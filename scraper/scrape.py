@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 Scraper for Paris academic conferences.
-Combines:
-- Indico API (IHP and other CNRS instances)
-- Playwright for JavaScript-rendered sites (Collège de France, EHESS, ENS, Sciences Po, Sorbonne)
-- Luma API for informal academic events in Paris
+Strategies (per source, in order of reliability):
+1. Indico JSON API (IHP)
+2. Luma JSON API + HTML
+3. Universal extractor based on <time datetime="..."> for JS-rendered sites
 """
 
 import json
@@ -22,8 +22,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 OUTPUT_FILE = Path(__file__).parent.parent / "data" / "events.json"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "application/json, text/html, */*",
+                  "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
     "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
 }
 
@@ -70,7 +69,7 @@ DISCIPLINE_KEYWORDS = {
     "Droit & Sciences politiques": [
         " droit ", "juridique", "constitutionnel", "science politique",
         "démocratie", "gouvernance", "parlement", "élection",
-        "souveraineté", "politique publique", "géopolitique", "international",
+        "souveraineté", "politique publique", "géopolitique",
     ],
     "Arts & Culture": [
         " art ", "musique", "cinéma", " film ", "théâtre", "peinture", "sculpture",
@@ -101,48 +100,47 @@ def clean_text(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
-def strip_html(s: str) -> str:
-    """Strip HTML tags from a string and return clean text."""
+def strip_html(s) -> str:
     if not s:
         return ""
+    if hasattr(s, "get_text"):
+        return clean_text(s.get_text(separator=" "))
     try:
-        text = BeautifulSoup(s, "lxml").get_text(separator=" ")
+        text = BeautifulSoup(str(s), "lxml").get_text(separator=" ")
     except Exception:
-        text = re.sub(r"<[^>]+>", " ", s)
+        text = re.sub(r"<[^>]+>", " ", str(s))
     return clean_text(text)
 
 
-def parse_date(s: str):
+def parse_date(s):
     if not s:
         return None
     try:
-        return dateparser.parse(s, dayfirst=True, languages=["fr", "en"], fuzzy=True)
+        return dateparser.parse(str(s), dayfirst=True, languages=["fr", "en"], fuzzy=True)
     except Exception:
         return None
 
 
-# ── Indico-based sources (proper JSON API) ────────────────────────────────────
+def make_absolute(href: str, base: str) -> str:
+    if not href:
+        return base
+    if href.startswith("http"):
+        return href
+    if href.startswith("//"):
+        return "https:" + href
+    if href.startswith("/"):
+        return base.rstrip("/") + href
+    return base.rstrip("/") + "/" + href
 
-INDICO_SOURCES = [
-    {
-        "name": "Institut Henri Poincaré",
-        "base": "https://indico.math.cnrs.fr",
-        "categ": "0",
-        "location_default": "IHP, 11 rue Pierre et Marie Curie, Paris 5e",
-        "filter_paris": True,
-    },
-]
 
+# ── Indico (IHP) ──────────────────────────────────────────────────────────────
 
-def scrape_indico(source: dict) -> list[dict]:
-    print(f"→ Indico: {source['name']}...")
+def scrape_indico(name: str, base: str, categ: str, location_default: str) -> list[dict]:
+    print(f"→ Indico: {name}...")
     events = []
     today = date.today()
     end = today + timedelta(days=120)
-    url = (
-        f"{source['base']}/export/categ/{source['categ']}.json"
-        f"?from={today.isoformat()}&to={end.isoformat()}&limit=200"
-    )
+    url = f"{base}/export/categ/{categ}.json?from={today.isoformat()}&to={end.isoformat()}&limit=200"
     try:
         r = requests.get(url, headers=HEADERS, timeout=20)
         r.raise_for_status()
@@ -163,39 +161,30 @@ def scrape_indico(source: dict) -> list[dict]:
         except Exception:
             continue
 
-        location = clean_text(item.get("location", "")) or clean_text(item.get("room", ""))
-        if source.get("filter_paris"):
-            if location and not re.search(
-                r"paris|ihp|jussieu|sorbonne|ens |college de france|"
-                r"sciences po|cdf|ehess|henri poincar", location, re.I
-            ):
-                continue
-        if not location:
-            location = source["location_default"]
-
-        raw_end = item.get("endDate", {})
+        location = clean_text(item.get("location", "")) or clean_text(item.get("room", "")) or location_default
         end_time = ""
         try:
+            raw_end = item.get("endDate", {})
             dt_end = dateparser.parse(f"{raw_end.get('date', '')} {raw_end.get('time', '')}".strip())
             if dt_end:
                 end_time = dt_end.strftime("%H:%M")
         except Exception:
             pass
 
-        desc = strip_html(item.get("description", ""))[:500]
+        desc = strip_html(item.get("description", ""))[:400]
         speakers = ", ".join(s.get("fullName", "") for s in item.get("speakers", []))[:120]
 
         events.append({
-            "id": make_id(source["name"], title, str(dt.date())),
+            "id": make_id(name, title, str(dt.date())),
             "title": title,
-            "institution": source["name"],
+            "institution": name,
             "discipline": detect_discipline(title, desc),
             "date": dt.strftime("%Y-%m-%d"),
             "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
             "end_time": end_time,
             "location": location,
             "description": desc,
-            "url": item.get("url", source["base"]),
+            "url": item.get("url", base),
             "speaker": clean_text(speakers),
             "source_type": "institution",
         })
@@ -203,89 +192,168 @@ def scrape_indico(source: dict) -> list[dict]:
     return events
 
 
-# ── Playwright-based scrapers (JS-rendered sites) ─────────────────────────────
+# ── Universal HTML extractor (uses <time datetime> as anchor) ─────────────────
 
-def pw_get_html(browser, url: str, wait_selector: str | None = None, scroll: bool = False) -> str:
-    """Load a URL with Playwright and return the rendered HTML."""
+def accept_cookies(page):
+    """Try common cookie consent buttons (French sites)."""
+    labels = [
+        "Tout accepter", "Accepter tout", "Accepter tous les cookies",
+        "J'accepte", "Accepter", "Accept all", "I accept",
+        "Continuer sans accepter", "Refuser",
+    ]
+    for label in labels:
+        try:
+            btn = page.get_by_role("button", name=re.compile(label, re.I))
+            if btn.count() > 0:
+                btn.first.click(timeout=1500)
+                page.wait_for_timeout(500)
+                return
+        except Exception:
+            pass
+    # Try generic cookie banner close
+    for sel in ["#tarteaucitronAllAllowed", "#axeptio_btn_acceptAll", "[id*='accept']", "[class*='accept']"]:
+        try:
+            page.locator(sel).first.click(timeout=1000)
+            page.wait_for_timeout(500)
+            return
+        except Exception:
+            pass
+
+
+def pw_get_html(browser, url: str, scroll: bool = True) -> tuple[str, str]:
+    """Load URL with Playwright. Returns (html, page_title)."""
     ctx = browser.new_context(
         user_agent=HEADERS["User-Agent"],
         locale="fr-FR",
-        viewport={"width": 1280, "height": 900},
+        viewport={"width": 1366, "height": 900},
     )
     page = ctx.new_page()
-    html = ""
+    html, title = "", ""
     try:
         page.goto(url, timeout=30000, wait_until="domcontentloaded")
         try:
             page.wait_for_load_state("networkidle", timeout=10000)
         except PWTimeout:
             pass
-        if wait_selector:
-            try:
-                page.wait_for_selector(wait_selector, timeout=8000)
-            except PWTimeout:
-                pass
+        accept_cookies(page)
         if scroll:
-            for _ in range(3):
+            for _ in range(4):
                 page.evaluate("window.scrollBy(0, window.innerHeight)")
-                page.wait_for_timeout(800)
+                page.wait_for_timeout(700)
         html = page.content()
+        title = page.title()
     except Exception as e:
-        print(f"   [WARN] Playwright failed for {url}: {e}")
+        print(f"   [WARN] {url}: {e}")
     finally:
         ctx.close()
-    return html
+    return html, title
 
 
-def extract_events_from_html(
+def extract_jsonld_events(soup) -> list[dict]:
+    """Extract events from JSON-LD structured data."""
+    events = []
+    for script in soup.select('script[type="application/ld+json"]'):
+        try:
+            data = json.loads(script.string or "{}")
+        except Exception:
+            continue
+        items = data if isinstance(data, list) else [data]
+        if isinstance(data, dict) and "@graph" in data:
+            items = data["@graph"]
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            t = item.get("@type", "")
+            if "Event" not in (t if isinstance(t, str) else " ".join(t)):
+                continue
+            events.append(item)
+    return events
+
+
+def extract_events_universal(
     html: str,
     institution: str,
     location_default: str,
     base_url: str,
-    selectors: list[str],
 ) -> list[dict]:
-    """Try multiple selector patterns to find event cards in rendered HTML."""
+    """Robust extractor: JSON-LD first, then <time datetime> scan."""
+    if not html:
+        return []
     soup = BeautifulSoup(html, "lxml")
     events = []
+    seen = set()
 
-    for sel in selectors:
-        cards = soup.select(sel)
-        if len(cards) < 2:
+    # Strategy 1: JSON-LD
+    for item in extract_jsonld_events(soup):
+        title = clean_text(item.get("name", ""))
+        start = item.get("startDate") or item.get("startTime")
+        if not title or not start:
             continue
-        for card in cards[:60]:
-            title_el = card.select_one(
-                "h1, h2, h3, h4, .title, .field--name-title, [class*='title'], [class*='Title']"
-            )
-            date_el = card.select_one(
-                "time, .date, .field--name-field-date, .views-field-field-date, "
-                "[class*='date'], [datetime]"
-            )
+        dt = parse_date(start)
+        if not dt or dt.date() < date.today() - timedelta(days=1):
+            continue
+        key = (title[:50].lower(), dt.date().isoformat())
+        if key in seen:
+            continue
+        seen.add(key)
+        url = item.get("url") or base_url
+        location = item.get("location", {})
+        if isinstance(location, dict):
+            loc_str = clean_text(location.get("name", "")) or location_default
+        else:
+            loc_str = str(location) or location_default
+        desc = strip_html(item.get("description", ""))[:400]
+        events.append({
+            "id": make_id(institution, title, str(dt.date())),
+            "title": title,
+            "institution": institution,
+            "discipline": detect_discipline(title, desc),
+            "date": dt.strftime("%Y-%m-%d"),
+            "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+            "end_time": "",
+            "location": loc_str,
+            "description": desc,
+            "url": make_absolute(url, base_url),
+            "speaker": "",
+            "source_type": "institution",
+        })
+
+    # Strategy 2: <time datetime> elements
+    for time_el in soup.select("time[datetime]"):
+        raw_dt = time_el.get("datetime", "")
+        dt = parse_date(raw_dt)
+        if not dt or dt.date() < date.today() - timedelta(days=1):
+            continue
+
+        # Walk up parents to find title + link
+        container = time_el
+        found = False
+        for _ in range(8):
+            container = container.parent
+            if container is None or container.name in ("body", "html"):
+                break
+            title_el = container.find(["h1", "h2", "h3", "h4", "h5"])
+            if not title_el:
+                title_el = container.select_one(
+                    "[class*='title' i], [class*='Title'], strong, b"
+                )
             if not title_el:
                 continue
             title = clean_text(title_el.get_text())
             if not title or len(title) < 5:
                 continue
+            key = (title[:50].lower(), dt.date().isoformat())
+            if key in seen:
+                found = True
+                break
+            seen.add(key)
 
-            raw_date = ""
-            if date_el:
-                raw_date = date_el.get("datetime") or clean_text(date_el.get_text())
-            dt = parse_date(raw_date)
-            if not dt:
-                continue
+            link_el = container.find("a", href=True)
+            href = link_el.get("href", "") if link_el else ""
+            full_url = make_absolute(href, base_url)
 
-            link_el = card.select_one("a[href]")
-            url_path = link_el.get("href", "") if link_el else ""
-            if url_path.startswith("/"):
-                full_url = base_url.rstrip("/") + url_path
-            elif url_path.startswith("http"):
-                full_url = url_path
-            else:
-                full_url = base_url
-
-            desc_el = card.select_one(
-                ".field--name-body, .views-field-body, .description, .summary, p"
-            )
-            desc = strip_html(str(desc_el))[:500] if desc_el else ""
+            desc_el = container.find("p")
+            desc = strip_html(desc_el)[:400] if desc_el else ""
 
             events.append({
                 "id": make_id(institution, title, str(dt.date())),
@@ -301,256 +369,170 @@ def extract_events_from_html(
                 "speaker": "",
                 "source_type": "institution",
             })
-        if events:
+            found = True
             break
+
     return events
 
 
-def scrape_college_de_france(browser) -> list[dict]:
-    print("→ Collège de France...")
-    html = pw_get_html(
-        browser,
-        "https://www.college-de-france.fr/fr/agenda",
-        wait_selector="article, .card, [class*='event'], [class*='Event']",
-        scroll=True,
-    )
-    events = extract_events_from_html(
-        html,
-        institution="Collège de France",
-        location_default="Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
-        base_url="https://www.college-de-france.fr",
-        selectors=[
-            "article.event-card",
-            ".cdf-card-agenda",
-            "article[class*='agenda']",
-            "[class*='EventCard']",
-            ".card-event",
-            "article",
-        ],
-    )
-    print(f"   {len(events)} events")
-    return events
+# ── Per-institution scrapers ──────────────────────────────────────────────────
+
+def scrape_site(browser, name: str, urls: list[tuple[str, str, str]]) -> list[dict]:
+    """Generic site scraper trying multiple URLs."""
+    print(f"→ {name}...")
+    all_events = []
+    for url, loc, base in urls:
+        html, title = pw_get_html(browser, url)
+        print(f"   [{url}] page_title='{title[:50]}' html_len={len(html)}")
+        events = extract_events_universal(html, name, loc, base)
+        print(f"   → {len(events)} events from this URL")
+        all_events.extend(events)
+    # Dedup within institution
+    seen, out = set(), []
+    for e in all_events:
+        k = (e["title"][:50].lower(), e["date"])
+        if k not in seen:
+            seen.add(k)
+            out.append(e)
+    print(f"   Total {name}: {len(out)} events")
+    return out
 
 
-def scrape_ehess(browser) -> list[dict]:
-    print("→ EHESS...")
-    html = pw_get_html(
-        browser,
-        "https://www.ehess.fr/fr/agenda",
-        wait_selector=".views-row, article, [class*='event']",
-        scroll=True,
-    )
-    events = extract_events_from_html(
-        html,
-        institution="EHESS",
-        location_default="EHESS, 54 boulevard Raspail, Paris 6e",
-        base_url="https://www.ehess.fr",
-        selectors=[
-            ".views-row",
-            "article.event",
-            ".node--type-event",
-            "article",
-            "li.event-item",
-        ],
-    )
-    print(f"   {len(events)} events")
-    return events
+def scrape_college_de_france(browser):
+    return scrape_site(browser, "Collège de France", [
+        ("https://www.college-de-france.fr/fr/agenda",
+         "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
+         "https://www.college-de-france.fr"),
+    ])
 
 
-def scrape_ens(browser) -> list[dict]:
-    print("→ ENS Paris...")
-    html = pw_get_html(
-        browser,
-        "https://www.ens.psl.eu/agenda",
-        wait_selector=".views-row, article, [class*='event']",
-        scroll=True,
-    )
-    events = extract_events_from_html(
-        html,
-        institution="ENS Paris",
-        location_default="ENS, 45 rue d'Ulm, Paris 5e",
-        base_url="https://www.ens.psl.eu",
-        selectors=[
-            ".view-content .views-row",
-            "article.node--type-event",
-            ".event-item",
-            "article",
-        ],
-    )
-    print(f"   {len(events)} events")
-    return events
+def scrape_ehess(browser):
+    return scrape_site(browser, "EHESS", [
+        ("https://www.ehess.fr/fr/agenda",
+         "EHESS, 54 boulevard Raspail, Paris 6e",
+         "https://www.ehess.fr"),
+    ])
 
 
-def scrape_sciences_po(browser) -> list[dict]:
-    print("→ Sciences Po...")
-    html = pw_get_html(
-        browser,
-        "https://www.sciencespo.fr/agenda/fr",
-        wait_selector=".views-row, article, [class*='event']",
-        scroll=True,
-    )
-    events = extract_events_from_html(
-        html,
-        institution="Sciences Po",
-        location_default="Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
-        base_url="https://www.sciencespo.fr",
-        selectors=[
-            ".view-content .views-row",
-            ".node--type-event",
-            "article.event",
-            "article",
-        ],
-    )
-    print(f"   {len(events)} events")
-    return events
+def scrape_ens(browser):
+    return scrape_site(browser, "ENS Paris", [
+        ("https://www.ens.psl.eu/agenda",
+         "ENS, 45 rue d'Ulm, Paris 5e",
+         "https://www.ens.psl.eu"),
+        ("https://www.ens.psl.eu/evenements",
+         "ENS, 45 rue d'Ulm, Paris 5e",
+         "https://www.ens.psl.eu"),
+    ])
 
 
-def scrape_sorbonne(browser) -> list[dict]:
-    print("→ Sorbonne Université...")
-    events = []
-    urls = [
+def scrape_sciences_po(browser):
+    return scrape_site(browser, "Sciences Po", [
+        ("https://www.sciencespo.fr/agenda/fr",
+         "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+         "https://www.sciencespo.fr"),
+        ("https://www.sciencespo.fr/events/fr",
+         "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+         "https://www.sciencespo.fr"),
+    ])
+
+
+def scrape_sorbonne(browser):
+    return scrape_site(browser, "Sorbonne Université", [
         ("https://www.sorbonne-universite.fr/evenements",
-         "Sorbonne, 21 rue de l'École de Médecine, Paris 6e",
+         "Sorbonne, Paris",
          "https://www.sorbonne-universite.fr"),
         ("https://lettres.sorbonne-universite.fr/agenda",
          "Sorbonne Lettres, 1 rue Victor Cousin, Paris 5e",
          "https://lettres.sorbonne-universite.fr"),
-    ]
-    for url, loc, base in urls:
-        html = pw_get_html(
-            browser, url,
-            wait_selector="article, .views-row, [class*='event']",
-            scroll=True,
-        )
-        sub_events = extract_events_from_html(
-            html,
-            institution="Sorbonne Université",
-            location_default=loc,
-            base_url=base,
-            selectors=[
-                ".view-content .views-row",
-                "article.event",
-                ".node--type-event",
-                "article",
-            ],
-        )
-        events.extend(sub_events)
-    print(f"   {len(events)} events")
-    return events
+    ])
 
 
-# ── Luma (informal academic events) ───────────────────────────────────────────
+# ── Luma ──────────────────────────────────────────────────────────────────────
 
 def scrape_luma(browser) -> list[dict]:
-    """Scrape Luma Paris events page."""
     print("→ Luma Paris...")
     events = []
-    html = pw_get_html(
-        browser,
-        "https://lu.ma/paris",
-        wait_selector="a[href*='lu.ma'], .event-card, [class*='event']",
-        scroll=True,
-    )
-    if not html:
-        return events
+    html, _ = pw_get_html(browser, "https://lu.ma/paris", scroll=True)
+    if html:
+        soup = BeautifulSoup(html, "lxml")
 
-    soup = BeautifulSoup(html, "lxml")
-    # Luma renders events as anchor cards. Look for anchors with hrefs and inner content
-    seen = set()
-    for a in soup.select("a[href]"):
-        href = a.get("href", "")
-        # Luma event URLs are typically /{slug}
-        if not re.match(r"^/[a-z0-9-]+$", href):
-            continue
-        if href in seen:
-            continue
-        seen.add(href)
+        # Try JSON-LD
+        for item in extract_jsonld_events(soup):
+            title = clean_text(item.get("name", ""))
+            start = item.get("startDate") or item.get("startTime")
+            if not title or not start:
+                continue
+            dt = parse_date(start)
+            if not dt or dt.date() < date.today() - timedelta(days=1):
+                continue
+            url = item.get("url", "https://lu.ma/paris")
+            location = item.get("location", {})
+            loc_str = ""
+            if isinstance(location, dict):
+                loc_str = clean_text(location.get("name", "")) or clean_text(location.get("address", ""))
+            host = (item.get("organizer") or {}).get("name", "Luma") if isinstance(item.get("organizer"), dict) else "Luma"
+            events.append({
+                "id": make_id("luma", title, str(dt.date())),
+                "title": title,
+                "institution": clean_text(host) or "Luma",
+                "discipline": detect_discipline(title, item.get("description", "")),
+                "date": dt.strftime("%Y-%m-%d"),
+                "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                "end_time": "",
+                "location": loc_str or "Paris",
+                "description": strip_html(item.get("description", ""))[:400],
+                "url": make_absolute(url, "https://lu.ma"),
+                "speaker": "",
+                "source_type": "luma",
+            })
 
-        text_blocks = [clean_text(s) for s in a.stripped_strings]
-        if len(text_blocks) < 2:
-            continue
-
-        # The structure: usually [date_line, time_line, title, host, location, ...]
-        # Heuristic: pick the longest text block as title, look for time pattern, etc.
-        title = ""
-        time_str = ""
-        date_str = ""
-        host = ""
-
-        for blk in text_blocks:
-            if re.match(r"^\d{1,2}:\d{2}", blk):
-                time_str = blk[:5]
-            elif re.search(r"(lun|mar|mer|jeu|ven|sam|dim|mon|tue|wed|thu|fri|sat|sun)", blk, re.I) \
-                    and not date_str:
-                date_str = blk
-            elif len(blk) > 10 and not title and not blk.startswith("@"):
-                title = blk
-            elif not host and 2 < len(blk) < 80 and blk != title:
-                host = blk
-
-        if not title:
-            continue
-
-        dt = parse_date(date_str)
-        # If no parseable date, skip
-        if not dt:
-            continue
-
-        full_url = "https://lu.ma" + href
-        # Filter to upcoming
-        if dt.date() < date.today() - timedelta(days=1):
-            continue
-
-        events.append({
-            "id": make_id("luma", title, str(dt.date())),
-            "title": title,
-            "institution": host or "Luma",
-            "discipline": detect_discipline(title),
-            "date": dt.strftime("%Y-%m-%d"),
-            "time": time_str,
-            "end_time": "",
-            "location": "Paris",
-            "description": "",
-            "url": full_url,
-            "speaker": "",
-            "source_type": "luma",
-        })
-
-    # Also try the JSON discover endpoint
-    try:
-        r = requests.get(
-            "https://api.lu.ma/discover/get-paginated-events",
-            params={"period": "future", "pagination_limit": 50, "discover_place_api_id": ""},
-            headers=HEADERS,
-            timeout=15,
-        )
-        if r.ok:
-            for item in r.json().get("entries", []):
-                ev = item.get("event", {})
-                title = clean_text(ev.get("name", ""))
-                start = ev.get("start_at", "")
-                geo = (ev.get("geo_address_info") or {}).get("city_state", "")
-                if not title or not start or "paris" not in geo.lower():
+        # Fallback: <time datetime> on the page
+        seen = {(e["title"][:50].lower(), e["date"]) for e in events}
+        for time_el in soup.select("time[datetime]"):
+            dt = parse_date(time_el.get("datetime", ""))
+            if not dt or dt.date() < date.today() - timedelta(days=1):
+                continue
+            container = time_el
+            for _ in range(6):
+                container = container.parent
+                if container is None:
+                    break
+                a_el = container.find("a", href=True) if container.name != "a" else container
+                if not a_el:
                     continue
-                dt = parse_date(start)
-                if not dt:
+                href = a_el.get("href", "")
+                if not re.match(r"^/[a-z0-9-]+$", href):
                     continue
+                # title heuristic
+                title_el = container.find(["h1", "h2", "h3", "h4"])
+                if not title_el:
+                    texts = [t for t in container.stripped_strings if len(t) > 8]
+                    if not texts:
+                        continue
+                    title = texts[0]
+                else:
+                    title = clean_text(title_el.get_text())
+                if len(title) < 5:
+                    continue
+                key = (title[:50].lower(), dt.date().isoformat())
+                if key in seen:
+                    break
+                seen.add(key)
                 events.append({
                     "id": make_id("luma", title, str(dt.date())),
                     "title": title,
-                    "institution": clean_text((ev.get("hosts") or [{}])[0].get("name", "Luma")),
-                    "discipline": detect_discipline(title, ev.get("description_short", "")),
+                    "institution": "Luma",
+                    "discipline": detect_discipline(title),
                     "date": dt.strftime("%Y-%m-%d"),
                     "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
                     "end_time": "",
-                    "location": clean_text(ev.get("geo_address_info", {}).get("address", "Paris")),
-                    "description": clean_text(ev.get("description_short", ""))[:500],
-                    "url": f"https://lu.ma/{ev.get('url', '')}",
+                    "location": "Paris",
+                    "description": "",
+                    "url": "https://lu.ma" + href,
                     "speaker": "",
                     "source_type": "luma",
                 })
-    except Exception as e:
-        print(f"   [WARN] Luma API: {e}")
+                break
 
     print(f"   {len(events)} events")
     return events
@@ -559,8 +541,7 @@ def scrape_luma(browser) -> list[dict]:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def deduplicate(events: list[dict]) -> list[dict]:
-    seen = set()
-    out = []
+    seen, out = set(), []
     for ev in events:
         key = (ev["title"].lower()[:60], ev["date"], ev["institution"])
         if key not in seen:
@@ -577,19 +558,22 @@ def filter_future(events: list[dict]) -> list[dict]:
 def main():
     all_events = []
 
-    # 1) API-based sources (no browser needed)
-    for src in INDICO_SOURCES:
-        try:
-            all_events.extend(scrape_indico(src))
-        except Exception as e:
-            print(f"[ERROR] Indico {src['name']}: {e}")
-            traceback.print_exc()
+    # Indico APIs
+    try:
+        all_events.extend(scrape_indico(
+            "Institut Henri Poincaré",
+            "https://indico.math.cnrs.fr", "0",
+            "IHP, 11 rue Pierre et Marie Curie, Paris 5e",
+        ))
+    except Exception as e:
+        print(f"[ERROR] IHP: {e}")
+        traceback.print_exc()
 
-    # 2) Browser-based sources
+    # Browser-based
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         try:
-            for scraper in [
+            for fn in [
                 scrape_college_de_france,
                 scrape_ehess,
                 scrape_ens,
@@ -598,14 +582,13 @@ def main():
                 scrape_luma,
             ]:
                 try:
-                    all_events.extend(scraper(browser))
+                    all_events.extend(fn(browser))
                 except Exception as e:
-                    print(f"[ERROR] {scraper.__name__}: {e}")
+                    print(f"[ERROR] {fn.__name__}: {e}")
                     traceback.print_exc()
         finally:
             browser.close()
 
-    # 3) Clean up
     all_events = deduplicate(all_events)
     all_events = filter_future(all_events)
     all_events.sort(key=lambda e: (e["date"], e.get("time", "")))
@@ -617,7 +600,6 @@ def main():
     n_inst = sum(1 for e in all_events if e.get("source_type") == "institution")
     n_luma = sum(1 for e in all_events if e.get("source_type") == "luma")
     print(f"\n✓ {len(all_events)} events ({n_inst} institutions · {n_luma} Luma)")
-    print(f"  Written to {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
