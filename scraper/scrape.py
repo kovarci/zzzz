@@ -101,6 +101,17 @@ def clean_text(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+def strip_html(s: str) -> str:
+    """Strip HTML tags from a string and return clean text."""
+    if not s:
+        return ""
+    try:
+        text = BeautifulSoup(s, "lxml").get_text(separator=" ")
+    except Exception:
+        text = re.sub(r"<[^>]+>", " ", s)
+    return clean_text(text)
+
+
 def parse_date(s: str):
     if not s:
         return None
@@ -171,7 +182,7 @@ def scrape_indico(source: dict) -> list[dict]:
         except Exception:
             pass
 
-        desc = clean_text(item.get("description", ""))[:500]
+        desc = strip_html(item.get("description", ""))[:500]
         speakers = ", ".join(s.get("fullName", "") for s in item.get("speakers", []))[:120]
 
         events.append({
@@ -274,7 +285,7 @@ def extract_events_from_html(
             desc_el = card.select_one(
                 ".field--name-body, .views-field-body, .description, .summary, p"
             )
-            desc = clean_text(desc_el.get_text())[:500] if desc_el else ""
+            desc = strip_html(str(desc_el))[:500] if desc_el else ""
 
             events.append({
                 "id": make_id(institution, title, str(dt.date())),
