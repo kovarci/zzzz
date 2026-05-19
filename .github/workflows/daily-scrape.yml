@@ -2,9 +2,8 @@ name: Daily Conference Scrape
 
 on:
   schedule:
-    # Every day at 6:00 AM Paris time (UTC+2 in summer = 04:00 UTC)
-    - cron: "0 4 * * *"
-  workflow_dispatch: # Allow manual trigger
+    - cron: "0 4 * * *"  # 06:00 Paris (summer) / 05:00 (winter)
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,6 +11,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repo
@@ -24,11 +24,16 @@ jobs:
           cache: "pip"
           cache-dependency-path: scraper/requirements.txt
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: pip install -r scraper/requirements.txt
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
 
       - name: Run scraper
         run: python scraper/scrape.py
+        env:
+          PYTHONUNBUFFERED: "1"
 
       - name: Commit updated events
         run: |
