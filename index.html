@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conférences Académiques à Paris</title>
+  <meta name="description" content="Calendrier agrégé des conférences et séminaires académiques à Paris : Collège de France, ENS, EHESS, IHP, Sciences Po, Sorbonne." />
+
+  <!-- FullCalendar -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+  <style>
+    /* ── Reset & base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --border: #e2e0db;
+      --text: #1a1917;
+      --muted: #6b6860;
+      --accent: #2a4a7f;
+
+      --math:    #3b82f6;
+      --philo:   #8b5cf6;
+      --litt:    #ef4444;
+      --hist:    #f97316;
+      --sci:     #22c55e;
+      --eco:     #eab308;
+      --socio:   #14b8a6;
+      --droit:   #475569;
+      --arts:    #ec4899;
+      --autre:   #9ca3af;
+    }
+
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────── */
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: .02em; }
+    header p  { font-size: .85rem; opacity: .8; font-style: italic; }
+    .header-meta { text-align: right; font-size: .8rem; opacity: .7; }
+
+    /* ── Layout ─────────────────────────────────────────────────── */
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      min-height: calc(100vh - 80px);
+    }
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; }
+      sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────────────── */
+    sidebar {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .filter-section h3 {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      margin-bottom: .6rem;
+    }
+    .search-box {
+      width: 100%;
+      padding: .5rem .75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .9rem;
+      font-family: inherit;
+      background: var(--bg);
+    }
+    .search-box:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+
+    .discipline-filters, .institution-filters { display: flex; flex-direction: column; gap: .35rem; }
+
+    .filter-chip {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .35rem .6rem;
+      border-radius: 999px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      font-size: .82rem;
+      font-family: inherit;
+      background: var(--bg);
+      text-align: left;
+      transition: all .15s;
+    }
+    .filter-chip .dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    }
+    .filter-chip.active { font-weight: 600; background: #eef2ff; border-color: currentColor; }
+    .filter-chip:hover { background: #f0f0ee; }
+
+    .reset-btn {
+      margin-top: .25rem;
+      padding: .4rem .75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: none;
+      font-family: inherit;
+      font-size: .82rem;
+      cursor: pointer;
+      color: var(--muted);
+    }
+    .reset-btn:hover { background: var(--bg); color: var(--text); }
+
+    .stat-box { background: var(--bg); border-radius: 8px; padding: .75rem; font-size: .82rem; }
+    .stat-box strong { font-size: 1.4rem; display: block; color: var(--accent); }
+
+    /* ── Main content ────────────────────────────────────────────── */
+    main { padding: 1.5rem; }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .view-toggle { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .view-btn {
+      padding: .4rem .9rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: .85rem;
+      font-family: inherit;
+      transition: background .15s;
+    }
+    .view-btn.active { background: var(--accent); color: #fff; }
+    .view-btn:not(.active):hover { background: var(--bg); }
+
+    .results-count { margin-left: auto; font-size: .82rem; color: var(--muted); }
+
+    /* ── Event cards ─────────────────────────────────────────────── */
+    #list-view { display: flex; flex-direction: column; gap: .75rem; }
+    #calendar-view { display: none; }
+
+    .event-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: grid;
+      grid-template-columns: 70px 1fr auto;
+      gap: .5rem 1rem;
+      align-items: start;
+      transition: box-shadow .15s;
+    }
+    .event-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+
+    .event-date-col { text-align: center; }
+    .event-day   { font-size: 1.8rem; font-weight: 700; line-height: 1; color: var(--accent); }
+    .event-month { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+
+    .event-title { font-size: 1rem; font-weight: 600; margin-bottom: .25rem; line-height: 1.3; }
+    .event-meta  { font-size: .8rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .4rem; }
+    .event-meta span::before { content: "·"; margin-right: .4rem; }
+    .event-meta span:first-child::before { content: ""; margin: 0; }
+    .event-badge {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .72rem; font-weight: 600; padding: .15rem .55rem;
+      border-radius: 999px; color: #fff; flex-shrink: 0;
+    }
+    .event-actions { display: flex; flex-direction: column; align-items: flex-end; gap: .5rem; }
+    .event-link {
+      font-size: .78rem; color: var(--accent); text-decoration: none;
+      border: 1px solid currentColor; border-radius: 6px; padding: .25rem .6rem;
+      white-space: nowrap;
+    }
+    .event-link:hover { background: var(--accent); color: #fff; }
+    .event-desc { grid-column: 2 / -1; font-size: .82rem; color: var(--muted); line-height: 1.5; }
+
+    .no-results {
+      text-align: center; padding: 4rem 1rem; color: var(--muted);
+      font-style: italic; font-size: 1rem;
+    }
+
+    /* ── Calendar ────────────────────────────────────────────────── */
+    #calendar { height: 680px; }
+
+    /* ── Footer ──────────────────────────────────────────────────── */
+    footer {
+      text-align: center; padding: 1.5rem; font-size: .78rem;
+      color: var(--muted); border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Conférences Académiques · Paris</h1>
+    <p>Collège de France · ENS · EHESS · IHP · Sciences Po · Sorbonne</p>
+  </div>
+  <div class="header-meta" id="last-updated">Chargement…</div>
+</header>
+
+<div class="layout">
+  <!-- ── Sidebar ── -->
+  <sidebar>
+    <div class="filter-section">
+      <h3>Recherche</h3>
+      <input class="search-box" id="search" type="search" placeholder="Titre, intervenant…" />
+    </div>
+
+    <div class="filter-section">
+      <h3>Discipline</h3>
+      <div class="discipline-filters" id="discipline-filters"></div>
+    </div>
+
+    <div class="filter-section">
+      <h3>Institution</h3>
+      <div class="institution-filters" id="institution-filters"></div>
+    </div>
+
+    <button class="reset-btn" id="reset-btn">Réinitialiser les filtres</button>
+
+    <div class="stat-box">
+      <strong id="stat-count">—</strong>
+      conférences à venir
+    </div>
+  </sidebar>
+
+  <!-- ── Main ── -->
+  <main>
+    <div class="toolbar">
+      <div class="view-toggle">
+        <button class="view-btn active" id="btn-list">Liste</button>
+        <button class="view-btn" id="btn-cal">Calendrier</button>
+      </div>
+      <span class="results-count" id="results-count"></span>
+    </div>
+
+    <div id="list-view"></div>
+    <div id="calendar-view"><div id="calendar"></div></div>
+  </main>
+</div>
+
+<footer>
+  Données agrégées automatiquement chaque jour depuis les agendas officiels.
+  <br>Code source sur <a href="https://github.com/" target="_blank">GitHub</a> · Contribuez en ajoutant une source !
+</footer>
+
+<script>
+// ── Discipline colours ────────────────────────────────────────────────────────
+const DISC_COLOR = {
+  "Mathématiques":             "#3b82f6",
+  "Philosophie":               "#8b5cf6",
+  "Littérature":               "#ef4444",
+  "Histoire":                  "#f97316",
+  "Sciences":                  "#22c55e",
+  "Économie":                  "#eab308",
+  "Sociologie & Anthropologie":"#14b8a6",
+  "Droit & Sciences politiques":"#475569",
+  "Arts & Culture":            "#ec4899",
+  "Autre":                     "#9ca3af",
+};
+
+const MONTH_FR = ["jan","fév","mar","avr","mai","juin","juil","août","sep","oct","nov","déc"];
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let allEvents = [];
+let activeDiscs = new Set();
+let activeInsts = new Set();
+let searchQuery = "";
+let calendarInstance = null;
+
+// ── Load data ─────────────────────────────────────────────────────────────────
+async function loadEvents() {
+  const r = await fetch("data/events.json?" + Date.now());
+  allEvents = await r.json();
+  allEvents.sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+  document.getElementById("last-updated").textContent =
+    "Mis à jour le " + new Date().toLocaleDateString("fr-FR");
+  document.getElementById("stat-count").textContent = allEvents.length;
+  buildFilters();
+  render();
+}
+
+// ── Build sidebar filters ─────────────────────────────────────────────────────
+function buildFilters() {
+  const discs = [...new Set(allEvents.map(e => e.discipline))].sort();
+  const insts = [...new Set(allEvents.map(e => e.institution))].sort();
+
+  const discContainer = document.getElementById("discipline-filters");
+  discContainer.innerHTML = "";
+  discs.forEach(d => {
+    const btn = document.createElement("button");
+    btn.className = "filter-chip";
+    btn.dataset.value = d;
+    btn.innerHTML = `<span class="dot" style="background:${DISC_COLOR[d] ?? "#9ca3af"}"></span>${d}`;
+    btn.style.color = DISC_COLOR[d] ?? "#9ca3af";
+    btn.addEventListener("click", () => toggleFilter(activeDiscs, d, btn, render));
+    discContainer.appendChild(btn);
+  });
+
+  const instContainer = document.getElementById("institution-filters");
+  instContainer.innerHTML = "";
+  insts.forEach(i => {
+    const btn = document.createElement("button");
+    btn.className = "filter-chip";
+    btn.dataset.value = i;
+    btn.innerHTML = `<span class="dot" style="background:#2a4a7f"></span>${i}`;
+    btn.style.color = "#2a4a7f";
+    btn.addEventListener("click", () => toggleFilter(activeInsts, i, btn, render));
+    instContainer.appendChild(btn);
+  });
+}
+
+function toggleFilter(set, value, btn, callback) {
+  if (set.has(value)) { set.delete(value); btn.classList.remove("active"); }
+  else                { set.add(value);    btn.classList.add("active"); }
+  callback();
+}
+
+// ── Filtering ─────────────────────────────────────────────────────────────────
+function filtered() {
+  const q = searchQuery.toLowerCase();
+  return allEvents.filter(e => {
+    if (activeDiscs.size && !activeDiscs.has(e.discipline)) return false;
+    if (activeInsts.size && !activeInsts.has(e.institution)) return false;
+    if (q && !e.title.toLowerCase().includes(q) &&
+             !e.speaker.toLowerCase().includes(q) &&
+             !e.description.toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+
+// ── Render list ───────────────────────────────────────────────────────────────
+function renderList(events) {
+  const container = document.getElementById("list-view");
+  if (!events.length) {
+    container.innerHTML = `<div class="no-results">Aucune conférence ne correspond à votre recherche.</div>`;
+    return;
+  }
+  container.innerHTML = events.map(ev => {
+    const dt = new Date(ev.date + "T12:00:00");
+    const day   = dt.getDate();
+    const month = MONTH_FR[dt.getMonth()];
+    const color = DISC_COLOR[ev.discipline] ?? "#9ca3af";
+    const time  = ev.time ? ` · ${ev.time}${ev.end_time ? "–" + ev.end_time : ""}` : "";
+    const desc  = ev.description
+      ? `<div class="event-desc">${ev.description.slice(0, 200)}${ev.description.length > 200 ? "…" : ""}</div>`
+      : "";
+    return `
+      <div class="event-card" style="border-left-color:${color}">
+        <div class="event-date-col">
+          <div class="event-day">${day}</div>
+          <div class="event-month">${month}</div>
+        </div>
+        <div>
+          <div class="event-title">${escHtml(ev.title)}</div>
+          <div class="event-meta">
+            <span>${escHtml(ev.institution)}</span>
+            ${ev.speaker ? `<span>${escHtml(ev.speaker)}</span>` : ""}
+            ${time ? `<span>${time}</span>` : ""}
+            ${ev.location ? `<span>${escHtml(ev.location)}</span>` : ""}
+          </div>
+          ${desc}
+        </div>
+        <div class="event-actions">
+          <span class="event-badge" style="background:${color}">${escHtml(ev.discipline)}</span>
+          ${ev.url ? `<a class="event-link" href="${escHtml(ev.url)}" target="_blank" rel="noopener">Voir →</a>` : ""}
+        </div>
+      </div>`;
+  }).join("");
+}
+
+// ── Render calendar ───────────────────────────────────────────────────────────
+function renderCalendar(events) {
+  const calEvents = events.map(ev => ({
+    id: ev.id,
+    title: ev.title,
+    start: ev.date + (ev.time ? "T" + ev.time : ""),
+    end:   ev.end_time ? ev.date + "T" + ev.end_time : undefined,
+    url:   ev.url || undefined,
+    backgroundColor: DISC_COLOR[ev.discipline] ?? "#9ca3af",
+    borderColor:     DISC_COLOR[ev.discipline] ?? "#9ca3af",
+    extendedProps:   ev,
+  }));
+
+  if (calendarInstance) {
+    calendarInstance.destroy();
+  }
+  const calEl = document.getElementById("calendar");
+  calendarInstance = new FullCalendar.Calendar(calEl, {
+    initialView: "dayGridMonth",
+    locale: "fr",
+    headerToolbar: {
+      left:   "prev,next today",
+      center: "title",
+      right:  "dayGridMonth,timeGridWeek,listMonth",
+    },
+    events: calEvents,
+    eventClick(info) {
+      info.jsEvent.preventDefault();
+      if (info.event.url) window.open(info.event.url, "_blank");
+    },
+    height: 680,
+  });
+  calendarInstance.render();
+}
+
+// ── Main render ───────────────────────────────────────────────────────────────
+function render() {
+  const evs = filtered();
+  document.getElementById("results-count").textContent = `${evs.length} résultat${evs.length !== 1 ? "s" : ""}`;
+  if (document.getElementById("list-view").style.display !== "none") renderList(evs);
+  else renderCalendar(evs);
+}
+
+// ── View toggle ───────────────────────────────────────────────────────────────
+document.getElementById("btn-list").addEventListener("click", () => {
+  document.getElementById("list-view").style.display = "";
+  document.getElementById("calendar-view").style.display = "none";
+  document.getElementById("btn-list").classList.add("active");
+  document.getElementById("btn-cal").classList.remove("active");
+  renderList(filtered());
+});
+document.getElementById("btn-cal").addEventListener("click", () => {
+  document.getElementById("list-view").style.display = "none";
+  document.getElementById("calendar-view").style.display = "";
+  document.getElementById("btn-list").classList.remove("active");
+  document.getElementById("btn-cal").classList.add("active");
+  renderCalendar(filtered());
+});
+
+// ── Search ────────────────────────────────────────────────────────────────────
+let searchTimer;
+document.getElementById("search").addEventListener("input", e => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => { searchQuery = e.target.value; render(); }, 200);
+});
+
+// ── Reset ─────────────────────────────────────────────────────────────────────
+document.getElementById("reset-btn").addEventListener("click", () => {
+  activeDiscs.clear(); activeInsts.clear(); searchQuery = "";
+  document.getElementById("search").value = "";
+  document.querySelectorAll(".filter-chip.active").forEach(el => el.classList.remove("active"));
+  render();
+});
+
+// ── Util ──────────────────────────────────────────────────────────────────────
+function escHtml(s) {
+  return String(s ?? "")
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+loadEvents().catch(err => {
+  document.getElementById("list-view").innerHTML =
+    `<div class="no-results">Erreur de chargement des données.<br><small>${err.message}</small></div>`;
+});
+</script>
+</body>
+</html>
