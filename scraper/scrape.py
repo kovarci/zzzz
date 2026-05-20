@@ -1069,21 +1069,27 @@ LUMA_PAGES = [
 
 
 def scrape_luma(browser) -> list[dict]:
-    """Scrape Luma — the Paris discover page + topic category pages — keeping
-    ONLY events located in France (category pages are worldwide)."""
+    """Scrape Luma — Paris discover page + topic category pages — keeping ONLY
+    events located in France. The browser is geolocated to Paris so the topic
+    pages surface French events instead of US ones."""
     print("→ Luma (France only)...")
     events, seen = [], set()
     captured = []
-    blobs = []
 
+    # Pretend we are browsing from Paris (locale + timezone + geolocation)
     ctx = browser.new_context(
         user_agent=HEADERS["User-Agent"], locale="fr-FR",
+        timezone_id="Europe/Paris",
+        geolocation={"latitude": 48.8566, "longitude": 2.3522},
+        permissions=["geolocation"],
         viewport={"width": 1366, "height": 900},
     )
     page = ctx.new_page()
     page.on("response", lambda r: capture_json(r, captured))
 
     for url in LUMA_PAGES:
+        seen_before = len(captured)
+        page_blobs = []
         try:
             page.goto(url, timeout=45000, wait_until="domcontentloaded")
             try:
@@ -1096,31 +1102,34 @@ def scrape_luma(browser) -> list[dict]:
                     "() => { if (document.body) window.scrollTo(0, document.body.scrollHeight); }")
                 page.wait_for_timeout(1100)
             html = page.content()
-            soup = BeautifulSoup(html, "lxml")
-            nd = soup.find("script", {"id": "__NEXT_DATA__"})
+            nd = BeautifulSoup(html, "lxml").find("script", {"id": "__NEXT_DATA__"})
             if nd and nd.string:
                 try:
-                    blobs.append(json.loads(nd.string))
+                    page_blobs.append(json.loads(nd.string))
                 except Exception:
                     pass
-            print(f"   {url}: loaded ({len(html)} chars)")
         except Exception as e:
             print(f"   [WARN] {url}: {e}")
 
+        # JSON captured while this page was loading
+        for _u, body in captured[seen_before:]:
+            page_blobs.append(body)
+
+        # how many events on the page total, and how many in France
+        total = sum(len(extract_events_deep_json(b, "Luma", "luma", "https://lu.ma"))
+                    for b in page_blobs)
+        new = 0
+        for blob in page_blobs:
+            for ev in extract_events_deep_json(blob, "Luma", source_type="luma",
+                                               base_url="https://lu.ma", require_france=True):
+                key = (ev["title"][:50].lower(), ev["date"])
+                if key not in seen:
+                    seen.add(key)
+                    events.append(ev)
+                    new += 1
+        print(f"   {url}: {total} events on page → +{new} in France")
+
     ctx.close()
-
-    for _url, body in captured:
-        blobs.append(body)
-    print(f"   scanning {len(blobs)} JSON blobs for France events...")
-
-    for blob in blobs:
-        for ev in extract_events_deep_json(blob, "Luma", source_type="luma",
-                                           base_url="https://lu.ma", require_france=True):
-            key = (ev["title"][:50].lower(), ev["date"])
-            if key not in seen:
-                seen.add(key)
-                events.append(ev)
-
     print(f"   ✓ {len(events)} events (France only)")
     return events
 
