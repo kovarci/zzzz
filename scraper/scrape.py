@@ -187,7 +187,19 @@ _JUNK_TITLE = re.compile(
     r"^\s*(acc[eè]s rapides?|aujourd'?hui|cette semaine|ce mois|cette ann[eé]e|"
     r"agenda|programme|calendrier|r[eé]sultats?|tous les|voir tout|voir plus|"
     r"filtrer|prochains? [eé]v[eé]nements?|[aà] venir|en ce moment|menu|"
-    r"newsletter|cookies?|\d{1,2}\s+\w+\s+\d{4})\s*$",
+    r"newsletter|cookies?|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|"
+    r"\d{1,2}\s+\w+\s+\d{4})\s*$",
+    re.I,
+)
+
+# French cities / venues OUTSIDE the Paris region — to filter the nationwide
+# CNRS-math Indico instance down to Paris-area events only.
+NON_PARIS = re.compile(
+    r"\b(toulouse|lyon|marseille|lille|nice|bordeaux|strasbourg|grenoble|"
+    r"nantes|rennes|montpellier|nancy|amiens|caen|dijon|orl[eé]ans|"
+    r"clermont|besan[çc]on|reims|rouen|metz|brest|angers|limoges|poitiers|"
+    r"pau|avignon|le mans|la rochelle|perpignan|toulon|villeurbanne|"
+    r"talence|frumam|upjv|braconnier|ljad|insa toulouse|insa lyon)\b",
     re.I,
 )
 
@@ -272,6 +284,9 @@ def scrape_indico(name, base, categ, location_default) -> list[dict]:
             end_time = dt_end.strftime("%H:%M")
         location = (clean_text(item.get("location", "")) or clean_text(item.get("room", ""))
                     or location_default)
+        # Indico CNRS-math is nationwide — keep only Paris-area events
+        if NON_PARIS.search(location):
+            continue
         desc = strip_html(item.get("description", ""))[:400]
         speakers = ", ".join(s.get("fullName", "") for s in item.get("speakers", []))[:120]
         events.append(new_event(
@@ -554,9 +569,16 @@ def extract_events_universal(html, institution, location_default, base_url) -> l
                       speaker=_find_speaker(container)))
 
     if len(events) < 3:
+        from collections import Counter
+        cls = Counter()
+        for el in soup.find_all(class_=True):
+            for c in el.get("class", []):
+                cls[c] += 1
+        top = ", ".join(f"{c}x{n}" for c, n in cls.most_common(22))
         print(f"   [DEBUG] {institution}: jsonld={len(extract_jsonld_events(soup))} "
               f"time[datetime]={len(soup.select('time[datetime]'))} "
               f"articles={len(soup.select('article'))} links={len(soup.select('a[href]'))}")
+        print(f"   [CLASSES] {top}")
     return events
 
 
