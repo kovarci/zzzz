@@ -385,40 +385,45 @@ def click_load_more(page, max_clicks=30) -> int:
     return clicks
 
 
-def load_page(page, url: str) -> tuple[str, str]:
-    """Navigate, wait for JS, accept cookies, exhaust infinite-scroll + load-more."""
+def load_page(page, url: str, exhaustive: bool = True) -> tuple[str, str]:
+    """Navigate, wait for JS, accept cookies, scroll.
+    exhaustive=True  : full infinite-scroll + click every 'load more' (single-page sites).
+    exhaustive=False : light scroll only (for explicitly paginated sites)."""
     try:
         page.goto(url, timeout=45000, wait_until="domcontentloaded")
     except Exception as e:
         print(f"   [WARN] goto {url}: {e}")
         return "", ""
     try:
-        page.wait_for_load_state("networkidle", timeout=18000)
+        page.wait_for_load_state("networkidle", timeout=15000)
     except PWTimeout:
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(2500)
     accept_cookies(page)
 
-    # Infinite scroll until the page stops growing
-    last_h = 0
-    for _ in range(30):
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        page.wait_for_timeout(850)
-        try:
-            h = page.evaluate("document.body.scrollHeight")
-        except Exception:
-            break
-        if h == last_h:
-            break
-        last_h = h
-
-    # Click any "load more" buttons, then scroll again
-    if click_load_more(page):
-        for _ in range(12):
+    if exhaustive:
+        # Infinite scroll until the page stops growing
+        last_h = 0
+        for _ in range(30):
             page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            page.wait_for_timeout(700)
+            page.wait_for_timeout(850)
+            try:
+                h = page.evaluate("document.body.scrollHeight")
+            except Exception:
+                break
+            if h == last_h:
+                break
+            last_h = h
+        if click_load_more(page):
+            for _ in range(12):
+                page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                page.wait_for_timeout(700)
+    else:
+        for _ in range(5):
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            page.wait_for_timeout(550)
 
     page.evaluate("window.scrollTo(0, 0)")
-    page.wait_for_timeout(400)
+    page.wait_for_timeout(300)
     try:
         return page.content(), page.title()
     except Exception:
@@ -739,9 +744,9 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
 # ── Paginated HTML scraper (CdF, EHESS, ENS, Sciences Po, Sorbonne) ───────────
 
 def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="institution"):
-    """Scrape paginated agendas. agenda_urls = [(base_url, location, site_base), ...].
-    Loops ?page=N until 2 consecutive pages yield no new events."""
-    print(f"→ {name} (paginated, up to {max_pages} pages/url)...")
+    """Scrape paginated agendas, trying BOTH ?page=N and /page/N/ URL styles
+    (different CMS use different pagination). agenda_urls = [(url, loc, base), ...]."""
+    print(f"→ {name} (paginated)...")
     all_events, seen = [], set()
     captured = []
 
@@ -753,32 +758,47 @@ def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="inst
     page = ctx.new_page()
     page.on("response", lambda r: capture_json(r, captured))
 
+    def harvest(url, location, site_base, label):
+        """Load a page, extract NEW events, return their count (None on error page)."""
+        html, title = load_page(page, url, exhaustive=False)
+        if is_error_page(title, html):
+            return None
+        evs = extract_events_universal(html, name, location, site_base)
+        new = 0
+        for e in evs:
+            k = (e["title"][:50].lower(), e["date"])
+            if k not in seen:
+                seen.add(k)
+                all_events.append(e)
+                new += 1
+        print(f"   {label}: {new} new / {len(evs)} found (html={len(html)})")
+        return new
+
     for base_url, location, site_base in agenda_urls:
-        empty_streak = 0
-        for page_num in range(0, max_pages):
-            sep = "&" if "?" in base_url else "?"
-            url = base_url if page_num == 0 else f"{base_url}{sep}page={page_num}"
-            html, title = load_page(page, url)
-            if is_error_page(title, html):
-                print(f"   page {page_num}: ERROR PAGE ('{title[:40]}') — stop this url")
+        # Page 1 = bare URL
+        if harvest(base_url, location, site_base, "page 1") is None:
+            continue
+        sep = "&" if "?" in base_url else "?"
+
+        # Style A: ?page=N
+        empty = 0
+        for n in range(1, max_pages):
+            r = harvest(f"{base_url}{sep}page={n}", location, site_base, f"?page={n}")
+            if r is None:
+                break
+            empty = 0 if r else empty + 1
+            if empty >= 2:
                 break
 
-            page_events = extract_events_universal(html, name, location, site_base)
-            new = []
-            for e in page_events:
-                key = (e["title"][:50].lower(), e["date"])
-                if key not in seen:
-                    seen.add(key)
-                    new.append(e)
-            print(f"   page {page_num}: {len(new)} new / {len(page_events)} found  (html={len(html)})")
-
-            if not new:
-                empty_streak += 1
-                if empty_streak >= 2:
-                    break
-            else:
-                empty_streak = 0
-                all_events.extend(new)
+        # Style B: /page/N/  (WordPress-style)
+        empty = 0
+        for n in range(2, max_pages):
+            r = harvest(f"{base_url.rstrip('/')}/page/{n}/", location, site_base, f"/page/{n}/")
+            if r is None:
+                break
+            empty = 0 if r else empty + 1
+            if empty >= 2:
+                break
 
     ctx.close()
 
@@ -898,12 +918,12 @@ def scrape_sciences_po(browser):
 
 
 def scrape_sorbonne(browser):
-    """Sorbonne — captured JSON API + HTML cards + universal extractor."""
-    print("→ Sorbonne Université...")
+    """Dedicated Sorbonne parser — events are .thumbnail[role=article] cards,
+    paginated with ?page=N (Drupal style)."""
+    print("→ Sorbonne Université (dedicated parser)...")
     events, seen = [], set()
     BASE = "https://www.sorbonne-universite.fr"
     LOC = "Sorbonne Université, Paris"
-    captured = []
 
     ctx = browser.new_context(
         user_agent=HEADERS["User-Agent"], locale="fr-FR",
@@ -911,52 +931,57 @@ def scrape_sorbonne(browser):
         extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
     )
     page = ctx.new_page()
-    page.on("response", lambda r: capture_json(r, captured))
-    html, _ = load_page(page, "https://www.sorbonne-universite.fr/evenements")
-    ctx.close()
+    sample_dumped = False
 
-    soup = BeautifulSoup(html, "lxml")
+    for page_num in range(0, 12):
+        url = ("https://www.sorbonne-universite.fr/evenements" if page_num == 0
+               else f"https://www.sorbonne-universite.fr/evenements?page={page_num}")
+        html, title = load_page(page, url, exhaustive=False)
+        if is_error_page(title, html):
+            break
+        soup = BeautifulSoup(html, "lxml")
+        cards = soup.select("div.thumbnail[role='article'], div.thumbnail")
 
-    # 1) captured JSON API
-    for _url, body in captured:
-        for e in extract_events_deep_json(body, "Sorbonne Université", "institution", BASE):
-            key = (e["title"][:60].lower(), e["date"])
-            if key not in seen:
-                seen.add(key)
-                events.append(e)
-    print(f"   captured {len(captured)} JSON responses → {len(events)} events from JSON")
+        # Dump one card (without <img>, which would bury the structure)
+        if not sample_dumped and cards:
+            s = BeautifulSoup(str(cards[0]), "lxml")
+            for img in s.find_all("img"):
+                img.decompose()
+            print(f"   [SAMPLE] {clean_text(str(s))[:900]}")
+            sample_dumped = True
 
-    # 2) HTML cards (Bootstrap columns with a French date in the text)
-    cards = soup.select(".col-lg-4, .col-md-6, .col-12, [class*='card' i]")
-    print(f"   {len(cards)} candidate columns")
-    sample = next((c for c in cards if c.select_one(".thumbnail, .img-cover, img")), None)
-    if sample:
-        print(f"   [SAMPLE EVENT CARD] {clean_text(str(sample))[:1000]}")
-    for card in cards:
-        d = parse_french_date_text(card.get_text(" ", strip=True))
-        if not d or not in_window(d):
-            continue
-        title_el = card.find(["h2", "h3", "h4", "h5"])
-        title = clean_text(title_el.get_text()) if title_el else ""
-        if not title:
-            a = card.find("a", href=True)
-            title = clean_text(a.get_text()) if a else ""
-        if not title or is_junk_title(title):
-            continue
-        href = _best_link(card, title_el)
-        key = (title[:60].lower(), d.isoformat())
-        if key not in seen:
+        page_new = 0
+        for card in cards:
+            link = card.find("a", href=True)
+            href = link.get("href", "") if link else ""
+            title_el = card.find(["h2", "h3", "h4", "h5"])
+            if not title_el:
+                title_el = card.select_one("[class*='title' i], [class*='titre' i]")
+            t = clean_text(title_el.get_text()) if title_el else ""
+            if not t and link:
+                t = clean_text(link.get_text())
+            if not t or is_junk_title(t):
+                continue
+            # Date: free text, then any date-ish element
+            d = parse_french_date_text(card.get_text(" ", strip=True))
+            if not d:
+                de = card.select_one("time, [class*='date' i], [class*='jour' i]")
+                if de:
+                    d = parse_date(de.get("datetime") or de.get_text())
+            if not d or not in_window(d):
+                continue
+            key = (t[:60].lower(), d.isoformat())
+            if key in seen:
+                continue
             seen.add(key)
-            events.append(new_event("Sorbonne Université", title, d,
+            page_new += 1
+            events.append(new_event("Sorbonne Université", t, d,
                                     location=LOC, url=make_absolute(href, BASE)))
+        print(f"   page {page_num}: {page_new} new ({len(cards)} cards)")
+        if page_num > 0 and page_new == 0:
+            break
 
-    # 3) universal extractor fallback
-    for e in extract_events_universal(html, "Sorbonne Université", LOC, BASE):
-        key = (e["title"][:60].lower(), e["date"])
-        if key not in seen:
-            seen.add(key)
-            events.append(e)
-
+    ctx.close()
     print(f"   ✓ Total Sorbonne: {len(events)} events")
     return events
 
