@@ -112,54 +112,6 @@
     "lng": 2.3379
   },
   {
-    "id": "d067b142940b",
-    "title": "Rechercher par :",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-05-20",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/?page=0",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
-    "id": "e0ef0dede627",
-    "title": "En route vers un cerveau en bonne santé : les clés de la prévention",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-05-20",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/agenda/en-route-vers-un-cerveau-en-bonne-sante-les-cles-de-la-prevention",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
-    "id": "6cb2bae039ba",
-    "title": "Concert Orchestre & Choeur PSL : \"Songs of Peace & Hope\"",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-05-20",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/agenda/concert-orchestre-choeur-psl-songs-peace-hope",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
     "id": "e29c473807ce",
     "title": "L’effet Hall quantique fractionnaire",
     "institution": "Collège de France",
@@ -683,7 +635,9 @@
     "description": "Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) Black holes with sufficiently large initial charge and mass will Hawking-evaporate towards the extremal limit. The emission slows as the temperature approaches zero, but still reaches the point where a single Hawking quantum would make the object superextremal, removing the horizon. We take this semiclassical prediction at face value and",
     "url": "https://indico.math.cnrs.fr/event/16579/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "9a0d0f19e907",
@@ -798,20 +752,6 @@
     "lng": 2.3379
   },
   {
-    "id": "53d021c465a9",
-    "title": "Board Games Night | Think Together",
-    "institution": "Emmanuel Orozco",
-    "discipline": "Autre",
-    "date": "2026-05-20",
-    "time": "17:00",
-    "end_time": "",
-    "location": "Bistrot Lucien, 8 Rue Lucien Sampaix 8-10, 75010 Paris, France",
-    "description": "",
-    "url": "https://lu.ma/9pw9dt5c",
-    "speaker": "",
-    "source_type": "luma"
-  },
-  {
     "id": "a92318a88bd0",
     "title": "La situation économique actuelle en France",
     "institution": "Paris School of Economics",
@@ -855,23 +795,9 @@
     "description": "Title: Quid of symbolic dynamics Abstract: This talk aims to give a broad answer to a question that you have probably seen yourself asking if you have run into a Chilean mathematician in the last couple of months: \"What are symbolic dynamics exactly?\" More specifically, we will define the usual framework around symbolic spaces, state some cool properties that make them special, and have a brief ov",
     "url": "https://indico.math.cnrs.fr/event/16588/",
     "speaker": "",
-    "source_type": "institution"
-  },
-  {
-    "id": "b3904518bc22",
-    "title": "Sixteen Film Institute Live Screening Series",
-    "institution": "Xavier Encinas",
-    "discipline": "Arts & Culture",
-    "date": "2026-05-20",
-    "time": "18:00",
-    "end_time": "",
-    "location": "27 Rue Notre Dame de Nazareth, 75003 Paris, France",
-    "description": "",
-    "url": "https://lu.ma/1sl3f37q",
-    "speaker": "",
-    "source_type": "luma",
-    "lat": 48.867288,
-    "lng": 2.359051
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "411e4685889b",
@@ -1114,6 +1040,22 @@
     "lng": 2.3379
   },
   {
+    "id": "e86aea8e6a3f",
+    "title": "Rechercher par :",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-05-21",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/?page=0",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
     "id": "5fd40638abb1",
     "title": "Soirée « Bazar numérique : live coding et art numérique hors norme »",
     "institution": "Université PSL",
@@ -1349,7 +1291,9 @@
     "description": "Speaker: Lisa Gaedke Merzhauser from KAUST Title: Recent Developments in the INLAverse: Bayesian Inference for Latent Gaussian Models Abstract: The methodology of integrated nested Laplace approximations (INLA) offers fast and accurate Bayesian inference for the class of latent Gaussian models. In this talk, I will give a brief overview of INLA and its applicable model class, before diving into so",
     "url": "https://indico.math.cnrs.fr/event/16202/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "8e0984bc83f0",
@@ -1379,7 +1323,9 @@
     "description": "Un problème de Talagrand demande si tout ensemble étoilé et symétrique A ⊂ R^n de « grande taille » contient, après un nombre fini d’additions de Minkowski, un ensemble convexe K ⊂ A + A + ··· + A lui-même de grande taille. Nous présenterons l’article \"On Creating Convexity in High Dimensions\" de Johnston, dans lequel une réponse négative à une version forte de ce problème est démontrée.",
     "url": "https://indico.math.cnrs.fr/event/14915/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "c9884e517a59",
@@ -1393,7 +1339,9 @@
     "description": "In this talk, we consider multiple zeta values, which are periods of unramified mixed Tate motives. For a given multiple zeta value ζ, there exists a unique minimal motive so that ζ is a period of this motive. In general, this motive is very difficult to compute. In the specific case of double zeta values, we can compute such a minimal motive. It is done by exploiting the Tannakian formalism. We w",
     "url": "https://indico.math.cnrs.fr/event/16521/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "8c1ffa17e147",
@@ -1407,7 +1355,9 @@
     "description": "In this talk, I will present our recent work on scattering of two boson stars by taking into account three effects: point-mass gravitational, tidal, and short-range scalar-field interactions. We first derive the analytical expressions of the scattering angle using PM-EFT techniques, providing the first analytical treatment of boson stars as a two-body problem. We then compare analytic results to t",
     "url": "https://indico.math.cnrs.fr/event/16434/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "488e8c6dd6cd",
@@ -1438,8 +1388,8 @@
     "url": "https://indico.math.cnrs.fr/event/16535/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.85889,
-    "lng": 2.320041
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "21d489d62ba1",
@@ -1453,7 +1403,9 @@
     "description": "Stokes waves are water waves of permanent form traveling with constant speed. Their dynamics is modeled by the Euler water wave equations, written down well over 200 years ago. Although the existence of these waves has been established for over a century, the study of their stability is far more recent. I will review analytical results on the dynamics of waves of small amplitude, as well as numeri",
     "url": "https://indico.math.cnrs.fr/event/16545/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "03ebeeffe70b",
@@ -1497,9 +1449,7 @@
     "description": "",
     "url": "https://lu.ma/sk5de3cn",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "8c0631607a40",
@@ -1748,8 +1698,8 @@
     "url": "https://indico.math.cnrs.fr/event/16524/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.852242,
-    "lng": 2.337552
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "1f1aa8f40866",
@@ -1779,7 +1729,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15462/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "156b18f660fc",
@@ -1793,7 +1745,9 @@
     "description": "Après une introduction générale aux groupes d'Artin à angles droits et à quelques outils de théorie géométrique des groupes, j'expliquerai comment exploiter des phénomènes de courbure négative pour caractériser géométriquement quand un groupe d'Artin à angles droits contient (ou non) un produit de groupes libres.",
     "url": "https://indico.math.cnrs.fr/event/15961/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "965c4e50de5e",
@@ -1807,7 +1761,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16432/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "69be9a29bae6",
@@ -1821,7 +1777,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14752/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "12dbc0368ec9",
@@ -1835,7 +1793,9 @@
     "description": "Séminaire d'Analyse Invariant manifold theory is a fundamental tool in the study of local dynamics near invariant structures in smooth evolution systems. It ensures the existence of nonlinearly invariant structures from linear ones. The theory has been well developed for diffeomorphisms, ODEs, semilinear PDEs, and some quasilinear parabolic PDEs. However, it becomes subtle for quasilinear or more ",
     "url": "https://indico.math.cnrs.fr/event/16595/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "fe7bb9b448d2",
@@ -1865,9 +1825,7 @@
     "description": "",
     "url": "https://lu.ma/a0veutt7",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "e90c68e432c8",
@@ -1959,9 +1917,7 @@
     "description": "",
     "url": "https://lu.ma/vfese35b",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "6e1a31050993",
@@ -1975,7 +1931,9 @@
     "description": "Based on the foundational works of Joseph Fels Ritt and Ellis Robert Kolchin, differential algebra has evolved into an extremely rich subject during the last two decades. Differential Algebra and Related Topics (DART) is a series of workshops which offer an opportunity for participants to present original research, to learn of research progress and new developments, and to exchange ideas and views",
     "url": "https://indico.math.cnrs.fr/event/16273/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "5cf1bc9ca1e8",
@@ -2197,7 +2155,9 @@
     "description": "Présentation Cette journée a pour but de rassembler les différents membres des laboratoires de la Fédération de Recherche Mathématique des Hauts-de-France travaillant sur les thèmes de l'analyse théorique et numérique des EDP autour de 4 exposés scientifiques. Pour cette édition du printemps 2026, l'évènement est organisé à Amiens par le LAMFA . Orateurs et oratrices Virginie Ehrlacher (CERMICS, É",
     "url": "https://indico.math.cnrs.fr/event/16052/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "2b0c2aff145a",
@@ -2291,7 +2251,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16419/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "967f420a011f",
@@ -2369,7 +2331,9 @@
     "description": "This is an in-person event of the consortium CIROQUO. It will take place at Institut de Mathématiques de Toulouse from May 26 (afternoon) to May 27 (morning). Registration is now possible until the 22th of April. We are looking forward to seeing you at Toulouse!",
     "url": "https://indico.math.cnrs.fr/event/16350/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "2ca5249360b0",
@@ -2383,7 +2347,9 @@
     "description": "Nonlinear dispersive equations are partial differential equations to describe various wave phenomena where the primary effects are wave dispersion and nonlinear interactions. Even a single equation can have many different types of solutions depending on the initial data, such as scattering, blow-up, and solitons. The theme of this course is to classify global behavior of solutions in terms of the ",
     "url": "https://indico.math.cnrs.fr/event/15176/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "796ab47a9666",
@@ -2413,7 +2379,9 @@
     "description": "My talk is motivated by the problem of sampling from a posterior distribution in Bayesian estimation, particularly when the posterior concentrates as the number of observations increases. In this context, I will present the Laplace approximation—a classical method for approximating concentrated posterior distributions. We will examine its application in the setting of log-concave measures, and the",
     "url": "https://indico.math.cnrs.fr/event/16607/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "36fc88158098",
@@ -2459,7 +2427,9 @@
     "description": "For this meeting we will have two speakers : Zikun Ouyang (Université Paris Dauphine) and Aikaterini Gkogkou (Tulane University).",
     "url": "https://indico.math.cnrs.fr/event/15901/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "51d315417d3c",
@@ -2473,9 +2443,7 @@
     "description": "",
     "url": "https://lu.ma/v5bg999h",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "4a06dc79d86c",
@@ -2633,7 +2601,9 @@
     "description": "La Fédération Occitane de recherche Mathématique organise ses journées annuelles du 27 au 29 mai 2026 à l'IMAG. Le 27 mai sera l'occasion de trois interventions par des invités de la fédération : F. Bonaldi (LAMPS) P. Calka (LMRS) D. Jordan (Hodge Institute) Les 28-29 mai seront dédiés à un tour d'horizon des activités scientifiques de la fédération sur la thématique \"statistique et optimisation\".",
     "url": "https://indico.math.cnrs.fr/event/15810/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "92f54a650462",
@@ -2695,7 +2665,9 @@
     "description": "Seed Seminar of Mathematics and Physics Spring '26: TQFT and Knot Theory Non-rational 2d CFTs are defined as unitary CFTs with c > 1, a normalizable vacuum, a discrete spectrum, a modular invariant torus partition function, and no conserved currents beside those of the Virasoro identity module. Perturbative results and lattice simulations suggest that a large class of these non-rational CFTs can b",
     "url": "https://indico.math.cnrs.fr/event/16321/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "03490e17ceac",
@@ -2709,7 +2681,9 @@
     "description": "Seed Seminar of Mathematics and Physics Spring '26: TQFT and Knot Theory Coloured Jones and Alexander polynomials are quantum invariants originating in representation theory and their geometric information is an important open problem in quantum topology. We present a new topological perspective that unifies these invariants through the topology of configuration spaces. First, for a fixed N, we de",
     "url": "https://indico.math.cnrs.fr/event/16322/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "f69ae11e714a",
@@ -2771,7 +2745,9 @@
     "description": "Ces journées visent à réunir les chercheurs en approximation diophantienne pour échanger des idées et collaborer sur une gamme de sujets et de problèmes du domaine. Les exposés seront en français. Cette deuxième édition est également l'occasion de marquer les 55 ans de Yann Bugeaud. La volonté est de créer un rassemblement annuel de la communauté diophantienne francophone, alternativement à Lyon e",
     "url": "https://indico.math.cnrs.fr/event/16092/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "958bfbb154e1",
@@ -2785,7 +2761,9 @@
     "description": "Nonlinear dispersive equations are partial differential equations to describe various wave phenomena where the primary effects are wave dispersion and nonlinear interactions. Even a single equation can have many different types of solutions depending on the initial data, such as scattering, blow-up, and solitons. The theme of this course is to classify global behavior of solutions in terms of the ",
     "url": "https://indico.math.cnrs.fr/event/15177/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "54ff35473c7c",
@@ -2845,9 +2823,7 @@
     "description": "",
     "url": "https://lu.ma/zrhaun3l",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "79a837ccb3f6",
@@ -2914,6 +2890,20 @@
     "lng": 2.327
   },
   {
+    "id": "744d67954882",
+    "title": "KLIMB Kafé - Morning Masterclass - Scaling your brand in the AI era",
+    "institution": "Michael Saifoudine",
+    "discipline": "Autre",
+    "date": "2026-05-28",
+    "time": "07:30",
+    "end_time": "",
+    "location": "Terrah | Coffee Shop & Torréfacteur, 26 Rue Oberkampf, 75011 Paris, France",
+    "description": "",
+    "url": "https://lu.ma/sqkkt40z",
+    "speaker": "",
+    "source_type": "luma"
+  },
+  {
     "id": "969ec5300e40",
     "title": "La Terre, une planète dynamique : un hommage à Xavier Le Pichon",
     "institution": "Collège de France",
@@ -2941,7 +2931,9 @@
     "description": "The goal of this conference is to advance the dialogue and interactions between the LLM community and the larger world of mathematics in order to further the mathematical understanding of LLMs and contribute to solving some of the outstanding problems in the new field of LLMs. In particular we intend to investigate mathematical structures that can be used to understand LLMs in terms of what they i",
     "url": "https://indico.math.cnrs.fr/event/16396/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "39704f058e6c",
@@ -2971,7 +2963,9 @@
     "description": "A framed polytope is the convex closure of a finite set of points in ℝⁿ together with an ordered linear basis. An n-category is a category that is enriched in the category of (n-1)-categories. Although these concepts may initially appear to be distant peaks in the mathematical landscape, there exists a trail connecting them, blazed in the 90's by Kapranov and Voevodsky. We will traverse this path,",
     "url": "https://indico.math.cnrs.fr/event/16556/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "01734f969e13",
@@ -3001,7 +2995,9 @@
     "description": "Nonlinear dispersive equations are partial differential equations to describe various wave phenomena where the primary effects are wave dispersion and nonlinear interactions. Even a single equation can have many different types of solutions depending on the initial data, such as scattering, blow-up, and solitons. The theme of this course is to classify global behavior of solutions in terms of the ",
     "url": "https://indico.math.cnrs.fr/event/15178/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "526acc1af2ac",
@@ -3015,7 +3011,9 @@
     "description": "The Central Limit Theorem (CLT) is one of the most well-known results in probability theory. It is traditionally stated for independent and identically distributed random variables. In this talk, I will present a version of the Central Limit Theorem where we only keep the independence assumption. This generalization allows us to handle heterogeneous frameworks in statistics. I will then establish ",
     "url": "https://indico.math.cnrs.fr/event/16344/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "4ab280a5271e",
@@ -3029,7 +3027,9 @@
     "description": "Higher-spin conserved currents and charges feature prominently in integrable 2d QFTs in flat space. Motivated by the question of integrable field theories in curved space and by results of the conformal bootstrap, we will consider the consequences of higher-spin currents for QFTs in AdS2. Namely, we will show that their presence is much more constraining than in flat space in particular proving th",
     "url": "https://indico.math.cnrs.fr/event/16229/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "fdf4233e9980",
@@ -3076,8 +3076,8 @@
     "url": "https://indico.math.cnrs.fr/event/16536/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.85889,
-    "lng": 2.320041
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "b8ebca8b86da",
@@ -3123,9 +3123,7 @@
     "description": "",
     "url": "https://lu.ma/c7vonwwb",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "0bac75bd8070",
@@ -3140,8 +3138,8 @@
     "url": "https://indico.math.cnrs.fr/event/16537/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.85889,
-    "lng": 2.320041
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "39f751074061",
@@ -3252,22 +3250,6 @@
     "lng": 2.3382
   },
   {
-    "id": "a306ed2d0876",
-    "title": "Rechercher par :",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-05-29",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/?page=0",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
     "id": "0a699c9005e5",
     "title": "Spiritualité maya, nouvelle ancestralité et sites archéologiques (Guatemala)",
     "institution": "Université PSL",
@@ -3278,6 +3260,38 @@
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
     "url": "https://psl.eu/agenda/spiritualite-maya-nouvelle-ancestralite-et-sites-archeologiques-guatemala",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "b2b7bd83c1dd",
+    "title": "Actualité de l’anthropologie sur les mutations des mondes contemporains",
+    "institution": "Université PSL",
+    "discipline": "Sociologie & Anthropologie",
+    "date": "2026-05-29",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/actualite-de-lanthropologie-sur-les-mutations-des-mondes-contemporains",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "a306ed2d0876",
+    "title": "Rechercher par :",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-05-29",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/?page=0",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
@@ -3407,7 +3421,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15463/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "c8286360ce3f",
@@ -3438,8 +3454,8 @@
     "url": "https://indico.math.cnrs.fr/event/16248/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.852242,
-    "lng": 2.337552
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "946c821fd25f",
@@ -3453,7 +3469,9 @@
     "description": "Nonlinear dispersive equations are partial differential equations to describe various wave phenomena where the primary effects are wave dispersion and nonlinear interactions. Even a single equation can have many different types of solutions depending on the initial data, such as scattering, blow-up, and solitons. The theme of this course is to classify global behavior of solutions in terms of the ",
     "url": "https://indico.math.cnrs.fr/event/15179/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "4cac78068981",
@@ -3467,7 +3485,9 @@
     "description": "We will show how to recover the construction of Deligne-Lustig representations by considering the trace of Frobenius on categorical G- representations. We will give a streamlined proof of the fact that the Deligne-Lustig functor does not depend on the choice of a parabolic *at the level of characters*. This is a joint work with N. Rozenblyum and Y. Varshavsky.",
     "url": "https://indico.math.cnrs.fr/event/15812/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "3f3f363c0899",
@@ -3497,9 +3517,7 @@
     "description": "",
     "url": "https://lu.ma/l0y5w4fd",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "6cd66c6c2878",
@@ -3560,6 +3578,22 @@
     "source_type": "institution",
     "lat": 48.8417,
     "lng": 2.3446
+  },
+  {
+    "id": "de32d5302b78",
+    "title": "Culture Run : Gravel Line",
+    "institution": "Culture Run®",
+    "discipline": "Autre",
+    "date": "2026-05-30",
+    "time": "07:30",
+    "end_time": "",
+    "location": "Cathédrale Notre-Dame de Paris, 6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris, France",
+    "description": "",
+    "url": "https://lu.ma/45gg37j4",
+    "speaker": "",
+    "source_type": "luma",
+    "lat": 48.852937,
+    "lng": 2.35005
   },
   {
     "id": "97a97dd3a806",
@@ -3699,7 +3733,9 @@
     "description": "Mathematics Inspired by Physics A Conference in Honor of Yan Soibelman 's Contributions June 1 & 2 2026 at IHES - Marilyn and James Simons Conference Center ; Léon Motchane Amphitheater How to get to IHES Registration is free but compulsory . Yan Soibelman, professor of mathematics at Kansas State University, has made influential contributions at the interface of geometry, algebra, and theoretical",
     "url": "https://indico.math.cnrs.fr/event/16542/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "59119a75d2f3",
@@ -3761,7 +3797,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16063/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "2e1371f7f043",
@@ -3791,7 +3829,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14703/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "6a2be2c95ce3",
@@ -3933,7 +3973,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16456/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "365d96cefff2",
@@ -4043,7 +4085,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16352/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "e0d251763ed7",
@@ -4073,7 +4117,9 @@
     "description": "« Héliopolis, la ville du soleil en égypte » - Une cité plurimillénaire depuis l'époque pharaonique jusqu'à la ville moderne appelée HÉLIOPOLIS. L'histoire de la ville comprend trois grandes périodes : dans l'Egypte ancienne, elle est l’un des grands centres théologiques liés au culte du Soleil ; la tradition chrétienne en fait un lieu de séjour de la Sainte Famille chrétienne lors de la Fuite en ",
     "url": "https://indico.math.cnrs.fr/event/16581/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "cd1f797654ee",
@@ -4485,7 +4531,9 @@
     "description": "[Image Jos Leys ] Journées SL2R Ce colloque tournant réunit périodiquement des mathématiciens spécialisés en théorie des représentations et en analyse harmonique, affiliés aux universités de Strasbourg, Lorraine, Louvain-la-Neuve, Luxembourg et Reims. Historique et souscription à la mailing-list : voir cette page. La session de printemps 2026 se déroulera les 4 et 5 juin au Laboratoire de Mathémat",
     "url": "https://indico.math.cnrs.fr/event/16417/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "7e9f49d4d75c",
@@ -4515,7 +4563,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16345/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "0e3c72d426be",
@@ -4529,7 +4579,9 @@
     "description": "Invariants are essential for classifying mathematical objects up to a group of transformations. This talk will review several constructions of rational invariants where a section to the orbits is an essential ingredient for tractable computations. We will start with a general construction to obtain a generating set for the field of invariants. The output of the algorithm further provides rewrite r",
     "url": "https://indico.math.cnrs.fr/event/16378/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "7f1b01a5ca9c",
@@ -4575,7 +4627,9 @@
     "description": "This talk focuses on symbolic integration of differential forms, with a particular emphasis on historical and modern developments, from Abel’s addition theorems for Abelian integrals to Zeilberger’s creative telescoping for parameterized integrals. It explores closed rational p-forms and provides algorithmic approaches for their integration, extending classical results like Hermite reduction and L",
     "url": "https://indico.math.cnrs.fr/event/16496/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "0bb0c9b4631f",
@@ -4733,7 +4787,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15464/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "c48f7d757f6e",
@@ -4763,7 +4819,9 @@
     "description": "Séminaire d'Analyse Motivated by the phenomenon of duality for interacting particle systems we introduce two classes of Pfaffian kernels describing a number of Pfaffian point processes in the \"bulk\" and at the \"edge\". Using the probabilistic method due to Mark Kac, we prove two Szegő-type asymptotic expansion theorems for the corresponding Fredholm Pfaffians. The idea of the proof is to introduce ",
     "url": "https://indico.math.cnrs.fr/event/16599/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "3361e4ae39f2",
@@ -4777,7 +4835,9 @@
     "description": "Le but de cet exposé est de présenter certaines méthodes mathématiques développées pour l’étude du gaz de Bose, en particulier dans le but d’établir la condensation de Bose-Einstein. Cette dernière correspond à une transition de phase au cours de laquelle une fraction macroscopique des particules occupe un même état quantique. Nous commencerons par décrire le cas du gaz idéal, pour lequel ce phéno",
     "url": "https://indico.math.cnrs.fr/event/16584/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "2c13431264d0",
@@ -4791,7 +4851,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14753/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "f9a847991491",
@@ -4805,7 +4867,9 @@
     "description": "Nous expliquerons l’origine et la signification du seuil 1/4 dans la théorie spectrale des surfaces hyperboliques. Les développements récents sur les surfaces hyperboliques aléatoires, qui feront l'objet de l'exposé de Bram Petri, mettent en évidence le caractère universel de ce seuil dans le cadre probabiliste. Au passage, nous rappellerons la formule des traces de Selberg, qui fournit un lien fo",
     "url": "https://indico.math.cnrs.fr/event/16583/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "96f69f5c8a90",
@@ -4819,7 +4883,9 @@
     "description": "Nous présentons une technique introduite par Anosov et Katok en 1970 permettant de construire des systèmes dynamiques exotiques comme limites de difféomorphismes conjugués à des rotations.",
     "url": "https://indico.math.cnrs.fr/event/16585/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "a63eeffd5570",
@@ -4881,7 +4947,9 @@
     "description": "Soit $d_n$ la densité maximale d'un empilement de sphères dont les centres forment un réseau de l'espace euclidien à $n$ dimensions. On expliquera comment Boáz Klartag a démontré l'inégalité $d_n \\geq c n^2 2^{-n}$ où $c>0$ est une constante universelle. En très grande dimension, même pour des empilements de sphères non nécessairement liés à un réseau, cette nouvelle borne inférieure est un progrè",
     "url": "https://indico.math.cnrs.fr/event/16566/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "20b2621cd0e2",
@@ -4895,7 +4963,9 @@
     "description": "Le but de cet exposé est d'expliquer trois résultats sur la première valeur propre (la note fondamentale) du Laplacien d'une surface hyperbolique aléatoire de grand genre. Les travaux de Huber et Cheng des années 1970 impliquent que, pour toute suite de surfaces fermées dont le genre tend vers l'infini, la limite de la note fondamentale ne peut pas excéder $1/4$, le bas du spectre du plan hyperbol",
     "url": "https://indico.math.cnrs.fr/event/16567/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "9738565df0a6",
@@ -4909,7 +4979,9 @@
     "description": "L’exemple le plus simple d'une dynamique sur une surface sans point périodique est une rotation irrationnelle de l'anneau. On peut alors se demander si tout difféomorphisme sans point périodique est (conjugué à) une rotation. Dans les années 1970, Anosov et Katok ont construit le premier exemple d’une pseudo-rotation (c’est-à-dire un difféomorphisme symplectique sans point périodique) lisse et tra",
     "url": "https://indico.math.cnrs.fr/event/16568/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "98a0dc59f3fb",
@@ -4923,7 +4995,9 @@
     "description": "Les bosons sont un type de particules quantiques dont le comportement collectif possède de remarquables propriétés physiques: condensation de Bose--Einstein, superfluidité... Mathématiquement, ces propriétés sont encore mal comprises si l'on tient compte des interactions entre particules. Par exemple, le fait qu'un système thermodynamique de bosons (c'est-à-dire la limite lorsque $N\\to+\\infty$ de ",
     "url": "https://indico.math.cnrs.fr/event/16569/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "d0d39663d4e7",
@@ -5081,7 +5155,9 @@
     "description": "Le nombre de Skewes est historiquement la plus petite valeur de $x$ telle que l'on ait $\\pi(x) > \\textrm{li}(x)$. Son existence fut démontrée de manière non effective par Littlewood en 1914 et c'est son étudiant Skewes qui fut le premier à en déterminer une borne (gigantesque). Aujourd'hui on sait que celui-ci est certainement de l'ordre de $10^{316}$. Plus généralement dès que l'on étudie des phé",
     "url": "https://indico.math.cnrs.fr/event/14764/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "f6949b8dd645",
@@ -5095,7 +5171,9 @@
     "description": "The goal of this event is to introduce young researchers to the use of machine learning frameworks and automatic differentiation in scientific computing . This one-week program covers the principles of automatic differentiation, JAX , and its modules for scientific computing, along with examples of ML interaction, application-oriented code examples, and hands-on practical sessions. It will take pl",
     "url": "https://indico.math.cnrs.fr/event/15084/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "3377d4cf6b72",
@@ -5109,7 +5187,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15047/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "e2abce90b9a1",
@@ -5123,7 +5203,9 @@
     "description": "Let S be a compact oriented surface with boundary, Γ its fundamental group, and G a simple algebraic group defined over Q such that the symmetric space associated to G ( R ) is Hermitian of tube type. Given a real closed field F and a canonical presentation of Γ , we define for a representation of Γ in G ( F ) an invariant taking values in an ordered abelian group A ( F ), called the refined Toled",
     "url": "https://indico.math.cnrs.fr/event/16444/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "b6da175d2e01",
@@ -5153,7 +5235,9 @@
     "description": "Dans cet exposé, nous étudierons la distribution des grandes valeurs de sommes exponentielles pondérées par les valeurs d’un caractère de Dirichlet. Dans le cas quadratique, ces sommes décrivent les valeurs des polynômes de Fekete sur le cercle unité, en lien avec une conjecture de Montgomery sur leur maximum. Conrey, Granville, Poonen et Soundararajan (2000) avaient obtenu des estimations de la q",
     "url": "https://indico.math.cnrs.fr/event/14777/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "3195d02b6756",
@@ -5167,7 +5251,9 @@
     "description": "Pour $q \\geq 2$ et $n \\in \\mathbb{N}$, on note $s_q(n)$ la somme des chiffres de $n$ écrit en base $q$. Spiegelhofer (2020) a démontré que la suite de Thue-Morse admet un niveau de distribution égal à $1$, améliorant un résultat antérieur de Fouvry et Mauduit (1996). Nous généralisons ce résultat aux suites de la forme $\\left\\{\\exp\\left(2\\pi i \\ell s_q(n)/b\\right)\\right\\}_{n \\in \\mathbb{N}}$ et fo",
     "url": "https://indico.math.cnrs.fr/event/14778/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "e903be4fa72e",
@@ -5181,7 +5267,9 @@
     "description": "Conjugacy classes in rank n affine Coxeter groups have a beautiful and simple geometric description in terms of their natural action on (n-1)-dimensional vector spaces. Moreover, one can locate the conjugating elements and centralizers in the vector space as well. These results allow to characterize the growth of the conjugator length function by geometric investigations.",
     "url": "https://indico.math.cnrs.fr/event/16445/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "65436cd6e55c",
@@ -5291,7 +5379,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14845/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "ac7a9f849c6d",
@@ -5305,7 +5395,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16205/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "75defd25105f",
@@ -5397,7 +5489,9 @@
     "description": "This training course is free and will be given in English by videoconference . This training course is intended for advanced users. The objective of this training is to explain how the PASAPAS procedure works. The algorithm for solving non-linear quasi-static problems is explained in detail as well as how to modify it when necessary. For CEA staff, in addition to this form, please register with yo",
     "url": "https://indico.math.cnrs.fr/event/16075/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "c30770bce272",
@@ -5555,7 +5649,9 @@
     "description": "Séminaire de géométrie arithmétique A longstanding question in the theory of Shimura varieties concerns their perfectoidness at infinite level — a property that would reveal deep connections between étale and coherent cohomology. In this talk, we establish a criterion for perfectoidness via Sen theory, building on a new development of p-adic Hodge theory for general valuation fields that extends T",
     "url": "https://indico.math.cnrs.fr/event/16582/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "7c9ff47a0eb5",
@@ -5569,7 +5665,9 @@
     "description": "Speaker: Constantin T Yiannoutsos from CUNY School of Public Health and Health Policy Title: Abstract: Calendar subscription link for the complete seminar series: https://indico.math.cnrs.fr/category/711/events.ics Program of the Biostatistics seminars: https://indico.math.cnrs.fr/category/711/ Subscribe to the seminar mailing list : https://diff.u-bordeaux.fr/sympa/subscribe/seminaire.biostat.bph",
     "url": "https://indico.math.cnrs.fr/event/16518/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "d962e3f60255",
@@ -5583,7 +5681,9 @@
     "description": "La relation entre les axiomes et les définitions a constitué un tournant décisif dans la transformation contemporaine de la logique, des mathématiques et des sciences, à la suite de la naissance et du développement de l'axiomatique moderne et des changements radicaux dans les définitions des notions fondamentales des mathématiques. La conférence explore la diversité des approches de la pensée axio",
     "url": "https://indico.math.cnrs.fr/event/16573/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "c23fd1d99ba5",
@@ -5597,7 +5697,9 @@
     "description": "In this talk, I will summarize the missing mass problem at galaxy scales, and will explore the possibility that some of the current most salient challenges of galaxy formation might have a fundamental origin, rather than simply indicate a problem in our understanding of the modeling of baryons within the standard Lambda Cold Dark Matter cosmological model. I will therefore explore how alternatives",
     "url": "https://indico.math.cnrs.fr/event/16253/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "87dfcaca608d",
@@ -5643,9 +5745,7 @@
     "description": "",
     "url": "https://lu.ma/0ivqgaik",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "be3d37f159e0",
@@ -5755,7 +5855,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15465/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "ae3cb416122f",
@@ -5769,7 +5871,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15710/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "43d52b447163",
@@ -5813,7 +5917,9 @@
     "description": "Please be aware that this page is distinct from the scientific website of the thematic programme. It is intended to collect the data necessary for the processing of your financial support. Please click on Apply now to enter your personal data and upload the requested documents. Download the AA-Application form and the Declaration of honour to fill and attach to your registration. * As a state fund",
     "url": "https://indico.math.cnrs.fr/event/16306/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "664bbfbf0ba4",
@@ -5827,7 +5933,9 @@
     "description": "Please be aware that this page is distinct from the scientific website of the thematic programme. It is intended to collect the data necessary for the processing of your financial support. Please click on Apply now to enter your personal data and upload the requested documents. Download the AA-Application form and the Declaration of honour to fill and attach to your registration. * As a state fund",
     "url": "https://indico.math.cnrs.fr/event/16427/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "6acdf488180d",
@@ -5873,7 +5981,9 @@
     "description": "The Institut de Mathématiques de Jussieu—Paris Rive Gauche organizes a yearly summer school . In 2026, the topic is Integrable Combinatorics . The field of integrable combinatorics seeks to understand certain universal phenomena through exactly soluble systems or physical models, thanks to properties of algebraic origin, coming in particular from representation theory. This school will give an int",
     "url": "https://indico.math.cnrs.fr/event/14175/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "172830e0d623",
@@ -5888,8 +5998,8 @@
     "url": "https://indico.math.cnrs.fr/event/14714/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "298f87af4d86",
@@ -5904,8 +6014,8 @@
     "url": "https://indico.math.cnrs.fr/event/14721/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "ff4e03368fd2",
@@ -5935,7 +6045,9 @@
     "description": "Le laboratoire MIPA de Nîmes université organise la conférence « Journées Nîmoises d’optimisation de forme » les 15 et 16 juin 2026. La conférence aura lieu sur le site Vauban de l'université. Cette conférence regroupera des spécialistes de l'optimisation de forme et d'autres domaines de l'analyse mathématique. Les intervenants seront : Samuel Amstutz (LMA) Pierre Bousquet (IMT) Nicolas Clozeau (I",
     "url": "https://indico.math.cnrs.fr/event/16465/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "9e5c9ed7d747",
@@ -5965,7 +6077,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14694/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "d09d883a86f3",
@@ -5995,7 +6109,9 @@
     "description": "Cet événement convivial a pour but de rassembler tous les membres du LMAC lors d'une journée d'exposés scientifiques. Deux exposés porteront sur le thème de l'analyse des EDP et deux exposés sur le thème des probabilités ou des statistiques. Le café d'accueil ainsi que les conférences se dérouleront au rez-de-chaussée du bâtiment du Génie Informatique. L'inscription à cet événement est gratuite ma",
     "url": "https://indico.math.cnrs.fr/event/16327/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "cb6b18e761b0",
@@ -6025,7 +6141,9 @@
     "description": "We want to emphasize the use of derived algebraic geometry and operads as tools to make significant progress in two directions: geometric representation theory, and specifically with the aim of constructing and studying cohomological Hall algebras ; topological field theories, via the use of mapping stacks and Simpson shapes. More details here .",
     "url": "https://indico.math.cnrs.fr/event/15829/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "2c1094809b04",
@@ -6039,7 +6157,9 @@
     "description": "We introduce and study V-monotone independence, which can be considered as a combination of two twin models of independence, monotone independence and antimonotone independence, into one model. We investigate the combinatorics of mixed moments of V-monotone independent random variables and prove the central and Poisson limit theorem. We obtain a combinatorial formula for the limit moments and we f",
     "url": "https://indico.math.cnrs.fr/event/16420/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "1c64d4a2e3dc",
@@ -6085,7 +6205,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14486/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "809236adf323",
@@ -6131,7 +6253,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16358/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "d2bb0029b767",
@@ -6146,8 +6270,8 @@
     "url": "https://indico.math.cnrs.fr/event/14971/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.852242,
-    "lng": 2.337552
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "5585b8c039a9",
@@ -6255,9 +6379,7 @@
     "description": "",
     "url": "https://lu.ma/33hvfvh9",
     "speaker": "",
-    "source_type": "luma",
-    "lat": 48.853495,
-    "lng": 2.348391
+    "source_type": "luma"
   },
   {
     "id": "12b23ec4ffca",
@@ -6367,7 +6489,9 @@
     "description": "Speaker: Alice Simon and Annesh Pal from BPH Title (Alice): Leveraging Concepts from Random Forests to Cluster High-Dimensional Data with an Application in Immunology Abstract: Clustering refers to a set of analytical methods aimed at identifying natural group structures within a dataset. By grouping observations according to intrinsic similarities, it serves as a key tool for exploring and segmen",
     "url": "https://indico.math.cnrs.fr/event/16559/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "838ba811a419",
@@ -6381,7 +6505,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14916/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "42fd0297d329",
@@ -6427,7 +6553,9 @@
     "description": "Programme 10h00–10h45 : Keyao Peng. 0 = 1 − 1 = −1 + 1 = 0, de l’arithmétique élémentaire aux skein lasagnes intrinsèques 11h00–11h45 : Jorge Becerra. Catégories module, homologie de factorisation et algèbres de Frobenius 12h00–14h00 : Repas partagé en « L’ancienne Salle du Conseil » de l’UFR Sciences & Techniques 14h00–14h45 : Svetlana Roudenko. Ground states in dispersive equations : existence, ",
     "url": "https://indico.math.cnrs.fr/event/16557/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "46cda4aaec62",
@@ -6458,8 +6586,8 @@
     "url": "https://indico.math.cnrs.fr/event/16525/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.852242,
-    "lng": 2.337552
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "33a373892f20",
@@ -6473,7 +6601,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15466/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "2fcccfe0e2ff",
@@ -6487,7 +6617,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16550/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "594e7046376f",
@@ -6501,7 +6633,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/14754/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "30f08bc7dcf0",
@@ -6531,7 +6665,9 @@
     "description": "TBA",
     "url": "https://indico.math.cnrs.fr/event/16447/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "e58ceb362f48",
@@ -6641,7 +6777,9 @@
     "description": "Journées Complex Flows sur les écoulements granulaires 22-24 juin 2026 Les écoulements granulaires sont présents dans de nombreux domaines de recherche, tels que la chimie, la géophysique, la biologie, l'ingénierie et les mathématiques, mais aussi dans les applications industrielles comme les processus de production pharmaceutique, l'industrie alimentaire, l'ingénierie de la construction. Ils sont",
     "url": "https://indico.math.cnrs.fr/event/16391/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "dfc9142e126d",
@@ -6671,23 +6809,9 @@
     "description": "Cette année, l’ école thématique CNRS « Mathématiques et Philosophie Contemporaines »XIII est articulée autour de trois sessions thématiques composées de cours (1h30 et 30mn de questions), d'exposés de recherche (1h et 30mn de questions) et de table rondes (1h30). S'y ajoute des sessions d’exposés libres en particuliers destinées aux jeunes chercheurs. Les thèmes traités en 2026 sont : La formalis",
     "url": "https://indico.math.cnrs.fr/event/16289/",
     "speaker": "",
-    "source_type": "institution"
-  },
-  {
-    "id": "3da705969df8",
-    "title": "Rechercher par :",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-06-23",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/?page=0",
-    "speaker": "",
     "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "669722970cc5",
@@ -6765,7 +6889,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16488/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "64f3ad5cdfb0",
@@ -6907,7 +7033,9 @@
     "description": "Speaker: Elias Krainski from KAUST Title: Abstract: Calendar subscription link for the complete seminar series: https://indico.math.cnrs.fr/category/711/events.ics Program of the Biostatistics seminars: https://indico.math.cnrs.fr/category/711/ Subscribe to the seminar mailing list : https://diff.u-bordeaux.fr/sympa/subscribe/seminaire.biostat.bph Former e-seminars on our YouTube channel (mostly i",
     "url": "https://indico.math.cnrs.fr/event/16203/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "d12f153f2084",
@@ -6970,8 +7098,8 @@
     "url": "https://indico.math.cnrs.fr/event/16596/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.852242,
-    "lng": 2.337552
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "a97f65416a59",
@@ -6985,7 +7113,9 @@
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15467/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "b81119f43c05",
@@ -7032,8 +7162,8 @@
     "url": "https://indico.math.cnrs.fr/event/15160/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.842875,
-    "lng": 2.346138
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "d18522299451",
@@ -7048,8 +7178,8 @@
     "url": "https://indico.math.cnrs.fr/event/13870/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "3f72cd73de91",
@@ -7063,7 +7193,9 @@
     "description": "Pattern Formation, Energy Landscapes, and Scaling Laws - celebrating Felix Otto as a mentor, collaborator, and mathematician Invited speakers: Peter Bella (TU Dortmund) Antonio De Simone (SISSA Trieste & Sant'Anna) Weinan E (Peking University & Princeton University) Benjamin Gess (TU Berlin & MPI MIS Leipzig) Martin Huesmann (University of Münster) Hans Knüpfer (University of Heidelberg) Lukas Koc",
     "url": "https://indico.math.cnrs.fr/event/13689/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "cf47fcbe1c95",
@@ -7109,7 +7241,9 @@
     "description": "This IHP summer school, consisting in a series of lectures by Andrea Cianchi and Jean Dolbeault , will cover modern techniques concerning the Sobolev and other related inequalities. The first course will focus on reduction principles for Sobolev-type inequalities, based on symmetrization, isoperimetry, interpolation, and rearrangements. The second course will focus on carré du champ techniques, en",
     "url": "https://indico.math.cnrs.fr/event/14954/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "7ff4ad1670ea",
@@ -7123,7 +7257,9 @@
     "description": "Organizing Committee: Daniel Baumann (Amsterdam and National Taiwan Univ.), Daniel Green (UC San Diego), Austin Joyce (Univ. of Chicago), Guilherme Pimentel (SNS Pisa) . Scientific Committee: Eiichiro Komatsu ((Max Planck Inst. for Astrophysics), Marilena LoVerde (Univ. of Washington), Eva Silverstein (Stanford Univ), Raman Sundrum (Univ. of Maryland). The Summer School will be held at the Institu",
     "url": "https://indico.math.cnrs.fr/event/15597/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "4d0d6aec3e65",
@@ -7137,7 +7273,9 @@
     "description": "My works mainly address systems in which the electronic interaction is strong, giving rise to emergent properties. In my talk, I will start by discussing theoretical results we obtained in the context of high-temperature superconductors, such as copper oxides. For large interactions, as we dope the system, it goes from a pseudo-gap phase (where there is loss of spectral weight in regions of the mo",
     "url": "https://indico.math.cnrs.fr/event/16135/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "088fe2dfb078",
@@ -7165,7 +7303,9 @@
     "description": "Description An introduction to quantum machine learning. With cool pictures! With memes! With food! The lecture will cover a basic introduction to quantum neural networks, quantum kernels, and data encoding techniques, with hands-on sessions for each. More advanced topics such as barren plateaus, expressivity, and \"application <-> hardware\" pipelines will be brushed over but not covered in detail.",
     "url": "https://indico.math.cnrs.fr/event/16561/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "c20f5b49d54f",
@@ -7212,8 +7352,8 @@
     "url": "https://indico.math.cnrs.fr/event/16399/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.826355,
-    "lng": 2.345941
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "884c77af766f",
@@ -7227,7 +7367,9 @@
     "description": "The workshop Probability, Ecology & Evolution 2026 will be held in Besançon from 9 to 11 September 2026. The program will feature seven 45-minute talks, two 3-hour minicourses, and a poster session. More information can be found on our website",
     "url": "https://indico.math.cnrs.fr/event/16490/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "710c5157bb0e",
@@ -7289,7 +7431,9 @@
     "description": "Thematic trimester programme with short courses, seminars and workshops September 14th to December 4th, 2026 at the Institut Henri Poincaré, Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the trimester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-intentioned people may be trying to contact some of participants by email or phone to get money and personal detai",
     "url": "https://indico.math.cnrs.fr/event/14373/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "112e8fed8443",
@@ -7303,7 +7447,9 @@
     "description": "Speaker: Aurore Zhe LI from BPH Title: Neural Ordinary Differential Equations enhanced Linear Mixed-effects Models Abstract: Introduction Longitudinal cohort studies generate irregularly spaced, partially missing repeated measurements where outcomes may depend on the full trajectory of time-varying exposures rather than their instantaneous values. Classical linear mixed-effects models (LMMs) can i",
     "url": "https://indico.math.cnrs.fr/event/16572/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "7a957d101954",
@@ -7317,19 +7463,21 @@
     "description": "Description : La formation est une initiation à la création de rapports de recherche reproductibles et dynamiques à l’aide de Rmarkdown et/ou Quarto. Elle permet d’automatiser la génération de documents intégrant code, résultats et interprétation, et facilite la diffusion en ligne des analyses de données biologiques. Objectifs : À la fin de la formation, vous serez capable de : Créer des rapports ",
     "url": "https://indico.math.cnrs.fr/event/15679/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
-    "id": "87b11bc69b89",
-    "title": "Cours du soir - La Nouvelle Vague, un cinéma en liberté",
+    "id": "98cebdfc42ab",
+    "title": "Rechercher par :",
     "institution": "Université PSL",
-    "discipline": "Arts & Culture",
-    "date": "2026-09-22",
+    "discipline": "Autre",
+    "date": "2026-09-23",
     "time": "",
     "end_time": "",
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
-    "url": "https://psl.eu/agenda/cours-du-soir-la-nouvelle-vague-un-cinema-en-liberte",
+    "url": "https://psl.eu/?page=0",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
@@ -7352,22 +7500,6 @@
     "lng": 2.3382
   },
   {
-    "id": "1a74065ab2cb",
-    "title": "Cours du soir - Le patrimoine architectural",
-    "institution": "Université PSL",
-    "discipline": "Histoire",
-    "date": "2026-09-24",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/agenda/cours-du-soir-le-patrimoine-architectural",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
     "id": "e514dbe4eb11",
     "title": "Cours du soir - Les grandes questions de l'astronomie",
     "institution": "Université PSL",
@@ -7378,6 +7510,22 @@
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
     "url": "https://psl.eu/agenda/cours-du-soir-les-grandes-questions-de-lastronomie",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "1a74065ab2cb",
+    "title": "Cours du soir - Le patrimoine architectural",
+    "institution": "Université PSL",
+    "discipline": "Histoire",
+    "date": "2026-09-24",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/cours-du-soir-le-patrimoine-architectural",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
@@ -7395,7 +7543,9 @@
     "description": "Présentation La vingtième Journée des Doctorantes et Doctorants en Mathématiques de la région Hauts-de-France aura lieu le vendredi 25 septembre 2026 à la Cité de la Dentelle et de la Mode, à Calais. L'objectif de cette journée est de permettre une rencontre et des échanges entre les doctorantes et doctorants de la région en présentant l'état d'avancement de leur travail de thèse à l'ensemble des ",
     "url": "https://indico.math.cnrs.fr/event/16167/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "dbffe8fd8b06",
@@ -7426,8 +7576,8 @@
     "url": "https://indico.math.cnrs.fr/event/14375/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "09f781f28de5",
@@ -7441,23 +7591,9 @@
     "description": "The 8 th edition of the \"CATS\" conferences will take place from September 28 th to October 2 nd , 2026 at \"La Vieille Perrotine\" , Île d'Oléron, France CATS 8 will be the occasion to celebrate Gabriele Vezzosi's 60 th birthday, and will be part of the ANR project \" DAG-Arts: Derived algebraic geometry applied to representation theory and singularity of schemes \". Registration is open until Februar",
     "url": "https://indico.math.cnrs.fr/event/15506/",
     "speaker": "",
-    "source_type": "institution"
-  },
-  {
-    "id": "e8f8ff85de3e",
-    "title": "Cours du soir - Une histoire de l'IA (1940-2026)",
-    "institution": "Université PSL",
-    "discipline": "Histoire",
-    "date": "2026-09-29",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026",
-    "speaker": "",
     "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "5757e90308b0",
@@ -7470,6 +7606,22 @@
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
     "url": "https://psl.eu/agenda/cours-du-soir-la-chimie-dans-notre-quotidien",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "e8f8ff85de3e",
+    "title": "Cours du soir - Une histoire de l'IA (1940-2026)",
+    "institution": "Université PSL",
+    "discipline": "Histoire",
+    "date": "2026-09-29",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
@@ -7535,7 +7687,9 @@
     "description": "Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs avancés. L'objectif est d'apprendre à développer dans Cast3M afin d'ajouter de nouvelles fonctionnalités au code (nouveaux opérateurs/directives, nouveaux modèles, ...). Pour le personnel CEA, en plus de ce formulaire, veuillez vous inscrire a",
     "url": "https://indico.math.cnrs.fr/event/16609/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "7ff13a6f605a",
@@ -7565,7 +7719,9 @@
     "description": "Description : La formation s’adresse à des personnes qui ont un niveau initié et veulent approfondir leurs connaissances en statistique. Elle est orientée vers la compréhension des bases de la modélisation par modèles linéaires et modèles linéaires généralisés. Objectifs : A la fin de la formation, vous serez capable de distinguer les différents modèles linéaires généralisés, comprendre les étapes",
     "url": "https://indico.math.cnrs.fr/event/15678/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "8376f3fafe8d",
@@ -7611,7 +7767,9 @@
     "description": "Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene !) . Cette formation s'adresse aux utilisateurs débutants. L'objectif est d'être capable d’utiliser Cast3M pour réaliser des calculs éléments finis en thermo-mécanique, linéaire et non linéaire, stationnaire et transitoire. Pour le personnel CEA, en plus de ce formulaire, veuillez vous in",
     "url": "https://indico.math.cnrs.fr/event/16605/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "555953563876",
@@ -7625,7 +7783,9 @@
     "description": "Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation \"débutants\"). L'objectif est de montrer les opérateurs et procédures de Cast3M utiles pour faire la simulation de la fabrication additive. Pour le personnel CEA, en plus de ce formulaire, veuil",
     "url": "https://indico.math.cnrs.fr/event/16608/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "0856b95d39fe",
@@ -7656,8 +7816,8 @@
     "url": "https://indico.math.cnrs.fr/event/14379/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "23a7a0442d98",
@@ -7719,7 +7879,9 @@
     "description": "Three day meeting in Coimbra to celebrate the relations between Spain - Portugal - France for researchers involved in modeling, numerical analysis and scientific computation. Funded and supported by the International Research Project (IRP) PICASSO , a French CNRS initiative. PICASSO stands for \"hy P erbol IC models, numerical A nalysi S and S cientific c O mputation\", see https://picasso.math.cnrs",
     "url": "https://indico.math.cnrs.fr/event/16008/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "cb98189aee41",
@@ -7733,7 +7895,9 @@
     "description": "Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation \"débutants\"). L'objectif de cette formation est d'acquérir une connaissance approfondie de la procédure de résolution PASAPAS. L'algorithme de résolution de problèmes non linéaires quasi statiq",
     "url": "https://indico.math.cnrs.fr/event/16606/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "3bb77e8a3471",
@@ -7843,7 +8007,9 @@
     "description": "To mark the occasion of the birthday and retirement of Hans-Olav Tylli, we are pleased to announce the conference HOT Topics in Analysis . The meeting takes place 26-27 November 2026 at the University of Helsinki. Registration will open shortly. Speakers Kari Astala (University of Helsinki) Isabelle Chalendar (Université Gustave Eiffel) Eva Gallardo-Gutiérrez ( Universidad Complutense de Madrid) M",
     "url": "https://indico.math.cnrs.fr/event/16258/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "57c4b458316a",
@@ -7874,8 +8040,8 @@
     "url": "https://indico.math.cnrs.fr/event/14380/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "5b486034f38e",
@@ -7921,7 +8087,9 @@
     "description": "This is a thematic trimester programme with short courses, seminars and workshops on Kinetic theory: from long-range interactions to turbulence and quantum simulators. January 18 to April 9, 2027 at the Institut Henri Poincaré, Paris REGISTRATION IS MANDATORY AND FREE IMPORTANT WARNING : Scam / Phishing / SMiShing! Note that ill-intentioned people may be trying to contact some of participants by e",
     "url": "https://indico.math.cnrs.fr/event/15606/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "143dcfdb88cd",
@@ -7936,8 +8104,8 @@
     "url": "https://indico.math.cnrs.fr/event/15144/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.826355,
-    "lng": 2.345941
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "5e1433c43a47",
@@ -7968,8 +8136,8 @@
     "url": "https://indico.math.cnrs.fr/event/15608/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "b64cbb610b1b",
@@ -7984,8 +8152,8 @@
     "url": "https://indico.math.cnrs.fr/event/15609/",
     "speaker": "",
     "source_type": "institution",
-    "lat": 48.844163,
-    "lng": 2.344093
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "12aa42b8176a",
@@ -7999,7 +8167,9 @@
     "description": "Thematic trimester programme with short courses, seminars and workshops April 19th to July 9th, 2027 at the Institut Henri Poincaré, Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the trimester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-intentioned people may be trying to contact some of participants by email or phone to get money and personal details, by p",
     "url": "https://indico.math.cnrs.fr/event/16291/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "3f8c053b21b9",
@@ -8013,6 +8183,8 @@
     "description": "High Dimensional Probability and Analysis, Continuous and Discrete Workshop 1: Convexity and Information Theory May 10 to 14, 2027 - IHP, Paris Aim of the Workshop The aim of this conference is to bring together experts from Information Theory and Convex Geometry. It will also place a strong emphasis on Functional Inequalities and Optimal Transport. Recent works at the intersection of one or more ",
     "url": "https://indico.math.cnrs.fr/event/16296/",
     "speaker": "",
-    "source_type": "institution"
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   }
 ]
