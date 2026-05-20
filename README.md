@@ -1,186 +1,90 @@
-# Conférences Académiques · Paris
+# Conférences académiques à Paris
 
-Un site web qui agrège **toutes les conférences et séminaires académiques de Paris**
-dans un seul calendrier filtrable, mis à jour **automatiquement chaque jour**.
+Un site qui rassemble les conférences et séminaires académiques de Paris sur
+une seule page, mis à jour chaque jour.
 
-🔗 **En ligne :** https://kovarci.github.io/zzzz
-📦 **Dépôt :** https://github.com/kovarci/zzzz
+- Site : https://kovarci.github.io/zzzz
+- Dépôt : https://github.com/kovarci/zzzz
 
----
+## Fonctionnement
 
-## Comment ça marche
+Une GitHub Action s'exécute chaque matin. Elle lance un scraper Python qui
+récupère les événements sur les sites des institutions, écrit
+`data/events.json` et committe le fichier. La page `index.html` lit ce JSON
+et l'affiche.
 
-```
-┌─────────────────┐   chaque jour à 6h    ┌──────────────────┐
-│ GitHub Actions  │ ────────────────────► │  scraper Python  │
-│  (cron gratuit) │                       │  (scrape.py)     │
-└─────────────────┘                       └────────┬─────────┘
-                                                   │ écrit
-                                                   ▼
-                                          ┌──────────────────┐
-┌─────────────────┐    lit le JSON        │ data/events.json │
-│  index.html     │ ◄──────────────────── │  (commit auto)   │
-│ (GitHub Pages)  │                       └──────────────────┘
-└─────────────────┘
-```
+L'hébergement (GitHub Pages) et l'automatisation (GitHub Actions) sont
+gratuits pour un dépôt public.
 
-1. Un **workflow GitHub Actions** se déclenche tout seul chaque matin (`cron`).
-2. Le **scraper Python** visite les sites des institutions et écrit `data/events.json`.
-3. Le bot **commit** le fichier mis à jour.
-4. **GitHub Pages** sert `index.html`, qui lit ce JSON et affiche le calendrier.
+## Sources
 
-Le tout **100 % gratuit** : Pages + Actions sont gratuits pour un dépôt public.
+| Source                    | Méthode                       |
+|---------------------------|-------------------------------|
+| Institut Henri Poincaré   | API Indico                    |
+| Collège de France         | scraping HTML paginé          |
+| Paris School of Economics | scraping HTML paginé          |
+| Université PSL            | scraping HTML paginé          |
+| EHESS                     | parseur dédié                 |
+| Sciences Po               | scraping HTML paginé          |
+| ENS Paris                 | scraping HTML paginé          |
+| Sorbonne Université       | parseur dédié                 |
+| Luma                      | interception des appels JSON  |
 
----
+Le total tourne autour de 500 événements à venir ; le détail par source
+change à chaque scrape.
 
-## ✅ Ce qui a été fait
+## Le site
 
-### Sources agrégées (8 institutions + Luma)
+- Recherche par titre, intervenant ou sujet.
+- Filtres : discipline, institution, date, format (présentiel ou en ligne).
+- Vue liste et vue carte.
+- Favoris, enregistrés dans le navigateur.
+- Ajout à un agenda : Google Agenda ou fichier `.ics` par événement.
+- Flux d'abonnement iCal (`data/calendar.ics`).
+- Les filtres sont conservés dans l'URL, ce qui rend les liens partageables.
+- Installable comme application (PWA) et consultable hors-ligne.
 
-| Source | Événements | Méthode |
-|---|---|---|
-| Institut Henri Poincaré | ~180 | API Indico (JSON), filtrée Paris |
-| Collège de France | ~113 | Scraping HTML paginé |
-| Paris School of Economics | ~95 | Scraping HTML paginé (`/page/N/`) |
-| Université PSL | ~38 | Scraping HTML paginé |
-| EHESS | ~18 | Parseur dédié (`.jnews-event-card`) |
-| Sciences Po | ~16 | Scraping HTML paginé |
-| ENS Paris | ~13 | Scraping HTML paginé |
-| Sorbonne Université | ~7 | Parseur dédié (`.thumbnail`) |
-| Luma | ~37 | Interception JSON + `__NEXT_DATA__`, filtré France |
+## Limites connues
 
-### Le scraper (`scraper/scrape.py`)
-
-- **Playwright** (navigateur sans interface) pour les sites en JavaScript.
-- **Plusieurs stratégies** selon le site : API Indico, interception réseau,
-  JSON-LD, balises `<time datetime>`, attributs `data-*`, texte en français.
-- **Pagination universelle** : essaie `?page=N` *et* `/page/N/`.
-- **Parsing de dates françaises** : « 3 juin 2026 », « 10 Sep. 2026 », « 20/05/26 »…
-- **Classement automatique par discipline** (mots-clés) : Mathématiques,
-  Philosophie, Littérature, Histoire, Sciences, Économie, Sociologie,
-  Droit & Sciences politiques, Arts & Culture.
-- **Filtre Paris** : exclut les événements hors région parisienne.
-- Filtre les événements passés, déduplique.
-
-### Le site (`index.html`)
-
-- Design **glassmorphism** : thème sombre, fond « aurora » animé, cartes en
-  verre translucide, effet **3D au survol** (la carte s'incline + reflet).
-- **Recherche** par titre / intervenant / sujet.
-- **Filtres** : discipline, institution, période (Aujourd'hui · Cette semaine ·
-  Ce week-end), format (en ligne / présentiel).
-- **Onglets** : Tout · Universités · Luma.
-- **Ajouter à mon agenda** : bouton Google Agenda + fichier `.ics`
-  (Apple Calendar / Outlook) sur chaque événement.
-- **Favoris** : une étoile pour sauvegarder des événements (gardés dans le
-  navigateur via `localStorage`).
-- **Carte de Paris** : une vue carte avec les événements en pins, géocodés
-  par adresse (OpenStreetMap / Leaflet, fond sombre). Les lieux sans adresse
-  précise (salles, codes de bâtiment) retombent sur leur institution.
-- **Liens partageables** : les filtres sont encodés dans l'URL — on peut
-  partager une vue précise, ex. `…/zzzz?discipline=Philosophie`.
-- **Finitions** : favicon, aperçu de partage (Open Graph), écran de
-  chargement (cartes scintillantes).
-- **Application installable (PWA)** : installable sur l'écran d'accueil du
-  téléphone ou du bureau, et consultable hors-ligne.
-- **Flux iCal d'abonnement** : un lien unique (`data/calendar.ics`) à ajouter
-  une fois à son agenda — tous les événements s'y synchronisent chaque jour.
-- **Mini tableau de bord** : nombre d'événements aujourd'hui / cette semaine /
-  ce week-end + répartition par discipline.
-- **« Près de moi »** : tri des événements par distance (géolocalisation du
-  navigateur), avec un repère sur la carte.
-- Entièrement **responsive** (mobile/desktop).
-
-### Automatisation
-
-- Scrape quotidien automatique à 6h — **aucun clic nécessaire**.
-- Déclenchement manuel possible (Actions → Run workflow).
-- **Contrôle de santé** : si une source majeure tombe à 0 événement
-  (le site a changé de structure), le workflow échoue et GitHub envoie
-  un e-mail d'alerte.
-
----
-
-## ❌ Ce qui n'a PAS été fait (et pourquoi)
-
-### Limites de couverture
-
-- **Université Paris Dauphine — 0 événement.** Sa page « événements à venir »
-  est construite en **carrousels** sans dates lisibles par une machine.
-  Impossible à parser de façon fiable.
-- **EHESS — ~18 seulement.** Sa page agenda contient ~500 cartes, mais ~480
-  sont des événements **passés** ou des articles. 18 est le vrai nombre
-  d'événements *à venir* sur cette page.
-- **Sorbonne — ~7 seulement.** Sa page `/evenements` est une page **curée**
-  qui n'affiche qu'une quinzaine d'événements au total, pas un agenda complet.
-- **ENS / Sciences Po — ~13-16.** Reflète ce que publient leurs pages
-  d'agenda principales.
-
-### Luma
-
-- **Catégories Luma (tech, ai, arts…) — non récupérables.** Luma géolocalise
-  par **adresse IP**. Le serveur GitHub étant aux États-Unis, ces pages ne
-  renvoient que des événements américains. Contournable uniquement avec un
-  **proxy français payant** — non rentable pour du contenu non-académique.
-- **Événements Luma « non listés » — impossibles.** Par conception, ils
-  n'apparaissent dans aucune API ni recherche : accessibles uniquement avec
-  le lien direct. Personne ne peut les énumérer.
-
-### Fonctionnalités non incluses
-
-- **Pas de vue calendrier** (grille mensuelle) — retirée car illisible avec
-  500+ événements ; la vue liste groupée par jour est plus claire.
-- **Pas de pages de détail** — cliquer un événement ouvre le site source.
-- **Pas de notifications / newsletter.**
-- **Carte** : un événement n'apparaît sur la carte que si son adresse a pu
-  être géocodée ; les lieux vagues (« Salle W », « en ligne ») sont absents.
-- **Classement par discipline approximatif** — basé sur des mots-clés, donc
-  quelques événements peuvent tomber dans « Autre » ou la mauvaise catégorie.
-
----
+- Université Paris Dauphine : aucun événement. Sa page est construite en
+  carrousels, sans dates exploitables par le scraper.
+- EHESS et Sorbonne : peu d'événements. Leurs pages d'agenda sont courtes,
+  ou contiennent surtout des événements passés.
+- Luma : seule la page « Paris » est récupérée. Les pages par thème sont
+  géolocalisées par IP et renvoient des événements américains depuis le
+  serveur GitHub.
+- Le classement par discipline repose sur des mots-clés ; il est approximatif.
+- Un événement n'apparaît sur la carte que si son adresse a pu être géocodée.
 
 ## Utilisation
 
-### Mettre à jour le site
+Le scrape est automatique, tous les jours à 6h. Pour le lancer à la main :
+onglet Actions, puis « Daily Conference Scrape », puis « Run workflow ».
 
-Le scrape est **automatique**. Pour forcer une mise à jour :
-**Actions → Daily Conference Scrape → Run workflow**.
+Pour modifier le site, éditer `index.html` et pousser : GitHub Pages
+redéploie automatiquement.
 
-Modifier le design (`index.html`) : il suffit de pousser le fichier,
-GitHub Pages redéploie tout seul.
+Pour ajouter une source, écrire une fonction dans `scraper/scrape.py` et
+l'ajouter à la liste dans `main()`.
 
-```bash
-git add .
-git commit -m "votre message"
-git push
-```
-
-### Ajouter une source
-
-Dans `scraper/scrape.py` :
-- Site avec pagination classique → ajouter une fonction qui appelle
-  `scrape_paginated(...)`.
-- Site complexe → écrire un parseur dédié (voir `scrape_ehess` / `scrape_sorbonne`).
-- Puis ajouter la fonction à la liste dans `main()`.
-
----
-
-## Structure du projet
+## Structure
 
 ```
-paris-conferences/
-├── index.html               ← Site (design + logique, un seul fichier)
-├── data/
-│   ├── events.json           ← Données (mises à jour par le bot)
-│   └── geocache.json         ← Cache des coordonnées GPS (pour la carte)
-├── scraper/
-│   ├── scrape.py             ← Scraper multi-sources
-│   └── requirements.txt
-└── .github/workflows/
-    └── daily-scrape.yml      ← Tâche cron quotidienne
+index.html              interface et logique du site
+manifest.json, sw.js    configuration de l'application installable
+icon.svg                icône de l'application
+data/
+  events.json           données, régénérées par le scraper
+  geocache.json         cache des coordonnées géographiques
+  calendar.ics          flux d'abonnement
+scraper/
+  scrape.py             scraper
+  check_health.py       contrôle des sources après le scrape
+  requirements.txt
+.github/workflows/
+  daily-scrape.yml      tâche quotidienne
 ```
 
 ## Coût
 
-**0 € / mois.** Dépôt public → GitHub Pages (hébergement) et GitHub Actions
-(scraper quotidien, ~10 min/jour) sont entièrement gratuits et sans limite.
+Aucun. GitHub Pages et GitHub Actions sont gratuits pour un dépôt public.
