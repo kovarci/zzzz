@@ -473,7 +473,7 @@ function reflectUI() {
   document.getElementById("fav-toggle").classList.toggle("active", showFavsOnly);
   document.getElementById("institution-section").style.display = activeSource === "luma" ? "none" : "";
   document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
-  document.getElementById("map-view").style.display  = activeView === "map" ? "" : "none";
+  document.getElementById("map-view").style.display  = activeView === "map" ? "block" : "none";
 }
 
 // ── Date / format helpers ────────────────────────────────────────
@@ -804,7 +804,7 @@ document.querySelectorAll(".view-btn").forEach(btn => {
     btn.classList.add("active");
     activeView = btn.dataset.view;
     document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
-    document.getElementById("map-view").style.display  = activeView === "map" ? "" : "none";
+    document.getElementById("map-view").style.display  = activeView === "map" ? "block" : "none";
     render();
   });
 });
