@@ -98,29 +98,49 @@ def detect_discipline(title: str, description: str = "") -> str:
 # ── French date parser ────────────────────────────────────────────────────────
 
 FRENCH_MONTHS = {
-    "janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4,
-    "mai": 5, "juin": 6, "juillet": 7, "août": 8, "aout": 8,
-    "septembre": 9, "octobre": 10, "novembre": 11, "décembre": 12, "decembre": 12,
+    "janvier": 1, "janv": 1, "jan": 1,
+    "fevrier": 2, "fevr": 2, "fev": 2,
+    "mars": 3, "mar": 3,
+    "avril": 4, "avr": 4,
+    "mai": 5,
+    "juin": 6,
+    "juillet": 7, "juill": 7, "juil": 7,
+    "aout": 8,
+    "septembre": 9, "sept": 9, "sep": 9,
+    "octobre": 10, "oct": 10,
+    "novembre": 11, "nov": 11,
+    "decembre": 12, "dec": 12,
 }
+
+# Regex fragment matching any full OR abbreviated French month (longest first)
+_MONTH_PAT = (r"janvier|janv|jan|f[ée]vrier|f[ée]vr|f[ée]v|mars|avril|avr|mai|"
+              r"juin|juillet|juill|juil|ao[uû]t|septembre|sept|sep|octobre|oct|"
+              r"novembre|nov|d[ée]cembre|d[ée]c")
+
 _FR_DATE_RE = re.compile(
-    r"(\d{1,2})(?:er|ère|ème|e)?\s+"
-    r"(janvier|f[eé]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[eé]cembre)"
-    r"\s+(\d{4})", re.I,
-)
+    r"(\d{1,2})(?:er|ère|ème|e)?\s+(" + _MONTH_PAT + r")\.?\s+(\d{4})", re.I)
+_FR_NOYEAR_RE = re.compile(
+    r"(\d{1,2})(?:er|ère|ème|e)?\s+(" + _MONTH_PAT + r")\b", re.I)
 _ISO_DATE_RE = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b")
 _FR_SLASH_RE = re.compile(r"\b(\d{1,2})[/.](\d{1,2})[/.](\d{2,4})\b")
+
+
+def _month_num(s):
+    """French month name or abbreviation → month number 1-12 (or None)."""
+    k = str(s or "").strip().lower().rstrip(".")
+    k = (k.replace("é", "e").replace("è", "e").replace("ê", "e")
+          .replace("û", "u").replace("ô", "o").replace("à", "a"))
+    return FRENCH_MONTHS.get(k)
 
 
 def parse_french_date_text(text: str):
     """Extract a date object from French text like 'Mardi 3 juin 2026'."""
     m = _FR_DATE_RE.search(text)
     if m:
-        day, month_str, year = m.groups()
-        key = month_str.lower().replace("é", "e").replace("û", "u")
-        month = FRENCH_MONTHS.get(key)
+        month = _month_num(m.group(2))
         if month:
             try:
-                return date(int(year), month, int(day))
+                return date(int(m.group(3)), month, int(m.group(1)))
             except ValueError:
                 pass
     m = _ISO_DATE_RE.search(text)
@@ -139,10 +159,7 @@ def parse_french_date_text(text: str):
         except ValueError:
             pass
     # Last resort: day + month without a year — infer the year
-    m = re.search(
-        r"\b(\d{1,2})(?:er|ère|ème|e)?\s+"
-        r"(janvier|f[eé]vrier|mars|avril|mai|juin|juillet|ao[uû]t|"
-        r"septembre|octobre|novembre|d[eé]cembre)\b", text, re.I)
+    m = _FR_NOYEAR_RE.search(text)
     if m:
         return _day_month_to_date(m.group(1), m.group(2))
     return None
@@ -154,9 +171,7 @@ def _day_month_to_date(day_str, month_str):
     if not dm:
         return None
     day = int(dm.group(0))
-    key = str(month_str or "").strip().lower().rstrip(".")
-    month = FRENCH_MONTHS.get(key) or FRENCH_MONTHS.get(
-        key.replace("é", "e").replace("û", "u").replace("ô", "o"))
+    month = _month_num(month_str)
     if not month:
         return None
     for yr in (TODAY.year, TODAY.year + 1):
@@ -255,8 +270,10 @@ def make_absolute(href: str, base: str) -> str:
     return base.rstrip("/") + "/" + href
 
 
-def in_window(d: date) -> bool:
-    return CUTOFF <= d <= HORIZON
+def in_window(d) -> bool:
+    if isinstance(d, datetime):
+        d = d.date()
+    return d is not None and CUTOFF <= d <= HORIZON
 
 
 def new_event(institution, title, d, time_str="", end_time="", location="",
@@ -400,29 +417,45 @@ def load_page(page, url: str, exhaustive: bool = True) -> tuple[str, str]:
         page.wait_for_timeout(2500)
     accept_cookies(page)
 
+    def _scroll_bottom():
+        try:
+            page.evaluate(
+                "() => { if (document.body) window.scrollTo(0, document.body.scrollHeight); }")
+        except Exception:
+            pass
+
+    def _height():
+        try:
+            return page.evaluate("() => document.body ? document.body.scrollHeight : 0")
+        except Exception:
+            return 0
+
     if exhaustive:
         # Infinite scroll until the page stops growing
         last_h = 0
         for _ in range(30):
-            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            _scroll_bottom()
             page.wait_for_timeout(850)
-            try:
-                h = page.evaluate("document.body.scrollHeight")
-            except Exception:
-                break
-            if h == last_h:
+            h = _height()
+            if h == 0 or h == last_h:
                 break
             last_h = h
-        if click_load_more(page):
-            for _ in range(12):
-                page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-                page.wait_for_timeout(700)
+        try:
+            if click_load_more(page):
+                for _ in range(12):
+                    _scroll_bottom()
+                    page.wait_for_timeout(700)
+        except Exception:
+            pass
     else:
         for _ in range(5):
-            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            _scroll_bottom()
             page.wait_for_timeout(550)
 
-    page.evaluate("window.scrollTo(0, 0)")
+    try:
+        page.evaluate("() => window.scrollTo(0, 0)")
+    except Exception:
+        pass
     page.wait_for_timeout(300)
     try:
         return page.content(), page.title()
@@ -952,24 +985,18 @@ def scrape_sorbonne(browser):
 
         page_new = 0
         for card in cards:
-            link = card.find("a", href=True)
-            href = link.get("href", "") if link else ""
-            title_el = card.find(["h2", "h3", "h4", "h5"])
-            if not title_el:
-                title_el = card.select_one("[class*='title' i], [class*='titre' i]")
+            title_el = card.select_one(".thumbnail__title")
             t = clean_text(title_el.get_text()) if title_el else ""
-            if not t and link:
-                t = clean_text(link.get_text())
             if not t or is_junk_title(t):
                 continue
-            # Date: free text, then any date-ish element
-            d = parse_french_date_text(card.get_text(" ", strip=True))
+            date_el = card.select_one(".thumbnail__date")
+            d = parse_french_date_text(date_el.get_text()) if date_el else None
             if not d:
-                de = card.select_one("time, [class*='date' i], [class*='jour' i]")
-                if de:
-                    d = parse_date(de.get("datetime") or de.get_text())
+                d = parse_french_date_text(card.get_text(" ", strip=True))
             if not d or not in_window(d):
                 continue
+            link = card.select_one(".thumbnail__title a") or card.find("a", href=True)
+            href = link.get("href", "") if link else ""
             key = (t[:60].lower(), d.isoformat())
             if key in seen:
                 continue
