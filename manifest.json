@@ -1,0 +1,21 @@
+{
+  "name": "Paris · Académique — Conférences",
+  "short_name": "Paris·Académique",
+  "description": "Toutes les conférences et séminaires académiques de Paris, mis à jour chaque jour.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07070d",
+  "theme_color": "#07070d",
+  "categories": ["education", "events"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

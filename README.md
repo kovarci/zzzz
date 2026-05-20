@@ -81,6 +81,8 @@ Le tout **100 % gratuit** : Pages + Actions sont gratuits pour un dépôt public
   partager une vue précise, ex. `…/zzzz?discipline=Philosophie`.
 - **Finitions** : favicon, aperçu de partage (Open Graph), écran de
   chargement (cartes scintillantes).
+- **Application installable (PWA)** : installable sur l'écran d'accueil du
+  téléphone ou du bureau, et consultable hors-ligne.
 - **Flux iCal d'abonnement** : un lien unique (`data/calendar.ics`) à ajouter
   une fois à son agenda — tous les événements s'y synchronisent chaque jour.
 - **Mini tableau de bord** : nombre d'événements aujourd'hui / cette semaine /
