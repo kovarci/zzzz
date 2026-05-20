@@ -23,7 +23,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/de-effet-hall-quantique-aux-materiaux-de-moire-topologie-et-geometrie-des-materiaux-quantiques/effet-hall-quantique-fractionnaire",
     "speaker": "Antoine Georges",
     "source_type": "institution"
   },
@@ -37,7 +37,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/p-adic-modules-and-the-p-adic-langlands-program/the-analytic-prismatization",
     "speaker": "Juan Esteban Rodríguez Camargo",
     "source_type": "institution"
   },
@@ -51,7 +51,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/topologie-et-correlations-electroniques-le-graphene-torsade/fractional-chern-insulators-toy-models-moire-and-new-mysteries",
     "speaker": "Nicolas Regnault",
     "source_type": "institution"
   },
@@ -65,7 +65,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/aspects-algebriques-contraction-inonu-wigner",
     "speaker": "Marc Henneaux",
     "source_type": "institution"
   },
@@ -79,7 +79,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/le-corps-du-droit-corpus-iuris-imaginer-le-droit-par-les-metaphores-corporelles-dans-la-litterature/les-lois-de-attraction-alluvions-metaphoriques-dans-le-langage-des-juristes-romains",
     "speaker": "Dario Mantovani",
     "source_type": "institution"
   },
@@ -107,7 +107,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/dire-les-choses-autrement-qu-est-ce-que-la-metaphore/metaphore-sensible-et-metaphore-technique-en-droit-prive",
     "speaker": "Michel Boudot",
     "source_type": "institution"
   },
@@ -121,7 +121,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativistes-de-la-theorie-einstein-et-applications/non-lorentzian-geometry-in-gravity-and-string-theory",
     "speaker": "Niels Obers",
     "source_type": "institution"
   },
@@ -205,21 +205,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu/#",
-    "speaker": "",
-    "source_type": "institution"
-  },
-  {
-    "id": "0c3da85b5dc5",
-    "title": "Séminaire d'études canguilhémiennes 2025-2026",
-    "institution": "ENS Paris",
-    "discipline": "Autre",
-    "date": "2026-05-21",
-    "time": "",
-    "end_time": "",
-    "location": "ENS, 45 rue d'Ulm, Paris 5e",
-    "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/philosophie-des-inegalites-ecologiques/2026-05-21t160000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -233,7 +219,77 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/philosophie-des-inegalites-ecologiques/2026-05-21t160000",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "0c3da85b5dc5",
+    "title": "Séminaire d'études canguilhémiennes 2025-2026",
+    "institution": "ENS Paris",
+    "discipline": "Autre",
+    "date": "2026-05-21",
+    "time": "",
+    "end_time": "",
+    "location": "ENS, 45 rue d'Ulm, Paris 5e",
+    "description": "",
+    "url": "https://www.ens.psl.eu/agenda/seminaire-d-etudes-canguilhemiennes-2025-2026/2026-05-21t160000",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "79b2eea165b5",
+    "title": "Événements",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-05-21",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Accueil > Événements",
+    "url": "https://www.sciencespo.fr/fr/evenements/place-des-soignants-des-usagers-et-des-aidants-dans-les-processus-decisionnaires-focus-sur-la-pair-aidance-en-sante-mentale/",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "34b0a51e5874",
+    "title": "Tous les événements",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-05-21",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Filtrer les événements",
+    "url": "https://www.sciencespo.fr/fr/evenements/place-des-soignants-des-usagers-et-des-aidants-dans-les-processus-decisionnaires-focus-sur-la-pair-aidance-en-sante-mentale/",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "a47e13787111",
+    "title": "Place des soignants, des usagers et des aidants dans les processus décisionnaires : Focus sur la pair-aidance en santé mentale",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-05-21",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Journée d'étude dans le cadre du séminaire « Politiques de santé mentale »",
+    "url": "https://www.sciencespo.fr/fr/evenements/place-des-soignants-des-usagers-et-des-aidants-dans-les-processus-decisionnaires-focus-sur-la-pair-aidance-en-sante-mentale/",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "11480a222a6a",
+    "title": "CANCELLED / ANNULÉ Les Grandes Conférences : Wopke Hoekstra, European Commissioner for Climate, Net Zero and Clean Growth; former Dutch Deputy Prime Minister and Minister of Foreign Affairs; and former Dutch Minister of Finance",
+    "institution": "Sciences Po",
+    "discipline": "Sciences",
+    "date": "2026-05-21",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "",
+    "url": "https://www.sciencespo.fr/fr/evenements/les-grandes-conferences-wopke-hoekstra-european-commissioner-for-climate-net-zero-and-clean-growth-former-dutch-minister-of-foreign-affairs-and-deputy-prime-minister-and-former-dutch-minister-of-finance/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -261,7 +317,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/evolution-des-mecanismes-du-developpement",
     "speaker": "Denis Duboule",
     "source_type": "institution"
   },
@@ -275,7 +331,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/transfert-electronique-ii",
     "speaker": "Louis Fensterbank",
     "source_type": "institution"
   },
@@ -289,7 +345,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/michael-doyle/more-than-just-peace",
     "speaker": "Michael Doyle",
     "source_type": "institution"
   },
@@ -346,20 +402,6 @@
     "location": "Toulouse School of Economics",
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/15383/",
-    "speaker": "",
-    "source_type": "institution"
-  },
-  {
-    "id": "a47e13787111",
-    "title": "Place des soignants, des usagers et des aidants dans les processus décisionnaires : Focus sur la pair-aidance en santé mentale",
-    "institution": "Sciences Po",
-    "discipline": "Autre",
-    "date": "2026-05-21",
-    "time": "12:00",
-    "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
     "speaker": "",
     "source_type": "institution"
   },
@@ -485,7 +527,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/touraj-daryaee/mapping-men-and-empire-the-sacred-topography-of-eransahr",
     "speaker": "Touraj Daryaee",
     "source_type": "institution"
   },
@@ -542,20 +584,6 @@
     "location": "IMB",
     "description": "Stokes waves are water waves of permanent form traveling with constant speed. Their dynamics is modeled by the Euler water wave equations, written down well over 200 years ago. Although the existence of these waves has been established for over a century, the study of their stability is far more recent. I will review analytical results on the dynamics of waves of small amplitude, as well as numeri",
     "url": "https://indico.math.cnrs.fr/event/16545/",
-    "speaker": "",
-    "source_type": "institution"
-  },
-  {
-    "id": "11480a222a6a",
-    "title": "CANCELLED / ANNULÉ Les Grandes Conférences : Wopke Hoekstra, European Commissioner for Climate, Net Zero and Clean Growth; former Dutch Deputy Prime Minister and Minister of Foreign Affairs; and former Dutch Minister of Finance",
-    "institution": "Sciences Po",
-    "discipline": "Sciences",
-    "date": "2026-05-21",
-    "time": "16:00",
-    "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
     "speaker": "",
     "source_type": "institution"
   },
@@ -658,6 +686,20 @@
     "source_type": "luma"
   },
   {
+    "id": "f222a86f0087",
+    "title": "vendredi",
+    "institution": "EHESS",
+    "discipline": "Autre",
+    "date": "2026-05-22",
+    "time": "",
+    "end_time": "",
+    "location": "EHESS, 54 boulevard Raspail, Paris 6e",
+    "description": "vendredi",
+    "url": "https://www.ehess.fr/jcms/187366_JEvent/fr/debats-en-anglais-des-editions-de-l-ehess-avec-robert-darnton",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
     "id": "4d6dfca26929",
     "title": "La jonction Josephson et le double puits de potentiel",
     "institution": "Collège de France",
@@ -667,7 +709,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/la-jonction-josephson-et-le-double-puits-de-potentiel",
     "speaker": "Jean Dalibard",
     "source_type": "institution"
   },
@@ -681,7 +723,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/mean-field-games-and-some-applications/mean-field-games-and-absorption",
     "speaker": "Panagiotis Souganidis",
     "source_type": "institution"
   },
@@ -695,7 +737,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-couples-et-jonctions-josephson/une-horloge-atomes-de-cesium-froids-dans-espace-la-mission-pharaoaces",
     "speaker": "Christophe Salomon",
     "source_type": "institution"
   },
@@ -882,30 +924,16 @@
     "source_type": "institution"
   },
   {
-    "id": "d7d74d0d8bd4",
-    "title": "Événements à la une Voir tout l'agenda scientifique",
-    "institution": "EHESS",
+    "id": "d9efdf982c1d",
+    "title": "Ecole de printemps Inalco - Ecole urbaine",
+    "institution": "Sciences Po",
     "discipline": "Autre",
     "date": "2026-05-26",
     "time": "",
     "end_time": "",
-    "location": "EHESS, 54 boulevard Raspail, Paris 6e",
-    "description": "Filtrer :",
-    "url": "https://www.ehess.fr/jcms/lpa_25567",
-    "speaker": "",
-    "source_type": "institution"
-  },
-  {
-    "id": "d8680e39502d",
-    "title": "Polynésie française : quelle réponse publique face à la consommation et au trafic de drogue ?",
-    "institution": "Sciences Po",
-    "discipline": "Autre",
-    "date": "2026-05-26",
-    "time": "07:00",
-    "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Futurs urbains : Penser et construire la ville résiliente",
+    "url": "https://www.sciencespo.fr/fr/evenements/ecole-de-printemps-inalco-ecole-urbaine/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -915,25 +943,25 @@
     "institution": "Sciences Po",
     "discipline": "Autre",
     "date": "2026-05-26",
-    "time": "07:00",
+    "time": "",
     "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "This international conference, hosted at Princeton University and Sciences Po in May 2026, explores how the French Revolution reshaped—and continues to shape—ideas of the sacred across time and space.",
+    "url": "https://www.sciencespo.fr/fr/evenements/conference-the-french-revolution-and-the-sacred-sciences-po-may-26-27-2026-global-and-contemporary-perspectives-18th-c-present/",
     "speaker": "",
     "source_type": "institution"
   },
   {
-    "id": "d9efdf982c1d",
-    "title": "Ecole de printemps Inalco - Ecole urbaine",
+    "id": "d8680e39502d",
+    "title": "Polynésie française : quelle réponse publique face à la consommation et au trafic de drogue ?",
     "institution": "Sciences Po",
-    "discipline": "Autre",
+    "discipline": "Économie",
     "date": "2026-05-26",
-    "time": "07:00",
+    "time": "",
     "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Débat autour du livre Sous emprises. Méthamphétamine et inégalités sociales en Polynésie Française de Alice Valiergue, Alice Simon et Henri Bergeron aux éditions du Croquant.",
+    "url": "https://www.sciencespo.fr/fr/evenements/polynesie-francaise-quelle-reponse-publique-face-a-la-consommation-et-au-trafic-de-drogue/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -947,7 +975,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/1-documents-en-rapport-avec-la-presence-sassanide-en-asie-centrale-2-le-mythe-historiographique-du/david-bivar-and-the-foundations-of-the-historiographic-myth-of-iranan-mithraism",
     "speaker": "Frantz Grenet",
     "source_type": "institution"
   },
@@ -1003,7 +1031,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/symbioses-du-mutualisme-plantesmicrobes-economie-symbiotique-et-de-la-cooperation",
     "speaker": "Claude Grison",
     "source_type": "institution"
   },
@@ -1036,6 +1064,20 @@
     "source_type": "institution"
   },
   {
+    "id": "a29cff0e87db",
+    "title": "Ginzburg-Landau Revisited: Tangential Anchoring, Bend and Splay.",
+    "institution": "Institut Henri Poincaré",
+    "discipline": "Autre",
+    "date": "2026-05-26",
+    "time": "11:00",
+    "end_time": "12:00",
+    "location": "IHP, 11 rue Pierre et Marie Curie, Paris 5e",
+    "description": "The Ginzburg-Landau energy and its mathematical study, started in the foundational work of Béthuel-Brezis-Hélein, is inspired by superconductivity. The phenomena observed in liquid crystals suggest new questions as well as modifications of the Ginzburg-Landau energy. I will be presenting results on defects in case of tangential boundary conditions and in case we add a divergence or curl penalizati",
+    "url": "https://indico.math.cnrs.fr/event/15805/",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
     "id": "e2ea4c3a4cd7",
     "title": "Shahnaz Shamim Shahul",
     "institution": "Institut Henri Poincaré",
@@ -1059,7 +1101,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/presences-de-foucault/morale",
     "speaker": "Didier Fassin",
     "source_type": "institution"
   },
@@ -1073,7 +1115,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/ecologie-fonctionnelle-pour-comprendre-la-dynamique-des-ecosystemes-dans-un-monde-changeant/vers-une-ecologie-fonctionnelle-des-paysages",
     "speaker": "Sandra Lavorel",
     "source_type": "institution"
   },
@@ -1087,7 +1129,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/presences-de-foucault/politique",
     "speaker": "Didier Fassin",
     "source_type": "institution"
   },
@@ -1157,7 +1199,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/louis-jonker/socio-political-transformation-and-biblical-interpretation-the-case-of-post-apartheid-south-africa",
     "speaker": "Louis Jonker",
     "source_type": "institution"
   },
@@ -1171,7 +1213,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/penser-avec-foucault/une-politique-sans-horizon-est-elle-possible",
     "speaker": "Mathieu Potte-Bonneville",
     "source_type": "institution"
   },
@@ -1218,6 +1260,20 @@
     "source_type": "luma"
   },
   {
+    "id": "480340d28b96",
+    "title": "mercredi",
+    "institution": "EHESS",
+    "discipline": "Autre",
+    "date": "2026-05-27",
+    "time": "",
+    "end_time": "",
+    "location": "EHESS, 54 boulevard Raspail, Paris 6e",
+    "description": "mercredi",
+    "url": "https://www.ehess.fr/jcms/190509_JEvent/fr/journee-d-etude-sergio-miceli",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
     "id": "8f889f28fefc",
     "title": "Une table qui tourne : la bibliothèque des poètes",
     "institution": "ENS Paris",
@@ -1227,7 +1283,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/une-table-qui-tourne-la-bibliotheque-des-poetes/2026-05-27t163000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -1237,11 +1293,25 @@
     "institution": "Sciences Po",
     "discipline": "Autre",
     "date": "2026-05-27",
-    "time": "06:45",
+    "time": "",
     "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "This event will assemble the burgeoning environmental research community at Sciences Po, along with external partners. The agenda includes three panel sessions, a lunch, one keynote lecture, the AIRE General Assembly and a closing reception.",
+    "url": "https://www.sciencespo.fr/fr/evenements/2026-aire-annual-conference/",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "af5504804b3a",
+    "title": "12th Graduate Conference in Political Theory : \"Speech and Politics\" with Miranda Fricker",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-05-27",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "This conference reexamines the links between discourse and political life. It brings together early-career scholars to explore how voice, silence, and listening shape power, recognition, and inequality.",
+    "url": "https://www.sciencespo.fr/fr/evenements/12th-graduate-conference-speech-and-politics-with-miranda-fricker/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -1255,7 +1325,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/de-effet-hall-quantique-aux-materiaux-moires-topologie-et-geometrie-des-materiaux-quantiques/materiaux-moires-introduction",
     "speaker": "Antoine Georges",
     "source_type": "institution"
   },
@@ -1283,22 +1353,8 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/p-adic-modules-and-the-p-adic-langlands-program/towards-the-geometrization-of-the-p-adic-langlands-correspondence",
     "speaker": "Juan Esteban Rodríguez Camargo",
-    "source_type": "institution"
-  },
-  {
-    "id": "af5504804b3a",
-    "title": "12th Graduate Conference in Political Theory : \"Speech and Politics\" with Miranda Fricker",
-    "institution": "Sciences Po",
-    "discipline": "Autre",
-    "date": "2026-05-27",
-    "time": "08:00",
-    "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
-    "speaker": "",
     "source_type": "institution"
   },
   {
@@ -1311,7 +1367,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/vers-une-ecologie-fonctionnelle-du-paysage-pour-un-futur-resilient-et-durable",
     "speaker": "Sandra Lavorel",
     "source_type": "institution"
   },
@@ -1325,7 +1381,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/topologie-et-correlations-electroniques-le-graphene-torsade/topological-states-in-moire-materials",
     "speaker": "Rebeca Ribeiro-Palau",
     "source_type": "institution"
   },
@@ -1367,7 +1423,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/theorie-de-newton-cartan",
     "speaker": "Marc Henneaux",
     "source_type": "institution"
   },
@@ -1381,7 +1437,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/le-corps-du-droit-corpus-iuris-imaginer-le-droit-par-les-metaphores-corporelles-dans-la-litterature/le-corps-du-droit-corpus-iuris-imaginer-le-droit-par-les-metaphores-corporelles-dans-la-litterature-8",
     "speaker": "Dario Mantovani",
     "source_type": "institution"
   },
@@ -1423,7 +1479,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativistes-de-la-theorie-einstein-et-applications/non-relativistic-limits-of-massive-higher-spin-gravity-and-their-condensed-matter-applications",
     "speaker": "Andrea Campoleoni",
     "source_type": "institution"
   },
@@ -1465,7 +1521,21 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/faits-doutes-et-action-climatique-que-faire-face-la-desinformation/2026-05-28t163000",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "b6a95cb25df1",
+    "title": "European Defense Townhall",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-05-28",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Join us for a pan-European citizens’ conversation co-organized with the Munich Security Conference.",
+    "url": "https://www.sciencespo.fr/fr/evenements/european-defense-townhall/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -1479,7 +1549,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/la-terre-une-planete-dynamique-un-hommage-xavier-le-pichon",
     "speaker": "Edouard Bard, Alessandro Morbidelli",
     "source_type": "institution"
   },
@@ -1507,7 +1577,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/paul-casanova-egypte-et-le-coran",
     "speaker": "François Déroche",
     "source_type": "institution"
   },
@@ -1605,7 +1675,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/determinisme-et-stochasticite-au-cours-du-developpement-neuronal/contributions-spatiales-et-temporelles-la-diversification-neuronale",
     "speaker": "Claude Desplan",
     "source_type": "institution"
   },
@@ -1619,7 +1689,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/touraj-daryaee/the-vision-of-the-world-in-late-antique-eransahr",
     "speaker": "Touraj Daryaee",
     "source_type": "institution"
   },
@@ -1661,22 +1731,8 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/le-futur-en-heritage-2026/la-nature-elle-une-valeur-intrinseque",
     "speaker": "Avenir Commun Durable",
-    "source_type": "institution"
-  },
-  {
-    "id": "b6a95cb25df1",
-    "title": "European Defense Townhall",
-    "institution": "Sciences Po",
-    "discipline": "Autre",
-    "date": "2026-05-28",
-    "time": "16:30",
-    "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
-    "speaker": "",
     "source_type": "institution"
   },
   {
@@ -1745,7 +1801,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/actualite-de-l-anthropologie-sur-les-mutations-des-mondes-contemporains/2026-05-29t073000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -1773,7 +1829,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/dynamique-une-jonction-josephson",
     "speaker": "Jean Dalibard",
     "source_type": "institution"
   },
@@ -1787,7 +1843,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/mean-field-games-and-some-applications/mean-field-games-and-stopping",
     "speaker": "Panagiotis Souganidis",
     "source_type": "institution"
   },
@@ -1801,7 +1857,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/oxidative-stress-in-cancer-therapy-response",
     "speaker": "Hugues de Thé",
     "source_type": "institution"
   },
@@ -1815,7 +1871,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-couples-et-jonctions-josephson/quantum-simulation-engineering-understanding-quantum-systems-atom-by-atom",
     "speaker": "Monika Aidelsburger",
     "source_type": "institution"
   },
@@ -1829,7 +1885,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/mental-health-and-addiction-understanding-determinants-to-improve-population-well-being",
     "speaker": "Maria Melchior",
     "source_type": "institution"
   },
@@ -1899,7 +1955,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/conferences-prehistoire-entre-utopie-et-realite/jacques-boucher-de-perthes-1788-1868-sciences-et-imaginaire-aux-origines-de-la-prehistoire",
     "speaker": "Claudine Cohen",
     "source_type": "institution"
   },
@@ -1941,7 +1997,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/la-terre-une-planete-dynamique-un-hommage-xavier-le-pichon",
     "speaker": "Edouard Bard, Alessandro Morbidelli",
     "source_type": "institution"
   },
@@ -1969,7 +2025,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/litteratures-et-cultures-d-enfance/2026-05-30t083000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -2021,11 +2077,11 @@
     "institution": "Sciences Po",
     "discipline": "Sociologie & Anthropologie",
     "date": "2026-06-01",
-    "time": "07:00",
+    "time": "",
     "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Workshop based on the surveys of the European Union Agency for Fundamental Rights (FRA)",
+    "url": "https://www.sciencespo.fr/fr/evenements/evaluation-of-the-state-of-equality-non-discrimination-and-anti-racism-policies-and-instruments-through-the-surveys-of-the-european-union-agency-for-fundamental-rights-fra-france-in-the-eu-context/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -2123,7 +2179,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/louis-jonker/reforming-history-the-book-of-chronicles-and-its-reception-in-post-apartheid-south-africa",
     "speaker": "Louis Jonker",
     "source_type": "institution"
   },
@@ -2147,11 +2203,11 @@
     "institution": "Sciences Po",
     "discipline": "Autre",
     "date": "2026-06-02",
-    "time": "07:00",
+    "time": "",
     "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://www.sciencespo.fr",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Programme complet de la biennale du CERI",
+    "url": "https://www.sciencespo.fr/fr/evenements/la-biennale-du-ceri-lignes-de-failles/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -2165,7 +2221,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/1-documents-en-rapport-avec-la-presence-sassanide-en-asie-centrale-2-le-mythe-historiographique-du",
     "speaker": "Frantz Grenet, Touraj Daryaee, Nina Mazhjoo",
     "source_type": "institution"
   },
@@ -2277,7 +2333,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/presences-de-foucault/engagement",
     "speaker": "Didier Fassin",
     "source_type": "institution"
   },
@@ -2291,7 +2347,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/ecologie-fonctionnelle-pour-comprendre-la-dynamique-des-ecosystemes-dans-un-monde-changeant/adaptation-au-changement-climatique-fondee-sur-la-nature",
     "speaker": "Sandra Lavorel",
     "source_type": "institution"
   },
@@ -2305,7 +2361,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/reparer-les-torts-justice-et-redressement-en-egypte-medievale/des-petitions-aux-lettres-un-systeme-appel-integre",
     "speaker": "Petra Sijpesteijn",
     "source_type": "institution"
   },
@@ -2319,7 +2375,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/presences-de-foucault/absences",
     "speaker": "Didier Fassin",
     "source_type": "institution"
   },
@@ -2347,7 +2403,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/penser-avec-foucault/savoirs-et-pouvoirs-dans-les-experiences-democratiques",
     "speaker": "José Luis Moreno Pestaña",
     "source_type": "institution"
   },
@@ -2375,7 +2431,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/de-effet-hall-quantique-aux-materiaux-de-moire-topologie-et-geometrie-des-materiaux-quantiques/geometrie-quantique-et-supraconductivite",
     "speaker": "Antoine Georges",
     "source_type": "institution"
   },
@@ -2389,7 +2445,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/qui-appartient-la-science-des-lumieres",
     "speaker": "Antoine Lilti",
     "source_type": "institution"
   },
@@ -2403,7 +2459,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/topologie-et-correlations-electroniques-le-graphene-torsade/electron-optics-experiments-in-quantum-hall-conductors-from-single-electrons-to-anyons",
     "speaker": "Gwendal Fève",
     "source_type": "institution"
   },
@@ -2417,7 +2473,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/gravitation-carrollienne-0",
     "speaker": "Marc Henneaux",
     "source_type": "institution"
   },
@@ -2431,7 +2487,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/le-corps-du-droit-corpus-iuris-imaginer-le-droit-par-les-metaphores-corporelles-dans-la-litterature/le-corps-du-droit-corpus-iuris-imaginer-le-droit-par-les-metaphores-corporelles-dans-la-litterature-9",
     "speaker": "Dario Mantovani",
     "source_type": "institution"
   },
@@ -2445,7 +2501,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/dire-les-choses-autrement-qu-est-ce-que-la-metaphore/iudicium-iudicate-de-impossibilite-metaphorique",
     "speaker": "Carlo Ossola",
     "source_type": "institution"
   },
@@ -2459,7 +2515,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativistes-de-la-theorie-einstein-et-applications/perspectives-on-carrollian-quantum-field-theories",
     "speaker": "Jakob Salzer",
     "source_type": "institution"
   },
@@ -2487,7 +2543,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/conferences-prehistoire-entre-utopie-et-realite/image-de-homme-de-neandertal",
     "speaker": "Pascal Depaepe",
     "source_type": "institution"
   },
@@ -2501,7 +2557,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/le-futur-en-heritage-2026/migrations-climat-et-hospitalite",
     "speaker": "François Gemenne & Michel Agier",
     "source_type": "institution"
   },
@@ -2529,7 +2585,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/growth-innovation-and-social-model-in-europe",
     "speaker": "Philippe Aghion",
     "source_type": "institution"
   },
@@ -2543,7 +2599,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-methods-to-address-problems-in-organic-synthesis/redshifting-photoredox-catalysis",
     "speaker": "Tomislav Rovis",
     "source_type": "institution"
   },
@@ -2641,7 +2697,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/determinisme-et-stochasticite-au-cours-du-developpement-neuronal/du-systeme-visuel-au-cortex-lignages-stochastiques-chez-les-invertebres-et-mammiferes",
     "speaker": "Claude Desplan",
     "source_type": "institution"
   },
@@ -2669,8 +2725,22 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/qui-appartient-la-science-des-lumieres",
     "speaker": "Antoine Lilti",
+    "source_type": "institution"
+  },
+  {
+    "id": "59032c54e602",
+    "title": "vendredi",
+    "institution": "EHESS",
+    "discipline": "Autre",
+    "date": "2026-06-05",
+    "time": "",
+    "end_time": "",
+    "location": "EHESS, 54 boulevard Raspail, Paris 6e",
+    "description": "vendredi",
+    "url": "https://www.ehess.fr/jcms/185224_JEvent/fr/presentation-discussion-lives-in-fragments-self-narrative-sources-and-biographical-approaches-to-the-armenian-genocide",
+    "speaker": "",
     "source_type": "institution"
   },
   {
@@ -2683,7 +2753,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/valery-et-la-vie-des-formes-la-poietique-le-rythme-et-le-nombre/2026-06-05t073000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -2697,7 +2767,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/effet-josephson-alternatif-et-les-resonances-de-shapiro",
     "speaker": "Jean Dalibard",
     "source_type": "institution"
   },
@@ -2711,7 +2781,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/ligand-enabled-gold-redox-catalysis/ligand-enabled-gold-redox-catalysis",
     "speaker": "Nitin T. Patil",
     "source_type": "institution"
   },
@@ -2725,7 +2795,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/foucault-sans-frontieres",
     "speaker": "Didier Fassin",
     "source_type": "institution"
   },
@@ -2739,7 +2809,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/mean-field-games-and-some-applications/mean-field-games-and-the-fleming-viot-process",
     "speaker": "Panagiotis Souganidis",
     "source_type": "institution"
   },
@@ -2753,7 +2823,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-couples-et-jonctions-josephson/optical-investigation-of-strongly-correlated-electrons",
     "speaker": "Atac Imamoglu",
     "source_type": "institution"
   },
@@ -2795,7 +2865,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-art-egyptien-et-ses-artistes/introduction-egyptologie-doit-elle-parler-art-et-artistes-egyptiens",
     "speaker": "Dimitri Laboury",
     "source_type": "institution"
   },
@@ -2879,7 +2949,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/comment-fabriquer-un-ocean/2026-06-06t130000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -3117,7 +3187,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/atelier-bergson-2025-2026/2026-06-09t083000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -3131,7 +3201,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/1-documents-en-rapport-avec-la-presence-sassanide-en-asie-centrale-2-le-mythe-historiographique-du-1",
     "speaker": "Frantz Grenet, Touraj Daryaee, Nina Mazhjoo",
     "source_type": "institution"
   },
@@ -3164,8 +3234,8 @@
     "source_type": "institution"
   },
   {
-    "id": "c7621c7c8a16",
-    "title": "La critica literaria desde el Extremo Occidente",
+    "id": "e33e621e6ecd",
+    "title": "La critique littéraire depuis l'Extrême-Occident",
     "institution": "Collège de France",
     "discipline": "Autre",
     "date": "2026-06-09",
@@ -3173,7 +3243,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-critica-literaria-desde-el-extremo-occidente/la-critique-litteraire-depuis-extreme-occident",
     "speaker": "Christopher Domínguez Michael",
     "source_type": "institution"
   },
@@ -3215,7 +3285,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/conferences-prehistoire-entre-utopie-et-realite/la-prehistoire-de-la-science-la-fiction-150-ans-de-recits-et-images",
     "speaker": "Catherine Schwab",
     "source_type": "institution"
   },
@@ -3232,6 +3302,20 @@
     "url": "https://lu.ma/dkphsos2",
     "speaker": "",
     "source_type": "luma"
+  },
+  {
+    "id": "fe36df0ec06b",
+    "title": "Journée du Lab de l'Ecole urbaine 2026",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-06-10",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Urban School Lab Day 2026",
+    "url": "https://www.sciencespo.fr/fr/evenements/journee-du-lab-de-l-ecole-urbaine-2026/",
+    "speaker": "",
+    "source_type": "institution"
   },
   {
     "id": "d7519fc4d85c",
@@ -3271,7 +3355,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/structures-carrolliennes-en-relativite-generale",
     "speaker": "Marc Henneaux",
     "source_type": "institution"
   },
@@ -3285,7 +3369,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/reparer-les-torts-justice-et-redressement-en-egypte-medievale/faire-passer-son-message-aspects-pratiques-de-la-redaction-de-lettres",
     "speaker": "Petra Sijpesteijn",
     "source_type": "institution"
   },
@@ -3299,8 +3383,22 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/algebres-de-lie-cinematiques-et-deformations",
     "speaker": "Marc Henneaux",
+    "source_type": "institution"
+  },
+  {
+    "id": "73977b451aad",
+    "title": "“Dominations et émancipations à l’épreuve de la frontière animal/humain”",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-06-11",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Soirée de discussion autour du numéro spécial de la Revue \"Nouvelles Perspectives en Sciences Sociales\", coordonné par Emilie Dardenne (Université Rennes 2) et Réjane Sénac (CEVIPOF - Sciences Po).",
+    "url": "https://www.sciencespo.fr/fr/evenements/dominations-et-emancipations-a-l-epreuve-de-la-frontiere-animal-humain/",
+    "speaker": "",
     "source_type": "institution"
   },
   {
@@ -3369,7 +3467,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-methods-to-address-problems-in-organic-synthesis/amine-feedstocks-as-cross-coupling-partners",
     "speaker": "Tomislav Rovis",
     "source_type": "institution"
   },
@@ -3383,7 +3481,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/histoires-mondiales-des-nations",
     "speaker": "Patrick Boucheron",
     "source_type": "institution"
   },
@@ -3509,7 +3607,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/determinisme-et-stochasticite-au-cours-du-developpement-neuronal/adaptation-evolutive-de-la-neurogenese-des-centres-de-apprentissage",
     "speaker": "Claude Desplan",
     "source_type": "institution"
   },
@@ -3537,7 +3635,7 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/sciences-en-traduction-xvie-xixe-siecles/2026-06-12t070000",
     "speaker": "",
     "source_type": "institution"
   },
@@ -3551,7 +3649,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/les-jonctions-atomiques-internes",
     "speaker": "Jean Dalibard",
     "source_type": "institution"
   },
@@ -3565,7 +3663,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-couples-et-jonctions-josephson/observing-the-quantum-mpemba-effect-in-quantum-processor",
     "speaker": "Benoît Vermersch",
     "source_type": "institution"
   },
@@ -3621,7 +3719,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/histoires-mondiales-des-nations",
     "speaker": "Patrick Boucheron",
     "source_type": "institution"
   },
@@ -3677,7 +3775,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-peste-et-la-fin-du-monde-antique-pas-si-simple-une-vue-egypte/la-peste-et-la-fin-du-monde-antique-pas-si-simple-une-vue-egypte",
     "speaker": "Gilles Bransbourg",
     "source_type": "institution"
   },
@@ -3775,7 +3873,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-art-egyptien-et-ses-artistes/pour-une-vision-plus-emique-de-art-egyptien-kunstwollen-et-choix-esthetiques",
     "speaker": "Dimitri Laboury",
     "source_type": "institution"
   },
@@ -3803,7 +3901,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/1-documents-en-rapport-avec-la-presence-sassanide-en-asie-centrale-2-le-mythe-historiographique-du-2",
     "speaker": "Frantz Grenet, Touraj Daryaee, Nina Mazhjoo",
     "source_type": "institution"
   },
@@ -3831,7 +3929,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/sapiens-remplace-neandertal",
     "speaker": "Jean-Jacques Hublin",
     "source_type": "institution"
   },
@@ -3929,7 +4027,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/reparer-les-torts-justice-et-redressement-en-egypte-medievale/valeurs-partagees",
     "speaker": "Petra Sijpesteijn",
     "source_type": "institution"
   },
@@ -4013,7 +4111,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/limites-non-relativistes-des-theories-des-champs",
     "speaker": "Marc Henneaux",
     "source_type": "institution"
   },
@@ -4027,7 +4125,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativistes-de-la-theorie-einstein-et-applications/gravitational-flux-balance-laws-from-conformal-carroll-geometry",
     "speaker": "Adrien Fiorucci",
     "source_type": "institution"
   },
@@ -4055,7 +4153,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/conferences-prehistoire-entre-utopie-et-realite/les-femmes-prehistoriques-et-la-chasse",
     "speaker": "Christophe Darmangeat",
     "source_type": "institution"
   },
@@ -4083,7 +4181,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-methods-to-address-problems-in-organic-synthesis/rh-catalyzed-h-activation-for-heterocycle-construction",
     "speaker": "Tomislav Rovis",
     "source_type": "institution"
   },
@@ -4097,7 +4195,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/antiesclavagisme-un-ideal-cosmopolite",
     "speaker": "Antoine Lilti",
     "source_type": "institution"
   },
@@ -4111,7 +4209,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/pouvoir-et-culture-ecrite-en-haute-mesopotamie-au-xviiie-siecle-av",
     "speaker": "Dominique Charpin",
     "source_type": "institution"
   },
@@ -4153,7 +4251,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-art-egyptien-et-ses-artistes/artiste-un-acteur-majeur-de-la-societe-pharaonique",
     "speaker": "Dimitri Laboury",
     "source_type": "institution"
   },
@@ -4195,7 +4293,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/determinisme-et-stochasticite-au-cours-du-developpement-neuronal/pheromones-et-societes",
     "speaker": "Claude Desplan",
     "source_type": "institution"
   },
@@ -4209,7 +4307,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/les-condensats-fragmentes",
     "speaker": "Jean Dalibard",
     "source_type": "institution"
   },
@@ -4237,7 +4335,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-couples-et-jonctions-josephson/sensing-with-quantum-trajectories",
     "speaker": "Klaus Mølmer",
     "source_type": "institution"
   },
@@ -4307,7 +4405,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/antiesclavagisme-un-ideal-cosmopolite",
     "speaker": "Antoine Lilti",
     "source_type": "institution"
   },
@@ -4335,7 +4433,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/anthroponymie-et-polytheisme-en-grece-ancienne",
     "speaker": "Vinciane Pirenne-Delforge",
     "source_type": "institution"
   },
@@ -4349,7 +4447,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/pouvoir-et-culture-ecrite-en-haute-mesopotamie-au-xviiie-siecle-av",
     "speaker": "Dominique Charpin",
     "source_type": "institution"
   },
@@ -4391,7 +4489,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/aspects-mathematiques-et-appliques-des-methodes-de-reduction-de-complexite",
     "speaker": "Yvon Maday",
     "source_type": "institution"
   },
@@ -4419,7 +4517,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/1-documents-en-rapport-avec-la-presence-sassanide-en-asie-centrale-2-le-mythe-historiographique-du-0",
     "speaker": "Frantz Grenet, Touraj Daryaee, Nina Mazhjoo",
     "source_type": "institution"
   },
@@ -4447,7 +4545,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/reparer-les-torts-justice-et-redressement-en-egypte-medievale/attentes-et-ecarts-regles-et-variations",
     "speaker": "Petra Sijpesteijn",
     "source_type": "institution"
   },
@@ -4475,7 +4573,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/extensions-supersymetriques",
     "speaker": "Marc Henneaux",
     "source_type": "institution"
   },
@@ -4489,7 +4587,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativistes-de-la-theorie-einstein-et-applications/classical-and-quantum-particles-of-the-galilei-and-carroll-groups-and-their-applications",
     "speaker": "José Figueroa O’Farrill",
     "source_type": "institution"
   },
@@ -4503,7 +4601,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/aspects-mathematiques-et-appliques-des-methodes-de-reduction-de-complexite",
     "speaker": "Yvon Maday",
     "source_type": "institution"
   },
@@ -4517,7 +4615,21 @@
     "end_time": "",
     "location": "ENS, 45 rue d'Ulm, Paris 5e",
     "description": "",
-    "url": "https://www.ens.psl.eu",
+    "url": "https://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-25t160000",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "f925ee7b0801",
+    "title": "The End of the U.S. Model of Journalism ? (And What Comes Next)",
+    "institution": "Sciences Po",
+    "discipline": "Sciences",
+    "date": "2026-06-25",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Cette conférence, organisée par le médialab et le DICEN, et présentée par Christopher Anderson (Université de Milan), explorera les évolutions du modèle du journalisme américain. Zhao Alexandre Huang (Université Gustave Eiffel) sera le discutant de cette présentation.",
+    "url": "https://www.sciencespo.fr/fr/evenements/the-end-of-the-u-s-model-of-journalism-and-what-comes-next/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -4531,7 +4643,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-methods-to-address-problems-in-organic-synthesis/catalytic-stereospecific-alkene-carboamination",
     "speaker": "Tomislav Rovis",
     "source_type": "institution"
   },
@@ -4545,7 +4657,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/democratie-ou-dictature-numerique-perspectives-historiques-et-comparatives",
     "speaker": "Anne Cheng, Alain Supiot",
     "source_type": "institution"
   },
@@ -4573,7 +4685,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/du-squid-supraconducteur-au-squid-atomique",
     "speaker": "Jean Dalibard",
     "source_type": "institution"
   },
@@ -4587,7 +4699,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/colloque/information-flow-and-computation-in-living-systems",
     "speaker": "Thomas Lecuit",
     "source_type": "institution"
   },
@@ -4601,7 +4713,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/seminaire/melange-de-gaz-quantiques/ressources-et-applications-des-reseaux-quantiques",
     "speaker": "Eleni Diamanti",
     "source_type": "institution"
   },
@@ -4643,7 +4755,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-art-egyptien-et-ses-artistes/qui-sont-les-peintres-des-tombes-de-la-necropole-de-elite-thebes-sous-la-18e-dynastie",
     "speaker": "Dimitri Laboury",
     "source_type": "institution"
   },
@@ -4756,6 +4868,20 @@
     "location": "Orléans",
     "description": "TBA",
     "url": "https://indico.math.cnrs.fr/event/15625/",
+    "speaker": "",
+    "source_type": "institution"
+  },
+  {
+    "id": "c114774b35fe",
+    "title": "Financement de la psychiatrie : budgets et remboursement de la psychothérapie",
+    "institution": "Sciences Po",
+    "discipline": "Économie",
+    "date": "2026-07-06",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Journée d'étude du cycle de séminaires \"Politiques de santé mentale\"",
+    "url": "https://www.sciencespo.fr/fr/evenements/financement-de-la-psychiatrie-budgets-et-remboursement-de-la-psychotherapie/",
     "speaker": "",
     "source_type": "institution"
   },
@@ -5133,7 +5259,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe-1",
     "speaker": "Olivier De Schutter",
     "source_type": "institution"
   },
@@ -5147,7 +5273,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe-2",
     "speaker": "Olivier De Schutter",
     "source_type": "institution"
   },
@@ -5203,7 +5329,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe-3",
     "speaker": "Olivier De Schutter",
     "source_type": "institution"
   },
@@ -5217,7 +5343,7 @@
     "end_time": "",
     "location": "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
     "description": "",
-    "url": "https://www.college-de-france.fr",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe/la-souverainete-alimentaire-et-la-transition-agro-ecologique-en-europe-4",
     "speaker": "Olivier De Schutter",
     "source_type": "institution"
   },
