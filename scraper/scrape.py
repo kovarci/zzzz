@@ -138,6 +138,13 @@ def parse_french_date_text(text: str):
             return date(y, int(m.group(2)), int(m.group(1)))
         except ValueError:
             pass
+    # Last resort: day + month without a year — infer the year
+    m = re.search(
+        r"\b(\d{1,2})(?:er|ère|ème|e)?\s+"
+        r"(janvier|f[eé]vrier|mars|avril|mai|juin|juillet|ao[uû]t|"
+        r"septembre|octobre|novembre|d[eé]cembre)\b", text, re.I)
+    if m:
+        return _day_month_to_date(m.group(1), m.group(2))
     return None
 
 
@@ -857,8 +864,11 @@ def scrape_ehess(browser):
             m = re.search(r"(\d{1,2})\s*[hH:]\s*(\d{2})?", hour_el.get_text())
             if m:
                 time_str = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
-        link = card.find("a", href=True)
-        href = link.get("href", "") if link else ""
+        # EHESS cards are JS-clickable: the URL is in data-jalios-url, not <a href>
+        href = card.get("data-jalios-url", "")
+        if not href:
+            link = card.find("a", href=True)
+            href = link.get("href", "") if link else ""
         key = (title[:60].lower(), d.isoformat())
         if key in seen:
             continue
@@ -919,8 +929,9 @@ def scrape_sorbonne(browser):
     # 2) HTML cards (Bootstrap columns with a French date in the text)
     cards = soup.select(".col-lg-4, .col-md-6, .col-12, [class*='card' i]")
     print(f"   {len(cards)} candidate columns")
-    if cards:
-        print(f"   [SAMPLE CARD] {clean_text(str(cards[0]))[:650]}")
+    sample = next((c for c in cards if c.select_one(".thumbnail, .img-cover, img")), None)
+    if sample:
+        print(f"   [SAMPLE EVENT CARD] {clean_text(str(sample))[:1000]}")
     for card in cards:
         d = parse_french_date_text(card.get_text(" ", strip=True))
         if not d or not in_window(d):
@@ -948,6 +959,30 @@ def scrape_sorbonne(browser):
 
     print(f"   ✓ Total Sorbonne: {len(events)} events")
     return events
+
+
+def scrape_dauphine(browser):
+    return scrape_paginated(browser, "Université Paris Dauphine", [
+        ("https://dauphine.psl.eu/dauphine/media-et-communication/evenements/evenements-a-venir",
+         "Université Paris Dauphine, Place du Maréchal de Lattre de Tassigny, Paris 16e",
+         "https://dauphine.psl.eu"),
+    ], max_pages=15)
+
+
+def scrape_pse(browser):
+    return scrape_paginated(browser, "Paris School of Economics", [
+        ("https://www.parisschoolofeconomics.eu/evenements/",
+         "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
+         "https://www.parisschoolofeconomics.eu"),
+    ], max_pages=15)
+
+
+def scrape_psl(browser):
+    return scrape_paginated(browser, "Université PSL", [
+        ("https://psl.eu/agenda",
+         "Université PSL, 60 rue Mazarine, Paris 6e",
+         "https://psl.eu"),
+    ], max_pages=15)
 
 
 # ── Luma ──────────────────────────────────────────────────────────────────────
@@ -1069,7 +1104,8 @@ def main():
         browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         try:
             for fn in [scrape_college_de_france, scrape_ehess, scrape_ens,
-                       scrape_sciences_po, scrape_sorbonne, scrape_luma]:
+                       scrape_sciences_po, scrape_sorbonne, scrape_dauphine,
+                       scrape_pse, scrape_psl, scrape_luma]:
                 try:
                     all_events.extend(fn(browser))
                 except Exception as e:
