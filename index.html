@@ -10,10 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales/fr.global.min.js"></script>
-
   <style>
     /* ═══════════════════════════════════════════════════════════════
        Design tokens
@@ -21,14 +17,13 @@
     :root {
       --bg:            #07070d;
       --text:          #ececf2;
-      --text-soft:     #b9b9c9;
-      --muted:         #76768c;
+      --text-soft:     #c2c2d0;
+      --muted:         #8888a0;
       --glass:         rgba(255,255,255,0.045);
       --glass-2:       rgba(255,255,255,0.07);
       --border:        rgba(255,255,255,0.09);
-      --border-bright: rgba(255,255,255,0.18);
+      --border-bright: rgba(255,255,255,0.2);
       --radius:        16px;
-      --radius-sm:     11px;
 
       --c-math:  #60a5fa;  --c-philo: #a78bfa;  --c-litt:  #fb7185;
       --c-hist:  #fb923c;  --c-sci:   #4ade80;  --c-eco:   #fbbf24;
@@ -58,7 +53,7 @@
     }
     .blob {
       position: absolute; border-radius: 50%;
-      filter: blur(110px); opacity: 0.55;
+      filter: blur(110px); opacity: 0.5;
       will-change: transform;
     }
     .blob.b1 { width: 46vw; height: 46vw; background: #6d28d9;
@@ -72,7 +67,6 @@
     @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(8vw,6vw) scale(1.15)} }
     @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-7vw,9vw) scale(1.1)} }
     @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(6vw,-8vw) scale(1.2)} }
-    /* fine grain so flat areas don't band */
     .aurora::after {
       content:""; position:absolute; inset:0;
       background-image: radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px);
@@ -158,7 +152,7 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       Controls (tabs / filters)
+       Controls
        ═══════════════════════════════════════════════════════════════ */
     .controls { padding: 32px 0 8px; }
 
@@ -221,25 +215,10 @@
 
     /* ── Toolbar ─────────────────────────────────────────────────── */
     .toolbar {
-      display: flex; align-items: center; justify-content: space-between;
       margin-top: 22px; padding-top: 18px;
       border-top: 1px solid var(--border);
     }
     .results-text { font-size: 13px; color: var(--muted); }
-    .view-toggle {
-      display: flex; gap: 3px; padding: 4px;
-      background: var(--glass); border: 1px solid var(--border); border-radius: 11px;
-    }
-    .view-btn {
-      padding: 6px 14px; border: none; cursor: pointer;
-      font-size: 13px; font-family: inherit; color: var(--text-soft);
-      background: none; border-radius: 7px; transition: all .15s;
-    }
-    .view-btn:hover { color: #fff; }
-    .view-btn.active {
-      color: #fff;
-      background: linear-gradient(135deg, rgba(167,139,250,.85), rgba(96,165,250,.85));
-    }
 
     /* ═══════════════════════════════════════════════════════════════
        Events
@@ -269,9 +248,9 @@
       display: flex; flex-direction: column; gap: 11px;
       padding: 19px;
       text-decoration: none; color: inherit;
-      background:
-        linear-gradient(160deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
-      border: 1px solid var(--border);
+      /* readable translucent panel — not pure black, aurora bleeds through */
+      background: linear-gradient(160deg, rgba(28,28,46,0.74), rgba(17,17,29,0.74));
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: var(--radius);
       transform-style: preserve-3d;
       transition: transform .5s cubic-bezier(.2,.8,.2,1),
@@ -284,7 +263,7 @@
       content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
       background: var(--accent, #888);
       box-shadow: 0 0 14px var(--accent, #888);
-      opacity: .85;
+      opacity: .9;
     }
     .event-card .glare {
       position: absolute; inset: 0; pointer-events: none;
@@ -292,8 +271,8 @@
     }
     .event-card:hover {
       border-color: var(--border-bright);
-      box-shadow: 0 18px 50px -16px rgba(0,0,0,0.7),
-                  0 0 40px -14px var(--accent, #888);
+      box-shadow: 0 18px 50px -16px rgba(0,0,0,0.8),
+                  0 0 44px -14px var(--accent, #888);
     }
 
     .card-top {
@@ -308,8 +287,8 @@
       font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em;
       text-transform: uppercase; padding: 4px 10px; border-radius: 999px;
       color: var(--accent, #fff);
-      background: color-mix(in srgb, var(--accent, #888) 16%, transparent);
-      border: 1px solid color-mix(in srgb, var(--accent, #888) 35%, transparent);
+      background: color-mix(in srgb, var(--accent, #888) 18%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent, #888) 40%, transparent);
       white-space: nowrap;
     }
     .card-title {
@@ -323,7 +302,7 @@
     }
     .card-meta .institution { color: #fff; font-weight: 500; }
     .card-meta .row { display: flex; align-items: center; gap: 7px; }
-    .card-meta svg { width: 13px; height: 13px; flex-shrink: 0; opacity: .55; }
+    .card-meta svg { width: 13px; height: 13px; flex-shrink: 0; opacity: .6; }
     .card-desc {
       font-size: 12.5px; color: var(--muted); line-height: 1.55;
       display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
@@ -337,41 +316,6 @@
       font-family: "Space Grotesk", sans-serif; font-size: 22px;
       color: var(--text-soft); margin-bottom: 8px;
     }
-
-    /* ── Calendar (dark) ─────────────────────────────────────────── */
-    #calendar-view { display: none; margin-top: 26px; }
-    #calendar {
-      background: var(--glass); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 22px; height: 720px;
-    }
-    .fc {
-      --fc-border-color: rgba(255,255,255,0.08);
-      --fc-page-bg-color: transparent;
-      --fc-neutral-bg-color: rgba(255,255,255,0.03);
-      --fc-today-bg-color: rgba(167,139,250,0.13);
-      --fc-list-event-hover-bg-color: rgba(255,255,255,0.05);
-      font-family: "Inter", sans-serif !important;
-      font-size: 13px; color: var(--text-soft);
-    }
-    .fc .fc-toolbar-title {
-      font-family: "Space Grotesk", sans-serif !important;
-      font-size: 21px !important; color: #fff;
-    }
-    .fc .fc-col-header-cell-cushion,
-    .fc .fc-daygrid-day-number { color: var(--text-soft); text-decoration: none; }
-    .fc .fc-button {
-      background: var(--glass-2) !important; border: 1px solid var(--border) !important;
-      color: var(--text) !important; text-transform: none !important;
-      font-weight: 500 !important; box-shadow: none !important; font-size: 13px !important;
-    }
-    .fc .fc-button:hover { background: rgba(255,255,255,0.12) !important; }
-    .fc .fc-button-primary:not(:disabled).fc-button-active {
-      background: linear-gradient(135deg, #a78bfa, #60a5fa) !important;
-      border-color: transparent !important; color: #fff !important;
-    }
-    .fc .fc-event { border: none !important; border-radius: 5px !important;
-                    padding: 1px 5px !important; font-size: 11px !important; cursor: pointer; }
-    .fc-theme-standard td, .fc-theme-standard th { border-color: rgba(255,255,255,.07); }
 
     /* ── Footer ──────────────────────────────────────────────────── */
     footer {
@@ -391,8 +335,7 @@
       .tab { flex: 1; justify-content: center; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .blob, .logo-orb { animation: none; }
-      .event-card { animation: none; }
+      .blob, .logo-orb, .event-card { animation: none; }
     }
   </style>
 </head>
@@ -447,17 +390,12 @@
 
   <div class="toolbar">
     <div class="results-text" id="results-text">—</div>
-    <div class="view-toggle">
-      <button class="view-btn active" data-view="list">Liste</button>
-      <button class="view-btn" data-view="calendar">Calendrier</button>
-    </div>
   </div>
 </section>
 
 <!-- ── Main ────────────────────────────────────────────────────── -->
 <main class="container">
   <div id="list-view"></div>
-  <div id="calendar-view"><div id="calendar"></div></div>
 </main>
 
 <footer class="container">
@@ -487,7 +425,7 @@ const ICONS = {
 
 let allEvents = [], activeSource = "all";
 let activeDiscs = new Set(), activeInsts = new Set();
-let searchQuery = "", activeView = "list", calendarInstance = null;
+let searchQuery = "";
 
 // ── Load ─────────────────────────────────────────────────────────
 async function loadEvents() {
@@ -574,7 +512,7 @@ function filtered() {
   });
 }
 
-// ── Render: list ─────────────────────────────────────────────────
+// ── Render ───────────────────────────────────────────────────────
 function escHtml(s) {
   return String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;")
     .replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
@@ -647,7 +585,7 @@ function attachTilt(card) {
       `perspective(820px) rotateY(${(px-.5)*9}deg) rotateX(${(.5-py)*9}deg) translateY(-5px) scale(1.018)`;
     if (glare)
       glare.style.background =
-        `radial-gradient(420px circle at ${px*100}% ${py*100}%, rgba(255,255,255,.13), transparent 55%)`;
+        `radial-gradient(420px circle at ${px*100}% ${py*100}%, rgba(255,255,255,.12), transparent 55%)`;
   });
   card.addEventListener("pointerleave", () => {
     card.style.transition = "transform .55s cubic-bezier(.2,.8,.2,1)";
@@ -656,34 +594,12 @@ function attachTilt(card) {
   });
 }
 
-// ── Render: calendar ─────────────────────────────────────────────
-function renderCalendar(events) {
-  const calEvents = events.map(ev => ({
-    title: ev.title,
-    start: ev.date + (ev.time ? "T"+ev.time : ""),
-    end: ev.end_time ? ev.date+"T"+ev.end_time : undefined,
-    url: ev.url,
-    backgroundColor: DISC_COLORS[ev.discipline] ?? "#9ca3af",
-    textColor: "#0a0a12",
-  }));
-  if (calendarInstance) calendarInstance.destroy();
-  calendarInstance = new FullCalendar.Calendar(document.getElementById("calendar"), {
-    initialView: "dayGridMonth", locale: "fr", height: 676,
-    headerToolbar: { left:"prev,next today", center:"title", right:"dayGridMonth,timeGridWeek,listMonth" },
-    buttonText: { today:"Aujourd'hui", month:"Mois", week:"Semaine", list:"Liste" },
-    events: calEvents,
-    eventClick(info) { info.jsEvent.preventDefault(); if (info.event.url) window.open(info.event.url,"_blank"); },
-  });
-  calendarInstance.render();
-}
-
 // ── Main render ──────────────────────────────────────────────────
 function render() {
   const evs = filtered();
   document.getElementById("results-text").textContent =
     `${evs.length} résultat${evs.length>1?"s":""}`;
-  if (activeView === "list") renderList(evs);
-  else renderCalendar(evs);
+  renderList(evs);
 }
 
 // ── Listeners ────────────────────────────────────────────────────
@@ -694,16 +610,6 @@ document.querySelectorAll(".tab").forEach(btn => {
     activeSource = btn.dataset.source;
     document.getElementById("institution-section").style.display =
       activeSource === "luma" ? "none" : "";
-    render();
-  });
-});
-document.querySelectorAll(".view-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".view-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    activeView = btn.dataset.view;
-    document.getElementById("list-view").style.display = activeView==="list" ? "" : "none";
-    document.getElementById("calendar-view").style.display = activeView==="calendar" ? "" : "none";
     render();
   });
 });

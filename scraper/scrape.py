@@ -718,10 +718,29 @@ def events_from_captured_json(captured, institution, location, base_url) -> list
     return events
 
 
+def _is_luma_france(ev):
+    """True if a Luma event dict is located in France."""
+    geo = ev.get("geo_address_info") or {}
+    if isinstance(geo, dict):
+        country = str(geo.get("country") or geo.get("country_code") or "").strip().lower()
+        if country:
+            return country in ("france", "fr")
+        text = " ".join(str(geo.get(k, "")) for k in
+                        ("full_address", "address", "city_state", "city", "region"))
+    else:
+        text = str(geo)
+    text = (text + " " + str(ev.get("location") or ev.get("address") or "")).lower()
+    if "france" in text or "paris" in text:
+        return True
+    return bool(re.search(r"\b75\d{3}\b", text))
+
+
 def extract_events_deep_json(obj, institution_default, source_type="institution",
-                             base_url="", _depth=0, _out=None, _seen=None):
+                             base_url="", require_france=False,
+                             _depth=0, _out=None, _seen=None):
     """Recursively walk ANY JSON structure, collecting event-like dicts.
-    An 'event' = any dict with a name/title field AND a start-date field."""
+    An 'event' = any dict with a name/title field AND a start-date field.
+    require_france=True keeps only events located in France (for Luma)."""
     if _out is None:
         _out, _seen = [], set()
     if _depth > 12:
@@ -729,7 +748,7 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
     if isinstance(obj, list):
         for x in obj[:600]:
             extract_events_deep_json(x, institution_default, source_type, base_url,
-                                     _depth + 1, _out, _seen)
+                                     require_france, _depth + 1, _out, _seen)
     elif isinstance(obj, dict):
         ev = obj.get("event") if isinstance(obj.get("event"), dict) else obj
         name = (ev.get("name") or ev.get("title") or ev.get("titre")
@@ -742,7 +761,8 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
             if dt and in_window(dt.date()):
                 title = clean_text(name)
                 key = (title[:50].lower(), dt.date().isoformat())
-                if not is_junk_title(title) and key not in _seen:
+                if (not is_junk_title(title) and key not in _seen
+                        and not (require_france and not _is_luma_france(ev))):
                     _seen.add(key)
                     geo = ev.get("geo_address_info") or ev.get("location") or {}
                     if isinstance(geo, dict):
@@ -770,7 +790,7 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
                     ))
         for v in obj.values():
             extract_events_deep_json(v, institution_default, source_type, base_url,
-                                     _depth + 1, _out, _seen)
+                                     require_france, _depth + 1, _out, _seen)
     return _out
 
 
@@ -1039,10 +1059,22 @@ def scrape_psl(browser):
 
 # ── Luma ──────────────────────────────────────────────────────────────────────
 
+LUMA_PAGES = [
+    "https://lu.ma/discover/paris",
+    "https://luma.com/parisai",
+    "https://luma.com/tech", "https://luma.com/arts", "https://luma.com/wellness",
+    "https://luma.com/crypto", "https://luma.com/climate", "https://luma.com/food",
+    "https://luma.com/ai", "https://luma.com/fitness",
+]
+
+
 def scrape_luma(browser) -> list[dict]:
-    print("→ Luma Paris...")
+    """Scrape Luma — the Paris discover page + topic category pages — keeping
+    ONLY events located in France (category pages are worldwide)."""
+    print("→ Luma (France only)...")
     events, seen = [], set()
     captured = []
+    blobs = []
 
     ctx = browser.new_context(
         user_agent=HEADERS["User-Agent"], locale="fr-FR",
@@ -1051,81 +1083,45 @@ def scrape_luma(browser) -> list[dict]:
     page = ctx.new_page()
     page.on("response", lambda r: capture_json(r, captured))
 
-    html = ""
-    for luma_url in ["https://lu.ma/discover/paris", "https://lu.ma/paris"]:
+    for url in LUMA_PAGES:
         try:
-            page.goto(luma_url, timeout=45000, wait_until="domcontentloaded")
+            page.goto(url, timeout=45000, wait_until="domcontentloaded")
             try:
-                page.wait_for_load_state("networkidle", timeout=22000)
+                page.wait_for_load_state("networkidle", timeout=15000)
             except PWTimeout:
-                page.wait_for_timeout(5000)
+                page.wait_for_timeout(3000)
             accept_cookies(page)
-            for _ in range(12):
-                page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-                page.wait_for_timeout(1300)
+            for _ in range(8):
+                page.evaluate(
+                    "() => { if (document.body) window.scrollTo(0, document.body.scrollHeight); }")
+                page.wait_for_timeout(1100)
             html = page.content()
-            print(f"   {luma_url}: html={len(html)}")
-            if len(html) > 60000:
-                break
+            soup = BeautifulSoup(html, "lxml")
+            nd = soup.find("script", {"id": "__NEXT_DATA__"})
+            if nd and nd.string:
+                try:
+                    blobs.append(json.loads(nd.string))
+                except Exception:
+                    pass
+            print(f"   {url}: loaded ({len(html)} chars)")
         except Exception as e:
-            print(f"   [WARN] {luma_url}: {e}")
+            print(f"   [WARN] {url}: {e}")
+
     ctx.close()
 
-    # Collect all JSON blobs: __NEXT_DATA__ (Luma is Next.js) + captured network JSON
-    blobs = []
-    if html:
-        soup = BeautifulSoup(html, "lxml")
-        nd = soup.find("script", {"id": "__NEXT_DATA__"})
-        if nd and nd.string:
-            try:
-                blobs.append(json.loads(nd.string))
-                print("   found __NEXT_DATA__")
-            except Exception:
-                pass
-        # Also any inline script assigning a big JSON object
-        for sc in soup.find_all("script"):
-            txt = sc.string or ""
-            if '"start_at"' in txt or '"startDate"' in txt:
-                m = re.search(r"(\{.*\}|\[.*\])", txt, re.S)
-                if m:
-                    try:
-                        blobs.append(json.loads(m.group(1)))
-                    except Exception:
-                        pass
-
-    print(f"   captured {len(captured)} network JSON · {len(blobs)} embedded blobs")
     for _url, body in captured:
         blobs.append(body)
+    print(f"   scanning {len(blobs)} JSON blobs for France events...")
 
-    # Deep-extract events from every blob
     for blob in blobs:
         for ev in extract_events_deep_json(blob, "Luma", source_type="luma",
-                                           base_url="https://lu.ma"):
+                                           base_url="https://lu.ma", require_france=True):
             key = (ev["title"][:50].lower(), ev["date"])
             if key not in seen:
                 seen.add(key)
                 events.append(ev)
 
-    # Fallback: JSON-LD from rendered HTML
-    if html and not events:
-        soup = BeautifulSoup(html, "lxml")
-        for item in extract_jsonld_events(soup):
-            title = clean_text(item.get("name", ""))
-            dt = parse_date(item.get("startDate") or item.get("startTime"))
-            if not title or not dt or not in_window(dt.date()):
-                continue
-            key = (title[:50].lower(), dt.date().isoformat())
-            if key in seen:
-                continue
-            seen.add(key)
-            events.append(new_event(
-                "Luma", title, dt.date(),
-                time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-                location="Paris", desc=strip_html(item.get("description", ""))[:400],
-                url=make_absolute(item.get("url", ""), "https://lu.ma"), source_type="luma",
-            ))
-
-    print(f"   ✓ {len(events)} events")
+    print(f"   ✓ {len(events)} events (France only)")
     return events
 
 
