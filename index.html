@@ -8,457 +8,443 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales/fr.global.min.js"></script>
 
   <style>
-    /* ─────────────────────────────────────────────────────────────
-       Design system
-       ───────────────────────────────────────────────────────────── */
+    /* ═══════════════════════════════════════════════════════════════
+       Design tokens
+       ═══════════════════════════════════════════════════════════════ */
     :root {
-      --bg:        #fafaf9;
-      --surface:   #ffffff;
-      --border:    #e7e5e4;
-      --border-strong: #d6d3d1;
-      --text:      #1c1917;
-      --text-soft: #57534e;
-      --muted:     #a8a29e;
-      --accent:    #18181b;
-      --accent-hover: #27272a;
-      --shadow:    0 1px 2px rgba(0,0,0,.04), 0 4px 12px rgba(0,0,0,.04);
-      --radius:    10px;
-      --radius-sm: 6px;
-      --radius-lg: 14px;
+      --bg:            #07070d;
+      --text:          #ececf2;
+      --text-soft:     #b9b9c9;
+      --muted:         #76768c;
+      --glass:         rgba(255,255,255,0.045);
+      --glass-2:       rgba(255,255,255,0.07);
+      --border:        rgba(255,255,255,0.09);
+      --border-bright: rgba(255,255,255,0.18);
+      --radius:        16px;
+      --radius-sm:     11px;
 
-      /* Discipline palette — muted, sophisticated */
-      --c-math-bg:    #eff6ff;  --c-math-fg:    #1d4ed8;
-      --c-philo-bg:   #f5f3ff;  --c-philo-fg:   #6d28d9;
-      --c-litt-bg:    #fef2f2;  --c-litt-fg:    #b91c1c;
-      --c-hist-bg:    #fff7ed;  --c-hist-fg:    #c2410c;
-      --c-sci-bg:     #f0fdf4;  --c-sci-fg:     #15803d;
-      --c-eco-bg:     #fefce8;  --c-eco-fg:     #a16207;
-      --c-socio-bg:   #f0fdfa;  --c-socio-fg:   #0f766e;
-      --c-droit-bg:   #f1f5f9;  --c-droit-fg:   #334155;
-      --c-arts-bg:    #fdf2f8;  --c-arts-fg:    #be185d;
-      --c-autre-bg:   #f5f5f4;  --c-autre-fg:   #57534e;
+      --c-math:  #60a5fa;  --c-philo: #a78bfa;  --c-litt:  #fb7185;
+      --c-hist:  #fb923c;  --c-sci:   #4ade80;  --c-eco:   #fbbf24;
+      --c-socio: #2dd4bf;  --c-droit: #9aa6b8;  --c-arts:  #f472b6;
+      --c-autre: #9ca3af;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
 
     body {
-      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      font-family: "Inter", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       font-size: 15px;
-      line-height: 1.55;
+      line-height: 1.6;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    .serif { font-family: "Instrument Serif", "Times New Roman", serif; font-weight: 400; }
+    /* ═══════════════════════════════════════════════════════════════
+       Animated aurora background
+       ═══════════════════════════════════════════════════════════════ */
+    .aurora {
+      position: fixed; inset: 0; z-index: -2;
+      overflow: hidden; background: var(--bg);
+    }
+    .blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(110px); opacity: 0.55;
+      will-change: transform;
+    }
+    .blob.b1 { width: 46vw; height: 46vw; background: #6d28d9;
+               top: -12vw; left: -8vw;  animation: drift1 24s ease-in-out infinite; }
+    .blob.b2 { width: 40vw; height: 40vw; background: #1d4ed8;
+               top: 18vw;  right: -12vw; animation: drift2 30s ease-in-out infinite; }
+    .blob.b3 { width: 38vw; height: 38vw; background: #be185d;
+               bottom: -16vw; left: 22vw; animation: drift3 27s ease-in-out infinite; }
+    .blob.b4 { width: 30vw; height: 30vw; background: #0e7490;
+               top: 40vw; left: 36vw;    animation: drift1 33s ease-in-out infinite reverse; }
+    @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(8vw,6vw) scale(1.15)} }
+    @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-7vw,9vw) scale(1.1)} }
+    @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(6vw,-8vw) scale(1.2)} }
+    /* fine grain so flat areas don't band */
+    .aurora::after {
+      content:""; position:absolute; inset:0;
+      background-image: radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 4px 4px; opacity:.5;
+    }
 
-    /* ─────────────────────────────────────────────────────────────
+    /* ═══════════════════════════════════════════════════════════════
        Layout
-       ───────────────────────────────────────────────────────────── */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+       ═══════════════════════════════════════════════════════════════ */
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
+    /* ── Nav ─────────────────────────────────────────────────────── */
     nav.topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,18,0.6);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
       border-bottom: 1px solid var(--border);
-      background: rgba(250, 250, 249, 0.85);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
     .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 24px;
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1240px; margin: 0 auto; padding: 15px 24px;
+      display: flex; align-items: center; justify-content: space-between;
     }
-    .logo {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      display: flex; align-items: center; gap: 8px;
+    .logo { display: flex; align-items: center; gap: 10px;
+            font-family: "Space Grotesk", sans-serif; font-weight: 600;
+            font-size: 17px; letter-spacing: -0.01em; }
+    .logo-orb {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: conic-gradient(from 0deg, #a78bfa, #60a5fa, #f472b6, #a78bfa);
+      box-shadow: 0 0 16px rgba(167,139,250,.7);
+      animation: spin 8s linear infinite;
     }
-    .logo .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-    .nav-meta { font-size: 13px; color: var(--muted); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .nav-meta { font-size: 12.5px; color: var(--muted); }
 
-    /* ─────────────────────────────────────────────────────────────
-       Hero
-       ───────────────────────────────────────────────────────────── */
-    .hero { padding: 56px 0 32px; }
+    /* ── Hero ────────────────────────────────────────────────────── */
+    .hero { padding: 76px 0 36px; text-align: center; }
+    .hero .eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+      padding: 6px 14px; border: 1px solid var(--border);
+      border-radius: 999px; background: var(--glass); margin-bottom: 22px;
+    }
     .hero h1 {
-      font-size: 56px;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(38px, 6vw, 72px);
+      font-weight: 700; line-height: 1.04; letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      background: linear-gradient(140deg, #ffffff 18%, #b3a4ff 52%, #6da8ff 78%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .hero p {
-      font-size: 17px;
-      color: var(--text-soft);
-      margin-bottom: 28px;
+      font-size: 17px; color: var(--text-soft);
+      max-width: 660px; margin: 0 auto 34px;
     }
-    .hero p .count { color: var(--text); font-weight: 600; }
+    .hero p .count {
+      font-weight: 700; color: #fff;
+      font-variant-numeric: tabular-nums;
+    }
 
-    /* Search */
-    .search-wrap {
-      position: relative;
-      max-width: 520px;
-      margin-bottom: 32px;
-    }
+    /* ── Search ──────────────────────────────────────────────────── */
+    .search-wrap { position: relative; max-width: 560px; margin: 0 auto; }
     .search-input {
-      width: 100%;
-      padding: 13px 14px 13px 42px;
-      border: 1px solid var(--border-strong);
-      border-radius: var(--radius);
-      font-size: 15px;
-      font-family: inherit;
-      background: var(--surface);
-      transition: all .15s ease;
+      width: 100%; padding: 16px 18px 16px 50px;
+      font-size: 15px; font-family: inherit; color: var(--text);
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      transition: border-color .2s, box-shadow .2s, background .2s;
     }
-    .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(24,24,27,.07); }
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus {
+      outline: none;
+      border-color: rgba(167,139,250,0.6);
+      background: var(--glass-2);
+      box-shadow: 0 0 0 4px rgba(167,139,250,0.12), 0 0 40px rgba(109,40,217,0.25);
+    }
     .search-icon {
-      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
-      width: 16px; height: 16px; color: var(--muted);
-      pointer-events: none;
+      position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+      width: 18px; height: 18px; color: var(--muted); pointer-events: none;
     }
 
-    /* ─────────────────────────────────────────────────────────────
-       Tabs
-       ───────────────────────────────────────────────────────────── */
+    /* ═══════════════════════════════════════════════════════════════
+       Controls (tabs / filters)
+       ═══════════════════════════════════════════════════════════════ */
+    .controls { padding: 32px 0 8px; }
+
     .tabs {
-      display: inline-flex;
-      gap: 4px;
-      padding: 4px;
-      background: var(--surface);
+      display: flex; gap: 5px; padding: 5px; width: fit-content; margin: 0 auto 26px;
+      background: var(--glass);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      margin-bottom: 24px;
+      border-radius: 14px;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
     .tab {
-      padding: 8px 16px;
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 500;
-      font-family: inherit;
-      color: var(--text-soft);
-      border-radius: var(--radius-sm);
-      transition: all .15s ease;
       display: flex; align-items: center; gap: 8px;
+      padding: 9px 18px; border: none; cursor: pointer;
+      font-size: 14px; font-weight: 500; font-family: inherit;
+      color: var(--text-soft); background: none;
+      border-radius: 10px; transition: all .18s;
     }
-    .tab:hover { color: var(--text); }
-    .tab.active { background: var(--accent); color: white; }
+    .tab:hover { color: #fff; }
+    .tab.active {
+      color: #fff;
+      background: linear-gradient(135deg, rgba(167,139,250,.9), rgba(96,165,250,.9));
+      box-shadow: 0 6px 24px rgba(109,40,217,.4);
+    }
     .tab .badge {
-      font-size: 11px; padding: 1px 7px; border-radius: 999px;
-      background: var(--c-autre-bg); color: var(--c-autre-fg); font-weight: 600;
+      font-size: 11px; font-weight: 700; padding: 1px 7px;
+      border-radius: 999px; background: rgba(255,255,255,0.1); color: var(--text-soft);
     }
-    .tab.active .badge { background: rgba(255,255,255,.18); color: white; }
+    .tab.active .badge { background: rgba(255,255,255,0.22); color: #fff; }
 
-    /* ─────────────────────────────────────────────────────────────
-       Filter chips
-       ───────────────────────────────────────────────────────────── */
-    .filter-section { margin-bottom: 14px; }
+    .filter-block { margin-bottom: 14px; }
     .filter-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 9px;
     }
-    .chips {
-      display: flex; flex-wrap: wrap; gap: 6px;
-    }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; }
     .chip {
-      padding: 5px 11px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      cursor: pointer;
-      font-size: 13px;
-      font-family: inherit;
-      color: var(--text-soft);
-      transition: all .12s ease;
-      white-space: nowrap;
+      padding: 6px 13px; cursor: pointer;
+      font-size: 13px; font-family: inherit; color: var(--text-soft);
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: 999px; transition: all .15s; white-space: nowrap;
     }
-    .chip:hover { border-color: var(--border-strong); color: var(--text); }
+    .chip:hover { border-color: var(--border-bright); color: #fff; }
     .chip.active {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
+      color: #fff; font-weight: 600;
+      background: var(--glass-2);
+      border-color: var(--chip-c, #fff);
+      box-shadow: 0 0 18px -4px var(--chip-c, rgba(255,255,255,.5)),
+                  inset 0 0 12px -8px var(--chip-c, #fff);
     }
-    .chip.discipline-chip.active.disc-Mathématiques     { background: var(--c-math-fg);   border-color: var(--c-math-fg); }
-    .chip.discipline-chip.active.disc-Philosophie       { background: var(--c-philo-fg);  border-color: var(--c-philo-fg); }
-    .chip.discipline-chip.active.disc-Littérature       { background: var(--c-litt-fg);   border-color: var(--c-litt-fg); }
-    .chip.discipline-chip.active.disc-Histoire          { background: var(--c-hist-fg);   border-color: var(--c-hist-fg); }
-    .chip.discipline-chip.active.disc-Sciences          { background: var(--c-sci-fg);    border-color: var(--c-sci-fg); }
-    .chip.discipline-chip.active.disc-Économie          { background: var(--c-eco-fg);    border-color: var(--c-eco-fg); }
-    .chip.discipline-chip.active.disc-Sociologie        { background: var(--c-socio-fg);  border-color: var(--c-socio-fg); }
-    .chip.discipline-chip.active.disc-Droit             { background: var(--c-droit-fg);  border-color: var(--c-droit-fg); }
-    .chip.discipline-chip.active.disc-Arts              { background: var(--c-arts-fg);   border-color: var(--c-arts-fg); }
-    .chip.discipline-chip.active.disc-Autre             { background: var(--c-autre-fg);  border-color: var(--c-autre-fg); }
+    .chip.disc-Mathématiques { --chip-c: var(--c-math); }
+    .chip.disc-Philosophie   { --chip-c: var(--c-philo); }
+    .chip.disc-Littérature   { --chip-c: var(--c-litt); }
+    .chip.disc-Histoire      { --chip-c: var(--c-hist); }
+    .chip.disc-Sciences      { --chip-c: var(--c-sci); }
+    .chip.disc-Économie      { --chip-c: var(--c-eco); }
+    .chip.disc-Sociologie    { --chip-c: var(--c-socio); }
+    .chip.disc-Droit         { --chip-c: var(--c-droit); }
+    .chip.disc-Arts          { --chip-c: var(--c-arts); }
+    .chip.disc-Autre         { --chip-c: var(--c-autre); }
 
-    /* ─────────────────────────────────────────────────────────────
-       Toolbar
-       ───────────────────────────────────────────────────────────── */
+    /* ── Toolbar ─────────────────────────────────────────────────── */
     .toolbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 0 8px;
-      margin-top: 18px;
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 22px; padding-top: 18px;
       border-top: 1px solid var(--border);
     }
     .results-text { font-size: 13px; color: var(--muted); }
-    .view-toggle { display: flex; gap: 2px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 3px; }
-    .view-btn {
-      padding: 5px 12px;
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-family: inherit;
-      color: var(--text-soft);
-      border-radius: 4px;
-      transition: all .12s;
+    .view-toggle {
+      display: flex; gap: 3px; padding: 4px;
+      background: var(--glass); border: 1px solid var(--border); border-radius: 11px;
     }
-    .view-btn:hover { color: var(--text); }
-    .view-btn.active { background: var(--accent); color: white; }
+    .view-btn {
+      padding: 6px 14px; border: none; cursor: pointer;
+      font-size: 13px; font-family: inherit; color: var(--text-soft);
+      background: none; border-radius: 7px; transition: all .15s;
+    }
+    .view-btn:hover { color: #fff; }
+    .view-btn.active {
+      color: #fff;
+      background: linear-gradient(135deg, rgba(167,139,250,.85), rgba(96,165,250,.85));
+    }
 
-    /* ─────────────────────────────────────────────────────────────
+    /* ═══════════════════════════════════════════════════════════════
        Events
-       ───────────────────────────────────────────────────────────── */
-    main { padding-bottom: 80px; }
+       ═══════════════════════════════════════════════════════════════ */
+    main { padding-bottom: 90px; }
 
-    .day-group { margin-top: 36px; }
-    .day-group:first-child { margin-top: 8px; }
-
+    .day-group { margin-top: 44px; }
+    .day-group:first-child { margin-top: 26px; }
     .day-header {
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; gap: 14px; margin-bottom: 16px;
     }
     .day-name {
-      font-family: "Instrument Serif", serif;
-      font-size: 26px;
-      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 24px; font-weight: 600; letter-spacing: -0.01em; color: #fff;
     }
     .day-date { font-size: 13px; color: var(--muted); }
+    .day-line { flex: 1; height: 1px; background: var(--border); }
 
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 16px;
     }
 
     .event-card {
-      background: var(--surface);
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column; gap: 11px;
+      padding: 19px;
+      text-decoration: none; color: inherit;
+      background:
+        linear-gradient(160deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      transition: all .15s ease;
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-      overflow: hidden;
+      border-radius: var(--radius);
+      transform-style: preserve-3d;
+      transition: transform .5s cubic-bezier(.2,.8,.2,1),
+                  border-color .25s, box-shadow .35s;
+      animation: cardIn .5s ease both;
+      animation-delay: calc(var(--d, 0) * 22ms);
+    }
+    @keyframes cardIn { from { opacity: 0; transform: translateY(16px); } }
+    .event-card::before {           /* discipline glow line at top */
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent, #888);
+      box-shadow: 0 0 14px var(--accent, #888);
+      opacity: .85;
+    }
+    .event-card .glare {
+      position: absolute; inset: 0; pointer-events: none;
+      border-radius: var(--radius); transition: background .2s;
     }
     .event-card:hover {
-      border-color: var(--border-strong);
-      box-shadow: var(--shadow);
-      transform: translateY(-1px);
+      border-color: var(--border-bright);
+      box-shadow: 0 18px 50px -16px rgba(0,0,0,0.7),
+                  0 0 40px -14px var(--accent, #888);
     }
 
     .card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--muted);
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
     }
     .card-time {
-      font-weight: 600;
-      color: var(--text);
+      font-size: 13px; font-weight: 600; color: #fff;
       font-variant-numeric: tabular-nums;
+      font-family: "Space Grotesk", sans-serif;
     }
     .disc-tag {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 999px;
+      color: var(--accent, #fff);
+      background: color-mix(in srgb, var(--accent, #888) 16%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent, #888) 35%, transparent);
+      white-space: nowrap;
     }
-    .disc-Mathématiques { background: var(--c-math-bg); color: var(--c-math-fg); }
-    .disc-Philosophie { background: var(--c-philo-bg); color: var(--c-philo-fg); }
-    .disc-Littérature { background: var(--c-litt-bg); color: var(--c-litt-fg); }
-    .disc-Histoire { background: var(--c-hist-bg); color: var(--c-hist-fg); }
-    .disc-Sciences { background: var(--c-sci-bg); color: var(--c-sci-fg); }
-    .disc-Économie { background: var(--c-eco-bg); color: var(--c-eco-fg); }
-    .disc-Sociologie { background: var(--c-socio-bg); color: var(--c-socio-fg); }
-    .disc-Droit { background: var(--c-droit-bg); color: var(--c-droit-fg); }
-    .disc-Arts { background: var(--c-arts-bg); color: var(--c-arts-fg); }
-    .disc-Autre { background: var(--c-autre-bg); color: var(--c-autre-fg); }
-
     .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.35;
-      color: var(--text);
-      letter-spacing: -0.005em;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 16.5px; font-weight: 600; line-height: 1.32; color: #fff;
+      letter-spacing: -0.01em;
     }
     .card-meta {
-      font-size: 13px;
-      color: var(--text-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
+      display: flex; flex-direction: column; gap: 4px;
+      font-size: 13px; color: var(--text-soft);
     }
-    .card-meta .institution {
-      font-weight: 500;
-      color: var(--text);
-    }
-    .card-meta .speaker, .card-meta .location {
-      display: flex; align-items: center; gap: 6px;
-      color: var(--text-soft);
-    }
-    .card-meta svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.6; }
+    .card-meta .institution { color: #fff; font-weight: 500; }
+    .card-meta .row { display: flex; align-items: center; gap: 7px; }
+    .card-meta svg { width: 13px; height: 13px; flex-shrink: 0; opacity: .55; }
     .card-desc {
-      font-size: 13px;
-      color: var(--text-soft);
-      line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+      font-size: 12.5px; color: var(--muted); line-height: 1.55;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
     .no-results {
-      text-align: center;
-      padding: 80px 20px;
-      color: var(--muted);
-      font-family: "Instrument Serif", serif;
-      font-size: 22px;
+      text-align: center; padding: 90px 20px; color: var(--muted);
     }
-    .no-results small {
-      display: block;
-      font-family: "Inter", sans-serif;
-      font-size: 13px;
-      margin-top: 12px;
+    .no-results .big {
+      font-family: "Space Grotesk", sans-serif; font-size: 22px;
+      color: var(--text-soft); margin-bottom: 8px;
     }
 
-    /* ─────────────────────────────────────────────────────────────
-       Calendar view
-       ───────────────────────────────────────────────────────────── */
-    #calendar-view { display: none; background: var(--surface); padding: 20px; border: 1px solid var(--border); border-radius: var(--radius-lg); }
-    #calendar { height: 700px; }
-    .fc { font-family: "Inter", sans-serif !important; font-size: 13px; }
-    .fc-toolbar-title { font-family: "Instrument Serif", serif !important; font-weight: 400 !important; font-size: 22px !important; }
-    .fc-button { background: var(--surface) !important; border: 1px solid var(--border) !important; color: var(--text) !important; text-transform: none !important; font-weight: 500 !important; box-shadow: none !important; }
-    .fc-button:hover { background: var(--bg) !important; }
-    .fc-button-active, .fc-button-primary:not(:disabled).fc-button-active { background: var(--accent) !important; border-color: var(--accent) !important; color: white !important; }
-    .fc-daygrid-day-number { color: var(--text-soft) !important; }
-    .fc-event { border-radius: 4px !important; padding: 1px 4px !important; font-size: 11px !important; cursor: pointer; }
+    /* ── Calendar (dark) ─────────────────────────────────────────── */
+    #calendar-view { display: none; margin-top: 26px; }
+    #calendar {
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px; height: 720px;
+    }
+    .fc {
+      --fc-border-color: rgba(255,255,255,0.08);
+      --fc-page-bg-color: transparent;
+      --fc-neutral-bg-color: rgba(255,255,255,0.03);
+      --fc-today-bg-color: rgba(167,139,250,0.13);
+      --fc-list-event-hover-bg-color: rgba(255,255,255,0.05);
+      font-family: "Inter", sans-serif !important;
+      font-size: 13px; color: var(--text-soft);
+    }
+    .fc .fc-toolbar-title {
+      font-family: "Space Grotesk", sans-serif !important;
+      font-size: 21px !important; color: #fff;
+    }
+    .fc .fc-col-header-cell-cushion,
+    .fc .fc-daygrid-day-number { color: var(--text-soft); text-decoration: none; }
+    .fc .fc-button {
+      background: var(--glass-2) !important; border: 1px solid var(--border) !important;
+      color: var(--text) !important; text-transform: none !important;
+      font-weight: 500 !important; box-shadow: none !important; font-size: 13px !important;
+    }
+    .fc .fc-button:hover { background: rgba(255,255,255,0.12) !important; }
+    .fc .fc-button-primary:not(:disabled).fc-button-active {
+      background: linear-gradient(135deg, #a78bfa, #60a5fa) !important;
+      border-color: transparent !important; color: #fff !important;
+    }
+    .fc .fc-event { border: none !important; border-radius: 5px !important;
+                    padding: 1px 5px !important; font-size: 11px !important; cursor: pointer; }
+    .fc-theme-standard td, .fc-theme-standard th { border-color: rgba(255,255,255,.07); }
 
-    /* ─────────────────────────────────────────────────────────────
-       Footer
-       ───────────────────────────────────────────────────────────── */
+    /* ── Footer ──────────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 32px 0;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
+      padding: 30px 0; text-align: center;
+      font-size: 13px; color: var(--muted);
     }
-    footer a { color: var(--text-soft); text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
+    footer a { color: var(--text-soft); text-decoration: underline;
+               text-underline-offset: 3px; text-decoration-color: var(--border-bright); }
 
-    /* ─────────────────────────────────────────────────────────────
-       Responsive
-       ───────────────────────────────────────────────────────────── */
-    @media (max-width: 640px) {
-      .hero { padding: 36px 0 24px; }
-      .hero h1 { font-size: 40px; }
-      .hero p { font-size: 15px; }
-      .day-name { font-size: 22px; }
+    /* ── Responsive ──────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero { padding: 50px 0 28px; }
       .container { padding: 0 16px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .tabs { width: 100%; }
+      .tab { flex: 1; justify-content: center; }
     }
-
-    /* Loading skeleton */
-    .skeleton {
-      background: linear-gradient(90deg, var(--bg) 25%, var(--surface) 50%, var(--bg) 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.5s infinite;
-      border-radius: var(--radius-lg);
-      height: 160px;
+    @media (prefers-reduced-motion: reduce) {
+      .blob, .logo-orb { animation: none; }
+      .event-card { animation: none; }
     }
-    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
   </style>
 </head>
 <body>
 
-<!-- ── Nav ─────────────────────────────────────────────────── -->
+<div class="aurora">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="blob b3"></div><div class="blob b4"></div>
+</div>
+
+<!-- ── Nav ─────────────────────────────────────────────────────── -->
 <nav class="topbar">
   <div class="topbar-inner">
-    <div class="logo">
-      <span class="dot"></span>
-      Paris·Académique
-    </div>
+    <div class="logo"><span class="logo-orb"></span>Paris·Académique</div>
     <div class="nav-meta" id="nav-meta">—</div>
   </div>
 </nav>
 
-<!-- ── Hero ────────────────────────────────────────────────── -->
-<section class="container hero">
-  <h1 class="serif">Toutes les conférences académiques à Paris.</h1>
+<!-- ── Hero ────────────────────────────────────────────────────── -->
+<header class="container hero">
+  <span class="eyebrow">Mis à jour chaque jour</span>
+  <h1>Toutes les conférences<br>académiques de Paris.</h1>
   <p>
-    <span class="count" id="hero-count">—</span> conférences à venir, agrégées depuis les
-    grandes institutions académiques parisiennes — Collège de France, ENS, EHESS, IHP,
-    Sciences Po, Sorbonne, Dauphine, PSE, PSL — et Luma.
+    <span class="count" id="hero-count">0</span> événements à venir, agrégés depuis
+    le Collège de France, l'ENS, l'EHESS, l'IHP, Sciences Po, la Sorbonne, PSE, PSL et Luma.
   </p>
-
   <div class="search-wrap">
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
     </svg>
-    <input class="search-input" id="search" type="search" placeholder="Rechercher un titre, intervenant, sujet…" />
+    <input class="search-input" id="search" type="search"
+           placeholder="Rechercher un titre, un intervenant, un sujet…" />
   </div>
+</header>
 
-  <!-- Tabs -->
+<!-- ── Controls ────────────────────────────────────────────────── -->
+<section class="container controls">
   <div class="tabs">
     <button class="tab active" data-source="all">Tout <span class="badge" id="badge-all">0</span></button>
     <button class="tab" data-source="institution">Universités <span class="badge" id="badge-inst">0</span></button>
     <button class="tab" data-source="luma">Luma <span class="badge" id="badge-luma">0</span></button>
   </div>
 
-  <!-- Filters -->
-  <div class="filter-section">
+  <div class="filter-block">
     <div class="filter-label">Discipline</div>
     <div class="chips" id="discipline-chips"></div>
   </div>
-  <div class="filter-section" id="institution-section">
+  <div class="filter-block" id="institution-section">
     <div class="filter-label">Institution</div>
     <div class="chips" id="institution-chips"></div>
   </div>
-</section>
 
-<!-- ── Toolbar ─────────────────────────────────────────────── -->
-<div class="container">
   <div class="toolbar">
     <div class="results-text" id="results-text">—</div>
     <div class="view-toggle">
@@ -466,112 +452,90 @@
       <button class="view-btn" data-view="calendar">Calendrier</button>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ── Main ────────────────────────────────────────────────── -->
+<!-- ── Main ────────────────────────────────────────────────────── -->
 <main class="container">
   <div id="list-view"></div>
   <div id="calendar-view"><div id="calendar"></div></div>
 </main>
 
-<!-- ── Footer ──────────────────────────────────────────────── -->
 <footer class="container">
-  Mises à jour automatiques chaque matin · <a href="https://github.com/kovarci/zzzz" target="_blank">Code source</a>
+  Agrégé automatiquement chaque matin · <a href="https://github.com/kovarci/zzzz" target="_blank">Code source</a>
 </footer>
 
 <script>
-// ─────────────────────────────────────────────────────────────
-// Constants
-// ─────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────
 const DISC_COLORS = {
-  "Mathématiques":              { bg: "#eff6ff", fg: "#1d4ed8" },
-  "Philosophie":                { bg: "#f5f3ff", fg: "#6d28d9" },
-  "Littérature":                { bg: "#fef2f2", fg: "#b91c1c" },
-  "Histoire":                   { bg: "#fff7ed", fg: "#c2410c" },
-  "Sciences":                   { bg: "#f0fdf4", fg: "#15803d" },
-  "Économie":                   { bg: "#fefce8", fg: "#a16207" },
-  "Sociologie & Anthropologie": { bg: "#f0fdfa", fg: "#0f766e" },
-  "Droit & Sciences politiques":{ bg: "#f1f5f9", fg: "#334155" },
-  "Arts & Culture":             { bg: "#fdf2f8", fg: "#be185d" },
-  "Autre":                      { bg: "#f5f5f4", fg: "#57534e" },
+  "Mathématiques":              "#60a5fa",
+  "Philosophie":                "#a78bfa",
+  "Littérature":                "#fb7185",
+  "Histoire":                   "#fb923c",
+  "Sciences":                   "#4ade80",
+  "Économie":                   "#fbbf24",
+  "Sociologie & Anthropologie": "#2dd4bf",
+  "Droit & Sciences politiques":"#9aa6b8",
+  "Arts & Culture":             "#f472b6",
+  "Autre":                      "#9ca3af",
 };
 const DAYS_FR = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
 const MONTHS_FR = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
-
 const ICONS = {
   user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
-  pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  pin:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
 };
 
-// ─────────────────────────────────────────────────────────────
-// State
-// ─────────────────────────────────────────────────────────────
-let allEvents = [];
-let activeSource = "all";       // all | institution | luma
-let activeDiscs = new Set();
-let activeInsts = new Set();
-let searchQuery = "";
-let activeView = "list";
-let calendarInstance = null;
+let allEvents = [], activeSource = "all";
+let activeDiscs = new Set(), activeInsts = new Set();
+let searchQuery = "", activeView = "list", calendarInstance = null;
 
-// ─────────────────────────────────────────────────────────────
-// Load data
-// ─────────────────────────────────────────────────────────────
+// ── Load ─────────────────────────────────────────────────────────
 async function loadEvents() {
   try {
     const r = await fetch("data/events.json?" + Date.now());
     allEvents = await r.json();
     allEvents.forEach(e => { if (!e.source_type) e.source_type = "institution"; });
-    allEvents.sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || "")));
+    allEvents.sort((a,b) => (a.date + (a.time||"")).localeCompare(b.date + (b.time||"")));
     document.getElementById("nav-meta").textContent =
-      "Mis à jour le " + new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long" });
+      "Mis à jour le " + new Date().toLocaleDateString("fr-FR", {day:"numeric",month:"long"});
     buildFilters();
     updateBadges();
     render();
   } catch (e) {
     document.getElementById("list-view").innerHTML =
-      `<div class="no-results">Erreur de chargement.<small>${e.message}</small></div>`;
+      `<div class="no-results"><div class="big">Erreur de chargement</div><div>${e.message}</div></div>`;
   }
 }
 
-// ─────────────────────────────────────────────────────────────
-// Filters
-// ─────────────────────────────────────────────────────────────
+// ── Filters ──────────────────────────────────────────────────────
 function buildFilters() {
-  const discs = [...new Set(allEvents.map(e => e.discipline))].sort((a, b) => {
-    const order = ["Mathématiques","Philosophie","Littérature","Histoire","Sciences","Économie","Sociologie & Anthropologie","Droit & Sciences politiques","Arts & Culture","Autre"];
-    return order.indexOf(a) - order.indexOf(b);
-  });
-  const insts = [...new Set(allEvents.filter(e => e.source_type === "institution").map(e => e.institution))].sort();
+  const order = ["Mathématiques","Philosophie","Littérature","Histoire","Sciences","Économie","Sociologie & Anthropologie","Droit & Sciences politiques","Arts & Culture","Autre"];
+  const discs = [...new Set(allEvents.map(e => e.discipline))].sort((a,b) => order.indexOf(a)-order.indexOf(b));
+  const insts = [...new Set(allEvents.filter(e => e.source_type==="institution").map(e => e.institution))].sort();
 
-  // Discipline chips
   const dc = document.getElementById("discipline-chips");
   dc.innerHTML = "";
   discs.forEach(d => {
-    const safe = d.split(" ")[0].replace("&","").replace(/[éè]/g,"e");
     const btn = document.createElement("button");
-    btn.className = `chip discipline-chip disc-${d.split(" ")[0]}`;
-    btn.dataset.value = d;
+    btn.className = `chip disc-${d.split(" ")[0]}`;
     btn.textContent = d;
     btn.addEventListener("click", () => {
       btn.classList.toggle("active");
-      if (activeDiscs.has(d)) activeDiscs.delete(d); else activeDiscs.add(d);
+      activeDiscs.has(d) ? activeDiscs.delete(d) : activeDiscs.add(d);
       render();
     });
     dc.appendChild(btn);
   });
 
-  // Institution chips
   const ic = document.getElementById("institution-chips");
   ic.innerHTML = "";
   insts.forEach(i => {
     const btn = document.createElement("button");
     btn.className = "chip";
-    btn.dataset.value = i;
     btn.textContent = i;
     btn.addEventListener("click", () => {
       btn.classList.toggle("active");
-      if (activeInsts.has(i)) activeInsts.delete(i); else activeInsts.add(i);
+      activeInsts.has(i) ? activeInsts.delete(i) : activeInsts.add(i);
       render();
     });
     ic.appendChild(btn);
@@ -579,12 +543,21 @@ function buildFilters() {
 }
 
 function updateBadges() {
-  const inst = allEvents.filter(e => e.source_type === "institution").length;
-  const luma = allEvents.filter(e => e.source_type === "luma").length;
+  const inst = allEvents.filter(e => e.source_type==="institution").length;
+  const luma = allEvents.filter(e => e.source_type==="luma").length;
   document.getElementById("badge-all").textContent = allEvents.length;
   document.getElementById("badge-inst").textContent = inst;
   document.getElementById("badge-luma").textContent = luma;
-  document.getElementById("hero-count").textContent = allEvents.length;
+  animateCount(document.getElementById("hero-count"), allEvents.length);
+}
+
+function animateCount(el, target) {
+  let cur = 0; const step = Math.max(1, Math.ceil(target/45));
+  const t = setInterval(() => {
+    cur += step;
+    if (cur >= target) { cur = target; clearInterval(t); }
+    el.textContent = cur;
+  }, 22);
 }
 
 function filtered() {
@@ -594,167 +567,152 @@ function filtered() {
     if (activeDiscs.size && !activeDiscs.has(e.discipline)) return false;
     if (activeInsts.size && !activeInsts.has(e.institution)) return false;
     if (q) {
-      const hay = (e.title + " " + e.speaker + " " + e.description + " " + e.institution).toLowerCase();
+      const hay = (e.title+" "+e.speaker+" "+e.description+" "+e.institution).toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
   });
 }
 
-// ─────────────────────────────────────────────────────────────
-// Render: list
-// ─────────────────────────────────────────────────────────────
-function groupByDate(events) {
-  const groups = new Map();
-  events.forEach(e => {
-    if (!groups.has(e.date)) groups.set(e.date, []);
-    groups.get(e.date).push(e);
-  });
-  return groups;
-}
-
+// ── Render: list ─────────────────────────────────────────────────
 function escHtml(s) {
-  return String(s ?? "")
-    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  return String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 }
-
 function fmtDayHeader(iso) {
   const d = new Date(iso + "T12:00:00");
-  return {
-    name: DAYS_FR[d.getDay()],
-    date: `${d.getDate()} ${MONTHS_FR[d.getMonth()]}`,
-  };
+  return { name: DAYS_FR[d.getDay()], date: `${d.getDate()} ${MONTHS_FR[d.getMonth()]}` };
+}
+function groupByDate(events) {
+  const g = new Map();
+  events.forEach(e => { if (!g.has(e.date)) g.set(e.date, []); g.get(e.date).push(e); });
+  return g;
 }
 
-function renderList(events) {
-  const container = document.getElementById("list-view");
-  if (!events.length) {
-    container.innerHTML = `
-      <div class="no-results">
-        Aucune conférence ne correspond.
-        <small>Essayez de réinitialiser vos filtres.</small>
-      </div>`;
-    return;
-  }
-
-  const groups = groupByDate(events);
-  let html = "";
-  for (const [iso, evs] of groups) {
-    const h = fmtDayHeader(iso);
-    html += `
-      <div class="day-group">
-        <div class="day-header">
-          <div class="day-name serif">${h.name}</div>
-          <div class="day-date">${h.date}</div>
-        </div>
-        <div class="cards-grid">
-          ${evs.map(cardHtml).join("")}
-        </div>
-      </div>`;
-  }
-  container.innerHTML = html;
-}
-
-function cardHtml(ev) {
+function cardHtml(ev, idx) {
+  const color = DISC_COLORS[ev.discipline] ?? "#9ca3af";
   const time = ev.time ? (ev.end_time ? `${ev.time}–${ev.end_time}` : ev.time) : "Horaire à confirmer";
-  const url = ev.url || "#";
-  const inst = ev.source_type === "luma" ? `${ev.institution} · Luma` : ev.institution;
+  const inst = ev.source_type === "luma" ? `${escHtml(ev.institution)} · Luma` : escHtml(ev.institution);
   return `
-    <a class="event-card" href="${escHtml(url)}" target="_blank" rel="noopener">
+    <a class="event-card" href="${escHtml(ev.url || "#")}" target="_blank" rel="noopener"
+       style="--accent:${color};--d:${Math.min(idx,26)}">
+      <span class="glare"></span>
       <div class="card-top">
         <span class="card-time">${escHtml(time)}</span>
-        <span class="disc-tag disc-${ev.discipline.split(" ")[0]}">${escHtml(ev.discipline)}</span>
+        <span class="disc-tag">${escHtml(ev.discipline)}</span>
       </div>
       <div class="card-title">${escHtml(ev.title)}</div>
       <div class="card-meta">
-        <div class="institution">${escHtml(inst)}</div>
-        ${ev.speaker ? `<div class="speaker">${ICONS.user}<span>${escHtml(ev.speaker)}</span></div>` : ""}
-        ${ev.location ? `<div class="location">${ICONS.pin}<span>${escHtml(ev.location)}</span></div>` : ""}
+        <div class="institution">${inst}</div>
+        ${ev.speaker ? `<div class="row">${ICONS.user}<span>${escHtml(ev.speaker)}</span></div>` : ""}
+        ${ev.location ? `<div class="row">${ICONS.pin}<span>${escHtml(ev.location)}</span></div>` : ""}
       </div>
       ${ev.description ? `<div class="card-desc">${escHtml(ev.description)}</div>` : ""}
     </a>`;
 }
 
-// ─────────────────────────────────────────────────────────────
-// Render: calendar
-// ─────────────────────────────────────────────────────────────
+function renderList(events) {
+  const container = document.getElementById("list-view");
+  if (!events.length) {
+    container.innerHTML = `<div class="no-results">
+      <div class="big">Aucune conférence trouvée</div>
+      <div>Essayez de retirer un filtre ou de modifier votre recherche.</div></div>`;
+    return;
+  }
+  let html = "", idx = 0;
+  for (const [iso, evs] of groupByDate(events)) {
+    const h = fmtDayHeader(iso);
+    html += `<div class="day-group">
+      <div class="day-header">
+        <span class="day-name">${h.name}</span>
+        <span class="day-date">${h.date}</span>
+        <span class="day-line"></span>
+      </div>
+      <div class="cards-grid">${evs.map(e => cardHtml(e, idx++)).join("")}</div>
+    </div>`;
+  }
+  container.innerHTML = html;
+  container.querySelectorAll(".event-card").forEach(attachTilt);
+}
+
+// ── 3D tilt ──────────────────────────────────────────────────────
+function attachTilt(card) {
+  const glare = card.querySelector(".glare");
+  card.addEventListener("pointerenter", () => { card.style.transition = "transform .08s linear"; });
+  card.addEventListener("pointermove", e => {
+    const r = card.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    card.style.transform =
+      `perspective(820px) rotateY(${(px-.5)*9}deg) rotateX(${(.5-py)*9}deg) translateY(-5px) scale(1.018)`;
+    if (glare)
+      glare.style.background =
+        `radial-gradient(420px circle at ${px*100}% ${py*100}%, rgba(255,255,255,.13), transparent 55%)`;
+  });
+  card.addEventListener("pointerleave", () => {
+    card.style.transition = "transform .55s cubic-bezier(.2,.8,.2,1)";
+    card.style.transform = "";
+    if (glare) glare.style.background = "";
+  });
+}
+
+// ── Render: calendar ─────────────────────────────────────────────
 function renderCalendar(events) {
   const calEvents = events.map(ev => ({
     title: ev.title,
-    start: ev.date + (ev.time ? "T" + ev.time : ""),
-    end: ev.end_time ? ev.date + "T" + ev.end_time : undefined,
+    start: ev.date + (ev.time ? "T"+ev.time : ""),
+    end: ev.end_time ? ev.date+"T"+ev.end_time : undefined,
     url: ev.url,
-    backgroundColor: DISC_COLORS[ev.discipline]?.fg ?? "#57534e",
-    borderColor: DISC_COLORS[ev.discipline]?.fg ?? "#57534e",
-    textColor: "#ffffff",
+    backgroundColor: DISC_COLORS[ev.discipline] ?? "#9ca3af",
+    textColor: "#0a0a12",
   }));
   if (calendarInstance) calendarInstance.destroy();
   calendarInstance = new FullCalendar.Calendar(document.getElementById("calendar"), {
-    initialView: "dayGridMonth",
-    locale: "fr",
-    headerToolbar: {
-      left: "prev,next today",
-      center: "title",
-      right: "dayGridMonth,timeGridWeek,listMonth",
-    },
-    buttonText: { today: "Aujourd'hui", month: "Mois", week: "Semaine", list: "Liste" },
+    initialView: "dayGridMonth", locale: "fr", height: 676,
+    headerToolbar: { left:"prev,next today", center:"title", right:"dayGridMonth,timeGridWeek,listMonth" },
+    buttonText: { today:"Aujourd'hui", month:"Mois", week:"Semaine", list:"Liste" },
     events: calEvents,
-    eventClick(info) {
-      info.jsEvent.preventDefault();
-      if (info.event.url) window.open(info.event.url, "_blank");
-    },
-    height: 700,
+    eventClick(info) { info.jsEvent.preventDefault(); if (info.event.url) window.open(info.event.url,"_blank"); },
   });
   calendarInstance.render();
 }
 
-// ─────────────────────────────────────────────────────────────
-// Main render
-// ─────────────────────────────────────────────────────────────
+// ── Main render ──────────────────────────────────────────────────
 function render() {
   const evs = filtered();
   document.getElementById("results-text").textContent =
-    `${evs.length} résultat${evs.length > 1 ? "s" : ""}`;
+    `${evs.length} résultat${evs.length>1?"s":""}`;
   if (activeView === "list") renderList(evs);
   else renderCalendar(evs);
 }
 
-// ─────────────────────────────────────────────────────────────
-// Event listeners
-// ─────────────────────────────────────────────────────────────
+// ── Listeners ────────────────────────────────────────────────────
 document.querySelectorAll(".tab").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
     btn.classList.add("active");
     activeSource = btn.dataset.source;
-    // Hide institution section in Luma mode
     document.getElementById("institution-section").style.display =
       activeSource === "luma" ? "none" : "";
     render();
   });
 });
-
 document.querySelectorAll(".view-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".view-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     activeView = btn.dataset.view;
-    document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
-    document.getElementById("calendar-view").style.display = activeView === "calendar" ? "" : "none";
+    document.getElementById("list-view").style.display = activeView==="list" ? "" : "none";
+    document.getElementById("calendar-view").style.display = activeView==="calendar" ? "" : "none";
     render();
   });
 });
-
 let searchTimer;
 document.getElementById("search").addEventListener("input", e => {
   clearTimeout(searchTimer);
   searchTimer = setTimeout(() => { searchQuery = e.target.value; render(); }, 200);
 });
 
-// ─────────────────────────────────────────────────────────────
-// Boot
-// ─────────────────────────────────────────────────────────────
 loadEvents();
 </script>
 </body>
