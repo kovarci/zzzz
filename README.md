@@ -74,6 +74,12 @@ Le tout **100 % gratuit** : Pages + Actions sont gratuits pour un dépôt public
   (Apple Calendar / Outlook) sur chaque événement.
 - **Favoris** : une étoile pour sauvegarder des événements (gardés dans le
   navigateur via `localStorage`).
+- **Carte de Paris** : une vue carte avec les événements en pins, géocodés
+  par adresse (OpenStreetMap / Leaflet, fond sombre).
+- **Liens partageables** : les filtres sont encodés dans l'URL — on peut
+  partager une vue précise, ex. `…/zzzz?discipline=Philosophie`.
+- **Finitions** : favicon, aperçu de partage (Open Graph), écran de
+  chargement (cartes scintillantes).
 - Entièrement **responsive** (mobile/desktop).
 
 ### Automatisation
@@ -113,8 +119,9 @@ Le tout **100 % gratuit** : Pages + Actions sont gratuits pour un dépôt public
 - **Pas de vue calendrier** (grille mensuelle) — retirée car illisible avec
   500+ événements ; la vue liste groupée par jour est plus claire.
 - **Pas de pages de détail** — cliquer un événement ouvre le site source.
-- **Pas de carte** des événements (géocodage non implémenté).
 - **Pas de notifications / newsletter.**
+- **Carte** : un événement n'apparaît sur la carte que si son adresse a pu
+  être géocodée ; les lieux vagues (« Salle W », « en ligne ») sont absents.
 - **Classement par discipline approximatif** — basé sur des mots-clés, donc
   quelques événements peuvent tomber dans « Autre » ou la mauvaise catégorie.
 
@@ -152,7 +159,8 @@ Dans `scraper/scrape.py` :
 paris-conferences/
 ├── index.html               ← Site (design + logique, un seul fichier)
 ├── data/
-│   └── events.json           ← Données (mises à jour par le bot)
+│   ├── events.json           ← Données (mises à jour par le bot)
+│   └── geocache.json         ← Cache des coordonnées GPS (pour la carte)
 ├── scraper/
 │   ├── scrape.py             ← Scraper multi-sources
 │   └── requirements.txt

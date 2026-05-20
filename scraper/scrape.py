@@ -13,6 +13,7 @@ All HTML sources are scraped page-by-page (?page=N) until no new events appear.
 import json
 import hashlib
 import re
+import time
 import traceback
 from datetime import datetime, date, timedelta
 from pathlib import Path
@@ -1145,6 +1146,80 @@ def deduplicate(events):
     return out
 
 
+# ── Geocoding (for the map view) ──────────────────────────────────────────────
+
+GEOCACHE_FILE = OUTPUT_FILE.parent / "geocache.json"
+MAX_NEW_GEOCODE = 220   # courtesy cap on Nominatim lookups per run
+
+# Known venue coordinates — seeds the cache so big institutions always map,
+# even if Nominatim is unreachable.
+SEED_GEOCODE = {
+    "ihp, 11 rue pierre et marie curie, paris 5e": [48.8438, 2.3437],
+    "collège de france, 11 place marcelin-berthelot, paris 5e": [48.8489, 2.3446],
+    "ens, 45 rue d'ulm, paris 5e": [48.8417, 2.3446],
+    "ehess, 54 boulevard raspail, paris 6e": [48.8488, 2.3270],
+    "sciences po, 27 rue saint-guillaume, paris 7e": [48.8543, 2.3280],
+    "paris school of economics, 48 boulevard jourdan, paris 14e": [48.8216, 2.3379],
+    "université psl, 60 rue mazarine, paris 6e": [48.8555, 2.3382],
+    "sorbonne université, paris": [48.8479, 2.3433],
+}
+
+
+def _nominatim(sess, address):
+    """Look up one address via OpenStreetMap Nominatim. Returns [lat, lng] or None."""
+    if re.search(r"\bonline\b|en ligne|visio|webinaire|zoom|distanciel", address, re.I):
+        return None
+    q = address
+    if "france" not in q.lower():
+        q = q + ("" if "paris" in q.lower() else ", Paris") + ", France"
+    try:
+        r = sess.get("https://nominatim.openstreetmap.org/search",
+                     params={"q": q, "format": "json", "limit": 1, "countrycodes": "fr"},
+                     timeout=15)
+        if r.ok and r.json():
+            d = r.json()[0]
+            return [round(float(d["lat"]), 6), round(float(d["lon"]), 6)]
+    except Exception:
+        pass
+    return None
+
+
+def geocode_all(events):
+    """Add lat/lng to events by geocoding their location, with a persistent cache."""
+    try:
+        cache = json.loads(GEOCACHE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        cache = {}
+    for k, v in SEED_GEOCODE.items():
+        cache.setdefault(k, v)
+
+    sess = requests.Session()
+    sess.headers.update({"User-Agent": "ParisAcademique/1.0 (github.com/kovarci/zzzz)"})
+    new = 0
+    for ev in events:
+        loc = clean_text(ev.get("location") or "")
+        if not loc:
+            continue
+        key = loc.lower()[:140]
+        if key not in cache:
+            if new >= MAX_NEW_GEOCODE:
+                continue
+            cache[key] = _nominatim(sess, loc)
+            new += 1
+            time.sleep(1.1)   # Nominatim asks for max 1 request/second
+        coords = cache.get(key)
+        if coords:
+            ev["lat"], ev["lng"] = coords[0], coords[1]
+
+    try:
+        GEOCACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=1),
+                                 encoding="utf-8")
+    except Exception as e:
+        print(f"[WARN] geocache write: {e}")
+    located = sum(1 for e in events if "lat" in e)
+    print(f"Geocoded: {new} new lookups · {located}/{len(events)} events placed on map")
+
+
 def main():
     all_events = []
 
@@ -1173,6 +1248,12 @@ def main():
     all_events = deduplicate(all_events)
     all_events = [e for e in all_events if e.get("date", "") >= CUTOFF.isoformat()]
     all_events.sort(key=lambda e: (e["date"], e.get("time", "")))
+
+    try:
+        geocode_all(all_events)
+    except Exception as e:
+        print(f"[ERROR] geocoding: {e}")
+        traceback.print_exc()
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
