@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
 Scraper for Paris academic conferences.
-Strategies (per source, in order of reliability):
-1. Indico JSON API (IHP)
-2. Luma JSON API + HTML
-3. Universal extractor based on <time datetime="..."> for JS-rendered sites
+
+Sources:
+- IHP            : Indico JSON API
+- Collège de France, EHESS, ENS, Sciences Po, Sorbonne : paginated HTML scrape
+- Luma           : network interception of JSON API calls
+
+All HTML sources are scraped page-by-page (?page=N) until no new events appear.
 """
 
 import json
@@ -25,13 +28,16 @@ HEADERS = {
                   "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
     "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
 }
+TODAY = date.today()
+CUTOFF = TODAY - timedelta(days=1)
+HORIZON = TODAY + timedelta(days=200)
 
 # ── Discipline detection ──────────────────────────────────────────────────────
 
 DISCIPLINE_KEYWORDS = {
     "Mathématiques": [
         "mathémat", "algèbre", "géométrie", "topologie", "analyse fonction",
-        "probabilit", "statistique", "calcul", "arithmétique", "combinatoire",
+        "probabilit", "statistique", "arithmétique", "combinatoire",
         "théorie des nombres", "équation", "logique mathématique", " math ",
         "poincaré", "graphe", "tenseur", "variété",
     ],
@@ -89,41 +95,34 @@ def detect_discipline(title: str, description: str = "") -> str:
     return max(scores, key=scores.get) if scores else "Autre"
 
 
-# ── French date text parser ───────────────────────────────────────────────────
+# ── French date parser ────────────────────────────────────────────────────────
 
 FRENCH_MONTHS = {
     "janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4,
     "mai": 5, "juin": 6, "juillet": 7, "août": 8, "aout": 8,
     "septembre": 9, "octobre": 10, "novembre": 11, "décembre": 12, "decembre": 12,
 }
-
 _FR_DATE_RE = re.compile(
-    r"(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)[\s,]*"
-    r"(\d{1,2})(?:er|ère|ème|e)?\s+(janvier|f[eé]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[eé]cembre)"
-    r"\s+(\d{4})",
-    re.I,
-)
-_FR_DATE_SHORT_RE = re.compile(
-    r"(\d{1,2})(?:er|ère|ème|e)?\s+(janvier|f[eé]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[eé]cembre)"
-    r"\s+(\d{4})",
-    re.I,
+    r"(\d{1,2})(?:er|ère|ème|e)?\s+"
+    r"(janvier|f[eé]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[eé]cembre)"
+    r"\s+(\d{4})", re.I,
 )
 _ISO_DATE_RE = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b")
-_FR_SLASH_RE = re.compile(r"\b(\d{2})/(\d{2})/(\d{4})\b")
+_FR_SLASH_RE = re.compile(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b")
 
 
 def parse_french_date_text(text: str):
-    """Extract a date from French text like 'Mardi 3 juin 2025' or '3 juin 2025'."""
-    for pattern in (_FR_DATE_RE, _FR_DATE_SHORT_RE):
-        m = pattern.search(text)
-        if m:
-            day, month_str, year = m.groups()
-            month = FRENCH_MONTHS.get(month_str.lower().replace("é", "e").replace("û", "u").replace("ô", "o"))
-            if month:
-                try:
-                    return date(int(year), month, int(day))
-                except ValueError:
-                    pass
+    """Extract a date object from French text like 'Mardi 3 juin 2026'."""
+    m = _FR_DATE_RE.search(text)
+    if m:
+        day, month_str, year = m.groups()
+        key = month_str.lower().replace("é", "e").replace("û", "u")
+        month = FRENCH_MONTHS.get(key)
+        if month:
+            try:
+                return date(int(year), month, int(day))
+            except ValueError:
+                pass
     m = _ISO_DATE_RE.search(text)
     if m:
         try:
@@ -139,15 +138,17 @@ def parse_french_date_text(text: str):
     return None
 
 
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
 def make_id(*parts) -> str:
     raw = "-".join(str(p) for p in parts if p)
     return hashlib.md5(raw.encode()).hexdigest()[:12]
 
 
-def clean_text(s: str) -> str:
+def clean_text(s) -> str:
     if not s:
         return ""
-    return re.sub(r"\s+", " ", s).strip()
+    return re.sub(r"\s+", " ", str(s)).strip()
 
 
 def strip_html(s) -> str:
@@ -156,10 +157,9 @@ def strip_html(s) -> str:
     if hasattr(s, "get_text"):
         return clean_text(s.get_text(separator=" "))
     try:
-        text = BeautifulSoup(str(s), "lxml").get_text(separator=" ")
+        return clean_text(BeautifulSoup(str(s), "lxml").get_text(separator=" "))
     except Exception:
-        text = re.sub(r"<[^>]+>", " ", str(s))
-    return clean_text(text)
+        return clean_text(re.sub(r"<[^>]+>", " ", str(s)))
 
 
 def parse_date(s):
@@ -183,16 +183,37 @@ def make_absolute(href: str, base: str) -> str:
     return base.rstrip("/") + "/" + href
 
 
+def in_window(d: date) -> bool:
+    return CUTOFF <= d <= HORIZON
+
+
+def new_event(institution, title, d, time_str="", end_time="", location="",
+              desc="", url="", speaker="", source_type="institution") -> dict:
+    return {
+        "id": make_id(institution, title, str(d)),
+        "title": title,
+        "institution": institution,
+        "discipline": detect_discipline(title, desc),
+        "date": d.isoformat(),
+        "time": time_str,
+        "end_time": end_time,
+        "location": location,
+        "description": desc,
+        "url": url,
+        "speaker": speaker,
+        "source_type": source_type,
+    }
+
+
 # ── Indico (IHP) ──────────────────────────────────────────────────────────────
 
-def scrape_indico(name: str, base: str, categ: str, location_default: str) -> list[dict]:
+def scrape_indico(name, base, categ, location_default) -> list[dict]:
     print(f"→ Indico: {name}...")
     events = []
-    today = date.today()
-    end = today + timedelta(days=120)
-    url = f"{base}/export/categ/{categ}.json?from={today.isoformat()}&to={end.isoformat()}&limit=200"
+    url = (f"{base}/export/categ/{categ}.json"
+           f"?from={TODAY.isoformat()}&to={HORIZON.isoformat()}&limit=400")
     try:
-        r = requests.get(url, headers=HEADERS, timeout=20)
+        r = requests.get(url, headers=HEADERS, timeout=25)
         r.raise_for_status()
         data = r.json()
     except Exception as e:
@@ -204,111 +225,88 @@ def scrape_indico(name: str, base: str, categ: str, location_default: str) -> li
         if not title:
             continue
         raw_start = item.get("startDate", {})
-        try:
-            dt = dateparser.parse(f"{raw_start.get('date', '')} {raw_start.get('time', '')}".strip())
-            if not dt:
-                continue
-        except Exception:
+        dt = parse_date(f"{raw_start.get('date', '')} {raw_start.get('time', '')}")
+        if not dt or not in_window(dt.date()):
             continue
-
-        location = clean_text(item.get("location", "")) or clean_text(item.get("room", "")) or location_default
         end_time = ""
-        try:
-            raw_end = item.get("endDate", {})
-            dt_end = dateparser.parse(f"{raw_end.get('date', '')} {raw_end.get('time', '')}".strip())
-            if dt_end:
-                end_time = dt_end.strftime("%H:%M")
-        except Exception:
-            pass
-
+        raw_end = item.get("endDate", {})
+        dt_end = parse_date(f"{raw_end.get('date', '')} {raw_end.get('time', '')}")
+        if dt_end:
+            end_time = dt_end.strftime("%H:%M")
+        location = (clean_text(item.get("location", "")) or clean_text(item.get("room", ""))
+                    or location_default)
         desc = strip_html(item.get("description", ""))[:400]
         speakers = ", ".join(s.get("fullName", "") for s in item.get("speakers", []))[:120]
-
-        events.append({
-            "id": make_id(name, title, str(dt.date())),
-            "title": title,
-            "institution": name,
-            "discipline": detect_discipline(title, desc),
-            "date": dt.strftime("%Y-%m-%d"),
-            "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-            "end_time": end_time,
-            "location": location,
-            "description": desc,
-            "url": item.get("url", base),
-            "speaker": clean_text(speakers),
-            "source_type": "institution",
-        })
+        events.append(new_event(
+            name, title, dt.date(),
+            time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+            end_time=end_time, location=location, desc=desc,
+            url=item.get("url", base), speaker=clean_text(speakers),
+        ))
     print(f"   {len(events)} events")
     return events
 
 
-# ── Universal HTML extractor (uses <time datetime> as anchor) ─────────────────
+# ── Playwright helpers ────────────────────────────────────────────────────────
 
 def accept_cookies(page):
-    """Try common cookie consent buttons (French sites)."""
-    labels = [
-        "Tout accepter", "Accepter tout", "Accepter tous les cookies",
-        "J'accepte", "Accepter", "Accept all", "I accept",
-        "Continuer sans accepter", "Refuser",
-    ]
+    labels = ["Tout accepter", "Accepter tout", "Accepter tous les cookies",
+              "J'accepte", "Accepter", "Accept all", "I accept",
+              "Continuer sans accepter", "OK pour moi"]
     for label in labels:
         try:
-            btn = page.get_by_role("button", name=re.compile(label, re.I))
+            btn = page.get_by_role("button", name=re.compile(re.escape(label), re.I))
             if btn.count() > 0:
-                btn.first.click(timeout=1500)
-                page.wait_for_timeout(500)
+                btn.first.click(timeout=1200)
+                page.wait_for_timeout(400)
                 return
         except Exception:
             pass
-    for sel in ["#tarteaucitronAllAllowed", "#axeptio_btn_acceptAll", "[id*='accept']", "[class*='accept']"]:
+    for sel in ["#tarteaucitronAllAllowed", "#axeptio_btn_acceptAll",
+                "[id*='accept' i]", "[class*='accept' i]"]:
         try:
-            page.locator(sel).first.click(timeout=1000)
-            page.wait_for_timeout(500)
+            page.locator(sel).first.click(timeout=800)
+            page.wait_for_timeout(300)
             return
         except Exception:
             pass
 
 
-def pw_get_html(browser, url: str, scroll: bool = True, extra_wait: int = 0) -> tuple[str, str]:
-    """Load URL with Playwright. Returns (html, page_title)."""
-    ctx = browser.new_context(
-        user_agent=HEADERS["User-Agent"],
-        locale="fr-FR",
-        viewport={"width": 1366, "height": 900},
-        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8"},
-    )
-    page = ctx.new_page()
-    html, title = "", ""
+def load_page(page, url: str) -> tuple[str, str]:
+    """Navigate, wait for JS, accept cookies, scroll. Returns (html, title)."""
     try:
         page.goto(url, timeout=45000, wait_until="domcontentloaded")
-        try:
-            page.wait_for_load_state("networkidle", timeout=20000)
-        except PWTimeout:
-            page.wait_for_timeout(3000)
-        accept_cookies(page)
-        if extra_wait:
-            page.wait_for_timeout(extra_wait)
-        if scroll:
-            for i in range(8):
-                page.evaluate("window.scrollBy(0, window.innerHeight)")
-                page.wait_for_timeout(900)
-                if i == 3:
-                    page.wait_for_timeout(1500)
-            page.evaluate("window.scrollTo(0, 0)")
-            page.wait_for_timeout(1000)
-        html = page.content()
-        title = page.title()
-        print(f"   html_len={len(html)} title='{title[:60]}'")
     except Exception as e:
-        print(f"   [WARN] {url}: {e}")
-    finally:
-        ctx.close()
-    return html, title
+        print(f"   [WARN] goto {url}: {e}")
+        return "", ""
+    try:
+        page.wait_for_load_state("networkidle", timeout=18000)
+    except PWTimeout:
+        page.wait_for_timeout(3000)
+    accept_cookies(page)
+    for _ in range(6):
+        page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+        page.wait_for_timeout(700)
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(500)
+    try:
+        return page.content(), page.title()
+    except Exception:
+        return "", ""
 
+
+def is_error_page(title: str, html: str) -> bool:
+    t = title.lower()
+    return (len(html) < 1500
+            or "404" in t or "403" in t
+            or "non trouvée" in t or "not found" in t
+            or "forbidden" in t or "erreur" in t)
+
+
+# ── JSON-LD + universal HTML extractor ────────────────────────────────────────
 
 def extract_jsonld_events(soup) -> list[dict]:
-    """Extract events from JSON-LD structured data."""
-    events = []
+    out = []
     for script in soup.select('script[type="application/ld+json"]'):
         try:
             data = json.loads(script.string or "{}")
@@ -321,104 +319,83 @@ def extract_jsonld_events(soup) -> list[dict]:
             if not isinstance(item, dict):
                 continue
             t = item.get("@type", "")
-            if "Event" not in (t if isinstance(t, str) else " ".join(t)):
-                continue
-            events.append(item)
-    return events
+            t = t if isinstance(t, str) else " ".join(t)
+            if "Event" in t:
+                out.append(item)
+    return out
 
 
-def _build_event(institution, title, d, dt, location, desc, url, base_url):
-    """Build a normalized event dict."""
-    time_str = ""
-    if dt and (dt.hour or dt.minute):
-        time_str = dt.strftime("%H:%M")
-    return {
-        "id": make_id(institution, title, str(d)),
-        "title": title,
-        "institution": institution,
-        "discipline": detect_discipline(title, desc),
-        "date": d.isoformat(),
-        "time": time_str,
-        "end_time": "",
-        "location": location,
-        "description": desc,
-        "url": make_absolute(url, base_url),
-        "speaker": "",
-        "source_type": "institution",
-    }
+def _find_title(container):
+    el = container.find(["h1", "h2", "h3", "h4", "h5"])
+    if not el:
+        el = container.select_one("[class*='title' i], [class*='name' i], strong, b")
+    return el
 
 
-def _find_title_in_container(container):
-    """Find a title element within a container node."""
-    title_el = container.find(["h1", "h2", "h3", "h4", "h5"])
-    if not title_el:
-        title_el = container.select_one(
-            "[class*='title' i], [class*='Title'], [class*='name' i], strong, b"
-        )
-    return title_el
+def _find_speaker(container):
+    el = container.select_one(
+        "[class*='author' i], [class*='speaker' i], [class*='professeur' i], "
+        "[class*='professor' i], [class*='intervenant' i]"
+    )
+    return clean_text(el.get_text()) if el else ""
 
 
-def extract_events_universal(html, institution, location_default, base_url):
-    """Robust extractor: 4 strategies in order of reliability."""
+def extract_events_universal(html, institution, location_default, base_url) -> list[dict]:
+    """4-strategy extractor: JSON-LD, <time datetime>, data-* attrs, French text."""
     if not html:
         return []
     soup = BeautifulSoup(html, "lxml")
-    events = []
-    seen = set()
-    today = date.today()
-    cutoff = today - timedelta(days=1)
+    events, seen = [], set()
 
-    def _add(ev):
+    def add(ev):
+        if not ev or not ev["title"]:
+            return
         key = (ev["title"][:50].lower(), ev["date"])
-        if key not in seen and ev["title"]:
+        if key not in seen:
             seen.add(key)
             events.append(ev)
 
     # Strategy 1: JSON-LD
     for item in extract_jsonld_events(soup):
         title = clean_text(item.get("name", ""))
-        start = item.get("startDate") or item.get("startTime")
-        if not title or not start:
+        dt = parse_date(item.get("startDate") or item.get("startTime"))
+        if not title or not dt or not in_window(dt.date()):
             continue
-        dt = parse_date(start)
-        if not dt or dt.date() < cutoff:
-            continue
-        url = item.get("url") or base_url
-        location = item.get("location", {})
-        loc_str = (clean_text(location.get("name", "")) if isinstance(location, dict) else str(location)) or location_default
-        desc = strip_html(item.get("description", ""))[:400]
-        _add(_build_event(institution, title, dt.date(), dt, loc_str, desc, url, base_url))
+        loc = item.get("location", {})
+        loc_str = (clean_text(loc.get("name", "")) if isinstance(loc, dict) else clean_text(loc)) or location_default
+        add(new_event(institution, title, dt.date(),
+                      time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                      location=loc_str, desc=strip_html(item.get("description", ""))[:400],
+                      url=make_absolute(item.get("url", ""), base_url)))
 
     # Strategy 2: <time datetime>
     for time_el in soup.select("time[datetime]"):
-        raw_dt = time_el.get("datetime", "")
-        dt = parse_date(raw_dt)
-        if not dt or dt.date() < cutoff:
+        dt = parse_date(time_el.get("datetime", ""))
+        if not dt or not in_window(dt.date()):
             continue
         container = time_el
         for _ in range(10):
             container = container.parent
             if container is None or container.name in ("body", "html"):
                 break
-            title_el = _find_title_in_container(container)
+            title_el = _find_title(container)
             if not title_el:
                 continue
             title = clean_text(title_el.get_text())
             if not title or len(title) < 5:
                 continue
-            link_el = container.find("a", href=True)
-            href = link_el.get("href", "") if link_el else ""
+            link = container.find("a", href=True)
             desc = strip_html(container.find("p"))[:400] if container.find("p") else ""
-            _add(_build_event(institution, title, dt.date(), dt, location_default, desc,
-                               make_absolute(href, base_url), base_url))
+            add(new_event(institution, title, dt.date(),
+                          time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                          location=location_default, desc=desc,
+                          url=make_absolute(link.get("href", "") if link else "", base_url),
+                          speaker=_find_speaker(container)))
             break
 
-    # Strategy 3: data-date / data-start attributes
-    date_attr_selectors = [
-        "[data-date]", "[data-start-date]", "[data-event-date]",
-        "[data-start]", "[data-datetime]", "[data-timestamp]",
-    ]
-    for sel in date_attr_selectors:
+    # Strategy 3: data-* date attributes
+    for sel in ["[data-date]", "[data-start-date]", "[data-event-date]",
+                "[data-start]", "[data-datetime]", "[data-timestamp]"]:
         for el in soup.select(sel):
             raw = (el.get("data-date") or el.get("data-start-date") or el.get("data-event-date")
                    or el.get("data-start") or el.get("data-datetime") or el.get("data-timestamp") or "")
@@ -429,12 +406,11 @@ def extract_events_universal(html, institution, location_default, base_url):
                     continue
             else:
                 dt = parse_date(raw)
-            if not dt or dt.date() < cutoff:
+            if not dt or not in_window(dt.date()):
                 continue
-            container = el
-            title_el = None
+            container, title_el = el, None
             for _ in range(10):
-                title_el = _find_title_in_container(container)
+                title_el = _find_title(container)
                 if title_el:
                     break
                 container = container.parent
@@ -445,475 +421,309 @@ def extract_events_universal(html, institution, location_default, base_url):
             title = clean_text(title_el.get_text())
             if not title or len(title) < 5:
                 continue
-            link_el = el.find_parent("a") or el.find("a", href=True)
-            href = link_el.get("href", "") if link_el else ""
-            _add(_build_event(institution, title, dt.date(), dt, location_default, "",
-                               make_absolute(href, base_url), base_url))
+            link = el.find_parent("a") or el.find("a", href=True)
+            add(new_event(institution, title, dt.date(),
+                          time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                          location=location_default,
+                          url=make_absolute(link.get("href", "") if link else "", base_url)))
 
-    # Strategy 4: French text date scan in event-like containers
-    EVENT_CONTAINER_SELECTORS = (
-        "article, [class*='event' i], [class*='agenda' i], [class*='conference' i],"
-        " [class*='seminaire' i], [class*='card' i],"
-        " [class*='item' i], [class*='lecture' i], [class*='cours' i],"
-        " li[class*='program' i], div[class*='program' i]"
-    )
-    for container in soup.select(EVENT_CONTAINER_SELECTORS):
-        full_text = container.get_text(" ", strip=True)
-        d = parse_french_date_text(full_text)
-        if not d or d < cutoff:
-            continue
-        title_el = _find_title_in_container(container)
-        if not title_el:
-            continue
-        title = clean_text(title_el.get_text())
-        if not title or len(title) < 8 or title.lower().startswith(("agenda", "programme", "calendrier")):
+    # Strategy 4: French date text inside event-like containers
+    container_sel = ("article, [class*='event' i], [class*='agenda' i], [class*='conference' i],"
+                     " [class*='seminaire' i], [class*='card' i], [class*='item' i],"
+                     " [class*='lecture' i], [class*='cours' i], li[class*='program' i],"
+                     " div[class*='program' i], [class*='teaser' i]")
+    for container in soup.select(container_sel):
+        d = parse_french_date_text(container.get_text(" ", strip=True))
+        if not d or not in_window(d):
             continue
         if container.find_parent(["nav", "header", "footer"]):
             continue
-        link_el = container.find("a", href=True)
-        href = link_el.get("href", "") if link_el else ""
-        desc_el = container.find("p")
-        desc = strip_html(desc_el)[:400] if desc_el else ""
-        _add(_build_event(institution, title, d, None, location_default, desc,
-                           make_absolute(href, base_url), base_url))
-
-    if not events:
-        print(f"   [DEBUG] soup size={len(str(soup))} | time_datetime={len(soup.select('time[datetime]'))} | articles={len(soup.select('article'))}")
+        title_el = _find_title(container)
+        if not title_el:
+            continue
+        title = clean_text(title_el.get_text())
+        if (not title or len(title) < 8
+                or title.lower().startswith(("agenda", "programme", "calendrier", "tous les"))):
+            continue
+        link = container.find("a", href=True)
+        desc = strip_html(container.find("p"))[:400] if container.find("p") else ""
+        add(new_event(institution, title, d, location_default and location_default,
+                      location=location_default, desc=desc,
+                      url=make_absolute(link.get("href", "") if link else "", base_url),
+                      speaker=_find_speaker(container)))
 
     return events
 
 
-# ── Per-institution scrapers ──────────────────────────────────────────────────
+# ── Captured JSON parsing ─────────────────────────────────────────────────────
 
-def scrape_site(browser, name: str, urls: list[tuple[str, str, str]]) -> list[dict]:
-    """Generic site scraper trying multiple URLs."""
-    print(f"→ {name}...")
-    all_events = []
-    for url, loc, base in urls:
-        html, title = pw_get_html(browser, url)
-        print(f"   [{url}] page_title='{title[:50]}' html_len={len(html)}")
-        events = extract_events_universal(html, name, loc, base)
-        print(f"   → {len(events)} events from this URL")
-        all_events.extend(events)
-    seen, out = set(), []
-    for e in all_events:
-        k = (e["title"][:50].lower(), e["date"])
-        if k not in seen:
-            seen.add(k)
-            out.append(e)
-    print(f"   Total {name}: {len(out)} events")
-    return out
-
-
-def scrape_college_de_france(browser):
-    """Dedicated Collège de France scraper.
-
-    CdF runs a Nuxt.js site. It loads event data via internal API calls.
-    Strategy: intercept network responses + fallback to HTML parsing.
-    """
-    print("→ Collège de France (network intercept + targeted HTML)...")
-    events = []
-    captured = []
-
-    ctx = browser.new_context(
-        user_agent=HEADERS["User-Agent"],
-        locale="fr-FR",
-        viewport={"width": 1366, "height": 900},
-        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
-    )
-    page = ctx.new_page()
-
-    def on_response(response):
-        url = response.url
-        if response.status == 200 and (
-            "college-de-france.fr" in url or "api" in url.lower()
-        ) and "json" in response.headers.get("content-type", ""):
-            try:
-                body = response.json()
-                captured.append((url, body))
-            except Exception:
-                pass
-
-    page.on("response", on_response)
-
-    html = ""
+def capture_json(response, store):
+    """Playwright response handler — stores (url, json_body) tuples."""
     try:
-        page.goto("https://www.college-de-france.fr/fr/agenda",
-                  timeout=45000, wait_until="domcontentloaded")
-        try:
-            page.wait_for_load_state("networkidle", timeout=25000)
-        except PWTimeout:
-            page.wait_for_timeout(4000)
-        accept_cookies(page)
+        ct = response.headers.get("content-type", "").lower()
+        if response.status == 200 and "json" in ct:
+            store.append((response.url, response.json()))
+    except Exception:
+        pass
 
-        for i in range(10):
-            page.evaluate("window.scrollBy(0, window.innerHeight)")
-            page.wait_for_timeout(1000)
-            if i == 4:
-                page.wait_for_timeout(2000)
 
-        for label in ["Voir plus", "Plus d'événements", "Charger plus", "Load more", "Suivant"]:
-            try:
-                btn = page.get_by_role("button", name=re.compile(label, re.I))
-                if btn.count() > 0:
-                    btn.first.click(timeout=2000)
-                    page.wait_for_timeout(2000)
-                    for _ in range(4):
-                        page.evaluate("window.scrollBy(0, window.innerHeight)")
-                        page.wait_for_timeout(800)
-            except Exception:
-                pass
+def _deep_find_event_lists(obj, depth=0):
+    """Recursively find lists of dicts that look like event lists."""
+    found = []
+    if depth > 4:
+        return found
+    if isinstance(obj, list):
+        if obj and isinstance(obj[0], dict):
+            found.append(obj)
+        for x in obj[:50]:
+            found.extend(_deep_find_event_lists(x, depth + 1))
+    elif isinstance(obj, dict):
+        for v in obj.values():
+            found.extend(_deep_find_event_lists(v, depth + 1))
+    return found
 
-        html = page.content()
-        print(f"   html_len={len(html)} | api_calls_captured={len(captured)}")
-    except Exception as e:
-        print(f"   [WARN] CdF: {e}")
-    finally:
-        ctx.close()
 
-    BASE = "https://www.college-de-france.fr"
-    LOC = "Collège de France, 11 place Marcelin-Berthelot, Paris 5e"
-
-    # Strategy 1: Parse captured API JSON
-    for api_url, body in captured:
-        items = []
-        if isinstance(body, list):
-            items = body
-        elif isinstance(body, dict):
-            for key in ("data", "events", "results", "items", "conferences", "seminaires"):
-                if isinstance(body.get(key), list):
-                    items = body[key]
-                    break
-
-        for item in items:
-            if not isinstance(item, dict):
-                continue
-            title = clean_text(
-                item.get("title") or item.get("titre") or item.get("name") or
-                item.get("label") or item.get("intitule") or ""
-            )
-            if not title or len(title) < 5:
-                continue
-            start_raw = (
-                item.get("startDate") or item.get("start_date") or item.get("date_debut") or
-                item.get("date") or item.get("dateDebut") or item.get("start") or ""
-            )
-            dt = parse_date(str(start_raw)) if start_raw else None
-            if not dt or dt.date() < date.today() - timedelta(days=1):
-                continue
-            speaker = clean_text(
-                item.get("speaker") or item.get("intervenant") or
-                item.get("professor") or item.get("professeur") or
-                ((item.get("speakers") or [{}])[0].get("name") if isinstance(item.get("speakers"), list) else "") or ""
-            )
-            url = make_absolute(item.get("url") or item.get("link") or item.get("slug") or "", BASE)
-            desc = strip_html(item.get("description") or item.get("resume") or "")[:400]
-            events.append({
-                "id": make_id("cdf", title, str(dt.date())),
-                "title": title,
-                "institution": "Collège de France",
-                "discipline": detect_discipline(title, desc),
-                "date": dt.strftime("%Y-%m-%d"),
-                "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-                "end_time": "",
-                "location": LOC,
-                "description": desc,
-                "url": url or f"{BASE}/fr/agenda",
-                "speaker": speaker,
-                "source_type": "institution",
-            })
-
-    # Strategy 2/3/4: Parse rendered HTML
-    if html:
-        seen = {(e["title"][:50].lower(), e["date"]) for e in events}
-        soup = BeautifulSoup(html, "lxml")
-
-        CDF_CARD_SELECTORS = [
-            ".c-card--event", ".EventCard", ".event-card", ".agenda-card",
-            ".c-event-teaser", ".EventTeaser", ".lecture-card",
-            "article[class*='event' i]", "article[class*='agenda' i]",
-            "div[class*='event-item' i]", "div[class*='EventItem']",
-            "li[class*='event' i]", ".program-item",
-            "[class*='cours' i]", "[class*='seminar' i]",
-        ]
-        for sel in CDF_CARD_SELECTORS:
-            cards = soup.select(sel)
-            if not cards:
-                continue
-            print(f"   [{sel}] → {len(cards)} cards found")
-            for card in cards:
-                full_text = card.get_text(" ", strip=True)
-                d = parse_french_date_text(full_text)
-                if not d:
-                    time_el = card.find("time", {"datetime": True})
-                    if time_el:
-                        dt_obj = parse_date(time_el["datetime"])
-                        d = dt_obj.date() if dt_obj else None
-                if not d or d < date.today() - timedelta(days=1):
+def events_from_captured_json(captured, institution, location, base_url) -> list[dict]:
+    """Extract events from captured JSON API responses."""
+    events, seen = [], set()
+    for _url, body in captured:
+        for lst in _deep_find_event_lists(body):
+            for item in lst:
+                if not isinstance(item, dict):
                     continue
-                title_el = card.find(["h1", "h2", "h3", "h4", "h5"])
-                if not title_el:
-                    title_el = card.select_one("[class*='title' i], [class*='name' i]")
-                if not title_el:
+                inner = item.get("event") if isinstance(item.get("event"), dict) else item
+                title = clean_text(
+                    inner.get("title") or inner.get("titre") or inner.get("name")
+                    or inner.get("label") or inner.get("intitule") or inner.get("summary") or ""
+                )
+                if not title or len(title) < 5:
                     continue
-                title = clean_text(title_el.get_text())
-                if not title or len(title) < 8:
+                start = (inner.get("startDate") or inner.get("start_date") or inner.get("date_debut")
+                         or inner.get("date") or inner.get("dateDebut") or inner.get("start")
+                         or inner.get("start_at") or inner.get("starts_at") or "")
+                dt = parse_date(str(start)) if start else None
+                if not dt or not in_window(dt.date()):
                     continue
-                key = (title[:50].lower(), d.isoformat())
+                key = (title[:50].lower(), dt.date().isoformat())
                 if key in seen:
                     continue
                 seen.add(key)
-                link_el = card.find("a", href=True)
-                href = link_el.get("href", "") if link_el else ""
-                speaker_el = card.select_one(
-                    "[class*='author' i], [class*='speaker' i], [class*='professeur' i], "
-                    "[class*='professor' i], [class*='intervenant' i]"
-                )
-                speaker = clean_text(speaker_el.get_text()) if speaker_el else ""
-                desc_el = card.find("p")
-                desc = strip_html(desc_el)[:400] if desc_el else ""
-                events.append({
-                    "id": make_id("cdf", title, d.isoformat()),
-                    "title": title,
-                    "institution": "Collège de France",
-                    "discipline": detect_discipline(title, desc),
-                    "date": d.isoformat(),
-                    "time": "",
-                    "end_time": "",
-                    "location": LOC,
-                    "description": desc,
-                    "url": make_absolute(href, BASE),
-                    "speaker": speaker,
-                    "source_type": "institution",
-                })
-
-        if len(events) == 0:
-            print("   [FALLBACK] Using universal extractor on CdF HTML")
-            events = extract_events_universal(html, "Collège de France", LOC, BASE)
-
-    print(f"   Total Collège de France: {len(events)} events")
+                speaker = inner.get("speaker") or inner.get("intervenant") or inner.get("professeur") or ""
+                if isinstance(inner.get("speakers"), list) and inner["speakers"]:
+                    sp0 = inner["speakers"][0]
+                    speaker = sp0.get("name", "") or sp0.get("fullName", "") if isinstance(sp0, dict) else ""
+                url = inner.get("url") or inner.get("link") or inner.get("slug") or ""
+                events.append(new_event(
+                    institution, title, dt.date(),
+                    time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                    location=location, desc=strip_html(inner.get("description") or inner.get("resume") or "")[:400],
+                    url=make_absolute(url, base_url), speaker=clean_text(speaker),
+                ))
     return events
 
 
+# ── Paginated HTML scraper (CdF, EHESS, ENS, Sciences Po, Sorbonne) ───────────
+
+def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="institution"):
+    """Scrape paginated agendas. agenda_urls = [(base_url, location, site_base), ...].
+    Loops ?page=N until 2 consecutive pages yield no new events."""
+    print(f"→ {name} (paginated, up to {max_pages} pages/url)...")
+    all_events, seen = [], set()
+    captured = []
+
+    ctx = browser.new_context(
+        user_agent=HEADERS["User-Agent"], locale="fr-FR",
+        viewport={"width": 1366, "height": 900},
+        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8"},
+    )
+    page = ctx.new_page()
+    page.on("response", lambda r: capture_json(r, captured))
+
+    for base_url, location, site_base in agenda_urls:
+        empty_streak = 0
+        for page_num in range(0, max_pages):
+            sep = "&" if "?" in base_url else "?"
+            url = base_url if page_num == 0 else f"{base_url}{sep}page={page_num}"
+            html, title = load_page(page, url)
+            if is_error_page(title, html):
+                print(f"   page {page_num}: ERROR PAGE ('{title[:40]}') — stop this url")
+                break
+
+            page_events = extract_events_universal(html, name, location, site_base)
+            new = []
+            for e in page_events:
+                key = (e["title"][:50].lower(), e["date"])
+                if key not in seen:
+                    seen.add(key)
+                    new.append(e)
+            print(f"   page {page_num}: {len(new)} new / {len(page_events)} found  (html={len(html)})")
+
+            if not new:
+                empty_streak += 1
+                if empty_streak >= 2:
+                    break
+            else:
+                empty_streak = 0
+                all_events.extend(new)
+
+    ctx.close()
+
+    # Add events found in captured API JSON
+    loc0, base0 = agenda_urls[0][1], agenda_urls[0][2]
+    for e in events_from_captured_json(captured, name, loc0, base0):
+        key = (e["title"][:50].lower(), e["date"])
+        if key not in seen:
+            seen.add(key)
+            all_events.append(e)
+
+    print(f"   ✓ Total {name}: {len(all_events)} events")
+    return all_events
+
+
+def scrape_college_de_france(browser):
+    return scrape_paginated(browser, "Collège de France", [
+        ("https://www.college-de-france.fr/fr/enseignements/agenda",
+         "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
+         "https://www.college-de-france.fr"),
+        ("https://www.college-de-france.fr/fr/agenda",
+         "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
+         "https://www.college-de-france.fr"),
+    ], max_pages=20)
+
+
 def scrape_ehess(browser):
-    return scrape_site(browser, "EHESS", [
+    return scrape_paginated(browser, "EHESS", [
         ("https://www.ehess.fr/fr/agenda",
          "EHESS, 54 boulevard Raspail, Paris 6e",
          "https://www.ehess.fr"),
-    ])
+    ], max_pages=20)
 
 
 def scrape_ens(browser):
-    return scrape_site(browser, "ENS Paris", [
+    return scrape_paginated(browser, "ENS Paris", [
         ("https://www.ens.psl.eu/agenda",
          "ENS, 45 rue d'Ulm, Paris 5e",
          "https://www.ens.psl.eu"),
-        ("https://www.ens.psl.eu/evenements",
-         "ENS, 45 rue d'Ulm, Paris 5e",
-         "https://www.ens.psl.eu"),
-    ])
+    ], max_pages=20)
 
 
 def scrape_sciences_po(browser):
-    return scrape_site(browser, "Sciences Po", [
-        ("https://www.sciencespo.fr/agenda/fr",
+    return scrape_paginated(browser, "Sciences Po", [
+        ("https://www.sciencespo.fr/fr/agenda/",
          "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
          "https://www.sciencespo.fr"),
-        ("https://www.sciencespo.fr/events/fr",
+        ("https://www.sciencespo.fr/fr/actualites/",
          "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
          "https://www.sciencespo.fr"),
-    ])
+    ], max_pages=15)
 
 
 def scrape_sorbonne(browser):
-    return scrape_site(browser, "Sorbonne Université", [
+    return scrape_paginated(browser, "Sorbonne Université", [
         ("https://www.sorbonne-universite.fr/evenements",
-         "Sorbonne, Paris",
+         "Sorbonne Université, Paris",
          "https://www.sorbonne-universite.fr"),
-        ("https://lettres.sorbonne-universite.fr/agenda",
+        ("https://lettres.sorbonne-universite.fr/evenements",
          "Sorbonne Lettres, 1 rue Victor Cousin, Paris 5e",
          "https://lettres.sorbonne-universite.fr"),
-    ])
+    ], max_pages=15)
 
 
 # ── Luma ──────────────────────────────────────────────────────────────────────
 
-def _parse_luma_event(entry: dict):
-    """Parse a single event from Luma's API response format."""
-    ev = entry.get("event", entry)
-    title = clean_text(ev.get("name", "") or ev.get("summary", "") or "")
-    if not title:
-        return None
-    start_raw = ev.get("start_at") or ev.get("startDate") or ev.get("starts_at") or ""
-    dt = parse_date(start_raw)
-    if not dt or dt.date() < date.today() - timedelta(days=1):
-        return None
-    location = ev.get("geo_address_info", {}) or {}
-    loc_str = clean_text(
-        location.get("full_address") or location.get("address") or
-        ev.get("location", "") or "Paris"
-    )
-    host_info = entry.get("host_calendars") or entry.get("hosts") or []
-    institution = "Luma"
-    if isinstance(host_info, list) and host_info:
-        institution = clean_text(host_info[0].get("name", "Luma")) or "Luma"
-    url = ev.get("url") or f"https://lu.ma/{ev.get('api_id', '')}"
-    return {
-        "id": make_id("luma", title, str(dt.date())),
-        "title": title,
-        "institution": institution,
-        "discipline": detect_discipline(title, ev.get("description", "")),
-        "date": dt.strftime("%Y-%m-%d"),
-        "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-        "end_time": "",
-        "location": loc_str,
-        "description": strip_html(ev.get("description", ""))[:400],
-        "url": make_absolute(url, "https://lu.ma"),
-        "speaker": "",
-        "source_type": "luma",
-    }
-
-
 def scrape_luma(browser) -> list[dict]:
-    """Scrape Luma Paris events via network interception of api.lu.ma calls."""
     print("→ Luma Paris (network intercept)...")
-    events = []
-    captured_responses = []
+    events, seen = [], set()
+    captured = []
 
     ctx = browser.new_context(
-        user_agent=HEADERS["User-Agent"],
-        locale="fr-FR",
+        user_agent=HEADERS["User-Agent"], locale="fr-FR",
         viewport={"width": 1366, "height": 900},
     )
     page = ctx.new_page()
-
-    def handle_response(response):
-        url = response.url
-        if "api.lu.ma" in url and response.status == 200:
-            try:
-                body = response.json()
-                captured_responses.append(body)
-            except Exception:
-                pass
-
-    page.on("response", handle_response)
+    page.on("response", lambda r: capture_json(r, captured))
 
     html = ""
-    try:
-        page.goto("https://lu.ma/paris", timeout=45000, wait_until="domcontentloaded")
+    for luma_url in ["https://lu.ma/discover/paris", "https://lu.ma/paris"]:
         try:
-            page.wait_for_load_state("networkidle", timeout=20000)
-        except PWTimeout:
-            page.wait_for_timeout(3000)
-        accept_cookies(page)
+            page.goto(luma_url, timeout=45000, wait_until="domcontentloaded")
+            try:
+                page.wait_for_load_state("networkidle", timeout=22000)
+            except PWTimeout:
+                page.wait_for_timeout(5000)
+            accept_cookies(page)
+            for _ in range(10):
+                page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+                page.wait_for_timeout(1300)
+            html = page.content()
+            if captured or len(html) > 60000:
+                break
+        except Exception as e:
+            print(f"   [WARN] {luma_url}: {e}")
+    ctx.close()
 
-        for _ in range(6):
-            page.evaluate("window.scrollBy(0, window.innerHeight)")
-            page.wait_for_timeout(1200)
+    print(f"   captured {len(captured)} JSON responses")
 
-        html = page.content()
-    except Exception as e:
-        print(f"   [WARN] Luma: {e}")
-        html = ""
-    finally:
-        ctx.close()
+    for _url, body in captured:
+        for lst in _deep_find_event_lists(body):
+            for item in lst:
+                if not isinstance(item, dict):
+                    continue
+                inner = item.get("event") if isinstance(item.get("event"), dict) else item
+                title = clean_text(inner.get("name") or inner.get("summary") or "")
+                start = (inner.get("start_at") or inner.get("startDate")
+                         or inner.get("starts_at") or "")
+                dt = parse_date(start)
+                if not title or not dt or not in_window(dt.date()):
+                    continue
+                key = (title[:50].lower(), dt.date().isoformat())
+                if key in seen:
+                    continue
+                seen.add(key)
+                geo = inner.get("geo_address_info", {}) or {}
+                loc = clean_text(geo.get("full_address") or geo.get("address")
+                                 or inner.get("location", "") or "Paris")
+                hosts = item.get("hosts") or item.get("host_calendars") or []
+                inst = "Luma"
+                if isinstance(hosts, list) and hosts and isinstance(hosts[0], dict):
+                    inst = clean_text(hosts[0].get("name", "Luma")) or "Luma"
+                api_id = inner.get("api_id", "")
+                url = inner.get("url") or (f"https://lu.ma/{api_id}" if api_id else "https://lu.ma/paris")
+                events.append(new_event(
+                    inst, title, dt.date(),
+                    time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                    location=loc, desc=strip_html(inner.get("description", ""))[:400],
+                    url=make_absolute(url, "https://lu.ma"), source_type="luma",
+                ))
 
-    print(f"   captured {len(captured_responses)} API responses")
-
-    # Parse captured API responses
-    for body in captured_responses:
-        entries = body.get("entries") or body.get("events") or body.get("items") or []
-        for entry in entries:
-            ev = _parse_luma_event(entry)
-            if ev:
-                events.append(ev)
-
-    # Fallback: JSON-LD + <time> from rendered HTML
-    if html:
+    # Fallback: JSON-LD from rendered HTML
+    if html and not events:
         soup = BeautifulSoup(html, "lxml")
-        seen = {(e["title"][:50].lower(), e["date"]) for e in events}
-
         for item in extract_jsonld_events(soup):
             title = clean_text(item.get("name", ""))
-            start = item.get("startDate") or item.get("startTime")
-            if not title or not start:
-                continue
-            dt = parse_date(start)
-            if not dt or dt.date() < date.today() - timedelta(days=1):
+            dt = parse_date(item.get("startDate") or item.get("startTime"))
+            if not title or not dt or not in_window(dt.date()):
                 continue
             key = (title[:50].lower(), dt.date().isoformat())
             if key in seen:
                 continue
             seen.add(key)
-            location = item.get("location", {})
-            loc_str = (clean_text(location.get("name", "")) if isinstance(location, dict) else "") or "Paris"
-            organizer = item.get("organizer") or {}
-            host = organizer.get("name", "Luma") if isinstance(organizer, dict) else "Luma"
-            events.append({
-                "id": make_id("luma", title, str(dt.date())),
-                "title": title,
-                "institution": clean_text(host) or "Luma",
-                "discipline": detect_discipline(title, item.get("description", "")),
-                "date": dt.strftime("%Y-%m-%d"),
-                "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-                "end_time": "",
-                "location": loc_str,
-                "description": strip_html(item.get("description", ""))[:400],
-                "url": make_absolute(item.get("url", ""), "https://lu.ma"),
-                "speaker": "",
-                "source_type": "luma",
-            })
+            org = item.get("organizer") or {}
+            host = org.get("name", "Luma") if isinstance(org, dict) else "Luma"
+            events.append(new_event(
+                clean_text(host) or "Luma", title, dt.date(),
+                time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                location="Paris", desc=strip_html(item.get("description", ""))[:400],
+                url=make_absolute(item.get("url", ""), "https://lu.ma"), source_type="luma",
+            ))
 
-        for time_el in soup.select("time[datetime]"):
-            dt = parse_date(time_el.get("datetime", ""))
-            if not dt or dt.date() < date.today() - timedelta(days=1):
-                continue
-            container = time_el
-            for _ in range(8):
-                container = container.parent
-                if container is None:
-                    break
-                a_el = container.find("a", href=True)
-                if not a_el:
-                    continue
-                href = a_el.get("href", "")
-                if not re.match(r"^/[a-z0-9_-]+$", href):
-                    continue
-                title_el = container.find(["h1", "h2", "h3", "h4"])
-                if not title_el:
-                    texts = [t for t in container.stripped_strings if len(t) > 8]
-                    title = texts[0] if texts else ""
-                else:
-                    title = clean_text(title_el.get_text())
-                if len(title) < 5:
-                    continue
-                key = (title[:50].lower(), dt.date().isoformat())
-                if key in seen:
-                    break
-                seen.add(key)
-                events.append({
-                    "id": make_id("luma", title, str(dt.date())),
-                    "title": title,
-                    "institution": "Luma",
-                    "discipline": detect_discipline(title),
-                    "date": dt.strftime("%Y-%m-%d"),
-                    "time": dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-                    "end_time": "",
-                    "location": "Paris",
-                    "description": "",
-                    "url": "https://lu.ma" + href,
-                    "speaker": "",
-                    "source_type": "luma",
-                })
-                break
-
-    print(f"   {len(events)} events")
+    print(f"   ✓ {len(events)} events")
     return events
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def deduplicate(events: list[dict]) -> list[dict]:
+def deduplicate(events):
     seen, out = set(), []
     for ev in events:
         key = (ev["title"].lower()[:60], ev["date"], ev["institution"])
@@ -923,20 +733,13 @@ def deduplicate(events: list[dict]) -> list[dict]:
     return out
 
 
-def filter_future(events: list[dict]) -> list[dict]:
-    cutoff = (date.today() - timedelta(days=1)).isoformat()
-    return [ev for ev in events if ev.get("date", "") >= cutoff]
-
-
 def main():
     all_events = []
 
     try:
         all_events.extend(scrape_indico(
-            "Institut Henri Poincaré",
-            "https://indico.math.cnrs.fr", "0",
-            "IHP, 11 rue Pierre et Marie Curie, Paris 5e",
-        ))
+            "Institut Henri Poincaré", "https://indico.math.cnrs.fr", "0",
+            "IHP, 11 rue Pierre et Marie Curie, Paris 5e"))
     except Exception as e:
         print(f"[ERROR] IHP: {e}")
         traceback.print_exc()
@@ -944,14 +747,8 @@ def main():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         try:
-            for fn in [
-                scrape_college_de_france,
-                scrape_ehess,
-                scrape_ens,
-                scrape_sciences_po,
-                scrape_sorbonne,
-                scrape_luma,
-            ]:
+            for fn in [scrape_college_de_france, scrape_ehess, scrape_ens,
+                       scrape_sciences_po, scrape_sorbonne, scrape_luma]:
                 try:
                     all_events.extend(fn(browser))
                 except Exception as e:
@@ -961,16 +758,21 @@ def main():
             browser.close()
 
     all_events = deduplicate(all_events)
-    all_events = filter_future(all_events)
+    all_events = [e for e in all_events if e.get("date", "") >= CUTOFF.isoformat()]
     all_events.sort(key=lambda e: (e["date"], e.get("time", "")))
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(all_events, f, ensure_ascii=False, indent=2)
 
-    n_inst = sum(1 for e in all_events if e.get("source_type") == "institution")
+    by_inst = {}
+    for e in all_events:
+        by_inst[e["institution"]] = by_inst.get(e["institution"], 0) + 1
     n_luma = sum(1 for e in all_events if e.get("source_type") == "luma")
-    print(f"\n✓ {len(all_events)} events ({n_inst} institutions · {n_luma} Luma)")
+    print(f"\n{'='*50}")
+    print(f"✓ TOTAL: {len(all_events)} events ({len(all_events) - n_luma} institutions · {n_luma} Luma)")
+    for inst, n in sorted(by_inst.items(), key=lambda x: -x[1]):
+        print(f"   {n:4d}  {inst}")
 
 
 if __name__ == "__main__":
