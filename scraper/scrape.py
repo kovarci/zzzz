@@ -163,12 +163,41 @@ def strip_html(s) -> str:
 
 
 def parse_date(s):
+    """Parse a date/datetime string.
+    ISO format (YYYY-MM-DD) is parsed year-first; everything else day-first
+    (European convention). Falls back to the French text parser."""
     if not s:
         return None
-    try:
-        return dateparser.parse(str(s), dayfirst=True, languages=["fr", "en"], fuzzy=True)
-    except Exception:
+    txt = str(s).strip()
+    if not txt:
         return None
+    is_iso = bool(re.match(r"\d{4}-\d{2}-\d{2}", txt))
+    try:
+        return dateparser.parse(txt, dayfirst=not is_iso, yearfirst=is_iso, fuzzy=True)
+    except Exception:
+        pass
+    # Fallback: French text date ("3 juin 2026")
+    d = parse_french_date_text(txt)
+    if d:
+        return datetime(d.year, d.month, d.day)
+    return None
+
+
+_JUNK_TITLE = re.compile(
+    r"^\s*(acc[eè]s rapides?|aujourd'?hui|cette semaine|ce mois|cette ann[eé]e|"
+    r"agenda|programme|calendrier|r[eé]sultats?|tous les|voir tout|voir plus|"
+    r"filtrer|prochains? [eé]v[eé]nements?|[aà] venir|en ce moment|menu|"
+    r"newsletter|cookies?|\d{1,2}\s+\w+\s+\d{4})\s*$",
+    re.I,
+)
+
+
+def is_junk_title(t: str) -> bool:
+    """True if the title is a navigation/UI element, not a real event."""
+    t = (t or "").strip()
+    if len(t) < 6:
+        return True
+    return bool(_JUNK_TITLE.match(t))
 
 
 def make_absolute(href: str, base: str) -> str:
@@ -230,7 +259,7 @@ def scrape_indico(name, base, categ, location_default) -> list[dict]:
     print(f"   API returned {len(results)} raw results")
     for item in results:
         title = clean_text(item.get("title", ""))
-        if not title:
+        if not title or is_junk_title(title):
             continue
         raw_start = item.get("startDate", {})
         dt = parse_date(f"{raw_start.get('date', '')} {raw_start.get('time', '')}")
@@ -403,7 +432,7 @@ def extract_events_universal(html, institution, location_default, base_url) -> l
     events, seen = [], set()
 
     def add(ev):
-        if not ev or not ev["title"]:
+        if not ev or not ev["title"] or is_junk_title(ev["title"]):
             return
         key = (ev["title"][:50].lower(), ev["date"])
         if key not in seen:
@@ -587,10 +616,10 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
     An 'event' = any dict with a name/title field AND a start-date field."""
     if _out is None:
         _out, _seen = [], set()
-    if _depth > 9:
+    if _depth > 12:
         return _out
     if isinstance(obj, list):
-        for x in obj[:400]:
+        for x in obj[:600]:
             extract_events_deep_json(x, institution_default, source_type, base_url,
                                      _depth + 1, _out, _seen)
     elif isinstance(obj, dict):
@@ -605,7 +634,7 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
             if dt and in_window(dt.date()):
                 title = clean_text(name)
                 key = (title[:50].lower(), dt.date().isoformat())
-                if len(title) >= 5 and key not in _seen:
+                if not is_junk_title(title) and key not in _seen:
                     _seen.add(key)
                     geo = ev.get("geo_address_info") or ev.get("location") or {}
                     if isinstance(geo, dict):
@@ -681,13 +710,18 @@ def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="inst
 
     ctx.close()
 
-    # Add events found in captured API JSON
-    loc0, base0 = agenda_urls[0][1], agenda_urls[0][2]
-    for e in events_from_captured_json(captured, name, loc0, base0):
-        key = (e["title"][:50].lower(), e["date"])
-        if key not in seen:
-            seen.add(key)
-            all_events.append(e)
+    # Add events found in captured API JSON (deep recursive search)
+    base0 = agenda_urls[0][2]
+    api_count = 0
+    for _url, body in captured:
+        for e in extract_events_deep_json(body, name, "institution", base0):
+            key = (e["title"][:50].lower(), e["date"])
+            if key not in seen:
+                seen.add(key)
+                all_events.append(e)
+                api_count += 1
+    if api_count:
+        print(f"   +{api_count} events from captured JSON API ({len(captured)} responses)")
 
     print(f"   ✓ Total {name}: {len(all_events)} events")
     return all_events
