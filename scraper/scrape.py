@@ -211,16 +211,24 @@ def scrape_indico(name, base, categ, location_default) -> list[dict]:
     print(f"→ Indico: {name}...")
     events = []
     url = (f"{base}/export/categ/{categ}.json"
-           f"?from={TODAY.isoformat()}&to={HORIZON.isoformat()}&limit=400")
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=25)
-        r.raise_for_status()
-        data = r.json()
-    except Exception as e:
-        print(f"   [WARN] {e}")
+           f"?from={TODAY.isoformat()}&to={HORIZON.isoformat()}&limit=300")
+    data = None
+    for attempt in range(1, 4):
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=35)
+            print(f"   attempt {attempt}: HTTP {r.status_code} ({len(r.content)} bytes)")
+            r.raise_for_status()
+            data = r.json()
+            break
+        except Exception as e:
+            print(f"   [WARN] attempt {attempt}: {e}")
+    if not data:
+        print("   [ERROR] Indico unreachable after 3 attempts")
         return events
 
-    for item in data.get("results", []):
+    results = data.get("results", [])
+    print(f"   API returned {len(results)} raw results")
+    for item in results:
         title = clean_text(item.get("title", ""))
         if not title:
             continue
@@ -272,8 +280,38 @@ def accept_cookies(page):
             pass
 
 
+def click_load_more(page, max_clicks=30) -> int:
+    """Repeatedly click 'load more' style buttons. Returns number of clicks."""
+    labels = ["Voir plus", "Afficher plus", "Charger plus", "Plus d'événements",
+              "Plus de résultats", "Voir tous", "Voir tout", "Load more",
+              "Show more", "See more", "Suivant", "Plus"]
+    clicks = 0
+    for _ in range(max_clicks):
+        clicked = False
+        for label in labels:
+            try:
+                pat = re.compile(r"^\s*" + re.escape(label) + r"\s*$", re.I)
+                btn = page.get_by_role("button", name=pat)
+                if btn.count() == 0:
+                    btn = page.get_by_role("link", name=pat)
+                if btn.count() > 0 and btn.first.is_visible():
+                    btn.first.scroll_into_view_if_needed(timeout=2000)
+                    btn.first.click(timeout=3000)
+                    page.wait_for_timeout(1800)
+                    clicks += 1
+                    clicked = True
+                    break
+            except Exception:
+                pass
+        if not clicked:
+            break
+    if clicks:
+        print(f"   clicked 'load more' {clicks}x")
+    return clicks
+
+
 def load_page(page, url: str) -> tuple[str, str]:
-    """Navigate, wait for JS, accept cookies, scroll. Returns (html, title)."""
+    """Navigate, wait for JS, accept cookies, exhaust infinite-scroll + load-more."""
     try:
         page.goto(url, timeout=45000, wait_until="domcontentloaded")
     except Exception as e:
@@ -284,11 +322,28 @@ def load_page(page, url: str) -> tuple[str, str]:
     except PWTimeout:
         page.wait_for_timeout(3000)
     accept_cookies(page)
-    for _ in range(6):
-        page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
-        page.wait_for_timeout(700)
+
+    # Infinite scroll until the page stops growing
+    last_h = 0
+    for _ in range(30):
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        page.wait_for_timeout(850)
+        try:
+            h = page.evaluate("document.body.scrollHeight")
+        except Exception:
+            break
+        if h == last_h:
+            break
+        last_h = h
+
+    # Click any "load more" buttons, then scroll again
+    if click_load_more(page):
+        for _ in range(12):
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            page.wait_for_timeout(700)
+
     page.evaluate("window.scrollTo(0, 0)")
-    page.wait_for_timeout(500)
+    page.wait_for_timeout(400)
     try:
         return page.content(), page.title()
     except Exception:
@@ -447,11 +502,15 @@ def extract_events_universal(html, institution, location_default, base_url) -> l
             continue
         link = container.find("a", href=True)
         desc = strip_html(container.find("p"))[:400] if container.find("p") else ""
-        add(new_event(institution, title, d, location_default and location_default,
+        add(new_event(institution, title, d,
                       location=location_default, desc=desc,
                       url=make_absolute(link.get("href", "") if link else "", base_url),
                       speaker=_find_speaker(container)))
 
+    if len(events) < 3:
+        print(f"   [DEBUG] {institution}: jsonld={len(extract_jsonld_events(soup))} "
+              f"time[datetime]={len(soup.select('time[datetime]'))} "
+              f"articles={len(soup.select('article'))} links={len(soup.select('a[href]'))}")
     return events
 
 
@@ -520,6 +579,60 @@ def events_from_captured_json(captured, institution, location, base_url) -> list
                     url=make_absolute(url, base_url), speaker=clean_text(speaker),
                 ))
     return events
+
+
+def extract_events_deep_json(obj, institution_default, source_type="institution",
+                             base_url="", _depth=0, _out=None, _seen=None):
+    """Recursively walk ANY JSON structure, collecting event-like dicts.
+    An 'event' = any dict with a name/title field AND a start-date field."""
+    if _out is None:
+        _out, _seen = [], set()
+    if _depth > 9:
+        return _out
+    if isinstance(obj, list):
+        for x in obj[:400]:
+            extract_events_deep_json(x, institution_default, source_type, base_url,
+                                     _depth + 1, _out, _seen)
+    elif isinstance(obj, dict):
+        ev = obj.get("event") if isinstance(obj.get("event"), dict) else obj
+        name = (ev.get("name") or ev.get("title") or ev.get("titre")
+                or ev.get("summary") or ev.get("label"))
+        start = (ev.get("start_at") or ev.get("startDate") or ev.get("start_date")
+                 or ev.get("starts_at") or ev.get("dateDebut") or ev.get("date_debut")
+                 or ev.get("date"))
+        if isinstance(name, str) and name.strip() and start:
+            dt = parse_date(str(start))
+            if dt and in_window(dt.date()):
+                title = clean_text(name)
+                key = (title[:50].lower(), dt.date().isoformat())
+                if len(title) >= 5 and key not in _seen:
+                    _seen.add(key)
+                    geo = ev.get("geo_address_info") or ev.get("location") or {}
+                    if isinstance(geo, dict):
+                        loc = clean_text(geo.get("full_address") or geo.get("address")
+                                         or geo.get("name") or geo.get("city") or "")
+                    else:
+                        loc = clean_text(geo)
+                    api_id = ev.get("api_id") or ev.get("id") or ""
+                    url = ev.get("url") or ev.get("link") or ""
+                    if not url and api_id and source_type == "luma":
+                        url = f"https://lu.ma/{api_id}"
+                    hosts = obj.get("hosts") or obj.get("host_calendars") or ev.get("hosts") or []
+                    inst = institution_default
+                    if isinstance(hosts, list) and hosts and isinstance(hosts[0], dict):
+                        inst = clean_text(hosts[0].get("name", "")) or institution_default
+                    _out.append(new_event(
+                        inst, title, dt.date(),
+                        time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                        location=loc or "Paris",
+                        desc=strip_html(ev.get("description") or ev.get("description_short") or "")[:400],
+                        url=make_absolute(url, base_url or "https://lu.ma"),
+                        source_type=source_type,
+                    ))
+        for v in obj.values():
+            extract_events_deep_json(v, institution_default, source_type, base_url,
+                                     _depth + 1, _out, _seen)
+    return _out
 
 
 # ── Paginated HTML scraper (CdF, EHESS, ENS, Sciences Po, Sorbonne) ───────────
@@ -632,7 +745,7 @@ def scrape_sorbonne(browser):
 # ── Luma ──────────────────────────────────────────────────────────────────────
 
 def scrape_luma(browser) -> list[dict]:
-    print("→ Luma Paris (network intercept)...")
+    print("→ Luma Paris...")
     events, seen = [], set()
     captured = []
 
@@ -652,49 +765,51 @@ def scrape_luma(browser) -> list[dict]:
             except PWTimeout:
                 page.wait_for_timeout(5000)
             accept_cookies(page)
-            for _ in range(10):
-                page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+            for _ in range(12):
+                page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
                 page.wait_for_timeout(1300)
             html = page.content()
-            if captured or len(html) > 60000:
+            print(f"   {luma_url}: html={len(html)}")
+            if len(html) > 60000:
                 break
         except Exception as e:
             print(f"   [WARN] {luma_url}: {e}")
     ctx.close()
 
-    print(f"   captured {len(captured)} JSON responses")
+    # Collect all JSON blobs: __NEXT_DATA__ (Luma is Next.js) + captured network JSON
+    blobs = []
+    if html:
+        soup = BeautifulSoup(html, "lxml")
+        nd = soup.find("script", {"id": "__NEXT_DATA__"})
+        if nd and nd.string:
+            try:
+                blobs.append(json.loads(nd.string))
+                print("   found __NEXT_DATA__")
+            except Exception:
+                pass
+        # Also any inline script assigning a big JSON object
+        for sc in soup.find_all("script"):
+            txt = sc.string or ""
+            if '"start_at"' in txt or '"startDate"' in txt:
+                m = re.search(r"(\{.*\}|\[.*\])", txt, re.S)
+                if m:
+                    try:
+                        blobs.append(json.loads(m.group(1)))
+                    except Exception:
+                        pass
 
+    print(f"   captured {len(captured)} network JSON · {len(blobs)} embedded blobs")
     for _url, body in captured:
-        for lst in _deep_find_event_lists(body):
-            for item in lst:
-                if not isinstance(item, dict):
-                    continue
-                inner = item.get("event") if isinstance(item.get("event"), dict) else item
-                title = clean_text(inner.get("name") or inner.get("summary") or "")
-                start = (inner.get("start_at") or inner.get("startDate")
-                         or inner.get("starts_at") or "")
-                dt = parse_date(start)
-                if not title or not dt or not in_window(dt.date()):
-                    continue
-                key = (title[:50].lower(), dt.date().isoformat())
-                if key in seen:
-                    continue
+        blobs.append(body)
+
+    # Deep-extract events from every blob
+    for blob in blobs:
+        for ev in extract_events_deep_json(blob, "Luma", source_type="luma",
+                                           base_url="https://lu.ma"):
+            key = (ev["title"][:50].lower(), ev["date"])
+            if key not in seen:
                 seen.add(key)
-                geo = inner.get("geo_address_info", {}) or {}
-                loc = clean_text(geo.get("full_address") or geo.get("address")
-                                 or inner.get("location", "") or "Paris")
-                hosts = item.get("hosts") or item.get("host_calendars") or []
-                inst = "Luma"
-                if isinstance(hosts, list) and hosts and isinstance(hosts[0], dict):
-                    inst = clean_text(hosts[0].get("name", "Luma")) or "Luma"
-                api_id = inner.get("api_id", "")
-                url = inner.get("url") or (f"https://lu.ma/{api_id}" if api_id else "https://lu.ma/paris")
-                events.append(new_event(
-                    inst, title, dt.date(),
-                    time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-                    location=loc, desc=strip_html(inner.get("description", ""))[:400],
-                    url=make_absolute(url, "https://lu.ma"), source_type="luma",
-                ))
+                events.append(ev)
 
     # Fallback: JSON-LD from rendered HTML
     if html and not events:
@@ -708,10 +823,8 @@ def scrape_luma(browser) -> list[dict]:
             if key in seen:
                 continue
             seen.add(key)
-            org = item.get("organizer") or {}
-            host = org.get("name", "Luma") if isinstance(org, dict) else "Luma"
             events.append(new_event(
-                clean_text(host) or "Luma", title, dt.date(),
+                "Luma", title, dt.date(),
                 time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
                 location="Paris", desc=strip_html(item.get("description", ""))[:400],
                 url=make_absolute(item.get("url", ""), "https://lu.ma"), source_type="luma",
