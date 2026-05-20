@@ -108,7 +108,7 @@ _FR_DATE_RE = re.compile(
     r"\s+(\d{4})", re.I,
 )
 _ISO_DATE_RE = re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b")
-_FR_SLASH_RE = re.compile(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b")
+_FR_SLASH_RE = re.compile(r"\b(\d{1,2})[/.](\d{1,2})[/.](\d{2,4})\b")
 
 
 def parse_french_date_text(text: str):
@@ -132,9 +132,33 @@ def parse_french_date_text(text: str):
     m = _FR_SLASH_RE.search(text)
     if m:
         try:
-            return date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+            y = int(m.group(3))
+            if y < 100:
+                y += 2000
+            return date(y, int(m.group(2)), int(m.group(1)))
         except ValueError:
             pass
+    return None
+
+
+def _day_month_to_date(day_str, month_str):
+    """Build a date from a day-number + French month name; infers the year."""
+    dm = re.search(r"\d{1,2}", str(day_str or ""))
+    if not dm:
+        return None
+    day = int(dm.group(0))
+    key = str(month_str or "").strip().lower().rstrip(".")
+    month = FRENCH_MONTHS.get(key) or FRENCH_MONTHS.get(
+        key.replace("é", "e").replace("û", "u").replace("ô", "o"))
+    if not month:
+        return None
+    for yr in (TODAY.year, TODAY.year + 1):
+        try:
+            d = date(yr, month, day)
+        except ValueError:
+            return None
+        if d >= TODAY - timedelta(days=15):
+            return d
     return None
 
 
@@ -780,11 +804,57 @@ def scrape_college_de_france(browser):
 
 
 def scrape_ehess(browser):
-    return scrape_paginated(browser, "EHESS", [
-        ("https://www.ehess.fr/jcms/kmo_28682/fr/agenda-de-l-ehess",
-         "EHESS, 54 boulevard Raspail, Paris 6e",
-         "https://www.ehess.fr"),
-    ], max_pages=20)
+    """Dedicated EHESS parser — events are .jnews-event-card elements
+    (.jnews-event-title for the title, .chiffre-cle + .month for the date)."""
+    print("→ EHESS (dedicated parser)...")
+    events, seen = [], set()
+    BASE = "https://www.ehess.fr"
+    LOC = "EHESS, 54 boulevard Raspail, Paris 6e"
+
+    ctx = browser.new_context(
+        user_agent=HEADERS["User-Agent"], locale="fr-FR",
+        viewport={"width": 1366, "height": 900},
+        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+    )
+    page = ctx.new_page()
+    html, _ = load_page(page, "https://www.ehess.fr/jcms/kmo_28682/fr/agenda-de-l-ehess")
+    ctx.close()
+
+    soup = BeautifulSoup(html, "lxml")
+    cards = soup.select(".jnews-event-card")
+    print(f"   found {len(cards)} .jnews-event-card")
+    for card in cards:
+        title_el = card.select_one(".jnews-event-title")
+        title = clean_text(title_el.get_text()) if title_el else ""
+        if not title or is_junk_title(title):
+            continue
+        # Date: structured day + month first, free-text fallback
+        d = None
+        day_el = card.select_one(".chiffre-cle")
+        month_el = card.select_one(".month")
+        if day_el and month_el:
+            d = _day_month_to_date(day_el.get_text(), month_el.get_text())
+        if not d:
+            d = parse_french_date_text(card.get_text(" ", strip=True))
+        if not d or not in_window(d):
+            continue
+        # Time
+        time_str = ""
+        hour_el = card.select_one(".hour")
+        if hour_el:
+            m = re.search(r"(\d{1,2})\s*[hH:]\s*(\d{2})?", hour_el.get_text())
+            if m:
+                time_str = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
+        link = card.find("a", href=True)
+        href = link.get("href", "") if link else ""
+        key = (title[:60].lower(), d.isoformat())
+        if key in seen:
+            continue
+        seen.add(key)
+        events.append(new_event("EHESS", title, d, time_str=time_str,
+                                location=LOC, url=make_absolute(href, BASE)))
+    print(f"   ✓ Total EHESS: {len(events)} events")
+    return events
 
 
 def scrape_ens(browser):
@@ -804,14 +874,57 @@ def scrape_sciences_po(browser):
 
 
 def scrape_sorbonne(browser):
-    return scrape_paginated(browser, "Sorbonne Université", [
-        ("https://www.sorbonne-universite.fr/evenements",
-         "Sorbonne Université, Paris",
-         "https://www.sorbonne-universite.fr"),
-        ("https://lettres.sorbonne-universite.fr/evenements",
-         "Sorbonne Lettres, 1 rue Victor Cousin, Paris 5e",
-         "https://lettres.sorbonne-universite.fr"),
-    ], max_pages=15)
+    """Dedicated Sorbonne parser — events are Bootstrap columns (.col-lg-4 /
+    .col-md-6) that contain a thumbnail image and a French date in their text."""
+    print("→ Sorbonne Université (dedicated parser)...")
+    events, seen = [], set()
+    BASE = "https://www.sorbonne-universite.fr"
+    LOC = "Sorbonne Université, Paris"
+
+    ctx = browser.new_context(
+        user_agent=HEADERS["User-Agent"], locale="fr-FR",
+        viewport={"width": 1366, "height": 900},
+        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+    )
+    page = ctx.new_page()
+    html, _ = load_page(page, "https://www.sorbonne-universite.fr/evenements")
+    ctx.close()
+
+    soup = BeautifulSoup(html, "lxml")
+    cards = soup.select(".col-lg-4, .col-md-6, .col-12, [class*='card' i]")
+    print(f"   {len(cards)} candidate columns")
+    for card in cards:
+        if not card.select_one(".thumbnail, img"):
+            continue
+        d = parse_french_date_text(card.get_text(" ", strip=True))
+        if not d or not in_window(d):
+            continue
+        title_el = card.find(["h2", "h3", "h4", "h5"])
+        title = clean_text(title_el.get_text()) if title_el else ""
+        if not title:
+            a = card.find("a", href=True)
+            title = clean_text(a.get_text()) if a else ""
+        if not title or is_junk_title(title):
+            continue
+        href = _best_link(card, title_el)
+        key = (title[:60].lower(), d.isoformat())
+        if key in seen:
+            continue
+        seen.add(key)
+        events.append(new_event("Sorbonne Université", title, d,
+                                location=LOC, url=make_absolute(href, BASE)))
+
+    # Fallback to the universal extractor if the dedicated parser found little
+    if len(events) < 3:
+        print("   [FALLBACK] universal extractor on Sorbonne HTML")
+        for e in extract_events_universal(html, "Sorbonne Université", LOC, BASE):
+            key = (e["title"][:60].lower(), e["date"])
+            if key not in seen:
+                seen.add(key)
+                events.append(e)
+
+    print(f"   ✓ Total Sorbonne: {len(events)} events")
+    return events
 
 
 # ── Luma ──────────────────────────────────────────────────────────────────────
