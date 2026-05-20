@@ -1059,12 +1059,11 @@ def scrape_psl(browser):
 
 # ── Luma ──────────────────────────────────────────────────────────────────────
 
+# Luma geolocates by IP. From the US-based CI runner the topic pages
+# (tech / ai / arts / ...) only ever return US events, so they are useless
+# here — we keep just the Paris discover feed, which is genuinely Paris.
 LUMA_PAGES = [
     "https://lu.ma/discover/paris",
-    "https://luma.com/parisai",
-    "https://luma.com/tech", "https://luma.com/arts", "https://luma.com/wellness",
-    "https://luma.com/crypto", "https://luma.com/climate", "https://luma.com/food",
-    "https://luma.com/ai", "https://luma.com/fitness",
 ]
 
 
