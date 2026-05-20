@@ -424,6 +424,23 @@ def _find_speaker(container):
     return clean_text(el.get_text()) if el else ""
 
 
+def _best_link(container, title_el=None) -> str:
+    """Find the most likely event-detail link: prefer the link on the title,
+    then the link wrapping the card, then the first real link."""
+    if title_el is not None:
+        a = title_el.find("a", href=True) or title_el.find_parent("a", href=True)
+        if a:
+            href = (a.get("href") or "").strip()
+            if href and href not in ("#", "/"):
+                return href
+    for a in container.find_all("a", href=True):
+        href = (a.get("href") or "").strip()
+        if (href and href not in ("#", "/")
+                and not href.lower().startswith(("javascript:", "mailto:", "tel:"))):
+            return href
+    return ""
+
+
 def extract_events_universal(html, institution, location_default, base_url) -> list[dict]:
     """4-strategy extractor: JSON-LD, <time datetime>, data-* attrs, French text."""
     if not html:
@@ -468,12 +485,12 @@ def extract_events_universal(html, institution, location_default, base_url) -> l
             title = clean_text(title_el.get_text())
             if not title or len(title) < 5:
                 continue
-            link = container.find("a", href=True)
+            href = _best_link(container, title_el)
             desc = strip_html(container.find("p"))[:400] if container.find("p") else ""
             add(new_event(institution, title, dt.date(),
                           time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
                           location=location_default, desc=desc,
-                          url=make_absolute(link.get("href", "") if link else "", base_url),
+                          url=make_absolute(href, base_url),
                           speaker=_find_speaker(container)))
             break
 
@@ -505,17 +522,18 @@ def extract_events_universal(html, institution, location_default, base_url) -> l
             title = clean_text(title_el.get_text())
             if not title or len(title) < 5:
                 continue
-            link = el.find_parent("a") or el.find("a", href=True)
+            href = _best_link(container, title_el)
             add(new_event(institution, title, dt.date(),
                           time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
                           location=location_default,
-                          url=make_absolute(link.get("href", "") if link else "", base_url)))
+                          url=make_absolute(href, base_url)))
 
     # Strategy 4: French date text inside event-like containers
     container_sel = ("article, [class*='event' i], [class*='agenda' i], [class*='conference' i],"
                      " [class*='seminaire' i], [class*='card' i], [class*='item' i],"
                      " [class*='lecture' i], [class*='cours' i], li[class*='program' i],"
-                     " div[class*='program' i], [class*='teaser' i]")
+                     " div[class*='program' i], [class*='teaser' i], [class*='evenement' i],"
+                     " [class*='manifestation' i], [class*='actualite' i], li[class*='result' i]")
     for container in soup.select(container_sel):
         d = parse_french_date_text(container.get_text(" ", strip=True))
         if not d or not in_window(d):
@@ -526,14 +544,13 @@ def extract_events_universal(html, institution, location_default, base_url) -> l
         if not title_el:
             continue
         title = clean_text(title_el.get_text())
-        if (not title or len(title) < 8
-                or title.lower().startswith(("agenda", "programme", "calendrier", "tous les"))):
+        if not title or is_junk_title(title):
             continue
-        link = container.find("a", href=True)
+        href = _best_link(container, title_el)
         desc = strip_html(container.find("p"))[:400] if container.find("p") else ""
         add(new_event(institution, title, d,
                       location=location_default, desc=desc,
-                      url=make_absolute(link.get("href", "") if link else "", base_url),
+                      url=make_absolute(href, base_url),
                       speaker=_find_speaker(container)))
 
     if len(events) < 3:
@@ -643,7 +660,9 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
                     else:
                         loc = clean_text(geo)
                     api_id = ev.get("api_id") or ev.get("id") or ""
-                    url = ev.get("url") or ev.get("link") or ""
+                    url = (ev.get("url") or ev.get("link") or ev.get("permalink")
+                           or ev.get("canonical_url") or ev.get("path")
+                           or ev.get("slug") or "")
                     if not url and api_id and source_type == "luma":
                         url = f"https://lu.ma/{api_id}"
                     hosts = obj.get("hosts") or obj.get("host_calendars") or ev.get("hosts") or []
@@ -740,7 +759,7 @@ def scrape_college_de_france(browser):
 
 def scrape_ehess(browser):
     return scrape_paginated(browser, "EHESS", [
-        ("https://www.ehess.fr/fr/agenda",
+        ("https://www.ehess.fr/jcms/kmo_28682/fr/agenda-de-l-ehess",
          "EHESS, 54 boulevard Raspail, Paris 6e",
          "https://www.ehess.fr"),
     ], max_pages=20)
@@ -756,10 +775,7 @@ def scrape_ens(browser):
 
 def scrape_sciences_po(browser):
     return scrape_paginated(browser, "Sciences Po", [
-        ("https://www.sciencespo.fr/fr/agenda/",
-         "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
-         "https://www.sciencespo.fr"),
-        ("https://www.sciencespo.fr/fr/actualites/",
+        ("https://www.sciencespo.fr/fr/evenements/",
          "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
          "https://www.sciencespo.fr"),
     ], max_pages=15)
