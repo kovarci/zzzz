@@ -1146,13 +1146,13 @@ def deduplicate(events):
     return out
 
 
-# ── Geocoding (for the map view) ──────────────────────────────────────────────
+# ── Geocoding + iCal feed (map view & calendar subscription) ──────────────────
 
 GEOCACHE_FILE = OUTPUT_FILE.parent / "geocache.json"
+ICS_FILE = OUTPUT_FILE.parent / "calendar.ics"
 MAX_NEW_GEOCODE = 220   # courtesy cap on Nominatim lookups per run
 
-# Known venue coordinates — seeds the cache so big institutions always map,
-# even if Nominatim is unreachable.
+# Seeds the cache so big institutions always map even if Nominatim is down.
 SEED_GEOCODE = {
     "ihp, 11 rue pierre et marie curie, paris 5e": [48.8438, 2.3437],
     "collège de france, 11 place marcelin-berthelot, paris 5e": [48.8489, 2.3446],
@@ -1163,6 +1163,30 @@ SEED_GEOCODE = {
     "université psl, 60 rue mazarine, paris 6e": [48.8555, 2.3382],
     "sorbonne université, paris": [48.8479, 2.3433],
 }
+
+# Fallback coordinates per institution — used when an event's exact location
+# (a room name, a building code…) can't be geocoded.
+INSTITUTION_COORDS = {
+    "Institut Henri Poincaré":   [48.8438, 2.3437],
+    "Collège de France":         [48.8489, 2.3446],
+    "ENS Paris":                 [48.8417, 2.3446],
+    "EHESS":                     [48.8488, 2.3270],
+    "Sciences Po":               [48.8543, 2.3280],
+    "Paris School of Economics": [48.8216, 2.3379],
+    "Université PSL":            [48.8555, 2.3382],
+    "Sorbonne Université":       [48.8479, 2.3433],
+}
+
+# A location worth geocoding looks like a real street address (postal code,
+# or "<number> <street type>"). Vague names ("amphi Fermat", "1R2") do not.
+_ADDR_RE = re.compile(
+    r"\b\d{5}\b|"
+    r"\b\d{1,4}\s?(?:bis|ter)?\s+(rue|avenue|av\.|bd|boulevard|place|quai|cours|"
+    r"impasse|passage|all[ée]e|chemin|esplanade|square)\b", re.I)
+
+
+def looks_like_address(loc):
+    return bool(_ADDR_RE.search(loc or ""))
 
 
 def _nominatim(sess, address):
@@ -1185,7 +1209,8 @@ def _nominatim(sess, address):
 
 
 def geocode_all(events):
-    """Add lat/lng to events by geocoding their location, with a persistent cache."""
+    """Add lat/lng to events. Real addresses are geocoded (Nominatim, cached);
+    vague locations fall back to the event's institution coordinates."""
     try:
         cache = json.loads(GEOCACHE_FILE.read_text(encoding="utf-8"))
     except Exception:
@@ -1198,16 +1223,16 @@ def geocode_all(events):
     new = 0
     for ev in events:
         loc = clean_text(ev.get("location") or "")
-        if not loc:
-            continue
-        key = loc.lower()[:140]
-        if key not in cache:
-            if new >= MAX_NEW_GEOCODE:
-                continue
-            cache[key] = _nominatim(sess, loc)
-            new += 1
-            time.sleep(1.1)   # Nominatim asks for max 1 request/second
-        coords = cache.get(key)
+        coords = None
+        if loc and looks_like_address(loc):
+            key = loc.lower()[:140]
+            if key not in cache and new < MAX_NEW_GEOCODE:
+                cache[key] = _nominatim(sess, loc)
+                new += 1
+                time.sleep(1.1)   # Nominatim asks for max 1 request/second
+            coords = cache.get(key)
+        if not coords:                       # fallback → institution coordinates
+            coords = INSTITUTION_COORDS.get(ev.get("institution"))
         if coords:
             ev["lat"], ev["lng"] = coords[0], coords[1]
 
@@ -1218,6 +1243,51 @@ def geocode_all(events):
         print(f"[WARN] geocache write: {e}")
     located = sum(1 for e in events if "lat" in e)
     print(f"Geocoded: {new} new lookups · {located}/{len(events)} events placed on map")
+
+
+def write_ics(events):
+    """Write a single subscribable .ics feed containing every event."""
+    def esc(s):
+        return (str(s or "").replace("\\", "\\\\").replace(";", "\\;")
+                .replace(",", "\\,").replace("\r", "").replace("\n", "\\n"))
+    stamp = datetime.now().strftime("%Y%m%dT%H%M%SZ")
+    out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Paris Academique//FR",
+           "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+           "X-WR-CALNAME:Conférences académiques · Paris",
+           "X-WR-TIMEZONE:Europe/Paris"]
+    for ev in events:
+        d = ev["date"].replace("-", "")
+        tm = ev.get("time", "")
+        if tm and re.match(r"\d{1,2}:\d{2}", tm):
+            h, m = tm.split(":")[:2]
+            dtstart = f"DTSTART:{d}T{int(h):02d}{int(m):02d}00"
+            et = ev.get("end_time", "")
+            if et and re.match(r"\d{1,2}:\d{2}", et):
+                eh, em = et.split(":")[:2]
+                dtend = f"DTEND:{d}T{int(eh):02d}{int(em):02d}00"
+            else:
+                dtend = f"DTEND:{d}T{min(int(h)+2,23):02d}{int(m):02d}00"
+        else:
+            dtstart = f"DTSTART;VALUE=DATE:{d}"
+            try:
+                nd = (datetime.strptime(ev["date"], "%Y-%m-%d") + timedelta(days=1)).strftime("%Y%m%d")
+            except Exception:
+                nd = d
+            dtend = f"DTEND;VALUE=DATE:{nd}"
+        desc = esc((ev.get("description") or "") + (("\n" + ev["url"]) if ev.get("url") else ""))
+        out += ["BEGIN:VEVENT", f"UID:{ev['id']}@paris-academique",
+                f"DTSTAMP:{stamp}", dtstart, dtend,
+                f"SUMMARY:{esc(ev['title'])}", f"DESCRIPTION:{desc}",
+                f"LOCATION:{esc(ev.get('location', ''))}"]
+        if ev.get("url"):
+            out.append(f"URL:{esc(ev['url'])}")
+        out.append("END:VEVENT")
+    out.append("END:VCALENDAR")
+    try:
+        ICS_FILE.write_text("\r\n".join(out) + "\r\n", encoding="utf-8")
+        print(f"Calendar feed: {len(events)} events → calendar.ics")
+    except Exception as e:
+        print(f"[WARN] ics write: {e}")
 
 
 def main():
@@ -1253,6 +1323,12 @@ def main():
         geocode_all(all_events)
     except Exception as e:
         print(f"[ERROR] geocoding: {e}")
+        traceback.print_exc()
+
+    try:
+        write_ics(all_events)
+    except Exception as e:
+        print(f"[ERROR] ics: {e}")
         traceback.print_exc()
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)

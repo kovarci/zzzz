@@ -6,10 +6,8 @@
   <title>Paris · Académique — toutes les conférences académiques de Paris</title>
   <meta name="description" content="Toutes les conférences et séminaires académiques de Paris, dans un calendrier filtrable, mis à jour chaque jour." />
 
-  <!-- Favicon (SVG inline) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23a78bfa'/><stop offset='.5' stop-color='%2360a5fa'/><stop offset='1' stop-color='%23f472b6'/></linearGradient></defs><circle cx='16' cy='16' r='13' fill='url(%23g)'/></svg>" />
 
-  <!-- Open Graph / partage -->
   <meta property="og:title" content="Conférences Académiques · Paris" />
   <meta property="og:description" content="Toutes les conférences et séminaires académiques de Paris — Collège de France, ENS, EHESS, IHP, Sciences Po, Sorbonne, PSE, PSL. Mis à jour chaque jour." />
   <meta property="og:type" content="website" />
@@ -28,26 +26,20 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <style>
-    /* ═══════════════════════════════════════════════════════════════
-       Design tokens
-       ═══════════════════════════════════════════════════════════════ */
     :root {
       --bg:#07070d; --text:#ececf2; --text-soft:#c2c2d0; --muted:#8888a0;
       --glass:rgba(255,255,255,0.045); --glass-2:rgba(255,255,255,0.07);
       --border:rgba(255,255,255,0.09); --border-bright:rgba(255,255,255,0.2);
-      --radius:16px; --gold:#fbbf24;
+      --radius:16px; --gold:#fbbf24; --cyan:#22d3ee;
       --c-math:#60a5fa; --c-philo:#a78bfa; --c-litt:#fb7185; --c-hist:#fb923c;
       --c-sci:#4ade80; --c-eco:#fbbf24; --c-socio:#2dd4bf; --c-droit:#9aa6b8;
       --c-arts:#f472b6; --c-autre:#9ca3af;
     }
     *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
     html { -webkit-font-smoothing:antialiased; scroll-behavior:smooth; }
-    body {
-      font-family:"Inter",system-ui,sans-serif; background:var(--bg); color:var(--text);
-      font-size:15px; line-height:1.6; min-height:100vh; overflow-x:hidden;
-    }
+    body { font-family:"Inter",system-ui,sans-serif; background:var(--bg); color:var(--text); font-size:15px; line-height:1.6; min-height:100vh; overflow-x:hidden; }
 
-    /* ── Aurora background ───────────────────────────────────────── */
+    /* Aurora */
     .aurora { position:fixed; inset:0; z-index:-2; overflow:hidden; background:var(--bg); }
     .blob { position:absolute; border-radius:50%; filter:blur(110px); opacity:.5; will-change:transform; }
     .blob.b1 { width:46vw; height:46vw; background:#6d28d9; top:-12vw; left:-8vw; animation:drift1 24s ease-in-out infinite; }
@@ -57,50 +49,37 @@
     @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(8vw,6vw) scale(1.15)} }
     @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-7vw,9vw) scale(1.1)} }
     @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(6vw,-8vw) scale(1.2)} }
-    .aurora::after {
-      content:""; position:absolute; inset:0;
-      background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);
-      background-size:4px 4px; opacity:.5;
-    }
+    .aurora::after { content:""; position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px); background-size:4px 4px; opacity:.5; }
 
-    /* ── Layout ──────────────────────────────────────────────────── */
     .container { max-width:1240px; margin:0 auto; padding:0 24px; }
 
-    nav.topbar {
-      position:sticky; top:0; z-index:100; background:rgba(10,10,18,0.6);
-      backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%);
-      border-bottom:1px solid var(--border);
-    }
+    nav.topbar { position:sticky; top:0; z-index:100; background:rgba(10,10,18,0.6); backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%); border-bottom:1px solid var(--border); }
     .topbar-inner { max-width:1240px; margin:0 auto; padding:15px 24px; display:flex; align-items:center; justify-content:space-between; }
     .logo { display:flex; align-items:center; gap:10px; font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:17px; letter-spacing:-0.01em; }
     .logo-orb { width:22px; height:22px; border-radius:50%; background:conic-gradient(from 0deg,#a78bfa,#60a5fa,#f472b6,#a78bfa); box-shadow:0 0 16px rgba(167,139,250,.7); animation:spin 8s linear infinite; }
     @keyframes spin { to { transform:rotate(360deg); } }
     .nav-meta { font-size:12.5px; color:var(--muted); }
 
-    /* ── Hero ────────────────────────────────────────────────────── */
     .hero { padding:76px 0 36px; text-align:center; }
     .hero .eyebrow { display:inline-block; font-size:12px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); padding:6px 14px; border:1px solid var(--border); border-radius:999px; background:var(--glass); margin-bottom:22px; }
-    .hero h1 {
-      font-family:"Space Grotesk",sans-serif; font-size:clamp(38px,6vw,72px);
-      font-weight:700; line-height:1.04; letter-spacing:-0.03em; margin-bottom:20px;
-      background:linear-gradient(140deg,#ffffff 18%,#b3a4ff 52%,#6da8ff 78%);
-      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-    }
+    .hero h1 { font-family:"Space Grotesk",sans-serif; font-size:clamp(38px,6vw,72px); font-weight:700; line-height:1.04; letter-spacing:-0.03em; margin-bottom:20px; background:linear-gradient(140deg,#ffffff 18%,#b3a4ff 52%,#6da8ff 78%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
     .hero p { font-size:17px; color:var(--text-soft); max-width:660px; margin:0 auto 34px; }
     .hero p .count { font-weight:700; color:#fff; font-variant-numeric:tabular-nums; }
 
     .search-wrap { position:relative; max-width:560px; margin:0 auto; }
-    .search-input {
-      width:100%; padding:16px 18px 16px 50px; font-size:15px; font-family:inherit; color:var(--text);
-      background:var(--glass); border:1px solid var(--border); border-radius:14px;
-      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-      transition:border-color .2s,box-shadow .2s,background .2s;
-    }
+    .search-input { width:100%; padding:16px 18px 16px 50px; font-size:15px; font-family:inherit; color:var(--text); background:var(--glass); border:1px solid var(--border); border-radius:14px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); transition:border-color .2s,box-shadow .2s,background .2s; }
     .search-input::placeholder { color:var(--muted); }
     .search-input:focus { outline:none; border-color:rgba(167,139,250,.6); background:var(--glass-2); box-shadow:0 0 0 4px rgba(167,139,250,.12),0 0 40px rgba(109,40,217,.25); }
     .search-icon { position:absolute; left:18px; top:50%; transform:translateY(-50%); width:18px; height:18px; color:var(--muted); pointer-events:none; }
 
-    /* ── Controls ────────────────────────────────────────────────── */
+    /* Stats bar */
+    .stats-bar { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px; margin-top:26px; }
+    .stat { display:flex; align-items:baseline; gap:6px; padding:8px 15px; cursor:pointer; font-size:13px; font-family:inherit; color:var(--text-soft); background:var(--glass); border:1px solid var(--border); border-radius:999px; transition:all .15s; }
+    .stat:hover { color:#fff; border-color:var(--border-bright); transform:translateY(-1px); }
+    .stat-num { font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:17px; color:#fff; }
+    .disc-bar { display:flex; width:100%; max-width:520px; height:7px; border-radius:999px; overflow:hidden; margin:6px auto 0; border:1px solid var(--border); }
+    .dseg { min-width:2px; }
+
     .controls { padding:32px 0 8px; }
     .tabs { display:flex; gap:5px; padding:5px; width:fit-content; margin:0 auto 26px; background:var(--glass); border:1px solid var(--border); border-radius:14px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
     .tab { display:flex; align-items:center; gap:8px; padding:9px 18px; border:none; cursor:pointer; font-size:14px; font-weight:500; font-family:inherit; color:var(--text-soft); background:none; border-radius:10px; transition:all .18s; }
@@ -121,21 +100,21 @@
     .chip.disc-Sociologie{--chip-c:var(--c-socio)} .chip.disc-Droit{--chip-c:var(--c-droit)}
     .chip.disc-Arts{--chip-c:var(--c-arts)} .chip.disc-Autre{--chip-c:var(--c-autre)}
 
-    /* ── Toolbar ─────────────────────────────────────────────────── */
     .toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:22px; padding-top:18px; border-top:1px solid var(--border); }
     .results-text { font-size:13px; color:var(--muted); }
-    .toolbar-right { display:flex; align-items:center; gap:10px; }
+    .toolbar-right { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
     .view-toggle { display:flex; gap:3px; padding:4px; background:var(--glass); border:1px solid var(--border); border-radius:999px; }
     .view-btn { padding:6px 14px; border:none; cursor:pointer; font-size:13px; font-family:inherit; color:var(--text-soft); background:none; border-radius:999px; transition:all .15s; }
     .view-btn:hover { color:#fff; }
     .view-btn.active { color:#fff; background:linear-gradient(135deg,rgba(167,139,250,.85),rgba(96,165,250,.85)); }
-    .fav-toggle { display:flex; align-items:center; gap:7px; padding:7px 14px; cursor:pointer; font-size:13px; font-weight:500; font-family:inherit; color:var(--text-soft); background:var(--glass); border:1px solid var(--border); border-radius:999px; transition:all .15s; }
-    .fav-toggle:hover { color:#fff; border-color:var(--border-bright); }
-    .fav-toggle svg { width:15px; height:15px; }
+    .pill-btn { display:flex; align-items:center; gap:7px; padding:7px 14px; cursor:pointer; font-size:13px; font-weight:500; font-family:inherit; color:var(--text-soft); background:var(--glass); border:1px solid var(--border); border-radius:999px; transition:all .15s; }
+    .pill-btn:hover { color:#fff; border-color:var(--border-bright); }
+    .pill-btn svg { width:15px; height:15px; }
     .fav-toggle.active { color:#fff; border-color:var(--gold); background:rgba(251,191,36,.12); box-shadow:0 0 18px -6px var(--gold); }
     .fav-toggle.active svg { fill:var(--gold); stroke:var(--gold); }
+    .near-btn.active { color:#fff; border-color:var(--cyan); background:rgba(34,211,238,.12); box-shadow:0 0 18px -6px var(--cyan); }
+    .near-btn.active svg { fill:var(--cyan); stroke:var(--cyan); }
 
-    /* ── Events ──────────────────────────────────────────────────── */
     main { padding-bottom:90px; }
     .day-group { margin-top:44px; }
     .day-group:first-child { margin-top:26px; }
@@ -145,20 +124,11 @@
     .day-line { flex:1; height:1px; background:var(--border); }
     .cards-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:16px; }
 
-    .event-card {
-      position:relative; overflow:hidden; cursor:pointer;
-      display:flex; flex-direction:column; gap:11px; padding:19px;
-      background:linear-gradient(160deg,rgba(28,28,46,0.74),rgba(17,17,29,0.74));
-      border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius);
-      transform-style:preserve-3d;
-      transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .35s;
-      animation:cardIn .5s ease both; animation-delay:calc(var(--d,0) * 22ms);
-    }
+    .event-card { position:relative; overflow:hidden; cursor:pointer; display:flex; flex-direction:column; gap:11px; padding:19px; background:linear-gradient(160deg,rgba(28,28,46,0.74),rgba(17,17,29,0.74)); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); transform-style:preserve-3d; transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .35s; animation:cardIn .5s ease both; animation-delay:calc(var(--d,0) * 22ms); }
     @keyframes cardIn { from { opacity:0; transform:translateY(16px); } }
     .event-card::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:var(--accent,#888); box-shadow:0 0 14px var(--accent,#888); opacity:.9; }
     .event-card .glare { position:absolute; inset:0; pointer-events:none; border-radius:var(--radius); transition:background .2s; }
     .event-card:hover { border-color:var(--border-bright); box-shadow:0 18px 50px -16px rgba(0,0,0,0.8),0 0 44px -14px var(--accent,#888); }
-
     .card-top { display:flex; align-items:center; justify-content:space-between; gap:10px; }
     .card-time { font-size:13px; font-weight:600; color:#fff; font-variant-numeric:tabular-nums; font-family:"Space Grotesk",sans-serif; }
     .disc-tag { font-size:10.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:4px 10px; border-radius:999px; color:var(--accent,#fff); background:color-mix(in srgb,var(--accent,#888) 18%,transparent); border:1px solid color-mix(in srgb,var(--accent,#888) 40%,transparent); white-space:nowrap; }
@@ -168,6 +138,7 @@
     .card-meta .row { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
     .card-meta svg { width:13px; height:13px; flex-shrink:0; opacity:.6; }
     .online-badge { font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:999px; color:#4ade80; background:rgba(74,222,128,.13); border:1px solid rgba(74,222,128,.35); }
+    .dist-badge { font-size:10px; font-weight:700; letter-spacing:.04em; padding:2px 7px; border-radius:999px; color:var(--cyan); background:rgba(34,211,238,.13); border:1px solid rgba(34,211,238,.35); }
     .card-desc { font-size:12.5px; color:var(--muted); line-height:1.55; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
     .card-actions { margin-top:auto; padding-top:12px; border-top:1px solid rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:space-between; }
     .open-hint { font-size:11.5px; color:var(--muted); }
@@ -181,13 +152,11 @@
     .no-results { text-align:center; padding:90px 20px; color:var(--muted); }
     .no-results .big { font-family:"Space Grotesk",sans-serif; font-size:22px; color:var(--text-soft); margin-bottom:8px; }
 
-    /* ── Loading skeleton ────────────────────────────────────────── */
     .sk { background:linear-gradient(100deg,rgba(255,255,255,.04) 25%,rgba(255,255,255,.11) 50%,rgba(255,255,255,.04) 75%); background-size:220% 100%; animation:shimmer 1.4s linear infinite; border-radius:10px; }
     @keyframes shimmer { to { background-position:-220% 0; } }
     .sk-day { display:inline-block; width:210px; height:26px; }
     .sk-card { height:188px; border:1px solid var(--border); border-radius:var(--radius); }
 
-    /* ── Map view ────────────────────────────────────────────────── */
     #map-view { display:none; margin-top:26px; position:relative; }
     #map { height:640px; border-radius:var(--radius); border:1px solid var(--border); overflow:hidden; z-index:1; }
     #map-note { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2; pointer-events:none; text-align:center; color:var(--muted); font-size:14px; background:rgba(10,10,18,.7); padding:14px 22px; border-radius:12px; border:1px solid var(--border); }
@@ -206,9 +175,13 @@
     .map-pop .mp-item a:hover { text-decoration:underline; }
     .map-pop .mp-date { font-size:11px; color:var(--muted); }
 
-    /* ── Footer ──────────────────────────────────────────────────── */
-    footer { border-top:1px solid var(--border); padding:30px 0; text-align:center; font-size:13px; color:var(--muted); }
-    footer a { color:var(--text-soft); text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--border-bright); }
+    footer { border-top:1px solid var(--border); padding:34px 0; text-align:center; }
+    .subscribe-btn { display:inline-flex; align-items:center; gap:9px; padding:12px 22px; margin-bottom:16px; font-size:14px; font-weight:600; font-family:inherit; color:#fff; text-decoration:none; background:linear-gradient(135deg,rgba(167,139,250,.92),rgba(96,165,250,.92)); border:1px solid var(--border-bright); border-radius:12px; box-shadow:0 8px 28px -8px rgba(109,40,217,.5); transition:transform .15s; }
+    .subscribe-btn:hover { transform:translateY(-2px); }
+    .subscribe-btn svg { width:17px; height:17px; }
+    .footer-note { font-size:13px; color:var(--muted); line-height:1.8; }
+    .footer-note code { font-family:ui-monospace,Menlo,monospace; font-size:12px; color:var(--text-soft); background:var(--glass-2); padding:2px 7px; border-radius:6px; }
+    .footer-note a { color:var(--text-soft); text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--border-bright); }
 
     @media (max-width:600px) {
       .hero { padding:50px 0 28px; }
@@ -219,6 +192,12 @@
       #map { height:460px; }
     }
     @media (prefers-reduced-motion:reduce) { .blob,.logo-orb,.event-card,.sk,.sk-card{animation:none} }
+
+    #cal-pop { position:fixed; z-index:200; min-width:220px; padding:6px; background:rgba(20,20,34,0.94); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid var(--border-bright); border-radius:12px; box-shadow:0 20px 50px -12px rgba(0,0,0,.8); }
+    .cal-pop-title { font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:7px 10px 5px; }
+    .cal-opt { display:flex; align-items:center; gap:9px; width:100%; padding:10px; cursor:pointer; font-size:13.5px; font-family:inherit; color:var(--text); background:none; border:none; border-radius:8px; text-align:left; transition:background .12s; }
+    .cal-opt:hover { background:var(--glass-2); }
+    .cal-opt svg { width:16px; height:16px; flex-shrink:0; }
   </style>
 </head>
 <body>
@@ -249,6 +228,7 @@
     <input class="search-input" id="search" type="search"
            placeholder="Rechercher un titre, un intervenant, un sujet…" />
   </div>
+  <div class="stats-bar" id="stats-bar"></div>
 </header>
 
 <section class="container controls">
@@ -291,7 +271,13 @@
         <button class="view-btn active" data-view="list">Liste</button>
         <button class="view-btn" data-view="map">Carte</button>
       </div>
-      <button class="fav-toggle" id="fav-toggle">
+      <button class="pill-btn near-btn" id="near-btn">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span id="near-label">Près de moi</span>
+      </button>
+      <button class="pill-btn fav-toggle" id="fav-toggle">
         <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
           <path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/>
         </svg>
@@ -318,7 +304,16 @@
 </main>
 
 <footer class="container">
-  Agrégé automatiquement chaque matin · <a href="https://github.com/kovarci/zzzz" target="_blank">Code source</a>
+  <a class="subscribe-btn" href="webcal://kovarci.github.io/zzzz/data/calendar.ics">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    S'abonner au calendrier
+  </a>
+  <div class="footer-note">
+    Un seul abonnement — tous les événements se synchronisent dans ton agenda, chaque jour.<br>
+    Pour Google Agenda : « Autres agendas → À partir de l'URL » avec
+    <code>https://kovarci.github.io/zzzz/data/calendar.ics</code><br>
+    <a href="https://github.com/kovarci/zzzz" target="_blank">Code source</a>
+  </div>
 </footer>
 
 <div id="cal-pop" style="display:none">
@@ -332,16 +327,8 @@
     Apple / Outlook (.ics)
   </button>
 </div>
-<style>
-  #cal-pop { position:fixed; z-index:200; min-width:220px; padding:6px; background:rgba(20,20,34,0.94); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid var(--border-bright); border-radius:12px; box-shadow:0 20px 50px -12px rgba(0,0,0,.8); }
-  .cal-pop-title { font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:7px 10px 5px; }
-  .cal-opt { display:flex; align-items:center; gap:9px; width:100%; padding:10px; cursor:pointer; font-size:13.5px; font-family:inherit; color:var(--text); background:none; border:none; border-radius:8px; text-align:left; transition:background .12s; }
-  .cal-opt:hover { background:var(--glass-2); }
-  .cal-opt svg { width:16px; height:16px; flex-shrink:0; }
-</style>
 
 <script>
-// ─────────────────────────────────────────────────────────────────
 const DISC_COLORS = {
   "Mathématiques":"#60a5fa","Philosophie":"#a78bfa","Littérature":"#fb7185",
   "Histoire":"#fb923c","Sciences":"#4ade80","Économie":"#fbbf24",
@@ -361,7 +348,7 @@ const ONLINE_RE = /\b(online|en ligne|visio|distanciel|webinaire|webinar|zoom|te
 let allEvents = [], activeSource = "all", activeView = "list";
 let activeDiscs = new Set(), activeInsts = new Set();
 let searchQuery = "", dateFilter = "all", formatFilter = "all", showFavsOnly = false;
-let map = null, markerLayer = null;
+let map = null, markerLayer = null, userPos = null, nearMode = false;
 
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } catch (e) {}
@@ -380,6 +367,7 @@ async function loadEvents() {
     reflectUI();
     updateBadges();
     updateFavCount();
+    renderStats();
     render();
   } catch (e) {
     document.getElementById("list-view").innerHTML =
@@ -438,7 +426,32 @@ function animateCount(el, target) {
   }, 22);
 }
 
-// ── URL filters (shareable links) ────────────────────────────────
+// ── Mini dashboard ───────────────────────────────────────────────
+function renderStats() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const tIso = isoOf(today);
+  const wEnd = new Date(today); wEnd.setDate(today.getDate() + ((7 - today.getDay()) % 7));
+  const sat  = new Date(today); sat.setDate(today.getDate() + ((6 - today.getDay() + 7) % 7));
+  const sun  = new Date(sat);   sun.setDate(sat.getDate() + 1);
+  let nT = 0, nW = 0, nWe = 0;
+  allEvents.forEach(e => {
+    if (e.date === tIso) nT++;
+    if (e.date >= tIso && e.date <= isoOf(wEnd)) nW++;
+    if (e.date === isoOf(sat) || e.date === isoOf(sun)) nWe++;
+  });
+  const byD = {};
+  allEvents.forEach(e => byD[e.discipline] = (byD[e.discipline]||0) + 1);
+  const segs = Object.entries(byD).sort((a,b) => b[1]-a[1])
+    .map(([d,n]) => `<span class="dseg" style="flex:${n};background:${DISC_COLORS[d]??"#888"}" title="${escHtml(d)} : ${n}"></span>`)
+    .join("");
+  document.getElementById("stats-bar").innerHTML = `
+    <button class="stat" data-date="today"><span class="stat-num">${nT}</span> aujourd'hui</button>
+    <button class="stat" data-date="week"><span class="stat-num">${nW}</span> cette semaine</button>
+    <button class="stat" data-date="weekend"><span class="stat-num">${nWe}</span> ce week-end</button>
+    <div class="disc-bar">${segs}</div>`;
+}
+
+// ── URL filters ──────────────────────────────────────────────────
 function syncURL() {
   const p = new URLSearchParams();
   if (activeSource !== "all")  p.set("source", activeSource);
@@ -476,7 +489,7 @@ function reflectUI() {
   document.getElementById("map-view").style.display  = activeView === "map" ? "block" : "none";
 }
 
-// ── Date / format helpers ────────────────────────────────────────
+// ── Helpers ──────────────────────────────────────────────────────
 function isoOf(d) {
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 }
@@ -498,6 +511,15 @@ function inDateFilter(ev) {
   return true;
 }
 function isOnline(ev) { return ONLINE_RE.test(ev.location || ""); }
+function haversine(a, b) {
+  const R = 6371, toR = x => x * Math.PI / 180;
+  const dLat = toR(b.lat - a.lat), dLng = toR(b.lng - a.lng);
+  const h = Math.sin(dLat/2)**2 + Math.cos(toR(a.lat))*Math.cos(toR(b.lat))*Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1-h));
+}
+function fmtDist(km) {
+  return km < 1 ? Math.round(km*1000) + " m" : km.toFixed(1).replace(".", ",") + " km";
+}
 
 function filtered() {
   const q = searchQuery.toLowerCase().trim();
@@ -593,6 +615,7 @@ function cardHtml(ev, idx) {
   const time = ev.time ? (ev.end_time ? `${ev.time}–${ev.end_time}` : ev.time) : "Horaire à confirmer";
   const inst = ev.source_type === "luma" ? `${escHtml(ev.institution)} · Luma` : escHtml(ev.institution);
   const fav = favs.has(ev.id);
+  const dist = (ev._dist != null) ? ` <span class="dist-badge">${fmtDist(ev._dist)}</span>` : "";
   return `
     <div class="event-card" data-id="${escHtml(ev.id)}" data-url="${escHtml(ev.url || "#")}"
          style="--accent:${color};--d:${Math.min(idx,26)}">
@@ -603,7 +626,7 @@ function cardHtml(ev, idx) {
       </div>
       <div class="card-title">${escHtml(ev.title)}</div>
       <div class="card-meta">
-        <div class="institution">${inst}</div>
+        <div class="institution">${inst}${dist}</div>
         ${ev.speaker ? `<div class="row">${ICONS.user}<span>${escHtml(ev.speaker)}</span></div>` : ""}
         ${ev.location ? `<div class="row">${ICONS.pin}<span>${escHtml(ev.location)}</span>${isOnline(ev) ? '<span class="online-badge">En ligne</span>' : ""}</div>` : ""}
       </div>
@@ -626,6 +649,28 @@ function renderList(events) {
     container.innerHTML = `<div class="no-results">${msg}</div>`;
     return;
   }
+  // Near-me: flat list sorted by distance
+  if (nearMode && userPos) {
+    const sorted = events
+      .filter(e => typeof e.lat === "number" && typeof e.lng === "number")
+      .map(e => Object.assign({}, e, { _dist: haversine(userPos, e) }))
+      .sort((a,b) => a._dist - b._dist);
+    if (!sorted.length) {
+      container.innerHTML = `<div class="no-results"><div class="big">Aucun lieu géolocalisé</div><div>Impossible de trier par distance pour ces filtres.</div></div>`;
+      return;
+    }
+    container.innerHTML = `<div class="day-group">
+      <div class="day-header">
+        <span class="day-name">Au plus près de vous</span>
+        <span class="day-date">${sorted.length} événement${sorted.length>1?"s":""} · trié par distance</span>
+        <span class="day-line"></span>
+      </div>
+      <div class="cards-grid">${sorted.map((e,i) => cardHtml(e,i)).join("")}</div>
+    </div>`;
+    container.querySelectorAll(".event-card").forEach(attachTilt);
+    return;
+  }
+  // Normal: grouped by date
   let html = "", idx = 0;
   for (const [iso, evs] of groupByDate(events)) {
     const h = fmtDayHeader(iso);
@@ -642,7 +687,6 @@ function renderList(events) {
   container.querySelectorAll(".event-card").forEach(attachTilt);
 }
 
-// ── 3D tilt ──────────────────────────────────────────────────────
 function attachTilt(card) {
   const glare = card.querySelector(".glare");
   card.addEventListener("pointerenter", () => { card.style.transition = "transform .08s linear"; });
@@ -683,7 +727,7 @@ function renderMap(events) {
 
   const note = document.getElementById("map-note");
   if (byLoc.size === 0) {
-    note.textContent = "Aucun lieu géolocalisé pour ces filtres — relancez le scrape pour générer les coordonnées.";
+    note.textContent = "Aucun lieu géolocalisé pour ces filtres.";
     note.style.display = "";
   } else {
     note.style.display = "none";
@@ -710,6 +754,12 @@ function renderMap(events) {
       { maxWidth: 320, minWidth: 240 });
     markerLayer.addLayer(marker);
   });
+
+  if (userPos) {
+    L.circleMarker([userPos.lat, userPos.lng], {
+      radius: 8, color: "#fff", weight: 2.5, fillColor: "#22d3ee", fillOpacity: 1,
+    }).bindPopup("Vous êtes ici").addTo(markerLayer);
+  }
   setTimeout(() => map.invalidateSize(), 60);
 }
 
@@ -798,6 +848,14 @@ function singleSelect(containerId, onPick) {
 singleSelect("date-chips",   ds => { dateFilter = ds.date; });
 singleSelect("format-chips", ds => { formatFilter = ds.format; });
 
+document.getElementById("stats-bar").addEventListener("click", e => {
+  const stat = e.target.closest(".stat");
+  if (!stat) return;
+  dateFilter = stat.dataset.date;
+  reflectUI();
+  render();
+});
+
 document.querySelectorAll(".view-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".view-btn").forEach(b => b.classList.remove("active"));
@@ -813,6 +871,26 @@ document.getElementById("fav-toggle").addEventListener("click", () => {
   showFavsOnly = !showFavsOnly;
   document.getElementById("fav-toggle").classList.toggle("active", showFavsOnly);
   render();
+});
+
+function updateNearBtn() {
+  document.getElementById("near-btn").classList.toggle("active", nearMode);
+  document.getElementById("near-label").textContent = nearMode ? "Tri par distance" : "Près de moi";
+}
+document.getElementById("near-btn").addEventListener("click", () => {
+  if (nearMode) { nearMode = false; updateNearBtn(); render(); return; }
+  if (userPos)  { nearMode = true;  updateNearBtn(); render(); return; }
+  if (!navigator.geolocation) { alert("La géolocalisation n'est pas disponible sur ce navigateur."); return; }
+  document.getElementById("near-label").textContent = "Localisation…";
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      userPos = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+      nearMode = true; updateNearBtn();
+      if (map) map.setView([userPos.lat, userPos.lng], 13);
+      render();
+    },
+    err => { updateNearBtn(); alert("Localisation impossible : " + err.message); }
+  );
 });
 
 let searchTimer;

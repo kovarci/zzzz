@@ -75,17 +75,27 @@ Le tout **100 % gratuit** : Pages + Actions sont gratuits pour un dépôt public
 - **Favoris** : une étoile pour sauvegarder des événements (gardés dans le
   navigateur via `localStorage`).
 - **Carte de Paris** : une vue carte avec les événements en pins, géocodés
-  par adresse (OpenStreetMap / Leaflet, fond sombre).
+  par adresse (OpenStreetMap / Leaflet, fond sombre). Les lieux sans adresse
+  précise (salles, codes de bâtiment) retombent sur leur institution.
 - **Liens partageables** : les filtres sont encodés dans l'URL — on peut
   partager une vue précise, ex. `…/zzzz?discipline=Philosophie`.
 - **Finitions** : favicon, aperçu de partage (Open Graph), écran de
   chargement (cartes scintillantes).
+- **Flux iCal d'abonnement** : un lien unique (`data/calendar.ics`) à ajouter
+  une fois à son agenda — tous les événements s'y synchronisent chaque jour.
+- **Mini tableau de bord** : nombre d'événements aujourd'hui / cette semaine /
+  ce week-end + répartition par discipline.
+- **« Près de moi »** : tri des événements par distance (géolocalisation du
+  navigateur), avec un repère sur la carte.
 - Entièrement **responsive** (mobile/desktop).
 
 ### Automatisation
 
 - Scrape quotidien automatique à 6h — **aucun clic nécessaire**.
 - Déclenchement manuel possible (Actions → Run workflow).
+- **Contrôle de santé** : si une source majeure tombe à 0 événement
+  (le site a changé de structure), le workflow échoue et GitHub envoie
+  un e-mail d'alerte.
 
 ---
 
