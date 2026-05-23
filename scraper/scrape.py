@@ -20,7 +20,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
-from dateutil import parser as dateparser
+from dateutil import parser as dateparser, tz as dateutil_tz
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
 OUTPUT_FILE = Path(__file__).parent.parent / "data" / "events.json"
@@ -209,10 +209,24 @@ def strip_html(s) -> str:
         return clean_text(re.sub(r"<[^>]+>", " ", str(s)))
 
 
+PARIS_TZ = dateutil_tz.gettz("Europe/Paris")
+
+
+def to_paris(dt):
+    """If dt is timezone-aware, convert to Paris wall-clock time and drop the
+    tz. Naive datetimes are returned unchanged. This is what fixes Luma —
+    its API returns times in UTC; here we shift them to Paris."""
+    if dt is None:
+        return None
+    if dt.tzinfo is not None and PARIS_TZ is not None:
+        dt = dt.astimezone(PARIS_TZ)
+    return dt.replace(tzinfo=None)
+
+
 def parse_date(s):
-    """Parse a date/datetime string.
-    ISO format (YYYY-MM-DD) is parsed year-first; everything else day-first
-    (European convention). Falls back to the French text parser."""
+    """Parse a date/datetime string into a naive Paris-local datetime.
+    ISO format (YYYY-MM-DD) is parsed year-first; everything else day-first.
+    Falls back to the French text parser."""
     if not s:
         return None
     txt = str(s).strip()
@@ -220,10 +234,9 @@ def parse_date(s):
         return None
     is_iso = bool(re.match(r"\d{4}-\d{2}-\d{2}", txt))
     try:
-        return dateparser.parse(txt, dayfirst=not is_iso, yearfirst=is_iso, fuzzy=True)
+        return to_paris(dateparser.parse(txt, dayfirst=not is_iso, yearfirst=is_iso, fuzzy=True))
     except Exception:
         pass
-    # Fallback: French text date ("3 juin 2026")
     d = parse_french_date_text(txt)
     if d:
         return datetime(d.year, d.month, d.day)
@@ -1150,7 +1163,9 @@ def deduplicate(events):
 
 GEOCACHE_FILE = OUTPUT_FILE.parent / "geocache.json"
 ICS_FILE = OUTPUT_FILE.parent / "calendar.ics"
-MAX_NEW_GEOCODE = 220   # courtesy cap on Nominatim lookups per run
+ARCHIVE_FILE = OUTPUT_FILE.parent / "events-archive.json"
+ARCHIVE_MAX_DAYS = 365     # keep at most one year of past events
+MAX_NEW_GEOCODE = 220      # courtesy cap on Nominatim lookups per run
 
 # Seeds the cache so big institutions always map even if Nominatim is down.
 SEED_GEOCODE = {
@@ -1290,7 +1305,45 @@ def write_ics(events):
         print(f"[WARN] ics write: {e}")
 
 
+def load_previous_events():
+    """Read the events.json from the previous run (or [] if none)."""
+    try:
+        return json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+
+def update_archive(previous_events):
+    """Move events that have aged into the past from the previous events.json
+    into the persistent archive. Used by the site's 'Historique' tab."""
+    try:
+        archive = json.loads(ARCHIVE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        archive = []
+    today_iso = TODAY.isoformat()
+    seen = {e.get("id") for e in archive if e.get("id")}
+    added = 0
+    for e in previous_events:
+        if (e.get("date", "") < today_iso and e.get("id")
+                and e["id"] not in seen):
+            archive.append(e)
+            seen.add(e["id"])
+            added += 1
+    # Cap: keep only the last ARCHIVE_MAX_DAYS days
+    cutoff = (TODAY - timedelta(days=ARCHIVE_MAX_DAYS)).isoformat()
+    archive = [e for e in archive if e.get("date", "") >= cutoff]
+    # Sort: most recent past first
+    archive.sort(key=lambda e: (e.get("date", ""), e.get("time", "")), reverse=True)
+    try:
+        ARCHIVE_FILE.write_text(json.dumps(archive, ensure_ascii=False, indent=2),
+                                encoding="utf-8")
+        print(f"Archive: +{added} new past events, total {len(archive)}")
+    except Exception as e:
+        print(f"[WARN] archive write: {e}")
+
+
 def main():
+    prev_events = load_previous_events()
     all_events = []
 
     try:
@@ -1334,6 +1387,12 @@ def main():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(all_events, f, ensure_ascii=False, indent=2)
+
+    try:
+        update_archive(prev_events)
+    except Exception as e:
+        print(f"[ERROR] archive: {e}")
+        traceback.print_exc()
 
     by_inst = {}
     for e in all_events:

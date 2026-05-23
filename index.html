@@ -239,6 +239,7 @@
     <button class="tab active" data-source="all">Tout <span class="badge" id="badge-all">0</span></button>
     <button class="tab" data-source="institution">Universités <span class="badge" id="badge-inst">0</span></button>
     <button class="tab" data-source="luma">Luma <span class="badge" id="badge-luma">0</span></button>
+    <button class="tab" data-source="history">Historique <span class="badge" id="badge-history">…</span></button>
   </div>
 
   <div class="filter-block">
@@ -352,6 +353,7 @@ let allEvents = [], activeSource = "all", activeView = "list";
 let activeDiscs = new Set(), activeInsts = new Set();
 let searchQuery = "", dateFilter = "all", formatFilter = "all", showFavsOnly = false;
 let map = null, markerLayer = null, userPos = null, nearMode = false;
+let archive = [], archiveLoaded = false;
 
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } catch (e) {}
@@ -366,7 +368,7 @@ async function loadEvents() {
     document.getElementById("nav-meta").textContent =
       "Mis à jour le " + new Date().toLocaleDateString("fr-FR", {day:"numeric",month:"long"});
     buildFilters();
-    applyURL();
+    await applyURL();
     reflectUI();
     updateBadges();
     updateFavCount();
@@ -376,6 +378,21 @@ async function loadEvents() {
     document.getElementById("list-view").innerHTML =
       `<div class="no-results"><div class="big">Erreur de chargement</div><div>${e.message}</div></div>`;
   }
+}
+
+// Lazy-loaded archive of past events (used by the "Historique" tab)
+async function ensureArchive() {
+  if (archiveLoaded) return;
+  try {
+    const r = await fetch("data/events-archive.json?" + Date.now());
+    archive = await r.json();
+  } catch (e) {
+    archive = [];
+  }
+  // newest past first
+  archive.sort((a, b) => (b.date + (b.time||"")).localeCompare(a.date + (a.time||"")));
+  archiveLoaded = true;
+  document.getElementById("badge-history").textContent = archive.length;
 }
 
 // ── Filters UI ───────────────────────────────────────────────────
@@ -468,7 +485,7 @@ function syncURL() {
   const qs = p.toString();
   history.replaceState(null, "", qs ? "?" + qs : location.pathname);
 }
-function applyURL() {
+async function applyURL() {
   const p = new URLSearchParams(location.search);
   if (p.get("source"))  activeSource = p.get("source");
   if (p.get("vue"))     activeView = p.get("vue");
@@ -478,6 +495,7 @@ function applyURL() {
   if (p.get("discipline")) p.get("discipline").split(",").forEach(d => d && activeDiscs.add(d));
   if (p.get("institution")) p.get("institution").split(",").forEach(i => i && activeInsts.add(i));
   if (p.get("favoris") === "1") showFavsOnly = true;
+  if (activeSource === "history") await ensureArchive();
 }
 function reflectUI() {
   document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.source === activeSource));
@@ -487,7 +505,10 @@ function reflectUI() {
   document.querySelectorAll("#institution-chips .chip").forEach(c => c.classList.toggle("active", activeInsts.has(c.textContent)));
   document.querySelectorAll(".view-btn").forEach(b => b.classList.toggle("active", b.dataset.view === activeView));
   document.getElementById("fav-toggle").classList.toggle("active", showFavsOnly);
+  const isHistory = activeSource === "history";
   document.getElementById("institution-section").style.display = activeSource === "luma" ? "none" : "";
+  document.getElementById("date-chips").closest(".filter-block").style.display = isHistory ? "none" : "";
+  document.getElementById("stats-bar").style.display = isHistory ? "none" : "";
   document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
   document.getElementById("map-view").style.display  = activeView === "map" ? "block" : "none";
 }
@@ -526,10 +547,14 @@ function fmtDist(km) {
 
 function filtered() {
   const q = searchQuery.toLowerCase().trim();
-  return allEvents.filter(e => {
+  const inHistory = activeSource === "history";
+  const source = inHistory ? archive : allEvents;
+  return source.filter(e => {
     if (showFavsOnly && !favs.has(e.id)) return false;
-    if (activeSource !== "all" && e.source_type !== activeSource) return false;
-    if (!inDateFilter(e)) return false;
+    // Source tabs filter only when in future mode; "history" shows all sources.
+    if (activeSource === "institution" && e.source_type !== "institution") return false;
+    if (activeSource === "luma" && e.source_type !== "luma") return false;
+    if (!inHistory && !inDateFilter(e)) return false;
     if (formatFilter === "online" && !isOnline(e)) return false;
     if (formatFilter === "inperson" && isOnline(e)) return false;
     if (activeDiscs.size && !activeDiscs.has(e.discipline)) return false;
@@ -606,7 +631,10 @@ function escHtml(s) {
 }
 function fmtDayHeader(iso) {
   const d = new Date(iso + "T12:00:00");
-  return { name: DAYS_FR[d.getDay()], date: `${d.getDate()} ${MONTHS_FR[d.getMonth()]}` };
+  const yr = d.getFullYear();
+  const currentYr = new Date().getFullYear();
+  const date = `${d.getDate()} ${MONTHS_FR[d.getMonth()]}${yr !== currentYr ? " " + yr : ""}`;
+  return { name: DAYS_FR[d.getDay()], date };
 }
 function groupByDate(events) {
   const g = new Map();
@@ -829,12 +857,12 @@ document.getElementById("list-view").addEventListener("click", e => {
 
 // ── Listeners ────────────────────────────────────────────────────
 document.querySelectorAll(".tab").forEach(btn => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", async () => {
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
     btn.classList.add("active");
     activeSource = btn.dataset.source;
-    document.getElementById("institution-section").style.display =
-      activeSource === "luma" ? "none" : "";
+    if (activeSource === "history") await ensureArchive();
+    reflectUI();
     render();
   });
 });
