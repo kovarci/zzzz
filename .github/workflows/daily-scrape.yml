@@ -35,6 +35,12 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
 
+      # Runs BEFORE the commit: if a major source is broken, the job fails here
+      # and the degraded data is never committed (the site keeps its last good
+      # version). Carry-forward in the scraper means this rarely triggers.
+      - name: Check sources health
+        run: python scraper/check_health.py
+
       - name: Commit updated events
         run: |
           git config user.name "github-actions[bot]"
@@ -46,7 +52,3 @@ jobs:
             git commit -m "chore: update conference data $(date -u +'%Y-%m-%d')"
             git push
           fi
-
-      - name: Check sources health
-        if: always()
-        run: python scraper/check_health.py

@@ -1368,6 +1368,23 @@ def main():
         finally:
             browser.close()
 
+    # Carry-forward: if a known source returned nothing this run (a transient
+    # glitch — slow site, network hiccup), reuse its events from the previous
+    # run so the site never loses a whole institution to a temporary failure.
+    KNOWN_SOURCES = {
+        "Institut Henri Poincaré", "Collège de France", "Paris School of Economics",
+        "Université PSL", "EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
+    }
+    present = {e.get("institution") for e in all_events}
+    carried = 0
+    for e in prev_events:
+        inst = e.get("institution")
+        if inst in KNOWN_SOURCES and inst not in present:
+            all_events.append(e)
+            carried += 1
+    if carried:
+        print(f"⚠ Carried forward {carried} events from sources that returned 0 this run")
+
     all_events = deduplicate(all_events)
     all_events = [e for e in all_events if e.get("date", "") >= CUTOFF.isoformat()]
     all_events.sort(key=lambda e: (e["date"], e.get("time", "")))
