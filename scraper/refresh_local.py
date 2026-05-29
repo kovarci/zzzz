@@ -37,7 +37,16 @@ import scrape  # noqa: E402
 # bien des événements français, contrairement au robot GitHub.
 LUMA_PAGES = [
     "https://lu.ma/discover/paris",
-    # "https://lu.ma/...",   # colle ici tes pages par thème
+    # Pages par thème : depuis la France elles renvoient bien des événements FR
+    # (depuis le robot GitHub elles renverraient des événements américains).
+    "https://luma.com/tech",
+    "https://luma.com/arts",
+    "https://luma.com/wellness",
+    "https://luma.com/crypto",
+    "https://luma.com/climate",
+    "https://luma.com/food",
+    "https://luma.com/ai",
+    "https://luma.com/fitness",
 ]
 
 
