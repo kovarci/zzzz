@@ -72,8 +72,8 @@
     "time": "",
     "end_time": "",
     "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
-    "description": "À propos de PSE",
-    "url": "https://www.parisschoolofeconomics.eu/#main",
+    "description": "Ce site propose de personnaliser vos contenus et votre navigation. Lorsque vous naviguez sur ce site Internet, des informations sont susceptibles d'être enregistrées (cookies) sur votre terminal, sous réserve de vos choix. La durée de validité de votre consentement ou de votre refus est de 6 mois. Pour en savoir plus, consultez notre politique de protection des données. Politique de confidentialit",
+    "url": "https://www.parisschoolofeconomics.eu/protection-des-donnees/",
     "speaker": "Claudia Senik (Sorbonne University and Paris School of Economics)",
     "source_type": "institution",
     "lat": 48.8216,
@@ -288,6 +288,22 @@
     "lng": 2.3379
   },
   {
+    "id": "9e97e893b92e",
+    "title": "Dynamique d'une jonction Josephson",
+    "institution": "Collège de France",
+    "discipline": "Sciences",
+    "date": "2026-05-29",
+    "time": "09:30",
+    "end_time": "",
+    "location": "Amphithéâtre Maurice Halbwachs, Site Marcelin Berthelot",
+    "description": "Cours · Fluides quantiques couplés et jonctions Josephson",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/dynamique-une-jonction-josephson",
+    "speaker": "Jean Dalibard",
+    "source_type": "institution",
+    "lat": 48.8489,
+    "lng": 2.3446
+  },
+  {
     "id": "40661e712cae",
     "title": "40 ans de la revue Histoire & Mesure",
     "institution": "EHESS",
@@ -318,22 +334,6 @@
     "source_type": "institution",
     "lat": 48.8216,
     "lng": 2.3379
-  },
-  {
-    "id": "9e97e893b92e",
-    "title": "Dynamique d'une jonction Josephson",
-    "institution": "Collège de France",
-    "discipline": "Sciences",
-    "date": "2026-05-29",
-    "time": "09:30",
-    "end_time": "",
-    "location": "Amphithéâtre Maurice Halbwachs, Site Marcelin Berthelot",
-    "description": "Cours · Fluides quantiques couplés et jonctions Josephson",
-    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/dynamique-une-jonction-josephson",
-    "speaker": "Jean Dalibard",
-    "source_type": "institution",
-    "lat": 48.8489,
-    "lng": 2.3446
   },
   {
     "id": "64552c60534e",
@@ -400,6 +400,22 @@
     "lng": 2.3379
   },
   {
+    "id": "bba2cd3f5a55",
+    "title": "Mean Field Games and Stopping",
+    "institution": "Collège de France",
+    "discipline": "Autre",
+    "date": "2026-05-29",
+    "time": "11:00",
+    "end_time": "",
+    "location": "Salle 2, Site Marcelin Berthelot",
+    "description": "Conférencier invité · Mean Field Games and Some Applications",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/mean-field-games-and-some-applications/mean-field-games-and-stopping",
+    "speaker": "Panagiotis Souganidis",
+    "source_type": "institution",
+    "lat": 48.8489,
+    "lng": 2.3446
+  },
+  {
     "id": "3b92df8f30a7",
     "title": "Behavior Working Group",
     "institution": "Paris School of Economics",
@@ -464,22 +480,6 @@
     "lng": 2.3379
   },
   {
-    "id": "bba2cd3f5a55",
-    "title": "Mean Field Games and Stopping",
-    "institution": "Collège de France",
-    "discipline": "Autre",
-    "date": "2026-05-29",
-    "time": "11:00",
-    "end_time": "",
-    "location": "Salle 2, Site Marcelin Berthelot",
-    "description": "Conférencier invité · Mean Field Games and Some Applications",
-    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/mean-field-games-and-some-applications/mean-field-games-and-stopping",
-    "speaker": "Panagiotis Souganidis",
-    "source_type": "institution",
-    "lat": 48.8489,
-    "lng": 2.3446
-  },
-  {
     "id": "09530d39f7e2",
     "title": "Séminaire Bachelier",
     "institution": "Institut Henri Poincaré",
@@ -512,22 +512,6 @@
     "lng": 2.3437
   },
   {
-    "id": "f9da709e45ed",
-    "title": "Economics and Psychology Seminar",
-    "institution": "Paris School of Economics",
-    "discipline": "Autre",
-    "date": "2026-05-29",
-    "time": "11:15",
-    "end_time": "",
-    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
-    "description": "TBA",
-    "url": "https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/",
-    "speaker": "TBA",
-    "source_type": "institution",
-    "lat": 48.8216,
-    "lng": 2.3379
-  },
-  {
     "id": "085a78eed20a",
     "title": "Quantum Simulation – Engineering & Understanding Quantum Systems Atom-by-Atom",
     "institution": "Collège de France",
@@ -542,6 +526,22 @@
     "source_type": "institution",
     "lat": 48.8489,
     "lng": 2.3446
+  },
+  {
+    "id": "f9da709e45ed",
+    "title": "Economics and Psychology Seminar",
+    "institution": "Paris School of Economics",
+    "discipline": "Autre",
+    "date": "2026-05-29",
+    "time": "11:15",
+    "end_time": "",
+    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
+    "description": "TBA",
+    "url": "https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/",
+    "speaker": "TBA",
+    "source_type": "institution",
+    "lat": 48.8216,
+    "lng": 2.3379
   },
   {
     "id": "c8286360ce3f",
@@ -896,8 +896,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/sh/387d1811-0a75-4e29-95f4-93b71c65c87a.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -971,8 +970,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/eq/e78c2375-34f5-4c4a-a3db-24598024e61f.jpg",
     "luma_categories": [
-      "paris",
-      "arts"
+      "paris"
     ]
   },
   {
@@ -1042,8 +1040,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/vf/0655c91c-2275-4864-93c4-f80ff5c59a81.jpg",
     "luma_categories": [
-      "paris",
-      "fitness"
+      "paris"
     ],
     "lat": 48.852937,
     "lng": 2.35005
@@ -1196,8 +1193,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/oq/45388d17-d530-4555-87cf-536c9a924743.jpg",
     "luma_categories": [
-      "paris",
-      "arts"
+      "paris"
     ],
     "lat": 48.846723,
     "lng": 2.332401
@@ -1217,8 +1213,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/bu/2b0fbd1a-42a5-45c7-ad47-ee2d298cae56.jpg",
     "luma_categories": [
-      "paris",
-      "arts"
+      "paris"
     ],
     "lat": 48.855368,
     "lng": 2.355811
@@ -1294,8 +1289,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/event-covers/np/44f222e3-40de-4d9b-b9f2-e8f9963a0150.jpg",
     "luma_categories": [
-      "paris",
-      "fitness"
+      "paris"
     ]
   },
   {
@@ -1664,6 +1658,22 @@
     "location": "Amphi Schwartz",
     "description": "",
     "url": "https://indico.math.cnrs.fr/event/16063/",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
+  },
+  {
+    "id": "eb8798426aa1",
+    "title": "Information de Fisher et équation de Boltzmann",
+    "institution": "Institut Henri Poincaré",
+    "discipline": "Mathématiques",
+    "date": "2026-06-01",
+    "time": "14:15",
+    "end_time": "16:15",
+    "location": "Manufacture",
+    "description": "",
+    "url": "https://indico.math.cnrs.fr/event/16682/",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8438,
@@ -2236,22 +2246,6 @@
     "lng": 2.3437
   },
   {
-    "id": "f4937a76a1f7",
-    "title": "Guy Casale - TBA",
-    "institution": "Institut Henri Poincaré",
-    "discipline": "Autre",
-    "date": "2026-06-02",
-    "time": "14:00",
-    "end_time": "15:00",
-    "location": "UMPA",
-    "description": "",
-    "url": "https://indico.math.cnrs.fr/event/16352/",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8438,
-    "lng": 2.3437
-  },
-  {
     "id": "a4e66c87b110",
     "title": "Engagement",
     "institution": "Collège de France",
@@ -2282,6 +2276,22 @@
     "source_type": "institution",
     "lat": 48.8489,
     "lng": 2.3446
+  },
+  {
+    "id": "f4937a76a1f7",
+    "title": "Guy Casale - TBA",
+    "institution": "Institut Henri Poincaré",
+    "discipline": "Autre",
+    "date": "2026-06-02",
+    "time": "14:00",
+    "end_time": "15:00",
+    "location": "UMPA",
+    "description": "",
+    "url": "https://indico.math.cnrs.fr/event/16352/",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
   },
   {
     "id": "1b3f2fa7df3e",
@@ -2565,6 +2575,22 @@
     "lng": 2.328
   },
   {
+    "id": "c7857ac80b5d",
+    "title": "Enregistrement en public d’un épisode du podcast Le Nouvel Esprit public",
+    "institution": "Sciences Po",
+    "discipline": "Autre",
+    "date": "2026-06-03",
+    "time": "",
+    "end_time": "",
+    "location": "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
+    "description": "Sciences Po a le plaisir d’accueillir l’enregistrement en public d’un épisode du podcast Le Nouvel Esprit public, animé par Philippe Meyer.",
+    "url": "https://www.sciencespo.fr/fr/evenements/enregistrement-en-public-d-un-episode-du-podcast-le-nouvel-esprit-public/",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8543,
+    "lng": 2.328
+  },
+  {
     "id": "cd1f797654ee",
     "title": "Où en est le crédit privé ?",
     "institution": "Paris School of Economics",
@@ -2607,6 +2633,70 @@
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
     "url": "https://psl.eu/agenda/deeptech-forum-sophia-antipolis-2",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "ac894bd58e27",
+    "title": "L’image de l’homme de Néandertal",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-03",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/limage-de-lhomme-de-neandertal",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "97018daf667f",
+    "title": "Paramètres d’accessibilité",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-03",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/#main-content",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "618c26b1d40f",
+    "title": "Rechercher par :",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-03",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/?page=0",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "4b6c751154f7",
+    "title": "Migrations, climat et hospitalité",
+    "institution": "Université PSL",
+    "discipline": "Sciences",
+    "date": "2026-06-03",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/migrations-climat-et-hospitalite",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
@@ -3153,8 +3243,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/i6/80b25175-7597-43c8-b01f-a14db6d0a6ad.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -3172,8 +3261,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/g2/23f3a761-30bb-4544-a497-dc3de71d4dfd.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -3268,8 +3356,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/6x/0741ef23-9e5a-4f12-ba19-208346d68842.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -3688,6 +3775,22 @@
     "location": "IHP, 11 rue Pierre et Marie Curie, Paris 5e",
     "description": "Une action de groupe (sur un ensemble infini) est dite hautement transitive si elle est n-transitive pour tout n ≥ 1. A la fin des années 2010, avec P. Fima, F. Le Maître et S. Moon, nous avons prouvé que les groupes de Baumslag-Solitar admettent des actions hautement transitives et fidèles (sauf dans les cas où il y a une obstruction évidente) ce qui répondait à une question de Hull et Osin Plus ",
     "url": "https://indico.math.cnrs.fr/event/16631/",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8438,
+    "lng": 2.3437
+  },
+  {
+    "id": "81ffe8d0c198",
+    "title": "Biased random walk on dynamical percolation (attention séance un jeudi)",
+    "institution": "Institut Henri Poincaré",
+    "discipline": "Autre",
+    "date": "2026-06-04",
+    "time": "10:30",
+    "end_time": "11:30",
+    "location": "IHP, 11 rue Pierre et Marie Curie, Paris 5e",
+    "description": "As an example for a random walk in random environment, we study biased random walk for dynamical percolation on the d-dimensional lattice. We establish a law of large numbers and an invariance principle for this random walk using regeneration times. Moreover, we verify that the Einstein relation holds, and we investigate the speed of the walk as a function of the bias. While for d = 1 the speed is",
+    "url": "https://indico.math.cnrs.fr/event/16548/",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8438,
@@ -4256,22 +4359,6 @@
     "lng": 2.3437
   },
   {
-    "id": "e15039342448",
-    "title": "Séminaire",
-    "institution": "Paris School of Economics",
-    "discipline": "Autre",
-    "date": "2026-06-05",
-    "time": "11:15",
-    "end_time": "",
-    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
-    "description": "Du ven. 05 juin",
-    "url": "https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8216,
-    "lng": 2.3379
-  },
-  {
     "id": "d0a729a5aaa4",
     "title": "Optical Investigation of Strongly Correlated Electrons",
     "institution": "Collège de France",
@@ -4286,6 +4373,22 @@
     "source_type": "institution",
     "lat": 48.8489,
     "lng": 2.3446
+  },
+  {
+    "id": "e15039342448",
+    "title": "Séminaire",
+    "institution": "Paris School of Economics",
+    "discipline": "Autre",
+    "date": "2026-06-05",
+    "time": "11:15",
+    "end_time": "",
+    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
+    "description": "Du ven. 05 juin",
+    "url": "https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8216,
+    "lng": 2.3379
   },
   {
     "id": "ac92a6b3a392",
@@ -4784,38 +4887,6 @@
     "lng": 2.3379
   },
   {
-    "id": "aeb05ac7563d",
-    "title": "Paramètres d’accessibilité",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-06-08",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/#main-content",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
-    "id": "4f3e02b6242a",
-    "title": "Rechercher par :",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-06-08",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/?page=0",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
     "id": "aaf9b73308cc",
     "title": "Le jeu vidéo en ligne : jouer, étudier, préserver",
     "institution": "Université PSL",
@@ -4842,6 +4913,38 @@
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
     "url": "https://psl.eu/agenda/inauguration-de-linstitut-universitaire-psl-usp-sao-paulo",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "aeb05ac7563d",
+    "title": "Paramètres d’accessibilité",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-08",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/#main-content",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "4f3e02b6242a",
+    "title": "Rechercher par :",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-08",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/?page=0",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
@@ -5126,6 +5229,22 @@
     "lng": 2.3446
   },
   {
+    "id": "2dbd2390bab9",
+    "title": "La Préhistoire, de la science à la fiction : 150 ans de récits et d’images",
+    "institution": "Université PSL",
+    "discipline": "Littérature",
+    "date": "2026-06-09",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/la-prehistoire-de-la-science-la-fiction-150-ans-de-recits-et-dimages",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
     "id": "d8dd1f6af572",
     "title": "Le RDV sport",
     "institution": "Luma",
@@ -5346,22 +5465,6 @@
     "lng": 2.28493
   },
   {
-    "id": "e5a01a8e1c08",
-    "title": "Colloque",
-    "institution": "Paris School of Economics",
-    "discipline": "Autre",
-    "date": "2026-06-09",
-    "time": "18:00",
-    "end_time": "",
-    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
-    "description": "Du lun. 08 juin au mar. 09 juin",
-    "url": "https://www.parisschoolofeconomics.eu/evenements/inegalites-innovation-et-dynamiques-du-marche-du-travail/",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8216,
-    "lng": 2.3379
-  },
-  {
     "id": "75defd25105f",
     "title": "La Préhistoire, de la science à la fiction : 150 ans de récits et d’images",
     "institution": "Collège de France",
@@ -5378,6 +5481,22 @@
     "lng": 2.3446
   },
   {
+    "id": "e5a01a8e1c08",
+    "title": "Colloque",
+    "institution": "Paris School of Economics",
+    "discipline": "Autre",
+    "date": "2026-06-09",
+    "time": "18:00",
+    "end_time": "",
+    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
+    "description": "Du lun. 08 juin au mar. 09 juin",
+    "url": "https://www.parisschoolofeconomics.eu/evenements/inegalites-innovation-et-dynamiques-du-marche-du-travail/",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8216,
+    "lng": 2.3379
+  },
+  {
     "id": "3361ef0dcfe8",
     "title": "Champions & Founders by Experts Entreprendre & Pennylane",
     "institution": "Guillaume Allaux",
@@ -5392,8 +5511,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/event-covers/mj/a131d7c4-5a5c-4671-8bd0-256f9df678c7.png",
     "luma_categories": [
-      "paris",
-      "fitness"
+      "paris"
     ]
   },
   {
@@ -6227,8 +6345,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/fu/d49a499b-8a24-4df4-aa11-80d9ccac68be.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -6859,22 +6976,6 @@
     "lng": 2.3437
   },
   {
-    "id": "fa4e0ef06746",
-    "title": "Conférence grand public",
-    "institution": "Paris School of Economics",
-    "discipline": "Autre",
-    "date": "2026-06-15",
-    "time": "14:00",
-    "end_time": "",
-    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
-    "description": "Du lun. 15 juin",
-    "url": "https://www.parisschoolofeconomics.eu/evenements/conference-sur-levaluation-du-budget-2026/",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8216,
-    "lng": 2.3379
-  },
-  {
     "id": "9e5c9ed7d747",
     "title": "Pour une vision (plus) émique de l'art égyptien : Kunstwollen et choix esthétiques",
     "institution": "Collège de France",
@@ -6889,6 +6990,22 @@
     "source_type": "institution",
     "lat": 48.8489,
     "lng": 2.3446
+  },
+  {
+    "id": "fa4e0ef06746",
+    "title": "Conférence grand public",
+    "institution": "Paris School of Economics",
+    "discipline": "Autre",
+    "date": "2026-06-15",
+    "time": "14:00",
+    "end_time": "",
+    "location": "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
+    "description": "Du lun. 15 juin",
+    "url": "https://www.parisschoolofeconomics.eu/evenements/conference-sur-levaluation-du-budget-2026/",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8216,
+    "lng": 2.3379
   },
   {
     "id": "e0d374e63b25",
@@ -7518,6 +7635,54 @@
     "lng": 2.3382
   },
   {
+    "id": "95e1a3a1c642",
+    "title": "Paramètres d’accessibilité",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-17",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/#main-content",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "36d50416a5e0",
+    "title": "Rechercher par :",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-17",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/?page=0",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "430f652986c5",
+    "title": "Les femmes préhistoriques et la chasse",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-17",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/les-femmes-prehistoriques-et-la-chasse",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
     "id": "5c2563bfce1a",
     "title": "Conférence - L’intelligence artificielle au service du dialogue social ?",
     "institution": "Université PSL",
@@ -7721,8 +7886,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/event-covers/yg/8aad8237-ef53-4f59-adb7-9976b4ee7aa9.png",
     "luma_categories": [
-      "paris",
-      "tech"
+      "paris"
     ]
   },
   {
@@ -7874,8 +8038,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/se/9e5c6e29-a7ba-4e75-8e24-2eb4bfcfd2f4.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -8132,8 +8295,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/et/31597536-0473-48fe-b1ef-e3e3af38e8a7.png",
     "luma_categories": [
-      "paris",
-      "tech"
+      "paris"
     ],
     "lat": 48.862959,
     "lng": 2.354276
@@ -8227,8 +8389,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/fv/4bd61c35-6166-49cc-8a92-424621f05542.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -8246,8 +8407,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/q7/91189e44-02a5-46f1-882e-362f4bee7b47.png",
     "luma_categories": [
-      "paris",
-      "ai"
+      "paris"
     ]
   },
   {
@@ -8303,6 +8463,22 @@
     "lng": 2.3437
   },
   {
+    "id": "ce7b04d9131b",
+    "title": "Les condensats fragmentés",
+    "institution": "Collège de France",
+    "discipline": "Sciences",
+    "date": "2026-06-19",
+    "time": "09:30",
+    "end_time": "",
+    "location": "Amphithéâtre Guillaume Budé, Site Marcelin Berthelot",
+    "description": "Cours · Fluides quantiques couplés et jonctions Josephson",
+    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/les-condensats-fragmentes",
+    "speaker": "Jean Dalibard",
+    "source_type": "institution",
+    "lat": 48.8489,
+    "lng": 2.3446
+  },
+  {
     "id": "19ac3f87167d",
     "title": "Atelier Robust'ASSO (inspiré de Tumulte) avec le Mouvement Tilt 💪",
     "institution": "Climate House",
@@ -8319,22 +8495,6 @@
     "luma_categories": [
       "climate"
     ]
-  },
-  {
-    "id": "ce7b04d9131b",
-    "title": "Les condensats fragmentés",
-    "institution": "Collège de France",
-    "discipline": "Sciences",
-    "date": "2026-06-19",
-    "time": "09:30",
-    "end_time": "",
-    "location": "Amphithéâtre Guillaume Budé, Site Marcelin Berthelot",
-    "description": "Cours · Fluides quantiques couplés et jonctions Josephson",
-    "url": "https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/les-condensats-fragmentes",
-    "speaker": "Jean Dalibard",
-    "source_type": "institution",
-    "lat": 48.8489,
-    "lng": 2.3446
   },
   {
     "id": "2894c6132990",
@@ -8776,6 +8936,38 @@
     "lng": 2.3437
   },
   {
+    "id": "669722970cc5",
+    "title": "Objectif Décarbonation",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-23",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/objectif-decarbonation",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "4d6b81200990",
+    "title": "Mines Paris Research Day 2026",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-23",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/mines-paris-research-day-2026",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
     "id": "a48a103d0ab6",
     "title": "Paramètres d’accessibilité",
     "institution": "Université PSL",
@@ -8802,22 +8994,6 @@
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
     "url": "https://psl.eu/?page=0",
-    "speaker": "",
-    "source_type": "institution",
-    "lat": 48.8555,
-    "lng": 2.3382
-  },
-  {
-    "id": "669722970cc5",
-    "title": "Objectif Décarbonation",
-    "institution": "Université PSL",
-    "discipline": "Autre",
-    "date": "2026-06-23",
-    "time": "",
-    "end_time": "",
-    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
-    "description": "",
-    "url": "https://psl.eu/agenda/objectif-decarbonation",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
@@ -9638,6 +9814,22 @@
     "lng": 2.347704
   },
   {
+    "id": "02f741a90601",
+    "title": "Je laisserai toutes sortes d'oiseaux voler chez moi",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-06-30",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/agenda/je-laisserai-toutes-sortes-doiseaux-voler-chez-moi",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
     "id": "6fc72ba71564",
     "title": "[🥂Les Apéros CyberIA ] by BricyBreak #004",
     "institution": "TheScorton",
@@ -9932,8 +10124,7 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/4l/02b86d5f-3559-45fa-ac7c-6701e41233fb.png",
     "luma_categories": [
-      "paris",
-      "wellness"
+      "paris"
     ]
   },
   {
@@ -10520,6 +10711,38 @@
     "location": "Université PSL, 60 rue Mazarine, Paris 6e",
     "description": "",
     "url": "https://psl.eu/agenda/cours-du-soir-la-chimie-dans-notre-quotidien",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "8c91482d810c",
+    "title": "Paramètres d’accessibilité",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-09-29",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/#main-content",
+    "speaker": "",
+    "source_type": "institution",
+    "lat": 48.8555,
+    "lng": 2.3382
+  },
+  {
+    "id": "078f515b40d1",
+    "title": "Rechercher par :",
+    "institution": "Université PSL",
+    "discipline": "Autre",
+    "date": "2026-09-29",
+    "time": "",
+    "end_time": "",
+    "location": "Université PSL, 60 rue Mazarine, Paris 6e",
+    "description": "",
+    "url": "https://psl.eu/?page=0",
     "speaker": "",
     "source_type": "institution",
     "lat": 48.8555,
