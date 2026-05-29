@@ -673,6 +673,13 @@ function groupByDate(events) {
   events.forEach(e => { if (!g.has(e.date)) g.set(e.date, []); g.get(e.date).push(e); });
   return g;
 }
+// Luma cover images are ~2–3 MB originals. Luma's CDN (Cloudflare) resizes
+// on the fly, so we request a small AVIF/WebP thumbnail (~40 KB) instead.
+function lumaThumb(url) {
+  if (!url || url.indexOf("images.lumacdn.com/") < 0 || url.indexOf("/cdn-cgi/") >= 0) return url;
+  return url.replace("images.lumacdn.com/",
+                     "images.lumacdn.com/cdn-cgi/image/width=600,quality=72,format=auto/");
+}
 function cardHtml(ev, idx) {
   const color = DISC_COLORS[ev.discipline] ?? "#9ca3af";
   const time = ev.time ? (ev.end_time ? `${ev.time}–${ev.end_time}` : ev.time) : "Horaire à confirmer";
@@ -680,7 +687,7 @@ function cardHtml(ev, idx) {
   const fav = favs.has(ev.id);
   const dist = (ev._dist != null) ? ` <span class="dist-badge">${fmtDist(ev._dist)}</span>` : "";
   const image = (ev.source_type === "luma" && ev.image)
-    ? `<div class="card-image"><img loading="lazy" src="${escHtml(ev.image)}" alt="" onerror="this.closest('.card-image').remove()"></div>` : "";
+    ? `<div class="card-image"><img loading="lazy" decoding="async" src="${escHtml(lumaThumb(ev.image))}" alt="" onerror="this.closest('.card-image').remove()"></div>` : "";
   return `
     <div class="event-card" data-id="${escHtml(ev.id)}" data-url="${escHtml(ev.url || "#")}"
          style="--accent:${color};--d:${Math.min(idx,26)}">
