@@ -21,7 +21,7 @@ gratuits pour un dépôt public.
 | Source                    | Méthode                       |
 |---------------------------|-------------------------------|
 | Institut Henri Poincaré   | API Indico                    |
-| Collège de France         | scraping HTML paginé          |
+| Collège de France         | scraping HTML (requests)      |
 | Paris School of Economics | scraping HTML paginé          |
 | Université PSL            | scraping HTML paginé          |
 | EHESS                     | parseur dédié                 |
@@ -50,11 +50,41 @@ change à chaque scrape.
   carrousels, sans dates exploitables par le scraper.
 - EHESS et Sorbonne : peu d'événements. Leurs pages d'agenda sont courtes,
   ou contiennent surtout des événements passés.
-- Luma : seule la page « Paris » est récupérée. Les pages par thème sont
-  géolocalisées par IP et renvoient des événements américains depuis le
-  serveur GitHub.
+- Collège de France : son CDN (BunnyCDN) bloque les IP de data-center. Le
+  robot GitHub reçoit donc 0 événement ; les conférences sont récupérées
+  depuis une connexion française (voir « Rafraîchissement local »). Entre
+  deux rafraîchissements, le filet de sécurité conserve les événements déjà
+  connus.
+- Luma : depuis le serveur GitHub, seule la page « Paris » donne des
+  résultats. Les pages par thème sont géolocalisées par IP et renvoient des
+  événements américains. Depuis une connexion française, le rafraîchissement
+  local récupère aussi ces pages.
 - Le classement par discipline repose sur des mots-clés ; il est approximatif.
 - Un événement n'apparaît sur la carte que si son adresse a pu être géocodée.
+
+## Rafraîchissement local
+
+Le Collège de France et les pages Luma par thème sont bloqués ou faussés
+depuis le serveur GitHub (géolocalisation par IP). Un script les récupère
+depuis une connexion française. À lancer environ une fois par semaine :
+
+```
+git pull
+python scraper/refresh_local.py
+git add data/events.json data/calendar.ics
+git commit -m "maj manuelle (College de France + Luma)"
+git push
+```
+
+La première fois seulement, installer le navigateur utilisé par Luma :
+
+```
+python -m playwright install chromium
+```
+
+Si une source ne répond pas, le script conserve les données précédentes au
+lieu de les effacer. Les autres sources ne sont pas touchées : le robot
+GitHub continue de les mettre à jour chaque jour.
 
 ## Utilisation
 
@@ -79,6 +109,7 @@ data/
   calendar.ics          flux d'abonnement
 scraper/
   scrape.py             scraper
+  refresh_local.py      rafraîchissement manuel (Collège de France + Luma)
   check_health.py       contrôle des sources après le scrape
   requirements.txt
 .github/workflows/

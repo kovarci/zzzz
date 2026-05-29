@@ -1219,10 +1219,14 @@ LUMA_PAGES = [
 ]
 
 
-def scrape_luma(browser) -> list[dict]:
+def scrape_luma(browser, pages=None) -> list[dict]:
     """Scrape Luma — Paris discover page + topic category pages — keeping ONLY
     events located in France. The browser is geolocated to Paris so the topic
-    pages surface French events instead of US ones."""
+    pages surface French events instead of US ones.
+
+    `pages` overrides LUMA_PAGES — used by the local refresh script, which runs
+    from a French IP and can therefore also harvest the topic pages (those
+    return US events from the GitHub runner)."""
     print("→ Luma (France only)...")
     events, seen = [], set()
     captured = []
@@ -1238,7 +1242,7 @@ def scrape_luma(browser) -> list[dict]:
     page = ctx.new_page()
     page.on("response", lambda r: capture_json(r, captured))
 
-    for url in LUMA_PAGES:
+    for url in (pages or LUMA_PAGES):
         seen_before = len(captured)
         page_blobs = []
         try:
