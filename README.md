@@ -66,12 +66,15 @@ change à chaque scrape.
 
 Le Collège de France et les pages Luma par thème sont bloqués ou faussés
 depuis le serveur GitHub (géolocalisation par IP). Un script les récupère
-depuis une connexion française. À lancer environ une fois par semaine :
+depuis une connexion française, à lancer environ une fois par semaine.
+
+Le plus simple : double-cliquer sur `maj.bat` (il enchaîne les étapes
+ci-dessous, puis ouvre GitHub pour confirmer la connexion). Sinon, à la main :
 
 ```
 git pull
 python scraper/refresh_local.py
-git add data/events.json data/calendar.ics
+git add data/
 git commit -m "maj manuelle (College de France + Luma)"
 git push
 ```
