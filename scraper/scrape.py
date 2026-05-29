@@ -948,7 +948,15 @@ def scrape_college_de_france(browser=None):
         return None
 
     def parse_cards(html):
-        soup = BeautifulSoup(html, "lxml")
+        # Python's built-in parser (not lxml): the runner sometimes gets a
+        # slow/partial page from BunnyCDN with malformed attributes that crash
+        # lxml's strict SAX parser (_getNsTag "not enough values to unpack").
+        # html.parser is lenient and never raises on that.
+        try:
+            soup = BeautifulSoup(html, "html.parser")
+        except Exception as e:
+            print(f"   [warn] parse error: {type(e).__name__}")
+            return 0
         added = 0
         for node in soup.select(".node--type-event"):
             link = node.select_one("a.card-event[href]") or node.find("a", href=True)
@@ -994,8 +1002,10 @@ def scrape_college_de_france(browser=None):
             added += 1
         return added
 
-    for base_url in (f"{BASE}/fr/agenda", f"{BASE}/fr/enseignements/agenda"):
-        html = fetch(base_url, tries=3, timeout=25)   # page 0 is CDN-cached -> reliable
+    # Only /fr/agenda: it is CDN-cached and carries every upcoming event.
+    # (/fr/enseignements/agenda just 403s / times out and adds nothing.)
+    for base_url in (f"{BASE}/fr/agenda",):
+        html = fetch(base_url, tries=4, timeout=40)   # slow from datacenter IPs but worth waiting
         if not html:
             print(f"   [warn] {base_url} unreachable")
             continue
@@ -1497,12 +1507,11 @@ def main():
             browser.close()
 
     # Carry-forward: union this run with the still-upcoming events from the
-    # previous run, per known source. A flaky scrape (slow site, a page that
-    # timed out, partial pagination) therefore can never shrink or wipe a
-    # source — at worst the site keeps yesterday's events until their date
-    # passes. Dedup by id below removes the overlap; past events are filtered
-    # out and archived, so the dataset stays bounded. (Luma is intentionally
-    # excluded: its events are transient and we don't want to keep stale ones.)
+    # previous run, per known source (and Luma). A flaky scrape (slow site, a
+    # page that timed out, partial pagination, a geo-blocked Luma) therefore can
+    # never shrink or wipe a source — at worst the site keeps yesterday's events
+    # until their date passes. Dedup by id below removes the overlap; past
+    # events are filtered out and archived, so the dataset stays bounded.
     KNOWN_SOURCES = {
         "Institut Henri Poincaré", "Collège de France", "Paris School of Economics",
         "Université PSL", "EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
@@ -1511,13 +1520,14 @@ def main():
     today_iso = TODAY.isoformat()
     carried = 0
     for e in prev_events:
-        if e.get("institution") not in KNOWN_SOURCES:
+        if not (e.get("institution") in KNOWN_SOURCES or e.get("source_type") == "luma"):
             continue
         if e.get("date", "") < today_iso:
             continue  # past event — the archive handles it, don't resurrect
         if e.get("id") in present_ids:
             continue
         all_events.append(e)
+        present_ids.add(e.get("id"))
         carried += 1
     if carried:
         print(f"⚠ Carried forward {carried} upcoming events from the previous run")
