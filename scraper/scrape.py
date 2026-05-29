@@ -291,8 +291,8 @@ def in_window(d) -> bool:
 
 
 def new_event(institution, title, d, time_str="", end_time="", location="",
-              desc="", url="", speaker="", source_type="institution") -> dict:
-    return {
+              desc="", url="", speaker="", source_type="institution", image="") -> dict:
+    ev = {
         "id": make_id(institution, title, str(d)),
         "title": title,
         "institution": institution,
@@ -306,6 +306,9 @@ def new_event(institution, title, d, time_str="", end_time="", location="",
         "speaker": speaker,
         "source_type": source_type,
     }
+    if image:
+        ev["image"] = image
+    return ev
 
 
 # ── Indico (IHP) ──────────────────────────────────────────────────────────────
@@ -801,13 +804,18 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
                     inst = institution_default
                     if isinstance(hosts, list) and hosts and isinstance(hosts[0], dict):
                         inst = clean_text(hosts[0].get("name", "")) or institution_default
+                    img = ""
+                    if source_type == "luma":
+                        img = (ev.get("cover_url") or ev.get("social_image_url")
+                               or (obj.get("cover_image") if isinstance(obj.get("cover_image"), str) else "")
+                               or "")
                     _out.append(new_event(
                         inst, title, dt.date(),
                         time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
                         location=loc or "Paris",
                         desc=strip_html(ev.get("description") or ev.get("description_short") or "")[:400],
                         url=make_absolute(url, base_url or "https://lu.ma"),
-                        source_type=source_type,
+                        source_type=source_type, image=img,
                     ))
         for v in obj.values():
             extract_events_deep_json(v, institution_default, source_type, base_url,
@@ -1219,6 +1227,13 @@ LUMA_PAGES = [
 ]
 
 
+def _luma_category(url):
+    """Topic label derived from a Luma page URL, used to filter Luma by theme.
+    .../discover/paris -> 'paris' ; luma.com/tech -> 'tech'."""
+    seg = url.rstrip("/").split("/")[-1].split("?")[0].lower()
+    return seg or "paris"
+
+
 def scrape_luma(browser, pages=None) -> list[dict]:
     """Scrape Luma — Paris discover page + topic category pages — keeping ONLY
     events located in France. The browser is geolocated to Paris so the topic
@@ -1228,7 +1243,7 @@ def scrape_luma(browser, pages=None) -> list[dict]:
     from a French IP and can therefore also harvest the topic pages (those
     return US events from the GitHub runner)."""
     print("→ Luma (France only)...")
-    events, seen = [], set()
+    events, seen = [], {}
     captured = []
 
     # Pretend we are browsing from Paris (locale + timezone + geolocation)
@@ -1273,15 +1288,19 @@ def scrape_luma(browser, pages=None) -> list[dict]:
         # how many events on the page total, and how many in France
         total = sum(len(extract_events_deep_json(b, "Luma", "luma", "https://lu.ma"))
                     for b in page_blobs)
+        cat = _luma_category(url)
         new = 0
         for blob in page_blobs:
             for ev in extract_events_deep_json(blob, "Luma", source_type="luma",
                                                base_url="https://lu.ma", require_france=True):
                 key = (ev["title"][:50].lower(), ev["date"])
                 if key not in seen:
-                    seen.add(key)
+                    ev["luma_categories"] = [cat] if cat else []
+                    seen[key] = ev
                     events.append(ev)
                     new += 1
+                elif cat and cat not in seen[key].get("luma_categories", []):
+                    seen[key].setdefault("luma_categories", []).append(cat)
         print(f"   {url}: {total} events on page → +{new} in France")
 
     ctx.close()
