@@ -420,14 +420,21 @@ def load_page(page, url: str, exhaustive: bool = True) -> tuple[str, str]:
     """Navigate, wait for JS, accept cookies, scroll.
     exhaustive=True  : full infinite-scroll + click every 'load more' (single-page sites).
     exhaustive=False : light scroll only (for explicitly paginated sites)."""
+    # "commit" resolves as soon as the first response bytes arrive, so a slow,
+    # heavy site (e.g. Collège de France) won't make goto hang on a late
+    # domcontentloaded. If goto still times out, we DON'T give up — the DOM is
+    # often there anyway; we wait a bit more and read it.
     try:
-        page.goto(url, timeout=45000, wait_until="domcontentloaded")
+        page.goto(url, timeout=60000, wait_until="commit")
     except Exception as e:
-        print(f"   [WARN] goto {url}: {e}")
-        return "", ""
+        print(f"   [warn] goto {url}: {e} — continuing with partial load")
     try:
-        page.wait_for_load_state("networkidle", timeout=15000)
-    except PWTimeout:
+        page.wait_for_load_state("domcontentloaded", timeout=20000)
+    except Exception:
+        pass
+    try:
+        page.wait_for_load_state("networkidle", timeout=12000)
+    except Exception:
         page.wait_for_timeout(2500)
     accept_cookies(page)
 
@@ -886,15 +893,136 @@ def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="inst
     return all_events
 
 
-def scrape_college_de_france(browser):
-    return scrape_paginated(browser, "Collège de France", [
-        ("https://www.college-de-france.fr/fr/enseignements/agenda",
-         "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
-         "https://www.college-de-france.fr"),
-        ("https://www.college-de-france.fr/fr/agenda",
-         "Collège de France, 11 place Marcelin-Berthelot, Paris 5e",
-         "https://www.college-de-france.fr"),
-    ], max_pages=20)
+# Full browser-like headers. The Collège de France site sits behind BunnyCDN,
+# which answers minimal-header requests with 403 / hangs, but serves the
+# CDN-cached HTML normally when the request looks like a real Chrome navigation.
+CDF_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,"
+              "image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"Windows"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+}
+
+
+def scrape_college_de_france(browser=None):
+    """Collège de France — Drupal 11 site behind BunnyCDN.
+
+    Pure `requests` (no Playwright): the agenda is fully server-rendered, so
+    headless Chromium added nothing but trouble — it hung on the slow *uncached*
+    ?page=N URLs (the 45 s timeouts we kept hitting). The bare /fr/agenda is
+    CDN-cached and always fast; paginated pages are best-effort (retried, but we
+    tolerate timeouts and keep whatever loaded). Combined with the carry-forward
+    in main(), a partial run never wipes the source. `browser` is accepted but
+    ignored so the call site in main() stays unchanged.
+    """
+    print("→ Collège de France (requests)...")
+    BASE = "https://www.college-de-france.fr"
+    LOC_DEFAULT = "Collège de France, 11 place Marcelin-Berthelot, Paris 5e"
+    sess = requests.Session()
+    sess.headers.update(CDF_HEADERS)
+
+    deadline = time.monotonic() + 150  # hard wall-clock budget for the whole source
+    events, seen = [], set()
+
+    def fetch(url, tries=2, timeout=30):
+        for attempt in range(1, tries + 1):
+            if time.monotonic() > deadline:
+                return None
+            try:
+                r = sess.get(url, timeout=timeout)
+                if r.status_code == 200 and r.text:
+                    return r.text
+                print(f"   [warn] {url} -> HTTP {r.status_code}")
+            except Exception as e:
+                print(f"   [warn] {url}: {type(e).__name__} (try {attempt}/{tries})")
+        return None
+
+    def parse_cards(html):
+        soup = BeautifulSoup(html, "lxml")
+        added = 0
+        for node in soup.select(".node--type-event"):
+            link = node.select_one("a.card-event[href]") or node.find("a", href=True)
+            href = link.get("href", "") if link else ""
+            title_el = node.select_one(".card-event__title")
+            title = clean_text(title_el.get_text()) if title_el else ""
+            if not title or is_junk_title(title):
+                continue
+            # Date + time: prefer the ISO <time datetime> (UTC -> Paris via parse_date)
+            d, time_str = None, ""
+            t_el = node.select_one("time[datetime]")
+            if t_el and t_el.get("datetime"):
+                dt = parse_date(t_el["datetime"])
+                if dt:
+                    d = dt.date()
+                    if dt.hour or dt.minute:
+                        time_str = dt.strftime("%H:%M")
+            if d is None:
+                date_el = node.select_one(".card-event__date")
+                if date_el:
+                    d = parse_french_date_text(date_el.get_text(" ", strip=True))
+            if d is None or d < CUTOFF or d > HORIZON:
+                continue
+            key = href or f"{title[:60].lower()}|{d.isoformat()}"
+            if key in seen:
+                continue
+            seen.add(key)
+            place_el = node.select_one(".card-event__place")
+            speaker_el = node.select_one(".card-event__main-speaker")
+            cycle_el = node.select_one(".card-event__cycle")
+            type_el = node.select_one(".card-event__type")
+            desc = " · ".join(x for x in [
+                clean_text(type_el.get_text()) if type_el else "",
+                clean_text(cycle_el.get_text()) if cycle_el else "",
+            ] if x)
+            events.append(new_event(
+                "Collège de France", title, d, time_str=time_str,
+                location=clean_text(place_el.get_text()) if place_el else LOC_DEFAULT,
+                desc=desc,
+                speaker=clean_text(speaker_el.get_text()) if speaker_el else "",
+                url=make_absolute(href, BASE),
+            ))
+            added += 1
+        return added
+
+    for base_url in (f"{BASE}/fr/agenda", f"{BASE}/fr/enseignements/agenda"):
+        html = fetch(base_url, tries=3, timeout=25)   # page 0 is CDN-cached -> reliable
+        if not html:
+            print(f"   [warn] {base_url} unreachable")
+            continue
+        n0 = parse_cards(html)
+        print(f"   page 0 ({base_url}): +{n0}  ·  total {len(events)}")
+        misses = 0
+        for p in range(1, 12):
+            if time.monotonic() > deadline:
+                print("   [info] time budget reached — stopping pagination")
+                break
+            html = fetch(f"{base_url}?page={p}", tries=2, timeout=30)
+            if not html:
+                misses += 1
+                if misses >= 3:
+                    break
+                continue
+            added = parse_cards(html)
+            print(f"   ?page={p}: +{added}  ·  total {len(events)}")
+            if added == 0:
+                misses += 1
+                if misses >= 2:
+                    break
+            else:
+                misses = 0
+
+    print(f"   ✓ Total Collège de France: {len(events)} events")
+    return events
 
 
 def scrape_ehess(browser):
@@ -1368,22 +1496,31 @@ def main():
         finally:
             browser.close()
 
-    # Carry-forward: if a known source returned nothing this run (a transient
-    # glitch — slow site, network hiccup), reuse its events from the previous
-    # run so the site never loses a whole institution to a temporary failure.
+    # Carry-forward: union this run with the still-upcoming events from the
+    # previous run, per known source. A flaky scrape (slow site, a page that
+    # timed out, partial pagination) therefore can never shrink or wipe a
+    # source — at worst the site keeps yesterday's events until their date
+    # passes. Dedup by id below removes the overlap; past events are filtered
+    # out and archived, so the dataset stays bounded. (Luma is intentionally
+    # excluded: its events are transient and we don't want to keep stale ones.)
     KNOWN_SOURCES = {
         "Institut Henri Poincaré", "Collège de France", "Paris School of Economics",
         "Université PSL", "EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
     }
-    present = {e.get("institution") for e in all_events}
+    present_ids = {e.get("id") for e in all_events}
+    today_iso = TODAY.isoformat()
     carried = 0
     for e in prev_events:
-        inst = e.get("institution")
-        if inst in KNOWN_SOURCES and inst not in present:
-            all_events.append(e)
-            carried += 1
+        if e.get("institution") not in KNOWN_SOURCES:
+            continue
+        if e.get("date", "") < today_iso:
+            continue  # past event — the archive handles it, don't resurrect
+        if e.get("id") in present_ids:
+            continue
+        all_events.append(e)
+        carried += 1
     if carried:
-        print(f"⚠ Carried forward {carried} events from sources that returned 0 this run")
+        print(f"⚠ Carried forward {carried} upcoming events from the previous run")
 
     all_events = deduplicate(all_events)
     all_events = [e for e in all_events if e.get("date", "") >= CUTOFF.isoformat()]
