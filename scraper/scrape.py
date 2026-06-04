@@ -1316,8 +1316,8 @@ ARTICLE1_URL = "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeun
 def scrape_article1(browser) -> list[dict]:
     """Article 1 calendar — Vue/Salesforce site. Events arrive via a JS Remoting
     XHR (apexremote → AG_ActiveCampaignControllerV2.getAteliers); we capture
-    that response. We keep the full 'jeune' calendar (Paris + other cities +
-    online); the user filters by city via the location shown on each card."""
+    that response. We keep the entire calendar (jeune + mentors), all cities
+    + online; the user filters by city via the location shown on each card."""
     print("→ Article 1 (association)...")
     events, seen = [], set()
     captured = []
@@ -1353,8 +1353,6 @@ def scrape_article1(browser) -> list[dict]:
         return f"{int(m.group(1)):02d}:{(m.group(2) or '00').rjust(2, '0')[:2]}" if m else ""
 
     for it in raw:
-        if it.get("affiche_Jeunes__c") is False:
-            continue                              # not in the 'jeune' view
         ms = it.get("StartDate")
         if not ms:
             continue
@@ -1371,7 +1369,8 @@ def scrape_article1(browser) -> list[dict]:
         region = clean_text(it.get("Region_campagne__c") or "")
         is_digital = bool(it.get("A_distance__c")) or it.get("Physique_ou_Digital__c") == "Digital"
         loc = "En ligne" if is_digital else (city or region or "Paris")
-        desc = strip_html(it.get("Description_Jeunes__c") or "")[:400]
+        desc = strip_html(it.get("Description_Jeunes__c")
+                          or it.get("Description_Benevoles__c") or "")[:400]
         key = (title[:60].lower(), d.isoformat())
         if key in seen:
             continue
