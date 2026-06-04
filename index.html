@@ -241,6 +241,7 @@
     <button class="tab active" data-source="all">Tout <span class="badge" id="badge-all">0</span></button>
     <button class="tab" data-source="institution">Universités <span class="badge" id="badge-inst">0</span></button>
     <button class="tab" data-source="luma">Luma <span class="badge" id="badge-luma">0</span></button>
+    <button class="tab" data-source="association">Association <span class="badge" id="badge-assoc">0</span></button>
     <button class="tab" data-source="history">Historique <span class="badge" id="badge-history">…</span></button>
   </div>
 
@@ -272,6 +273,10 @@
   <div class="filter-block" id="luma-theme-section" style="display:none">
     <div class="filter-label">Thème</div>
     <div class="chips" id="luma-chips"></div>
+  </div>
+  <div class="filter-block" id="assoc-section" style="display:none">
+    <div class="filter-label">Association</div>
+    <div class="chips" id="assoc-chips"></div>
   </div>
 
   <div class="toolbar">
@@ -356,7 +361,7 @@ const ICONS = {
 const ONLINE_RE = /\b(online|en ligne|visio|distanciel|webinaire|webinar|zoom|teams|à distance|hybride|streaming)\b/i;
 
 let allEvents = [], activeSource = "all", activeView = "list";
-let activeDiscs = new Set(), activeInsts = new Set(), activeLumaCats = new Set();
+let activeDiscs = new Set(), activeInsts = new Set(), activeLumaCats = new Set(), activeAssocs = new Set();
 let searchQuery = "", dateFilter = "all", formatFilter = "all", showFavsOnly = false;
 let map = null, markerLayer = null, userPos = null, nearMode = false;
 let archive = [], archiveLoaded = false;
@@ -453,14 +458,32 @@ function buildFilters() {
     });
     lc.appendChild(btn);
   });
+
+  // Association chips (shown only on the Association tab)
+  const assocs = [...new Set(allEvents.filter(e => e.source_type==="association")
+                                      .map(e => e.institution))].sort();
+  const ac = document.getElementById("assoc-chips"); ac.innerHTML = "";
+  assocs.forEach(a => {
+    const btn = document.createElement("button");
+    btn.className = "chip";
+    btn.textContent = a;
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      activeAssocs.has(a) ? activeAssocs.delete(a) : activeAssocs.add(a);
+      render();
+    });
+    ac.appendChild(btn);
+  });
 }
 
 function updateBadges() {
   const inst = allEvents.filter(e => e.source_type==="institution").length;
   const luma = allEvents.filter(e => e.source_type==="luma").length;
+  const assoc = allEvents.filter(e => e.source_type==="association").length;
   document.getElementById("badge-all").textContent = allEvents.length;
   document.getElementById("badge-inst").textContent = inst;
   document.getElementById("badge-luma").textContent = luma;
+  document.getElementById("badge-assoc").textContent = assoc;
   animateCount(document.getElementById("hero-count"), allEvents.length);
 }
 function updateFavCount() { document.getElementById("fav-count").textContent = `(${favs.size})`; }
@@ -509,6 +532,7 @@ function syncURL() {
   if (activeDiscs.size)        p.set("discipline", [...activeDiscs].join(","));
   if (activeInsts.size)        p.set("institution", [...activeInsts].join(","));
   if (activeLumaCats.size)     p.set("theme", [...activeLumaCats].join(","));
+  if (activeAssocs.size)       p.set("assoc", [...activeAssocs].join(","));
   if (showFavsOnly)            p.set("favoris", "1");
   const qs = p.toString();
   history.replaceState(null, "", qs ? "?" + qs : location.pathname);
@@ -523,6 +547,7 @@ async function applyURL() {
   if (p.get("discipline")) p.get("discipline").split(",").forEach(d => d && activeDiscs.add(d));
   if (p.get("institution")) p.get("institution").split(",").forEach(i => i && activeInsts.add(i));
   if (p.get("theme")) p.get("theme").split(",").forEach(c => c && activeLumaCats.add(c));
+  if (p.get("assoc")) p.get("assoc").split(",").forEach(a => a && activeAssocs.add(a));
   if (p.get("favoris") === "1") showFavsOnly = true;
   if (activeSource === "history") await ensureArchive();
 }
@@ -533,11 +558,13 @@ function reflectUI() {
   document.querySelectorAll("#discipline-chips .chip").forEach(c => c.classList.toggle("active", activeDiscs.has(c.textContent)));
   document.querySelectorAll("#institution-chips .chip").forEach(c => c.classList.toggle("active", activeInsts.has(c.textContent)));
   document.querySelectorAll("#luma-chips .chip").forEach(c => c.classList.toggle("active", activeLumaCats.has(c.dataset.cat)));
+  document.querySelectorAll("#assoc-chips .chip").forEach(c => c.classList.toggle("active", activeAssocs.has(c.textContent)));
   document.querySelectorAll(".view-btn").forEach(b => b.classList.toggle("active", b.dataset.view === activeView));
   document.getElementById("fav-toggle").classList.toggle("active", showFavsOnly);
   const isHistory = activeSource === "history";
-  document.getElementById("institution-section").style.display = activeSource === "luma" ? "none" : "";
+  document.getElementById("institution-section").style.display = (activeSource === "luma" || activeSource === "association") ? "none" : "";
   document.getElementById("luma-theme-section").style.display = activeSource === "luma" ? "" : "none";
+  document.getElementById("assoc-section").style.display = activeSource === "association" ? "" : "none";
   document.getElementById("date-chips").closest(".filter-block").style.display = isHistory ? "none" : "";
   document.getElementById("stats-bar").style.display = isHistory ? "none" : "";
   document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
@@ -585,12 +612,14 @@ function filtered() {
     // Source tabs filter only when in future mode; "history" shows all sources.
     if (activeSource === "institution" && e.source_type !== "institution") return false;
     if (activeSource === "luma" && e.source_type !== "luma") return false;
+    if (activeSource === "association" && e.source_type !== "association") return false;
     if (!inHistory && !inDateFilter(e)) return false;
     if (formatFilter === "online" && !isOnline(e)) return false;
     if (formatFilter === "inperson" && isOnline(e)) return false;
     if (activeDiscs.size && !activeDiscs.has(e.discipline)) return false;
     if (activeInsts.size && !activeInsts.has(e.institution)) return false;
     if (activeLumaCats.size && !(e.luma_categories||[]).some(c => activeLumaCats.has(c))) return false;
+    if (activeAssocs.size && !activeAssocs.has(e.institution)) return false;
     if (q) {
       const hay = (e.title+" "+e.speaker+" "+e.description+" "+e.institution).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -683,7 +712,9 @@ function lumaThumb(url) {
 function cardHtml(ev, idx) {
   const color = DISC_COLORS[ev.discipline] ?? "#9ca3af";
   const time = ev.time ? (ev.end_time ? `${ev.time}–${ev.end_time}` : ev.time) : "Horaire à confirmer";
-  const inst = ev.source_type === "luma" ? `${escHtml(ev.institution)} · Luma` : escHtml(ev.institution);
+  const inst = ev.source_type === "luma"        ? `${escHtml(ev.institution)} · Luma`
+             : ev.source_type === "association" ? `${escHtml(ev.institution)} · Association`
+             : escHtml(ev.institution);
   const fav = favs.has(ev.id);
   const dist = (ev._dist != null) ? ` <span class="dist-badge">${fmtDist(ev._dist)}</span>` : "";
   const image = (ev.source_type === "luma" && ev.image)
@@ -905,7 +936,7 @@ document.querySelectorAll(".tab").forEach(btn => {
     activeSource = btn.dataset.source;
     // Reset the per-category filters so they don't carry across tabs
     // (e.g. a "Collège de France" filter would show 0 events on the Luma tab).
-    activeDiscs.clear(); activeInsts.clear(); activeLumaCats.clear();
+    activeDiscs.clear(); activeInsts.clear(); activeLumaCats.clear(); activeAssocs.clear();
     dateFilter = "all"; formatFilter = "all";
     if (activeSource === "history") await ensureArchive();
     reflectUI();

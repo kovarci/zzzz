@@ -1308,6 +1308,91 @@ def scrape_luma(browser, pages=None) -> list[dict]:
     return events
 
 
+# ── Article 1 (association) ───────────────────────────────────────────────────
+
+ARTICLE1_URL = "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune"
+
+
+def scrape_article1(browser) -> list[dict]:
+    """Article 1 calendar — Vue/Salesforce site. Events arrive via a JS Remoting
+    XHR (apexremote → AG_ActiveCampaignControllerV2.getAteliers); we capture
+    that response. Keep Paris-area + online/national events (since online is
+    accessible from Paris)."""
+    print("→ Article 1 (association)...")
+    events, seen = [], set()
+    captured = []
+    ctx = browser.new_context(
+        user_agent=HEADERS["User-Agent"], locale="fr-FR",
+        viewport={"width": 1366, "height": 900},
+        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+    )
+    page = ctx.new_page()
+    page.on("response", lambda r: capture_json(r, captured))
+    try:
+        page.goto(ARTICLE1_URL, timeout=45000, wait_until="domcontentloaded")
+        try:
+            page.wait_for_load_state("networkidle", timeout=15000)
+        except PWTimeout:
+            page.wait_for_timeout(3000)
+        page.wait_for_timeout(2500)  # give Vue + apex-remoting time to fire
+    except Exception as e:
+        print(f"   [WARN] goto Article 1: {e}")
+    ctx.close()
+
+    raw = []
+    for _u, body in captured:
+        if (isinstance(body, list) and body and isinstance(body[0], dict)
+                and body[0].get("method") == "getAteliers"):
+            raw = body[0].get("result") or []
+            break
+    print(f"   {len(raw)} raw events")
+
+    def _norm_time(s):
+        s = clean_text(s or "")
+        m = re.match(r"(\d{1,2})\s*[hH:]\s*(\d{0,2})", s)
+        return f"{int(m.group(1)):02d}:{(m.group(2) or '00').rjust(2, '0')[:2]}" if m else ""
+
+    kept_paris = kept_online = 0
+    for it in raw:
+        if it.get("affiche_Jeunes__c") is False:
+            continue                              # not in the 'jeune' view
+        ms = it.get("StartDate")
+        if not ms:
+            continue
+        try:
+            d = datetime.utcfromtimestamp(int(ms) / 1000).date()
+        except Exception:
+            continue
+        if d < CUTOFF or d > HORIZON:
+            continue
+        title = clean_text(it.get("Name") or "")
+        if not title or is_junk_title(title):
+            continue
+        city = clean_text(it.get("Ville__c") or "")
+        region = clean_text(it.get("Region_campagne__c") or "")
+        is_digital = bool(it.get("A_distance__c")) or it.get("Physique_ou_Digital__c") == "Digital"
+        is_paris = bool(re.search(r"\bparis\b|île-de-france|ile-de-france", (city + " " + region).lower()))
+        if not (is_paris or is_digital):
+            continue                              # other cities → out of scope
+        loc = "En ligne" if (is_digital and not is_paris) else (city or region or "Paris")
+        desc = strip_html(it.get("Description_Jeunes__c") or "")[:400]
+        key = (title[:60].lower(), d.isoformat())
+        if key in seen:
+            continue
+        seen.add(key)
+        if is_paris: kept_paris += 1
+        else: kept_online += 1
+        events.append(new_event(
+            "Article 1", title, d,
+            time_str=_norm_time(it.get("Heure_de_debut_text__c")),
+            end_time=_norm_time(it.get("Heure_de_fin_texte__c")),
+            location=loc, desc=desc, url=ARTICLE1_URL,
+            source_type="association", image=it.get("image_EVT__c") or "",
+        ))
+    print(f"   ✓ Total Article 1: {len(events)} events ({kept_paris} Paris, {kept_online} en ligne)")
+    return events
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def deduplicate(events):
@@ -1520,7 +1605,7 @@ def main():
         try:
             for fn in [scrape_college_de_france, scrape_ehess, scrape_ens,
                        scrape_sciences_po, scrape_sorbonne, scrape_dauphine,
-                       scrape_pse, scrape_psl, scrape_luma]:
+                       scrape_pse, scrape_psl, scrape_luma, scrape_article1]:
                 try:
                     all_events.extend(fn(browser))
                 except Exception as e:
@@ -1543,7 +1628,8 @@ def main():
     today_iso = TODAY.isoformat()
     carried = 0
     for e in prev_events:
-        if not (e.get("institution") in KNOWN_SOURCES or e.get("source_type") == "luma"):
+        if not (e.get("institution") in KNOWN_SOURCES
+                or e.get("source_type") in ("luma", "association")):
             continue
         if e.get("date", "") < today_iso:
             continue  # past event — the archive handles it, don't resurrect
