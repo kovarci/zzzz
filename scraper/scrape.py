@@ -1316,8 +1316,8 @@ ARTICLE1_URL = "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeun
 def scrape_article1(browser) -> list[dict]:
     """Article 1 calendar — Vue/Salesforce site. Events arrive via a JS Remoting
     XHR (apexremote → AG_ActiveCampaignControllerV2.getAteliers); we capture
-    that response. Keep Paris-area + online/national events (since online is
-    accessible from Paris)."""
+    that response. We keep the full 'jeune' calendar (Paris + other cities +
+    online); the user filters by city via the location shown on each card."""
     print("→ Article 1 (association)...")
     events, seen = [], set()
     captured = []
@@ -1352,7 +1352,6 @@ def scrape_article1(browser) -> list[dict]:
         m = re.match(r"(\d{1,2})\s*[hH:]\s*(\d{0,2})", s)
         return f"{int(m.group(1)):02d}:{(m.group(2) or '00').rjust(2, '0')[:2]}" if m else ""
 
-    kept_paris = kept_online = 0
     for it in raw:
         if it.get("affiche_Jeunes__c") is False:
             continue                              # not in the 'jeune' view
@@ -1371,17 +1370,12 @@ def scrape_article1(browser) -> list[dict]:
         city = clean_text(it.get("Ville__c") or "")
         region = clean_text(it.get("Region_campagne__c") or "")
         is_digital = bool(it.get("A_distance__c")) or it.get("Physique_ou_Digital__c") == "Digital"
-        is_paris = bool(re.search(r"\bparis\b|île-de-france|ile-de-france", (city + " " + region).lower()))
-        if not (is_paris or is_digital):
-            continue                              # other cities → out of scope
-        loc = "En ligne" if (is_digital and not is_paris) else (city or region or "Paris")
+        loc = "En ligne" if is_digital else (city or region or "Paris")
         desc = strip_html(it.get("Description_Jeunes__c") or "")[:400]
         key = (title[:60].lower(), d.isoformat())
         if key in seen:
             continue
         seen.add(key)
-        if is_paris: kept_paris += 1
-        else: kept_online += 1
         events.append(new_event(
             "Article 1", title, d,
             time_str=_norm_time(it.get("Heure_de_debut_text__c")),
@@ -1389,7 +1383,7 @@ def scrape_article1(browser) -> list[dict]:
             location=loc, desc=desc, url=ARTICLE1_URL,
             source_type="association", image=it.get("image_EVT__c") or "",
         ))
-    print(f"   ✓ Total Article 1: {len(events)} events ({kept_paris} Paris, {kept_online} en ligne)")
+    print(f"   ✓ Total Article 1: {len(events)} events")
     return events
 
 
