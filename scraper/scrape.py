@@ -1391,13 +1391,18 @@ def scrape_article1(browser) -> list[dict]:
 SCIENCES_CULTURES_LINKTREE = "https://linktr.ee/Sciences_et_Cultures"
 
 
-def scrape_sciences_cultures() -> list[dict]:
+def scrape_sciences_cultures(past_days: int = 0) -> list[dict]:
     """Sciences et Cultures (association étudiante).
     Their Linktree page lists each conference with a framaforms.org inscription
     URL. The URL itself carries the date as DDMMYYYY (e.g.
     `inscription-conference-anssi-16062026-sciences-cultures-c`), and the link
     title carries the speaker + topic. So we parse it all straight from the
-    Linktree's embedded JSON — no need to fetch each Framaforms page."""
+    Linktree's embedded JSON — no need to fetch each Framaforms page.
+
+    past_days > 0 also keeps events from the last N days (used by the local
+    bootstrap to feed Historique with recently-passed conferences). The daily
+    runner uses past_days=0; once a future event is seen, it lands in
+    events.json and is auto-archived when its date passes."""
     print("→ Sciences et Cultures (Linktree)...")
     H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                        "AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
@@ -1430,6 +1435,7 @@ def scrape_sciences_cultures() -> list[dict]:
                 yield from walk(x)
 
     SKIP_KW = ("recrutement", "partenariats", "filmer", "nous-rejoindre")
+    floor = CUTOFF - timedelta(days=past_days) if past_days > 0 else CUTOFF
     events, seen = [], set()
     raw_count = 0
     for title, url in walk(data):
@@ -1446,7 +1452,7 @@ def scrape_sciences_cultures() -> list[dict]:
             d = date(int(dm.group(3)), int(dm.group(2)), int(dm.group(1)))
         except Exception:
             continue
-        if d < CUTOFF or d > HORIZON:
+        if d < floor or d > HORIZON:
             continue
         title = clean_text(title)
         if not title or is_junk_title(title):
@@ -1461,7 +1467,10 @@ def scrape_sciences_cultures() -> list[dict]:
             desc="Inscription requise via le lien.",
             url=url, source_type="association",
         ))
-    print(f"   {raw_count} liens framaforms · {len(events)} à venir")
+    n_future = sum(1 for e in events if e["date"] >= CUTOFF.isoformat())
+    n_past = len(events) - n_future
+    print(f"   {raw_count} liens framaforms · {n_future} à venir"
+          + (f" · {n_past} récemment passés (pour Historique)" if n_past else ""))
     return events
 
 
