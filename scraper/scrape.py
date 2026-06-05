@@ -1491,6 +1491,24 @@ def deduplicate(events):
 GEOCACHE_FILE = OUTPUT_FILE.parent / "geocache.json"
 ICS_FILE = OUTPUT_FILE.parent / "calendar.ics"
 ARCHIVE_FILE = OUTPUT_FILE.parent / "events-archive.json"
+META_FILE = OUTPUT_FILE.parent / "meta.json"
+
+
+def update_meta(field: str) -> None:
+    """Stamp data/meta.json with the current UTC time for `field`.
+    Used by main() (`last_workflow_run`) and refresh_local.py
+    (`last_manual_run`) so the site can show 'last update' indicators.
+    Preserves the other field if present."""
+    try:
+        m = json.loads(META_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        m = {}
+    from datetime import timezone
+    m[field] = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    try:
+        META_FILE.write_text(json.dumps(m, indent=2), encoding="utf-8")
+    except Exception as e:
+        print(f"[WARN] meta write: {e}")
 ARCHIVE_MAX_DAYS = 365     # keep at most one year of past events
 MAX_NEW_GEOCODE = 220      # courtesy cap on Nominatim lookups per run
 
@@ -1754,6 +1772,8 @@ def main():
     except Exception as e:
         print(f"[ERROR] archive: {e}")
         traceback.print_exc()
+
+    update_meta("last_workflow_run")
 
     by_inst = {}
     for e in all_events:

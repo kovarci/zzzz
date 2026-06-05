@@ -117,6 +117,7 @@ def main():
     scrape.write_ics(merged)
     out.write_text(json.dumps(merged, ensure_ascii=False, indent=2),
                    encoding="utf-8")
+    scrape.update_meta("last_manual_run")
 
     print(f"\nAprès : {len(merged)} événements "
           f"(Collège de France {_inst_count(merged, 'Collège de France')}, "
