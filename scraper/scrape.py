@@ -1386,6 +1386,85 @@ def scrape_article1(browser) -> list[dict]:
     return events
 
 
+# ── Sciences et Cultures (association — Linktree → Framaforms) ───────────────
+
+SCIENCES_CULTURES_LINKTREE = "https://linktr.ee/Sciences_et_Cultures"
+
+
+def scrape_sciences_cultures() -> list[dict]:
+    """Sciences et Cultures (association étudiante).
+    Their Linktree page lists each conference with a framaforms.org inscription
+    URL. The URL itself carries the date as DDMMYYYY (e.g.
+    `inscription-conference-anssi-16062026-sciences-cultures-c`), and the link
+    title carries the speaker + topic. So we parse it all straight from the
+    Linktree's embedded JSON — no need to fetch each Framaforms page."""
+    print("→ Sciences et Cultures (Linktree)...")
+    H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                       "AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
+         "Accept-Language": "fr-FR,fr;q=0.9", "Accept": "text/html,*/*"}
+    try:
+        r = requests.get(SCIENCES_CULTURES_LINKTREE, headers=H, timeout=30)
+    except Exception as e:
+        print(f"   [WARN] {type(e).__name__}: {e}")
+        return []
+    if r.status_code != 200:
+        print(f"   HTTP {r.status_code}")
+        return []
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.+?)</script>', r.text, re.S)
+    if not m:
+        print("   no __NEXT_DATA__")
+        return []
+    try:
+        data = json.loads(m.group(1))
+    except Exception:
+        return []
+
+    def walk(o):
+        if isinstance(o, dict):
+            if isinstance(o.get("url"), str) and isinstance(o.get("title"), str):
+                yield o["title"], o["url"]
+            for v in o.values():
+                yield from walk(v)
+        elif isinstance(o, list):
+            for x in o:
+                yield from walk(x)
+
+    SKIP_KW = ("recrutement", "partenariats", "filmer", "nous-rejoindre")
+    events, seen = [], set()
+    raw_count = 0
+    for title, url in walk(data):
+        if "framaforms.org" not in url:
+            continue
+        raw_count += 1
+        if any(kw in url.lower() for kw in SKIP_KW):
+            continue
+        # DDMMYYYY between hyphens (e.g. -16062026-)
+        dm = re.search(r"-(\d{2})(\d{2})(20\d{2})(?:-|\b)", url)
+        if not dm:
+            continue
+        try:
+            d = date(int(dm.group(3)), int(dm.group(2)), int(dm.group(1)))
+        except Exception:
+            continue
+        if d < CUTOFF or d > HORIZON:
+            continue
+        title = clean_text(title)
+        if not title or is_junk_title(title):
+            continue
+        key = (title[:60].lower(), d.isoformat())
+        if key in seen:
+            continue
+        seen.add(key)
+        events.append(new_event(
+            "Sciences et Cultures", title, d,
+            location="Sorbonne, Paris",
+            desc="Inscription requise via le lien.",
+            url=url, source_type="association",
+        ))
+    print(f"   {raw_count} liens framaforms · {len(events)} à venir")
+    return events
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def deduplicate(events):
@@ -1429,6 +1508,7 @@ INSTITUTION_COORDS = {
     "Paris School of Economics": [48.8216, 2.3379],
     "Université PSL":            [48.8555, 2.3382],
     "Sorbonne Université":       [48.8479, 2.3433],
+    "Sciences et Cultures":      [48.8479, 2.3433],   # Sorbonne (Paris 5e)
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -1591,6 +1671,12 @@ def main():
             "IHP, 11 rue Pierre et Marie Curie, Paris 5e"))
     except Exception as e:
         print(f"[ERROR] IHP: {e}")
+        traceback.print_exc()
+
+    try:
+        all_events.extend(scrape_sciences_cultures())
+    except Exception as e:
+        print(f"[ERROR] Sciences et Cultures: {e}")
         traceback.print_exc()
 
     with sync_playwright() as p:
