@@ -344,7 +344,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/oe/7407b4d1-f016-47e1-bdec-f88bc08801b8.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "arts"
     ]
   },
   {
@@ -428,7 +429,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/3m/1b4241c9-033a-43ca-adc0-cdca3a5f440f.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "arts"
     ]
   },
   {
@@ -1415,22 +1417,6 @@
     "lng": 2.28493
   },
   {
-    "id": "75defd25105f",
-    "title": "La Préhistoire, de la science à la fiction : 150 ans de récits et d’images",
-    "institution": "Collège de France",
-    "discipline": "Littérature",
-    "date": "2026-06-09",
-    "time": "18:00",
-    "end_time": "",
-    "location": "Amphithéâtre Maurice Halbwachs, Site Marcelin Berthelot",
-    "description": "Grand événement · Conférences « Préhistoire : entre utopie et réalité »",
-    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/conferences-prehistoire-entre-utopie-et-realite/la-prehistoire-de-la-science-la-fiction-150-ans-de-recits-et-images",
-    "speaker": "Catherine Schwab",
-    "source_type": "institution",
-    "lat": 48.8489,
-    "lng": 2.3446
-  },
-  {
     "id": "e5a01a8e1c08",
     "title": "Colloque",
     "institution": "Paris School of Economics",
@@ -1447,6 +1433,22 @@
     "lng": 2.3379
   },
   {
+    "id": "75defd25105f",
+    "title": "La Préhistoire, de la science à la fiction : 150 ans de récits et d’images",
+    "institution": "Collège de France",
+    "discipline": "Littérature",
+    "date": "2026-06-09",
+    "time": "18:00",
+    "end_time": "",
+    "location": "Amphithéâtre Maurice Halbwachs, Site Marcelin Berthelot",
+    "description": "Grand événement · Conférences « Préhistoire : entre utopie et réalité »",
+    "url": "https://www.college-de-france.fr/fr/agenda/grand-evenement/conferences-prehistoire-entre-utopie-et-realite/la-prehistoire-de-la-science-la-fiction-150-ans-de-recits-et-images",
+    "speaker": "Catherine Schwab",
+    "source_type": "institution",
+    "lat": 48.8489,
+    "lng": 2.3446
+  },
+  {
     "id": "3361ef0dcfe8",
     "title": "Champions & Founders by Experts Entreprendre & Pennylane",
     "institution": "Guillaume Allaux",
@@ -1461,7 +1463,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/event-covers/mj/a131d7c4-5a5c-4671-8bd0-256f9df678c7.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "fitness"
     ]
   },
   {
@@ -2842,44 +2845,6 @@
     "lng": 2.290513
   },
   {
-    "id": "b3e3c6f081af",
-    "title": "Build Your Webshop with Mollie & Codex",
-    "institution": "Boris",
-    "discipline": "Autre",
-    "date": "2026-06-11",
-    "time": "18:00",
-    "end_time": "",
-    "location": "Paris",
-    "description": "",
-    "url": "https://lu.ma/0ivqgaik",
-    "speaker": "",
-    "source_type": "luma",
-    "image": "https://images.lumacdn.com/uploads/fu/d49a499b-8a24-4df4-aa11-80d9ccac68be.png",
-    "luma_categories": [
-      "paris"
-    ]
-  },
-  {
-    "id": "60f68496afd0",
-    "title": "The Million Euro Evening: How to Speak, Position and Win High-Value Deals as a Top 1% Expert",
-    "institution": "Faith Chang",
-    "discipline": "Autre",
-    "date": "2026-06-11",
-    "time": "18:00",
-    "end_time": "",
-    "location": "18 Rue de la Fontaine au Roi, 75011 Paris, France",
-    "description": "",
-    "url": "https://lu.ma/1tgrtf7q",
-    "speaker": "",
-    "source_type": "luma",
-    "image": "https://images.lumacdn.com/uploads/bl/0b3eaeeb-c297-47dc-963f-eb2339b27aa3.png",
-    "luma_categories": [
-      "paris"
-    ],
-    "lat": 48.868195,
-    "lng": 2.370587
-  },
-  {
     "id": "3519e495788d",
     "title": "Nice - Nice -Pique Nique de fin d'année-11-06-2026 - 11-06-2026",
     "institution": "Article 1",
@@ -2908,6 +2873,45 @@
     "speaker": "",
     "source_type": "association",
     "image": "https://article1.my.salesforce-sites.com/resource/1756192419000/event_autres?"
+  },
+  {
+    "id": "b3e3c6f081af",
+    "title": "Build Your Webshop with Mollie & Codex",
+    "institution": "Boris",
+    "discipline": "Autre",
+    "date": "2026-06-11",
+    "time": "18:00",
+    "end_time": "",
+    "location": "Paris",
+    "description": "",
+    "url": "https://lu.ma/0ivqgaik",
+    "speaker": "",
+    "source_type": "luma",
+    "image": "https://images.lumacdn.com/uploads/fu/d49a499b-8a24-4df4-aa11-80d9ccac68be.png",
+    "luma_categories": [
+      "paris",
+      "ai"
+    ]
+  },
+  {
+    "id": "60f68496afd0",
+    "title": "The Million Euro Evening: How to Speak, Position and Win High-Value Deals as a Top 1% Expert",
+    "institution": "Faith Chang",
+    "discipline": "Autre",
+    "date": "2026-06-11",
+    "time": "18:00",
+    "end_time": "",
+    "location": "18 Rue de la Fontaine au Roi, 75011 Paris, France",
+    "description": "",
+    "url": "https://lu.ma/1tgrtf7q",
+    "speaker": "",
+    "source_type": "luma",
+    "image": "https://images.lumacdn.com/uploads/bl/0b3eaeeb-c297-47dc-963f-eb2339b27aa3.png",
+    "luma_categories": [
+      "paris"
+    ],
+    "lat": 48.868195,
+    "lng": 2.370587
   },
   {
     "id": "7d7a5960739f",
@@ -3365,6 +3369,24 @@
     "lng": 2.330662
   },
   {
+    "id": "061c56687f3c",
+    "title": "Intelligence artificielle de défense : quels usages opérationnels ?",
+    "institution": "INAS",
+    "discipline": "Sciences",
+    "date": "2026-06-12",
+    "time": "19:00",
+    "end_time": "",
+    "location": "Mairie du 17ᵉ arrondissement de Paris, 16-20 Rue des Batignolles, 75017 Paris, France",
+    "description": "",
+    "url": "https://lu.ma/srlc8hd3",
+    "speaker": "",
+    "source_type": "luma",
+    "image": "https://images.lumacdn.com/uploads/ye/538cc89c-0165-42f4-9840-43a6a6dac6c9.png",
+    "luma_categories": [
+      "ai"
+    ]
+  },
+  {
     "id": "9f52893d477a",
     "title": "SOI35 x Enzo Calvo : Night 1",
     "institution": "SOI35 .",
@@ -3492,7 +3514,9 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/i2/949829e9-e447-448c-8666-9d49e9c5accb.jpg",
     "luma_categories": [
-      "paris"
+      "paris",
+      "tech",
+      "arts"
     ]
   },
   {
@@ -3949,22 +3973,6 @@
     "lng": 2.3437
   },
   {
-    "id": "9e5c9ed7d747",
-    "title": "Pour une vision (plus) émique de l'art égyptien : Kunstwollen et choix esthétiques",
-    "institution": "Collège de France",
-    "discipline": "Autre",
-    "date": "2026-06-15",
-    "time": "14:00",
-    "end_time": "",
-    "location": "Amphithéâtre Guillaume Budé, Site Marcelin Berthelot",
-    "description": "Conférencier invité · Propos sur l'art égyptien et ses artistes",
-    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-art-egyptien-et-ses-artistes/pour-une-vision-plus-emique-de-art-egyptien-kunstwollen-et-choix-esthetiques",
-    "speaker": "Dimitri Laboury",
-    "source_type": "institution",
-    "lat": 48.8489,
-    "lng": 2.3446
-  },
-  {
     "id": "b4c2ea47b748",
     "title": "Réunions d'information \"Reprise d'études\"",
     "institution": "EHESS",
@@ -3995,6 +4003,42 @@
     "source_type": "institution",
     "lat": 48.8216,
     "lng": 2.3379
+  },
+  {
+    "id": "9e5c9ed7d747",
+    "title": "Pour une vision (plus) émique de l'art égyptien : Kunstwollen et choix esthétiques",
+    "institution": "Collège de France",
+    "discipline": "Autre",
+    "date": "2026-06-15",
+    "time": "14:00",
+    "end_time": "",
+    "location": "Amphithéâtre Guillaume Budé, Site Marcelin Berthelot",
+    "description": "Conférencier invité · Propos sur l'art égyptien et ses artistes",
+    "url": "https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-art-egyptien-et-ses-artistes/pour-une-vision-plus-emique-de-art-egyptien-kunstwollen-et-choix-esthetiques",
+    "speaker": "Dimitri Laboury",
+    "source_type": "institution",
+    "lat": 48.8489,
+    "lng": 2.3446
+  },
+  {
+    "id": "ea94de5718fd",
+    "title": "Culinary Experience",
+    "institution": "ONDA MOOVE",
+    "discipline": "Autre",
+    "date": "2026-06-15",
+    "time": "17:00",
+    "end_time": "",
+    "location": "11 Imp. Reille, 75014 Paris, France",
+    "description": "",
+    "url": "https://lu.ma/1773e73q",
+    "speaker": "",
+    "source_type": "luma",
+    "image": "https://images.lumacdn.com/uploads/lv/8957ec61-fa3e-4e54-b24a-a433ca6cb631.jpg",
+    "luma_categories": [
+      "food"
+    ],
+    "lat": 48.826139,
+    "lng": 2.339581
   },
   {
     "id": "e0396e84ffe7",
@@ -4528,7 +4572,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/ke/2d4d4ca3-288c-4da4-9f24-da2a0a3749fd.jpg",
     "luma_categories": [
-      "paris"
+      "paris",
+      "arts"
     ]
   },
   {
@@ -4602,6 +4647,24 @@
     "lng": 2.327
   },
   {
+    "id": "69b85ea81c76",
+    "title": "🥂 Summer Party InSpek",
+    "institution": "InSpek",
+    "discipline": "Autre",
+    "date": "2026-06-16",
+    "time": "18:00",
+    "end_time": "",
+    "location": "DocCity Suresnes, 5 Rue Gardenat Lapostol, 92150 Suresnes, France",
+    "description": "",
+    "url": "https://lu.ma/rek89y82",
+    "speaker": "",
+    "source_type": "luma",
+    "image": "https://images.lumacdn.com/uploads/j7/0a1b7571-6b15-41c4-9a6f-4076594f23d7.png",
+    "luma_categories": [
+      "tech"
+    ]
+  },
+  {
     "id": "877323282151",
     "title": "Defense innovations / Defense Demo Day",
     "institution": "Dmytro Kuzmenko",
@@ -4653,24 +4716,6 @@
     "speaker": "",
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/ok/d6315968-c1ea-4b9d-80fd-a1929f872f5a.png",
-    "luma_categories": [
-      "tech"
-    ]
-  },
-  {
-    "id": "69b85ea81c76",
-    "title": "🥂 Summer Party InSpek",
-    "institution": "InSpek",
-    "discipline": "Autre",
-    "date": "2026-06-16",
-    "time": "18:00",
-    "end_time": "",
-    "location": "DocCity Suresnes, 5 Rue Gardenat Lapostol, 92150 Suresnes, France",
-    "description": "",
-    "url": "https://lu.ma/rek89y82",
-    "speaker": "",
-    "source_type": "luma",
-    "image": "https://images.lumacdn.com/uploads/j7/0a1b7571-6b15-41c4-9a6f-4076594f23d7.png",
     "luma_categories": [
       "tech"
     ]
@@ -5273,7 +5318,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/dh/46454d86-7262-4865-9d7e-b15d5544715f.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "tech"
     ]
   },
   {
@@ -5295,6 +5341,21 @@
     ]
   },
   {
+    "id": "293db6713c0c",
+    "title": "Paris - Soirée des métiers de l'Audit et du Conseil - 17-06-2026",
+    "institution": "Article 1",
+    "discipline": "Autre",
+    "date": "2026-06-17",
+    "time": "18:00",
+    "end_time": "21:00",
+    "location": "Paris",
+    "description": "Venez rencontrer les professionnels du secteur autour d’une table ronde et d’un networking accompagné d’un cocktail ! Vous aurez l’occasion de poser toutes vos questions aux professionnels de l'Audit et du Conseil ! 🚀",
+    "url": "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune",
+    "speaker": "",
+    "source_type": "association",
+    "image": "https://article1.my.salesforce-sites.com/resource/1756192419000/event_autres?"
+  },
+  {
     "id": "cbd4832aef32",
     "title": "Les femmes préhistoriques et la chasse",
     "institution": "Collège de France",
@@ -5309,21 +5370,6 @@
     "source_type": "institution",
     "lat": 48.8489,
     "lng": 2.3446
-  },
-  {
-    "id": "293db6713c0c",
-    "title": "Paris - Soirée des métiers de l'Audit et du Conseil - 17-06-2026",
-    "institution": "Article 1",
-    "discipline": "Autre",
-    "date": "2026-06-17",
-    "time": "18:00",
-    "end_time": "21:00",
-    "location": "Paris",
-    "description": "Venez rencontrer les professionnels du secteur autour d’une table ronde et d’un networking accompagné d’un cocktail ! Vous aurez l’occasion de poser toutes vos questions aux professionnels de l'Audit et du Conseil ! 🚀",
-    "url": "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune",
-    "speaker": "",
-    "source_type": "association",
-    "image": "https://article1.my.salesforce-sites.com/resource/1756192419000/event_autres?"
   },
   {
     "id": "87f5d1bc1395",
@@ -5378,7 +5424,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/1d/f88ca973-eed1-40ea-a604-b8ff3fa04797.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "ai"
     ],
     "lat": 48.879167,
     "lng": 2.331747
@@ -5659,7 +5706,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/se/9e5c6e29-a7ba-4e75-8e24-2eb4bfcfd2f4.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "ai"
     ]
   },
   {
@@ -5677,7 +5725,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/i4/f18a55dc-7f59-4251-8839-c605ad5f2a46.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "tech"
     ]
   },
   {
@@ -6064,6 +6113,21 @@
     ]
   },
   {
+    "id": "778b423c7979",
+    "title": "- Temps d'échange Mentors ✨ - 18-06-2026",
+    "institution": "Article 1",
+    "discipline": "Autre",
+    "date": "2026-06-18",
+    "time": "18:30",
+    "end_time": "21:30",
+    "location": "Ile-de-France",
+    "description": "Nous vous invitons à un moment convivial entre mentors le 18 juin 2026 à 18h30, à l'Ascenseur à Bastille.",
+    "url": "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune",
+    "speaker": "",
+    "source_type": "association",
+    "image": "https://article1.my.salesforce-sites.com/resource/1756192419000/event_autres?"
+  },
+  {
     "id": "ae83ec9a389d",
     "title": "PARIS DEFENCE DRINKS No.2",
     "institution": "Alex Flamant",
@@ -6078,7 +6142,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/et/31597536-0473-48fe-b1ef-e3e3af38e8a7.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "tech"
     ],
     "lat": 48.862959,
     "lng": 2.354276
@@ -6098,7 +6163,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/event-covers/gl/99ec75a2-508b-49f6-9edb-3b2427f4a104.jpg",
     "luma_categories": [
-      "paris"
+      "paris",
+      "arts"
     ]
   },
   {
@@ -6116,23 +6182,27 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/5t/6a77de85-e6f7-4990-a7b6-b95cb6c5c4b8.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "tech"
     ]
   },
   {
-    "id": "778b423c7979",
-    "title": "- Temps d'échange Mentors ✨ - 18-06-2026",
-    "institution": "Article 1",
+    "id": "f87fff505b81",
+    "title": "Lancement de l'antenne DMH Onco",
+    "institution": "Lefebvre Antoine",
     "discipline": "Autre",
     "date": "2026-06-18",
     "time": "18:30",
-    "end_time": "21:30",
-    "location": "Ile-de-France",
-    "description": "Nous vous invitons à un moment convivial entre mentors le 18 juin 2026 à 18h30, à l'Ascenseur à Bastille.",
-    "url": "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune",
+    "end_time": "",
+    "location": "PariSanté Campus, 2 - 10 Rue d'Oradour-sur-Glane, 75015 Paris, France",
+    "description": "",
+    "url": "https://lu.ma/44y92qz6",
     "speaker": "",
-    "source_type": "association",
-    "image": "https://article1.my.salesforce-sites.com/resource/1756192419000/event_autres?"
+    "source_type": "luma",
+    "image": "https://images.lumacdn.com/event-covers/90/e5e3b22a-3970-4a3b-9ce4-0c03bbccf8d7.png",
+    "luma_categories": [
+      "tech"
+    ]
   },
   {
     "id": "71e640d72a55",
@@ -6153,24 +6223,6 @@
     ],
     "lat": 48.875826,
     "lng": 2.338505
-  },
-  {
-    "id": "f87fff505b81",
-    "title": "Lancement de l'antenne DMH Onco",
-    "institution": "Lefebvre Antoine",
-    "discipline": "Autre",
-    "date": "2026-06-18",
-    "time": "18:30",
-    "end_time": "",
-    "location": "PariSanté Campus, 2 - 10 Rue d'Oradour-sur-Glane, 75015 Paris, France",
-    "description": "",
-    "url": "https://lu.ma/44y92qz6",
-    "speaker": "",
-    "source_type": "luma",
-    "image": "https://images.lumacdn.com/event-covers/90/e5e3b22a-3970-4a3b-9ce4-0c03bbccf8d7.png",
-    "luma_categories": [
-      "tech"
-    ]
   },
   {
     "id": "3e91f8e6653a",
@@ -6241,7 +6293,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/fv/4bd61c35-6166-49cc-8a92-424621f05542.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "ai"
     ]
   },
   {
@@ -6591,7 +6644,10 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/9y/12f51c84-c703-4645-9a47-f0c79005507c.jpg",
     "luma_categories": [
-      "paris"
+      "paris",
+      "tech",
+      "arts",
+      "climate"
     ]
   },
   {
@@ -6609,7 +6665,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/ni/eb22c59d-dc1d-4a20-a9ac-9e992588010f.jpg",
     "luma_categories": [
-      "paris"
+      "paris",
+      "tech"
     ],
     "lat": 48.86257,
     "lng": 2.35772
@@ -8072,7 +8129,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/07/0f5f0f39-5f5e-49ea-acbf-83d5eafe5dec.jpg",
     "luma_categories": [
-      "paris"
+      "paris",
+      "arts"
     ],
     "lat": 48.867402,
     "lng": 2.359
@@ -9146,7 +9204,8 @@
     "source_type": "luma",
     "image": "https://images.lumacdn.com/uploads/4l/02b86d5f-3559-45fa-ac7c-6701e41233fb.png",
     "luma_categories": [
-      "paris"
+      "paris",
+      "wellness"
     ]
   },
   {
@@ -9256,6 +9315,26 @@
     "luma_categories": [
       "arts"
     ]
+  },
+  {
+    "id": "ace4212054b1",
+    "title": "Soirée d'été Graneet",
+    "institution": "Graneet",
+    "discipline": "Autre",
+    "date": "2026-07-08",
+    "time": "19:00",
+    "end_time": "",
+    "location": "3 Rue Portefoin, 75003 Paris, France",
+    "description": "",
+    "url": "https://lu.ma/59wgqpr1",
+    "speaker": "",
+    "source_type": "luma",
+    "image": "https://images.lumacdn.com/uploads/81/ae748263-5dd7-4aee-bf30-e0483aaf1395.png",
+    "luma_categories": [
+      "tech"
+    ],
+    "lat": 48.863482,
+    "lng": 2.360182
   },
   {
     "id": "f318eb855053",
