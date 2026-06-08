@@ -3,7 +3,7 @@
 Un site qui rassemble les conférences et séminaires académiques de Paris sur
 une seule page, mis à jour chaque jour.
 
-- Site : https://kovarci.github.io/zzzz
+- Site : https://kovarci.github.io/zzzz ou https://lotent.fr
 - Dépôt : https://github.com/kovarci/zzzz
 
 ## Fonctionnement
