@@ -117,6 +117,15 @@ def main():
     scrape.write_ics(merged)
     out.write_text(json.dumps(merged, ensure_ascii=False, indent=2),
                    encoding="utf-8")
+    try:
+        try:
+            arch = json.loads(scrape.ARCHIVE_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            arch = []
+        scrape.write_event_pages(merged + arch)
+        scrape.build_digest(merged)
+    except Exception as e:
+        print(f"[!] pages/digest : {type(e).__name__}: {e}")
     scrape.update_meta("last_manual_run")
 
     print(f"\nAprès : {len(merged)} événements "

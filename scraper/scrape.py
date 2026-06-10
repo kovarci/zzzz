@@ -246,7 +246,8 @@ def parse_date(s):
 _JUNK_TITLE = re.compile(
     r"^\s*(acc[eè]s rapides?|aujourd'?hui|cette semaine|ce mois|cette ann[eé]e|"
     r"agenda|programme|calendrier|r[eé]sultats?|tous les|voir tout|voir plus|"
-    r"filtrer|prochains? [eé]v[eé]nements?|[aà] venir|en ce moment|menu|"
+    r"filtrer|affiner( par)?|trier( par)?|recherche[rz]?|"
+    r"prochains? [eé]v[eé]nements?|[aà] venir|en ce moment|menu|"
     r"newsletter|cookies?|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|"
     r"\d{1,2}\s+\w+\s+\d{4})\s*$",
     re.I,
@@ -1651,6 +1652,170 @@ def write_ics(events):
         print(f"[WARN] ics write: {e}")
 
 
+SITE_URL = "https://lotent.fr"
+EVENT_PAGES_DIR = OUTPUT_FILE.parent.parent / "e"
+DIGEST_FILE = OUTPUT_FILE.parent / "digest.json"
+RSS_FILE = OUTPUT_FILE.parent / "digest.xml"
+
+_MONTHS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+              "août", "septembre", "octobre", "novembre", "décembre"]
+
+
+def _esc_attr(s) -> str:
+    import html as _html
+    return _html.escape(str(s or ""), quote=True)
+
+
+def _date_fr(iso: str) -> str:
+    try:
+        d = datetime.strptime(iso, "%Y-%m-%d")
+        return f"{d.day} {_MONTHS_FR[d.month - 1]} {d.year}"
+    except Exception:
+        return iso
+
+
+def write_event_pages(events):
+    """One tiny static page per event (e/<id>.html) carrying its own Open
+    Graph tags, so a shared event link unfurls with the event's title and
+    details on WhatsApp/Discord/Twitter. Browsers are instantly redirected
+    to the app with the event modal open (GitHub Pages is static, so this
+    prerendering is the only way to get per-event link previews)."""
+    EVENT_PAGES_DIR.mkdir(exist_ok=True)
+    keep = set()
+    for ev in events:
+        eid = ev.get("id") or ""
+        if not re.fullmatch(r"[0-9a-f]{12}", eid):
+            continue
+        if f"{eid}.html" in keep:
+            continue
+        keep.add(f"{eid}.html")
+        title = _esc_attr(ev.get("title"))
+        desc = _date_fr(ev.get("date", ""))
+        if ev.get("time"):
+            desc += f" à {ev['time']}"
+        desc += f" — {ev.get('institution', '')}"
+        if ev.get("location"):
+            desc += f" · {ev['location']}"
+        desc = _esc_attr(desc)
+        img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
+        target = f"../index.html?event={eid}"
+        page = f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>{title}</title>
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:type" content="event">
+<meta property="og:url" content="{SITE_URL}/e/{eid}.html">
+<meta property="og:image" content="{img}">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{img}">
+<meta name="description" content="{desc}">
+<meta http-equiv="refresh" content="0;url={target}">
+<script>location.replace("{target}");</script>
+</head>
+<body>
+<p>Redirection vers <a href="{target}">l'événement</a>…</p>
+</body>
+</html>
+"""
+        try:
+            (EVENT_PAGES_DIR / f"{eid}.html").write_text(page, encoding="utf-8")
+        except Exception as e:
+            print(f"[WARN] event page {eid}: {e}")
+    removed = 0
+    for f in EVENT_PAGES_DIR.glob("*.html"):
+        if f.name not in keep:
+            try:
+                f.unlink()
+                removed += 1
+            except Exception:
+                pass
+    print(f"Pages événement : {len(keep)} générées · {removed} obsolètes supprimées")
+
+
+# Mots-clés qui signalent un événement marquant (gros invité, leçon rare…)
+_DIGEST_KW = re.compile(
+    r"nobel|fields|médaille|ancien(?:ne)? (?:premier )?ministre|ambassad|"
+    r"président|prix\b|inaugural|leçon (?:inaugurale|de clôture)|"
+    r"académie|colloque international", re.I)
+_DIGEST_WEIGHT = {
+    "Collège de France": 3, "Sciences et Cultures": 2.5, "ENS Paris": 2,
+    "EHESS": 1.5, "Sciences Po": 1.5, "Sorbonne Université": 1.5,
+    "Institut Henri Poincaré": 1, "Paris School of Economics": 1,
+    "Université PSL": 1, "Article 1": 1,
+}
+
+
+def build_digest(events):
+    """Pick the ~10 'immanquables' of the next 7 days and write
+    data/digest.json (for the site's strip) + data/digest.xml (RSS feed).
+    Heuristic: institution weight + headline keywords + has speaker/time,
+    capped at 2 events per institution for variety."""
+    end = TODAY + timedelta(days=7)
+    pool = [e for e in events
+            if TODAY.isoformat() <= e.get("date", "") <= end.isoformat()
+            and not is_junk_title(e.get("title", ""))]
+
+    def score(e):
+        s = _DIGEST_WEIGHT.get(e.get("institution"), 0.5)
+        if _DIGEST_KW.search(f"{e.get('title', '')} {e.get('description', '')} {e.get('speaker', '')}"):
+            s += 3
+        if e.get("speaker"):
+            s += 0.7
+        if e.get("time"):
+            s += 0.3
+        if e.get("source_type") == "luma":
+            s -= 1.5
+        return s
+
+    pool.sort(key=score, reverse=True)
+    picked, per_inst = [], {}
+    for e in pool:
+        inst = e.get("institution")
+        if per_inst.get(inst, 0) >= 2:
+            continue
+        picked.append(e)
+        per_inst[inst] = per_inst.get(inst, 0) + 1
+        if len(picked) >= 10:
+            break
+    picked.sort(key=lambda e: (e["date"], e.get("time", "")))
+
+    period = f"du {_date_fr(TODAY.isoformat())} au {_date_fr(end.isoformat())}"
+    try:
+        DIGEST_FILE.write_text(json.dumps(
+            {"generated": TODAY.isoformat(), "period": period, "events": picked},
+            ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception as e:
+        print(f"[WARN] digest write: {e}")
+
+    items = []
+    for e in picked:
+        link = f"{SITE_URL}/e/{e['id']}.html"
+        d = _date_fr(e.get("date", "")) + (f" à {e['time']}" if e.get("time") else "")
+        items.append(
+            f"<item><title>{_esc_attr(e['title'])}</title>"
+            f"<link>{link}</link><guid isPermaLink=\"true\">{link}</guid>"
+            f"<description>{_esc_attr(d + ' — ' + e.get('institution', '') + (' · ' + e['location'] if e.get('location') else ''))}</description>"
+            f"</item>")
+    rss = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+           "<rss version=\"2.0\"><channel>"
+           "<title>Paris Académique — les immanquables de la semaine</title>"
+           f"<link>{SITE_URL}</link>"
+           "<description>Les conférences à ne pas manquer cette semaine à Paris, sélection automatique.</description>"
+           "<language>fr</language>"
+           + "".join(items) + "</channel></rss>")
+    try:
+        RSS_FILE.write_text(rss, encoding="utf-8")
+    except Exception as e:
+        print(f"[WARN] rss write: {e}")
+    print(f"Digest : {len(picked)} immanquables ({period})")
+
+
 def load_previous_events():
     """Read the events.json from the previous run (or [] if none)."""
     try:
@@ -1771,6 +1936,23 @@ def main():
         update_archive(prev_events)
     except Exception as e:
         print(f"[ERROR] archive: {e}")
+        traceback.print_exc()
+
+    # Per-event share pages (current + archived, so old shared links survive)
+    try:
+        try:
+            arch = json.loads(ARCHIVE_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            arch = []
+        write_event_pages(all_events + arch)
+    except Exception as e:
+        print(f"[ERROR] event pages: {e}")
+        traceback.print_exc()
+
+    try:
+        build_digest(all_events)
+    except Exception as e:
+        print(f"[ERROR] digest: {e}")
         traceback.print_exc()
 
     update_meta("last_workflow_run")

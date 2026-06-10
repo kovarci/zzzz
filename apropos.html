@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — Paris·Académique</title>
+  <meta name="description" content="Comment fonctionne Paris·Académique : les sources, la fréquence de mise à jour, la technique." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23a78bfa'/><stop offset='.5' stop-color='%2360a5fa'/><stop offset='1' stop-color='%23f472b6'/></linearGradient></defs><circle cx='16' cy='16' r='13' fill='url(%23g)'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#07070d; --text:#ececf2; --text-soft:#c2c2d0; --muted:#8888a0;
+      --border:rgba(255,255,255,0.09); --border-bright:rgba(255,255,255,0.2);
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); font-size:15.5px; line-height:1.75; min-height:100vh; }
+    .aurora { position:fixed; inset:0; z-index:-2; overflow:hidden; background:var(--bg); }
+    .blob { position:absolute; border-radius:50%; filter:blur(120px); opacity:.35; }
+    .b1 { width:44vw; height:44vw; background:#6d28d9; top:-14vw; left:-10vw; }
+    .b2 { width:36vw; height:36vw; background:#1d4ed8; bottom:-12vw; right:-10vw; }
+    nav { position:sticky; top:0; background:rgba(10,10,18,.6); backdrop-filter:blur(18px); border-bottom:1px solid var(--border); z-index:10; }
+    .nav-inner { max-width:760px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; gap:9px; color:var(--text); text-decoration:none; }
+    .logo-orb { width:15px; height:15px; border-radius:50%; background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6); }
+    .back { font-size:13.5px; color:var(--muted); text-decoration:none; border:1px solid var(--border); padding:7px 16px; border-radius:999px; transition:.2s; }
+    .back:hover { color:#fff; border-color:var(--border-bright); }
+    main { max-width:760px; margin:0 auto; padding:54px 24px 80px; }
+    h1 { font-family:"Space Grotesk",sans-serif; font-size:34px; margin-bottom:10px; }
+    .lede { color:var(--muted); margin-bottom:42px; font-size:16.5px; }
+    h2 { font-family:"Space Grotesk",sans-serif; font-size:20px; margin:38px 0 12px; }
+    p { color:var(--text-soft); margin-bottom:14px; }
+    a { color:#8ab4ff; }
+    table { width:100%; border-collapse:collapse; margin:14px 0 6px; font-size:14px; }
+    th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--border); color:var(--text-soft); }
+    th { color:var(--muted); font-weight:600; font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; }
+    code { background:rgba(255,255,255,.07); border-radius:6px; padding:2px 7px; font-size:13px; }
+    ul { margin:0 0 14px 20px; color:var(--text-soft); }
+    li { margin-bottom:6px; }
+    .note { font-size:13.5px; color:var(--muted); border-left:2px solid var(--border-bright); padding-left:14px; margin:18px 0; }
+  </style>
+</head>
+<body>
+<div class="aurora"><div class="blob b1"></div><div class="blob b2"></div></div>
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><span class="logo-orb"></span>Paris·Académique</a>
+    <a class="back" href="index.html">← Retour au calendrier</a>
+  </div>
+</nav>
+<main>
+  <h1>À propos</h1>
+  <p class="lede">Un seul endroit pour savoir ce qui se passe dans les amphis parisiens.</p>
+
+  <h2>Le projet</h2>
+  <p>Les conférences, séminaires et colloques parisiens sont éparpillés sur une dizaine
+  de sites institutionnels, chacun avec son propre agenda, sa propre pagination, son
+  propre format. Beaucoup sont ouverts à tous — mais encore faut-il savoir qu'ils existent.</p>
+  <p>Ce site les rassemble en un calendrier unique, filtrable par discipline,
+  institution, date et format, avec une carte, un historique et un flux iCal
+  pour s'abonner depuis son agenda.</p>
+
+  <h2>Les sources</h2>
+  <table>
+    <tr><th>Source</th><th>Type</th></tr>
+    <tr><td>Collège de France</td><td>Institution</td></tr>
+    <tr><td>École normale supérieure (ENS)</td><td>Institution</td></tr>
+    <tr><td>EHESS</td><td>Institution</td></tr>
+    <tr><td>Institut Henri Poincaré</td><td>Institution</td></tr>
+    <tr><td>Paris School of Economics</td><td>Institution</td></tr>
+    <tr><td>Sciences Po</td><td>Institution</td></tr>
+    <tr><td>Sorbonne Université</td><td>Institution</td></tr>
+    <tr><td>Université PSL</td><td>Institution</td></tr>
+    <tr><td>Luma (événements parisiens : tech, IA, arts…)</td><td>Plateforme</td></tr>
+    <tr><td>Sciences et Cultures / Citoy.ENS</td><td>Association étudiante</td></tr>
+    <tr><td>Article 1</td><td>Association</td></tr>
+  </table>
+  <p class="note">Le classement par discipline est automatique (mots-clés) : il peut se
+  tromper. L'événement fait toujours foi sur le site de l'institution — cliquez sur une
+  carte pour y accéder.</p>
+
+  <h2>La mise à jour</h2>
+  <ul>
+    <li><strong>Chaque jour vers 6h</strong> : récupération automatique de toutes les sources.</li>
+    <li><strong>Chaque semaine</strong> : passage complémentaire pour les sources qui
+    bloquent les robots des data-centers (Collège de France, pages thématiques Luma).</li>
+    <li>Les événements passés sont conservés dans l'onglet <em>Historique</em> pendant un an.</li>
+  </ul>
+
+  <h2>La technique</h2>
+  <p>Site statique, sans tracker, sans compte, sans cookie tiers. Les données sont
+  collectées par un scraper Python (exécuté par GitHub Actions), publiées en JSON et
+  affichées par une page unique en JavaScript. Le tout est open source :
+  <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener">github.com/kovarci/zzzz</a>.</p>
+  <ul>
+    <li>Flux iCal global : <code>data/calendar.ics</code></li>
+    <li>Flux RSS des immanquables : <code>data/digest.xml</code></li>
+    <li>Données brutes : <code>data/events.json</code></li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Une source à suggérer, un bug à signaler ? Ouvrez une
+  <a href="https://github.com/kovarci/zzzz/issues" target="_blank" rel="noopener">issue GitHub</a>.
+  Projet maintenu par <a href="https://github.com/kovarci" target="_blank" rel="noopener">kovarci</a>.</p>
+</main>
+</body>
+</html>
