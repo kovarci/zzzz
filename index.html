@@ -54,6 +54,30 @@
     @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(6vw,-8vw) scale(1.2)} }
     .aurora::after { content:""; position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px); background-size:4px 4px; opacity:.5; }
 
+    /* Historique : ambiance sépia/ambre, comme une salle d'archives */
+    .blob { transition:background 1.2s ease; }
+    body.history-mode .blob.b1 { background:#92400e; }
+    body.history-mode .blob.b2 { background:#713f12; }
+    body.history-mode .blob.b3 { background:#7c2d12; }
+    body.history-mode .blob.b4 { background:#57534e; }
+    .month-select { appearance:none; -webkit-appearance:none; background:var(--glass); color:var(--text-soft); border:1px solid var(--border); border-radius:999px; padding:7px 30px 7px 14px; font:inherit; font-size:13px; cursor:pointer; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238888a0' fill='none' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 12px center; }
+    .month-select:hover { border-color:var(--border-bright); color:#fff; }
+    .month-select option { background:#15151f; color:#eee; }
+
+    /* Bouton + modal « événement aléatoire » */
+    .dice-overlay { position:fixed; inset:0; z-index:300; background:rgba(5,5,12,.68); backdrop-filter:blur(9px); -webkit-backdrop-filter:blur(9px); display:flex; align-items:center; justify-content:center; padding:20px; }
+    .dice-modal { width:min(560px,100%); max-height:88vh; overflow-y:auto; background:rgba(19,19,31,.96); border:1px solid var(--border-bright); border-radius:20px; padding:18px; box-shadow:0 30px 90px -20px rgba(0,0,0,.9); animation:diceIn .32s cubic-bezier(.2,.9,.3,1.2); }
+    @keyframes diceIn { from { transform:scale(.9) translateY(14px); opacity:0; } to { transform:scale(1) translateY(0); opacity:1; } }
+    .dice-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+    .dice-title { font-weight:700; font-size:15px; }
+    .dice-x { background:none; border:none; color:var(--muted); font-size:17px; cursor:pointer; padding:4px 8px; border-radius:8px; }
+    .dice-x:hover { color:#fff; background:rgba(255,255,255,.07); }
+    .dice-body .event-card { animation:none; }
+    .dice-foot { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:14px; }
+    .dice-hint { font-size:12px; color:var(--muted); }
+    #dice-reroll.rolling svg { animation:diceSpin .45s ease; }
+    @keyframes diceSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+
     .container { max-width:1240px; margin:0 auto; padding:0 24px; }
 
     nav.topbar { position:sticky; top:0; z-index:100; background:rgba(10,10,18,0.6); backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%); border-bottom:1px solid var(--border); }
@@ -295,6 +319,21 @@
     <div class="filter-label">Association</div>
     <div class="chips" id="assoc-chips"></div>
   </div>
+  <div class="filter-block" id="history-section" style="display:none">
+    <div class="filter-label">Source</div>
+    <div class="chips" id="history-source-chips">
+      <button class="chip active" data-hsource="all">Tout</button>
+      <button class="chip" data-hsource="institution">Universités</button>
+      <button class="chip" data-hsource="luma">Luma</button>
+      <button class="chip" data-hsource="association">Associations</button>
+    </div>
+    <div class="filter-label" style="margin-top:12px">Période</div>
+    <div class="chips">
+      <select id="history-month" class="month-select">
+        <option value="all">Toute la période</option>
+      </select>
+    </div>
+  </div>
 
   <div class="toolbar">
     <div class="results-text" id="results-text">—</div>
@@ -303,6 +342,17 @@
         <button class="view-btn active" data-view="list">Liste</button>
         <button class="view-btn" data-view="map">Carte</button>
       </div>
+      <button class="pill-btn dice-btn" id="dice-btn" title="Découvrir un événement au hasard (respecte les filtres actifs)">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+          <rect x="3" y="3" width="18" height="18" rx="4.5"/>
+          <circle cx="8.3" cy="8.3" r="1.35" fill="currentColor" stroke="none"/>
+          <circle cx="15.7" cy="8.3" r="1.35" fill="currentColor" stroke="none"/>
+          <circle cx="12" cy="12" r="1.35" fill="currentColor" stroke="none"/>
+          <circle cx="8.3" cy="15.7" r="1.35" fill="currentColor" stroke="none"/>
+          <circle cx="15.7" cy="15.7" r="1.35" fill="currentColor" stroke="none"/>
+        </svg>
+        Aléatoire
+      </button>
       <button class="pill-btn near-btn" id="near-btn">
         <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
           <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>
@@ -360,6 +410,28 @@
   </button>
 </div>
 
+<div class="dice-overlay" id="dice-overlay" style="display:none">
+  <div class="dice-modal">
+    <div class="dice-head">
+      <span class="dice-title">Découverte aléatoire</span>
+      <button class="dice-x" id="dice-close" aria-label="Fermer">✕</button>
+    </div>
+    <div class="dice-body" id="dice-body"></div>
+    <div class="dice-foot">
+      <span class="dice-hint" id="dice-hint"></span>
+      <button class="pill-btn" id="dice-reroll">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" width="15" height="15">
+          <rect x="3" y="3" width="18" height="18" rx="4.5"/>
+          <circle cx="8.3" cy="8.3" r="1.35" fill="currentColor" stroke="none"/>
+          <circle cx="15.7" cy="15.7" r="1.35" fill="currentColor" stroke="none"/>
+          <circle cx="12" cy="12" r="1.35" fill="currentColor" stroke="none"/>
+        </svg>
+        Relancer
+      </button>
+    </div>
+  </div>
+</div>
+
 <script>
 const DISC_COLORS = {
   "Mathématiques":"#60a5fa","Philosophie":"#a78bfa","Littérature":"#fb7185",
@@ -382,6 +454,7 @@ let activeDiscs = new Set(), activeInsts = new Set(), activeLumaCats = new Set()
 let searchQuery = "", dateFilter = "all", formatFilter = "all", showFavsOnly = false;
 let map = null, markerLayer = null, userPos = null, nearMode = false;
 let archive = [], archiveLoaded = false;
+let historySource = "all", historyMonth = "all", currentRandom = null;
 
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } catch (e) {}
@@ -466,6 +539,18 @@ async function ensureArchive() {
   archive.sort((a, b) => (b.date + (b.time||"")).localeCompare(a.date + (a.time||"")));
   archiveLoaded = true;
   document.getElementById("badge-history").textContent = archive.length;
+
+  // Populate the month selector with the months actually present
+  const MONTHS_FR = ["janvier","février","mars","avril","mai","juin",
+                     "juillet","août","septembre","octobre","novembre","décembre"];
+  const months = [...new Set(archive.map(e => (e.date||"").slice(0,7)))].filter(Boolean).sort().reverse();
+  const sel = document.getElementById("history-month");
+  sel.innerHTML = '<option value="all">Toute la période</option>' +
+    months.map(m => {
+      const [y, mo] = m.split("-");
+      return `<option value="${m}">${MONTHS_FR[+mo-1]} ${y}</option>`;
+    }).join("");
+  sel.value = historyMonth;
 }
 
 // ── Filters UI ───────────────────────────────────────────────────
@@ -624,9 +709,12 @@ function reflectUI() {
   document.querySelectorAll(".view-btn").forEach(b => b.classList.toggle("active", b.dataset.view === activeView));
   document.getElementById("fav-toggle").classList.toggle("active", showFavsOnly);
   const isHistory = activeSource === "history";
+  document.body.classList.toggle("history-mode", isHistory);
+  document.querySelectorAll("#history-source-chips .chip").forEach(c => c.classList.toggle("active", c.dataset.hsource === historySource));
   document.getElementById("institution-section").style.display = (activeSource === "luma" || activeSource === "association") ? "none" : "";
   document.getElementById("luma-theme-section").style.display = activeSource === "luma" ? "" : "none";
   document.getElementById("assoc-section").style.display = activeSource === "association" ? "" : "none";
+  document.getElementById("history-section").style.display = isHistory ? "" : "none";
   document.getElementById("date-chips").closest(".filter-block").style.display = isHistory ? "none" : "";
   document.getElementById("stats-bar").style.display = isHistory ? "none" : "";
   document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
@@ -671,10 +759,13 @@ function filtered() {
   const source = inHistory ? archive : allEvents;
   return source.filter(e => {
     if (showFavsOnly && !favs.has(e.id)) return false;
-    // Source tabs filter only when in future mode; "history" shows all sources.
     if (activeSource === "institution" && e.source_type !== "institution") return false;
     if (activeSource === "luma" && e.source_type !== "luma") return false;
     if (activeSource === "association" && e.source_type !== "association") return false;
+    if (inHistory) {
+      if (historySource !== "all" && e.source_type !== historySource) return false;
+      if (historyMonth !== "all" && !(e.date || "").startsWith(historyMonth)) return false;
+    }
     if (!inHistory && !inDateFilter(e)) return false;
     if (formatFilter === "online" && !isOnline(e)) return false;
     if (formatFilter === "inperson" && isOnline(e)) return false;
@@ -956,7 +1047,7 @@ document.getElementById("cal-pop").addEventListener("click", e => {
   const opt = e.target.closest(".cal-opt");
   if (!opt) return;
   const pop = document.getElementById("cal-pop");
-  const ev = allEvents.find(x => x.id === pop.dataset.id);
+  const ev = allEvents.find(x => x.id === pop.dataset.id) || archive.find(x => x.id === pop.dataset.id);
   if (ev) {
     if (opt.dataset.act === "google") window.open(googleUrl(ev), "_blank", "noopener");
     else downloadIcs(ev);
@@ -973,7 +1064,7 @@ document.getElementById("list-view").addEventListener("click", e => {
   const calBtn = e.target.closest(".cal-btn");
   if (calBtn) {
     e.preventDefault(); e.stopPropagation();
-    const ev = allEvents.find(x => x.id === calBtn.dataset.id);
+    const ev = allEvents.find(x => x.id === calBtn.dataset.id) || archive.find(x => x.id === calBtn.dataset.id);
     if (ev) openCalPopover(calBtn, ev);
     return;
   }
@@ -1000,6 +1091,8 @@ document.querySelectorAll(".tab").forEach(btn => {
     // (e.g. a "Collège de France" filter would show 0 events on the Luma tab).
     activeDiscs.clear(); activeInsts.clear(); activeLumaCats.clear(); activeAssocs.clear();
     dateFilter = "all"; formatFilter = "all";
+    historySource = "all"; historyMonth = "all";
+    const hm = document.getElementById("history-month"); if (hm) hm.value = "all";
     if (activeSource === "history") await ensureArchive();
     reflectUI();
     render();
@@ -1017,6 +1110,64 @@ function singleSelect(containerId, onPick) {
 }
 singleSelect("date-chips",   ds => { dateFilter = ds.date; });
 singleSelect("format-chips", ds => { formatFilter = ds.format; });
+singleSelect("history-source-chips", ds => { historySource = ds.hsource; });
+document.getElementById("history-month").addEventListener("change", e => {
+  historyMonth = e.target.value;
+  render();
+});
+
+// ── Événement aléatoire (dé) ─────────────────────────────────────
+function rollRandom() {
+  const pool = filtered();
+  const body = document.getElementById("dice-body");
+  const hint = document.getElementById("dice-hint");
+  if (!pool.length) {
+    currentRandom = null;
+    body.innerHTML = `<div class="no-results"><div class="big">Rien à tirer</div><div>Élargis tes filtres, puis relance le dé.</div></div>`;
+    hint.textContent = "0 événement dans la sélection";
+    return;
+  }
+  currentRandom = pool[Math.floor(Math.random() * pool.length)];
+  body.innerHTML = cardHtml(currentRandom, 0);
+  hint.textContent = `Tiré parmi ${pool.length} événement${pool.length > 1 ? "s" : ""} (filtres actifs)`;
+}
+document.getElementById("dice-btn").addEventListener("click", () => {
+  document.getElementById("dice-overlay").style.display = "flex";
+  rollRandom();
+});
+document.getElementById("dice-reroll").addEventListener("click", e => {
+  const b = e.currentTarget;
+  b.classList.remove("rolling"); void b.offsetWidth; b.classList.add("rolling");
+  rollRandom();
+});
+document.getElementById("dice-close").addEventListener("click", () => {
+  document.getElementById("dice-overlay").style.display = "none";
+});
+document.getElementById("dice-overlay").addEventListener("click", e => {
+  if (e.target === e.currentTarget) e.currentTarget.style.display = "none";
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") document.getElementById("dice-overlay").style.display = "none";
+});
+// Interactions dans la carte tirée (favori, agenda, ouverture)
+document.getElementById("dice-body").addEventListener("click", e => {
+  const calBtn = e.target.closest(".cal-btn");
+  if (calBtn && currentRandom) {
+    e.preventDefault(); e.stopPropagation();
+    openCalPopover(calBtn, currentRandom);
+    return;
+  }
+  const favBtn = e.target.closest(".fav-btn");
+  if (favBtn) {
+    e.preventDefault(); e.stopPropagation();
+    toggleFav(favBtn.dataset.id);
+    favBtn.classList.toggle("is-fav");
+    return;
+  }
+  const card = e.target.closest(".event-card");
+  if (card && card.dataset.url && card.dataset.url !== "#")
+    window.open(card.dataset.url, "_blank", "noopener");
+});
 
 document.getElementById("stats-bar").addEventListener("click", e => {
   const stat = e.target.closest(".stat");
