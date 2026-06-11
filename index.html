@@ -82,6 +82,12 @@
     #dice-reroll.rolling svg { animation:diceSpin .45s ease; }
     @keyframes diceSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
 
+    /* Nouveautés depuis la dernière visite */
+    .new-dot { width:8px; height:8px; border-radius:50%; background:#4ade80; box-shadow:0 0 9px #4ade80; animation:newPulse 2s ease-in-out infinite; }
+    @keyframes newPulse { 0%,100%{opacity:1} 50%{opacity:.45} }
+    .new-btn.active { color:#fff; border-color:#4ade80; background:rgba(74,222,128,.12); box-shadow:0 0 18px -6px #4ade80; }
+    .new-tag { font-size:9.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:#4ade80; border:1px solid rgba(74,222,128,.45); background:rgba(74,222,128,.1); padding:2px 8px; border-radius:999px; }
+
     /* Toast « lien copié » */
     .toast { position:fixed; bottom:26px; left:50%; transform:translateX(-50%) translateY(16px); z-index:400; background:rgba(22,22,36,.95); border:1px solid var(--border-bright); border-radius:12px; padding:10px 18px; font-size:13.5px; color:#fff; box-shadow:0 12px 40px -10px rgba(0,0,0,.8); opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; }
     .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
@@ -314,6 +320,7 @@
     <div class="filter-label">Quand</div>
     <div class="chips" id="date-chips">
       <button class="chip qchip active" data-date="all">Tout</button>
+      <button class="chip qchip" data-date="now">⏱ En ce moment</button>
       <button class="chip qchip" data-date="today">Aujourd'hui</button>
       <button class="chip qchip" data-date="week">Cette semaine</button>
       <button class="chip qchip" data-date="weekend">Ce week-end</button>
@@ -366,6 +373,10 @@
         <button class="view-btn active" data-view="list">Liste</button>
         <button class="view-btn" data-view="map">Carte</button>
       </div>
+      <button class="pill-btn new-btn" id="new-btn" style="display:none" title="Événements ajoutés depuis ta dernière visite">
+        <span class="new-dot"></span>
+        <span id="new-count">0</span> nouveaux
+      </button>
       <button class="pill-btn dice-btn" id="dice-btn" title="Découvrir un événement au hasard (respecte les filtres actifs)">
         <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
           <rect x="3" y="3" width="18" height="18" rx="4.5"/>
@@ -489,6 +500,7 @@ let searchQuery = "", dateFilter = "all", formatFilter = "all", showFavsOnly = f
 let map = null, markerLayer = null, userPos = null, nearMode = false;
 let archive = [], archiveLoaded = false;
 let historySource = "all", historyMonth = "all", currentRandom = null;
+let newIds = new Set(), showNewOnly = false;
 
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } catch (e) {}
@@ -539,6 +551,28 @@ async function loadMeta() {
 }
 setInterval(loadMeta, 60000);  // refresh tooltips every minute
 
+// ── Nouveautés depuis la dernière visite ─────────────────────────
+function detectNewEvents() {
+  try {
+    const seen = new Set(JSON.parse(localStorage.getItem("paf_seen") || "[]"));
+    if (seen.size) {
+      allEvents.forEach(e => { if (!seen.has(e.id)) newIds.add(e.id); });
+    }
+    // La visite actuelle devient la référence pour la prochaine
+    localStorage.setItem("paf_seen", JSON.stringify(allEvents.map(e => e.id)));
+  } catch (e) {}
+  const btn = document.getElementById("new-btn");
+  if (newIds.size) {
+    document.getElementById("new-count").textContent = newIds.size;
+    btn.style.display = "";
+  }
+}
+document.getElementById("new-btn").addEventListener("click", () => {
+  showNewOnly = !showNewOnly;
+  document.getElementById("new-btn").classList.toggle("active", showNewOnly);
+  render();
+});
+
 // ── Load ─────────────────────────────────────────────────────────
 async function loadEvents() {
   try {
@@ -548,6 +582,7 @@ async function loadEvents() {
     allEvents.sort((a,b) => (a.date + (a.time||"")).localeCompare(b.date + (b.time||"")));
     loadMeta();
     loadDigest();
+    detectNewEvents();
     buildFilters();
     await applyURL();
     reflectUI();
@@ -760,6 +795,7 @@ function reflectUI() {
   document.getElementById("history-section").style.display = isHistory ? "" : "none";
   document.getElementById("date-chips").closest(".filter-block").style.display = isHistory ? "none" : "";
   document.getElementById("stats-bar").style.display = isHistory ? "none" : "";
+  document.getElementById("new-btn").style.display = (newIds.size && !isHistory) ? "" : "none";
   document.getElementById("digest-strip").style.display =
     (digestLoaded && activeSource === "all" && activeView === "list") ? "" : "none";
   document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
@@ -773,6 +809,20 @@ function isoOf(d) {
 function inDateFilter(ev) {
   if (dateFilter === "all") return true;
   const today = new Date(); today.setHours(0,0,0,0);
+  if (dateFilter === "now") {
+    // En cours, ou qui commence dans l'heure (durée par défaut : 2 h)
+    if (ev.date !== isoOf(today) || !ev.time) return false;
+    const now = new Date();
+    const cur = now.getHours() * 60 + now.getMinutes();
+    const [h, m] = ev.time.split(":").map(Number);
+    const start = h * 60 + (m || 0);
+    let end = start + 120;
+    if (ev.end_time && /^\d{1,2}:\d{2}/.test(ev.end_time)) {
+      const [eh, em] = ev.end_time.split(":").map(Number);
+      end = eh * 60 + (em || 0);
+    }
+    return start <= cur + 60 && end >= cur;
+  }
   if (dateFilter === "today") return ev.date === isoOf(today);
   if (dateFilter === "week") {
     const end = new Date(today);
@@ -798,12 +848,18 @@ function fmtDist(km) {
   return km < 1 ? Math.round(km*1000) + " m" : km.toFixed(1).replace(".", ",") + " km";
 }
 
+// Recherche tolérante : sans accents ni casse ("poincare" trouve Poincaré),
+// et chaque mot tapé doit se trouver quelque part (titre, intervenant, etc.)
+function fold(s) {
+  return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
 function filtered() {
-  const q = searchQuery.toLowerCase().trim();
+  const qWords = fold(searchQuery.trim()).split(/\s+/).filter(Boolean);
   const inHistory = activeSource === "history";
   const source = inHistory ? archive : allEvents;
   return source.filter(e => {
     if (showFavsOnly && !favs.has(e.id)) return false;
+    if (showNewOnly && !newIds.has(e.id)) return false;
     if (activeSource === "institution" && e.source_type !== "institution") return false;
     if (activeSource === "luma" && e.source_type !== "luma") return false;
     if (activeSource === "association" && e.source_type !== "association") return false;
@@ -818,9 +874,10 @@ function filtered() {
     if (activeInsts.size && !activeInsts.has(e.institution)) return false;
     if (activeLumaCats.size && !(e.luma_categories||[]).some(c => activeLumaCats.has(c))) return false;
     if (activeAssocs.size && !activeAssocs.has(e.institution)) return false;
-    if (q) {
-      const hay = (e.title+" "+e.speaker+" "+e.description+" "+e.institution).toLowerCase();
-      if (!hay.includes(q)) return false;
+    if (qWords.length) {
+      const hay = fold(e.title + " " + e.speaker + " " + e.description + " "
+                       + e.institution + " " + (e.location || ""));
+      if (!qWords.every(w => hay.includes(w))) return false;
     }
     return true;
   });
@@ -924,7 +981,10 @@ function cardHtml(ev, idx) {
       ${image}
       <div class="card-top">
         <span class="card-time">${escHtml(time)}</span>
-        <span class="disc-tag">${escHtml(ev.discipline)}</span>
+        <span style="display:flex;gap:6px;align-items:center">
+          ${newIds.has(ev.id) ? '<span class="new-tag">nouveau</span>' : ""}
+          <span class="disc-tag">${escHtml(ev.discipline)}</span>
+        </span>
       </div>
       <div class="card-title">${escHtml(ev.title)}</div>
       <div class="card-meta">
@@ -1144,6 +1204,8 @@ document.querySelectorAll(".tab").forEach(btn => {
     activeDiscs.clear(); activeInsts.clear(); activeLumaCats.clear(); activeAssocs.clear();
     dateFilter = "all"; formatFilter = "all";
     historySource = "all"; historyMonth = "all";
+    showNewOnly = false;
+    document.getElementById("new-btn").classList.remove("active");
     const hm = document.getElementById("history-month"); if (hm) hm.value = "all";
     if (activeSource === "history") await ensureArchive();
     reflectUI();
