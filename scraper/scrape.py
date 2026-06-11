@@ -1718,6 +1718,46 @@ def _date_fr(iso: str) -> str:
         return iso
 
 
+def _event_jsonld(ev):
+    """schema.org Event JSON-LD — feeds Google's rich results (date & venue
+    shown directly in search). Returns a JSON string with no HTML-unsafe
+    sequences (the closing '</' is split to be safe inside a <script> tag)."""
+    eid = ev["id"]
+    start = ev["date"] + (f"T{ev['time']}:00" if ev.get("time") else "")
+    data = {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": ev.get("title") or "",
+        "startDate": start,
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": ("https://schema.org/OnlineEventAttendanceMode"
+                                if ev.get("location") and ONLINE_RE.search(ev["location"])
+                                else "https://schema.org/OfflineEventAttendanceMode"),
+        "url": f"{SITE_URL}/e/{eid}.html",
+        "organizer": {"@type": "Organization", "name": ev.get("institution") or ""},
+    }
+    if ev.get("end_time"):
+        data["endDate"] = ev["date"] + f"T{ev['end_time']}:00"
+    if ev.get("location"):
+        data["location"] = {
+            "@type": "Place",
+            "name": ev["location"],
+            "address": {"@type": "PostalAddress",
+                        "addressLocality": "Paris", "addressCountry": "FR"},
+        }
+    if ev.get("description"):
+        data["description"] = ev["description"][:500]
+    if ev.get("image"):
+        data["image"] = ev["image"]
+    if ev.get("speaker"):
+        data["performer"] = {"@type": "Person", "name": ev["speaker"]}
+    return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+
+
+ONLINE_RE = re.compile(r"\b(online|en ligne|visio|distanciel|webinaire|webinar|"
+                       r"zoom|teams|à distance|hybride|streaming)\b", re.I)
+
+
 def write_event_pages(events):
     """One small static page per event (e/<id>.html): Open Graph tags for a
     proper link preview on WhatsApp/Discord/Twitter, plus REAL visible content
@@ -1745,6 +1785,7 @@ def write_event_pages(events):
         img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
         ext = _esc_attr(ev.get("url") or "")
         target = f"../index.html?event={eid}"
+        jsonld = _event_jsonld(ev)
         page = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -1763,6 +1804,7 @@ def write_event_pages(events):
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{meta_desc}">
 <meta name="twitter:image" content="{img}">
+<script type="application/ld+json">{jsonld}</script>
 <style>
 body{{font-family:Inter,system-ui,sans-serif;background:#07070d;color:#ececf2;margin:0;
 display:flex;align-items:center;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}}
