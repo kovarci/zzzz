@@ -1719,11 +1719,12 @@ def _date_fr(iso: str) -> str:
 
 
 def write_event_pages(events):
-    """One tiny static page per event (e/<id>.html) carrying its own Open
-    Graph tags, so a shared event link unfurls with the event's title and
-    details on WhatsApp/Discord/Twitter. Browsers are instantly redirected
-    to the app with the event modal open (GitHub Pages is static, so this
-    prerendering is the only way to get per-event link previews)."""
+    """One small static page per event (e/<id>.html): Open Graph tags for a
+    proper link preview on WhatsApp/Discord/Twitter, plus REAL visible content
+    (title, date, place, description, registration link) so Google can index
+    each conference individually — an instant redirect would be treated as a
+    redirect by crawlers and never indexed. A prominent button sends humans
+    to the calendar app with the event modal open."""
     EVENT_PAGES_DIR.mkdir(exist_ok=True)
     keep = set()
     for ev in events:
@@ -1734,36 +1735,63 @@ def write_event_pages(events):
             continue
         keep.add(f"{eid}.html")
         title = _esc_attr(ev.get("title"))
-        desc = _date_fr(ev.get("date", ""))
-        if ev.get("time"):
-            desc += f" à {ev['time']}"
-        desc += f" — {ev.get('institution', '')}"
-        if ev.get("location"):
-            desc += f" · {ev['location']}"
-        desc = _esc_attr(desc)
+        date_label = _date_fr(ev.get("date", "")) + (f" à {ev['time']}" if ev.get("time") else "")
+        inst = _esc_attr(ev.get("institution", ""))
+        loc = _esc_attr(ev.get("location", ""))
+        speaker = _esc_attr(ev.get("speaker", ""))
+        body_desc = _esc_attr(ev.get("description", ""))
+        meta_desc = _esc_attr(f"{date_label} — {ev.get('institution', '')}"
+                              + (f" · {ev['location']}" if ev.get("location") else ""))
         img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
+        ext = _esc_attr(ev.get("url") or "")
         target = f"../index.html?event={eid}"
         page = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>{title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title} — Paris·Académique</title>
+<link rel="canonical" href="{SITE_URL}/e/{eid}.html">
+<meta name="description" content="{meta_desc}">
 <meta property="og:title" content="{title}">
-<meta property="og:description" content="{desc}">
+<meta property="og:description" content="{meta_desc}">
 <meta property="og:type" content="event">
 <meta property="og:url" content="{SITE_URL}/e/{eid}.html">
 <meta property="og:image" content="{img}">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title}">
-<meta name="twitter:description" content="{desc}">
+<meta name="twitter:description" content="{meta_desc}">
 <meta name="twitter:image" content="{img}">
-<meta name="description" content="{desc}">
-<meta http-equiv="refresh" content="0;url={target}">
-<script>location.replace("{target}");</script>
+<style>
+body{{font-family:Inter,system-ui,sans-serif;background:#07070d;color:#ececf2;margin:0;
+display:flex;align-items:center;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}}
+.card{{max-width:540px;width:100%;background:linear-gradient(160deg,#1c1c2eb8,#11111db8);
+border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:26px}}
+.k{{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8888a0;margin-bottom:10px}}
+h1{{font-size:23px;line-height:1.3;margin:0 0 16px}}
+p{{color:#c2c2d0;font-size:14.5px;line-height:1.65;margin:6px 0}}
+.lbl{{color:#8888a0}}
+.btn{{display:block;text-align:center;margin-top:22px;padding:13px;border-radius:12px;font-weight:600;
+text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7dff)}}
+.ext{{display:block;text-align:center;margin-top:10px;font-size:13.5px;color:#8ab4ff}}
+.foot{{text-align:center;margin-top:18px;font-size:12px}}
+.foot a{{color:#8888a0}}
+</style>
 </head>
 <body>
-<p>Redirection vers <a href="{target}">l'événement</a>…</p>
+<main class="card">
+<div class="k">Conférence · Paris</div>
+<h1>{title}</h1>
+<p><span class="lbl">Quand :</span> {_esc_attr(date_label)}</p>
+<p><span class="lbl">Où :</span> {loc or 'Paris'}</p>
+<p><span class="lbl">Organisé par :</span> {inst}</p>
+{f'<p><span class="lbl">Intervenant :</span> {speaker}</p>' if speaker else ''}
+{f'<p>{body_desc}</p>' if body_desc else ''}
+<a class="btn" href="{target}">Voir dans le calendrier →</a>
+{f'<a class="ext" href="{ext}" rel="noopener">Page officielle / inscription ↗</a>' if ext else ''}
+<div class="foot"><a href="{SITE_URL}">Paris·Académique — toutes les conférences de Paris</a></div>
+</main>
 </body>
 </html>
 """
@@ -1780,6 +1808,33 @@ def write_event_pages(events):
             except Exception:
                 pass
     print(f"Pages événement : {len(keep)} générées · {removed} obsolètes supprimées")
+
+
+SITEMAP_FILE = OUTPUT_FILE.parent.parent / "sitemap.xml"
+
+
+def write_sitemap(events):
+    """sitemap.xml at the site root: home, about, and every event page.
+    Helps Google discover and index each conference individually."""
+    today = TODAY.isoformat()
+    urls = [f"<url><loc>{SITE_URL}/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq></url>",
+            f"<url><loc>{SITE_URL}/apropos.html</loc><changefreq>monthly</changefreq></url>"]
+    seen = set()
+    for ev in events:
+        eid = ev.get("id") or ""
+        if not re.fullmatch(r"[0-9a-f]{12}", eid) or eid in seen:
+            continue
+        seen.add(eid)
+        urls.append(f"<url><loc>{SITE_URL}/e/{eid}.html</loc>"
+                    f"<lastmod>{today}</lastmod></url>")
+    xml = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+           "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"
+           + "".join(urls) + "</urlset>")
+    try:
+        SITEMAP_FILE.write_text(xml, encoding="utf-8")
+        print(f"Sitemap : {len(urls)} URLs")
+    except Exception as e:
+        print(f"[WARN] sitemap: {e}")
 
 
 # Mots-clés qui signalent un événement marquant (gros invité, leçon rare…)
@@ -1986,13 +2041,19 @@ def main():
 
     # Per-event share pages (current + archived, so old shared links survive)
     try:
-        try:
-            arch = json.loads(ARCHIVE_FILE.read_text(encoding="utf-8"))
-        except Exception:
-            arch = []
+        arch = json.loads(ARCHIVE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        arch = []
+    try:
         write_event_pages(all_events + arch)
     except Exception as e:
         print(f"[ERROR] event pages: {e}")
+        traceback.print_exc()
+
+    try:
+        write_sitemap(all_events + arch)
+    except Exception as e:
+        print(f"[ERROR] sitemap: {e}")
         traceback.print_exc()
 
     try:

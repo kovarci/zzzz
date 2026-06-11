@@ -141,6 +141,10 @@
     .search-input { width:100%; padding:16px 18px 16px 50px; font-size:15px; font-family:inherit; color:var(--text); background:var(--glass); border:1px solid var(--border); border-radius:14px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); transition:border-color .2s,box-shadow .2s,background .2s; }
     .search-input::placeholder { color:var(--muted); }
     .search-input:focus { outline:none; border-color:rgba(167,139,250,.6); background:var(--glass-2); box-shadow:0 0 0 4px rgba(167,139,250,.12),0 0 40px rgba(109,40,217,.25); }
+    .search-suggest { position:absolute; top:calc(100% + 7px); left:0; right:0; z-index:60; background:rgba(19,19,31,.97); border:1px solid var(--border-bright); border-radius:13px; overflow:hidden; box-shadow:0 18px 50px -12px rgba(0,0,0,.85); text-align:left; }
+    .sg-item { display:flex; justify-content:space-between; align-items:center; gap:10px; width:100%; padding:10px 16px; background:none; border:none; color:var(--text-soft); font:inherit; font-size:13.5px; cursor:pointer; text-align:left; }
+    .sg-item:hover { background:rgba(255,255,255,.06); color:#fff; }
+    .sg-item .sg-kind { font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; white-space:nowrap; }
     .search-icon { position:absolute; left:18px; top:50%; transform:translateY(-50%); width:18px; height:18px; color:var(--muted); pointer-events:none; }
 
     /* Stats bar */
@@ -284,7 +288,8 @@
   <div class="topbar-inner">
     <div class="logo"><span class="logo-orb"></span>Paris·Académique</div>
     <div class="meta-group">
-      <a class="about-link" href="apropos.html">À propos</a>
+      <button class="about-link" id="lang-btn" title="Switch language" style="border:1px solid var(--border);background:none;cursor:pointer;font-family:inherit">EN</button>
+      <a class="about-link" id="about-link" href="apropos.html">À propos</a>
       <div class="meta-pill" id="meta-auto" title="—">
         <span class="meta-label">Auto</span>
         <span class="meta-sep">·</span>
@@ -310,8 +315,9 @@
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
     </svg>
-    <input class="search-input" id="search" type="search"
+    <input class="search-input" id="search" type="search" autocomplete="off"
            placeholder="Rechercher un titre, un intervenant, un sujet…" />
+    <div class="search-suggest" id="search-suggest" style="display:none"></div>
   </div>
   <div class="stats-bar" id="stats-bar"></div>
 </header>
@@ -451,14 +457,14 @@
 </main>
 
 <footer class="container">
-  <a class="subscribe-btn" href="webcal://kovarci.github.io/zzzz/data/calendar.ics">
+  <a class="subscribe-btn" href="webcal://lotent.fr/data/calendar.ics">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
     S'abonner au calendrier
   </a>
-  <div class="footer-note">
+  <div class="footer-note" id="footer-note">
     Un seul abonnement — tous les événements se synchronisent dans ton agenda, chaque jour.<br>
     Pour Google Agenda : « Autres agendas → À partir de l'URL » avec
-    <code>https://kovarci.github.io/zzzz/data/calendar.ics</code><br>
+    <code>https://lotent.fr/data/calendar.ics</code><br>
     <a href="apropos.html">À propos</a> · <a href="data/digest.xml">RSS des immanquables</a> · <a href="https://github.com/kovarci/zzzz" target="_blank">Code source</a>
   </div>
 </footer>
@@ -517,6 +523,97 @@ const ICONS = {
 };
 const ONLINE_RE = /\b(online|en ligne|visio|distanciel|webinaire|webinar|zoom|teams|à distance|hybride|streaming)\b/i;
 
+// ── i18n (FR par défaut dans le HTML ; EN appliqué par applyLang) ─
+let LANG = "fr";
+try { LANG = localStorage.getItem("paf_lang") || "fr"; } catch (e) {}
+const LOCALE = LANG === "en" ? "en-GB" : "fr-FR";
+const TR = {
+  result:        ["résultat", "result"],
+  results:       ["résultats", "results"],
+  tbaTime:       ["Horaire à confirmer", "Time TBC"],
+  openPage:      ["Ouvrir la page ↗", "Open the page ↗"],
+  online:        ["En ligne", "Online"],
+  newTag:        ["nouveau", "new"],
+  randomTitle:   ["Découverte aléatoire", "Random discovery"],
+  eventTitle:    ["Événement", "Event"],
+  nothingToRoll: ["Rien à tirer", "Nothing to draw"],
+  widenFilters:  ["Élargis tes filtres, puis relance le dé.", "Widen your filters, then roll again."],
+  zeroInSel:     ["0 événement dans la sélection", "0 events in the selection"],
+  drawnFrom:     ["Tiré parmi", "Drawn from"],
+  evts:          ["événement", "event"],
+  activeFilters: ["(filtres actifs)", "(active filters)"],
+  linkCopied:    ["Lien de l'événement copié ✓", "Event link copied ✓"],
+  notFound:      ["Événement introuvable — il est peut-être terminé.", "Event not found — it may be over."],
+  noFavs:        ["Aucun favori", "No favourites"],
+  noFavsSub:     ["Cliquez sur l'étoile d'un événement pour le sauvegarder ici.", "Click an event's star to save it here."],
+  noResults:     ["Aucune conférence trouvée", "No conferences found"],
+  noResultsSub:  ["Essayez de retirer un filtre ou de modifier votre recherche.", "Try removing a filter or changing your search."],
+  loadError:     ["Erreur de chargement", "Loading error"],
+  today:         ["aujourd'hui", "today"],
+  thisWeek:      ["cette semaine", "this week"],
+  thisWeekend:   ["ce week-end", "this weekend"],
+  upcoming:      ["à venir · lien de cette page partageable", "upcoming · this page's link is shareable"],
+  wholePeriod:   ["Toute la période", "Whole period"],
+  never:         ["jamais", "never"],
+  justNow:       ["à l'instant", "just now"],
+  agoMin:        ["il y a # min", "# min ago"],
+  agoH:          ["il y a # h", "# h ago"],
+  agoD:          ["il y a # j", "# d ago"],
+  nextAuto:      ["Prochaine MAJ auto (GitHub) dans ", "Next auto update (GitHub) in "],
+  nextWin:       ["Prochaine MAJ Windows dans ", "Next Windows update in "],
+};
+function t(key) { return (TR[key] || [key, key])[LANG === "en" ? 1 : 0]; }
+function setLabel(el, txt) {
+  if (!el) return;
+  for (const n of el.childNodes) {
+    if (n.nodeType === 3 && n.textContent.trim()) { n.textContent = " " + txt + " "; return; }
+  }
+  el.textContent = txt;
+}
+function applyLang() {
+  document.getElementById("lang-btn").textContent = LANG === "en" ? "FR" : "EN";
+  if (LANG !== "en") return;   // le HTML est déjà en français
+  document.documentElement.lang = "en";
+  document.querySelector(".eyebrow").textContent = "Updated daily";
+  document.querySelector(".hero h1").innerHTML = "Every academic conference<br>in Paris.";
+  const heroP = document.querySelector(".hero p");
+  if (heroP) heroP.innerHTML = '<span class="count" id="hero-count">0</span> upcoming events, aggregated from Collège de France, ENS, EHESS, IHP, Sciences Po, Sorbonne, PSE, PSL and Luma.';
+  document.getElementById("search").placeholder = "Search a title, a speaker, a topic…";
+  document.getElementById("about-link").textContent = "About";
+  const TAB = { all:"All", institution:"Universities", luma:"Luma", association:"Associations", history:"Past events" };
+  document.querySelectorAll(".tab").forEach(b => setLabel(b, TAB[b.dataset.source] || ""));
+  const LBL = { "Quand":"When", "Format":"Format", "Discipline":"Discipline", "Institution":"Institution",
+                "Thème":"Topic", "Association":"Association", "Source":"Source", "Période":"Period" };
+  document.querySelectorAll(".filter-label").forEach(l => { if (LBL[l.textContent.trim()]) l.textContent = LBL[l.textContent.trim()]; });
+  const DATE = { all:"All", now:"⏱ Right now", today:"Today", week:"This week", weekend:"This weekend" };
+  document.querySelectorAll("#date-chips .chip").forEach(c => c.textContent = DATE[c.dataset.date] || c.textContent);
+  const FMT = { all:"All", inperson:"In person", online:"Online" };
+  document.querySelectorAll("#format-chips .chip").forEach(c => c.textContent = FMT[c.dataset.format] || c.textContent);
+  const HSRC = { all:"All", institution:"Universities", luma:"Luma", association:"Associations" };
+  document.querySelectorAll("#history-source-chips .chip").forEach(c => c.textContent = HSRC[c.dataset.hsource] || c.textContent);
+  document.querySelectorAll(".view-btn").forEach(b => b.textContent = b.dataset.view === "list" ? "List" : "Map");
+  document.getElementById("near-label").textContent = "Near me";
+  setLabel(document.getElementById("fav-toggle"), "Favourites");
+  setLabel(document.getElementById("dice-btn"), "Random");
+  setLabel(document.getElementById("new-btn"), "new");
+  document.querySelector("#digest-strip h2").textContent = "⭐ This week's highlights";
+  setLabel(document.getElementById("dice-reroll"), "Roll again");
+  document.getElementById("inst-site").childNodes[0].textContent = "Official website ↗";
+  setLabel(document.getElementById("inst-ical"), "Subscribe (iCal)");
+  document.querySelector(".cal-pop-title").textContent = "Add to my calendar";
+  setLabel(document.querySelector('.cal-opt[data-act="google"]'), "Google Calendar");
+  setLabel(document.querySelector('.cal-opt[data-act="ics"]'), "Apple / Outlook (.ics)");
+  setLabel(document.querySelector(".subscribe-btn"), "Subscribe to the calendar");
+  document.getElementById("footer-note").innerHTML =
+    'One subscription — every event syncs into your calendar, daily.<br>' +
+    'For Google Calendar: “Other calendars → From URL” with <code>https://lotent.fr/data/calendar.ics</code><br>' +
+    '<a href="apropos.html">About</a> · <a href="data/digest.xml">Highlights RSS</a> · <a href="https://github.com/kovarci/zzzz" target="_blank">Source code</a>';
+}
+document.getElementById("lang-btn").addEventListener("click", () => {
+  try { localStorage.setItem("paf_lang", LANG === "en" ? "fr" : "en"); } catch (e) {}
+  location.reload();
+});
+
 let allEvents = [], activeSource = "all", activeView = "list";
 let activeDiscs = new Set(), activeInsts = new Set(), activeLumaCats = new Set(), activeAssocs = new Set();
 let searchQuery = "", dateFilter = "all", formatFilter = "all", showFavsOnly = false;
@@ -530,12 +627,12 @@ try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } ca
 
 // ── « Dernière mise à jour » indicators ─────────────────────────
 function _fmtRel(ts) {
-  if (!ts) return "jamais";
+  if (!ts) return t("never");
   const diff = (Date.now() - new Date(ts).getTime()) / 1000;
-  if (diff < 60)      return "à l'instant";
-  if (diff < 3600)    return "il y a " + Math.floor(diff/60)   + " min";
-  if (diff < 86400)   return "il y a " + Math.floor(diff/3600) + " h";
-  return                    "il y a " + Math.floor(diff/86400) + " j";
+  if (diff < 60)      return t("justNow");
+  if (diff < 3600)    return t("agoMin").replace("#", Math.floor(diff/60));
+  if (diff < 86400)   return t("agoH").replace("#", Math.floor(diff/3600));
+  return                     t("agoD").replace("#", Math.floor(diff/86400));
 }
 function _fmtCountdown(target) {
   let s = Math.max(0, Math.floor((target - Date.now()) / 1000));
@@ -569,8 +666,8 @@ async function loadMeta() {
   } catch (e) {}
   document.getElementById("meta-auto-time").textContent = _fmtRel(m.last_workflow_run);
   document.getElementById("meta-manu-time").textContent = _fmtRel(m.last_manual_run);
-  document.getElementById("meta-auto").title = "Prochaine MAJ auto (GitHub) dans " + _fmtCountdown(_nextDailyRun());
-  document.getElementById("meta-manu").title = "Prochaine MAJ Windows dans " + _fmtCountdown(_nextWeeklyRun());
+  document.getElementById("meta-auto").title = t("nextAuto") + _fmtCountdown(_nextDailyRun());
+  document.getElementById("meta-manu").title = t("nextWin") + _fmtCountdown(_nextWeeklyRun());
 }
 setInterval(loadMeta, 60000);  // refresh tooltips every minute
 
@@ -606,6 +703,7 @@ async function loadEvents() {
     loadMeta();
     loadDigest();
     detectNewEvents();
+    buildSuggestIndex();
     buildFilters();
     await applyURL();
     reflectUI();
@@ -615,7 +713,7 @@ async function loadEvents() {
     render();
   } catch (e) {
     document.getElementById("list-view").innerHTML =
-      `<div class="no-results"><div class="big">Erreur de chargement</div><div>${e.message}</div></div>`;
+      `<div class="no-results"><div class="big">${t("loadError")}</div><div>${e.message}</div></div>`;
   }
 }
 
@@ -634,14 +732,12 @@ async function ensureArchive() {
   document.getElementById("badge-history").textContent = archive.length;
 
   // Populate the month selector with the months actually present
-  const MONTHS_FR = ["janvier","février","mars","avril","mai","juin",
-                     "juillet","août","septembre","octobre","novembre","décembre"];
   const months = [...new Set(archive.map(e => (e.date||"").slice(0,7)))].filter(Boolean).sort().reverse();
   const sel = document.getElementById("history-month");
-  sel.innerHTML = '<option value="all">Toute la période</option>' +
+  sel.innerHTML = `<option value="all">${t("wholePeriod")}</option>` +
     months.map(m => {
-      const [y, mo] = m.split("-");
-      return `<option value="${m}">${MONTHS_FR[+mo-1]} ${y}</option>`;
+      const lbl = new Date(m + "-15T12:00:00").toLocaleDateString(LOCALE, { month: "long", year: "numeric" });
+      return `<option value="${m}">${lbl}</option>`;
     }).join("");
   sel.value = historyMonth;
 }
@@ -755,9 +851,9 @@ function renderStats() {
     .map(([d,n]) => `<span class="dseg" style="flex:${n};background:${DISC_COLORS[d]??"#888"}" title="${escHtml(d)} : ${n}"></span>`)
     .join("");
   document.getElementById("stats-bar").innerHTML = `
-    <button class="stat" data-date="today"><span class="stat-num">${nT}</span> aujourd'hui</button>
-    <button class="stat" data-date="week"><span class="stat-num">${nW}</span> cette semaine</button>
-    <button class="stat" data-date="weekend"><span class="stat-num">${nWe}</span> ce week-end</button>
+    <button class="stat" data-date="today"><span class="stat-num">${nT}</span> ${t("today")}</button>
+    <button class="stat" data-date="week"><span class="stat-num">${nW}</span> ${t("thisWeek")}</button>
+    <button class="stat" data-date="weekend"><span class="stat-num">${nWe}</span> ${t("thisWeekend")}</button>
     <div class="disc-bar">${segs}</div>`;
 }
 
@@ -796,7 +892,7 @@ async function applyURL() {
     let ev = allEvents.find(x => x.id === evId);
     if (!ev) { await ensureArchive(); ev = archive.find(x => x.id === evId); }
     if (ev) openEventModal(ev, "detail");
-    else showToast("Événement introuvable — il est peut-être terminé.");
+    else showToast(t("notFound"));
   }
 }
 function reflectUI() {
@@ -972,8 +1068,10 @@ function fmtDayHeader(iso) {
   const d = new Date(iso + "T12:00:00");
   const yr = d.getFullYear();
   const currentYr = new Date().getFullYear();
-  const date = `${d.getDate()} ${MONTHS_FR[d.getMonth()]}${yr !== currentYr ? " " + yr : ""}`;
-  return { name: DAYS_FR[d.getDay()], date };
+  const name = d.toLocaleDateString(LOCALE, { weekday: "long" });
+  const date = d.toLocaleDateString(LOCALE, { day: "numeric", month: "long" })
+               + (yr !== currentYr ? " " + yr : "");
+  return { name: name.charAt(0).toUpperCase() + name.slice(1), date };
 }
 function groupByDate(events) {
   const g = new Map();
@@ -989,7 +1087,7 @@ function lumaThumb(url) {
 }
 function cardHtml(ev, idx) {
   const color = DISC_COLORS[ev.discipline] ?? "#9ca3af";
-  const time = ev.time ? (ev.end_time ? `${ev.time}–${ev.end_time}` : ev.time) : "Horaire à confirmer";
+  const time = ev.time ? (ev.end_time ? `${ev.time}–${ev.end_time}` : ev.time) : t("tbaTime");
   const inst = ev.source_type === "luma"        ? `${escHtml(ev.institution)} · Luma`
              : ev.source_type === "association" ? `${escHtml(ev.institution)} · Association`
              : escHtml(ev.institution);
@@ -1005,7 +1103,7 @@ function cardHtml(ev, idx) {
       <div class="card-top">
         <span class="card-time">${escHtml(time)}</span>
         <span style="display:flex;gap:6px;align-items:center">
-          ${newIds.has(ev.id) ? '<span class="new-tag">nouveau</span>' : ""}
+          ${newIds.has(ev.id) ? `<span class="new-tag">${t("newTag")}</span>` : ""}
           <span class="disc-tag">${escHtml(ev.discipline)}</span>
         </span>
       </div>
@@ -1013,11 +1111,11 @@ function cardHtml(ev, idx) {
       <div class="card-meta">
         <div class="institution">${inst}${dist}</div>
         ${ev.speaker ? `<div class="row">${ICONS.user}<span>${escHtml(ev.speaker)}</span></div>` : ""}
-        ${ev.location ? `<div class="row">${ICONS.pin}<span>${escHtml(ev.location)}</span>${isOnline(ev) ? '<span class="online-badge">En ligne</span>' : ""}</div>` : ""}
+        ${ev.location ? `<div class="row">${ICONS.pin}<span>${escHtml(ev.location)}</span>${isOnline(ev) ? `<span class="online-badge">${t("online")}</span>` : ""}</div>` : ""}
       </div>
       ${ev.description ? `<div class="card-desc">${escHtml(ev.description)}</div>` : ""}
       <div class="card-actions">
-        <span class="open-hint">Ouvrir la page ↗</span>
+        <span class="open-hint">${t("openPage")}</span>
         <div class="act-group">
           <button class="act-btn share-btn" data-id="${escHtml(ev.id)}" title="Copier le lien de l'événement" aria-label="Partager">${ICONS.share}</button>
           <button class="act-btn cal-btn" data-id="${escHtml(ev.id)}" title="Ajouter à mon agenda" aria-label="Ajouter à mon agenda">${ICONS.cal}</button>
@@ -1030,8 +1128,8 @@ function renderList(events) {
   const container = document.getElementById("list-view");
   if (!events.length) {
     const msg = showFavsOnly
-      ? `<div class="big">Aucun favori</div><div>Cliquez sur l'étoile d'un événement pour le sauvegarder ici.</div>`
-      : `<div class="big">Aucune conférence trouvée</div><div>Essayez de retirer un filtre ou de modifier votre recherche.</div>`;
+      ? `<div class="big">${t("noFavs")}</div><div>${t("noFavsSub")}</div>`
+      : `<div class="big">${t("noResults")}</div><div>${t("noResultsSub")}</div>`;
     container.innerHTML = `<div class="no-results">${msg}</div>`;
     return;
   }
@@ -1127,7 +1225,7 @@ function renderMap(events) {
     });
     const items = g.items.slice(0, 30).map(e => {
       const d = new Date(e.date + "T12:00:00");
-      const ds = `${d.getDate()} ${MONTHS_FR[d.getMonth()].slice(0,4)}.`;
+      const ds = d.toLocaleDateString(LOCALE, { day: "numeric", month: "short" });
       return `<div class="mp-item">
         <a href="${escHtml(e.url || "#")}" target="_blank" rel="noopener">${escHtml(e.title)}</a>
         <span class="mp-date">${ds}${e.time ? " · " + escHtml(e.time) : ""} — ${escHtml(e.institution)}</span>
@@ -1179,7 +1277,7 @@ function updateInstHeader() {
   document.getElementById("inst-avatar").textContent = name.charAt(0).toUpperCase();
   document.getElementById("inst-name").textContent = name;
   document.getElementById("inst-meta").textContent =
-    `${count} événement${count > 1 ? "s" : ""} à venir · lien de cette page partageable`;
+    `${count} ${t("evts")}${count > 1 ? "s" : ""} ${t("upcoming")}`;
   const site = INSTITUTION_SITES[name];
   document.getElementById("inst-site").style.display = site ? "" : "none";
   if (site) document.getElementById("inst-site").href = site;
@@ -1191,7 +1289,7 @@ function updateInstHeader() {
 function render() {
   const evs = filtered();
   document.getElementById("results-text").textContent =
-    `${evs.length} résultat${evs.length>1?"s":""}`;
+    `${evs.length} ${evs.length>1 ? t("results") : t("result")}`;
   updateInstHeader();
   if (activeView === "map") renderMap(evs);
   else renderList(evs);
@@ -1299,25 +1397,25 @@ function rollRandom() {
   const hint = document.getElementById("dice-hint");
   if (!pool.length) {
     currentRandom = null;
-    body.innerHTML = `<div class="no-results"><div class="big">Rien à tirer</div><div>Élargis tes filtres, puis relance le dé.</div></div>`;
-    hint.textContent = "0 événement dans la sélection";
+    body.innerHTML = `<div class="no-results"><div class="big">${t("nothingToRoll")}</div><div>${t("widenFilters")}</div></div>`;
+    hint.textContent = t("zeroInSel");
     return;
   }
   currentRandom = pool[Math.floor(Math.random() * pool.length)];
   body.innerHTML = cardHtml(currentRandom, 0);
-  hint.textContent = `Tiré parmi ${pool.length} événement${pool.length > 1 ? "s" : ""} (filtres actifs)`;
+  hint.textContent = `${t("drawnFrom")} ${pool.length} ${t("evts")}${pool.length > 1 ? "s" : ""} ${t("activeFilters")}`;
 }
 // Le même modal sert au dé (mode "random") et au détail partagé (mode "detail")
 function openEventModal(ev, mode) {
   currentRandom = ev;
   document.getElementById("dice-title").textContent =
-    mode === "random" ? "Découverte aléatoire" : "Événement";
+    mode === "random" ? t("randomTitle") : t("eventTitle");
   document.getElementById("dice-foot").style.display = mode === "random" ? "" : "none";
   document.getElementById("dice-body").innerHTML = cardHtml(ev, 0);
   document.getElementById("dice-overlay").style.display = "flex";
 }
 document.getElementById("dice-btn").addEventListener("click", () => {
-  document.getElementById("dice-title").textContent = "Découverte aléatoire";
+  document.getElementById("dice-title").textContent = t("randomTitle");
   document.getElementById("dice-foot").style.display = "";
   document.getElementById("dice-overlay").style.display = "flex";
   rollRandom();
@@ -1334,7 +1432,10 @@ document.getElementById("dice-overlay").addEventListener("click", e => {
   if (e.target === e.currentTarget) e.currentTarget.style.display = "none";
 });
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") document.getElementById("dice-overlay").style.display = "none";
+  if (e.key === "Escape") {
+    document.getElementById("dice-overlay").style.display = "none";
+    document.getElementById("search-suggest").style.display = "none";
+  }
 });
 // Interactions dans la carte tirée (favori, agenda, partage, ouverture)
 document.getElementById("dice-body").addEventListener("click", e => {
@@ -1395,7 +1496,7 @@ function shareEvent(id) {
     navigator.share({ title: ev ? ev.title : "Événement", url }).catch(() => {});
     return;
   }
-  copyText(url).then(() => showToast("Lien de l'événement copié ✓"));
+  copyText(url).then(() => showToast(t("linkCopied")));
 }
 
 // ── Raccourcis clavier ───────────────────────────────────────────
@@ -1416,7 +1517,7 @@ async function loadDigest() {
     document.getElementById("digest-scroll").innerHTML = d.events.map(ev => {
       const color = DISC_COLORS[ev.discipline] ?? "#9ca3af";
       const dt = new Date(ev.date + "T12:00:00");
-      const lbl = dt.toLocaleDateString("fr-FR", { weekday:"short", day:"numeric", month:"short" });
+      const lbl = dt.toLocaleDateString(LOCALE, { weekday:"short", day:"numeric", month:"short" });
       return `<div class="digest-card" data-id="${escHtml(ev.id)}" style="--accent:${color}">
         <div class="digest-date">${lbl}${ev.time ? " · " + escHtml(ev.time) : ""}</div>
         <div class="digest-title">${escHtml(ev.title)}</div>
@@ -1479,12 +1580,63 @@ document.getElementById("near-btn").addEventListener("click", () => {
   );
 });
 
+// ── Autocomplétion (intervenants + institutions) ────────────────
+let suggestIndex = [];
+function buildSuggestIndex() {
+  const counts = new Map();
+  allEvents.forEach(e => {
+    (e.speaker || "").split(/[,;&]|\bet\b|\band\b/).forEach(raw => {
+      const name = raw.trim().replace(/^(M\.|Mme\.?|Pr\.?|Dr\.?|Prof\.?)\s+/i, "");
+      if (name.length < 5 || !/\s/.test(name) || /\d/.test(name)) return;
+      const k = "s|" + name;
+      counts.set(k, (counts.get(k) || 0) + 1);
+    });
+    if (e.institution) {
+      const k = "i|" + e.institution;
+      counts.set(k, (counts.get(k) || 0) + 1);
+    }
+  });
+  suggestIndex = [...counts.entries()].map(([k, n]) =>
+    ({ kind: k[0], name: k.slice(2), n, folded: fold(k.slice(2)) }));
+}
+function showSuggestions(q) {
+  const box = document.getElementById("search-suggest");
+  const fq = fold(q.trim());
+  if (fq.length < 2) { box.style.display = "none"; return; }
+  const hits = suggestIndex.filter(s => s.folded.includes(fq))
+    .sort((a, b) => b.n - a.n).slice(0, 6);
+  if (!hits.length) { box.style.display = "none"; return; }
+  const kindLbl = k => k === "s" ? (LANG === "en" ? "speaker" : "intervenant") : "institution";
+  box.innerHTML = hits.map(h =>
+    `<button class="sg-item" data-name="${escHtml(h.name)}">
+       <span>${escHtml(h.name)}</span>
+       <span class="sg-kind">${kindLbl(h.kind)} · ${h.n}</span>
+     </button>`).join("");
+  box.style.display = "";
+}
+// mousedown (et pas click) : se déclenche avant le blur du champ
+document.getElementById("search-suggest").addEventListener("mousedown", e => {
+  const item = e.target.closest(".sg-item");
+  if (!item) return;
+  e.preventDefault();
+  const s = document.getElementById("search");
+  s.value = item.dataset.name;
+  searchQuery = item.dataset.name;
+  document.getElementById("search-suggest").style.display = "none";
+  render();
+});
+document.getElementById("search").addEventListener("blur", () => {
+  setTimeout(() => { document.getElementById("search-suggest").style.display = "none"; }, 150);
+});
+
 let searchTimer;
 document.getElementById("search").addEventListener("input", e => {
   clearTimeout(searchTimer);
+  showSuggestions(e.target.value);
   searchTimer = setTimeout(() => { searchQuery = e.target.value; render(); }, 200);
 });
 
+applyLang();
 loadEvents();
 
 // Progressive Web App — installable sur l'écran d'accueil + hors-ligne
