@@ -192,6 +192,16 @@ def make_id(*parts) -> str:
     return hashlib.md5(raw.encode()).hexdigest()[:12]
 
 
+def slugify(name: str) -> str:
+    """ASCII slug, must stay identical to the JS slugify() in index.html
+    (used for the per-institution .ics filenames)."""
+    import unicodedata
+    s = unicodedata.normalize("NFD", str(name or ""))
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn").lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return s
+
+
 def clean_text(s) -> str:
     if not s:
         return ""
@@ -1608,48 +1618,82 @@ def geocode_all(events):
 
 
 def write_ics(events):
-    """Write a single subscribable .ics feed containing every event."""
+    """Write the global subscribable .ics feed + one feed per institution
+    (data/cal/<slug>.ics), used by the per-institution header on the site."""
     def esc(s):
         return (str(s or "").replace("\\", "\\\\").replace(";", "\\;")
                 .replace(",", "\\,").replace("\r", "").replace("\n", "\\n"))
     stamp = datetime.now().strftime("%Y%m%dT%H%M%SZ")
-    out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Paris Academique//FR",
-           "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-           "X-WR-CALNAME:Conférences académiques · Paris",
-           "X-WR-TIMEZONE:Europe/Paris"]
-    for ev in events:
-        d = ev["date"].replace("-", "")
-        tm = ev.get("time", "")
-        if tm and re.match(r"\d{1,2}:\d{2}", tm):
-            h, m = tm.split(":")[:2]
-            dtstart = f"DTSTART:{d}T{int(h):02d}{int(m):02d}00"
-            et = ev.get("end_time", "")
-            if et and re.match(r"\d{1,2}:\d{2}", et):
-                eh, em = et.split(":")[:2]
-                dtend = f"DTEND:{d}T{int(eh):02d}{int(em):02d}00"
+
+    def vcal(evts, calname):
+        out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Paris Academique//FR",
+               "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+               f"X-WR-CALNAME:{esc(calname)}",
+               "X-WR-TIMEZONE:Europe/Paris"]
+        for ev in evts:
+            d = ev["date"].replace("-", "")
+            tm = ev.get("time", "")
+            if tm and re.match(r"\d{1,2}:\d{2}", tm):
+                h, m = tm.split(":")[:2]
+                dtstart = f"DTSTART:{d}T{int(h):02d}{int(m):02d}00"
+                et = ev.get("end_time", "")
+                if et and re.match(r"\d{1,2}:\d{2}", et):
+                    eh, em = et.split(":")[:2]
+                    dtend = f"DTEND:{d}T{int(eh):02d}{int(em):02d}00"
+                else:
+                    dtend = f"DTEND:{d}T{min(int(h)+2,23):02d}{int(m):02d}00"
             else:
-                dtend = f"DTEND:{d}T{min(int(h)+2,23):02d}{int(m):02d}00"
-        else:
-            dtstart = f"DTSTART;VALUE=DATE:{d}"
-            try:
-                nd = (datetime.strptime(ev["date"], "%Y-%m-%d") + timedelta(days=1)).strftime("%Y%m%d")
-            except Exception:
-                nd = d
-            dtend = f"DTEND;VALUE=DATE:{nd}"
-        desc = esc((ev.get("description") or "") + (("\n" + ev["url"]) if ev.get("url") else ""))
-        out += ["BEGIN:VEVENT", f"UID:{ev['id']}@paris-academique",
-                f"DTSTAMP:{stamp}", dtstart, dtend,
-                f"SUMMARY:{esc(ev['title'])}", f"DESCRIPTION:{desc}",
-                f"LOCATION:{esc(ev.get('location', ''))}"]
-        if ev.get("url"):
-            out.append(f"URL:{esc(ev['url'])}")
-        out.append("END:VEVENT")
-    out.append("END:VCALENDAR")
+                dtstart = f"DTSTART;VALUE=DATE:{d}"
+                try:
+                    nd = (datetime.strptime(ev["date"], "%Y-%m-%d") + timedelta(days=1)).strftime("%Y%m%d")
+                except Exception:
+                    nd = d
+                dtend = f"DTEND;VALUE=DATE:{nd}"
+            desc = esc((ev.get("description") or "") + (("\n" + ev["url"]) if ev.get("url") else ""))
+            out += ["BEGIN:VEVENT", f"UID:{ev['id']}@paris-academique",
+                    f"DTSTAMP:{stamp}", dtstart, dtend,
+                    f"SUMMARY:{esc(ev['title'])}", f"DESCRIPTION:{desc}",
+                    f"LOCATION:{esc(ev.get('location', ''))}"]
+            if ev.get("url"):
+                out.append(f"URL:{esc(ev['url'])}")
+            out.append("END:VEVENT")
+        out.append("END:VCALENDAR")
+        return "\r\n".join(out) + "\r\n"
+
     try:
-        ICS_FILE.write_text("\r\n".join(out) + "\r\n", encoding="utf-8")
+        ICS_FILE.write_text(vcal(events, "Conférences académiques · Paris"),
+                            encoding="utf-8")
         print(f"Calendar feed: {len(events)} events → calendar.ics")
     except Exception as e:
         print(f"[WARN] ics write: {e}")
+
+    # Per-institution feeds (academic + association sources only — not the
+    # dozens of one-off Luma hosts). Same slug logic as the frontend.
+    cal_dir = OUTPUT_FILE.parent / "cal"
+    cal_dir.mkdir(exist_ok=True)
+    by_inst = {}
+    for ev in events:
+        if ev.get("source_type") == "luma":
+            continue
+        by_inst.setdefault(ev.get("institution", ""), []).append(ev)
+    written = set()
+    for inst, evts in by_inst.items():
+        slug = slugify(inst)
+        if not slug:
+            continue
+        written.add(f"{slug}.ics")
+        try:
+            (cal_dir / f"{slug}.ics").write_text(vcal(evts, f"{inst} · Paris Académique"),
+                                                 encoding="utf-8")
+        except Exception as e:
+            print(f"[WARN] ics {slug}: {e}")
+    for f in cal_dir.glob("*.ics"):       # prune calendars of vanished sources
+        if f.name not in written:
+            try:
+                f.unlink()
+            except Exception:
+                pass
+    print(f"Calendriers par institution : {len(written)}")
 
 
 SITE_URL = "https://lotent.fr"
@@ -1789,7 +1833,7 @@ def build_digest(events):
     try:
         DIGEST_FILE.write_text(json.dumps(
             {"generated": TODAY.isoformat(), "period": period, "events": picked},
-            ensure_ascii=False, indent=1), encoding="utf-8")
+            ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     except Exception as e:
         print(f"[WARN] digest write: {e}")
 
@@ -1846,7 +1890,9 @@ def update_archive(previous_events):
     # Sort: most recent past first
     archive.sort(key=lambda e: (e.get("date", ""), e.get("time", "")), reverse=True)
     try:
-        ARCHIVE_FILE.write_text(json.dumps(archive, ensure_ascii=False, indent=2),
+        # Minified: the browser downloads this file, indentation costs ~40%
+        ARCHIVE_FILE.write_text(json.dumps(archive, ensure_ascii=False,
+                                           separators=(",", ":")),
                                 encoding="utf-8")
         print(f"Archive: +{added} new past events, total {len(archive)}")
     except Exception as e:
@@ -1930,7 +1976,7 @@ def main():
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(all_events, f, ensure_ascii=False, indent=2)
+        json.dump(all_events, f, ensure_ascii=False, separators=(",", ":"))
 
     try:
         update_archive(prev_events)

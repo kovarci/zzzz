@@ -82,6 +82,15 @@
     #dice-reroll.rolling svg { animation:diceSpin .45s ease; }
     @keyframes diceSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
 
+    /* En-tête « page institution » (visible quand une seule institution est filtrée) */
+    .inst-header { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin:22px 0 4px; padding:18px 20px; background:linear-gradient(160deg,rgba(30,28,50,.7),rgba(16,16,28,.78)); border:1px solid var(--border-bright); border-radius:var(--radius); animation:cardIn .4s ease; }
+    .inst-avatar { width:52px; height:52px; border-radius:14px; flex:0 0 52px; display:flex; align-items:center; justify-content:center; font-family:"Space Grotesk",sans-serif; font-size:24px; font-weight:700; color:#fff; background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6); box-shadow:0 6px 22px -8px rgba(120,100,255,.7); }
+    .inst-info { flex:1; min-width:200px; }
+    .inst-name { font-family:"Space Grotesk",sans-serif; font-size:19px; font-weight:700; }
+    .inst-meta { font-size:13px; color:var(--muted); margin-top:2px; }
+    .inst-actions { display:flex; gap:9px; flex-wrap:wrap; }
+    .inst-actions .pill-btn { text-decoration:none; }
+
     /* Nouveautés depuis la dernière visite */
     .new-dot { width:8px; height:8px; border-radius:50%; background:#4ade80; box-shadow:0 0 9px #4ade80; animation:newPulse 2s ease-in-out infinite; }
     @keyframes newPulse { 0%,100%{opacity:1} 50%{opacity:.45} }
@@ -405,6 +414,20 @@
 </section>
 
 <main class="container">
+  <div class="inst-header" id="inst-header" style="display:none">
+    <div class="inst-avatar" id="inst-avatar">·</div>
+    <div class="inst-info">
+      <div class="inst-name" id="inst-name"></div>
+      <div class="inst-meta" id="inst-meta"></div>
+    </div>
+    <div class="inst-actions">
+      <a class="pill-btn" id="inst-site" target="_blank" rel="noopener">Site officiel ↗</a>
+      <a class="pill-btn" id="inst-ical" title="S'abonner uniquement aux événements de cette institution">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        S'abonner (iCal)
+      </a>
+    </div>
+  </div>
   <div class="digest-strip" id="digest-strip" style="display:none">
     <div class="digest-head">
       <h2>⭐ Les immanquables de la semaine</h2>
@@ -1127,10 +1150,49 @@ function renderMap(events) {
 }
 
 // ── Main render ──────────────────────────────────────────────────
+// ── En-tête institution (quand une seule est filtrée) ────────────
+const INSTITUTION_SITES = {
+  "Collège de France": "https://www.college-de-france.fr",
+  "ENS Paris": "https://www.ens.psl.eu",
+  "EHESS": "https://www.ehess.fr",
+  "Institut Henri Poincaré": "https://www.ihp.fr",
+  "Paris School of Economics": "https://www.parisschoolofeconomics.eu",
+  "Sciences Po": "https://www.sciencespo.fr",
+  "Sorbonne Université": "https://www.sorbonne-universite.fr",
+  "Université PSL": "https://psl.eu",
+  "Article 1": "https://article-1.eu",
+  "Sciences et Cultures": "https://linktr.ee/Sciences_et_Cultures",
+};
+// Doit rester identique au slugify() Python (noms des fichiers .ics)
+function slugify(name) {
+  return (name || "").normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+function updateInstHeader() {
+  const el = document.getElementById("inst-header");
+  if (activeInsts.size !== 1 || activeSource === "history") {
+    el.style.display = "none";
+    return;
+  }
+  const name = [...activeInsts][0];
+  const count = allEvents.filter(e => e.institution === name).length;
+  document.getElementById("inst-avatar").textContent = name.charAt(0).toUpperCase();
+  document.getElementById("inst-name").textContent = name;
+  document.getElementById("inst-meta").textContent =
+    `${count} événement${count > 1 ? "s" : ""} à venir · lien de cette page partageable`;
+  const site = INSTITUTION_SITES[name];
+  document.getElementById("inst-site").style.display = site ? "" : "none";
+  if (site) document.getElementById("inst-site").href = site;
+  document.getElementById("inst-ical").href =
+    new URL("data/cal/" + slugify(name) + ".ics", location.href).href.replace(/^https?/, "webcal");
+  el.style.display = "";
+}
+
 function render() {
   const evs = filtered();
   document.getElementById("results-text").textContent =
     `${evs.length} résultat${evs.length>1?"s":""}`;
+  updateInstHeader();
   if (activeView === "map") renderMap(evs);
   else renderList(evs);
   syncURL();
@@ -1327,6 +1389,12 @@ function shareEvent(id) {
   // e/<id>.html porte les balises OG de l'événement (généré par le scraper)
   // et redirige les navigateurs vers index.html?event=<id>.
   const url = new URL("e/" + id + ".html", location.href).href;
+  const ev = allEvents.find(x => x.id === id) || archive.find(x => x.id === id) || currentRandom;
+  // Sur mobile : menu de partage du système (WhatsApp, Messages…)
+  if (navigator.share && /android|iphone|ipad|mobile/i.test(navigator.userAgent)) {
+    navigator.share({ title: ev ? ev.title : "Événement", url }).catch(() => {});
+    return;
+  }
   copyText(url).then(() => showToast("Lien de l'événement copié ✓"));
 }
 

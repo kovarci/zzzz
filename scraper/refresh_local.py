@@ -115,7 +115,7 @@ def main():
 
     scrape.geocode_all(merged)
     scrape.write_ics(merged)
-    out.write_text(json.dumps(merged, ensure_ascii=False, indent=2),
+    out.write_text(json.dumps(merged, ensure_ascii=False, separators=(",", ":")),
                    encoding="utf-8")
     try:
         try:
