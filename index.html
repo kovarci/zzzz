@@ -29,8 +29,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <style>
     :root {
@@ -81,6 +85,35 @@
     .dice-hint { font-size:12px; color:var(--muted); }
     #dice-reroll.rolling svg { animation:diceSpin .45s ease; }
     @keyframes diceSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+
+    /* Vue Semaine — agenda lun→dim */
+    #week-view { margin-top:18px; }
+    .week-nav { display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+    .week-arrow { width:36px; height:36px; border-radius:10px; border:1px solid var(--border); background:var(--glass); color:var(--text); font-size:22px; line-height:0; cursor:pointer; font-family:inherit; transition:.2s; }
+    .week-arrow:hover { border-color:var(--border-bright); background:var(--glass-2); }
+    .week-label { font-family:"Space Grotesk",sans-serif; font-size:17px; font-weight:600; min-width:240px; text-align:center; }
+    .week-today { padding:7px 16px; border-radius:999px; border:1px solid var(--border); background:none; color:var(--muted); font-family:inherit; font-size:12.5px; cursor:pointer; margin-left:auto; transition:.2s; }
+    .week-today:hover { color:#fff; border-color:var(--border-bright); }
+    .week-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:8px; }
+    .week-col { background:linear-gradient(180deg,rgba(28,28,46,.45),rgba(17,17,29,.55)); border:1px solid var(--border); border-radius:14px; padding:11px 9px; min-height:340px; display:flex; flex-direction:column; gap:7px; }
+    .week-col.is-today { border-color:rgba(167,139,250,.5); background:linear-gradient(180deg,rgba(40,30,70,.6),rgba(22,18,38,.65)); box-shadow:0 0 0 1px rgba(167,139,250,.2); }
+    .week-col.is-past { opacity:.42; }
+    .week-day { font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:2px; }
+    .week-num { font-family:"Space Grotesk",sans-serif; font-size:19px; font-weight:700; margin-bottom:6px; }
+    .week-col.is-today .week-num { color:#a78bfa; }
+    .week-evt { padding:8px 9px; border-radius:9px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-left:2.5px solid var(--accent,#888); cursor:pointer; transition:.2s; }
+    .week-evt:hover { background:rgba(255,255,255,.09); transform:translateY(-1px); }
+    .week-evt-time { font-size:10.5px; font-weight:700; color:var(--accent,#aaa); letter-spacing:.04em; }
+    .week-evt-title { font-size:12px; font-weight:600; line-height:1.3; margin-top:2px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .week-evt-inst { font-size:10.5px; color:var(--muted); margin-top:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .week-more { font-size:10.5px; color:var(--muted); text-align:center; padding:4px; cursor:pointer; }
+    .week-more:hover { color:#fff; }
+    .week-empty { font-size:11px; color:var(--muted); opacity:.5; text-align:center; padding:8px 0; }
+    @media (max-width:780px) {
+      .week-grid { grid-template-columns:1fr; }
+      .week-col { min-height:auto; }
+      .week-col.is-empty { display:none; }
+    }
 
     /* En-tête « page institution » (visible quand une seule institution est filtrée) */
     .inst-header { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin:22px 0 4px; padding:18px 20px; background:linear-gradient(160deg,rgba(30,28,50,.7),rgba(16,16,28,.78)); border:1px solid var(--border-bright); border-radius:var(--radius); animation:cardIn .4s ease; }
@@ -386,6 +419,7 @@
     <div class="toolbar-right">
       <div class="view-toggle">
         <button class="view-btn active" data-view="list">Liste</button>
+        <button class="view-btn" data-view="week">Semaine</button>
         <button class="view-btn" data-view="map">Carte</button>
       </div>
       <button class="pill-btn new-btn" id="new-btn" style="display:none" title="Événements ajoutés depuis ta dernière visite">
@@ -453,6 +487,15 @@
   <div id="map-view">
     <div id="map"></div>
     <div id="map-note" style="display:none"></div>
+  </div>
+  <div id="week-view" style="display:none">
+    <div class="week-nav">
+      <button class="week-arrow" id="week-prev" aria-label="Semaine précédente">‹</button>
+      <div class="week-label" id="week-label">—</div>
+      <button class="week-arrow" id="week-next" aria-label="Semaine suivante">›</button>
+      <button class="week-today" id="week-today">Aujourd'hui</button>
+    </div>
+    <div class="week-grid" id="week-grid"></div>
   </div>
 </main>
 
@@ -591,7 +634,11 @@ function applyLang() {
   document.querySelectorAll("#format-chips .chip").forEach(c => c.textContent = FMT[c.dataset.format] || c.textContent);
   const HSRC = { all:"All", institution:"Universities", luma:"Luma", association:"Associations" };
   document.querySelectorAll("#history-source-chips .chip").forEach(c => c.textContent = HSRC[c.dataset.hsource] || c.textContent);
-  document.querySelectorAll(".view-btn").forEach(b => b.textContent = b.dataset.view === "list" ? "List" : "Map");
+  document.querySelectorAll(".view-btn").forEach(b => {
+    b.textContent = b.dataset.view === "list" ? "List" :
+                    b.dataset.view === "week" ? "Week" : "Map";
+  });
+  document.getElementById("week-today").textContent = "Today";
   document.getElementById("near-label").textContent = "Near me";
   setLabel(document.getElementById("fav-toggle"), "Favourites");
   setLabel(document.getElementById("dice-btn"), "Random");
@@ -621,6 +668,7 @@ let map = null, markerLayer = null, userPos = null, nearMode = false;
 let archive = [], archiveLoaded = false;
 let historySource = "all", historyMonth = "all", currentRandom = null;
 let newIds = new Set(), showNewOnly = false;
+let weekOffset = 0;
 
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } catch (e) {}
@@ -919,6 +967,7 @@ function reflectUI() {
     (digestLoaded && activeSource === "all" && activeView === "list") ? "" : "none";
   document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
   document.getElementById("map-view").style.display  = activeView === "map" ? "block" : "none";
+  document.getElementById("week-view").style.display = activeView === "week" ? "block" : "none";
 }
 
 // ── Helpers ──────────────────────────────────────────────────────
@@ -1158,7 +1207,7 @@ function renderList(events) {
   let html = "", idx = 0;
   for (const [iso, evs] of groupByDate(events)) {
     const h = fmtDayHeader(iso);
-    html += `<div class="day-group">
+    html += `<div class="day-group" data-date="${iso}">
       <div class="day-header">
         <span class="day-name">${h.name}</span>
         <span class="day-date">${h.date}</span>
@@ -1292,9 +1341,84 @@ function render() {
     `${evs.length} ${evs.length>1 ? t("results") : t("result")}`;
   updateInstHeader();
   if (activeView === "map") renderMap(evs);
+  else if (activeView === "week") renderWeek(evs);
   else renderList(evs);
   syncURL();
 }
+
+// ── Vue Semaine ──────────────────────────────────────────────────
+function renderWeek(events) {
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  // Lundi de la semaine courante + décalage
+  const monday = new Date(today);
+  const dow = (monday.getDay() + 6) % 7;          // 0=lun … 6=dim
+  monday.setDate(monday.getDate() - dow + weekOffset * 7);
+  const days = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(monday); d.setDate(monday.getDate() + i); return d;
+  });
+  const todayIso = isoOf(today);
+  // Plage couverte par cette semaine
+  const fromIso = isoOf(days[0]);
+  const toIso = isoOf(days[6]);
+  const inWeek = events.filter(e => e.date >= fromIso && e.date <= toIso);
+
+  // Étiquette de la semaine
+  const lang = LANG === "en" ? "en-GB" : "fr-FR";
+  const lbl = days[0].toLocaleDateString(lang, { day: "numeric", month: "short" })
+            + " – " + days[6].toLocaleDateString(lang, { day: "numeric", month: "short", year: "numeric" });
+  document.getElementById("week-label").textContent = lbl;
+
+  const DAY_NAMES = LANG === "en"
+    ? ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+    : ["Lun","Mar","Mer","Jeu","Ven","Sam","Dim"];
+  const TIME_TBA = LANG === "en" ? "TBC" : "—";
+  const moreLabel = n => LANG === "en" ? `+${n} more` : `+${n} autres`;
+  const noneLabel = LANG === "en" ? "Nothing planned" : "Rien de prévu";
+
+  const grid = document.getElementById("week-grid");
+  grid.innerHTML = days.map((d, i) => {
+    const iso = isoOf(d);
+    const dayEvs = inWeek.filter(e => e.date === iso)
+                         .sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
+    const isToday = iso === todayIso;
+    const isPast = iso < todayIso;
+    const shown = dayEvs.slice(0, 5);
+    const hidden = dayEvs.length - shown.length;
+    return `<div class="week-col${isToday ? " is-today" : ""}${isPast ? " is-past" : ""}${dayEvs.length === 0 ? " is-empty" : ""}">
+      <div class="week-day">${DAY_NAMES[i]}</div>
+      <div class="week-num">${d.getDate()}</div>
+      ${dayEvs.length === 0 ? `<div class="week-empty">${noneLabel}</div>` : ""}
+      ${shown.map(e => {
+        const color = DISC_COLORS[e.discipline] ?? "#9ca3af";
+        return `<div class="week-evt" data-id="${escHtml(e.id)}" style="--accent:${color}">
+          <div class="week-evt-time">${escHtml(e.time || TIME_TBA)}</div>
+          <div class="week-evt-title">${escHtml(e.title)}</div>
+          <div class="week-evt-inst">${escHtml(e.institution)}</div>
+        </div>`;
+      }).join("")}
+      ${hidden > 0 ? `<div class="week-more" data-date="${iso}">${moreLabel(hidden)}</div>` : ""}
+    </div>`;
+  }).join("");
+}
+document.getElementById("week-grid").addEventListener("click", e => {
+  const evtEl = e.target.closest(".week-evt");
+  if (evtEl) {
+    const ev = allEvents.find(x => x.id === evtEl.dataset.id) || archive.find(x => x.id === evtEl.dataset.id);
+    if (ev) openEventModal(ev, "detail");
+    return;
+  }
+  // « +N autres » : on bascule en vue Liste et on filtre sur ce jour
+  const more = e.target.closest(".week-more");
+  if (more) {
+    activeView = "list";
+    reflectUI(); render();
+    const target = document.querySelector(`.day-group[data-date="${more.dataset.date}"]`);
+    if (target) target.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+});
+document.getElementById("week-prev").addEventListener("click", () => { weekOffset--; render(); });
+document.getElementById("week-next").addEventListener("click", () => { weekOffset++; render(); });
+document.getElementById("week-today").addEventListener("click", () => { weekOffset = 0; render(); });
 
 // ── Calendar popover ─────────────────────────────────────────────
 function openCalPopover(btn, ev) {
@@ -1550,6 +1674,7 @@ document.querySelectorAll(".view-btn").forEach(btn => {
     activeView = btn.dataset.view;
     document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
     document.getElementById("map-view").style.display  = activeView === "map" ? "block" : "none";
+    document.getElementById("week-view").style.display = activeView === "week" ? "block" : "none";
     render();
   });
 });

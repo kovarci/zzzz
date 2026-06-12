@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>À propos — Paris·Académique</title>
   <meta name="description" content="Comment fonctionne Paris·Académique : les sources, la fréquence de mise à jour, la technique." />
+  <link rel="canonical" href="https://lotent.fr/apropos.html" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23a78bfa'/><stop offset='.5' stop-color='%2360a5fa'/><stop offset='1' stop-color='%23f472b6'/></linearGradient></defs><circle cx='16' cy='16' r='13' fill='url(%23g)'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +25,22 @@
     .nav-inner { max-width:760px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
     .logo { font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:17px; display:flex; align-items:center; gap:9px; color:var(--text); text-decoration:none; }
     .logo-orb { width:15px; height:15px; border-radius:50%; background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6); }
-    .back { font-size:13.5px; color:var(--muted); text-decoration:none; border:1px solid var(--border); padding:7px 16px; border-radius:999px; transition:.2s; }
-    .back:hover { color:#fff; border-color:var(--border-bright); }
+    .nav-right { display:flex; gap:8px; align-items:center; }
+    .lang-btn, .back { font-size:13.5px; color:var(--muted); text-decoration:none; border:1px solid var(--border); padding:7px 16px; border-radius:999px; transition:.2s; background:none; cursor:pointer; font-family:inherit; }
+    .lang-btn:hover, .back:hover { color:#fff; border-color:var(--border-bright); }
     main { max-width:760px; margin:0 auto; padding:54px 24px 80px; }
     h1 { font-family:"Space Grotesk",sans-serif; font-size:34px; margin-bottom:10px; }
-    .lede { color:var(--muted); margin-bottom:42px; font-size:16.5px; }
+    .lede { color:var(--muted); margin-bottom:30px; font-size:16.5px; }
     h2 { font-family:"Space Grotesk",sans-serif; font-size:20px; margin:38px 0 12px; }
     p { color:var(--text-soft); margin-bottom:14px; }
     a { color:#8ab4ff; }
+
+    /* Carte de stats publiques */
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:22px 0 10px; }
+    .stat { padding:18px 16px; background:linear-gradient(160deg,rgba(28,28,46,.7),rgba(17,17,29,.7)); border:1px solid var(--border); border-radius:14px; }
+    .stat-num { font-family:"Space Grotesk",sans-serif; font-size:30px; font-weight:700; background:linear-gradient(120deg,#ececf2,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .stat-lbl { font-size:12.5px; color:var(--muted); margin-top:4px; }
+
     table { width:100%; border-collapse:collapse; margin:14px 0 6px; font-size:14px; }
     th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--border); color:var(--text-soft); }
     th { color:var(--muted); font-weight:600; font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; }
@@ -39,6 +48,10 @@
     ul { margin:0 0 14px 20px; color:var(--text-soft); }
     li { margin-bottom:6px; }
     .note { font-size:13.5px; color:var(--muted); border-left:2px solid var(--border-bright); padding-left:14px; margin:18px 0; }
+    [data-en] { display:none; }
+    html[lang="en"] [data-fr] { display:none; }
+    html[lang="en"] [data-en] { display:initial; }
+    html[lang="en"] [data-en="block"] { display:block; }
   </style>
 </head>
 <body>
@@ -46,63 +59,156 @@
 <nav>
   <div class="nav-inner">
     <a class="logo" href="index.html"><span class="logo-orb"></span>Paris·Académique</a>
-    <a class="back" href="index.html">← Retour au calendrier</a>
+    <div class="nav-right">
+      <button class="lang-btn" id="lang-btn" title="Switch language">EN</button>
+      <a class="back" href="index.html">
+        <span data-fr>← Retour au calendrier</span>
+        <span data-en>← Back to the calendar</span>
+      </a>
+    </div>
   </div>
 </nav>
 <main>
-  <h1>À propos</h1>
-  <p class="lede">Un seul endroit pour savoir ce qui se passe dans les amphis parisiens.</p>
+  <h1>
+    <span data-fr>À propos</span>
+    <span data-en>About</span>
+  </h1>
+  <p class="lede">
+    <span data-fr>Un seul endroit pour savoir ce qui se passe dans les amphis parisiens.</span>
+    <span data-en>One place to know what's happening in Paris's lecture halls.</span>
+  </p>
 
-  <h2>Le projet</h2>
-  <p>Les conférences, séminaires et colloques parisiens sont éparpillés sur une dizaine
+  <div class="stats-grid" id="stats-grid">
+    <div class="stat"><div class="stat-num" id="stat-total">—</div>
+      <div class="stat-lbl"><span data-fr>événements indexés</span><span data-en>indexed events</span></div></div>
+    <div class="stat"><div class="stat-num" id="stat-upcoming">—</div>
+      <div class="stat-lbl"><span data-fr>à venir</span><span data-en>upcoming</span></div></div>
+    <div class="stat"><div class="stat-num" id="stat-sources">—</div>
+      <div class="stat-lbl"><span data-fr>sources</span><span data-en>sources</span></div></div>
+    <div class="stat"><div class="stat-num" id="stat-since">—</div>
+      <div class="stat-lbl"><span data-fr>indexé depuis</span><span data-en>indexed since</span></div></div>
+  </div>
+
+  <h2><span data-fr>Le projet</span><span data-en>The project</span></h2>
+  <p data-fr>Les conférences, séminaires et colloques parisiens sont éparpillés sur une dizaine
   de sites institutionnels, chacun avec son propre agenda, sa propre pagination, son
   propre format. Beaucoup sont ouverts à tous — mais encore faut-il savoir qu'ils existent.</p>
-  <p>Ce site les rassemble en un calendrier unique, filtrable par discipline,
+  <p data-en="block">Conferences, seminars and symposiums in Paris are scattered across a dozen
+  institutional websites, each with its own agenda, its own pagination, its own
+  format. Many are open to everyone — but you still need to know they exist.</p>
+  <p data-fr>Ce site les rassemble en un calendrier unique, filtrable par discipline,
   institution, date et format, avec une carte, un historique et un flux iCal
   pour s'abonner depuis son agenda.</p>
+  <p data-en="block">This site brings them together into a single calendar, filterable by discipline,
+  institution, date and format, with a map, an archive and an iCal feed to
+  subscribe from your own calendar app.</p>
 
-  <h2>Les sources</h2>
+  <h2><span data-fr>Les sources</span><span data-en>The sources</span></h2>
   <table>
-    <tr><th>Source</th><th>Type</th></tr>
-    <tr><td>Collège de France</td><td>Institution</td></tr>
-    <tr><td>École normale supérieure (ENS)</td><td>Institution</td></tr>
-    <tr><td>EHESS</td><td>Institution</td></tr>
-    <tr><td>Institut Henri Poincaré</td><td>Institution</td></tr>
-    <tr><td>Paris School of Economics</td><td>Institution</td></tr>
-    <tr><td>Sciences Po</td><td>Institution</td></tr>
-    <tr><td>Sorbonne Université</td><td>Institution</td></tr>
-    <tr><td>Université PSL</td><td>Institution</td></tr>
-    <tr><td>Luma (événements parisiens : tech, IA, arts…)</td><td>Plateforme</td></tr>
-    <tr><td>Sciences et Cultures / Citoy.ENS</td><td>Association étudiante</td></tr>
-    <tr><td>Article 1</td><td>Association</td></tr>
+    <tr><th><span data-fr>Source</span><span data-en>Source</span></th>
+        <th><span data-fr>Type</span><span data-en>Type</span></th></tr>
+    <tr><td>Collège de France</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td><span data-fr>École normale supérieure (ENS)</span><span data-en>École normale supérieure (ENS)</span></td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>EHESS</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Institut Henri Poincaré</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Paris School of Economics</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Sciences Po</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Sorbonne Université</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Université PSL</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td><span data-fr>Luma (événements parisiens : tech, IA, arts…)</span><span data-en>Luma (events in Paris: tech, AI, arts…)</span></td><td><span data-fr>Plateforme</span><span data-en>Platform</span></td></tr>
+    <tr><td>Sciences et Cultures / Citoy.ENS</td><td><span data-fr>Association étudiante</span><span data-en>Student association</span></td></tr>
+    <tr><td>Article 1</td><td><span data-fr>Association</span><span data-en>Association</span></td></tr>
   </table>
-  <p class="note">Le classement par discipline est automatique (mots-clés) : il peut se
+  <p class="note" data-fr>Le classement par discipline est automatique (mots-clés) : il peut se
   tromper. L'événement fait toujours foi sur le site de l'institution — cliquez sur une
   carte pour y accéder.</p>
+  <p class="note" data-en="block">Discipline classification is automatic (keywords): it can be wrong.
+  The event's official page is always the source of truth — click any card to reach it.</p>
 
-  <h2>La mise à jour</h2>
-  <ul>
+  <h2><span data-fr>La mise à jour</span><span data-en>Updates</span></h2>
+  <ul data-fr>
     <li><strong>Chaque jour vers 6h</strong> : récupération automatique de toutes les sources.</li>
     <li><strong>Chaque semaine</strong> : passage complémentaire pour les sources qui
     bloquent les robots des data-centers (Collège de France, pages thématiques Luma).</li>
     <li>Les événements passés sont conservés dans l'onglet <em>Historique</em> pendant un an.</li>
   </ul>
-
-  <h2>La technique</h2>
-  <p>Site statique, sans tracker, sans compte, sans cookie tiers. Les données sont
-  collectées par un scraper Python (exécuté par GitHub Actions), publiées en JSON et
-  affichées par une page unique en JavaScript. Le tout est open source :
-  <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener">github.com/kovarci/zzzz</a>.</p>
-  <ul>
-    <li>Flux iCal global : <code>data/calendar.ics</code></li>
-    <li>Flux RSS des immanquables : <code>data/digest.xml</code></li>
-    <li>Données brutes : <code>data/events.json</code></li>
+  <ul data-en="block">
+    <li><strong>Every day around 6 AM Paris time</strong>: automatic refresh of every source.</li>
+    <li><strong>Every week</strong>: a complementary pass for sources that block
+    data-center bots (Collège de France, Luma theme pages).</li>
+    <li>Past events are kept in the <em>Past events</em> tab for one year.</li>
   </ul>
 
-  <h2>Contact</h2>
-  <p>Une source à suggérer, un bug à signaler ? Ouvrez une
-  <a href="https://github.com/kovarci/zzzz/issues" target="_blank" rel="noopener">issue GitHub</a>.
-  Projet maintenu par <a href="https://github.com/kovarci" target="_blank" rel="noopener">kovarci</a>.</p>
+  <h2><span data-fr>La technique</span><span data-en>The tech</span></h2>
+  <p data-fr>Site statique, sans tracker, sans compte, sans cookie tiers. Les données sont
+  collectées par un scraper Python (exécuté par GitHub Actions), publiées en JSON et
+  affichées par une page unique en JavaScript. Le tout est open source :
+  <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">github.com/kovarci/zzzz</a>.</p>
+  <p data-en="block">Static site, no tracker, no account, no third-party cookie. Data is collected
+  by a Python scraper (run by GitHub Actions), published as JSON and rendered by
+  a single JavaScript page. Everything is open source:
+  <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">github.com/kovarci/zzzz</a>.</p>
+  <ul>
+    <li><span data-fr>Flux iCal global</span><span data-en>Global iCal feed</span> : <code>data/calendar.ics</code></li>
+    <li><span data-fr>Flux iCal par institution</span><span data-en>Per-institution iCal feeds</span> : <code>data/cal/&lt;slug&gt;.ics</code></li>
+    <li><span data-fr>Flux RSS des immanquables</span><span data-en>Highlights RSS feed</span> : <code>data/digest.xml</code></li>
+    <li><span data-fr>Données brutes</span><span data-en>Raw data</span> : <code>data/events.json</code></li>
+  </ul>
+
+  <h2><span data-fr>Contact</span><span data-en>Contact</span></h2>
+  <p data-fr>Une source à suggérer, un bug à signaler ? Ouvrez une
+  <a href="https://github.com/kovarci/zzzz/issues" target="_blank" rel="noopener noreferrer">issue GitHub</a>.
+  Projet maintenu par <a href="https://github.com/kovarci" target="_blank" rel="noopener noreferrer">kovarci</a>.</p>
+  <p data-en="block">Got a source to suggest, a bug to report? Open a
+  <a href="https://github.com/kovarci/zzzz/issues" target="_blank" rel="noopener noreferrer">GitHub issue</a>.
+  Maintained by <a href="https://github.com/kovarci" target="_blank" rel="noopener noreferrer">kovarci</a>.</p>
 </main>
+
+<script>
+// Toggle EN/FR (partagé avec l'app principale via localStorage)
+function applyLang() {
+  let lang = "fr";
+  try { lang = localStorage.getItem("paf_lang") || "fr"; } catch (e) {}
+  document.documentElement.lang = lang;
+  document.getElementById("lang-btn").textContent = lang === "en" ? "FR" : "EN";
+  document.title = lang === "en" ? "About — Paris·Académique" : "À propos — Paris·Académique";
+}
+document.getElementById("lang-btn").addEventListener("click", () => {
+  const cur = document.documentElement.lang;
+  try { localStorage.setItem("paf_lang", cur === "en" ? "fr" : "en"); } catch (e) {}
+  applyLang();
+});
+applyLang();
+
+// Stats publiques calculées à la volée depuis les JSON déjà servis
+function fmtNumber(n) {
+  return new Intl.NumberFormat(document.documentElement.lang === "en" ? "en-US" : "fr-FR").format(n);
+}
+(async () => {
+  try {
+    const [evRes, arRes] = await Promise.all([
+      fetch("data/events.json?" + Date.now()),
+      fetch("data/events-archive.json?" + Date.now()),
+    ]);
+    const events = await evRes.json();
+    const archive = await arRes.json();
+    const today = new Date().toISOString().slice(0, 10);
+    const upcoming = events.filter(e => e.date >= today).length;
+    const total = events.length + archive.length;
+    const institutions = new Set(events.concat(archive).map(e => e.institution)).size;
+    const allDates = events.concat(archive).map(e => e.date).filter(Boolean).sort();
+    const earliest = allDates[0];
+    document.getElementById("stat-total").textContent = fmtNumber(total);
+    document.getElementById("stat-upcoming").textContent = fmtNumber(upcoming);
+    document.getElementById("stat-sources").textContent = fmtNumber(institutions);
+    if (earliest) {
+      const d = new Date(earliest + "T12:00:00");
+      const lang = document.documentElement.lang === "en" ? "en-GB" : "fr-FR";
+      document.getElementById("stat-since").textContent =
+        d.toLocaleDateString(lang, { month: "short", year: "numeric" });
+    }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
