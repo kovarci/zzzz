@@ -17,5 +17,19 @@
       "sizes": "any",
       "purpose": "any maskable"
     }
+  ],
+  "shortcuts": [
+    { "name": "Cette semaine",
+      "short_name": "Semaine",
+      "url": "./?vue=week",
+      "description": "Voir les conférences de la semaine en cours" },
+    { "name": "Mes favoris",
+      "short_name": "Favoris",
+      "url": "./?favoris=1",
+      "description": "Conférences mises en favoris" },
+    { "name": "En ce moment",
+      "short_name": "Maintenant",
+      "url": "./?date=now",
+      "description": "Événements qui commencent dans l'heure" }
   ]
 }

@@ -18,7 +18,7 @@ python scraper\refresh_local.py
 echo.
 
 echo [3/4] Enregistrement...
-git add data/ e/ sitemap.xml
+git add data/ e/ sitemap.xml og.png
 git commit -m "maj College de France + Luma"
 echo.
 

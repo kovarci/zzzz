@@ -86,6 +86,32 @@
     #dice-reroll.rolling svg { animation:diceSpin .45s ease; }
     @keyframes diceSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
 
+    /* Mes intervenants — cloches sur les cartes + panneau */
+    .speaker-name { cursor:pointer; transition:color .2s; }
+    .speaker-name:hover { color:#fff; }
+    .speaker-follow { display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; margin-left:6px; padding:0; vertical-align:-3px; border:none; background:none; color:var(--muted); cursor:pointer; border-radius:50%; transition:.2s; }
+    .speaker-follow svg { width:13px; height:13px; }
+    .speaker-follow:hover { color:#fff; background:rgba(255,255,255,.08); }
+    .speaker-follow.is-followed { color:var(--gold); }
+    .speaker-follow.is-followed svg { fill:var(--gold); stroke:var(--gold); }
+    .speakers-btn.has-new::after { content:""; position:absolute; top:6px; right:8px; width:8px; height:8px; border-radius:50%; background:#4ade80; box-shadow:0 0 9px #4ade80; animation:newPulse 2s ease-in-out infinite; }
+    .speakers-btn { position:relative; }
+    .sp-row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:13px 4px; border-bottom:1px solid var(--border); }
+    .sp-row:last-child { border-bottom:none; }
+    .sp-info { flex:1; min-width:0; }
+    .sp-name { font-weight:600; font-size:14.5px; margin-bottom:5px; }
+    .sp-upcoming { font-size:12px; color:var(--muted); }
+    .sp-talk { margin-top:5px; padding:6px 9px; background:rgba(255,255,255,.04); border-radius:7px; font-size:12px; cursor:pointer; transition:.2s; }
+    .sp-talk:hover { background:rgba(255,255,255,.09); }
+    .sp-talk-date { color:var(--muted); margin-right:7px; }
+    .sp-actions { display:flex; gap:6px; flex-direction:column; align-items:flex-end; }
+    .sp-unfollow { background:none; border:none; color:var(--muted); cursor:pointer; font-size:11.5px; padding:5px 9px; border-radius:7px; }
+    .sp-unfollow:hover { color:#fff; background:rgba(255,255,255,.07); }
+    #speakers-body .no-results { text-align:center; padding:30px 14px; color:var(--muted); font-size:13.5px; line-height:1.6; }
+    .notify-banner { display:flex; align-items:center; gap:10px; margin-bottom:14px; padding:11px 14px; background:rgba(74,222,128,.08); border:1px solid rgba(74,222,128,.25); border-radius:11px; font-size:12.5px; color:var(--text-soft); }
+    .notify-banner button { padding:6px 13px; border-radius:999px; border:1px solid rgba(74,222,128,.5); background:rgba(74,222,128,.12); color:#4ade80; font-family:inherit; font-size:11.5px; cursor:pointer; font-weight:600; }
+    .notify-banner button:hover { background:rgba(74,222,128,.2); }
+
     /* Vue Semaine — agenda lun→dim */
     #week-view { margin-top:18px; }
     .week-nav { display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
@@ -443,6 +469,10 @@
         </svg>
         <span id="near-label">Près de moi</span>
       </button>
+      <button class="pill-btn speakers-btn" id="speakers-btn" title="Mes intervenants suivis" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        <span id="speakers-label">Mes intervenants</span>&nbsp;<span id="speakers-count">(0)</span>
+      </button>
       <button class="pill-btn fav-toggle" id="fav-toggle">
         <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
           <path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/>
@@ -526,6 +556,17 @@
 
 <div class="toast" id="toast"></div>
 
+<div class="dice-overlay" id="speakers-overlay" style="display:none">
+  <div class="dice-modal" style="max-width:580px">
+    <div class="dice-head">
+      <span class="dice-title" id="speakers-title">Mes intervenants</span>
+      <button class="dice-x" id="speakers-close" aria-label="Fermer">✕</button>
+    </div>
+    <div id="speakers-body"></div>
+    <div class="dice-foot" id="speakers-foot" style="justify-content:flex-start;font-size:12px;color:var(--muted)"></div>
+  </div>
+</div>
+
 <div class="dice-overlay" id="dice-overlay" style="display:none">
   <div class="dice-modal">
     <div class="dice-head">
@@ -563,6 +604,7 @@ const ICONS = {
   cal:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
   star:'<svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>',
   share:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>',
+  bell:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>',
 };
 const ONLINE_RE = /\b(online|en ligne|visio|distanciel|webinaire|webinar|zoom|teams|à distance|hybride|streaming)\b/i;
 
@@ -604,6 +646,16 @@ const TR = {
   agoD:          ["il y a # j", "# d ago"],
   nextAuto:      ["Prochaine MAJ auto (GitHub) dans ", "Next auto update (GitHub) in "],
   nextWin:       ["Prochaine MAJ Windows dans ", "Next Windows update in "],
+  followSpeaker: ["Suivre cet intervenant", "Follow this speaker"],
+  unfollow:      ["Ne plus suivre", "Unfollow"],
+  followed:      ["Suivi ✓", "Following ✓"],
+  mySpeakers:    ["Mes intervenants", "My speakers"],
+  noSpeakers:    ["Aucun intervenant suivi. Clique sur la cloche d'un intervenant pour ajouter ici.", "No speakers followed yet. Click the bell on a speaker to add them here."],
+  upcomingFrom:  ["Prochaines confs", "Upcoming talks"],
+  notifyTitle:   ["Tes intervenants reviennent", "Your speakers are back"],
+  notifyEnable:  ["Activer les notifications", "Enable notifications"],
+  notifyEnabled: ["Notifications activées ✓", "Notifications enabled ✓"],
+  notifyDenied:  ["Notifications bloquées par le navigateur.", "Notifications blocked by the browser."],
 };
 function t(key) { return (TR[key] || [key, key])[LANG === "en" ? 1 : 0]; }
 function setLabel(el, txt) {
@@ -669,6 +721,8 @@ let archive = [], archiveLoaded = false;
 let historySource = "all", historyMonth = "all", currentRandom = null;
 let newIds = new Set(), showNewOnly = false;
 let weekOffset = 0;
+let followedSpeakers = new Set();
+try { followedSpeakers = new Set(JSON.parse(localStorage.getItem("paf_speakers") || "[]")); } catch (e) {}
 
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } catch (e) {}
@@ -741,6 +795,181 @@ document.getElementById("new-btn").addEventListener("click", () => {
   render();
 });
 
+// ── « Mes intervenants » : suivi local + alerte à l'ouverture ────
+function speakerNames(raw) {
+  // « Pr. Jean Dalibard (CdF), Marie Curie et Albert Einstein » → 3 noms.
+  // On retire d'abord les affiliations entre parenthèses pour ne pas
+  // découper « Magne (PSE, Paris 1) » au milieu de la virgule interne.
+  const cleaned = (raw || "").replace(/\([^)]*\)/g, "");
+  return cleaned.split(/[,;&]|\bet\b|\band\b/)
+    .map(s => s.trim().replace(/^(M\.|Mme\.?|Pr\.?|Dr\.?|Prof\.?)\s+/i, ""))
+    .filter(s => s.length >= 5 && /\s/.test(s) && !/\d/.test(s));
+}
+function renderSpeakers(raw) {
+  const names = speakerNames(raw);
+  if (!names.length) return escHtml(raw);
+  return names.map(n => {
+    const followed = followedSpeakers.has(n);
+    return `<span class="speaker-name" data-speaker="${escHtml(n)}">${escHtml(n)}</span>` +
+           `<button class="speaker-follow ${followed ? "is-followed" : ""}" ` +
+           `data-speaker="${escHtml(n)}" title="${followed ? t("unfollow") : t("followSpeaker")}" ` +
+           `aria-label="${followed ? t("unfollow") : t("followSpeaker")}">${ICONS.bell}</button>`;
+  }).join(", ");
+}
+function saveFollowed() {
+  try { localStorage.setItem("paf_speakers", JSON.stringify([...followedSpeakers])); } catch (e) {}
+  refreshSpeakersBtn();
+}
+function toggleFollowSpeaker(name, btn) {
+  if (followedSpeakers.has(name)) {
+    followedSpeakers.delete(name);
+    if (btn) { btn.classList.remove("is-followed"); btn.title = t("followSpeaker"); }
+  } else {
+    followedSpeakers.add(name);
+    if (btn) { btn.classList.add("is-followed"); btn.title = t("unfollow"); }
+    showToast(t("followed"));
+  }
+  saveFollowed();
+}
+function refreshSpeakersBtn() {
+  const btn = document.getElementById("speakers-btn");
+  if (!btn) return;
+  const visible = followedSpeakers.size > 0;
+  btn.style.display = visible ? "" : "none";
+  document.getElementById("speakers-count").textContent = "(" + followedSpeakers.size + ")";
+  // Compteur des « nouvelles » confs depuis la dernière ouverture du panneau
+  let seenIds = new Set();
+  try { seenIds = new Set(JSON.parse(localStorage.getItem("paf_speakers_seen") || "[]")); } catch (e) {}
+  const today = new Date().toISOString().slice(0, 10);
+  let unseen = 0;
+  allEvents.forEach(e => {
+    if (e.date < today || !e.speaker) return;
+    for (const n of speakerNames(e.speaker)) {
+      if (followedSpeakers.has(n) && !seenIds.has(e.id)) { unseen++; break; }
+    }
+  });
+  btn.classList.toggle("has-new", unseen > 0);
+}
+function openSpeakersPanel() {
+  const body = document.getElementById("speakers-body");
+  if (!followedSpeakers.size) {
+    body.innerHTML = `<div class="no-results">${t("noSpeakers")}</div>`;
+  } else {
+    const today = new Date().toISOString().slice(0, 10);
+    const lang = LANG === "en" ? "en-GB" : "fr-FR";
+    const rows = [...followedSpeakers].sort().map(name => {
+      const talks = allEvents.filter(e => e.date >= today && e.speaker
+                                          && speakerNames(e.speaker).includes(name))
+        .sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || "")))
+        .slice(0, 3);
+      const talkList = talks.length
+        ? talks.map(e => {
+            const d = new Date(e.date + "T12:00:00")
+              .toLocaleDateString(lang, { day: "numeric", month: "short" });
+            return `<div class="sp-talk" data-id="${escHtml(e.id)}">
+              <span class="sp-talk-date">${d}${e.time ? " · " + escHtml(e.time) : ""}</span>
+              ${escHtml(e.title)}
+            </div>`;
+          }).join("")
+        : `<div class="sp-upcoming">${LANG === "en" ? "No upcoming talks" : "Pas de conf à venir"}</div>`;
+      return `<div class="sp-row">
+        <div class="sp-info">
+          <div class="sp-name">${escHtml(name)}</div>
+          <div class="sp-upcoming">${talks.length} ${t("upcomingFrom")}</div>
+          ${talkList}
+        </div>
+        <div class="sp-actions">
+          <button class="sp-unfollow" data-speaker="${escHtml(name)}">${t("unfollow")}</button>
+        </div>
+      </div>`;
+    }).join("");
+    let banner = "";
+    if ("Notification" in window && Notification.permission === "default") {
+      banner = `<div class="notify-banner">
+        <span>🔔 ${LANG === "en"
+          ? "Get notified when a followed speaker has a new talk."
+          : "Sois prévenu quand un intervenant que tu suis a une nouvelle conf."}</span>
+        <button id="enable-notif">${t("notifyEnable")}</button>
+      </div>`;
+    }
+    body.innerHTML = banner + rows;
+  }
+  document.getElementById("speakers-title").textContent = t("mySpeakers");
+  document.getElementById("speakers-overlay").style.display = "flex";
+  // Marquer ce qui est affiché comme « vu »
+  const today = new Date().toISOString().slice(0, 10);
+  const seen = allEvents.filter(e => e.date >= today && e.speaker
+                          && speakerNames(e.speaker).some(n => followedSpeakers.has(n)))
+                        .map(e => e.id);
+  try { localStorage.setItem("paf_speakers_seen", JSON.stringify(seen)); } catch (e) {}
+  refreshSpeakersBtn();
+}
+document.getElementById("speakers-btn").addEventListener("click", openSpeakersPanel);
+document.getElementById("speakers-close").addEventListener("click", () => {
+  document.getElementById("speakers-overlay").style.display = "none";
+});
+document.getElementById("speakers-overlay").addEventListener("click", e => {
+  if (e.target === e.currentTarget) e.currentTarget.style.display = "none";
+});
+document.getElementById("speakers-body").addEventListener("click", e => {
+  const unfollow = e.target.closest(".sp-unfollow");
+  if (unfollow) {
+    followedSpeakers.delete(unfollow.dataset.speaker);
+    saveFollowed();
+    openSpeakersPanel();
+    return;
+  }
+  const talk = e.target.closest(".sp-talk");
+  if (talk) {
+    const ev = allEvents.find(x => x.id === talk.dataset.id);
+    if (ev) {
+      document.getElementById("speakers-overlay").style.display = "none";
+      openEventModal(ev, "detail");
+    }
+    return;
+  }
+  if (e.target.id === "enable-notif") {
+    Notification.requestPermission().then(p => {
+      if (p === "granted") showToast(t("notifyEnabled"));
+      else if (p === "denied") showToast(t("notifyDenied"));
+      openSpeakersPanel();
+    });
+  }
+});
+// Délégation : cloche sur n'importe quelle carte (list, week, modal)
+document.body.addEventListener("click", e => {
+  const f = e.target.closest(".speaker-follow");
+  if (!f) return;
+  e.preventDefault(); e.stopPropagation();
+  toggleFollowSpeaker(f.dataset.speaker, f);
+  // Synchroniser visuellement les autres cloches du même intervenant
+  document.querySelectorAll(`.speaker-follow[data-speaker="${CSS.escape(f.dataset.speaker)}"]`)
+    .forEach(b => b.classList.toggle("is-followed", followedSpeakers.has(f.dataset.speaker)));
+});
+function checkSpeakerNotifications() {
+  if (!followedSpeakers.size) return;
+  if (!("Notification" in window) || Notification.permission !== "granted") return;
+  let seenIds = new Set();
+  try { seenIds = new Set(JSON.parse(localStorage.getItem("paf_speakers_seen") || "[]")); } catch (e) {}
+  const today = new Date().toISOString().slice(0, 10);
+  const fresh = [];
+  for (const e of allEvents) {
+    if (e.date < today || !e.speaker || seenIds.has(e.id)) continue;
+    for (const n of speakerNames(e.speaker)) {
+      if (followedSpeakers.has(n)) { fresh.push({ ev: e, name: n }); break; }
+    }
+  }
+  if (!fresh.length) return;
+  const sample = fresh.slice(0, 3).map(x => `${x.name} — ${x.ev.title}`).join("\n");
+  const more = fresh.length > 3 ? `\n+${fresh.length - 3} ${LANG === "en" ? "more" : "autres"}` : "";
+  try {
+    new Notification(t("notifyTitle"), {
+      body: sample + more,
+      icon: "icon.svg", tag: "paf-speakers", renotify: false, silent: false,
+    });
+  } catch (e) {}
+}
+
 // ── Load ─────────────────────────────────────────────────────────
 async function loadEvents() {
   try {
@@ -752,6 +981,8 @@ async function loadEvents() {
     loadDigest();
     detectNewEvents();
     buildSuggestIndex();
+    refreshSpeakersBtn();
+    checkSpeakerNotifications();
     buildFilters();
     await applyURL();
     reflectUI();
@@ -1159,7 +1390,7 @@ function cardHtml(ev, idx) {
       <div class="card-title">${escHtml(ev.title)}</div>
       <div class="card-meta">
         <div class="institution">${inst}${dist}</div>
-        ${ev.speaker ? `<div class="row">${ICONS.user}<span>${escHtml(ev.speaker)}</span></div>` : ""}
+        ${ev.speaker ? `<div class="row">${ICONS.user}<span>${renderSpeakers(ev.speaker)}</span></div>` : ""}
         ${ev.location ? `<div class="row">${ICONS.pin}<span>${escHtml(ev.location)}</span>${isOnline(ev) ? `<span class="online-badge">${t("online")}</span>` : ""}</div>` : ""}
       </div>
       ${ev.description ? `<div class="card-desc">${escHtml(ev.description)}</div>` : ""}
@@ -1558,6 +1789,7 @@ document.getElementById("dice-overlay").addEventListener("click", e => {
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") {
     document.getElementById("dice-overlay").style.display = "none";
+    document.getElementById("speakers-overlay").style.display = "none";
     document.getElementById("search-suggest").style.display = "none";
   }
 });

@@ -124,6 +124,7 @@ def main():
             arch = []
         scrape.write_event_pages(merged + arch)
         scrape.write_sitemap(merged + arch)
+        scrape.write_og_image(merged)
         scrape.build_digest(merged)
     except Exception as e:
         print(f"[!] pages/digest : {type(e).__name__}: {e}")

@@ -1852,6 +1852,82 @@ text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7df
     print(f"Pages événement : {len(keep)} générées · {removed} obsolètes supprimées")
 
 
+OG_FILE = OUTPUT_FILE.parent.parent / "og.png"
+
+
+def write_og_image(events):
+    """Re-render og.png (1200x630) with the current event count baked in,
+    so any share of lotent.fr unfurls with today's live numbers instead
+    of a stale figure. Uses Playwright (already needed for scraping)."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception as e:
+        print(f"[WARN] og.png skipped (no Playwright): {e}")
+        return
+    n = len(events)
+    html = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1200px; height:630px; background:#07070d; overflow:hidden;
+       position:relative; font-family:'Space Grotesk',sans-serif; color:#ececf2; }
+.blob { position:absolute; border-radius:50%; filter:blur(120px); opacity:.55; }
+.b1 { width:560px; height:560px; background:#6d28d9; top:-180px; left:-120px; }
+.b2 { width:480px; height:480px; background:#1d4ed8; top:120px; right:-140px; }
+.b3 { width:430px; height:430px; background:#be185d; bottom:-200px; left:330px; }
+.grain { position:absolute; inset:0;
+         background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);
+         background-size:4px 4px; }
+.wrap { position:absolute; inset:0; display:flex; flex-direction:column;
+        justify-content:center; padding:0 90px; }
+.orb { width:34px; height:34px; border-radius:50%;
+       background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6);
+       display:inline-block; vertical-align:middle; margin-right:16px; }
+.brand { font-size:30px; font-weight:600; color:#c2c2d0;
+         display:flex; align-items:center; margin-bottom:34px; }
+h1 { font-size:74px; font-weight:700; line-height:1.12; letter-spacing:-1px;
+     background:linear-gradient(100deg,#ececf2 20%,#a78bfa 55%,#60a5fa 80%);
+     -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+     margin-bottom:34px; }
+.sub { font-family:Inter,sans-serif; font-size:27px; color:#9a9ab2;
+       line-height:1.5; max-width:900px; }
+.badges { position:absolute; bottom:54px; left:90px; display:flex; gap:14px;
+          font-family:Inter,sans-serif; }
+.badge { font-size:20px; padding:10px 22px; border-radius:999px;
+         border:1px solid rgba(255,255,255,.16);
+         background:rgba(255,255,255,.05); color:#c2c2d0; }
+.badge b { color:#fff; }
+</style></head><body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="grain"></div>
+<div class="wrap">
+  <div class="brand"><span class="orb"></span>lotent.fr</div>
+  <h1>Toutes les conférences<br>académiques de Paris.</h1>
+  <div class="sub">Collège de France · ENS · EHESS · Sorbonne · Sciences Po · IHP · PSE · PSL — mis à jour chaque jour.</div>
+</div>
+<div class="badges">
+  <span class="badge"><b>__N__</b>&nbsp;événements à venir</span>
+  <span class="badge">Gratuit, sans compte</span>
+  <span class="badge">Carte · Agenda · iCal</span>
+</div>
+</body></html>""".replace("__N__", str(n))
+    tmp = OG_FILE.parent / "_og_template.html"
+    tmp.write_text(html, encoding="utf-8")
+    try:
+        with sync_playwright() as p:
+            b = p.chromium.launch(headless=True)
+            pg = b.new_page(viewport={"width": 1200, "height": 630})
+            pg.goto(tmp.resolve().as_uri())
+            pg.wait_for_timeout(1800)  # webfont load
+            pg.screenshot(path=str(OG_FILE), type="png")
+            b.close()
+        print(f"og.png régénéré avec {n} événements")
+    except Exception as e:
+        print(f"[WARN] og.png render: {e}")
+    finally:
+        try: tmp.unlink()
+        except Exception: pass
+
+
 SITEMAP_FILE = OUTPUT_FILE.parent.parent / "sitemap.xml"
 
 
@@ -2096,6 +2172,12 @@ def main():
         write_sitemap(all_events + arch)
     except Exception as e:
         print(f"[ERROR] sitemap: {e}")
+        traceback.print_exc()
+
+    try:
+        write_og_image(all_events)
+    except Exception as e:
+        print(f"[ERROR] og image: {e}")
         traceback.print_exc()
 
     try:
