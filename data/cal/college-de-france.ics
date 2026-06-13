@@ -6,28 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Collège de France · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:7691d9c09cd6@paris-academique
-DTSTAMP:20260612T082141Z
-DTSTART:20260612T093000
-DTEND:20260612T113000
-SUMMARY:Les jonctions atomiques internes
-DESCRIPTION:Cours · Fluides quantiques couplés et jonctions Josephson\nhttps://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/les-jonctions-atomiques-internes
-LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-et-jonctions-josephson/les-jonctions-atomiques-internes
-END:VEVENT
-BEGIN:VEVENT
-UID:1abf5d7dd1fb@paris-academique
-DTSTAMP:20260612T082141Z
-DTSTART:20260612T111500
-DTEND:20260612T131500
-SUMMARY:Observing the Quantum Mpemba Effect in a Quantum Processor
-DESCRIPTION:Séminaire · Fluides quantiques couplés et jonctions Josephson\nhttps://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-couples-et-jonctions-josephson/observing-the-quantum-mpemba-effect-in-quantum-processor
-LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-couples-et-jonctions-josephson/observing-the-quantum-mpemba-effect-in-quantum-processor
-END:VEVENT
-BEGIN:VEVENT
 UID:05b8aff1b7ee@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260615T100000
 DTEND:20260615T120000
 SUMMARY:Network Design Problems: Approximation Algorithms and Linear Programming Relaxations (3)
@@ -37,7 +17,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/network-desig
 END:VEVENT
 BEGIN:VEVENT
 UID:80ca783dbad1@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260615T100000
 DTEND:20260615T120000
 SUMMARY:La peste et la fin du monde antique : pas si simple. Une vue d'Égypte
@@ -47,7 +27,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-peste-et-l
 END:VEVENT
 BEGIN:VEVENT
 UID:9e5c9ed7d747@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260615T140000
 DTEND:20260615T160000
 SUMMARY:Pour une vision (plus) émique de l'art égyptien : Kunstwollen et choix esthétiques
@@ -57,7 +37,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-ar
 END:VEVENT
 BEGIN:VEVENT
 UID:d09d883a86f3@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260616T100000
 DTEND:20260616T120000
 SUMMARY:1) Documents en rapport avec la présence sassanide en Asie centrale \; 2) Le mythe historiographique du mithraisme souterrain en Iran (3)
@@ -67,7 +47,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/1-do
 END:VEVENT
 BEGIN:VEVENT
 UID:809236adf323@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260616T150000
 DTEND:20260616T170000
 SUMMARY:Valeurs partagées
@@ -77,7 +57,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/reparer-les-t
 END:VEVENT
 BEGIN:VEVENT
 UID:73d0b4eb0319@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260616T163000
 DTEND:20260616T183000
 SUMMARY:Documents en rapport avec le sujet du cours : documents bactriens (3)
@@ -87,7 +67,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/docu
 END:VEVENT
 BEGIN:VEVENT
 UID:557b5644fde1@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260617T140000
 DTEND:20260617T160000
 SUMMARY:Limites non relativistes des théories des champs
@@ -97,7 +77,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de
 END:VEVENT
 BEGIN:VEVENT
 UID:3567c1eb993f@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260617T160000
 DTEND:20260617T180000
 SUMMARY:Gravitational Flux-Balance Laws from Conformal Carroll Geometry
@@ -107,7 +87,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativiste
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd4832aef32@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260617T180000
 DTEND:20260617T200000
 SUMMARY:Les femmes préhistoriques et la chasse
@@ -117,7 +97,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/conferences-prehi
 END:VEVENT
 BEGIN:VEVENT
 UID:12b23ec4ffca@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260618T110000
 DTEND:20260618T130000
 SUMMARY:Rh-Catalyzed C-H Activation for N-Heterocycle Construction
@@ -127,7 +107,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-met
 END:VEVENT
 BEGIN:VEVENT
 UID:ebe5dfcc4c69@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260618T140000
 DTEND:20260618T160000
 SUMMARY:L'artiste\, un acteur majeur de la société pharaonique
@@ -137,7 +117,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-ar
 END:VEVENT
 BEGIN:VEVENT
 UID:42fd0297d329@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260618T160000
 DTEND:20260618T180000
 SUMMARY:Phéromones et sociétés
@@ -147,7 +127,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/determinisme-
 END:VEVENT
 BEGIN:VEVENT
 UID:ce7b04d9131b@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260619T093000
 DTEND:20260619T113000
 SUMMARY:Les condensats fragmentés
@@ -157,7 +137,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-
 END:VEVENT
 BEGIN:VEVENT
 UID:46cda4aaec62@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260619T111500
 DTEND:20260619T131500
 SUMMARY:Sensing with Quantum Trajectories
@@ -167,7 +147,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/fluides-quantiques-coup
 END:VEVENT
 BEGIN:VEVENT
 UID:2942eccb0893@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260622T100000
 DTEND:20260622T120000
 SUMMARY:Network Design Problems: Approximation Algorithms and Linear Programming Relaxations (4)
@@ -177,7 +157,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/network-desig
 END:VEVENT
 BEGIN:VEVENT
 UID:875707f633fa@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260623T100000
 DTEND:20260623T120000
 SUMMARY:1) Documents en rapport avec la présence sassanide en Asie centrale \; 2) Le mythe historiographique du mithraisme souterrain en Iran (4)
@@ -187,7 +167,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/1-do
 END:VEVENT
 BEGIN:VEVENT
 UID:1667cb0671fd@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260623T150000
 DTEND:20260623T170000
 SUMMARY:Attentes et écarts \; règles et variations
@@ -197,7 +177,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/reparer-les-t
 END:VEVENT
 BEGIN:VEVENT
 UID:ba64a939002b@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260623T163000
 DTEND:20260623T183000
 SUMMARY:Documents en rapport avec le sujet du cours : documents bactriens (4)
@@ -207,7 +187,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/mithra-en-dialogue/docu
 END:VEVENT
 BEGIN:VEVENT
 UID:3b35494338d6@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260624T140000
 DTEND:20260624T160000
 SUMMARY:Extensions supersymétriques
@@ -217,7 +197,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de
 END:VEVENT
 BEGIN:VEVENT
 UID:3f17c885e916@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260624T160000
 DTEND:20260624T180000
 SUMMARY:Classical and Quantum Particles of the Galilei and Carroll Groups and Their Applications
@@ -227,7 +207,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativiste
 END:VEVENT
 BEGIN:VEVENT
 UID:b199618b9d3b@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260625T110000
 DTEND:20260625T130000
 SUMMARY:Catalytic Stereospecific Alkene Carboamination
@@ -237,7 +217,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-met
 END:VEVENT
 BEGIN:VEVENT
 UID:d12f153f2084@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260626T093000
 DTEND:20260626T113000
 SUMMARY:Du SQUID supraconducteur au SQUID atomique
@@ -247,7 +227,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-
 END:VEVENT
 BEGIN:VEVENT
 UID:2d957499992a@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260626T110000
 DTEND:20260626T130000
 SUMMARY:Ressources et applications des réseaux quantiques
@@ -257,7 +237,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/melange-de-gaz-quantiqu
 END:VEVENT
 BEGIN:VEVENT
 UID:b81119f43c05@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260626T140000
 DTEND:20260626T160000
 SUMMARY:Qui sont les peintres des tombes de la nécropole de l'élite à Thèbes sous la XVIIIe dynastie ?
@@ -267,7 +247,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-ar
 END:VEVENT
 BEGIN:VEVENT
 UID:115417ab1aa9@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20260703T110000
 DTEND:20260703T130000
 SUMMARY:Single-Atom Catalysis
@@ -277,7 +257,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/sin
 END:VEVENT
 BEGIN:VEVENT
 UID:23a7a0442d98@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20261104T173000
 DTEND:20261104T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (1)
@@ -287,7 +267,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:55661ed6b6dc@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20261105T173000
 DTEND:20261105T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (2)
@@ -297,7 +277,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:3bb77e8a3471@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20261112T173000
 DTEND:20261112T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (3)
@@ -307,7 +287,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:df68f3d2816a@paris-academique
-DTSTAMP:20260612T082141Z
+DTSTAMP:20260613T074437Z
 DTSTART:20261113T173000
 DTEND:20261113T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (4)
