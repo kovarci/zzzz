@@ -2132,6 +2132,14 @@ def main():
         print(f"⚠ Carried forward {carried} upcoming events from the previous run")
 
     all_events = deduplicate(all_events)
+
+    # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
+    # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.
+    prev_added = {e.get("id"): e.get("added_at") for e in prev_events if e.get("id")}
+    today_iso = TODAY.isoformat()
+    for ev in all_events:
+        if ev.get("id"):
+            ev["added_at"] = prev_added.get(ev["id"]) or today_iso
     all_events = [e for e in all_events if e.get("date", "") >= CUTOFF.isoformat()]
     all_events.sort(key=lambda e: (e["date"], e.get("time", "")))
 
