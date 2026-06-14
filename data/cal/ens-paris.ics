@@ -1,68 +1,58 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:ENS Paris · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:be3d37f159e0@paris-academique
-DTSTAMP:20260613T074437Z
-DTSTART;VALUE=DATE:20260612
-DTEND;VALUE=DATE:20260613
-SUMMARY:Sciences en traduction\, XVIe-XIXe siècles
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/sciences-en-traduction-xvie-xixe-siecles/2026-06-12t070000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/sciences-en-traduction-xvie-xixe-siecles/2026-06-12t070000
-END:VEVENT
-BEGIN:VEVENT
-UID:1f75009c619d@paris-academique
-DTSTAMP:20260613T074437Z
-DTSTART;VALUE=DATE:20260618
-DTEND;VALUE=DATE:20260619
-SUMMARY:Philosophie des inégalités écologiques
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/philosophie-des-inegalites-ecologiques/2026-06-18t160000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/philosophie-des-inegalites-ecologiques/2026-06-18t160000
-END:VEVENT
-BEGIN:VEVENT
-UID:0efc4c97d6c1@paris-academique
-DTSTAMP:20260613T074437Z
-DTSTART;VALUE=DATE:20260623
-DTEND;VALUE=DATE:20260624
-SUMMARY:Entrée au Panthéon de Marc Bloch et de Simonne Vidal : l’Ecole normale supérieure accueille la Veillée républicaine les 22 et 23 Juin 2026
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/entree-au-pantheon-de-marc-bloch-et-de-simonne-vidal-l-ecole-normale-superieure-accueille-la
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/entree-au-pantheon-de-marc-bloch-et-de-simonne-vidal-l-ecole-normale-superieure-accueille-la
-END:VEVENT
-BEGIN:VEVENT
-UID:b0013f8bc3e1@paris-academique
-DTSTAMP:20260613T074437Z
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260626
-SUMMARY:Living at the limits – France-Arizona perspectives on global environmental challenges
-DESCRIPTION:\nhttps://www.ens.psl.eu/node/9058
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/node/9058
-END:VEVENT
-BEGIN:VEVENT
-UID:1d156fc56d66@paris-academique
-DTSTAMP:20260613T074437Z
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260626
-SUMMARY:Soirée / Concert : Human sensory ecology
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-25t160000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-25t160000
-END:VEVENT
-BEGIN:VEVENT
-UID:b5002ded173d@paris-academique
-DTSTAMP:20260613T074437Z
-DTSTART;VALUE=DATE:20260704
-DTEND;VALUE=DATE:20260705
-SUMMARY:Voyage au centre du cerveau
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ENS Paris · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:1f75009c619d@paris-academique
+DTSTAMP:20260614T100329Z
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+SUMMARY:Philosophie des inégalités écologiques
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/philosophie-des-inegalites-ecologiques/2026-06-18t160000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/philosophie-des-inegalites-ecologiques/2026-06-18t160000
+END:VEVENT
+BEGIN:VEVENT
+UID:0efc4c97d6c1@paris-academique
+DTSTAMP:20260614T100329Z
+DTSTART;VALUE=DATE:20260623
+DTEND;VALUE=DATE:20260624
+SUMMARY:Entrée au Panthéon de Marc Bloch et de Simonne Vidal : l’Ecole normale supérieure accueille la Veillée républicaine les 22 et 23 Juin 2026
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/entree-au-pantheon-de-marc-bloch-et-de-simonne-vidal-l-ecole-normale-superieure-accueille-la
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/entree-au-pantheon-de-marc-bloch-et-de-simonne-vidal-l-ecole-normale-superieure-accueille-la
+END:VEVENT
+BEGIN:VEVENT
+UID:b0013f8bc3e1@paris-academique
+DTSTAMP:20260614T100329Z
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+SUMMARY:Living at the limits – France-Arizona perspectives on global environmental challenges
+DESCRIPTION:\nhttps://www.ens.psl.eu/node/9058
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/node/9058
+END:VEVENT
+BEGIN:VEVENT
+UID:1d156fc56d66@paris-academique
+DTSTAMP:20260614T100329Z
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+SUMMARY:Soirée / Concert : Human sensory ecology
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-25t160000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-25t160000
+END:VEVENT
+BEGIN:VEVENT
+UID:b5002ded173d@paris-academique
+DTSTAMP:20260614T100329Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+SUMMARY:Voyage au centre du cerveau
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
+END:VEVENT
+END:VCALENDAR
