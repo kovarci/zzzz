@@ -104,8 +104,8 @@
     body.select-mode .pick-box { display:block; }
     .pick-box.is-picked { background:linear-gradient(135deg,#a78bfa,#60a5fa); border-color:transparent; }
     .pick-box.is-picked::after { content:"✓"; color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; height:100%; }
-    .select-bar { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(110%); z-index:200; display:flex; gap:10px; align-items:center; background:rgba(19,19,32,.96); border:1px solid var(--border-bright); border-radius:999px; padding:9px 14px 9px 18px; box-shadow:0 18px 50px -10px rgba(0,0,0,.7); transition:transform .25s; }
-    body.select-mode .select-bar { transform:translateX(-50%) translateY(0); }
+    .select-bar { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(140px); z-index:200; display:flex; gap:10px; align-items:center; background:rgba(19,19,32,.96); border:1px solid var(--border-bright); border-radius:999px; padding:9px 14px 9px 18px; box-shadow:0 18px 50px -10px rgba(0,0,0,.7); opacity:0; pointer-events:none; transition:transform .25s, opacity .2s; }
+    body.select-mode .select-bar { transform:translateX(-50%) translateY(0); opacity:1; pointer-events:auto; }
     .select-bar .count { font-weight:700; font-family:"Space Grotesk",sans-serif; }
     .select-bar button { background:linear-gradient(120deg,#7c5cff,#3f7dff); color:#fff; border:none; padding:8px 16px; border-radius:999px; font-family:inherit; font-size:13px; font-weight:600; cursor:pointer; }
     .select-bar button:disabled { opacity:.45; cursor:not-allowed; }
@@ -289,8 +289,10 @@
     .event-card::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:var(--accent,#888); box-shadow:0 0 14px var(--accent,#888); opacity:.9; }
     .event-card .glare { position:absolute; inset:0; pointer-events:none; border-radius:var(--radius); transition:background .2s; }
     .event-card:hover { border-color:var(--border-bright); box-shadow:0 18px 50px -16px rgba(0,0,0,0.8),0 0 44px -14px var(--accent,#888); }
-    .card-image { margin:-19px -19px 4px; aspect-ratio:16/9; overflow:hidden; background:rgba(255,255,255,0.05); border-radius:var(--radius) var(--radius) 0 0; }
+    .card-image { position:relative; margin:-19px -19px 4px; aspect-ratio:16/9; overflow:hidden; background:rgba(255,255,255,0.05); border-radius:var(--radius) var(--radius) 0 0; }
     .card-image img { width:100%; height:100%; object-fit:cover; display:block; }
+    .price-badge { position:absolute; top:10px; right:10px; padding:4px 10px; border-radius:999px; font-size:11.5px; font-weight:700; letter-spacing:.02em; background:rgba(15,15,24,0.85); color:#fff; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.18); }
+    .price-badge.is-free { background:rgba(74,222,128,0.25); border-color:rgba(74,222,128,0.55); color:#86efac; }
     .card-top { display:flex; align-items:center; justify-content:space-between; gap:10px; }
     .card-time { font-size:13px; font-weight:600; color:#fff; font-variant-numeric:tabular-nums; font-family:"Space Grotesk",sans-serif; }
     .disc-tag { font-size:10.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:4px 10px; border-radius:999px; color:var(--accent,#fff); background:color-mix(in srgb,var(--accent,#888) 18%,transparent); border:1px solid color-mix(in srgb,var(--accent,#888) 40%,transparent); white-space:nowrap; }
@@ -426,14 +428,6 @@
       <button class="chip qchip" data-date="today">Aujourd'hui</button>
       <button class="chip qchip" data-date="week">Cette semaine</button>
       <button class="chip qchip" data-date="weekend">Ce week-end</button>
-    </div>
-  </div>
-  <div class="filter-block">
-    <div class="filter-label">Format</div>
-    <div class="chips" id="format-chips">
-      <button class="chip fchip active" data-format="all">Tout</button>
-      <button class="chip fchip" data-format="inperson">Présentiel</button>
-      <button class="chip fchip" data-format="online">En ligne</button>
     </div>
   </div>
   <div class="filter-block">
@@ -720,8 +714,6 @@ function applyLang() {
   document.querySelectorAll(".filter-label").forEach(l => { if (LBL[l.textContent.trim()]) l.textContent = LBL[l.textContent.trim()]; });
   const DATE = { all:"All", now:"⏱ Right now", tonight:"🌙 Tonight", today:"Today", week:"This week", weekend:"This weekend" };
   document.querySelectorAll("#date-chips .chip").forEach(c => c.textContent = DATE[c.dataset.date] || c.textContent);
-  const FMT = { all:"All", inperson:"In person", online:"Online" };
-  document.querySelectorAll("#format-chips .chip").forEach(c => c.textContent = FMT[c.dataset.format] || c.textContent);
   const HSRC = { all:"All", institution:"Universities", luma:"Luma", association:"Associations" };
   document.querySelectorAll("#history-source-chips .chip").forEach(c => c.textContent = HSRC[c.dataset.hsource] || c.textContent);
   document.querySelectorAll(".view-btn").forEach(b => {
@@ -1262,7 +1254,7 @@ async function applyURL() {
 function reflectUI() {
   document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.source === activeSource));
   document.querySelectorAll("#date-chips .chip").forEach(c => c.classList.toggle("active", c.dataset.date === dateFilter));
-  document.querySelectorAll("#format-chips .chip").forEach(c => c.classList.toggle("active", c.dataset.format === formatFilter));
+  // format-chips retiré : tout le monde est "Présentiel" par défaut, online minoritaire
   document.querySelectorAll("#discipline-chips .chip").forEach(c => c.classList.toggle("active", activeDiscs.has(c.textContent)));
   document.querySelectorAll("#institution-chips .chip").forEach(c => c.classList.toggle("active", activeInsts.has(c.textContent)));
   document.querySelectorAll("#luma-chips .chip").forEach(c => c.classList.toggle("active", activeLumaCats.has(c.dataset.cat)));
@@ -1459,8 +1451,11 @@ function cardHtml(ev, idx) {
              : escHtml(ev.institution);
   const fav = favs.has(ev.id);
   const dist = (ev._dist != null) ? ` <span class="dist-badge">${fmtDist(ev._dist)}</span>` : "";
+  const priceBadge = ev.price
+    ? `<span class="price-badge ${ev.price === "Gratuit" ? "is-free" : ""}">${escHtml(ev.price)}</span>`
+    : "";
   const image = (ev.source_type === "luma" && ev.image)
-    ? `<div class="card-image"><img loading="lazy" decoding="async" src="${escHtml(lumaThumb(ev.image))}" alt="" onerror="this.closest('.card-image').remove()"></div>` : "";
+    ? `<div class="card-image"><img loading="lazy" decoding="async" src="${escHtml(lumaThumb(ev.image))}" alt="" onerror="this.closest('.card-image').remove()">${priceBadge}</div>` : "";
   return `
     <div class="event-card" data-id="${escHtml(ev.id)}" data-url="${escHtml(ev.url || "#")}"
          style="--accent:${color};--d:${Math.min(idx,26)}">
@@ -1832,7 +1827,6 @@ function singleSelect(containerId, onPick) {
   });
 }
 singleSelect("date-chips",   ds => { dateFilter = ds.date; });
-singleSelect("format-chips", ds => { formatFilter = ds.format; });
 singleSelect("history-source-chips", ds => { historySource = ds.hsource; });
 document.getElementById("history-month").addEventListener("change", e => {
   historyMonth = e.target.value;

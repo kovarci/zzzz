@@ -816,18 +816,38 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
                     if isinstance(hosts, list) and hosts and isinstance(hosts[0], dict):
                         inst = clean_text(hosts[0].get("name", "")) or institution_default
                     img = ""
+                    price = ""
                     if source_type == "luma":
                         img = (ev.get("cover_url") or ev.get("social_image_url")
                                or (obj.get("cover_image") if isinstance(obj.get("cover_image"), str) else "")
                                or "")
-                    _out.append(new_event(
+                        # Prix : ticket_info contient {price: {cents, currency}, is_free}
+                        ti = obj.get("ticket_info") if isinstance(obj.get("ticket_info"), dict) else {}
+                        if ti.get("is_free"):
+                            price = "Gratuit"
+                        elif isinstance(ti.get("price"), dict):
+                            cents = ti["price"].get("cents")
+                            cur = (ti["price"].get("currency") or "").upper()
+                            if isinstance(cents, (int, float)) and cents > 0:
+                                sym = {"EUR": "€", "USD": "$", "GBP": "£"}.get(cur, cur)
+                                amt = int(cents) // 100
+                                price = f"{amt} {sym}".strip()
+                                mx = ti.get("max_price")
+                                if isinstance(mx, dict) and isinstance(mx.get("cents"), (int, float)):
+                                    max_amt = int(mx["cents"]) // 100
+                                    if max_amt > amt:
+                                        price = f"{amt}–{max_amt} {sym}".strip()
+                    ne = new_event(
                         inst, title, dt.date(),
                         time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
                         location=loc or "Paris",
                         desc=strip_html(ev.get("description") or ev.get("description_short") or "")[:400],
                         url=make_absolute(url, base_url or "https://lu.ma"),
                         source_type=source_type, image=img,
-                    ))
+                    )
+                    if price:
+                        ne["price"] = price
+                    _out.append(ne)
         for v in obj.values():
             extract_events_deep_json(v, institution_default, source_type, base_url,
                                      require_france, _depth + 1, _out, _seen)
@@ -2120,6 +2140,36 @@ h1 { font-size:74px; font-weight:700; line-height:1.12; letter-spacing:-1px;
 
 SITEMAP_FILE = OUTPUT_FILE.parent.parent / "sitemap.xml"
 
+# IndexNow (Bing) — propre clé persistante. Le fichier <key>.txt servi à la
+# racine du domaine prouve qu'on contrôle bien le site.
+INDEXNOW_KEY = "8c5d9e1f4a2b6e3d7c5f8a1b9d2e4c6f"
+INDEXNOW_KEY_FILE = OUTPUT_FILE.parent.parent / f"{INDEXNOW_KEY}.txt"
+
+
+def notify_indexnow(urls):
+    """Ping IndexNow (Bing, Yandex) avec la liste d'URLs qui viennent
+    d'apparaître/changer — indexation quasi-immédiate côté Bing."""
+    urls = [u for u in urls if u.startswith("http")]
+    if not urls:
+        return
+    # Crée la clé-fichier à la racine si manquante
+    if not INDEXNOW_KEY_FILE.exists():
+        INDEXNOW_KEY_FILE.write_text(INDEXNOW_KEY, encoding="utf-8")
+    payload = {
+        "host": "lotent.fr",
+        "key": INDEXNOW_KEY,
+        "keyLocation": f"{SITE_URL}/{INDEXNOW_KEY}.txt",
+        "urlList": urls[:10000],   # IndexNow accepte jusqu'à 10 000 URLs/batch
+    }
+    try:
+        r = requests.post("https://api.indexnow.org/IndexNow",
+                          json=payload, timeout=20,
+                          headers={"Content-Type": "application/json; charset=utf-8"})
+        # 200 OK · 202 Accepted (déjà reçu, en traitement) sont les succès
+        print(f"IndexNow : {len(urls)} URLs envoyées (HTTP {r.status_code})")
+    except Exception as e:
+        print(f"[WARN] IndexNow: {type(e).__name__}: {e}")
+
 
 def write_sitemap(events):
     """sitemap.xml at the site root: home, about, and every event page.
@@ -2383,6 +2433,17 @@ def main():
     except Exception as e:
         print(f"[ERROR] institution pages: {e}")
         traceback.print_exc()
+
+    # Notifie Bing/Yandex des nouveautés du jour pour accélérer l'indexation.
+    try:
+        fresh_urls = [f"{SITE_URL}/e/{e['id']}.html" for e in all_events
+                      if e.get("added_at") == today_iso and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")]
+        # Ping aussi la home + sitemap + pages institution si on a des nouveautés
+        if fresh_urls:
+            fresh_urls = [f"{SITE_URL}/", f"{SITE_URL}/sitemap.xml"] + fresh_urls
+            notify_indexnow(fresh_urls)
+    except Exception as e:
+        print(f"[WARN] IndexNow ping: {e}")
 
     try:
         build_digest(all_events)
