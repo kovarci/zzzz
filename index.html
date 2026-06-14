@@ -783,11 +783,27 @@ function detectNewEvents() {
     // La visite actuelle devient la référence pour la prochaine
     localStorage.setItem("paf_seen", JSON.stringify(allEvents.map(e => e.id)));
   } catch (e) {}
+  refreshNewBtn();
+}
+function refreshNewBtn() {
   const btn = document.getElementById("new-btn");
-  if (newIds.size) {
-    document.getElementById("new-count").textContent = newIds.size;
-    btn.style.display = "";
+  const isHistory = activeSource === "history";
+  if (!newIds.size || isHistory) { btn.style.display = "none"; return; }
+  // Combien de nouveautés appartiennent à l'onglet actif ? (sinon le clic
+  // afficherait « 0 résultat » trompeur)
+  const matches = allEvents.filter(e => newIds.has(e.id) && (
+    activeSource === "all" ||
+    (activeSource === "institution"  && e.source_type === "institution") ||
+    (activeSource === "luma"         && e.source_type === "luma") ||
+    (activeSource === "association"  && e.source_type === "association")
+  ));
+  if (!matches.length) {
+    btn.style.display = "none";
+    if (showNewOnly) { showNewOnly = false; btn.classList.remove("active"); }
+    return;
   }
+  document.getElementById("new-count").textContent = matches.length;
+  btn.style.display = "";
 }
 document.getElementById("new-btn").addEventListener("click", () => {
   showNewOnly = !showNewOnly;
@@ -1193,7 +1209,7 @@ function reflectUI() {
   document.getElementById("history-section").style.display = isHistory ? "" : "none";
   document.getElementById("date-chips").closest(".filter-block").style.display = isHistory ? "none" : "";
   document.getElementById("stats-bar").style.display = isHistory ? "none" : "";
-  document.getElementById("new-btn").style.display = (newIds.size && !isHistory) ? "" : "none";
+  refreshNewBtn();
   document.getElementById("digest-strip").style.display =
     (digestLoaded && activeSource === "all" && activeView === "list") ? "" : "none";
   document.getElementById("list-view").style.display = activeView === "list" ? "" : "none";
