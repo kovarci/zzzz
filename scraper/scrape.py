@@ -37,63 +37,139 @@ HORIZON = TODAY + timedelta(days=365)
 
 DISCIPLINE_KEYWORDS = {
     "Mathématiques": [
-        "mathémat", "algèbre", "géométrie", "topologie", "analyse fonction",
+        # FR
+        "mathémat", "algèbre", "géométri", "topologi", "analyse fonction",
         "probabilit", "statistique", "arithmétique", "combinatoire",
         "théorie des nombres", "équation", "logique mathématique", " math ",
-        "poincaré", "graphe", "tenseur", "variété",
+        "graphe", "tenseur", "variété", "homologi", "cohomologi",
+        "homotopi", "homotop", "espace métrique", "groupe de lie",
+        "courbe ellipt", "modulair", "polytope", "fractale",
+        # EN
+        "theorem", "conjecture", "manifold", "algebra", "geometry", "geometr",
+        "topology", "operator", "operad", "homotopy", "homology", "cohomology",
+        "motivic", "automorphic", "langlands", "modular form", "galois",
+        "perfectoid", "ergodic", "schur", "étale", "etale", "derived",
+        "scheme", "sheaf", "fano", "calabi-yau", "hodge", "witt", "k-theory",
+        "k-théorie", "lie algebra", "lie group", "lie algebr", " hilbert",
+        "banach", "sobolev", " nls", "pde ", " edp", "schrödinger",
+        "schrodinger", "hyperbolic equation", "elliptic equation", "lattice",
+        "integrable", "dispersive", "ricci", "yamabe", " riemann", "kahler",
+        "kähler", "symplectic", "symplectique", "groebner", "gröbner",
     ],
     "Philosophie": [
         "philosoph", "éthique", "métaphysique", "épistémologie", "ontologie",
-        "phénoménologie", "wittgenstein", "hegel", " kant ", "nietzsche",
+        "phénoménologi", "wittgenstein", "hegel", " kant", "nietzsche",
         "platon", "aristote", "esthétique philosophique", "morale",
+        "ricoeur", "deleuze", "foucault", "merleau-ponty", "spinoza",
     ],
     "Littérature": [
-        "littératur", "roman", "poésie", "poème", "narratologie", "récit",
+        "littératur", "roman", "poésie", "poème", "narratologi", "récit",
         "fiction", "écrivain", "stylistique", "rhétorique", "traduction littéraire",
-        "linguistique", "philolog",
+        "linguistique", "philolog", "poétique", "romanesque", "shakespeare",
+        "balzac", "proust", "flaubert", "stendhal", "céline", "rimbaud",
+        "baudelaire", "verlaine", "molière", "racine", "corneille",
     ],
     "Histoire": [
         "histoir", "archive", "mémoire collective", "patrimoine", "médiéval",
-        "antiquité", "révolution", "colonialism", "esclavage", " guerre ",
-        "empire", "historiograph", "chronologie",
+        "antiquité", "révolution", "colonialism", "esclavage", " guerre",
+        "empire", "historiograph", "chronologie", "préhistoir", "néolithi",
+        "byzantin", "ottoman", "renaissance", " moyen âge", "égyptolog",
+        "assyriolog", "sumeri", " sassanid", "carthag", "vichy", " shoah",
     ],
     "Sciences": [
-        "physique", "chimie", "biologie", "neuroscienc", "génétique", "écologie",
-        "astronomie", "astrophysique", "quantique", "thermodynamique", "évolution",
-        "darwin", "climat", "environnement", "science cognitiv", "machine learning",
-        "intelligence artificielle", "deep learning", "data science",
+        # FR
+        "physique", "chimie", "biologi", "neuroscienc", "génétique", "écologi",
+        "astronomi", "astrophysique", "quantique", "thermodynamique", "évolution",
+        "darwin", "climat", "environnement", "science cognitiv",
+        "intelligence artificielle", "apprentissage automatique",
+        "particule", "atomique", "moléculaire", "nucléair", "relativ",
+        "supraconduc", "cellulair", "écosystèm", "biodiversit",
+        "cosmolog", "exoplanèt", "matière noire", "boson",
+        # EN
+        "physics", "chemistry", "biology", "ecology", "ecological",
+        "climate", "quantum", "particle", "atomic", "molecular",
+        "cosmic", "cosmolog", "exoplanet", "stellar",
+        "machine learning", "deep learning", "data science", "neural network",
+        "artificial intelligence", "computational", "computing",
+        "hamiltonian", "lagrangian", "magnetic", "magnetism", "magnétique",
+        "semi-classical", "laplacian", "laplacien", "dirac", "gauge",
+        "supersymetr", "supersymétri", "conformal", "conforme", "holograph",
+        "condensed matter", "matière condensé", "moire", "moiré",
+        "josephson", "topological state", "moléculaire", "réaction chimique",
+        " josephson",
     ],
     "Économie": [
-        "économi", "macroéco", "microéco", "marché", "finance", "monétaire",
-        "fiscal", "inégalité", "croissance", "emploi", "chômage", "salaire",
-        "capitalisme", "économétrie",
+        "économi", "economic", "macroéco", "microéco", "macro-", "micro-",
+        "marché", "finance", "financ", "monétaire", "monetary",
+        "fiscal", "inégalité", "inequality", "croissance", "growth",
+        "emploi", "chômage", "unemployment", "salaire", "wage",
+        "capitalisme", "capitalism", "économétr", "econometric",
+        "pib", "gdp", "inflation", "phillips", "solow", "dsge",
+        "consumption", "consommation", "investment", "investissement",
+        "trade ", "commerce", "tax", "fiscalit", "banque centrale",
+        "central bank", "labor market", "marché du travail",
     ],
     "Sociologie & Anthropologie": [
-        "sociologi", "anthropologi", "ethnolog", "terrain", "enquête", "société",
-        "classe sociale", "genre ", "racisme", "discrimination", "migration",
-        "identité", "rituel", "bourdieu", "durkheim", "famille",
+        "sociologi", "anthropologi", "ethnolog", "terrain", " enquête",
+        "société", "classe sociale", "genre ", "racisme", "discrimination",
+        "migration", "identité", "rituel", "bourdieu", "durkheim", "famille",
+        "ethnograph", "kinship", "parenté", "tribu", "rural", "urbain ",
     ],
     "Droit & Sciences politiques": [
-        " droit ", "juridique", "constitutionnel", "science politique",
-        "démocratie", "gouvernance", "parlement", "élection",
-        "souveraineté", "politique publique", "géopolitique",
+        " droit", " droits ", "juridique", "constitutionnel", "science politique",
+        "démocratie", "democracy", "gouvernance", "parlement",
+        "élection", "election", "souveraineté", "sovereignty",
+        "politique publique", "géopolitique", "geopolitic", "ambassadeur",
+        "ambassade", "diplomate", "diplomacy", "diplomatie", "ministre",
+        "minister", "ancien premier ministre", "former prime minister",
+        "président", "elysée", "elysee",
     ],
     "Arts & Culture": [
-        " art ", "musique", "cinéma", " film ", "théâtre", "peinture", "sculpture",
-        "architecture", "danse", "muséolog", "exposition", "photographie",
-        "design", "musical",
+        " art ", " arts ", "musique", "music ", "cinéma", "cinema", " film ",
+        " films ", "théâtre", "theatre", "peinture", "painting", "sculpture",
+        "architecture", "danse", "dance ", "muséolog", "exposition", "exhibit",
+        "photographi", "photograph", "design", "musical", "ballet", "opéra",
+        "opera", "matisse", "picasso", "monet", "degas", "rodin", "rembrandt",
     ],
 }
 
+# Quand le détecteur ne trouve rien, on tombe sur la discipline « phare »
+# de l'institution. Les multi-disciplines (Sciences Po, EHESS…) restent en
+# « Autre » pour ne pas étiqueter à tort.
+_INSTITUTION_DEFAULT = {
+    "Institut Henri Poincaré": "Mathématiques",
+    "Paris School of Economics": "Économie",
+}
 
-def detect_discipline(title: str, description: str = "") -> str:
+
+# Mapping des thèmes Luma vers une discipline « phare » : si aucun mot-clé
+# n'attrape un titre Luma (souvent court, ex. « Pocket Party »), on retombe
+# au moins sur le thème de la page Luma d'où il vient.
+_LUMA_CAT_DISCIPLINE = {
+    "ai": "Sciences", "tech": "Sciences", "climate": "Sciences",
+    "arts": "Arts & Culture", "crypto": "Économie",
+    # paris / wellness / food / fitness → restent "Autre" (vraiment hors champ académique)
+}
+
+
+def detect_discipline(title: str, description: str = "",
+                      institution: str = "",
+                      luma_categories=None) -> str:
     text = " " + (title + " " + description).lower() + " "
     scores = {}
     for discipline, keywords in DISCIPLINE_KEYWORDS.items():
         score = sum(1 for kw in keywords if kw in text)
         if score:
             scores[discipline] = score
-    return max(scores, key=scores.get) if scores else "Autre"
+    if scores:
+        return max(scores, key=scores.get)
+    # Fallback Luma : la catégorie d'origine sert d'indice
+    if luma_categories:
+        for cat in luma_categories:
+            d = _LUMA_CAT_DISCIPLINE.get(cat)
+            if d:
+                return d
+    return _INSTITUTION_DEFAULT.get(institution, "Autre")
 
 
 # ── French date parser ────────────────────────────────────────────────────────
@@ -256,8 +332,12 @@ def parse_date(s):
 _JUNK_TITLE = re.compile(
     r"^\s*(acc[eè]s rapides?|aujourd'?hui|cette semaine|ce mois|cette ann[eé]e|"
     r"agenda|programme|calendrier|r[eé]sultats?|tous les|voir tout|voir plus|"
-    r"filtrer|affiner( par)?|trier( par)?|recherche[rz]?|"
+    r"filtrer|affiner( par)?|trier( par)?|recherche[rz]?|recherche par\b.*|"
     r"prochains? [eé]v[eé]nements?|[aà] venir|en ce moment|menu|"
+    r"[eé]v[eé]nements?|tous les [eé]v[eé]nements?|"
+    r"formulaire(\s+de\s+recherche)?|"
+    r"param[eè]tres?(\s+d['e]?accessibilit[eé])?|accessibilit[eé]|"
+    r"se connecter|connexion|s'inscrire|inscription|"
     r"newsletter|cookies?|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|"
     r"\d{1,2}\s+\w+\s+\d{4})\s*$",
     re.I,
@@ -307,7 +387,7 @@ def new_event(institution, title, d, time_str="", end_time="", location="",
         "id": make_id(institution, title, str(d)),
         "title": title,
         "institution": institution,
-        "discipline": detect_discipline(title, desc),
+        "discipline": detect_discipline(title, desc, institution),
         "date": d.isoformat(),
         "time": time_str,
         "end_time": end_time,
