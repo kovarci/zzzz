@@ -95,6 +95,22 @@
     #dice-reroll.rolling svg { animation:diceSpin .45s ease; }
     @keyframes diceSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
 
+    /* Mode sélection + export .ics personnalisé */
+    .select-btn { display:none; }
+    body.select-mode .select-btn.active { display:inline-flex; }
+    body.select-mode .event-card { padding-left:46px; }
+    .pick-box { position:absolute; top:14px; left:14px; width:22px; height:22px; border:1.5px solid var(--border-bright); border-radius:6px; background:rgba(0,0,0,.3); cursor:pointer; display:none; z-index:5; transition:.15s; }
+    body.select-mode .pick-box { display:block; }
+    .pick-box.is-picked { background:linear-gradient(135deg,#a78bfa,#60a5fa); border-color:transparent; }
+    .pick-box.is-picked::after { content:"✓"; color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; height:100%; }
+    .select-bar { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(110%); z-index:200; display:flex; gap:10px; align-items:center; background:rgba(19,19,32,.96); border:1px solid var(--border-bright); border-radius:999px; padding:9px 14px 9px 18px; box-shadow:0 18px 50px -10px rgba(0,0,0,.7); transition:transform .25s; }
+    body.select-mode .select-bar { transform:translateX(-50%) translateY(0); }
+    .select-bar .count { font-weight:700; font-family:"Space Grotesk",sans-serif; }
+    .select-bar button { background:linear-gradient(120deg,#7c5cff,#3f7dff); color:#fff; border:none; padding:8px 16px; border-radius:999px; font-family:inherit; font-size:13px; font-weight:600; cursor:pointer; }
+    .select-bar button:disabled { opacity:.45; cursor:not-allowed; }
+    .select-bar .x { background:none; color:var(--muted); padding:5px 10px; font-size:18px; }
+    .select-bar .x:hover { color:#fff; }
+
     /* Mes intervenants — cloches sur les cartes + panneau */
     .speaker-name { cursor:pointer; transition:color .2s; }
     .speaker-name:hover { color:#fff; }
@@ -463,6 +479,10 @@
         <span class="new-dot"></span>
         <span id="new-count">0</span> nouveaux
       </button>
+      <button class="pill-btn" id="select-btn" title="Cocher des événements pour exporter un calendrier personnalisé">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Sélection
+      </button>
       <button class="pill-btn dice-btn" id="dice-btn" title="Découvrir un événement au hasard (respecte les filtres actifs)">
         <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
           <rect x="3" y="3" width="18" height="18" rx="4.5"/>
@@ -566,6 +586,12 @@
 </div>
 
 <div class="toast" id="toast"></div>
+
+<div class="select-bar" id="select-bar">
+  <span><span class="count" id="select-count">0</span> sélectionné(s)</span>
+  <button id="select-export" disabled>Exporter .ics</button>
+  <button class="x" id="select-cancel" aria-label="Annuler">✕</button>
+</div>
 
 <div class="dice-overlay" id="speakers-overlay" style="display:none">
   <div class="dice-modal" style="max-width:580px">
@@ -748,6 +774,7 @@ let newIds = new Set(), showNewOnly = false;
 let weekOffset = 0;
 let followedSpeakers = new Set();
 try { followedSpeakers = new Set(JSON.parse(localStorage.getItem("paf_speakers") || "[]")); } catch (e) {}
+let pickedIds = new Set(), selectMode = false;
 
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("paf_favs") || "[]")); } catch (e) {}
@@ -1437,6 +1464,7 @@ function cardHtml(ev, idx) {
     <div class="event-card" data-id="${escHtml(ev.id)}" data-url="${escHtml(ev.url || "#")}"
          style="--accent:${color};--d:${Math.min(idx,26)}">
       <span class="glare"></span>
+      <span class="pick-box ${pickedIds.has(ev.id) ? "is-picked" : ""}" data-id="${escHtml(ev.id)}" aria-label="Sélectionner"></span>
       ${image}
       <div class="card-top">
         <span class="card-time">${escHtml(time)}</span>
@@ -1622,6 +1650,13 @@ function updateInstHeader() {
   document.getElementById("inst-ical").href =
     new URL("data/cal/" + slugify(name) + ".ics", location.href).href.replace(/^https?/, "webcal");
   el.style.display = "";
+  // Met à jour aussi les meta OG de la page pour les partages directs
+  const slug = slugify(name);
+  const ogUrl = `https://lotent.fr/i/${slug}.html`;
+  const ogImg = `https://lotent.fr/data/og/${slug}.png`;
+  document.querySelector('meta[property="og:url"]').setAttribute("content", ogUrl);
+  document.querySelector('meta[property="og:image"]').setAttribute("content", ogImg);
+  document.querySelector('meta[name="twitter:image"]').setAttribute("content", ogImg);
 }
 
 function render() {
@@ -1918,6 +1953,87 @@ function shareEvent(id) {
   }
   copyText(url).then(() => showToast(t("linkCopied")));
 }
+
+// ── Mode sélection + export .ics personnalisé ────────────────────
+function toggleSelectMode(on) {
+  selectMode = on;
+  document.body.classList.toggle("select-mode", on);
+  document.getElementById("select-btn").classList.toggle("active", on);
+  if (!on) { pickedIds.clear(); updateSelectBar(); render(); }
+}
+function updateSelectBar() {
+  document.getElementById("select-count").textContent = pickedIds.size;
+  document.getElementById("select-export").disabled = pickedIds.size === 0;
+}
+document.getElementById("select-btn").addEventListener("click", () => toggleSelectMode(!selectMode));
+document.getElementById("select-cancel").addEventListener("click", () => toggleSelectMode(false));
+document.body.addEventListener("click", e => {
+  const box = e.target.closest(".pick-box");
+  if (!box) return;
+  e.preventDefault(); e.stopPropagation();
+  const id = box.dataset.id;
+  if (pickedIds.has(id)) { pickedIds.delete(id); box.classList.remove("is-picked"); }
+  else                   { pickedIds.add(id);    box.classList.add("is-picked"); }
+  updateSelectBar();
+}, true);
+function _icsEsc(s) {
+  return String(s || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;")
+    .replace(/,/g, "\\,").replace(/\r/g, "").replace(/\n/g, "\\n");
+}
+function _icsDt(date, time) {
+  const d = date.replace(/-/g, "");
+  if (time && /^\d{1,2}:\d{2}/.test(time)) {
+    const [h, m] = time.split(":");
+    return { start: `${d}T${h.padStart(2,"0")}${m.padStart(2,"0")}00`,
+             allDay: false, h: +h, m: +m };
+  }
+  return { start: d, allDay: true };
+}
+function buildIcs(events) {
+  const stamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+  const out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Paris Academique//Selection//FR",
+               "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+               "X-WR-CALNAME:Ma sélection · Paris Académique",
+               "X-WR-TIMEZONE:Europe/Paris"];
+  for (const ev of events) {
+    const s = _icsDt(ev.date, ev.time);
+    let dtstart, dtend;
+    if (s.allDay) {
+      dtstart = `DTSTART;VALUE=DATE:${s.start}`;
+      const nd = new Date(ev.date + "T00:00:00");
+      nd.setDate(nd.getDate() + 1);
+      dtend = `DTEND;VALUE=DATE:${nd.toISOString().slice(0,10).replace(/-/g,"")}`;
+    } else {
+      dtstart = `DTSTART:${s.start}`;
+      const e = _icsDt(ev.date, ev.end_time);
+      dtend = e.start && !e.allDay ? `DTEND:${e.start}`
+                                   : `DTEND:${ev.date.replace(/-/g,"")}T${String(Math.min(s.h+2,23)).padStart(2,"0")}${String(s.m).padStart(2,"0")}00`;
+    }
+    const desc = _icsEsc((ev.description || "") + (ev.url ? "\n" + ev.url : ""));
+    out.push("BEGIN:VEVENT", `UID:${ev.id}@paris-academique`, `DTSTAMP:${stamp}`,
+             dtstart, dtend, `SUMMARY:${_icsEsc(ev.title)}`,
+             `DESCRIPTION:${desc}`, `LOCATION:${_icsEsc(ev.location || "")}`);
+    if (ev.url) out.push(`URL:${_icsEsc(ev.url)}`);
+    out.push("END:VEVENT");
+  }
+  out.push("END:VCALENDAR");
+  return out.join("\r\n") + "\r\n";
+}
+document.getElementById("select-export").addEventListener("click", () => {
+  const picked = [...pickedIds].map(id => allEvents.find(e => e.id === id)
+                                       || archive.find(e => e.id === id))
+                               .filter(Boolean);
+  if (!picked.length) return;
+  const ics = buildIcs(picked);
+  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `paris-academique-selection-${new Date().toISOString().slice(0,10)}.ics`;
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 200);
+  showToast(picked.length + " événement" + (picked.length > 1 ? "s exportés ✓" : " exporté ✓"));
+});
 
 // ── Raccourcis clavier ───────────────────────────────────────────
 document.addEventListener("keydown", e => {

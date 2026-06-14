@@ -15,7 +15,8 @@ DATA = Path(__file__).parent.parent / "data" / "events.json"
 CRITICAL = ["Institut Henri Poincaré", "Collège de France",
             "Paris School of Economics", "Université PSL"]
 # Smaller sources — worth a heads-up if they vanish, but not a hard failure.
-WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université"]
+WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
+         "Article 1", "Sciences et Cultures"]
 
 
 def main():

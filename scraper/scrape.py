@@ -1853,6 +1853,196 @@ text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7df
 
 
 OG_FILE = OUTPUT_FILE.parent.parent / "og.png"
+OG_INST_DIR = OUTPUT_FILE.parent / "og"
+INST_PAGES_DIR = OUTPUT_FILE.parent.parent / "i"
+
+# Institutions « phares » pour lesquelles on génère une page partage dédiée
+# avec image OG personnalisée. Doit correspondre à INSTITUTION_SITES côté JS.
+SHARE_INSTITUTIONS = [
+    "Collège de France", "ENS Paris", "EHESS", "Institut Henri Poincaré",
+    "Paris School of Economics", "Sciences Po", "Sorbonne Université",
+    "Université PSL", "Article 1", "Sciences et Cultures",
+]
+
+
+def write_institution_share_pages(events):
+    """Pour chaque grande institution : 1 PNG (data/og/<slug>.png) + 1 page
+    HTML (i/<slug>.html) avec balises OG dédiées et redirection vers
+    l'app filtrée. Partage WhatsApp/Twitter de l'URL = aperçu propre,
+    contenu indexable par Google. Régénéré à chaque scrape."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception as e:
+        print(f"[WARN] institution OG skipped (no Playwright): {e}")
+        return
+
+    OG_INST_DIR.mkdir(exist_ok=True)
+    INST_PAGES_DIR.mkdir(exist_ok=True)
+
+    # Stats par institution (uniquement les futures)
+    today_iso = TODAY.isoformat()
+    by_inst = {}
+    for ev in events:
+        inst = ev.get("institution", "")
+        if inst not in SHARE_INSTITUTIONS:
+            continue
+        if ev.get("date", "") < today_iso:
+            continue
+        by_inst.setdefault(inst, []).append(ev)
+
+    written_pngs, written_pages = set(), set()
+    with sync_playwright() as p:
+        b = p.chromium.launch(headless=True)
+        for inst in SHARE_INSTITUTIONS:
+            slug = slugify(inst)
+            if not slug:
+                continue
+            evts = by_inst.get(inst, [])
+            n = len(evts)
+            initial = inst[0].upper()
+            html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap');
+* {{ margin:0; padding:0; box-sizing:border-box; }}
+body {{ width:1200px; height:630px; background:#07070d; overflow:hidden; position:relative;
+       font-family:'Space Grotesk',sans-serif; color:#ececf2; }}
+.blob {{ position:absolute; border-radius:50%; filter:blur(120px); opacity:.55; }}
+.b1 {{ width:560px; height:560px; background:#6d28d9; top:-180px; left:-120px; }}
+.b2 {{ width:480px; height:480px; background:#1d4ed8; top:120px; right:-140px; }}
+.b3 {{ width:430px; height:430px; background:#be185d; bottom:-200px; left:330px; }}
+.grain {{ position:absolute; inset:0;
+         background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);
+         background-size:4px 4px; }}
+.wrap {{ position:absolute; inset:0; display:flex; flex-direction:column;
+        justify-content:center; padding:0 90px; }}
+.brand {{ font-size:24px; font-weight:500; color:#8888a0; margin-bottom:22px;
+         letter-spacing:.04em; }}
+.row {{ display:flex; align-items:center; gap:32px; margin-bottom:34px; }}
+.avatar {{ width:130px; height:130px; border-radius:36px; flex:0 0 130px;
+          display:flex; align-items:center; justify-content:center;
+          font-size:74px; font-weight:700; color:#fff;
+          background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6);
+          box-shadow:0 18px 60px -10px rgba(120,100,255,.6); }}
+h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
+     background:linear-gradient(100deg,#ececf2 30%,#a78bfa 80%);
+     -webkit-background-clip:text; -webkit-text-fill-color:transparent; }}
+.count {{ font-size:42px; font-weight:600; color:#c2c2d0;
+         font-family:Inter,sans-serif; }}
+.count b {{ background:linear-gradient(100deg,#a78bfa,#60a5fa);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+            font-weight:700; }}
+.foot {{ position:absolute; bottom:48px; left:90px; right:90px;
+        display:flex; justify-content:space-between; align-items:center;
+        font-family:Inter,sans-serif; font-size:19px; color:#8888a0; }}
+.orb {{ width:18px; height:18px; border-radius:50%; display:inline-block;
+       background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6);
+       vertical-align:-3px; margin-right:9px; }}
+</style></head><body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="grain"></div>
+<div class="wrap">
+  <div class="brand">CONFÉRENCES À PARIS</div>
+  <div class="row">
+    <div class="avatar">{initial}</div>
+    <div>
+      <h1>{_esc_attr(inst)}</h1>
+    </div>
+  </div>
+  <div class="count"><b>{n}</b>&nbsp;conférence{'s' if n != 1 else ''} à venir</div>
+</div>
+<div class="foot">
+  <span><span class="orb"></span>lotent.fr</span>
+  <span>mis à jour chaque jour</span>
+</div>
+</body></html>"""
+            tmp = OG_INST_DIR / f"_tmp_{slug}.html"
+            tmp.write_text(html, encoding="utf-8")
+            png_path = OG_INST_DIR / f"{slug}.png"
+            try:
+                pg = b.new_page(viewport={"width": 1200, "height": 630})
+                pg.goto(tmp.resolve().as_uri())
+                pg.wait_for_timeout(1500)
+                pg.screenshot(path=str(png_path), type="png")
+                pg.close()
+                written_pngs.add(f"{slug}.png")
+            except Exception as e:
+                print(f"[WARN] OG {slug}: {e}")
+            finally:
+                try: tmp.unlink()
+                except Exception: pass
+
+            # Page HTML stub avec balises OG + contenu indexable
+            from urllib.parse import quote
+            inst_quoted = quote(inst)
+            target = f"../index.html?institution={inst_quoted}"
+            short = f"{n} conférence{'s' if n != 1 else ''} à venir à Paris."
+            speakers = []
+            for ev in evts[:8]:
+                if ev.get("speaker"):
+                    speakers.append(ev["speaker"][:60])
+            speakers_section = ""
+            if speakers:
+                speakers_section = "<p>Avec : " + ", ".join(_esc_attr(s) for s in speakers[:5]) + (" et d'autres" if len(speakers) > 5 else "") + ".</p>"
+            page = f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{_esc_attr(inst)} — Conférences à Paris</title>
+<link rel="canonical" href="{SITE_URL}/i/{slug}.html">
+<meta name="description" content="{_esc_attr(short)} Calendrier mis à jour chaque jour sur lotent.fr.">
+<meta property="og:title" content="{_esc_attr(inst)} — {n} conférence{'s' if n != 1 else ''} à venir">
+<meta property="og:description" content="{_esc_attr(short)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{SITE_URL}/i/{slug}.html">
+<meta property="og:image" content="{SITE_URL}/data/og/{slug}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{_esc_attr(inst)} — {n} conférences à venir">
+<meta name="twitter:description" content="{_esc_attr(short)}">
+<meta name="twitter:image" content="{SITE_URL}/data/og/{slug}.png">
+<style>
+body{{font-family:Inter,system-ui,sans-serif;background:#07070d;color:#ececf2;margin:0;
+display:flex;align-items:center;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}}
+.card{{max-width:560px;width:100%;background:linear-gradient(160deg,#1c1c2eb8,#11111db8);
+border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}}
+.k{{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8888a0;margin-bottom:10px}}
+h1{{font-size:26px;line-height:1.25;margin:0 0 14px}}
+p{{color:#c2c2d0;font-size:14.5px;line-height:1.7;margin:8px 0}}
+.btn{{display:block;text-align:center;margin-top:22px;padding:13px;border-radius:12px;font-weight:600;
+text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7dff)}}
+.foot{{text-align:center;margin-top:18px;font-size:12px}}
+.foot a{{color:#8888a0}}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="k">Conférences à Paris</div>
+<h1>{_esc_attr(inst)}</h1>
+<p><strong>{n} conférence{'s' if n != 1 else ''} à venir</strong> dans le calendrier Paris·Académique.</p>
+{speakers_section}
+<a class="btn" href="{target}">Voir le calendrier →</a>
+<div class="foot"><a href="{SITE_URL}">lotent.fr — toutes les conférences académiques de Paris</a></div>
+</main>
+</body>
+</html>
+"""
+            (INST_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
+            written_pages.add(f"{slug}.html")
+        b.close()
+
+    # Nettoyage : si une institution est retirée de SHARE_INSTITUTIONS,
+    # supprimer ses anciens fichiers.
+    for f in OG_INST_DIR.glob("*.png"):
+        if f.name not in written_pngs:
+            try: f.unlink()
+            except Exception: pass
+    for f in INST_PAGES_DIR.glob("*.html"):
+        if f.name not in written_pages:
+            try: f.unlink()
+            except Exception: pass
+    print(f"Pages institution : {len(written_pages)} HTML + {len(written_pngs)} PNG")
 
 
 def write_og_image(events):
@@ -2186,6 +2376,12 @@ def main():
         write_og_image(all_events)
     except Exception as e:
         print(f"[ERROR] og image: {e}")
+        traceback.print_exc()
+
+    try:
+        write_institution_share_pages(all_events)
+    except Exception as e:
+        print(f"[ERROR] institution pages: {e}")
         traceback.print_exc()
 
     try:
