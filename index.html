@@ -210,6 +210,8 @@
     .meta-group { display:flex; gap:8px; align-items:center; }
     .about-link { font-size:12.5px; color:var(--muted); text-decoration:none; padding:4px 11px; border-radius:999px; transition:color .2s; }
     .about-link:hover { color:#fff; }
+    .suggest-link { color:#86efac; border:1px solid rgba(74,222,128,.35); }
+    .suggest-link:hover { background:rgba(74,222,128,.12); color:#bbf7d0; }
     .meta-pill { display:inline-flex; align-items:center; gap:6px; padding:4px 11px; border:1px solid rgba(255,255,255,0.09); border-radius:999px; background:rgba(255,255,255,0.03); font-size:11.5px; color:var(--muted); cursor:help; transition:color .2s, border-color .2s, background .2s; }
     .meta-pill:hover { border-color:rgba(255,255,255,0.2); color:#e6e6ef; background:rgba(255,255,255,0.06); }
     .meta-pill .meta-label { font-weight:600; letter-spacing:.02em; }
@@ -377,6 +379,9 @@
     <div class="meta-group">
       <button class="about-link" id="theme-btn" title="Mode clair / sombre" style="border:1px solid var(--border);background:none;cursor:pointer;font-family:inherit">🌙</button>
       <button class="about-link" id="lang-btn" title="Switch language" style="border:1px solid var(--border);background:none;cursor:pointer;font-family:inherit">EN</button>
+      <a class="about-link suggest-link" id="suggest-link" target="_blank" rel="noopener noreferrer"
+         href="https://github.com/kovarci/zzzz/issues/new?title=Source%20manquante&body=Hello%20kovarci%20%2F%20j%27aimerais%20que%20le%20site%20suive%20la%20source%20suivante%20%3A%0A%0A-%20Nom%20%3A%20%0A-%20URL%20%3A%20%0A-%20Pourquoi%20%3A%20"
+         title="Suggérer une source à ajouter au site">+ Source</a>
       <a class="about-link" id="about-link" href="apropos.html">À propos</a>
       <div class="meta-pill" id="meta-auto" title="—">
         <span class="meta-label">Auto</span>
