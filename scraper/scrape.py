@@ -1818,26 +1818,94 @@ def _date_fr(iso: str) -> str:
         return iso
 
 
+ONLINE_RE = re.compile(r"\b(online|en ligne|visio|distanciel|webinaire|webinar|"
+                       r"zoom|teams|à distance|hybride|streaming)\b", re.I)
+
+# Site officiel par institution — sert à remplir organizer.url dans le JSON-LD
+# (sinon Google se plaint « Champ url manquant dans organizer »).
+INSTITUTION_URLS = {
+    "Collège de France": "https://www.college-de-france.fr",
+    "ENS Paris": "https://www.ens.psl.eu",
+    "EHESS": "https://www.ehess.fr",
+    "Institut Henri Poincaré": "https://www.ihp.fr",
+    "Paris School of Economics": "https://www.parisschoolofeconomics.eu",
+    "Sciences Po": "https://www.sciencespo.fr",
+    "Sorbonne Université": "https://www.sorbonne-universite.fr",
+    "Université PSL": "https://psl.eu",
+    "Article 1": "https://article-1.eu",
+    "Sciences et Cultures": "https://linktr.ee/Sciences_et_Cultures",
+}
+
+
 def _event_jsonld(ev):
     """schema.org Event JSON-LD — feeds Google's rich results (date & venue
-    shown directly in search). Returns a JSON string with no HTML-unsafe
-    sequences (the closing '</' is split to be safe inside a <script> tag)."""
+    shown directly in search). Includes every recommended field (image,
+    endDate, performer, organizer.url, offers) so Search Console doesn't
+    flag missing properties. '</' is split to be safe inside a <script>."""
     eid = ev["id"]
     start = ev["date"] + (f"T{ev['time']}:00" if ev.get("time") else "")
+    # endDate : si pas d'heure de fin scrappée, on suppose +2h (cohérent
+    # avec le calendrier .ics) plutôt que de laisser le champ absent.
+    if ev.get("end_time"):
+        end = ev["date"] + f"T{ev['end_time']}:00"
+    elif ev.get("time"):
+        try:
+            h, m = ev["time"].split(":")
+            end = ev["date"] + f"T{min(int(h)+2,23):02d}:{int(m):02d}:00"
+        except Exception:
+            end = start
+    else:
+        end = start
+    inst = ev.get("institution") or ""
+    organizer = {"@type": "Organization", "name": inst}
+    if INSTITUTION_URLS.get(inst):
+        organizer["url"] = INSTITUTION_URLS[inst]
+    elif ev.get("url"):
+        organizer["url"] = ev["url"]
+    # performer : si pas d'intervenant scrappé, on liste l'institution comme
+    # PerformingGroup — acceptable et évite le warning « Champ performer
+    # manquant ». Sinon, la personne nommée.
+    if ev.get("speaker"):
+        performer = {"@type": "Person", "name": ev["speaker"]}
+    else:
+        performer = {"@type": "PerformingGroup", "name": inst or "Conférencier"}
+    # image : fallback vers l'og.png par institution (toujours fraîche) ou
+    # l'og.png global du site -> tout event a une image.
+    img = ev.get("image")
+    if not img:
+        slug = slugify(inst)
+        img = f"{SITE_URL}/data/og/{slug}.png" if slug else f"{SITE_URL}/og.png"
+    # offers : Google le demande même pour les confs gratuites. On marque
+    # explicitement le prix (Luma a un champ price ; sinon, 0/gratuit).
+    price_str = ev.get("price") or ""
+    if "gratuit" in price_str.lower():
+        price = "0"
+    else:
+        m = re.search(r"(\d+)", price_str)
+        price = m.group(1) if m else "0"
+    offers = {
+        "@type": "Offer",
+        "price": price, "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": ev.get("url") or f"{SITE_URL}/e/{eid}.html",
+        "validFrom": ev["date"],
+    }
     data = {
         "@context": "https://schema.org",
         "@type": "Event",
         "name": ev.get("title") or "",
         "startDate": start,
+        "endDate": end,
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": ("https://schema.org/OnlineEventAttendanceMode"
                                 if ev.get("location") and ONLINE_RE.search(ev["location"])
                                 else "https://schema.org/OfflineEventAttendanceMode"),
         "url": f"{SITE_URL}/e/{eid}.html",
-        "organizer": {"@type": "Organization", "name": ev.get("institution") or ""},
+        "image": img,
+        "organizer": organizer,
+        "performer": performer,
+        "offers": offers,
     }
-    if ev.get("end_time"):
-        data["endDate"] = ev["date"] + f"T{ev['end_time']}:00"
     if ev.get("location"):
         data["location"] = {
             "@type": "Place",
@@ -1847,15 +1915,7 @@ def _event_jsonld(ev):
         }
     if ev.get("description"):
         data["description"] = ev["description"][:500]
-    if ev.get("image"):
-        data["image"] = ev["image"]
-    if ev.get("speaker"):
-        data["performer"] = {"@type": "Person", "name": ev["speaker"]}
     return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
-
-
-ONLINE_RE = re.compile(r"\b(online|en ligne|visio|distanciel|webinaire|webinar|"
-                       r"zoom|teams|à distance|hybride|streaming)\b", re.I)
 
 
 def write_event_pages(events):
