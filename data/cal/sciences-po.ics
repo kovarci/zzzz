@@ -7,7 +7,7 @@ X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:1539d8a188aa@paris-academique
-DTSTAMP:20260615T095712Z
+DTSTAMP:20260616T092211Z
 DTSTART;VALUE=DATE:20260615
 DTEND;VALUE=DATE:20260616
 SUMMARY:[Les Lundis du Cevipof] Quelles perspectives pour une gauche fracturée ?
@@ -17,7 +17,7 @@ URL:https://www.sciencespo.fr/fr/evenements/lundis-du-cevipof-quelles-perspectiv
 END:VEVENT
 BEGIN:VEVENT
 UID:4798c3c9a57c@paris-academique
-DTSTAMP:20260615T095712Z
+DTSTAMP:20260616T092211Z
 DTSTART;VALUE=DATE:20260617
 DTEND;VALUE=DATE:20260618
 SUMMARY:Comparative Agendas Project Conference - Paris 2026
@@ -26,8 +26,18 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/cap-conference-paris-2026/
 END:VEVENT
 BEGIN:VEVENT
+UID:a36de4afb6a0@paris-academique
+DTSTAMP:20260616T092211Z
+DTSTART;VALUE=DATE:20260617
+DTEND;VALUE=DATE:20260618
+SUMMARY:European economic security in an age of de-risking
+DESCRIPTION:In-person conference. Drawing on US\, Japanese\, and Chinese insights\, this talk assesses Europe's current de-risking strategies to propose a more constructive\, network-aware approach to economic security and supply chain resilience.\nhttps://www.sciencespo.fr/fr/evenements/european-economic-security-in-an-age-of-de-risking/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/european-economic-security-in-an-age-of-de-risking/
+END:VEVENT
+BEGIN:VEVENT
 UID:7905023c4b8d@paris-academique
-DTSTAMP:20260615T095712Z
+DTSTAMP:20260616T092211Z
 DTSTART;VALUE=DATE:20260618
 DTEND;VALUE=DATE:20260619
 SUMMARY:Lecture : Talk with Professor Leif Wenar
@@ -37,7 +47,7 @@ URL:https://www.sciencespo.fr/fr/evenements/lecture-talk-with-professor-leif-wen
 END:VEVENT
 BEGIN:VEVENT
 UID:2934b2e97a19@paris-academique
-DTSTAMP:20260615T095712Z
+DTSTAMP:20260616T092211Z
 DTSTART;VALUE=DATE:20260622
 DTEND;VALUE=DATE:20260623
 SUMMARY:In the Eye of European Storm: Lessons from Ukraine for European Defence
@@ -47,7 +57,7 @@ URL:https://www.sciencespo.fr/fr/evenements/in-the-eye-of-european-storm-lessons
 END:VEVENT
 BEGIN:VEVENT
 UID:89679a5d98b5@paris-academique
-DTSTAMP:20260615T095712Z
+DTSTAMP:20260616T092211Z
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
 SUMMARY:Protéger les sources : un statut pour la recherche
@@ -57,7 +67,7 @@ URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-
 END:VEVENT
 BEGIN:VEVENT
 UID:f925ee7b0801@paris-academique
-DTSTAMP:20260615T095712Z
+DTSTAMP:20260616T092211Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:The End of the U.S. Model of Journalism ? (And What Comes Next)
@@ -66,8 +76,18 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/the-end-of-the-u-s-model-of-journalism-and-what-comes-next/
 END:VEVENT
 BEGIN:VEVENT
+UID:855eb6b5809b@paris-academique
+DTSTAMP:20260616T092211Z
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+SUMMARY:Paris Alumni Chapter Launch of the European University Institute at Sciences Po
+DESCRIPTION:The European University Institute is pleased to launch in Paris its Alumni Chapter in France\, generously hosted by Sciences Po. The event will feature an interactive panel discussion with distinguished speakers from the European University Institute\, Sciences Po\, and the wider EUI alumni community.\nhttps://www.sciencespo.fr/fr/evenements/paris-alumni-chapter-launch-of-the-european-university-institute-at-sciences-po/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/paris-alumni-chapter-launch-of-the-european-university-institute-at-sciences-po/
+END:VEVENT
+BEGIN:VEVENT
 UID:c114774b35fe@paris-academique
-DTSTAMP:20260615T095712Z
+DTSTAMP:20260616T092211Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Financement de la psychiatrie : budgets et remboursement de la psychothérapie
