@@ -6,18 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Article 1 · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:b793c0ba9d02@paris-academique
-DTSTAMP:20260616T092211Z
-DTSTART:20260616T180000
-DTEND:20260616T190000
-SUMMARY:Paris - Exposition de photographies inédites de Marilyn Monroe - 16-06-2026
-DESCRIPTION:Nous avons le plaisir de vous inviter à une découverte culturelle exceptionnelle le 16 juin de 18h à 19h à la Galerie Cinéma (25 rue Saint-Claude\, Paris 3e)\, un nouveau lieu qui fait dialoguer l’art et le cinéma.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Paris
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
 UID:293db6713c0c@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260617T180000
 DTEND:20260617T210000
 SUMMARY:Paris - Soirée des métiers de l'Audit et du Conseil - 17-06-2026
@@ -27,7 +17,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:c2bc28a70e29@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260617T183000
 DTEND:20260617T210000
 SUMMARY:Marseille - Soirée de fin d'année - 17-06-2026
@@ -37,7 +27,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:16c9e08a4577@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260618T130000
 DTEND:20260618T170000
 SUMMARY:Paris - BCG x Enrise - Jeu d'entreprise - 18-06-2026
@@ -47,7 +37,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:778b423c7979@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260618T183000
 DTEND:20260618T213000
 SUMMARY:- Temps d'échange Mentors ✨ - 18-06-2026
@@ -57,7 +47,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:6c034a87cf10@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260624T120000
 DTEND:20260624T180000
 SUMMARY:Bordeaux - Escape game et journée de fin d'année 🌻 - 24-06-2026
@@ -67,7 +57,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:ee84026238f7@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260625T183000
 DTEND:20260625T210000
 SUMMARY:Montpellier - SOIREE DE FIN D'ANNEE - 25-06-2026
@@ -77,7 +67,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:1e67cba8db2f@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260701T183000
 DTEND:20260701T213000
 SUMMARY:Paris - Paris - Apéro d'été de fin d'année ☀ - 01-07-2026 - 01-07-2026
@@ -87,7 +77,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:7df2a2eeeac1@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260701T183000
 DTEND:20260701T213000
 SUMMARY:Paris - Apéro de fin d'année ☀ - 01-07-2026
@@ -97,7 +87,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:24977aec60d6@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Paris - L'Académie BCG 2026 - 06-07-2026
@@ -107,7 +97,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:0836ba218704@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260710T120000
 DTEND:20260710T170000
 SUMMARY:Paris - Campus d’été - 10-07-2026
@@ -116,8 +106,18 @@ LOCATION:Paris
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
+UID:3b058dcc4abd@paris-academique
+DTSTAMP:20260617T085855Z
+DTSTART:20260714T000000
+DTEND:20260714T010000
+SUMMARY:Bordeaux - soiree finale MA1SON Bordeaux - 14-07-2026
+DESCRIPTION:Hey\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Bordeaux
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
 UID:6a1bb57a40ac@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART:20260924T183000
 DTEND:20260924T203000
 SUMMARY:Nantes - Soirée métier de la tech et des sciences avec Valeuriad - 24-09-2026

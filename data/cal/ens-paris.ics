@@ -7,7 +7,7 @@ X-WR-CALNAME:ENS Paris · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:65e60bb546d0@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART;VALUE=DATE:20260618
 DTEND;VALUE=DATE:20260619
 SUMMARY:Existe-t-il une géopolitique française ?
@@ -17,7 +17,7 @@ URL:https://www.ens.psl.eu/agenda/existe-t-il-une-geopolitique-francaise/2026-06
 END:VEVENT
 BEGIN:VEVENT
 UID:1f75009c619d@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART;VALUE=DATE:20260618
 DTEND;VALUE=DATE:20260619
 SUMMARY:Philosophie des inégalités écologiques
@@ -26,8 +26,18 @@ LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
 URL:https://www.ens.psl.eu/agenda/philosophie-des-inegalites-ecologiques/2026-06-18t160000
 END:VEVENT
 BEGIN:VEVENT
+UID:132d03f30238@paris-academique
+DTSTAMP:20260617T085855Z
+DTSTART;VALUE=DATE:20260623
+DTEND;VALUE=DATE:20260624
+SUMMARY:Entrée au Panthéon de Marc et Simonne Bloch : l’Ecole normale supérieure accueille la Veillée républicaine les 22 et 23 Juin 2026
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/entree-au-pantheon-de-marc-et-simonne-bloch-l-ecole-normale-superieure-accueille-la-veillee
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/entree-au-pantheon-de-marc-et-simonne-bloch-l-ecole-normale-superieure-accueille-la-veillee
+END:VEVENT
+BEGIN:VEVENT
 UID:0efc4c97d6c1@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260624
 SUMMARY:Entrée au Panthéon de Marc Bloch et de Simonne Vidal : l’Ecole normale supérieure accueille la Veillée républicaine les 22 et 23 Juin 2026
@@ -37,7 +47,7 @@ URL:https://www.ens.psl.eu/agenda/entree-au-pantheon-de-marc-bloch-et-de-simonne
 END:VEVENT
 BEGIN:VEVENT
 UID:b0013f8bc3e1@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:Living at the limits – France-Arizona perspectives on global environmental challenges
@@ -47,7 +57,7 @@ URL:https://www.ens.psl.eu/node/9058
 END:VEVENT
 BEGIN:VEVENT
 UID:1d156fc56d66@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:Soirée / Concert : Human sensory ecology
@@ -57,7 +67,7 @@ URL:https://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-2
 END:VEVENT
 BEGIN:VEVENT
 UID:b5002ded173d@paris-academique
-DTSTAMP:20260616T092211Z
+DTSTAMP:20260617T085855Z
 DTSTART;VALUE=DATE:20260704
 DTEND;VALUE=DATE:20260705
 SUMMARY:Voyage au centre du cerveau
