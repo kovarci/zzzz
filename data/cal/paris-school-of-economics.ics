@@ -6,158 +6,18 @@ METHOD:PUBLISH
 X-WR-CALNAME:Paris School of Economics · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:10a5fa5fbb2b@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART;VALUE=DATE:20260616
-DTEND;VALUE=DATE:20260617
-SUMMARY:Lunch séminaire d’économie appliquée
-DESCRIPTION:Du mar. 16 juin\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-END:VEVENT
-BEGIN:VEVENT
-UID:3998ea546a0f@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART;VALUE=DATE:20260616
-DTEND;VALUE=DATE:20260617
-SUMMARY:Petit Séminaire Informel de la Paris School of Economics
-DESCRIPTION:Du mar. 16 juin\nhttps://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de-la-paris-school-of-economics/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de-la-paris-school-of-economics/
-END:VEVENT
-BEGIN:VEVENT
-UID:72e7213422a6@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260616T123000
-DTEND:20260616T143000
-SUMMARY:Séminaire
-DESCRIPTION:Du mar. 16 juin\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-END:VEVENT
-BEGIN:VEVENT
-UID:884e764ec04f@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T083000
-DTEND:20260617T103000
+UID:d351a9a14559@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T083000
+DTEND:20260618T103000
 SUMMARY:Matériaux et minéraux critiques
 DESCRIPTION:Lieu Amphithéâtre Daniel Cohen\nhttps://www.parisschoolofeconomics.eu/evenements/materiaux-et-mineraux-critiques/
 LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/materiaux-et-mineraux-critiques/
 END:VEVENT
 BEGIN:VEVENT
-UID:51e50ff7162b@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T090000
-DTEND:20260617T110000
-SUMMARY:PSE-CEPR Policy Forum 2026
-DESCRIPTION:Lieu Amphithéâtre Daniel Cohen\nhttps://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:f23ba18e2910@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T090000
-DTEND:20260617T110000
-SUMMARY:Économie comportementale du genre
-DESCRIPTION:Lieu R1-09\nhttps://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du-genre/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du-genre/
-END:VEVENT
-BEGIN:VEVENT
-UID:e847b5c8c846@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T100000
-DTEND:20260617T120000
-SUMMARY:Retraites et parcours de vie
-DESCRIPTION:Lieu R2-21\nhttps://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vie/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vie/
-END:VEVENT
-BEGIN:VEVENT
-UID:51c8ab34d480@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T123000
-DTEND:20260617T143000
-SUMMARY:Lunch séminaire d’économie appliquée
-DESCRIPTION:Milla Tarpola (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-END:VEVENT
-BEGIN:VEVENT
-UID:79476af4bd1d@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T123000
-DTEND:20260617T143000
-SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
-DESCRIPTION:Kalyan CHATTERJEE (Penn State)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-END:VEVENT
-BEGIN:VEVENT
-UID:b0c99697ce0b@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T123000
-DTEND:20260617T143000
-SUMMARY:Travail et économie publique (interne)
-DESCRIPTION:Louis Margolis (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-END:VEVENT
-BEGIN:VEVENT
-UID:dcd313a9c580@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T130000
-DTEND:20260617T150000
-SUMMARY:Casual Friday Development
-DESCRIPTION:TBA\nhttps://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
-END:VEVENT
-BEGIN:VEVENT
-UID:f351ade26c56@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART:20260617T173000
-DTEND:20260617T193000
-SUMMARY:Petit Séminaire Informel de la Paris School of Economics
-DESCRIPTION:Simone Bresser (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de-la-paris-school-of-economics/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de-la-paris-school-of-economics/
-END:VEVENT
-BEGIN:VEVENT
-UID:cf1db1ffea03@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART;VALUE=DATE:20260618
-DTEND;VALUE=DATE:20260619
-SUMMARY:PSE-CEPR Policy Forum 2026
-DESCRIPTION:Du jeu. 18 juin au ven. 19 juin\nhttps://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:72b6d206ce20@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART;VALUE=DATE:20260618
-DTEND;VALUE=DATE:20260619
-SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
-DESCRIPTION:Du jeu. 18 juin\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-END:VEVENT
-BEGIN:VEVENT
-UID:f7f47ef17bd3@paris-academique
-DTSTAMP:20260617T085855Z
-DTSTART;VALUE=DATE:20260618
-DTEND;VALUE=DATE:20260619
-SUMMARY:Travail et économie publique (interne)
-DESCRIPTION:Du jeu. 18 juin\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-END:VEVENT
-BEGIN:VEVENT
 UID:6ac4da446a5f@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260618T090000
 DTEND:20260618T110000
 SUMMARY:PSE-CEPR Policy Forum
@@ -166,8 +26,38 @@ LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
 END:VEVENT
 BEGIN:VEVENT
+UID:cf1db1ffea03@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T090000
+DTEND:20260618T110000
+SUMMARY:PSE-CEPR Policy Forum 2026
+DESCRIPTION:Lieu Amphithéâtre Daniel Cohen\nhttps://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:53e9d677fac2@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T090000
+DTEND:20260618T110000
+SUMMARY:Économie comportementale du genre
+DESCRIPTION:Lieu R1-09\nhttps://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du-genre/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du-genre/
+END:VEVENT
+BEGIN:VEVENT
+UID:67a37498db5a@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T100000
+DTEND:20260618T120000
+SUMMARY:Retraites et parcours de vie
+DESCRIPTION:Lieu R2-21\nhttps://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vie/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vie/
+END:VEVENT
+BEGIN:VEVENT
 UID:0d342479e4e2@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260618T123000
 DTEND:20260618T143000
 SUMMARY:Séminaire
@@ -176,8 +66,58 @@ LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
 END:VEVENT
 BEGIN:VEVENT
+UID:72b6d206ce20@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T123000
+DTEND:20260618T143000
+SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
+DESCRIPTION:Kalyan CHATTERJEE (Penn State)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+END:VEVENT
+BEGIN:VEVENT
+UID:f7f47ef17bd3@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T123000
+DTEND:20260618T143000
+SUMMARY:Travail et économie publique (interne)
+DESCRIPTION:Louis Margolis (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
+END:VEVENT
+BEGIN:VEVENT
+UID:93e323273b31@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T123000
+DTEND:20260618T143000
+SUMMARY:Lunch séminaire d’économie appliquée
+DESCRIPTION:Katharina Kaeppel (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
+END:VEVENT
+BEGIN:VEVENT
+UID:3ab54bdaae03@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T130000
+DTEND:20260618T150000
+SUMMARY:Casual Friday Development
+DESCRIPTION:TBA\nhttps://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
+END:VEVENT
+BEGIN:VEVENT
+UID:d44aa6952441@paris-academique
+DTSTAMP:20260618T084214Z
+DTSTART:20260618T173000
+DTEND:20260618T193000
+SUMMARY:Petit Séminaire Informel de la Paris School of Economics
+DESCRIPTION:Sarath Chandra (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de-la-paris-school-of-economics/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de-la-paris-school-of-economics/
+END:VEVENT
+BEGIN:VEVENT
 UID:3d6dcf54e2fb@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260619T180000
 DTEND:20260619T200000
 SUMMARY:PSE-CEPR Policy Forum
@@ -187,7 +127,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/pse-cepr-policy-forum-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:21de9fb9de0f@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
 SUMMARY:Colloque
@@ -197,7 +137,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/la-foret-et-les-hommes-de-l
 END:VEVENT
 BEGIN:VEVENT
 UID:1dd043f757fd@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
 SUMMARY:La forêt et les hommes : de la vue du ciel à la dynamique locale
@@ -207,7 +147,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/la-foret-et-les-hommes-de-l
 END:VEVENT
 BEGIN:VEVENT
 UID:239770719746@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260624
 SUMMARY:Lunch séminaire d’économie appliquée
@@ -217,7 +157,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-a
 END:VEVENT
 BEGIN:VEVENT
 UID:61c0173ab9f5@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260624
 SUMMARY:Petit Séminaire Informel de la Paris School of Economics
@@ -227,7 +167,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de
 END:VEVENT
 BEGIN:VEVENT
 UID:17b7e8e3c296@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260623T123000
 DTEND:20260623T143000
 SUMMARY:Séminaire
@@ -237,7 +177,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-a
 END:VEVENT
 BEGIN:VEVENT
 UID:57def7d98a6e@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:Matériaux et minéraux critiques
@@ -247,7 +187,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/materiaux-et-mineraux-criti
 END:VEVENT
 BEGIN:VEVENT
 UID:e2348e9f7db5@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260625T083000
 DTEND:20260625T103000
 SUMMARY:Conférence
@@ -257,7 +197,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/materiaux-et-mineraux-criti
 END:VEVENT
 BEGIN:VEVENT
 UID:90c09d1c0a56@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260627
 SUMMARY:Casual Friday Development
@@ -267,7 +207,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
 END:VEVENT
 BEGIN:VEVENT
 UID:3b889d30dc89@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260626T130000
 DTEND:20260626T150000
 SUMMARY:Séminaire
@@ -277,7 +217,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
 END:VEVENT
 BEGIN:VEVENT
 UID:b3046b768687@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260626T235900
 DTEND:20260626T235900
 SUMMARY:Colloque
@@ -287,7 +227,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/la-foret-et-les-hommes-de-l
 END:VEVENT
 BEGIN:VEVENT
 UID:c20f5b49d54f@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260710
 DTEND;VALUE=DATE:20260711
 SUMMARY:Économie comportementale du genre
@@ -297,7 +237,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du
 END:VEVENT
 BEGIN:VEVENT
 UID:fa48263e76e8@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260710T090000
 DTEND:20260710T110000
 SUMMARY:Colloque
@@ -307,7 +247,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du
 END:VEVENT
 BEGIN:VEVENT
 UID:624b892002af@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20260911
 DTEND;VALUE=DATE:20260912
 SUMMARY:Retraites et parcours de vie
@@ -317,7 +257,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vi
 END:VEVENT
 BEGIN:VEVENT
 UID:db6cd5534d34@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20260911T100000
 DTEND:20260911T120000
 SUMMARY:Séminaire
@@ -327,7 +267,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vi
 END:VEVENT
 BEGIN:VEVENT
 UID:1d41337f2fa3@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Colloque
@@ -337,7 +277,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:2e528fa7db58@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Conférence de l’Association Française d’Économie des Transports
@@ -347,7 +287,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:5232c30fa4a3@paris-academique
-DTSTAMP:20260617T085855Z
+DTSTAMP:20260618T084214Z
 DTSTART:20261119T235900
 DTEND:20261119T235900
 SUMMARY:Colloque
