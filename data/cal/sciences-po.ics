@@ -6,28 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:4798c3c9a57c@paris-academique
-DTSTAMP:20260618T084214Z
-DTSTART;VALUE=DATE:20260617
-DTEND;VALUE=DATE:20260618
-SUMMARY:Comparative Agendas Project Conference - Paris 2026
-DESCRIPTION:Le CDSP et le CEE de Sciences Po accueilleront la conférence 2026 du Comparative Agendas Project (CAP)\, qui se tiendra à Paris du 17 au 19 juin 2026\, sur le campus Saint-Thomas de Sciences Po.\nhttps://www.sciencespo.fr/fr/evenements/cap-conference-paris-2026/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/cap-conference-paris-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:7905023c4b8d@paris-academique
-DTSTAMP:20260618T084214Z
-DTSTART;VALUE=DATE:20260618
-DTEND;VALUE=DATE:20260619
-SUMMARY:Lecture : Talk with Professor Leif Wenar
-DESCRIPTION:Stanford Philosophy Professor Leif Wenar will deliver a talk on Might Makes Right: Power\, Legitimacy\, and the Rules that Govern the World\nhttps://www.sciencespo.fr/fr/evenements/lecture-talk-with-professor-leif-wenar/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/lecture-talk-with-professor-leif-wenar/
-END:VEVENT
-BEGIN:VEVENT
 UID:2934b2e97a19@paris-academique
-DTSTAMP:20260618T084214Z
+DTSTAMP:20260619T090236Z
 DTSTART;VALUE=DATE:20260622
 DTEND;VALUE=DATE:20260623
 SUMMARY:In the Eye of European Storm: Lessons from Ukraine for European Defence
@@ -37,7 +17,7 @@ URL:https://www.sciencespo.fr/fr/evenements/in-the-eye-of-european-storm-lessons
 END:VEVENT
 BEGIN:VEVENT
 UID:89679a5d98b5@paris-academique
-DTSTAMP:20260618T084214Z
+DTSTAMP:20260619T090236Z
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
 SUMMARY:Protéger les sources : un statut pour la recherche
@@ -47,7 +27,7 @@ URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-
 END:VEVENT
 BEGIN:VEVENT
 UID:1d240158f4ab@paris-academique
-DTSTAMP:20260618T084214Z
+DTSTAMP:20260619T090236Z
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
 SUMMARY:How Can We Support the New Generation of Women Mediators for Peace?
@@ -57,7 +37,7 @@ URL:https://www.sciencespo.fr/fr/evenements/how-can-we-support-the-new-generatio
 END:VEVENT
 BEGIN:VEVENT
 UID:bf6dbb8518a9@paris-academique
-DTSTAMP:20260618T084214Z
+DTSTAMP:20260619T090236Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:Présentation du 36e rapport sur la lutte contre le racisme\, l’antisémitisme et la xénophobie
@@ -67,7 +47,7 @@ URL:https://www.sciencespo.fr/fr/evenements/presentation-du-36e-rapport-sur-la-l
 END:VEVENT
 BEGIN:VEVENT
 UID:f925ee7b0801@paris-academique
-DTSTAMP:20260618T084214Z
+DTSTAMP:20260619T090236Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:The End of the U.S. Model of Journalism ? (And What Comes Next)
@@ -77,7 +57,7 @@ URL:https://www.sciencespo.fr/fr/evenements/the-end-of-the-u-s-model-of-journali
 END:VEVENT
 BEGIN:VEVENT
 UID:855eb6b5809b@paris-academique
-DTSTAMP:20260618T084214Z
+DTSTAMP:20260619T090236Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Paris Alumni Chapter Launch of the European University Institute at Sciences Po
@@ -87,7 +67,7 @@ URL:https://www.sciencespo.fr/fr/evenements/paris-alumni-chapter-launch-of-the-e
 END:VEVENT
 BEGIN:VEVENT
 UID:c114774b35fe@paris-academique
-DTSTAMP:20260618T084214Z
+DTSTAMP:20260619T090236Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Financement de la psychiatrie : budgets et remboursement de la psychothérapie
