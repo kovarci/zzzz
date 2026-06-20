@@ -6,158 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Institut Henri Poincaré · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:56cc1b9e2d51@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260618T100000
-DTEND:20260618T120000
-SUMMARY:CAIPI symposium: Caen
-DESCRIPTION:Algorithms for curves\nhttps://indico.math.cnrs.fr/event/16362/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16362/
-END:VEVENT
-BEGIN:VEVENT
-UID:81c719cd3b57@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T090000
-DTEND:20260619T180000
-SUMMARY:Journée scientifique de l’IMB
-DESCRIPTION:19 juin 2026\, amphi Paris 10h00 – 10h45 Keyao Peng. 0 = 1 − 1 = −1 + 1 = 0\, de l'arithmétique élémentaire aux skein lasagnes intrinsèques À partir d'un mème\, cet exposé met en évidence des liens entre la fibration de Hopf\, les groupes d'homotopie\, les espaces de configurations\, la K-théorie algébrique et le cobordisme. L'identité 0 = 1 − 1 = −1 + 1 = 0 y reflète un principe fondamental commun à ce\nhttps://indico.math.cnrs.fr/event/16557/
-LOCATION:UFR SCIENCES ET TECHNIQUES - Bâtiment Mirande
-URL:https://indico.math.cnrs.fr/event/16557/
-END:VEVENT
-BEGIN:VEVENT
-UID:0f3095d95310@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T093000
-DTEND:20260619T130000
-SUMMARY:Notions d'hyperbolicité en géométrie complexe et déformations holomorphes
-DESCRIPTION:Composition du jury : M. Philippe EYSSIDIEUX\, Rapporteur\, Université Grenoble Alpes M. Vestislav APOSTOLOV\, Rapporteur\, Université du Québec à Montréal Mme Anna Maria FINO\, Examinatrice\, Università di Torino M. Vincent GUEDJ\, Examinateur\, Université de Toulouse M. Dan POPOVICI\, Directeur de thèse\, Université de Toulouse\nhttps://indico.math.cnrs.fr/event/16884/
-LOCATION:Université Paul Sabatier
-URL:https://indico.math.cnrs.fr/event/16884/
-END:VEVENT
-BEGIN:VEVENT
-UID:3a64b9580a3a@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T100000
-DTEND:20260619T103000
-SUMMARY:Optimal levaraging of strong convexity and smoothness for splitting algorithms
-DESCRIPTION:In this talk\, we establish a tight optimal linear convergence rates for a class of strongly convex optimization problems involving two functions\, at least one of which is smooth. Our approach consists of applying the classical splitting algorithms (including proximal-gradient\, FISTA\, and Peaceman-Rachford algorithms) to an equivalent modified optimization problem with adjustable levels of strong c\nhttps://indico.math.cnrs.fr/event/16777/
-LOCATION:XLIM
-URL:https://indico.math.cnrs.fr/event/16777/
-END:VEVENT
-BEGIN:VEVENT
-UID:33cd7851d35b@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T103000
-DTEND:20260619T113000
-SUMMARY:Pas de seminaire: Journée de l'IDP
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16525/
-LOCATION:Tours
-URL:https://indico.math.cnrs.fr/event/16525/
-END:VEVENT
-BEGIN:VEVENT
-UID:2894c6132990@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T103000
-DTEND:20260619T123000
-SUMMARY:holomorphic foliations
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16587/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16587/
-END:VEVENT
-BEGIN:VEVENT
-UID:a9a1ee87b12c@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T110000
-DTEND:20260619T113000
-SUMMARY:Congested Crossing Pedestrian Traffic Flow: Dispersion vs. Transport in Crowded Areas
-DESCRIPTION:This study investigates the complex dynamic interactions between two types of populations coexisting within a shared space. We propose both theoretical and numerical approaches to analyze scenarios where one population (population 1) must traverse a territory occupied by another (population 2)\, requiring strategies to mitigate overcrowding due to spatial limitations. To capture these interactions\,\nhttps://indico.math.cnrs.fr/event/16778/
-LOCATION:XLIM
-URL:https://indico.math.cnrs.fr/event/16778/
-END:VEVENT
-BEGIN:VEVENT
-UID:7e2e978d6c6f@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T110000
-DTEND:20260619T113000
-SUMMARY:Transport\, Correction\, and Reaction Dynamics in Congested Pedestrian Flows
-DESCRIPTION:This work extends an initial model of pedestrian crossing in a congested area by introducing richer dynamics for the two interacting populations. We successively consider transport mechanisms\, sandpile‑type correction dynamics\, and a reaction coupling\, allowing us to capture a wider diversity of collective dynamics in high‑density conditions.\nhttps://indico.math.cnrs.fr/event/16778/
-LOCATION:XLIM
-URL:https://indico.math.cnrs.fr/event/16778/
-END:VEVENT
-BEGIN:VEVENT
-UID:33a373892f20@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T111500
-DTEND:20260619T121500
-SUMMARY:Séminaire Bachelier
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/15466/
-LOCATION:IHP - Bâtiment Perrin
-URL:https://indico.math.cnrs.fr/event/15466/
-END:VEVENT
-BEGIN:VEVENT
-UID:9592ee6d60b9@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T111500
-DTEND:20260619T121500
-SUMMARY:Élements réguliers et marches aléatoires dans Sp_4(Q_p)
-DESCRIPTION:Une matrice dans SL_n(R) est dite régulière si ses valeurs propres sont toutes réelles et de valeurs absolues distinctes. Dans SL_2(R)\, ce sont les isométries loxodromiques du plan hyperbolique. Un théorème de Benoist-Labourie affirme qu'un sous-groupe Zariski-dense de SL_n(R) contient toujours des isométries loxodromiques. Sur un corps non-archimédien\, comme le corps des nombres p-adiques\, la sit\nhttps://indico.math.cnrs.fr/event/16077/
-LOCATION:ICJ
-URL:https://indico.math.cnrs.fr/event/16077/
-END:VEVENT
-BEGIN:VEVENT
-UID:66c0f2e5ce47@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T113000
-DTEND:20260619T120000
-SUMMARY:A Survey of Stability Analysis for Specific Classes of Multidimensional Systems
-DESCRIPTION:Multidimensional systems provide a natural framework for the modeling of phenomena involving several independent variables. Among the most widely studied representations\, the Roesser and Fornasini–Marchesini models play a central role in the analysis of two-dimensional systems. In this talk\, we first review some classical stability results available in the discrete setting\, with an emphasis on str\nhttps://indico.math.cnrs.fr/event/16779/
-LOCATION:XLIM
-URL:https://indico.math.cnrs.fr/event/16779/
-END:VEVENT
-BEGIN:VEVENT
-UID:2fcccfe0e2ff@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T140000
-DTEND:20260619T173000
-SUMMARY:Nouveaux projets et perspectives de recherche sur les mathématiques médiévales arabes et latines
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16550/
-LOCATION:IHP - Bâtiment Borel
-URL:https://indico.math.cnrs.fr/event/16550/
-END:VEVENT
-BEGIN:VEVENT
-UID:864c14a0e736@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T140000
-DTEND:20260619T160000
-SUMMARY:Disques de Siegel de rayon conforme maximal
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16885/
-LOCATION:1R2C
-URL:https://indico.math.cnrs.fr/event/16885/
-END:VEVENT
-BEGIN:VEVENT
-UID:594e7046376f@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T143000
-DTEND:20260619T153000
-SUMMARY:Séminaire FDD - FiME - MIRTE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/14754/
-LOCATION:IHP - Bâtiment Borel
-URL:https://indico.math.cnrs.fr/event/14754/
-END:VEVENT
-BEGIN:VEVENT
-UID:61ff37cf7db6@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T160000
-DTEND:20260619T170000
-SUMMARY:Stephane Lhaut
-DESCRIPTION:TBA\nhttps://indico.math.cnrs.fr/event/16447/
-LOCATION:IHP - Bâtiment Borel
-URL:https://indico.math.cnrs.fr/event/16447/
-END:VEVENT
-BEGIN:VEVENT
 UID:9266232bac6f@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260622T080000
 DTEND:20260622T180000
 SUMMARY:Journées Complex Flows sur les écoulements granulaires - 2026
@@ -167,7 +17,7 @@ URL:https://indico.math.cnrs.fr/event/16391/
 END:VEVENT
 BEGIN:VEVENT
 UID:088f9ffa16a0@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260622T090000
 DTEND:20260622T190000
 SUMMARY:Life\, Structure and Cognition (LSC) 2026: Breakpoints across Biological Systems
@@ -177,7 +27,7 @@ URL:https://indico.math.cnrs.fr/event/16616/
 END:VEVENT
 BEGIN:VEVENT
 UID:bc7955e3c168@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260622T140000
 DTEND:20260622T164500
 SUMMARY:MathEcoMed 1 : Strategic Interactions
@@ -187,7 +37,7 @@ URL:https://indico.math.cnrs.fr/event/15821/
 END:VEVENT
 BEGIN:VEVENT
 UID:995b0bb7308c@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260622T140000
 DTEND:20260622T150000
 SUMMARY:Relaxation : are smooth functions still dense in Sobolev spaces under energy constraints?
@@ -197,7 +47,7 @@ URL:https://indico.math.cnrs.fr/event/16317/
 END:VEVENT
 BEGIN:VEVENT
 UID:b83ca86f0b8b@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260622T180000
 DTEND:20260622T130000
 SUMMARY:Mathématiques et Philosophie Contemporaines XIII
@@ -207,7 +57,7 @@ URL:https://indico.math.cnrs.fr/event/16289/
 END:VEVENT
 BEGIN:VEVENT
 UID:47c15d21a182@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T095000
 DTEND:20260623T105000
 SUMMARY:Généalogie des processus de branchement densité dépendants
@@ -217,7 +67,7 @@ URL:https://indico.math.cnrs.fr/event/16312/
 END:VEVENT
 BEGIN:VEVENT
 UID:f7fc228585e6@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T103000
 DTEND:20260623T123000
 SUMMARY:Mikael de la Salle : Peut-on calculer le rayon spectral d'une marche aléatoire?
@@ -227,7 +77,7 @@ URL:https://indico.math.cnrs.fr/event/16786/
 END:VEVENT
 BEGIN:VEVENT
 UID:eabb2d1bb3f0@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T103000
 DTEND:20260623T113000
 SUMMARY:Campbell Wheeler: Cohomology with q
@@ -237,7 +87,7 @@ URL:https://indico.math.cnrs.fr/event/16742/
 END:VEVENT
 BEGIN:VEVENT
 UID:fdeaeb54fe87@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T103000
 DTEND:20260623T113000
 SUMMARY:Campbell Wheeler
@@ -247,7 +97,7 @@ URL:https://indico.math.cnrs.fr/event/16742/
 END:VEVENT
 BEGIN:VEVENT
 UID:fb127c2adc5c@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T103000
 DTEND:20260623T123000
 SUMMARY:Mikael de la Salle : Working seminar on Ozawa's 'Uniform amenability at infinity'
@@ -257,7 +107,7 @@ URL:https://indico.math.cnrs.fr/event/16786/
 END:VEVENT
 BEGIN:VEVENT
 UID:0407f5229021@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T111500
 DTEND:20260623T121500
 SUMMARY:pas d'exposé (Conférence Particle systems and PDEs XIV)
@@ -267,7 +117,7 @@ URL:https://indico.math.cnrs.fr/event/16218/
 END:VEVENT
 BEGIN:VEVENT
 UID:0f7ff7271864@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T111500
 DTEND:20260623T121500
 SUMMARY:Asymptotic statistical theory of irreducible quantum Markov chains
@@ -277,7 +127,7 @@ URL:https://indico.math.cnrs.fr/event/14487/
 END:VEVENT
 BEGIN:VEVENT
 UID:116232e11b14@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T140000
 DTEND:20260623T150000
 SUMMARY:Michele Bolognesi - Annulé
@@ -286,8 +136,18 @@ LOCATION:UMPA
 URL:https://indico.math.cnrs.fr/event/16488/
 END:VEVENT
 BEGIN:VEVENT
+UID:caefb80212e1@paris-academique
+DTSTAMP:20260620T074743Z
+DTSTART:20260623T140000
+DTEND:20260623T150000
+SUMMARY:Annulé
+DESCRIPTION:The classical bar-cobar adjunction between dg algebras and dg coalgebras goes back to the origins of differential homological algebra as developed by Cartan\, Eilenberg\, Moore\, and many others\, and is part of the broader framework of Koszul duality. In recent years\, several ∞-categorical analogues of this adjunction have been developed\, notably by Lurie\, Francis--Gaitsgory\, and Heuts. However\, ther\nhttps://indico.math.cnrs.fr/event/15883/
+LOCATION:Salle Pellos
+URL:https://indico.math.cnrs.fr/event/15883/
+END:VEVENT
+BEGIN:VEVENT
 UID:20c7a1e7d7b3@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T140000
 DTEND:20260623T150000
 SUMMARY:Unifying Koszul dualities via point-set models
@@ -297,7 +157,7 @@ URL:https://indico.math.cnrs.fr/event/15883/
 END:VEVENT
 BEGIN:VEVENT
 UID:cf4dc8a3b7d9@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260623T140000
 DTEND:20260623T150000
 SUMMARY:Michele Bolognesi - TBA
@@ -307,7 +167,7 @@ URL:https://indico.math.cnrs.fr/event/16488/
 END:VEVENT
 BEGIN:VEVENT
 UID:7bada1707b4c@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260625T110000
 DTEND:20260625T120000
 SUMMARY:Irreducibility in Gaussian Quantum Markov Semigroups
@@ -317,7 +177,7 @@ URL:https://indico.math.cnrs.fr/event/16580/
 END:VEVENT
 BEGIN:VEVENT
 UID:c3ee6bc490ec@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260625T130000
 DTEND:20260625T140000
 SUMMARY:Elias Krainski from KAUST
@@ -327,7 +187,7 @@ URL:https://indico.math.cnrs.fr/event/16203/
 END:VEVENT
 BEGIN:VEVENT
 UID:1258940bf8c3@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260625T140000
 DTEND:20260625T190000
 SUMMARY:Global Iwasawa theory of graphs and p-adic Mahler measures
@@ -337,7 +197,7 @@ URL:https://indico.math.cnrs.fr/event/16693/
 END:VEVENT
 BEGIN:VEVENT
 UID:1a0320be1417@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260625T140000
 DTEND:20260625T150000
 SUMMARY:Quantitative approximation of the Vlasov-Navier-Stokes system
@@ -347,7 +207,7 @@ URL:https://indico.math.cnrs.fr/event/15377/
 END:VEVENT
 BEGIN:VEVENT
 UID:b7f1f0994c17@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260625T144500
 DTEND:20260625T160000
 SUMMARY:CFT and QFT from the Fuzzy Sphere
@@ -357,7 +217,7 @@ URL:https://indico.math.cnrs.fr/event/16865/
 END:VEVENT
 BEGIN:VEVENT
 UID:757170a0462f@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260626T103000
 DTEND:20260626T115000
 SUMMARY:Séminaire commun avec ROOT(LIFAT)
@@ -367,7 +227,7 @@ URL:https://indico.math.cnrs.fr/event/16596/
 END:VEVENT
 BEGIN:VEVENT
 UID:acb3b9049fdd@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260626T110000
 DTEND:20260626T113000
 SUMMARY:Méthodes de réseaux de neurones pour le contrôle optimal en grande dimension et les jeux à champ moyen
@@ -377,7 +237,7 @@ URL:https://indico.math.cnrs.fr/event/16780/
 END:VEVENT
 BEGIN:VEVENT
 UID:a97f65416a59@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260626T111500
 DTEND:20260626T121500
 SUMMARY:Séminaire Bachelier
@@ -387,7 +247,7 @@ URL:https://indico.math.cnrs.fr/event/15467/
 END:VEVENT
 BEGIN:VEVENT
 UID:dda595df442b@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260629T080000
 DTEND:20260629T180000
 SUMMARY:Asymptotic Behaviors of systems of PDEs arising in physics and biology - 6th edition
@@ -397,7 +257,7 @@ URL:https://indico.math.cnrs.fr/event/15160/
 END:VEVENT
 BEGIN:VEVENT
 UID:d18522299451@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260629T083000
 DTEND:20260629T173000
 SUMMARY:Idealised mathematical models for geophysical flows
@@ -407,7 +267,7 @@ URL:https://indico.math.cnrs.fr/event/13870/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f72cd73de91@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260629T090000
 DTEND:20260629T170000
 SUMMARY:Felix Otto's Conference in Paris
@@ -417,7 +277,7 @@ URL:https://indico.math.cnrs.fr/event/13689/
 END:VEVENT
 BEGIN:VEVENT
 UID:cf47fcbe1c95@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260629T110000
 DTEND:20260629T150000
 SUMMARY:Gissel Estrada-Rodriguez (Universitat Politècnica de Catalunya)
@@ -427,7 +287,7 @@ URL:https://indico.math.cnrs.fr/event/16152/
 END:VEVENT
 BEGIN:VEVENT
 UID:6b735d07453a@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260629T140000
 DTEND:20260629T150000
 SUMMARY:On the multi-cell formula in homogenization
@@ -437,7 +297,7 @@ URL:https://indico.math.cnrs.fr/event/16880/
 END:VEVENT
 BEGIN:VEVENT
 UID:04b9de22b935@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260629T140000
 DTEND:20260629T150000
 SUMMARY:A minimization problem of the Klein-Gordon-Schrödinger system and related topics
@@ -447,7 +307,7 @@ URL:https://indico.math.cnrs.fr/event/16534/
 END:VEVENT
 BEGIN:VEVENT
 UID:a86251ab86c0@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260630T091500
 DTEND:20260630T170000
 SUMMARY:8ème Journée Probabilité Statistique Besançon-Dijon
@@ -457,7 +317,7 @@ URL:https://indico.math.cnrs.fr/event/16872/
 END:VEVENT
 BEGIN:VEVENT
 UID:5cf4f4c49251@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260630T094500
 DTEND:20260630T112500
 SUMMARY:Rémi Coulon
@@ -466,8 +326,18 @@ LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
 URL:https://indico.math.cnrs.fr/event/16782/
 END:VEVENT
 BEGIN:VEVENT
+UID:fbe9027e19bc@paris-academique
+DTSTAMP:20260620T074743Z
+DTSTART:20260630T111500
+DTEND:20260630T121500
+SUMMARY:Solving image inverse problem with deep generative models
+DESCRIPTION:Image inverse problems involve recovering a clean image from a degraded observation. Such problems arise in numerous applications\, including photography\, medical imaging\, and astrophysics. These problems are typically ill-posed because part of the image information is lost or corrupted during the acquisition process. Under a Bayesian framework\, the posterior distribution of the solution can be mod\nhttps://indico.math.cnrs.fr/event/14488/
+LOCATION:1R3\, 1er étage
+URL:https://indico.math.cnrs.fr/event/14488/
+END:VEVENT
+BEGIN:VEVENT
 UID:b3c719fced5b@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260630T111500
 DTEND:20260630T121500
 SUMMARY:Orbital stability of a traveling wave of the Gross-Pitaevskii equation
@@ -477,7 +347,7 @@ URL:https://indico.math.cnrs.fr/event/16224/
 END:VEVENT
 BEGIN:VEVENT
 UID:f594a394a92e@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260630T140000
 DTEND:20260630T150000
 SUMMARY:Anthony Fraga. RAID - Compact PKE bridging RQC and LRPC cryptosystem paradigm
@@ -487,7 +357,7 @@ URL:https://indico.math.cnrs.fr/event/16866/
 END:VEVENT
 BEGIN:VEVENT
 UID:bb139e1e4787@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260703T103000
 DTEND:20260703T123000
 SUMMARY:holomorphic foliations
@@ -497,7 +367,7 @@ URL:https://indico.math.cnrs.fr/event/16587/
 END:VEVENT
 BEGIN:VEVENT
 UID:35ee2ad683a2@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260706T080000
 DTEND:20260706T170000
 SUMMARY:Modern aspects of Sobolev inequalities
@@ -507,7 +377,7 @@ URL:https://indico.math.cnrs.fr/event/14954/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ff4ad1670ea@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260706T083000
 DTEND:20260706T170000
 SUMMARY:2026 IHES Summer School - Cosmological Correlators
@@ -517,7 +387,7 @@ URL:https://indico.math.cnrs.fr/event/15597/
 END:VEVENT
 BEGIN:VEVENT
 UID:4d0d6aec3e65@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260706T110000
 DTEND:20260706T120000
 SUMMARY:Séminaire commun GREMAN-IDP: Strongly correlated systems at equilibrium and away from equilibrium
@@ -527,7 +397,7 @@ URL:https://indico.math.cnrs.fr/event/16135/
 END:VEVENT
 BEGIN:VEVENT
 UID:af2d40ec5cc7@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260707T094500
 DTEND:20260707T112500
 SUMMARY:Alexandre Biscarat
@@ -537,7 +407,7 @@ URL:https://indico.math.cnrs.fr/event/16674/
 END:VEVENT
 BEGIN:VEVENT
 UID:150404a9d467@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260708T123000
 DTEND:20260708T184000
 SUMMARY:A guided hike into quantum machine learning
@@ -547,7 +417,7 @@ URL:https://indico.math.cnrs.fr/event/16561/
 END:VEVENT
 BEGIN:VEVENT
 UID:24a9a604a2f4@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260716T090000
 DTEND:20260716T174500
 SUMMARY:COOKIE (COmputing & apprOximating KInetic Equations)
@@ -557,7 +427,7 @@ URL:https://indico.math.cnrs.fr/event/16399/
 END:VEVENT
 BEGIN:VEVENT
 UID:2493d0bfb1b3@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260831T090000
 DTEND:20260831T195000
 SUMMARY:Summer school "Proof assistants and applications"
@@ -567,7 +437,7 @@ URL:https://indico.math.cnrs.fr/event/16687/
 END:VEVENT
 BEGIN:VEVENT
 UID:bcf2553271bf@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260831T090000
 DTEND:20260831T195000
 SUMMARY:Summer school "Proofs assistants and applications"
@@ -577,7 +447,7 @@ URL:https://indico.math.cnrs.fr/event/16687/
 END:VEVENT
 BEGIN:VEVENT
 UID:884c77af766f@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260909T120000
 DTEND:20260909T150000
 SUMMARY:Besançon Meeting on Probability\, Ecology & Evolution 2026
@@ -587,7 +457,7 @@ URL:https://indico.math.cnrs.fr/event/16490/
 END:VEVENT
 BEGIN:VEVENT
 UID:712a6015ef55@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260915
 SUMMARY:T3-2026 Operator Algebras - Admin
@@ -597,7 +467,7 @@ URL:https://indico.math.cnrs.fr/event/16615/
 END:VEVENT
 BEGIN:VEVENT
 UID:543cc3cbfa42@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260914T083000
 DTEND:20260914T163000
 SUMMARY:Operator Algebras: Approximation\, Rigidity and Dynamics\, Paris
@@ -606,8 +476,18 @@ LOCATION:IHP
 URL:https://indico.math.cnrs.fr/event/14373/
 END:VEVENT
 BEGIN:VEVENT
+UID:d2e8285b412e@paris-academique
+DTSTAMP:20260620T074743Z
+DTSTART:20260914T110000
+DTEND:20260914T130000
+SUMMARY:Emmanuel Trelat
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16473/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16473/
+END:VEVENT
+BEGIN:VEVENT
 UID:13179f9cd0cb@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260915T090000
 DTEND:20260915T172000
 SUMMARY:Korea-France Joint Workshop on String Theory
@@ -617,7 +497,7 @@ URL:https://indico.math.cnrs.fr/event/16694/
 END:VEVENT
 BEGIN:VEVENT
 UID:ed1fdfef5236@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260915T090000
 DTEND:20260915T190000
 SUMMARY:Conférence pour Michel Vaquié
@@ -627,7 +507,7 @@ URL:https://indico.math.cnrs.fr/event/16676/
 END:VEVENT
 BEGIN:VEVENT
 UID:112e8fed8443@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260917T130000
 DTEND:20260917T140000
 SUMMARY:Aurore Zhe LI - Neural Ordinary Differential Equations enhanced Linear Mixed-effects Models
@@ -637,7 +517,7 @@ URL:https://indico.math.cnrs.fr/event/16572/
 END:VEVENT
 BEGIN:VEVENT
 UID:7a957d101954@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260921T090000
 DTEND:20260921T170000
 SUMMARY:Formation "Rédaction de documents avec Rmarkdown et Quarto"
@@ -647,7 +527,7 @@ URL:https://indico.math.cnrs.fr/event/15679/
 END:VEVENT
 BEGIN:VEVENT
 UID:3c75778cc37d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260924T130000
 DTEND:20260924T140000
 SUMMARY:Sébastien Bailly from INSERM U1300
@@ -657,7 +537,7 @@ URL:https://indico.math.cnrs.fr/event/16832/
 END:VEVENT
 BEGIN:VEVENT
 UID:1ef31e078831@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260925T090000
 DTEND:20260925T221500
 SUMMARY:20ème Journée des Doctorantes et Doctorants en Mathématiques de la région Hauts-de-France (JDM 2026)
@@ -667,7 +547,7 @@ URL:https://indico.math.cnrs.fr/event/16167/
 END:VEVENT
 BEGIN:VEVENT
 UID:dbffe8fd8b06@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260925T133000
 DTEND:20260925T170000
 SUMMARY:Séminaire 25-09-2026
@@ -677,7 +557,7 @@ URL:https://indico.math.cnrs.fr/event/16591/
 END:VEVENT
 BEGIN:VEVENT
 UID:9c09e527e288@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260925T141500
 DTEND:20260925T151500
 SUMMARY:Séminaire 25/09/2026 - Michael I. Jordan
@@ -687,7 +567,7 @@ URL:https://indico.math.cnrs.fr/event/16591/
 END:VEVENT
 BEGIN:VEVENT
 UID:3abc235cb73f@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260928T083000
 DTEND:20260928T173000
 SUMMARY:Workshop 1 - Operator Algebras: Groups and Dynamics
@@ -697,7 +577,7 @@ URL:https://indico.math.cnrs.fr/event/14375/
 END:VEVENT
 BEGIN:VEVENT
 UID:09f781f28de5@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260928T090000
 DTEND:20260928T140000
 SUMMARY:CATS 8 - A conference in honour of Gabriele Vezzosi's 60th birthday
@@ -707,7 +587,7 @@ URL:https://indico.math.cnrs.fr/event/15506/
 END:VEVENT
 BEGIN:VEVENT
 UID:bfbc2e7a89a0@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260928T103000
 DTEND:20260928T113000
 SUMMARY:TBA - ICJ
@@ -717,7 +597,7 @@ URL:https://indico.math.cnrs.fr/event/16813/
 END:VEVENT
 BEGIN:VEVENT
 UID:a66c0bb4d87a@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261001T090000
 DTEND:20261001T163000
 SUMMARY:Formation Cast3M Développement
@@ -727,7 +607,7 @@ URL:https://indico.math.cnrs.fr/event/16609/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ff13a6f605a@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261002T110000
 DTEND:20261002T130000
 SUMMARY:Annabelle Collin (INRIA Bordeaux)
@@ -737,7 +617,7 @@ URL:https://indico.math.cnrs.fr/event/16528/
 END:VEVENT
 BEGIN:VEVENT
 UID:b0bbf60fbaf8@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261005T090000
 DTEND:20261005T123000
 SUMMARY:Modèle linéaire et modèle linéaire généralisé
@@ -747,7 +627,7 @@ URL:https://indico.math.cnrs.fr/event/15678/
 END:VEVENT
 BEGIN:VEVENT
 UID:8376f3fafe8d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261006T103000
 DTEND:20261006T113000
 SUMMARY:Simone Castellan
@@ -757,7 +637,7 @@ URL:https://indico.math.cnrs.fr/event/16484/
 END:VEVENT
 BEGIN:VEVENT
 UID:b2d0f798df7d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261008T090000
 DTEND:20261008T110000
 SUMMARY:Real loci of rational Fano threefolds
@@ -767,7 +647,7 @@ URL:https://indico.math.cnrs.fr/event/15080/
 END:VEVENT
 BEGIN:VEVENT
 UID:098b38bb73e3@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261008T160000
 DTEND:20261008T170000
 SUMMARY:COLLOQUIUM Sylvain Crovisier "TBA"
@@ -777,7 +657,7 @@ URL:https://indico.math.cnrs.fr/event/16673/
 END:VEVENT
 BEGIN:VEVENT
 UID:47c682781012@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261009T110000
 DTEND:20261009T130000
 SUMMARY:Annabelle Collin (INRIA Bordeaux)
@@ -787,7 +667,7 @@ URL:https://indico.math.cnrs.fr/event/16528/
 END:VEVENT
 BEGIN:VEVENT
 UID:dbb51315227c@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261009T141500
 DTEND:20261009T151500
 SUMMARY:Séminaire 09/10/2026 - Gabriel Peyré
@@ -797,7 +677,7 @@ URL:https://indico.math.cnrs.fr/event/16833/
 END:VEVENT
 BEGIN:VEVENT
 UID:34933c52095b@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261012T090000
 DTEND:20261012T180000
 SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
@@ -807,7 +687,7 @@ URL:https://indico.math.cnrs.fr/event/16773/
 END:VEVENT
 BEGIN:VEVENT
 UID:ad71a3bc75cf@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261012T103000
 DTEND:20261012T113000
 SUMMARY:TBA - ICJ
@@ -817,7 +697,7 @@ URL:https://indico.math.cnrs.fr/event/16812/
 END:VEVENT
 BEGIN:VEVENT
 UID:972237d4a206@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261012T110000
 DTEND:20261012T130000
 SUMMARY:Elisenda Feliu (Copenhagen)
@@ -827,7 +707,7 @@ URL:https://indico.math.cnrs.fr/event/16474/
 END:VEVENT
 BEGIN:VEVENT
 UID:3d91623f0032@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261013T090000
 DTEND:20261013T163000
 SUMMARY:Formation Cast3M pour Débutants
@@ -837,7 +717,7 @@ URL:https://indico.math.cnrs.fr/event/16605/
 END:VEVENT
 BEGIN:VEVENT
 UID:471f55685b9d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261013T090000
 DTEND:20261013T140000
 SUMMARY:Conférence "PDEs under pressure and applications in life science"
@@ -847,7 +727,7 @@ URL:https://indico.math.cnrs.fr/event/16864/
 END:VEVENT
 BEGIN:VEVENT
 UID:49290ed8004a@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261013T140000
 DTEND:20261013T160000
 SUMMARY:Séminaire SPIKE
@@ -857,7 +737,7 @@ URL:https://indico.math.cnrs.fr/event/16846/
 END:VEVENT
 BEGIN:VEVENT
 UID:bcfeba0669c0@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261015T140000
 DTEND:20261015T160000
 SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
@@ -867,7 +747,7 @@ URL:https://indico.math.cnrs.fr/event/16773/
 END:VEVENT
 BEGIN:VEVENT
 UID:555953563876@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261016T090000
 DTEND:20261016T163000
 SUMMARY:Formation Cast3M Fabrication Additive
@@ -877,7 +757,7 @@ URL:https://indico.math.cnrs.fr/event/16608/
 END:VEVENT
 BEGIN:VEVENT
 UID:0856b95d39fe@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261023T110000
 DTEND:20261023T130000
 SUMMARY:Cinzia Soresina (University of Trento)
@@ -887,7 +767,7 @@ URL:https://indico.math.cnrs.fr/event/16529/
 END:VEVENT
 BEGIN:VEVENT
 UID:2e5b14531e9b@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261026T083000
 DTEND:20261026T173000
 SUMMARY:Workshop 2 - Operator Algebras: Matricial Approximations
@@ -897,7 +777,7 @@ URL:https://indico.math.cnrs.fr/event/14379/
 END:VEVENT
 BEGIN:VEVENT
 UID:365ff4c16d30@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261029T103000
 DTEND:20261029T113000
 SUMMARY:Pause pédagogique
@@ -907,7 +787,7 @@ URL:https://indico.math.cnrs.fr/event/16636/
 END:VEVENT
 BEGIN:VEVENT
 UID:bf2e2ba40923@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261102T103000
 DTEND:20261102T113000
 SUMMARY:TBA - ICJ
@@ -917,7 +797,7 @@ URL:https://indico.math.cnrs.fr/event/16814/
 END:VEVENT
 BEGIN:VEVENT
 UID:5af48d4112b7@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261106T110000
 DTEND:20261106T130000
 SUMMARY:Francesca Ballatore (Université Côte d'Azur)
@@ -927,7 +807,7 @@ URL:https://indico.math.cnrs.fr/event/16530/
 END:VEVENT
 BEGIN:VEVENT
 UID:8a6e82173c58@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261109T080000
 DTEND:20261109T190000
 SUMMARY:2nd PICASSO conference France Portugal Spain
@@ -937,7 +817,7 @@ URL:https://indico.math.cnrs.fr/event/16008/
 END:VEVENT
 BEGIN:VEVENT
 UID:97edcdb715b5@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261110T140000
 DTEND:20261110T160000
 SUMMARY:Séminaire SPIKE
@@ -947,7 +827,7 @@ URL:https://indico.math.cnrs.fr/event/16847/
 END:VEVENT
 BEGIN:VEVENT
 UID:cb98189aee41@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261112T090000
 DTEND:20261112T163000
 SUMMARY:Formation Cast3M PASAPAS et procédures utilisateurs
@@ -957,7 +837,7 @@ URL:https://indico.math.cnrs.fr/event/16606/
 END:VEVENT
 BEGIN:VEVENT
 UID:2e684136cbfb@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261113T141500
 DTEND:20261113T151500
 SUMMARY:Séminaire 13/11/2026 - Cyril Letrouit
@@ -967,7 +847,7 @@ URL:https://indico.math.cnrs.fr/event/16834/
 END:VEVENT
 BEGIN:VEVENT
 UID:0ea8ddbf819d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261116T090000
 DTEND:20261116T110000
 SUMMARY:Feuilletages loin des rivages
@@ -977,7 +857,7 @@ URL:https://indico.math.cnrs.fr/event/16763/
 END:VEVENT
 BEGIN:VEVENT
 UID:9ac40cd88ac1@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261116T090000
 DTEND:20261116T110000
 SUMMARY:Autumn School on Derived Foliations
@@ -987,7 +867,7 @@ URL:https://indico.math.cnrs.fr/event/16763/
 END:VEVENT
 BEGIN:VEVENT
 UID:25e6656e5aae@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261116T103000
 DTEND:20261116T113000
 SUMMARY:TBA - ICJ
@@ -997,7 +877,7 @@ URL:https://indico.math.cnrs.fr/event/16815/
 END:VEVENT
 BEGIN:VEVENT
 UID:91feb6ef127b@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261123T090000
 DTEND:20261123T200000
 SUMMARY:Workshop POK0 "Positivity on K-trivial varieties"
@@ -1007,7 +887,7 @@ URL:https://indico.math.cnrs.fr/event/16870/
 END:VEVENT
 BEGIN:VEVENT
 UID:333eb44c0c8c@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261123T090000
 DTEND:20261123T200000
 SUMMARY:POK0 conference "Positivity on K-trivial varieties"
@@ -1017,7 +897,7 @@ URL:https://indico.math.cnrs.fr/event/16870/
 END:VEVENT
 BEGIN:VEVENT
 UID:ef214ea9007e@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261124T111500
 DTEND:20261124T121500
 SUMMARY:Nikolas Adaloglou
@@ -1027,7 +907,7 @@ URL:https://indico.math.cnrs.fr/event/16453/
 END:VEVENT
 BEGIN:VEVENT
 UID:9268dccad0e3@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261126T080000
 DTEND:20261126T120000
 SUMMARY:HOT Topics in Analysis
@@ -1037,7 +917,7 @@ URL:https://indico.math.cnrs.fr/event/16258/
 END:VEVENT
 BEGIN:VEVENT
 UID:57c4b458316a@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Zena Hadjivasiliou (Francis Crick Institute)
@@ -1047,7 +927,7 @@ URL:https://indico.math.cnrs.fr/event/16531/
 END:VEVENT
 BEGIN:VEVENT
 UID:8de2133e8c34@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261127T141500
 DTEND:20261127T163000
 SUMMARY:Séminaire 27/11/2026 - Francis Bach et Stephane Mallat
@@ -1057,7 +937,7 @@ URL:https://indico.math.cnrs.fr/event/16835/
 END:VEVENT
 BEGIN:VEVENT
 UID:5675c284891d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261130T083000
 DTEND:20261130T173000
 SUMMARY:Workshop 3 - Operator Algebras: Rigidity and Classification
@@ -1067,7 +947,7 @@ URL:https://indico.math.cnrs.fr/event/14380/
 END:VEVENT
 BEGIN:VEVENT
 UID:5488bd18d9d2@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261130T103000
 DTEND:20261130T113000
 SUMMARY:TBA - ICJ
@@ -1077,7 +957,7 @@ URL:https://indico.math.cnrs.fr/event/16816/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ae66d1fd3e7@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261208T140000
 DTEND:20261208T160000
 SUMMARY:Séminaire SPIKE
@@ -1087,7 +967,7 @@ URL:https://indico.math.cnrs.fr/event/16854/
 END:VEVENT
 BEGIN:VEVENT
 UID:5b486034f38e@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261211T110000
 DTEND:20261211T130000
 SUMMARY:Ruth Baker (Oxford University)
@@ -1097,7 +977,7 @@ URL:https://indico.math.cnrs.fr/event/16532/
 END:VEVENT
 BEGIN:VEVENT
 UID:6f71a5a8d9ec@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261211T141500
 DTEND:20261211T151500
 SUMMARY:Séminaire 11/12/2026 - Borjan Geshkovski
@@ -1107,7 +987,7 @@ URL:https://indico.math.cnrs.fr/event/16836/
 END:VEVENT
 BEGIN:VEVENT
 UID:41f6f301b3e5@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261214T103000
 DTEND:20261214T113000
 SUMMARY:TBA - ICJ
@@ -1117,7 +997,7 @@ URL:https://indico.math.cnrs.fr/event/16817/
 END:VEVENT
 BEGIN:VEVENT
 UID:00a514f0e69d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261224T103000
 DTEND:20261224T113000
 SUMMARY:-Férié
@@ -1127,7 +1007,7 @@ URL:https://indico.math.cnrs.fr/event/16644/
 END:VEVENT
 BEGIN:VEVENT
 UID:e39a349a038d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20261231T103000
 DTEND:20261231T113000
 SUMMARY:-Férié
@@ -1137,7 +1017,7 @@ URL:https://indico.math.cnrs.fr/event/16645/
 END:VEVENT
 BEGIN:VEVENT
 UID:9686aff2a6f4@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270104T170000
 DTEND:20270104T190000
 SUMMARY:Applications of Computer Algebra
@@ -1147,7 +1027,7 @@ URL:https://indico.math.cnrs.fr/event/16617/
 END:VEVENT
 BEGIN:VEVENT
 UID:31ff09d02bd3@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270108T100000
 DTEND:20270108T120000
 SUMMARY:Marie Doumic (INRIA Paris)
@@ -1157,7 +1037,7 @@ URL:https://indico.math.cnrs.fr/event/16589/
 END:VEVENT
 BEGIN:VEVENT
 UID:e6b6c2e5bcba@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270108T141500
 DTEND:20270108T151500
 SUMMARY:Séminaire 08/01/2027 - Mathurin Massias
@@ -1167,7 +1047,7 @@ URL:https://indico.math.cnrs.fr/event/16837/
 END:VEVENT
 BEGIN:VEVENT
 UID:6cca57460bb4@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270111T103000
 DTEND:20270111T113000
 SUMMARY:TBA - ICJ
@@ -1177,7 +1057,7 @@ URL:https://indico.math.cnrs.fr/event/16818/
 END:VEVENT
 BEGIN:VEVENT
 UID:f818090006df@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270112T140000
 DTEND:20270112T160000
 SUMMARY:Séminaire SPIKE
@@ -1187,7 +1067,7 @@ URL:https://indico.math.cnrs.fr/event/16855/
 END:VEVENT
 BEGIN:VEVENT
 UID:e7dafe142bd4@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270118T083000
 DTEND:20270118T183000
 SUMMARY:Kinetic theory: from long-range interactions to turbulence and quantum simulators\, Paris
@@ -1197,7 +1077,7 @@ URL:https://indico.math.cnrs.fr/event/15606/
 END:VEVENT
 BEGIN:VEVENT
 UID:143dcfdb88cd@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270121T090000
 DTEND:20270121T170000
 SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the occasion of Antonin Chambolle's 60th birthday
@@ -1207,7 +1087,7 @@ URL:https://indico.math.cnrs.fr/event/15144/
 END:VEVENT
 BEGIN:VEVENT
 UID:03db8dd7c197@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270125T103000
 DTEND:20270125T113000
 SUMMARY:TBA - ICJ
@@ -1217,7 +1097,7 @@ URL:https://indico.math.cnrs.fr/event/16819/
 END:VEVENT
 BEGIN:VEVENT
 UID:97bd0e006bf5@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270128T103000
 DTEND:20270128T113000
 SUMMARY:atelier KRIS
@@ -1227,7 +1107,7 @@ URL:https://indico.math.cnrs.fr/event/16649/
 END:VEVENT
 BEGIN:VEVENT
 UID:5e1433c43a47@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270129T100000
 DTEND:20270129T120000
 SUMMARY:Florence Hubert (I2M)
@@ -1237,7 +1117,7 @@ URL:https://indico.math.cnrs.fr/event/16590/
 END:VEVENT
 BEGIN:VEVENT
 UID:6b61efdb190e@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270202T140000
 DTEND:20270202T160000
 SUMMARY:Séminaire SPIKE
@@ -1247,7 +1127,7 @@ URL:https://indico.math.cnrs.fr/event/16856/
 END:VEVENT
 BEGIN:VEVENT
 UID:c90809908159@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270208T103000
 DTEND:20270208T113000
 SUMMARY:TBA - ICJ
@@ -1257,7 +1137,7 @@ URL:https://indico.math.cnrs.fr/event/16820/
 END:VEVENT
 BEGIN:VEVENT
 UID:708611c7acdf@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270218T103000
 DTEND:20270218T113000
 SUMMARY:Pause pédagogique
@@ -1267,7 +1147,7 @@ URL:https://indico.math.cnrs.fr/event/16652/
 END:VEVENT
 BEGIN:VEVENT
 UID:069f7e5e251a@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270301T083000
 DTEND:20270301T173000
 SUMMARY:Classical Transport and Dynamical Evolution in the Statistical Physics of Long-Range Interaction Systems
@@ -1277,7 +1157,7 @@ URL:https://indico.math.cnrs.fr/event/15608/
 END:VEVENT
 BEGIN:VEVENT
 UID:ccd3ba53dd29@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270301T103000
 DTEND:20270301T113000
 SUMMARY:TBA - ICJ
@@ -1287,7 +1167,7 @@ URL:https://indico.math.cnrs.fr/event/16822/
 END:VEVENT
 BEGIN:VEVENT
 UID:a2fcedeafa72@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270309T140000
 DTEND:20270309T160000
 SUMMARY:Séminaire SPIKE
@@ -1297,7 +1177,7 @@ URL:https://indico.math.cnrs.fr/event/16857/
 END:VEVENT
 BEGIN:VEVENT
 UID:85e9bb659fc4@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270315T103000
 DTEND:20270315T113000
 SUMMARY:TBA - ICJ
@@ -1307,7 +1187,7 @@ URL:https://indico.math.cnrs.fr/event/16823/
 END:VEVENT
 BEGIN:VEVENT
 UID:b64cbb610b1b@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270322T083000
 DTEND:20270322T183000
 SUMMARY:Effective theories in quantum matter
@@ -1317,7 +1197,7 @@ URL:https://indico.math.cnrs.fr/event/15609/
 END:VEVENT
 BEGIN:VEVENT
 UID:a47aa53f32b2@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270405T103000
 DTEND:20270405T113000
 SUMMARY:TBA - ICJ
@@ -1327,7 +1207,7 @@ URL:https://indico.math.cnrs.fr/event/16824/
 END:VEVENT
 BEGIN:VEVENT
 UID:f43731f41c71@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270412T110000
 DTEND:20270412T130000
 SUMMARY:Jean-Michel Roquejoffre 60’s birthday
@@ -1337,7 +1217,7 @@ URL:https://indico.math.cnrs.fr/event/16628/
 END:VEVENT
 BEGIN:VEVENT
 UID:e93e05bb104f@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270412T110000
 DTEND:20270412T130000
 SUMMARY:Amandine Aftalion (Paris Saclay)
@@ -1347,7 +1227,7 @@ URL:https://indico.math.cnrs.fr/event/16480/
 END:VEVENT
 BEGIN:VEVENT
 UID:3cae384e2630@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270415T103000
 DTEND:20270415T113000
 SUMMARY:Pause pédagogique
@@ -1357,7 +1237,7 @@ URL:https://indico.math.cnrs.fr/event/16660/
 END:VEVENT
 BEGIN:VEVENT
 UID:12aa42b8176a@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270419T083000
 DTEND:20270419T173000
 SUMMARY:High Dimensional Probability and Analysis\, Continuous and Discrete
@@ -1367,7 +1247,7 @@ URL:https://indico.math.cnrs.fr/event/16291/
 END:VEVENT
 BEGIN:VEVENT
 UID:00c8e891f599@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270420T140000
 DTEND:20270420T160000
 SUMMARY:Séminaire SPIKE
@@ -1377,7 +1257,7 @@ URL:https://indico.math.cnrs.fr/event/16858/
 END:VEVENT
 BEGIN:VEVENT
 UID:1628364d95be@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270426T103000
 DTEND:20270426T113000
 SUMMARY:TBA - ICJ
@@ -1387,7 +1267,7 @@ URL:https://indico.math.cnrs.fr/event/16825/
 END:VEVENT
 BEGIN:VEVENT
 UID:9a81686672a4@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270504T103000
 DTEND:20270504T113000
 SUMMARY:TBA - ICJ
@@ -1397,7 +1277,7 @@ URL:https://indico.math.cnrs.fr/event/16827/
 END:VEVENT
 BEGIN:VEVENT
 UID:0c4c2250fc0d@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270506T103000
 DTEND:20270506T113000
 SUMMARY:-Férié
@@ -1407,7 +1287,7 @@ URL:https://indico.math.cnrs.fr/event/16663/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f8c053b21b9@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270510T083000
 DTEND:20270510T200000
 SUMMARY:Workshop 1: Convexity and Information Theory
@@ -1417,7 +1297,7 @@ URL:https://indico.math.cnrs.fr/event/16296/
 END:VEVENT
 BEGIN:VEVENT
 UID:636f460acfff@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270511T140000
 DTEND:20270511T160000
 SUMMARY:Séminaire SPIKE
@@ -1427,7 +1307,7 @@ URL:https://indico.math.cnrs.fr/event/16859/
 END:VEVENT
 BEGIN:VEVENT
 UID:0a82eba9d57f@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270527T103000
 DTEND:20270527T113000
 SUMMARY:Relâche
@@ -1437,7 +1317,7 @@ URL:https://indico.math.cnrs.fr/event/16666/
 END:VEVENT
 BEGIN:VEVENT
 UID:b0b434ebaad3@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270531T093000
 DTEND:20270531T173000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji
@@ -1447,7 +1327,7 @@ URL:https://indico.math.cnrs.fr/event/15993/
 END:VEVENT
 BEGIN:VEVENT
 UID:75647a514de6@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270531T103000
 DTEND:20270531T113000
 SUMMARY:TBA - ICJ
@@ -1457,7 +1337,7 @@ URL:https://indico.math.cnrs.fr/event/16828/
 END:VEVENT
 BEGIN:VEVENT
 UID:4ee32fa36a84@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270607T090000
 DTEND:20270607T180000
 SUMMARY:Summer School - Control of PDEs: Theoretical and Numerical Aspects
@@ -1467,7 +1347,7 @@ URL:https://indico.math.cnrs.fr/event/16764/
 END:VEVENT
 BEGIN:VEVENT
 UID:fd25db4eb645@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270614T080000
 DTEND:20270614T200000
 SUMMARY:School: Asymptotic geometric analysis and functional inequalities
@@ -1477,7 +1357,7 @@ URL:https://indico.math.cnrs.fr/event/16297/
 END:VEVENT
 BEGIN:VEVENT
 UID:443aac0d6307@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270614T090000
 DTEND:20270614T180000
 SUMMARY:Spectral theory\, from theory to applications to control problems
@@ -1487,7 +1367,7 @@ URL:https://indico.math.cnrs.fr/event/16765/
 END:VEVENT
 BEGIN:VEVENT
 UID:8ea2ce2037a2@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20270614T103000
 DTEND:20270614T113000
 SUMMARY:TBA - ICJ

@@ -6,48 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:EHESS · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:c6c1d410604a@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260618T000000
-DTEND:20260618T020000
-SUMMARY:Festival CRIP - et je serai à tes côtés
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:d8aab769fbdd@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260618T000000
-DTEND:20260618T020000
-SUMMARY:Colloque inaugural – Existe-t-il une géopolitique française ?
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:44a02a038a3a@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260618T100000
-DTEND:20260618T120000
-SUMMARY:Sémantique et discours
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:35f97b3b3923@paris-academique
-DTSTAMP:20260619T090236Z
-DTSTART:20260619T183000
-DTEND:20260619T203000
-SUMMARY:Fictions sexuelles\, genres et féminismes / Penser dans l’amitié d’Anne E. Berger
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
 UID:f0c8e85cd7ae@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260622T090000
 DTEND:20260622T110000
 SUMMARY:L'exil dans l'espace post-ottoman : violence\, pouvoir et perspectives historiques
@@ -57,7 +17,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:c021701aaac8@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260624T090000
 DTEND:20260624T110000
 SUMMARY:Trajectoires et expériences de l’engagement associatif en Europe du Sud-Est. Grèce et Yougoslavie (1918-2020)
@@ -67,7 +27,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:150b48c37d09@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260624T090000
 DTEND:20260624T110000
 SUMMARY:Lancement du programme "Trajectoires et expériences de l’engagement associatif en Europe du Sud-Est. Grèce et Yougoslavie (1918-2020)"
@@ -77,7 +37,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:fe56a0e6dcd2@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260624T100000
 DTEND:20260624T120000
 SUMMARY:Habiter\, Raconter\, Partager... les méditerranées : le programme
@@ -87,7 +47,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:b180f0626171@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260624T100000
 DTEND:20260624T120000
 SUMMARY:Habiter\, Raconter\, Partager... les méditerranées : découvrir le programme
@@ -97,7 +57,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:64f3ad5cdfb0@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260624T100000
 DTEND:20260624T120000
 SUMMARY:Habiter\, Raconter\, Partager... les méditerranées
@@ -107,7 +67,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:151239bcd499@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260624T200000
 DTEND:20260624T220000
 SUMMARY:Soirée de lancement du podcast L’Effet Cocktail
@@ -117,7 +77,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:c23ab6f24beb@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260624T200000
 DTEND:20260624T220000
 SUMMARY:L’Effet Cocktail – Quand c’est notre santé qui trinque
@@ -127,7 +87,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:75114ef748c2@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260626T090000
 DTEND:20260626T110000
 SUMMARY:Argumentation linguistique et ethos
@@ -137,7 +97,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:24a956430ff4@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260626T140000
 DTEND:20260626T160000
 SUMMARY:A panlectal descriptive grammar of Hachijo\, an Eastern Japonic variety\, including a few insights on diachrony
@@ -147,7 +107,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:b02fd47d5735@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260630T140000
 DTEND:20260630T160000
 SUMMARY:La forme du secret. L’écriture entre esthétique et politique. Une étude sur Petrolio (1992) de Pier Paolo Pasolini
@@ -157,7 +117,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:d7b45e757505@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260630T160000
 DTEND:20260630T180000
 SUMMARY:Les Débats du CéSor avec Stéphanie Latte Abdallah et Abaher el-Sakka
@@ -167,7 +127,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:e408f6c2fbd0@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260630T160000
 DTEND:20260630T180000
 SUMMARY:Les débats du CéSor - Mardi 30 juin avec Stéphanie Latte Abdallah et Abaher el-Sakka
@@ -177,7 +137,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:72b698668946@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260907T000000
 DTEND:20260907T020000
 SUMMARY:École thématique : Mobilisations conservatrices et liberté d’expression
@@ -187,7 +147,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:e340e58e8394@paris-academique
-DTSTAMP:20260619T090236Z
+DTSTAMP:20260620T074743Z
 DTSTART:20260921T140000
 DTEND:20260921T160000
 SUMMARY:Réunions d'information "Reprise d'études"
