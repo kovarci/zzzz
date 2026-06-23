@@ -1940,8 +1940,20 @@ def write_event_pages(events):
         loc = _esc_attr(ev.get("location", ""))
         speaker = _esc_attr(ev.get("speaker", ""))
         body_desc = _esc_attr(ev.get("description", ""))
-        meta_desc = _esc_attr(f"{date_label} — {ev.get('institution', '')}"
-                              + (f" · {ev['location']}" if ev.get("location") else ""))
+        # Title SEO : on rajoute date + institution -> match plus de requêtes
+        # long-tail (« conférence X juin 2026 », « X collège de france »).
+        # Cap à ~70 caractères pour ne pas se faire tronquer dans Google.
+        seo_title_full = f"{ev.get('title','')[:55]} · {_date_fr(ev.get('date',''))} · {ev.get('institution','')}"
+        seo_title = _esc_attr(seo_title_full[:67])
+        # Meta description : phrase naturelle + mots-clés (intervenant, lieu,
+        # date) — 150 caractères, format optimal pour Google SERP.
+        parts = [f"{ev.get('title','')} — conférence {('à ' + ev['location']) if ev.get('location') else 'à Paris'}"]
+        parts.append(f"organisée par {ev.get('institution','')} le {_date_fr(ev.get('date',''))}")
+        if ev.get("speaker"):
+            parts.append(f"avec {ev['speaker'][:50]}")
+        if ev.get("time"):
+            parts.append(f"à {ev['time']}")
+        meta_desc = _esc_attr((". ".join(parts) + ".")[:155])
         img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
         ext = _esc_attr(ev.get("url") or "")
         target = f"../index.html?event={eid}"
@@ -1951,9 +1963,10 @@ def write_event_pages(events):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} — Paris·Académique</title>
+<title>{seo_title}</title>
 <link rel="canonical" href="{SITE_URL}/e/{eid}.html">
 <meta name="description" content="{meta_desc}">
+<meta name="keywords" content="conférence Paris, {_esc_attr(ev.get('institution',''))}, {_esc_attr((ev.get('speaker','') or ev.get('discipline','')))}, séminaire académique">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{meta_desc}">
 <meta property="og:type" content="event">
