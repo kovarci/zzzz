@@ -7,7 +7,7 @@ X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:2934b2e97a19@paris-academique
-DTSTAMP:20260622T094346Z
+DTSTAMP:20260623T074501Z
 DTSTART;VALUE=DATE:20260622
 DTEND;VALUE=DATE:20260623
 SUMMARY:In the Eye of European Storm: Lessons from Ukraine for European Defence
@@ -16,18 +16,8 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/in-the-eye-of-european-storm-lessons-from-ukraine-for-european-defence/
 END:VEVENT
 BEGIN:VEVENT
-UID:89679a5d98b5@paris-academique
-DTSTAMP:20260622T094346Z
-DTSTART;VALUE=DATE:20260624
-DTEND;VALUE=DATE:20260625
-SUMMARY:Protéger les sources : un statut pour la recherche
-DESCRIPTION:Programme détaillé de la journée d'étude.\nhttps://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
-END:VEVENT
-BEGIN:VEVENT
 UID:1d240158f4ab@paris-academique
-DTSTAMP:20260622T094346Z
+DTSTAMP:20260623T074501Z
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
 SUMMARY:How Can We Support the New Generation of Women Mediators for Peace?
@@ -36,8 +26,18 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/how-can-we-support-the-new-generation-of-women-mediators-for-peace/
 END:VEVENT
 BEGIN:VEVENT
+UID:89679a5d98b5@paris-academique
+DTSTAMP:20260623T074501Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:Protéger les sources : un statut pour la recherche
+DESCRIPTION:Programme détaillé de la journée d'étude.\nhttps://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
+END:VEVENT
+BEGIN:VEVENT
 UID:bf6dbb8518a9@paris-academique
-DTSTAMP:20260622T094346Z
+DTSTAMP:20260623T074501Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:Présentation du 36e rapport sur la lutte contre le racisme\, l’antisémitisme et la xénophobie
@@ -47,7 +47,7 @@ URL:https://www.sciencespo.fr/fr/evenements/presentation-du-36e-rapport-sur-la-l
 END:VEVENT
 BEGIN:VEVENT
 UID:f925ee7b0801@paris-academique
-DTSTAMP:20260622T094346Z
+DTSTAMP:20260623T074501Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:The End of the U.S. Model of Journalism ? (And What Comes Next)
@@ -57,7 +57,7 @@ URL:https://www.sciencespo.fr/fr/evenements/the-end-of-the-u-s-model-of-journali
 END:VEVENT
 BEGIN:VEVENT
 UID:855eb6b5809b@paris-academique
-DTSTAMP:20260622T094346Z
+DTSTAMP:20260623T074501Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Paris Alumni Chapter Launch of the European University Institute at Sciences Po
@@ -67,7 +67,7 @@ URL:https://www.sciencespo.fr/fr/evenements/paris-alumni-chapter-launch-of-the-e
 END:VEVENT
 BEGIN:VEVENT
 UID:c114774b35fe@paris-academique
-DTSTAMP:20260622T094346Z
+DTSTAMP:20260623T074501Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Financement de la psychiatrie : budgets et remboursement de la psychothérapie
