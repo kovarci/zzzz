@@ -6,38 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Collège de France · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:0aa55c139f22@paris-academique
-DTSTAMP:20260624T073722Z
-DTSTART:20260624T140000
-DTEND:20260624T160000
-SUMMARY:Extensions supersymétriques Marc Henneaux
-DESCRIPTION:Cours · Limites non relativistes de la théorie d’Einstein et applications\nhttps://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/extensions-supersymetriques
-LOCATION:Amphithéâtre Guillaume Budé\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/extensions-supersymetriques
-END:VEVENT
-BEGIN:VEVENT
-UID:3b35494338d6@paris-academique
-DTSTAMP:20260624T073722Z
-DTSTART:20260624T140000
-DTEND:20260624T160000
-SUMMARY:Extensions supersymétriques
-DESCRIPTION:Cours · Limites non relativistes de la théorie d’Einstein et applications\nhttps://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/extensions-supersymetriques
-LOCATION:Amphithéâtre Guillaume Budé\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/limites-non-relativistes-de-la-theorie-einstein-et-applications/extensions-supersymetriques
-END:VEVENT
-BEGIN:VEVENT
-UID:fa76ea140b6a@paris-academique
-DTSTAMP:20260624T073722Z
-DTSTART:20260624T160000
-DTEND:20260624T180000
-SUMMARY:Classical and Quantum Particles of the Galilei and Carroll Groups and Their Applications José Figueroa O’Farrill
-DESCRIPTION:Séminaire · Limites non relativistes de la théorie d'Einstein et applications\nhttps://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativistes-de-la-theorie-einstein-et-applications/classical-and-quantum-particles-of-the-galilei-and-carroll-groups-and-their-applications
-LOCATION:Amphithéâtre Guillaume Budé\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/limites-non-relativistes-de-la-theorie-einstein-et-applications/classical-and-quantum-particles-of-the-galilei-and-carroll-groups-and-their-applications
-END:VEVENT
-BEGIN:VEVENT
 UID:926a094ae442@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260625T110000
 DTEND:20260625T130000
 SUMMARY:Catalytic Stereospecific Alkene Carboamination Tomislav Rovis
@@ -47,7 +17,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-met
 END:VEVENT
 BEGIN:VEVENT
 UID:b199618b9d3b@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260625T110000
 DTEND:20260625T130000
 SUMMARY:Catalytic Stereospecific Alkene Carboamination
@@ -57,7 +27,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/catalytic-met
 END:VEVENT
 BEGIN:VEVENT
 UID:0f748e15dd12@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260626T093000
 DTEND:20260626T113000
 SUMMARY:Du SQUID supraconducteur au SQUID atomique Jean Dalibard
@@ -67,7 +37,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-
 END:VEVENT
 BEGIN:VEVENT
 UID:d12f153f2084@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260626T093000
 DTEND:20260626T113000
 SUMMARY:Du SQUID supraconducteur au SQUID atomique
@@ -77,7 +47,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/fluides-quantiques-couples-
 END:VEVENT
 BEGIN:VEVENT
 UID:db0f383c36ec@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260626T110000
 DTEND:20260626T130000
 SUMMARY:Ressources et applications des réseaux quantiques Eleni Diamanti
@@ -87,7 +57,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/melange-de-gaz-quantiqu
 END:VEVENT
 BEGIN:VEVENT
 UID:2d957499992a@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260626T110000
 DTEND:20260626T130000
 SUMMARY:Ressources et applications des réseaux quantiques
@@ -97,7 +67,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/melange-de-gaz-quantiqu
 END:VEVENT
 BEGIN:VEVENT
 UID:d5934e6fb268@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260626T140000
 DTEND:20260626T160000
 SUMMARY:Qui sont les peintres des tombes de la nécropole de l'élite à Thèbes sous la XVIIIe dynastie ? Dimitri Laboury
@@ -107,7 +77,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/propos-sur-ar
 END:VEVENT
 BEGIN:VEVENT
 UID:28a4daf34215@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260703T110000
 DTEND:20260703T130000
 SUMMARY:Single-Atom Catalysis Tao Zhang
@@ -117,7 +87,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/sin
 END:VEVENT
 BEGIN:VEVENT
 UID:115417ab1aa9@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260703T110000
 DTEND:20260703T130000
 SUMMARY:Single-Atom Catalysis
@@ -127,7 +97,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/sin
 END:VEVENT
 BEGIN:VEVENT
 UID:f29e7e0f0fdb@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260930T090000
 DTEND:20260930T110000
 SUMMARY:Forum Éducation 2026 Agir pour l'éducation
@@ -137,7 +107,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/forum-education-2
 END:VEVENT
 BEGIN:VEVENT
 UID:d6e2591df0bf@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20260930T090000
 DTEND:20260930T110000
 SUMMARY:Forum Éducation 2026
@@ -147,7 +117,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/forum-education-2
 END:VEVENT
 BEGIN:VEVENT
 UID:1ef93e6b0e5f@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261104T173000
 DTEND:20261104T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (1) Olivier De Schutter
@@ -157,7 +127,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:61c921502396@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261105T173000
 DTEND:20261105T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (2) Olivier De Schutter
@@ -167,7 +137,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:91f9db516d06@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261112T173000
 DTEND:20261112T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (3) Olivier De Schutter
@@ -177,7 +147,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:146b68f5d8dd@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261113T110000
 DTEND:20261113T130000
 SUMMARY:Representative Democracy in Reflexive Globalization Philipp Dann
@@ -187,7 +157,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/philipp-dann/
 END:VEVENT
 BEGIN:VEVENT
 UID:b66ab1235125@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261113T110000
 DTEND:20261113T130000
 SUMMARY:Representative Democracy in Reflexive Globalization
@@ -197,7 +167,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/philipp-dann/
 END:VEVENT
 BEGIN:VEVENT
 UID:dda5daf0acc6@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261113T173000
 DTEND:20261113T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (4) Olivier De Schutter
@@ -207,7 +177,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:aacc5031d998@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Géants technologiques mondiaux et privatisation du droit Vincent Martenet
@@ -217,7 +187,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/vincent-marte
 END:VEVENT
 BEGIN:VEVENT
 UID:743282c56fec@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Géants technologiques mondiaux et privatisation du droit

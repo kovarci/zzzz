@@ -6,18 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sciences et Cultures · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:069e93eaf905@paris-academique
-DTSTAMP:20260624T073722Z
-DTSTART;VALUE=DATE:20260623
-DTEND;VALUE=DATE:20260624
-SUMMARY:GRANDE INTERVIEW - Jean-Jacques Velasco (OVNIs et déclassifications)
-DESCRIPTION:Inscription requise via le lien.\nhttps://framaforms.org/inscription-entretien-ovnis-et-declassifications-23062026-sciences-cultures-citoyens-accis
-LOCATION:Sorbonne\, Paris
-URL:https://framaforms.org/inscription-entretien-ovnis-et-declassifications-23062026-sciences-cultures-citoyens-accis
-END:VEVENT
-BEGIN:VEVENT
 UID:df0a0176c3bd@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
 SUMMARY:GRANDE INTERVIEW - Alain Giami (sexualité)
@@ -27,7 +17,7 @@ URL:https://framaforms.org/inscription-entretien-alain-giami-24062026-sciences-c
 END:VEVENT
 BEGIN:VEVENT
 UID:cf995edee8be@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:CONFÉRENCE - Frédéric Courtade (GEIPAN)
@@ -37,7 +27,7 @@ URL:https://framaforms.org/inscription-conference-geipan-30062026-sciences-cultu
 END:VEVENT
 BEGIN:VEVENT
 UID:3eb02c70e10c@paris-academique
-DTSTAMP:20260624T073722Z
+DTSTAMP:20260625T073901Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:CONFÉRENCE - Ngô Bảo Châu (Prix Nobel de Mathématiques)
