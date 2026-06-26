@@ -6,18 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:bf6dbb8518a9@paris-academique
-DTSTAMP:20260625T073901Z
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260626
-SUMMARY:Présentation du 36e rapport sur la lutte contre le racisme\, l’antisémitisme et la xénophobie
-DESCRIPTION:\nhttps://www.sciencespo.fr/fr/evenements/presentation-du-36e-rapport-sur-la-lutte-contre-le-racisme-l-antisemitisme-et-la-xenophobie/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/presentation-du-36e-rapport-sur-la-lutte-contre-le-racisme-l-antisemitisme-et-la-xenophobie/
-END:VEVENT
-BEGIN:VEVENT
 UID:f925ee7b0801@paris-academique
-DTSTAMP:20260625T073901Z
+DTSTAMP:20260626T074653Z
 DTSTART;VALUE=DATE:20260625
 DTEND;VALUE=DATE:20260626
 SUMMARY:The End of the U.S. Model of Journalism ? (And What Comes Next)
@@ -27,7 +17,7 @@ URL:https://www.sciencespo.fr/fr/evenements/the-end-of-the-u-s-model-of-journali
 END:VEVENT
 BEGIN:VEVENT
 UID:855eb6b5809b@paris-academique
-DTSTAMP:20260625T073901Z
+DTSTAMP:20260626T074653Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Paris Alumni Chapter Launch of the European University Institute at Sciences Po
@@ -37,7 +27,7 @@ URL:https://www.sciencespo.fr/fr/evenements/paris-alumni-chapter-launch-of-the-e
 END:VEVENT
 BEGIN:VEVENT
 UID:c114774b35fe@paris-academique
-DTSTAMP:20260625T073901Z
+DTSTAMP:20260626T074653Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Financement de la psychiatrie : budgets et remboursement de la psychothérapie

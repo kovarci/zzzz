@@ -6,28 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:ENS Paris · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:b0013f8bc3e1@paris-academique
-DTSTAMP:20260625T073901Z
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260626
-SUMMARY:Living at the limits – France-Arizona perspectives on global environmental challenges
-DESCRIPTION:\nhttps://www.ens.psl.eu/node/9058
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/node/9058
-END:VEVENT
-BEGIN:VEVENT
-UID:1d156fc56d66@paris-academique
-DTSTAMP:20260625T073901Z
-DTSTART;VALUE=DATE:20260625
-DTEND;VALUE=DATE:20260626
-SUMMARY:Soirée / Concert : Human sensory ecology
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-25t160000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/soiree-concert-human-sensory-ecology/2026-06-25t160000
-END:VEVENT
-BEGIN:VEVENT
 UID:b5002ded173d@paris-academique
-DTSTAMP:20260625T073901Z
+DTSTAMP:20260626T074653Z
 DTSTART;VALUE=DATE:20260704
 DTEND;VALUE=DATE:20260705
 SUMMARY:Voyage au centre du cerveau
@@ -37,7 +17,7 @@ URL:https://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
 END:VEVENT
 BEGIN:VEVENT
 UID:ef764e63916d@paris-academique
-DTSTAMP:20260625T073901Z
+DTSTAMP:20260626T074653Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Existe-t-il une médecine européenne ?
@@ -47,7 +27,7 @@ URL:https://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-09-29
 END:VEVENT
 BEGIN:VEVENT
 UID:a4e3ed0912c8@paris-academique
-DTSTAMP:20260625T073901Z
+DTSTAMP:20260626T074653Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Résiliences\, résistances\, futurs communs
@@ -57,7 +37,7 @@ URL:https://www.ens.psl.eu/agenda/resiliences-resistances-futurs-communs/2026-10
 END:VEVENT
 BEGIN:VEVENT
 UID:f31262bcf8c6@paris-academique
-DTSTAMP:20260625T073901Z
+DTSTAMP:20260626T074653Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Atelier Digit_Hum 2026
