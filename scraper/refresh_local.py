@@ -113,6 +113,19 @@ def main():
     merged = [e for e in merged if e.get("date", "") >= scrape.CUTOFF.isoformat()]
     merged.sort(key=lambda e: (e["date"], e.get("time", "")))
 
+    # Date d'ajout : on garde celle des events existants ; les nouveaux ids
+    # (jamais vus avant) reçoivent today -> le tag « nouveau » s'affichera.
+    prev_added = {e.get("id"): e.get("added_at") for e in events if e.get("id")}
+    today_iso = scrape.TODAY.isoformat()
+    n_new = 0
+    for ev in merged:
+        if ev.get("id"):
+            existing = prev_added.get(ev["id"])
+            ev["added_at"] = existing or today_iso
+            if not existing:
+                n_new += 1
+    print(f"  {n_new} nouveaux ids estampillés added_at={today_iso}")
+
     scrape.geocode_all(merged)
     scrape.write_ics(merged)
     out.write_text(json.dumps(merged, ensure_ascii=False, separators=(",", ":")),
