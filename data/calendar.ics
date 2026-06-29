@@ -6,18 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Conférences académiques · Paris
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:20494170f585@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260627T150000
-DTEND:20260627T170000
-SUMMARY:SLW ARCHIVE SALE
-DESCRIPTION:\nhttps://lu.ma/0vj540dv
-LOCATION:Le Petit Samaritain\, 8 Rue Baillet\, 75001 Paris\, France
-URL:https://lu.ma/0vj540dv
-END:VEVENT
-BEGIN:VEVENT
 UID:31ba40d82589@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260628T090000
 DTEND:20260628T110000
 SUMMARY:Économie comportementale du genre
@@ -27,7 +17,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du
 END:VEVENT
 BEGIN:VEVENT
 UID:61b5dfca55e3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260628T100000
 DTEND:20260628T120000
 SUMMARY:Retraites et parcours de vie
@@ -36,58 +26,8 @@ LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vie/
 END:VEVENT
 BEGIN:VEVENT
-UID:1e7a42bde2fa@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T100000
-DTEND:20260628T120000
-SUMMARY:RUN CLUB #02 @La Montgolfière 10ème
-DESCRIPTION:\nhttps://lu.ma/gddyvfw4
-LOCATION:La Montgolfière\, 25 Rue Yves Toudic\, 75010 Paris\, France
-URL:https://lu.ma/gddyvfw4
-END:VEVENT
-BEGIN:VEVENT
-UID:288b592ce796@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T100000
-DTEND:20260628T120000
-SUMMARY:Je découvre le Nirvana® pour me détendre et me tonifier en douceur
-DESCRIPTION:\nhttps://lu.ma/zwbixqan
-LOCATION:11 Rue Pierre Curie\, 78220 Viroflay\, France
-URL:https://lu.ma/zwbixqan
-END:VEVENT
-BEGIN:VEVENT
-UID:516d081fb5e2@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T103000
-DTEND:20260628T123000
-SUMMARY:Coffee & Readings: An Intimate Morning of Personalised Readings for Women
-DESCRIPTION:\nhttps://lu.ma/aui4pvqk
-LOCATION:Paris
-URL:https://lu.ma/aui4pvqk
-END:VEVENT
-BEGIN:VEVENT
-UID:4691a0bfbf9f@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T110000
-DTEND:20260628T130000
-SUMMARY:Wellness Morning : Padel & Yoga
-DESCRIPTION:\nhttps://lu.ma/p8i5x692
-LOCATION:15e Arrondissement\, 75015 Paris\, France
-URL:https://lu.ma/p8i5x692
-END:VEVENT
-BEGIN:VEVENT
-UID:7426fd3d5839@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T113000
-DTEND:20260628T133000
-SUMMARY:Je découvre le Yoga du rire pour me relaxer et me mettre en joie
-DESCRIPTION:\nhttps://lu.ma/xkiya5cv
-LOCATION:11 Rue Pierre Curie\, 78220 Viroflay\, France
-URL:https://lu.ma/xkiya5cv
-END:VEVENT
-BEGIN:VEVENT
 UID:6b6065ac8efc@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260628T120000
 DTEND:20260628T140000
 SUMMARY:Fashion & Tea - Wenjüe Lu x Laïzé Pop-up
@@ -97,7 +37,7 @@ URL:https://lu.ma/em2gaq4s
 END:VEVENT
 BEGIN:VEVENT
 UID:ac47122378e0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260628T123000
 DTEND:20260628T143000
 SUMMARY:Lunch séminaire d’économie appliquée
@@ -106,28 +46,8 @@ LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
 END:VEVENT
 BEGIN:VEVENT
-UID:52166b73aa0d@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T140000
-DTEND:20260628T160000
-SUMMARY:🌴Aloha Summer Party - Copacabana edition🇧🇷
-DESCRIPTION:\nhttps://lu.ma/jgmot64m
-LOCATION:51 Rue de Vincennes\, 93100 Montreuil\, France
-URL:https://lu.ma/jgmot64m
-END:VEVENT
-BEGIN:VEVENT
-UID:a7375fb4c19a@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T140000
-DTEND:20260628T160000
-SUMMARY:Maraviya Writing Session
-DESCRIPTION:\nhttps://lu.ma/f5cda86j
-LOCATION:Parc-de-Montsouris\, 75014 Paris\, France
-URL:https://lu.ma/f5cda86j
-END:VEVENT
-BEGIN:VEVENT
 UID:5551b6862ae2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260628T150000
 DTEND:20260628T170000
 SUMMARY:Lancement de la Chaire Modélisation des risques économiques et financiers liés à la nature
@@ -136,38 +56,8 @@ LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-modelisation-des-risques-economiques-et-financiers-lies-a-la-nature/
 END:VEVENT
 BEGIN:VEVENT
-UID:8a2f136e48e9@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T150000
-DTEND:20260628T170000
-SUMMARY:MEGA Picnic | Relax Together
-DESCRIPTION:\nhttps://lu.ma/mik4ot4j
-LOCATION:Jardin de la Tour Eiffel\, 75007 Paris\, France
-URL:https://lu.ma/mik4ot4j
-END:VEVENT
-BEGIN:VEVENT
-UID:f0ded0fb2052@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T150000
-DTEND:20260628T170000
-SUMMARY:La Parenthèse #1
-DESCRIPTION:\nhttps://lu.ma/r4ay3hyd
-LOCATION:Arcueil
-URL:https://lu.ma/r4ay3hyd
-END:VEVENT
-BEGIN:VEVENT
-UID:8ec374088830@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T170000
-DTEND:20260628T190000
-SUMMARY:Paris Curated Coffee Meetup: meet fellow creatives. Hosted by Artist Rebecca Shkeyrov
-DESCRIPTION:\nhttps://lu.ma/c4a4nvm0
-LOCATION:Paris
-URL:https://lu.ma/c4a4nvm0
-END:VEVENT
-BEGIN:VEVENT
 UID:fd5e7ef7743f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260628T173000
 DTEND:20260628T193000
 SUMMARY:Petit Séminaire Informel de la Paris School of Economics
@@ -176,38 +66,8 @@ LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de-la-paris-school-of-economics/
 END:VEVENT
 BEGIN:VEVENT
-UID:b9290278a99a@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T173000
-DTEND:20260628T193000
-SUMMARY:Pre YC Startup School: Builders & Drinks
-DESCRIPTION:\nhttps://lu.ma/kbu5c9zq
-LOCATION:Paris
-URL:https://lu.ma/kbu5c9zq
-END:VEVENT
-BEGIN:VEVENT
-UID:33f61bc0a441@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T173000
-DTEND:20260628T193000
-SUMMARY:Women Founders Sunday Picnic
-DESCRIPTION:\nhttps://lu.ma/g6rog09r
-LOCATION:Jardin du Luxembourg\, 75006 Paris\, France
-URL:https://lu.ma/g6rog09r
-END:VEVENT
-BEGIN:VEVENT
-UID:16295f85fc97@paris-academique
-DTSTAMP:20260628T100312Z
-DTSTART:20260628T180000
-DTEND:20260628T200000
-SUMMARY:Summer Opening Circle with Well in France
-DESCRIPTION:\nhttps://lu.ma/wif-summerOC
-LOCATION:Paris
-URL:https://lu.ma/wif-summerOC
-END:VEVENT
-BEGIN:VEVENT
 UID:dda595df442b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T080000
 DTEND:20260629T180000
 SUMMARY:Asymptotic Behaviors of systems of PDEs arising in physics and biology - 6th edition
@@ -217,7 +77,7 @@ URL:https://indico.math.cnrs.fr/event/15160/
 END:VEVENT
 BEGIN:VEVENT
 UID:d18522299451@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T083000
 DTEND:20260629T173000
 SUMMARY:Idealised mathematical models for geophysical flows
@@ -227,7 +87,7 @@ URL:https://indico.math.cnrs.fr/event/13870/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f72cd73de91@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T090000
 DTEND:20260629T170000
 SUMMARY:Felix Otto's Conference in Paris
@@ -237,7 +97,7 @@ URL:https://indico.math.cnrs.fr/event/13689/
 END:VEVENT
 BEGIN:VEVENT
 UID:e1fc89b22376@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T090000
 DTEND:20260629T110000
 SUMMARY:SC26 - Atelier Cybersécurité
@@ -247,7 +107,7 @@ URL:https://lu.ma/3q44gm0f
 END:VEVENT
 BEGIN:VEVENT
 UID:14b591f6eb8f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T090000
 DTEND:20260629T110000
 SUMMARY:SC26 - Data & IA : storytelling
@@ -257,7 +117,7 @@ URL:https://lu.ma/ko99kaan
 END:VEVENT
 BEGIN:VEVENT
 UID:cf47fcbe1c95@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T110000
 DTEND:20260629T150000
 SUMMARY:Gissel Estrada-Rodriguez (Universitat Politècnica de Catalunya)
@@ -267,7 +127,7 @@ URL:https://indico.math.cnrs.fr/event/16152/
 END:VEVENT
 BEGIN:VEVENT
 UID:6b735d07453a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T140000
 DTEND:20260629T150000
 SUMMARY:On the multi-cell formula in homogenization
@@ -277,7 +137,7 @@ URL:https://indico.math.cnrs.fr/event/16880/
 END:VEVENT
 BEGIN:VEVENT
 UID:04b9de22b935@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T140000
 DTEND:20260629T150000
 SUMMARY:A minimization problem of the Klein-Gordon-Schrödinger system and related topics
@@ -287,7 +147,7 @@ URL:https://indico.math.cnrs.fr/event/16534/
 END:VEVENT
 BEGIN:VEVENT
 UID:6f7cd3fa2285@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T140000
 DTEND:20260629T160000
 SUMMARY:rivière | Et si tu donnais vie à tes rêves ?
@@ -297,7 +157,7 @@ URL:https://lu.ma/8cqkt747
 END:VEVENT
 BEGIN:VEVENT
 UID:3461794c1543@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T163000
 DTEND:20260629T173000
 SUMMARY:Ergodic theorems for the frontier of branching Brownian motion
@@ -307,7 +167,7 @@ URL:https://indico.math.cnrs.fr/event/16900/
 END:VEVENT
 BEGIN:VEVENT
 UID:fda5bfa5a5e7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T173000
 DTEND:20260629T193000
 SUMMARY:Assemblée Générale Annuelle Team for the Planet
@@ -317,7 +177,7 @@ URL:https://lu.ma/team-gwpa
 END:VEVENT
 BEGIN:VEVENT
 UID:9d725ed5d784@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T173000
 DTEND:20260629T193000
 SUMMARY:IA neuro-symbolique : la prochaine étape après les LLM\, les agents et l’IA générative
@@ -327,7 +187,7 @@ URL:https://lu.ma/5v6ikpdj
 END:VEVENT
 BEGIN:VEVENT
 UID:0850bef97c73@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T180000
 DTEND:20260629T200000
 SUMMARY:Summer watch party de la SporTech
@@ -337,7 +197,7 @@ URL:https://lu.ma/bwjbh7xw
 END:VEVENT
 BEGIN:VEVENT
 UID:dc68eb1009bb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T183000
 DTEND:20260629T203000
 SUMMARY:The PhD → VC Jump 🧪➡️💼
@@ -347,7 +207,7 @@ URL:https://lu.ma/1ks91tsx
 END:VEVENT
 BEGIN:VEVENT
 UID:3c4e20166d5a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T190000
 DTEND:20260629T210000
 SUMMARY:Startup Party by Dust\, Fin & Stripe
@@ -357,7 +217,7 @@ URL:https://lu.ma/dust-fin-stripe
 END:VEVENT
 BEGIN:VEVENT
 UID:3f0c1515dfe0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T190000
 DTEND:20260629T210000
 SUMMARY:WWDinner V : Back from Dubdub
@@ -367,7 +227,7 @@ URL:https://lu.ma/wwdinner-v
 END:VEVENT
 BEGIN:VEVENT
 UID:184aa01ce21d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T193000
 DTEND:20260629T213000
 SUMMARY:Langues En Poésie 001
@@ -376,8 +236,18 @@ LOCATION:YIYI Sphère\, 32 Rue de Palestro\, 75002 Paris\, France
 URL:https://lu.ma/gnk74t37
 END:VEVENT
 BEGIN:VEVENT
+UID:b9591de2d4ca@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260629T193000
+DTEND:20260629T213000
+SUMMARY:Je médite et crée ma bulle de légèreté en pleine conscience
+DESCRIPTION:\nhttps://lu.ma/rt5a8lo5
+LOCATION:19 Av. du Général-Leclerc\, 78220 Viroflay\, France
+URL:https://lu.ma/rt5a8lo5
+END:VEVENT
+BEGIN:VEVENT
 UID:88a4496fa8a1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T193000
 DTEND:20260629T213000
 SUMMARY:Hive - Ladies Who Tech June Meetup
@@ -387,7 +257,7 @@ URL:https://lu.ma/8qu4rcjh
 END:VEVENT
 BEGIN:VEVENT
 UID:5ea32c813def@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T193000
 DTEND:20260629T213000
 SUMMARY:LE FOOTING Summer Session 🏝️
@@ -397,7 +267,7 @@ URL:https://lu.ma/2rtxq7pj
 END:VEVENT
 BEGIN:VEVENT
 UID:33d8f2e4d380@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T200000
 DTEND:20260629T220000
 SUMMARY:Prediction Markets Meetup Paris 🥂
@@ -406,8 +276,18 @@ LOCATION:Albert School\, 18 Rue de Paradis\, 75010 Paris\, France
 URL:https://lu.ma/tt1j3h7r
 END:VEVENT
 BEGIN:VEVENT
+UID:623a57fd7890@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260629T203000
+DTEND:20260629T223000
+SUMMARY:Side Event: The Secret (AI)fter Party - staaake in Paris
+DESCRIPTION:\nhttps://lu.ma/33dz1b82
+LOCATION:Paris
+URL:https://lu.ma/33dz1b82
+END:VEVENT
+BEGIN:VEVENT
 UID:d808e9e89b47@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260629T203000
 DTEND:20260629T223000
 SUMMARY:Acting Pro - Représentation Finale 2026
@@ -416,8 +296,18 @@ LOCATION:3 Rue d'Avron\, 75020 Paris\, France
 URL:https://lu.ma/p4nmqyil
 END:VEVENT
 BEGIN:VEVENT
+UID:6b9e3afe9c47@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260629T210000
+DTEND:20260629T230000
+SUMMARY:YC After Party
+DESCRIPTION:\nhttps://lu.ma/i95z8fjh
+LOCATION:Café Oz Rooftop - The Australian Bar\, Cité de la Mode et du Design\, 34 Quai d'Austerlitz\, 75013 Paris\, France
+URL:https://lu.ma/i95z8fjh
+END:VEVENT
+BEGIN:VEVENT
 UID:cf995edee8be@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:CONFÉRENCE - Frédéric Courtade (GEIPAN)
@@ -427,7 +317,7 @@ URL:https://framaforms.org/inscription-conference-geipan-30062026-sciences-cultu
 END:VEVENT
 BEGIN:VEVENT
 UID:855eb6b5809b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Paris Alumni Chapter Launch of the European University Institute at Sciences Po
@@ -437,7 +327,7 @@ URL:https://www.sciencespo.fr/fr/evenements/paris-alumni-chapter-launch-of-the-e
 END:VEVENT
 BEGIN:VEVENT
 UID:d621698ff79d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Lunch séminaire d’économie appliquée
@@ -447,7 +337,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-a
 END:VEVENT
 BEGIN:VEVENT
 UID:603f42429b99@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Petit Séminaire Informel de la Paris School of Economics
@@ -457,7 +347,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/petit-seminaire-informel-de
 END:VEVENT
 BEGIN:VEVENT
 UID:02f741a90601@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Je laisserai toutes sortes d'oiseaux voler chez moi
@@ -467,7 +357,7 @@ URL:https://psl.eu/agenda/je-laisserai-toutes-sortes-doiseaux-voler-chez-moi
 END:VEVENT
 BEGIN:VEVENT
 UID:f78b61c5951d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Paramètres d’accessibilité
@@ -477,7 +367,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:43faeeee8745@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Rechercher par :
@@ -487,7 +377,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:a6d53258b7c6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T090000
 DTEND:20260630T110000
 SUMMARY:Masterclass Permaentreprise
@@ -497,7 +387,7 @@ URL:https://lu.ma/ckwzu6me
 END:VEVENT
 BEGIN:VEVENT
 UID:d46c85d93b7f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T090000
 DTEND:20260630T110000
 SUMMARY:La contribution du GEO à votre business devient enfin mesurablePetit-déjeuner CMO mediaROI × GetMint\, 30 juin
@@ -507,7 +397,7 @@ URL:https://lu.ma/e87zlicl
 END:VEVENT
 BEGIN:VEVENT
 UID:34f550198355@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T090000
 DTEND:20260630T110000
 SUMMARY:Data Breakfast avec Euronext
@@ -517,7 +407,7 @@ URL:https://lu.ma/ugu0m5px
 END:VEVENT
 BEGIN:VEVENT
 UID:a86251ab86c0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T091500
 DTEND:20260630T170000
 SUMMARY:8ème Journée Probabilité Statistique Besançon-Dijon
@@ -527,7 +417,7 @@ URL:https://indico.math.cnrs.fr/event/16872/
 END:VEVENT
 BEGIN:VEVENT
 UID:b5bffc443833@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T094500
 DTEND:20260630T112500
 SUMMARY:Rémi Coulon : "Dynamique du flot géodésique pour un groupe avec un élément contractant"
@@ -537,7 +427,7 @@ URL:https://indico.math.cnrs.fr/event/16782/
 END:VEVENT
 BEGIN:VEVENT
 UID:5cf4f4c49251@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T094500
 DTEND:20260630T112500
 SUMMARY:Rémi Coulon
@@ -547,7 +437,7 @@ URL:https://indico.math.cnrs.fr/event/16782/
 END:VEVENT
 BEGIN:VEVENT
 UID:b7137efcb25e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T100000
 DTEND:20260630T120000
 SUMMARY:Masterclass : Gouvernance
@@ -557,7 +447,7 @@ URL:https://lu.ma/esmdrlpf
 END:VEVENT
 BEGIN:VEVENT
 UID:a3eaa3b27d80@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T110000
 DTEND:20260630T130000
 SUMMARY:Atelier Mongalet
@@ -567,7 +457,7 @@ URL:https://lu.ma/6xffkk53
 END:VEVENT
 BEGIN:VEVENT
 UID:fbe9027e19bc@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T111500
 DTEND:20260630T121500
 SUMMARY:Solving image inverse problem with deep generative models
@@ -577,7 +467,7 @@ URL:https://indico.math.cnrs.fr/event/14488/
 END:VEVENT
 BEGIN:VEVENT
 UID:b3c719fced5b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T111500
 DTEND:20260630T121500
 SUMMARY:Orbital stability of a traveling wave of the Gross-Pitaevskii equation
@@ -587,7 +477,7 @@ URL:https://indico.math.cnrs.fr/event/16224/
 END:VEVENT
 BEGIN:VEVENT
 UID:75cad4b3e94e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T123000
 DTEND:20260630T143000
 SUMMARY:Séminaire
@@ -597,7 +487,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-a
 END:VEVENT
 BEGIN:VEVENT
 UID:f594a394a92e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T140000
 DTEND:20260630T150000
 SUMMARY:Anthony Fraga. RAID - Compact PKE bridging RQC and LRPC cryptosystem paradigm
@@ -607,7 +497,7 @@ URL:https://indico.math.cnrs.fr/event/16866/
 END:VEVENT
 BEGIN:VEVENT
 UID:b02fd47d5735@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T140000
 DTEND:20260630T160000
 SUMMARY:La forme du secret. L’écriture entre esthétique et politique. Une étude sur Petrolio (1992) de Pier Paolo Pasolini
@@ -617,7 +507,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:d7b45e757505@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T160000
 DTEND:20260630T180000
 SUMMARY:Les Débats du CéSor avec Stéphanie Latte Abdallah et Abaher el-Sakka
@@ -627,7 +517,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:e408f6c2fbd0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T160000
 DTEND:20260630T180000
 SUMMARY:Les débats du CéSor - Mardi 30 juin avec Stéphanie Latte Abdallah et Abaher el-Sakka
@@ -637,7 +527,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:39d7e482934c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T160000
 DTEND:20260630T180000
 SUMMARY:De 27m€ de CA au tapis… reconstruire plus solide après un échec majeur
@@ -647,7 +537,7 @@ URL:https://lu.ma/iwgfease
 END:VEVENT
 BEGIN:VEVENT
 UID:36cb35c7132a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T180000
 DTEND:20260630T200000
 SUMMARY:Winter Spring 2027 Collection Launch Cocktail / Cocktail de lancement de la collection Winter Spring 2027
@@ -657,7 +547,7 @@ URL:https://lu.ma/uvdbk0ij
 END:VEVENT
 BEGIN:VEVENT
 UID:3576c2da7840@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T183000
 DTEND:20260630T203000
 SUMMARY:Paris Design Club Afterwork #5
@@ -667,7 +557,7 @@ URL:https://lu.ma/a46e9c2w
 END:VEVENT
 BEGIN:VEVENT
 UID:37a133140b85@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T183000
 DTEND:20260630T203000
 SUMMARY:Unaite Fellowship for AI in Biology - Open House
@@ -677,7 +567,7 @@ URL:https://lu.ma/d027eojb
 END:VEVENT
 BEGIN:VEVENT
 UID:2dea0b4b3aab@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T183000
 DTEND:20260630T203000
 SUMMARY:FIA - 6ᵉ Afterwork
@@ -687,7 +577,7 @@ URL:https://lu.ma/y8erf0wi
 END:VEVENT
 BEGIN:VEVENT
 UID:b6389e57b90d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T183000
 DTEND:20260630T203000
 SUMMARY:Futur de l’IA\, futur immédiat
@@ -697,7 +587,7 @@ URL:https://lu.ma/nrmf8lgg
 END:VEVENT
 BEGIN:VEVENT
 UID:cf1ab55108db@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T183000
 DTEND:20260630T203000
 SUMMARY:Inscription Crème Running Club - Paris
@@ -707,7 +597,7 @@ URL:https://lu.ma/ktx98nym
 END:VEVENT
 BEGIN:VEVENT
 UID:6f273afd59f8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T183000
 DTEND:20260630T203000
 SUMMARY:AI & Engineering - Where AI Engineering Meets Product Design
@@ -717,7 +607,7 @@ URL:https://lu.ma/9oc6wppg
 END:VEVENT
 BEGIN:VEVENT
 UID:6fc72ba71564@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T183000
 DTEND:20260630T203000
 SUMMARY:[🥂Les Apéros CyberIA ] by BricyBreak #004
@@ -727,7 +617,7 @@ URL:https://lu.ma/sxzjvq3e
 END:VEVENT
 BEGIN:VEVENT
 UID:c702442aba37@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T190000
 DTEND:20260630T210000
 SUMMARY:Meetup des Yahoo! alumni\, Edition 2026
@@ -737,7 +627,7 @@ URL:https://lu.ma/xqh6fce3
 END:VEVENT
 BEGIN:VEVENT
 UID:ae1f6e308ef9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T190000
 DTEND:20260630T210000
 SUMMARY:RESILIENCE WORKSHOP - 30.06
@@ -747,7 +637,7 @@ URL:https://lu.ma/ntll8xri
 END:VEVENT
 BEGIN:VEVENT
 UID:ac99be72e2d6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T190000
 DTEND:20260630T210000
 SUMMARY:Hypnotic Breathwork
@@ -757,7 +647,7 @@ URL:https://lu.ma/6rybbcz1
 END:VEVENT
 BEGIN:VEVENT
 UID:1026a61c588c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T190000
 DTEND:20260630T210000
 SUMMARY:Hold The Grip : Climb with Builders #1
@@ -767,7 +657,7 @@ URL:https://lu.ma/3869zv4v
 END:VEVENT
 BEGIN:VEVENT
 UID:1d83252fa8ab@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T193000
 DTEND:20260630T213000
 SUMMARY:Miles That Matter - A solidarity run & conversation hosted by Serena\, Clover & OVNI.
@@ -776,8 +666,18 @@ LOCATION:Paris
 URL:https://lu.ma/46wdzb1x
 END:VEVENT
 BEGIN:VEVENT
+UID:77a3e6d75622@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260630T193000
+DTEND:20260630T213000
+SUMMARY:OPEN PITCH - WakeUp! x Avalon
+DESCRIPTION:\nhttps://lu.ma/avalon-uty5
+LOCATION:Le Comptoir Avalon - Paris\, 202 Av. Jean Jaurès\, 75019 Paris\, France
+URL:https://lu.ma/avalon-uty5
+END:VEVENT
+BEGIN:VEVENT
 UID:3839b55aecd7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260630T193000
 DTEND:20260630T213000
 SUMMARY:Glou Glou Paris .01
@@ -787,7 +687,7 @@ URL:https://lu.ma/5o8xtpv6
 END:VEVENT
 BEGIN:VEVENT
 UID:d583a9366bf6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
 SUMMARY:Collections : le jeu des contraires
@@ -797,7 +697,7 @@ URL:https://psl.eu/agenda/collections-le-jeu-des-contraires
 END:VEVENT
 BEGIN:VEVENT
 UID:d05af4b03363@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
 SUMMARY:Paramètres d’accessibilité
@@ -807,7 +707,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:90d8ecf63e9e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
 SUMMARY:Rechercher par :
@@ -817,7 +717,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:77fb894d8354@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T093000
 DTEND:20260701T113000
 SUMMARY:Petit déjeuner Cool Tech - Le Black Friday se gagne en Juillet
@@ -827,7 +727,7 @@ URL:https://lu.ma/4yi223vo
 END:VEVENT
 BEGIN:VEVENT
 UID:c6c483d12dfa@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T160000
 DTEND:20260701T180000
 SUMMARY:Essays on The Political Economy ol Land Inequality in Egypt
@@ -837,7 +737,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:8cd534dcd360@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T160000
 DTEND:20260701T180000
 SUMMARY:Workshop: Institutional Access to the Digital Asset Landscape by Bitwise
@@ -847,7 +747,7 @@ URL:https://lu.ma/e827cjbn
 END:VEVENT
 BEGIN:VEVENT
 UID:879567ce188c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T160000
 DTEND:20260701T180000
 SUMMARY:Atelier Mongalet
@@ -857,7 +757,7 @@ URL:https://lu.ma/ywwh63qg
 END:VEVENT
 BEGIN:VEVENT
 UID:d20f204ccbfd@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T170000
 DTEND:20260701T190000
 SUMMARY:Blockstories Horizon 2026: Paris Summit 🇫🇷
@@ -867,7 +767,7 @@ URL:https://lu.ma/paf3texj
 END:VEVENT
 BEGIN:VEVENT
 UID:6d298d3f8f49@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T181500
 DTEND:20260701T201500
 SUMMARY:Table ronde BOLD ⚡️ Protégez ce qui fait la valeur de votre entreprise : la checklist indispensable
@@ -877,7 +777,7 @@ URL:https://lu.ma/Protegez-ce-qui-fait-la-valeur-de-votre-entreprise
 END:VEVENT
 BEGIN:VEVENT
 UID:1e67cba8db2f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T183000
 DTEND:20260701T213000
 SUMMARY:Paris - Paris - Apéro d'été de fin d'année ☀ - 01-07-2026 - 01-07-2026
@@ -887,7 +787,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:7df2a2eeeac1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T183000
 DTEND:20260701T213000
 SUMMARY:Paris - Apéro de fin d'année ☀ - 01-07-2026
@@ -897,7 +797,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:64ff3d6272f9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T183000
 DTEND:20260701T203000
 SUMMARY:HYK MEET-UP
@@ -907,7 +807,7 @@ URL:https://lu.ma/0acsdl4e
 END:VEVENT
 BEGIN:VEVENT
 UID:9853c694fa35@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T183000
 DTEND:20260701T203000
 SUMMARY:IA & GTM : La méthode de l'équipe B2B de Joko\, avec Anthropic
@@ -917,7 +817,7 @@ URL:https://lu.ma/1o2qgblu
 END:VEVENT
 BEGIN:VEVENT
 UID:5e76ac6516f9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T190000
 DTEND:20260701T210000
 SUMMARY:Atelier Forensique Linux : enquêtez dans la mémoire de votre machine
@@ -927,7 +827,7 @@ URL:https://lu.ma/zaou3cso
 END:VEVENT
 BEGIN:VEVENT
 UID:06e5942848e8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T190000
 DTEND:20260701T210000
 SUMMARY:Je lâche prise avec la sonothérapie
@@ -937,7 +837,7 @@ URL:https://lu.ma/nee5h0ut
 END:VEVENT
 BEGIN:VEVENT
 UID:7a3e312a6fe7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T190000
 DTEND:20260701T210000
 SUMMARY:Spark Run & Recover x Lucis
@@ -947,7 +847,7 @@ URL:https://lu.ma/9dsjnyae
 END:VEVENT
 BEGIN:VEVENT
 UID:0c740ba4d7ed@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T190000
 DTEND:20260701T210000
 SUMMARY:Atelier Prestashop x AI Discipline
@@ -957,7 +857,7 @@ URL:https://lu.ma/rzjvau7y
 END:VEVENT
 BEGIN:VEVENT
 UID:b15cbc007154@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T190000
 DTEND:20260701T210000
 SUMMARY:Become a 10x RevOps: AI Agents for GTM Teams
@@ -967,7 +867,7 @@ URL:https://lu.ma/dust-gtu9
 END:VEVENT
 BEGIN:VEVENT
 UID:2725e26d3856@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T190000
 DTEND:20260701T210000
 SUMMARY:CTO Voices x "No Dust\, No glory"
@@ -977,7 +877,7 @@ URL:https://lu.ma/fge2d65m
 END:VEVENT
 BEGIN:VEVENT
 UID:93d25e5f0ba6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260701T200000
 DTEND:20260701T220000
 SUMMARY:Dinner with founders #2
@@ -986,8 +886,18 @@ LOCATION:11e Arrondissement\, 75011 Paris\, France
 URL:https://lu.ma/56simaex
 END:VEVENT
 BEGIN:VEVENT
+UID:ecae76bf7a32@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260701T200000
+DTEND:20260701T220000
+SUMMARY:Dîner Cinéma
+DESCRIPTION:\nhttps://lu.ma/erjyhrut
+LOCATION:Paris\, France
+URL:https://lu.ma/erjyhrut
+END:VEVENT
+BEGIN:VEVENT
 UID:3ca6dfcbefdc@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260702
 DTEND;VALUE=DATE:20260703
 SUMMARY:Alternative Career Paths for Scientists
@@ -997,7 +907,7 @@ URL:https://psl.eu/agenda/alternative-career-paths-scientists
 END:VEVENT
 BEGIN:VEVENT
 UID:fa440c5dda0a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T081500
 DTEND:20260702T101500
 SUMMARY:Break into Critical Minerals Fast
@@ -1007,7 +917,7 @@ URL:https://lu.ma/m51t34r0
 END:VEVENT
 BEGIN:VEVENT
 UID:01e4633840ac@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T090000
 DTEND:20260702T110000
 SUMMARY:Go Conversational : entrez dans l'ère du commerce conversationnel 💬
@@ -1017,7 +927,7 @@ URL:https://lu.ma/lhf8om1g
 END:VEVENT
 BEGIN:VEVENT
 UID:04c8b2fcad4b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T110000
 DTEND:20260702T130000
 SUMMARY:Pierre Dreyfuss - Analyse d’un modèle de type RANS avec une équation de fermeture
@@ -1027,7 +937,7 @@ URL:https://indico.math.cnrs.fr/event/16898/
 END:VEVENT
 BEGIN:VEVENT
 UID:4bc2d8ba5d45@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T160000
 DTEND:20260702T180000
 SUMMARY:The AI New Deal - Startups\, Scale-ups et institutionnels : l'IA qui redéfinit les règles du jeu.
@@ -1037,7 +947,7 @@ URL:https://lu.ma/63q6cjl5
 END:VEVENT
 BEGIN:VEVENT
 UID:82d2700076c9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T180000
 DTEND:20260702T200000
 SUMMARY:Fin x Mistral AI: Evaluating your AI Agent
@@ -1047,7 +957,7 @@ URL:https://lu.ma/finxmistral
 END:VEVENT
 BEGIN:VEVENT
 UID:d3bd99731c3b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T180000
 DTEND:20260702T200000
 SUMMARY:AI Reading Club — Croissant: A Metadata Format for ML-Ready Datasets
@@ -1057,7 +967,7 @@ URL:https://lu.ma/hsxvktbs
 END:VEVENT
 BEGIN:VEVENT
 UID:2ad73ebce20a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T180000
 DTEND:20260702T200000
 SUMMARY:Hoche Hour with Gilles Babinet\, serial entrepreneur & one of France's most prominent digital and AI voices
@@ -1067,7 +977,7 @@ URL:https://lu.ma/hoche-hour-gilles-babinet
 END:VEVENT
 BEGIN:VEVENT
 UID:a65283ecca00@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T180000
 DTEND:20260702T200000
 SUMMARY:SFL Padel Night - Édition #2
@@ -1077,7 +987,7 @@ URL:https://lu.ma/rwtgn87s
 END:VEVENT
 BEGIN:VEVENT
 UID:68a4f0ef2490@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T183000
 DTEND:20260702T203000
 SUMMARY:MCP Connect - Reinventing Travel in the AI Era with Evaneos\, Alpic & Jinko
@@ -1087,7 +997,7 @@ URL:https://lu.ma/ng66frvi
 END:VEVENT
 BEGIN:VEVENT
 UID:29e242d4fb6e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T183000
 DTEND:20260702T203000
 SUMMARY:Assemblée Générale 2026 d’Alliance Digitale
@@ -1097,7 +1007,7 @@ URL:https://lu.ma/izoznfg8
 END:VEVENT
 BEGIN:VEVENT
 UID:d4fc0eca826a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T183000
 DTEND:20260702T203000
 SUMMARY:Comment réussir son Go-to-market et son financement d’amorçage ? (Creative Valley x Ville de Paris x BPI France)
@@ -1107,7 +1017,7 @@ URL:https://lu.ma/dix8nfkq
 END:VEVENT
 BEGIN:VEVENT
 UID:213fc35fdadf@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T184000
 DTEND:20260702T204000
 SUMMARY:Opluo Family - Builders Arena #1
@@ -1117,7 +1027,7 @@ URL:https://lu.ma/opluo-4uaq
 END:VEVENT
 BEGIN:VEVENT
 UID:b5f4432f5731@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T190000
 DTEND:20260702T210000
 SUMMARY:Le Ring #01 : Visible ou rentable ?
@@ -1127,7 +1037,7 @@ URL:https://lu.ma/61t2pdlj
 END:VEVENT
 BEGIN:VEVENT
 UID:f5241f99dd6a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T190000
 DTEND:20260702T210000
 SUMMARY:Cede Arena - Beer & Trade #2
@@ -1137,7 +1047,7 @@ URL:https://lu.ma/quqvzdjn
 END:VEVENT
 BEGIN:VEVENT
 UID:d07d5bea2d33@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T190000
 DTEND:20260702T210000
 SUMMARY:Open AI Forum - Meet Up - 02/07/2027
@@ -1147,7 +1057,7 @@ URL:https://lu.ma/8saqd0wy
 END:VEVENT
 BEGIN:VEVENT
 UID:d9382872ad97@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260702T193000
 DTEND:20260702T213000
 SUMMARY:La Table de Kore : Saveurs Coréennes
@@ -1157,7 +1067,7 @@ URL:https://lu.ma/dekss89a
 END:VEVENT
 BEGIN:VEVENT
 UID:614a04d1dad4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260703T083000
 DTEND:20260703T103000
 SUMMARY:☕️🌎 Open Café des Gaïas (Femmes et Climat)
@@ -1167,7 +1077,7 @@ URL:https://lu.ma/ky247cbi
 END:VEVENT
 BEGIN:VEVENT
 UID:764909669586@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260703T100000
 DTEND:20260703T120000
 SUMMARY:the suuuper deals cruuuise
@@ -1177,7 +1087,7 @@ URL:https://lu.ma/p1jbgbot
 END:VEVENT
 BEGIN:VEVENT
 UID:bb139e1e4787@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260703T103000
 DTEND:20260703T123000
 SUMMARY:holomorphic foliations
@@ -1187,7 +1097,7 @@ URL:https://indico.math.cnrs.fr/event/16587/
 END:VEVENT
 BEGIN:VEVENT
 UID:28a4daf34215@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260703T110000
 DTEND:20260703T130000
 SUMMARY:Single-Atom Catalysis Tao Zhang
@@ -1197,7 +1107,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/sin
 END:VEVENT
 BEGIN:VEVENT
 UID:115417ab1aa9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260703T110000
 DTEND:20260703T130000
 SUMMARY:Single-Atom Catalysis
@@ -1207,7 +1117,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/sin
 END:VEVENT
 BEGIN:VEVENT
 UID:c91d536fb959@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260703T190000
 DTEND:20260703T210000
 SUMMARY:Conférence Gesticulée 'Je domine\, tu domines\, arrêtons les dominos !'
@@ -1217,7 +1127,7 @@ URL:https://lu.ma/w55su2vj
 END:VEVENT
 BEGIN:VEVENT
 UID:5ee4b51e5d8d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260703T220000
 DTEND:20260703T230000
 SUMMARY:Voyage Voyage Party
@@ -1227,7 +1137,7 @@ URL:https://lu.ma/kblx55xv
 END:VEVENT
 BEGIN:VEVENT
 UID:b5002ded173d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260704
 DTEND;VALUE=DATE:20260705
 SUMMARY:Voyage au centre du cerveau
@@ -1237,7 +1147,7 @@ URL:https://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
 END:VEVENT
 BEGIN:VEVENT
 UID:64206b51d79d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T093000
 DTEND:20260704T113000
 SUMMARY:Founders Running Club :: Paris
@@ -1247,7 +1157,7 @@ URL:https://lu.ma/s52hfei0
 END:VEVENT
 BEGIN:VEVENT
 UID:540a08941780@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T103000
 DTEND:20260704T123000
 SUMMARY:TVC Run + DJ set
@@ -1257,7 +1167,7 @@ URL:https://lu.ma/o1tt31p0
 END:VEVENT
 BEGIN:VEVENT
 UID:bb70bc999cc8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T140000
 DTEND:20260704T160000
 SUMMARY:BMSH - "OUTSIDER ⛏️" POP UP
@@ -1267,7 +1177,7 @@ URL:https://lu.ma/5d7srps4
 END:VEVENT
 BEGIN:VEVENT
 UID:5965dc3f171f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T150000
 DTEND:20260704T170000
 SUMMARY:Atelier de Poésie
@@ -1277,7 +1187,7 @@ URL:https://lu.ma/0yxmy34x
 END:VEVENT
 BEGIN:VEVENT
 UID:dc8eb58961c2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T150000
 DTEND:20260704T170000
 SUMMARY:Dérailler: Sydney's Underground in Paris - Book Signing\, Film Screening & Photo Walk
@@ -1286,8 +1196,18 @@ LOCATION:Le Grand Jeu\, 15 Pass. de Ménilmontant\, 75011 Paris\, France
 URL:https://lu.ma/tumljzqr
 END:VEVENT
 BEGIN:VEVENT
+UID:d285b5680d3c@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260704T150000
+DTEND:20260704T170000
+SUMMARY:Bloom into Intuition — Flowers\, Feng Shui & Lenormand
+DESCRIPTION:\nhttps://lu.ma/b894arrg
+LOCATION:Hôtel HOY\, 68 R. des Martyrs\, 75009 Paris\, France
+URL:https://lu.ma/b894arrg
+END:VEVENT
+BEGIN:VEVENT
 UID:43d91922719d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T160000
 DTEND:20260704T180000
 SUMMARY:📚 XL Reading Party x live Piano Concert 🎹 | Édition spéciale : ☀️ Les mots de l'été | TiTi Palacio
@@ -1297,7 +1217,7 @@ URL:https://lu.ma/onx6ql5z
 END:VEVENT
 BEGIN:VEVENT
 UID:33a077087ab5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T180000
 DTEND:20260704T200000
 SUMMARY:OPENING -KOI NO YOKAN- POLYGON1993
@@ -1307,7 +1227,7 @@ URL:https://lu.ma/8op8972s
 END:VEVENT
 BEGIN:VEVENT
 UID:da2424e42ed8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260704T180000
 DTEND:20260704T200000
 SUMMARY:Paris | Apéro Night in the Artist Studio with Eri Maeda
@@ -1317,7 +1237,7 @@ URL:https://lu.ma/mx8xpj4m
 END:VEVENT
 BEGIN:VEVENT
 UID:ee730d3b6980@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260705T100000
 DTEND:20260705T120000
 SUMMARY:AI RUN FRENCH AI TALENTS X MERCI INTERNET
@@ -1326,8 +1246,18 @@ LOCATION:Place du Trocadéro et du 11 Novembre\, Pl. du Trocadéro et du 11 Nove
 URL:https://lu.ma/n50nrqbg
 END:VEVENT
 BEGIN:VEVENT
+UID:6d6b673cb424@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260705T123000
+DTEND:20260705T143000
+SUMMARY:Wellive Workout for Women (followed by a coffee)
+DESCRIPTION:\nhttps://lu.ma/u7g2b373
+LOCATION:1 Rue Grenier sur l'Eau\, 75004 Paris\, France
+URL:https://lu.ma/u7g2b373
+END:VEVENT
+BEGIN:VEVENT
 UID:60e99a102e20@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260705T140000
 DTEND:20260705T160000
 SUMMARY:Café des photographes – Paris
@@ -1337,7 +1267,7 @@ URL:https://lu.ma/jhf15110
 END:VEVENT
 BEGIN:VEVENT
 UID:90df1d857dd7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260705T180000
 DTEND:20260705T200000
 SUMMARY:1-Hour Reading Rave | FREE XL Stunt 📚 | Eiffel Tower | Trocadero
@@ -1347,7 +1277,7 @@ URL:https://lu.ma/kzr64a46
 END:VEVENT
 BEGIN:VEVENT
 UID:dc85575fd0b9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260705T183000
 DTEND:20260705T203000
 SUMMARY:SOI35 x Eunice: Around The Table
@@ -1357,7 +1287,7 @@ URL:https://lu.ma/zuxn2zor
 END:VEVENT
 BEGIN:VEVENT
 UID:c114774b35fe@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Financement de la psychiatrie : budgets et remboursement de la psychothérapie
@@ -1367,7 +1297,7 @@ URL:https://www.sciencespo.fr/fr/evenements/financement-de-la-psychiatrie-budget
 END:VEVENT
 BEGIN:VEVENT
 UID:7f839eafa26b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Lancement de la Chaire Modélisation des risques économiques et financiers liés à la nature
@@ -1377,7 +1307,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-mode
 END:VEVENT
 BEGIN:VEVENT
 UID:c8b9ce58cf22@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Table ronde interdisciplinaire « Construire avec la vie »
@@ -1387,7 +1317,7 @@ URL:https://psl.eu/agenda/table-ronde-interdisciplinaire-construire-avec-la-vie
 END:VEVENT
 BEGIN:VEVENT
 UID:24977aec60d6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Paris - L'Académie BCG 2026 - 06-07-2026
@@ -1397,7 +1327,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:35ee2ad683a2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T080000
 DTEND:20260706T170000
 SUMMARY:Modern aspects of Sobolev inequalities
@@ -1407,7 +1337,7 @@ URL:https://indico.math.cnrs.fr/event/14954/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ff4ad1670ea@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T083000
 DTEND:20260706T170000
 SUMMARY:2026 IHES Summer School - Cosmological Correlators
@@ -1417,7 +1347,7 @@ URL:https://indico.math.cnrs.fr/event/15597/
 END:VEVENT
 BEGIN:VEVENT
 UID:227a439160c6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T090000
 DTEND:20260706T110000
 SUMMARY:Brain Gardeners' Club 2026
@@ -1427,7 +1357,7 @@ URL:https://lu.ma/ph2iq2oi
 END:VEVENT
 BEGIN:VEVENT
 UID:d4224a3c5cbc@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T090000
 DTEND:20260706T110000
 SUMMARY:SC26 - AI & Data Viz- Atelier #7
@@ -1437,7 +1367,7 @@ URL:https://lu.ma/uup89cdb
 END:VEVENT
 BEGIN:VEVENT
 UID:4d0d6aec3e65@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T110000
 DTEND:20260706T120000
 SUMMARY:Séminaire commun GREMAN-IDP: Strongly correlated systems at equilibrium and away from equilibrium
@@ -1447,7 +1377,7 @@ URL:https://indico.math.cnrs.fr/event/16135/
 END:VEVENT
 BEGIN:VEVENT
 UID:728c6d172950@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T140000
 DTEND:20260706T160000
 SUMMARY:Rencontres soudaines et marques pérennes. Etude des vécus de celles et ceux qui coexistent avec les animaux du parc national de Bardiya (sud-ouest du Népal)
@@ -1457,7 +1387,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:8151b434909a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T140000
 DTEND:20260706T160000
 SUMMARY:"Un art nouveau pour une nation nouvelle". La tapisserie dans l'invention senghorienne de la nation sénégalaise (1960-1980)
@@ -1467,7 +1397,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:c810ed537b8f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T150000
 DTEND:20260706T170000
 SUMMARY:Chaires de recherche
@@ -1477,7 +1407,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-mode
 END:VEVENT
 BEGIN:VEVENT
 UID:1715808165cd@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T180000
 DTEND:20260706T200000
 SUMMARY:Yorkseed Passport Series: RAISE SUMMIT Pitch Roulette Edition
@@ -1487,7 +1417,7 @@ URL:https://lu.ma/e1qd2zbe
 END:VEVENT
 BEGIN:VEVENT
 UID:b3fb7b443c96@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T184500
 DTEND:20260706T204500
 SUMMARY:Projection: "Ma chair terre" x " & Them" + After-Party 🪬🍷
@@ -1497,7 +1427,7 @@ URL:https://lu.ma/g9davpk5
 END:VEVENT
 BEGIN:VEVENT
 UID:e7cd3fc21a87@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T190000
 DTEND:20260706T210000
 SUMMARY:Workshop : Sécurisez vos agents IA n8n - du prototype au workflow prod-ready
@@ -1507,7 +1437,7 @@ URL:https://lu.ma/n8n-pjdi
 END:VEVENT
 BEGIN:VEVENT
 UID:12b6101aa54a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260706T190000
 DTEND:20260706T210000
 SUMMARY:Frontier of Intelligence: An Evening Under the Eiffel Tower - Hosted by Boston Dynamics\, BofA\, and the NYSE
@@ -1517,7 +1447,7 @@ URL:https://lu.ma/6elgt7t6
 END:VEVENT
 BEGIN:VEVENT
 UID:c40c4b7df223@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T080000
 DTEND:20260707T100000
 SUMMARY:Decart Customer & Partner Advisory Breakfast
@@ -1527,7 +1457,7 @@ URL:https://lu.ma/t2wanucb
 END:VEVENT
 BEGIN:VEVENT
 UID:5a02b5e25dda@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T083000
 DTEND:20260707T103000
 SUMMARY:Stablecoins x Agents: The New Financial Stack
@@ -1537,7 +1467,7 @@ URL:https://lu.ma/tbw_raise_summit
 END:VEVENT
 BEGIN:VEVENT
 UID:26bc3749adf8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T083000
 DTEND:20260707T103000
 SUMMARY:Invitation | Découvrez en avant-première les enseignements du Semestre de la Fintech 2026
@@ -1547,7 +1477,7 @@ URL:https://lu.ma/fpn9wdv9
 END:VEVENT
 BEGIN:VEVENT
 UID:af018f56a22f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T083000
 DTEND:20260707T103000
 SUMMARY:AI Security Summit Paris
@@ -1557,7 +1487,7 @@ URL:https://lu.ma/8x5mssq6
 END:VEVENT
 BEGIN:VEVENT
 UID:deb5a5330ca7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T084500
 DTEND:20260707T104500
 SUMMARY:Build & Scale - AI in ops
@@ -1567,7 +1497,7 @@ URL:https://lu.ma/4aub99zo
 END:VEVENT
 BEGIN:VEVENT
 UID:19eb7aa4a50c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T090000
 DTEND:20260707T110000
 SUMMARY:Matinée Programmatique de l'Open Web & Sustainability
@@ -1577,7 +1507,7 @@ URL:https://lu.ma/t5wm5c7y
 END:VEVENT
 BEGIN:VEVENT
 UID:d05c569611d5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T090000
 DTEND:20260707T110000
 SUMMARY:SC26 - Atelier Marketing (client réel !) - Atelier #8
@@ -1587,7 +1517,7 @@ URL:https://lu.ma/tldfi564
 END:VEVENT
 BEGIN:VEVENT
 UID:af2d40ec5cc7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T094500
 DTEND:20260707T112500
 SUMMARY:Alexandre Biscarat
@@ -1597,7 +1527,7 @@ URL:https://indico.math.cnrs.fr/event/16674/
 END:VEVENT
 BEGIN:VEVENT
 UID:5f38e99240a7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T100000
 DTEND:20260707T120000
 SUMMARY:Enterprise AI Summit 2026
@@ -1607,7 +1537,7 @@ URL:https://lu.ma/vulqxv52
 END:VEVENT
 BEGIN:VEVENT
 UID:a41a0331b0f3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T100000
 DTEND:20260707T120000
 SUMMARY:Enterprise AI Summit x RAISE AI 2026
@@ -1617,7 +1547,7 @@ URL:https://lu.ma/vulqxv52
 END:VEVENT
 BEGIN:VEVENT
 UID:a1b13f2c1b73@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T100000
 DTEND:20260707T120000
 SUMMARY:Executive Enterprise AI Forum x RAISE AI 2026
@@ -1627,7 +1557,7 @@ URL:https://lu.ma/vulqxv52
 END:VEVENT
 BEGIN:VEVENT
 UID:7d69588ec489@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T120000
 DTEND:20260707T140000
 SUMMARY:AI Infrastructure & UEC Workshop
@@ -1637,7 +1567,7 @@ URL:https://lu.ma/jqgwfbk6
 END:VEVENT
 BEGIN:VEVENT
 UID:0b9691e2d5f1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T143000
 DTEND:20260707T163000
 SUMMARY:Paris - Visite guidée du Panthéon - 07-07-2026
@@ -1647,7 +1577,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:621c5350b268@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T150000
 DTEND:20260707T170000
 SUMMARY:Se battre pour la citoyenneté dans la vallée Kichwa d'Otavalo (Equateur) : socio-histoire de l'éducation\, expériences scolaires et mobilités sociales à l'épreuve des frontières ethniques (1940-2017)
@@ -1657,7 +1587,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:c73bbb2e33fb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T153000
 DTEND:20260707T173000
 SUMMARY:Wind Day + Summer Party 26'
@@ -1667,7 +1597,7 @@ URL:https://lu.ma/windday-summerparty
 END:VEVENT
 BEGIN:VEVENT
 UID:1981a114c508@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T180000
 DTEND:20260707T200000
 SUMMARY:Climate Leaders Series : Annual Summer Party 🎙️☀️
@@ -1677,7 +1607,7 @@ URL:https://lu.ma/lqboakw1
 END:VEVENT
 BEGIN:VEVENT
 UID:be2807539692@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T180000
 DTEND:20260707T200000
 SUMMARY:FlexUp Startup Networking Workshop #21\, Station F (Mistral)\, Paris • Tuesday 7th July 2026\, 6pm (CET)
@@ -1687,7 +1617,7 @@ URL:https://lu.ma/roo2fccd
 END:VEVENT
 BEGIN:VEVENT
 UID:7544940e545f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T180000
 DTEND:20260707T200000
 SUMMARY:JAB Afterwork
@@ -1697,7 +1627,7 @@ URL:https://lu.ma/uz26hv2d
 END:VEVENT
 BEGIN:VEVENT
 UID:ae76f0e06d9b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T180000
 DTEND:20260707T200000
 SUMMARY:Improbable 2041 : Opening
@@ -1707,7 +1637,7 @@ URL:https://lu.ma/82d6jzws
 END:VEVENT
 BEGIN:VEVENT
 UID:954f35d4fdab@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T180000
 DTEND:20260707T200000
 SUMMARY:First Pour with Fireworks AI × NVIDIA
@@ -1717,7 +1647,7 @@ URL:https://lu.ma/no98hixu
 END:VEVENT
 BEGIN:VEVENT
 UID:088fe2dfb078@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T183000
 DTEND:20260707T203000
 SUMMARY:La fête des Rêveurs 🌟
@@ -1727,7 +1657,7 @@ URL:https://lu.ma/x2ru5os6
 END:VEVENT
 BEGIN:VEVENT
 UID:c6e4ce757e2e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T183000
 DTEND:20260707T203000
 SUMMARY:VCUnder30 Awards - 2nd edition
@@ -1737,7 +1667,7 @@ URL:https://lu.ma/amscuh58
 END:VEVENT
 BEGIN:VEVENT
 UID:bc120f047d5b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T183000
 DTEND:20260707T203000
 SUMMARY:Paris | Painting Atelier & Wine en Plein Air
@@ -1747,7 +1677,7 @@ URL:https://lu.ma/zwf37bn6
 END:VEVENT
 BEGIN:VEVENT
 UID:1c1cbacb8d8d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T183000
 DTEND:20260707T203000
 SUMMARY:Daytona AI Builders - Paris\, July 2026
@@ -1757,7 +1687,7 @@ URL:https://lu.ma/ai-builders-paris
 END:VEVENT
 BEGIN:VEVENT
 UID:d31a216303c0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T183000
 DTEND:20260707T203000
 SUMMARY:Visionary Diagnostics: Products Advancing Diagnostic Capabilities
@@ -1767,7 +1697,7 @@ URL:https://lu.ma/aic-visionary-diagnostics-AIC-doctolib
 END:VEVENT
 BEGIN:VEVENT
 UID:558914d3d640@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T183000
 DTEND:20260707T203000
 SUMMARY:Daytona AI Builders - Paris\, July 2026
@@ -1777,7 +1707,7 @@ URL:https://lu.ma/ai-builders-paris
 END:VEVENT
 BEGIN:VEVENT
 UID:d44a75d92155@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T190000
 DTEND:20260707T210000
 SUMMARY:Scaling Open Source from 0 to $100M
@@ -1787,7 +1717,7 @@ URL:https://lu.ma/2jmybdlo
 END:VEVENT
 BEGIN:VEVENT
 UID:8f4574a840c3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T190000
 DTEND:20260707T210000
 SUMMARY:Dev With AI Meetup #17 @ Dashlane
@@ -1797,7 +1727,7 @@ URL:https://lu.ma/dm17
 END:VEVENT
 BEGIN:VEVENT
 UID:de5c0920e7b9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T190000
 DTEND:20260707T210000
 SUMMARY:Travel x AI : Build Night with Lovable & Jinko
@@ -1807,7 +1737,7 @@ URL:https://lu.ma/tru412zk
 END:VEVENT
 BEGIN:VEVENT
 UID:52fa676e2768@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T193000
 DTEND:20260707T213000
 SUMMARY:La Table de Kore : 와인 & Dine
@@ -1817,7 +1747,7 @@ URL:https://lu.ma/p2d2za8o
 END:VEVENT
 BEGIN:VEVENT
 UID:843dd547365b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260707T193000
 DTEND:20260707T213000
 SUMMARY:Inference Above Paris
@@ -1827,7 +1757,7 @@ URL:https://lu.ma/jacuxzd6
 END:VEVENT
 BEGIN:VEVENT
 UID:b8e658552c0c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T083000
 DTEND:20260708T103000
 SUMMARY:Retour d'expérience IA agentique : créer rapidement de la valeur\, tout en limitant les risques
@@ -1837,7 +1767,7 @@ URL:https://lu.ma/mi6yynyj
 END:VEVENT
 BEGIN:VEVENT
 UID:e8f5d22f34fb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T090000
 DTEND:20260708T110000
 SUMMARY:EUDIW Unfold #4 - Ecosystem
@@ -1847,7 +1777,7 @@ URL:https://lu.ma/xann6vve
 END:VEVENT
 BEGIN:VEVENT
 UID:150404a9d467@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T123000
 DTEND:20260708T184000
 SUMMARY:A guided hike into quantum machine learning
@@ -1857,7 +1787,7 @@ URL:https://indico.math.cnrs.fr/event/16561/
 END:VEVENT
 BEGIN:VEVENT
 UID:b19b667c35ef@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T140000
 DTEND:20260708T160000
 SUMMARY:rivière | Et si tu donnais vie à tes rêves ?
@@ -1867,7 +1797,7 @@ URL:https://lu.ma/62rgkzva
 END:VEVENT
 BEGIN:VEVENT
 UID:40b493de2cd7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T160000
 DTEND:20260708T180000
 SUMMARY:The Nordic Reception In Paris
@@ -1877,7 +1807,7 @@ URL:https://lu.ma/i5iidbgh
 END:VEVENT
 BEGIN:VEVENT
 UID:c9331344a25a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T170000
 DTEND:20260708T190000
 SUMMARY:Rooftop Privé with Sentry\, Baseten\, & NVIDIA
@@ -1887,7 +1817,7 @@ URL:https://lu.ma/raise_rooftop
 END:VEVENT
 BEGIN:VEVENT
 UID:7815a8f676e8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T170000
 DTEND:20260708T190000
 SUMMARY:Rooftop Privé with Sentry & Baseten
@@ -1897,7 +1827,7 @@ URL:https://lu.ma/raise_rooftop
 END:VEVENT
 BEGIN:VEVENT
 UID:465c39088080@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T170000
 DTEND:20260708T190000
 SUMMARY:Rooftop Privé by Sentry & Baseten
@@ -1907,7 +1837,7 @@ URL:https://lu.ma/raise_rooftop
 END:VEVENT
 BEGIN:VEVENT
 UID:4de1f7ae0491@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T173000
 DTEND:20260708T193000
 SUMMARY:RAISE a glass... to fast inference
@@ -1917,7 +1847,7 @@ URL:https://lu.ma/o08do43a
 END:VEVENT
 BEGIN:VEVENT
 UID:ef2cf5654921@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T174500
 DTEND:20260708T193000
 SUMMARY:Paris - Visite du louvre 💫 - 08-07-2026
@@ -1927,7 +1857,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:44a6ff7004c5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T180000
 DTEND:20260708T200000
 SUMMARY:Le jardin n’est pas innocent
@@ -1937,7 +1867,7 @@ URL:https://lu.ma/tbv3hu3k
 END:VEVENT
 BEGIN:VEVENT
 UID:43ebf96dd452@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T180000
 DTEND:20260708T200000
 SUMMARY:AI Infrastructure CXO Roundtable
@@ -1947,7 +1877,7 @@ URL:https://lu.ma/1bse6tc4
 END:VEVENT
 BEGIN:VEVENT
 UID:811be88ad71b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T180000
 DTEND:20260708T200000
 SUMMARY:Solidigm Executive Exchange: Solid-State Storage’s Foundational Role in AI
@@ -1957,7 +1887,7 @@ URL:https://lu.ma/raiseweek-8dux
 END:VEVENT
 BEGIN:VEVENT
 UID:ca61904b3309@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T180000
 DTEND:20260708T200000
 SUMMARY:The Challenger Stack - AMD\, frontier labs\, and the new compute playbook
@@ -1967,7 +1897,7 @@ URL:https://lu.ma/0ravqoxx
 END:VEVENT
 BEGIN:VEVENT
 UID:af7b8486c7c3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T183000
 DTEND:20260708T203000
 SUMMARY:CxO Summit Closing Reception Hosted by Cognition
@@ -1977,7 +1907,7 @@ URL:https://lu.ma/raiseweek-CxO-Summit-Closing
 END:VEVENT
 BEGIN:VEVENT
 UID:c65054c01623@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T183000
 DTEND:20260708T203000
 SUMMARY:Paris AI Operators Happy Hour at RAISE
@@ -1987,7 +1917,7 @@ URL:https://lu.ma/gradient-5k3t
 END:VEVENT
 BEGIN:VEVENT
 UID:dfc1c54e5f6f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T183000
 DTEND:20260708T203000
 SUMMARY:RAISE After Hours by Telehouse & Cirrascale
@@ -1997,7 +1927,7 @@ URL:https://lu.ma/psmzxqzq
 END:VEVENT
 BEGIN:VEVENT
 UID:a71a8fc44a71@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:Pétanque des Builders IQ
@@ -2007,7 +1937,7 @@ URL:https://lu.ma/dhx690ev
 END:VEVENT
 BEGIN:VEVENT
 UID:ace4212054b1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:Soirée d'été Graneet
@@ -2017,7 +1947,7 @@ URL:https://lu.ma/59wgqpr1
 END:VEVENT
 BEGIN:VEVENT
 UID:10534c765fce@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:Spocky happy hour
@@ -2027,7 +1957,7 @@ URL:https://lu.ma/sfnr5p1w
 END:VEVENT
 BEGIN:VEVENT
 UID:155d1714b1a0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:Wine Equity
@@ -2037,7 +1967,7 @@ URL:https://lu.ma/nzrv4tqm
 END:VEVENT
 BEGIN:VEVENT
 UID:dd34f5a595a7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:Beneath the Louvre: Wine Tasting with Encord [RAISE Summit]
@@ -2047,7 +1977,7 @@ URL:https://lu.ma/lescavesdulouvre
 END:VEVENT
 BEGIN:VEVENT
 UID:1c1c48ea7fb8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:AI Executive Salon: Paris Edition by Mirantis & IREN & NVIDIA
@@ -2057,7 +1987,7 @@ URL:https://lu.ma/ai-exec-salon-paris-raise
 END:VEVENT
 BEGIN:VEVENT
 UID:84377cdd49a6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:An Evening Above Paris hosted by Netris and vCluster
@@ -2067,7 +1997,7 @@ URL:https://lu.ma/vcluster-fvdd
 END:VEVENT
 BEGIN:VEVENT
 UID:d5c2d9798116@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:The Concierge Salon hosted by Decagon
@@ -2077,7 +2007,7 @@ URL:https://lu.ma/decagon-concierge-salon
 END:VEVENT
 BEGIN:VEVENT
 UID:f318eb855053@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T190000
 DTEND:20260708T210000
 SUMMARY:Quai des Modèles
@@ -2087,7 +2017,7 @@ URL:https://lu.ma/mwu9azs9
 END:VEVENT
 BEGIN:VEVENT
 UID:f84eba973541@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260708T193000
 DTEND:20260708T213000
 SUMMARY:Lumière Candlelight Concert
@@ -2097,7 +2027,7 @@ URL:https://lu.ma/956xw0n8
 END:VEVENT
 BEGIN:VEVENT
 UID:2873cd0a2f1d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T073000
 DTEND:20260709T093000
 SUMMARY:The Morning NAAM Stack | An Executive Breakfast by Netris and Red Hat | RAISE Summit 2026
@@ -2107,7 +2037,7 @@ URL:https://lu.ma/lkaj7i2v
 END:VEVENT
 BEGIN:VEVENT
 UID:fd7b7f0b24e0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T083000
 DTEND:20260709T103000
 SUMMARY:OSS Breakfast
@@ -2117,7 +2047,7 @@ URL:https://lu.ma/raise26-OSSBreakfast
 END:VEVENT
 BEGIN:VEVENT
 UID:9777f419abe9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T083000
 DTEND:20260709T103000
 SUMMARY:The Agentic GTM Hackathon by Anthropic\, FullEnrich & Sillage
@@ -2127,7 +2057,7 @@ URL:https://lu.ma/96wafjf6
 END:VEVENT
 BEGIN:VEVENT
 UID:565a283feb4b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T090000
 DTEND:20260709T110000
 SUMMARY:LeClub IA × RAISE Summit — Learning Expedition & Garden Party
@@ -2137,7 +2067,7 @@ URL:https://lu.ma/i8g9ba2k
 END:VEVENT
 BEGIN:VEVENT
 UID:b3d2ffa9b43b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T113000
 DTEND:20260709T133000
 SUMMARY:Ce qui nous hante\, ce qui nous lie : comment exprimer l’indicible ?
@@ -2147,7 +2077,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:46e9672cdbdc@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T120000
 DTEND:20260709T140000
 SUMMARY:Reframe Venture Lunch: Sustainability Leads "Group Therapy"
@@ -2157,7 +2087,7 @@ URL:https://lu.ma/vrnq12kc
 END:VEVENT
 BEGIN:VEVENT
 UID:6cb5bcfd10f8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T120000
 DTEND:20260709T140000
 SUMMARY:Blue Bridge Group AI Exclusive Lunch - with RAISE
@@ -2167,7 +2097,7 @@ URL:https://lu.ma/l849nbc2
 END:VEVENT
 BEGIN:VEVENT
 UID:e8c12558a030@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T130000
 DTEND:20260709T150000
 SUMMARY:Le Salon de l'Inférence
@@ -2177,7 +2107,7 @@ URL:https://lu.ma/togetherai_raisehouse
 END:VEVENT
 BEGIN:VEVENT
 UID:d3958e88b0c1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T133000
 DTEND:20260709T153000
 SUMMARY:Hymaday - Agentic Analytics
@@ -2187,7 +2117,7 @@ URL:https://lu.ma/o9p80zqm
 END:VEVENT
 BEGIN:VEVENT
 UID:5c79f1dbcdcb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T140000
 DTEND:20260709T160000
 SUMMARY:Reframe Venture: Paris Mini-FRAME
@@ -2197,7 +2127,7 @@ URL:https://lu.ma/u2e5c6ps
 END:VEVENT
 BEGIN:VEVENT
 UID:d88c3049c88d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T140000
 DTEND:20260709T160000
 SUMMARY:OneRagtime Founders Day
@@ -2207,7 +2137,7 @@ URL:https://lu.ma/j39kyvz3
 END:VEVENT
 BEGIN:VEVENT
 UID:cbde00503abd@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T180000
 DTEND:20260709T210000
 SUMMARY:Montpellier - Montpellier - SOIREE DE FIN D'ANNEE - 09-07-2026
@@ -2217,7 +2147,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:dc9577553c2e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T180000
 DTEND:20260709T200000
 SUMMARY:Automating Science Happy Hour with Periodic Labs\, Density\, Kleiner Perkins\, and Gradient
@@ -2227,7 +2157,7 @@ URL:https://lu.ma/3d30n76m
 END:VEVENT
 BEGIN:VEVENT
 UID:c1be0feb6649@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T180000
 DTEND:20260709T200000
 SUMMARY:TECH APÉRO
@@ -2237,7 +2167,7 @@ URL:https://lu.ma/ugqinve1
 END:VEVENT
 BEGIN:VEVENT
 UID:180e8c9236d0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T183000
 DTEND:20260709T203000
 SUMMARY:Women of SaaS Paris – Monthly Networking Drinks | 9 July
@@ -2247,7 +2177,7 @@ URL:https://lu.ma/5snaq3vm
 END:VEVENT
 BEGIN:VEVENT
 UID:6e9e4892db68@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T183000
 DTEND:20260709T203000
 SUMMARY:Founders & Capital @RAISE SUMMIT 🇫🇷 2026
@@ -2257,7 +2187,7 @@ URL:https://lu.ma/n63xyeon
 END:VEVENT
 BEGIN:VEVENT
 UID:070e7b744e0d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T190000
 DTEND:20260709T210000
 SUMMARY:Champagne\, caviar\, AI & nuggs I Tech meet-up
@@ -2267,7 +2197,7 @@ URL:https://lu.ma/raisesummit-drinks
 END:VEVENT
 BEGIN:VEVENT
 UID:48e33c99c2b7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T190000
 DTEND:20260709T210000
 SUMMARY:From Weights to Frames
@@ -2277,7 +2207,7 @@ URL:https://lu.ma/bsxbl7vv
 END:VEVENT
 BEGIN:VEVENT
 UID:3d0d6ca13cd5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T190000
 DTEND:20260709T210000
 SUMMARY:Gcore | Nokia RAISE networking reception
@@ -2287,7 +2217,7 @@ URL:https://lu.ma/fhy7mgyf
 END:VEVENT
 BEGIN:VEVENT
 UID:ff6ccb28ca32@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T190000
 DTEND:20260709T210000
 SUMMARY:La Garden Party
@@ -2297,7 +2227,7 @@ URL:https://lu.ma/a8e6ap9w
 END:VEVENT
 BEGIN:VEVENT
 UID:1065ee90b2f1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T190000
 DTEND:20260709T210000
 SUMMARY:AIC/BytePlus: From Weights to Frames
@@ -2307,7 +2237,7 @@ URL:https://lu.ma/bsxbl7vv
 END:VEVENT
 BEGIN:VEVENT
 UID:409c27c7ed2b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260709T210000
 DTEND:20260709T230000
 SUMMARY:Backblaze World Cup Social at Raise Summit
@@ -2317,7 +2247,7 @@ URL:https://lu.ma/2qtsz9ux
 END:VEVENT
 BEGIN:VEVENT
 UID:c20f5b49d54f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260710
 DTEND;VALUE=DATE:20260711
 SUMMARY:Économie comportementale du genre
@@ -2327,7 +2257,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du
 END:VEVENT
 BEGIN:VEVENT
 UID:90fe73743619@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260710T080000
 DTEND:20260710T100000
 SUMMARY:Paris Open Source AI Summit 2026
@@ -2337,7 +2267,7 @@ URL:https://lu.ma/26axb8c1
 END:VEVENT
 BEGIN:VEVENT
 UID:fa48263e76e8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260710T090000
 DTEND:20260710T110000
 SUMMARY:Colloque
@@ -2347,7 +2277,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du
 END:VEVENT
 BEGIN:VEVENT
 UID:0836ba218704@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260710T120000
 DTEND:20260710T170000
 SUMMARY:Paris - Campus d’été - 10-07-2026
@@ -2357,7 +2287,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:929851640600@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260711T160000
 DTEND:20260711T180000
 SUMMARY:The Summer Club - Styling Experience
@@ -2366,8 +2296,18 @@ LOCATION:Le Marais\, Paris\, France
 URL:https://lu.ma/x7291t5c
 END:VEVENT
 BEGIN:VEVENT
+UID:66baf0f23e64@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20260712T100000
+DTEND:20260712T120000
+SUMMARY:🍫 World Chocolate Day Special: 📚 Offline Reading Party x Slow Chocolate Drinking | My Little Paris Bistrot | Paris 9th
+DESCRIPTION:\nhttps://lu.ma/b1zvq7lm
+LOCATION:My Little Box\, 13 Blvd Marguerite de Rochechouart\, 75009 Paris\, France
+URL:https://lu.ma/b1zvq7lm
+END:VEVENT
+BEGIN:VEVENT
 UID:3b058dcc4abd@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260714T000000
 DTEND:20260714T010000
 SUMMARY:Bordeaux - soiree finale MA1SON Bordeaux - 14-07-2026
@@ -2377,7 +2317,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:be6499865a2d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260715T180000
 DTEND:20260715T200000
 SUMMARY:Signal & Noise
@@ -2387,7 +2327,7 @@ URL:https://lu.ma/ik01xawq
 END:VEVENT
 BEGIN:VEVENT
 UID:24a9a604a2f4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260716T090000
 DTEND:20260716T174500
 SUMMARY:COOKIE (COmputing & apprOximating KInetic Equations)
@@ -2397,7 +2337,7 @@ URL:https://indico.math.cnrs.fr/event/16399/
 END:VEVENT
 BEGIN:VEVENT
 UID:deda68e7fbf0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260718T083000
 DTEND:20260718T103000
 SUMMARY:Mistral Vibe Hackathon
@@ -2407,7 +2347,7 @@ URL:https://lu.ma/w692ilf0
 END:VEVENT
 BEGIN:VEVENT
 UID:ee1cafa6ae0d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260728T173000
 DTEND:20260728T193000
 SUMMARY:Paris AI\, ML\, and Computer Vision Meetup
@@ -2417,7 +2357,7 @@ URL:https://lu.ma/voxel51-lojh
 END:VEVENT
 BEGIN:VEVENT
 UID:8d2b493b87de@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260817T090000
 DTEND:20260817T110000
 SUMMARY:SKILLS WEEK
@@ -2427,7 +2367,7 @@ URL:https://lu.ma/oqr3c6zn
 END:VEVENT
 BEGIN:VEVENT
 UID:2493d0bfb1b3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260831T090000
 DTEND:20260831T195000
 SUMMARY:Summer school "Proof assistants and applications"
@@ -2437,7 +2377,7 @@ URL:https://indico.math.cnrs.fr/event/16687/
 END:VEVENT
 BEGIN:VEVENT
 UID:bcf2553271bf@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260831T090000
 DTEND:20260831T195000
 SUMMARY:Summer school "Proofs assistants and applications"
@@ -2447,7 +2387,7 @@ URL:https://indico.math.cnrs.fr/event/16687/
 END:VEVENT
 BEGIN:VEVENT
 UID:6b7b6a79407b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260903T173000
 DTEND:20260903T193000
 SUMMARY:Meetup Labelia
@@ -2457,7 +2397,7 @@ URL:https://lu.ma/datacraft-1hb0
 END:VEVENT
 BEGIN:VEVENT
 UID:c65277e6dccf@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260904T190000
 DTEND:20260904T210000
 SUMMARY:Real World Cryptography Paris Meetup 5
@@ -2467,7 +2407,7 @@ URL:https://lu.ma/f11wyf7c
 END:VEVENT
 BEGIN:VEVENT
 UID:72b698668946@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260907T000000
 DTEND:20260907T020000
 SUMMARY:École thématique : Mobilisations conservatrices et liberté d’expression
@@ -2477,7 +2417,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:579d02651a4c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260908T180000
 DTEND:20260908T200000
 SUMMARY:Soirée de lancement : DRH\, tous des héros
@@ -2487,7 +2427,7 @@ URL:https://lu.ma/6k2gn6jt
 END:VEVENT
 BEGIN:VEVENT
 UID:884c77af766f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260909T120000
 DTEND:20260909T150000
 SUMMARY:Besançon Meeting on Probability\, Ecology & Evolution 2026
@@ -2497,7 +2437,7 @@ URL:https://indico.math.cnrs.fr/event/16490/
 END:VEVENT
 BEGIN:VEVENT
 UID:710c5157bb0e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260910
 DTEND;VALUE=DATE:20260911
 SUMMARY:Cérémonie du Serment d'Augusta
@@ -2507,7 +2447,7 @@ URL:https://www.sorbonne-universite.fr/evenements/ceremonie-du-serment-daugusta
 END:VEVENT
 BEGIN:VEVENT
 UID:e88e36abbf3c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260910
 DTEND;VALUE=DATE:20260911
 SUMMARY:Atelier photo 📷
@@ -2517,7 +2457,7 @@ URL:https://psl.eu/agenda/atelier-photo-10
 END:VEVENT
 BEGIN:VEVENT
 UID:ff4fc001ff1b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260910T163000
 DTEND:20260910T183000
 SUMMARY:Service après-vente des vacances : LES RETROUVAILLES
@@ -2527,7 +2467,7 @@ URL:https://lu.ma/ia97ka3m
 END:VEVENT
 BEGIN:VEVENT
 UID:624b892002af@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260911
 DTEND;VALUE=DATE:20260912
 SUMMARY:Retraites et parcours de vie
@@ -2537,7 +2477,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vi
 END:VEVENT
 BEGIN:VEVENT
 UID:7f137658b5a2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260911T083000
 DTEND:20260911T103000
 SUMMARY:☕️🌎 Open Café des Gaïas (Femmes et Climat)
@@ -2547,7 +2487,7 @@ URL:https://lu.ma/7seg8eiu
 END:VEVENT
 BEGIN:VEVENT
 UID:db6cd5534d34@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260911T100000
 DTEND:20260911T120000
 SUMMARY:Séminaire
@@ -2557,7 +2497,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vi
 END:VEVENT
 BEGIN:VEVENT
 UID:712a6015ef55@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260915
 SUMMARY:T3-2026 Operator Algebras - Admin
@@ -2567,7 +2507,7 @@ URL:https://indico.math.cnrs.fr/event/16615/
 END:VEVENT
 BEGIN:VEVENT
 UID:543cc3cbfa42@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260914T083000
 DTEND:20260914T163000
 SUMMARY:Operator Algebras: Approximation\, Rigidity and Dynamics\, Paris
@@ -2577,7 +2517,7 @@ URL:https://indico.math.cnrs.fr/event/14373/
 END:VEVENT
 BEGIN:VEVENT
 UID:d4a51cfa2913@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260914T090000
 DTEND:20260914T110000
 SUMMARY:AI & WEB3 Growth Summit
@@ -2587,7 +2527,7 @@ URL:https://lu.ma/nivf7yvb
 END:VEVENT
 BEGIN:VEVENT
 UID:0330efef7e5d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260914T110000
 DTEND:20260914T130000
 SUMMARY:Emmanuel Trelat (Sorbonne Université)
@@ -2597,7 +2537,7 @@ URL:https://indico.math.cnrs.fr/event/16473/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2e8285b412e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260914T110000
 DTEND:20260914T130000
 SUMMARY:Emmanuel Trelat
@@ -2607,7 +2547,7 @@ URL:https://indico.math.cnrs.fr/event/16473/
 END:VEVENT
 BEGIN:VEVENT
 UID:ed1fdfef5236@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260915T090000
 DTEND:20260915T190000
 SUMMARY:Conférence pour Michel Vaquié
@@ -2617,7 +2557,7 @@ URL:https://indico.math.cnrs.fr/event/16676/
 END:VEVENT
 BEGIN:VEVENT
 UID:13179f9cd0cb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260915T090000
 DTEND:20260915T172000
 SUMMARY:Korea-France Joint Workshop on String Theory
@@ -2627,7 +2567,7 @@ URL:https://indico.math.cnrs.fr/event/16694/
 END:VEVENT
 BEGIN:VEVENT
 UID:07c402e85799@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260915T180000
 DTEND:20260915T200000
 SUMMARY:Apéro brainstorming | Échanges entre Chief Product Officer
@@ -2637,7 +2577,7 @@ URL:https://lu.ma/8iqpylc6
 END:VEVENT
 BEGIN:VEVENT
 UID:0c852adcf137@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260915T190000
 DTEND:20260915T210000
 SUMMARY:No-Code Communities Meetup #4
@@ -2647,7 +2587,7 @@ URL:https://lu.ma/3ui9756t
 END:VEVENT
 BEGIN:VEVENT
 UID:874ddc4805d4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260916T143000
 DTEND:20260916T163000
 SUMMARY:🏡 BOOST-CAMP #14 - Être créatif
@@ -2657,7 +2597,7 @@ URL:https://lu.ma/htgz4bow
 END:VEVENT
 BEGIN:VEVENT
 UID:3eb02c70e10c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:CONFÉRENCE - Ngô Bảo Châu (Prix Nobel de Mathématiques)
@@ -2667,7 +2607,7 @@ URL:https://framaforms.org/inscription-conference-ngo-bao-chau-17092026-sciences
 END:VEVENT
 BEGIN:VEVENT
 UID:3cd214674545@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260917T090000
 DTEND:20260917T110000
 SUMMARY:Le manager\, premier acteur de la santé en entreprise ?
@@ -2677,7 +2617,7 @@ URL:https://lu.ma/ilhmml7d
 END:VEVENT
 BEGIN:VEVENT
 UID:112e8fed8443@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260917T130000
 DTEND:20260917T140000
 SUMMARY:Aurore Zhe LI - Neural Ordinary Differential Equations enhanced Linear Mixed-effects Models
@@ -2687,7 +2627,7 @@ URL:https://indico.math.cnrs.fr/event/16572/
 END:VEVENT
 BEGIN:VEVENT
 UID:ae9b24edbe98@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 SUMMARY:Les champignons : qu'ont-ils à nous apprendre ?
@@ -2697,7 +2637,7 @@ URL:https://www.sorbonne-universite.fr/evenements/les-champignons-quont-ils-nous
 END:VEVENT
 BEGIN:VEVENT
 UID:af9267944253@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
 SUMMARY:Journées européennes du patrimoine 2026
@@ -2707,7 +2647,7 @@ URL:https://www.sorbonne-universite.fr/evenements/journees-europeennes-du-patrim
 END:VEVENT
 BEGIN:VEVENT
 UID:7a957d101954@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260921T090000
 DTEND:20260921T170000
 SUMMARY:Formation "Rédaction de documents avec Rmarkdown et Quarto"
@@ -2717,7 +2657,7 @@ URL:https://indico.math.cnrs.fr/event/15679/
 END:VEVENT
 BEGIN:VEVENT
 UID:e340e58e8394@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260921T140000
 DTEND:20260921T160000
 SUMMARY:Réunions d'information "Reprise d'études"
@@ -2727,7 +2667,7 @@ URL:https://www.ehess.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:58afe5c981bb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260921T180000
 DTEND:20260921T200000
 SUMMARY:10 ans BioLaunchpad
@@ -2737,7 +2677,7 @@ URL:https://lu.ma/59fgmsee
 END:VEVENT
 BEGIN:VEVENT
 UID:87b11bc69b89@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
 SUMMARY:Cours du soir - La Nouvelle Vague\, un cinéma en liberté
@@ -2747,7 +2687,7 @@ URL:https://psl.eu/agenda/cours-du-soir-la-nouvelle-vague-un-cinema-en-liberte
 END:VEVENT
 BEGIN:VEVENT
 UID:679a7cb44ed8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
 SUMMARY:Paramètres d’accessibilité
@@ -2757,7 +2697,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:f78ef38b9ec2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
 SUMMARY:Rechercher par :
@@ -2767,7 +2707,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:350c82816a44@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
 SUMMARY:Cours du soir - L'architecture du XXe siècle
@@ -2777,7 +2717,7 @@ URL:https://psl.eu/agenda/cours-du-soir-larchitecture-du-xxe-siecle
 END:VEVENT
 BEGIN:VEVENT
 UID:b061d10fdbe2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
 SUMMARY:Paramètres d’accessibilité
@@ -2787,7 +2727,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:98cebdfc42ab@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
 SUMMARY:Rechercher par :
@@ -2797,7 +2737,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:b7163d3f2bcb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260923T183000
 DTEND:20260923T203000
 SUMMARY:Diner-Conférence | Durabilité et compétitivité - REPORT
@@ -2807,7 +2747,7 @@ URL:https://lu.ma/6gd1znzp
 END:VEVENT
 BEGIN:VEVENT
 UID:fdc8574fc7af@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260923T183000
 DTEND:20260923T203000
 SUMMARY:Les Petits Plats dans les Grandes Idées | Durabilité et compétitivité - REPORT
@@ -2817,7 +2757,7 @@ URL:https://lu.ma/rea6xyz0
 END:VEVENT
 BEGIN:VEVENT
 UID:1a74065ab2cb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:Cours du soir - Le patrimoine architectural
@@ -2827,7 +2767,7 @@ URL:https://psl.eu/agenda/cours-du-soir-le-patrimoine-architectural
 END:VEVENT
 BEGIN:VEVENT
 UID:e514dbe4eb11@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:Cours du soir - Les grandes questions de l'astronomie
@@ -2837,7 +2777,7 @@ URL:https://psl.eu/agenda/cours-du-soir-les-grandes-questions-de-lastronomie
 END:VEVENT
 BEGIN:VEVENT
 UID:0a09e10712f8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:Paramètres d’accessibilité
@@ -2847,7 +2787,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:ce36d042c432@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:Rechercher par :
@@ -2857,7 +2797,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:3c75778cc37d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260924T130000
 DTEND:20260924T140000
 SUMMARY:Sébastien Bailly from INSERM U1300
@@ -2867,7 +2807,7 @@ URL:https://indico.math.cnrs.fr/event/16832/
 END:VEVENT
 BEGIN:VEVENT
 UID:6a1bb57a40ac@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260924T183000
 DTEND:20260924T203000
 SUMMARY:Nantes - Soirée métier de la tech et des sciences avec Valeuriad - 24-09-2026
@@ -2877,7 +2817,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:1ca517c4e559@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Game Night 🎲
@@ -2887,7 +2827,7 @@ URL:https://psl.eu/agenda/game-night-16
 END:VEVENT
 BEGIN:VEVENT
 UID:fdb8d40ee918@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Paramètres d’accessibilité
@@ -2897,7 +2837,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:2c11c9a43cf9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Rechercher par :
@@ -2907,7 +2847,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:1ef31e078831@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260925T090000
 DTEND:20260925T221500
 SUMMARY:20ème Journée des Doctorantes et Doctorants en Mathématiques de la région Hauts-de-France (JDM 2026)
@@ -2917,7 +2857,7 @@ URL:https://indico.math.cnrs.fr/event/16167/
 END:VEVENT
 BEGIN:VEVENT
 UID:ce2ddedb3550@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260925T093000
 DTEND:20260925T113000
 SUMMARY:RWA EUROPE - The Leading European Summit for Real-World Asset Tokenization
@@ -2927,7 +2867,7 @@ URL:https://lu.ma/47w93rzv
 END:VEVENT
 BEGIN:VEVENT
 UID:dbffe8fd8b06@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260925T133000
 DTEND:20260925T170000
 SUMMARY:Séminaire 25-09-2026
@@ -2937,7 +2877,7 @@ URL:https://indico.math.cnrs.fr/event/16591/
 END:VEVENT
 BEGIN:VEVENT
 UID:9c09e527e288@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260925T141500
 DTEND:20260925T151500
 SUMMARY:Séminaire 25/09/2026 - Michael I. Jordan
@@ -2947,7 +2887,7 @@ URL:https://indico.math.cnrs.fr/event/16591/
 END:VEVENT
 BEGIN:VEVENT
 UID:3abc235cb73f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260928T083000
 DTEND:20260928T173000
 SUMMARY:Workshop 1 - Operator Algebras: Groups and Dynamics
@@ -2957,7 +2897,7 @@ URL:https://indico.math.cnrs.fr/event/14375/
 END:VEVENT
 BEGIN:VEVENT
 UID:09f781f28de5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260928T090000
 DTEND:20260928T140000
 SUMMARY:CATS 8 - A conference in honour of Gabriele Vezzosi's 60th birthday
@@ -2967,7 +2907,7 @@ URL:https://indico.math.cnrs.fr/event/15506/
 END:VEVENT
 BEGIN:VEVENT
 UID:bfbc2e7a89a0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260928T103000
 DTEND:20260928T113000
 SUMMARY:TBA - ICJ
@@ -2977,7 +2917,7 @@ URL:https://indico.math.cnrs.fr/event/16813/
 END:VEVENT
 BEGIN:VEVENT
 UID:ef764e63916d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Existe-t-il une médecine européenne ?
@@ -2987,7 +2927,7 @@ URL:https://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-09-29
 END:VEVENT
 BEGIN:VEVENT
 UID:8c91482d810c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Paramètres d’accessibilité
@@ -2997,7 +2937,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:078f515b40d1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Rechercher par :
@@ -3007,7 +2947,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:5757e90308b0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Cours du soir - La Chimie dans notre quotidien
@@ -3017,7 +2957,7 @@ URL:https://psl.eu/agenda/cours-du-soir-la-chimie-dans-notre-quotidien
 END:VEVENT
 BEGIN:VEVENT
 UID:e8f8ff85de3e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Cours du soir - Une histoire de l'IA (1940-2026)
@@ -3027,7 +2967,7 @@ URL:https://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:cd2954af473b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260929T100000
 DTEND:20260929T120000
 SUMMARY:Math du Labo
@@ -3037,7 +2977,7 @@ URL:https://indico.math.cnrs.fr/event/16889/
 END:VEVENT
 BEGIN:VEVENT
 UID:1ce0ada1c4c6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:L’éveil du Morpho : bio-inspirez-vous !
@@ -3047,7 +2987,7 @@ URL:https://www.sorbonne-universite.fr/evenements/leveil-du-morpho-bio-inspirez-
 END:VEVENT
 BEGIN:VEVENT
 UID:fde64d7e2d88@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Cours du soir - Histoire du cinéma d'animation
@@ -3057,7 +2997,7 @@ URL:https://psl.eu/agenda/cours-du-soir-histoire-du-cinema-danimation-0
 END:VEVENT
 BEGIN:VEVENT
 UID:1bdbdfd47850@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Paramètres d’accessibilité
@@ -3067,7 +3007,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:1cc4e1a6c254@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Rechercher par :
@@ -3077,7 +3017,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:f29e7e0f0fdb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260930T090000
 DTEND:20260930T110000
 SUMMARY:Forum Éducation 2026 Agir pour l'éducation
@@ -3087,7 +3027,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/forum-education-2
 END:VEVENT
 BEGIN:VEVENT
 UID:d6e2591df0bf@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260930T090000
 DTEND:20260930T110000
 SUMMARY:Forum Éducation 2026
@@ -3097,7 +3037,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/forum-education-2
 END:VEVENT
 BEGIN:VEVENT
 UID:f4b9342243cc@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260930T183000
 DTEND:20260930T203000
 SUMMARY:[🥂Les Apéros CyberIA ] by BricyBreak #004
@@ -3107,7 +3047,7 @@ URL:https://lu.ma/sxzjvq3e
 END:VEVENT
 BEGIN:VEVENT
 UID:03aa3837dc80@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20260930T190000
 DTEND:20260930T210000
 SUMMARY:From CTO to CEO
@@ -3117,7 +3057,7 @@ URL:https://lu.ma/w9fsxtp3
 END:VEVENT
 BEGIN:VEVENT
 UID:a4e3ed0912c8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Résiliences\, résistances\, futurs communs
@@ -3127,7 +3067,7 @@ URL:https://www.ens.psl.eu/agenda/resiliences-resistances-futurs-communs/2026-10
 END:VEVENT
 BEGIN:VEVENT
 UID:f5620c915385@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cours du soir - De l'Empire ottoman à la Turquie moderne
@@ -3137,7 +3077,7 @@ URL:https://psl.eu/agenda/cours-du-soir-de-lempire-ottoman-la-turquie-moderne
 END:VEVENT
 BEGIN:VEVENT
 UID:4339160d5f85@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cours du soir - La mode sous toutes ses coutures
@@ -3147,7 +3087,7 @@ URL:https://psl.eu/agenda/cours-du-soir-la-mode-sous-toutes-ses-coutures
 END:VEVENT
 BEGIN:VEVENT
 UID:e5b05b81feda@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Paramètres d’accessibilité
@@ -3157,7 +3097,7 @@ URL:https://psl.eu/#main-content
 END:VEVENT
 BEGIN:VEVENT
 UID:23bf1315b14f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Rechercher par :
@@ -3167,7 +3107,7 @@ URL:https://psl.eu/?page=0
 END:VEVENT
 BEGIN:VEVENT
 UID:a66c0bb4d87a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261001T090000
 DTEND:20261001T163000
 SUMMARY:Formation Cast3M Développement
@@ -3177,7 +3117,7 @@ URL:https://indico.math.cnrs.fr/event/16609/
 END:VEVENT
 BEGIN:VEVENT
 UID:30aa3790e14a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261002T100000
 DTEND:20261002T120000
 SUMMARY:Deeply Human Summit 2026: Building What The Future Deserves\, Together
@@ -3187,7 +3127,7 @@ URL:https://lu.ma/deeply-29oo
 END:VEVENT
 BEGIN:VEVENT
 UID:7ff13a6f605a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261002T110000
 DTEND:20261002T130000
 SUMMARY:Annabelle Collin (INRIA Bordeaux)
@@ -3197,7 +3137,7 @@ URL:https://indico.math.cnrs.fr/event/16528/
 END:VEVENT
 BEGIN:VEVENT
 UID:b0bbf60fbaf8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261005T090000
 DTEND:20261005T123000
 SUMMARY:Modèle linéaire et modèle linéaire généralisé
@@ -3207,7 +3147,7 @@ URL:https://indico.math.cnrs.fr/event/15678/
 END:VEVENT
 BEGIN:VEVENT
 UID:4470f17d3547@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261006T090000
 DTEND:20261006T180000
 SUMMARY:Journée Analyse Appliquée Hauts-de-France
@@ -3216,8 +3156,18 @@ LOCATION:Université de Technologie de Compiègne
 URL:https://indico.math.cnrs.fr/event/16868/
 END:VEVENT
 BEGIN:VEVENT
+UID:f5e594ad4ca6@paris-academique
+DTSTAMP:20260629T101848Z
+DTSTART:20261006T090000
+DTEND:20261006T110000
+SUMMARY:Masterclass - Préparer la sortie de vos investisseurs : ce que vous devez savoir
+DESCRIPTION:\nhttps://lu.ma/omjj936l
+LOCATION:74 Rue d'Hauteville\, 75010 Paris\, France
+URL:https://lu.ma/omjj936l
+END:VEVENT
+BEGIN:VEVENT
 UID:8376f3fafe8d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261006T103000
 DTEND:20261006T113000
 SUMMARY:Simone Castellan
@@ -3227,7 +3177,7 @@ URL:https://indico.math.cnrs.fr/event/16484/
 END:VEVENT
 BEGIN:VEVENT
 UID:f31262bcf8c6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Atelier Digit_Hum 2026
@@ -3237,7 +3187,7 @@ URL:https://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
 END:VEVENT
 BEGIN:VEVENT
 UID:b2d0f798df7d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261008T090000
 DTEND:20261008T110000
 SUMMARY:Real loci of rational Fano threefolds
@@ -3247,7 +3197,7 @@ URL:https://indico.math.cnrs.fr/event/15080/
 END:VEVENT
 BEGIN:VEVENT
 UID:098b38bb73e3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261008T160000
 DTEND:20261008T170000
 SUMMARY:COLLOQUIUM Sylvain Crovisier "TBA"
@@ -3257,7 +3207,7 @@ URL:https://indico.math.cnrs.fr/event/16673/
 END:VEVENT
 BEGIN:VEVENT
 UID:47c682781012@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261009T110000
 DTEND:20261009T130000
 SUMMARY:Annabelle Collin (INRIA Bordeaux)
@@ -3267,7 +3217,7 @@ URL:https://indico.math.cnrs.fr/event/16528/
 END:VEVENT
 BEGIN:VEVENT
 UID:dbb51315227c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261009T141500
 DTEND:20261009T151500
 SUMMARY:Séminaire 09/10/2026 - Gabriel Peyré
@@ -3277,7 +3227,7 @@ URL:https://indico.math.cnrs.fr/event/16833/
 END:VEVENT
 BEGIN:VEVENT
 UID:760b85c2518d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261012T083000
 DTEND:20261012T103000
 SUMMARY:Dev With AI Conference #1
@@ -3287,7 +3237,7 @@ URL:https://lu.ma/dc1
 END:VEVENT
 BEGIN:VEVENT
 UID:34933c52095b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261012T090000
 DTEND:20261012T180000
 SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
@@ -3297,7 +3247,7 @@ URL:https://indico.math.cnrs.fr/event/16773/
 END:VEVENT
 BEGIN:VEVENT
 UID:ad71a3bc75cf@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261012T103000
 DTEND:20261012T113000
 SUMMARY:TBA - ICJ
@@ -3307,7 +3257,7 @@ URL:https://indico.math.cnrs.fr/event/16812/
 END:VEVENT
 BEGIN:VEVENT
 UID:972237d4a206@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261012T110000
 DTEND:20261012T130000
 SUMMARY:Elisenda Feliu (Copenhagen)
@@ -3317,7 +3267,7 @@ URL:https://indico.math.cnrs.fr/event/16474/
 END:VEVENT
 BEGIN:VEVENT
 UID:471f55685b9d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261013T090000
 DTEND:20261013T140000
 SUMMARY:Conférence "PDEs under pressure and applications in life science"
@@ -3327,7 +3277,7 @@ URL:https://indico.math.cnrs.fr/event/16864/
 END:VEVENT
 BEGIN:VEVENT
 UID:3d91623f0032@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261013T090000
 DTEND:20261013T163000
 SUMMARY:Formation Cast3M pour Débutants
@@ -3337,7 +3287,7 @@ URL:https://indico.math.cnrs.fr/event/16605/
 END:VEVENT
 BEGIN:VEVENT
 UID:c3f8eb1ddfb3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261013T130000
 DTEND:20261013T150000
 SUMMARY:Les Rencontres de l’EDC 2026 | CDR France Days 2026
@@ -3347,7 +3297,7 @@ URL:https://lu.ma/fygnho1f
 END:VEVENT
 BEGIN:VEVENT
 UID:49290ed8004a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261013T140000
 DTEND:20261013T160000
 SUMMARY:Séminaire SPIKE
@@ -3357,7 +3307,7 @@ URL:https://indico.math.cnrs.fr/event/16846/
 END:VEVENT
 BEGIN:VEVENT
 UID:6c027adb674e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261015T090000
 DTEND:20261015T110000
 SUMMARY:[Reporté] Atelier Model Thinking: configurer un LLM pour le traitement de mails KYC
@@ -3367,7 +3317,7 @@ URL:https://lu.ma/atelier-model-thinking-configurer-un-llm-pour-le-t
 END:VEVENT
 BEGIN:VEVENT
 UID:bcfeba0669c0@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261015T140000
 DTEND:20261015T160000
 SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
@@ -3377,7 +3327,7 @@ URL:https://indico.math.cnrs.fr/event/16773/
 END:VEVENT
 BEGIN:VEVENT
 UID:ff3e467f37f2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261015T200000
 DTEND:20261015T220000
 SUMMARY:Cinq Maîtres en Perspective: Edvard Munch avec Pierre Wat - Galerie Amelie du Chalard
@@ -3387,7 +3337,7 @@ URL:https://lu.ma/6wz73lsi
 END:VEVENT
 BEGIN:VEVENT
 UID:555953563876@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261016T090000
 DTEND:20261016T163000
 SUMMARY:Formation Cast3M Fabrication Additive
@@ -3397,7 +3347,7 @@ URL:https://indico.math.cnrs.fr/event/16608/
 END:VEVENT
 BEGIN:VEVENT
 UID:39166fb697d8@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:École thématique MuHaS 2026
@@ -3407,7 +3357,7 @@ URL:https://www.sorbonne-universite.fr/evenements/ecole-thematique-muhas-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:0856b95d39fe@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261023T110000
 DTEND:20261023T130000
 SUMMARY:Cinzia Soresina (University of Trento)
@@ -3417,7 +3367,7 @@ URL:https://indico.math.cnrs.fr/event/16529/
 END:VEVENT
 BEGIN:VEVENT
 UID:2e5b14531e9b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261026T083000
 DTEND:20261026T173000
 SUMMARY:Workshop 2 - Operator Algebras: Matricial Approximations
@@ -3427,7 +3377,7 @@ URL:https://indico.math.cnrs.fr/event/14379/
 END:VEVENT
 BEGIN:VEVENT
 UID:6d8ebef55585@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261026T090000
 DTEND:20261026T123000
 SUMMARY:2èmes Rencontres d’Anaïs / anniversaire de Michel Zinsmeister
@@ -3437,7 +3387,7 @@ URL:https://indico.math.cnrs.fr/event/16249/
 END:VEVENT
 BEGIN:VEVENT
 UID:b11cedd30581@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261027T095000
 DTEND:20261027T105000
 SUMMARY:Vacances
@@ -3447,7 +3397,7 @@ URL:https://indico.math.cnrs.fr/event/16890/
 END:VEVENT
 BEGIN:VEVENT
 UID:365ff4c16d30@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261029T103000
 DTEND:20261029T113000
 SUMMARY:Pause pédagogique
@@ -3457,7 +3407,7 @@ URL:https://indico.math.cnrs.fr/event/16636/
 END:VEVENT
 BEGIN:VEVENT
 UID:bf2e2ba40923@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261102T103000
 DTEND:20261102T113000
 SUMMARY:TBA - ICJ
@@ -3467,7 +3417,7 @@ URL:https://indico.math.cnrs.fr/event/16814/
 END:VEVENT
 BEGIN:VEVENT
 UID:1ef93e6b0e5f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261104T173000
 DTEND:20261104T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (1) Olivier De Schutter
@@ -3477,7 +3427,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:bbe50afa830d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261105T080000
 DTEND:20261105T180000
 SUMMARY:Journées maths-bio en Occitanie
@@ -3487,7 +3437,7 @@ URL:https://indico.math.cnrs.fr/event/16901/
 END:VEVENT
 BEGIN:VEVENT
 UID:61c921502396@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261105T173000
 DTEND:20261105T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (2) Olivier De Schutter
@@ -3497,7 +3447,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:5af48d4112b7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261106T110000
 DTEND:20261106T130000
 SUMMARY:Francesca Ballatore (Université Côte d'Azur)
@@ -3507,7 +3457,7 @@ URL:https://indico.math.cnrs.fr/event/16530/
 END:VEVENT
 BEGIN:VEVENT
 UID:8a6e82173c58@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261109T080000
 DTEND:20261109T190000
 SUMMARY:2nd PICASSO conference France Portugal Spain
@@ -3517,7 +3467,7 @@ URL:https://indico.math.cnrs.fr/event/16008/
 END:VEVENT
 BEGIN:VEVENT
 UID:97edcdb715b5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261110T140000
 DTEND:20261110T160000
 SUMMARY:Séminaire SPIKE
@@ -3527,7 +3477,7 @@ URL:https://indico.math.cnrs.fr/event/16847/
 END:VEVENT
 BEGIN:VEVENT
 UID:cb98189aee41@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261112T090000
 DTEND:20261112T163000
 SUMMARY:Formation Cast3M PASAPAS et procédures utilisateurs
@@ -3537,7 +3487,7 @@ URL:https://indico.math.cnrs.fr/event/16606/
 END:VEVENT
 BEGIN:VEVENT
 UID:91f9db516d06@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261112T173000
 DTEND:20261112T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (3) Olivier De Schutter
@@ -3547,7 +3497,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:146b68f5d8dd@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261113T110000
 DTEND:20261113T130000
 SUMMARY:Representative Democracy in Reflexive Globalization Philipp Dann
@@ -3557,7 +3507,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/philipp-dann/
 END:VEVENT
 BEGIN:VEVENT
 UID:b66ab1235125@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261113T110000
 DTEND:20261113T130000
 SUMMARY:Representative Democracy in Reflexive Globalization
@@ -3567,7 +3517,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/philipp-dann/
 END:VEVENT
 BEGIN:VEVENT
 UID:2e684136cbfb@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261113T141500
 DTEND:20261113T151500
 SUMMARY:Séminaire 13/11/2026 - Cyril Letrouit
@@ -3577,7 +3527,7 @@ URL:https://indico.math.cnrs.fr/event/16834/
 END:VEVENT
 BEGIN:VEVENT
 UID:dda5daf0acc6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261113T173000
 DTEND:20261113T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (4) Olivier De Schutter
@@ -3587,7 +3537,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:0ea8ddbf819d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261116T090000
 DTEND:20261116T120000
 SUMMARY:Feuilletages loin des rivages
@@ -3597,7 +3547,7 @@ URL:https://indico.math.cnrs.fr/event/16763/
 END:VEVENT
 BEGIN:VEVENT
 UID:9ac40cd88ac1@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261116T090000
 DTEND:20261116T110000
 SUMMARY:Autumn School on Derived Foliations
@@ -3607,7 +3557,7 @@ URL:https://indico.math.cnrs.fr/event/16763/
 END:VEVENT
 BEGIN:VEVENT
 UID:25e6656e5aae@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261116T103000
 DTEND:20261116T113000
 SUMMARY:TBA - ICJ
@@ -3617,7 +3567,7 @@ URL:https://indico.math.cnrs.fr/event/16815/
 END:VEVENT
 BEGIN:VEVENT
 UID:1d41337f2fa3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Colloque
@@ -3627,7 +3577,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:2e528fa7db58@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Conférence de l’Association Française d’Économie des Transports
@@ -3637,7 +3587,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:aab7768acd48@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Patrimoines spoliés : restituer\, réparer\, raconter
@@ -3647,7 +3597,7 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoines-spolies-restituer-
 END:VEVENT
 BEGIN:VEVENT
 UID:5232c30fa4a3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261119T235900
 DTEND:20261119T235900
 SUMMARY:Colloque
@@ -3657,7 +3607,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:91feb6ef127b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261123T090000
 DTEND:20261123T200000
 SUMMARY:Workshop POK0 "Positivity on K-trivial varieties"
@@ -3667,7 +3617,7 @@ URL:https://indico.math.cnrs.fr/event/16870/
 END:VEVENT
 BEGIN:VEVENT
 UID:333eb44c0c8c@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261123T090000
 DTEND:20261123T200000
 SUMMARY:POK0 conference "Positivity on K-trivial varieties"
@@ -3677,7 +3627,7 @@ URL:https://indico.math.cnrs.fr/event/16870/
 END:VEVENT
 BEGIN:VEVENT
 UID:a8d86a09d7db@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Comment mieux sensibiliser au handicap ?
@@ -3687,7 +3637,7 @@ URL:https://www.sorbonne-universite.fr/evenements/comment-mieux-sensibiliser-au-
 END:VEVENT
 BEGIN:VEVENT
 UID:ef214ea9007e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261124T111500
 DTEND:20261124T121500
 SUMMARY:Nikolas Adaloglou
@@ -3697,7 +3647,7 @@ URL:https://indico.math.cnrs.fr/event/16453/
 END:VEVENT
 BEGIN:VEVENT
 UID:9268dccad0e3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261126T080000
 DTEND:20261126T120000
 SUMMARY:HOT Topics in Analysis
@@ -3707,7 +3657,7 @@ URL:https://indico.math.cnrs.fr/event/16258/
 END:VEVENT
 BEGIN:VEVENT
 UID:57c4b458316a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Zena Hadjivasiliou (Francis Crick Institute)
@@ -3717,7 +3667,7 @@ URL:https://indico.math.cnrs.fr/event/16531/
 END:VEVENT
 BEGIN:VEVENT
 UID:aacc5031d998@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Géants technologiques mondiaux et privatisation du droit Vincent Martenet
@@ -3727,7 +3677,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/vincent-marte
 END:VEVENT
 BEGIN:VEVENT
 UID:743282c56fec@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Géants technologiques mondiaux et privatisation du droit
@@ -3737,7 +3687,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/vincent-marte
 END:VEVENT
 BEGIN:VEVENT
 UID:8de2133e8c34@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261127T141500
 DTEND:20261127T163000
 SUMMARY:Séminaire 27/11/2026 - Francis Bach et Stephane Mallat
@@ -3747,7 +3697,7 @@ URL:https://indico.math.cnrs.fr/event/16835/
 END:VEVENT
 BEGIN:VEVENT
 UID:5675c284891d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261130T083000
 DTEND:20261130T173000
 SUMMARY:Workshop 3 - Operator Algebras: Rigidity and Classification
@@ -3757,7 +3707,7 @@ URL:https://indico.math.cnrs.fr/event/14380/
 END:VEVENT
 BEGIN:VEVENT
 UID:5488bd18d9d2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261130T103000
 DTEND:20261130T113000
 SUMMARY:TBA - ICJ
@@ -3767,7 +3717,7 @@ URL:https://indico.math.cnrs.fr/event/16816/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ae66d1fd3e7@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261208T140000
 DTEND:20261208T160000
 SUMMARY:Séminaire SPIKE
@@ -3777,7 +3727,7 @@ URL:https://indico.math.cnrs.fr/event/16854/
 END:VEVENT
 BEGIN:VEVENT
 UID:d1b3d8685070@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261209T090000
 DTEND:20261209T110000
 SUMMARY:AI Context Series Paris
@@ -3787,7 +3737,7 @@ URL:https://lu.ma/rikjfvfm
 END:VEVENT
 BEGIN:VEVENT
 UID:9e9e6b37e8db@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261210T200000
 DTEND:20261210T220000
 SUMMARY:Cinq Maîtres en Perspective: Simon Hantaï avec Pierre Wat - Galerie Amelie du Chalard
@@ -3797,7 +3747,7 @@ URL:https://lu.ma/e8vi4klp
 END:VEVENT
 BEGIN:VEVENT
 UID:5b486034f38e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261211T110000
 DTEND:20261211T130000
 SUMMARY:Ruth Baker (Oxford University)
@@ -3807,7 +3757,7 @@ URL:https://indico.math.cnrs.fr/event/16532/
 END:VEVENT
 BEGIN:VEVENT
 UID:6f71a5a8d9ec@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261211T141500
 DTEND:20261211T151500
 SUMMARY:Séminaire 11/12/2026 - Borjan Geshkovski
@@ -3817,7 +3767,7 @@ URL:https://indico.math.cnrs.fr/event/16836/
 END:VEVENT
 BEGIN:VEVENT
 UID:41f6f301b3e5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261214T103000
 DTEND:20261214T113000
 SUMMARY:TBA - ICJ
@@ -3827,7 +3777,7 @@ URL:https://indico.math.cnrs.fr/event/16817/
 END:VEVENT
 BEGIN:VEVENT
 UID:00a514f0e69d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261224T103000
 DTEND:20261224T113000
 SUMMARY:-Férié
@@ -3837,7 +3787,7 @@ URL:https://indico.math.cnrs.fr/event/16644/
 END:VEVENT
 BEGIN:VEVENT
 UID:e39a349a038d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20261231T103000
 DTEND:20261231T113000
 SUMMARY:-Férié
@@ -3847,7 +3797,7 @@ URL:https://indico.math.cnrs.fr/event/16645/
 END:VEVENT
 BEGIN:VEVENT
 UID:9686aff2a6f4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270104T170000
 DTEND:20270104T190000
 SUMMARY:Applications of Computer Algebra
@@ -3857,7 +3807,7 @@ URL:https://indico.math.cnrs.fr/event/16617/
 END:VEVENT
 BEGIN:VEVENT
 UID:31ff09d02bd3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270108T100000
 DTEND:20270108T120000
 SUMMARY:Marie Doumic (INRIA Paris)
@@ -3867,7 +3817,7 @@ URL:https://indico.math.cnrs.fr/event/16589/
 END:VEVENT
 BEGIN:VEVENT
 UID:e6b6c2e5bcba@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270108T141500
 DTEND:20270108T151500
 SUMMARY:Séminaire 08/01/2027 - Mathurin Massias
@@ -3877,7 +3827,7 @@ URL:https://indico.math.cnrs.fr/event/16837/
 END:VEVENT
 BEGIN:VEVENT
 UID:6cca57460bb4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270111T103000
 DTEND:20270111T113000
 SUMMARY:TBA - ICJ
@@ -3887,7 +3837,7 @@ URL:https://indico.math.cnrs.fr/event/16818/
 END:VEVENT
 BEGIN:VEVENT
 UID:f818090006df@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270112T140000
 DTEND:20270112T160000
 SUMMARY:Séminaire SPIKE
@@ -3897,7 +3847,7 @@ URL:https://indico.math.cnrs.fr/event/16855/
 END:VEVENT
 BEGIN:VEVENT
 UID:e7dafe142bd4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270118T083000
 DTEND:20270118T183000
 SUMMARY:Kinetic theory: from long-range interactions to turbulence and quantum simulators\, Paris
@@ -3907,7 +3857,7 @@ URL:https://indico.math.cnrs.fr/event/15606/
 END:VEVENT
 BEGIN:VEVENT
 UID:143dcfdb88cd@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270121T090000
 DTEND:20270121T170000
 SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the occasion of Antonin Chambolle's 60th birthday
@@ -3917,7 +3867,7 @@ URL:https://indico.math.cnrs.fr/event/15144/
 END:VEVENT
 BEGIN:VEVENT
 UID:03db8dd7c197@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270125T103000
 DTEND:20270125T113000
 SUMMARY:TBA - ICJ
@@ -3927,7 +3877,7 @@ URL:https://indico.math.cnrs.fr/event/16819/
 END:VEVENT
 BEGIN:VEVENT
 UID:97bd0e006bf5@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270128T103000
 DTEND:20270128T113000
 SUMMARY:atelier KRIS
@@ -3937,7 +3887,7 @@ URL:https://indico.math.cnrs.fr/event/16649/
 END:VEVENT
 BEGIN:VEVENT
 UID:5e1433c43a47@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270129T100000
 DTEND:20270129T120000
 SUMMARY:Florence Hubert (I2M)
@@ -3947,7 +3897,7 @@ URL:https://indico.math.cnrs.fr/event/16590/
 END:VEVENT
 BEGIN:VEVENT
 UID:6b61efdb190e@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270202T140000
 DTEND:20270202T160000
 SUMMARY:Séminaire SPIKE
@@ -3957,7 +3907,7 @@ URL:https://indico.math.cnrs.fr/event/16856/
 END:VEVENT
 BEGIN:VEVENT
 UID:c90809908159@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270208T103000
 DTEND:20270208T113000
 SUMMARY:TBA - ICJ
@@ -3967,7 +3917,7 @@ URL:https://indico.math.cnrs.fr/event/16820/
 END:VEVENT
 BEGIN:VEVENT
 UID:48838fe0ef1f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270208T110000
 DTEND:20270208T130000
 SUMMARY:Irène Waldspurger (Université Paris-Dauphine)
@@ -3977,7 +3927,7 @@ URL:https://indico.math.cnrs.fr/event/16478/
 END:VEVENT
 BEGIN:VEVENT
 UID:708611c7acdf@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270218T103000
 DTEND:20270218T113000
 SUMMARY:Pause pédagogique
@@ -3987,7 +3937,7 @@ URL:https://indico.math.cnrs.fr/event/16652/
 END:VEVENT
 BEGIN:VEVENT
 UID:069f7e5e251a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270301T083000
 DTEND:20270301T173000
 SUMMARY:Classical Transport and Dynamical Evolution in the Statistical Physics of Long-Range Interaction Systems
@@ -3997,7 +3947,7 @@ URL:https://indico.math.cnrs.fr/event/15608/
 END:VEVENT
 BEGIN:VEVENT
 UID:ccd3ba53dd29@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270301T103000
 DTEND:20270301T113000
 SUMMARY:TBA - ICJ
@@ -4007,7 +3957,7 @@ URL:https://indico.math.cnrs.fr/event/16822/
 END:VEVENT
 BEGIN:VEVENT
 UID:69853b929899@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270308T110000
 DTEND:20270308T130000
 SUMMARY:Laure Saint-Raymond (IHES)
@@ -4017,7 +3967,7 @@ URL:https://indico.math.cnrs.fr/event/16479/
 END:VEVENT
 BEGIN:VEVENT
 UID:a2fcedeafa72@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270309T140000
 DTEND:20270309T160000
 SUMMARY:Séminaire SPIKE
@@ -4027,7 +3977,7 @@ URL:https://indico.math.cnrs.fr/event/16857/
 END:VEVENT
 BEGIN:VEVENT
 UID:85e9bb659fc4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270315T103000
 DTEND:20270315T113000
 SUMMARY:TBA - ICJ
@@ -4037,7 +3987,7 @@ URL:https://indico.math.cnrs.fr/event/16823/
 END:VEVENT
 BEGIN:VEVENT
 UID:b64cbb610b1b@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270322T083000
 DTEND:20270322T183000
 SUMMARY:Effective theories in quantum matter
@@ -4047,7 +3997,7 @@ URL:https://indico.math.cnrs.fr/event/15609/
 END:VEVENT
 BEGIN:VEVENT
 UID:a47aa53f32b2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270405T103000
 DTEND:20270405T113000
 SUMMARY:TBA - ICJ
@@ -4057,7 +4007,7 @@ URL:https://indico.math.cnrs.fr/event/16824/
 END:VEVENT
 BEGIN:VEVENT
 UID:e93e05bb104f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270412T110000
 DTEND:20270412T130000
 SUMMARY:Amandine Aftalion (Paris Saclay)
@@ -4067,7 +4017,7 @@ URL:https://indico.math.cnrs.fr/event/16480/
 END:VEVENT
 BEGIN:VEVENT
 UID:f43731f41c71@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270412T110000
 DTEND:20270412T130000
 SUMMARY:Jean-Michel Roquejoffre 60’s birthday
@@ -4077,7 +4027,7 @@ URL:https://indico.math.cnrs.fr/event/16628/
 END:VEVENT
 BEGIN:VEVENT
 UID:3cae384e2630@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270415T103000
 DTEND:20270415T113000
 SUMMARY:Pause pédagogique
@@ -4087,7 +4037,7 @@ URL:https://indico.math.cnrs.fr/event/16660/
 END:VEVENT
 BEGIN:VEVENT
 UID:12aa42b8176a@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270419T083000
 DTEND:20270419T173000
 SUMMARY:High Dimensional Probability and Analysis\, Continuous and Discrete
@@ -4097,7 +4047,7 @@ URL:https://indico.math.cnrs.fr/event/16291/
 END:VEVENT
 BEGIN:VEVENT
 UID:00c8e891f599@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270420T140000
 DTEND:20270420T160000
 SUMMARY:Séminaire SPIKE
@@ -4107,7 +4057,7 @@ URL:https://indico.math.cnrs.fr/event/16858/
 END:VEVENT
 BEGIN:VEVENT
 UID:78dc55302068@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART;VALUE=DATE:20270426
 DTEND;VALUE=DATE:20270427
 SUMMARY:Comment s'adapter au changement climatique ?
@@ -4117,7 +4067,7 @@ URL:https://www.sorbonne-universite.fr/evenements/comment-sadapter-au-changement
 END:VEVENT
 BEGIN:VEVENT
 UID:1628364d95be@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270426T103000
 DTEND:20270426T113000
 SUMMARY:TBA - ICJ
@@ -4127,7 +4077,7 @@ URL:https://indico.math.cnrs.fr/event/16825/
 END:VEVENT
 BEGIN:VEVENT
 UID:9a81686672a4@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270504T103000
 DTEND:20270504T113000
 SUMMARY:TBA - ICJ
@@ -4137,7 +4087,7 @@ URL:https://indico.math.cnrs.fr/event/16827/
 END:VEVENT
 BEGIN:VEVENT
 UID:0c4c2250fc0d@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270506T103000
 DTEND:20270506T113000
 SUMMARY:-Férié
@@ -4147,7 +4097,7 @@ URL:https://indico.math.cnrs.fr/event/16663/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f8c053b21b9@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270510T083000
 DTEND:20270510T200000
 SUMMARY:Workshop 1: Convexity and Information Theory
@@ -4157,7 +4107,7 @@ URL:https://indico.math.cnrs.fr/event/16296/
 END:VEVENT
 BEGIN:VEVENT
 UID:636f460acfff@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270511T140000
 DTEND:20270511T160000
 SUMMARY:Séminaire SPIKE
@@ -4167,7 +4117,7 @@ URL:https://indico.math.cnrs.fr/event/16859/
 END:VEVENT
 BEGIN:VEVENT
 UID:0a82eba9d57f@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270527T103000
 DTEND:20270527T113000
 SUMMARY:Relâche
@@ -4177,7 +4127,7 @@ URL:https://indico.math.cnrs.fr/event/16666/
 END:VEVENT
 BEGIN:VEVENT
 UID:b0b434ebaad3@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270531T093000
 DTEND:20270531T173000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji
@@ -4187,7 +4137,7 @@ URL:https://indico.math.cnrs.fr/event/15993/
 END:VEVENT
 BEGIN:VEVENT
 UID:75647a514de6@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270531T103000
 DTEND:20270531T113000
 SUMMARY:TBA - ICJ
@@ -4197,7 +4147,7 @@ URL:https://indico.math.cnrs.fr/event/16828/
 END:VEVENT
 BEGIN:VEVENT
 UID:4ee32fa36a84@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270607T090000
 DTEND:20270607T180000
 SUMMARY:Summer School - Control of PDEs: Theoretical and Numerical Aspects
@@ -4207,7 +4157,7 @@ URL:https://indico.math.cnrs.fr/event/16764/
 END:VEVENT
 BEGIN:VEVENT
 UID:fd25db4eb645@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270614T080000
 DTEND:20270614T200000
 SUMMARY:School: Asymptotic geometric analysis and functional inequalities
@@ -4217,7 +4167,7 @@ URL:https://indico.math.cnrs.fr/event/16297/
 END:VEVENT
 BEGIN:VEVENT
 UID:443aac0d6307@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270614T090000
 DTEND:20270614T180000
 SUMMARY:Spectral theory\, from theory to applications to control problems
@@ -4227,7 +4177,7 @@ URL:https://indico.math.cnrs.fr/event/16765/
 END:VEVENT
 BEGIN:VEVENT
 UID:8ea2ce2037a2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270614T103000
 DTEND:20270614T113000
 SUMMARY:TBA - ICJ
@@ -4237,7 +4187,7 @@ URL:https://indico.math.cnrs.fr/event/16829/
 END:VEVENT
 BEGIN:VEVENT
 UID:310b4ff86cc2@paris-academique
-DTSTAMP:20260628T100312Z
+DTSTAMP:20260629T101848Z
 DTSTART:20270628T103000
 DTEND:20270628T113000
 SUMMARY:TBA - ICJ
