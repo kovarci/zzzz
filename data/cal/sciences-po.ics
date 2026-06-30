@@ -7,7 +7,7 @@ X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:855eb6b5809b@paris-academique
-DTSTAMP:20260629T085427Z
+DTSTAMP:20260630T074658Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Paris Alumni Chapter Launch of the European University Institute at Sciences Po
@@ -17,12 +17,22 @@ URL:https://www.sciencespo.fr/fr/evenements/paris-alumni-chapter-launch-of-the-e
 END:VEVENT
 BEGIN:VEVENT
 UID:c114774b35fe@paris-academique
-DTSTAMP:20260629T085427Z
+DTSTAMP:20260630T074658Z
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
 SUMMARY:Financement de la psychiatrie : budgets et remboursement de la psychothérapie
 DESCRIPTION:Journée d'étude du cycle de séminaires "Politiques de santé mentale"\nhttps://www.sciencespo.fr/fr/evenements/financement-de-la-psychiatrie-budgets-et-remboursement-de-la-psychotherapie/
 LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/financement-de-la-psychiatrie-budgets-et-remboursement-de-la-psychotherapie/
+END:VEVENT
+BEGIN:VEVENT
+UID:534610543f02@paris-academique
+DTSTAMP:20260630T074658Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Protéger les sources : un statut pour la recherche
+DESCRIPTION:Programme détaillé de la journée d'étude.\nhttps://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
 END:VEVENT
 END:VCALENDAR
