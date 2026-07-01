@@ -1,48 +1,48 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:ENS Paris · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:b5002ded173d@paris-academique
-DTSTAMP:20260630T074658Z
-DTSTART;VALUE=DATE:20260704
-DTEND;VALUE=DATE:20260705
-SUMMARY:Voyage au centre du cerveau
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
-END:VEVENT
-BEGIN:VEVENT
-UID:ef764e63916d@paris-academique
-DTSTAMP:20260630T074658Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Existe-t-il une médecine européenne ?
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-09-29t160000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-09-29t160000
-END:VEVENT
-BEGIN:VEVENT
-UID:a4e3ed0912c8@paris-academique
-DTSTAMP:20260630T074658Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Résiliences\, résistances\, futurs communs
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/resiliences-resistances-futurs-communs/2026-10-01t063000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/resiliences-resistances-futurs-communs/2026-10-01t063000
-END:VEVENT
-BEGIN:VEVENT
-UID:f31262bcf8c6@paris-academique
-DTSTAMP:20260630T074658Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:Atelier Digit_Hum 2026
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ENS Paris · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:b5002ded173d@paris-academique
+DTSTAMP:20260701T100258Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+SUMMARY:Voyage au centre du cerveau
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/voyage-au-centre-du-cerveau/2026-07-04t130000
+END:VEVENT
+BEGIN:VEVENT
+UID:ef764e63916d@paris-academique
+DTSTAMP:20260701T100258Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Existe-t-il une médecine européenne ?
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-09-29t160000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-09-29t160000
+END:VEVENT
+BEGIN:VEVENT
+UID:a4e3ed0912c8@paris-academique
+DTSTAMP:20260701T100258Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Résiliences\, résistances\, futurs communs
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/resiliences-resistances-futurs-communs/2026-10-01t063000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/resiliences-resistances-futurs-communs/2026-10-01t063000
+END:VEVENT
+BEGIN:VEVENT
+UID:f31262bcf8c6@paris-academique
+DTSTAMP:20260701T100258Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Atelier Digit_Hum 2026
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
+END:VEVENT
+END:VCALENDAR
