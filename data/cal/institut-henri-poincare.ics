@@ -1,1208 +1,1158 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Institut Henri Poincaré · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:a86251ab86c0@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260630T091500
-DTEND:20260630T170000
-SUMMARY:8ème Journée Probabilité Statistique Besançon-Dijon
-DESCRIPTION:La 8ème Journée Probabilité Statistique Besançon-Dijon se tiendra le mardi 30 juin 2026 à l’Amphi Bernard\, organisée conjointement par l’IMB et le LmB dans le cadre de la Fédération Bourgogne-Franche-Comté Mathématiques Programme : 09h15 – Accueil café 10h00 – Yoann Offret (IMB) : Hydrodynamique et limites d’échelle du processus d’exclusion à entropie maximale sur le cercle 10h40 – Ralph Fénelon (\nhttps://indico.math.cnrs.fr/event/16872/
-LOCATION:UFR Sciences et Techniques
-URL:https://indico.math.cnrs.fr/event/16872/
-END:VEVENT
-BEGIN:VEVENT
-UID:b5bffc443833@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260630T094500
-DTEND:20260630T112500
-SUMMARY:Rémi Coulon : "Dynamique du flot géodésique pour un groupe avec un élément contractant"
-DESCRIPTION:Résumé : Étant donné une variété hyperbolique compacte M\, la dynamique du flot géodésique sur son fibré unitaire tangent nous renseigne sur sa géométrie ainsi que la structure de son groupe fondamental G. Par exemple le taux de croissance exponentiel de G pour l'action sur le revêtement universel X de M coïncide avec l'entropie topologique du flot géodésique. Ce cadre s'est révélé extrêmement robu\nhttps://indico.math.cnrs.fr/event/16782/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16782/
-END:VEVENT
-BEGIN:VEVENT
-UID:5cf4f4c49251@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260630T094500
-DTEND:20260630T112500
-SUMMARY:Rémi Coulon
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16782/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16782/
-END:VEVENT
-BEGIN:VEVENT
-UID:fbe9027e19bc@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260630T111500
-DTEND:20260630T121500
-SUMMARY:Solving image inverse problem with deep generative models
-DESCRIPTION:Image inverse problems involve recovering a clean image from a degraded observation. Such problems arise in numerous applications\, including photography\, medical imaging\, and astrophysics. These problems are typically ill-posed because part of the image information is lost or corrupted during the acquisition process. Under a Bayesian framework\, the posterior distribution of the solution can be mod\nhttps://indico.math.cnrs.fr/event/14488/
-LOCATION:1R3\, 1er étage
-URL:https://indico.math.cnrs.fr/event/14488/
-END:VEVENT
-BEGIN:VEVENT
-UID:b3c719fced5b@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260630T111500
-DTEND:20260630T121500
-SUMMARY:Orbital stability of a traveling wave of the Gross-Pitaevskii equation
-DESCRIPTION:The two-dimensional Gross-Pitaevskii equation is a non-linear model for the distribution of Bose-Einstein condensates. Despite the similarity with the non-linear Schr¨odinger equation (NLS)\, the non-vanishing condition at infinity induces different inherent structures from the ones of NLS. Unlike the one-dimensional case\, it is also not kwown if this non-linear dispersive equation is integrable an\nhttps://indico.math.cnrs.fr/event/16224/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16224/
-END:VEVENT
-BEGIN:VEVENT
-UID:f594a394a92e@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260630T140000
-DTEND:20260630T150000
-SUMMARY:Anthony Fraga. RAID - Compact PKE bridging RQC and LRPC cryptosystem paradigm
-DESCRIPTION:Abstract: We introduce Rank Additive Ideal Decoding (RAID)\, a new rank-based encryption framework that bridges the design of the RQC and LRPC cryptosystems. In contrast to RQC\, whose ciphertext has two components\, RAID produces a single-component ciphertext by adding an LRPC error directly to an encoded message. The decryption procedure requires to multiply the ciphertext by the secret key and lev\nhttps://indico.math.cnrs.fr/event/16866/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16866/
-END:VEVENT
-BEGIN:VEVENT
-UID:04c8b2fcad4b@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260702T110000
-DTEND:20260702T130000
-SUMMARY:Pierre Dreyfuss - Analyse d’un modèle de type RANS avec une équation de fermeture
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16898/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16898/
-END:VEVENT
-BEGIN:VEVENT
-UID:6b0860f2e5dc@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260703T103000
-DTEND:20260703T113000
-SUMMARY:Batailles infinies
-DESCRIPTION:Le jeu de la bataille que nous évoquerons ici consiste en $n$ cartes $1\,\\dots\, n$ de forces correspondant à l'ordre naturel. Nous nous intéressons spécifiquement à l'existence de parties infinies\, relativement à différentes règles de remises (aléatoire\, déterministe max\, déterministe constante). À l'aide de simulations\, nous conjecturerons les comportements asymptotiques.\nhttps://indico.math.cnrs.fr/event/16527/
-LOCATION:Tours
-URL:https://indico.math.cnrs.fr/event/16527/
-END:VEVENT
-BEGIN:VEVENT
-UID:bb139e1e4787@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260703T103000
-DTEND:20260703T123000
-SUMMARY:holomorphic foliations
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16587/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16587/
-END:VEVENT
-BEGIN:VEVENT
-UID:35ee2ad683a2@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260706T080000
-DTEND:20260706T170000
-SUMMARY:Modern aspects of Sobolev inequalities
-DESCRIPTION:This IHP summer school\, consisting in a series of lectures by Andrea Cianchi and Jean Dolbeault \, will cover modern techniques concerning the Sobolev and other related inequalities. The first course will focus on reduction principles for Sobolev-type inequalities\, based on symmetrization\, isoperimetry\, interpolation\, and rearrangements. The second course will focus on carré du champ techniques\, en\nhttps://indico.math.cnrs.fr/event/14954/
-LOCATION:IHP
-URL:https://indico.math.cnrs.fr/event/14954/
-END:VEVENT
-BEGIN:VEVENT
-UID:7ff4ad1670ea@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260706T083000
-DTEND:20260706T170000
-SUMMARY:2026 IHES Summer School - Cosmological Correlators
-DESCRIPTION:Organizing Committee: Daniel Baumann (Amsterdam and National Taiwan Univ.)\, Daniel Green (UC San Diego)\, Austin Joyce (Univ. of Chicago)\, Guilherme Pimentel (SNS Pisa) . Scientific Committee: Eiichiro Komatsu ((Max Planck Inst. for Astrophysics)\, Marilena LoVerde (Univ. of Washington)\, Eva Silverstein (Stanford Univ)\, Raman Sundrum (Univ. of Maryland). The Summer School will be held at the Institu\nhttps://indico.math.cnrs.fr/event/15597/
-LOCATION:Le Bois-Marie
-URL:https://indico.math.cnrs.fr/event/15597/
-END:VEVENT
-BEGIN:VEVENT
-UID:4d0d6aec3e65@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260706T110000
-DTEND:20260706T120000
-SUMMARY:Séminaire commun GREMAN-IDP: Strongly correlated systems at equilibrium and away from equilibrium
-DESCRIPTION:My works mainly address systems in which the electronic interaction is strong\, giving rise to emergent properties. In my talk\, I will start by discussing theoretical results we obtained in the context of high-temperature superconductors\, such as copper oxides. For large interactions\, as we dope the system\, it goes from a pseudo-gap phase (where there is loss of spectral weight in regions of the mo\nhttps://indico.math.cnrs.fr/event/16135/
-LOCATION:Salle des séminaires
-URL:https://indico.math.cnrs.fr/event/16135/
-END:VEVENT
-BEGIN:VEVENT
-UID:af2d40ec5cc7@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260707T094500
-DTEND:20260707T112500
-SUMMARY:Alexandre Biscarat
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16674/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16674/
-END:VEVENT
-BEGIN:VEVENT
-UID:150404a9d467@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260708T123000
-DTEND:20260708T184000
-SUMMARY:A guided hike into quantum machine learning
-DESCRIPTION:Description An introduction to quantum machine learning. With cool pictures! With memes! With food! The lecture will cover a basic introduction to quantum neural networks\, quantum kernels\, and data encoding techniques\, with hands-on sessions for each. More advanced topics such as barren plateaus\, expressivity\, and "application <-> hardware" pipelines will be brushed over but not covered in detail.\nhttps://indico.math.cnrs.fr/event/16561/
-LOCATION:Maison de la Simulation
-URL:https://indico.math.cnrs.fr/event/16561/
-END:VEVENT
-BEGIN:VEVENT
-UID:24a9a604a2f4@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260716T090000
-DTEND:20260716T174500
-SUMMARY:COOKIE (COmputing & apprOximating KInetic Equations)
-DESCRIPTION:We are happy to organise the workshop Cookie. We welcome all participants to the workshop\, but registration is mandatory. Location and time The workshop will take place July 16th in the Pétri-Turing room at INRIA Rennes. List of Speakers Martin Campos Pinto Rémi Carles Anaïs Crestetto Erwan Faou Hélène Hivert Julien Mathiaud Michel Mehrenberger\nhttps://indico.math.cnrs.fr/event/16399/
-LOCATION:INRIA
-URL:https://indico.math.cnrs.fr/event/16399/
-END:VEVENT
-BEGIN:VEVENT
-UID:2493d0bfb1b3@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260831T090000
-DTEND:20260831T195000
-SUMMARY:Summer school "Proof assistants and applications"
-DESCRIPTION:This summer school offers an introduction to proof assistants for mathematics and its applications in programme certifications. It covers several recent techniques\, such as homotopy theory or the interactions with large language models. The summer school is composed of five lectures and three talks. Each lecture (2x1h30) will be complemented by 2 hours of tutorials. It is primarily intended for th\nhttps://indico.math.cnrs.fr/event/16687/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16687/
-END:VEVENT
-BEGIN:VEVENT
-UID:bcf2553271bf@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260831T090000
-DTEND:20260831T195000
-SUMMARY:Summer school "Proofs assistants and applications"
-DESCRIPTION:This summer school offers an introduction to proof assistants for mathematics and its applications in programme certifications. It covers several recent techniques\, such as homotopy theory or the interactions with large language models. The summer school is composed of five lectures and three talks. Each lecture (2x1h30) will be complemented by 2 hours of tutorials. It is primarily intended for th\nhttps://indico.math.cnrs.fr/event/16687/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16687/
-END:VEVENT
-BEGIN:VEVENT
-UID:884c77af766f@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260909T120000
-DTEND:20260909T150000
-SUMMARY:Besançon Meeting on Probability\, Ecology & Evolution 2026
-DESCRIPTION:The workshop Probability\, Ecology & Evolution 2026 will be held in Besançon from 9 to 11 September 2026. The program will feature seven 45-minute talks\, two 3-hour minicourses\, and a poster session. More information can be found on our website\nhttps://indico.math.cnrs.fr/event/16490/
-LOCATION:Université Marie et Louis Pasteur
-URL:https://indico.math.cnrs.fr/event/16490/
-END:VEVENT
-BEGIN:VEVENT
-UID:712a6015ef55@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART;VALUE=DATE:20260914
-DTEND;VALUE=DATE:20260915
-SUMMARY:T3-2026 Operator Algebras - Admin
-DESCRIPTION:Please be aware that this page is different from the scientific website of the thematic programme. It is intended to collect the necessary data for the processing of your financial support. Please click on Apply now to enter your personal data and upload the requested documents. Download AA-Application form and the Declaration of Honour\, fill and attach to your registration. * As a state funded in\nhttps://indico.math.cnrs.fr/event/16615/
-LOCATION:IHP
-URL:https://indico.math.cnrs.fr/event/16615/
-END:VEVENT
-BEGIN:VEVENT
-UID:543cc3cbfa42@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260914T083000
-DTEND:20260914T163000
-SUMMARY:Operator Algebras: Approximation\, Rigidity and Dynamics\, Paris
-DESCRIPTION:Thematic trimester programme with short courses\, seminars and workshops September 14th to December 4th\, 2026 at the Institut Henri Poincaré\, Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the trimester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-intentioned people may be trying to contact some of participants by email or phone to get money and personal detai\nhttps://indico.math.cnrs.fr/event/14373/
-LOCATION:IHP
-URL:https://indico.math.cnrs.fr/event/14373/
-END:VEVENT
-BEGIN:VEVENT
-UID:0330efef7e5d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260914T110000
-DTEND:20260914T130000
-SUMMARY:Emmanuel Trelat (Sorbonne Université)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16473/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16473/
-END:VEVENT
-BEGIN:VEVENT
-UID:d2e8285b412e@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260914T110000
-DTEND:20260914T130000
-SUMMARY:Emmanuel Trelat
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16473/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16473/
-END:VEVENT
-BEGIN:VEVENT
-UID:ed1fdfef5236@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260915T090000
-DTEND:20260915T190000
-SUMMARY:Conférence pour Michel Vaquié
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16676/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16676/
-END:VEVENT
-BEGIN:VEVENT
-UID:13179f9cd0cb@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260915T090000
-DTEND:20260915T172000
-SUMMARY:Korea-France Joint Workshop on String Theory
-DESCRIPTION:Korea-France Joint Workshop on String Theory September 15-18\, 2026 at IHES - Marilyn and James Simons Conference Center How to get to IHES This workshop will bring together experts in string theory and quantum field theory to discuss recent advances in these fields\, and also to foster collaboration between the Korean and French theoretical and mathematical physics communities. Key topics will incl\nhttps://indico.math.cnrs.fr/event/16694/
-LOCATION:Le Bois-Marie
-URL:https://indico.math.cnrs.fr/event/16694/
-END:VEVENT
-BEGIN:VEVENT
-UID:112e8fed8443@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260917T130000
-DTEND:20260917T140000
-SUMMARY:Aurore Zhe LI - Neural Ordinary Differential Equations enhanced Linear Mixed-effects Models
-DESCRIPTION:Speaker: Aurore Zhe LI from BPH Title: Neural Ordinary Differential Equations enhanced Linear Mixed-effects Models Abstract: Introduction Longitudinal cohort studies generate irregularly spaced\, partially missing repeated measurements where outcomes may depend on the full trajectory of time-varying exposures rather than their instantaneous values. Classical linear mixed-effects models (LMMs) can i\nhttps://indico.math.cnrs.fr/event/16572/
-LOCATION:ISPED
-URL:https://indico.math.cnrs.fr/event/16572/
-END:VEVENT
-BEGIN:VEVENT
-UID:7a957d101954@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260921T090000
-DTEND:20260921T170000
-SUMMARY:Formation "Rédaction de documents avec Rmarkdown et Quarto"
-DESCRIPTION:Description : La formation est une initiation à la création de rapports de recherche reproductibles et dynamiques à l’aide de Rmarkdown et/ou Quarto. Elle permet d’automatiser la génération de documents intégrant code\, résultats et interprétation\, et facilite la diffusion en ligne des analyses de données biologiques. Objectifs : À la fin de la formation\, vous serez capable de : Créer des rapports \nhttps://indico.math.cnrs.fr/event/15679/
-LOCATION:IMT
-URL:https://indico.math.cnrs.fr/event/15679/
-END:VEVENT
-BEGIN:VEVENT
-UID:3c75778cc37d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260924T130000
-DTEND:20260924T140000
-SUMMARY:Sébastien Bailly from INSERM U1300
-DESCRIPTION:Speaker: Sébastien Bailly from INSERM U1300 Title: TBD Abstract: TBD Calendar subscription link for the complete seminar series: https://indico.math.cnrs.fr/category/711/events.ics Program of the Biostatistics seminars: https://indico.math.cnrs.fr/category/711/ Subscribe to the seminar mailing list : https://diff.u-bordeaux.fr/sympa/subscribe/seminaire.biostat.bph Former e-seminars on our YouTube \nhttps://indico.math.cnrs.fr/event/16832/
-LOCATION:ISPED
-URL:https://indico.math.cnrs.fr/event/16832/
-END:VEVENT
-BEGIN:VEVENT
-UID:1ef31e078831@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260925T090000
-DTEND:20260925T221500
-SUMMARY:20ème Journée des Doctorantes et Doctorants en Mathématiques de la région Hauts-de-France (JDM 2026)
-DESCRIPTION:La vingtième Journée des Doctorantes et Doctorants en Mathématiques de la région Hauts-de-France aura lieu le vendredi 25 septembre 2026 à la Cité de la Dentelle et de la Mode\, à Calais. L'objectif de cette journée est de permettre une rencontre et des échanges entre les doctorantes et doctorants de la région en présentant l'état d'avancement de leur travail de thèse à l'ensemble des enseignants-c\nhttps://indico.math.cnrs.fr/event/16167/
-LOCATION:Cité de la Dentelle et de la Mode
-URL:https://indico.math.cnrs.fr/event/16167/
-END:VEVENT
-BEGIN:VEVENT
-UID:dbffe8fd8b06@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260925T133000
-DTEND:20260925T170000
-SUMMARY:Séminaire 25-09-2026
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16591/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16591/
-END:VEVENT
-BEGIN:VEVENT
-UID:9c09e527e288@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260925T141500
-DTEND:20260925T151500
-SUMMARY:Séminaire 25/09/2026 - Michael I. Jordan
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16591/
-LOCATION:IHP - Bâtiment Perrin
-URL:https://indico.math.cnrs.fr/event/16591/
-END:VEVENT
-BEGIN:VEVENT
-UID:3abc235cb73f@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260928T083000
-DTEND:20260928T173000
-SUMMARY:Workshop 1 - Operator Algebras: Groups and Dynamics
-DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 1 - Operator Algebras: Groups and Dynamics September 28 to October 2\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the interaction between operators algebras\, group representation theory\, group actions\, topological dynamics and ergodic theory. List of speakers: Goulnara Arzhantseva Uri Bade\nhttps://indico.math.cnrs.fr/event/14375/
-LOCATION:Institut Henri Poincaré
-URL:https://indico.math.cnrs.fr/event/14375/
-END:VEVENT
-BEGIN:VEVENT
-UID:09f781f28de5@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260928T090000
-DTEND:20260928T140000
-SUMMARY:CATS 8 - A conference in honour of Gabriele Vezzosi's 60th birthday
-DESCRIPTION:The 8 th edition of the "CATS" conferences will take place from September 28 th to October 2 nd \, 2026 at "La Vieille Perrotine" \, Île d'Oléron\, France CATS 8 will be the occasion to celebrate Gabriele Vezzosi's 60 th birthday\, and will be part of the ANR project " DAG-Arts: Derived algebraic geometry applied to representation theory and singularity of schemes ". Registration is open until Februar\nhttps://indico.math.cnrs.fr/event/15506/
-LOCATION:La Vieille Perrotine
-URL:https://indico.math.cnrs.fr/event/15506/
-END:VEVENT
-BEGIN:VEVENT
-UID:bfbc2e7a89a0@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260928T103000
-DTEND:20260928T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16813/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16813/
-END:VEVENT
-BEGIN:VEVENT
-UID:cd2954af473b@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20260929T100000
-DTEND:20260929T120000
-SUMMARY:Math du Labo
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16889/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16889/
-END:VEVENT
-BEGIN:VEVENT
-UID:a66c0bb4d87a@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261001T090000
-DTEND:20261001T163000
-SUMMARY:Formation Cast3M Développement
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs avancés. L'objectif est d'apprendre à développer dans Cast3M afin d'ajouter de nouvelles fonctionnalités au code (nouveaux opérateurs/directives\, nouveaux modèles\, ...). Pour le personnel CEA\, en plus de ce formulaire\, veuillez vous inscrire a\nhttps://indico.math.cnrs.fr/event/16609/
-LOCATION:Maison de la Simulation
-URL:https://indico.math.cnrs.fr/event/16609/
-END:VEVENT
-BEGIN:VEVENT
-UID:7ff13a6f605a@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261002T110000
-DTEND:20261002T130000
-SUMMARY:Annabelle Collin (INRIA Bordeaux)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16528/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16528/
-END:VEVENT
-BEGIN:VEVENT
-UID:b0bbf60fbaf8@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261005T090000
-DTEND:20261005T123000
-SUMMARY:Modèle linéaire et modèle linéaire généralisé
-DESCRIPTION:Description : La formation s’adresse à des personnes qui ont un niveau initié et veulent approfondir leurs connaissances en statistique. Elle est orientée vers la compréhension des bases de la modélisation par modèles linéaires et modèles linéaires généralisés. Objectifs : A la fin de la formation\, vous serez capable de distinguer les différents modèles linéaires généralisés\, comprendre les étapes\nhttps://indico.math.cnrs.fr/event/15678/
-LOCATION:CBI
-URL:https://indico.math.cnrs.fr/event/15678/
-END:VEVENT
-BEGIN:VEVENT
-UID:4470f17d3547@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261006T090000
-DTEND:20261006T180000
-SUMMARY:Journée Analyse Appliquée Hauts-de-France
-DESCRIPTION:Cet événement a pour but de rassembler les différents membres des laboratoires de la Fédération de Recherche Mathématique des Hauts-de-France travaillant sur les thèmes de l'analyse théorique et numérique des EDP lors d'une journée d'exposés scientifiques. Cette journée est organisée à l'Université de Technologie de Compiègne (UTC)\, son organisation est soutenue financièrement par la Fédération et\nhttps://indico.math.cnrs.fr/event/16868/
-LOCATION:Université de Technologie de Compiègne
-URL:https://indico.math.cnrs.fr/event/16868/
-END:VEVENT
-BEGIN:VEVENT
-UID:8376f3fafe8d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261006T103000
-DTEND:20261006T113000
-SUMMARY:Simone Castellan
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16484/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16484/
-END:VEVENT
-BEGIN:VEVENT
-UID:b2d0f798df7d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261008T090000
-DTEND:20261008T110000
-SUMMARY:Real loci of rational Fano threefolds
-DESCRIPTION:From the classification of real rational surfaces established by Comessatti at the beginning of the 20th century\, one obtains the following striking characterisation of real rational surfaces: a geometrically rational real surface is rational if and only if its real locus is nonempty and connected. The analogous statement fails in higher dimensions. In this talk\, we investigate the real loci of ge\nhttps://indico.math.cnrs.fr/event/15080/
-LOCATION:Korea
-URL:https://indico.math.cnrs.fr/event/15080/
-END:VEVENT
-BEGIN:VEVENT
-UID:098b38bb73e3@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261008T160000
-DTEND:20261008T170000
-SUMMARY:COLLOQUIUM Sylvain Crovisier "TBA"
-DESCRIPTION:TBA\nhttps://indico.math.cnrs.fr/event/16673/
-LOCATION:IMB
-URL:https://indico.math.cnrs.fr/event/16673/
-END:VEVENT
-BEGIN:VEVENT
-UID:47c682781012@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261009T110000
-DTEND:20261009T130000
-SUMMARY:Annabelle Collin (INRIA Bordeaux)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16528/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16528/
-END:VEVENT
-BEGIN:VEVENT
-UID:dbb51315227c@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261009T141500
-DTEND:20261009T151500
-SUMMARY:Séminaire 09/10/2026 - Gabriel Peyré
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16833/
-LOCATION:IHP - Bâtiment Perrin
-URL:https://indico.math.cnrs.fr/event/16833/
-END:VEVENT
-BEGIN:VEVENT
-UID:34933c52095b@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261012T090000
-DTEND:20261012T180000
-SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16773/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16773/
-END:VEVENT
-BEGIN:VEVENT
-UID:ad71a3bc75cf@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261012T103000
-DTEND:20261012T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16812/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16812/
-END:VEVENT
-BEGIN:VEVENT
-UID:972237d4a206@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261012T110000
-DTEND:20261012T130000
-SUMMARY:Elisenda Feliu (Copenhagen)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16474/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16474/
-END:VEVENT
-BEGIN:VEVENT
-UID:471f55685b9d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261013T090000
-DTEND:20261013T140000
-SUMMARY:Conférence "PDEs under pressure and applications in life science"
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16864/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16864/
-END:VEVENT
-BEGIN:VEVENT
-UID:3d91623f0032@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261013T090000
-DTEND:20261013T163000
-SUMMARY:Formation Cast3M pour Débutants
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene !) . Cette formation s'adresse aux utilisateurs débutants. L'objectif est d'être capable d’utiliser Cast3M pour réaliser des calculs éléments finis en thermo-mécanique\, linéaire et non linéaire\, stationnaire et transitoire. Pour le personnel CEA\, en plus de ce formulaire\, veuillez vous in\nhttps://indico.math.cnrs.fr/event/16605/
-LOCATION:Maison de la Simulation
-URL:https://indico.math.cnrs.fr/event/16605/
-END:VEVENT
-BEGIN:VEVENT
-UID:49290ed8004a@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261013T140000
-DTEND:20261013T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16846/
-LOCATION:IHP - Bâtiment Borel
-URL:https://indico.math.cnrs.fr/event/16846/
-END:VEVENT
-BEGIN:VEVENT
-UID:bcfeba0669c0@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261015T140000
-DTEND:20261015T160000
-SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16773/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16773/
-END:VEVENT
-BEGIN:VEVENT
-UID:555953563876@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261016T090000
-DTEND:20261016T163000
-SUMMARY:Formation Cast3M Fabrication Additive
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation "débutants"). L'objectif est de montrer les opérateurs et procédures de Cast3M utiles pour faire la simulation de la fabrication additive. Pour le personnel CEA\, en plus de ce formulaire\, veuil\nhttps://indico.math.cnrs.fr/event/16608/
-LOCATION:Maison de la Simulation
-URL:https://indico.math.cnrs.fr/event/16608/
-END:VEVENT
-BEGIN:VEVENT
-UID:0856b95d39fe@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261023T110000
-DTEND:20261023T130000
-SUMMARY:Cinzia Soresina (University of Trento)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16529/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16529/
-END:VEVENT
-BEGIN:VEVENT
-UID:2e5b14531e9b@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261026T083000
-DTEND:20261026T173000
-SUMMARY:Workshop 2 - Operator Algebras: Matricial Approximations
-DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 2 - Operator Algebras: Matricial Approximations October 26 to 30\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the interaction between operators algebras and hyperlinearity\, soficity\, stability\, random matrices and noncommutative harmonic analysis. List of speakers: Charles Bordenave Michae\nhttps://indico.math.cnrs.fr/event/14379/
-LOCATION:Institut Henri Poincaré
-URL:https://indico.math.cnrs.fr/event/14379/
-END:VEVENT
-BEGIN:VEVENT
-UID:6d8ebef55585@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261026T090000
-DTEND:20261026T123000
-SUMMARY:2èmes Rencontres d’Anaïs / anniversaire de Michel Zinsmeister
-DESCRIPTION:Les rencontres auront lieu au à l’Université de Bordeaux Elles débuteront le lundi 26 octobre à 9h et se clôtureront le vendredi 30 octobre à 12:30. La journée de lundi 26 octobre sera dédiée à notre collègue Michel Zinsmeister. Mini-cours Stéphane Charpentier Béatrice Védel Orateurs et Oratrices confirmé-e-s Alano Ancona Kari Astala Aline Bonami Sary Drappeau Bertrand Duplantier Joseph Feneuil De\nhttps://indico.math.cnrs.fr/event/16249/
-LOCATION:IMB
-URL:https://indico.math.cnrs.fr/event/16249/
-END:VEVENT
-BEGIN:VEVENT
-UID:b11cedd30581@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261027T095000
-DTEND:20261027T105000
-SUMMARY:Vacances
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16890/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16890/
-END:VEVENT
-BEGIN:VEVENT
-UID:365ff4c16d30@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261029T103000
-DTEND:20261029T113000
-SUMMARY:Pause pédagogique
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16636/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16636/
-END:VEVENT
-BEGIN:VEVENT
-UID:bf2e2ba40923@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261102T103000
-DTEND:20261102T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16814/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16814/
-END:VEVENT
-BEGIN:VEVENT
-UID:bbe50afa830d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261105T080000
-DTEND:20261105T180000
-SUMMARY:Journées maths-bio en Occitanie
-DESCRIPTION:"Groupe de travail maths-bio" pour l'ERC MUSEUM et la fédération occimath\nhttps://indico.math.cnrs.fr/event/16901/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16901/
-END:VEVENT
-BEGIN:VEVENT
-UID:24bbd6c8e42e@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261105T130000
-DTEND:20261105T130000
-SUMMARY:Mathematical modeling for ecology and evolution
-DESCRIPTION:The ERC project MUSEUM and the OcciMath federation are jointly organizing a workshop at the interface of mathematics\, ecology\, and evolution. The workshop will take place on November 5th and 6th at the Institut Montpelliérain Alexander Grothendieck (IMAG) and will serve as a platform for exchange between mathematicians and biologists. To kickstart the discussions\, there will be three sessions feat\nhttps://indico.math.cnrs.fr/event/16901/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16901/
-END:VEVENT
-BEGIN:VEVENT
-UID:5af48d4112b7@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261106T110000
-DTEND:20261106T130000
-SUMMARY:Francesca Ballatore (Université Côte d'Azur)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16530/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16530/
-END:VEVENT
-BEGIN:VEVENT
-UID:8a6e82173c58@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261109T080000
-DTEND:20261109T190000
-SUMMARY:2nd PICASSO conference France Portugal Spain
-DESCRIPTION:Three day meeting in Coimbra to celebrate the relations between Spain - Portugal - France for researchers involved in modeling\, numerical analysis and scientific computation. Funded and supported by the International Research Project (IRP) PICASSO \, a French CNRS initiative. PICASSO stands for "hy P erbol IC models\, numerical A nalysi S and S cientific c O mputation"\, see https://picasso.math.cnrs\nhttps://indico.math.cnrs.fr/event/16008/
-LOCATION:University of Coimbra
-URL:https://indico.math.cnrs.fr/event/16008/
-END:VEVENT
-BEGIN:VEVENT
-UID:97edcdb715b5@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261110T140000
-DTEND:20261110T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16847/
-LOCATION:IHP - Bâtiment Borel
-URL:https://indico.math.cnrs.fr/event/16847/
-END:VEVENT
-BEGIN:VEVENT
-UID:cb98189aee41@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261112T090000
-DTEND:20261112T163000
-SUMMARY:Formation Cast3M PASAPAS et procédures utilisateurs
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation "débutants"). L'objectif de cette formation est d'acquérir une connaissance approfondie de la procédure de résolution PASAPAS. L'algorithme de résolution de problèmes non linéaires quasi statiq\nhttps://indico.math.cnrs.fr/event/16606/
-LOCATION:Maison de la Simulation
-URL:https://indico.math.cnrs.fr/event/16606/
-END:VEVENT
-BEGIN:VEVENT
-UID:2e684136cbfb@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261113T141500
-DTEND:20261113T151500
-SUMMARY:Séminaire 13/11/2026 - Cyril Letrouit
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16834/
-LOCATION:IHP - Bâtiment Perrin
-URL:https://indico.math.cnrs.fr/event/16834/
-END:VEVENT
-BEGIN:VEVENT
-UID:0ea8ddbf819d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261116T090000
-DTEND:20261116T120000
-SUMMARY:Feuilletages loin des rivages
-DESCRIPTION:Thème : Les feuilletages dérivés Date : 16 au 20 novembre 2026 Lieu : Aussois ( centre Paul Langevin ) Ce workshop introduira les fondements de la théorie des feuilletages dérivés\, via les algèbres graduées mixtes\, ainsi que ses applications à la géométrie de Poisson dérivée et dans le cadre analytique complexe. L'événement s’adresse à un public intéressé par la géométrie dérivée (en caractéristiq\nhttps://indico.math.cnrs.fr/event/16763/
-LOCATION:Aussois
-URL:https://indico.math.cnrs.fr/event/16763/
-END:VEVENT
-BEGIN:VEVENT
-UID:9ac40cd88ac1@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261116T090000
-DTEND:20261116T110000
-SUMMARY:Autumn School on Derived Foliations
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16763/
-LOCATION:Aussois
-URL:https://indico.math.cnrs.fr/event/16763/
-END:VEVENT
-BEGIN:VEVENT
-UID:25e6656e5aae@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261116T103000
-DTEND:20261116T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16815/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16815/
-END:VEVENT
-BEGIN:VEVENT
-UID:91feb6ef127b@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261123T090000
-DTEND:20261123T200000
-SUMMARY:Workshop POK0 "Positivity on K-trivial varieties"
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16870/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16870/
-END:VEVENT
-BEGIN:VEVENT
-UID:333eb44c0c8c@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261123T090000
-DTEND:20261123T200000
-SUMMARY:POK0 conference "Positivity on K-trivial varieties"
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16870/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16870/
-END:VEVENT
-BEGIN:VEVENT
-UID:ef214ea9007e@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261124T111500
-DTEND:20261124T121500
-SUMMARY:Nikolas Adaloglou
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16453/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16453/
-END:VEVENT
-BEGIN:VEVENT
-UID:9268dccad0e3@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261126T080000
-DTEND:20261126T120000
-SUMMARY:HOT Topics in Analysis
-DESCRIPTION:To mark the occasion of the birthday and retirement of Hans-Olav Tylli\, we are pleased to announce the conference HOT Topics in Analysis . The meeting takes place 26-27 November 2026 at the University of Helsinki. The themes of the conference are Banach space theory\, operator theory\, complex analysis and related topics. Speakers Kari Astala (University of Helsinki) Isabelle Chalendar (Université G\nhttps://indico.math.cnrs.fr/event/16258/
-LOCATION:University of Helsinki
-URL:https://indico.math.cnrs.fr/event/16258/
-END:VEVENT
-BEGIN:VEVENT
-UID:57c4b458316a@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261127T110000
-DTEND:20261127T130000
-SUMMARY:Zena Hadjivasiliou (Francis Crick Institute)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16531/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16531/
-END:VEVENT
-BEGIN:VEVENT
-UID:8de2133e8c34@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261127T141500
-DTEND:20261127T163000
-SUMMARY:Séminaire 27/11/2026 - Francis Bach et Stephane Mallat
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16835/
-LOCATION:IHP - Bâtiment Perrin
-URL:https://indico.math.cnrs.fr/event/16835/
-END:VEVENT
-BEGIN:VEVENT
-UID:5675c284891d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261130T083000
-DTEND:20261130T173000
-SUMMARY:Workshop 3 - Operator Algebras: Rigidity and Classification
-DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 3 - Operator Algebras: Rigidity and Classification November 30 to December 4\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the structure\, classification and rigidity of C ∗ -algebras and von Neumann algebras. List of speakers: Martijn Caspers (tbc) Soham Chakraborty Milan Donvil Daniel Drim\nhttps://indico.math.cnrs.fr/event/14380/
-LOCATION:Institut Henri Poincaré
-URL:https://indico.math.cnrs.fr/event/14380/
-END:VEVENT
-BEGIN:VEVENT
-UID:5488bd18d9d2@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261130T103000
-DTEND:20261130T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16816/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16816/
-END:VEVENT
-BEGIN:VEVENT
-UID:3ae66d1fd3e7@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261208T140000
-DTEND:20261208T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16854/
-LOCATION:IHP - Bâtiment Perrin
-URL:https://indico.math.cnrs.fr/event/16854/
-END:VEVENT
-BEGIN:VEVENT
-UID:5b486034f38e@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261211T110000
-DTEND:20261211T130000
-SUMMARY:Ruth Baker (Oxford University)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16532/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16532/
-END:VEVENT
-BEGIN:VEVENT
-UID:6f71a5a8d9ec@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261211T141500
-DTEND:20261211T151500
-SUMMARY:Séminaire 11/12/2026 - Borjan Geshkovski
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16836/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16836/
-END:VEVENT
-BEGIN:VEVENT
-UID:41f6f301b3e5@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261214T103000
-DTEND:20261214T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16817/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16817/
-END:VEVENT
-BEGIN:VEVENT
-UID:00a514f0e69d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261224T103000
-DTEND:20261224T113000
-SUMMARY:-Férié
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16644/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16644/
-END:VEVENT
-BEGIN:VEVENT
-UID:e39a349a038d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20261231T103000
-DTEND:20261231T113000
-SUMMARY:-Férié
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16645/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16645/
-END:VEVENT
-BEGIN:VEVENT
-UID:9686aff2a6f4@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270104T170000
-DTEND:20270104T190000
-SUMMARY:Applications of Computer Algebra
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16617/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16617/
-END:VEVENT
-BEGIN:VEVENT
-UID:31ff09d02bd3@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270108T100000
-DTEND:20270108T120000
-SUMMARY:Marie Doumic (INRIA Paris)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16589/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16589/
-END:VEVENT
-BEGIN:VEVENT
-UID:e6b6c2e5bcba@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270108T141500
-DTEND:20270108T151500
-SUMMARY:Séminaire 08/01/2027 - Mathurin Massias
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16837/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16837/
-END:VEVENT
-BEGIN:VEVENT
-UID:6cca57460bb4@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270111T103000
-DTEND:20270111T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16818/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16818/
-END:VEVENT
-BEGIN:VEVENT
-UID:f818090006df@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270112T140000
-DTEND:20270112T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16855/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16855/
-END:VEVENT
-BEGIN:VEVENT
-UID:e7dafe142bd4@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270118T083000
-DTEND:20270118T183000
-SUMMARY:Kinetic theory: from long-range interactions to turbulence and quantum simulators\, Paris
-DESCRIPTION:This is a thematic trimester programme with short courses\, seminars and workshops on Kinetic theory: from long-range interactions to turbulence and quantum simulators. January 18 to April 9\, 2027 at the Institut Henri Poincaré\, Paris REGISTRATION IS MANDATORY AND FREE IMPORTANT WARNING : Scam / Phishing / SMiShing! Note that ill-intentioned people may be trying to contact some of participants by e\nhttps://indico.math.cnrs.fr/event/15606/
-LOCATION:IHP
-URL:https://indico.math.cnrs.fr/event/15606/
-END:VEVENT
-BEGIN:VEVENT
-UID:143dcfdb88cd@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270121T090000
-DTEND:20270121T170000
-SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the occasion of Antonin Chambolle's 60th birthday
-DESCRIPTION:This conference aims to bring together researchers from optimization\, calculus of variations and image processing to celebrate Antonin Chambolle's contributions to these fields. The event brings together collaborators\, colleagues\, friends\, and former students to celebrate his scientific achievements and the thriving community around them. List of confirmed speakers: Grégoire Allaire Claire Boyer L\nhttps://indico.math.cnrs.fr/event/15144/
-LOCATION:INRIA Paris
-URL:https://indico.math.cnrs.fr/event/15144/
-END:VEVENT
-BEGIN:VEVENT
-UID:03db8dd7c197@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270125T103000
-DTEND:20270125T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16819/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16819/
-END:VEVENT
-BEGIN:VEVENT
-UID:97bd0e006bf5@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270128T103000
-DTEND:20270128T113000
-SUMMARY:atelier KRIS
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16649/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16649/
-END:VEVENT
-BEGIN:VEVENT
-UID:5e1433c43a47@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270129T100000
-DTEND:20270129T120000
-SUMMARY:Florence Hubert (I2M)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16590/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16590/
-END:VEVENT
-BEGIN:VEVENT
-UID:6b61efdb190e@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270202T140000
-DTEND:20270202T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16856/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16856/
-END:VEVENT
-BEGIN:VEVENT
-UID:c90809908159@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270208T103000
-DTEND:20270208T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16820/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16820/
-END:VEVENT
-BEGIN:VEVENT
-UID:48838fe0ef1f@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270208T110000
-DTEND:20270208T130000
-SUMMARY:Irène Waldspurger (Université Paris-Dauphine)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16478/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16478/
-END:VEVENT
-BEGIN:VEVENT
-UID:708611c7acdf@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270218T103000
-DTEND:20270218T113000
-SUMMARY:Pause pédagogique
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16652/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16652/
-END:VEVENT
-BEGIN:VEVENT
-UID:069f7e5e251a@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270301T083000
-DTEND:20270301T173000
-SUMMARY:Classical Transport and Dynamical Evolution in the Statistical Physics of Long-Range Interaction Systems
-DESCRIPTION:Kinetic theory: from long-range interactions to turbulence and quantum simulators Workshop 1: Classical Transport and Dynamical Evolution in the Statistical Physics of Long-Range Interaction Systems March 1 to 5\, 2027 - IHP\, Paris Summary In progress... Preliminary list of speakers (to be confirmed): In progress... Organising Committee:\nhttps://indico.math.cnrs.fr/event/15608/
-LOCATION:Institut Henri Poincaré
-URL:https://indico.math.cnrs.fr/event/15608/
-END:VEVENT
-BEGIN:VEVENT
-UID:ccd3ba53dd29@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270301T103000
-DTEND:20270301T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16822/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16822/
-END:VEVENT
-BEGIN:VEVENT
-UID:69853b929899@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270308T110000
-DTEND:20270308T130000
-SUMMARY:Laure Saint-Raymond (IHES)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16479/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16479/
-END:VEVENT
-BEGIN:VEVENT
-UID:a2fcedeafa72@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270309T140000
-DTEND:20270309T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16857/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16857/
-END:VEVENT
-BEGIN:VEVENT
-UID:85e9bb659fc4@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270315T103000
-DTEND:20270315T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16823/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16823/
-END:VEVENT
-BEGIN:VEVENT
-UID:b64cbb610b1b@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270322T083000
-DTEND:20270322T183000
-SUMMARY:Effective theories in quantum matter
-DESCRIPTION:Kinetic theory: from long-range interactions to turbulence and quantum simulators Workshop 2: Effective theories in quantum matter March 22 to 25\, 2027 - IHP\, Paris Summary In progress... Preliminary list of speakers (to be confirmed): In progress... Organising Committee:\nhttps://indico.math.cnrs.fr/event/15609/
-LOCATION:Institut Henri Poincaré
-URL:https://indico.math.cnrs.fr/event/15609/
-END:VEVENT
-BEGIN:VEVENT
-UID:a47aa53f32b2@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270405T103000
-DTEND:20270405T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16824/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16824/
-END:VEVENT
-BEGIN:VEVENT
-UID:e93e05bb104f@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270412T110000
-DTEND:20270412T130000
-SUMMARY:Amandine Aftalion (Paris Saclay)
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16480/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16480/
-END:VEVENT
-BEGIN:VEVENT
-UID:f43731f41c71@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270412T110000
-DTEND:20270412T130000
-SUMMARY:Jean-Michel Roquejoffre 60’s birthday
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16628/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16628/
-END:VEVENT
-BEGIN:VEVENT
-UID:3cae384e2630@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270415T103000
-DTEND:20270415T113000
-SUMMARY:Pause pédagogique
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16660/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16660/
-END:VEVENT
-BEGIN:VEVENT
-UID:12aa42b8176a@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270419T083000
-DTEND:20270419T173000
-SUMMARY:High Dimensional Probability and Analysis\, Continuous and Discrete
-DESCRIPTION:Thematic trimester programme with short courses\, seminars and workshops April 19th to July 9th\, 2027 at the Institut Henri Poincaré\, Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the trimester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-intentioned people may be trying to contact some of participants by email or phone to get money and personal details\, by p\nhttps://indico.math.cnrs.fr/event/16291/
-LOCATION:IHP
-URL:https://indico.math.cnrs.fr/event/16291/
-END:VEVENT
-BEGIN:VEVENT
-UID:00c8e891f599@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270420T140000
-DTEND:20270420T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16858/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16858/
-END:VEVENT
-BEGIN:VEVENT
-UID:1628364d95be@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270426T103000
-DTEND:20270426T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16825/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16825/
-END:VEVENT
-BEGIN:VEVENT
-UID:9a81686672a4@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270504T103000
-DTEND:20270504T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16827/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16827/
-END:VEVENT
-BEGIN:VEVENT
-UID:0c4c2250fc0d@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270506T103000
-DTEND:20270506T113000
-SUMMARY:-Férié
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16663/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16663/
-END:VEVENT
-BEGIN:VEVENT
-UID:3f8c053b21b9@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270510T083000
-DTEND:20270510T200000
-SUMMARY:Workshop 1: Convexity and Information Theory
-DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Discrete Workshop 1: Convexity and Information Theory May 10 to 14\, 2027 - IHP\, Paris Aim of the Workshop The aim of this conference is to bring together experts from Information Theory and Convex Geometry. It will also place a strong emphasis on Functional Inequalities and Optimal Transport. Recent works at the intersection of one or more \nhttps://indico.math.cnrs.fr/event/16296/
-LOCATION:Aphithéâtre Hermite
-URL:https://indico.math.cnrs.fr/event/16296/
-END:VEVENT
-BEGIN:VEVENT
-UID:636f460acfff@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270511T140000
-DTEND:20270511T160000
-SUMMARY:Séminaire SPIKE
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16859/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16859/
-END:VEVENT
-BEGIN:VEVENT
-UID:0a82eba9d57f@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270527T103000
-DTEND:20270527T113000
-SUMMARY:Relâche
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16666/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16666/
-END:VEVENT
-BEGIN:VEVENT
-UID:b0b434ebaad3@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270531T093000
-DTEND:20270531T173000
-SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji
-DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji May 31 - June 4\, 2027 at IHES - Marilyn and James Simons Conference Center How to get to IHES This conference\, which is part of a long-standing tradition of French-Japanese collaboration in arithmetic geometry\, will honor two leading figures of this partnership: Professor Takeshi Saito \, on the occasion o\nhttps://indico.math.cnrs.fr/event/15993/
-LOCATION:Le Bois-Marie
-URL:https://indico.math.cnrs.fr/event/15993/
-END:VEVENT
-BEGIN:VEVENT
-UID:75647a514de6@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270531T103000
-DTEND:20270531T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16828/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16828/
-END:VEVENT
-BEGIN:VEVENT
-UID:4ee32fa36a84@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270607T090000
-DTEND:20270607T180000
-SUMMARY:Summer School - Control of PDEs: Theoretical and Numerical Aspects
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16764/
-LOCATION:IMT
-URL:https://indico.math.cnrs.fr/event/16764/
-END:VEVENT
-BEGIN:VEVENT
-UID:fd25db4eb645@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270614T080000
-DTEND:20270614T200000
-SUMMARY:School: Asymptotic geometric analysis and functional inequalities
-DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Discrete School: Asymptotic geometric analysis and functional inequalities June 14 to 18\, 2027 - IHP\, Paris Summary This school is the 3rd main event of the semester “High Dimensional Probability and Analysis\, Continuous and Discrete”. Its aim is to introduce several concepts at the interface between probability\, analysis and high-dimension\nhttps://indico.math.cnrs.fr/event/16297/
-LOCATION:Amphithéâtre Hermite
-URL:https://indico.math.cnrs.fr/event/16297/
-END:VEVENT
-BEGIN:VEVENT
-UID:443aac0d6307@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270614T090000
-DTEND:20270614T180000
-SUMMARY:Spectral theory\, from theory to applications to control problems
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16765/
-LOCATION:IMT
-URL:https://indico.math.cnrs.fr/event/16765/
-END:VEVENT
-BEGIN:VEVENT
-UID:8ea2ce2037a2@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270614T103000
-DTEND:20270614T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16829/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16829/
-END:VEVENT
-BEGIN:VEVENT
-UID:310b4ff86cc2@paris-academique
-DTSTAMP:20260701T100258Z
-DTSTART:20270628T103000
-DTEND:20270628T113000
-SUMMARY:TBA - ICJ
-DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16830/
-LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
-URL:https://indico.math.cnrs.fr/event/16830/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Institut Henri Poincaré · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:04c8b2fcad4b@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260702T110000
+DTEND:20260702T130000
+SUMMARY:Pierre Dreyfuss - Analyse d’un modèle de type RANS avec une équation de fermeture
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16898/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16898/
+END:VEVENT
+BEGIN:VEVENT
+UID:6b0860f2e5dc@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260703T103000
+DTEND:20260703T113000
+SUMMARY:Batailles infinies
+DESCRIPTION:Le jeu de la bataille que nous évoquerons ici consiste en $n$ cartes $1\,\\dots\, n$ de forces correspondant à l'ordre naturel. Nous nous intéressons spécifiquement à l'existence de parties infinies\, relativement à différentes règles de remises (aléatoire\, déterministe max\, déterministe constante). À l'aide de simulations\, nous conjecturerons les comportements asymptotiques.\nhttps://indico.math.cnrs.fr/event/16527/
+LOCATION:Tours
+URL:https://indico.math.cnrs.fr/event/16527/
+END:VEVENT
+BEGIN:VEVENT
+UID:bb139e1e4787@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260703T103000
+DTEND:20260703T123000
+SUMMARY:holomorphic foliations
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16587/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16587/
+END:VEVENT
+BEGIN:VEVENT
+UID:35ee2ad683a2@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260706T080000
+DTEND:20260706T170000
+SUMMARY:Modern aspects of Sobolev inequalities
+DESCRIPTION:This IHP summer school\, consisting in a series of lectures by Andrea Cianchi and Jean Dolbeault \, will cover modern techniques concerning the Sobolev and other related inequalities. The first course will focus on reduction principles for Sobolev-type inequalities\, based on symmetrization\, isoperimetry\, interpolation\, and rearrangements. The second course will focus on carré du champ techniques\, en\nhttps://indico.math.cnrs.fr/event/14954/
+LOCATION:IHP
+URL:https://indico.math.cnrs.fr/event/14954/
+END:VEVENT
+BEGIN:VEVENT
+UID:7ff4ad1670ea@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260706T083000
+DTEND:20260706T170000
+SUMMARY:2026 IHES Summer School - Cosmological Correlators
+DESCRIPTION:Organizing Committee: Daniel Baumann (Amsterdam and National Taiwan Univ.)\, Daniel Green (UC San Diego)\, Austin Joyce (Univ. of Chicago)\, Guilherme Pimentel (SNS Pisa) . Scientific Committee: Eiichiro Komatsu ((Max Planck Inst. for Astrophysics)\, Marilena LoVerde (Univ. of Washington)\, Eva Silverstein (Stanford Univ)\, Raman Sundrum (Univ. of Maryland). The Summer School will be held at the Institu\nhttps://indico.math.cnrs.fr/event/15597/
+LOCATION:Le Bois-Marie
+URL:https://indico.math.cnrs.fr/event/15597/
+END:VEVENT
+BEGIN:VEVENT
+UID:4d0d6aec3e65@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260706T110000
+DTEND:20260706T120000
+SUMMARY:Séminaire commun GREMAN-IDP: Strongly correlated systems at equilibrium and away from equilibrium
+DESCRIPTION:My works mainly address systems in which the electronic interaction is strong\, giving rise to emergent properties. In my talk\, I will start by discussing theoretical results we obtained in the context of high-temperature superconductors\, such as copper oxides. For large interactions\, as we dope the system\, it goes from a pseudo-gap phase (where there is loss of spectral weight in regions of the mo\nhttps://indico.math.cnrs.fr/event/16135/
+LOCATION:Salle des séminaires
+URL:https://indico.math.cnrs.fr/event/16135/
+END:VEVENT
+BEGIN:VEVENT
+UID:af2d40ec5cc7@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260707T094500
+DTEND:20260707T112500
+SUMMARY:Alexandre Biscarat
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16674/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16674/
+END:VEVENT
+BEGIN:VEVENT
+UID:150404a9d467@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260708T123000
+DTEND:20260708T184000
+SUMMARY:A guided hike into quantum machine learning
+DESCRIPTION:Description An introduction to quantum machine learning. With cool pictures! With memes! With food! The lecture will cover a basic introduction to quantum neural networks\, quantum kernels\, and data encoding techniques\, with hands-on sessions for each. More advanced topics such as barren plateaus\, expressivity\, and "application <-> hardware" pipelines will be brushed over but not covered in detail.\nhttps://indico.math.cnrs.fr/event/16561/
+LOCATION:Maison de la Simulation
+URL:https://indico.math.cnrs.fr/event/16561/
+END:VEVENT
+BEGIN:VEVENT
+UID:24a9a604a2f4@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260716T090000
+DTEND:20260716T174500
+SUMMARY:COOKIE (COmputing & apprOximating KInetic Equations)
+DESCRIPTION:We are happy to organise the workshop Cookie. We welcome all participants to the workshop\, but registration is mandatory. Location and time The workshop will take place July 16th in the Pétri-Turing room at INRIA Rennes. List of Speakers Martin Campos Pinto Rémi Carles Anaïs Crestetto Erwan Faou Hélène Hivert Julien Mathiaud Michel Mehrenberger\nhttps://indico.math.cnrs.fr/event/16399/
+LOCATION:INRIA
+URL:https://indico.math.cnrs.fr/event/16399/
+END:VEVENT
+BEGIN:VEVENT
+UID:2493d0bfb1b3@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260831T090000
+DTEND:20260831T195000
+SUMMARY:Summer school "Proof assistants and applications"
+DESCRIPTION:This summer school offers an introduction to proof assistants for mathematics and its applications in programme certifications. It covers several recent techniques\, such as homotopy theory or the interactions with large language models. The summer school is composed of five lectures and three talks. Each lecture (2x1h30) will be complemented by 2 hours of tutorials. It is primarily intended for th\nhttps://indico.math.cnrs.fr/event/16687/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16687/
+END:VEVENT
+BEGIN:VEVENT
+UID:bcf2553271bf@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260831T090000
+DTEND:20260831T195000
+SUMMARY:Summer school "Proofs assistants and applications"
+DESCRIPTION:This summer school offers an introduction to proof assistants for mathematics and its applications in programme certifications. It covers several recent techniques\, such as homotopy theory or the interactions with large language models. The summer school is composed of five lectures and three talks. Each lecture (2x1h30) will be complemented by 2 hours of tutorials. It is primarily intended for th\nhttps://indico.math.cnrs.fr/event/16687/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16687/
+END:VEVENT
+BEGIN:VEVENT
+UID:884c77af766f@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260909T120000
+DTEND:20260909T150000
+SUMMARY:Besançon Meeting on Probability\, Ecology & Evolution 2026
+DESCRIPTION:The workshop Probability\, Ecology & Evolution 2026 will be held in Besançon from 9 to 11 September 2026. The program will feature seven 45-minute talks\, two 3-hour minicourses\, and a poster session. More information can be found on our website\nhttps://indico.math.cnrs.fr/event/16490/
+LOCATION:Université Marie et Louis Pasteur
+URL:https://indico.math.cnrs.fr/event/16490/
+END:VEVENT
+BEGIN:VEVENT
+UID:712a6015ef55@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+SUMMARY:T3-2026 Operator Algebras - Admin
+DESCRIPTION:Please be aware that this page is different from the scientific website of the thematic programme. It is intended to collect the necessary data for the processing of your financial support. Please click on Apply now to enter your personal data and upload the requested documents. Download AA-Application form and the Declaration of Honour\, fill and attach to your registration. * As a state funded in\nhttps://indico.math.cnrs.fr/event/16615/
+LOCATION:IHP
+URL:https://indico.math.cnrs.fr/event/16615/
+END:VEVENT
+BEGIN:VEVENT
+UID:543cc3cbfa42@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260914T083000
+DTEND:20260914T163000
+SUMMARY:Operator Algebras: Approximation\, Rigidity and Dynamics\, Paris
+DESCRIPTION:Thematic trimester programme with short courses\, seminars and workshops September 14th to December 4th\, 2026 at the Institut Henri Poincaré\, Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the trimester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-intentioned people may be trying to contact some of participants by email or phone to get money and personal detai\nhttps://indico.math.cnrs.fr/event/14373/
+LOCATION:IHP
+URL:https://indico.math.cnrs.fr/event/14373/
+END:VEVENT
+BEGIN:VEVENT
+UID:0330efef7e5d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260914T110000
+DTEND:20260914T130000
+SUMMARY:Emmanuel Trelat (Sorbonne Université)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16473/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16473/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2e8285b412e@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260914T110000
+DTEND:20260914T130000
+SUMMARY:Emmanuel Trelat
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16473/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16473/
+END:VEVENT
+BEGIN:VEVENT
+UID:ed1fdfef5236@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260915T090000
+DTEND:20260915T190000
+SUMMARY:Conférence pour Michel Vaquié
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16676/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16676/
+END:VEVENT
+BEGIN:VEVENT
+UID:13179f9cd0cb@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260915T090000
+DTEND:20260915T172000
+SUMMARY:Korea-France Joint Workshop on String Theory
+DESCRIPTION:Korea-France Joint Workshop on String Theory September 15-18\, 2026 at IHES - Marilyn and James Simons Conference Center How to get to IHES This workshop will bring together experts in string theory and quantum field theory to discuss recent advances in these fields\, and also to foster collaboration between the Korean and French theoretical and mathematical physics communities. Key topics will incl\nhttps://indico.math.cnrs.fr/event/16694/
+LOCATION:Le Bois-Marie
+URL:https://indico.math.cnrs.fr/event/16694/
+END:VEVENT
+BEGIN:VEVENT
+UID:112e8fed8443@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260917T130000
+DTEND:20260917T140000
+SUMMARY:Aurore Zhe LI - Neural Ordinary Differential Equations enhanced Linear Mixed-effects Models
+DESCRIPTION:Speaker: Aurore Zhe LI from BPH Title: Neural Ordinary Differential Equations enhanced Linear Mixed-effects Models Abstract: Introduction Longitudinal cohort studies generate irregularly spaced\, partially missing repeated measurements where outcomes may depend on the full trajectory of time-varying exposures rather than their instantaneous values. Classical linear mixed-effects models (LMMs) can i\nhttps://indico.math.cnrs.fr/event/16572/
+LOCATION:ISPED
+URL:https://indico.math.cnrs.fr/event/16572/
+END:VEVENT
+BEGIN:VEVENT
+UID:7a957d101954@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260921T090000
+DTEND:20260921T170000
+SUMMARY:Formation "Rédaction de documents avec Rmarkdown et Quarto"
+DESCRIPTION:Description : La formation est une initiation à la création de rapports de recherche reproductibles et dynamiques à l’aide de Rmarkdown et/ou Quarto. Elle permet d’automatiser la génération de documents intégrant code\, résultats et interprétation\, et facilite la diffusion en ligne des analyses de données biologiques. Objectifs : À la fin de la formation\, vous serez capable de : Créer des rapports \nhttps://indico.math.cnrs.fr/event/15679/
+LOCATION:IMT
+URL:https://indico.math.cnrs.fr/event/15679/
+END:VEVENT
+BEGIN:VEVENT
+UID:3c75778cc37d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260924T130000
+DTEND:20260924T140000
+SUMMARY:Sébastien Bailly from INSERM U1300
+DESCRIPTION:Speaker: Sébastien Bailly from INSERM U1300 Title: TBD Abstract: TBD Calendar subscription link for the complete seminar series: https://indico.math.cnrs.fr/category/711/events.ics Program of the Biostatistics seminars: https://indico.math.cnrs.fr/category/711/ Subscribe to the seminar mailing list : https://diff.u-bordeaux.fr/sympa/subscribe/seminaire.biostat.bph Former e-seminars on our YouTube \nhttps://indico.math.cnrs.fr/event/16832/
+LOCATION:ISPED
+URL:https://indico.math.cnrs.fr/event/16832/
+END:VEVENT
+BEGIN:VEVENT
+UID:1ef31e078831@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260925T090000
+DTEND:20260925T221500
+SUMMARY:20ème Journée des Doctorantes et Doctorants en Mathématiques de la région Hauts-de-France (JDM 2026)
+DESCRIPTION:La vingtième Journée des Doctorantes et Doctorants en Mathématiques de la région Hauts-de-France aura lieu le vendredi 25 septembre 2026 à la Cité de la Dentelle et de la Mode\, à Calais. L'objectif de cette journée est de permettre une rencontre et des échanges entre les doctorantes et doctorants de la région en présentant l'état d'avancement de leur travail de thèse à l'ensemble des enseignants-c\nhttps://indico.math.cnrs.fr/event/16167/
+LOCATION:Cité de la Dentelle et de la Mode
+URL:https://indico.math.cnrs.fr/event/16167/
+END:VEVENT
+BEGIN:VEVENT
+UID:dbffe8fd8b06@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260925T133000
+DTEND:20260925T170000
+SUMMARY:Séminaire 25-09-2026
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16591/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16591/
+END:VEVENT
+BEGIN:VEVENT
+UID:9c09e527e288@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260925T141500
+DTEND:20260925T151500
+SUMMARY:Séminaire 25/09/2026 - Michael I. Jordan
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16591/
+LOCATION:IHP - Bâtiment Perrin
+URL:https://indico.math.cnrs.fr/event/16591/
+END:VEVENT
+BEGIN:VEVENT
+UID:3abc235cb73f@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260928T083000
+DTEND:20260928T173000
+SUMMARY:Workshop 1 - Operator Algebras: Groups and Dynamics
+DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 1 - Operator Algebras: Groups and Dynamics September 28 to October 2\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the interaction between operators algebras\, group representation theory\, group actions\, topological dynamics and ergodic theory. List of speakers: Goulnara Arzhantseva Uri Bade\nhttps://indico.math.cnrs.fr/event/14375/
+LOCATION:Institut Henri Poincaré
+URL:https://indico.math.cnrs.fr/event/14375/
+END:VEVENT
+BEGIN:VEVENT
+UID:09f781f28de5@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260928T090000
+DTEND:20260928T140000
+SUMMARY:CATS 8 - A conference in honour of Gabriele Vezzosi's 60th birthday
+DESCRIPTION:The 8 th edition of the "CATS" conferences will take place from September 28 th to October 2 nd \, 2026 at "La Vieille Perrotine" \, Île d'Oléron\, France CATS 8 will be the occasion to celebrate Gabriele Vezzosi's 60 th birthday\, and will be part of the ANR project " DAG-Arts: Derived algebraic geometry applied to representation theory and singularity of schemes ". Registration is open until Februar\nhttps://indico.math.cnrs.fr/event/15506/
+LOCATION:La Vieille Perrotine
+URL:https://indico.math.cnrs.fr/event/15506/
+END:VEVENT
+BEGIN:VEVENT
+UID:bfbc2e7a89a0@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260928T103000
+DTEND:20260928T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16813/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16813/
+END:VEVENT
+BEGIN:VEVENT
+UID:cd2954af473b@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20260929T100000
+DTEND:20260929T120000
+SUMMARY:Math du Labo
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16889/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16889/
+END:VEVENT
+BEGIN:VEVENT
+UID:5a92d0e16078@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261001T090000
+DTEND:20261001T163000
+SUMMARY:Journée GADT
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16913/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16913/
+END:VEVENT
+BEGIN:VEVENT
+UID:a66c0bb4d87a@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261001T090000
+DTEND:20261001T163000
+SUMMARY:Formation Cast3M Développement
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs avancés. L'objectif est d'apprendre à développer dans Cast3M afin d'ajouter de nouvelles fonctionnalités au code (nouveaux opérateurs/directives\, nouveaux modèles\, ...). Pour le personnel CEA\, en plus de ce formulaire\, veuillez vous inscrire a\nhttps://indico.math.cnrs.fr/event/16609/
+LOCATION:Maison de la Simulation
+URL:https://indico.math.cnrs.fr/event/16609/
+END:VEVENT
+BEGIN:VEVENT
+UID:7ff13a6f605a@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261002T110000
+DTEND:20261002T130000
+SUMMARY:Annabelle Collin (INRIA Bordeaux)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16528/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16528/
+END:VEVENT
+BEGIN:VEVENT
+UID:b0bbf60fbaf8@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261005T090000
+DTEND:20261005T123000
+SUMMARY:Modèle linéaire et modèle linéaire généralisé
+DESCRIPTION:Description : La formation s’adresse à des personnes qui ont un niveau initié et veulent approfondir leurs connaissances en statistique. Elle est orientée vers la compréhension des bases de la modélisation par modèles linéaires et modèles linéaires généralisés. Objectifs : A la fin de la formation\, vous serez capable de distinguer les différents modèles linéaires généralisés\, comprendre les étapes\nhttps://indico.math.cnrs.fr/event/15678/
+LOCATION:CBI
+URL:https://indico.math.cnrs.fr/event/15678/
+END:VEVENT
+BEGIN:VEVENT
+UID:4470f17d3547@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261006T090000
+DTEND:20261006T180000
+SUMMARY:Journée Analyse Appliquée Hauts-de-France
+DESCRIPTION:Cet événement a pour but de rassembler les différents membres des laboratoires de la Fédération de Recherche Mathématique des Hauts-de-France travaillant sur les thèmes de l'analyse théorique et numérique des EDP lors d'une journée d'exposés scientifiques. Cette journée est organisée à l'Université de Technologie de Compiègne (UTC)\, son organisation est soutenue financièrement par la Fédération et\nhttps://indico.math.cnrs.fr/event/16868/
+LOCATION:Université de Technologie de Compiègne
+URL:https://indico.math.cnrs.fr/event/16868/
+END:VEVENT
+BEGIN:VEVENT
+UID:8376f3fafe8d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261006T103000
+DTEND:20261006T113000
+SUMMARY:Simone Castellan
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16484/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16484/
+END:VEVENT
+BEGIN:VEVENT
+UID:b2d0f798df7d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261008T090000
+DTEND:20261008T110000
+SUMMARY:Real loci of rational Fano threefolds
+DESCRIPTION:From the classification of real rational surfaces established by Comessatti at the beginning of the 20th century\, one obtains the following striking characterisation of real rational surfaces: a geometrically rational real surface is rational if and only if its real locus is nonempty and connected. The analogous statement fails in higher dimensions. In this talk\, we investigate the real loci of ge\nhttps://indico.math.cnrs.fr/event/15080/
+LOCATION:Korea
+URL:https://indico.math.cnrs.fr/event/15080/
+END:VEVENT
+BEGIN:VEVENT
+UID:098b38bb73e3@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261008T160000
+DTEND:20261008T170000
+SUMMARY:COLLOQUIUM Sylvain Crovisier "TBA"
+DESCRIPTION:TBA\nhttps://indico.math.cnrs.fr/event/16673/
+LOCATION:IMB
+URL:https://indico.math.cnrs.fr/event/16673/
+END:VEVENT
+BEGIN:VEVENT
+UID:47c682781012@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261009T110000
+DTEND:20261009T130000
+SUMMARY:Annabelle Collin (INRIA Bordeaux)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16528/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16528/
+END:VEVENT
+BEGIN:VEVENT
+UID:dbb51315227c@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261009T141500
+DTEND:20261009T151500
+SUMMARY:Séminaire 09/10/2026 - Gabriel Peyré
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16833/
+LOCATION:IHP - Bâtiment Perrin
+URL:https://indico.math.cnrs.fr/event/16833/
+END:VEVENT
+BEGIN:VEVENT
+UID:34933c52095b@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261012T090000
+DTEND:20261012T180000
+SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16773/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16773/
+END:VEVENT
+BEGIN:VEVENT
+UID:ad71a3bc75cf@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261012T103000
+DTEND:20261012T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16812/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16812/
+END:VEVENT
+BEGIN:VEVENT
+UID:972237d4a206@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261012T110000
+DTEND:20261012T130000
+SUMMARY:Elisenda Feliu (Copenhagen)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16474/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16474/
+END:VEVENT
+BEGIN:VEVENT
+UID:471f55685b9d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261013T090000
+DTEND:20261013T140000
+SUMMARY:Conférence "PDEs under pressure and applications in life science"
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16864/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16864/
+END:VEVENT
+BEGIN:VEVENT
+UID:3d91623f0032@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261013T090000
+DTEND:20261013T163000
+SUMMARY:Formation Cast3M pour Débutants
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene !) . Cette formation s'adresse aux utilisateurs débutants. L'objectif est d'être capable d’utiliser Cast3M pour réaliser des calculs éléments finis en thermo-mécanique\, linéaire et non linéaire\, stationnaire et transitoire. Pour le personnel CEA\, en plus de ce formulaire\, veuillez vous in\nhttps://indico.math.cnrs.fr/event/16605/
+LOCATION:Maison de la Simulation
+URL:https://indico.math.cnrs.fr/event/16605/
+END:VEVENT
+BEGIN:VEVENT
+UID:49290ed8004a@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261013T140000
+DTEND:20261013T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16846/
+LOCATION:IHP - Bâtiment Borel
+URL:https://indico.math.cnrs.fr/event/16846/
+END:VEVENT
+BEGIN:VEVENT
+UID:bcfeba0669c0@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261015T140000
+DTEND:20261015T160000
+SUMMARY:Rencontre ANR "Higgs bundles and geometrization of representations"
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16773/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16773/
+END:VEVENT
+BEGIN:VEVENT
+UID:555953563876@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261016T090000
+DTEND:20261016T163000
+SUMMARY:Formation Cast3M Fabrication Additive
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation "débutants"). L'objectif est de montrer les opérateurs et procédures de Cast3M utiles pour faire la simulation de la fabrication additive. Pour le personnel CEA\, en plus de ce formulaire\, veuil\nhttps://indico.math.cnrs.fr/event/16608/
+LOCATION:Maison de la Simulation
+URL:https://indico.math.cnrs.fr/event/16608/
+END:VEVENT
+BEGIN:VEVENT
+UID:0856b95d39fe@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261023T110000
+DTEND:20261023T130000
+SUMMARY:Cinzia Soresina (University of Trento)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16529/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16529/
+END:VEVENT
+BEGIN:VEVENT
+UID:2e5b14531e9b@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261026T083000
+DTEND:20261026T173000
+SUMMARY:Workshop 2 - Operator Algebras: Matricial Approximations
+DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 2 - Operator Algebras: Matricial Approximations October 26 to 30\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the interaction between operators algebras and hyperlinearity\, soficity\, stability\, random matrices and noncommutative harmonic analysis. List of speakers: Charles Bordenave Michae\nhttps://indico.math.cnrs.fr/event/14379/
+LOCATION:Institut Henri Poincaré
+URL:https://indico.math.cnrs.fr/event/14379/
+END:VEVENT
+BEGIN:VEVENT
+UID:6d8ebef55585@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261026T090000
+DTEND:20261026T123000
+SUMMARY:2èmes Rencontres d’Anaïs / anniversaire de Michel Zinsmeister
+DESCRIPTION:Les rencontres auront lieu au à l’Université de Bordeaux Elles débuteront le lundi 26 octobre à 9h et se clôtureront le vendredi 30 octobre à 12:30. La journée de lundi 26 octobre sera dédiée à notre collègue Michel Zinsmeister. Mini-cours Stéphane Charpentier Béatrice Védel Orateurs et Oratrices confirmé-e-s Alano Ancona Kari Astala Aline Bonami Sary Drappeau Bertrand Duplantier Joseph Feneuil De\nhttps://indico.math.cnrs.fr/event/16249/
+LOCATION:IMB
+URL:https://indico.math.cnrs.fr/event/16249/
+END:VEVENT
+BEGIN:VEVENT
+UID:b11cedd30581@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261027T095000
+DTEND:20261027T105000
+SUMMARY:Vacances
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16890/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16890/
+END:VEVENT
+BEGIN:VEVENT
+UID:365ff4c16d30@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261029T103000
+DTEND:20261029T113000
+SUMMARY:Pause pédagogique
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16636/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16636/
+END:VEVENT
+BEGIN:VEVENT
+UID:bf2e2ba40923@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261102T103000
+DTEND:20261102T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16814/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16814/
+END:VEVENT
+BEGIN:VEVENT
+UID:bbe50afa830d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261105T080000
+DTEND:20261105T180000
+SUMMARY:Journées maths-bio en Occitanie
+DESCRIPTION:"Groupe de travail maths-bio" pour l'ERC MUSEUM et la fédération occimath\nhttps://indico.math.cnrs.fr/event/16901/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16901/
+END:VEVENT
+BEGIN:VEVENT
+UID:24bbd6c8e42e@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261105T130000
+DTEND:20261105T130000
+SUMMARY:Mathematical modeling for ecology and evolution
+DESCRIPTION:The ERC project MUSEUM and the OcciMath federation are jointly organizing a workshop at the interface of mathematics\, ecology\, and evolution. The workshop will take place on November 5th and 6th at the Institut Montpelliérain Alexander Grothendieck (IMAG) and will serve as a platform for exchange between mathematicians and biologists. To kickstart the discussions\, there will be three sessions feat\nhttps://indico.math.cnrs.fr/event/16901/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16901/
+END:VEVENT
+BEGIN:VEVENT
+UID:5af48d4112b7@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261106T110000
+DTEND:20261106T130000
+SUMMARY:Francesca Ballatore (Université Côte d'Azur)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16530/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16530/
+END:VEVENT
+BEGIN:VEVENT
+UID:8a6e82173c58@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261109T080000
+DTEND:20261109T190000
+SUMMARY:2nd PICASSO conference France Portugal Spain
+DESCRIPTION:Three day meeting in Coimbra to celebrate the relations between Spain - Portugal - France for researchers involved in modeling\, numerical analysis and scientific computation. Funded and supported by the International Research Project (IRP) PICASSO \, a French CNRS initiative. PICASSO stands for "hy P erbol IC models\, numerical A nalysi S and S cientific c O mputation"\, see https://picasso.math.cnrs\nhttps://indico.math.cnrs.fr/event/16008/
+LOCATION:University of Coimbra
+URL:https://indico.math.cnrs.fr/event/16008/
+END:VEVENT
+BEGIN:VEVENT
+UID:97edcdb715b5@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261110T140000
+DTEND:20261110T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16847/
+LOCATION:IHP - Bâtiment Borel
+URL:https://indico.math.cnrs.fr/event/16847/
+END:VEVENT
+BEGIN:VEVENT
+UID:cb98189aee41@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261112T090000
+DTEND:20261112T163000
+SUMMARY:Formation Cast3M PASAPAS et procédures utilisateurs
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation "débutants"). L'objectif de cette formation est d'acquérir une connaissance approfondie de la procédure de résolution PASAPAS. L'algorithme de résolution de problèmes non linéaires quasi statiq\nhttps://indico.math.cnrs.fr/event/16606/
+LOCATION:Maison de la Simulation
+URL:https://indico.math.cnrs.fr/event/16606/
+END:VEVENT
+BEGIN:VEVENT
+UID:2e684136cbfb@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261113T141500
+DTEND:20261113T151500
+SUMMARY:Séminaire 13/11/2026 - Cyril Letrouit
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16834/
+LOCATION:IHP - Bâtiment Perrin
+URL:https://indico.math.cnrs.fr/event/16834/
+END:VEVENT
+BEGIN:VEVENT
+UID:0ea8ddbf819d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261116T090000
+DTEND:20261116T120000
+SUMMARY:Feuilletages loin des rivages
+DESCRIPTION:Thème : Les feuilletages dérivés Date : 16 au 20 novembre 2026 Lieu : Aussois ( centre Paul Langevin ) Ce workshop introduira les fondements de la théorie des feuilletages dérivés\, via les algèbres graduées mixtes\, ainsi que ses applications à la géométrie de Poisson dérivée et dans le cadre analytique complexe. L'événement s’adresse à un public intéressé par la géométrie dérivée (en caractéristiq\nhttps://indico.math.cnrs.fr/event/16763/
+LOCATION:Aussois
+URL:https://indico.math.cnrs.fr/event/16763/
+END:VEVENT
+BEGIN:VEVENT
+UID:9ac40cd88ac1@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261116T090000
+DTEND:20261116T110000
+SUMMARY:Autumn School on Derived Foliations
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16763/
+LOCATION:Aussois
+URL:https://indico.math.cnrs.fr/event/16763/
+END:VEVENT
+BEGIN:VEVENT
+UID:25e6656e5aae@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261116T103000
+DTEND:20261116T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16815/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16815/
+END:VEVENT
+BEGIN:VEVENT
+UID:91feb6ef127b@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261123T090000
+DTEND:20261123T200000
+SUMMARY:Workshop POK0 "Positivity on K-trivial varieties"
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16870/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16870/
+END:VEVENT
+BEGIN:VEVENT
+UID:333eb44c0c8c@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261123T090000
+DTEND:20261123T200000
+SUMMARY:POK0 conference "Positivity on K-trivial varieties"
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16870/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16870/
+END:VEVENT
+BEGIN:VEVENT
+UID:ef214ea9007e@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261124T111500
+DTEND:20261124T121500
+SUMMARY:Nikolas Adaloglou
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16453/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16453/
+END:VEVENT
+BEGIN:VEVENT
+UID:9268dccad0e3@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261126T080000
+DTEND:20261126T120000
+SUMMARY:HOT Topics in Analysis
+DESCRIPTION:To mark the occasion of the birthday and retirement of Hans-Olav Tylli\, we are pleased to announce the conference HOT Topics in Analysis . The meeting takes place 26-27 November 2026 at the University of Helsinki. The themes of the conference are Banach space theory\, operator theory\, complex analysis and related topics. Speakers Kari Astala (University of Helsinki) Isabelle Chalendar (Université G\nhttps://indico.math.cnrs.fr/event/16258/
+LOCATION:University of Helsinki
+URL:https://indico.math.cnrs.fr/event/16258/
+END:VEVENT
+BEGIN:VEVENT
+UID:57c4b458316a@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261127T110000
+DTEND:20261127T130000
+SUMMARY:Zena Hadjivasiliou (Francis Crick Institute)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16531/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16531/
+END:VEVENT
+BEGIN:VEVENT
+UID:8de2133e8c34@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261127T141500
+DTEND:20261127T163000
+SUMMARY:Séminaire 27/11/2026 - Francis Bach et Stephane Mallat
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16835/
+LOCATION:IHP - Bâtiment Perrin
+URL:https://indico.math.cnrs.fr/event/16835/
+END:VEVENT
+BEGIN:VEVENT
+UID:5675c284891d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261130T083000
+DTEND:20261130T173000
+SUMMARY:Workshop 3 - Operator Algebras: Rigidity and Classification
+DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 3 - Operator Algebras: Rigidity and Classification November 30 to December 4\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the structure\, classification and rigidity of C ∗ -algebras and von Neumann algebras. List of speakers: Martijn Caspers (tbc) Soham Chakraborty Milan Donvil Daniel Drim\nhttps://indico.math.cnrs.fr/event/14380/
+LOCATION:Institut Henri Poincaré
+URL:https://indico.math.cnrs.fr/event/14380/
+END:VEVENT
+BEGIN:VEVENT
+UID:5488bd18d9d2@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261130T103000
+DTEND:20261130T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16816/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16816/
+END:VEVENT
+BEGIN:VEVENT
+UID:3ae66d1fd3e7@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261208T140000
+DTEND:20261208T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16854/
+LOCATION:IHP - Bâtiment Perrin
+URL:https://indico.math.cnrs.fr/event/16854/
+END:VEVENT
+BEGIN:VEVENT
+UID:5b486034f38e@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261211T110000
+DTEND:20261211T130000
+SUMMARY:Ruth Baker (Oxford University)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16532/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16532/
+END:VEVENT
+BEGIN:VEVENT
+UID:6f71a5a8d9ec@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261211T141500
+DTEND:20261211T151500
+SUMMARY:Séminaire 11/12/2026 - Borjan Geshkovski
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16836/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16836/
+END:VEVENT
+BEGIN:VEVENT
+UID:41f6f301b3e5@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261214T103000
+DTEND:20261214T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16817/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16817/
+END:VEVENT
+BEGIN:VEVENT
+UID:00a514f0e69d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261224T103000
+DTEND:20261224T113000
+SUMMARY:-Férié
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16644/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16644/
+END:VEVENT
+BEGIN:VEVENT
+UID:e39a349a038d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20261231T103000
+DTEND:20261231T113000
+SUMMARY:-Férié
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16645/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16645/
+END:VEVENT
+BEGIN:VEVENT
+UID:9686aff2a6f4@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270104T170000
+DTEND:20270104T190000
+SUMMARY:Applications of Computer Algebra
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16617/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16617/
+END:VEVENT
+BEGIN:VEVENT
+UID:31ff09d02bd3@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270108T100000
+DTEND:20270108T120000
+SUMMARY:Marie Doumic (INRIA Paris)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16589/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16589/
+END:VEVENT
+BEGIN:VEVENT
+UID:e6b6c2e5bcba@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270108T141500
+DTEND:20270108T151500
+SUMMARY:Séminaire 08/01/2027 - Mathurin Massias
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16837/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16837/
+END:VEVENT
+BEGIN:VEVENT
+UID:6cca57460bb4@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270111T103000
+DTEND:20270111T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16818/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16818/
+END:VEVENT
+BEGIN:VEVENT
+UID:f818090006df@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270112T140000
+DTEND:20270112T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16855/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16855/
+END:VEVENT
+BEGIN:VEVENT
+UID:e7dafe142bd4@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270118T083000
+DTEND:20270118T183000
+SUMMARY:Kinetic theory: from long-range interactions to turbulence and quantum simulators\, Paris
+DESCRIPTION:This is a thematic trimester programme with short courses\, seminars and workshops on Kinetic theory: from long-range interactions to turbulence and quantum simulators. January 18 to April 9\, 2027 at the Institut Henri Poincaré\, Paris REGISTRATION IS MANDATORY AND FREE IMPORTANT WARNING : Scam / Phishing / SMiShing! Note that ill-intentioned people may be trying to contact some of participants by e\nhttps://indico.math.cnrs.fr/event/15606/
+LOCATION:IHP
+URL:https://indico.math.cnrs.fr/event/15606/
+END:VEVENT
+BEGIN:VEVENT
+UID:143dcfdb88cd@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270121T090000
+DTEND:20270121T170000
+SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the occasion of Antonin Chambolle's 60th birthday
+DESCRIPTION:This conference aims to bring together researchers from optimization\, calculus of variations and image processing to celebrate Antonin Chambolle's contributions to these fields. The event brings together collaborators\, colleagues\, friends\, and former students to celebrate his scientific achievements and the thriving community around them. List of confirmed speakers: Grégoire Allaire Claire Boyer L\nhttps://indico.math.cnrs.fr/event/15144/
+LOCATION:INRIA Paris
+URL:https://indico.math.cnrs.fr/event/15144/
+END:VEVENT
+BEGIN:VEVENT
+UID:03db8dd7c197@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270125T103000
+DTEND:20270125T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16819/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16819/
+END:VEVENT
+BEGIN:VEVENT
+UID:97bd0e006bf5@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270128T103000
+DTEND:20270128T113000
+SUMMARY:atelier KRIS
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16649/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16649/
+END:VEVENT
+BEGIN:VEVENT
+UID:5e1433c43a47@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270129T100000
+DTEND:20270129T120000
+SUMMARY:Florence Hubert (I2M)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16590/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16590/
+END:VEVENT
+BEGIN:VEVENT
+UID:6b61efdb190e@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270202T140000
+DTEND:20270202T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16856/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16856/
+END:VEVENT
+BEGIN:VEVENT
+UID:c90809908159@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270208T103000
+DTEND:20270208T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16820/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16820/
+END:VEVENT
+BEGIN:VEVENT
+UID:48838fe0ef1f@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270208T110000
+DTEND:20270208T130000
+SUMMARY:Irène Waldspurger (Université Paris-Dauphine)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16478/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16478/
+END:VEVENT
+BEGIN:VEVENT
+UID:708611c7acdf@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270218T103000
+DTEND:20270218T113000
+SUMMARY:Pause pédagogique
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16652/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16652/
+END:VEVENT
+BEGIN:VEVENT
+UID:069f7e5e251a@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270301T083000
+DTEND:20270301T173000
+SUMMARY:Classical Transport and Dynamical Evolution in the Statistical Physics of Long-Range Interaction Systems
+DESCRIPTION:Kinetic theory: from long-range interactions to turbulence and quantum simulators Workshop 1: Classical Transport and Dynamical Evolution in the Statistical Physics of Long-Range Interaction Systems March 1 to 5\, 2027 - IHP\, Paris Summary In progress... Preliminary list of speakers (to be confirmed): In progress... Organising Committee:\nhttps://indico.math.cnrs.fr/event/15608/
+LOCATION:Institut Henri Poincaré
+URL:https://indico.math.cnrs.fr/event/15608/
+END:VEVENT
+BEGIN:VEVENT
+UID:ccd3ba53dd29@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270301T103000
+DTEND:20270301T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16822/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16822/
+END:VEVENT
+BEGIN:VEVENT
+UID:69853b929899@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270308T110000
+DTEND:20270308T130000
+SUMMARY:Laure Saint-Raymond (IHES)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16479/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16479/
+END:VEVENT
+BEGIN:VEVENT
+UID:a2fcedeafa72@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270309T140000
+DTEND:20270309T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16857/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16857/
+END:VEVENT
+BEGIN:VEVENT
+UID:85e9bb659fc4@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270315T103000
+DTEND:20270315T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16823/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16823/
+END:VEVENT
+BEGIN:VEVENT
+UID:b64cbb610b1b@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270322T083000
+DTEND:20270322T183000
+SUMMARY:Effective theories in quantum matter
+DESCRIPTION:Kinetic theory: from long-range interactions to turbulence and quantum simulators Workshop 2: Effective theories in quantum matter March 22 to 25\, 2027 - IHP\, Paris Summary In progress... Preliminary list of speakers (to be confirmed): In progress... Organising Committee:\nhttps://indico.math.cnrs.fr/event/15609/
+LOCATION:Institut Henri Poincaré
+URL:https://indico.math.cnrs.fr/event/15609/
+END:VEVENT
+BEGIN:VEVENT
+UID:a47aa53f32b2@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270405T103000
+DTEND:20270405T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16824/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16824/
+END:VEVENT
+BEGIN:VEVENT
+UID:e93e05bb104f@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270412T110000
+DTEND:20270412T130000
+SUMMARY:Amandine Aftalion (Paris Saclay)
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16480/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16480/
+END:VEVENT
+BEGIN:VEVENT
+UID:f43731f41c71@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270412T110000
+DTEND:20270412T130000
+SUMMARY:Jean-Michel Roquejoffre 60’s birthday
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16628/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16628/
+END:VEVENT
+BEGIN:VEVENT
+UID:3cae384e2630@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270415T103000
+DTEND:20270415T113000
+SUMMARY:Pause pédagogique
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16660/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16660/
+END:VEVENT
+BEGIN:VEVENT
+UID:12aa42b8176a@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270419T083000
+DTEND:20270419T173000
+SUMMARY:High Dimensional Probability and Analysis\, Continuous and Discrete
+DESCRIPTION:Thematic trimester programme with short courses\, seminars and workshops April 19th to July 9th\, 2027 at the Institut Henri Poincaré\, Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the trimester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-intentioned people may be trying to contact some of participants by email or phone to get money and personal details\, by p\nhttps://indico.math.cnrs.fr/event/16291/
+LOCATION:IHP
+URL:https://indico.math.cnrs.fr/event/16291/
+END:VEVENT
+BEGIN:VEVENT
+UID:00c8e891f599@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270420T140000
+DTEND:20270420T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16858/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16858/
+END:VEVENT
+BEGIN:VEVENT
+UID:1628364d95be@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270426T103000
+DTEND:20270426T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16825/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16825/
+END:VEVENT
+BEGIN:VEVENT
+UID:9a81686672a4@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270504T103000
+DTEND:20270504T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16827/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16827/
+END:VEVENT
+BEGIN:VEVENT
+UID:0c4c2250fc0d@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270506T103000
+DTEND:20270506T113000
+SUMMARY:-Férié
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16663/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16663/
+END:VEVENT
+BEGIN:VEVENT
+UID:3f8c053b21b9@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270510T083000
+DTEND:20270510T200000
+SUMMARY:Workshop 1: Convexity and Information Theory
+DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Discrete Workshop 1: Convexity and Information Theory May 10 to 14\, 2027 - IHP\, Paris Aim of the Workshop The aim of this conference is to bring together experts from Information Theory and Convex Geometry. It will also place a strong emphasis on Functional Inequalities and Optimal Transport. Recent works at the intersection of one or more \nhttps://indico.math.cnrs.fr/event/16296/
+LOCATION:Aphithéâtre Hermite
+URL:https://indico.math.cnrs.fr/event/16296/
+END:VEVENT
+BEGIN:VEVENT
+UID:636f460acfff@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270511T140000
+DTEND:20270511T160000
+SUMMARY:Séminaire SPIKE
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16859/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16859/
+END:VEVENT
+BEGIN:VEVENT
+UID:0a82eba9d57f@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270527T103000
+DTEND:20270527T113000
+SUMMARY:Relâche
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16666/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16666/
+END:VEVENT
+BEGIN:VEVENT
+UID:b0b434ebaad3@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270531T093000
+DTEND:20270531T173000
+SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji
+DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji May 31 - June 4\, 2027 at IHES - Marilyn and James Simons Conference Center How to get to IHES This conference\, which is part of a long-standing tradition of French-Japanese collaboration in arithmetic geometry\, will honor two leading figures of this partnership: Professor Takeshi Saito \, on the occasion o\nhttps://indico.math.cnrs.fr/event/15993/
+LOCATION:Le Bois-Marie
+URL:https://indico.math.cnrs.fr/event/15993/
+END:VEVENT
+BEGIN:VEVENT
+UID:75647a514de6@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270531T103000
+DTEND:20270531T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16828/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16828/
+END:VEVENT
+BEGIN:VEVENT
+UID:4ee32fa36a84@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270607T090000
+DTEND:20270607T180000
+SUMMARY:Summer School - Control of PDEs: Theoretical and Numerical Aspects
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16764/
+LOCATION:IMT
+URL:https://indico.math.cnrs.fr/event/16764/
+END:VEVENT
+BEGIN:VEVENT
+UID:fd25db4eb645@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270614T080000
+DTEND:20270614T200000
+SUMMARY:School: Asymptotic geometric analysis and functional inequalities
+DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Discrete School: Asymptotic geometric analysis and functional inequalities June 14 to 18\, 2027 - IHP\, Paris Summary This school is the 3rd main event of the semester “High Dimensional Probability and Analysis\, Continuous and Discrete”. Its aim is to introduce several concepts at the interface between probability\, analysis and high-dimension\nhttps://indico.math.cnrs.fr/event/16297/
+LOCATION:Amphithéâtre Hermite
+URL:https://indico.math.cnrs.fr/event/16297/
+END:VEVENT
+BEGIN:VEVENT
+UID:443aac0d6307@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270614T090000
+DTEND:20270614T180000
+SUMMARY:Spectral theory\, from theory to applications to control problems
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16765/
+LOCATION:IMT
+URL:https://indico.math.cnrs.fr/event/16765/
+END:VEVENT
+BEGIN:VEVENT
+UID:8ea2ce2037a2@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270614T103000
+DTEND:20270614T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16829/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16829/
+END:VEVENT
+BEGIN:VEVENT
+UID:310b4ff86cc2@paris-academique
+DTSTAMP:20260701T080811Z
+DTSTART:20270628T103000
+DTEND:20270628T113000
+SUMMARY:TBA - ICJ
+DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16830/
+LOCATION:IHP\, 11 rue Pierre et Marie Curie\, Paris 5e
+URL:https://indico.math.cnrs.fr/event/16830/
+END:VEVENT
+END:VCALENDAR
