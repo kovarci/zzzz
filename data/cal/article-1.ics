@@ -1,78 +1,78 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Article 1 · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:24977aec60d6@paris-academique
-DTSTAMP:20260704T064402Z
-DTSTART;VALUE=DATE:20260706
-DTEND;VALUE=DATE:20260707
-SUMMARY:Paris - L'Académie BCG 2026 - 06-07-2026
-DESCRIPTION:Le BCG vous accueille pour une semaine pour son événement "L'Académie" (Ex-Summer School)\, au programme : des rencontres avec différentes entreprises\, un jeu d'entreprise\, des ateliers de professionnalisation\, des ateliers de prise de parole !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Paris
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:0b9691e2d5f1@paris-academique
-DTSTAMP:20260704T064402Z
-DTSTART:20260707T143000
-DTEND:20260707T163000
-SUMMARY:Paris - Visite guidée du Panthéon - 07-07-2026
-DESCRIPTION:Visite guidée du Panthéon - Découvrez les femmes qui ont marqué l'histoire\, de Sainte Geneviève à Joséphine Baker\, à travers une visite guidée du Panthéon.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Paris
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:ef2cf5654921@paris-academique
-DTSTAMP:20260704T064402Z
-DTSTART:20260708T174500
-DTEND:20260708T193000
-SUMMARY:Paris - Visite du louvre 💫 - 08-07-2026
-DESCRIPTION:Une visite guidée du Louvre exclusive d'une partie du musée\, animée par deux bénévoles d'Art Explora qui partageront avec vous anecdotes\, histoires et coups de cœur artistiques.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Paris
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:cbde00503abd@paris-academique
-DTSTAMP:20260704T064402Z
-DTSTART:20260709T180000
-DTEND:20260709T210000
-SUMMARY:Montpellier - Montpellier - SOIREE DE FIN D'ANNEE - 09-07-2026
-DESCRIPTION:SAVE THE DATE Soirée de fin d'année ! 📅 Jeudi 9 Juillet à 18h00 📍 Montpellier - Gazette Café\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Montpellier
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:0836ba218704@paris-academique
-DTSTAMP:20260704T064402Z
-DTSTART:20260710T120000
-DTEND:20260710T170000
-SUMMARY:Paris - Campus d’été - 10-07-2026
-DESCRIPTION:Le Campus d'Été est un week-end organisé spécialement pour se détendre\, fêter la fin d’année et créer un sentiment de communauté. C’est le moment idéal pour rencontrer d'autres mentoré.e.s et des membres d'Article 1 !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Paris
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:3b058dcc4abd@paris-academique
-DTSTAMP:20260704T064402Z
-DTSTART:20260714T000000
-DTEND:20260714T010000
-SUMMARY:Bordeaux - soiree finale MA1SON Bordeaux - 14-07-2026
-DESCRIPTION:Hey\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Bordeaux
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:6a1bb57a40ac@paris-academique
-DTSTAMP:20260704T064402Z
-DTSTART:20260924T183000
-DTEND:20260924T203000
-SUMMARY:Nantes - Soirée métier de la tech et des sciences avec Valeuriad - 24-09-2026
-DESCRIPTION:Soirée de rencontre avec des professionnels de la tech et du digital au sein de l'entreprise Valeuriad 🤝​ L'opportunité de rencontrer et de discuter avec des professionnelles de ce secteur\, de partager son CV\, d'en apprendre plus sur certains métiers..\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Nantes
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Article 1 · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:24977aec60d6@paris-academique
+DTSTAMP:20260704T100547Z
+DTSTART;VALUE=DATE:20260706
+DTEND;VALUE=DATE:20260707
+SUMMARY:Paris - L'Académie BCG 2026 - 06-07-2026
+DESCRIPTION:Le BCG vous accueille pour une semaine pour son événement "L'Académie" (Ex-Summer School)\, au programme : des rencontres avec différentes entreprises\, un jeu d'entreprise\, des ateliers de professionnalisation\, des ateliers de prise de parole !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:0b9691e2d5f1@paris-academique
+DTSTAMP:20260704T100547Z
+DTSTART:20260707T143000
+DTEND:20260707T163000
+SUMMARY:Paris - Visite guidée du Panthéon - 07-07-2026
+DESCRIPTION:Visite guidée du Panthéon - Découvrez les femmes qui ont marqué l'histoire\, de Sainte Geneviève à Joséphine Baker\, à travers une visite guidée du Panthéon.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:ef2cf5654921@paris-academique
+DTSTAMP:20260704T100547Z
+DTSTART:20260708T174500
+DTEND:20260708T193000
+SUMMARY:Paris - Visite du louvre 💫 - 08-07-2026
+DESCRIPTION:Une visite guidée du Louvre exclusive d'une partie du musée\, animée par deux bénévoles d'Art Explora qui partageront avec vous anecdotes\, histoires et coups de cœur artistiques.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:cbde00503abd@paris-academique
+DTSTAMP:20260704T100547Z
+DTSTART:20260709T180000
+DTEND:20260709T210000
+SUMMARY:Montpellier - Montpellier - SOIREE DE FIN D'ANNEE - 09-07-2026
+DESCRIPTION:SAVE THE DATE Soirée de fin d'année ! 📅 Jeudi 9 Juillet à 18h00 📍 Montpellier - Gazette Café\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Montpellier
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:0836ba218704@paris-academique
+DTSTAMP:20260704T100547Z
+DTSTART:20260710T120000
+DTEND:20260710T170000
+SUMMARY:Paris - Campus d’été - 10-07-2026
+DESCRIPTION:Le Campus d'Été est un week-end organisé spécialement pour se détendre\, fêter la fin d’année et créer un sentiment de communauté. C’est le moment idéal pour rencontrer d'autres mentoré.e.s et des membres d'Article 1 !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:3b058dcc4abd@paris-academique
+DTSTAMP:20260704T100547Z
+DTSTART:20260714T000000
+DTEND:20260714T010000
+SUMMARY:Bordeaux - soiree finale MA1SON Bordeaux - 14-07-2026
+DESCRIPTION:Hey\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Bordeaux
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:6a1bb57a40ac@paris-academique
+DTSTAMP:20260704T100547Z
+DTSTART:20260924T183000
+DTEND:20260924T203000
+SUMMARY:Nantes - Soirée métier de la tech et des sciences avec Valeuriad - 24-09-2026
+DESCRIPTION:Soirée de rencontre avec des professionnels de la tech et du digital au sein de l'entreprise Valeuriad 🤝​ L'opportunité de rencontrer et de discuter avec des professionnelles de ce secteur\, de partager son CV\, d'en apprendre plus sur certains métiers..\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Nantes
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+END:VCALENDAR
