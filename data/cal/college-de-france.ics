@@ -6,28 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Collège de France · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:28a4daf34215@paris-academique
-DTSTAMP:20260703T065825Z
-DTSTART:20260703T110000
-DTEND:20260703T130000
-SUMMARY:Single-Atom Catalysis Tao Zhang
-DESCRIPTION:Conférencier invité\nhttps://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/single-atom-catalysis
-LOCATION:Salle 2\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/single-atom-catalysis
-END:VEVENT
-BEGIN:VEVENT
-UID:115417ab1aa9@paris-academique
-DTSTAMP:20260703T065825Z
-DTSTART:20260703T110000
-DTEND:20260703T130000
-SUMMARY:Single-Atom Catalysis
-DESCRIPTION:Conférencier invité\nhttps://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/single-atom-catalysis
-LOCATION:Salle 2\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/tao-zhang/single-atom-catalysis
-END:VEVENT
-BEGIN:VEVENT
 UID:ad49647df9ce@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20260717T110000
 DTEND:20260717T130000
 SUMMARY:Total Synthesis with Designed Hydrocarbons Michael Sherburn
@@ -37,7 +17,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/michael-sherb
 END:VEVENT
 BEGIN:VEVENT
 UID:194daf1a9aba@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20260717T110000
 DTEND:20260717T130000
 SUMMARY:Total Synthesis with Designed Hydrocarbons Michaël Sherburn
@@ -46,8 +26,28 @@ LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
 URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/michael-sherburn/total-synthesis-with-designed-hydrocarbons
 END:VEVENT
 BEGIN:VEVENT
+UID:d00a145bc532@paris-academique
+DTSTAMP:20260704T064402Z
+DTSTART:20260919T100000
+DTEND:20260919T120000
+SUMMARY:Journées européennes du patrimoine 2026 – 19 septembre Collège de France
+DESCRIPTION:Grand événement · Journées européennes du patrimoine 2026\nhttps://www.college-de-france.fr/fr/agenda/grand-evenement/journees-europeennes-du-patrimoine-2026/journees-europeennes-du-patrimoine-2026-19-septembre
+LOCATION:Collège de France\, 11 place Marcelin-Berthelot\, Paris 5e
+URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/journees-europeennes-du-patrimoine-2026/journees-europeennes-du-patrimoine-2026-19-septembre
+END:VEVENT
+BEGIN:VEVENT
+UID:76f5576d29f7@paris-academique
+DTSTAMP:20260704T064402Z
+DTSTART:20260920T100000
+DTEND:20260920T120000
+SUMMARY:Journées européennes du patrimoine 2026 – 20 septembre Collège de France
+DESCRIPTION:Grand événement · Journées européennes du patrimoine 2026\nhttps://www.college-de-france.fr/fr/agenda/grand-evenement/journees-europeennes-du-patrimoine-2026/journees-europeennes-du-patrimoine-2026-20-septembre
+LOCATION:Collège de France\, 11 place Marcelin-Berthelot\, Paris 5e
+URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/journees-europeennes-du-patrimoine-2026/journees-europeennes-du-patrimoine-2026-20-septembre
+END:VEVENT
+BEGIN:VEVENT
 UID:51eb617a16aa@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20260922T173000
 DTEND:20260922T193000
 SUMMARY:Élire Foucault au Collège de France : enjeux scientifiques et politiques Orazio Irrera & Céline Surprenant
@@ -57,7 +57,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-foucault-a
 END:VEVENT
 BEGIN:VEVENT
 UID:f29e7e0f0fdb@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20260930T090000
 DTEND:20260930T110000
 SUMMARY:Forum Éducation 2026 Agir pour l'éducation
@@ -67,7 +67,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/forum-education-2
 END:VEVENT
 BEGIN:VEVENT
 UID:d6e2591df0bf@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20260930T090000
 DTEND:20260930T110000
 SUMMARY:Forum Éducation 2026
@@ -77,7 +77,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/forum-education-2
 END:VEVENT
 BEGIN:VEVENT
 UID:011f88e9ef3b@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261013T173000
 DTEND:20261013T193000
 SUMMARY:Foucault et la vie du Collège : dialogue avec les pairs\, création de chaires Aurèle Méthivier & Sandra Boehringer
@@ -87,7 +87,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-foucault-a
 END:VEVENT
 BEGIN:VEVENT
 UID:778bb1b09762@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261103T173000
 DTEND:20261103T193000
 SUMMARY:Foucault enseignant : cohérence d’une trajectoire et place dans l’œuvre Philippe Sabot & Elisabetta Basso
@@ -97,7 +97,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-foucault-a
 END:VEVENT
 BEGIN:VEVENT
 UID:1ef93e6b0e5f@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261104T173000
 DTEND:20261104T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (1) Olivier De Schutter
@@ -107,7 +107,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:61c921502396@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261105T173000
 DTEND:20261105T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (2) Olivier De Schutter
@@ -117,7 +117,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:91f9db516d06@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261112T173000
 DTEND:20261112T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (3) Olivier De Schutter
@@ -127,7 +127,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:146b68f5d8dd@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261113T110000
 DTEND:20261113T130000
 SUMMARY:Representative Democracy in Reflexive Globalization Philipp Dann
@@ -137,7 +137,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/philipp-dann/
 END:VEVENT
 BEGIN:VEVENT
 UID:b66ab1235125@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261113T110000
 DTEND:20261113T130000
 SUMMARY:Representative Democracy in Reflexive Globalization
@@ -147,7 +147,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/philipp-dann/
 END:VEVENT
 BEGIN:VEVENT
 UID:dda5daf0acc6@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261113T173000
 DTEND:20261113T193000
 SUMMARY:La souveraineté alimentaire et la transition agro-écologique en Europe (4) Olivier De Schutter
@@ -157,7 +157,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/la-souveraine
 END:VEVENT
 BEGIN:VEVENT
 UID:0defde4da6c8@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261124T173000
 DTEND:20261124T193000
 SUMMARY:Travailler avec Foucault : les séminaires du Collège Pasquale Pasquino & Carolina Verlengia
@@ -167,7 +167,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-foucault-a
 END:VEVENT
 BEGIN:VEVENT
 UID:aacc5031d998@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Géants technologiques mondiaux et privatisation du droit Vincent Martenet
@@ -177,7 +177,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/vincent-marte
 END:VEVENT
 BEGIN:VEVENT
 UID:743282c56fec@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Géants technologiques mondiaux et privatisation du droit
@@ -187,7 +187,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/vincent-marte
 END:VEVENT
 BEGIN:VEVENT
 UID:88fd7d5e0fe9@paris-academique
-DTSTAMP:20260703T065825Z
+DTSTAMP:20260704T064402Z
 DTSTART:20261215T173000
 DTEND:20261215T193000
 SUMMARY:Histoire et postérité d’une leçon : « Qu’est-ce que les Lumières ? » Antoine Lilti
