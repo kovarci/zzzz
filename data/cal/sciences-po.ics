@@ -7,7 +7,7 @@ X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:0999afce34a9@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260709
 DTEND;VALUE=DATE:20260710
 SUMMARY:Narratives and cleavage politics: How narratives express and shape political
@@ -17,7 +17,7 @@ URL:https://www.sciencespo.fr/fr/evenements/narratives-and-cleavage-politics-how
 END:VEVENT
 BEGIN:VEVENT
 UID:af157a9f2eaf@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260710
 DTEND;VALUE=DATE:20260711
 SUMMARY:Loyalties-in-Between: Overseas Chinese Identity and the Chinese Communist Party
@@ -26,8 +26,18 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/loyalties-in-between-overseas-chinese-identity-and-the-chinese-communist-party/
 END:VEVENT
 BEGIN:VEVENT
+UID:a5a59c56f30b@paris-academique
+DTSTAMP:20260708T062616Z
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20260905
+SUMMARY:Leçon inaugurale de l'École de droit par Nicolas Guillou
+DESCRIPTION:À l’occasion de sa rentrée solennelle\, l’École de droit est très honorée d'accueillir Nicolas Guillou\, Juge à la Cour pénale internationale.\nhttps://www.sciencespo.fr/fr/evenements/lecon-inaugurale-de-l-ecole-de-droit-par-nicolas-guillou/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/lecon-inaugurale-de-l-ecole-de-droit-par-nicolas-guillou/
+END:VEVENT
+BEGIN:VEVENT
 UID:534610543f02@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Protéger les sources : un statut pour la recherche

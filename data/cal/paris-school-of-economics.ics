@@ -6,88 +6,58 @@ METHOD:PUBLISH
 X-WR-CALNAME:Paris School of Economics · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:7f839eafa26b@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART;VALUE=DATE:20260706
-DTEND;VALUE=DATE:20260707
-SUMMARY:Lancement de la Chaire Modélisation des risques économiques et financiers liés à la nature
-DESCRIPTION:Du lun. 06 juil.\nhttps://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-modelisation-des-risques-economiques-et-financiers-lies-a-la-nature/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-modelisation-des-risques-economiques-et-financiers-lies-a-la-nature/
-END:VEVENT
-BEGIN:VEVENT
-UID:c810ed537b8f@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART:20260706T150000
-DTEND:20260706T170000
-SUMMARY:Chaires de recherche
-DESCRIPTION:Du lun. 06 juil.\nhttps://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-modelisation-des-risques-economiques-et-financiers-lies-a-la-nature/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-modelisation-des-risques-economiques-et-financiers-lies-a-la-nature/
-END:VEVENT
-BEGIN:VEVENT
-UID:b6e17e7c63e0@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART:20260707T090000
-DTEND:20260707T110000
+UID:405d2e5514ab@paris-academique
+DTSTAMP:20260708T062616Z
+DTSTART:20260708T090000
+DTEND:20260708T110000
 SUMMARY:Économie comportementale du genre
 DESCRIPTION:Lieu R1-09\nhttps://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du-genre/
 LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du-genre/
 END:VEVENT
 BEGIN:VEVENT
-UID:5333be502c58@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART:20260707T090000
-DTEND:20260707T110000
+UID:90b29bf5558d@paris-academique
+DTSTAMP:20260708T062616Z
+DTSTART:20260708T090000
+DTEND:20260708T110000
 SUMMARY:Colloque en l’honneur de François Bourguignon\, lauréat du Prix de la Revue économique 2026
 DESCRIPTION:Lieu Amphithéâtre Daniel Cohen\nhttps://www.parisschoolofeconomics.eu/evenements/colloque-en-lhonneur-de-francois-bourguignon-laureat-du-prix-de-la-revue-economique-2026/
 LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/colloque-en-lhonneur-de-francois-bourguignon-laureat-du-prix-de-la-revue-economique-2026/
 END:VEVENT
 BEGIN:VEVENT
-UID:b1adb3dbd987@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART:20260707T100000
-DTEND:20260707T120000
+UID:3657e53299dc@paris-academique
+DTSTAMP:20260708T062616Z
+DTSTART:20260708T100000
+DTEND:20260708T120000
 SUMMARY:Retraites et parcours de vie
 DESCRIPTION:Lieu R2-21\nhttps://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vie/
 LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vie/
 END:VEVENT
 BEGIN:VEVENT
-UID:98c3f59a0a8b@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART:20260707T123000
-DTEND:20260707T143000
+UID:c3fa0c4ff7bb@paris-academique
+DTSTAMP:20260708T062616Z
+DTSTART:20260708T123000
+DTEND:20260708T143000
 SUMMARY:Histoire économique
 DESCRIPTION:Victor Gay (TSE)\nhttps://www.parisschoolofeconomics.eu/evenements/histoire-economique/
 LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
 END:VEVENT
 BEGIN:VEVENT
-UID:18588e0cb4e0@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART:20260707T130000
-DTEND:20260707T150000
+UID:ef436e4ebb82@paris-academique
+DTSTAMP:20260708T062616Z
+DTSTART:20260708T130000
+DTEND:20260708T150000
 SUMMARY:Casual Friday Development
 DESCRIPTION:Mariachiara Iannuzzi (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
 LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
 URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
 END:VEVENT
 BEGIN:VEVENT
-UID:7de363830939@paris-academique
-DTSTAMP:20260707T073840Z
-DTSTART:20260707T150000
-DTEND:20260707T170000
-SUMMARY:Lancement de la Chaire Modélisation des risques économiques et financiers liés à la nature
-DESCRIPTION:Heure 15:00 – 17:00\nhttps://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-modelisation-des-risques-economiques-et-financiers-lies-a-la-nature/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lancement-de-la-chaire-modelisation-des-risques-economiques-et-financiers-lies-a-la-nature/
-END:VEVENT
-BEGIN:VEVENT
 UID:c20f5b49d54f@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260710
 DTEND;VALUE=DATE:20260711
 SUMMARY:Économie comportementale du genre
@@ -97,7 +67,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du
 END:VEVENT
 BEGIN:VEVENT
 UID:fa48263e76e8@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20260710T090000
 DTEND:20260710T110000
 SUMMARY:Colloque
@@ -107,7 +77,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-comportementale-du
 END:VEVENT
 BEGIN:VEVENT
 UID:82aebf4c6aba@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260904
 DTEND;VALUE=DATE:20260905
 SUMMARY:Colloque en l’honneur de François Bourguignon\, lauréat du Prix de la Revue économique 2026
@@ -117,7 +87,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/colloque-en-lhonneur-de-fra
 END:VEVENT
 BEGIN:VEVENT
 UID:4bb768b06a23@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20260904T090000
 DTEND:20260904T110000
 SUMMARY:Colloque
@@ -127,7 +97,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/colloque-en-lhonneur-de-fra
 END:VEVENT
 BEGIN:VEVENT
 UID:7315f120cd68@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260907
 DTEND;VALUE=DATE:20260908
 SUMMARY:Séminaire
@@ -137,7 +107,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/regulation-et-environnement
 END:VEVENT
 BEGIN:VEVENT
 UID:f6921f511db9@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260907
 DTEND;VALUE=DATE:20260908
 SUMMARY:Régulation et Environnement
@@ -147,7 +117,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/regulation-et-environnement
 END:VEVENT
 BEGIN:VEVENT
 UID:42ce15e20e25@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260910
 DTEND;VALUE=DATE:20260911
 SUMMARY:Groupe de travail : Macro Workshop
@@ -157,7 +127,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/groupe-de-travail-macro-wor
 END:VEVENT
 BEGIN:VEVENT
 UID:f4f201b5fa07@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20260910T123000
 DTEND:20260910T143000
 SUMMARY:Séminaire
@@ -167,7 +137,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/groupe-de-travail-macro-wor
 END:VEVENT
 BEGIN:VEVENT
 UID:624b892002af@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260911
 DTEND;VALUE=DATE:20260912
 SUMMARY:Retraites et parcours de vie
@@ -177,7 +147,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vi
 END:VEVENT
 BEGIN:VEVENT
 UID:db6cd5534d34@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20260911T100000
 DTEND:20260911T120000
 SUMMARY:Séminaire
@@ -187,7 +157,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/retraites-et-parcours-de-vi
 END:VEVENT
 BEGIN:VEVENT
 UID:538f7aac1b33@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:Histoire économique
@@ -197,7 +167,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
 END:VEVENT
 BEGIN:VEVENT
 UID:cdc04064c347@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20260916T123000
 DTEND:20260916T143000
 SUMMARY:Séminaire
@@ -207,7 +177,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
 END:VEVENT
 BEGIN:VEVENT
 UID:f24ac17eb800@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 SUMMARY:Casual Friday Development
@@ -217,7 +187,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
 END:VEVENT
 BEGIN:VEVENT
 UID:83103f2ef9ad@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20260918T124500
 DTEND:20260918T144500
 SUMMARY:Séminaire
@@ -227,7 +197,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
 END:VEVENT
 BEGIN:VEVENT
 UID:1d41337f2fa3@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Colloque
@@ -237,7 +207,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:2e528fa7db58@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Conférence de l’Association Française d’Économie des Transports
@@ -247,7 +217,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:5232c30fa4a3@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20261119T235900
 DTEND:20261119T235900
 SUMMARY:Colloque
@@ -257,7 +227,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-
 END:VEVENT
 BEGIN:VEVENT
 UID:26c1ca2f4a50@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Colloque
@@ -267,7 +237,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques
 END:VEVENT
 BEGIN:VEVENT
 UID:4bf60ece4689@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Politiques macroéconomiques avec des agents hétérogènes
@@ -277,7 +247,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques
 END:VEVENT
 BEGIN:VEVENT
 UID:c2b72465129d@paris-academique
-DTSTAMP:20260707T073840Z
+DTSTAMP:20260708T062616Z
 DTSTART:20261216T235900
 DTEND:20261216T235900
 SUMMARY:Colloque
