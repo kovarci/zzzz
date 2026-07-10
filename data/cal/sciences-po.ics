@@ -6,18 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:0999afce34a9@paris-academique
-DTSTAMP:20260709T073914Z
-DTSTART;VALUE=DATE:20260709
-DTEND;VALUE=DATE:20260710
-SUMMARY:Narratives and cleavage politics: How narratives express and shape political
-DESCRIPTION:This seminar will bring together recent research on social media and political theory to examine the reconfiguration of contemporary political spaces.\nhttps://www.sciencespo.fr/fr/evenements/narratives-and-cleavage-politics-how-narratives-express-and-shape-political/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/narratives-and-cleavage-politics-how-narratives-express-and-shape-political/
-END:VEVENT
-BEGIN:VEVENT
 UID:af157a9f2eaf@paris-academique
-DTSTAMP:20260709T073914Z
+DTSTAMP:20260710T073223Z
 DTSTART;VALUE=DATE:20260710
 DTEND;VALUE=DATE:20260711
 SUMMARY:Loyalties-in-Between: Overseas Chinese Identity and the Chinese Communist Party
@@ -27,7 +17,7 @@ URL:https://www.sciencespo.fr/fr/evenements/loyalties-in-between-overseas-chines
 END:VEVENT
 BEGIN:VEVENT
 UID:a5a59c56f30b@paris-academique
-DTSTAMP:20260709T073914Z
+DTSTAMP:20260710T073223Z
 DTSTART;VALUE=DATE:20260904
 DTEND;VALUE=DATE:20260905
 SUMMARY:Leçon inaugurale de l'École de droit par Nicolas Guillou
@@ -37,7 +27,7 @@ URL:https://www.sciencespo.fr/fr/evenements/lecon-inaugurale-de-l-ecole-de-droit
 END:VEVENT
 BEGIN:VEVENT
 UID:534610543f02@paris-academique
-DTSTAMP:20260709T073914Z
+DTSTAMP:20260710T073223Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Protéger les sources : un statut pour la recherche
