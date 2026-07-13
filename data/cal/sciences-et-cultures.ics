@@ -1,18 +1,18 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Sciences et Cultures · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:3eb02c70e10c@paris-academique
-DTSTAMP:20260712T195602Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:CONFÉRENCE - Ngô Bảo Châu (Prix Nobel de Mathématiques)
-DESCRIPTION:Inscription requise via le lien.\nhttps://framaforms.org/inscription-conference-ngo-bao-chau-17092026-sciences-cultures-citoyens-accis-1778860670
-LOCATION:Sorbonne\, Paris
-URL:https://framaforms.org/inscription-conference-ngo-bao-chau-17092026-sciences-cultures-citoyens-accis-1778860670
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sciences et Cultures · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:3eb02c70e10c@paris-academique
+DTSTAMP:20260713T065002Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:CONFÉRENCE - Ngô Bảo Châu (Prix Nobel de Mathématiques)
+DESCRIPTION:Inscription requise via le lien.\nhttps://framaforms.org/inscription-conference-ngo-bao-chau-17092026-sciences-cultures-citoyens-accis-1778860670
+LOCATION:Sorbonne\, Paris
+URL:https://framaforms.org/inscription-conference-ngo-bao-chau-17092026-sciences-cultures-citoyens-accis-1778860670
+END:VEVENT
+END:VCALENDAR
