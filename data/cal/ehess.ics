@@ -1,68 +1,68 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:EHESS · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:f3d9659c9f1a@paris-academique
-DTSTAMP:20260713T065002Z
-DTSTART:20260713T093000
-DTEND:20260713T113000
-SUMMARY:Democracy\, Political Participation and Civil Society. The Participation Repertoires and Organizational Life of Rights-Based NGOs in Contemporary Turkey (2015-2023)
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:e20a9439eaf7@paris-academique
-DTSTAMP:20260713T065002Z
-DTSTART:20260717T100000
-DTEND:20260717T120000
-SUMMARY:Underground Intellectuals ? A Connected and Entangled History of Greek Anti-Junta Networks : Balancing Local Activism and Global Radicalism in Montreal and Paris (1967-1974)
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:72b698668946@paris-academique
-DTSTAMP:20260713T065002Z
-DTSTART;VALUE=DATE:20260907
-DTEND;VALUE=DATE:20260908
-SUMMARY:École thématique : Mobilisations conservatrices et liberté d’expression
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:e340e58e8394@paris-academique
-DTSTAMP:20260713T065002Z
-DTSTART:20260921T140000
-DTEND:20260921T160000
-SUMMARY:Réunions d'information "Reprise d'études"
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:456348f971f0@paris-academique
-DTSTAMP:20260713T065002Z
-DTSTART:20260922T093000
-DTEND:20260922T113000
-SUMMARY:Fragments de soi : sources et récits de vie en Asie orientale
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:839834ae86e7@paris-academique
-DTSTAMP:20260713T065002Z
-DTSTART:20260924T143000
-DTEND:20260924T163000
-SUMMARY:Allez Savoir #7 : "L'argent. C'est-à-dire ?" du 24 au 26 septembre à Marseille
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:EHESS · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:f3d9659c9f1a@paris-academique
+DTSTAMP:20260713T100247Z
+DTSTART:20260713T093000
+DTEND:20260713T113000
+SUMMARY:Democracy\, Political Participation and Civil Society. The Participation Repertoires and Organizational Life of Rights-Based NGOs in Contemporary Turkey (2015-2023)
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:e20a9439eaf7@paris-academique
+DTSTAMP:20260713T100247Z
+DTSTART:20260717T100000
+DTEND:20260717T120000
+SUMMARY:Underground Intellectuals ? A Connected and Entangled History of Greek Anti-Junta Networks : Balancing Local Activism and Global Radicalism in Montreal and Paris (1967-1974)
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:72b698668946@paris-academique
+DTSTAMP:20260713T100247Z
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+SUMMARY:École thématique : Mobilisations conservatrices et liberté d’expression
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:e340e58e8394@paris-academique
+DTSTAMP:20260713T100247Z
+DTSTART:20260921T140000
+DTEND:20260921T160000
+SUMMARY:Réunions d'information "Reprise d'études"
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:456348f971f0@paris-academique
+DTSTAMP:20260713T100247Z
+DTSTART:20260922T093000
+DTEND:20260922T113000
+SUMMARY:Fragments de soi : sources et récits de vie en Asie orientale
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:839834ae86e7@paris-academique
+DTSTAMP:20260713T100247Z
+DTSTART:20260924T143000
+DTEND:20260924T163000
+SUMMARY:Allez Savoir #7 : "L'argent. C'est-à-dire ?" du 24 au 26 septembre à Marseille
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+END:VCALENDAR
