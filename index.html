@@ -354,6 +354,15 @@
     .footer-note code { font-family:ui-monospace,Menlo,monospace; font-size:12px; color:var(--text-soft); background:var(--glass-2); padding:2px 7px; border-radius:6px; }
     .footer-note a { color:var(--text-soft); text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--border-bright); }
 
+    /* Liens en dur vers les pages institution : ils donnent à Google un
+       chemin de crawl home -> institution -> événement. Sans eux les
+       pages e/*.html ne sont atteignables que par le sitemap. */
+    .inst-links { margin:22px 0 16px; font-size:13px; line-height:2.1; color:var(--muted); }
+    .inst-links strong { display:block; font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; font-weight:600; }
+    .inst-links a { display:inline-block; margin:0 6px 6px 0; padding:4px 11px; border-radius:999px;
+                    border:1px solid var(--border-bright); color:var(--text-soft); text-decoration:none; }
+    .inst-links a:hover { color:#fff; background:var(--glass-2); }
+
     @media (max-width:600px) {
       .hero { padding:50px 0 28px; }
       .container { padding:0 16px; }
@@ -570,6 +579,19 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
     S'abonner au calendrier
   </a>
+  <nav class="inst-links">
+    <strong>Parcourir par institution</strong>
+    <a href="i/college-de-france.html">Collège de France</a>
+    <a href="i/ens-paris.html">ENS Paris</a>
+    <a href="i/ehess.html">EHESS</a>
+    <a href="i/institut-henri-poincare.html">Institut Henri Poincaré</a>
+    <a href="i/paris-school-of-economics.html">Paris School of Economics</a>
+    <a href="i/sciences-po.html">Sciences Po</a>
+    <a href="i/sorbonne-universite.html">Sorbonne Université</a>
+    <a href="i/universite-psl.html">Université PSL</a>
+    <a href="i/article-1.html">Article 1</a>
+    <a href="i/sciences-et-cultures.html">Sciences et Cultures</a>
+  </nav>
   <div class="footer-note" id="footer-note">
     Un seul abonnement — tous les événements se synchronisent dans ton agenda, chaque jour.<br>
     Pour Google Agenda : « Autres agendas → À partir de l'URL » avec

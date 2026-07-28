@@ -2148,13 +2148,45 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
             inst_quoted = quote(inst)
             target = f"../index.html?institution={inst_quoted}"
             short = f"{n} conférence{'s' if n != 1 else ''} à venir à Paris."
-            speakers = []
-            for ev in evts[:8]:
-                if ev.get("speaker"):
-                    speakers.append(ev["speaker"][:60])
+            # Dédupliqué et sans le nom de l'institution : un cycle de cours
+            # répète le même intervenant sur 10 séances, et certaines sources
+            # remplissent « speaker » avec le nom de l'établissement.
+            speakers, _seen_sp = [], set()
+            for ev in evts[:40]:
+                sp = (ev.get("speaker") or "").strip()[:60]
+                key = sp.lower()
+                if not sp or key in _seen_sp or key == inst.lower():
+                    continue
+                _seen_sp.add(key)
+                speakers.append(sp)
             speakers_section = ""
             if speakers:
                 speakers_section = "<p>Avec : " + ", ".join(_esc_attr(s) for s in speakers[:5]) + (" et d'autres" if len(speakers) > 5 else "") + ".</p>"
+
+            # Liens vers les pages événement. Sans ça les 800+ pages e/*.html
+            # ne sont atteignables que par le sitemap : Google les considère
+            # comme orphelines et n'en indexe presque aucune. Ces 10 pages
+            # institution servent de hubs de crawl vers l'ensemble du site.
+            _MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.",
+                     "août", "sept.", "oct.", "nov.", "déc."]
+            items = []
+            for ev in evts[:60]:
+                eid = ev.get("id") or ""
+                if not re.fullmatch(r"[0-9a-f]{12}", eid):
+                    continue
+                try:
+                    d = date.fromisoformat(ev.get("date", ""))
+                    when = f"{d.day} {_MOIS[d.month - 1]}"
+                except Exception:
+                    when = ""
+                items.append(
+                    f'<li><a href="../e/{eid}.html">'
+                    f'<span class="d">{_esc_attr(when)}</span>'
+                    f'{_esc_attr((ev.get("title") or "")[:110])}</a></li>')
+            events_section = ""
+            if items:
+                events_section = ("<h2>Prochaines conférences</h2><ul class=\"evts\">"
+                                  + "".join(items) + "</ul>")
             page = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2177,7 +2209,15 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
 <meta name="twitter:image" content="{SITE_URL}/data/og/{slug}.png">
 <style>
 body{{font-family:Inter,system-ui,sans-serif;background:#07070d;color:#ececf2;margin:0;
-display:flex;align-items:center;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}}
+display:flex;align-items:flex-start;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}}
+h2{{font-size:15px;margin:26px 0 10px;color:#8888a0;font-weight:600;
+letter-spacing:.04em;text-transform:uppercase}}
+ul.evts{{list-style:none;padding:0;margin:0}}
+ul.evts li{{border-top:1px solid rgba(255,255,255,.08)}}
+ul.evts a{{display:flex;gap:12px;padding:11px 2px;color:#c2c2d0;
+text-decoration:none;font-size:14px;line-height:1.45}}
+ul.evts a:hover{{color:#fff}}
+ul.evts .d{{flex:0 0 62px;color:#8888a0;font-variant-numeric:tabular-nums}}
 .card{{max-width:560px;width:100%;background:linear-gradient(160deg,#1c1c2eb8,#11111db8);
 border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}}
 .k{{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8888a0;margin-bottom:10px}}
@@ -2195,6 +2235,7 @@ text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7df
 <h1>{_esc_attr(inst)}</h1>
 <p><strong>{n} conférence{'s' if n != 1 else ''} à venir</strong> dans le calendrier Paris·Académique.</p>
 {speakers_section}
+{events_section}
 <a class="btn" href="{target}">Voir le calendrier →</a>
 <div class="foot"><a href="{SITE_URL}">lotent.fr — toutes les conférences académiques de Paris</a></div>
 </main>
@@ -2325,25 +2366,44 @@ def notify_indexnow(urls):
 
 
 def write_sitemap(events):
-    """sitemap.xml at the site root: home, about, and every event page.
-    Helps Google discover and index each conference individually."""
+    """sitemap.xml at the site root: home, about, the institution hubs and
+    every UPCOMING event page.
+
+    Past events keep their e/<id>.html page — old shared links must not
+    break — but they are deliberately left out of the sitemap. Asking
+    Google to index 2000+ expired conferences burns the crawl budget of a
+    young site, and none of them can rank anyway. Only pages that are
+    still worth ranking get submitted.
+    """
     today = TODAY.isoformat()
     urls = [f"<url><loc>{SITE_URL}/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq></url>",
             f"<url><loc>{SITE_URL}/apropos.html</loc><changefreq>monthly</changefreq></url>"]
-    seen = set()
+    # Hubs par institution : ce sont eux qui lient vers les pages événement,
+    # ils doivent être crawlés souvent.
+    for f in sorted(INST_PAGES_DIR.glob("*.html")):
+        urls.append(f"<url><loc>{SITE_URL}/i/{f.name}</loc>"
+                    f"<lastmod>{today}</lastmod><changefreq>weekly</changefreq></url>")
+    seen, n_past = set(), 0
     for ev in events:
         eid = ev.get("id") or ""
         if not re.fullmatch(r"[0-9a-f]{12}", eid) or eid in seen:
             continue
+        if ev.get("date", "") < today:
+            n_past += 1
+            continue
         seen.add(eid)
+        # lastmod = date d'ajout réelle. Estampiller « aujourd'hui » des
+        # milliers de pages inchangées apprend à Google à ignorer le champ.
+        lastmod = ev.get("added_at") or today
         urls.append(f"<url><loc>{SITE_URL}/e/{eid}.html</loc>"
-                    f"<lastmod>{today}</lastmod></url>")
+                    f"<lastmod>{lastmod}</lastmod></url>")
     xml = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
            "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"
            + "".join(urls) + "</urlset>")
     try:
         SITEMAP_FILE.write_text(xml, encoding="utf-8")
-        print(f"Sitemap : {len(urls)} URLs")
+        print(f"Sitemap : {len(urls)} URLs ({n_past} pages archivées "
+              f"laissées en ligne mais non soumises)")
     except Exception as e:
         print(f"[WARN] sitemap: {e}")
 
@@ -2569,6 +2629,13 @@ def main():
         print(f"[ERROR] event pages: {e}")
         traceback.print_exc()
 
+    # Avant le sitemap : celui-ci liste les hubs i/*.html réellement présents.
+    try:
+        write_institution_share_pages(all_events)
+    except Exception as e:
+        print(f"[ERROR] institution pages: {e}")
+        traceback.print_exc()
+
     try:
         write_sitemap(all_events + arch)
     except Exception as e:
@@ -2579,12 +2646,6 @@ def main():
         write_og_image(all_events)
     except Exception as e:
         print(f"[ERROR] og image: {e}")
-        traceback.print_exc()
-
-    try:
-        write_institution_share_pages(all_events)
-    except Exception as e:
-        print(f"[ERROR] institution pages: {e}")
         traceback.print_exc()
 
     # Notifie Bing/Yandex des nouveautés du jour pour accélérer l'indexation.
