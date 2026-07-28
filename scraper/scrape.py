@@ -2652,9 +2652,14 @@ def main():
     try:
         fresh_urls = [f"{SITE_URL}/e/{e['id']}.html" for e in all_events
                       if e.get("added_at") == today_iso and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")]
-        # Ping aussi la home + sitemap + pages institution si on a des nouveautés
+        # Ping aussi la home + sitemap + hubs institution : leur liste de
+        # prochaines conférences a changé en même temps, et ce sont eux qui
+        # mènent Bing vers les nouvelles pages événement.
         if fresh_urls:
-            fresh_urls = [f"{SITE_URL}/", f"{SITE_URL}/sitemap.xml"] + fresh_urls
+            hubs = [f"{SITE_URL}/i/{f.name}"
+                    for f in sorted(INST_PAGES_DIR.glob("*.html"))]
+            fresh_urls = ([f"{SITE_URL}/", f"{SITE_URL}/sitemap.xml"]
+                          + hubs + fresh_urls)
             notify_indexnow(fresh_urls)
     except Exception as e:
         print(f"[WARN] IndexNow ping: {e}")
