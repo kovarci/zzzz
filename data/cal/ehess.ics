@@ -1,68 +1,68 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:EHESS · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:72b698668946@paris-academique
-DTSTAMP:20260812T100436Z
-DTSTART;VALUE=DATE:20260907
-DTEND;VALUE=DATE:20260908
-SUMMARY:École thématique : Mobilisations conservatrices et liberté d’expression
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:e340e58e8394@paris-academique
-DTSTAMP:20260812T100436Z
-DTSTART:20260921T140000
-DTEND:20260921T160000
-SUMMARY:Réunions d'information "Reprise d'études"
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:3058e8dd6ca3@paris-academique
-DTSTAMP:20260812T100436Z
-DTSTART:20260922T093000
-DTEND:20260922T113000
-SUMMARY:Journées de rentrée et d'intégration du 22 septembre au 8 octobre 2026
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:456348f971f0@paris-academique
-DTSTAMP:20260812T100436Z
-DTSTART:20260922T093000
-DTEND:20260922T113000
-SUMMARY:Fragments de soi : sources et récits de vie en Asie orientale
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:839834ae86e7@paris-academique
-DTSTAMP:20260812T100436Z
-DTSTART:20260924T143000
-DTEND:20260924T163000
-SUMMARY:Allez Savoir #7 : "L'argent. C'est-à-dire ?" du 24 au 26 septembre à Marseille
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:dd9a5174fcc3@paris-academique
-DTSTAMP:20260812T100436Z
-DTSTART:20261003T100000
-DTEND:20261003T120000
-SUMMARY:Raconter les mondes - Partager les savoirs
-DESCRIPTION:\nhttps://www.ehess.fr
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:EHESS · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:72b698668946@paris-academique
+DTSTAMP:20260813T053253Z
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+SUMMARY:École thématique : Mobilisations conservatrices et liberté d’expression
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:e340e58e8394@paris-academique
+DTSTAMP:20260813T053253Z
+DTSTART:20260921T140000
+DTEND:20260921T160000
+SUMMARY:Réunions d'information "Reprise d'études"
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:3058e8dd6ca3@paris-academique
+DTSTAMP:20260813T053253Z
+DTSTART:20260922T093000
+DTEND:20260922T113000
+SUMMARY:Journées de rentrée et d'intégration du 22 septembre au 8 octobre 2026
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:456348f971f0@paris-academique
+DTSTAMP:20260813T053253Z
+DTSTART:20260922T093000
+DTEND:20260922T113000
+SUMMARY:Fragments de soi : sources et récits de vie en Asie orientale
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:839834ae86e7@paris-academique
+DTSTAMP:20260813T053253Z
+DTSTART:20260924T143000
+DTEND:20260924T163000
+SUMMARY:Allez Savoir #7 : "L'argent. C'est-à-dire ?" du 24 au 26 septembre à Marseille
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:dd9a5174fcc3@paris-academique
+DTSTAMP:20260813T053253Z
+DTSTART:20261003T100000
+DTEND:20261003T120000
+SUMMARY:Raconter les mondes - Partager les savoirs
+DESCRIPTION:\nhttps://www.ehess.fr
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr
+END:VEVENT
+END:VCALENDAR
