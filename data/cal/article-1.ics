@@ -1,38 +1,38 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Article 1 · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:1c77cd9b5fa9@paris-academique
-DTSTAMP:20260815T100427Z
-DTSTART:20260924T183000
-DTEND:20260924T210000
-SUMMARY:Nantes - Soirée métier de la tech et scientifiques 🎉​ - 24-09-2026
-DESCRIPTION:Participe à une soirée de rencontre au sein de l'entreprise Valeuriad à Nantes 🤝​ Témoignages inspirant de femmes travaillant dans la tech et des domaines scientifiques\, speed coaching et cocktail au programme ☀️​ Seulement pour les étudiantes !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Nantes
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:6a1bb57a40ac@paris-academique
-DTSTAMP:20260815T100427Z
-DTSTART:20260924T183000
-DTEND:20260924T203000
-SUMMARY:Nantes - Soirée métier de la tech et des sciences avec Valeuriad - 24-09-2026
-DESCRIPTION:Soirée de rencontre avec des professionnels de la tech et du digital au sein de l'entreprise Valeuriad 🤝​ L'opportunité de rencontrer et de discuter avec des professionnelles de ce secteur\, de partager son CV\, d'en apprendre plus sur certains métiers..\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Nantes
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-BEGIN:VEVENT
-UID:bc6ce9a54db9@paris-academique
-DTSTAMP:20260815T100427Z
-DTSTART:20261013T180000
-DTEND:20261013T200000
-SUMMARY:Clermont-Ferrand - Soirée Court Métrage - 13-10-2026
-DESCRIPTION:Nous avons le plaisir de vous retrouver pour la 3ème édition de notre soirée court métrage. Rendez-vous le mardi 13 octobre à 18h à la Clermont School of Business.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Clermont-Ferrand
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Article 1 · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:1c77cd9b5fa9@paris-academique
+DTSTAMP:20260816T043048Z
+DTSTART:20260924T183000
+DTEND:20260924T210000
+SUMMARY:Nantes - Soirée métier de la tech et scientifiques 🎉​ - 24-09-2026
+DESCRIPTION:Participe à une soirée de rencontre au sein de l'entreprise Valeuriad à Nantes 🤝​ Témoignages inspirant de femmes travaillant dans la tech et des domaines scientifiques\, speed coaching et cocktail au programme ☀️​ Seulement pour les étudiantes !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Nantes
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:6a1bb57a40ac@paris-academique
+DTSTAMP:20260816T043048Z
+DTSTART:20260924T183000
+DTEND:20260924T203000
+SUMMARY:Nantes - Soirée métier de la tech et des sciences avec Valeuriad - 24-09-2026
+DESCRIPTION:Soirée de rencontre avec des professionnels de la tech et du digital au sein de l'entreprise Valeuriad 🤝​ L'opportunité de rencontrer et de discuter avec des professionnelles de ce secteur\, de partager son CV\, d'en apprendre plus sur certains métiers..\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Nantes
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:bc6ce9a54db9@paris-academique
+DTSTAMP:20260816T043048Z
+DTSTART:20261013T180000
+DTEND:20261013T200000
+SUMMARY:Clermont-Ferrand - Soirée Court Métrage - 13-10-2026
+DESCRIPTION:Nous avons le plaisir de vous retrouver pour la 3ème édition de notre soirée court métrage. Rendez-vous le mardi 13 octobre à 18h à la Clermont School of Business.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+LOCATION:Clermont-Ferrand
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+END:VEVENT
+END:VCALENDAR
