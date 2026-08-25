@@ -1,98 +1,108 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Sciences Po · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:a5a59c56f30b@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20260904
-DTEND;VALUE=DATE:20260905
-SUMMARY:Leçon inaugurale de l'École de droit par Nicolas Guillou
-DESCRIPTION:À l’occasion de sa rentrée solennelle\, l’École de droit est très honorée d'accueillir Nicolas Guillou\, Juge à la Cour pénale internationale.\nhttps://www.sciencespo.fr/fr/evenements/lecon-inaugurale-de-l-ecole-de-droit-par-nicolas-guillou/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/lecon-inaugurale-de-l-ecole-de-droit-par-nicolas-guillou/
-END:VEVENT
-BEGIN:VEVENT
-UID:59bfb0de8eb6@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20260908
-DTEND;VALUE=DATE:20260909
-SUMMARY:Représenter la mort en migration : arts et sciences sociales face à l’indicible
-DESCRIPTION:La bibliothèque de Sciences Po\, en partenariat avec le CERI\, organise une discussion à trois voix consacrée aux représentations artistiques de la mort en migration et aux formes de dialogue possibles entre recherche et création.\nhttps://www.sciencespo.fr/fr/evenements/representer-mort-migration/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/representer-mort-migration/
-END:VEVENT
-BEGIN:VEVENT
-UID:c85fe8b4f1db@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20260915
-DTEND;VALUE=DATE:20260916
-SUMMARY:Rencontre annuelle ELIPSS#3 – Doctorants\, panels et données d’enquêtes en sciences sociales
-DESCRIPTION:À l’occasion de son séminaire annuel\, le Centre de Données Socio-Politiques (CDSP) propose une matinée d’étude consacrée à un premier bilan de cette expérience et à la place des panels et des données d’enquêtes dans la formation doctorale en sciences sociales.\nhttps://www.sciencespo.fr/fr/evenements/rencontre-annuelle-elipss-3-doctorants-panels-et-donnees-d-enquete-en-sciences-sociales/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/rencontre-annuelle-elipss-3-doctorants-panels-et-donnees-d-enquete-en-sciences-sociales/
-END:VEVENT
-BEGIN:VEVENT
-UID:24b7e98e4b37@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:Passage de relais de Jérôme Ferrari à Tanguy Viel
-DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de la Maison des Arts & de la Création à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-END:VEVENT
-BEGIN:VEVENT
-UID:132b940e3309@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:Tanguy Viel - Passage de relais de la Chaire d'Écriture
-DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de Sciences Po à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-END:VEVENT
-BEGIN:VEVENT
-UID:32944db202b7@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:"Suis-je l'auteur de mes films ?" avec Christophe Honoré
-DESCRIPTION:Après Claire Denis\, Mathieu Amalric et Alice Diop\, Christophe Honoré devient le nouveau titulaire de la Chaire Cinéma de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
-END:VEVENT
-BEGIN:VEVENT
-UID:8d135b3888fb@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:"Le son inaugural" avec Laurent de Wilde
-DESCRIPTION:Pianiste\, compositeur\, producteur et homme de radio\, Laurent de Wilde devient le nouveau titulaire de la Chaire Arts vivants de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
-END:VEVENT
-BEGIN:VEVENT
-UID:0ed2fc3defe3@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Prix Penser le travail 2026
-DESCRIPTION:Le Monde et Sciences Po ont le plaisir de vous convier à la cérémonie de remise Prix Penser le travail\, fruit d'un travail réunissant les professionnels des RH et du conseil en management\, les chercheurs en sciences sociales et les étudiants du Master RH et gouvernance durable de Sciences Po.\nhttps://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:534610543f02@paris-academique
-DTSTAMP:20260824T141955Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:Protéger les sources : un statut pour la recherche
-DESCRIPTION:Programme détaillé de la journée d'étude.\nhttps://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sciences Po · Paris Académique
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:c4e306fc8bfb@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+SUMMARY:Conférence inaugurale de l'Ecole urbaine 2026
+DESCRIPTION:Cécile Duflot\, directrice générale d'Oxfam France et ancienne ministre de l'Aménagement du territoire et de la Décentralisation de France\nhttps://www.sciencespo.fr/fr/evenements/conference-inaugurale-de-l-ecole-urbaine-2026/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/conference-inaugurale-de-l-ecole-urbaine-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:a5a59c56f30b@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20260905
+SUMMARY:Leçon inaugurale de l'École de droit par Nicolas Guillou
+DESCRIPTION:À l’occasion de sa rentrée solennelle\, l’École de droit est très honorée d'accueillir Nicolas Guillou\, Juge à la Cour pénale internationale.\nhttps://www.sciencespo.fr/fr/evenements/lecon-inaugurale-de-l-ecole-de-droit-par-nicolas-guillou/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/lecon-inaugurale-de-l-ecole-de-droit-par-nicolas-guillou/
+END:VEVENT
+BEGIN:VEVENT
+UID:59bfb0de8eb6@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:Représenter la mort en migration : arts et sciences sociales face à l’indicible
+DESCRIPTION:La bibliothèque de Sciences Po\, en partenariat avec le CERI\, organise une discussion à trois voix consacrée aux représentations artistiques de la mort en migration et aux formes de dialogue possibles entre recherche et création.\nhttps://www.sciencespo.fr/fr/evenements/representer-mort-migration/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/representer-mort-migration/
+END:VEVENT
+BEGIN:VEVENT
+UID:c85fe8b4f1db@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+SUMMARY:Rencontre annuelle ELIPSS#3 – Doctorants\, panels et données d’enquêtes en sciences sociales
+DESCRIPTION:À l’occasion de son séminaire annuel\, le Centre de Données Socio-Politiques (CDSP) propose une matinée d’étude consacrée à un premier bilan de cette expérience et à la place des panels et des données d’enquêtes dans la formation doctorale en sciences sociales.\nhttps://www.sciencespo.fr/fr/evenements/rencontre-annuelle-elipss-3-doctorants-panels-et-donnees-d-enquete-en-sciences-sociales/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/rencontre-annuelle-elipss-3-doctorants-panels-et-donnees-d-enquete-en-sciences-sociales/
+END:VEVENT
+BEGIN:VEVENT
+UID:24b7e98e4b37@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Passage de relais de Jérôme Ferrari à Tanguy Viel
+DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de la Maison des Arts & de la Création à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+END:VEVENT
+BEGIN:VEVENT
+UID:132b940e3309@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Tanguy Viel - Passage de relais de la Chaire d'Écriture
+DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de Sciences Po à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+END:VEVENT
+BEGIN:VEVENT
+UID:32944db202b7@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:"Suis-je l'auteur de mes films ?" avec Christophe Honoré
+DESCRIPTION:Après Claire Denis\, Mathieu Amalric et Alice Diop\, Christophe Honoré devient le nouveau titulaire de la Chaire Cinéma de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
+END:VEVENT
+BEGIN:VEVENT
+UID:8d135b3888fb@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:"Le son inaugural" avec Laurent de Wilde
+DESCRIPTION:Pianiste\, compositeur\, producteur et homme de radio\, Laurent de Wilde devient le nouveau titulaire de la Chaire Arts vivants de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
+END:VEVENT
+BEGIN:VEVENT
+UID:0ed2fc3defe3@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Prix Penser le travail 2026
+DESCRIPTION:Le Monde et Sciences Po ont le plaisir de vous convier à la cérémonie de remise Prix Penser le travail\, fruit d'un travail réunissant les professionnels des RH et du conseil en management\, les chercheurs en sciences sociales et les étudiants du Master RH et gouvernance durable de Sciences Po.\nhttps://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:534610543f02@paris-academique
+DTSTAMP:20260825T043436Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Protéger les sources : un statut pour la recherche
+DESCRIPTION:Programme détaillé de la journée d'étude.\nhttps://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
+END:VEVENT
+END:VCALENDAR
