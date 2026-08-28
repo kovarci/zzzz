@@ -732,7 +732,11 @@ def extract_events_universal(html, institution, location_default, base_url) -> l
                      " [class*='seminaire' i], [class*='card' i], [class*='item' i],"
                      " [class*='lecture' i], [class*='cours' i], li[class*='program' i],"
                      " div[class*='program' i], [class*='teaser' i], [class*='evenement' i],"
-                     " [class*='manifestation' i], [class*='actualite' i], li[class*='result' i]")
+                     " [class*='manifestation' i], [class*='actualite' i], li[class*='result' i],"
+                     # Dauphine (TYPO3) : chaque événement est une ligne
+                     # Bootstrap nue dans .news-list — aucune classe parlante,
+                     # seul le lien porte 'card_link', et il n'a pas la date.
+                     " .news-list > .row")
     for container in soup.select(container_sel):
         d = parse_french_date_text(container.get_text(" ", strip=True))
         if not d or not in_window(d):
@@ -1450,11 +1454,27 @@ def scrape_article1(browser) -> list[dict]:
         print(f"   [WARN] goto Article 1: {e}")
     ctx.close()
 
+    def _campaign_list(res):
+        """L'API a déjà changé de forme : getAteliers renvoyait la liste
+        directement, getAllCampaign renvoie {"campaigns": [...]}."""
+        if isinstance(res, dict):
+            for k in ("campaigns", "ateliers", "result"):
+                if isinstance(res.get(k), list):
+                    return res[k]
+            return []
+        return res if isinstance(res, list) else []
+
     raw = []
     for _u, body in captured:
-        if (isinstance(body, list) and body and isinstance(body[0], dict)
-                and body[0].get("method") == "getAteliers"):
-            raw = body[0].get("result") or []
+        if not (isinstance(body, list) and body and isinstance(body[0], dict)):
+            continue
+        lst = _campaign_list(body[0].get("result"))
+        # On reconnaît le bon payload à sa FORME (des objets datés), pas au
+        # nom de la méthode : Article 1 l'a renommée une fois déjà
+        # (getAteliers -> getAllCampaign) et le scraper est tombé à 0 en
+        # silence pendant des semaines.
+        if lst and isinstance(lst[0], dict) and "StartDate" in lst[0]:
+            raw = lst
             break
     print(f"   {len(raw)} raw events")
 
@@ -1473,15 +1493,31 @@ def scrape_article1(browser) -> list[dict]:
             continue
         if d < CUTOFF or d > HORIZON:
             continue
-        title = clean_text(it.get("Name") or "")
+        # Name est le libellé technique « Ville - Titre - JJ-MM-AAAA » ;
+        # TECH_Nom_Campagne_saisie__c porte le titre propre saisi à la main.
+        title = clean_text(it.get("TECH_Nom_Campagne_saisie__c") or "")
+        if not title:
+            title = re.sub(r"\s*-\s*\d{2}-\d{2}-\d{4}\s*$", "",
+                           clean_text(it.get("Name") or ""))
+        # Saisies manuelles : titre entièrement encadré de guillemets droits,
+        # ou guillemet ouvrant resté orphelin. Les deux passent mal en carte
+        # comme en balise SEO.
+        if title.count('"') == 1 or (title.startswith('"') and title.endswith('"')):
+            title = title.replace('"', "").strip()
         if not title or is_junk_title(title):
             continue
         city = clean_text(it.get("Ville__c") or "")
         region = clean_text(it.get("Region_campagne__c") or "")
         is_digital = bool(it.get("A_distance__c")) or it.get("Physique_ou_Digital__c") == "Digital"
         loc = "En ligne" if is_digital else (city or region or "Paris")
+        # Les champs Description_*__c ont disparu de l'API : on reconstruit
+        # une phrase courte à partir de ce qui reste exposé.
         desc = strip_html(it.get("Description_Jeunes__c")
                           or it.get("Description_Benevoles__c") or "")[:400]
+        if not desc:
+            desc = " · ".join(b for b in (
+                clean_text(it.get("Type_evenement__c") or ""),
+                clean_text(it.get("Public__c") or "")) if b)
         key = (title[:60].lower(), d.isoformat())
         if key in seen:
             continue
@@ -1490,7 +1526,11 @@ def scrape_article1(browser) -> list[dict]:
             "Article 1", title, d,
             time_str=_norm_time(it.get("Heure_de_debut_text__c")),
             end_time=_norm_time(it.get("Heure_de_fin_texte__c")),
-            location=loc, desc=desc, url=ARTICLE1_URL,
+            location=loc, desc=desc,
+            # Lien direct vers l'inscription quand il existe : plus utile
+            # que la page calendrier générique.
+            url=(clean_text(it.get("Lien_inscription__c") or "").startswith("http")
+                 and clean_text(it["Lien_inscription__c"]) or ARTICLE1_URL),
             source_type="association", image=it.get("image_EVT__c") or "",
         ))
     print(f"   ✓ Total Article 1: {len(events)} events")
@@ -1605,17 +1645,18 @@ ARCHIVE_FILE = OUTPUT_FILE.parent / "events-archive.json"
 META_FILE = OUTPUT_FILE.parent / "meta.json"
 
 
-def update_meta(field: str) -> None:
-    """Stamp data/meta.json with the current UTC time for `field`.
-    Used by main() (`last_workflow_run`) and refresh_local.py
-    (`last_manual_run`) so the site can show 'last update' indicators.
-    Preserves the other field if present."""
+def update_meta(field: str, value=None) -> None:
+    """Stamp data/meta.json with the current UTC time for `field`, or with
+    `value` when one is given. Used by main() (`last_workflow_run`,
+    `fresh_counts`) and refresh_local.py (`last_manual_run`) so the site can
+    show 'last update' indicators. Preserves the other fields if present."""
     try:
         m = json.loads(META_FILE.read_text(encoding="utf-8"))
     except Exception:
         m = {}
     from datetime import timezone
-    m[field] = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    m[field] = (value if value is not None else
+                datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"))
     try:
         META_FILE.write_text(json.dumps(m, indent=2), encoding="utf-8")
     except Exception as e:
@@ -1647,6 +1688,7 @@ INSTITUTION_COORDS = {
     "Université PSL":            [48.8555, 2.3382],
     "Sorbonne Université":       [48.8479, 2.3433],
     "Sciences et Cultures":      [48.8479, 2.3433],   # Sorbonne (Paris 5e)
+    "Université Paris Dauphine": [48.8702, 2.2745],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -1661,13 +1703,28 @@ def looks_like_address(loc):
     return bool(_ADDR_RE.search(loc or ""))
 
 
+# Villes hors Paris déjà vues dans les données (Article 1 couvre toute la
+# France) : leur présence empêche d'ancrer la recherche sur Paris.
+_FR_CITY_RE = re.compile(
+    r"\b(nantes|bordeaux|lyon|marseille|toulouse|lille|strasbourg|montpellier|"
+    r"rennes|reims|nancy|metz|grenoble|dijon|angers|nice|clermont[- ]ferrand|"
+    r"saint[- ][ée]tienne|tours|orl[ée]ans|caen|rouen|amiens|limoges|"
+    r"besan[çc]on|poitiers|brest|le mans|avignon|mulhouse|perpignan|n[îi]mes|"
+    r"toulon|villeurbanne|aix[- ]en[- ]provence|roissy|la r[ée]union|"
+    r"guadeloupe|martinique|mayotte)\b", re.I)
+
+
 def _nominatim(sess, address):
     """Look up one address via OpenStreetMap Nominatim. Returns [lat, lng] or None."""
     if re.search(r"\bonline\b|en ligne|visio|webinaire|zoom|distanciel", address, re.I):
         return None
     q = address
     if "france" not in q.lower():
-        q = q + ("" if "paris" in q.lower() else ", Paris") + ", France"
+        # N'ancrer sur Paris que si aucune autre ville n'est nommée. Depuis
+        # qu'Article 1 remonte aussi ses événements de province, une adresse
+        # nantaise deviendrait sinon « …, Nantes, Paris, France ».
+        anchored = "paris" in q.lower() or _FR_CITY_RE.search(q)
+        q = q + ("" if anchored else ", Paris") + ", France"
     try:
         r = sess.get("https://nominatim.openstreetmap.org/search",
                      params={"q": q, "format": "json", "limit": 1, "countrycodes": "fr"},
@@ -1834,6 +1891,7 @@ INSTITUTION_URLS = {
     "Université PSL": "https://psl.eu",
     "Article 1": "https://article-1.eu",
     "Sciences et Cultures": "https://linktr.ee/Sciences_et_Cultures",
+    "Université Paris Dauphine": "https://dauphine.psl.eu",
 }
 
 
@@ -2035,6 +2093,7 @@ SHARE_INSTITUTIONS = [
     "Collège de France", "ENS Paris", "EHESS", "Institut Henri Poincaré",
     "Paris School of Economics", "Sciences Po", "Sorbonne Université",
     "Université PSL", "Article 1", "Sciences et Cultures",
+    "Université Paris Dauphine",
 ]
 
 
@@ -2557,6 +2616,17 @@ def main():
         finally:
             browser.close()
 
+    # Compteurs du scrape FRAIS, avant carry-forward : c'est le seul instant
+    # où l'on voit ce que chaque source a réellement rendu aujourd'hui. Une
+    # fois le report appliqué, une source morte garde ses anciens événements
+    # et paraît vivante — c'est ainsi qu'Article 1 est resté cassé sans
+    # déclencher la moindre alerte. check_health.py lit ces compteurs.
+    fresh_counts = {}
+    for e in all_events:
+        k = e.get("institution") or "?"
+        fresh_counts[k] = fresh_counts.get(k, 0) + 1
+    update_meta("fresh_counts", fresh_counts)
+
     # Carry-forward: union this run with the still-upcoming events from the
     # previous run, per known source (and Luma). A flaky scrape (slow site, a
     # page that timed out, partial pagination, a geo-blocked Luma) therefore can
@@ -2566,6 +2636,7 @@ def main():
     KNOWN_SOURCES = {
         "Institut Henri Poincaré", "Collège de France", "Paris School of Economics",
         "Université PSL", "EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
+        "Université Paris Dauphine",
     }
     present_ids = {e.get("id") for e in all_events}
     today_iso = TODAY.isoformat()

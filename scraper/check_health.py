@@ -16,7 +16,7 @@ CRITICAL = ["Institut Henri Poincaré", "Collège de France",
             "Paris School of Economics", "Université PSL"]
 # Smaller sources — worth a heads-up if they vanish, but not a hard failure.
 WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
-         "Article 1", "Sciences et Cultures"]
+         "Article 1", "Sciences et Cultures", "Université Paris Dauphine"]
 
 
 def main():
@@ -30,17 +30,36 @@ def main():
     for e in events:
         counts[e.get("institution", "?")] = counts.get(e.get("institution", "?"), 0) + 1
 
-    for s in WATCH:
-        if counts.get(s, 0) == 0:
-            print(f"::warning::Source à vérifier — « {s} » renvoie 0 événement")
+    # events.json est écrit APRÈS le carry-forward : une source morte y garde
+    # ses anciens événements et paraît vivante. Article 1 est ainsi resté
+    # cassé sans jamais déclencher d'alerte. fresh_counts, écrit par le
+    # scraper avant le report, dit ce que chaque source a rendu aujourd'hui.
+    try:
+        meta = json.loads((DATA.parent / "meta.json").read_text(encoding="utf-8"))
+        fresh = meta.get("fresh_counts") or {}
+    except Exception:
+        fresh = {}
 
-    broken = [s for s in CRITICAL if counts.get(s, 0) == 0]
+    def live(source):
+        """Nombre ramené aujourd'hui ; retombe sur events.json si le scraper
+        n'a pas encore écrit fresh_counts (première exécution)."""
+        return fresh.get(source, counts.get(source, 0)) if fresh else counts.get(source, 0)
+
+    for s in WATCH:
+        if live(s) == 0:
+            kept = counts.get(s, 0)
+            extra = f" (events.json en garde {kept} d'un run précédent)" if kept else ""
+            print(f"::warning::Source à vérifier — « {s} » n'a rien ramené{extra}")
+
+    broken = [s for s in CRITICAL if live(s) == 0]
     for s in broken:
-        print(f"::error::Source cassée — « {s} » renvoie 0 événement")
+        print(f"::error::Source cassée — « {s} » n'a rien ramené ce run")
 
     print(f"Total : {len(events)} événements")
+    hdr = "ramenés" if fresh else "en base"
+    print(f"  {hdr:>8}  {'en base':>8}  source")
     for s in CRITICAL + WATCH:
-        print(f"  {counts.get(s, 0):4d}  {s}")
+        print(f"  {live(s):8d}  {counts.get(s, 0):8d}  {s}")
 
     if broken:
         print(f"\n{len(broken)} source(s) critique(s) cassée(s).")

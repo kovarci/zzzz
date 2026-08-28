@@ -6,33 +6,93 @@ METHOD:PUBLISH
 X-WR-CALNAME:Article 1 · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:1c77cd9b5fa9@paris-academique
-DTSTAMP:20260828T200911Z
+UID:8729154c1e58@paris-academique
+DTSTAMP:20260828T204217Z
+DTSTART:20260907T180000
+DTEND:20260907T200000
+SUMMARY:Soirée du Mentorat avec AXA
+DESCRIPTION:Soirée dédiée au Mentorat 🤝 AXA a le plaisir de vous inviter à une soirée spéciale dédiée au Mentorat\, le lundi 7 septembre de 18h00 à 20h00 ! 📍 Adresse : 25 avenue Matignon 75008\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEGbx&id=a1NIV0000098qCL&base=base6
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEGbx&id=a1NIV0000098qCL&base=base6
+END:VEVENT
+BEGIN:VEVENT
+UID:7ab26494917f@paris-academique
+DTSTAMP:20260828T204217Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
+SUMMARY:Saint-Denis - Speed Coaching - Festival UNIQUE X AXA - 12-09-2026
+DESCRIPTION:Le Festival UNIQUES et AXA vous donnent rendez-vous le 12 septembre à la Cité du Cinéma pour des sessions individuelles de mentorat de 30 minutes avec des cadres dirigeants d’AXA.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEEoe&id=a1NIV00000ASSGX&base=base6
+LOCATION:Saint-Denis
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEEoe&id=a1NIV00000ASSGX&base=base6
+END:VEVENT
+BEGIN:VEVENT
+UID:3b8774f99266@paris-academique
+DTSTAMP:20260828T204217Z
+DTSTART:20260914T090000
+DTEND:20260914T123000
+SUMMARY:Job coaching - AIR France
+DESCRIPTION:Speed-coaching & Découverte des métiers ! ✈️ Air France vous ouvre les portes de son siège social pour une matinée d'échanges privilégiés ! Au programme : Speed coaching et decouverte métiers en uniforme et IT.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEN7B&id=a1NIV00000ASSGX&base=base6
+LOCATION:Roissy Charles de Gaulle
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEN7B&id=a1NIV00000ASSGX&base=base6
+END:VEVENT
+BEGIN:VEVENT
+UID:8afdf131efd0@paris-academique
+DTSTAMP:20260828T204217Z
+DTSTART:20260924T160000
+DTEND:20260924T200000
+SUMMARY:ACCENTURE -Simulations d'entretiens & Initiation networking
+DESCRIPTION:Tu as envie de prendre confiance quand tu te présentes en entretien ou lors de rencontres professionnelles ? Participe à cette session de simulations d'entretien + d'initiation au networking avec Accenture !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001kljGT&id=a1NIV00000ASSGX&base=base6
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001kljGT&id=a1NIV00000ASSGX&base=base6
+END:VEVENT
+BEGIN:VEVENT
+UID:2ce494558f97@paris-academique
+DTSTAMP:20260828T204217Z
 DTSTART:20260924T183000
 DTEND:20260924T210000
-SUMMARY:Nantes - Soirée métier de la tech et scientifiques 🎉​ - 24-09-2026
-DESCRIPTION:Participe à une soirée de rencontre au sein de l'entreprise Valeuriad à Nantes 🤝​ Témoignages inspirant de femmes travaillant dans la tech et des domaines scientifiques\, speed coaching et cocktail au programme ☀️​ Seulement pour les étudiantes !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+SUMMARY:Soirée métier de la tech et scientifiques 🎉​
+DESCRIPTION:Participe à une soirée de rencontre au sein de l'entreprise Valeuriad à Nantes 🤝​ Témoignages inspirant de femmes travaillant dans la tech et des domaines scientifiques\, speed coaching et cocktail au programme ☀️​ Seulement pour les étudiantes !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001jC79r&id=a1NIV00000B1JiD&base=base6
 LOCATION:Nantes
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001jC79r&id=a1NIV00000B1JiD&base=base6
 END:VEVENT
 BEGIN:VEVENT
-UID:6a1bb57a40ac@paris-academique
-DTSTAMP:20260828T200911Z
-DTSTART:20260924T183000
-DTEND:20260924T203000
-SUMMARY:Nantes - Soirée métier de la tech et des sciences avec Valeuriad - 24-09-2026
-DESCRIPTION:Soirée de rencontre avec des professionnels de la tech et du digital au sein de l'entreprise Valeuriad 🤝​ L'opportunité de rencontrer et de discuter avec des professionnelles de ce secteur\, de partager son CV\, d'en apprendre plus sur certains métiers..\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
-LOCATION:Nantes
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+UID:ee2538b9d87c@paris-academique
+DTSTAMP:20260828T204217Z
+DTSTART:20260928T190000
+DTEND:20260928T210000
+SUMMARY:Boost ta candidature n°1 - ta recherche d'alternance
+DESCRIPTION:Tu galères pour trouver un contrat d'alternance pour cette année ? 2 heures avec l'association WALT - spécialiste de l'apprentissage Viens avec ton CV\, tes candidatures\, et on regarde ensemble comment te donner un coup de main dans tes candidatures.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mt5is&id=a1NIV00000ASSGX&base=base6
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mt5is&id=a1NIV00000ASSGX&base=base6
 END:VEVENT
 BEGIN:VEVENT
-UID:bc6ce9a54db9@paris-academique
-DTSTAMP:20260828T200911Z
+UID:ee454c2e4d8a@paris-academique
+DTSTAMP:20260828T204217Z
+DTSTART:20261012T063000
+DTEND:20261012T080000
+SUMMARY:WEBINAIRE LINKEDIN : DEVELOPPER SON RESEAU PRO
+DESCRIPTION:Au cours de ce webinaire\, découvrez comment utiliser LinkedIn de manière stratégique pour élargir votre réseau professionnel\, valoriser votre profil et entrer en contact avec les bonnes personnes\, sans démarche commerciale intrusive.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXduY&id=a1NIV00000BSSuH&base=base6
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXduY&id=a1NIV00000BSSuH&base=base6
+END:VEVENT
+BEGIN:VEVENT
+UID:2a7b61c6ded4@paris-academique
+DTSTAMP:20260828T204217Z
 DTSTART:20261013T180000
 DTEND:20261013T200000
-SUMMARY:Clermont-Ferrand - Soirée Court Métrage - 13-10-2026
-DESCRIPTION:Nous avons le plaisir de vous retrouver pour la 3ème édition de notre soirée court métrage. Rendez-vous le mardi 13 octobre à 18h à la Clermont School of Business.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+SUMMARY:Soirée Court Métrage
+DESCRIPTION:Nous avons le plaisir de vous retrouver pour la 3ème édition de notre soirée court métrage. Rendez-vous le mardi 13 octobre à 18h à la Clermont School of Business.\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001i2SXq&id=a1NIV00000Axgjp&base=base6
 LOCATION:Clermont-Ferrand
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001i2SXq&id=a1NIV00000Axgjp&base=base6
+END:VEVENT
+BEGIN:VEVENT
+UID:f8ae1b7ffcd2@paris-academique
+DTSTAMP:20260828T204217Z
+DTSTART:20261014T183000
+DTEND:20261014T223000
+SUMMARY:Apéro de rentrée 🎉
+DESCRIPTION:La rentrée approche\, et nous avons hâte de vous retrouver pour l’événement incontournable de l’année : l’Apéro de rentrée !\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWDf&id=a1NIV00000BUvH3&base=base6
+LOCATION:Ile-de-France
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWDf&id=a1NIV00000BUvH3&base=base6
 END:VEVENT
 END:VCALENDAR
