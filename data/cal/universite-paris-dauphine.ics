@@ -7,7 +7,7 @@ X-WR-CALNAME:Université Paris Dauphine · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:69795a53750b@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:Leçon inaugurale 2026 : Les enjeux écologiques du XXIe siècle
@@ -16,8 +16,18 @@ LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassigny\,
 URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/lecon-inaugurale-2026-les-enjeux-ecologiques-du-xxie-siecle
 END:VEVENT
 BEGIN:VEVENT
+UID:60200df71963@paris-academique
+DTSTAMP:20260904T082443Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:Séminaire européen-japonais sur l’avenir de la gouvernance du relèvement
+DESCRIPTION:Le 21 septembre 2026\nhttps://dauphine.psl.eu/dauphine/media-et-communication/article/seminaire-europeen-japonais-sur-lavenir-de-la-gouvernance-du-relevement
+LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassigny\, Paris 16e
+URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/seminaire-europeen-japonais-sur-lavenir-de-la-gouvernance-du-relevement
+END:VEVENT
+BEGIN:VEVENT
 UID:17a24b971783@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
 SUMMARY:Soirée " La rentrée de l’entrepreneuriat "
@@ -27,7 +37,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/soiree-la-re
 END:VEVENT
 BEGIN:VEVENT
 UID:1fb55b372a0a@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
 SUMMARY:Afterworks 2026 : rencontrez\, échangez\, développez votre réseau
@@ -37,7 +47,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/afterworks-2
 END:VEVENT
 BEGIN:VEVENT
 UID:9f7c21b2b4b0@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
 SUMMARY:L’Âge du Mystère : étude de tendances & nouvelles désirabilités du luxe
@@ -47,7 +57,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/lage-du-myst
 END:VEVENT
 BEGIN:VEVENT
 UID:7c48337aa72b@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Masterclass : Des terres minées\, 11 enquêtes sur les sols en France
@@ -57,7 +67,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/masterclass-
 END:VEVENT
 BEGIN:VEVENT
 UID:53083ce3c28c@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Projection : Éclaireurs\, réinventer le travail face aux défis écologiques
@@ -67,7 +77,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/projection-e
 END:VEVENT
 BEGIN:VEVENT
 UID:e199a489871d@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Rencontre autour du DU Passerelle avec l'association Fleur de Bitume
@@ -77,7 +87,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/rencontre-au
 END:VEVENT
 BEGIN:VEVENT
 UID:efec2a64f47a@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Entreprises familiales : transmettre pour la souveraineté économique
@@ -87,7 +97,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/entreprises-
 END:VEVENT
 BEGIN:VEVENT
 UID:448641d959dd@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Remise du Prix du journalisme environnemental 2026
@@ -97,7 +107,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/prix-du-jour
 END:VEVENT
 BEGIN:VEVENT
 UID:0ce4704d1217@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Projection : (In)Action\, un documentaire sur l'engagement climatique
@@ -107,7 +117,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/projection-d
 END:VEVENT
 BEGIN:VEVENT
 UID:c39d980f00bf@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Lancement de la seconde Convention Citoyenne Etudiante
@@ -117,7 +127,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/lancement-de
 END:VEVENT
 BEGIN:VEVENT
 UID:e680bfd1b04c@paris-academique
-DTSTAMP:20260903T082841Z
+DTSTAMP:20260904T082443Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Projection : À contre champs\, un mémoire d'étudiantes devenu documentaire
