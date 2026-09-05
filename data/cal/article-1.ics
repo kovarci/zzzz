@@ -7,7 +7,7 @@ X-WR-CALNAME:Article 1 · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:8729154c1e58@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20260907T180000
 DTEND:20260907T200000
 SUMMARY:Soirée du Mentorat avec AXA
@@ -17,7 +17,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEGbx&id=
 END:VEVENT
 BEGIN:VEVENT
 UID:7ab26494917f@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART;VALUE=DATE:20260912
 DTEND;VALUE=DATE:20260913
 SUMMARY:Saint-Denis - Speed Coaching - Festival UNIQUE X AXA - 12-09-2026
@@ -27,7 +27,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEEoe&id=
 END:VEVENT
 BEGIN:VEVENT
 UID:3b8774f99266@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20260914T090000
 DTEND:20260914T123000
 SUMMARY:Job coaching - AIR France
@@ -37,7 +37,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEN7B&id=
 END:VEVENT
 BEGIN:VEVENT
 UID:8afdf131efd0@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20260924T160000
 DTEND:20260924T200000
 SUMMARY:ACCENTURE -Simulations d'entretiens & Initiation networking
@@ -47,7 +47,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001kljGT&id=
 END:VEVENT
 BEGIN:VEVENT
 UID:2ce494558f97@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20260924T183000
 DTEND:20260924T210000
 SUMMARY:Soirée métier de la tech et scientifiques 🎉​
@@ -57,7 +57,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001jC79r&id=
 END:VEVENT
 BEGIN:VEVENT
 UID:ee2538b9d87c@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20260928T190000
 DTEND:20260928T210000
 SUMMARY:Boost ta candidature n°1 - ta recherche d'alternance
@@ -66,8 +66,28 @@ LOCATION:Paris
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mt5is&id=a1NIV00000ASSGX&base=base6
 END:VEVENT
 BEGIN:VEVENT
+UID:4ac270b9f6e4@paris-academique
+DTSTAMP:20260905T080110Z
+DTSTART:20261001T183000
+DTEND:20261001T210000
+SUMMARY:Temps convivial de rentrée
+DESCRIPTION:Nous vous donnons rendez-vous pour un temps convivial de rentrée à Rennes ! 📅 Jeudi 1 octobre à 18h30 📍 Rennes (lieu à définir en fonction des inscriptions)\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001nkDC4&id=a1NIV000009V9Hx&base=base6
+LOCATION:Rennes
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001nkDC4&id=a1NIV000009V9Hx&base=base6
+END:VEVENT
+BEGIN:VEVENT
+UID:2db1e11291a0@paris-academique
+DTSTAMP:20260905T080110Z
+DTSTART:20261006T183000
+DTEND:20261006T210000
+SUMMARY:Temps convivial de rentrée
+DESCRIPTION:Nous vous donnons rendez-vous pour un temps convivial de rentrée à Nantes ! 📅 Mardi 6 octobre à 18h30 📍Nantes (lieu à définir en fonction des inscriptions)\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001nd98P&id=a1NIV000009I2vp&base=base6
+LOCATION:Nantes
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001nd98P&id=a1NIV000009I2vp&base=base6
+END:VEVENT
+BEGIN:VEVENT
 UID:ee454c2e4d8a@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20261012T063000
 DTEND:20261012T080000
 SUMMARY:WEBINAIRE LINKEDIN : DEVELOPPER SON RESEAU PRO
@@ -77,7 +97,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXduY&id=
 END:VEVENT
 BEGIN:VEVENT
 UID:2a7b61c6ded4@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20261013T180000
 DTEND:20261013T200000
 SUMMARY:Soirée Court Métrage
@@ -87,7 +107,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001i2SXq&id=
 END:VEVENT
 BEGIN:VEVENT
 UID:f8ae1b7ffcd2@paris-academique
-DTSTAMP:20260904T082443Z
+DTSTAMP:20260905T080110Z
 DTSTART:20261014T183000
 DTEND:20261014T223000
 SUMMARY:Apéro de rentrée 🎉
