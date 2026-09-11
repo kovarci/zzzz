@@ -6,38 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sciences Po · Paris Académique
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:394733c640c9@paris-academique
-DTSTAMP:20260910T083808Z
-DTSTART;VALUE=DATE:20260909
-DTEND;VALUE=DATE:20260910
-SUMMARY:Inaugural Lesson 2026 - PSIA at 15: The Future of International Affairs
-DESCRIPTION:Join us for a conversation with the three successive deans of our School about how much the world has changed in the last 15 years and the future of international affairs.\nhttps://www.sciencespo.fr/fr/evenements/psia-at-15-the-future-of-international-affairs/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/psia-at-15-the-future-of-international-affairs/
-END:VEVENT
-BEGIN:VEVENT
-UID:43a4ae3970a7@paris-academique
-DTSTAMP:20260910T083808Z
-DTSTART;VALUE=DATE:20260910
-DTEND;VALUE=DATE:20260911
-SUMMARY:Leçon inaugurale d'Elian Peltier à l'École de journalisme
-DESCRIPTION:L'École de journalisme de Sciences Po est honorée d'accueillir pour sa leçon inaugurale de la rentrée 2026 Elian Peltier "Stepping Outside: International Reporting"\nhttps://www.sciencespo.fr/fr/evenements/la-lecon-inaugurale-d-elian-peltier/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/la-lecon-inaugurale-d-elian-peltier/
-END:VEVENT
-BEGIN:VEVENT
-UID:91f07b7390af@paris-academique
-DTSTAMP:20260910T083808Z
-DTSTART;VALUE=DATE:20260910
-DTEND;VALUE=DATE:20260911
-SUMMARY:Leçon inaugurale d'Elian Peltier à l'Ecole de journalisme
-DESCRIPTION:L'École de journalisme de Sciences Po est honorée d'accueillir pour sa leçon inaugurale de la rentrée 2026 Elian Peltier "Stepping Outside: International Reporting"\nhttps://www.sciencespo.fr/fr/evenements/la-lecon-inaugurale-d-elian-peltier/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/la-lecon-inaugurale-d-elian-peltier/
-END:VEVENT
-BEGIN:VEVENT
 UID:c85fe8b4f1db@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260915
 DTEND;VALUE=DATE:20260916
 SUMMARY:Rencontre annuelle ELIPSS#3 – Doctorants\, panels et données d’enquêtes en sciences sociales
@@ -47,7 +17,7 @@ URL:https://www.sciencespo.fr/fr/evenements/rencontre-annuelle-elipss-3-doctoran
 END:VEVENT
 BEGIN:VEVENT
 UID:6b3c3ee08ec5@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
 SUMMARY:Les Grandes Conférences : Yann Le Cun\, président exécutif d’Advanced Machine Intelligence et lauréat du prix Turing
@@ -57,7 +27,7 @@ URL:https://www.sciencespo.fr/fr/evenements/les-grandes-conferences-yann-le-cun-
 END:VEVENT
 BEGIN:VEVENT
 UID:821e56e8ed57@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:Visite guidée “Le Paris Noir”: a guided tour of the Black heritage of Paris
@@ -67,7 +37,7 @@ URL:https://www.sciencespo.fr/fr/evenements/visite-guidee-le-paris-noir-a-guided
 END:VEVENT
 BEGIN:VEVENT
 UID:5af4d5d713e3@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:Remise du prix du livre Chaire d'études sur le fait religieux
@@ -77,7 +47,7 @@ URL:https://www.sciencespo.fr/fr/evenements/remise-du-prix-du-livre-chaire-d-etu
 END:VEVENT
 BEGIN:VEVENT
 UID:24b7e98e4b37@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:Passage de relais de Jérôme Ferrari à Tanguy Viel
@@ -87,7 +57,7 @@ URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:132b940e3309@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:Tanguy Viel - Passage de relais de la Chaire d'Écriture
@@ -97,7 +67,7 @@ URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:19cc6720d169@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 SUMMARY:The student-led Gen Z mobilization in India and its socio-political impact
@@ -106,8 +76,18 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/the-student-led-gen-z-mobilization-in-india-and-its-socio-political-impact/
 END:VEVENT
 BEGIN:VEVENT
+UID:558326286d85@paris-academique
+DTSTAMP:20260911T083013Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:Table ronde & défilé de mode - Coutures africaines. Mode\, gestes\, héritages - Acte II
+DESCRIPTION:Pour la deuxième année consécutive l’Africa Programme de Sciences Po s’associe au CCMC pour une journée d’exploration collective\, de réflexion sur la création de mode africaine.\nhttps://www.sciencespo.fr/fr/evenements/table-ronde-and-defile-de-mode-coutures-africaines-mode-gestes-heritages-acte-ii/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/table-ronde-and-defile-de-mode-coutures-africaines-mode-gestes-heritages-acte-ii/
+END:VEVENT
+BEGIN:VEVENT
 UID:48ed850803b3@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
 SUMMARY:Matinées du CEVIPOF : Dialogue sur le fascisme
@@ -117,7 +97,7 @@ URL:https://www.sciencespo.fr/fr/evenements/matinees-du-cevipof-dialogue-sur-le-
 END:VEVENT
 BEGIN:VEVENT
 UID:d5baa1519fe9@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
 SUMMARY:Café de la donnée : Pourquoi les métadonnées sont la clé de vos données de recherche
@@ -127,7 +107,7 @@ URL:https://www.sciencespo.fr/fr/evenements/cafe-de-la-donnee-metadonnées-clé-
 END:VEVENT
 BEGIN:VEVENT
 UID:909645890a3a@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
 SUMMARY:Debating the State in the Middle East and Beyond: Political Frameworks in a Changing World Order
@@ -137,7 +117,7 @@ URL:https://www.sciencespo.fr/fr/evenements/debating-the-state-in-the-middle-eas
 END:VEVENT
 BEGIN:VEVENT
 UID:f7272564bdf4@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
 SUMMARY:Nouveau séminaire « L’État de droit dans tous ses états »
@@ -147,7 +127,7 @@ URL:https://www.sciencespo.fr/fr/evenements/lancement-d-un-nouveau-seminaire-l-e
 END:VEVENT
 BEGIN:VEVENT
 UID:12e054c2811e@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
 SUMMARY:Michel Foucault : Iran\, quand la terre tremble. Reportage 1978-1979
@@ -157,7 +137,7 @@ URL:https://www.sciencespo.fr/fr/evenements/michel-foucault-iran-quand-la-terre-
 END:VEVENT
 BEGIN:VEVENT
 UID:32944db202b7@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:"Suis-je l'auteur de mes films ?" avec Christophe Honoré
@@ -167,7 +147,7 @@ URL:https://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-
 END:VEVENT
 BEGIN:VEVENT
 UID:67d5769d1a8a@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:How is the World Led when Populist Lead ?
@@ -177,7 +157,7 @@ URL:https://www.sciencespo.fr/fr/evenements/who-leads-when-populists-leads-the-w
 END:VEVENT
 BEGIN:VEVENT
 UID:c6bfcc3a9c3d@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Forum Carrières 2026
@@ -186,8 +166,18 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/forum-carrieres-2026/
 END:VEVENT
 BEGIN:VEVENT
+UID:a8acdcf36d63@paris-academique
+DTSTAMP:20260911T083013Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Taking Stock of the Global IR Debate: What Is the “Non-West”?
+DESCRIPTION:Inaugural session of the new CERI seminar: "Global IR in the planetary era"\nhttps://www.sciencespo.fr/fr/evenements/taking-stock-of-the-global-ir-debate-what-is-the-non-west/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/taking-stock-of-the-global-ir-debate-what-is-the-non-west/
+END:VEVENT
+BEGIN:VEVENT
 UID:3066cb5797dd@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Vers la dénumérisation ?
@@ -197,7 +187,7 @@ URL:https://www.sciencespo.fr/fr/evenements/vers-la-denumerisation/
 END:VEVENT
 BEGIN:VEVENT
 UID:8d135b3888fb@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:"Le son inaugural" avec Laurent de Wilde
@@ -207,7 +197,7 @@ URL:https://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wil
 END:VEVENT
 BEGIN:VEVENT
 UID:a13f9073cb15@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cities Ablaze: Tales of the December 2007 Riots in Karachi
@@ -216,8 +206,18 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-december-2007-riots-in-karachi/
 END:VEVENT
 BEGIN:VEVENT
+UID:d2c2e4e326fb@paris-academique
+DTSTAMP:20260911T083013Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:L’affaire des viols de Mazan : Quels héritages pour la justice et la société?
+DESCRIPTION:Table-ronde en présence de Maîtres Antoine Camus et Babonneau\, avocats de Gisèle Pélicot\, Maître Béatrice Zavarro\, avocate de Dominique Pélicot\, Marie Mercat-Bruns\, Professeure des Universités\, Sciences Po (Ecole de droit)\, membre du comité de direction de PRESAGE. Mardi 13 octobre 2026\, 19h15-21h15 27 rue Saint-Guillaume\, 75007 Paris\, amphithéâtre Albert Sorel & Leroy Beaulieu\nhttps://www.sciencespo.fr/fr/evenements/l-affaire-des-viols-de-mazan-quels-heritages-pour-la-justice-et-la-societe/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/l-affaire-des-viols-de-mazan-quels-heritages-pour-la-justice-et-la-societe/
+END:VEVENT
+BEGIN:VEVENT
 UID:0ed2fc3defe3@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Prix Penser le travail 2026
@@ -227,7 +227,7 @@ URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:611dadba4fbb@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Cérémonie du Collège universitaire / Undergraduate College Award Ceremony
@@ -237,7 +237,7 @@ URL:https://www.sciencespo.fr/fr/evenements/ceremonie-du-college-universitaire-u
 END:VEVENT
 BEGIN:VEVENT
 UID:534610543f02@paris-academique
-DTSTAMP:20260910T083808Z
+DTSTAMP:20260911T083013Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Protéger les sources : un statut pour la recherche
