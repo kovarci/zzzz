@@ -1976,6 +1976,16 @@ def _event_jsonld(ev):
     return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 
 
+def _series_key(ev):
+    """(institution, titre sans le « (n) ») : regroupe les séances d'un cycle."""
+    base = re.sub(r"\s*\(\d+\)\s*", " ", ev.get("title", "") or "").strip()
+    # Collège de France colle le nom de l'intervenant à la fin du titre.
+    sp = (ev.get("speaker") or "").strip()
+    if sp and base.endswith(sp):
+        base = base[:-len(sp)].strip()
+    return (ev.get("institution", ""), base)
+
+
 def write_event_pages(events):
     """One small static page per event (e/<id>.html): Open Graph tags for a
     proper link preview on WhatsApp/Discord/Twitter, plus REAL visible content
@@ -1984,6 +1994,31 @@ def write_event_pages(events):
     redirect by crawlers and never indexed. A prominent button sends humans
     to the calendar app with the event modal open."""
     EVENT_PAGES_DIR.mkdir(exist_ok=True)
+    today_iso = TODAY.isoformat()
+    # Maillage interne : Search Console classait une partie des pages en
+    # « Explorée, actuellement non indexée » — pages trop minces (description
+    # de 30 caractères) et quasi identiques d'une séance à l'autre d'un même
+    # cycle (« Cours X (1) », « (2) »…), sans aucun lien sortant à part la
+    # home. On relie chaque page à son hub institution, aux autres séances du
+    # cycle et aux prochaines conférences de la même institution : contenu
+    # unique par page + Google découvre les pages autrement que via le sitemap.
+    hubs = {slugify(i) for i in SHARE_INSTITUTIONS
+            if (INST_PAGES_DIR / f"{slugify(i)}.html").exists()}
+    upcoming = [e for e in events if e.get("date", "") >= today_iso
+                and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")]
+    upcoming.sort(key=lambda e: (e.get("date", ""), e.get("time", "")))
+    by_inst, by_series = {}, {}
+    for e in upcoming:
+        by_inst.setdefault(e.get("institution", ""), []).append(e)
+        by_series.setdefault(_series_key(e), []).append(e)
+
+    def _links(evts, cls):
+        items = "".join(
+            f'<li><a href="{e["id"]}.html">{_esc_attr(e.get("title", ""))}</a>'
+            f' <span class="d">{_esc_attr(_date_fr(e.get("date", "")))}</span></li>'
+            for e in evts)
+        return f'<ul class="{cls}">{items}</ul>' if items else ""
+
     keep = set()
     for ev in events:
         eid = ev.get("id") or ""
@@ -1992,6 +2027,21 @@ def write_event_pages(events):
         if f"{eid}.html" in keep:
             continue
         keep.add(f"{eid}.html")
+        inst_raw = ev.get("institution", "")
+        inst_slug = slugify(inst_raw)
+        hub_url = f"{SITE_URL}/i/{inst_slug}.html" if inst_slug in hubs else ""
+        # Autres séances du même cycle (même titre sans le numéro), puis
+        # d'autres conférences de l'institution — 5 max chacune, hors self.
+        series = [e for e in by_series.get(_series_key(ev), []) if e["id"] != eid][:5]
+        series_ids = {e["id"] for e in series}
+        others = [e for e in by_inst.get(inst_raw, [])
+                  if e["id"] != eid and e["id"] not in series_ids][:5]
+        n_series = len(by_series.get(_series_key(ev), []))
+        m = re.search(r"\((\d+)\)", ev.get("title", "") or "")
+        series_note = ""
+        if m and n_series > 1:
+            series_note = (f"Séance {m.group(1)} du cycle « {_esc_attr(_series_key(ev)[1])} »"
+                           f" — {n_series} séances programmées.")
         title = _esc_attr(ev.get("title"))
         date_label = _date_fr(ev.get("date", "")) + (f" à {ev['time']}" if ev.get("time") else "")
         inst = _esc_attr(ev.get("institution", ""))
@@ -2014,8 +2064,23 @@ def write_event_pages(events):
         meta_desc = _esc_attr((". ".join(parts) + ".")[:155])
         img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
         ext = _esc_attr(ev.get("url") or "")
-        target = f"../index.html?event={eid}"
+        # « /?event= » et non « ../index.html?event= » : sinon Google découvre
+        # des milliers de variantes index.html?… d'une même page.
+        target = f"/?event={eid}"
         jsonld = _event_jsonld(ev)
+        crumbs = [("Accueil", f"{SITE_URL}/")]
+        if hub_url:
+            crumbs.append((inst_raw, hub_url))
+        crumbs.append((ev.get("title", ""), f"{SITE_URL}/e/{eid}.html"))
+        crumb_ld = json.dumps({
+            "@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "name": n, "item": u}
+                for i, (n, u) in enumerate(crumbs)]}, ensure_ascii=False).replace("</", "<\\/")
+        crumb_html = " › ".join(
+            f'<a href="{u}">{_esc_attr(n)}</a>' if i < len(crumbs) - 1 else _esc_attr(n)
+            for i, (n, u) in enumerate(crumbs))
+        inst_html = (f'<a href="{hub_url}">{inst}</a>' if hub_url else inst)
         page = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2036,6 +2101,7 @@ def write_event_pages(events):
 <meta name="twitter:description" content="{meta_desc}">
 <meta name="twitter:image" content="{img}">
 <script type="application/ld+json">{jsonld}</script>
+<script type="application/ld+json">{crumb_ld}</script>
 <style>
 body{{font-family:Inter,system-ui,sans-serif;background:#07070d;color:#ececf2;margin:0;
 display:flex;align-items:center;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}}
@@ -2050,20 +2116,34 @@ text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7df
 .ext{{display:block;text-align:center;margin-top:10px;font-size:13.5px;color:#8ab4ff}}
 .foot{{text-align:center;margin-top:18px;font-size:12px}}
 .foot a{{color:#8888a0}}
+.crumb{{font-size:12px;color:#8888a0;margin-bottom:14px}}
+.crumb a{{color:#8ab4ff;text-decoration:none}}
+h2{{font-size:14px;color:#8888a0;margin:22px 0 8px;font-weight:600}}
+.rel{{list-style:none;padding:0;margin:0}}
+.rel li{{font-size:13.5px;line-height:1.5;margin:4px 0}}
+.rel a{{color:#c2c2d0;text-decoration:none}}
+.rel a:hover{{color:#fff}}
+.rel .d{{color:#8888a0;font-size:12px}}
+p a{{color:#8ab4ff;text-decoration:none}}
 </style>
 </head>
 <body>
 <main class="card">
+<nav class="crumb" aria-label="Fil d'Ariane">{crumb_html}</nav>
 <div class="k">Conférence · Paris</div>
 <h1>{title}</h1>
 <p><span class="lbl">Quand :</span> {_esc_attr(date_label)}</p>
 <p><span class="lbl">Où :</span> {loc or 'Paris'}</p>
-<p><span class="lbl">Organisé par :</span> {inst}</p>
+<p><span class="lbl">Organisé par :</span> {inst_html}</p>
 {f'<p><span class="lbl">Intervenant :</span> {speaker}</p>' if speaker else ''}
 {f'<p>{body_desc}</p>' if body_desc else ''}
+{f'<p>{series_note}</p>' if series_note else ''}
 <a class="btn" href="{target}">Voir dans le calendrier →</a>
 {f'<a class="ext" href="{ext}" rel="noopener">Page officielle / inscription ↗</a>' if ext else ''}
-<div class="foot"><a href="{SITE_URL}">Paris·Académique — toutes les conférences de Paris</a></div>
+{f'<h2>Autres séances du cycle</h2>{_links(series, "rel")}' if series else ''}
+{f'<h2>Prochaines conférences · {inst}</h2>{_links(others, "rel")}' if others else ''}
+{f'<p><a href="{hub_url}">Toutes les conférences de {inst} →</a></p>' if hub_url else ''}
+<div class="foot"><a href="{SITE_URL}/">Paris·Académique — toutes les conférences de Paris</a></div>
 </main>
 </body>
 </html>
@@ -2286,6 +2366,15 @@ p{{color:#c2c2d0;font-size:14.5px;line-height:1.7;margin:8px 0}}
 text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7dff)}}
 .foot{{text-align:center;margin-top:18px;font-size:12px}}
 .foot a{{color:#8888a0}}
+.crumb{{font-size:12px;color:#8888a0;margin-bottom:14px}}
+.crumb a{{color:#8ab4ff;text-decoration:none}}
+h2{{font-size:14px;color:#8888a0;margin:22px 0 8px;font-weight:600}}
+.rel{{list-style:none;padding:0;margin:0}}
+.rel li{{font-size:13.5px;line-height:1.5;margin:4px 0}}
+.rel a{{color:#c2c2d0;text-decoration:none}}
+.rel a:hover{{color:#fff}}
+.rel .d{{color:#8888a0;font-size:12px}}
+p a{{color:#8ab4ff;text-decoration:none}}
 </style>
 </head>
 <body>
