@@ -1,4 +1,4 @@
-/* Paris·Académique — front. `npm run build` dans web/ produit ../app.js + ../app.css. */
+/* Lotent — front. `npm run build` dans web/ produit ../app.js + ../app.css. */
 import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
@@ -290,6 +290,7 @@ function App() {
   }, []);
   const ensureArchive = useCallback(() => archive ? Promise.resolve(archive) : fetch("data/events-archive.json?" + Date.now()).then(r => r.json()).catch(() => []).then(a => { a.sort((x, y) => (y.date + (y.time || "")).localeCompare(x.date + (x.time || ""))); setArchive(a); return a; }), [archive]);
   useEffect(() => { if (history) ensureArchive(); }, [history]);
+  useEffect(() => { document.documentElement.classList.toggle("history-mode", history); }, [history]);
   // ?event=<id> (pages e/*.html) : ouvre la fiche, dans les événements à venir ou l'archive
   useEffect(() => {
     if (!events || !pendingEvent.current) return; const id = pendingEvent.current; pendingEvent.current = null;
@@ -352,7 +353,7 @@ function App() {
   /* actions */
   const onFav = id => { toggleFav(id); notify(favs.has(id) ? t("toast_fav_removed") : t("toast_fav_added")); };
   const onSelect = id => setSelected(s => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
-  const exportSel = () => { const evs = pool.filter(e => selected.has(e.id)); if (!evs.length) return; download("ma-selection-paris-academique.ics", buildIcs(evs)); notify(t("toast_exported", { n: evs.length })); };
+  const exportSel = () => { const evs = pool.filter(e => selected.has(e.id)); if (!evs.length) return; download("ma-selection-lotent.ics", buildIcs(evs)); notify(t("toast_exported", { n: evs.length })); };
   const toggleNear = () => {
     if (near) { setNear(false); return; }
     if (userPos) { setNear(true); return; }
@@ -370,7 +371,7 @@ function App() {
   return <>
     <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-4">
-        <a href="/" className="flex items-center gap-2 font-semibold tracking-tight"><span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-bold">P</span><span>Paris·Académique</span></a>
+        <a href="/" className="flex items-center gap-2 font-semibold tracking-tight"><img src="icon.svg" alt="" width="28" height="28" className="h-7 w-7 rounded-md" /><span>Lotent</span></a>
         <nav className="hidden md:flex items-center gap-1 text-sm text-muted-foreground ml-4"><button onClick={() => { setHistory(false); goAgenda(); }} className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_agenda")}</button><button onClick={toggleHistory} className={cn("px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent", history && "text-foreground bg-accent")}>{t("nav_history")}</button><a href="apropos.html" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_about")}</a></nav>
         <div className="ml-auto flex items-center gap-2">
           <button onClick={() => setCmd(true)} className="inline-flex items-center gap-2 h-9 rounded-md border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent hover:text-foreground w-10 sm:w-64 justify-center sm:justify-between" aria-label={t("search_ph")}><Icon d={ICONS.search} size={15} className="sm:hidden" /><span className="hidden sm:inline">{t("search_ph")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
@@ -380,6 +381,12 @@ function App() {
         </div></div></header>
 
     <main className="mx-auto max-w-7xl px-4 sm:px-6">
+      {history ? <section className="relative pt-16 pb-10 text-center overflow-hidden">
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(60%_55%_at_50%_-10%,rgba(180,83,9,.22),transparent_70%)]" />
+        <BlurFade inView={false}><div className="inline-flex items-center gap-1.5 rounded-full border bg-background/60 px-4 py-1 text-sm shadow-sm"><Icon d={ICONS.history} size={13} />{t("history_kicker")}</div></BlurFade>
+        <BlurFade inView={false} delay={.1}><h1 className="mt-6 text-3xl sm:text-5xl font-bold tracking-tight [text-wrap:balance] max-w-3xl mx-auto leading-[1.05]">{t("history_title")}</h1></BlurFade>
+        <BlurFade inView={false} delay={.2}><p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto [text-wrap:balance]">{archive ? t("history_lede", { n: archive.length }) : t("history_loading")}</p></BlurFade>
+      </section> : <>
       <section className="relative pt-14 pb-8 text-center">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
         <BlurFade inView={false}><div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-1 text-sm shadow-sm"><AnimatedShinyText>✦ {meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events ? t("live_events_suffix", { n: UP.length }) : ""}</AnimatedShinyText></div></BlurFade>
@@ -388,7 +395,7 @@ function App() {
         <BlurFade inView={false} delay={.3}><div className="mt-8 flex flex-wrap justify-center gap-3"><Button onClick={() => { setHistory(false); setF({ when: "today" }); goAgenda(); }} className="h-11 px-6">{t("btn_today")}</Button><Button variant="outline" onClick={() => { setHistory(false); setF({ when: "week" }); goAgenda(); }} className="h-11 px-6">{t("btn_week")}</Button></div></BlurFade>
         <BlurFade inView={false} delay={.4}><div className="relative mt-12 grid grid-cols-3 max-w-xl mx-auto divide-x rounded-xl border bg-card shadow-sm">
           {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w], i) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="flex flex-col items-center py-4 hover:bg-accent first:rounded-l-xl last:rounded-r-xl"><span className="text-3xl font-bold"><NumberTicker value={n} delay={.2 + i * .1} locale={lang === "en" ? "en-US" : "fr-FR"} /></span><span className="text-xs text-muted-foreground mt-1">{l}</span></button>)}
-          <BorderBeam size={200} duration={12} colorFrom="#3B82F6" colorTo="#EC4899" /></div></BlurFade>
+          <BorderBeam size={70} duration={9} colorFrom="#3B82F6" colorTo="#EC4899" /></div></BlurFade>
       </section>
 
       {topInst.length > 0 && <section className="py-2 relative [mask-image:linear-gradient(to_right,transparent,#000_10%,#000_90%,transparent)]">
@@ -409,6 +416,7 @@ function App() {
           <MiniMap events={UP} onGoMap={goMap} />
         </BentoGrid>
       </section>}
+      </>}
 
       <div ref={agendaRef} className="scroll-mt-14" />
       <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-background/80 backdrop-blur border-b">
@@ -453,7 +461,7 @@ function App() {
 
     <footer className="border-t">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 grid gap-8 md:grid-cols-3 text-sm">
-        <div><div className="font-semibold">Paris·Académique</div><p className="text-muted-foreground mt-2 max-w-xs">{t("footer_tagline")}</p><p className="text-xs text-muted-foreground mt-3">{t("footer_updated", { auto: relTime(meta.last_workflow_run) })}{meta.last_manual_run && t("footer_manual_suffix", { t: relTime(meta.last_manual_run) })}</p></div>
+        <div><div className="font-semibold">Lotent</div><p className="text-muted-foreground mt-2 max-w-xs">{t("footer_tagline")}</p><p className="text-xs text-muted-foreground mt-3">{t("footer_updated", { auto: relTime(meta.last_workflow_run) })}{meta.last_manual_run && t("footer_manual_suffix", { t: relTime(meta.last_manual_run) })}</p></div>
         <div><div className="font-semibold">{t("footer_subscribe")}</div><ul className="mt-2 space-y-1.5 text-muted-foreground"><li><a className="hover:text-foreground" href="data/calendar.ics">{t("footer_ics")}</a></li><li><a className="hover:text-foreground" href="data/digest.xml">{t("footer_rss")}</a></li><li><a className="hover:text-foreground" href="sitemap.xml">{t("footer_sitemap")}</a></li><li><a className="hover:text-foreground" href="apropos.html">{t("nav_about")}</a></li></ul></div>
         <GithubCard />
       </div>

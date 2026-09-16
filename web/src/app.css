@@ -49,6 +49,12 @@
   [hidden] { display: none !important; }
 }
 
+/* Mode Historique : ambiance sépia/archives, comme dans l'ancien site — l'accent
+   passe à l'ambre le temps de la consultation, pour marquer le changement de mode. */
+:root.history-mode {
+  --primary: 27 72% 40% !important; --primary-foreground: 40 55% 97% !important; --ring: 27 72% 40% !important;
+}
+
 /* Spotlight (Aceternity) : conçu pour un fond sombre → masqué en clair */
 .spot { display: none; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .spot { display: block; } }

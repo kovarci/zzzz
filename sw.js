@@ -2,7 +2,7 @@
    Strategy: network-first (fresh online), cache fallback when offline.
    Bumped CACHE version forces clients to refresh their precache. */
 
-const CACHE = "paris-academique-v8";
+const CACHE = "lotent-v10";
 
 // Precached on install : the shell that lets the app boot fully offline,
 // even on first visit-when-offline. Per-event pages (e/<id>.html) are

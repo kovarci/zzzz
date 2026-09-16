@@ -31,6 +31,9 @@ const TR = {
   tab_week: ["Semaine", "Week"], tab_weekend: ["Week-end", "Weekend"], tab_new: ["Nouveautés", "New"],
   history_badge: ["Historique", "History"], history_all_period: ["Toute la période", "Whole period"],
   history_back: ["← Retour à l'agenda", "← Back to agenda"], history_loading: ["Chargement de l'historique…", "Loading history…"],
+  history_kicker: ["Archives", "Archives"], history_title: ["Les conférences passées.", "Past conferences."],
+  history_lede: ["{n} conférence{s} archivée{s} — la mémoire de l'agenda, pour retrouver un intervenant ou une séance.",
+                 "{n} archived event{s} — the agenda's memory, to find a past speaker or session again."],
 
   pop_discipline: ["Discipline", "Discipline"], pop_institution: ["Institution", "Institution"], pop_source: ["Source", "Source"],
   group_establishments: ["Établissements", "Institutions"], group_others: ["Autres organisateurs", "Other organisers"],

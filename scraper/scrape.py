@@ -1840,7 +1840,7 @@ def write_ics(events):
             continue
         written.add(f"{slug}.ics")
         try:
-            (cal_dir / f"{slug}.ics").write_text(vcal(evts, f"{inst} · Paris Académique"),
+            (cal_dir / f"{slug}.ics").write_text(vcal(evts, f"{inst} · Lotent"),
                                                  encoding="utf-8")
         except Exception as e:
             print(f"[WARN] ics {slug}: {e}")
@@ -2199,14 +2199,14 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 <dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{speaker}</dd>' if speaker else ''}</dl>
 {f'<p class="desc">{body_desc}</p>' if body_desc and len(body_desc) > 40 and body_desc != speaker else ''}
 {f'<p class="desc">{series_note}</p>' if series_note else ''}
-<div class="cta"><a class="site" href="{target}">Voir sur Paris·Académique →</a>{f'<a class="ext" href="{ext}" rel="noopener">Page officielle · inscription ↗</a>' if ext else ''}</div>
+<div class="cta"><a class="site" href="{target}">Voir sur Lotent →</a>{f'<a class="ext" href="{ext}" rel="noopener">Page officielle · inscription ↗</a>' if ext else ''}</div>
 <p class="note">Vérifie les horaires sur la page officielle avant de te déplacer.</p>
 </div>
 </main>
 {f'<h2>Autres séances du cycle</h2>{_links(series, "rel")}' if series else ''}
 {f'<h2>Prochaines conférences · {inst}</h2>{_links(others, "rel")}' if others else ''}
 {f'<a class="more" href="{hub_url}">Toutes les conférences de {inst} →</a>' if hub_url else ''}
-<div class="foot"><a href="{SITE_URL}/">Paris·Académique — toutes les conférences de Paris</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">Questions &amp; recommandations</a></div>
+<div class="foot"><a href="{SITE_URL}/">Lotent — toutes les conférences de Paris</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">Questions &amp; recommandations</a></div>
 </div>
 </body>
 </html>
@@ -2444,7 +2444,7 @@ p a{{color:#8ab4ff;text-decoration:none}}
 <main class="card">
 <div class="k">Conférences à Paris</div>
 <h1>{_esc_attr(inst)}</h1>
-<p><strong>{n} conférence{'s' if n != 1 else ''} à venir</strong> dans le calendrier Paris·Académique.</p>
+<p><strong>{n} conférence{'s' if n != 1 else ''} à venir</strong> dans le calendrier Lotent.</p>
 {speakers_section}
 {events_section}
 <a class="btn" href="{target}">Voir le calendrier →</a>
@@ -2685,7 +2685,7 @@ def build_digest(events):
             f"</item>")
     rss = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
            "<rss version=\"2.0\"><channel>"
-           "<title>Paris Académique — les immanquables de la semaine</title>"
+           "<title>Lotent — les immanquables de la semaine</title>"
            f"<link>{SITE_URL}</link>"
            "<description>Les conférences à ne pas manquer cette semaine à Paris, sélection automatique.</description>"
            "<language>fr</language>"

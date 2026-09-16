@@ -120,8 +120,8 @@ function icsDt(date, time) {
 }
 export function buildIcs(events) {
   const stamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-  const out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Paris Academique//Selection//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-    "X-WR-CALNAME:Ma sélection · Paris Académique", "X-WR-TIMEZONE:Europe/Paris"];
+  const out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Lotent//Selection//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "X-WR-CALNAME:Ma sélection · Lotent", "X-WR-TIMEZONE:Europe/Paris"];
   for (const ev of events) {
     const s = icsDt(ev.date, ev.time); let dtstart, dtend;
     if (s.allDay) { dtstart = `DTSTART;VALUE=DATE:${s.start}`; dtend = `DTEND;VALUE=DATE:${iso(addDays(parse(ev.date), 1)).replace(/-/g, "")}`; }

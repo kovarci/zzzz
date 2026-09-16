@@ -1,23 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8b5cf6"/>
-      <stop offset="0.5" stop-color="#5b8cff"/>
-      <stop offset="1" stop-color="#f472b6"/>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C6CF0"/>
+      <stop offset=".55" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#F0559C"/>
     </linearGradient>
+    <radialGradient id="shade" cx=".72" cy=".8" r=".6">
+      <stop offset="0" stop-color="#2A0A3D" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#2A0A3D" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gloss" cx=".32" cy=".24" r=".5">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="512" height="512" fill="url(#bg)"/>
-  <g fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="142" y="166" width="228" height="204" rx="32"/>
-    <line x1="142" y1="232" x2="370" y2="232"/>
-    <line x1="208" y1="138" x2="208" y2="188"/>
-    <line x1="304" y1="138" x2="304" y2="188"/>
-  </g>
-  <g fill="#ffffff">
-    <circle cx="198" cy="284" r="16"/>
-    <circle cx="256" cy="284" r="16"/>
-    <circle cx="314" cy="284" r="16"/>
-    <circle cx="198" cy="332" r="16"/>
-    <circle cx="256" cy="332" r="16"/>
-  </g>
+  <rect width="96" height="96" rx="22" fill="#0B0B10"/>
+  <circle cx="48" cy="46" r="25" fill="url(#orb)"/>
+  <circle cx="48" cy="46" r="25" fill="url(#shade)"/>
+  <circle cx="48" cy="46" r="25" fill="url(#gloss)"/>
 </svg>

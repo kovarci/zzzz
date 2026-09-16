@@ -1,4 +1,4 @@
-# Paris·Académique
+# Lotent
 
 Un site qui rassemble toutes les conférences et séminaires académiques de Paris
 dans un seul calendrier filtrable, mis à jour chaque jour.
