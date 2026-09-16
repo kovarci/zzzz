@@ -275,6 +275,10 @@ function App() {
   const toggleIn = key => v => setFilters(f => { const n = new Set(f[key]); n.has(v) ? n.delete(v) : n.add(v); return { ...f, [key]: n }; });
   const notify = msg => { setToast(msg); setTimeout(() => setToast(null), 1500); };
   const goAgenda = () => agendaRef.current?.scrollIntoView({ behavior: "smooth" });
+  // Basculer agenda <-> historique ajoute ou retire tout le haut de page (hero,
+  // carrousel, bento) : l'ancre mesurée avant le rendu est donc périmée de ~1000px.
+  // On note où aller et on scrolle une fois la nouvelle mise en page posée.
+  const pendingScroll = useRef(null);
   const SRC_LABEL_T = { institution: t("src_institution"), luma: t("src_luma"), association: t("src_association") };
 
   /* données */
@@ -291,6 +295,10 @@ function App() {
   const ensureArchive = useCallback(() => archive ? Promise.resolve(archive) : fetch("data/events-archive.json?" + Date.now()).then(r => r.json()).catch(() => []).then(a => { a.sort((x, y) => (y.date + (y.time || "")).localeCompare(x.date + (x.time || ""))); setArchive(a); return a; }), [archive]);
   useEffect(() => { if (history) ensureArchive(); }, [history]);
   useEffect(() => { document.documentElement.classList.toggle("history-mode", history); }, [history]);
+  useEffect(() => {
+    const to = pendingScroll.current; if (!to) return; pendingScroll.current = null;
+    if (to === "top") window.scrollTo({ top: 0, behavior: "smooth" }); else goAgenda();
+  }, [history]);
   // ?event=<id> (pages e/*.html) : ouvre la fiche, dans les événements à venir ou l'archive
   useEffect(() => {
     if (!events || !pendingEvent.current) return; const id = pendingEvent.current; pendingEvent.current = null;
@@ -361,7 +369,8 @@ function App() {
     setLocating(true);
     navigator.geolocation.getCurrentPosition(p => { setUserPos({ lat: p.coords.latitude, lng: p.coords.longitude }); setNear(true); setLocating(false); }, err => { setLocating(false); notify(t("toast_locate_error", { msg: err.message })); });
   };
-  const toggleHistory = () => { setHistory(h => !h); setView("list"); setNear(false); goAgenda(); };
+  const toggleHistory = () => { pendingScroll.current = history ? "agenda" : "top"; setHistory(h => !h); setView("list"); setNear(false); };
+  const backToAgenda = () => { if (history) { pendingScroll.current = "agenda"; setHistory(false); } else goAgenda(); };
   const toggleTheme = () => { const r = document.documentElement, dark = r.dataset.theme === "dark" || (!r.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches); r.dataset.theme = dark ? "light" : "dark"; store.set("paf_theme", dark ? "light" : "dark"); };
   const pickRandom = () => { const p = filtered.length ? filtered : pool; if (p.length) setOpen(p[Math.floor(Math.random() * p.length)]); };
   const goMap = () => { setHistory(false); setNear(false); setView("map"); goAgenda(); };
@@ -372,7 +381,7 @@ function App() {
     <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-4">
         <a href="/" className="flex items-center gap-2 font-semibold tracking-tight"><img src="icon.svg" alt="" width="28" height="28" className="h-7 w-7 rounded-md" /><span>Lotent</span></a>
-        <nav className="hidden md:flex items-center gap-1 text-sm text-muted-foreground ml-4"><button onClick={() => { setHistory(false); goAgenda(); }} className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_agenda")}</button><button onClick={toggleHistory} className={cn("px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent", history && "text-foreground bg-accent")}>{t("nav_history")}</button><a href="apropos.html" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_about")}</a></nav>
+        <nav className="hidden md:flex items-center gap-1 text-sm text-muted-foreground ml-4"><button onClick={backToAgenda} className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_agenda")}</button><button onClick={toggleHistory} className={cn("px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent", history && "text-foreground bg-accent")}>{t("nav_history")}</button><a href="apropos.html" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_about")}</a></nav>
         <div className="ml-auto flex items-center gap-2">
           <button onClick={() => setCmd(true)} className="inline-flex items-center gap-2 h-9 rounded-md border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent hover:text-foreground w-10 sm:w-64 justify-center sm:justify-between" aria-label={t("search_ph")}><Icon d={ICONS.search} size={15} className="sm:hidden" /><span className="hidden sm:inline">{t("search_ph")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
           <Button variant="outline" size="icon" onClick={toggleLang} aria-label={t("lang_aria")} className="font-semibold text-xs">{lang === "en" ? "FR" : "EN"}</Button>
@@ -472,7 +481,7 @@ function App() {
     <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40">
       <Dock>
         <DockIcon title={t("dock_top")} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Icon d={ICONS.up} /></DockIcon>
-        <DockIcon title={t("dock_today")} active={!history && filters.when === "today"} onClick={() => { setHistory(false); setF({ when: "today" }); goAgenda(); }}><Icon d={ICONS.cal} /></DockIcon>
+        <DockIcon title={t("dock_today")} active={!history && filters.when === "today"} onClick={() => { setF({ when: "today" }); backToAgenda(); }}><Icon d={ICONS.cal} /></DockIcon>
         <DockIcon title={t("dock_history")} active={history} onClick={toggleHistory}><Icon d={ICONS.history} /></DockIcon>
         <DockIcon title={t("dock_random")} onClick={pickRandom}><Icon d={ICONS.random} /></DockIcon>
         <DockIcon title={t("dock_fav")} active={filters.fav} onClick={() => { setF({ fav: !filters.fav }); goAgenda(); }}><Icon d={ICONS.star} />{favs.size > 0 && <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 rounded-full bg-primary text-primary-foreground text-[10px] font-bold px-1 leading-4">{favs.size}</span>}</DockIcon>

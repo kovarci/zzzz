@@ -1,6 +1,7 @@
-/** Tailwind ne scanne que le front React ; index.html ne contient que la coquille. */
+/** Tailwind scanne le front React, la coquille index.html et la page À propos,
+    qui est statique mais partage app.css pour rester identique au reste du site. */
 module.exports = {
-  content: ["./src/**/*.{js,jsx}", "../index.html"],
+  content: ["./src/**/*.{js,jsx}", "../index.html", "../apropos.html"],
   darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     extend: {
