@@ -101,11 +101,17 @@ export function MovingBorderButton({ children, onClick, href, duration = 3000, c
     <div className="relative flex h-full w-full items-center justify-center border border-border bg-background/90 backdrop-blur-xl px-6 font-medium rounded-[1.75rem] antialiased">{children}</div>
   </Tag>;
 }
+function pointAt(el, v) {
+  // Le rect peut avoir une géométrie nulle au tout premier rendu (taille 0
+  // avant que Tailwind/les polices ne se chargent) : getPointAtLength lève
+  // alors une exception non rattrapable dans la boucle d'animation.
+  try { const len = el?.getTotalLength(); if (!len) return { x: 0, y: 0 }; return el.getPointAtLength(v % len); } catch { return { x: 0, y: 0 }; }
+}
 function MovingBorder({ children, duration, rx, ry }) {
   const pathRef = useRef(null); const progress = useMotionValue(0);
   useAnimationFrame(time => { const len = pathRef.current?.getTotalLength(); if (len) progress.set((time * (len / duration)) % len); });
-  const x = useTransform(progress, v => pathRef.current?.getPointAtLength(v).x);
-  const y = useTransform(progress, v => pathRef.current?.getPointAtLength(v).y);
+  const x = useTransform(progress, v => pointAt(pathRef.current, v).x);
+  const y = useTransform(progress, v => pointAt(pathRef.current, v).y);
   const transform = useTransform([x, y], ([a, b]) => `translateX(${a}px) translateY(${b}px) translateX(-50%) translateY(-50%)`);
   return <>
     <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="absolute h-full w-full" width="100%" height="100%"><rect fill="none" width="100%" height="100%" rx={rx} ry={ry} ref={pathRef} /></svg>
@@ -146,12 +152,12 @@ export function Popover({ label, count, children, align = "left" }) {
       className={cn("absolute top-[calc(100%+6px)] z-40 min-w-[280px] max-h-[60vh] overflow-auto rounded-lg border bg-popover p-1 shadow-lg", align === "right" ? "right-0" : "left-0")}>{children(() => setOpen(false))}</motion.div>}</AnimatePresence>
   </div>;
 }
-export function CheckList({ values, set, onToggle, swatch, labelFn, onClear, colorOf }) {
+export function CheckList({ values, set, onToggle, swatch, labelFn, onClear, colorOf, clearLabel = "Tout effacer" }) {
   return <>
     {values.map(([v, n, hd]) => <React.Fragment key={v}>{hd && <div className="px-2 pt-2 pb-1 text-xs font-medium text-muted-foreground">{hd}</div>}
       <label className="flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm cursor-pointer hover:bg-accent"><input type="checkbox" className="accent-[hsl(var(--primary))]" checked={set.has(v)} onChange={() => onToggle(v)} />
         {swatch && <span className="h-2.5 w-2.5 rounded-sm shrink-0" style={{ background: colorOf(v) }} />}<span className="truncate">{labelFn ? labelFn(v) : v}</span><span className="ml-auto text-xs text-muted-foreground tabular-nums">{n}</span></label></React.Fragment>)}
-    <button onClick={onClear} className="w-full text-left rounded-b-md px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent mt-1 border-t">Tout effacer</button>
+    <button onClick={onClear} className="w-full text-left rounded-b-md px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent mt-1 border-t">{clearLabel}</button>
   </>;
 }
 export const Icon = ({ d, size = 18, ...p }) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}>{Array.isArray(d) ? d.map((x, i) => <path key={i} d={x} />) : <path d={d} />}</svg>;

@@ -1,0 +1,149 @@
+/* Bilingue FR/EN. Clé courte -> [fr, en]. "{n}" est remplacé par la valeur
+   fournie, "{s}" devient "s" si n > 1 (accord singulier/pluriel commun aux
+   deux langues). Persisté dans localStorage sous la même clé que l'ancien
+   site (paf_lang), donc un visiteur qui revient garde sa langue. */
+import React, { createContext, useContext, useState, useCallback, useMemo } from "react";
+import { store } from "./lib.js";
+
+const TR = {
+  nav_agenda: ["Agenda", "Agenda"], nav_history: ["Historique", "History"], nav_about: ["À propos", "About"],
+  search_ph: ["Rechercher…", "Search…"], subscribe: ["S'abonner", "Subscribe"], theme_aria: ["Changer de thème", "Toggle theme"],
+  lang_aria: ["Passer en anglais", "Switch to French"],
+
+  live_updated: ["Mis à jour {rel}", "Updated {rel}"], live_fallback: ["Mis à jour chaque matin", "Updated every morning"],
+  live_events_suffix: [" · {n} événement{s} à venir", " · {n} upcoming event{s}"],
+  hero_title_1: ["Toutes les conférences de Paris,", "All the conferences in Paris,"],
+  hero_title_2: ["en un seul agenda.", "in one single agenda."],
+  hero_loading: ["chargement…", "loading…"],
+  hero_lede: ["Cours du Collège de France, séminaires de l'IHP et de PSE, rencontres Luma : {n} organisateurs réunis, {f} événements en entrée libre.",
+              "Lectures from the Collège de France, seminars from IHP and PSE, Luma meetups: {n} organisers gathered, {f} free events."],
+  btn_today: ["Voir aujourd'hui", "See today"], btn_week: ["Cette semaine", "This week"],
+  stat_today: ["aujourd'hui", "today"], stat_week: ["cette semaine", "this week"], stat_weekend: ["ce week-end", "this weekend"],
+
+  featured_title: ["À la une", "Featured"],
+  featured_sub_digest: ["Sélection de la semaine — {period}", "This week's picks — {period}"],
+  featured_sub_auto: ["Aujourd'hui et demain, sélection automatique.", "Today and tomorrow, automatic pick."],
+  tonight_title: ["Ce soir", "Tonight"], tonight_empty: ["Rien après 17h30 aujourd'hui. Regarde demain.", "Nothing after 5:30pm today. Check tomorrow."],
+  days7_title: ["Les 7 prochains jours", "Next 7 days"], n_events: ["{n} événement{s}", "{n} event{s}"],
+  map_title: ["Carte", "Map"], map_cta: ["Voir la carte →", "View map →"],
+
+  tab_all: ["Tout", "All"], tab_today: ["Aujourd'hui", "Today"], tab_tonight: ["Ce soir", "Tonight"],
+  tab_week: ["Semaine", "Week"], tab_weekend: ["Week-end", "Weekend"], tab_new: ["Nouveautés", "New"],
+  history_badge: ["Historique", "History"], history_all_period: ["Toute la période", "Whole period"],
+  history_back: ["← Retour à l'agenda", "← Back to agenda"], history_loading: ["Chargement de l'historique…", "Loading history…"],
+
+  pop_discipline: ["Discipline", "Discipline"], pop_institution: ["Institution", "Institution"], pop_source: ["Source", "Source"],
+  group_establishments: ["Établissements", "Institutions"], group_others: ["Autres organisateurs", "Other organisers"],
+  group_luma_themes: ["Thèmes Luma", "Luma themes"], clear_all: ["Tout effacer", "Clear all"],
+  btn_fav: ["Favoris", "Favourites"], btn_online: ["En ligne", "Online"],
+  near_locate: ["Localisation…", "Locating…"], near_sorted: ["Tri par distance", "Sorted by distance"], near_label: ["Près de moi", "Near me"],
+  select_btn: ["Sélection", "Select"], noun_event: ["événement{s}", "event{s}"], adj_selected: ["sélectionné{s}", "selected"],
+  src_institution: ["Universités & instituts", "Universities & institutes"], src_luma: ["Luma", "Luma"], src_association: ["Associations", "Associations"],
+
+  badge_new: ["Nouveau", "New"], badge_free: ["Gratuit", "Free"], online_prefix: ["En ligne · ", "Online · "],
+  time_tbd: ["Horaire à confirmer", "Time TBC"],
+
+  empty_fav_title: ["Aucun favori", "No favourites"], empty_fav_sub: ["Clique sur l'étoile d'un événement pour le retrouver ici.", "Click an event's star to find it here."],
+  empty_generic_title: ["Rien ne correspond", "Nothing matches"], empty_generic_sub: ["Élargis la période ou retire un filtre.", "Widen the period or remove a filter."],
+  sorted_by_distance: ["Triés par distance depuis ta position.", "Sorted by distance from your location."],
+  show_more: ["Afficher la suite · {n} restant{s}", "Show more · {n} left"],
+
+  sheet_free: ["Entrée libre", "Free entry"], sheet_online: ["En ligne", "Online"], sheet_organizer: ["Organisé par", "Organised by"],
+  sheet_with: ["Avec", "With"], sheet_place: ["Lieu", "Venue"], sheet_price: ["Tarif", "Price"],
+  sheet_official: ["Page officielle · inscription ↗", "Official page · registration ↗"],
+  sheet_fav_on: ["★ Favori", "★ Favourite"], sheet_fav_off: ["☆ Favori", "☆ Favourite"],
+  sheet_agenda: ["Agenda", "Calendar"], sheet_google_cal: ["Google Agenda ↗", "Google Calendar ↗"],
+  sheet_ics_file: ["Fichier .ics (Apple, Outlook…)", ".ics file (Apple, Outlook…)"], sheet_share: ["Partager", "Share"],
+  sheet_footer_note: ["Vérifie les horaires sur la page officielle avant de te déplacer.", "Double-check the time on the official page before heading out."],
+  sheet_terminated: ["terminé", "past"], sheet_today: ["c'est aujourd'hui", "it's today"], sheet_tomorrow: ["c'est demain", "it's tomorrow"],
+  sheet_in_days: ["dans {n} jours", "in {n} days"], org_default: ["Universités & instituts", "Universities & institutes"],
+  fermer: ["Fermer", "Close"], favori: ["Favori", "Favourite"],
+
+  cmd_ph: ["Un titre, un intervenant, un sujet…", "A title, a speaker, a topic…"], cmd_nav: ["naviguer", "navigate"],
+  cmd_open: ["ouvrir", "open"], cmd_none: ["Aucun résultat.", "No results."], cmd_today_tomorrow: ["Aujourd'hui et demain", "Today and tomorrow"],
+  cmd_n_results: ["{n} résultat{s}", "{n} result{s}"],
+
+  week_prev: ["← Semaine préc.", "← Prev week"], week_next: ["Semaine suiv. →", "Next week →"], week_this: ["cette semaine", "this week"],
+
+  map_note: ["{n} événement{s} localisé{s} · clique un point pour voir les conférences du lieu.", "{n} located event{s} · click a point to see the conferences there."],
+
+  toast_fav_added: ["Ajouté aux favoris", "Added to favourites"], toast_fav_removed: ["Retiré des favoris", "Removed from favourites"],
+  toast_link_copied: ["Lien copié", "Link copied"], toast_exported: ["{n} événement{s} exporté{s}", "{n} event{s} exported"],
+  toast_geoloc_unavailable: ["Géolocalisation indisponible sur ce navigateur.", "Geolocation unavailable on this browser."],
+  toast_locate_error: ["Localisation impossible : {msg}", "Location failed: {msg}"],
+  toast_not_found: ["Événement introuvable — il est peut-être terminé.", "Event not found — it may be over."],
+
+  sel_selected: ["{n} sélectionné{s}", "{n} selected"], sel_export: ["Exporter .ics", "Export .ics"], sel_done: ["Terminer", "Done"],
+
+  dock_top: ["Haut de page", "Back to top"], dock_today: ["Aujourd'hui", "Today"], dock_history: ["Historique", "History"],
+  dock_random: ["Au hasard", "Random"], dock_fav: ["Favoris", "Favourites"], dock_search: ["Rechercher (⌘K)", "Search (⌘K)"],
+
+  footer_tagline: ["Toutes les conférences, cours et séminaires ouverts au public à Paris, réunis chaque matin en un seul agenda.",
+                   "All public conferences, lectures and seminars in Paris, gathered every morning into one agenda."],
+  footer_updated: ["Dernière mise à jour automatique : {auto}", "Last automatic update: {auto}"],
+  footer_manual_suffix: [" · manuelle : {t}", " · manual: {t}"],
+  footer_subscribe: ["S'abonner", "Subscribe"], footer_ics: ["Calendrier complet (.ics)", "Full calendar (.ics)"],
+  footer_rss: ["Flux RSS de la semaine", "This week's RSS feed"], footer_sitemap: ["Plan du site", "Sitemap"],
+  footer_contact_title: ["Une question, une idée ?", "A question, an idea?"],
+  footer_contact_body: ["Le code est ouvert : signale une source manquante, un bug, ou propose une amélioration.",
+                         "The code is open: report a missing source, a bug, or suggest an improvement."],
+  footer_repo_desc: ["Agrégateur des conférences académiques de Paris.", "Aggregator for Paris academic conferences."],
+  footer_open_issue: ["Ouvrir une discussion", "Open a discussion"], footer_source: ["Code source", "Source code"],
+
+  rel_never: ["jamais", "never"], rel_now: ["à l'instant", "just now"],
+  rel_min: ["il y a {n} min", "{n} min ago"], rel_h: ["il y a {n} h", "{n} h ago"], rel_d: ["il y a {n} j", "{n} d ago"],
+  rel_today: ["Aujourd'hui", "Today"], rel_tomorrow: ["Demain", "Tomorrow"],
+};
+
+const WD_FR = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+const WD_EN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const WDS_FR = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
+const WDS_EN = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MO_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+const MO_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const LangContext = createContext(null);
+
+function parseISO(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
+
+export function LangProvider({ children }) {
+  const [lang, setLangState] = useState(() => (store.get("paf_lang", "fr") === "en" ? "en" : "fr"));
+  const setLang = useCallback(l => { setLangState(l); store.set("paf_lang", l); }, []);
+  const toggleLang = useCallback(() => setLang(lang === "en" ? "fr" : "en"), [lang, setLang]);
+
+  const t = useCallback((key, vars) => {
+    let s = (TR[key] || [key, key])[lang === "en" ? 1 : 0];
+    if (vars) {
+      if ("n" in vars) s = s.split("{s}").join(vars.n > 1 ? "s" : "");
+      Object.keys(vars).forEach(k => { s = s.split(`{${k}}`).join(vars[k]); });
+    }
+    return s;
+  }, [lang]);
+
+  const value = useMemo(() => {
+    const WD = lang === "en" ? WD_EN : WD_FR, WDS = lang === "en" ? WDS_EN : WDS_FR, MO = lang === "en" ? MO_EN : MO_FR;
+    const relTime = ts => {
+      if (!ts) return t("rel_never");
+      const m = Math.round((Date.now() - new Date(ts)) / 60000);
+      if (m < 1) return t("rel_now");
+      if (m < 60) return t("rel_min", { n: m });
+      if (m < 48 * 60) return t("rel_h", { n: Math.round(m / 60) });
+      return t("rel_d", { n: Math.round(m / 1440) });
+    };
+    return {
+      lang, setLang, toggleLang, t, WD, WDS, MO,
+      fmtDay: s => { const d = parseISO(s); return `${WD[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()]}`; },
+      fmtShort: s => { const d = parseISO(s); return `${WDS[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()].slice(0, lang === "en" ? 3 : 4)}`; },
+      relDay: (s, TODAY, TOMORROW) => s === TODAY ? t("rel_today") : s === TOMORROW ? t("rel_tomorrow") : "",
+      relTime,
+    };
+  }, [lang, t]);
+
+  return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
+}
+
+export function useI18n() {
+  const ctx = useContext(LangContext);
+  if (!ctx) throw new Error("useI18n must be used within a LangProvider");
+  return ctx;
+}
