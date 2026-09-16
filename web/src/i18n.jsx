@@ -2,7 +2,7 @@
    fournie, "{s}" devient "s" si n > 1 (accord singulier/pluriel commun aux
    deux langues). Persisté dans localStorage sous la même clé que l'ancien
    site (paf_lang), donc un visiteur qui revient garde sa langue. */
-import React, { createContext, useContext, useState, useCallback, useMemo } from "react";
+import React, { createContext, useContext, useState, useCallback, useMemo, useEffect } from "react";
 import { store } from "./lib.js";
 
 const TR = {
@@ -101,6 +101,8 @@ const TR = {
   inst_ics: ["S'abonner à son agenda", "Subscribe to its calendar"], inst_clear: ["Voir toutes les institutions", "See all institutions"],
   search_hint: ["Appuie sur / pour rechercher", "Press / to search"],
 
+  you_are_here: ["Vous êtes ici", "You are here"],
+  speaker_followed: ["Intervenant suivi ✓", "Speaker followed ✓"], speaker_unfollowed: ["Ne suit plus cet intervenant", "No longer following"],
   rel_never: ["jamais", "never"], rel_now: ["à l'instant", "just now"],
   rel_min: ["il y a {n} min", "{n} min ago"], rel_h: ["il y a {n} h", "{n} h ago"], rel_d: ["il y a {n} j", "{n} d ago"],
   rel_today: ["Aujourd'hui", "Today"], rel_tomorrow: ["Demain", "Tomorrow"],
@@ -121,6 +123,9 @@ export function LangProvider({ children }) {
   const [lang, setLangState] = useState(() => (store.get("paf_lang", "fr") === "en" ? "en" : "fr"));
   const setLang = useCallback(l => { setLangState(l); store.set("paf_lang", l); }, []);
   const toggleLang = useCallback(() => setLang(lang === "en" ? "fr" : "en"), [lang, setLang]);
+  // <html lang> reste sinon figé sur "fr" (valeur statique d'index.html) après
+  // un passage en anglais — mauvais pour l'accessibilité et les lecteurs d'écran.
+  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
 
   const t = useCallback((key, vars) => {
     let s = (TR[key] || [key, key])[lang === "en" ? 1 : 0];

@@ -168,7 +168,13 @@
 // Toggle EN/FR (partagé avec l'app principale via localStorage)
 function applyLang() {
   let lang = "fr";
-  try { lang = localStorage.getItem("paf_lang") || "fr"; } catch (e) {}
+  // Le nouveau site (React) enregistre "paf_lang" en JSON (donc entre guillemets,
+  // ex. '"en"') ; cette page l'écrit en brut. On tolère les deux formats, sinon
+  // un visiteur passé par le nouveau site en anglais retombe ici en français.
+  try {
+    const raw = localStorage.getItem("paf_lang");
+    lang = raw ? JSON.parse(raw) : "fr";
+  } catch (e) { try { lang = localStorage.getItem("paf_lang") || "fr"; } catch (e2) {} }
   document.documentElement.lang = lang;
   document.getElementById("lang-btn").textContent = lang === "en" ? "FR" : "EN";
   document.title = lang === "en" ? "About — Paris·Académique" : "À propos — Paris·Académique";

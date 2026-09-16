@@ -6,13 +6,13 @@ import { cn } from "./lib.js";
 
 /* ═══════════════════ Magic UI ═══════════════════ */
 // magicui.design/docs/components/number-ticker
-export function NumberTicker({ value, className, delay = 0 }) {
+export function NumberTicker({ value, className, delay = 0, locale = "fr-FR" }) {
   const ref = useRef(null);
   const mv = useMotionValue(0);
   const spring = useSpring(mv, { damping: 60, stiffness: 100 });
   const inView = useInView(ref, { once: true, margin: "0px" });
   useEffect(() => { if (inView) { const t = setTimeout(() => mv.set(value), delay * 1000); return () => clearTimeout(t); } }, [inView, value]);
-  useEffect(() => spring.on("change", v => { if (ref.current) ref.current.textContent = Intl.NumberFormat("fr-FR").format(Math.round(v)); }), [spring]);
+  useEffect(() => spring.on("change", v => { if (ref.current) ref.current.textContent = Intl.NumberFormat(locale).format(Math.round(v)); }), [spring, locale]);
   return <span ref={ref} className={cn("inline-block tabular-nums tracking-tight", className)}>0</span>;
 }
 // magicui.design/docs/components/animated-shiny-text

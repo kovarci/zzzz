@@ -154,7 +154,7 @@ function MapView({ events, onOpen, userPos }) {
         (evs.length > 6 ? `<div style="opacity:.7">+ ${evs.length - 6}</div>` : "") + "</div>";
       L.marker([lat, lng], { icon }).bindPopup(html).addTo(layer);
     });
-    if (userPos) L.marker([userPos.lat, userPos.lng], { icon: L.divIcon({ className: "", html: '<div class="pin-me"></div>', iconSize: [14, 14], iconAnchor: [7, 7] }) }).addTo(layer);
+    if (userPos) L.marker([userPos.lat, userPos.lng], { icon: L.divIcon({ className: "", html: '<div class="pin-me"></div>', iconSize: [14, 14], iconAnchor: [7, 7] }) }).bindPopup(t("you_are_here")).addTo(layer);
   }, [events, userPos]);
   return <div className="pt-6"><div ref={ref} className="h-[70vh] rounded-xl border overflow-hidden z-0" /><p className="text-xs text-muted-foreground mt-2">{t("map_note", { n: events.filter(e => typeof e.lat === "number").length })}</p></div>;
 }
@@ -387,7 +387,7 @@ function App() {
         <BlurFade inView={false} delay={.2}><p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto [text-wrap:balance]">{events ? t("hero_lede", { n: Object.keys(counts.inst).length, f: UP.filter(isFree).length }) : t("hero_loading")}</p></BlurFade>
         <BlurFade inView={false} delay={.3}><div className="mt-8 flex flex-wrap justify-center gap-3"><Button onClick={() => { setHistory(false); setF({ when: "today" }); goAgenda(); }} className="h-11 px-6">{t("btn_today")}</Button><Button variant="outline" onClick={() => { setHistory(false); setF({ when: "week" }); goAgenda(); }} className="h-11 px-6">{t("btn_week")}</Button></div></BlurFade>
         <BlurFade inView={false} delay={.4}><div className="relative mt-12 grid grid-cols-3 max-w-xl mx-auto divide-x rounded-xl border bg-card shadow-sm">
-          {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w], i) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="flex flex-col items-center py-4 hover:bg-accent first:rounded-l-xl last:rounded-r-xl"><span className="text-3xl font-bold"><NumberTicker value={n} delay={.2 + i * .1} /></span><span className="text-xs text-muted-foreground mt-1">{l}</span></button>)}
+          {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w], i) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="flex flex-col items-center py-4 hover:bg-accent first:rounded-l-xl last:rounded-r-xl"><span className="text-3xl font-bold"><NumberTicker value={n} delay={.2 + i * .1} locale={lang === "en" ? "en-US" : "fr-FR"} /></span><span className="text-xs text-muted-foreground mt-1">{l}</span></button>)}
           <BorderBeam size={200} duration={12} colorFrom="#3B82F6" colorTo="#EC4899" /></div></BlurFade>
       </section>
 
@@ -474,7 +474,7 @@ function App() {
       </Dock>
     </div>
 
-    <Sheet e={open} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} following={open ? speakers.has(open.speaker) : false} onFollow={name => { toggleSpeaker(name); notify(speakers.has(name) ? t("unfollow_speaker") : t("follow_speaker")); }} />
+    <Sheet e={open} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} following={open ? speakers.has(open.speaker) : false} onFollow={name => { const willFollow = !speakers.has(name); toggleSpeaker(name); notify(willFollow ? t("speaker_followed") : t("speaker_unfollowed")); }} />
     <CommandDialog open={cmd} onClose={() => setCmd(false)} onPick={e => { setCmd(false); setOpen(e); }} pool={pool} />
     <SpeakersPanel open={speakersOpen} onClose={() => setSpeakersOpen(false)} speakers={speakers} onUnfollow={toggleSpeaker} pool={UP} onOpenEvent={e => { setSpeakersOpen(false); setOpen(e); }} notifyPerm={notifyPerm} onEnableNotify={enableNotify} />
     <AnimatePresence>{toast && <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg">{toast}</motion.div>}</AnimatePresence>

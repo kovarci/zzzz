@@ -7,8 +7,8 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#07070d",
-  "theme_color": "#07070d",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "categories": ["education", "events"],
   "icons": [
     {
@@ -26,10 +26,6 @@
     { "name": "Mes favoris",
       "short_name": "Favoris",
       "url": "./?favoris=1",
-      "description": "Conférences mises en favoris" },
-    { "name": "En ce moment",
-      "short_name": "Maintenant",
-      "url": "./?date=now",
-      "description": "Événements qui commencent dans l'heure" }
+      "description": "Conférences mises en favoris" }
   ]
 }
