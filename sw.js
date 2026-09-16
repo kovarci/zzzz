@@ -2,13 +2,13 @@
    Strategy: network-first (fresh online), cache fallback when offline.
    Bumped CACHE version forces clients to refresh their precache. */
 
-const CACHE = "paris-academique-v3";
+const CACHE = "paris-academique-v4";
 
 // Precached on install : the shell that lets the app boot fully offline,
 // even on first visit-when-offline. Per-event pages (e/<id>.html) are
 // cached opportunistically as the user navigates to them.
 const SHELL = [
-  "./", "./index.html", "./apropos.html",
+  "./", "./index.html", "./app.js", "./app.css", "./apropos.html",
   "./manifest.json", "./icon.svg", "./og.png",
   "./data/events.json", "./data/events-archive.json",
   "./data/digest.json", "./data/meta.json",
@@ -43,7 +43,8 @@ function isCacheable(url) {
     p === "/" || p.endsWith("/") ||
     p.endsWith(".html") || p.endsWith(".json") ||
     p.endsWith(".svg") || p.endsWith(".png") ||
-    p.endsWith(".webp") || p.endsWith(".ics") || p.endsWith(".xml")
+    p.endsWith(".webp") || p.endsWith(".ics") || p.endsWith(".xml") ||
+    p.endsWith(".js") || p.endsWith(".css")
   );
 }
 

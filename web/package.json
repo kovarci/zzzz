@@ -1,0 +1,22 @@
+{
+  "name": "paris-academique-web",
+  "private": true,
+  "description": "Front React de lotent.fr — `npm run build` produit ../app.js et ../app.css (commités, GitHub Pages ne build pas).",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "esbuild src/main.jsx --bundle --minify --jsx=automatic --define:process.env.NODE_ENV=\\\"production\\\" --outfile=../app.js",
+    "build:css": "tailwindcss -i src/app.css -o ../app.css --minify",
+    "watch": "concurrently \"esbuild src/main.jsx --bundle --jsx=automatic --define:process.env.NODE_ENV=\\\"development\\\" --outfile=../app.js --watch\" \"tailwindcss -i src/app.css -o ../app.css --watch\""
+  },
+  "dependencies": {
+    "framer-motion": "^11.11.17",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "esbuild": "^0.24.0",
+    "tailwindcss": "^3.4.14"
+  }
+}

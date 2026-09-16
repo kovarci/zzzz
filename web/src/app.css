@@ -1,0 +1,73 @@
+@import "leaflet/dist/leaflet.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Tokens shadcn (zinc) — clair par défaut, sombre via préférence système
+   ou via data-theme posé par le bouton de thème ─────────────────────────── */
+:root {
+  --background: 0 0% 100%; --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%; --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%; --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%; --primary-foreground: 0 0% 98%;
+  --muted: 240 4.8% 95.9%; --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%; --accent-foreground: 240 5.9% 10%;
+  --border: 240 5.9% 90%; --input: 240 5.9% 90%; --ring: 240 5.9% 10%;
+  --radius: .75rem;
+  /* Couleurs de discipline — mêmes clés que DISC dans lib.js */
+  --c-math: #3B82F6; --c-sci: #10B981; --c-eco: #F59E0B; --c-his: #A16207; --c-phi: #8B5CF6;
+  --c-lit: #EC4899; --c-soc: #EAB308; --c-dro: #0EA5E9; --c-art: #F43F5E; --c-aut: #71717A;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: 240 10% 3.9%; --foreground: 0 0% 98%;
+    --card: 240 10% 5.5%; --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%; --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%; --primary-foreground: 240 5.9% 10%;
+    --muted: 240 3.7% 15.9%; --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%; --accent-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%; --input: 240 3.7% 15.9%; --ring: 240 4.9% 83.9%;
+  }
+}
+:root[data-theme="dark"] {
+  --background: 240 10% 3.9%; --foreground: 0 0% 98%;
+  --card: 240 10% 5.5%; --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%; --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%; --primary-foreground: 240 5.9% 10%;
+  --muted: 240 3.7% 15.9%; --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%; --accent-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%; --input: 240 3.7% 15.9%; --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * { border-color: hsl(var(--border)); }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible {
+    outline: none; box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+  }
+  [hidden] { display: none !important; }
+}
+
+/* Spotlight (Aceternity) : conçu pour un fond sombre → masqué en clair */
+.spot { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .spot { display: block; } }
+:root[data-theme="dark"] .spot { display: block; }
+
+/* Carte Leaflet : fond de carte adapté au thème, popups aux tokens */
+.leaflet-container { background: hsl(var(--muted)); font-family: inherit; }
+/* Mode sombre : tuiles OSM inversées (astuce classique, pas de tuiles sombres sans clé) */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .leaflet-tile { filter: invert(1) hue-rotate(180deg) brightness(.9) contrast(.9) saturate(.6); } }
+:root[data-theme="dark"] .leaflet-tile { filter: invert(1) hue-rotate(180deg) brightness(.9) contrast(.9) saturate(.6); }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: hsl(var(--popover)); color: hsl(var(--popover-foreground)); box-shadow: 0 8px 24px -8px rgba(0,0,0,.35); }
+.leaflet-popup-content { margin: 10px 12px; font-size: 13px; line-height: 1.4; }
+.leaflet-popup-content a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.leaflet-control-zoom a { background: hsl(var(--card)); color: hsl(var(--foreground)); border-color: hsl(var(--border)) !important; }
+.leaflet-control-attribution { background: hsl(var(--background) / .8); color: hsl(var(--muted-foreground)); font-size: 10px; }
+.leaflet-control-attribution a { color: inherit; }
+.pin { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.4); }
+.pin-me { width: 14px; height: 14px; border-radius: 50%; background: #3B82F6; border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(59,130,246,.3); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
+}

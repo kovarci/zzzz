@@ -40,18 +40,37 @@ Plus de 1 500 événements indexés depuis avril 2026.
 
 ## Le site
 
-- Recherche tolérante aux accents et multi-mots, avec autocomplétion intervenants.
-- Filtres : discipline, institution, format, date (« En ce moment », aujourd'hui, semaine, week-end).
-- 4 onglets : **Tout / Universités / Luma / Association** + **Historique** (changement d'ambiance sépia).
-- 3 vues : **Liste**, **Semaine** (grille lun→dim avec navigation), **Carte** (Leaflet).
-- Bandeau **« Les immanquables de la semaine »** (sélection automatique pondérée).
-- Bouton **dé** pour découvrir un événement au hasard parmi la sélection filtrée.
-- Pastille **« N nouveaux »** depuis ta dernière visite (localStorage).
-- Favoris, **partage natif mobile** (`navigator.share`), bouton « Près de moi ».
-- En-tête dédié quand une seule institution est filtrée (lien officiel + iCal filtré).
-- Bilingue **FR/EN**, raccourcis clavier (`/` pour chercher, `Échap` pour fermer).
-- Page **À propos** avec stats publiques en temps réel.
+Front **React 18 + Tailwind + Framer Motion** (dossier `web/`), compilé en deux fichiers statiques
+commités à la racine : `app.js` et `app.css`. GitHub Pages ne build rien.
+
+- **Hero** : compteurs animés (aujourd'hui / semaine / week-end), marquee des institutions.
+- **À la une** : bento avec la sélection éditoriale de la semaine (`data/digest.json`), « Ce soir »
+  et le graphique des 7 prochains jours.
+- **Filtres** : période (dont « Nouveautés » = ajoutés depuis 48 h), discipline, institution,
+  source + thèmes Luma, favoris, « En ligne ». L'état est dans l'URL (`?date=…&discipline=…`),
+  mêmes clés que l'ancien site : les liens partagés restent valides.
+- **3 vues** : Liste (groupée par jour), Semaine (lun→dim), Carte (Leaflet + OSM).
+- **Historique** : bouton central du dock, archive chargée à la demande, filtre par mois.
+- **Dock** flottant : haut de page, aujourd'hui, historique, au hasard, favoris, recherche.
+- **Recherche ⌘K / Ctrl+K** avec navigation clavier.
+- **Fiche** latérale : page officielle / inscription, favori, ajout à l'agenda (Google ou .ics),
+  partage (lien `e/<id>.html`).
+- **Sélection** : coche plusieurs événements, exporte un `.ics` personnalisé.
+- **Près de moi** : tri par distance (géolocalisation navigateur), position sur la carte.
+- Favoris et thème mémorisés (`paf_favs`, `paf_theme`), lien profond `?event=<id>`.
 - Installable comme application (PWA), consultable hors-ligne.
+
+### Modifier le front
+
+```
+cd web
+npm install          # une seule fois
+npm run build        # → ../app.js + ../app.css (à commiter)
+npm run watch        # rebuild à chaque modification
+```
+
+Après un build, incrémente `?v=` sur `app.js` / `app.css` dans `index.html` et la constante
+`CACHE` de `sw.js`, sinon les visiteurs gardent l'ancienne version en cache.
 
 ## SEO & partage
 
@@ -121,7 +140,10 @@ la liste dans `main()`. Le filet de sécurité couvre automatiquement les source
 ## Structure
 
 ```
-index.html              interface et logique du site
+index.html              coquille SEO + contenu de secours, charge app.js
+app.js, app.css         front compilé (ne pas éditer : voir web/)
+web/                    sources du front (React) — src/main.jsx, ui.jsx, lib.js
+                        legacy-index.html = ancien site, conservé pour référence
 apropos.html            page « À propos » (bilingue FR/EN, stats vivantes)
 manifest.json, sw.js    configuration de l'application installable
 icon.svg, og.png        icônes et image de partage

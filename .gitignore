@@ -12,3 +12,6 @@ playwright-report/
 # OS
 .DS_Store
 Thumbs.db
+
+# Outillage local Claude Code
+.claude/
