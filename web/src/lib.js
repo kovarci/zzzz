@@ -52,6 +52,12 @@ export function haversine(a, b) {
 }
 export const fmtDist = km => km < 1 ? `${Math.round(km * 1000)} m` : `${km.toFixed(1)} km`;
 
+// Identique à slugify() dans scraper/scrape.py (mêmes règles : NFD, minuscules,
+// non-alphanumériques -> "-") — sert à retrouver i/<slug>.html et data/cal/<slug>.ics.
+export function slugify(name) {
+  return (name || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
 export const relTime = ts => {
   if (!ts) return "jamais"; const m = Math.round((Date.now() - new Date(ts)) / 60000);
   if (m < 1) return "à l'instant"; if (m < 60) return `il y a ${m} min`; if (m < 48 * 60) return `il y a ${Math.round(m / 60)} h`; return `il y a ${Math.round(m / 1440)} j`;

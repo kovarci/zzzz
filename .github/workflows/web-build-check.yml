@@ -1,0 +1,57 @@
+name: Front-end build check
+
+# Le front (web/src/*.jsx) est compilé à la main via `npm run build` dans
+# web/ et le résultat (app.js, app.css) est commité à la racine — GitHub
+# Pages ne build rien. Rien ne garantit qu'un commit contienne bien le
+# bundle correspondant aux sources : ce workflow rebuild à l'identique et
+# échoue si le résultat diffère de ce qui est commité, pour repérer un
+# oubli de `npm run build` avant de pousser.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "paris-conferences/web/**"
+      - "paris-conferences/app.js"
+      - "paris-conferences/app.css"
+  pull_request:
+    paths:
+      - "paris-conferences/web/**"
+      - "paris-conferences/app.js"
+      - "paris-conferences/app.css"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: paris-conferences/web
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: paris-conferences/web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Fail if the committed bundle is stale
+        run: |
+          if ! git diff --exit-code -- ../app.js ../app.css; then
+            echo "::error::app.js / app.css ne correspondent pas à web/src/ — relance 'npm run build' dans web/ et commite le résultat."
+            exit 1
+          fi

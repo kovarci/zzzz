@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
+import { SITE, REPO, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
@@ -39,7 +39,7 @@ function EventCard({ e, fav, onFav, onOpen, selectMode, selected, onSelect, dist
 }
 
 /* ═════════════════════ Fiche (sheet) ═════════════════════ */
-function Sheet({ e, onClose, fav, onFav, onToast }) {
+function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow }) {
   const { t, fmtDay } = useI18n();
   useEffect(() => { if (!e) return; const h = ev => ev.key === "Escape" && onClose(); document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, [e]);
   const share = async () => {
@@ -59,7 +59,7 @@ function Sheet({ e, onClose, fav, onFav, onToast }) {
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
             <div className="text-sm"><div className="font-medium capitalize">{fmtDay(e.date)} {d.getFullYear()}</div><div className="text-muted-foreground">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""} · ` : ""}{days < 0 ? t("sheet_terminated") : days === 0 ? t("sheet_today") : days === 1 ? t("sheet_tomorrow") : t("sheet_in_days", { n: days })}</div></div>
           </div>
-          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">{[[t("sheet_organizer"), e.institution], [t("sheet_with"), e.speaker], [t("sheet_place"), e.location], [t("sheet_price"), e.price ? (isFree(e) ? t("sheet_free") : e.price) : null]].filter(r => r[1]).map(([k, v]) => <React.Fragment key={k}><dt className="text-muted-foreground">{k}</dt><dd className="break-words">{v}</dd></React.Fragment>)}</dl>
+          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">{[[t("sheet_organizer"), e.institution, null], [t("sheet_with"), e.speaker, "speaker"], [t("sheet_place"), e.location, null], [t("sheet_price"), e.price ? (isFree(e) ? t("sheet_free") : e.price) : null, null]].filter(r => r[1]).map(([k, v, kind]) => <React.Fragment key={k}><dt className="text-muted-foreground">{k}</dt><dd className="break-words">{kind === "speaker" ? <span className="inline-flex items-center gap-1.5">{v}<button onClick={() => onFollow(v)} aria-label={following ? t("unfollow_speaker") : t("follow_speaker")} title={following ? t("unfollow_speaker") : t("follow_speaker")} className={cn("inline-flex h-5 w-5 items-center justify-center rounded", following ? "text-amber-500" : "text-muted-foreground hover:text-foreground")}><Icon d={following ? ICONS.bell : ICONS.bellOff} size={13} /></button></span> : v}</dd></React.Fragment>)}</dl>
           {e.description && e.description.length > 60 && <p className="text-sm leading-relaxed text-muted-foreground whitespace-pre-line">{e.description}</p>}
           <div className="grid gap-2 pt-2">
             {e.url && <LinkButton href={e.url} target="_blank" rel="noopener">{t("sheet_official")}</LinkButton>}
@@ -100,6 +100,15 @@ function CommandDialog({ open, onClose, onPick, pool }) {
 function WeekView({ events, onOpen, favs }) {
   const { t, WDS, MO } = useI18n();
   const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    const h = ev => {
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "")) return;
+      if (ev.key === "ArrowLeft") setOffset(o => o - 1);
+      if (ev.key === "ArrowRight") setOffset(o => o + 1);
+    };
+    document.addEventListener("keydown", h);
+    return () => document.removeEventListener("keydown", h);
+  }, []);
   const monday = addDays(today, -((today.getDay() + 6) % 7) + offset * 7);
   const days = Array.from({ length: 7 }, (_, i) => addDays(monday, i));
   const from = iso(days[0]), to = iso(days[6]);
@@ -176,6 +185,49 @@ function MiniMap({ events, onGoMap }) {
   </button>;
 }
 
+/* ═════════════════════ Bandeau institution (filtre unique) ═════════════════════ */
+function InstitutionBanner({ name, events, onClear }) {
+  const { t } = useI18n();
+  const evs = useMemo(() => events.filter(e => e.institution === name), [events, name]);
+  const slug = slugify(name);
+  const isMain = MAIN_INST.includes(name);
+  return <div className="flex flex-wrap items-center gap-3 rounded-xl border bg-card p-3 my-3 shadow-sm">
+    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg font-semibold text-white" style={{ background: evs[0] ? discColor(evs[0].discipline) : "var(--c-aut)" }}>{name[0]}</span>
+    <div className="flex-1 min-w-0"><div className="font-semibold text-sm truncate">{name}</div><div className="text-xs text-muted-foreground">{t("inst_events_count", { n: evs.length })}</div></div>
+    <div className="flex items-center gap-3 shrink-0 ml-auto">
+      {isMain && <a href={`i/${slug}.html`} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline hidden sm:inline">{t("inst_site")}</a>}
+      {isMain && <a href={`data/cal/${slug}.ics`} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline hidden sm:inline">{t("inst_ics")}</a>}
+      <Button variant="outline" size="sm" onClick={onClear}>{t("inst_clear")}</Button>
+    </div>
+  </div>;
+}
+
+/* ═════════════════════ Mes intervenants ═════════════════════ */
+function SpeakersPanel({ open, onClose, speakers, onUnfollow, pool, onOpenEvent, notifyPerm, onEnableNotify }) {
+  const { t, fmtShort } = useI18n();
+  const list = useMemo(() => [...speakers].sort((a, b) => a.localeCompare(b)), [speakers]);
+  return <AnimatePresence>{open && <motion.div key="speakers" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
+    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+    <motion.div initial={{ scale: .97, y: -8 }} animate={{ scale: 1, y: 0 }} exit={{ scale: .97, y: -8 }} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] -translate-x-1/2 rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
+      <div className="flex items-center justify-between border-b px-4 py-3"><h2 className="font-semibold text-sm">{t("my_speakers")}</h2><button onClick={onClose} className="inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-accent" aria-label={t("fermer")}><Icon d={ICONS.x} size={15} /></button></div>
+      {notifyPerm !== "unsupported" && <div className="px-4 py-2 border-b bg-muted/40 text-xs">
+        {notifyPerm === "granted" ? <span className="text-emerald-600 dark:text-emerald-400 font-medium">{t("notify_enabled")}</span>
+          : notifyPerm === "denied" ? <span className="text-muted-foreground">{t("notify_denied")}</span>
+          : <button onClick={onEnableNotify} className="font-medium underline underline-offset-2 hover:text-foreground">{t("notify_enable")}</button>}
+      </div>}
+      <div className="overflow-auto flex-1">
+        {!list.length ? <div className="p-8 text-center"><p className="text-sm font-medium">{t("no_speakers")}</p><p className="text-xs text-muted-foreground mt-1">{t("no_speakers_sub")}</p></div>
+          : <ul className="divide-y">{list.map(name => {
+            const talks = pool.filter(e => e.speaker && e.speaker.toLowerCase().includes(name.toLowerCase())).slice(0, 3);
+            return <li key={name} className="px-4 py-3">
+              <div className="flex items-center justify-between gap-2"><span className="font-medium text-sm truncate">{name}</span><button onClick={() => onUnfollow(name)} className="text-xs text-muted-foreground hover:text-foreground shrink-0">{t("unfollow_speaker")}</button></div>
+              {talks.length ? <ul className="mt-1.5 flex flex-col gap-1">{talks.map(e => <li key={e.id}><button onClick={() => onOpenEvent(e)} className="w-full text-left text-xs text-muted-foreground hover:text-foreground flex gap-2"><span className="tabular-nums shrink-0">{fmtShort(e.date)}</span><span className="truncate">{e.title}</span></button></li>)}</ul>
+                : <p className="mt-1 text-xs text-muted-foreground">{t("no_upcoming")}</p>}
+            </li>; })}</ul>}
+      </div>
+    </motion.div></motion.div>}</AnimatePresence>;
+}
+
 /* ═════════════════════ Carte GitHub (contact) ═════════════════════ */
 function GithubCard() {
   const { t } = useI18n();
@@ -196,6 +248,15 @@ function useFavs() {
   const toggle = useCallback(id => setFavs(s => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); store.set("paf_favs", [...n]); return n; }), []);
   return [favs, toggle];
 }
+// Intervenants suivis (paf_speakers) + notifications : événements déjà vus
+// pour un intervenant suivi (paf_speakers_seen), pour ne notifier qu'une fois.
+function useSpeakers() {
+  const [speakers, setSpeakers] = useState(() => new Set(store.get("paf_speakers", [])));
+  const [seen, setSeen] = useState(() => new Set(store.get("paf_speakers_seen", [])));
+  const toggle = useCallback(name => setSpeakers(s => { const n = new Set(s); n.has(name) ? n.delete(name) : n.add(name); store.set("paf_speakers", [...n]); return n; }), []);
+  const markSeen = useCallback(ids => setSeen(s => { const n = new Set(s); ids.forEach(id => n.add(id)); store.set("paf_speakers_seen", [...n]); return n; }), []);
+  return { speakers, toggle, seen, markSeen };
+}
 function App() {
   const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO } = useI18n();
   const init = useMemo(filtersFromURL, []);
@@ -204,6 +265,9 @@ function App() {
   const [filters, setFilters] = useState(init.filters); const [rawQ, setRawQ] = useState(init.rawQ);
   const [view, setView] = useState(init.view); const [history, setHistory] = useState(init.history); const [histMonth, setHistMonth] = useState("all");
   const [favs, toggleFav] = useFavs(); const [open, setOpen] = useState(null); const [cmd, setCmd] = useState(false); const [shown, setShown] = useState(PAGE); const [toast, setToast] = useState(null);
+  const { speakers, toggle: toggleSpeaker, seen: seenSpeakerEvents, markSeen } = useSpeakers();
+  const [speakersOpen, setSpeakersOpen] = useState(false);
+  const [notifyPerm, setNotifyPerm] = useState(() => (typeof Notification === "undefined" ? "unsupported" : Notification.permission));
   const [selectMode, setSelectMode] = useState(false); const [selected, setSelected] = useState(new Set());
   const [near, setNear] = useState(false); const [userPos, setUserPos] = useState(null); const [locating, setLocating] = useState(false);
   const agendaRef = useRef(null), moreRef = useRef(null), pendingEvent = useRef(init.event);
@@ -233,7 +297,11 @@ function App() {
     ensureArchive().then(a => { const p = a.find(x => x.id === id); p ? setOpen(p) : notify(t("toast_not_found")); });
   }, [events]);
   useEffect(() => { window.history.replaceState(null, "", urlFromState({ filters, view, history, rawQ })); }, [filters, view, history, rawQ]);
-  useEffect(() => { const h = ev => { if ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === "k") { ev.preventDefault(); setCmd(c => !c); } if (ev.key === "Escape") setCmd(false); }; document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, []);
+  useEffect(() => { const h = ev => {
+    if ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === "k") { ev.preventDefault(); setCmd(c => !c); }
+    else if (ev.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "")) { ev.preventDefault(); setCmd(true); }
+    if (ev.key === "Escape") setCmd(false);
+  }; document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, []);
 
   /* dérivés */
   const UP = useMemo(() => (events || []).filter(e => e.date >= TODAY), [events]);
@@ -249,6 +317,24 @@ function App() {
   const counts = useMemo(() => { const c = k => { const m = {}; UP.forEach(e => m[e[k]] = (m[e[k]] || 0) + 1); return m; }; const th = {}; UP.forEach(e => (e.luma_categories || []).forEach(t => th[t] = (th[t] || 0) + 1)); return { disc: c("discipline"), inst: c("institution"), src: c("source_type"), theme: th }; }, [UP]);
   const nToday = UP.filter(e => e.date === TODAY).length, nWeek = UP.filter(e => e.date <= WEEK_END).length, nWe = UP.filter(e => WE.includes(e.date)).length, nNew = UP.filter(isNew).length;
   const topInst = useMemo(() => Object.entries(counts.inst).sort((a, b) => b[1] - a[1]).slice(0, 18), [counts]);
+  const followedNew = useMemo(() => {
+    if (!speakers.size) return [];
+    const names = [...speakers].map(n => n.toLowerCase());
+    return UP.filter(e => e.speaker && !seenSpeakerEvents.has(e.id) && names.some(n => e.speaker.toLowerCase().includes(n)));
+  }, [UP, speakers, seenSpeakerEvents]);
+  useEffect(() => {
+    if (notifyPerm !== "granted" || !followedNew.length) return;
+    try {
+      if (followedNew.length === 1) new Notification(t("notify_title"), { body: followedNew[0].title });
+      else new Notification(t("notify_title"), { body: `${followedNew.length} ${t("noun_event", { n: followedNew.length })}` });
+    } catch (err) {}
+    markSeen(followedNew.map(x => x.id));
+  }, [followedNew, notifyPerm]);
+  const enableNotify = () => {
+    if (typeof Notification === "undefined") return;
+    Notification.requestPermission().then(p => { setNotifyPerm(p); if (p === "granted") notify(t("notify_enabled")); else if (p === "denied") notify(t("notify_denied")); });
+  };
+  const openSpeakers = () => { setSpeakersOpen(true); if (followedNew.length) markSeen(followedNew.map(x => x.id)); };
   const featured = useMemo(() => {
     // Le digest (data/digest.json) est la sélection éditoriale de la semaine ; sinon sélection automatique
     const fromDigest = digest ? digest.events.map(d => UP.find(e => e.id === d.id)).filter(Boolean).filter(e => e.date <= WEEK_END) : [];
@@ -347,6 +433,8 @@ function App() {
         {(activeTags.length > 0 || rawQ) && <div className="flex flex-wrap gap-1.5 mt-2">{rawQ && <span className="inline-flex items-center gap-1 rounded-md border bg-background pl-2 pr-1 py-0.5 text-xs font-medium">« {rawQ} »<button onClick={() => { setRawQ(""); setF({ q: "" }); }} className="inline-flex h-4 w-4 items-center justify-center rounded-sm text-muted-foreground hover:bg-accent hover:text-foreground">×</button></span>}{activeTags.map(([l, rm]) => <span key={l} className="inline-flex items-center gap-1 rounded-md border bg-background pl-2 pr-1 py-0.5 text-xs font-medium">{l}<button onClick={rm} className="inline-flex h-4 w-4 items-center justify-center rounded-sm text-muted-foreground hover:bg-accent hover:text-foreground">×</button></span>)}</div>}
       </div>
 
+      {!history && filters.inst.size === 1 && <InstitutionBanner name={[...filters.inst][0]} events={UP} onClear={() => setF({ inst: new Set() })} />}
+
       <section className="py-4 pb-36">
         {!events && <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pt-6">{[...Array(8)].map((_, i) => <div key={i} className="rounded-xl border bg-card overflow-hidden animate-pulse"><div className="aspect-[16/10] bg-muted" /><div className="p-4 space-y-2"><div className="h-3 w-1/3 bg-muted rounded" /><div className="h-4 w-4/5 bg-muted rounded" /><div className="h-3 w-1/2 bg-muted rounded" /></div></div>)}</div>}
         {events && history && !archive && <p className="pt-6 text-sm text-muted-foreground">{t("history_loading")}</p>}
@@ -380,13 +468,15 @@ function App() {
         <DockIcon title={t("dock_history")} active={history} onClick={toggleHistory}><Icon d={ICONS.history} /></DockIcon>
         <DockIcon title={t("dock_random")} onClick={pickRandom}><Icon d={ICONS.random} /></DockIcon>
         <DockIcon title={t("dock_fav")} active={filters.fav} onClick={() => { setF({ fav: !filters.fav }); goAgenda(); }}><Icon d={ICONS.star} />{favs.size > 0 && <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 rounded-full bg-primary text-primary-foreground text-[10px] font-bold px-1 leading-4">{favs.size}</span>}</DockIcon>
+        {speakers.size > 0 && <DockIcon title={t("my_speakers")} active={speakersOpen} onClick={openSpeakers}><Icon d={ICONS.bell} />{followedNew.length > 0 && <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 rounded-full bg-primary text-primary-foreground text-[10px] font-bold px-1 leading-4">{followedNew.length}</span>}</DockIcon>}
         <DockSep />
         <DockIcon title={t("dock_search")} onClick={() => setCmd(true)}><Icon d={ICONS.search} /></DockIcon>
       </Dock>
     </div>
 
-    <Sheet e={open} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} />
+    <Sheet e={open} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} following={open ? speakers.has(open.speaker) : false} onFollow={name => { toggleSpeaker(name); notify(speakers.has(name) ? t("unfollow_speaker") : t("follow_speaker")); }} />
     <CommandDialog open={cmd} onClose={() => setCmd(false)} onPick={e => { setCmd(false); setOpen(e); }} pool={pool} />
+    <SpeakersPanel open={speakersOpen} onClose={() => setSpeakersOpen(false)} speakers={speakers} onUnfollow={toggleSpeaker} pool={UP} onOpenEvent={e => { setSpeakersOpen(false); setOpen(e); }} notifyPerm={notifyPerm} onEnableNotify={enableNotify} />
     <AnimatePresence>{toast && <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg">{toast}</motion.div>}</AnimatePresence>
   </>;
 }

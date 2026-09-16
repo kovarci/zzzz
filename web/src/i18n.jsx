@@ -90,6 +90,17 @@ const TR = {
   footer_repo_desc: ["Agrégateur des conférences académiques de Paris.", "Aggregator for Paris academic conferences."],
   footer_open_issue: ["Ouvrir une discussion", "Open a discussion"], footer_source: ["Code source", "Source code"],
 
+  follow_speaker: ["Suivre cet intervenant", "Follow this speaker"], unfollow_speaker: ["Ne plus suivre", "Unfollow"],
+  my_speakers: ["Mes intervenants", "My speakers"], no_speakers: ["Aucun intervenant suivi.", "No speakers followed yet."],
+  no_speakers_sub: ["Clique sur la cloche à côté d'un intervenant pour le suivre ici.", "Click the bell next to a speaker to follow them here."],
+  upcoming_from: ["À venir", "Upcoming"], no_upcoming: ["Plus rien de prévu pour l'instant.", "Nothing scheduled for now."],
+  notify_enable: ["Activer les notifications", "Enable notifications"], notify_enabled: ["Notifications activées ✓", "Notifications enabled ✓"],
+  notify_denied: ["Notifications bloquées par le navigateur.", "Notifications blocked by the browser."],
+  notify_title: ["Tes intervenants reviennent", "Your speakers are back"],
+  inst_events_count: ["{n} événement{s} à venir", "{n} upcoming event{s}"], inst_site: ["Fiche institution ↗", "Institution page ↗"],
+  inst_ics: ["S'abonner à son agenda", "Subscribe to its calendar"], inst_clear: ["Voir toutes les institutions", "See all institutions"],
+  search_hint: ["Appuie sur / pour rechercher", "Press / to search"],
+
   rel_never: ["jamais", "never"], rel_now: ["à l'instant", "just now"],
   rel_min: ["il y a {n} min", "{n} min ago"], rel_h: ["il y a {n} h", "{n} h ago"], rel_d: ["il y a {n} j", "{n} d ago"],
   rel_today: ["Aujourd'hui", "Today"], rel_tomorrow: ["Demain", "Tomorrow"],
