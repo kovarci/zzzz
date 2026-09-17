@@ -1,308 +1,318 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Sciences Po · Paris Académique
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:6b3c3ee08ec5@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260916
-DTEND;VALUE=DATE:20260917
-SUMMARY:Les Grandes Conférences : Yann Le Cun\, président exécutif d’Advanced Machine Intelligence et lauréat du prix Turing
-DESCRIPTION:À l’occasion de la première Grande Conférence de l’année universitaire 2026-2027\, Sciences Po a l’honneur d’accueillir Yann Le Cun\, président exécutif d’Advanced Machine Intelligence\, lauréat du prix Turing et professeur à la New York University.\nhttps://www.sciencespo.fr/fr/evenements/les-grandes-conferences-yann-le-cun-president-executif-d-advanced-machine-intelligence-et-laureat-du-prix-turing/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/les-grandes-conferences-yann-le-cun-president-executif-d-advanced-machine-intelligence-et-laureat-du-prix-turing/
-END:VEVENT
-BEGIN:VEVENT
-UID:821e56e8ed57@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:Visite guidée “Le Paris Noir”: a guided tour of the Black heritage of Paris
-DESCRIPTION:(English below) Découvrez le Paris Noir\, une visite guidée de Paris mettant en lumière des artistes\, intellectuels et personnalités politiques du “Monde noir” à travers des marques de leur héritage présentes dans la capitale.\nhttps://www.sciencespo.fr/fr/evenements/visite-guidee-le-paris-noir-a-guided-tour-of-the-black-heritage-of-paris/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/visite-guidee-le-paris-noir-a-guided-tour-of-the-black-heritage-of-paris/
-END:VEVENT
-BEGIN:VEVENT
-UID:5af4d5d713e3@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:Remise du prix du livre Chaire d'études sur le fait religieux
-DESCRIPTION:Evènement en présentiel organisé dans le cadre de la Chaire d'étude sur le fait religieux.\nhttps://www.sciencespo.fr/fr/evenements/remise-du-prix-du-livre-chaire-d-etudes-sur-le-fait-religieux/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/remise-du-prix-du-livre-chaire-d-etudes-sur-le-fait-religieux/
-END:VEVENT
-BEGIN:VEVENT
-UID:24b7e98e4b37@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:Passage de relais de Jérôme Ferrari à Tanguy Viel
-DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de la Maison des Arts & de la Création à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-END:VEVENT
-BEGIN:VEVENT
-UID:175caaf89216@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:L'Europe seule au monde
-DESCRIPTION:Rejoignez-nous pour la présentation du livre de la doyenne de PSIA\, Arancha González\, en conversation avec Clémenent Beaune\, Haut-commissaire à la Stratégie et au Plan\, et Christine Ockrent\, Journaliste à France Culture.\nhttps://www.sciencespo.fr/fr/evenements/l-europe-seule-au-monde/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/l-europe-seule-au-monde/
-END:VEVENT
-BEGIN:VEVENT
-UID:c5fde2c92b84@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:Quels enjeux de politique économique pour la présidentielle ?
-DESCRIPTION:L'École d'affaires publiques est ravie d'accueillir Xavier Jaravel\, Emmanuel Monnet\, Mathieu Peruyero et Vincent Pons pour cette conférence-débat à l'occasion de la publication de leur manuel Les politiques économiques à l'épreuve des faits.\nhttps://www.sciencespo.fr/fr/evenements/quels-enjeux-de-politique-economique-pour-la-presidentielle/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/quels-enjeux-de-politique-economique-pour-la-presidentielle/
-END:VEVENT
-BEGIN:VEVENT
-UID:132b940e3309@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260918
-SUMMARY:Tanguy Viel - Passage de relais de la Chaire d'Écriture
-DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de Sciences Po à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
-END:VEVENT
-BEGIN:VEVENT
-UID:19cc6720d169@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260918
-DTEND;VALUE=DATE:20260919
-SUMMARY:The student-led Gen Z mobilization in India and its socio-political impact
-DESCRIPTION:This conference examines the student-led Gen Z mobilization in India and its broader socio-political implications.\nhttps://www.sciencespo.fr/fr/evenements/the-student-led-gen-z-mobilization-in-india-and-its-socio-political-impact/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/the-student-led-gen-z-mobilization-in-india-and-its-socio-political-impact/
-END:VEVENT
-BEGIN:VEVENT
-UID:558326286d85@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260919
-DTEND;VALUE=DATE:20260920
-SUMMARY:Table ronde & défilé de mode - Coutures africaines. Mode\, gestes\, héritages - Acte II
-DESCRIPTION:Pour la deuxième année consécutive l’Africa Programme de Sciences Po s’associe au CCMC pour une journée d’exploration collective\, de réflexion sur la création de mode africaine.\nhttps://www.sciencespo.fr/fr/evenements/table-ronde-and-defile-de-mode-coutures-africaines-mode-gestes-heritages-acte-ii/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/table-ronde-and-defile-de-mode-coutures-africaines-mode-gestes-heritages-acte-ii/
-END:VEVENT
-BEGIN:VEVENT
-UID:48ed850803b3@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260921
-DTEND;VALUE=DATE:20260922
-SUMMARY:Matinées du CEVIPOF : Dialogue sur le fascisme
-DESCRIPTION:Pour cette première séance de l'année\, Lucien Jaume (CEVIPOF) invite Marc Lazar (Centre d'histoire) pour débattre autour de son ouvrage "La vraie nature du fascisme italien : La révolution culturelle de Mussolini" éditions Tallandier.\nhttps://www.sciencespo.fr/fr/evenements/matinees-du-cevipof-dialogue-sur-le-fascisme/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/matinees-du-cevipof-dialogue-sur-le-fascisme/
-END:VEVENT
-BEGIN:VEVENT
-UID:d5baa1519fe9@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260921
-DTEND;VALUE=DATE:20260922
-SUMMARY:Café de la donnée : Pourquoi les métadonnées sont la clé de vos données de recherche
-DESCRIPTION:À l’occasion de cette nouvelle édition du Café de la donnée\, le CDSP\, en collaboration avec l'INIST\, présente de nouvelles ressources pédagogiques consacrées au standard DDI (Data Documentation Initiative)\, développées dans le cadre du projet FAIRwDDI en collaboration avec CLOSER UK et l'INIST (DORANUM).\nhttps://www.sciencespo.fr/fr/evenements/cafe-de-la-donnee-metadonnées-clé-données-de-recherche/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/cafe-de-la-donnee-metadonnées-clé-données-de-recherche/
-END:VEVENT
-BEGIN:VEVENT
-UID:30d4bfb9bf85@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260923
-SUMMARY:L'institut français d'économie (IFE) présente ses publications consacrées aux grandes tendances économiques de 2027
-DESCRIPTION:Trois ouvrages collectifs des Éditions La Découverte analysent les grandes évolutions et enjeux économiques à venir : L'économie française 2027\, L'économie européenne 2027\, L'économie mondiale 2027. Ce sera l'occasion de découvrir l'IFE\, né de la fusion de l'OFCE et du CEPII : équipe\, programme de travail et nouveau site web.\nhttps://www.sciencespo.fr/fr/evenements/l-institut-francais-d-economie-ife-presente-ses-publications-consacrees-aux-grandes-tendances-economiques-de-2027/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/l-institut-francais-d-economie-ife-presente-ses-publications-consacrees-aux-grandes-tendances-economiques-de-2027/
-END:VEVENT
-BEGIN:VEVENT
-UID:909645890a3a@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260923
-SUMMARY:Debating the State in the Middle East and Beyond: Political Frameworks in a Changing World Order
-DESCRIPTION:Hybrid event organized as part of the seminar « Authoritarianism's (un)making of North Africa and the Middle East »\nhttps://www.sciencespo.fr/fr/evenements/debating-the-state-in-the-middle-east-and-beyond-political-frameworks-in-a-changing-world-order/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/debating-the-state-in-the-middle-east-and-beyond-political-frameworks-in-a-changing-world-order/
-END:VEVENT
-BEGIN:VEVENT
-UID:f7272564bdf4@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
-SUMMARY:Nouveau séminaire « L’État de droit dans tous ses états »
-DESCRIPTION:Les membres du Pôle « Institutions politiques » du CEVIPOF lancent un nouveau séminaire\, qui propose d’examiner la notion d'"Etat de droit" sous divers angles (histoire\, philosophie\, droit\, science politique\, relations internationales) et à différentes échelles (française\, européenne\, internationale). 1ère séance menée par Alexandre Escudier.\nhttps://www.sciencespo.fr/fr/evenements/lancement-d-un-nouveau-seminaire-l-etat-de-droit-dans-tous-ses-etats/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/lancement-d-un-nouveau-seminaire-l-etat-de-droit-dans-tous-ses-etats/
-END:VEVENT
-BEGIN:VEVENT
-UID:d15f85c8ed00@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
-SUMMARY:Who will stand up for international law?
-DESCRIPTION:Latin America\, Europe and the invasion of Ukraine\nhttps://www.sciencespo.fr/fr/evenements/who-will-stand-up-for-international-law-latin-america-europe-and-the-invasion-of-ukraine/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/who-will-stand-up-for-international-law-latin-america-europe-and-the-invasion-of-ukraine/
-END:VEVENT
-BEGIN:VEVENT
-UID:12e054c2811e@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
-SUMMARY:Michel Foucault : Iran\, quand la terre tremble. Reportage 1978-1979
-DESCRIPTION:Une discussion autour du "reportage d'idées" réalisé par Michel Foucault un an avant la révolution islamique iranienne\, à l'occasion de la sortie de l'ouvrage posthume aux Éditions Gallimard. En présence de Chowra Makaremi (éditrice\, EHESS)\, Julien Cavagnis (éditeur\, université catholique de Louvain)\, Fabienne Brion (université catholique de Louvain)\, Gilles Gressani (Le Grand Continent) et Frédér\nhttps://www.sciencespo.fr/fr/evenements/michel-foucault-iran-quand-la-terre-tremble-reportage-1978-1979/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/michel-foucault-iran-quand-la-terre-tremble-reportage-1978-1979/
-END:VEVENT
-BEGIN:VEVENT
-UID:06bb3fe0fa06@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
-SUMMARY:Cycle IA\, Démocraties et Milieu Informationnel
-DESCRIPTION:Le cycle s’ouvre avec un grand entretien en présence d’Anna Zeiter\, cofondatrice et CEO de W Social\, alternative européenne aux grands réseaux sociaux. Cette rencontre explorera les conditions d’une souveraineté numérique européenne et les enjeux de la reconquête de l’espace public en ligne.\nhttps://www.sciencespo.fr/fr/evenements/cycle-ia-democraties-et-milieu-informationnel/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/cycle-ia-democraties-et-milieu-informationnel/
-END:VEVENT
-BEGIN:VEVENT
-UID:c28187af2ee8@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Cross-perspectives on modern central banking
-DESCRIPTION:A joint Bank of England/Banque de France conference\nhttps://www.sciencespo.fr/fr/evenements/cross-perspectives-on-modern-central-banking/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/cross-perspectives-on-modern-central-banking/
-END:VEVENT
-BEGIN:VEVENT
-UID:32944db202b7@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:"Suis-je l'auteur de mes films ?" avec Christophe Honoré
-DESCRIPTION:Après Claire Denis\, Mathieu Amalric et Alice Diop\, Christophe Honoré devient le nouveau titulaire de la Chaire Cinéma de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
-END:VEVENT
-BEGIN:VEVENT
-UID:67d5769d1a8a@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:How is the World Led when Populist Lead ?
-DESCRIPTION:In person event organised as part of The International Dimensions and Effects of Populism (IDEoPOP) doctoral program.\nhttps://www.sciencespo.fr/fr/evenements/who-leads-when-populists-leads-the-world/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/who-leads-when-populists-leads-the-world/
-END:VEVENT
-BEGIN:VEVENT
-UID:1bb0ab02c138@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Tribunes de la santé 2026 : "Numérique et santé mentale des jeunes : faut-il légiférer ?"\, avec Laure Miller
-DESCRIPTION:Au regard de son expérience au sein de la commission d'enquête sur TikTok\, Laure Miller abordera les impacts d'une surexposition de la jeunesse au numérique en matière de santé mentale. La députée discutera des stratégies économiques des acteurs du numérique et des politiques publiques à conduire\, en France et en Europe.\nhttps://www.sciencespo.fr/fr/evenements/tribunes-de-la-sante-2026-numerique-et-sante-mentale-des-jeunes-faut-il-legiferer-avec-laure-miller/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/tribunes-de-la-sante-2026-numerique-et-sante-mentale-des-jeunes-faut-il-legiferer-avec-laure-miller/
-END:VEVENT
-BEGIN:VEVENT
-UID:c6bfcc3a9c3d@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Forum Carrières 2026
-DESCRIPTION:Le traditionnel forum de recrutement de Sciences Po aura lieu vendredi 25 septembre sur son campus parisien (1 place Saint-Thomas-d'Aquin) et se prolongera en ligne\, les 29 et 30 septembre\, sur la plateforme Seekube.\nhttps://www.sciencespo.fr/fr/evenements/forum-carrieres-2026/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/forum-carrieres-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:a8acdcf36d63@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Taking Stock of the Global IR Debate: What Is the “Non-West”?
-DESCRIPTION:Inaugural session of the new CERI seminar: "Global IR in the planetary era"\nhttps://www.sciencespo.fr/fr/evenements/taking-stock-of-the-global-ir-debate-what-is-the-non-west/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/taking-stock-of-the-global-ir-debate-what-is-the-non-west/
-END:VEVENT
-BEGIN:VEVENT
-UID:3066cb5797dd@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-SUMMARY:Vers la dénumérisation ?
-DESCRIPTION:Najat Vallaud-Belkacem\, Nastasia Hadjadji et Thomas Honnet seront les invités de cette conférence du médialab\, aux côtés de Robin de Mourat et Clémence Seurat. Ensemble\, ils échangeront autour d’une question : comment redonner au numérique sa juste place dans nos sociétés ?\nhttps://www.sciencespo.fr/fr/evenements/vers-la-denumerisation/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/vers-la-denumerisation/
-END:VEVENT
-BEGIN:VEVENT
-UID:a13f9073cb15@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Cities Ablaze: Tales of the December 2007 Riots in Karachi
-DESCRIPTION:Book discussion : Laurent Gayer and Waseem Yaqoob\, "Quand la ville brûle. Sur les traces d'une émeute. Karachi\, 2007-2023"\, Paris\, Anamosa\, 2026.\nhttps://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-december-2007-riots-in-karachi/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-december-2007-riots-in-karachi/
-END:VEVENT
-BEGIN:VEVENT
-UID:8d135b3888fb@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:"Le son inaugural" avec Laurent de Wilde
-DESCRIPTION:Pianiste\, compositeur\, producteur et homme de radio\, Laurent de Wilde devient le nouveau titulaire de la Chaire Arts vivants de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
-END:VEVENT
-BEGIN:VEVENT
-UID:d2c2e4e326fb@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
-SUMMARY:L’affaire des viols de Mazan : Quels héritages pour la justice et la société?
-DESCRIPTION:Table-ronde en présence de Maîtres Antoine Camus et Babonneau\, avocats de Gisèle Pélicot\, Maître Béatrice Zavarro\, avocate de Dominique Pélicot\, Marie Mercat-Bruns\, Professeure des Universités\, Sciences Po (Ecole de droit)\, membre du comité de direction de PRESAGE. Mardi 13 octobre 2026\, 19h15-21h15 27 rue Saint-Guillaume\, 75007 Paris\, amphithéâtre Albert Sorel & Leroy Beaulieu\nhttps://www.sciencespo.fr/fr/evenements/l-affaire-des-viols-de-mazan-quels-heritages-pour-la-justice-et-la-societe/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/l-affaire-des-viols-de-mazan-quels-heritages-pour-la-justice-et-la-societe/
-END:VEVENT
-BEGIN:VEVENT
-UID:0ed2fc3defe3@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Prix Penser le travail 2026
-DESCRIPTION:Le Monde et Sciences Po ont le plaisir de vous convier à la cérémonie de remise Prix Penser le travail\, fruit d'un travail réunissant les professionnels des RH et du conseil en management\, les chercheurs en sciences sociales et les étudiants du Master RH et gouvernance durable de Sciences Po.\nhttps://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:611dadba4fbb@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261103
-SUMMARY:Cérémonie du Collège universitaire / Undergraduate College Award Ceremony
-DESCRIPTION:Après des prises de parole institutionnelles\, les étudiantes et étudiants recevront leurs Certifications et/ou diplômes summa cum laude. Ce moment sera suivi d’un cocktail convivial\nhttps://www.sciencespo.fr/fr/evenements/ceremonie-du-college-universitaire-undergraduate-college-award-ceremony/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/ceremonie-du-college-universitaire-undergraduate-college-award-ceremony/
-END:VEVENT
-BEGIN:VEVENT
-UID:534610543f02@paris-academique
-DTSTAMP:20260916T171925Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:Protéger les sources : un statut pour la recherche
-DESCRIPTION:Programme détaillé de la journée d'étude.\nhttps://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sciences Po · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:821e56e8ed57@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Visite guidée “Le Paris Noir”: a guided tour of the Black heritage of Paris
+DESCRIPTION:(English below) Découvrez le Paris Noir\, une visite guidée de Paris mettant en lumière des artistes\, intellectuels et personnalités politiques du “Monde noir” à travers des marques de leur héritage présentes dans la capitale.\nhttps://www.sciencespo.fr/fr/evenements/visite-guidee-le-paris-noir-a-guided-tour-of-the-black-heritage-of-paris/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/visite-guidee-le-paris-noir-a-guided-tour-of-the-black-heritage-of-paris/
+END:VEVENT
+BEGIN:VEVENT
+UID:5af4d5d713e3@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Remise du prix du livre Chaire d'études sur le fait religieux
+DESCRIPTION:Evènement en présentiel organisé dans le cadre de la Chaire d'étude sur le fait religieux.\nhttps://www.sciencespo.fr/fr/evenements/remise-du-prix-du-livre-chaire-d-etudes-sur-le-fait-religieux/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/remise-du-prix-du-livre-chaire-d-etudes-sur-le-fait-religieux/
+END:VEVENT
+BEGIN:VEVENT
+UID:24b7e98e4b37@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Passage de relais de Jérôme Ferrari à Tanguy Viel
+DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de la Maison des Arts & de la Création à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+END:VEVENT
+BEGIN:VEVENT
+UID:175caaf89216@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:L'Europe seule au monde
+DESCRIPTION:Rejoignez-nous pour la présentation du livre de la doyenne de PSIA\, Arancha González\, en conversation avec Clémenent Beaune\, Haut-commissaire à la Stratégie et au Plan\, et Christine Ockrent\, Journaliste à France Culture.\nhttps://www.sciencespo.fr/fr/evenements/l-europe-seule-au-monde/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/l-europe-seule-au-monde/
+END:VEVENT
+BEGIN:VEVENT
+UID:c5fde2c92b84@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Quels enjeux de politique économique pour la présidentielle ?
+DESCRIPTION:L'École d'affaires publiques est ravie d'accueillir Xavier Jaravel\, Emmanuel Monnet\, Mathieu Peruyero et Vincent Pons pour cette conférence-débat à l'occasion de la publication de leur manuel Les politiques économiques à l'épreuve des faits.\nhttps://www.sciencespo.fr/fr/evenements/quels-enjeux-de-politique-economique-pour-la-presidentielle/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/quels-enjeux-de-politique-economique-pour-la-presidentielle/
+END:VEVENT
+BEGIN:VEVENT
+UID:132b940e3309@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Tanguy Viel - Passage de relais de la Chaire d'Écriture
+DESCRIPTION:Jérôme Ferrari passe le relais de la Chaire d'Écriture de Sciences Po à l'écrivain Tanguy Viel.\nhttps://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/tanguy-viel-passage-de-relais-de-la-chaire-d-ecriture/
+END:VEVENT
+BEGIN:VEVENT
+UID:19cc6720d169@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+SUMMARY:The student-led Gen Z mobilization in India and its socio-political impact
+DESCRIPTION:This conference examines the student-led Gen Z mobilization in India and its broader socio-political implications.\nhttps://www.sciencespo.fr/fr/evenements/the-student-led-gen-z-mobilization-in-india-and-its-socio-political-impact/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/the-student-led-gen-z-mobilization-in-india-and-its-socio-political-impact/
+END:VEVENT
+BEGIN:VEVENT
+UID:558326286d85@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+SUMMARY:Table ronde & défilé de mode - Coutures africaines. Mode\, gestes\, héritages - Acte II
+DESCRIPTION:Pour la deuxième année consécutive l’Africa Programme de Sciences Po s’associe au CCMC pour une journée d’exploration collective\, de réflexion sur la création de mode africaine.\nhttps://www.sciencespo.fr/fr/evenements/table-ronde-and-defile-de-mode-coutures-africaines-mode-gestes-heritages-acte-ii/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/table-ronde-and-defile-de-mode-coutures-africaines-mode-gestes-heritages-acte-ii/
+END:VEVENT
+BEGIN:VEVENT
+UID:95f6e6bca1e1@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:Transition juste et sécurisante
+DESCRIPTION:Colloque organisé avec la Direction Générale de la Cohésion Sociale\nhttps://www.sciencespo.fr/fr/evenements/transition-juste-et-securisante/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/transition-juste-et-securisante/
+END:VEVENT
+BEGIN:VEVENT
+UID:48ed850803b3@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:Matinées du CEVIPOF : Dialogue sur le fascisme
+DESCRIPTION:Pour cette première séance de l'année\, Lucien Jaume (CEVIPOF) invite Marc Lazar (Centre d'histoire) pour débattre autour de son ouvrage "La vraie nature du fascisme italien : La révolution culturelle de Mussolini" éditions Tallandier.\nhttps://www.sciencespo.fr/fr/evenements/matinees-du-cevipof-dialogue-sur-le-fascisme/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/matinees-du-cevipof-dialogue-sur-le-fascisme/
+END:VEVENT
+BEGIN:VEVENT
+UID:d5baa1519fe9@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:Café de la donnée : Pourquoi les métadonnées sont la clé de vos données de recherche
+DESCRIPTION:À l’occasion de cette nouvelle édition du Café de la donnée\, le CDSP\, en collaboration avec l'INIST\, présente de nouvelles ressources pédagogiques consacrées au standard DDI (Data Documentation Initiative)\, développées dans le cadre du projet FAIRwDDI en collaboration avec CLOSER UK et l'INIST (DORANUM).\nhttps://www.sciencespo.fr/fr/evenements/cafe-de-la-donnee-metadonnées-clé-données-de-recherche/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/cafe-de-la-donnee-metadonnées-clé-données-de-recherche/
+END:VEVENT
+BEGIN:VEVENT
+UID:1df600d150b5@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:Transition juste et sécurisante
+DESCRIPTION:\nhttps://www.sciencespo.fr/transition-juste-et-securisante
+LOCATION:Paris
+URL:https://www.sciencespo.fr/transition-juste-et-securisante
+END:VEVENT
+BEGIN:VEVENT
+UID:30d4bfb9bf85@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:L'institut français d'économie (IFE) présente ses publications consacrées aux grandes tendances économiques de 2027
+DESCRIPTION:Trois ouvrages collectifs des Éditions La Découverte analysent les grandes évolutions et enjeux économiques à venir : L'économie française 2027\, L'économie européenne 2027\, L'économie mondiale 2027. Ce sera l'occasion de découvrir l'IFE\, né de la fusion de l'OFCE et du CEPII : équipe\, programme de travail et nouveau site web.\nhttps://www.sciencespo.fr/fr/evenements/l-institut-francais-d-economie-ife-presente-ses-publications-consacrees-aux-grandes-tendances-economiques-de-2027/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/l-institut-francais-d-economie-ife-presente-ses-publications-consacrees-aux-grandes-tendances-economiques-de-2027/
+END:VEVENT
+BEGIN:VEVENT
+UID:909645890a3a@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:Debating the State in the Middle East and Beyond: Political Frameworks in a Changing World Order
+DESCRIPTION:Hybrid event organized as part of the seminar « Authoritarianism's (un)making of North Africa and the Middle East »\nhttps://www.sciencespo.fr/fr/evenements/debating-the-state-in-the-middle-east-and-beyond-political-frameworks-in-a-changing-world-order/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/debating-the-state-in-the-middle-east-and-beyond-political-frameworks-in-a-changing-world-order/
+END:VEVENT
+BEGIN:VEVENT
+UID:f7272564bdf4@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Nouveau séminaire « L’État de droit dans tous ses états »
+DESCRIPTION:Les membres du Pôle « Institutions politiques » du CEVIPOF lancent un nouveau séminaire\, qui propose d’examiner la notion d'"Etat de droit" sous divers angles (histoire\, philosophie\, droit\, science politique\, relations internationales) et à différentes échelles (française\, européenne\, internationale). 1ère séance menée par Alexandre Escudier.\nhttps://www.sciencespo.fr/fr/evenements/lancement-d-un-nouveau-seminaire-l-etat-de-droit-dans-tous-ses-etats/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/lancement-d-un-nouveau-seminaire-l-etat-de-droit-dans-tous-ses-etats/
+END:VEVENT
+BEGIN:VEVENT
+UID:d15f85c8ed00@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Who will stand up for international law?
+DESCRIPTION:Latin America\, Europe and the invasion of Ukraine\nhttps://www.sciencespo.fr/fr/evenements/who-will-stand-up-for-international-law-latin-america-europe-and-the-invasion-of-ukraine/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/who-will-stand-up-for-international-law-latin-america-europe-and-the-invasion-of-ukraine/
+END:VEVENT
+BEGIN:VEVENT
+UID:12e054c2811e@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Michel Foucault : Iran\, quand la terre tremble. Reportage 1978-1979
+DESCRIPTION:Une discussion autour du "reportage d'idées" réalisé par Michel Foucault un an avant la révolution islamique iranienne\, à l'occasion de la sortie de l'ouvrage posthume aux Éditions Gallimard. En présence de Chowra Makaremi (éditrice\, EHESS)\, Julien Cavagnis (éditeur\, université catholique de Louvain)\, Fabienne Brion (université catholique de Louvain)\, Gilles Gressani (Le Grand Continent) et Frédér\nhttps://www.sciencespo.fr/fr/evenements/michel-foucault-iran-quand-la-terre-tremble-reportage-1978-1979/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/michel-foucault-iran-quand-la-terre-tremble-reportage-1978-1979/
+END:VEVENT
+BEGIN:VEVENT
+UID:06bb3fe0fa06@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Cycle IA\, Démocraties et Milieu Informationnel
+DESCRIPTION:Le cycle s’ouvre avec un grand entretien en présence d’Anna Zeiter\, cofondatrice et CEO de W Social\, alternative européenne aux grands réseaux sociaux. Cette rencontre explorera les conditions d’une souveraineté numérique européenne et les enjeux de la reconquête de l’espace public en ligne.\nhttps://www.sciencespo.fr/fr/evenements/cycle-ia-democraties-et-milieu-informationnel/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/cycle-ia-democraties-et-milieu-informationnel/
+END:VEVENT
+BEGIN:VEVENT
+UID:c28187af2ee8@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Cross-perspectives on modern central banking
+DESCRIPTION:A joint Bank of England/Banque de France conference\nhttps://www.sciencespo.fr/fr/evenements/cross-perspectives-on-modern-central-banking/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/cross-perspectives-on-modern-central-banking/
+END:VEVENT
+BEGIN:VEVENT
+UID:32944db202b7@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:"Suis-je l'auteur de mes films ?" avec Christophe Honoré
+DESCRIPTION:Après Claire Denis\, Mathieu Amalric et Alice Diop\, Christophe Honoré devient le nouveau titulaire de la Chaire Cinéma de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/suis-je-l-auteur-de-mes-films-lecon-inaugurale-de-christophe-honore/
+END:VEVENT
+BEGIN:VEVENT
+UID:67d5769d1a8a@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:How is the World Led when Populist Lead ?
+DESCRIPTION:In person event organised as part of The International Dimensions and Effects of Populism (IDEoPOP) doctoral program.\nhttps://www.sciencespo.fr/fr/evenements/who-leads-when-populists-leads-the-world/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/who-leads-when-populists-leads-the-world/
+END:VEVENT
+BEGIN:VEVENT
+UID:1bb0ab02c138@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Tribunes de la santé 2026 : "Numérique et santé mentale des jeunes : faut-il légiférer ?"\, avec Laure Miller
+DESCRIPTION:Au regard de son expérience au sein de la commission d'enquête sur TikTok\, Laure Miller abordera les impacts d'une surexposition de la jeunesse au numérique en matière de santé mentale. La députée discutera des stratégies économiques des acteurs du numérique et des politiques publiques à conduire\, en France et en Europe.\nhttps://www.sciencespo.fr/fr/evenements/tribunes-de-la-sante-2026-numerique-et-sante-mentale-des-jeunes-faut-il-legiferer-avec-laure-miller/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/tribunes-de-la-sante-2026-numerique-et-sante-mentale-des-jeunes-faut-il-legiferer-avec-laure-miller/
+END:VEVENT
+BEGIN:VEVENT
+UID:c6bfcc3a9c3d@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:Forum Carrières 2026
+DESCRIPTION:Le traditionnel forum de recrutement de Sciences Po aura lieu vendredi 25 septembre sur son campus parisien (1 place Saint-Thomas-d'Aquin) et se prolongera en ligne\, les 29 et 30 septembre\, sur la plateforme Seekube.\nhttps://www.sciencespo.fr/fr/evenements/forum-carrieres-2026/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/forum-carrieres-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:a8acdcf36d63@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Taking Stock of the Global IR Debate: What Is the “Non-West”?
+DESCRIPTION:Inaugural session of the new CERI seminar: "Global IR in the planetary era"\nhttps://www.sciencespo.fr/fr/evenements/taking-stock-of-the-global-ir-debate-what-is-the-non-west/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/taking-stock-of-the-global-ir-debate-what-is-the-non-west/
+END:VEVENT
+BEGIN:VEVENT
+UID:3066cb5797dd@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Vers la dénumérisation ?
+DESCRIPTION:Najat Vallaud-Belkacem\, Nastasia Hadjadji et Thomas Honnet seront les invités de cette conférence du médialab\, aux côtés de Robin de Mourat et Clémence Seurat. Ensemble\, ils échangeront autour d’une question : comment redonner au numérique sa juste place dans nos sociétés ?\nhttps://www.sciencespo.fr/fr/evenements/vers-la-denumerisation/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/vers-la-denumerisation/
+END:VEVENT
+BEGIN:VEVENT
+UID:a13f9073cb15@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Cities Ablaze: Tales of the December 2007 Riots in Karachi
+DESCRIPTION:Book discussion : Laurent Gayer and Waseem Yaqoob\, "Quand la ville brûle. Sur les traces d'une émeute. Karachi\, 2007-2023"\, Paris\, Anamosa\, 2026.\nhttps://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-december-2007-riots-in-karachi/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-december-2007-riots-in-karachi/
+END:VEVENT
+BEGIN:VEVENT
+UID:8d135b3888fb@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:"Le son inaugural" avec Laurent de Wilde
+DESCRIPTION:Pianiste\, compositeur\, producteur et homme de radio\, Laurent de Wilde devient le nouveau titulaire de la Chaire Arts vivants de la Maison des Arts & de la Création et livre sa leçon inaugurale.\nhttps://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/le-son-inaugural-avec-laurent-de-wilde/
+END:VEVENT
+BEGIN:VEVENT
+UID:d2c2e4e326fb@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:L’affaire des viols de Mazan : Quels héritages pour la justice et la société?
+DESCRIPTION:Table-ronde en présence de Maîtres Antoine Camus et Babonneau\, avocats de Gisèle Pélicot\, Maître Béatrice Zavarro\, avocate de Dominique Pélicot\, Marie Mercat-Bruns\, Professeure des Universités\, Sciences Po (Ecole de droit)\, membre du comité de direction de PRESAGE. Mardi 13 octobre 2026\, 19h15-21h15 27 rue Saint-Guillaume\, 75007 Paris\, amphithéâtre Albert Sorel & Leroy Beaulieu\nhttps://www.sciencespo.fr/fr/evenements/l-affaire-des-viols-de-mazan-quels-heritages-pour-la-justice-et-la-societe/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/l-affaire-des-viols-de-mazan-quels-heritages-pour-la-justice-et-la-societe/
+END:VEVENT
+BEGIN:VEVENT
+UID:0ed2fc3defe3@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Prix Penser le travail 2026
+DESCRIPTION:Le Monde et Sciences Po ont le plaisir de vous convier à la cérémonie de remise Prix Penser le travail\, fruit d'un travail réunissant les professionnels des RH et du conseil en management\, les chercheurs en sciences sociales et les étudiants du Master RH et gouvernance durable de Sciences Po.\nhttps://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:611dadba4fbb@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Cérémonie du Collège universitaire / Undergraduate College Award Ceremony
+DESCRIPTION:Après des prises de parole institutionnelles\, les étudiantes et étudiants recevront leurs Certifications et/ou diplômes summa cum laude. Ce moment sera suivi d’un cocktail convivial\nhttps://www.sciencespo.fr/fr/evenements/ceremonie-du-college-universitaire-undergraduate-college-award-ceremony/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/ceremonie-du-college-universitaire-undergraduate-college-award-ceremony/
+END:VEVENT
+BEGIN:VEVENT
+UID:534610543f02@paris-academique
+DTSTAMP:20260917T090751Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Protéger les sources : un statut pour la recherche
+DESCRIPTION:Programme détaillé de la journée d'étude.\nhttps://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-pour-la-recherche/
+END:VEVENT
+END:VCALENDAR
