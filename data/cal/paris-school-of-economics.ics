@@ -1,638 +1,628 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Paris School of Economics · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:1cbca90e9075@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260921
-DTEND;VALUE=DATE:20260922
-SUMMARY:Séminaire
-DESCRIPTION:Du lun. 21 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/regulation-et-environnement/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/regulation-et-environnement/
-END:VEVENT
-BEGIN:VEVENT
-UID:5bca5a4d9db6@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260921
-DTEND;VALUE=DATE:20260922
-SUMMARY:Régulation et Environnement
-DESCRIPTION:Du lun. 21 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/regulation-et-environnement/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/regulation-et-environnement/
-END:VEVENT
-BEGIN:VEVENT
-UID:fdc99bf49a75@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T093000
-DTEND:20260921T113000
-SUMMARY:Journées de l’économie 2026
-DESCRIPTION:Heure 09:30 – 19:30\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:ed2b470583ca@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T111500
-DTEND:20260921T131500
-SUMMARY:Economics and Psychology Seminar
-DESCRIPTION:Catherine Molho (TSE)\nhttps://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
-END:VEVENT
-BEGIN:VEVENT
-UID:3d2974a83b96@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T120000
-DTEND:20260921T140000
-SUMMARY:Séminaire PSE Interne
-DESCRIPTION:Philipp Ketz (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
-END:VEVENT
-BEGIN:VEVENT
-UID:61343ca3097e@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T123000
-DTEND:20260921T143000
-SUMMARY:Lunch séminaire d’économie appliquée
-DESCRIPTION:Olivier Meslin (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-END:VEVENT
-BEGIN:VEVENT
-UID:db4974023a25@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T123000
-DTEND:20260921T143000
-SUMMARY:Histoire économique
-DESCRIPTION:Carola Stapper (Johannes Kepler University Linz)\nhttps://www.parisschoolofeconomics.eu/evenements/histoire-economique/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
-END:VEVENT
-BEGIN:VEVENT
-UID:127ea3183af9@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T123000
-DTEND:20260921T143000
-SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
-DESCRIPTION:Andrew Kosenko (Marist University)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-END:VEVENT
-BEGIN:VEVENT
-UID:b632708e0f79@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T123000
-DTEND:20260921T143000
-SUMMARY:Travail et économie publique (interne)
-DESCRIPTION:Sehyun Hong (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-END:VEVENT
-BEGIN:VEVENT
-UID:f5cbe4a76de9@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T123000
-DTEND:20260921T143000
-SUMMARY:Paris Empirical Political Economics Seminar (PEPES)
-DESCRIPTION:Joachim VOTH (University of Zurich)\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
-END:VEVENT
-BEGIN:VEVENT
-UID:8372b6c0973f@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T123000
-DTEND:20260921T143000
-SUMMARY:Travail et économie publique
-DESCRIPTION:Hans Grönqvist (Linnaeus University and the Research Institute of Industrial Economics (IFN))\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
-END:VEVENT
-BEGIN:VEVENT
-UID:c53acb3b02e6@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T130000
-DTEND:20260921T150000
-SUMMARY:Seminar of Trade Economists in Paris (STEP)
-DESCRIPTION:Peio Villanueva (Paris Dauphine)\nhttps://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
-END:VEVENT
-BEGIN:VEVENT
-UID:dcd11005a0de@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T130000
-DTEND:20260921T150000
-SUMMARY:Casual Friday Development
-DESCRIPTION:Héctor Paredes (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
-END:VEVENT
-BEGIN:VEVENT
-UID:286463d225f9@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T143000
-DTEND:20260921T163000
-SUMMARY:Paris trade seminar
-DESCRIPTION:Feodora Teti (LMU)\nhttps://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-END:VEVENT
-BEGIN:VEVENT
-UID:3633290fef55@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T143000
-DTEND:20260921T163000
-SUMMARY:Nowcasting
-DESCRIPTION:Lieu R1-09\nhttps://www.parisschoolofeconomics.eu/evenements/nowcasting/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/nowcasting/
-END:VEVENT
-BEGIN:VEVENT
-UID:e043330b642e@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T150000
-DTEND:20260921T170000
-SUMMARY:L'économie mondiale postmoderne
-DESCRIPTION:Maurice Obstfeld\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-END:VEVENT
-BEGIN:VEVENT
-UID:84c673518e35@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T160000
-DTEND:20260921T180000
-SUMMARY:Théorie économique Roy-Adres
-DESCRIPTION:Clemens Puppe (KIT)\nhttps://www.parisschoolofeconomics.eu/evenements/theorie-economique-roy-adres/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/theorie-economique-roy-adres/
-END:VEVENT
-BEGIN:VEVENT
-UID:e0cbbe7da102@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T160000
-DTEND:20260921T180000
-SUMMARY:Macroéconomie
-DESCRIPTION:Jane Olmstead-Rumsey (LSE)\nhttps://www.parisschoolofeconomics.eu/evenements/macroeconomie/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/macroeconomie/
-END:VEVENT
-BEGIN:VEVENT
-UID:e7349042f751@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T160000
-DTEND:20260921T180000
-SUMMARY:Économétrie
-DESCRIPTION:Daniel Wilhelm (LMU)\nhttps://www.parisschoolofeconomics.eu/evenements/econometrie/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/econometrie/
-END:VEVENT
-BEGIN:VEVENT
-UID:1fc853bd705e@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260921T163000
-DTEND:20260921T183000
-SUMMARY:Économie du développement
-DESCRIPTION:Erin Kelley (University of Chicago)\nhttps://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
-END:VEVENT
-BEGIN:VEVENT
-UID:7fa7e3de294e@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260923
-SUMMARY:Seminar of Trade Economists in Paris (STEP)
-DESCRIPTION:Du mar. 22 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
-END:VEVENT
-BEGIN:VEVENT
-UID:a6e9cf110dfd@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260923
-SUMMARY:Paris trade seminar
-DESCRIPTION:Du mar. 22 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-END:VEVENT
-BEGIN:VEVENT
-UID:0891a693e19a@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260923
-SUMMARY:Lunch séminaire d’économie appliquée
-DESCRIPTION:Du mar. 22 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
-END:VEVENT
-BEGIN:VEVENT
-UID:3664941e5454@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260922T090000
-DTEND:20260922T110000
-SUMMARY:Séminaire
-DESCRIPTION:Du mar. 22 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
-END:VEVENT
-BEGIN:VEVENT
-UID:cde6dc26a464@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
-SUMMARY:Histoire économique
-DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/histoire-economique/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
-END:VEVENT
-BEGIN:VEVENT
-UID:78adf9ce9ac8@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
-SUMMARY:Nowcasting
-DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/nowcasting/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/nowcasting/
-END:VEVENT
-BEGIN:VEVENT
-UID:30ba61445fd6@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
-SUMMARY:Économie du développement
-DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
-END:VEVENT
-BEGIN:VEVENT
-UID:226c73659614@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260923T123000
-DTEND:20260923T143000
-SUMMARY:Séminaire
-DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/histoire-economique/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
-END:VEVENT
-BEGIN:VEVENT
-UID:08e91ca795f1@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260923T143000
-DTEND:20260923T163000
-SUMMARY:Colloque
-DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/nowcasting/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/nowcasting/
-END:VEVENT
-BEGIN:VEVENT
-UID:6ba9b2ec272b@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
-DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-END:VEVENT
-BEGIN:VEVENT
-UID:c3a7c032495d@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Groupe de travail : Macro Workshop
-DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/groupe-de-travail-macro-workshop/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/groupe-de-travail-macro-workshop/
-END:VEVENT
-BEGIN:VEVENT
-UID:8a434444d88c@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Travail et économie publique (interne)
-DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
-END:VEVENT
-BEGIN:VEVENT
-UID:00d02d05fcf4@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Paris Empirical Political Economics Seminar (PEPES)
-DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
-END:VEVENT
-BEGIN:VEVENT
-UID:e5ac803124b7@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Macroéconomie
-DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/macroeconomie/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/macroeconomie/
-END:VEVENT
-BEGIN:VEVENT
-UID:6c54c7fbb276@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260924T123000
-DTEND:20260924T143000
-SUMMARY:Séminaire
-DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
-END:VEVENT
-BEGIN:VEVENT
-UID:5b2a046bb7ba@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Economics and Psychology Seminar
-DESCRIPTION:Du ven. 25 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
-END:VEVENT
-BEGIN:VEVENT
-UID:293c8565a496@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Casual Friday Development
-DESCRIPTION:Du ven. 25 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
-END:VEVENT
-BEGIN:VEVENT
-UID:658311d901c5@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260925T111500
-DTEND:20260925T131500
-SUMMARY:Séminaire
-DESCRIPTION:Du ven. 25 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
-END:VEVENT
-BEGIN:VEVENT
-UID:c4693c7647d9@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Séminaire PSE Interne
-DESCRIPTION:Du lun. 28 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
-END:VEVENT
-BEGIN:VEVENT
-UID:e1be174d3ff0@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Économétrie
-DESCRIPTION:Du lun. 28 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/econometrie/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/econometrie/
-END:VEVENT
-BEGIN:VEVENT
-UID:676a42f17c88@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20260928T123000
-DTEND:20260928T143000
-SUMMARY:Séminaire
-DESCRIPTION:Du lun. 28 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
-END:VEVENT
-BEGIN:VEVENT
-UID:296f81f4b76f@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Travail et économie publique
-DESCRIPTION:Du jeu. 15 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
-END:VEVENT
-BEGIN:VEVENT
-UID:6a4600b7a68f@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261015T123000
-DTEND:20261015T143000
-SUMMARY:Séminaire
-DESCRIPTION:Du jeu. 15 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
-END:VEVENT
-BEGIN:VEVENT
-UID:7a8832bdab96@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261020
-SUMMARY:L'économie mondiale postmoderne
-DESCRIPTION:Du lun. 19 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-END:VEVENT
-BEGIN:VEVENT
-UID:b1a1d4b549db@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261019T140000
-DTEND:20261019T160000
-SUMMARY:Chaire Macroéconomie internationale
-DESCRIPTION:Du lun. 19 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-END:VEVENT
-BEGIN:VEVENT
-UID:b7914638dfc7@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261019T150000
-DTEND:20261019T170000
-SUMMARY:Conférence
-DESCRIPTION:Du lun. 19 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
-END:VEVENT
-BEGIN:VEVENT
-UID:2cd3053e4541@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:Journées de l’économie 2026
-DESCRIPTION:Du mar. 03 nov. au jeu. 05 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:7d6d87892ee2@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261103T093000
-DTEND:20261103T113000
-SUMMARY:Conférence grand public
-DESCRIPTION:Du mar. 03 nov. au jeu. 05 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:2f105ff5c535@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261105T193000
-DTEND:20261105T213000
-SUMMARY:Conférence grand public
-DESCRIPTION:Du mar. 03 nov. au jeu. 05 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:9271bc69540d@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Colloque
-DESCRIPTION:Du ven. 06 nov. au sam. 07 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:a0f914c128c4@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Réunion annuelle ESOC-ReCIPE 2026
-DESCRIPTION:Du ven. 06 nov. au sam. 07 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:b7a47416b59b@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261107T235900
-DTEND:20261107T235900
-SUMMARY:Colloque
-DESCRIPTION:Du ven. 06 nov. au sam. 07 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:1d41337f2fa3@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:Colloque
-DESCRIPTION:Du mer. 18 nov. au jeu. 19 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
-END:VEVENT
-BEGIN:VEVENT
-UID:2e528fa7db58@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:Conférence de l’Association Française d’Économie des Transports
-DESCRIPTION:Du mer. 18 nov. au jeu. 19 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
-END:VEVENT
-BEGIN:VEVENT
-UID:5232c30fa4a3@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261119T235900
-DTEND:20261119T235900
-SUMMARY:Colloque
-DESCRIPTION:Du mer. 18 nov. au jeu. 19 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
-END:VEVENT
-BEGIN:VEVENT
-UID:ac46921a8046@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261210
-DTEND;VALUE=DATE:20261211
-SUMMARY:Colloque
-DESCRIPTION:Du jeu. 10 déc. au ven. 11 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
-END:VEVENT
-BEGIN:VEVENT
-UID:05ebeee4df82@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261210
-DTEND;VALUE=DATE:20261211
-SUMMARY:L’immigration dans les pays de l’OCDE
-DESCRIPTION:Du jeu. 10 déc. au ven. 11 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
-END:VEVENT
-BEGIN:VEVENT
-UID:3e4569c94010@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261211T235900
-DTEND:20261211T235900
-SUMMARY:Colloque
-DESCRIPTION:Du jeu. 10 déc. au ven. 11 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
-END:VEVENT
-BEGIN:VEVENT
-UID:26c1ca2f4a50@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261215
-DTEND;VALUE=DATE:20261216
-SUMMARY:Colloque
-DESCRIPTION:Du mar. 15 déc. au mer. 16 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
-END:VEVENT
-BEGIN:VEVENT
-UID:4bf60ece4689@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20261215
-DTEND;VALUE=DATE:20261216
-SUMMARY:Politiques macroéconomiques avec des agents hétérogènes
-DESCRIPTION:Du mar. 15 déc. au mer. 16 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
-END:VEVENT
-BEGIN:VEVENT
-UID:c2b72465129d@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20261216T235900
-DTEND:20261216T235900
-SUMMARY:Colloque
-DESCRIPTION:Du mar. 15 déc. au mer. 16 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
-END:VEVENT
-BEGIN:VEVENT
-UID:199563320cd8@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART;VALUE=DATE:20270302
-DTEND;VALUE=DATE:20270303
-SUMMARY:Paris trade seminar
-DESCRIPTION:Du mar. 02 mars\nhttps://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-END:VEVENT
-BEGIN:VEVENT
-UID:3017cf591403@paris-academique
-DTSTAMP:20260921T185025Z
-DTSTART:20270302T123000
-DTEND:20270302T143000
-SUMMARY:Séminaire
-DESCRIPTION:Du mar. 02 mars\nhttps://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
-URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Paris School of Economics · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:3664941e5454@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T090000
+DTEND:20260922T110000
+SUMMARY:Séminaire
+DESCRIPTION:Du mar. 22 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
+END:VEVENT
+BEGIN:VEVENT
+UID:97802d3bbebb@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T093000
+DTEND:20260922T113000
+SUMMARY:Journées de l’économie 2026
+DESCRIPTION:Heure 09:30 – 19:30\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:4033cc9a1fc7@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T111500
+DTEND:20260922T131500
+SUMMARY:Economics and Psychology Seminar
+DESCRIPTION:Catherine Molho (TSE)\nhttps://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
+END:VEVENT
+BEGIN:VEVENT
+UID:b20ab7f418f0@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T120000
+DTEND:20260922T140000
+SUMMARY:Séminaire PSE Interne
+DESCRIPTION:Philipp Ketz (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
+END:VEVENT
+BEGIN:VEVENT
+UID:0891a693e19a@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T123000
+DTEND:20260922T143000
+SUMMARY:Lunch séminaire d’économie appliquée
+DESCRIPTION:Olivier Meslin (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-deconomie-appliquee/
+END:VEVENT
+BEGIN:VEVENT
+UID:687e06d3b525@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T123000
+DTEND:20260922T143000
+SUMMARY:Histoire économique
+DESCRIPTION:Carola Stapper (Johannes Kepler University Linz)\nhttps://www.parisschoolofeconomics.eu/evenements/histoire-economique/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
+END:VEVENT
+BEGIN:VEVENT
+UID:0f7139964873@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T123000
+DTEND:20260922T143000
+SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
+DESCRIPTION:Andrew Kosenko (Marist University)\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+END:VEVENT
+BEGIN:VEVENT
+UID:6f981b2a7446@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T123000
+DTEND:20260922T143000
+SUMMARY:Travail et économie publique (interne)
+DESCRIPTION:Sehyun Hong (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
+END:VEVENT
+BEGIN:VEVENT
+UID:da4c873ceb16@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T123000
+DTEND:20260922T143000
+SUMMARY:Paris Empirical Political Economics Seminar (PEPES)
+DESCRIPTION:Joachim VOTH (University of Zurich)\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
+END:VEVENT
+BEGIN:VEVENT
+UID:94b16bb85883@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T123000
+DTEND:20260922T143000
+SUMMARY:Offshore Talks #6
+DESCRIPTION:Oliver Bullough\nhttps://www.parisschoolofeconomics.eu/evenements/offshore-talks-6/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/offshore-talks-6/
+END:VEVENT
+BEGIN:VEVENT
+UID:09d8f926d451@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T123000
+DTEND:20260922T143000
+SUMMARY:Travail et économie publique
+DESCRIPTION:Hans Grönqvist (Linnaeus University and the Research Institute of Industrial Economics (IFN))\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
+END:VEVENT
+BEGIN:VEVENT
+UID:7fa7e3de294e@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T130000
+DTEND:20260922T150000
+SUMMARY:Seminar of Trade Economists in Paris (STEP)
+DESCRIPTION:Peio Villanueva (Paris Dauphine)\nhttps://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/seminar-of-trade-economists-in-paris-step/
+END:VEVENT
+BEGIN:VEVENT
+UID:348d778fab84@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T130000
+DTEND:20260922T150000
+SUMMARY:Casual Friday Development
+DESCRIPTION:Héctor Paredes (PSE)\nhttps://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
+END:VEVENT
+BEGIN:VEVENT
+UID:a6e9cf110dfd@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T143000
+DTEND:20260922T163000
+SUMMARY:Paris trade seminar
+DESCRIPTION:Feodora Teti (LMU)\nhttps://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
+END:VEVENT
+BEGIN:VEVENT
+UID:52be5a52d416@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T143000
+DTEND:20260922T163000
+SUMMARY:Nowcasting
+DESCRIPTION:Lieu R1-09\nhttps://www.parisschoolofeconomics.eu/evenements/nowcasting/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/nowcasting/
+END:VEVENT
+BEGIN:VEVENT
+UID:a854722c9db7@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T150000
+DTEND:20260922T170000
+SUMMARY:L'économie mondiale postmoderne
+DESCRIPTION:Maurice Obstfeld\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+END:VEVENT
+BEGIN:VEVENT
+UID:67228cdfe55c@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T160000
+DTEND:20260922T180000
+SUMMARY:Macroéconomie
+DESCRIPTION:Jane Olmstead-Rumsey (LSE)\nhttps://www.parisschoolofeconomics.eu/evenements/macroeconomie/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/macroeconomie/
+END:VEVENT
+BEGIN:VEVENT
+UID:93eaff48ba16@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T160000
+DTEND:20260922T180000
+SUMMARY:Théorie économique Roy-Adres
+DESCRIPTION:Gilat Levy (LSE)\nhttps://www.parisschoolofeconomics.eu/evenements/theorie-economique-roy-adres/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/theorie-economique-roy-adres/
+END:VEVENT
+BEGIN:VEVENT
+UID:2a8c2c77e4b8@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T160000
+DTEND:20260922T180000
+SUMMARY:Économétrie
+DESCRIPTION:Daniel Wilhelm (LMU)\nhttps://www.parisschoolofeconomics.eu/evenements/econometrie/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/econometrie/
+END:VEVENT
+BEGIN:VEVENT
+UID:20d0c4c28933@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260922T163000
+DTEND:20260922T183000
+SUMMARY:Économie du développement
+DESCRIPTION:Erin Kelley (University of Chicago)\nhttps://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
+END:VEVENT
+BEGIN:VEVENT
+UID:cde6dc26a464@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Histoire économique
+DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/histoire-economique/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
+END:VEVENT
+BEGIN:VEVENT
+UID:78adf9ce9ac8@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Nowcasting
+DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/nowcasting/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/nowcasting/
+END:VEVENT
+BEGIN:VEVENT
+UID:30ba61445fd6@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Économie du développement
+DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/economie-du-developpement/
+END:VEVENT
+BEGIN:VEVENT
+UID:226c73659614@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260923T123000
+DTEND:20260923T143000
+SUMMARY:Séminaire
+DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/histoire-economique/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
+END:VEVENT
+BEGIN:VEVENT
+UID:08e91ca795f1@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260923T143000
+DTEND:20260923T163000
+SUMMARY:Colloque
+DESCRIPTION:Du mer. 23 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/nowcasting/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/nowcasting/
+END:VEVENT
+BEGIN:VEVENT
+UID:6ba9b2ec272b@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
+DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+END:VEVENT
+BEGIN:VEVENT
+UID:c3a7c032495d@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Groupe de travail : Macro Workshop
+DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/groupe-de-travail-macro-workshop/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/groupe-de-travail-macro-workshop/
+END:VEVENT
+BEGIN:VEVENT
+UID:8a434444d88c@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Travail et économie publique (interne)
+DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique-interne/
+END:VEVENT
+BEGIN:VEVENT
+UID:00d02d05fcf4@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Paris Empirical Political Economics Seminar (PEPES)
+DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-economie-politique-empirique-de-paris-pepes/
+END:VEVENT
+BEGIN:VEVENT
+UID:e5ac803124b7@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Macroéconomie
+DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/macroeconomie/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/macroeconomie/
+END:VEVENT
+BEGIN:VEVENT
+UID:6c54c7fbb276@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260924T123000
+DTEND:20260924T143000
+SUMMARY:Séminaire
+DESCRIPTION:Du jeu. 24 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theorie-organisation-et-marches-tom/
+END:VEVENT
+BEGIN:VEVENT
+UID:5b2a046bb7ba@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:Economics and Psychology Seminar
+DESCRIPTION:Du ven. 25 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
+END:VEVENT
+BEGIN:VEVENT
+UID:293c8565a496@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:Casual Friday Development
+DESCRIPTION:Du ven. 25 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-development/
+END:VEVENT
+BEGIN:VEVENT
+UID:658311d901c5@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260925T111500
+DTEND:20260925T131500
+SUMMARY:Séminaire
+DESCRIPTION:Du ven. 25 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/economics-and-psychology-seminar/
+END:VEVENT
+BEGIN:VEVENT
+UID:c4693c7647d9@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Séminaire PSE Interne
+DESCRIPTION:Du lun. 28 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
+END:VEVENT
+BEGIN:VEVENT
+UID:940d3f6352a4@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Théorie économique Roy-Adres
+DESCRIPTION:Du lun. 28 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/theorie-economique-roy-adres/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/theorie-economique-roy-adres/
+END:VEVENT
+BEGIN:VEVENT
+UID:e1be174d3ff0@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Économétrie
+DESCRIPTION:Du lun. 28 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/econometrie/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/econometrie/
+END:VEVENT
+BEGIN:VEVENT
+UID:676a42f17c88@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20260928T123000
+DTEND:20260928T143000
+SUMMARY:Séminaire
+DESCRIPTION:Du lun. 28 sept.\nhttps://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
+END:VEVENT
+BEGIN:VEVENT
+UID:3091b4f40d93@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Offshore Talks #6
+DESCRIPTION:Du mer. 14 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/offshore-talks-6/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/offshore-talks-6/
+END:VEVENT
+BEGIN:VEVENT
+UID:6f8164f18ed6@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261014T123000
+DTEND:20261014T143000
+SUMMARY:Colloque
+DESCRIPTION:Du mer. 14 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/offshore-talks-6/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/offshore-talks-6/
+END:VEVENT
+BEGIN:VEVENT
+UID:296f81f4b76f@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Travail et économie publique
+DESCRIPTION:Du jeu. 15 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
+END:VEVENT
+BEGIN:VEVENT
+UID:6a4600b7a68f@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261015T123000
+DTEND:20261015T143000
+SUMMARY:Séminaire
+DESCRIPTION:Du jeu. 15 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-publique/
+END:VEVENT
+BEGIN:VEVENT
+UID:7a8832bdab96@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:L'économie mondiale postmoderne
+DESCRIPTION:Du lun. 19 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+END:VEVENT
+BEGIN:VEVENT
+UID:b1a1d4b549db@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261019T140000
+DTEND:20261019T160000
+SUMMARY:Chaire Macroéconomie internationale
+DESCRIPTION:Du lun. 19 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+END:VEVENT
+BEGIN:VEVENT
+UID:b7914638dfc7@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261019T150000
+DTEND:20261019T170000
+SUMMARY:Conférence
+DESCRIPTION:Du lun. 19 oct.\nhttps://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-postmoderne/
+END:VEVENT
+BEGIN:VEVENT
+UID:2cd3053e4541@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Journées de l’économie 2026
+DESCRIPTION:Du mar. 03 nov. au jeu. 05 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:7d6d87892ee2@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261103T093000
+DTEND:20261103T113000
+SUMMARY:Conférence grand public
+DESCRIPTION:Du mar. 03 nov. au jeu. 05 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:2f105ff5c535@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261105T193000
+DTEND:20261105T213000
+SUMMARY:Conférence grand public
+DESCRIPTION:Du mar. 03 nov. au jeu. 05 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:9271bc69540d@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:Colloque
+DESCRIPTION:Du ven. 06 nov. au sam. 07 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:a0f914c128c4@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:Réunion annuelle ESOC-ReCIPE 2026
+DESCRIPTION:Du ven. 06 nov. au sam. 07 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:b7a47416b59b@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261107T235900
+DTEND:20261107T235900
+SUMMARY:Colloque
+DESCRIPTION:Du ven. 06 nov. au sam. 07 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-recipe-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:1d41337f2fa3@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Colloque
+DESCRIPTION:Du mer. 18 nov. au jeu. 19 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:2e528fa7db58@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Conférence de l’Association Française d’Économie des Transports
+DESCRIPTION:Du mer. 18 nov. au jeu. 19 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:5232c30fa4a3@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261119T235900
+DTEND:20261119T235900
+SUMMARY:Colloque
+DESCRIPTION:Du mer. 18 nov. au jeu. 19 nov.\nhttps://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassociation-francaise-deconomie-des-transports-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:ac46921a8046@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Colloque
+DESCRIPTION:Du jeu. 10 déc. au ven. 11 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
+END:VEVENT
+BEGIN:VEVENT
+UID:05ebeee4df82@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:L’immigration dans les pays de l’OCDE
+DESCRIPTION:Du jeu. 10 déc. au ven. 11 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
+END:VEVENT
+BEGIN:VEVENT
+UID:3e4569c94010@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261211T235900
+DTEND:20261211T235900
+SUMMARY:Colloque
+DESCRIPTION:Du jeu. 10 déc. au ven. 11 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-pays-de-locde-3/
+END:VEVENT
+BEGIN:VEVENT
+UID:26c1ca2f4a50@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:Colloque
+DESCRIPTION:Du mar. 15 déc. au mer. 16 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:4bf60ece4689@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:Politiques macroéconomiques avec des agents hétérogènes
+DESCRIPTION:Du mar. 15 déc. au mer. 16 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:c2b72465129d@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20261216T235900
+DTEND:20261216T235900
+SUMMARY:Colloque
+DESCRIPTION:Du mar. 15 déc. au mer. 16 déc.\nhttps://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/politiques-macroeconomiques-avec-des-agents-heterogenes-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:199563320cd8@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART;VALUE=DATE:20270302
+DTEND;VALUE=DATE:20270303
+SUMMARY:Paris trade seminar
+DESCRIPTION:Du mar. 02 mars\nhttps://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
+END:VEVENT
+BEGIN:VEVENT
+UID:3017cf591403@paris-academique
+DTSTAMP:20260922T085916Z
+DTSTART:20270302T123000
+DTEND:20270302T143000
+SUMMARY:Séminaire
+DESCRIPTION:Du mar. 02 mars\nhttps://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
+LOCATION:Paris School of Economics\, 48 boulevard Jourdan\, Paris 14e
+URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
+END:VEVENT
+END:VCALENDAR
