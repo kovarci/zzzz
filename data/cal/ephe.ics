@@ -1,78 +1,78 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:EPHE · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:c5b00653b8ee@paris-academique
-DTSTAMP:20260923T221553Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Les corpus des manuscrits hébreux de la BnF et du Vatican : une analyse comparative à l'aide de l'IA
-DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/lcorpus-manuscrits-hebreux-syriaques-bnf-vatican-analyse-comparative-aide-ia
-LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
-URL:https://www.ephe.psl.eu/lcorpus-manuscrits-hebreux-syriaques-bnf-vatican-analyse-comparative-aide-ia
-END:VEVENT
-BEGIN:VEVENT
-UID:f055f572dbbe@paris-academique
-DTSTAMP:20260923T221553Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:De l'Empire ottoman à la Turquie moderne : un voyage historique
-DESCRIPTION:Cours du soir par Özgür Türesay (EPHE - PSL).\nhttps://www.ephe.psl.eu/de-lempire-ottoman-la-turquie-moderne-un-voyage-historique
-LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
-URL:https://www.ephe.psl.eu/de-lempire-ottoman-la-turquie-moderne-un-voyage-historique
-END:VEVENT
-BEGIN:VEVENT
-UID:9f8951e95f56@paris-academique
-DTSTAMP:20260923T221553Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Une bandelette de momie à la source de premières découvertes sur l'écriture égyptienne avant Champollion
-DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/une-bandelette-de-momie-la-source-de-premieres-decouvertes-sur-lecriture-egyptienne-avant
-LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
-URL:https://www.ephe.psl.eu/une-bandelette-de-momie-la-source-de-premieres-decouvertes-sur-lecriture-egyptienne-avant
-END:VEVENT
-BEGIN:VEVENT
-UID:ecf90a5691f5@paris-academique
-DTSTAMP:20260923T221553Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
-SUMMARY:Rentrée académique 2026-2027
-DESCRIPTION:La rentrée académique de l'École Pratique des Hautes Études – PSL aura lieu le mardi 6 octobre.\nhttps://www.ephe.psl.eu/rentree-academique-2026-2027
-LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
-URL:https://www.ephe.psl.eu/rentree-academique-2026-2027
-END:VEVENT
-BEGIN:VEVENT
-UID:c2727d2ebbe1@paris-academique
-DTSTAMP:20260923T221553Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
-SUMMARY:La norme et son autre : perspectives comparées sur le concept d'hérésie
-DESCRIPTION:Journée d'études.\nhttps://www.ephe.psl.eu/la-norme-et-son-autre-perspectives-comparees-sur-le-concept-dheresie
-LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
-URL:https://www.ephe.psl.eu/la-norme-et-son-autre-perspectives-comparees-sur-le-concept-dheresie
-END:VEVENT
-BEGIN:VEVENT
-UID:32649b1e98de@paris-academique
-DTSTAMP:20260923T221553Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
-SUMMARY:Des vases sur des monnaies grecques et romaines
-DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/des-vases-sur-des-monnaies-grecques-et-romaines
-LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
-URL:https://www.ephe.psl.eu/des-vases-sur-des-monnaies-grecques-et-romaines
-END:VEVENT
-BEGIN:VEVENT
-UID:200ad1b5bf7d@paris-academique
-DTSTAMP:20260923T221553Z
-DTSTART;VALUE=DATE:20261210
-DTEND;VALUE=DATE:20261211
-SUMMARY:Hippocrate à Constantinople : le Parisinus gr. 2144 et ses lecteurs à l'époque des Paléologues
-DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/hippocrate-constantinople-le-parisinus-gr-2144-et-ses-lecteurs-lepoque-des-paleologues
-LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
-URL:https://www.ephe.psl.eu/hippocrate-constantinople-le-parisinus-gr-2144-et-ses-lecteurs-lepoque-des-paleologues
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:EPHE · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:c5b00653b8ee@paris-academique
+DTSTAMP:20260923T203700Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Les corpus des manuscrits hébreux de la BnF et du Vatican : une analyse comparative à l'aide de l'IA
+DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/lcorpus-manuscrits-hebreux-syriaques-bnf-vatican-analyse-comparative-aide-ia
+LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
+URL:https://www.ephe.psl.eu/lcorpus-manuscrits-hebreux-syriaques-bnf-vatican-analyse-comparative-aide-ia
+END:VEVENT
+BEGIN:VEVENT
+UID:f055f572dbbe@paris-academique
+DTSTAMP:20260923T203700Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:De l'Empire ottoman à la Turquie moderne : un voyage historique
+DESCRIPTION:Cours du soir par Özgür Türesay (EPHE - PSL).\nhttps://www.ephe.psl.eu/de-lempire-ottoman-la-turquie-moderne-un-voyage-historique
+LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
+URL:https://www.ephe.psl.eu/de-lempire-ottoman-la-turquie-moderne-un-voyage-historique
+END:VEVENT
+BEGIN:VEVENT
+UID:9f8951e95f56@paris-academique
+DTSTAMP:20260923T203700Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Une bandelette de momie à la source de premières découvertes sur l'écriture égyptienne avant Champollion
+DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/une-bandelette-de-momie-la-source-de-premieres-decouvertes-sur-lecriture-egyptienne-avant
+LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
+URL:https://www.ephe.psl.eu/une-bandelette-de-momie-la-source-de-premieres-decouvertes-sur-lecriture-egyptienne-avant
+END:VEVENT
+BEGIN:VEVENT
+UID:ecf90a5691f5@paris-academique
+DTSTAMP:20260923T203700Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Rentrée académique 2026-2027
+DESCRIPTION:La rentrée académique de l'École Pratique des Hautes Études – PSL aura lieu le mardi 6 octobre.\nhttps://www.ephe.psl.eu/rentree-academique-2026-2027
+LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
+URL:https://www.ephe.psl.eu/rentree-academique-2026-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:c2727d2ebbe1@paris-academique
+DTSTAMP:20260923T203700Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:La norme et son autre : perspectives comparées sur le concept d'hérésie
+DESCRIPTION:Journée d'études.\nhttps://www.ephe.psl.eu/la-norme-et-son-autre-perspectives-comparees-sur-le-concept-dheresie
+LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
+URL:https://www.ephe.psl.eu/la-norme-et-son-autre-perspectives-comparees-sur-le-concept-dheresie
+END:VEVENT
+BEGIN:VEVENT
+UID:32649b1e98de@paris-academique
+DTSTAMP:20260923T203700Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Des vases sur des monnaies grecques et romaines
+DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/des-vases-sur-des-monnaies-grecques-et-romaines
+LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
+URL:https://www.ephe.psl.eu/des-vases-sur-des-monnaies-grecques-et-romaines
+END:VEVENT
+BEGIN:VEVENT
+UID:200ad1b5bf7d@paris-academique
+DTSTAMP:20260923T203700Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Hippocrate à Constantinople : le Parisinus gr. 2144 et ses lecteurs à l'époque des Paléologues
+DESCRIPTION:Cycle de conférences EPHE – PSL / BnF.\nhttps://www.ephe.psl.eu/hippocrate-constantinople-le-parisinus-gr-2144-et-ses-lecteurs-lepoque-des-paleologues
+LOCATION:EPHE\, 4-14 rue Ferrus\, Paris 14e
+URL:https://www.ephe.psl.eu/hippocrate-constantinople-le-parisinus-gr-2144-et-ses-lecteurs-lepoque-des-paleologues
+END:VEVENT
+END:VCALENDAR
