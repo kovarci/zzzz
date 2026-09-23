@@ -16,7 +16,13 @@ CRITICAL = ["Institut Henri Poincaré", "Collège de France",
             "Paris School of Economics", "Université PSL"]
 # Smaller sources — worth a heads-up if they vanish, but not a hard failure.
 WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
-         "Article 1", "Sciences et Cultures", "Université Paris Dauphine"]
+         "Article 1", "Sciences et Cultures", "Université Paris Dauphine",
+         # Sources statiques ajoutées en sept. 2026 (voir NEW_INSTITUTIONS)
+         "Université Paris Cité", "Cnam", "Muséum national d'Histoire naturelle",
+         "BnF", "Institut Pasteur", "Institut Curie", "Institut du Cerveau",
+         "Inalco", "EPHE", "Collège des Bernardins", "Académie des sciences",
+         "Cité des sciences", "Université Sorbonne Nouvelle", "Université Paris 8",
+         "Université Paris Nanterre"]
 
 
 def main():

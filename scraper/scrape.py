@@ -139,6 +139,12 @@ DISCIPLINE_KEYWORDS = {
 _INSTITUTION_DEFAULT = {
     "Institut Henri Poincaré": "Mathématiques",
     "Paris School of Economics": "Économie",
+    "Institut Pasteur": "Sciences",
+    "Institut Curie": "Sciences",
+    "Institut du Cerveau": "Sciences",
+    "Académie des sciences": "Sciences",
+    "Muséum national d'Histoire naturelle": "Sciences",
+    "Cité des sciences": "Sciences",
 }
 
 
@@ -187,6 +193,9 @@ FRENCH_MONTHS = {
     "octobre": 10, "oct": 10,
     "novembre": 11, "nov": 11,
     "decembre": 12, "dec": 12,
+    # Abréviations anglaises (Bernardins, Webflow) — dict seul, pas dans
+    # _MONTH_PAT, pour ne pas faire matcher « may »/« jun » dans du texte libre.
+    "feb": 2, "apr": 4, "may": 5, "jun": 6, "jul": 7, "aug": 8,
 }
 
 # Regex fragment matching any full OR abbreviated French month (longest first)
@@ -350,7 +359,9 @@ NON_PARIS = re.compile(
     r"nantes|rennes|montpellier|nancy|amiens|caen|dijon|orl[eé]ans|"
     r"clermont|besan[çc]on|reims|rouen|metz|brest|angers|limoges|poitiers|"
     r"pau|avignon|le mans|la rochelle|perpignan|toulon|villeurbanne|"
-    r"talence|frumam|upjv|braconnier|ljad|insa toulouse|insa lyon)\b",
+    r"talence|frumam|upjv|braconnier|ljad|insa toulouse|insa lyon|"
+    # Sites du Muséum et partenaires Inalco hors Île-de-France
+    r"menton|concarneau|dinard|eyzies|s[ée]rignan|pessac)\b",
     re.I,
 )
 
@@ -1332,6 +1343,329 @@ def scrape_psl(browser):
     ], max_pages=15)
 
 
+# ── Sources « cartes » (HTML statique, sans navigateur) ───────────────────────
+# Chaque site est décrit par ses sélecteurs CSS et passe par le même parseur
+# _scrape_cards. Tous servent leur agenda en HTML côté serveur : requests
+# suffit, ce qui garde le job GitHub rapide malgré le nombre de sources.
+
+# Vie de campus, soutenances, démarches : pas des conférences.
+_OFF_TOPIC = re.compile(
+    r"^(avis de )?soutenance|\bsoutenance (de|d'|publique)|\bphd defen[cs]e|"
+    r"don du sang|d[ée]pistage|r[ée]paration de v[ée]los|rollerdisco|"
+    r"livres en don|roadshow|welcome party|soir[ée]e internationale|"
+    r"forum de rentr[ée]e|cr[ée]maill[èe]re|[ée]lections? des|"
+    r"remise des dipl[ôo]mes|c[ée]r[ée]monie des docteur|contrats doctoraux|"
+    r"visite street-art|jeu de piste|journ[ée]e d'accueil|webinaire d.accueil|"
+    r"ateliers? de pratiques? artistiques?|assurance maladie|^exposition\b",
+    re.I)
+
+_TIME_RE = re.compile(r"(?<![\d/.-])([01]?\d|2[0-3])\s*(?:h|H|:)\s*([0-5]\d)?(?!\d)")
+
+
+def _time_of(text) -> str:
+    """'19 h', '14h30', '10:00' → 'HH:MM' ; minuit = pas d'heure."""
+    m = _TIME_RE.search(text or "")
+    if not m:
+        return ""
+    t = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
+    return "" if t == "00:00" else t
+
+
+def _card_date(el):
+    """(date, 'HH:MM') d'un élément : <time datetime> ISO d'abord, sinon texte."""
+    times = ([el] if el.name == "time" else []) + el.select("time[datetime]")
+    for t in times:
+        raw = (t.get("datetime") or "").split("/")[0]
+        if re.match(r"\d{4}-\d{2}-\d{2}", raw):
+            dt = parse_date(raw)
+            if dt:
+                return dt.date(), (dt.strftime("%H:%M") if (dt.hour or dt.minute) else "")
+    txt = el.get_text(" ", strip=True)
+    d = parse_french_date_text(txt)
+    if not d:
+        # « 1 Feb » : abréviations anglaises, connues de FRENCH_MONTHS seulement
+        m = re.search(r"(\d{1,2})\s+([A-Za-z]{3,9})\b", txt)
+        d = _day_month_to_date(m.group(1), m.group(2)) if m else None
+    return d, _time_of(txt)
+
+
+def _get(url):
+    r = requests.get(url, headers=CDF_HEADERS, timeout=35)
+    r.raise_for_status()
+    # Sans charset déclaré, requests suppose du latin-1 : faux pour l'iCal de
+    # Nanterre (UTF-8), juste pour Sorbonne Nouvelle (cp1252). On tranche.
+    if "charset" in r.headers.get("content-type", "").lower():
+        return r.text
+    try:
+        return r.content.decode("utf-8")
+    except UnicodeDecodeError:
+        return r.content.decode("cp1252", errors="replace")
+
+
+def _scrape_cards(name, url, card, *, title, base, location, date=None,
+                  link=None, place=None, kind=None, keep_kind=None,
+                  drop_kind=None, page_url=None, max_pages=8,
+                  one_per_title=False):
+    """Parseur générique d'agenda en cartes.
+    card/title/date/link/place/kind : sélecteurs CSS (relatifs à la carte).
+    keep_kind / drop_kind : filtre sur le texte de `kind` (sous-chaînes).
+    page_url : format '{n}' des pages suivantes ; on s'arrête dès qu'une page
+    n'apporte rien de nouveau. one_per_title : un colloque sur 3 jours
+    apparaît 3 fois → on garde son premier jour."""
+    print(f"→ {name}...")
+    events, seen, stats = [], set(), {"cards": 0, "off": 0, "kind": 0, "date": 0}
+    urls = [url] + ([page_url.format(n=n) for n in range(1, max_pages)] if page_url else [])
+    for u in urls:
+        try:
+            soup = BeautifulSoup(_get(u), "lxml")
+        except Exception as e:
+            print(f"   [warn] {u}: {e}")
+            break
+        cards = soup.select(card)
+        stats["cards"] += len(cards)
+        new = 0
+        for c in cards:
+            t_el = c.select_one(title)
+            t = clean_text(t_el.get_text(" ")) if t_el else ""
+            if not t or is_junk_title(t):
+                continue
+            if _OFF_TOPIC.search(t):
+                stats["off"] += 1
+                continue
+            k = clean_text(c.select_one(kind).get_text(" ")) if kind and c.select_one(kind) else ""
+            kl = k.lower()
+            if ((keep_kind and not any(x in kl for x in keep_kind))
+                    or (drop_kind and any(x in kl for x in drop_kind))):
+                stats["kind"] += 1
+                continue
+            d_el = c.select_one(date) if date else None
+            d, tm = _card_date(d_el or c)
+            if not d or not in_window(d):
+                stats["date"] += 1
+                continue
+            key = t.lower()[:60] if one_per_title else (t.lower()[:60], d.isoformat())
+            if key in seen:
+                continue
+            seen.add(key)
+            a = (c.select_one(link) if link else None) or (c if c.name == "a" else None) \
+                or (t_el.find("a", href=True) if t_el else None) \
+                or (t_el.find_parent("a", href=True) if t_el else None) or c.find("a", href=True)
+            p = clean_text(c.select_one(place).get_text(" ")) if place and c.select_one(place) else ""
+            if p and NON_PARIS.search(p):
+                continue
+            events.append(new_event(
+                name, t, d, time_str=tm, url=make_absolute(a.get("href", "") if a else "", base),
+                location=f"{p} — {location}" if p and p.lower() not in location.lower() else location,
+                desc=k))
+            new += 1
+        if page_url and (not cards or not new):
+            break
+    print(f"   stats: {stats}")
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+def scrape_paris_cite():
+    # All-in-One Event Calendar : ~12 événements par vue, pages via ?ai1ec=…
+    return _scrape_cards(
+        "Université Paris Cité", "https://u-paris.fr/agenda/", ".ai1ec-univ-event",
+        title=".ai1ec-event-title", date=".ai1ec-event-date", place=".ai1ec-event-location",
+        base="https://u-paris.fr",
+        location="Université Paris Cité, 85 boulevard Saint-Germain, Paris 6e",
+        page_url="https://u-paris.fr/agenda/?ai1ec=action~agenda|page_offset~{n}", max_pages=6)
+
+
+def scrape_cnam():
+    return _scrape_cards(
+        "Cnam", "https://www.cnam.fr/agenda", "li.page-agenda__resultats",
+        title="h3", date="time", base="https://www.cnam.fr",
+        location="Cnam, 292 rue Saint-Martin, Paris 3e")
+
+
+def scrape_mnhn():
+    # L'agenda mêle expos, ateliers enfants et visites : on garde la parole.
+    return _scrape_cards(
+        "Muséum national d'Histoire naturelle", "https://www.mnhn.fr/fr/l-agenda-du-museum",
+        ".mt-tuile", title=".mt-tuile__title", date=".field--name-field-dates-text",
+        kind=".mt-tuile-category", keep_kind=("conférence", "rencontre", "colloque", "débat", "table ronde"),
+        place=".field--name-extra-field-place-name", base="https://www.mnhn.fr",
+        location="Muséum national d'Histoire naturelle, 57 rue Cuvier, Paris 5e",
+        page_url="https://www.mnhn.fr/fr/l-agenda-du-museum?page={n}", max_pages=8)
+
+
+def scrape_bnf():
+    # Filtre « Conférences » de l'agenda (quoi=2585), 8 par page.
+    u = "https://www.bnf.fr/fr/agenda?quoi%5B0%5D=2585"
+    return _scrape_cards(
+        "BnF", u, "article.blockEvent", title="h3", date="time",
+        kind=".cycle-event", place=".etiquette_rectangular.white", base="https://www.bnf.fr",
+        location="Bibliothèque nationale de France, Paris",
+        page_url=u + "&page={n}", max_pages=10)
+
+
+def scrape_pasteur():
+    return _scrape_cards(
+        "Institut Pasteur", "https://research.pasteur.fr/en/events/", ".timeline .item",
+        title="h3", date=".atc_date_start", place=".location",
+        drop_kind=("phd",), kind=".label", base="https://research.pasteur.fr",
+        location="Institut Pasteur, 25-28 rue du Docteur Roux, Paris 15e")
+
+
+def scrape_curie():
+    # Liste triée par date décroissante : la 1re page contient tout le futur.
+    return _scrape_cards(
+        "Institut Curie", "https://curie.fr/evenements-scientifiques",
+        'li:has(a[href^="/evenements-scientifiques/"])',
+        title='a[href^="/evenements-scientifiques/"]', date="div.mt-4", kind="span",
+        base="https://curie.fr", location="Institut Curie, 26 rue d'Ulm, Paris 5e")
+
+
+def scrape_institut_cerveau():
+    return _scrape_cards(
+        "Institut du Cerveau", "https://institutducerveau.org/agenda", ".card-event",
+        title=".card-event-title", date=".card-event-date", kind=".card-event-category",
+        base="https://institutducerveau.org",
+        location="Institut du Cerveau, 47 boulevard de l'Hôpital, Paris 13e",
+        page_url="https://institutducerveau.org/agenda?page={n}", max_pages=8)
+
+
+def scrape_inalco():
+    return _scrape_cards(
+        "Inalco", "https://www.inalco.fr/agenda", "article.inalco-card--event",
+        title=".inalco-link--card", date="time", place=".inalco-event-location__content",
+        base="https://www.inalco.fr",
+        location="Inalco, 65 rue des Grands Moulins, Paris 13e",
+        page_url="https://www.inalco.fr/agenda?page={n}", max_pages=10)
+
+
+def scrape_ephe():
+    return _scrape_cards(
+        "EPHE", "https://www.ephe.psl.eu/agenda", "article.article-event",
+        title="h3", date=".teaser-txt__date", kind=".teaser-txt__chapo",
+        base="https://www.ephe.psl.eu", location="EPHE, 4-14 rue Ferrus, Paris 14e")
+
+
+def scrape_bernardins():
+    # Webflow : jour + mois abrégé anglais (« 30 Sep »), sans année.
+    return _scrape_cards(
+        "Collège des Bernardins", "https://www.collegedesbernardins.fr/agenda",
+        ".item-agenda", title="h2", date=".tag-date-wrapper", kind=".tag-vignette-agenda-v2",
+        base="https://www.collegedesbernardins.fr",
+        location="Collège des Bernardins, 20 rue de Poissy, Paris 5e")
+
+
+def scrape_academie_sciences():
+    return _scrape_cards(
+        "Académie des sciences", "https://www.academie-sciences.fr/events", ".NodeEventTeaser",
+        title=".NodeEventTeaser-title", date="time", kind=".NodeEventTeaser-type",
+        place=".NodeEventTeaser-location", base="https://www.academie-sciences.fr",
+        location="Académie des sciences, 23 quai de Conti, Paris 6e",
+        page_url="https://www.academie-sciences.fr/events?page={n}", max_pages=5)
+
+
+def scrape_cite_sciences():
+    # « Ma première conférence » et « Adolesciences » visent les scolaires.
+    return _scrape_cards(
+        "Cité des sciences",
+        "https://www.cite-sciences.fr/fr/au-programme/activites-spectacles/conferences",
+        ".BlocContenuSdL", title=".titre", date=".date", kind=".sousTitre",
+        drop_kind=("première conférence", "adolesciences"),
+        base="https://www.cite-sciences.fr",
+        location="Cité des sciences et de l'industrie, 30 avenue Corentin-Cariou, Paris 19e")
+
+
+def scrape_sorbonne_nouvelle():
+    # Une page par année (« Colloques 2026 ») liée depuis la page d'accueil
+    # des colloques ; on suit celles de l'année en cours et de la suivante.
+    base = "https://www.sorbonne-nouvelle.fr"
+    loc = "Université Sorbonne Nouvelle, 8 avenue de Saint-Mandé, Paris 12e"
+    pages = ["https://www.sorbonne-nouvelle.fr/conferences-scientifiques-de-la-sorbonne-nouvelle-60950.kjsp?RH=1236178100008"]
+    try:
+        soup = BeautifulSoup(_get(base + "/colloques-journees-d-etudes-de-la-sorbonne-nouvelle-23462.kjsp?RH=1236178100008"), "lxml")
+        years = (str(TODAY.year), str(TODAY.year + 1))
+        pages += [make_absolute(a["href"], base) for a in soup.find_all("a", href=True)
+                  if re.search(r"colloques", a["href"]) and any(y in a.get_text() for y in years)]
+    except Exception as e:
+        print(f"   [warn] Sorbonne Nouvelle index: {e}")
+    out = []
+    for u in dict.fromkeys(pages):
+        out += _scrape_cards("Université Sorbonne Nouvelle", u, "ul.liste-objets li",
+                             title="a", date=".date-liste", base=base, location=loc)
+    return out
+
+
+def scrape_paris8():
+    # Pas d'agenda central : la frise de la page d'accueil couvre ~1 mois,
+    # le report quotidien (carry-forward) fait le reste.
+    return _scrape_cards(
+        "Université Paris 8", "https://www.univ-paris8.fr", ".cd-timeline-block",
+        title="h3", date=".cd-date", base="https://www.univ-paris8.fr/",
+        location="Université Paris 8, 2 rue de la Liberté, Saint-Denis",
+        one_per_title=True)
+
+
+def _parse_ics(text):
+    """VEVENT → dicts {SUMMARY, DTSTART, URL, LOCATION…} (lignes dépliées)."""
+    text = re.sub(r"\r?\n[ \t]", "", text)
+    out, cur = [], None
+    for line in text.splitlines():
+        if line == "BEGIN:VEVENT":
+            cur = {}
+        elif line == "END:VEVENT" and cur is not None:
+            out.append(cur)
+            cur = None
+        elif cur is not None and ":" in line:
+            k, v = line.split(":", 1)
+            cur[k.split(";")[0]] = v.replace("\\,", ",").replace("\\;", ";").replace("\\n", " ")
+    return out
+
+
+def scrape_nanterre():
+    # Export iCal natif de l'agenda (Kosmos) sur un an glissant.
+    name = "Université Paris Nanterre"
+    print(f"→ {name} (iCal)...")
+    fmt = lambda d: d.strftime("%d%%2F%m%%2F%Y")
+    u = ("https://www.parisnanterre.fr/servlet/com.kosmos.agenda.export.ExportAgendaServlet"
+         f"?DTSTART={fmt(TODAY)}&DTEND={fmt(HORIZON)}&THEMATIQUE=&CATEGORIE=&LIEU="
+         "&CODE_RUBRIQUE=1713186750251&CODE_RATTACHEMENT=&EXT=agenda")
+    events = []
+    for v in _parse_ics(_get(u)):
+        t = clean_text(v.get("SUMMARY"))
+        # 20261012T100000Z → 2026-10-12T10:00:00Z, sinon dateutil lit le jour en 1er
+        raw = re.sub(r"^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})",
+                     r"\1-\2-\3T\4:\5:\6", v.get("DTSTART", ""))
+        dt = parse_date(raw)
+        if not t or not dt or not in_window(dt.date()) or _OFF_TOPIC.search(t):
+            continue
+        loc = clean_text(v.get("LOCATION"))
+        events.append(new_event(
+            name, t, dt.date(), time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+            location=f"{loc} — Université Paris Nanterre, 200 avenue de la République, Nanterre"
+            if loc else "Université Paris Nanterre, 200 avenue de la République, Nanterre",
+            url=v.get("URL") or "https://www.parisnanterre.fr/agenda",
+            desc=clean_text(v.get("DESCRIPTION"))[:400]))
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+# Noms d'institution des sources ci-dessus (carry-forward, hubs i/*.html).
+# Doit rester aligné sur MAIN_INST dans web/src/lib.js.
+NEW_INSTITUTIONS = [
+    "Université Paris Cité", "Cnam", "Muséum national d'Histoire naturelle", "BnF",
+    "Institut Pasteur", "Institut Curie", "Institut du Cerveau", "Inalco", "EPHE",
+    "Collège des Bernardins", "Académie des sciences", "Cité des sciences",
+    "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre",
+]
+
+# Ordre = ordre d'exécution dans main() ; tous sans navigateur.
+STATIC_SOURCES = [
+    scrape_paris_cite, scrape_cnam, scrape_mnhn, scrape_bnf, scrape_pasteur,
+    scrape_curie, scrape_institut_cerveau, scrape_inalco, scrape_ephe,
+    scrape_bernardins, scrape_academie_sciences, scrape_cite_sciences,
+    scrape_sorbonne_nouvelle, scrape_paris8, scrape_nanterre,
+]
+
+
 # ── Luma ──────────────────────────────────────────────────────────────────────
 
 # Luma geolocates by IP. From the US-based CI runner the topic pages
@@ -1689,6 +2023,21 @@ INSTITUTION_COORDS = {
     "Sorbonne Université":       [48.8479, 2.3433],
     "Sciences et Cultures":      [48.8479, 2.3433],   # Sorbonne (Paris 5e)
     "Université Paris Dauphine": [48.8702, 2.2745],
+    "Université Paris Cité":     [48.8508, 2.3431],
+    "Cnam":                      [48.8667, 2.3553],
+    "Muséum national d'Histoire naturelle": [48.8440, 2.3590],
+    "BnF":                       [48.8336, 2.3758],
+    "Institut Pasteur":          [48.8404, 2.3106],
+    "Institut Curie":            [48.8440, 2.3440],
+    "Institut du Cerveau":       [48.8387, 2.3622],
+    "Inalco":                    [48.8276, 2.3810],
+    "EPHE":                      [48.8322, 2.3405],
+    "Collège des Bernardins":    [48.8490, 2.3528],
+    "Académie des sciences":     [48.8574, 2.3372],
+    "Cité des sciences":         [48.8958, 2.3878],
+    "Université Sorbonne Nouvelle": [48.8465, 2.3960],
+    "Université Paris 8":        [48.9454, 2.3634],
+    "Université Paris Nanterre": [48.9035, 2.2129],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -1892,6 +2241,21 @@ INSTITUTION_URLS = {
     "Article 1": "https://article-1.eu",
     "Sciences et Cultures": "https://linktr.ee/Sciences_et_Cultures",
     "Université Paris Dauphine": "https://dauphine.psl.eu",
+    "Université Paris Cité": "https://u-paris.fr",
+    "Cnam": "https://www.cnam.fr",
+    "Muséum national d'Histoire naturelle": "https://www.mnhn.fr",
+    "BnF": "https://www.bnf.fr",
+    "Institut Pasteur": "https://www.pasteur.fr",
+    "Institut Curie": "https://curie.fr",
+    "Institut du Cerveau": "https://institutducerveau.org",
+    "Inalco": "https://www.inalco.fr",
+    "EPHE": "https://www.ephe.psl.eu",
+    "Collège des Bernardins": "https://www.collegedesbernardins.fr",
+    "Académie des sciences": "https://www.academie-sciences.fr",
+    "Cité des sciences": "https://www.cite-sciences.fr",
+    "Université Sorbonne Nouvelle": "https://www.sorbonne-nouvelle.fr",
+    "Université Paris 8": "https://www.univ-paris8.fr",
+    "Université Paris Nanterre": "https://www.parisnanterre.fr",
 }
 
 
@@ -2236,7 +2600,7 @@ SHARE_INSTITUTIONS = [
     "Collège de France", "ENS Paris", "EHESS", "Institut Henri Poincaré",
     "Paris School of Economics", "Sciences Po", "Sorbonne Université",
     "Université PSL", "Article 1", "Sciences et Cultures",
-    "Université Paris Dauphine",
+    "Université Paris Dauphine", *NEW_INSTITUTIONS,
 ]
 
 
@@ -2754,6 +3118,13 @@ def main():
         print(f"[ERROR] Sciences et Cultures: {e}")
         traceback.print_exc()
 
+    for fn in STATIC_SOURCES:
+        try:
+            all_events.extend(fn())
+        except Exception as e:
+            print(f"[ERROR] {fn.__name__}: {e}")
+            traceback.print_exc()
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         try:
@@ -2788,7 +3159,7 @@ def main():
     KNOWN_SOURCES = {
         "Institut Henri Poincaré", "Collège de France", "Paris School of Economics",
         "Université PSL", "EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
-        "Université Paris Dauphine",
+        "Université Paris Dauphine", *NEW_INSTITUTIONS,
     }
     present_ids = {e.get("id") for e in all_events}
     today_iso = TODAY.isoformat()

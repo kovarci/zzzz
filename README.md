@@ -32,6 +32,16 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | Sciences Po                         | scraping HTML paginé                 | Institution    |
 | ENS Paris                           | scraping HTML paginé                 | Institution    |
 | Sorbonne Université                 | parseur dédié                        | Institution    |
+| Université Paris Cité               | cartes HTML (All-in-One Calendar)    | Institution    |
+| Université Sorbonne Nouvelle        | listes annuelles des colloques       | Institution    |
+| Université Paris 8                  | frise de la page d'accueil (~1 mois) | Institution    |
+| Université Paris Nanterre           | export iCal de l'agenda              | Institution    |
+| EPHE, Inalco, Cnam                  | cartes HTML                          | Institution    |
+| Académie des sciences               | cartes HTML                          | Institution    |
+| Institut Pasteur, Institut Curie, Institut du Cerveau | cartes HTML        | Recherche      |
+| Muséum (MNHN), Cité des sciences    | cartes HTML, conférences seulement   | Musée          |
+| BnF                                 | agenda filtré « Conférences »        | Bibliothèque   |
+| Collège des Bernardins              | cartes HTML (Webflow)                | Lieu de débat  |
 | Luma (Paris + 8 pages thématiques)  | interception des appels JSON         | Plateforme     |
 | Article 1                           | capture remoting Salesforce          | Association    |
 | Sciences et Cultures / Citoy.ENS    | Linktree → Framaforms (date dans l'URL) | Association |
@@ -86,6 +96,9 @@ Après un build, incrémente `?v=` sur `app.js` / `app.css` dans `index.html` et
 ## Limites connues
 
 - Université Paris Dauphine : aucun événement (page en carrousels, sans dates exploitables).
+- Inria Paris : non intégré, le site est protégé par un anti-robot (Anubis) qu'on ne contourne pas.
+- Cnam : son agenda public ne liste que très peu d'événements (souvent 0 ou 1).
+- Université Paris 8 : pas d'agenda central, seule la frise de la page d'accueil (~1 mois) est lue.
 - EHESS et Sorbonne : peu d'événements (pages d'agenda courtes).
 - Collège de France : son CDN (BunnyCDN) bloque les IP de data-center. Le robot GitHub
   reçoit 0 événement ; les conférences sont récupérées depuis une connexion française.

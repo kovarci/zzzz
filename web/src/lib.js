@@ -11,7 +11,11 @@ export const DISC = {
 export const SRC_LABEL = { institution: "Universités & instituts", luma: "Luma", association: "Associations" };
 // Doit rester aligné sur SHARE_INSTITUTIONS dans scraper/scrape.py (hubs i/<slug>.html)
 export const MAIN_INST = ["Collège de France", "Institut Henri Poincaré", "Université PSL", "Paris School of Economics",
-  "Sciences Po", "Sorbonne Université", "ENS Paris", "Université Paris Dauphine", "EHESS", "Article 1", "Sciences et Cultures"];
+  "Sciences Po", "Sorbonne Université", "ENS Paris", "Université Paris Dauphine", "EHESS", "Article 1", "Sciences et Cultures",
+  // NEW_INSTITUTIONS dans scraper/scrape.py
+  "Université Paris Cité", "Cnam", "Muséum national d'Histoire naturelle", "BnF", "Institut Pasteur", "Institut Curie",
+  "Institut du Cerveau", "Inalco", "EPHE", "Collège des Bernardins", "Académie des sciences", "Cité des sciences",
+  "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre"];
 export const WD = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 export const WDS = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
 export const MO = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
