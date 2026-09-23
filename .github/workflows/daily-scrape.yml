@@ -50,5 +50,13 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: update conference data $(date -u +'%Y-%m-%d')"
-            git push
+            # Si quelqu'un a poussé pendant le scrape (code, maj.bat…), on se
+            # remet à jour avant de pousser. -X theirs : en cas de conflit sur
+            # un fichier de données, la version fraîche du robot l'emporte.
+            for i in 1 2 3; do
+              if git pull --rebase -X theirs origin main && git push; then exit 0; fi
+              git rebase --abort 2>/dev/null || true
+              sleep 10
+            done
+            exit 1
           fi
