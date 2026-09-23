@@ -292,6 +292,9 @@ function App() {
     fetch("data/digest.json?" + Date.now()).then(r => r.json()).then(d => d?.events?.length && setDigest(d)).catch(() => {});
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   }, []);
+  // Agenda rendu (ou erreur affichée) : on efface en fondu l'écran de
+  // chargement d'index.html — deux frames, le temps que le rendu soit peint.
+  useEffect(() => { if (events || loadErr) requestAnimationFrame(() => requestAnimationFrame(() => window.__lotentReady?.())); }, [events, loadErr]);
   const ensureArchive = useCallback(() => archive ? Promise.resolve(archive) : fetch("data/events-archive.json?" + Date.now()).then(r => r.json()).catch(() => []).then(a => { a.sort((x, y) => (y.date + (y.time || "")).localeCompare(x.date + (x.time || ""))); setArchive(a); return a; }), [archive]);
   useEffect(() => { if (history) ensureArchive(); }, [history]);
   useEffect(() => { document.documentElement.classList.toggle("history-mode", history); }, [history]);
