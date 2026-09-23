@@ -46,6 +46,11 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | Article 1                           | capture remoting Salesforce          | Association    |
 | Sciences et Cultures / Citoy.ENS    | Linktree → Framaforms (date dans l'URL) | Association |
 | Que faire à Paris (Ville de Paris)  | API open data, tag « Conférence »    | Ville (`source_type: ville`) |
+| IJCLab, IN2P3 (LPNHE, APC…), Observatoire de Paris | API Indico (tranches de 60 j, sans réunions internes) | Laboratoire |
+| Sciencesconf.org                    | liste des colloques à venir (~3 semaines) + fiche, filtre Île-de-France | Plateforme |
+
+Les **soutenances** de thèse / HDR (repérées au titre, toutes sources) portent `kind: "soutenance"` :
+masquées du fil principal, affichées par le bouton « 🎓 Soutenances » (`?soutenances=1`).
 
 Plus de 1 500 événements indexés depuis avril 2026.
 

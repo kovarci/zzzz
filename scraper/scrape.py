@@ -414,27 +414,46 @@ def new_event(institution, title, d, time_str="", end_time="", location="",
 
 # ── Indico (IHP) ──────────────────────────────────────────────────────────────
 
-def scrape_indico(name, base, categ, location_default) -> list[dict]:
+_INDICO_INTERNAL = re.compile(r"\b(r[ée]union|meeting|sign[- ]up|stage coll[èe]ge|weekly)\b", re.I)
+
+
+def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
+                  keep_loc=None) -> list[dict]:
+    """skip_meetings : écarte les réunions internes (type Indico « meeting »).
+    keep_loc : regex — pour une instance nationale, ne garder que les
+    événements dont le lieu (location / room / address) y correspond."""
     print(f"→ Indico: {name}...")
     events = []
-    url = (f"{base}/export/categ/{categ}.json"
-           f"?from={TODAY.isoformat()}&to={HORIZON.isoformat()}&limit=300")
-    data = None
-    for attempt in range(1, 4):
-        try:
-            r = requests.get(url, headers=HEADERS, timeout=35)
-            print(f"   attempt {attempt}: HTTP {r.status_code} ({len(r.content)} bytes)")
-            r.raise_for_status()
-            data = r.json()
-            break
-        except Exception as e:
-            print(f"   [WARN] attempt {attempt}: {e}")
-    if not data:
+    # Sur un an d'un coup, l'export Indico ne rend qu'un sous-ensemble (IHP :
+    # 287 événements au lieu de 548, IJCLab 11 au lieu de 48) : on découpe
+    # l'année en tranches de 60 jours et on fusionne par id.
+    results, seen_ids, failed = [], set(), 0
+    start = TODAY
+    while start <= HORIZON:
+        stop = min(start + timedelta(days=60), HORIZON)
+        url = (f"{base}/export/categ/{categ}.json"
+               f"?from={start.isoformat()}&to={stop.isoformat()}&limit=300")
+        data = None
+        for attempt in range(1, 4):
+            try:
+                r = requests.get(url, headers=HEADERS, timeout=35)
+                r.raise_for_status()
+                data = r.json()
+                break
+            except Exception as e:
+                print(f"   [WARN] {start}→{stop} attempt {attempt}: {e}")
+        if data is None:
+            failed += 1
+        for item in (data or {}).get("results", []):
+            if item.get("id") not in seen_ids:
+                seen_ids.add(item.get("id"))
+                results.append(item)
+        start = stop + timedelta(days=1)
+    if not results:
         print("   [ERROR] Indico unreachable after 3 attempts")
         return events
-
-    results = data.get("results", [])
-    print(f"   API returned {len(results)} raw results")
+    print(f"   API returned {len(results)} raw results"
+          + (f" ({failed} tranche(s) en échec)" if failed else ""))
     for item in results:
         title = clean_text(item.get("title", ""))
         if not title or is_junk_title(title):
@@ -448,6 +467,11 @@ def scrape_indico(name, base, categ, location_default) -> list[dict]:
         dt_end = parse_date(f"{raw_end.get('date', '')} {raw_end.get('time', '')}")
         if dt_end:
             end_time = dt_end.strftime("%H:%M")
+        if skip_meetings and (item.get("type") == "meeting" or _INDICO_INTERNAL.search(title)):
+            continue
+        where = " ".join(clean_text(item.get(k, "")) for k in ("location", "room", "address"))
+        if keep_loc and not keep_loc.search(where):
+            continue
         location = (clean_text(item.get("location", "")) or clean_text(item.get("room", ""))
                     or location_default)
         # Indico CNRS-math is nationwide — keep only Paris-area events
@@ -1347,9 +1371,9 @@ def scrape_psl(browser):
 # _scrape_cards. Tous servent leur agenda en HTML côté serveur : requests
 # suffit, ce qui garde le job GitHub rapide malgré le nombre de sources.
 
-# Vie de campus, soutenances, démarches : pas des conférences.
+# Vie de campus, démarches : pas des conférences. (Les soutenances ne sont
+# plus jetées : _SOUTENANCE les étiquette, le site les range à part.)
 _OFF_TOPIC = re.compile(
-    r"^(avis de )?soutenance|\bsoutenance (de|d'|publique)|\bphd defen[cs]e|"
     r"don du sang|d[ée]pistage|r[ée]paration de v[ée]los|rollerdisco|"
     r"livres en don|roadshow|welcome party|soir[ée]e internationale|"
     r"forum de rentr[ée]e|cr[ée]maill[èe]re|[ée]lections? des|"
@@ -1359,6 +1383,13 @@ _OFF_TOPIC = re.compile(
     re.I)
 
 _TIME_RE = re.compile(r"(?<![\d/.-])([01]?\d|2[0-3])\s*(?:h|H|:)\s*([0-5]\d)?(?!\d)")
+
+
+# Soutenances de thèse / HDR : gardées, mais kind="soutenance" → catégorie à
+# part sur le site (masquées par défaut, un bouton les affiche).
+_SOUTENANCE = re.compile(
+    r"^(avis de )?soutenance|\bsoutenance (de|d'|publique|hdr)|\bph\.?d\.? defen[cs]e|"
+    r"\bthesis defen[cs]e|habilitation [àa] diriger", re.I)
 
 
 def _time_of(text) -> str:
@@ -1515,7 +1546,7 @@ def scrape_pasteur():
     return _scrape_cards(
         "Institut Pasteur", "https://research.pasteur.fr/en/events/", ".timeline .item",
         title="h3", date=".atc_date_start", place=".location",
-        drop_kind=("phd",), kind=".label", base="https://research.pasteur.fr",
+        kind=".label", base="https://research.pasteur.fr",
         location="Institut Pasteur, 25-28 rue du Docteur Roux, Paris 15e")
 
 
@@ -1643,6 +1674,90 @@ def scrape_nanterre():
     return events
 
 
+# ── Indico des labos (même code que l'IHP) ────────────────────────────────────
+
+# Lieux d'Île-de-France, pour réduire une instance nationale à la région
+_IDF_RE = re.compile(
+    r"\b(paris|lpnhe|apc|jussieu|ijclab|orsay|saclay|palaiseau|ihp|henri poincar[ée]|"
+    r"meudon|observatoire|condorcet|aubervilliers|gif|bures|villejuif|cr[ée]teil|"
+    r"nanterre|saint-denis|versailles|cergy|[ée]vry|marne-la-vall[ée]e|champs-sur-marne)\b", re.I)
+
+
+def scrape_ijclab():
+    return scrape_indico("IJCLab", "https://indico.ijclab.in2p3.fr", "0",
+                         "IJCLab, 15 rue Georges Clemenceau, Orsay", skip_meetings=True)
+
+
+def scrape_in2p3_paris():
+    # Instance nationale : on ne garde que LPNHE, APC & co en Île-de-France.
+    return scrape_indico("IN2P3", "https://indico.in2p3.fr", "0",
+                         "LPNHE, 4 place Jussieu, Paris 5e", skip_meetings=True, keep_loc=_IDF_RE)
+
+
+def scrape_observatoire():
+    return scrape_indico("Observatoire de Paris", "https://indico.obspm.fr", "0",
+                         "Observatoire de Paris, 61 avenue de l'Observatoire, Paris 14e",
+                         skip_meetings=True)
+
+
+# ── Sciencesconf.org (colloques CNRS / universités) ───────────────────────────
+
+def _range_start(text):
+    """« 23-25 sept. 2026 », « 28 sept.-1 oct. 2026 » → date de début."""
+    end = parse_french_date_text(text)
+    m = re.match(r"\s*(\d{1,2})(?:er)?\s*([^\d\s-][^-]*?)?\s*(\d{4})?\s*-", text or "")
+    if not end or not m:
+        return end
+    month = _month_num(m.group(2)) if m.group(2) else end.month
+    year = int(m.group(3)) if m.group(3) else end.year - (1 if month and month > end.month else 0)
+    try:
+        return date(year, month or end.month, int(m.group(1)))
+    except ValueError:
+        return end
+
+
+def scrape_sciencesconf():
+    """Le portail ne liste que ~200 colloques à venir (≈ 3 semaines) : le
+    report quotidien fait le reste. Fiche détaillée lue pour les seuls
+    colloques franciliens : adresse, site du colloque, GPS."""
+    name = "Sciencesconf.org"
+    print(f"→ {name}...")
+    base = "https://portal.sciencesconf.org"
+    events = []
+    for td in _soup(base + "/browse/list").select("td.miniconf_bloc"):
+        raw = clean_text(td.select_one(".miniconf_titre").get_text(" ")) if td.select_one(".miniconf_titre") else ""
+        ps = [clean_text(p.get_text(" ")) for p in td.select("p.miniconf_dateou")]
+        a = td.select_one("p.miniconf_voir a[href]")
+        if not raw or len(ps) < 2 or not a or "France" not in ps[0] or not _IDF_RE.search(ps[0]):
+            continue
+        d = _range_start(ps[1])
+        if not d or not in_window(d):
+            continue
+        title = raw.split(" : ", 1)[-1]           # « ACRONYME : Titre complet »
+        fiche = make_absolute(a["href"], base)
+        loc, url, desc, lat, lon = ps[0], fiche, "", None, None
+        try:
+            f = _soup(fiche)
+            loc = clean_text(f.select_one(".conference .city").get_text(" ")) or loc
+            site = f.select_one(".conference h3 a[href]")
+            url = site["href"] if site else fiche
+            desc = clean_text(f.select_one(".conference .description").get_text(" "))[:400] \
+                if f.select_one(".conference .description") else ""
+            html = str(f)
+            mlat = re.search(r"\blat\s*=\s*(-?\d+\.\d+)", html)
+            mlon = re.search(r"\blon\s*=\s*(-?\d+\.\d+)", html)
+            lat, lon = (float(mlat.group(1)), float(mlon.group(1))) if mlat and mlon else (None, None)
+        except Exception as e:
+            print(f"   [warn] fiche {fiche}: {e}")
+        ev = new_event(name, title, d, location=loc, desc=desc, url=url)
+        ev["description"] = desc or "Colloque"
+        if lat and lon:
+            ev["lat"], ev["lng"], ev["geo_exact"] = lat, lon, True
+        events.append(ev)
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
 # ── Que faire à Paris (open data Ville de Paris) ──────────────────────────────
 
 QFAP_API = ("https://parisdata.opendatasoft.com/api/explore/v2.1/catalog/"
@@ -1698,7 +1813,7 @@ def scrape_que_faire_a_paris():
                 ev["price"] = "Gratuit"
             geo = x.get("lat_lon") or {}
             if geo.get("lat") and geo.get("lon"):
-                ev["lat"], ev["lng"] = geo["lat"], geo["lon"]
+                ev["lat"], ev["lng"], ev["geo_exact"] = geo["lat"], geo["lon"], True
             events.append(ev)
         if len(rows) < 100 or offset >= 900:
             break
@@ -1725,6 +1840,7 @@ NEW_INSTITUTIONS = [
     "Institut Pasteur", "Institut Curie", "Institut du Cerveau", "Inalco", "EPHE",
     "Collège des Bernardins", "Académie des sciences", "Cité des sciences",
     "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre",
+    "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org",
 ]
 
 # Ordre = ordre d'exécution dans main() ; tous sans navigateur.
@@ -1733,6 +1849,7 @@ STATIC_SOURCES = [
     scrape_curie, scrape_institut_cerveau, scrape_inalco, scrape_ephe,
     scrape_bernardins, scrape_academie_sciences, scrape_cite_sciences,
     scrape_sorbonne_nouvelle, scrape_paris8, scrape_nanterre,
+    scrape_ijclab, scrape_in2p3_paris, scrape_observatoire, scrape_sciencesconf,
 ]
 
 
@@ -2108,6 +2225,9 @@ INSTITUTION_COORDS = {
     "Université Sorbonne Nouvelle": [48.8465, 2.3960],
     "Université Paris 8":        [48.9454, 2.3634],
     "Université Paris Nanterre": [48.9035, 2.2129],
+    "IJCLab":                    [48.6985, 2.1840],
+    "IN2P3":                     [48.8467, 2.3560],   # LPNHE, Jussieu
+    "Observatoire de Paris":     [48.8364, 2.3364],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -2170,8 +2290,8 @@ def geocode_all(events):
     sess.headers.update({"User-Agent": "ParisAcademique/1.0 (github.com/kovarci/zzzz)"})
     new = 0
     for ev in events:
-        if ev.get("source_type") == "ville" and "lat" in ev:
-            continue                         # GPS fourni par l'API Ville de Paris
+        if ev.get("geo_exact") and "lat" in ev:
+            continue                         # GPS fourni par la source (Ville de Paris, Sciencesconf)
         loc = clean_text(ev.get("location") or "")
         coords = None
         if loc and looks_like_address(loc):
@@ -2329,6 +2449,10 @@ INSTITUTION_URLS = {
     "Université Sorbonne Nouvelle": "https://www.sorbonne-nouvelle.fr",
     "Université Paris 8": "https://www.univ-paris8.fr",
     "Université Paris Nanterre": "https://www.parisnanterre.fr",
+    "IJCLab": "https://www.ijclab.in2p3.fr",
+    "IN2P3": "https://www.in2p3.cnrs.fr",
+    "Observatoire de Paris": "https://www.observatoiredeparis.psl.eu",
+    "Sciencesconf.org": "https://www.sciencesconf.org",
 }
 
 
@@ -3252,6 +3376,9 @@ def main():
         print(f"⚠ Carried forward {carried} upcoming events from the previous run")
 
     all_events = _drop_city_duplicates(deduplicate(all_events))
+    for e in all_events:                  # toutes sources, anciennes comprises
+        if _SOUTENANCE.search(e.get("title", "")):
+            e["kind"] = "soutenance"
 
     # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
     # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.

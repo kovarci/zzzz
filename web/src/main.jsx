@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
+import { SITE, REPO, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, isThesis, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
@@ -324,7 +324,9 @@ function App() {
   useEffect(() => setShown(PAGE), [filtered]);
   useEffect(() => { const el = moreRef.current; if (!el) return; const io = new IntersectionObserver(es => es[0].isIntersecting && setShown(s => s + PAGE), { rootMargin: "800px" }); io.observe(el); return () => io.disconnect(); }, [shown, filtered, view]);
   const counts = useMemo(() => { const c = k => { const m = {}; UP.forEach(e => m[e[k]] = (m[e[k]] || 0) + 1); return m; }; const th = {}; UP.forEach(e => (e.luma_categories || []).forEach(t => th[t] = (th[t] || 0) + 1)); return { disc: c("discipline"), inst: c("institution"), src: c("source_type"), theme: th }; }, [UP]);
-  const nToday = UP.filter(e => e.date === TODAY).length, nWeek = UP.filter(e => e.date <= WEEK_END).length, nWe = UP.filter(e => WE.includes(e.date)).length, nNew = UP.filter(isNew).length;
+  // Compteurs sans les soutenances, masquées par défaut dans la liste
+  const UPc = UP.filter(e => !isThesis(e)), nTheses = UP.length - UPc.length;
+  const nToday = UPc.filter(e => e.date === TODAY).length, nWeek = UPc.filter(e => e.date <= WEEK_END).length, nWe = UPc.filter(e => WE.includes(e.date)).length, nNew = UPc.filter(isNew).length;
   const topInst = useMemo(() => Object.entries(counts.inst).sort((a, b) => b[1] - a[1]).slice(0, 18), [counts]);
   const followedNew = useMemo(() => {
     if (!speakers.size) return [];
@@ -356,7 +358,7 @@ function App() {
   const max7 = Math.max(1, ...days7.map(x => x.n));
   const groups = useMemo(() => { const g = []; filtered.slice(0, shown).forEach(e => { if (!g.length || g[g.length - 1].date !== e.date) g.push({ date: e.date, items: [] }); g[g.length - 1].items.push(e); }); return g; }, [filtered, shown]);
   const histMonths = useMemo(() => [...new Set((archive || []).map(e => e.date.slice(0, 7)))].sort().reverse(), [archive]);
-  const activeTags = [...[...filters.disc].map(v => [v, () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : [])];
+  const activeTags = [...[...filters.disc].map(v => [v, () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.theses ? [[t("btn_theses"), () => setF({ theses: false })]] : [])];
 
   /* actions */
   const onFav = id => { toggleFav(id); notify(favs.has(id) ? t("toast_fav_removed") : t("toast_fav_added")); };
@@ -440,6 +442,7 @@ function App() {
             {Object.keys(counts.theme).length > 0 && <CheckList values={Object.entries(counts.theme).sort((a, b) => b[1] - a[1]).map(([tm, n], k) => [tm, n, k === 0 ? t("group_luma_themes") : null])} set={filters.theme} onToggle={toggleIn("theme")} onClear={() => setF({ theme: new Set() })} clearLabel={t("clear_all")} />}</>}</Popover>
           <Button variant={filters.fav ? "default" : "outline"} size="sm" className="h-9" onClick={() => setF({ fav: !filters.fav })} aria-pressed={filters.fav}>★<span className="hidden sm:inline"> {t("btn_fav")}</span>{favs.size > 0 && <span className={cn("inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[11px]", filters.fav ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground")}>{favs.size}</span>}</Button>
           <Button variant={filters.online ? "default" : "outline"} size="sm" className="h-9" onClick={() => setF({ online: !filters.online })} aria-pressed={filters.online}>{t("btn_online")}</Button>
+          {nTheses > 0 && <Button variant={filters.theses ? "default" : "outline"} size="sm" className="h-9" onClick={() => setF({ theses: !filters.theses })} aria-pressed={filters.theses} title={t("btn_theses_hint")}>🎓<span className="hidden sm:inline"> {t("btn_theses")}</span><span className="tabular-nums text-xs opacity-70">{nTheses}</span></Button>}
           <div className="ml-auto flex items-center gap-2">
             {!history && <Tabs value={view} onChange={setView} layoutId="view-pill" items={[["list", <Icon d={ICONS.list} size={15} />], ["week", <Icon d={ICONS.week} size={15} />], ["map", <Icon d={ICONS.map} size={15} />]]} />}
             {!history && <Button variant={near ? "default" : "outline"} size="sm" className="h-9" onClick={toggleNear} aria-pressed={near} disabled={locating}><Icon d={ICONS.pin} size={14} /><span className="hidden lg:inline">{locating ? t("near_locate") : near ? t("near_sorted") : t("near_label")}</span></Button>}

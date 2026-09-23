@@ -22,7 +22,8 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
          "BnF", "Institut Pasteur", "Institut Curie", "Institut du Cerveau",
          "Inalco", "EPHE", "Collège des Bernardins", "Académie des sciences",
          "Cité des sciences", "Université Sorbonne Nouvelle", "Université Paris 8",
-         "Université Paris Nanterre"]
+         "Université Paris Nanterre", "IJCLab", "IN2P3", "Observatoire de Paris",
+         "Sciencesconf.org"]
 
 
 def main():

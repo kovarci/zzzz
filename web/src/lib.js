@@ -15,7 +15,8 @@ export const MAIN_INST = ["Collège de France", "Institut Henri Poincaré", "Uni
   // NEW_INSTITUTIONS dans scraper/scrape.py
   "Université Paris Cité", "Cnam", "Muséum national d'Histoire naturelle", "BnF", "Institut Pasteur", "Institut Curie",
   "Institut du Cerveau", "Inalco", "EPHE", "Collège des Bernardins", "Académie des sciences", "Cité des sciences",
-  "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre"];
+  "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre",
+  "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org"];
 export const WD = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 export const WDS = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
 export const MO = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
@@ -37,7 +38,8 @@ export const NEW_CUTOFF = new Date(Date.now() - 48 * 3600 * 1000).toISOString().
 export const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 export const cn = (...a) => a.filter(Boolean).join(" ");
 export const dc = e => `var(${DISC[e.discipline] || "--c-aut"})`;
-export const kindOf = e => { const m = KIND_RE.exec(e.description || "") || KIND_RE.exec(e.title || ""); return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : (e.source_type === "luma" ? "Rencontre" : "Conférence"); };
+export const isThesis = e => e.kind === "soutenance";
+export const kindOf = e => { if (isThesis(e)) return "Soutenance"; const m =KIND_RE.exec(e.description || "") || KIND_RE.exec(e.title || ""); return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : (e.source_type === "luma" ? "Rencontre" : "Conférence"); };
 export const isFree = e => e.price === "0" || e.price === 0 || /gratuit|free/i.test(e.price || "");
 export const isOnline = e => ONLINE_RE.test(e.location || "");
 export const isNew = e => e.added_at && e.added_at >= NEW_CUTOFF;
@@ -68,10 +70,13 @@ export const relTime = ts => {
 };
 
 /* ── Filtrage ──────────────────────────────────────────────────── */
-export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, q: "" };
+export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, theses: false, q: "" };
 
 export function matches(e, f, favs) {
   if (f.fav && !favs.has(e.id)) return false;
+  // Soutenances : catégorie à part, masquée sauf bouton « Soutenances »
+  // (ou favori / recherche : un nom de doctorant doit rester trouvable).
+  if (f.theses ? !isThesis(e) : isThesis(e) && !f.q && !f.fav) return false;
   if (f.online && !isOnline(e)) return false;
   if (f.when === "today" && e.date !== TODAY) return false;
   if (f.when === "tonight" && !(e.date === TODAY && (e.time || "") >= "17:30")) return false;
@@ -96,6 +101,7 @@ export function filtersFromURL() {
   const src = p.get("source"); if (src && src !== "all" && src !== "history") f.src.add(src);
   if (p.get("favoris") === "1") f.fav = true;
   if (p.get("format") === "online") f.online = true;
+  if (p.get("soutenances") === "1") f.theses = true;
   if (p.get("q")) f.q = norm(p.get("q"));
   return { filters: f, view: p.get("vue") || "list", history: src === "history", event: p.get("event") || null, rawQ: p.get("q") || "" };
 }
@@ -110,6 +116,7 @@ export function urlFromState({ filters: f, view, history, rawQ }) {
   if (f.inst.size) p.set("institution", [...f.inst].join(","));
   if (f.theme.size) p.set("theme", [...f.theme].join(","));
   if (f.fav) p.set("favoris", "1");
+  if (f.theses) p.set("soutenances", "1");
   const qs = p.toString(); return qs ? "?" + qs : location.pathname;
 }
 
