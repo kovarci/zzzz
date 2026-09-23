@@ -3,10 +3,12 @@
 Rafraîchissement local — à lancer depuis ta connexion française (chez toi).
 
 Pourquoi ce script existe :
-Depuis le serveur GitHub (une IP de data-center, aux États-Unis), deux sources
-sont bloquées ou faussées par géolocalisation IP :
+Depuis le serveur GitHub (une IP de data-center, aux États-Unis), quelques
+sources sont bloquées ou faussées par géolocalisation IP :
   - Collège de France : son CDN (BunnyCDN) bloque les IP de data-center, donc
     le robot GitHub reçoit 0 événement.
+  - Muséum national d'Histoire naturelle et Académie des sciences : même
+    chose (403 Forbidden depuis GitHub).
   - Luma : les pages par thème sont géolocalisées par IP et renvoient des
     événements américains depuis les États-Unis.
 Depuis ta connexion française, les deux fonctionnent normalement. Ce script va
@@ -50,6 +52,12 @@ LUMA_PAGES = [
 ]
 
 
+# Sources que le robot GitHub ne peut pas lire (IP de data-center bloquée) :
+# ce script les remplace par un scrape frais depuis ta connexion.
+MNHN = "Muséum national d'Histoire naturelle"
+LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences"}
+
+
 def _luma_count(events):
     return sum(1 for e in events if e.get("source_type") == "luma")
 
@@ -67,6 +75,15 @@ def main():
 
     # 1) Collège de France — requests, fonctionne depuis une IP française
     cdf = scrape.scrape_college_de_france(None)
+
+    # 1 bis) Muséum + Académie des sciences : même blocage des IP de
+    # data-center (403 sur le robot GitHub), requests suffit depuis la France.
+    blocked = []
+    for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences):
+        try:
+            blocked += fn()
+        except Exception as e:
+            print(f"[!] {fn.__name__} ignoré ({type(e).__name__}: {e}).")
 
     # 2) Luma — Playwright + géolocalisation Paris, fonctionne depuis la France
     luma = []
@@ -88,11 +105,11 @@ def main():
     if not luma:
         print("[!] Luma a renvoyé 0 cette fois.")
 
-    # Recompose : tout le reste (intact) + Collège de France + Luma frais.
+    # Recompose : tout le reste (intact) + sources locales + Luma frais.
     others = [e for e in events
-              if e.get("institution") != "Collège de France"
+              if e.get("institution") not in LOCAL_INSTITUTIONS
               and e.get("source_type") != "luma"]
-    merged = others + cdf + luma
+    merged = others + cdf + blocked + luma
     merged = scrape.deduplicate(merged)
 
     # Filet de sécurité (comme le robot) : on réunit le scrape frais avec les
@@ -106,7 +123,7 @@ def main():
             continue
         if e.get("id") in present_ids:
             continue
-        if e.get("institution") == "Collège de France" or e.get("source_type") == "luma":
+        if e.get("institution") in LOCAL_INSTITUTIONS or e.get("source_type") == "luma":
             merged.append(e)
             present_ids.add(e.get("id"))
 
@@ -147,6 +164,8 @@ def main():
 
     print(f"\nAprès : {len(merged)} événements "
           f"(Collège de France {_inst_count(merged, 'Collège de France')}, "
+          f"Muséum {_inst_count(merged, MNHN)}, "
+          f"Académie des sciences {_inst_count(merged, 'Académie des sciences')}, "
           f"Luma {_luma_count(merged)})")
     print("\nÉtape suivante :")
     print("  git add data/events.json data/calendar.ics")

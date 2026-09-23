@@ -96,6 +96,9 @@ Après un build, incrémente `?v=` sur `app.js` / `app.css` dans `index.html` et
 ## Limites connues
 
 - Université Paris Dauphine : aucun événement (page en carrousels, sans dates exploitables).
+- Muséum (MNHN) et Académie des sciences : comme le Collège de France, ils refusent les IP de
+  data-center (403). Récupérés par le rafraîchissement local ; le filet de sécurité les garde
+  entre deux passages.
 - Inria Paris : non intégré, le site est protégé par un anti-robot (Anubis) qu'on ne contourne pas.
 - Cnam : son agenda public ne liste que très peu d'événements (souvent 0 ou 1).
 - Université Paris 8 : pas d'agenda central, seule la frise de la page d'accueil (~1 mois) est lue.

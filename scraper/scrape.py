@@ -18,8 +18,10 @@ import traceback
 from datetime import datetime, date, timedelta
 from pathlib import Path
 
+import icalendar
 import requests
 from bs4 import BeautifulSoup
+from dateparser.search import search_dates
 from dateutil import parser as dateparser, tz as dateutil_tz
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
@@ -193,9 +195,6 @@ FRENCH_MONTHS = {
     "octobre": 10, "oct": 10,
     "novembre": 11, "nov": 11,
     "decembre": 12, "dec": 12,
-    # Abréviations anglaises (Bernardins, Webflow) — dict seul, pas dans
-    # _MONTH_PAT, pour ne pas faire matcher « may »/« jun » dans du texte libre.
-    "feb": 2, "apr": 4, "may": 5, "jun": 6, "jul": 7, "aug": 8,
 }
 
 # Regex fragment matching any full OR abbreviated French month (longest first)
@@ -1382,24 +1381,33 @@ def _card_date(el):
                 return dt.date(), (dt.strftime("%H:%M") if (dt.hour or dt.minute) else "")
     txt = el.get_text(" ", strip=True)
     d = parse_french_date_text(txt)
-    if not d:
-        # « 1 Feb » : abréviations anglaises, connues de FRENCH_MONTHS seulement
-        m = re.search(r"(\d{1,2})\s+([A-Za-z]{3,9})\b", txt)
-        d = _day_month_to_date(m.group(1), m.group(2)) if m else None
+    if not d and len(txt) <= 80:
+        # Secours seulement (notre parseur, réglé sur les sources historiques,
+        # garde la main) : dateparser lit l'anglais (« 1 Feb ») et les formats
+        # inattendus. Base 15 jours en arrière = même inférence d'année que
+        # _day_month_to_date. Limité aux textes courts, il sur-interprète.
+        # Langue auto-détectée : avec languages=["fr", …], « 1 Mar » devient
+        # « mardi 1 ». On exige un n° de jour (« Sep 2026 » → faux 8 sept.).
+        found = search_dates(txt, settings={
+            "PREFER_DATES_FROM": "future", "DATE_ORDER": "DMY",
+            "RELATIVE_BASE": datetime.combine(TODAY - timedelta(days=15), datetime.min.time())})
+        d = next((dt.date() for s, dt in found or []
+                  if re.search(r"(?<!\d)\d{1,2}(?!\d)", s)), None)
     return d, _time_of(txt)
 
 
-def _get(url):
+def _soup(url):
+    """Page → BeautifulSoup. On passe les octets bruts : BeautifulSoup lit le
+    charset du <meta> (Sorbonne Nouvelle est en cp1252 sans le dire à HTTP)."""
     r = requests.get(url, headers=CDF_HEADERS, timeout=35)
     r.raise_for_status()
-    # Sans charset déclaré, requests suppose du latin-1 : faux pour l'iCal de
-    # Nanterre (UTF-8), juste pour Sorbonne Nouvelle (cp1252). On tranche.
-    if "charset" in r.headers.get("content-type", "").lower():
-        return r.text
-    try:
-        return r.content.decode("utf-8")
-    except UnicodeDecodeError:
-        return r.content.decode("cp1252", errors="replace")
+    declared = "charset" in r.headers.get("content-type", "").lower()
+    soup = BeautifulSoup(r.content, "lxml", from_encoding=r.encoding if declared else None)
+    if (soup.original_encoding or "").lower() in ("iso-8859-1", "latin-1", "latin1"):
+        # Comme les navigateurs (norme WHATWG) : « latin-1 » annoncé = cp1252,
+        # sinon les apostrophes typographiques (’) disparaissent.
+        soup = BeautifulSoup(r.content, "lxml", from_encoding="cp1252")
+    return soup
 
 
 def _scrape_cards(name, url, card, *, title, base, location, date=None,
@@ -1417,7 +1425,7 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
     urls = [url] + ([page_url.format(n=n) for n in range(1, max_pages)] if page_url else [])
     for u in urls:
         try:
-            soup = BeautifulSoup(_get(u), "lxml")
+            soup = _soup(u)
         except Exception as e:
             print(f"   [warn] {u}: {e}")
             break
@@ -1581,7 +1589,7 @@ def scrape_sorbonne_nouvelle():
     loc = "Université Sorbonne Nouvelle, 8 avenue de Saint-Mandé, Paris 12e"
     pages = ["https://www.sorbonne-nouvelle.fr/conferences-scientifiques-de-la-sorbonne-nouvelle-60950.kjsp?RH=1236178100008"]
     try:
-        soup = BeautifulSoup(_get(base + "/colloques-journees-d-etudes-de-la-sorbonne-nouvelle-23462.kjsp?RH=1236178100008"), "lxml")
+        soup = _soup(base + "/colloques-journees-d-etudes-de-la-sorbonne-nouvelle-23462.kjsp?RH=1236178100008")
         years = (str(TODAY.year), str(TODAY.year + 1))
         pages += [make_absolute(a["href"], base) for a in soup.find_all("a", href=True)
                   if re.search(r"colloques", a["href"]) and any(y in a.get_text() for y in years)]
@@ -1604,22 +1612,6 @@ def scrape_paris8():
         one_per_title=True)
 
 
-def _parse_ics(text):
-    """VEVENT → dicts {SUMMARY, DTSTART, URL, LOCATION…} (lignes dépliées)."""
-    text = re.sub(r"\r?\n[ \t]", "", text)
-    out, cur = [], None
-    for line in text.splitlines():
-        if line == "BEGIN:VEVENT":
-            cur = {}
-        elif line == "END:VEVENT" and cur is not None:
-            out.append(cur)
-            cur = None
-        elif cur is not None and ":" in line:
-            k, v = line.split(":", 1)
-            cur[k.split(";")[0]] = v.replace("\\,", ",").replace("\\;", ";").replace("\\n", " ")
-    return out
-
-
 def scrape_nanterre():
     # Export iCal natif de l'agenda (Kosmos) sur un an glissant.
     name = "Université Paris Nanterre"
@@ -1628,21 +1620,24 @@ def scrape_nanterre():
     u = ("https://www.parisnanterre.fr/servlet/com.kosmos.agenda.export.ExportAgendaServlet"
          f"?DTSTART={fmt(TODAY)}&DTEND={fmt(HORIZON)}&THEMATIQUE=&CATEGORIE=&LIEU="
          "&CODE_RUBRIQUE=1713186750251&CODE_RATTACHEMENT=&EXT=agenda")
+    r = requests.get(u, headers=CDF_HEADERS, timeout=35)
+    r.raise_for_status()
     events = []
-    for v in _parse_ics(_get(u)):
+    for v in icalendar.Calendar.from_ical(r.content).walk("VEVENT"):
         t = clean_text(v.get("SUMMARY"))
-        # 20261012T100000Z → 2026-10-12T10:00:00Z, sinon dateutil lit le jour en 1er
-        raw = re.sub(r"^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})",
-                     r"\1-\2-\3T\4:\5:\6", v.get("DTSTART", ""))
-        dt = parse_date(raw)
-        if not t or not dt or not in_window(dt.date()) or _OFF_TOPIC.search(t):
+        start = v.decoded("DTSTART", None)
+        if start is None:
+            continue
+        # DTSTART en UTC (…Z) → heure de Paris ; un jour entier reste une date
+        dt = to_paris(start) if isinstance(start, datetime) else datetime.combine(start, datetime.min.time())
+        if not t or not in_window(dt.date()) or _OFF_TOPIC.search(t):
             continue
         loc = clean_text(v.get("LOCATION"))
         events.append(new_event(
             name, t, dt.date(), time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
             location=f"{loc} — Université Paris Nanterre, 200 avenue de la République, Nanterre"
             if loc else "Université Paris Nanterre, 200 avenue de la République, Nanterre",
-            url=v.get("URL") or "https://www.parisnanterre.fr/agenda",
+            url=str(v.get("URL") or "https://www.parisnanterre.fr/agenda"),
             desc=clean_text(v.get("DESCRIPTION"))[:400]))
     print(f"   ✓ Total {name}: {len(events)} events")
     return events
