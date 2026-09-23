@@ -8,7 +8,7 @@ export const DISC = {
   "Philosophie": "--c-phi", "Littérature": "--c-lit", "Sociologie & Anthropologie": "--c-soc",
   "Droit & Sciences politiques": "--c-dro", "Arts & Culture": "--c-art", "Autre": "--c-aut",
 };
-export const SRC_LABEL = { institution: "Universités & instituts", luma: "Luma", association: "Associations" };
+export const SRC_LABEL = { institution: "Universités & instituts", luma: "Luma", association: "Associations", ville: "Que faire à Paris" };
 // Doit rester aligné sur SHARE_INSTITUTIONS dans scraper/scrape.py (hubs i/<slug>.html)
 export const MAIN_INST = ["Collège de France", "Institut Henri Poincaré", "Université PSL", "Paris School of Economics",
   "Sciences Po", "Sorbonne Université", "ENS Paris", "Université Paris Dauphine", "EHESS", "Article 1", "Sciences et Cultures",

@@ -1643,6 +1643,81 @@ def scrape_nanterre():
     return events
 
 
+# ── Que faire à Paris (open data Ville de Paris) ──────────────────────────────
+
+QFAP_API = ("https://parisdata.opendatasoft.com/api/explore/v2.1/catalog/"
+            "datasets/que-faire-a-paris-/records")
+# Le tag « Conférence » de la Ville est large : visites guidées de musée,
+# petits-déjeuners de réseau, soirées bien-être… hors sujet ici.
+_QFAP_SKIP = re.compile(
+    r"^visites?\b|\bvisites?[- ](guid|conf)|astrolog|petit[- ]d[ée]j|ap[ée]ro\b|"
+    r"speed[- ]dating|yoga|m[ée]ditation|sophrolog|tarot|networking", re.I)
+
+
+def scrape_que_faire_a_paris():
+    """Agenda officiel de la Ville de Paris, tag « Conférence » : une API, pas
+    de scraping. Lieu, GPS, prix et image arrivent structurés. Catégorie de
+    source à part (source_type « ville ») ; l'institution affichée est le lieu
+    (médiathèque, mairie…), comme l'hôte d'un événement Luma."""
+    print("→ Que faire à Paris (API open data)...")
+    events, offset = [], 0
+    while True:
+        r = requests.get(QFAP_API, timeout=35, params={
+            "where": 'search(qfap_tags, "Conférence") and date_end >= now()',
+            "order_by": "date_start", "limit": 100, "offset": offset})
+        r.raise_for_status()
+        rows = r.json().get("results", [])
+        for x in rows:
+            tags = x.get("qfap_tags") or ""
+            title = clean_text(x.get("title"))
+            if ("Enfants" in tags or not title or _OFF_TOPIC.search(title)
+                    or _QFAP_SKIP.search(title)):
+                continue
+            # Une conférence en plusieurs séances = plusieurs « occurrences » :
+            # on garde la prochaine, le scrape du lendemain passera à la suivante.
+            starts = []
+            for occ in (x.get("occurrences") or x.get("date_start") or "").split(";"):
+                try:
+                    starts.append(to_paris(datetime.fromisoformat(occ.split("_")[0])))
+                except ValueError:
+                    pass
+            dt = next((s for s in sorted(starts) if in_window(s.date())), None)
+            if not dt:
+                continue
+            venue = clean_text(x.get("address_name") or x.get("contact_organisation_name")) or "Ville de Paris"
+            loc = ", ".join(p for p in (venue, clean_text(x.get("address_street")),
+                                         clean_text(f"{x.get('address_zipcode') or ''} {x.get('address_city') or ''}")) if p)
+            desc = clean_text(x.get("lead_text")) or strip_html(x.get("description"))[:400]
+            ev = new_event(venue, title, dt.date(),
+                           time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                           location=loc, desc=desc, url=x.get("url") or "",
+                           source_type="ville", image=x.get("cover_url") or "")
+            # Les tags (« Histoire », « Littérature »…) aident le classement
+            ev["discipline"] = detect_discipline(title, f"{desc} {tags.replace(';', ' ')}", venue)
+            if x.get("price_type") == "gratuit":
+                ev["price"] = "Gratuit"
+            geo = x.get("lat_lon") or {}
+            if geo.get("lat") and geo.get("lon"):
+                ev["lat"], ev["lng"] = geo["lat"], geo["lon"]
+            events.append(ev)
+        if len(rows) < 100 or offset >= 900:
+            break
+        offset += 100
+    print(f"   ✓ Total Que faire à Paris: {len(events)} events")
+    return events
+
+
+def _drop_city_duplicates(events):
+    """Une conférence de Sciences Po ou de la BnF peut aussi être publiée sur
+    Que faire à Paris : la source institutionnelle l'emporte."""
+    key = lambda e: (slugify(e.get("title", ""))[:50], e.get("date"))
+    known = {key(e) for e in events if e.get("source_type") != "ville"}
+    out = [e for e in events if e.get("source_type") != "ville" or key(e) not in known]
+    if len(out) < len(events):
+        print(f"Que faire à Paris : {len(events) - len(out)} doublons d'autres sources écartés")
+    return out
+
+
 # Noms d'institution des sources ci-dessus (carry-forward, hubs i/*.html).
 # Doit rester aligné sur MAIN_INST dans web/src/lib.js.
 NEW_INSTITUTIONS = [
@@ -2095,6 +2170,8 @@ def geocode_all(events):
     sess.headers.update({"User-Agent": "ParisAcademique/1.0 (github.com/kovarci/zzzz)"})
     new = 0
     for ev in events:
+        if ev.get("source_type") == "ville" and "lat" in ev:
+            continue                         # GPS fourni par l'API Ville de Paris
         loc = clean_text(ev.get("location") or "")
         coords = None
         if loc and looks_like_address(loc):
@@ -2169,12 +2246,13 @@ def write_ics(events):
         print(f"[WARN] ics write: {e}")
 
     # Per-institution feeds (academic + association sources only — not the
-    # dozens of one-off Luma hosts). Same slug logic as the frontend.
+    # dozens of one-off Luma hosts / Que faire à Paris venues). Same slug
+    # logic as the frontend.
     cal_dir = OUTPUT_FILE.parent / "cal"
     cal_dir.mkdir(exist_ok=True)
     by_inst = {}
     for ev in events:
-        if ev.get("source_type") == "luma":
+        if ev.get("source_type") in ("luma", "ville"):
             continue
         by_inst.setdefault(ev.get("institution", ""), []).append(ev)
     written = set()
@@ -3113,7 +3191,7 @@ def main():
         print(f"[ERROR] Sciences et Cultures: {e}")
         traceback.print_exc()
 
-    for fn in STATIC_SOURCES:
+    for fn in STATIC_SOURCES + [scrape_que_faire_a_paris]:
         try:
             all_events.extend(fn())
         except Exception as e:
@@ -3161,7 +3239,7 @@ def main():
     carried = 0
     for e in prev_events:
         if not (e.get("institution") in KNOWN_SOURCES
-                or e.get("source_type") in ("luma", "association")):
+                or e.get("source_type") in ("luma", "association", "ville")):
             continue
         if e.get("date", "") < today_iso:
             continue  # past event — the archive handles it, don't resurrect
@@ -3173,7 +3251,7 @@ def main():
     if carried:
         print(f"⚠ Carried forward {carried} upcoming events from the previous run")
 
-    all_events = deduplicate(all_events)
+    all_events = _drop_city_duplicates(deduplicate(all_events))
 
     # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
     # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.

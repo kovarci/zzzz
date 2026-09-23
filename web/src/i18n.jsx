@@ -41,7 +41,7 @@ const TR = {
   btn_fav: ["Favoris", "Favourites"], btn_online: ["En ligne", "Online"],
   near_locate: ["Localisation…", "Locating…"], near_sorted: ["Tri par distance", "Sorted by distance"], near_label: ["Près de moi", "Near me"],
   select_btn: ["Sélection", "Select"], noun_event: ["événement{s}", "event{s}"], adj_selected: ["sélectionné{s}", "selected"],
-  src_institution: ["Universités & instituts", "Universities & institutes"], src_luma: ["Luma", "Luma"], src_association: ["Associations", "Associations"],
+  src_institution: ["Universités & instituts", "Universities & institutes"], src_luma: ["Luma", "Luma"], src_association: ["Associations", "Associations"], src_ville: ["Que faire à Paris", "Que faire à Paris (City of Paris)"],
 
   badge_new: ["Nouveau", "New"], badge_free: ["Gratuit", "Free"], online_prefix: ["En ligne · ", "Online · "],
   time_tbd: ["Horaire à confirmer", "Time TBC"],

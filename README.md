@@ -45,6 +45,7 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | Luma (Paris + 8 pages thématiques)  | interception des appels JSON         | Plateforme     |
 | Article 1                           | capture remoting Salesforce          | Association    |
 | Sciences et Cultures / Citoy.ENS    | Linktree → Framaforms (date dans l'URL) | Association |
+| Que faire à Paris (Ville de Paris)  | API open data, tag « Conférence »    | Ville (`source_type: ville`) |
 
 Plus de 1 500 événements indexés depuis avril 2026.
 

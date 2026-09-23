@@ -279,7 +279,7 @@ function App() {
   // carrousel, bento) : l'ancre mesurée avant le rendu est donc périmée de ~1000px.
   // On note où aller et on scrolle une fois la nouvelle mise en page posée.
   const pendingScroll = useRef(null);
-  const SRC_LABEL_T = { institution: t("src_institution"), luma: t("src_luma"), association: t("src_association") };
+  const SRC_LABEL_T = { institution: t("src_institution"), luma: t("src_luma"), association: t("src_association"), ville: t("src_ville") };
 
   /* données */
   useEffect(() => {
