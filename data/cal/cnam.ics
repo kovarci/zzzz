@@ -1,18 +1,18 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Cnam · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:b7bbdc6db79c@paris-academique
-DTSTAMP:20260923T200849Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:ASSTI: Transformer pour prospérer dans un monde durable
-DESCRIPTION:\nhttps://www.cnam.fr/actualites/recherche-innovation/agenda-actus/assti-transformer-pour-prosperer-dans-un-monde-durable
-LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
-URL:https://www.cnam.fr/actualites/recherche-innovation/agenda-actus/assti-transformer-pour-prosperer-dans-un-monde-durable
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Cnam · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:b7bbdc6db79c@paris-academique
+DTSTAMP:20260923T221553Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:ASSTI: Transformer pour prospérer dans un monde durable
+DESCRIPTION:\nhttps://www.cnam.fr/actualites/recherche-innovation/agenda-actus/assti-transformer-pour-prosperer-dans-un-monde-durable
+LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
+URL:https://www.cnam.fr/actualites/recherche-innovation/agenda-actus/assti-transformer-pour-prosperer-dans-un-monde-durable
+END:VEVENT
+END:VCALENDAR
