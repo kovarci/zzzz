@@ -61,7 +61,8 @@ recrutement étudiants à Paris, façon Trackr.
 - Une recherche hebdomadaire (tâche Claude planifiée) ajoute les nouveaux événements au fichier.
 
 **Associations étudiantes** (source_type `association`) : Article 1 et Sciences et Cultures (scrapers
-dédiés), Jeunes IHEDN (agenda lu chaque jour), et `scraper/associations.json` pour celles qui ne
+dédiés), Jeunes IHEDN (agenda de leur site ; bloque les IP de data-center → lu par le
+rafraîchissement local), et `scraper/associations.json` pour celles qui ne
 publient que sur Instagram / LinkedIn / Eventbrite (Taureaux du Panthéon…) ou sur leur site
 (Open Diplomacy…) : liste suivie + événements publics vérifiés, enrichis par la même recherche
 hebdomadaire.

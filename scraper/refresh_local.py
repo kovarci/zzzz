@@ -8,7 +8,7 @@ sources sont bloquées ou faussées par géolocalisation IP :
   - Collège de France : son CDN (BunnyCDN) bloque les IP de data-center, donc
     le robot GitHub reçoit 0 événement.
   - Muséum national d'Histoire naturelle et Académie des sciences : même
-    chose (403 Forbidden depuis GitHub).
+    chose (403 Forbidden depuis GitHub). Jeunes IHEDN : page vide depuis GitHub.
   - Luma : les pages par thème sont géolocalisées par IP et renvoient des
     événements américains depuis les États-Unis.
 Depuis ta connexion française, les deux fonctionnent normalement. Ce script va
@@ -55,7 +55,7 @@ LUMA_PAGES = [
 # Sources que le robot GitHub ne peut pas lire (IP de data-center bloquée) :
 # ce script les remplace par un scrape frais depuis ta connexion.
 MNHN = "Muséum national d'Histoire naturelle"
-LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences"}
+LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences", "Jeunes IHEDN"}
 
 
 def _luma_count(events):
@@ -76,10 +76,10 @@ def main():
     # 1) Collège de France — requests, fonctionne depuis une IP française
     cdf = scrape.scrape_college_de_france(None)
 
-    # 1 bis) Muséum + Académie des sciences : même blocage des IP de
+    # 1 bis) Muséum, Académie des sciences, Jeunes IHEDN : même blocage des IP de
     # data-center (403 sur le robot GitHub), requests suffit depuis la France.
     blocked = []
-    for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences):
+    for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences, scrape.scrape_jeunes_ihedn):
         try:
             blocked += fn()
         except Exception as e:
