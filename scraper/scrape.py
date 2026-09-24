@@ -57,12 +57,18 @@ DISCIPLINE_KEYWORDS = {
         "schrodinger", "hyperbolic equation", "elliptic equation", "lattice",
         "integrable", "dispersive", "ricci", "yamabe", " riemann", "kahler",
         "kähler", "symplectic", "symplectique", "groebner", "gröbner",
+        "spectral", "spectrale", "combinatoire", "combinatorics",
+        "stochastic", "stochastique", "mathematics", "mathematical",
     ],
     "Philosophie": [
         "philosoph", "éthique", "métaphysique", "épistémologie", "ontologie",
         "phénoménologi", "wittgenstein", "hegel", " kant", "nietzsche",
         "platon", "aristote", "esthétique philosophique", "morale",
         "ricoeur", "deleuze", "foucault", "merleau-ponty", "spinoza",
+        # Théologie / spiritualité (Collège des Bernardins…) rangées ici
+        "théolog", "theolog", " dieu", "église", "biblique", "bible",
+        "chrétien", "christian", "spiritualit", "évangile", "évangél",
+        "pensée", "philosophy",
     ],
     "Littérature": [
         "littératur", "roman", "poésie", "poème", "narratologi", "récit",
@@ -70,6 +76,8 @@ DISCIPLINE_KEYWORDS = {
         "linguistique", "philolog", "poétique", "romanesque", "shakespeare",
         "balzac", "proust", "flaubert", "stendhal", "céline", "rimbaud",
         "baudelaire", "verlaine", "molière", "racine", "corneille",
+        "une heure, un livre", "écrivaine", "romancier", "romancière",
+        "poète", "poésie", "literature", "novel", "poetry",
     ],
     "Histoire": [
         "histoir", "archive", "mémoire collective", "patrimoine", "médiéval",
@@ -77,6 +85,10 @@ DISCIPLINE_KEYWORDS = {
         "empire", "historiograph", "chronologie", "préhistoir", "néolithi",
         "byzantin", "ottoman", "renaissance", " moyen âge", "égyptolog",
         "assyriolog", "sumeri", " sassanid", "carthag", "vichy", " shoah",
+        "siècle", "égypt", "mésopotam", " antique", "archéolog", "papyr",
+        "romain", "rome antique", "grec ancien", "pharaon", "médiév",
+        "napoléon", "monarchie", "history", "historical", "ancient",
+        "medieval", "archaeolog",
     ],
     "Sciences": [
         # FR
@@ -99,6 +111,19 @@ DISCIPLINE_KEYWORDS = {
         "condensed matter", "matière condensé", "moire", "moiré",
         "josephson", "topological state", "moléculaire", "réaction chimique",
         " josephson",
+        # Vivant, santé, numérique, instruments (labos, Pasteur, Curie…)
+        "cellule", "cancer", "tumeur", "oncolog", "cerveau", "neuron",
+        "génom", "genom", " gène", "protéin", "protein", "immun", "virus",
+        "viral", "bactéri", "bacteri", "microbio", "épidémi", "epidemi",
+        "vaccin", "médecine", "médical", "medical", "clinique", "clinical",
+        "pathogen", "infection", "brain", " cell", "stem cell", "enzym",
+        "données", "informatique", "algorithm", "logiciel", "software",
+        "robot", " ia ", "(ia)", "entropi", "fluide", "atome", " atom",
+        "laser", "plasma", "accélérateur", "accelerator", "détecteur",
+        "detector", "neutrino", "photon", "galax", "planét", "planet",
+        "astronom", "spectroscop", "matériau", "material", "énergie",
+        "energy", "océan", "ocean", "géolog", "geolog", "séisme",
+        "chimi", "chemist", "biophys", "cosmic", "supernova",
     ],
     "Économie": [
         "économi", "economic", "macroéco", "microéco", "macro-", "micro-",
@@ -139,6 +164,17 @@ DISCIPLINE_KEYWORDS = {
 # de l'institution. Les multi-disciplines (Sciences Po, EHESS…) restent en
 # « Autre » pour ne pas étiqueter à tort.
 _INSTITUTION_DEFAULT = {
+    "Université Paris-Panthéon-Assas": "Droit & Sciences politiques",
+    "Sciences Po": "Droit & Sciences politiques",
+    "Université Paris Dauphine": "Économie",
+    "EPHE": "Histoire",
+    "Fondation Maison des Sciences de l'Homme": "Sociologie & Anthropologie",
+    "Campus Condorcet": "Sociologie & Anthropologie",
+    "Musée du quai Branly": "Sociologie & Anthropologie",
+    "EHESS": "Sociologie & Anthropologie",
+    "Collège des Bernardins": "Philosophie",
+    "Université Sorbonne Nouvelle": "Littérature",
+    "IJCLab": "Sciences", "IN2P3": "Sciences", "Observatoire de Paris": "Sciences",
     "Institut Henri Poincaré": "Mathématiques",
     "Paris School of Economics": "Économie",
     "Institut Pasteur": "Sciences",
@@ -148,6 +184,51 @@ _INSTITUTION_DEFAULT = {
     "Muséum national d'Histoire naturelle": "Sciences",
     "Cité des sciences": "Sciences",
 }
+
+
+# Titulaires des chaires du Collège de France (college-de-france.fr/fr/chaires-
+# actuelles, sept. 2026). Leurs cours ont des titres sans mot-clé (« Les
+# Épouses du dieu à Thèbes (6) ») : le nom du professeur suffit. À mettre à
+# jour quand les chaires changent ; le classement par mots-clés reste en secours.
+_SPEAKER_DISCIPLINE = {
+    "Nalini Anantharaman": "Mathématiques", "Timothy Gowers": "Mathématiques",
+    "Laure Saint-Raymond": "Mathématiques",
+    **dict.fromkeys([
+        "Xavier Leroy", "Stéphane Mallat", "Ioana Manolescu", "Lydéric Bocquet",
+        "Jean Dalibard", "Louis Fensterbank", "Marc Fontecave", "Antoine Georges",
+        "Marc Henneaux", "Jean-François Joanny", "Jean-Marie Tarascon", "Edouard Bard",
+        "Alessandro Morbidelli", "Simon Cauchemez", "Hugues de Thé", "Stanislas Dehaene",
+        "Denis Duboule", "Sonia Garel", "Edith Heard", "Olivier Hermine",
+        "Jean-Jacques Hublin", "Thomas Lecuit", "Tâm Mignot", "Lluis Quintana-Murci"],
+        "Sciences"),
+    **dict.fromkeys([
+        "Patrick Boucheron", "Dominique Charpin", "Anne Cheng", "Laurent Coulon",
+        "François-Xavier Fauvelle", "Jean-Luc Fournet", "Henry Laurens", "Antoine Lilti",
+        "Dario Mantovani", "Vinciane Pirenne-Delforge", "Thomas Römer"], "Histoire"),
+    "Isabelle Ratié": "Philosophie", "Barbara Cassin": "Philosophie",
+    "François Recanati": "Philosophie",
+    "Diane Bodart": "Arts & Culture", "Claire Denis": "Arts & Culture",
+    "William Marx": "Littérature",
+    "Philippe Aghion": "Économie", "Esther Duflo": "Économie", "Marc Fleurbaey": "Économie",
+    "Samantha Besson": "Droit & Sciences politiques",
+    "Olivier Borraz": "Sociologie & Anthropologie", "Didier Fassin": "Sociologie & Anthropologie",
+    "Pierre-Michel Menger": "Sociologie & Anthropologie",
+}
+
+
+def _speaker_discipline(ev):
+    hay = f"{ev.get('speaker', '')} {ev.get('title', '')}"
+    return next((d for name, d in _SPEAKER_DISCIPLINE.items() if name in hay), None)
+
+
+def reclassify(ev):
+    """Pour les événements restés en « Autre » (y compris ceux reportés des
+    jours précédents) : professeur connu, puis mots-clés, puis institution."""
+    if ev.get("discipline") not in (None, "", "Autre"):
+        return
+    ev["discipline"] = _speaker_discipline(ev) or detect_discipline(
+        ev.get("title", ""), ev.get("description", ""), ev.get("institution", ""),
+        ev.get("luma_categories"))
 
 
 # Mapping des thèmes Luma vers une discipline « phare » : si aucun mot-clé
@@ -340,12 +421,12 @@ def parse_date(s):
 _JUNK_TITLE = re.compile(
     r"^\s*(acc[eè]s rapides?|aujourd'?hui|cette semaine|ce mois|cette ann[eé]e|"
     r"agenda|programme|calendrier|r[eé]sultats?|tous les|voir tout|voir plus|"
-    r"filtrer|affiner( par)?|trier( par)?|recherche[rz]?|recherche par\b.*|"
+    r"filtrer|affiner( par)?|trier( par)?|recherche[rz]?( par\b.*)?|"
     r"prochains? [eé]v[eé]nements?|[aà] venir|en ce moment|menu|"
     r"[eé]v[eé]nements?|tous les [eé]v[eé]nements?|"
     r"formulaire(\s+de\s+recherche)?|"
-    r"param[eè]tres?(\s+d['e]?accessibilit[eé])?|accessibilit[eé]|"
-    r"se connecter|connexion|s'inscrire|inscription|"
+    r"param[eè]tres?(\s+d['’e]?\s*accessibilit[eé])?|accessibilit[eé]|"
+    r"se connecter|connexion|s['’]inscrire|inscription|"
     r"newsletter|cookies?|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|"
     r"\d{1,2}\s+\w+\s+\d{4})\s*$",
     re.I,
@@ -2467,6 +2548,38 @@ def scrape_sciences_cultures(past_days: int = 0) -> list[dict]:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+def _richness(ev):
+    """Pour garder la meilleure fiche d'un doublon inter-sources."""
+    return ((ev.get("source_type") == "institution") * 4 + bool(ev.get("time")) * 2
+            + bool(ev.get("speaker")) + min(len(ev.get("description") or ""), 300) / 300)
+
+
+def merge_cross_source(events):
+    """Même titre + même date chez deux organisateurs (BnF + EPHE, PSL +
+    Dauphine…) : une seule fiche, la plus complète ; les autres organisateurs
+    sont notés dans « also ». Titres trop courts / génériques ignorés."""
+    groups = {}
+    for ev in events:
+        t = slugify(ev.get("title", ""))
+        if len(t) < 20:
+            groups[id(ev)] = [ev]
+            continue
+        groups.setdefault((t[:45], ev.get("date")), []).append(ev)
+    out, merged = [], 0
+    for g in groups.values():
+        if len({e.get("institution") for e in g}) < 2:
+            out.extend(g)
+            continue
+        best = max(g, key=_richness)
+        others = sorted({e.get("institution") for e in g} - {best.get("institution")})
+        best["also"] = sorted(set(best.get("also", [])) | set(others))
+        out.append(best)
+        merged += len(g) - 1
+    if merged:
+        print(f"Doublons inter-sources fusionnés : {merged}")
+    return out
+
+
 def deduplicate(events):
     seen, out = set(), []
     for ev in events:
@@ -3709,8 +3822,11 @@ def main():
     if carried:
         print(f"⚠ Carried forward {carried} upcoming events from the previous run")
 
-    all_events = _drop_city_duplicates(deduplicate(all_events))
+    all_events = merge_cross_source(_drop_city_duplicates(deduplicate(all_events)))
+    # Titres parasites (menus lus comme événements) — y compris reportés
+    all_events = [e for e in all_events if not is_junk_title(e.get("title", ""))]
     for e in all_events:                  # toutes sources, anciennes comprises
+        reclassify(e)
         if _SOUTENANCE.search(e.get("title", "")):
             e["kind"] = "soutenance"
         if _MEMBERS_ONLY.search(f"{e.get('title', '')} {e.get('description', '')}"):
