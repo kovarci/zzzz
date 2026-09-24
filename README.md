@@ -60,6 +60,10 @@ recrutement étudiants à Paris, façon Trackr.
   par l'API publique (`/api/events/open/list`, autorisée par leur robots.txt), filtrés Île-de-France.
 - Une recherche hebdomadaire (tâche Claude planifiée) ajoute les nouveaux événements au fichier.
 
+**Réservé aux membres** : `members: true` (Article 1 hors public « Extérieur », rencontres de membres des
+Jeunes IHEDN, phrases « réservé aux adhérents / membres only… » repérées sur toutes les sources, champ
+`"membres": true` des fichiers vérifiés) → badge 🔒 et filtre « Accès » (`?acces=public|membres`).
+
 **Associations étudiantes** (source_type `association`) : Article 1 et Sciences et Cultures (scrapers
 dédiés), Jeunes IHEDN (agenda de leur site ; bloque les IP de data-center → lu par le
 rafraîchissement local), et `scraper/associations.json` pour celles qui ne

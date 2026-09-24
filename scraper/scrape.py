@@ -1392,6 +1392,14 @@ _SOUTENANCE = re.compile(
     r"\bthesis defen[cs]e|habilitation [àa] diriger", re.I)
 
 
+# Réservé aux membres (adhérents, bénéficiaires, élèves d'une école…) : gardé,
+# mais marqué members=True → 🔒 et filtre « Accès » sur le site.
+_MEMBERS_ONLY = re.compile(
+    r"r[ée]serv[ée]e?s? (exclusivement |uniquement )?aux? (membres|adh[ée]rents?|b[ée]n[ée]ficiaires|"
+    r"mentor[ée]s|filleul|alumni|[ée]tudiants? d[eu']|[ée]l[èe]ves? d[eu'])|"
+    r"membres uniquement|adh[ée]rents uniquement|members[- ]only|sur invitation( uniquement)?\b", re.I)
+
+
 def _time_of(text) -> str:
     """'19 h', '14h30', '10:00' → 'HH:MM' ; minuit = pas d'heure."""
     m = _TIME_RE.search(text or "")
@@ -1862,6 +1870,8 @@ def scrape_carrieres_verifiees():
             time_str=x.get("heure", ""), end_time=x.get("fin", ""), location=x.get("lieu", ""),
             desc=x.get("description", ""), url=x.get("url", ""),
             kind_label=x.get("type") or "Événement recrutement"))
+        if x.get("membres"):                  # forum réservé aux élèves d'une école…
+            events[-1]["members"] = True
     print(f"   ✓ Total Carrières · sélection: {len(events)} events")
     return events
 
@@ -1876,16 +1886,17 @@ ASSOCIATIONS_FILE = Path(__file__).parent / "associations.json"
 
 
 def scrape_jeunes_ihedn():
-    # Conférences publiques ; les « Popote » & co (rencontres membres) sont
-    # rangées en « Uncategorized » → écartées.
+    # Conférences publiques + rencontres de membres (« Popote »…, rangées
+    # « Uncategorized ») : ces dernières sont gardées, marquées 🔒.
     evs = _scrape_cards(
         "Jeunes IHEDN", "https://www.jeunes-ihedn.org/evenements-a-venir/", ".wildworld_calendar_item",
         title=".wildworld_calendar_item_title", date=".wildworld_calendar_item_time",
         kind=".wildworld_calendar_item_category",
-        keep_kind=("conférence", "table ronde", "colloque", "débat", "atelier", "rencontre"),
         base="https://www.jeunes-ihedn.org", location="Paris")
     for e in evs:
         e["source_type"] = "association"
+        if not re.search(r"conf[ée]rence|table ronde|colloque|d[ée]bat|atelier", e.get("description", ""), re.I):
+            e["members"] = True
     return evs
 
 
@@ -1951,6 +1962,8 @@ def scrape_associations_verifiees():
             end_time=x.get("fin", ""), location=x.get("lieu", ""),
             desc=" — ".join(p for p in (x.get("type"), x.get("description")) if p),
             url=x.get("url", ""), speaker=x.get("intervenants", ""), source_type="association"))
+        if x.get("membres"):                  # réservé aux adhérents / bénéficiaires
+            events[-1]["members"] = True
     print(f"   ✓ Total Associations · sélection: {len(events)} events")
     return events
 
@@ -2253,6 +2266,10 @@ def scrape_article1(browser) -> list[dict]:
                  and clean_text(it["Lien_inscription__c"]) or ARTICLE1_URL),
             source_type="association", image=it.get("image_EVT__c") or "",
         ))
+        # Public_cible__c liste les publics invités (« EL;PP;Mentors…») ; seuls
+        # les événements qui citent « Extérieur » sont ouverts hors communauté.
+        if "extérieur" not in clean_text(it.get("Public_cible__c") or "").lower():
+            events[-1]["members"] = True
     print(f"   ✓ Total Article 1: {len(events)} events")
     return events
 
@@ -3579,6 +3596,8 @@ def main():
     for e in all_events:                  # toutes sources, anciennes comprises
         if _SOUTENANCE.search(e.get("title", "")):
             e["kind"] = "soutenance"
+        if _MEMBERS_ONLY.search(f"{e.get('title', '')} {e.get('description', '')}"):
+            e["members"] = True
 
     # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
     # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.

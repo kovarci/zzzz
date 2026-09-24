@@ -39,6 +39,8 @@ const TR = {
   group_establishments: ["Établissements", "Institutions"], group_others: ["Autres organisateurs", "Other organisers"],
   group_luma_themes: ["Thèmes Luma", "Luma themes"], clear_all: ["Tout effacer", "Clear all"],
   btn_fav: ["Favoris", "Favourites"], btn_online: ["En ligne", "Online"],
+  pop_access: ["Accès", "Access"], access_public: ["Ouvert à tous", "Open to all"], access_members: ["Réservé aux membres", "Members only"],
+  badge_members: ["Membres", "Members"], access_members_hint: ["Réservé aux membres de l'organisation (adhérents, bénéficiaires, élèves…)", "Reserved for the organisation's members (members, beneficiaries, students…)"],
   btn_theses: ["Soutenances", "PhD defences"], btn_theses_hint: ["Soutenances de thèse et HDR, masquées du fil principal", "PhD and habilitation defences, hidden from the main feed"],
   btn_careers: ["Carrières", "Careers"], btn_careers_hint: ["Événements de recrutement des entreprises (banques, conseil, tech…), masqués du fil principal", "Company recruiting events (banks, consulting, tech…), hidden from the main feed"],
   near_locate: ["Localisation…", "Locating…"], near_sorted: ["Tri par distance", "Sorted by distance"], near_label: ["Près de moi", "Near me"],

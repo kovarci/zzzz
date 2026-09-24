@@ -45,6 +45,10 @@ export const SIDE_KINDS = {
   carriere: { param: "carrieres", icon: "💼", label: "btn_careers", hint: "btn_careers_hint", kind: "Recrutement" },
 };
 export const isSide = e => !!SIDE_KINDS[e.kind];
+// Réservé aux membres (adhérents, bénéficiaires, élèves d'une école…) : 🔒
+export const isMembers = e => !!e.members;
+export const accessOf = e => isMembers(e) ? "membres" : "public";
+export const titleOf = e => (isMembers(e) ? "🔒 " : "") + e.title;
 export const kindOf = e => { if (isSide(e)) return SIDE_KINDS[e.kind].kind; const m =KIND_RE.exec(e.description || "") || KIND_RE.exec(e.title || ""); return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : (e.source_type === "luma" ? "Rencontre" : "Conférence"); };
 export const isFree = e => e.price === "0" || e.price === 0 || /gratuit|free/i.test(e.price || "");
 export const isOnline = e => ONLINE_RE.test(e.location || "");
@@ -76,7 +80,7 @@ export const relTime = ts => {
 };
 
 /* ── Filtrage ──────────────────────────────────────────────────── */
-export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, cat: "", q: "" };
+export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, cat: "", access: new Set(), q: "" };
 
 export function matches(e, f, favs) {
   if (f.fav && !favs.has(e.id)) return false;
@@ -92,6 +96,7 @@ export function matches(e, f, favs) {
   if (f.disc.size && !f.disc.has(e.discipline)) return false;
   if (f.inst.size && !f.inst.has(e.institution)) return false;
   if (f.src.size && !f.src.has(e.source_type)) return false;
+  if (f.access.size && !f.access.has(accessOf(e))) return false;
   if (f.theme.size && !(e.luma_categories || []).some(c => f.theme.has(c))) return false;
   if (f.q) { const hay = norm([e.title, e.speaker, e.institution, e.description, e.location].join(" ")); if (!f.q.split(/\s+/).every(w => hay.includes(w))) return false; }
   return true;
@@ -100,9 +105,10 @@ export function matches(e, f, favs) {
 /* ── URL ⇄ état (mêmes clés que l'ancien site : les liens partagés et les
    hubs i/*.html?institution=… continuent de fonctionner) ─────────────── */
 export function filtersFromURL() {
-  const p = new URLSearchParams(location.search), f = { ...EMPTY_FILTERS, disc: new Set(), inst: new Set(), src: new Set(), theme: new Set() };
+  const p = new URLSearchParams(location.search), f = { ...EMPTY_FILTERS, disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), access: new Set() };
   const list = k => (p.get(k) || "").split(",").filter(Boolean);
   if (p.get("date")) f.when = p.get("date");
+  list("acces").forEach(v => f.access.add(v));
   list("discipline").forEach(v => f.disc.add(v)); list("institution").forEach(v => f.inst.add(v)); list("theme").forEach(v => f.theme.add(v));
   const src = p.get("source"); if (src && src !== "all" && src !== "history") f.src.add(src);
   if (p.get("favoris") === "1") f.fav = true;
@@ -121,6 +127,7 @@ export function urlFromState({ filters: f, view, history, rawQ }) {
   if (f.disc.size) p.set("discipline", [...f.disc].join(","));
   if (f.inst.size) p.set("institution", [...f.inst].join(","));
   if (f.theme.size) p.set("theme", [...f.theme].join(","));
+  if (f.access.size) p.set("acces", [...f.access].join(","));
   if (f.fav) p.set("favoris", "1");
   if (f.cat && SIDE_KINDS[f.cat]) p.set(SIDE_KINDS[f.cat].param, "1");
   const qs = p.toString(); return qs ? "?" + qs : location.pathname;

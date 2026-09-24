@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, SIDE_KINDS, isSide, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
+import { SITE, REPO, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
@@ -15,7 +15,10 @@ const discColor = disc => getComputedStyle(document.documentElement).getProperty
 function Cover({ e, className = "", eager }) {
   const [broken, setBroken] = useState(false);
   const pos = className.split(" ").includes("absolute") ? "" : "relative";
-  const badge = <Badge className="absolute top-2.5 left-2.5 bg-background/90 text-foreground backdrop-blur border-0 shadow-sm z-[1]">{kindOf(e)}</Badge>;
+  const { t } = useI18n();
+  const badge = <div className="absolute top-2.5 left-2.5 z-[1] flex flex-wrap gap-1.5">
+    <Badge className="bg-background/90 text-foreground backdrop-blur border-0 shadow-sm">{kindOf(e)}</Badge>
+    {isMembers(e) && <Badge className="bg-background/90 text-foreground backdrop-blur border-0 shadow-sm" title={t("access_members_hint")}>🔒 {t("badge_members")}</Badge>}</div>;
   if (e.image && !broken) return <div className={cn(pos, "overflow-hidden bg-muted", className)}>
     <img src={thumb(e.image)} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => setBroken(true)} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
   return <div className={cn(pos, "overflow-hidden flex items-end p-4 text-white", className)} style={{ background: `linear-gradient(135deg, ${dc(e)}, color-mix(in srgb, ${dc(e)} 55%, #000))` }}>
@@ -53,7 +56,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow }) {
       {(() => { const d = parse(e.date), days = Math.round((d - today) / 864e5); return <>
         <div className="relative aspect-[16/10] shrink-0 group"><Cover e={e} className="absolute inset-0" eager /><button onClick={onClose} className="absolute top-3 right-3 z-[2] inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow hover:bg-background" aria-label={t("fermer")}><Icon d={ICONS.x} size={16} /></button></div>
         <div className="p-6 flex flex-col gap-4">
-          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), color: dc(e) }}>{e.discipline}</Badge><Badge>{kindOf(e)}</Badge>{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
+          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), color: dc(e) }}>{e.discipline}</Badge><Badge>{kindOf(e)}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
           <h2 className="text-2xl font-semibold tracking-tight leading-tight [text-wrap:balance]">{e.title}</h2>
           <div className="flex items-center gap-3 rounded-lg border bg-card p-3">
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
@@ -90,7 +93,7 @@ function CommandDialog({ open, onClose, onPick, pool }) {
       <div className="flex items-center gap-2 border-b px-3"><Icon d={ICONS.search} size={16} className="text-muted-foreground" />
         <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKey} className="h-12 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground" placeholder={t("cmd_ph")} /><Kbd>ESC</Kbd></div>
       <div className="max-h-[50vh] overflow-auto p-1">{res.length ? res.map((e, i) => <button key={e.id} onMouseEnter={() => setSel(i)} onClick={() => onPick(e)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", i === sel && "bg-accent")}>
-        <span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="flex-1 min-w-0"><span className="block truncate">{e.title}</span><span className="block text-xs text-muted-foreground truncate">{e.institution}{e.speaker ? " · " + e.speaker : ""}</span></span><span className="text-xs text-muted-foreground tabular-nums whitespace-nowrap">{fmtShort(e.date)}{e.time ? " " + e.time : ""}</span></button>)
+        <span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="flex-1 min-w-0"><span className="block truncate">{titleOf(e)}</span><span className="block text-xs text-muted-foreground truncate">{e.institution}{e.speaker ? " · " + e.speaker : ""}</span></span><span className="text-xs text-muted-foreground tabular-nums whitespace-nowrap">{fmtShort(e.date)}{e.time ? " " + e.time : ""}</span></button>)
         : <p className="p-6 text-center text-sm text-muted-foreground">{t("cmd_none")}</p>}</div>
       <div className="flex items-center gap-3 border-t px-3 py-2 text-[11px] text-muted-foreground"><span><kbd className="font-mono">↑↓</kbd> {t("cmd_nav")}</span><span><kbd className="font-mono">↵</kbd> {t("cmd_open")}</span><span className="ml-auto">{q ? t("cmd_n_results", { n: res.length }) : t("cmd_today_tomorrow")}</span></div>
     </motion.div></motion.div>}</AnimatePresence>;
@@ -124,7 +127,7 @@ function WeekView({ events, onOpen, favs }) {
         <div className={cn("px-3 py-2 border-b text-xs font-semibold capitalize flex items-baseline justify-between", k < TODAY && "text-muted-foreground")}><span>{WDS[d.getDay()]} {d.getDate()}</span><span className="text-muted-foreground font-normal tabular-nums">{evs.length || ""}</span></div>
         <div className="flex flex-col divide-y overflow-auto max-h-[60vh]">{evs.map(e => <button key={e.id} onClick={() => onOpen(e)} className="text-left px-3 py-2 hover:bg-accent text-xs flex flex-col gap-0.5">
           <span className="flex items-center gap-1.5 text-muted-foreground tabular-nums"><span className="h-1.5 w-1.5 rounded-full" style={{ background: dc(e) }} />{e.time || "—"}{favs.has(e.id) && <span className="text-amber-500">★</span>}</span>
-          <span className="font-medium leading-snug line-clamp-3">{e.title}</span><span className="text-muted-foreground truncate">{e.institution}</span></button>)}</div>
+          <span className="font-medium leading-snug line-clamp-3">{titleOf(e)}</span><span className="text-muted-foreground truncate">{e.institution}</span></button>)}</div>
       </div>; })}
     </div></div>;
 }
@@ -326,7 +329,7 @@ function App() {
   }, [pool, filters, favs, history, histMonth, near, userPos]);
   useEffect(() => setShown(PAGE), [filtered]);
   useEffect(() => { const el = moreRef.current; if (!el) return; const io = new IntersectionObserver(es => es[0].isIntersecting && setShown(s => s + PAGE), { rootMargin: "800px" }); io.observe(el); return () => io.disconnect(); }, [shown, filtered, view]);
-  const counts = useMemo(() => { const c = k => { const m = {}; UP.forEach(e => m[e[k]] = (m[e[k]] || 0) + 1); return m; }; const th = {}; UP.forEach(e => (e.luma_categories || []).forEach(t => th[t] = (th[t] || 0) + 1)); return { disc: c("discipline"), inst: c("institution"), src: c("source_type"), theme: th }; }, [UP]);
+  const counts = useMemo(() => { const c = k => { const m = {}; UP.forEach(e => m[e[k]] = (m[e[k]] || 0) + 1); return m; }; const th = {}; UP.forEach(e => (e.luma_categories || []).forEach(t => th[t] = (th[t] || 0) + 1)); const acc = {}; UP.forEach(e => { const a = accessOf(e); acc[a] = (acc[a] || 0) + 1; }); return { disc: c("discipline"), inst: c("institution"), src: c("source_type"), theme: th, access: acc }; }, [UP]);
   // Compteurs sans les catégories à part (soutenances, carrières), masquées par défaut
   const UPc = UP.filter(e => !isSide(e)), nSide = {};
   UP.forEach(e => { if (isSide(e)) nSide[e.kind] = (nSide[e.kind] || 0) + 1; });
@@ -362,7 +365,7 @@ function App() {
   const max7 = Math.max(1, ...days7.map(x => x.n));
   const groups = useMemo(() => { const g = []; filtered.slice(0, shown).forEach(e => { if (!g.length || g[g.length - 1].date !== e.date) g.push({ date: e.date, items: [] }); g[g.length - 1].items.push(e); }); return g; }, [filtered, shown]);
   const histMonths = useMemo(() => [...new Set((archive || []).map(e => e.date.slice(0, 7)))].sort().reverse(), [archive]);
-  const activeTags = [...[...filters.disc].map(v => [v, () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.cat ? [[t(SIDE_KINDS[filters.cat].label), () => setF({ cat: "" })]] : [])];
+  const activeTags = [...[...filters.disc].map(v => [v, () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.cat ? [[t(SIDE_KINDS[filters.cat].label), () => setF({ cat: "" })]] : [])];
 
   /* actions */
   const onFav = id => { toggleFav(id); notify(favs.has(id) ? t("toast_fav_removed") : t("toast_fav_added")); };
@@ -444,6 +447,7 @@ function App() {
           <Popover label={t("pop_source")} count={filters.src.size + filters.theme.size}>{() => <>
             <CheckList values={Object.keys(SRC_LABEL_T).filter(s => counts.src[s]).map(s => [s, counts.src[s]])} set={filters.src} onToggle={toggleIn("src")} labelFn={v => SRC_LABEL_T[v]} onClear={() => setF({ src: new Set(), theme: new Set() })} clearLabel={t("clear_all")} />
             {Object.keys(counts.theme).length > 0 && <CheckList values={Object.entries(counts.theme).sort((a, b) => b[1] - a[1]).map(([tm, n], k) => [tm, n, k === 0 ? t("group_luma_themes") : null])} set={filters.theme} onToggle={toggleIn("theme")} onClear={() => setF({ theme: new Set() })} clearLabel={t("clear_all")} />}</>}</Popover>
+          {counts.access.membres > 0 && <Popover label={t("pop_access")} count={filters.access.size}>{() => <CheckList values={["public", "membres"].filter(a => counts.access[a]).map(a => [a, counts.access[a]])} set={filters.access} onToggle={toggleIn("access")} labelFn={v => (v === "membres" ? "🔒 " : "") + t(v === "membres" ? "access_members" : "access_public")} onClear={() => setF({ access: new Set() })} clearLabel={t("clear_all")} />}</Popover>}
           <Button variant={filters.fav ? "default" : "outline"} size="sm" className="h-9" onClick={() => setF({ fav: !filters.fav })} aria-pressed={filters.fav}>★<span className="hidden sm:inline"> {t("btn_fav")}</span>{favs.size > 0 && <span className={cn("inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[11px]", filters.fav ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground")}>{favs.size}</span>}</Button>
           <Button variant={filters.online ? "default" : "outline"} size="sm" className="h-9" onClick={() => setF({ online: !filters.online })} aria-pressed={filters.online}>{t("btn_online")}</Button>
           {Object.entries(SIDE_KINDS).map(([k, s]) => nSide[k] > 0 && <Button key={k} variant={filters.cat === k ? "default" : "outline"} size="sm" className="h-9" onClick={() => setF({ cat: filters.cat === k ? "" : k })} aria-pressed={filters.cat === k} title={t(s.hint)}>{s.icon}<span className="hidden sm:inline"> {t(s.label)}</span><span className="tabular-nums text-xs opacity-70">{nSide[k]}</span></Button>)}
