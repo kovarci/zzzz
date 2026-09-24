@@ -8,18 +8,148 @@
     "Les événements passés sont ignorés par le scraper ; la recherche hebdomadaire peut les retirer."
   ],
   "associations": [
-    {"nom": "Article 1", "ecole": "Réseau national (Paris)", "domaine": "Égalité des chances, débats", "auto": "scrape_article1"},
-    {"nom": "Sciences et Cultures", "ecole": "ENS / Citoy.ENS", "domaine": "Sciences et société", "auto": "scrape_sciences_cultures"},
-    {"nom": "Jeunes IHEDN", "ecole": "Inter-écoles", "domaine": "Défense, géopolitique", "auto": "scrape_jeunes_ihedn",
-     "canaux": ["https://www.jeunes-ihedn.org/evenements-a-venir/"]},
-    {"nom": "Taureaux du Panthéon", "ecole": "Université Paris 1 Panthéon-Sorbonne", "domaine": "Finance (marchés, M&A, fintech)",
-     "canaux": ["https://www.helloasso.com/associations/taureaux-du-pantheon", "https://www.instagram.com/taureauxdupantheon/", "https://www.linkedin.com/in/taureauxdupantheon/"]},
-    {"nom": "Institut Open Diplomacy", "ecole": "Think tank jeunes (inter-écoles)", "domaine": "Diplomatie, géopolitique, polycrise",
-     "canaux": ["https://www.open-diplomacy.fr/"]},
-    {"nom": "Sorbonne Finance", "ecole": "Université Paris 1 Panthéon-Sorbonne", "domaine": "Finance",
-     "canaux": []},
-    {"nom": "Association du Master Géopolitique ENS / Paris 1", "ecole": "ENS / Paris 1", "domaine": "Géopolitique",
-     "canaux": ["https://www.facebook.com/mastergeopo/"]}
+    {
+      "nom": "Article 1",
+      "ecole": "Réseau national (Paris)",
+      "domaine": "Égalité des chances, débats",
+      "auto": "scrape_article1"
+    },
+    {
+      "nom": "Sciences et Cultures",
+      "ecole": "ENS / Citoy.ENS",
+      "domaine": "Sciences et société",
+      "auto": "scrape_sciences_cultures"
+    },
+    {
+      "nom": "Jeunes IHEDN",
+      "ecole": "Inter-écoles",
+      "domaine": "Défense, géopolitique",
+      "auto": "scrape_jeunes_ihedn",
+      "canaux": [
+        "https://www.jeunes-ihedn.org/evenements-a-venir/"
+      ]
+    },
+    {
+      "nom": "Taureaux du Panthéon",
+      "ecole": "Université Paris 1 Panthéon-Sorbonne",
+      "domaine": "Finance (marchés, M&A, fintech)",
+      "canaux": [
+        "https://www.helloasso.com/associations/taureaux-du-pantheon",
+        "https://www.instagram.com/taureauxdupantheon/",
+        "https://www.linkedin.com/in/taureauxdupantheon/"
+      ]
+    },
+    {
+      "nom": "Institut Open Diplomacy",
+      "ecole": "Think tank jeunes (inter-écoles)",
+      "domaine": "Diplomatie, géopolitique, polycrise",
+      "canaux": [
+        "https://www.open-diplomacy.fr/"
+      ]
+    },
+    {
+      "nom": "Sorbonne Finance",
+      "ecole": "Université Paris 1 Panthéon-Sorbonne",
+      "domaine": "Finance",
+      "canaux": []
+    },
+    {
+      "nom": "Association du Master Géopolitique ENS / Paris 1",
+      "ecole": "ENS / Paris 1",
+      "domaine": "Géopolitique",
+      "canaux": [
+        "https://www.facebook.com/mastergeopo/"
+      ]
+    },
+    {
+      "nom": "makesense",
+      "ecole": "Réseau citoyen (Paris et France)",
+      "domaine": "Engagement, climat, société — débats et ateliers publics",
+      "auto": "scrape_makesense",
+      "canaux": [
+        "https://chiche.makesense.org/events"
+      ]
+    },
+    {
+      "nom": "Chemins d'avenirs",
+      "ecole": "Jeunes des territoires ruraux",
+      "domaine": "Égalité des chances, orientation",
+      "canaux": [
+        "https://www.cheminsdavenirs.fr/"
+      ]
+    },
+    {
+      "nom": "Institut Télémaque",
+      "ecole": "Jeunes de milieux modestes",
+      "domaine": "Égalité des chances, mentorat",
+      "canaux": [
+        "https://www.telemaque.org/"
+      ]
+    },
+    {
+      "nom": "NQT (Nos Quartiers ont des Talents)",
+      "ecole": "Jeunes diplômés",
+      "domaine": "Insertion professionnelle, parrainage",
+      "canaux": [
+        "https://nqt.fr/"
+      ]
+    },
+    {
+      "nom": "JobIRL",
+      "ecole": "Collégiens, lycéens, étudiants",
+      "domaine": "Orientation, rencontres métiers",
+      "canaux": [
+        "https://www.jobirl.com/"
+      ]
+    },
+    {
+      "nom": "Elles Bougent",
+      "ecole": "Étudiantes ingénieures et scientifiques",
+      "domaine": "Femmes dans l'ingénierie et les sciences",
+      "canaux": [
+        "https://www.ellesbougent.com/"
+      ]
+    },
+    {
+      "nom": "Social Builder",
+      "ecole": "Femmes, reconversion",
+      "domaine": "Femmes dans le numérique",
+      "canaux": [
+        "https://www.socialbuilder.org/evenements/"
+      ]
+    },
+    {
+      "nom": "Capital Filles",
+      "ecole": "Lycéennes et étudiantes",
+      "domaine": "Égalité des chances, mentorat au féminin",
+      "canaux": [
+        "https://capitalfilles.fr/"
+      ]
+    },
+    {
+      "nom": "Rêv'Elles",
+      "ecole": "Jeunes femmes de quartiers populaires",
+      "domaine": "Orientation, confiance, métiers",
+      "canaux": [
+        "https://revelles.org/evenements/"
+      ]
+    },
+    {
+      "nom": "Diversidays",
+      "ecole": "Talents de la diversité",
+      "domaine": "Numérique, égalité des chances",
+      "canaux": [
+        "https://diversidays.com/"
+      ]
+    },
+    {
+      "nom": "Mozaïk RH",
+      "ecole": "Jeunes diplômés de la diversité",
+      "domaine": "Recrutement, égalité des chances",
+      "canaux": [
+        "https://mozaikrh.com/agenda/"
+      ]
+    }
   ],
   "evenements": [
     {

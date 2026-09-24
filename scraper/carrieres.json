@@ -9,91 +9,601 @@
     "Les événements passés sont ignorés par le scraper ; la recherche hebdomadaire peut les retirer."
   ],
   "entreprises": [
-    {"nom": "BNP Paribas", "secteur": "Banque & finance", "carrieres": "https://group.bnpparibas/emploi-carriere"},
-    {"nom": "Société Générale", "secteur": "Banque & finance", "carrieres": "https://careers.societegenerale.com"},
-    {"nom": "Crédit Agricole CIB", "secteur": "Banque & finance", "carrieres": "https://www.ca-cib.com/fr/carrieres"},
-    {"nom": "Natixis CIB", "secteur": "Banque & finance", "carrieres": "https://natixis.groupebpce.com/carrieres/"},
-    {"nom": "AXA", "secteur": "Banque & finance", "carrieres": "https://www.axa.com/fr/carrieres"},
-    {"nom": "Amundi", "secteur": "Banque & finance", "carrieres": "https://about.amundi.com/fr/carrieres"},
-    {"nom": "Goldman Sachs", "secteur": "Banque & finance", "carrieres": "https://www.goldmansachs.com/careers/students"},
-    {"nom": "J.P. Morgan", "secteur": "Banque & finance", "carrieres": "https://www.jpmorganchase.com/careers/events"},
-    {"nom": "Morgan Stanley", "secteur": "Banque & finance", "carrieres": "https://www.morganstanley.com/people", "eightfold": "morganstanley", "domaine": "morganstanley.com"},
-    {"nom": "HSBC", "secteur": "Banque & finance", "carrieres": "https://www.hsbc.com/careers", "eightfold": "hsbc", "domaine": "hsbc.com"},
-    {"nom": "Citi", "secteur": "Banque & finance", "carrieres": "https://jobs.citi.com", "eightfold": "citi", "domaine": "citi.com"},
-    {"nom": "Deutsche Bank", "secteur": "Banque & finance", "carrieres": "https://careers.db.com/students-graduates"},
-    {"nom": "Bank of America", "secteur": "Banque & finance", "carrieres": "https://campus.bankofamerica.com"},
-    {"nom": "Rothschild & Co", "secteur": "Banque & finance", "carrieres": "https://www.rothschildandco.com/fr/carrieres/"},
-    {"nom": "Lazard", "secteur": "Banque & finance", "carrieres": "https://www.lazard.com/careers/"},
-    {"nom": "CFM", "secteur": "Banque & finance", "carrieres": "https://www.cfm.com/careers/"},
-    {"nom": "Qube Research & Technologies", "secteur": "Banque & finance", "carrieres": "https://www.qube-rt.com/careers"},
-    {"nom": "BCG", "secteur": "Conseil", "carrieres": "https://careers.bcg.com", "eightfold": "bcg", "domaine": "bcg.com"},
-    {"nom": "McKinsey & Company", "secteur": "Conseil", "carrieres": "https://www.mckinsey.com/careers/students"},
-    {"nom": "Bain & Company", "secteur": "Conseil", "carrieres": "https://www.bain.com/careers/"},
-    {"nom": "Roland Berger", "secteur": "Conseil", "carrieres": "https://www.rolandberger.com/fr/Join/"},
-    {"nom": "Oliver Wyman", "secteur": "Conseil", "carrieres": "https://www.oliverwyman.com/careers.html"},
-    {"nom": "Kearney", "secteur": "Conseil", "carrieres": "https://www.kearney.com/careers"},
-    {"nom": "Eleven Strategy", "secteur": "Conseil", "carrieres": "https://eleven-strategy.com/careers"},
-    {"nom": "Accenture", "secteur": "Conseil", "carrieres": "https://www.accenture.com/fr-fr/careers", "eightfold": "accenture", "domaine": "accenture.com"},
-    {"nom": "Capgemini", "secteur": "Conseil", "carrieres": "https://www.capgemini.com/fr-fr/carrieres/"},
-    {"nom": "Deloitte", "secteur": "Audit & conseil", "carrieres": "https://www.deloitte.com/fr/fr/careers.html"},
-    {"nom": "PwC", "secteur": "Audit & conseil", "carrieres": "https://www.pwc.fr/fr/carrieres.html"},
-    {"nom": "EY", "secteur": "Audit & conseil", "carrieres": "https://www.ey.com/fr_fr/careers", "eightfold": "ey", "domaine": "ey.com"},
-    {"nom": "KPMG", "secteur": "Audit & conseil", "carrieres": "https://kpmg.com/fr/fr/carrieres.html"},
-    {"nom": "Forvis Mazars", "secteur": "Audit & conseil", "carrieres": "https://www.forvismazars.com/fr/fr/carrieres"},
-    {"nom": "L'Oréal", "secteur": "Luxe & grande consommation", "carrieres": "https://careers.loreal.com"},
-    {"nom": "LVMH", "secteur": "Luxe & grande consommation", "carrieres": "https://www.lvmh.com/fr/nous-rejoindre"},
-    {"nom": "Kering", "secteur": "Luxe & grande consommation", "carrieres": "https://www.kering.com/fr/talent/", "eightfold": "kering", "domaine": "kering.com"},
-    {"nom": "Hermès", "secteur": "Luxe & grande consommation", "carrieres": "https://www.hermes.com/fr/fr/content/careers/"},
-    {"nom": "Danone", "secteur": "Luxe & grande consommation", "carrieres": "https://www.danone.com/fr/careers.html"},
-    {"nom": "Pernod Ricard", "secteur": "Luxe & grande consommation", "carrieres": "https://www.pernod-ricard.com/fr/careers"},
-    {"nom": "TotalEnergies", "secteur": "Industrie & énergie", "carrieres": "https://totalenergies.com/fr/carrieres"},
-    {"nom": "Airbus", "secteur": "Industrie & énergie", "carrieres": "https://www.airbus.com/fr/careers"},
-    {"nom": "Safran", "secteur": "Industrie & énergie", "carrieres": "https://www.safran-group.com/fr/emplois"},
-    {"nom": "Thales", "secteur": "Industrie & énergie", "carrieres": "https://careers.thalesgroup.com/fr/fr"},
-    {"nom": "EDF", "secteur": "Industrie & énergie", "carrieres": "https://www.edf.fr/edf-recrute"},
-    {"nom": "Engie", "secteur": "Industrie & énergie", "carrieres": "https://jobs.engie.com"},
-    {"nom": "Schneider Electric", "secteur": "Industrie & énergie", "carrieres": "https://www.se.com/fr/fr/about-us/careers/"},
-    {"nom": "Saint-Gobain", "secteur": "Industrie & énergie", "carrieres": "https://joinus.saint-gobain.com"},
-    {"nom": "Sanofi", "secteur": "Industrie & énergie", "carrieres": "https://www.sanofi.com/fr/carrieres"},
-    {"nom": "Google", "secteur": "Tech", "carrieres": "https://www.google.com/about/careers/applications/students/"},
-    {"nom": "Microsoft", "secteur": "Tech", "carrieres": "https://careers.microsoft.com/students/"},
-    {"nom": "Datadog", "secteur": "Tech", "carrieres": "https://careers.datadoghq.com"},
-    {"nom": "Criteo", "secteur": "Tech", "carrieres": "https://careers.criteo.com"},
-    {"nom": "Doctolib", "secteur": "Tech", "carrieres": "https://careers.doctolib.com"},
-    {"nom": "Mistral AI", "secteur": "Tech", "carrieres": "https://mistral.ai/careers"},
-    {"nom": "Dataiku", "secteur": "Tech", "carrieres": "https://www.dataiku.com/careers/"},
-    {"nom": "Qonto", "secteur": "Tech", "carrieres": "https://qonto.com/fr/careers"},
-    {"nom": "Alan", "secteur": "Tech", "carrieres": "https://alan.com/fr-fr/careers"},
-    {"nom": "Back Market", "secteur": "Tech", "carrieres": "https://careers.backmarket.com"},
-    {"nom": "AstraZeneca", "secteur": "Pharma & santé", "carrieres": "https://careers.astrazeneca.com", "eightfold": "astrazeneca", "domaine": "astrazeneca.com"},
-    {"nom": "Servier", "secteur": "Pharma & santé", "carrieres": "https://servier.com/carrieres/"},
-    {"nom": "Ipsen", "secteur": "Pharma & santé", "carrieres": "https://www.ipsen.com/careers/"},
-    {"nom": "Novartis", "secteur": "Pharma & santé", "carrieres": "https://www.novartis.com/fr-fr/carrieres"},
-    {"nom": "Roche", "secteur": "Pharma & santé", "carrieres": "https://www.roche.fr/carrieres"},
-    {"nom": "bioMérieux", "secteur": "Pharma & santé", "carrieres": "https://careers.biomerieux.com"},
-    {"nom": "Owkin", "secteur": "Pharma & santé", "carrieres": "https://www.owkin.com/careers"},
-    {"nom": "Air Liquide", "secteur": "Chimie & matériaux", "carrieres": "https://www.airliquide.com/fr/carrieres"},
-    {"nom": "Arkema", "secteur": "Chimie & matériaux", "carrieres": "https://www.arkema.com/france/fr/careers/"},
-    {"nom": "Michelin", "secteur": "Chimie & matériaux", "carrieres": "https://recrutement.michelin.fr"},
-    {"nom": "CEA", "secteur": "Recherche & ingénierie", "carrieres": "https://www.emploi.cea.fr"},
-    {"nom": "Dassault Systèmes", "secteur": "Recherche & ingénierie", "carrieres": "https://www.3ds.com/fr/careers"},
-    {"nom": "Dassault Aviation", "secteur": "Spatial & défense", "carrieres": "https://www.dassault-aviation.com/fr/groupe/carrieres/"},
-    {"nom": "ArianeGroup", "secteur": "Spatial & défense", "carrieres": "https://www.ariane.group/fr/carrieres/"},
-    {"nom": "CNES", "secteur": "Spatial & défense", "carrieres": "https://cnes.fr/fr/emplois"},
-    {"nom": "MBDA", "secteur": "Spatial & défense", "carrieres": "https://www.mbda-systems.com/careers/"},
-    {"nom": "Naval Group", "secteur": "Spatial & défense", "carrieres": "https://www.naval-group.com/fr/carrieres"},
-    {"nom": "Valeo", "secteur": "Recherche & ingénierie", "carrieres": "https://www.valeo.com/fr/carrieres/"},
-    {"nom": "Nokia Bell Labs", "secteur": "Deeptech & IA", "carrieres": "https://www.nokia.com/careers/"},
-    {"nom": "IBM France", "secteur": "Deeptech & IA", "carrieres": "https://www.ibm.com/fr-fr/careers"},
-    {"nom": "NVIDIA", "secteur": "Deeptech & IA", "carrieres": "https://www.nvidia.com/fr-fr/about-nvidia/careers/", "eightfold": "nvidia", "domaine": "nvidia.com"},
-    {"nom": "Qualcomm", "secteur": "Deeptech & IA", "carrieres": "https://www.qualcomm.com/company/careers", "eightfold": "qualcomm", "domaine": "qualcomm.com"},
-    {"nom": "Google DeepMind", "secteur": "Deeptech & IA", "carrieres": "https://deepmind.google/about/careers/"},
-    {"nom": "Meta (FAIR Paris)", "secteur": "Deeptech & IA", "carrieres": "https://www.metacareers.com/students"},
-    {"nom": "Hugging Face", "secteur": "Deeptech & IA", "carrieres": "https://huggingface.co/jobs"},
-    {"nom": "Kyutai", "secteur": "Deeptech & IA", "carrieres": "https://kyutai.org/careers"},
-    {"nom": "Pasqal", "secteur": "Deeptech & IA", "carrieres": "https://www.pasqal.com/careers/"},
-    {"nom": "Alice & Bob", "secteur": "Deeptech & IA", "carrieres": "https://alice-bob.com/careers/"},
-    {"nom": "Quandela", "secteur": "Deeptech & IA", "carrieres": "https://www.quandela.com/careers/"}
+    {
+      "nom": "BNP Paribas",
+      "secteur": "Banque & finance",
+      "carrieres": "https://group.bnpparibas/emploi-carriere"
+    },
+    {
+      "nom": "Société Générale",
+      "secteur": "Banque & finance",
+      "carrieres": "https://careers.societegenerale.com"
+    },
+    {
+      "nom": "Crédit Agricole CIB",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.ca-cib.com/fr/carrieres"
+    },
+    {
+      "nom": "Natixis CIB",
+      "secteur": "Banque & finance",
+      "carrieres": "https://natixis.groupebpce.com/carrieres/"
+    },
+    {
+      "nom": "AXA",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.axa.com/fr/carrieres"
+    },
+    {
+      "nom": "Amundi",
+      "secteur": "Banque & finance",
+      "carrieres": "https://about.amundi.com/fr/carrieres"
+    },
+    {
+      "nom": "Goldman Sachs",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.goldmansachs.com/careers/students"
+    },
+    {
+      "nom": "J.P. Morgan",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.jpmorganchase.com/careers/events"
+    },
+    {
+      "nom": "Morgan Stanley",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.morganstanley.com/people",
+      "eightfold": "morganstanley",
+      "domaine": "morganstanley.com"
+    },
+    {
+      "nom": "HSBC",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.hsbc.com/careers",
+      "eightfold": "hsbc",
+      "domaine": "hsbc.com"
+    },
+    {
+      "nom": "Citi",
+      "secteur": "Banque & finance",
+      "carrieres": "https://jobs.citi.com",
+      "eightfold": "citi",
+      "domaine": "citi.com"
+    },
+    {
+      "nom": "Deutsche Bank",
+      "secteur": "Banque & finance",
+      "carrieres": "https://careers.db.com/students-graduates"
+    },
+    {
+      "nom": "Bank of America",
+      "secteur": "Banque & finance",
+      "carrieres": "https://campus.bankofamerica.com"
+    },
+    {
+      "nom": "Rothschild & Co",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.rothschildandco.com/fr/carrieres/"
+    },
+    {
+      "nom": "Lazard",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.lazard.com/careers/"
+    },
+    {
+      "nom": "CFM",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.cfm.com/careers/"
+    },
+    {
+      "nom": "Qube Research & Technologies",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.qube-rt.com/careers"
+    },
+    {
+      "nom": "BCG",
+      "secteur": "Conseil",
+      "carrieres": "https://careers.bcg.com",
+      "eightfold": "bcg",
+      "domaine": "bcg.com"
+    },
+    {
+      "nom": "McKinsey & Company",
+      "secteur": "Conseil",
+      "carrieres": "https://www.mckinsey.com/careers/students"
+    },
+    {
+      "nom": "Bain & Company",
+      "secteur": "Conseil",
+      "carrieres": "https://www.bain.com/careers/"
+    },
+    {
+      "nom": "Roland Berger",
+      "secteur": "Conseil",
+      "carrieres": "https://www.rolandberger.com/fr/Join/"
+    },
+    {
+      "nom": "Oliver Wyman",
+      "secteur": "Conseil",
+      "carrieres": "https://www.oliverwyman.com/careers.html"
+    },
+    {
+      "nom": "Kearney",
+      "secteur": "Conseil",
+      "carrieres": "https://www.kearney.com/careers"
+    },
+    {
+      "nom": "Eleven Strategy",
+      "secteur": "Conseil",
+      "carrieres": "https://eleven-strategy.com/careers"
+    },
+    {
+      "nom": "Accenture",
+      "secteur": "Conseil",
+      "carrieres": "https://www.accenture.com/fr-fr/careers",
+      "eightfold": "accenture",
+      "domaine": "accenture.com"
+    },
+    {
+      "nom": "Capgemini",
+      "secteur": "Conseil",
+      "carrieres": "https://www.capgemini.com/fr-fr/carrieres/"
+    },
+    {
+      "nom": "Deloitte",
+      "secteur": "Audit & conseil",
+      "carrieres": "https://www.deloitte.com/fr/fr/careers.html"
+    },
+    {
+      "nom": "PwC",
+      "secteur": "Audit & conseil",
+      "carrieres": "https://www.pwc.fr/fr/carrieres.html"
+    },
+    {
+      "nom": "EY",
+      "secteur": "Audit & conseil",
+      "carrieres": "https://www.ey.com/fr_fr/careers",
+      "eightfold": "ey",
+      "domaine": "ey.com"
+    },
+    {
+      "nom": "KPMG",
+      "secteur": "Audit & conseil",
+      "carrieres": "https://kpmg.com/fr/fr/carrieres.html"
+    },
+    {
+      "nom": "Forvis Mazars",
+      "secteur": "Audit & conseil",
+      "carrieres": "https://www.forvismazars.com/fr/fr/carrieres"
+    },
+    {
+      "nom": "L'Oréal",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://careers.loreal.com"
+    },
+    {
+      "nom": "LVMH",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://www.lvmh.com/fr/nous-rejoindre"
+    },
+    {
+      "nom": "Kering",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://www.kering.com/fr/talent/",
+      "eightfold": "kering",
+      "domaine": "kering.com"
+    },
+    {
+      "nom": "Hermès",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://www.hermes.com/fr/fr/content/careers/"
+    },
+    {
+      "nom": "Danone",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://www.danone.com/fr/careers.html"
+    },
+    {
+      "nom": "Pernod Ricard",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://www.pernod-ricard.com/fr/careers"
+    },
+    {
+      "nom": "TotalEnergies",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://totalenergies.com/fr/carrieres"
+    },
+    {
+      "nom": "Airbus",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.airbus.com/fr/careers"
+    },
+    {
+      "nom": "Safran",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.safran-group.com/fr/emplois"
+    },
+    {
+      "nom": "Thales",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://careers.thalesgroup.com/fr/fr"
+    },
+    {
+      "nom": "EDF",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.edf.fr/edf-recrute"
+    },
+    {
+      "nom": "Engie",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://jobs.engie.com"
+    },
+    {
+      "nom": "Schneider Electric",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.se.com/fr/fr/about-us/careers/"
+    },
+    {
+      "nom": "Saint-Gobain",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://joinus.saint-gobain.com"
+    },
+    {
+      "nom": "Sanofi",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.sanofi.com/fr/carrieres"
+    },
+    {
+      "nom": "Google",
+      "secteur": "Tech",
+      "carrieres": "https://www.google.com/about/careers/applications/students/"
+    },
+    {
+      "nom": "Microsoft",
+      "secteur": "Tech",
+      "carrieres": "https://careers.microsoft.com/students/"
+    },
+    {
+      "nom": "Datadog",
+      "secteur": "Tech",
+      "carrieres": "https://careers.datadoghq.com"
+    },
+    {
+      "nom": "Criteo",
+      "secteur": "Tech",
+      "carrieres": "https://careers.criteo.com"
+    },
+    {
+      "nom": "Doctolib",
+      "secteur": "Tech",
+      "carrieres": "https://careers.doctolib.com"
+    },
+    {
+      "nom": "Mistral AI",
+      "secteur": "Tech",
+      "carrieres": "https://mistral.ai/careers"
+    },
+    {
+      "nom": "Dataiku",
+      "secteur": "Tech",
+      "carrieres": "https://www.dataiku.com/careers/"
+    },
+    {
+      "nom": "Qonto",
+      "secteur": "Tech",
+      "carrieres": "https://qonto.com/fr/careers"
+    },
+    {
+      "nom": "Alan",
+      "secteur": "Tech",
+      "carrieres": "https://alan.com/fr-fr/careers"
+    },
+    {
+      "nom": "Back Market",
+      "secteur": "Tech",
+      "carrieres": "https://careers.backmarket.com"
+    },
+    {
+      "nom": "AstraZeneca",
+      "secteur": "Pharma & santé",
+      "carrieres": "https://careers.astrazeneca.com",
+      "eightfold": "astrazeneca",
+      "domaine": "astrazeneca.com"
+    },
+    {
+      "nom": "Servier",
+      "secteur": "Pharma & santé",
+      "carrieres": "https://servier.com/carrieres/"
+    },
+    {
+      "nom": "Ipsen",
+      "secteur": "Pharma & santé",
+      "carrieres": "https://www.ipsen.com/careers/"
+    },
+    {
+      "nom": "Novartis",
+      "secteur": "Pharma & santé",
+      "carrieres": "https://www.novartis.com/fr-fr/carrieres"
+    },
+    {
+      "nom": "Roche",
+      "secteur": "Pharma & santé",
+      "carrieres": "https://www.roche.fr/carrieres"
+    },
+    {
+      "nom": "bioMérieux",
+      "secteur": "Pharma & santé",
+      "carrieres": "https://careers.biomerieux.com"
+    },
+    {
+      "nom": "Owkin",
+      "secteur": "Pharma & santé",
+      "carrieres": "https://www.owkin.com/careers"
+    },
+    {
+      "nom": "Air Liquide",
+      "secteur": "Chimie & matériaux",
+      "carrieres": "https://www.airliquide.com/fr/carrieres"
+    },
+    {
+      "nom": "Arkema",
+      "secteur": "Chimie & matériaux",
+      "carrieres": "https://www.arkema.com/france/fr/careers/"
+    },
+    {
+      "nom": "Michelin",
+      "secteur": "Chimie & matériaux",
+      "carrieres": "https://recrutement.michelin.fr"
+    },
+    {
+      "nom": "CEA",
+      "secteur": "Recherche & ingénierie",
+      "carrieres": "https://www.emploi.cea.fr"
+    },
+    {
+      "nom": "Dassault Systèmes",
+      "secteur": "Recherche & ingénierie",
+      "carrieres": "https://www.3ds.com/fr/careers"
+    },
+    {
+      "nom": "Dassault Aviation",
+      "secteur": "Spatial & défense",
+      "carrieres": "https://www.dassault-aviation.com/fr/groupe/carrieres/"
+    },
+    {
+      "nom": "ArianeGroup",
+      "secteur": "Spatial & défense",
+      "carrieres": "https://www.ariane.group/fr/carrieres/"
+    },
+    {
+      "nom": "CNES",
+      "secteur": "Spatial & défense",
+      "carrieres": "https://cnes.fr/fr/emplois"
+    },
+    {
+      "nom": "MBDA",
+      "secteur": "Spatial & défense",
+      "carrieres": "https://www.mbda-systems.com/careers/"
+    },
+    {
+      "nom": "Naval Group",
+      "secteur": "Spatial & défense",
+      "carrieres": "https://www.naval-group.com/fr/carrieres"
+    },
+    {
+      "nom": "Valeo",
+      "secteur": "Recherche & ingénierie",
+      "carrieres": "https://www.valeo.com/fr/carrieres/"
+    },
+    {
+      "nom": "Nokia Bell Labs",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://www.nokia.com/careers/"
+    },
+    {
+      "nom": "IBM France",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://www.ibm.com/fr-fr/careers"
+    },
+    {
+      "nom": "NVIDIA",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://www.nvidia.com/fr-fr/about-nvidia/careers/",
+      "eightfold": "nvidia",
+      "domaine": "nvidia.com"
+    },
+    {
+      "nom": "Qualcomm",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://www.qualcomm.com/company/careers",
+      "eightfold": "qualcomm",
+      "domaine": "qualcomm.com"
+    },
+    {
+      "nom": "Google DeepMind",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://deepmind.google/about/careers/"
+    },
+    {
+      "nom": "Meta (FAIR Paris)",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://www.metacareers.com/students"
+    },
+    {
+      "nom": "Hugging Face",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://huggingface.co/jobs"
+    },
+    {
+      "nom": "Kyutai",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://kyutai.org/careers"
+    },
+    {
+      "nom": "Pasqal",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://www.pasqal.com/careers/"
+    },
+    {
+      "nom": "Alice & Bob",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://alice-bob.com/careers/"
+    },
+    {
+      "nom": "Quandela",
+      "secteur": "Deeptech & IA",
+      "carrieres": "https://www.quandela.com/careers/"
+    },
+    {
+      "nom": "Scaleway",
+      "secteur": "Tech",
+      "carrieres": "https://www.scaleway.com/fr/carrieres/"
+    },
+    {
+      "nom": "OVHcloud",
+      "secteur": "Tech",
+      "carrieres": "https://careers.ovhcloud.com"
+    },
+    {
+      "nom": "Salesforce",
+      "secteur": "Tech",
+      "carrieres": "https://careers.salesforce.com"
+    },
+    {
+      "nom": "Amazon / AWS",
+      "secteur": "Tech",
+      "carrieres": "https://www.amazon.jobs/fr/"
+    },
+    {
+      "nom": "SAP",
+      "secteur": "Tech",
+      "carrieres": "https://jobs.sap.com"
+    },
+    {
+      "nom": "Ubisoft",
+      "secteur": "Tech",
+      "carrieres": "https://www.ubisoft.com/fr-fr/company/careers"
+    },
+    {
+      "nom": "Contentsquare",
+      "secteur": "Tech",
+      "carrieres": "https://contentsquare.com/careers/"
+    },
+    {
+      "nom": "BlaBlaCar",
+      "secteur": "Tech",
+      "carrieres": "https://blog.blablacar.com/careers"
+    },
+    {
+      "nom": "Deezer",
+      "secteur": "Tech",
+      "carrieres": "https://www.deezer-jobs.com"
+    },
+    {
+      "nom": "Ledger",
+      "secteur": "Tech",
+      "carrieres": "https://www.ledger.com/careers"
+    },
+    {
+      "nom": "Pennylane",
+      "secteur": "Tech",
+      "carrieres": "https://www.pennylane.com/fr/carrieres"
+    },
+    {
+      "nom": "Swile",
+      "secteur": "Tech",
+      "carrieres": "https://www.swile.co/fr-fr/careers"
+    },
+    {
+      "nom": "Sopra Steria",
+      "secteur": "Conseil",
+      "carrieres": "https://www.soprasteria.fr/carrieres"
+    },
+    {
+      "nom": "Eviden (Atos)",
+      "secteur": "Tech",
+      "carrieres": "https://eviden.com/careers/"
+    },
+    {
+      "nom": "Orange",
+      "secteur": "Tech",
+      "carrieres": "https://orange.jobs"
+    },
+    {
+      "nom": "SNCF",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.emploi.sncf.com"
+    },
+    {
+      "nom": "RATP",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.ratp.fr/groupe-ratp/recrutement"
+    },
+    {
+      "nom": "Veolia",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.veolia.com/fr/carrieres"
+    },
+    {
+      "nom": "Vinci",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://jobs.vinci.com"
+    },
+    {
+      "nom": "Bouygues",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.bouygues.com/carrieres/"
+    },
+    {
+      "nom": "Renault Group",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.renaultgroup.com/talents/"
+    },
+    {
+      "nom": "Stellantis",
+      "secteur": "Industrie & énergie",
+      "carrieres": "https://www.stellantis.com/fr/carrieres"
+    },
+    {
+      "nom": "BPCE",
+      "secteur": "Banque & finance",
+      "carrieres": "https://recrutement.bpce.fr"
+    },
+    {
+      "nom": "La Banque Postale",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.labanquepostale.com/recrutement.html"
+    },
+    {
+      "nom": "Allianz France",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.allianz.fr/recrutement.html"
+    },
+    {
+      "nom": "Banque de France",
+      "secteur": "Banque & finance",
+      "carrieres": "https://www.banque-france.fr/fr/carrieres"
+    },
+    {
+      "nom": "Publicis Groupe",
+      "secteur": "Conseil",
+      "carrieres": "https://careers.publicisgroupe.com"
+    },
+    {
+      "nom": "Carrefour",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://www.carrefour.com/fr/carrieres"
+    },
+    {
+      "nom": "Decathlon",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://joinus.decathlon.fr"
+    },
+    {
+      "nom": "Chanel",
+      "secteur": "Luxe & grande consommation",
+      "carrieres": "https://careers.chanel.com"
+    }
   ],
   "evenements": [
     {
@@ -118,6 +628,50 @@
       "lieu": "Parc des Princes, 24 rue du Commandant Guilbaud, Paris 16e",
       "url": "https://www.your-future.fr/",
       "description": "Deux jours (15 et 16 janvier) : écoles et entreprises pour trouver une formation, un stage, une alternance ou un premier emploi. Entrée gratuite, inscription en ligne.",
+      "verifie_le": "2026-09-24"
+    },
+    {
+      "entreprise": "Scaleway",
+      "secteur": "Tech",
+      "titre": "ai-PULSE 2026 — la conférence IA de Scaleway",
+      "type": "Conférence tech",
+      "date": "2026-10-13",
+      "lieu": "Station F, 5 parvis Alan Turing, Paris 13e",
+      "url": "https://www.ai-pulse.eu/",
+      "description": "Conférence européenne sur l'intelligence artificielle (talks, networking) organisée par Scaleway à Station F. Inscription en ligne.",
+      "verifie_le": "2026-09-24"
+    },
+    {
+      "entreprise": "Devoxx France",
+      "secteur": "Tech",
+      "titre": "Devoxx France 2027 — conférence des développeurs",
+      "type": "Conférence tech",
+      "date": "2027-04-07",
+      "lieu": "Palais des Congrès, 2 place de la Porte Maillot, Paris 17e",
+      "url": "https://www.devoxx.fr/",
+      "description": "15e édition, du 7 au 9 avril 2027 : trois jours de conférences pour développeurs, avec de nombreuses entreprises tech présentes. Billetterie ouverte début novembre 2026.",
+      "verifie_le": "2026-09-24"
+    },
+    {
+      "entreprise": "VivaTech",
+      "secteur": "Tech",
+      "titre": "VivaTech 2027 — salon de l'innovation et des startups",
+      "type": "Salon professionnel",
+      "date": "2027-06-16",
+      "lieu": "Paris Expo Porte de Versailles, 1 place de la Porte de Versailles, Paris 15e",
+      "url": "https://vivatech.com/",
+      "description": "Du 16 au 19 juin 2027 : grands groupes, startups et conférences ; offre dédiée aux étudiants (conditions sur le site).",
+      "verifie_le": "2026-09-24"
+    },
+    {
+      "entreprise": "Salon du Bourget (SIAE)",
+      "secteur": "Spatial & défense",
+      "titre": "Salon international de l'aéronautique et de l'espace 2027",
+      "type": "Salon professionnel",
+      "date": "2027-06-14",
+      "lieu": "Parc des expositions du Bourget, Le Bourget (93)",
+      "url": "https://www.siae.fr/",
+      "description": "Du 14 au 20 juin 2027 : Airbus, Safran, Thales, Dassault, ArianeGroup… journées professionnelles puis journées grand public.",
       "verifie_le": "2026-09-24"
     }
   ]

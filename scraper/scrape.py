@@ -1889,6 +1889,47 @@ def scrape_jeunes_ihedn():
     return evs
 
 
+# Ateliers « franchisés » (fresques, DIY…) : nombreux et peu « conférence »
+_MAKESENSE_SKIP = re.compile(r"fresque|\bdiy\b|ap[ée]ro|pique-nique|yoga|m[ée]ditation|c'est moi qui l'ai fait", re.I)
+
+
+def scrape_makesense():
+    """makesense (engagement citoyen) : conférences, débats, ateliers publics.
+    La page liste ~1 semaine d'événements en JSON-LD (partout en France) ; on
+    garde l'Île-de-France, le report quotidien accumule les semaines."""
+    print("→ makesense...")
+    base = "https://chiche.makesense.org"
+    soup = _soup(base + "/events")
+    # Le JSON-LD n'a pas d'URL : on la retrouve par le slug du titre, comparé
+    # sans séparateurs (makesense écrit « lespoir » là où slugify met « l-espoir »)
+    key = lambda s: re.sub(r"[^a-z0-9]", "", s)[:32]
+    links = {}
+    for a in soup.select('a[href^="/events/e/"]'):
+        slug = a["href"].rstrip("/").split("/")[-1].rsplit("-", 1)[0]
+        links.setdefault(key(slug), base + a["href"])
+    events = []
+    for it in extract_jsonld_events(soup):
+        title = clean_text(it.get("name"))
+        loc = it.get("location") or {}
+        addr = clean_text(loc.get("address") if isinstance(loc, dict) else loc)
+        d = parse_date(it.get("startDate"))
+        if (not title or not d or not in_window(d.date()) or not _IDF_RE.search(addr)
+                or _MAKESENSE_SKIP.search(title) or _OFF_TOPIC.search(title)):
+            continue
+        org = it.get("organizer")
+        org = clean_text(org.get("name") if isinstance(org, dict) else org)
+        desc = " — ".join(p for p in (f"Organisé par {org}" if org else "",
+                                      strip_html(it.get("description"))[:300]) if p)
+        ev = new_event("makesense", title, d.date(), location=addr, desc=desc,
+                       url=links.get(key(slugify(title)), base + "/events"),
+                       source_type="association", image=it.get("image") or "")
+        if it.get("isAccessibleForFree"):
+            ev["price"] = "Gratuit"
+        events.append(ev)
+    print(f"   ✓ Total makesense: {len(events)} events")
+    return events
+
+
 def scrape_associations_verifiees():
     """Événements vérifiés à la main dans scraper/associations.json."""
     print("→ Associations · sélection vérifiée...")
@@ -2007,7 +2048,7 @@ STATIC_SOURCES = [
     scrape_sorbonne_nouvelle, scrape_paris8, scrape_nanterre,
     scrape_ijclab, scrape_in2p3_paris, scrape_observatoire, scrape_sciencesconf,
     scrape_eightfold, scrape_carrieres_verifiees,
-    scrape_jeunes_ihedn, scrape_associations_verifiees,
+    scrape_jeunes_ihedn, scrape_makesense, scrape_associations_verifiees,
 ]
 
 
