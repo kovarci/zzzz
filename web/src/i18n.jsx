@@ -40,9 +40,10 @@ const TR = {
   group_luma_themes: ["Thèmes Luma", "Luma themes"], clear_all: ["Tout effacer", "Clear all"],
   btn_fav: ["Favoris", "Favourites"], btn_online: ["En ligne", "Online"],
   btn_theses: ["Soutenances", "PhD defences"], btn_theses_hint: ["Soutenances de thèse et HDR, masquées du fil principal", "PhD and habilitation defences, hidden from the main feed"],
+  btn_careers: ["Carrières", "Careers"], btn_careers_hint: ["Événements de recrutement des entreprises (banques, conseil, tech…), masqués du fil principal", "Company recruiting events (banks, consulting, tech…), hidden from the main feed"],
   near_locate: ["Localisation…", "Locating…"], near_sorted: ["Tri par distance", "Sorted by distance"], near_label: ["Près de moi", "Near me"],
   select_btn: ["Sélection", "Select"], noun_event: ["événement{s}", "event{s}"], adj_selected: ["sélectionné{s}", "selected"],
-  src_institution: ["Universités & instituts", "Universities & institutes"], src_luma: ["Luma", "Luma"], src_association: ["Associations", "Associations"], src_ville: ["Que faire à Paris", "Que faire à Paris (City of Paris)"],
+  src_institution: ["Universités & instituts", "Universities & institutes"], src_luma: ["Luma", "Luma"], src_association: ["Associations", "Associations"], src_ville: ["Que faire à Paris", "Que faire à Paris (City of Paris)"], src_entreprise: ["Entreprise", "Company"],
 
   badge_new: ["Nouveau", "New"], badge_free: ["Gratuit", "Free"], online_prefix: ["En ligne · ", "Online · "],
   time_tbd: ["Horaire à confirmer", "Time TBC"],

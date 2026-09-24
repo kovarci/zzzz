@@ -1680,7 +1680,8 @@ def scrape_nanterre():
 _IDF_RE = re.compile(
     r"\b(paris|lpnhe|apc|jussieu|ijclab|orsay|saclay|palaiseau|ihp|henri poincar[ée]|"
     r"meudon|observatoire|condorcet|aubervilliers|gif|bures|villejuif|cr[ée]teil|"
-    r"nanterre|saint-denis|versailles|cergy|[ée]vry|marne-la-vall[ée]e|champs-sur-marne)\b", re.I)
+    r"nanterre|saint-denis|versailles|cergy|[ée]vry|marne-la-vall[ée]e|champs-sur-marne|"
+    r"(?:75|77|78|91|92|93|94|95)\d{3})\b", re.I)            # + codes postaux franciliens
 
 
 def scrape_ijclab():
@@ -1755,6 +1756,107 @@ def scrape_sciencesconf():
             ev["lat"], ev["lng"], ev["geo_exact"] = lat, lon, True
         events.append(ev)
     print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+# ── Carrières (événements de recrutement étudiants) ───────────────────────────
+# Catégorie à part sur le site (kind="carriere", masquée du fil principal,
+# bouton « 💼 Carrières »). Deux sources : le portail d'événements Eightfold
+# (API publique, autorisée par son robots.txt) pour les recruteurs qui s'en
+# servent, et scraper/carrieres.json — liste suivie + événements vérifiés à la
+# main, enrichi chaque semaine par une recherche.
+
+CARRIERES_FILE = Path(__file__).parent / "carrieres.json"
+_SECTOR_DISCIPLINE = {
+    "Banque & finance": "Économie", "Conseil": "Économie", "Audit & conseil": "Économie",
+    "Tech": "Sciences", "Industrie & énergie": "Sciences",
+}
+
+
+def _career_event(company, sector, title, dt, *, time_str="", end_time="", location="",
+                  desc="", url="", image="", kind_label="Événement recrutement"):
+    ev = new_event(company, title, dt, time_str=time_str, end_time=end_time,
+                   location=location, desc=f"{kind_label} · {sector}" + (f" — {desc}" if desc else ""),
+                   url=url, source_type="entreprise", image=image)
+    ev["kind"] = "carriere"
+    ev["discipline"] = _SECTOR_DISCIPLINE.get(sector, "Autre")
+    return ev
+
+
+def _carrieres_config():
+    try:
+        return json.loads(CARRIERES_FILE.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"   [warn] carrieres.json: {e}")
+        return {}
+
+
+def scrape_eightfold():
+    """Portails Eightfold (bcg.eightfold.ai…) : tous les événements publics de
+    chaque recruteur, gardés s'ils ont lieu en Île-de-France (ou en ligne avec
+    Paris / France dans le titre)."""
+    print("→ Carrières · Eightfold...")
+    events = []
+    for c in _carrieres_config().get("entreprises", []):
+        if not c.get("eightfold"):
+            continue
+        n = 0
+        for page in range(1, 25):
+            try:
+                r = requests.get(f"https://{c['eightfold']}.eightfold.ai/api/events/open/list",
+                                 params={"domain": c["domaine"], "page": page},
+                                 headers=HEADERS, timeout=25)
+                r.raise_for_status()
+                rows = r.json().get("plannedEventList") or []
+            except Exception as e:
+                print(f"   [warn] {c['nom']} p{page}: {e}")
+                break
+            for x in rows:
+                if x.get("isCancelled") or not x.get("startTimestamp"):
+                    continue
+                where = clean_text(x.get("completeVenue") or x.get("venue") or x.get("address"))
+                online = x.get("eventLocationType") == "virtual"
+                name = clean_text(x.get("name"))
+                # Lieu souvent vague (« TBC ») : le titre dit alors « BCG Paris - … »
+                if not (_IDF_RE.search(f"{where} {name}")
+                        or (online and re.search(r"\b(paris|france)\b", name, re.I))):
+                    continue
+                dt = to_paris(datetime.fromtimestamp(int(x["startTimestamp"]), dateutil_tz.UTC))
+                if not in_window(dt.date()):
+                    continue
+                end = x.get("endTimestamp")
+                end_time = to_paris(datetime.fromtimestamp(int(end), dateutil_tz.UTC)).strftime("%H:%M") if end else ""
+                events.append(_career_event(
+                    c["nom"], c["secteur"], name, dt.date(), time_str=dt.strftime("%H:%M"),
+                    end_time=end_time,
+                    location=where if _IDF_RE.search(where) else ("En ligne" if online else f"{c['nom']}, Paris"),
+                    desc=strip_html(x.get("description"))[:300], url=x.get("eventLandingPage") or "",
+                    image=x.get("thumbnailImage") or ""))
+                n += 1
+            if len(rows) < 10:
+                break
+        print(f"   {c['nom']}: {n}")
+    print(f"   ✓ Total Carrières · Eightfold: {len(events)} events")
+    return events
+
+
+def scrape_carrieres_verifiees():
+    """Événements vérifiés à la main dans scraper/carrieres.json."""
+    print("→ Carrières · sélection vérifiée...")
+    events = []
+    for x in _carrieres_config().get("evenements", []):
+        try:
+            d = date.fromisoformat(x["date"])
+        except (KeyError, ValueError):
+            continue
+        if not in_window(d):
+            continue
+        events.append(_career_event(
+            x.get("entreprise", ""), x.get("secteur", ""), x.get("titre", ""), d,
+            time_str=x.get("heure", ""), end_time=x.get("fin", ""), location=x.get("lieu", ""),
+            desc=x.get("description", ""), url=x.get("url", ""),
+            kind_label=x.get("type") or "Événement recrutement"))
+    print(f"   ✓ Total Carrières · sélection: {len(events)} events")
     return events
 
 
@@ -1850,6 +1952,7 @@ STATIC_SOURCES = [
     scrape_bernardins, scrape_academie_sciences, scrape_cite_sciences,
     scrape_sorbonne_nouvelle, scrape_paris8, scrape_nanterre,
     scrape_ijclab, scrape_in2p3_paris, scrape_observatoire, scrape_sciencesconf,
+    scrape_eightfold, scrape_carrieres_verifiees,
 ]
 
 
@@ -2372,7 +2475,7 @@ def write_ics(events):
     cal_dir.mkdir(exist_ok=True)
     by_inst = {}
     for ev in events:
-        if ev.get("source_type") in ("luma", "ville"):
+        if ev.get("source_type") in ("luma", "ville", "entreprise"):
             continue
         by_inst.setdefault(ev.get("institution", ""), []).append(ev)
     written = set()
@@ -3201,6 +3304,7 @@ def build_digest(events):
     end = TODAY + timedelta(days=7)
     pool = [e for e in events
             if TODAY.isoformat() <= e.get("date", "") <= end.isoformat()
+            and not e.get("kind")                 # soutenances / carrières : catégories à part
             and not is_junk_title(e.get("title", ""))]
 
     def score(e):
@@ -3363,7 +3467,7 @@ def main():
     carried = 0
     for e in prev_events:
         if not (e.get("institution") in KNOWN_SOURCES
-                or e.get("source_type") in ("luma", "association", "ville")):
+                or e.get("source_type") in ("luma", "association", "ville", "entreprise")):
             continue
         if e.get("date", "") < today_iso:
             continue  # past event — the archive handles it, don't resurrect

@@ -52,6 +52,14 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 Les **soutenances** de thèse / HDR (repérées au titre, toutes sources) portent `kind: "soutenance"` :
 masquées du fil principal, affichées par le bouton « 🎓 Soutenances » (`?soutenances=1`).
 
+**Carrières** (`kind: "carriere"`, bouton « 💼 Carrières », `?carrieres=1`) : événements de
+recrutement étudiants à Paris, façon Trackr.
+- `scraper/carrieres.json` : ~55 recruteurs suivis (banque, conseil, audit, luxe, industrie, tech)
+  et les événements **vérifiés sur une page officielle** (salons, ateliers, soirées…).
+- Portails **Eightfold** (BCG, Kering, Morgan Stanley, HSBC, Accenture, EY, Citi) lus chaque jour
+  par l'API publique (`/api/events/open/list`, autorisée par leur robots.txt), filtrés Île-de-France.
+- Une recherche hebdomadaire (tâche Claude planifiée) ajoute les nouveaux événements au fichier.
+
 Plus de 1 500 événements indexés depuis avril 2026.
 
 ## Le site

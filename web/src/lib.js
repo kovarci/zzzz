@@ -38,8 +38,14 @@ export const NEW_CUTOFF = new Date(Date.now() - 48 * 3600 * 1000).toISOString().
 export const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 export const cn = (...a) => a.filter(Boolean).join(" ");
 export const dc = e => `var(${DISC[e.discipline] || "--c-aut"})`;
-export const isThesis = e => e.kind === "soutenance";
-export const kindOf = e => { if (isThesis(e)) return "Soutenance"; const m =KIND_RE.exec(e.description || "") || KIND_RE.exec(e.title || ""); return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : (e.source_type === "luma" ? "Rencontre" : "Conférence"); };
+// Catégories à part : masquées du fil principal, un bouton chacune les affiche.
+// param = clé d'URL (?soutenances=1), label/hint = clés i18n.
+export const SIDE_KINDS = {
+  soutenance: { param: "soutenances", icon: "🎓", label: "btn_theses", hint: "btn_theses_hint", kind: "Soutenance" },
+  carriere: { param: "carrieres", icon: "💼", label: "btn_careers", hint: "btn_careers_hint", kind: "Recrutement" },
+};
+export const isSide = e => !!SIDE_KINDS[e.kind];
+export const kindOf = e => { if (isSide(e)) return SIDE_KINDS[e.kind].kind; const m =KIND_RE.exec(e.description || "") || KIND_RE.exec(e.title || ""); return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : (e.source_type === "luma" ? "Rencontre" : "Conférence"); };
 export const isFree = e => e.price === "0" || e.price === 0 || /gratuit|free/i.test(e.price || "");
 export const isOnline = e => ONLINE_RE.test(e.location || "");
 export const isNew = e => e.added_at && e.added_at >= NEW_CUTOFF;
@@ -70,13 +76,13 @@ export const relTime = ts => {
 };
 
 /* ── Filtrage ──────────────────────────────────────────────────── */
-export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, theses: false, q: "" };
+export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, cat: "", q: "" };
 
 export function matches(e, f, favs) {
   if (f.fav && !favs.has(e.id)) return false;
-  // Soutenances : catégorie à part, masquée sauf bouton « Soutenances »
+  // Soutenances, carrières : catégories à part, masquées sauf leur bouton
   // (ou favori / recherche : un nom de doctorant doit rester trouvable).
-  if (f.theses ? !isThesis(e) : isThesis(e) && !f.q && !f.fav) return false;
+  if (f.cat ? e.kind !== f.cat : isSide(e) && !f.q && !f.fav) return false;
   if (f.online && !isOnline(e)) return false;
   if (f.when === "today" && e.date !== TODAY) return false;
   if (f.when === "tonight" && !(e.date === TODAY && (e.time || "") >= "17:30")) return false;
@@ -101,7 +107,7 @@ export function filtersFromURL() {
   const src = p.get("source"); if (src && src !== "all" && src !== "history") f.src.add(src);
   if (p.get("favoris") === "1") f.fav = true;
   if (p.get("format") === "online") f.online = true;
-  if (p.get("soutenances") === "1") f.theses = true;
+  Object.entries(SIDE_KINDS).forEach(([k, s]) => { if (p.get(s.param) === "1") f.cat = k; });
   if (p.get("q")) f.q = norm(p.get("q"));
   return { filters: f, view: p.get("vue") || "list", history: src === "history", event: p.get("event") || null, rawQ: p.get("q") || "" };
 }
@@ -116,7 +122,7 @@ export function urlFromState({ filters: f, view, history, rawQ }) {
   if (f.inst.size) p.set("institution", [...f.inst].join(","));
   if (f.theme.size) p.set("theme", [...f.theme].join(","));
   if (f.fav) p.set("favoris", "1");
-  if (f.theses) p.set("soutenances", "1");
+  if (f.cat && SIDE_KINDS[f.cat]) p.set(SIDE_KINDS[f.cat].param, "1");
   const qs = p.toString(); return qs ? "?" + qs : location.pathname;
 }
 
