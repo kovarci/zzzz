@@ -1,0 +1,88 @@
+name: 📅 Proposer un événement
+description: Ajouter une conférence, un colloque, une rencontre d'association ou un événement carrière à l'agenda de lotent.fr
+title: "[Événement] "
+labels: ["proposition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci ! Chaque proposition est relue (en général sous une semaine) puis ajoutée à [lotent.fr](https://lotent.fr).
+        Seuls les événements **à Paris / Île-de-France** (ou en ligne pour des étudiants en France) et **à venir** sont retenus.
+        Les événements réservés aux membres sont acceptés : ils apparaîtront avec un 🔒.
+  - type: input
+    id: titre
+    attributes:
+      label: Titre de l'événement
+      placeholder: "Ex. Conférence « Les marchés face à la polycrise »"
+    validations:
+      required: true
+  - type: input
+    id: organisateur
+    attributes:
+      label: Organisateur
+      description: Association, laboratoire, université, entreprise…
+      placeholder: "Ex. Taureaux du Panthéon (Paris 1)"
+    validations:
+      required: true
+  - type: dropdown
+    id: categorie
+    attributes:
+      label: Catégorie
+      options:
+        - Association étudiante
+        - Conférence / séminaire / colloque (université, labo, institut)
+        - Carrières (recrutement, forum, atelier entreprise)
+        - Autre
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: Format JJ/MM/AAAA (pour plusieurs jours, indiquez le premier et précisez dans la description)
+      placeholder: "15/10/2026"
+    validations:
+      required: true
+  - type: input
+    id: horaire
+    attributes:
+      label: Horaire
+      placeholder: "18h30 – 20h"
+  - type: input
+    id: lieu
+    attributes:
+      label: Lieu (adresse complète) ou « En ligne »
+      placeholder: "12 place du Panthéon, 75005 Paris — amphi II"
+    validations:
+      required: true
+  - type: input
+    id: lien
+    attributes:
+      label: Lien officiel (inscription ou annonce)
+      description: Site, billetterie, HelloAsso, Luma, publication Instagram / LinkedIn de l'organisateur…
+      placeholder: "https://…"
+    validations:
+      required: true
+  - type: dropdown
+    id: acces
+    attributes:
+      label: Accès
+      options:
+        - Ouvert à tous (gratuit ou payant)
+        - Réservé aux membres / adhérents / élèves d'une école
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Thème, intervenants, public visé, conditions d'inscription.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: Les informations sont exactes et l'événement est annoncé publiquement par son organisateur.
+          required: true

@@ -5,7 +5,8 @@
     "un scraper dédié (ne rien ajouter à la main pour elle). « canaux » = où elle publie ses événements.",
     "evenements : uniquement des événements publics vérifiés sur une page officielle (url) —",
     "site de l'association, HelloAsso, Luma, page de l'université hôte. Pas les soirées réservées aux membres.",
-    "Les événements passés sont ignorés par le scraper ; la recherche hebdomadaire peut les retirer."
+    "Les événements passés sont ignorés par le scraper ; la recherche hebdomadaire peut les retirer.",
+    "Propositions du formulaire GitHub (label « proposition ») : ajoutées ici après vérification ; \"source\": \"institution\" pour une conférence de labo / université, \"membres\": true si réservé, \"proposition\": <n° du ticket>."
   ],
   "associations": [
     {

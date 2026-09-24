@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=16" />
+  <link rel="stylesheet" href="app.css?v=17" />
   <script>
     // Même thème que l'app principale, appliqué avant le premier rendu (pas de flash)
     try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
@@ -114,6 +114,13 @@
     <tr><td>Sorbonne Université</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
     <tr><td>Université PSL</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
     <tr><td>Université Paris Dauphine</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Université Paris 1 Panthéon-Sorbonne</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Université Paris-Panthéon-Assas</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Université Paris-Saclay</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
+    <tr><td>Campus Condorcet</td><td><span data-fr>Campus de recherche</span><span data-en>Research campus</span></td></tr>
+    <tr><td>Institut d'études avancées de Paris</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
+    <tr><td>Fondation Maison des Sciences de l'Homme</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
+    <tr><td>Musée du quai Branly</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
     <tr><td>Université Paris Cité</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
     <tr><td>Université Sorbonne Nouvelle</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
     <tr><td>Université Paris 8</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
@@ -173,6 +180,15 @@
     <li><span data-fr>Flux RSS des immanquables</span><span data-en>Highlights RSS feed</span> : <code>data/digest.xml</code></li>
     <li><span data-fr>Données brutes</span><span data-en>Raw data</span> : <code>data/events.json</code></li>
   </ul>
+
+  <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>Proposer un événement</span><span data-en>Submit an event</span></h2>
+  <p data-fr>Vous organisez une conférence, un colloque, une rencontre d'association ou un événement carrière à Paris ?
+  Remplissez le <a href="https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml" target="_blank" rel="noopener noreferrer">formulaire de proposition</a> :
+  chaque proposition est relue puis ajoutée à l'agenda (en général sous une semaine). Les événements réservés aux membres
+  sont acceptés et signalés par un 🔒.</p>
+  <p data-en="block">Organising a talk, a conference, a student association meetup or a career event in Paris?
+  Fill in the <a href="https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml" target="_blank" rel="noopener noreferrer">submission form</a>: every submission
+  is reviewed and added to the calendar (usually within a week). Members-only events are welcome and marked with 🔒.</p>
 
   <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>Contact</span><span data-en>Contact</span></h2>
   <p data-fr>Une source à suggérer, un bug à signaler ? Ouvrez une

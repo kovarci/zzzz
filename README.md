@@ -33,6 +33,9 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | ENS Paris                           | scraping HTML paginé                 | Institution    |
 | Sorbonne Université                 | parseur dédié                        | Institution    |
 | Université Paris Cité               | cartes HTML (All-in-One Calendar)    | Institution    |
+| Paris 1 Panthéon-Sorbonne (agenda + recherche), Paris-Panthéon-Assas, Paris-Saclay | cartes HTML | Institution |
+| Campus Condorcet, IEA de Paris, FMSH | cartes HTML                         | Recherche      |
+| Musée du quai Branly (colloques + salon de lecture) | cartes HTML          | Musée          |
 | Université Sorbonne Nouvelle        | listes annuelles des colloques       | Institution    |
 | Université Paris 8                  | frise de la page d'accueil (~1 mois) | Institution    |
 | Université Paris Nanterre           | export iCal de l'agenda              | Institution    |

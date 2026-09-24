@@ -6,7 +6,7 @@ import React, { createContext, useContext, useState, useCallback, useMemo, useEf
 import { store } from "./lib.js";
 
 const TR = {
-  nav_agenda: ["Agenda", "Agenda"], nav_history: ["Historique", "History"], nav_about: ["À propos", "About"],
+  nav_agenda: ["Agenda", "Agenda"], nav_history: ["Historique", "History"], nav_about: ["À propos", "About"], nav_propose: ["Proposer un événement", "Submit an event"],
   search_ph: ["Rechercher…", "Search…"], subscribe: ["S'abonner", "Subscribe"], theme_aria: ["Changer de thème", "Toggle theme"],
   lang_aria: ["Passer en anglais", "Switch to French"],
 

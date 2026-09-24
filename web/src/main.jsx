@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
+import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, EMPTY_FILTERS, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
@@ -390,7 +390,7 @@ function App() {
     <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-4">
         <a href="/" className="flex items-center gap-2 font-semibold tracking-tight"><img src="icon.svg" alt="" width="28" height="28" className="h-7 w-7 rounded-md" /><span>Lotent</span></a>
-        <nav className="hidden md:flex items-center gap-1 text-sm text-muted-foreground ml-4"><button onClick={backToAgenda} className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_agenda")}</button><button onClick={toggleHistory} className={cn("px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent", history && "text-foreground bg-accent")}>{t("nav_history")}</button><a href="apropos.html" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_about")}</a></nav>
+        <nav className="hidden md:flex items-center gap-1 text-sm text-muted-foreground ml-4"><button onClick={backToAgenda} className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_agenda")}</button><button onClick={toggleHistory} className={cn("px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent", history && "text-foreground bg-accent")}>{t("nav_history")}</button><a href="apropos.html" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_about")}</a><a href={PROPOSE_URL} target="_blank" rel="noopener" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_propose")}</a></nav>
         <div className="ml-auto flex items-center gap-2">
           <button onClick={() => setCmd(true)} className="inline-flex items-center gap-2 h-9 rounded-md border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent hover:text-foreground w-10 sm:w-64 justify-center sm:justify-between" aria-label={t("search_ph")}><Icon d={ICONS.search} size={15} className="sm:hidden" /><span className="hidden sm:inline">{t("search_ph")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
           <Button variant="outline" size="icon" onClick={toggleLang} aria-label={t("lang_aria")} className="font-semibold text-xs">{lang === "en" ? "FR" : "EN"}</Button>
@@ -482,7 +482,7 @@ function App() {
     <footer className="border-t">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 grid gap-8 md:grid-cols-3 text-sm">
         <div><div className="font-semibold">Lotent</div><p className="text-muted-foreground mt-2 max-w-xs">{t("footer_tagline")}</p><p className="text-xs text-muted-foreground mt-3">{t("footer_updated", { auto: relTime(meta.last_workflow_run) })}{meta.last_manual_run && t("footer_manual_suffix", { t: relTime(meta.last_manual_run) })}</p></div>
-        <div><div className="font-semibold">{t("footer_subscribe")}</div><ul className="mt-2 space-y-1.5 text-muted-foreground"><li><a className="hover:text-foreground" href="data/calendar.ics">{t("footer_ics")}</a></li><li><a className="hover:text-foreground" href="data/digest.xml">{t("footer_rss")}</a></li><li><a className="hover:text-foreground" href="sitemap.xml">{t("footer_sitemap")}</a></li><li><a className="hover:text-foreground" href="apropos.html">{t("nav_about")}</a></li></ul></div>
+        <div><div className="font-semibold">{t("footer_subscribe")}</div><ul className="mt-2 space-y-1.5 text-muted-foreground"><li><a className="hover:text-foreground" href="data/calendar.ics">{t("footer_ics")}</a></li><li><a className="hover:text-foreground" href="data/digest.xml">{t("footer_rss")}</a></li><li><a className="hover:text-foreground" href="sitemap.xml">{t("footer_sitemap")}</a></li><li><a className="hover:text-foreground" href="apropos.html">{t("nav_about")}</a></li><li><a className="hover:text-foreground" href={PROPOSE_URL} target="_blank" rel="noopener">{t("nav_propose")}</a></li></ul></div>
         <GithubCard />
       </div>
     </footer>

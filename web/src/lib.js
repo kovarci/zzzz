@@ -2,6 +2,8 @@
 
 export const SITE = "https://lotent.fr";
 export const REPO = "https://github.com/kovarci/zzzz";
+// Formulaire « Proposer un événement » (.github/ISSUE_TEMPLATE/proposer-evenement.yml)
+export const PROPOSE_URL = "https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml";
 
 export const DISC = {
   "Mathématiques": "--c-math", "Sciences": "--c-sci", "Économie": "--c-eco", "Histoire": "--c-his",
@@ -16,7 +18,8 @@ export const MAIN_INST = ["Collège de France", "Institut Henri Poincaré", "Uni
   "Université Paris Cité", "Cnam", "Muséum national d'Histoire naturelle", "BnF", "Institut Pasteur", "Institut Curie",
   "Institut du Cerveau", "Inalco", "EPHE", "Collège des Bernardins", "Académie des sciences", "Cité des sciences",
   "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre",
-  "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org"];
+  "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org",
+  "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas", "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris", "Fondation Maison des Sciences de l'Homme", "Musée du quai Branly"];
 export const WD = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 export const WDS = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
 export const MO = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];

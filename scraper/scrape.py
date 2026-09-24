@@ -1421,7 +1421,18 @@ def _card_date(el):
     txt = el.get_text(" ", strip=True)
     # « 30 - Septembre » (Jeunes IHEDN) → « 30 Septembre »
     txt = re.sub(r"(\d{1,2})\s*-\s*([^\W\d_]{3,})", r"\1 \2", txt)
+    tm = _time_of(txt)
+    # « Jeudi 24 18:00 Sept. 2026 » (FMSH) : l'heure coupe « 24 … Sept. »
+    txt = re.sub(r"\b\d{1,2}[:h]\d{2}\b", " ", txt)
     d = parse_french_date_text(txt)
+    # « Du 20 mai au 26 sept » sans année : le début, déjà passé, serait
+    # déduit en 2027 (après la fin) → événement en cours, on l'écarte.
+    if d and not (_FR_DATE_RE.search(txt) or _ISO_DATE_RE.search(txt) or _FR_SLASH_RE.search(txt)):
+        ms = list(_FR_NOYEAR_RE.finditer(txt))
+        if len(ms) >= 2:
+            d2 = _day_month_to_date(ms[1].group(1), ms[1].group(2))
+            if d2 and d > d2:
+                return None, ""
     if not d and len(txt) <= 80:
         # Secours seulement (notre parseur, réglé sur les sources historiques,
         # garde la main) : dateparser lit l'anglais (« 1 Feb ») et les formats
@@ -1434,7 +1445,7 @@ def _card_date(el):
             "RELATIVE_BASE": datetime.combine(TODAY - timedelta(days=15), datetime.min.time())})
         d = next((dt.date() for s, dt in found or []
                   if re.search(r"(?<!\d)\d{1,2}(?!\d)", s)), None)
-    return d, _time_of(txt)
+    return d, tm
 
 
 def _soup(url):
@@ -1453,7 +1464,7 @@ def _soup(url):
 
 def _scrape_cards(name, url, card, *, title, base, location, date=None,
                   link=None, place=None, kind=None, keep_kind=None,
-                  drop_kind=None, page_url=None, max_pages=8,
+                  drop_kind=None, page_url=None, max_pages=8, page_start=1,
                   one_per_title=False):
     """Parseur générique d'agenda en cartes.
     card/title/date/link/place/kind : sélecteurs CSS (relatifs à la carte).
@@ -1463,7 +1474,8 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
     apparaît 3 fois → on garde son premier jour."""
     print(f"→ {name}...")
     events, seen, stats = [], set(), {"cards": 0, "off": 0, "kind": 0, "date": 0}
-    urls = [url] + ([page_url.format(n=n) for n in range(1, max_pages)] if page_url else [])
+    urls = [url] + ([page_url.format(n=n) for n in range(page_start, page_start + max_pages - 1)]
+                    if page_url else [])
     for u in urls:
         try:
             soup = _soup(u)
@@ -1682,6 +1694,92 @@ def scrape_nanterre():
             desc=clean_text(v.get("DESCRIPTION"))[:400]))
     print(f"   ✓ Total {name}: {len(events)} events")
     return events
+
+
+# ── Universités & lieux de recherche (ajout 2) ────────────────────────────────
+
+def scrape_paris1():
+    # Agenda général + agenda de la recherche : même thème Drupal (article.event)
+    name, base = "Université Paris 1 Panthéon-Sorbonne", "https://www.pantheonsorbonne.fr"
+    loc = "Université Paris 1 Panthéon-Sorbonne, 12 place du Panthéon, Paris 5e"
+    out = []
+    for site in (base, "https://recherche.pantheonsorbonne.fr"):
+        out += _scrape_cards(name, site + "/evenements", "article.event", title="h2.title",
+                             date=".date-style", kind=".categ-style", base=base, location=loc,
+                             page_url=site + "/evenements?page={n}", max_pages=6)
+    return out
+
+
+def scrape_assas():
+    return _scrape_cards(
+        "Université Paris-Panthéon-Assas", "https://www.assas-universite.fr/fr/evenements",
+        ".liste__evenements .event", title="h3", kind=".type__evenement", place=".adresse",
+        base="https://www.assas-universite.fr",
+        location="Université Paris-Panthéon-Assas, 92 rue d'Assas, Paris 6e",
+        page_url="https://www.assas-universite.fr/fr/evenements?page={n}", max_pages=6)
+
+
+def scrape_paris_saclay():
+    return _scrape_cards(
+        "Université Paris-Saclay", "https://www.universite-paris-saclay.fr/evenements", "article.thumbnail",
+        title="h3", date=".thumbnail__info__date", place=".thumbnail__info__place",
+        base="https://www.universite-paris-saclay.fr",
+        location="Université Paris-Saclay, Gif-sur-Yvette",
+        page_url="https://www.universite-paris-saclay.fr/evenements?page={n}", max_pages=6)
+
+
+def scrape_condorcet():
+    p = ("https://www.campus-condorcet.fr/agenda?l=0&beanKey=agendaSearchParam&&site=ACCUEIL"
+         "&dateAgenda=true&onlyAgenda=true&s=MAJ_EVENT_ASC&limit=10&page={n}")
+    return _scrape_cards(
+        "Campus Condorcet", "https://www.campus-condorcet.fr/agenda", "li.avec_vignette",
+        title="a.item-title__element_title", date=".date_agenda", kind=".date_agenda_typeEvenement",
+        base="https://www.campus-condorcet.fr",
+        location="Campus Condorcet, 8 cours des Humanités, Aubervilliers",
+        page_url=p, page_start=2, max_pages=8)
+
+
+def scrape_iea():
+    """Institut d'études avancées : chaque ligne est un lien « 24 Sep 2026, Titre »."""
+    name = "Institut d'études avancées de Paris"
+    print(f"→ {name}...")
+    base = "https://www.paris-iea.fr"
+    events = []
+    for a in _soup(base + "/fr/evenements").select("a:has(> span.dates)"):
+        out_of_town = a.select_one(".infos-emplacement-event")
+        if out_of_town and "hors les murs" in out_of_town.get_text().lower():
+            continue                              # colloques de fellows à l'étranger
+        d = parse_french_date_text(a.select_one("span.dates").get_text(" "))
+        for x in a.select("span.dates, .infos-emplacement-event"):
+            x.extract()
+        title = clean_text(a.get_text(" "))
+        if not d or not in_window(d) or not title or is_junk_title(title):
+            continue
+        events.append(new_event(name, title, d, url=make_absolute(a.get("href", ""), base),
+                                location="Institut d'études avancées de Paris, 17 quai d'Anjou, Paris 4e"))
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+def scrape_fmsh():
+    return _scrape_cards(
+        "Fondation Maison des Sciences de l'Homme", "https://www.fmsh.fr/agenda",
+        "article.node--event.node--view-mode--search-item", title="h2, h3", date=".dates, .date",
+        kind=".field_type", link="a[href*='/agenda/']",
+        base="https://www.fmsh.fr", location="FMSH, 54 boulevard Raspail, Paris 6e",
+        page_url="https://www.fmsh.fr/agenda?page={n}", max_pages=5)
+
+
+def scrape_quai_branly():
+    base = "https://www.quaibranly.fr"
+    out = []
+    for path in ("/fr/recherche-scientifique/activites/colloques-et-enseignements/conferences-et-colloques",
+                 "/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lecture-jacques-kerchache"):
+        out += _scrape_cards(
+            "Musée du quai Branly", base + path, "article.push, article.push-big", title="h3", date=".date",
+            kind=".categories", link="a.related-event", base=base,
+            location="Musée du quai Branly – Jacques Chirac, 37 quai Branly, Paris 7e")
+    return out
 
 
 # ── Indico des labos (même code que l'IHP) ────────────────────────────────────
@@ -1961,7 +2059,10 @@ def scrape_associations_verifiees():
             x.get("association", ""), x.get("titre", ""), d, time_str=x.get("heure", ""),
             end_time=x.get("fin", ""), location=x.get("lieu", ""),
             desc=" — ".join(p for p in (x.get("type"), x.get("description")) if p),
-            url=x.get("url", ""), speaker=x.get("intervenants", ""), source_type="association"))
+            url=x.get("url", ""), speaker=x.get("intervenants", ""),
+            # Propositions du formulaire : une conférence de labo / d'université
+            # y est rangée avec "source": "institution"
+            source_type="institution" if x.get("source") == "institution" else "association"))
         if x.get("membres"):                  # réservé aux adhérents / bénéficiaires
             events[-1]["members"] = True
     print(f"   ✓ Total Associations · sélection: {len(events)} events")
@@ -2051,6 +2152,7 @@ NEW_INSTITUTIONS = [
     "Collège des Bernardins", "Académie des sciences", "Cité des sciences",
     "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre",
     "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org",
+    "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas", "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris", "Fondation Maison des Sciences de l'Homme", "Musée du quai Branly",
 ]
 
 # Ordre = ordre d'exécution dans main() ; tous sans navigateur.
@@ -2062,6 +2164,7 @@ STATIC_SOURCES = [
     scrape_ijclab, scrape_in2p3_paris, scrape_observatoire, scrape_sciencesconf,
     scrape_eightfold, scrape_carrieres_verifiees,
     scrape_jeunes_ihedn, scrape_makesense, scrape_associations_verifiees,
+    scrape_paris1, scrape_assas, scrape_paris_saclay, scrape_condorcet, scrape_iea, scrape_fmsh, scrape_quai_branly,
 ]
 
 
@@ -2444,6 +2547,13 @@ INSTITUTION_COORDS = {
     "IJCLab":                    [48.6985, 2.1840],
     "IN2P3":                     [48.8467, 2.3560],   # LPNHE, Jussieu
     "Observatoire de Paris":     [48.8364, 2.3364],
+    "Université Paris 1 Panthéon-Sorbonne": [48.8467, 2.3441],
+    "Université Paris-Panthéon-Assas": [48.8436, 2.3325],
+    "Université Paris-Saclay": [48.711, 2.17],
+    "Campus Condorcet": [48.9063, 2.3703],
+    "Institut d'études avancées de Paris": [48.8518, 2.3584],
+    "Fondation Maison des Sciences de l'Homme": [48.8488, 2.327],
+    "Musée du quai Branly": [48.8609, 2.2977],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -2669,6 +2779,13 @@ INSTITUTION_URLS = {
     "IN2P3": "https://www.in2p3.cnrs.fr",
     "Observatoire de Paris": "https://www.observatoiredeparis.psl.eu",
     "Sciencesconf.org": "https://www.sciencesconf.org",
+    "Université Paris 1 Panthéon-Sorbonne": "https://www.pantheonsorbonne.fr",
+    "Université Paris-Panthéon-Assas": "https://www.assas-universite.fr",
+    "Université Paris-Saclay": "https://www.universite-paris-saclay.fr",
+    "Campus Condorcet": "https://www.campus-condorcet.fr",
+    "Institut d'études avancées de Paris": "https://www.paris-iea.fr",
+    "Fondation Maison des Sciences de l'Homme": "https://www.fmsh.fr",
+    "Musée du quai Branly": "https://www.quaibranly.fr",
 }
 
 
