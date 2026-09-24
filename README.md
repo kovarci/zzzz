@@ -36,6 +36,14 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | Paris 1 Panthéon-Sorbonne (agenda + recherche), Paris-Panthéon-Assas, Paris-Saclay | cartes HTML | Institution |
 | Campus Condorcet, IEA de Paris, FMSH | cartes HTML                         | Recherche      |
 | Musée du quai Branly (colloques + salon de lecture) | cartes HTML          | Musée          |
+| Musée du Louvre (conférences, colloques) | données Next.js, mois par mois | Musée          |
+| Centre Pompidou (rencontres hors les murs) | cartes HTML               | Musée          |
+| ENS : maths (API The Events Calendar), ITEM, CIENS, CERES | cartes HTML / pages séminaires | Institution |
+| HEC Paris                           | cartes HTML paginées (hors webinaires) | École       |
+| Hi! PARIS, PR[AI]RIE                | API The Events Calendar / cartes HTML | Recherche IA |
+| Université Ouverte (Paris Cité)     | articles « Conférences gratuites »   | Institution    |
+| Les Mardis de la Philo              | programme des cycles (Webflow)       | Conférences    |
+| HEC IA                              | cartes HTML                          | Association    |
 | Université Sorbonne Nouvelle        | listes annuelles des colloques       | Institution    |
 | Université Paris 8                  | frise de la page d'accueil (~1 mois) | Institution    |
 | Université Paris Nanterre           | export iCal de l'agenda              | Institution    |

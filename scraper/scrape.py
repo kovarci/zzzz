@@ -22,6 +22,7 @@ import icalendar
 import requests
 from bs4 import BeautifulSoup
 from dateparser.search import search_dates
+from html import unescape as html_unescape
 from dateutil import parser as dateparser, tz as dateutil_tz
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
@@ -124,6 +125,8 @@ DISCIPLINE_KEYWORDS = {
         "astronom", "spectroscop", "matériau", "material", "énergie",
         "energy", "océan", "ocean", "géolog", "geolog", "séisme",
         "chimi", "chemist", "biophys", "cosmic", "supernova",
+        "obésité", "traitement", "médicament", "nutrition", "physiolog",
+        "plantes", "botani",
     ],
     "Économie": [
         "économi", "economic", "macroéco", "microéco", "macro-", "micro-",
@@ -171,6 +174,9 @@ _INSTITUTION_DEFAULT = {
     "Fondation Maison des Sciences de l'Homme": "Sociologie & Anthropologie",
     "Campus Condorcet": "Sociologie & Anthropologie",
     "Musée du quai Branly": "Sociologie & Anthropologie",
+    "Musée du Louvre": "Arts & Culture", "Centre Pompidou": "Arts & Culture",
+    "Hi! PARIS": "Sciences", "PR[AI]RIE": "Sciences", "HEC IA": "Sciences",
+    "HEC Paris": "Économie",
     "EHESS": "Sociologie & Anthropologie",
     "Collège des Bernardins": "Philosophie",
     "Université Sorbonne Nouvelle": "Littérature",
@@ -1529,10 +1535,34 @@ def _card_date(el):
     return d, tm
 
 
+# CIENS et CERES (ENS) envoient une mauvaise chaîne de certificats : l'ancien
+# intermédiaire « GEANT OV RSA CA 4 » au lieu de « GEANT TLS RSA/ECC 1 »
+# (HARICA). Les navigateurs la complètent seuls, pas Python : on ajoute ces
+# deux intermédiaires officiels (crt.harica.gr) au magasin de certifi, pour
+# ces hôtes seulement. La vérification TLS reste entière.
+_EXTRA_CA = Path(__file__).parent / "certs" / "harica-geant-tls.pem"
+_EXTRA_CA_HOSTS = ("ciens.ens.psl.eu", "ceres.ens.psl.eu")
+_ca_bundle = None
+
+
+def _verify_for(url):
+    global _ca_bundle
+    if not any(h in url for h in _EXTRA_CA_HOSTS):
+        return True
+    if _ca_bundle is None:
+        import certifi
+        import tempfile
+        with tempfile.NamedTemporaryFile("w", suffix=".pem", delete=False, encoding="utf-8") as f:
+            f.write(Path(certifi.where()).read_text(encoding="utf-8") + "\n"
+                    + _EXTRA_CA.read_text(encoding="utf-8"))
+        _ca_bundle = f.name
+    return _ca_bundle
+
+
 def _soup(url):
     """Page → BeautifulSoup. On passe les octets bruts : BeautifulSoup lit le
     charset du <meta> (Sorbonne Nouvelle est en cp1252 sans le dire à HTTP)."""
-    r = requests.get(url, headers=CDF_HEADERS, timeout=35)
+    r = requests.get(url, headers=CDF_HEADERS, timeout=35, verify=_verify_for(url))
     r.raise_for_status()
     declared = "charset" in r.headers.get("content-type", "").lower()
     soup = BeautifulSoup(r.content, "lxml", from_encoding=r.encoding if declared else None)
@@ -2225,6 +2255,459 @@ def _drop_city_duplicates(events):
     return out
 
 
+# ── Liste de sites proposée par kovarci (sept. 2026) ─────────────────────────
+
+def _where_or(where, default):
+    """Lieu précis s'il est situable (ville, rue, campus connu), sinon
+    « salle X, <adresse par défaut> »."""
+    if not where:
+        return default
+    if _IDF_RE.search(where) or re.search(r"\d+,?\s+(rue|av|bd|boulevard|place|quai)\b", where, re.I):
+        return where
+    return f"{where}, {default}"
+
+
+def scrape_tribe(name, base, location, *, drop=None, source_type="institution",
+                 default_kind="Séminaire", discipline=None):
+    """Agenda WordPress « The Events Calendar » : son API REST publique
+    (/wp-json/tribe/events/v1) rend dates, lieux et descriptions propres."""
+    print(f"→ {name}...")
+    events = []
+    url = (f"{base}/wp-json/tribe/events/v1/events?per_page=50"
+           f"&start_date={TODAY.isoformat()}&end_date={HORIZON.isoformat()}")
+    for _ in range(10):
+        r = requests.get(url, headers=HEADERS, timeout=35)
+        r.raise_for_status()
+        data = r.json()
+        for it in data.get("events", []):
+            title = clean_text(html_unescape(it.get("title", "")))
+            if not title or is_junk_title(title) or (drop and drop.search(title)):
+                continue
+            dt = parse_date(it.get("start_date", ""))
+            if not dt or not in_window(dt.date()):
+                continue
+            end = parse_date(it.get("end_date", ""))
+            v = it.get("venue") if isinstance(it.get("venue"), dict) else {}
+            where = clean_text(html_unescape(", ".join(
+                p for p in (v.get("venue"), v.get("address"), v.get("zip"), v.get("city")) if p)))
+            if where and (NON_PARIS.search(where) or (v.get("city") and not _IDF_RE.search(where))):
+                continue
+            cats = [clean_text(html_unescape(c.get("name", ""))) for c in it.get("categories") or []]
+            # Catégories-séries seulement (pas « ANNÉE 2026-2027 », « Séances suivantes »)
+            cats = [c for c in cats if re.search(
+                r"s[ée]minaire|seminar|colloqu|groupe de travail|journ[ée]e|workshop|conf[ée]rence", c, re.I)]
+            # Séminaires titrés du seul nom de l'orateur : « Antoine Joux »,
+            # « Monica Musso (University of Bath) »
+            bare = re.sub(r"\s*\(.*?\)", "", title)
+            if len(bare.split()) <= 5 and not re.search(r"[:«»?!–]", title):
+                speaker = title
+                title = f"{cats[0] if cats else default_kind} : {title}"
+            else:
+                speaker = ""
+            timed = not it.get("all_day") and (dt.hour or dt.minute)
+            img = it.get("image") if isinstance(it.get("image"), dict) else {}
+            events.append(new_event(
+                name, title, dt.date(), time_str=dt.strftime("%H:%M") if timed else "",
+                end_time=end.strftime("%H:%M") if timed and end and end.date() == dt.date() else "",
+                location=_where_or(where, location),
+                desc=strip_html(html_unescape(it.get("description", "")))[:400],
+                url=it.get("url") or base, speaker=speaker, source_type=source_type,
+                image=img.get("url", "")))
+            if discipline:
+                events[-1]["discipline"] = discipline
+        url = data.get("next_rest_url")
+        if not url:
+            break
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+def scrape_hi_paris():
+    # Centre IA & données d'IP Paris et d'HEC (Hi!ckathon, career fair, reading groups)
+    return scrape_tribe("Hi! PARIS", "https://hi-paris.fr",
+                        "Institut Polytechnique de Paris, Palaiseau")
+
+
+def scrape_ens_maths():
+    # Département de mathématiques de l'ENS : colloquium, séminaires, « Maths + IA »
+    return scrape_tribe("ENS Paris", "https://www.math.ens.psl.eu",
+                        "ENS, 45 rue d'Ulm, Paris 5e",
+                        default_kind="Séminaire de mathématiques", discipline="Mathématiques")
+
+
+_PRAIRIE_SKIP = re.compile(r"formation qualifiante", re.I)
+
+
+def scrape_prairie():
+    """PR[AI]RIE-PSAI (institut IA de PSL, Inria, CNRS…). Cartes WordPress :
+    dates « Oct | 02 | 2026 | Oct | 04 | 2026 », puis type, titre, lieu."""
+    print("→ PR[AI]RIE...")
+    base = "https://www.prairie-psai.fr"
+    events = []
+    for c in _soup(f"{base}/agenda/").select("li.wp-block-post.evenement"):
+        box = c.select_one(".wp-pattern-event-card__dates")
+        parts = list(box.stripped_strings) if box else []
+        dt = parse_date(" ".join(parts[:3])) if len(parts) >= 3 else None
+        t_el = c.select_one("h2, h3, .wp-block-post-title")
+        title = clean_text(t_el.get_text(" ")) if t_el else ""
+        if not dt or not title or not in_window(dt.date()) or _PRAIRIE_SKIP.search(title):
+            continue
+        a = t_el.find("a", href=True) or t_el.find_parent("a", href=True)
+        lines = [clean_text(x) for x in c.stripped_strings]
+        place = lines[-1] if lines and lines[-1] != title else ""
+        if place and NON_PARIS.search(place):
+            continue
+        events.append(new_event(
+            "PR[AI]RIE", title, dt.date(), url=make_absolute(a["href"], base) if a else f"{base}/agenda/",
+            location=_where_or(place, "PR[AI]RIE-PSAI, Paris"),
+            desc=" · ".join(x for x in lines[len(parts):] if x not in (title, place, ","))[:200]))
+    print(f"   ✓ Total PR[AI]RIE: {len(events)} events")
+    return events
+
+
+def scrape_item_ens():
+    """ITEM (ENS/CNRS, manuscrits modernes) : conférences et colloques,
+    triés du plus lointain au plus proche ; « Lieu : … (17h-19h00) »."""
+    print("→ ITEM (ENS)...")
+    base, events = "https://www.item.ens.fr", []
+    for n in range(1, 5):
+        url = f"{base}/conferences/" + (f"page/{n}/" if n > 1 else "")
+        try:
+            cards = _soup(url).select("li.loop-post-single")
+        except Exception as e:
+            print(f"   [warn] {url}: {e}")
+            break
+        dates = []
+        for c in cards:
+            a = c.select_one("h2 a[href]")
+            t = c.select_one("time")
+            d = parse_french_date_text(t.get_text(" ", strip=True)) if t else None
+            if d:
+                dates.append(d)
+            if not a or not d or not in_window(d):
+                continue
+            txt = c.get_text(" ", strip=True)
+            m = re.search(r"Lieu\s*:\s*(.+?)(?=\s{2}|$)", txt)
+            lieu = clean_text(m.group(1))[:200] if m else ""
+            if lieu and not _IDF_RE.search(lieu):
+                continue                       # Dakar, Genève…
+            tms = _TIME_RE.findall(lieu)       # « … Salle Dussane - (17h-19h00) »
+            fmt = lambda x: f"{int(x[0]):02d}:{x[1] or '00'}"
+            lieu = re.sub(r"[\s.,–-]*\(?\s*\d{1,2}\s*h.*$", "", lieu).strip(" -–.,")
+            events.append(new_event(
+                "ENS Paris", clean_text(a.get_text(" ")), d, time_str=fmt(tms[0]) if tms else "",
+                end_time=fmt(tms[1]) if len(tms) > 1 else "",
+                location=lieu or "ITEM (ENS-CNRS), 45 rue d'Ulm, Paris 5e",
+                url=make_absolute(a["href"], base), desc="ITEM — Institut des textes et manuscrits modernes"))
+            if events[-1]["discipline"] == "Autre":
+                events[-1]["discipline"] = "Littérature"
+        if not cards or (dates and max(dates) < TODAY):
+            break
+    print(f"   ✓ Total ITEM: {len(events)} events")
+    return events
+
+
+def scrape_ciens():
+    """CIENS (ENS, enjeux stratégiques) : « 25/09/2026 | titre | Lieu : … »."""
+    print("→ CIENS (ENS)...")
+    events = []
+    for c in _soup("https://ciens.ens.psl.eu/evenements-fr/").select(".upcoming-events .event"):
+        t, d_el, p, a = c.select_one("h3"), c.select_one(".dateevent"), c.select_one("p"), c.select_one("a[href]")
+        d = parse_french_date_text(d_el.get_text(" ", strip=True)) if d_el else None
+        if not t or not d or not in_window(d):
+            continue
+        lieu = re.sub(r"^\s*Lieu\s*:\s*", "", p.get_text(" ", strip=True)) if p else ""
+        events.append(new_event(
+            "ENS Paris", clean_text(t.get_text(" ")), d, url=a["href"] if a else "https://ciens.ens.psl.eu",
+            location=_where_or(clean_text(lieu), "ENS, 45 rue d'Ulm, Paris 5e"),
+            desc="CIENS — Centre interdisciplinaire sur les enjeux stratégiques"))
+    print(f"   ✓ Total CIENS: {len(events)} events")
+    return events
+
+
+_DAY_MONTH_RE = re.compile(r"(\d{1,2})(?:er)?\s+(janvier|f[ée]vrier|mars|avril|mai|juin|juillet|"
+                           r"ao[uû]t|septembre|octobre|novembre|d[ée]cembre)", re.I)
+# Même chose, mois abrégés (« 3 nov., 1er déc., 5 janv. 2027 ») et année facultative
+_DAY_MONTH_ABBR_RE = re.compile(
+    r"(\d{1,2})(?:er)?\s+(janv|f[ée]vr?|mars|avr|mai|juin|juil|ao[uû]t|sept|oct|nov|d[ée]c)"
+    r"[a-zéû]*\.?(?:\s+(20\d\d))?", re.I)
+_CERES_FIELD = r"(?=\s+(?:Salle|Lieu|Modalit|M odalit|Public|Nombre|Programme|Horaires?|Jour|Niveau|ECTS|Contact|Enseignant)\w*\s*:|$)"
+
+
+def scrape_ceres():
+    """CERES (ENS, environnement) : une page par séminaire / cycle, avec
+    « Jour et heure : Jeudi 18h-20h », « Dates : 3 décembre, 21 janvier… »."""
+    print("→ CERES (ENS)...")
+    base = "https://ceres.ens.psl.eu/"
+    events = []
+    menu = _soup(base + "-Cours-et-seminaires-")
+    pages = {make_absolute(a["href"], base): clean_text(a.get_text(" "))
+             for a in menu.select("a[href]")
+             if re.match(r"(s[ée]minaire|cycle de conf)", clean_text(a.get_text(" ")), re.I)}
+    for url, name in list(pages.items())[:25]:
+        try:
+            soup = _soup(url)
+        except Exception as e:
+            print(f"   [warn] {url}: {e}")
+            continue
+        txt = " ".join(soup.get_text(" ").split())
+        # Pages des années passées (« Archives des enseignements / 2024-2025 »)
+        # : leurs dates sans année seraient lues comme à venir.
+        if re.search(r"Archives des enseignements\s*/\s*20\d\d", txt):
+            continue
+        m = re.search(r"Dates?\s*:\s*(.+?)" + _CERES_FIELD, txt)
+        if not m or re.search(r"\bdu\s+\d", m.group(1)):
+            continue                       # « du 17 sept. au 17 déc. » : hebdo, non daté
+        h = re.search(r"(?:Jour et heure|Horaires?)\s*:\s*(.+?)" + _CERES_FIELD, txt)
+        tms = _TIME_RE.findall(h.group(1)) if h else []
+        fmt = lambda x: f"{int(x[0]):02d}:{x[1] or '00'}"
+        lieu = re.search(r"(?:Lieu|Salle)\s*:\s*(.+?)" + _CERES_FIELD, txt)
+        title = " ".join(re.sub(r"\d{4}\s*[-–/]\s*\d{4}", " ", name).split()).strip(" :")
+        toks = list(_DAY_MONTH_ABBR_RE.finditer(m.group(1)))
+        # Année universitaire : 1re date explicite, sinon titre « 2026-2027 », sinon l'actuelle
+        ay = re.search(r"(20\d\d)\s*[-–/]\s*20\d\d", name)
+        first = next((t for t in toks if t.group(3)), None)
+        if first:
+            ay = int(first.group(3)) - (_month_num(first.group(2)) < 8)
+        else:
+            ay = int(ay.group(1)) if ay else TODAY.year - (TODAY.month < 8)
+        seen = set()
+        for t in toks:
+            mon = _month_num(t.group(2))
+            try:
+                d = date(int(t.group(3)) if t.group(3) else ay + (mon < 8), mon, int(t.group(1)))
+            except (TypeError, ValueError):
+                continue
+            if d in seen or not in_window(d):
+                continue
+            seen.add(d)
+            events.append(new_event(
+                "ENS Paris", title, d, time_str=fmt(tms[0]) if tms else "",
+                end_time=fmt(tms[1]) if len(tms) > 1 else "",
+                location=_where_or(re.split(r"\s+Programme", clean_text(lieu.group(1)))[0][:160]
+                                   if lieu else "", "ENS, 45 rue d'Ulm, Paris 5e"),
+                url=url, desc="CERES — Centre de formation sur l'environnement et la société (ENS)"))
+    print(f"   ✓ Total CERES: {len(events)} events")
+    return events
+
+
+def scrape_hec_paris():
+    """HEC Paris : séminaires de recherche (Jouy-en-Josas) et conférences à
+    Paris. On écarte les webinaires et les réunions d'information Executive."""
+    print("→ HEC Paris...")
+    base, events = "https://www.hec.edu", []
+    for n in range(0, 8):
+        try:
+            cards = _soup(f"{base}/fr/evenements" + (f"?page={n}" if n else "")).select(".event-item")
+        except Exception as e:
+            print(f"   [warn] page {n}: {e}")
+            break
+        new = 0
+        for c in cards:
+            t = c.select_one("h3")
+            dd = c.select_one(".event-item__date")
+            cat = clean_text(c.select_one(".event-item__cartridge").get_text(" ")) if c.select_one(".event-item__cartridge") else ""
+            title = clean_text(t.get_text(" ")) if t else ""
+            d = parse_french_date_text(dd.get_text(" ", strip=True)) if dd else None
+            if not title or not d or not in_window(d):
+                continue
+            icons = {i.find("i")["class"][-1].replace("webfont-", ""): clean_text(i.get_text(" "))
+                     for i in c.select(".event-item__icon") if i.find("i") and i.find("i").get("class")}
+            place = icons.get("lieu", "")
+            desc = clean_text(c.select_one(".event-item__description").get_text(" ")) if c.select_one(".event-item__description") else ""
+            if (not place or re.search(r"webinar|webinaire|tout savoir en", f"{title} {desc}", re.I)
+                    or cat == "Executive Education"):
+                continue
+            if re.search(r"jouy", place, re.I):
+                loc = "HEC Paris, 1 rue de la Libération, Jouy-en-Josas"
+            elif _IDF_RE.search(place):
+                loc = place
+            else:
+                continue
+            a = t.find_parent("a", href=True)
+            sp = re.search(r"(?:Intervenant|Speaker)\s*:\s*(.+?)(?:\s+(?:Salle|Heure|Conference)\b|$)", desc)
+            sp = re.sub(r"\s+Professor\s*-\s*(.+)$", r" (\1)", clean_text(sp.group(1)))[:120] if sp else ""
+            if re.fullmatch(r"(tbc|tba|à venir|tbd)\.?", title, re.I) or (sp and sp.startswith(title)):
+                title = f"Séminaire de recherche HEC : {sp or title}"
+            events.append(new_event(
+                "HEC Paris", title, d, time_str=_time_of(icons.get("heure", "")), location=loc,
+                url=make_absolute(a["href"], base) if a else f"{base}/fr/evenements",
+                desc=" · ".join(x for x in (cat, desc) if x)[:300], speaker=sp))
+            if cat == "Faculté et Recherche":
+                events[-1]["discipline"] = "Économie"
+            new += 1
+        if not cards or not new and n > 1:
+            break
+    print(f"   ✓ Total HEC Paris: {len(events)} events")
+    return events
+
+
+def scrape_hec_ia():
+    """Association HEC IA : dîners, paper clubs, hackathons à Paris."""
+    evs = _scrape_cards(
+        "HEC IA", "https://hec-ia.com/en/events", '[data-slot="card"]',
+        title='[data-slot="card-title"]', date='[data-slot="badge"]', base="https://hec-ia.com",
+        location="Paris — lieu précisé sur la page de l'événement")
+    for e in evs:
+        e["source_type"] = "association"
+    return evs
+
+
+def _next_data(soup):
+    tag = soup.find("script", id="__NEXT_DATA__")
+    return json.loads(tag.string) if tag and tag.string else {}
+
+
+def scrape_louvre():
+    """Musée du Louvre : conférences et colloques de l'auditorium. Page Next.js
+    filtrable par mois (?date=<dernier jour du mois>), données dans __NEXT_DATA__."""
+    print("→ Musée du Louvre...")
+    base = "https://www.louvre.fr"
+    events, seen = [], set()
+    m = date(TODAY.year, TODAY.month, 1)
+    while m <= HORIZON:
+        nxt = date(m.year + (m.month == 12), m.month % 12 + 1, 1)
+        try:
+            data = _next_data(_soup(f"{base}/expositions-et-evenements/evenements-activites"
+                                    f"?date={(nxt - timedelta(days=1)).isoformat()}"))
+        except Exception as e:
+            print(f"   [warn] {m:%Y-%m}: {e}")
+            data = {}
+        stack, found = [data], []
+        while stack:
+            x = stack.pop()
+            if isinstance(x, dict):
+                if x.get("type") == "Event" and x.get("title"):
+                    found.append(x)
+                stack.extend(x.values())
+            elif isinstance(x, list):
+                stack.extend(x)
+        for x in found:
+            tags = {t.get("label", "") for t in x.get("tags") or []}
+            raw = clean_text(x.get("date", ""))
+            dm = _DAY_MONTH_RE.search(raw)
+            # « 30 septembre 2026 – 25 février 2027 » = cycle / période : écarté
+            if not tags & {"Conférences", "Colloques"} or not dm or re.search(r"[–-]", raw):
+                continue
+            mon = _month_num(dm.group(2))
+            yr = re.search(r"\b(20\d\d)\b", raw)
+            yr = int(yr.group(1)) if yr else (m.year if mon >= m.month else m.year + 1)
+            try:
+                d = date(yr, mon, int(dm.group(1)))
+            except ValueError:
+                continue
+            title = clean_text(x["title"])
+            if (title, d) in seen or not in_window(d):
+                continue
+            seen.add((title, d))
+            desc = strip_html(re.sub(r"<\?xml[^>]*\?>", "", (x.get("description") or {}).get("html", "")))
+            sp = re.match(r"Avec\s+(.{3,120}?)(?:\.|$)", desc)
+            img = ((x.get("image") or {}).get("hashes") or {}).get("w1200_16_9", "")
+            events.append(new_event(
+                "Musée du Louvre", title, d, desc=desc[:400],
+                location="Musée du Louvre, auditorium Michel Laclotte, Paris 1er",
+                url=make_absolute(((x.get("link") or {}).get("url") or ""), base),
+                speaker=clean_text(sp.group(1)) if sp else "", image=img))
+        m = nxt
+    print(f"   ✓ Total Musée du Louvre: {len(events)} events")
+    return events
+
+
+def scrape_pompidou():
+    """Centre Pompidou (fermé pour travaux) : rencontres et conférences hors
+    les murs — Bpi, Ircam, BULAC, mk2… On garde la parole, à Paris."""
+    print("→ Centre Pompidou...")
+    base, events, seen = "https://www.centrepompidou.fr", [], set()
+    for c in _soup(f"{base}/fr/programme/agenda/").select(".event-card"):
+        typ = clean_text(c.select_one(".event-type").get_text(" ")) if c.select_one(".event-type") else ""
+        place = clean_text(c.get("data-place", ""))
+        t = c.select_one(".event-title")
+        raw = clean_text(c.select_one(".dateEvenement").get_text(" ")) if c.select_one(".dateEvenement") else ""
+        if (not t or not re.search(r"rencontre|conf[ée]rence|d[ée]bat|colloque|table ronde|s[ée]minaire", typ, re.I)
+                or re.search(r"projection|cin[ée]ma|film", typ, re.I)
+                or not _IDF_RE.search(place) or re.search(r"jusqu|partir", raw, re.I)):
+            continue
+        d = _range_start(raw)
+        title = clean_text(t.get_text(" "))
+        if not d or not in_window(d) or (title, d) in seen:
+            continue
+        seen.add((title, d))
+        a = c.select_one("a[href]")
+        sub = c.select_one(".event-subtitle")
+        events.append(new_event(
+            "Centre Pompidou", title, d, location=place,
+            url=make_absolute(a["href"], base) if a else f"{base}/fr/programme/agenda/",
+            desc=" · ".join(x for x in (typ, clean_text(sub.get_text(" ")) if sub else "") if x)))
+    print(f"   ✓ Total Centre Pompidou: {len(events)} events")
+    return events
+
+
+def scrape_mardis_philo():
+    """Les Mardis de la Philo (35 bis rue de Sèvres) : cycles de conférences,
+    payants, en accès libre pour les moins de 26 ans."""
+    print("→ Les Mardis de la Philo...")
+    base, events = "https://www.lesmardisdelaphilo.com", []
+    for path, disc in (("programme-philosophie", "Philosophie"), ("programme-litterature", "Littérature")):
+        try:
+            soup = _soup(f"{base}/{path}")
+        except Exception as e:
+            print(f"   [warn] {path}: {e}")
+            continue
+        for row in soup.select(".table_accordion"):
+            cells = row.select(".table_accordion-row > .table_column")
+            t = row.select_one(".table_numero-cycle-wrapper [fs-cmssort-field]")
+            if not t or len(cells) < 4:
+                continue
+            tms = _TIME_RE.findall(cells[2].get_text(" "))
+            fmt = lambda x: f"{int(x[0]):02d}:{x[1] or '00'}"
+            content = row.select_one(".table_accordion-content-layout > div:not([class])")
+            dates = sorted({d for d in (parse_french_date_text(x) for x in cells[3].get_text(" ").split(",")) if d})
+            for i, d in enumerate(dates, 1):
+                if not in_window(d):
+                    continue
+                ev = new_event(
+                    "Les Mardis de la Philo",
+                    clean_text(t.get_text(" ")) + (f" ({i}/{len(dates)})" if len(dates) > 1 else ""), d,
+                    time_str=fmt(tms[0]) if tms else "", end_time=fmt(tms[1]) if len(tms) > 1 else "",
+                    location="Les Mardis de la Philo, 35 bis rue de Sèvres, Paris 6e (et en direct sur Zoom)",
+                    desc=clean_text(content.get_text(" "))[:400] if content else "",
+                    url=f"{base}/{path}", source_type="association")
+                ev["discipline"] = disc
+                ev["price"] = "Payant · entrée libre pour les moins de 26 ans"
+                events.append(ev)
+    print(f"   ✓ Total Les Mardis de la Philo: {len(events)} events")
+    return events
+
+
+def scrape_universite_ouverte():
+    """Université Ouverte (Université Paris Cité) : conférences gratuites.
+    Articles WordPress ; la date est dans le texte (« jeudi 1er octobre à 17h »)."""
+    print("→ Université Ouverte (Paris Cité)...")
+    events = []
+    soup = _soup("https://u-paris.fr/universite-ouverte/category/conferences-gratuites/")
+    for art in soup.select("article"):
+        a = art.select_one("h2 a[href], h3 a[href]")
+        if not a:
+            continue
+        body = art.get_text(" ", strip=True)
+        head = body.split(clean_text(a.get_text(" ")), 1)[-1]
+        # 1re date du chapeau, en sautant la date de publication (« 16 septembre 2026 | »)
+        head = re.sub(r"^\s*\d{1,2}\s+\S+\s+20\d\d", "", head)
+        dm = _DAY_MONTH_RE.search(head)
+        d = _day_month_to_date(dm.group(1), dm.group(2)) if dm else None
+        if not d or not in_window(d):
+            continue
+        tm = re.search(r"\b(?:à|de)\s*(\d{1,2})\s*h\s*(\d{2})?", head[dm.start():dm.start() + 80])
+        events.append(new_event(
+            "Université Paris Cité", clean_text(a.get_text(" ")), d,
+            time_str=f"{int(tm.group(1)):02d}:{tm.group(2) or '00'}" if tm else "",
+            location="Université Ouverte — Université Paris Cité, Paris",
+            url=a["href"], desc=("Université Ouverte · conférence gratuite · " + head.strip(" |"))[:400]))
+        events[-1]["price"] = "Gratuit"
+    print(f"   ✓ Total Université Ouverte: {len(events)} events")
+    return events
+
+
 # Noms d'institution des sources ci-dessus (carry-forward, hubs i/*.html).
 # Doit rester aligné sur MAIN_INST dans web/src/lib.js.
 NEW_INSTITUTIONS = [
@@ -2234,6 +2717,7 @@ NEW_INSTITUTIONS = [
     "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre",
     "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org",
     "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas", "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris", "Fondation Maison des Sciences de l'Homme", "Musée du quai Branly",
+    "Hi! PARIS", "PR[AI]RIE", "HEC Paris", "Musée du Louvre", "Centre Pompidou",
 ]
 
 # Ordre = ordre d'exécution dans main() ; tous sans navigateur.
@@ -2246,6 +2730,9 @@ STATIC_SOURCES = [
     scrape_eightfold, scrape_carrieres_verifiees,
     scrape_jeunes_ihedn, scrape_makesense, scrape_associations_verifiees,
     scrape_paris1, scrape_assas, scrape_paris_saclay, scrape_condorcet, scrape_iea, scrape_fmsh, scrape_quai_branly,
+    scrape_hi_paris, scrape_ens_maths, scrape_prairie, scrape_item_ens, scrape_ciens, scrape_ceres,
+    scrape_hec_paris, scrape_hec_ia, scrape_louvre, scrape_pompidou, scrape_mardis_philo,
+    scrape_universite_ouverte,
 ]
 
 
@@ -2667,6 +3154,11 @@ INSTITUTION_COORDS = {
     "Institut d'études avancées de Paris": [48.8518, 2.3584],
     "Fondation Maison des Sciences de l'Homme": [48.8488, 2.327],
     "Musée du quai Branly": [48.8609, 2.2977],
+    "Hi! PARIS": [48.7133, 2.2089],
+    "PR[AI]RIE": [48.8445, 2.3445],
+    "HEC Paris": [48.7596, 2.1682],
+    "Musée du Louvre": [48.8606, 2.3376],
+    "Centre Pompidou": [48.8607, 2.3522],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -2899,6 +3391,11 @@ INSTITUTION_URLS = {
     "Institut d'études avancées de Paris": "https://www.paris-iea.fr",
     "Fondation Maison des Sciences de l'Homme": "https://www.fmsh.fr",
     "Musée du quai Branly": "https://www.quaibranly.fr",
+    "Hi! PARIS": "https://hi-paris.fr",
+    "PR[AI]RIE": "https://www.prairie-psai.fr",
+    "HEC Paris": "https://www.hec.edu",
+    "Musée du Louvre": "https://www.louvre.fr",
+    "Centre Pompidou": "https://www.centrepompidou.fr",
 }
 
 

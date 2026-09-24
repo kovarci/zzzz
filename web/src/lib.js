@@ -19,7 +19,8 @@ export const MAIN_INST = ["Collège de France", "Institut Henri Poincaré", "Uni
   "Institut du Cerveau", "Inalco", "EPHE", "Collège des Bernardins", "Académie des sciences", "Cité des sciences",
   "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre",
   "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org",
-  "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas", "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris", "Fondation Maison des Sciences de l'Homme", "Musée du quai Branly"];
+  "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas", "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris", "Fondation Maison des Sciences de l'Homme", "Musée du quai Branly",
+  "Hi! PARIS", "PR[AI]RIE", "HEC Paris", "Musée du Louvre", "Centre Pompidou"];
 export const WD = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 export const WDS = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
 export const MO = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
