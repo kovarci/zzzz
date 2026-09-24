@@ -55,7 +55,7 @@ const TR = {
   sorted_by_distance: ["Triés par distance depuis ta position.", "Sorted by distance from your location."],
   show_more: ["Afficher la suite · {n} restant{s}", "Show more · {n} left"],
 
-  sheet_free: ["Entrée libre", "Free entry"], sheet_online: ["En ligne", "Online"], sheet_organizer: ["Organisé par", "Organised by"],
+  sheet_free: ["Entrée libre", "Free entry"], sheet_online: ["En ligne", "Online"], sheet_organizer: ["Organisé par", "Organised by"], sheet_also: ["Co-organisé avec", "Co-organised with"],
   sheet_with: ["Avec", "With"], sheet_place: ["Lieu", "Venue"], sheet_price: ["Tarif", "Price"],
   sheet_official: ["Page officielle · inscription ↗", "Official page · registration ↗"],
   sheet_fav_on: ["★ Favori", "★ Favourite"], sheet_fav_off: ["☆ Favori", "☆ Favourite"],
