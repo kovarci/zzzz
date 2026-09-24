@@ -55,7 +55,10 @@ LUMA_PAGES = [
 # Sources que le robot GitHub ne peut pas lire (IP de data-center bloquée) :
 # ce script les remplace par un scrape frais depuis ta connexion.
 MNHN = "Muséum national d'Histoire naturelle"
-LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences", "Jeunes IHEDN"}
+# Ifri (403), IRIS (page vide) et Fondation Jean-Jaurès (réponse invalide)
+# ne répondent pas non plus au robot GitHub depuis septembre 2026.
+LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences", "Jeunes IHEDN",
+                      "Ifri", "IRIS", "Fondation Jean-Jaurès"}
 
 
 def _luma_count(events):
@@ -76,10 +79,12 @@ def main():
     # 1) Collège de France — requests, fonctionne depuis une IP française
     cdf = scrape.scrape_college_de_france(None)
 
-    # 1 bis) Muséum, Académie des sciences, Jeunes IHEDN : même blocage des IP de
-    # data-center (403 sur le robot GitHub), requests suffit depuis la France.
+    # 1 bis) Muséum, Académie des sciences, Jeunes IHEDN, Ifri, IRIS, Fondation
+    # Jean-Jaurès : même blocage des IP de data-center (403 ou page vide sur le
+    # robot GitHub), requests suffit depuis la France.
     blocked = []
-    for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences, scrape.scrape_jeunes_ihedn):
+    for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences, scrape.scrape_jeunes_ihedn,
+               scrape.scrape_ifri, scrape.scrape_iris, scrape.scrape_jean_jaures):
         try:
             blocked += fn()
         except Exception as e:
