@@ -49,6 +49,9 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | Institut Louis Bachelier, Citéco, ESCP | cartes HTML (Webflow / Drupal) | Économie & finance |
 | ENS Paris-Saclay                    | cartes HTML (Scène de recherche)     | Institution    |
 | Université Sorbonne Paris Nord      | JSON-LD schema.org (`scrape_jsonld`) | Institution    |
+| LAMSADE (Dauphine), CMAP (Polytechnique) | cartes HTML (séminaires)         | Laboratoire    |
+| Institut des actuaires              | cartes HTML (prix gratuit/payant)    | Profession     |
+| Institut de l'Engagement            | API The Events Calendar              | Association    |
 | Université Sorbonne Nouvelle        | listes annuelles des colloques       | Institution    |
 | Université Paris 8                  | frise de la page d'accueil (~1 mois) | Institution    |
 | Université Paris Nanterre           | export iCal de l'agenda              | Institution    |

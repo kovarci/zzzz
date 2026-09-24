@@ -26,7 +26,8 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
          "Sciencesconf.org",
          "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas", "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris", "Fondation Maison des Sciences de l'Homme", "Musée du quai Branly",
          "Hi! PARIS", "PR[AI]RIE", "HEC Paris", "Musée du Louvre", "Centre Pompidou",
-         "INHA", "Ifri", "IRIS", "Institut Jacques Delors", "Fondation Jean-Jaurès", "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay", "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes"]
+         "INHA", "Ifri", "IRIS", "Institut Jacques Delors", "Fondation Jean-Jaurès", "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay", "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
+         "Institut des actuaires", "École polytechnique"]
 
 
 def main():

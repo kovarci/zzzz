@@ -184,6 +184,7 @@ _INSTITUTION_DEFAULT = {
     "Fondation Jean-Jaurès": "Droit & Sciences politiques",
     "Institut Louis Bachelier": "Économie", "Citéco": "Économie", "ESCP Business School": "Économie",
     "ENS Paris-Saclay": "Sciences",
+    "Institut des actuaires": "Économie", "École polytechnique": "Sciences",
     "EHESS": "Sociologie & Anthropologie",
     "Collège des Bernardins": "Philosophie",
     "Université Sorbonne Nouvelle": "Littérature",
@@ -2902,6 +2903,94 @@ def scrape_chartes():
         base="https://www.chartes.psl.eu", location="École nationale des chartes, 65 rue de Richelieu, Paris 2e")
 
 
+# ── Troisième lot : labos de maths appliquées, actuariat, engagement ──────────
+
+def scrape_lamsade():
+    """LAMSADE (Dauphine) : séminaires des trois pôles (aide à la décision,
+    optimisation combinatoire, sciences des données) + « Jeux et choix social »."""
+    base = "https://www.lamsade.dauphine.fr/"
+    events = []
+    for path in ("fr/seminaires.html",
+                 "fr/seminaires/seminaires-du-pole-1-aide-a-la-decision.html",
+                 "fr/seminaires/seminaires-du-pole-2-optimisation-combinatoire-algorithmique.html",
+                 "fr/seminaires/seminaires-du-pole-3-sciences-des-donnees.html"):
+        try:
+            evs = _scrape_cards(
+                "Université Paris Dauphine", base + path, "div.actus-list > div.actus-item",
+                title="h3", date=".actus-date", kind=".actus-category", link="a.actus-more", base=base,
+                location="Université Paris Dauphine-PSL, place du Maréchal de Lattre de Tassigny, Paris 16e")
+        except Exception as e:
+            print(f"   [warn] LAMSADE {path}: {e}")
+            continue
+        for e in evs:
+            # « Romain Plassard - Hayekian Cyborg… » → orateur + titre
+            m = re.match(r"(.{3,60}?)\s+[-–]\s+(.+)", e["title"])
+            if m:
+                e["speaker"], e["title"] = m.group(1), m.group(2)
+            e["title"] = f"Séminaire LAMSADE ({e['description'] or 'recherche'}) : {e['title']}"
+            e["id"] = make_id(e["institution"], e["title"], e["date"])
+            e["discipline"] = "Économie" if "choix social" in e["description"].lower() else "Sciences"
+        events.extend(evs)
+    return events
+
+
+def scrape_cmap():
+    """CMAP (maths appliquées, École polytechnique) : colloquium et séminaires.
+    La carte titre « Colloquium à 10h » ; le vrai titre est dans le chapô."""
+    print("→ CMAP (École polytechnique)...")
+    base, events = "https://cmap.ip-paris.fr", []
+    for c in _soup(f"{base}/evenements").select("div.conteneur-liste > div.conteneur-element"):
+        d = parse_french_date_text(c.select_one(".date").get_text(" ", strip=True)) if c.select_one(".date") else None
+        h = c.select_one("h2")
+        if not d or not h or not in_window(d):
+            continue
+        head = clean_text(h.get_text(" "))
+        chapo = clean_text(c.select_one(".chapo-element").get_text(" ")) if c.select_one(".chapo-element") else ""
+        t = re.search(r"Titre\s*:\s*(.+?)(?:\s+R[ée]sum[ée]\s*:|$)", chapo)
+        sp = re.search(r"Orat(?:eur|rice)s?\s*:\s*(.+?)(?:\s+Titre\s*:|$)", chapo)
+        kind = re.split(r"\s+à\s+\d", head)[0]
+        a = h.find("a", href=True)
+        events.append(new_event(
+            "École polytechnique", f"{kind} du CMAP : {t.group(1)}" if t else f"{head} (CMAP)", d,
+            time_str=_time_of(head), speaker=clean_text(sp.group(1))[:120] if sp else "",
+            location="CMAP, École polytechnique, route de Saclay, Palaiseau",
+            url=make_absolute(a["href"], base) if a else f"{base}/evenements", desc=chapo[:400]))
+        if events[-1]["discipline"] == "Autre":
+            events[-1]["discipline"] = "Mathématiques"
+    print(f"   ✓ Total CMAP: {len(events)} events")
+    return events
+
+
+def scrape_actuaires():
+    """Institut des actuaires : conférences, journées (payantes pour la
+    plupart ; le prix est dans la classe de la carte)."""
+    evs = _scrape_cards(
+        "Institut des actuaires", "https://www.institutdesactuaires.com/agenda", "li.event-list-item",
+        title="h5", date="header h6", time=".eventHour", kind=".event_list-theme", place=".place",
+        keep_loc=_IDF_RE, members=re.compile(r"nouveaux associés|réservé aux (membres|adhérents)", re.I),
+        base="https://www.institutdesactuaires.com", location="Paris — lieu précisé sur la page de l'événement",
+        page_url="https://www.institutdesactuaires.com/agenda?page={n}", page_start=2, max_pages=4)
+    try:
+        soup = _soup("https://www.institutdesactuaires.com/agenda")
+        paid = {clean_text(li.select_one("h5").get_text(" ")): " ".join(li.get("class", []))
+                for li in soup.select("li.event-list-item") if li.select_one("h5")}
+        for e in evs:
+            cls = paid.get(e["title"], "")
+            if "gratuit" in cls:
+                e["price"] = "Gratuit"
+            elif "payant" in cls:
+                e["price"] = "Payant"
+    except Exception as e:
+        print(f"   [warn] actuaires prix: {e}")
+    return evs
+
+
+def scrape_institut_engagement():
+    # Institut de l'Engagement : rencontres des lauréats, ateliers (API The Events Calendar)
+    return scrape_tribe("Institut de l'Engagement", "https://www.engagement.fr",
+                        "Institut de l'Engagement, Paris", source_type="association")
+
+
 # Noms d'institution des sources ci-dessus (carry-forward, hubs i/*.html).
 # Doit rester aligné sur MAIN_INST dans web/src/lib.js.
 NEW_INSTITUTIONS = [
@@ -2915,6 +3004,7 @@ NEW_INSTITUTIONS = [
     "INHA", "Ifri", "IRIS", "Institut Jacques Delors", "Fondation Jean-Jaurès",
     "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay",
     "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
+    "Institut des actuaires", "École polytechnique",
 ]
 
 # Ordre = ordre d'exécution dans main() ; tous sans navigateur.
@@ -2933,6 +3023,7 @@ STATIC_SOURCES = [
     scrape_inha, scrape_ifri, scrape_iris, scrape_institut_delors, scrape_jean_jaures,
     scrape_louis_bachelier, scrape_citeco, scrape_ima, scrape_beaux_arts, scrape_ens_saclay,
     scrape_escp, scrape_sorbonne_paris_nord, scrape_chartes,
+    scrape_lamsade, scrape_cmap, scrape_actuaires, scrape_institut_engagement,
 ]
 
 
@@ -3372,6 +3463,8 @@ INSTITUTION_COORDS = {
     "ESCP Business School": [48.8637, 2.3835],
     "Université Sorbonne Paris Nord": [48.957, 2.3417],
     "École nationale des chartes": [48.8675, 2.3383],
+    "Institut des actuaires": [48.8718, 2.3236],
+    "École polytechnique": [48.7134, 2.2105],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -3622,6 +3715,8 @@ INSTITUTION_URLS = {
     "ESCP Business School": "https://escp.eu",
     "Université Sorbonne Paris Nord": "https://www.univ-spn.fr",
     "École nationale des chartes": "https://www.chartes.psl.eu",
+    "Institut des actuaires": "https://www.institutdesactuaires.com",
+    "École polytechnique": "https://www.polytechnique.edu",
 }
 
 

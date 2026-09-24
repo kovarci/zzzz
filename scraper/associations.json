@@ -201,6 +201,71 @@
       "canaux": [
         "https://hec-ia.com/en/events"
       ]
+    },
+    {
+      "nom": "L'Ascenseur",
+      "ecole": "Maison de l'égalité des chances (Paris 17e)",
+      "domaine": "Égalité des chances, soirées et prix",
+      "canaux": [
+        "https://www.lascenseur.org/nos-actions-de-plaidoyer/nos-evenements/"
+      ]
+    },
+    {
+      "nom": "Institut de l'Engagement",
+      "ecole": "National (siège à Paris)",
+      "domaine": "Engagement, mentorat",
+      "auto": "scrape_institut_engagement",
+      "canaux": [
+        "https://www.engagement.fr/events/"
+      ]
+    },
+    {
+      "nom": "Les Déterminés",
+      "ecole": "Réseau national",
+      "domaine": "Entrepreneuriat, égalité des chances",
+      "canaux": [
+        "https://www.lesdetermines.fr/"
+      ]
+    },
+    {
+      "nom": "PEEQ (Do Well Do Good)",
+      "ecole": "Programme d'excellence",
+      "domaine": "Égalité des chances, carrières",
+      "canaux": [
+        "https://dowelldogood.fr/"
+      ]
+    },
+    {
+      "nom": "Culture Prioritaire",
+      "ecole": "Programme",
+      "domaine": "Culture générale, égalité des chances",
+      "canaux": [
+        "https://www.cultureprioritaire.fr/"
+      ]
+    },
+    {
+      "nom": "DEMA1N",
+      "ecole": "Plateforme de mentorat",
+      "domaine": "Mentorat, insertion",
+      "canaux": [
+        "https://www.dema1n.org/"
+      ]
+    },
+    {
+      "nom": "Proxité",
+      "ecole": "Association (Île-de-France)",
+      "domaine": "Mentorat de jeunes des quartiers",
+      "canaux": [
+        "https://www.proxite.com/"
+      ]
+    },
+    {
+      "nom": "Les Pilotes",
+      "ecole": "Association",
+      "domaine": "Immersion professionnelle",
+      "canaux": [
+        "https://www.lespilotes.fr/"
+      ]
     }
   ],
   "evenements": [
