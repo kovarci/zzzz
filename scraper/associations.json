@@ -52,7 +52,10 @@
       "nom": "Sorbonne Finance",
       "ecole": "Université Paris 1 Panthéon-Sorbonne",
       "domaine": "Finance",
-      "canaux": []
+      "canaux": [
+        "https://fr.linkedin.com/company/sorbonne-finance-association",
+        "https://www.helloasso.com/associations/sorbonne-finance"
+      ]
     },
     {
       "nom": "Association du Master Géopolitique ENS / Paris 1",
@@ -149,6 +152,54 @@
       "domaine": "Recrutement, égalité des chances",
       "canaux": [
         "https://mozaikrh.com/agenda/"
+      ]
+    },
+    {
+      "nom": "Assas Finance Club",
+      "ecole": "Université Paris-Panthéon-Assas",
+      "domaine": "Finance",
+      "canaux": [
+        "https://www.assas-universite.fr/fr/campus/associations/associations-etudiantes/assas-finance-club",
+        "https://fr.linkedin.com/company/assas-finance"
+      ]
+    },
+    {
+      "nom": "Assas Finance Society",
+      "ecole": "Université Paris-Panthéon-Assas",
+      "domaine": "Finance (carrières, concours d'analyse financière)",
+      "canaux": [
+        "https://www.assas-universite.fr/fr/campus/associations/associations-etudiantes/assas-finance-society"
+      ]
+    },
+    {
+      "nom": "Assas Finance Organisation",
+      "ecole": "Université Paris-Panthéon-Assas",
+      "domaine": "Finance",
+      "canaux": [
+        "https://www.assas-universite.fr/fr/campus/associations/associations-etudiantes/assas-finance-organisation"
+      ]
+    },
+    {
+      "nom": "Assas Finance (Magistère Banque-Finance)",
+      "ecole": "Université Paris-Panthéon-Assas",
+      "domaine": "Finance (conférences, séminaires avec des professionnels)",
+      "canaux": [
+        "https://mbfassas.com/en/assas-finance"
+      ]
+    },
+    {
+      "nom": "Club Finance Dauphine",
+      "ecole": "Université Paris Dauphine-PSL",
+      "domaine": "Banque, marchés, fonds d'investissement",
+      "canaux": []
+    },
+    {
+      "nom": "HEC IA",
+      "ecole": "HEC Paris",
+      "domaine": "Intelligence artificielle",
+      "auto": "scrape_hec_ia",
+      "canaux": [
+        "https://hec-ia.com/en/events"
       ]
     }
   ],

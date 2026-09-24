@@ -44,7 +44,7 @@ DISCIPLINE_KEYWORDS = {
         "mathémat", "algèbre", "géométri", "topologi", "analyse fonction",
         "probabilit", "statistique", "arithmétique", "combinatoire",
         "théorie des nombres", "équation", "logique mathématique", " math ",
-        "graphe", "tenseur", "variété", "homologi", "cohomologi",
+        " graphe", "tenseur", "variété", "homologi", "cohomologi",
         "homotopi", "homotop", "espace métrique", "groupe de lie",
         "courbe ellipt", "modulair", "polytope", "fractale",
         # EN
@@ -177,6 +177,13 @@ _INSTITUTION_DEFAULT = {
     "Musée du Louvre": "Arts & Culture", "Centre Pompidou": "Arts & Culture",
     "Hi! PARIS": "Sciences", "PR[AI]RIE": "Sciences", "HEC IA": "Sciences",
     "HEC Paris": "Économie",
+    "INHA": "Arts & Culture", "Beaux-Arts de Paris": "Arts & Culture",
+    "Institut du monde arabe": "Arts & Culture", "École nationale des chartes": "Histoire",
+    "Ifri": "Droit & Sciences politiques", "IRIS": "Droit & Sciences politiques",
+    "Institut Jacques Delors": "Droit & Sciences politiques",
+    "Fondation Jean-Jaurès": "Droit & Sciences politiques",
+    "Institut Louis Bachelier": "Économie", "Citéco": "Économie", "ESCP Business School": "Économie",
+    "ENS Paris-Saclay": "Sciences",
     "EHESS": "Sociologie & Anthropologie",
     "Collège des Bernardins": "Philosophie",
     "Université Sorbonne Nouvelle": "Littérature",
@@ -1487,6 +1494,13 @@ _MEMBERS_ONLY = re.compile(
     r"membres uniquement|adh[ée]rents uniquement|members[- ]only|sur invitation( uniquement)?\b", re.I)
 
 
+def _times(text):
+    """« 18h-19h30 », « 18:30 – 20:00 », « de 12h30 à 14h30 » → ('18:00', '19:30')."""
+    tms = _TIME_RE.findall(re.sub(r"\s*[-–]\s*(?=\d)", " - ", text or ""))
+    fmt = lambda x: f"{int(x[0]):02d}:{x[1] or '00'}"
+    return (fmt(tms[0]) if tms else "", fmt(tms[1]) if len(tms) > 1 else "")
+
+
 def _time_of(text) -> str:
     """'19 h', '14h30', '10:00' → 'HH:MM' ; minuit = pas d'heure."""
     m = _TIME_RE.search(text or "")
@@ -1576,13 +1590,19 @@ def _soup(url):
 def _scrape_cards(name, url, card, *, title, base, location, date=None,
                   link=None, place=None, kind=None, keep_kind=None,
                   drop_kind=None, page_url=None, max_pages=8, page_start=1,
-                  one_per_title=False):
+                  one_per_title=False, time=None, drop=None, members=None,
+                  speaker=None, keep_loc=None, place_only=False):
     """Parseur générique d'agenda en cartes.
     card/title/date/link/place/kind : sélecteurs CSS (relatifs à la carte).
     keep_kind / drop_kind : filtre sur le texte de `kind` (sous-chaînes).
     page_url : format '{n}' des pages suivantes ; on s'arrête dès qu'une page
     n'apporte rien de nouveau. one_per_title : un colloque sur 3 jours
-    apparaît 3 fois → on garde son premier jour."""
+    apparaît 3 fois → on garde son premier jour.
+    time : sélecteur « 18:30 – 20:00 » (début + fin). drop : regex de titres
+    écartés. members : regex sur le texte de la carte → accès réservé (🔒).
+    speaker : sélecteur de l'orateur. keep_loc : regex que le lieu doit
+    contenir (sinon carte écartée). place_only : le lieu de la carte est une
+    adresse complète, pas un simple complément de `location`."""
     print(f"→ {name}...")
     events, seen, stats = [], set(), {"cards": 0, "off": 0, "kind": 0, "date": 0}
     urls = [url] + ([page_url.format(n=n) for n in range(page_start, page_start + max_pages - 1)]
@@ -1601,7 +1621,7 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
             t = clean_text(t_el.get_text(" ")) if t_el else ""
             if not t or is_junk_title(t):
                 continue
-            if _OFF_TOPIC.search(t):
+            if _OFF_TOPIC.search(t) or (drop and drop.search(t)):
                 stats["off"] += 1
                 continue
             k = clean_text(c.select_one(kind).get_text(" ")) if kind and c.select_one(kind) else ""
@@ -1623,12 +1643,23 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
                 or (t_el.find("a", href=True) if t_el else None) \
                 or (t_el.find_parent("a", href=True) if t_el else None) or c.find("a", href=True)
             p = clean_text(c.select_one(place).get_text(" ")) if place and c.select_one(place) else ""
-            if p and NON_PARIS.search(p):
+            if p and (NON_PARIS.search(p) or (keep_loc and not keep_loc.search(p))):
                 continue
+            end = ""
+            if time and c.select_one(time):
+                t0, end = _times(c.select_one(time).get_text(" "))
+                tm = t0 or tm
+            sp = clean_text(c.select_one(speaker).get_text(" ")) if speaker and c.select_one(speaker) else ""
+            if re.match(r"(journ[ée]e|organis|colloque|s[ée]minaire|conf[ée]rence|table ronde|atelier)", sp, re.I):
+                sp = ""                        # « Journée organisée par… » : pas un orateur
             events.append(new_event(
-                name, t, d, time_str=tm, url=make_absolute(a.get("href", "") if a else "", base),
-                location=f"{p} — {location}" if p and p.lower() not in location.lower() else location,
-                desc=k))
+                name, t, d, time_str=tm, end_time=end,
+                url=make_absolute(a.get("href", "") if a else "", base),
+                location=(_where_or(p, location) if place_only else
+                          f"{p} — {location}" if p and p.lower() not in location.lower() else location),
+                desc=k, speaker=re.sub(r"^(Par|Avec)\s+", "", sp)[:160]))
+            if members and members.search(c.get_text(" ")):
+                events[-1]["members"] = True
             new += 1
         if page_url and (not cards or not new):
             break
@@ -2391,12 +2422,10 @@ def scrape_item_ens():
             lieu = clean_text(m.group(1))[:200] if m else ""
             if lieu and not _IDF_RE.search(lieu):
                 continue                       # Dakar, Genève…
-            tms = _TIME_RE.findall(lieu)       # « … Salle Dussane - (17h-19h00) »
-            fmt = lambda x: f"{int(x[0]):02d}:{x[1] or '00'}"
+            t0, t1 = _times(lieu)              # « … Salle Dussane - (17h-19h00) »
             lieu = re.sub(r"[\s.,–-]*\(?\s*\d{1,2}\s*h.*$", "", lieu).strip(" -–.,")
             events.append(new_event(
-                "ENS Paris", clean_text(a.get_text(" ")), d, time_str=fmt(tms[0]) if tms else "",
-                end_time=fmt(tms[1]) if len(tms) > 1 else "",
+                "ENS Paris", clean_text(a.get_text(" ")), d, time_str=t0, end_time=t1,
                 location=lieu or "ITEM (ENS-CNRS), 45 rue d'Ulm, Paris 5e",
                 url=make_absolute(a["href"], base), desc="ITEM — Institut des textes et manuscrits modernes"))
             if events[-1]["discipline"] == "Autre":
@@ -2431,7 +2460,7 @@ _DAY_MONTH_RE = re.compile(r"(\d{1,2})(?:er)?\s+(janvier|f[ée]vrier|mars|avril|
 _DAY_MONTH_ABBR_RE = re.compile(
     r"(\d{1,2})(?:er)?\s+(janv|f[ée]vr?|mars|avr|mai|juin|juil|ao[uû]t|sept|oct|nov|d[ée]c)"
     r"[a-zéû]*\.?(?:\s+(20\d\d))?", re.I)
-_CERES_FIELD = r"(?=\s+(?:Salle|Lieu|Modalit|M odalit|Public|Nombre|Programme|Horaires?|Jour|Niveau|ECTS|Contact|Enseignant)\w*\s*:|$)"
+_CERES_FIELD = r"(?=\s+(?:Salle|Lieu|Modalit|M odalit|Public|Nombre|Programme|Horaires?|Jour|Niveau|ECTS|Contact|Enseignant)[^:]{0,25}:|$)"
 
 
 def scrape_ceres():
@@ -2459,8 +2488,7 @@ def scrape_ceres():
         if not m or re.search(r"\bdu\s+\d", m.group(1)):
             continue                       # « du 17 sept. au 17 déc. » : hebdo, non daté
         h = re.search(r"(?:Jour et heure|Horaires?)\s*:\s*(.+?)" + _CERES_FIELD, txt)
-        tms = _TIME_RE.findall(h.group(1)) if h else []
-        fmt = lambda x: f"{int(x[0]):02d}:{x[1] or '00'}"
+        t0, t1 = _times(h.group(1)) if h else ("", "")
         lieu = re.search(r"(?:Lieu|Salle)\s*:\s*(.+?)" + _CERES_FIELD, txt)
         title = " ".join(re.sub(r"\d{4}\s*[-–/]\s*\d{4}", " ", name).split()).strip(" :")
         toks = list(_DAY_MONTH_ABBR_RE.finditer(m.group(1)))
@@ -2482,9 +2510,8 @@ def scrape_ceres():
                 continue
             seen.add(d)
             events.append(new_event(
-                "ENS Paris", title, d, time_str=fmt(tms[0]) if tms else "",
-                end_time=fmt(tms[1]) if len(tms) > 1 else "",
-                location=_where_or(re.split(r"\s+Programme", clean_text(lieu.group(1)))[0][:160]
+                "ENS Paris", title, d, time_str=t0, end_time=t1,
+                location=_where_or(re.split(r"\s+Programme\b", clean_text(lieu.group(1)))[0][:160]
                                    if lieu else "", "ENS, 45 rue d'Ulm, Paris 5e"),
                 url=url, desc="CERES — Centre de formation sur l'environnement et la société (ENS)"))
     print(f"   ✓ Total CERES: {len(events)} events")
@@ -2708,6 +2735,173 @@ def scrape_universite_ouverte():
     return events
 
 
+# ── Deuxième lot (sept. 2026) : think tanks, finance, écoles, culture ─────────
+
+def scrape_jsonld(name, url, location, *, drop=None, keep=None):
+    """Agenda qui publie ses événements en JSON-LD schema.org (Event)."""
+    print(f"→ {name}...")
+    soup = _soup(url)
+    events, seen = [], set()
+    for sc in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(sc.string or "")
+        except ValueError:
+            continue
+        items = data if isinstance(data, list) else data.get("@graph", [data]) if isinstance(data, dict) else []
+        for x in items:
+            if not isinstance(x, dict) or x.get("@type") not in ("Event", "EducationEvent", "BusinessEvent"):
+                continue
+            title = clean_text(html_unescape(x.get("name", "")))
+            dt = parse_date(x.get("startDate", ""))
+            if (not title or not dt or title.lower() in seen or not in_window(dt.date())
+                    or is_junk_title(title) or _OFF_TOPIC.search(title)
+                    or (drop and drop.search(title)) or (keep and not keep.search(title))):
+                continue
+            seen.add(title.lower())                    # 1er jour seulement
+            loc = x.get("location") if isinstance(x.get("location"), dict) else {}
+            where = clean_text(html_unescape(loc.get("name", "")))
+            offers = x.get("offers") if isinstance(x.get("offers"), dict) else {}
+            events.append(new_event(
+                name, title, dt.date(), time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                location=_where_or(where, location), desc=strip_html(x.get("description", ""))[:400],
+                url=offers.get("url") or x.get("url") or url))
+            if str(offers.get("price", "")) == "0":
+                events[-1]["price"] = "Gratuit"
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+_TALK_KINDS = ("conférence", "conference", "rencontre", "débat", "debat", "dialogue", "colloque",
+               "table ronde", "séminaire", "seminaire", "journée d'étude", "journée d’étude",
+               "cours public", "leçon", "talk", "forum")
+
+
+def scrape_inha():
+    # Institut national d'histoire de l'art : débats, conférences, colloques
+    return _scrape_cards(
+        "INHA", "https://www.inha.fr/agenda/", "article.card-agenda",
+        title=".text-content p", date="a > span:not(.time)", time="span.time",
+        kind=".text-content .cat", drop_kind=("exposition",), place=".venue",
+        drop=re.compile(r"report[ée]e|annul[ée]", re.I),
+        base="https://www.inha.fr", location="INHA, 2 rue Vivienne, Paris 2e",
+        page_url="https://www.inha.fr/agenda/page/{n}/", page_start=2, max_pages=6)
+
+
+def scrape_ifri():
+    # Institut français des relations internationales. « Sur invitation » → 🔒
+    return _scrape_cards(
+        "Ifri", "https://www.ifri.org/fr/agenda", "div.agenda-container.view-content > div",
+        title="h2", date=".event-date .font-title", time=".event-date .font-title-light",
+        kind=".u-flex.u-align-items-center.u-mb10", drop_kind=("visioconférence", "webinaire"),
+        members=re.compile(r"Sur invitation", re.I), base="https://www.ifri.org",
+        location="Ifri, 27 rue de la Procession, Paris 15e",
+        page_url="https://www.ifri.org/fr/agenda?page={n}", page_start=1, max_pages=4)
+
+
+def scrape_iris():
+    # Institut de relations internationales et stratégiques
+    return _scrape_cards(
+        "IRIS", "https://www.iris-france.org/evenements/", "div.row.gy-base.mb-3 > div.col-sm-6",
+        title="h3", date="p.card-subheading", drop=re.compile(r"\breplay\b|webinaire", re.I),
+        base="https://www.iris-france.org", location="IRIS, 2 bis rue Mercœur, Paris 11e")
+
+
+def scrape_institut_delors():
+    return _scrape_cards(
+        "Institut Jacques Delors", "https://institutdelors.eu/evenements/",
+        "div.facetwp-template > ul > li", title="h3", date=".bg-primary", time=".text-gray-600",
+        kind="span.inline-block", drop_kind=("en ligne",), base="https://institutdelors.eu",
+        location="Paris — lieu précisé sur la page de l'événement")
+
+
+def scrape_jean_jaures():
+    # Fondation Jean-Jaurès : débats, rencontres. « Du … au … » (prix, festivals) écartés
+    return _scrape_cards(
+        "Fondation Jean-Jaurès", "https://www.jean-jaures.org/evenements/",
+        "div.line-agenda div.row-flex", title="h3.thumbnail-title",
+        date=".card-agenda .card-date", time=".thumbnail-infos", place=".card-location address",
+        kind=".thumbnail-tags", keep_loc=_IDF_RE, place_only=True, base="https://www.jean-jaures.org",
+        location="Fondation Jean-Jaurès, 12 cité Malesherbes, Paris 9e",
+        page_url="https://www.jean-jaures.org/evenements/page/{n}/", page_start=2, max_pages=5)
+
+
+def scrape_louis_bachelier():
+    # Institut Louis Bachelier (recherche en finance) : conférences de Place,
+    # séminaires. L'agenda relaie aussi des courses caritatives : écartées.
+    return _scrape_cards(
+        "Institut Louis Bachelier", "https://www.institutlouisbachelier.org/evenements/",
+        "div.collection-item-events", title=".event-title_text", date=".event-date_text",
+        kind=".event-type_text", place=".event-venue_text",
+        drop=re.compile(r"\brun\b|course|marathon|trail", re.I),
+        base="https://www.institutlouisbachelier.org",
+        location="Institut Louis Bachelier, 28 place de la Bourse, Paris 2e")
+
+
+def scrape_citeco():
+    # Cité de l'économie : conférences et débats (pas les visites ni ateliers)
+    return _scrape_cards(
+        "Citéco", "https://www.citeco.fr/agenda", "div.slider-ruban-content > div.content-zone-ruban",
+        title=".content-zone-ruban-titre", date=".ruban-info-bulle", time=".ruban-info-bulle",
+        drop=re.compile(r"^visite|atelier|escape|jeu\b|enfant|famille|en réalité augmentée|nocturne", re.I),
+        base="https://www.citeco.fr", location="Citéco, 1 place du Général Catroux, Paris 17e")
+
+
+def scrape_ima():
+    return _scrape_cards(
+        "Institut du monde arabe", "https://www.imarabe.org/fr/agenda/rencontres-et-debats",
+        "div.cards-grid > div.card", title="h3", date=".dates",
+        drop=re.compile(r"séance d'écoute|concert", re.I), base="https://www.imarabe.org",
+        location="Institut du monde arabe, 1 rue des Fossés-Saint-Bernard, Paris 5e")
+
+
+def scrape_beaux_arts():
+    return _scrape_cards(
+        "Beaux-Arts de Paris", "https://beauxartsparis.fr/fr/agenda", "div.view-content.row > div",
+        title="h4", date="h3", time="time", kind="div.fw-bold.text-uppercase", keep_kind=_TALK_KINDS,
+        place="div.fw-light.text-uppercase", base="https://beauxartsparis.fr",
+        location="Beaux-Arts de Paris, 14 rue Bonaparte, Paris 6e",
+        page_url="https://beauxartsparis.fr/fr/agenda?page={n}", page_start=1, max_pages=5)
+
+
+def scrape_ens_saclay():
+    # Scène de recherche de l'ENS Paris-Saclay (hors spectacles et animations enfants)
+    return _scrape_cards(
+        "ENS Paris-Saclay", "https://www.ens-paris-saclay.fr/agenda", "div.view-event-item",
+        title=".event-title", date=".content-date", time=".content-date", kind=".event-category",
+        drop_kind=("théâtre", "spectacle", "concert", "animation", "danse", "cinéma"),
+        drop=re.compile(r"réparation|vélo|yoga|sport", re.I),
+        base="https://www.ens-paris-saclay.fr",
+        location="ENS Paris-Saclay, 4 avenue des Sciences, Gif-sur-Yvette")
+
+
+def scrape_escp():
+    return _scrape_cards(
+        "ESCP Business School", "https://escp.eu/fr/events", "a.item-event",
+        title="h2.title-item", date="p.date-item", kind="p.subtitle-item",
+        drop_kind=("webinar", "online"), place="p.locat-seal", keep_loc=_IDF_RE, place_only=True,
+        drop=re.compile(r"webinar|info(rmation)? session|réunion d'information|portes ouvertes|open day|"
+                        r"london|londres|berlin|madrid|turin|torino|warsaw|varsovie", re.I),
+        base="https://escp.eu", location="ESCP Business School, 79 avenue de la République, Paris 11e")
+
+
+def scrape_sorbonne_paris_nord():
+    # Agenda « Modern Events Calendar » en JSON-LD ; surtout vie de campus,
+    # on garde colloques, conférences, journées d'étude.
+    return scrape_jsonld(
+        "Université Sorbonne Paris Nord", "https://www.univ-spn.fr/agenda/",
+        "Université Sorbonne Paris Nord, 99 avenue Jean-Baptiste Clément, Villetaneuse",
+        drop=re.compile(r"^\[(exposition|visite|théâtre|concert|atelier)|campus tour|start campus|"
+                        r"piles usagées|salon studyrama|portes ouvertes|patrimoine", re.I))
+
+
+def scrape_chartes():
+    return _scrape_cards(
+        "École nationale des chartes", "https://www.chartes.psl.eu/gazette-chartiste/agenda",
+        "li.c-grid-card__item", title="h3", date=".icon-calendar + .c-tags__tags",
+        time=".icon-clock + .c-tags__tags", kind=".c-taxonomy__text", speaker=".c-card__description",
+        base="https://www.chartes.psl.eu", location="École nationale des chartes, 65 rue de Richelieu, Paris 2e")
+
+
 # Noms d'institution des sources ci-dessus (carry-forward, hubs i/*.html).
 # Doit rester aligné sur MAIN_INST dans web/src/lib.js.
 NEW_INSTITUTIONS = [
@@ -2718,6 +2912,9 @@ NEW_INSTITUTIONS = [
     "IJCLab", "IN2P3", "Observatoire de Paris", "Sciencesconf.org",
     "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas", "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris", "Fondation Maison des Sciences de l'Homme", "Musée du quai Branly",
     "Hi! PARIS", "PR[AI]RIE", "HEC Paris", "Musée du Louvre", "Centre Pompidou",
+    "INHA", "Ifri", "IRIS", "Institut Jacques Delors", "Fondation Jean-Jaurès",
+    "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay",
+    "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
 ]
 
 # Ordre = ordre d'exécution dans main() ; tous sans navigateur.
@@ -2733,6 +2930,9 @@ STATIC_SOURCES = [
     scrape_hi_paris, scrape_ens_maths, scrape_prairie, scrape_item_ens, scrape_ciens, scrape_ceres,
     scrape_hec_paris, scrape_hec_ia, scrape_louvre, scrape_pompidou, scrape_mardis_philo,
     scrape_universite_ouverte,
+    scrape_inha, scrape_ifri, scrape_iris, scrape_institut_delors, scrape_jean_jaures,
+    scrape_louis_bachelier, scrape_citeco, scrape_ima, scrape_beaux_arts, scrape_ens_saclay,
+    scrape_escp, scrape_sorbonne_paris_nord, scrape_chartes,
 ]
 
 
@@ -3159,6 +3359,19 @@ INSTITUTION_COORDS = {
     "HEC Paris": [48.7596, 2.1682],
     "Musée du Louvre": [48.8606, 2.3376],
     "Centre Pompidou": [48.8607, 2.3522],
+    "INHA": [48.868, 2.3395],
+    "Ifri": [48.8395, 2.3065],
+    "IRIS": [48.8546, 2.3808],
+    "Institut Jacques Delors": [48.8773, 2.329],
+    "Fondation Jean-Jaurès": [48.881, 2.338],
+    "Institut Louis Bachelier": [48.869, 2.341],
+    "Citéco": [48.8836, 2.308],
+    "Institut du monde arabe": [48.849, 2.3572],
+    "Beaux-Arts de Paris": [48.8566, 2.3336],
+    "ENS Paris-Saclay": [48.712, 2.168],
+    "ESCP Business School": [48.8637, 2.3835],
+    "Université Sorbonne Paris Nord": [48.957, 2.3417],
+    "École nationale des chartes": [48.8675, 2.3383],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -3396,6 +3609,19 @@ INSTITUTION_URLS = {
     "HEC Paris": "https://www.hec.edu",
     "Musée du Louvre": "https://www.louvre.fr",
     "Centre Pompidou": "https://www.centrepompidou.fr",
+    "INHA": "https://www.inha.fr",
+    "Ifri": "https://www.ifri.org",
+    "IRIS": "https://www.iris-france.org",
+    "Institut Jacques Delors": "https://institutdelors.eu",
+    "Fondation Jean-Jaurès": "https://www.jean-jaures.org",
+    "Institut Louis Bachelier": "https://www.institutlouisbachelier.org",
+    "Citéco": "https://www.citeco.fr",
+    "Institut du monde arabe": "https://www.imarabe.org",
+    "Beaux-Arts de Paris": "https://beauxartsparis.fr",
+    "ENS Paris-Saclay": "https://ens-paris-saclay.fr",
+    "ESCP Business School": "https://escp.eu",
+    "Université Sorbonne Paris Nord": "https://www.univ-spn.fr",
+    "École nationale des chartes": "https://www.chartes.psl.eu",
 }
 
 
