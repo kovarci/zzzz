@@ -6,18 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:ENS Paris · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:0ff4fcb067b2@paris-academique
-DTSTAMP:20260923T210519Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260923
-SUMMARY:L’Histoire transnationale\, impériale et globale
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/l-histoire-transnationale-imperiale-et-globale/2026-09-22t150000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/l-histoire-transnationale-imperiale-et-globale/2026-09-22t150000
-END:VEVENT
-BEGIN:VEVENT
 UID:7cf77da03d01@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:Histoires de genre
@@ -27,7 +17,7 @@ URL:https://www.ens.psl.eu/agenda/histoires-de-genre/2026-09-24t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:9658016c1e03@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:L’Intelligence Artificielle : entre promesses\, illusions et révolutions créatives
@@ -37,7 +27,7 @@ URL:https://www.ens.psl.eu/agenda/l-intelligence-artificielle-entre-promesses-il
 END:VEVENT
 BEGIN:VEVENT
 UID:ac493e5e51fc@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Nuit des données
@@ -47,7 +37,7 @@ URL:https://www.ens.psl.eu/agenda/nuit-des-donnees/2026-09-25t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:fb36fae8a846@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:La Nuit de l'ENS
@@ -57,7 +47,7 @@ URL:https://www.ens.psl.eu/agenda/la-nuit-de-l-ens/2026-09-25t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:cb4dc4811cbd@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Lectures lévinassiennes
@@ -67,7 +57,7 @@ URL:https://www.ens.psl.eu/agenda/lectures-levinassiennes/2026-09-28t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:ef764e63916d@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Existe-t-il une médecine européenne ?
@@ -77,7 +67,7 @@ URL:https://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-09-29
 END:VEVENT
 BEGIN:VEVENT
 UID:a4e3ed0912c8@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Résiliences\, résistances\, futurs communs
@@ -87,7 +77,7 @@ URL:https://www.ens.psl.eu/agenda/resiliences-resistances-futurs-communs/2026-10
 END:VEVENT
 BEGIN:VEVENT
 UID:f31262bcf8c6@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Atelier Digit_Hum 2026
@@ -97,7 +87,7 @@ URL:https://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
 END:VEVENT
 BEGIN:VEVENT
 UID:9b05dd97a7de@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:« Hors tout et débordements »
@@ -106,8 +96,18 @@ LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
 URL:https://www.ens.psl.eu/agenda/hors-tout-et-debordements/2026-10-08t120000
 END:VEVENT
 BEGIN:VEVENT
+UID:e0bd49eddd4a@paris-academique
+DTSTAMP:20260924T085937Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Autodafés. Ces livres qu'on brûle
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/autodafes-ces-livres-qu-brule/2026-10-08t160000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/autodafes-ces-livres-qu-brule/2026-10-08t160000
+END:VEVENT
+BEGIN:VEVENT
 UID:f60f479b82a1@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Transferts Culturels – Kulturtransfer – Intercultural Transfers
@@ -117,7 +117,7 @@ URL:https://www.ens.psl.eu/agenda/transferts-culturels-kulturtransfer-intercultu
 END:VEVENT
 BEGIN:VEVENT
 UID:3309f4121594@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Théophile de Viau. Poésie et liberté
@@ -127,7 +127,7 @@ URL:https://www.ens.psl.eu/agenda/theophile-de-viau-poesie-et-liberte/2026-10-09
 END:VEVENT
 BEGIN:VEVENT
 UID:843fb94aa236@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:L’ENS-PSL vous invite à fêter toutes les sciences
@@ -136,8 +136,18 @@ LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
 URL:https://www.ens.psl.eu/agenda/l-ens-psl-vous-invite-feter-toutes-les-sciences/2026-10-11t080000
 END:VEVENT
 BEGIN:VEVENT
+UID:af474c0cde7e@paris-academique
+DTSTAMP:20260924T085937Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:L’Histoire transnationale\, impériale et globale
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/l-histoire-transnationale-imperiale-et-globale/2026-10-13t150000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/l-histoire-transnationale-imperiale-et-globale/2026-10-13t150000
+END:VEVENT
+BEGIN:VEVENT
 UID:178bb5a0f397@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Les Europe(s) Spatiale(s)
@@ -147,7 +157,7 @@ URL:https://www.ens.psl.eu/agenda/les-europes-spatiales/2026-10-15t143000
 END:VEVENT
 BEGIN:VEVENT
 UID:50b96e6e179f@paris-academique
-DTSTAMP:20260923T210519Z
+DTSTAMP:20260924T085937Z
 DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
 SUMMARY:Histoire de la médecine et de la santé : perspectives transnationales
