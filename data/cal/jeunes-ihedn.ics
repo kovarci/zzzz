@@ -1,18 +1,18 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Jeunes IHEDN · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:77f582158809@paris-academique
-DTSTAMP:20260924T195823Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-SUMMARY:« Nouveaux acteurs\, nouvelles influences : les stratégies turque et italienne en Afrique »
-DESCRIPTION:Conférence \,\nhttps://www.jeunes-ihedn.org/events/nouveaux-acteurs-nouvelles-influences-les-strategies-turque-et-italienne-en-afrique/
-LOCATION:Paris
-URL:https://www.jeunes-ihedn.org/events/nouveaux-acteurs-nouvelles-influences-les-strategies-turque-et-italienne-en-afrique/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Jeunes IHEDN · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:77f582158809@paris-academique
+DTSTAMP:20260924T182717Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:« Nouveaux acteurs\, nouvelles influences : les stratégies turque et italienne en Afrique »
+DESCRIPTION:Conférence \,\nhttps://www.jeunes-ihedn.org/events/nouveaux-acteurs-nouvelles-influences-les-strategies-turque-et-italienne-en-afrique/
+LOCATION:Paris
+URL:https://www.jeunes-ihedn.org/events/nouveaux-acteurs-nouvelles-influences-les-strategies-turque-et-italienne-en-afrique/
+END:VEVENT
+END:VCALENDAR
