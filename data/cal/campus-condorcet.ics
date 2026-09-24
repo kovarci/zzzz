@@ -7,7 +7,7 @@ X-WR-CALNAME:Campus Condorcet · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:c8154c980882@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260927
 SUMMARY:Colloque international « Articuler genre et sexualité »
@@ -17,7 +17,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/colloque-international-«-articule
 END:VEVENT
 BEGIN:VEVENT
 UID:1d2ca6bdf5ec@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:L'écologie est une science
@@ -26,18 +26,8 @@ LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
 URL:https://www.campus-condorcet.fr/fr/agenda/lecologie-est-une-science
 END:VEVENT
 BEGIN:VEVENT
-UID:d6078bc5957f@paris-academique
-DTSTAMP:20260924T205557Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Élus des banlieues populaires
-DESCRIPTION:Journée d'étude\nhttps://www.campus-condorcet.fr/fr/agenda/elus-des-banlieues-populaires
-LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
-URL:https://www.campus-condorcet.fr/fr/agenda/elus-des-banlieues-populaires
-END:VEVENT
-BEGIN:VEVENT
 UID:7d12ca1be1c1@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Les Balkans en transformation : quatre variations : pancarte\, passeport\, argent\, maison
@@ -46,8 +36,18 @@ LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
 URL:https://www.campus-condorcet.fr/fr/agenda/les-balkans-en-transformation -quatre-variations-pancarte-passeport-argent
 END:VEVENT
 BEGIN:VEVENT
+UID:d6078bc5957f@paris-academique
+DTSTAMP:20260924T210820Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Élus des banlieues populaires
+DESCRIPTION:Journée d'étude\nhttps://www.campus-condorcet.fr/fr/agenda/elus-des-banlieues-populaires
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/elus-des-banlieues-populaires
+END:VEVENT
+BEGIN:VEVENT
 UID:35ecb23ca55c@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Elu.es des banlieues populaires : quels enjeux suite aux élections municipales de 2026 ? Une discussion entre élu.es\, personnes engagées en politique et chercheur.es
@@ -57,7 +57,7 @@ URL:https://www.campus-condorcet.fr
 END:VEVENT
 BEGIN:VEVENT
 UID:f929aed3981e@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:« La Paix pour Nina » : projection et discussion
@@ -67,7 +67,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/«-la-paix-pour-nina-»-projection
 END:VEVENT
 BEGIN:VEVENT
 UID:4a6d21ad8d8d@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Enquêtes par panel et effets de mode : état des lieux
@@ -77,7 +77,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/enquetes-par-panel-et-effets-de-mo
 END:VEVENT
 BEGIN:VEVENT
 UID:b54d9beccef7@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Wealth Inequality and Demographic Events (Wide)
@@ -86,18 +86,8 @@ LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
 URL:https://www.campus-condorcet.fr/fr/agenda/wealth-inequality-and-demographic-events-wide
 END:VEVENT
 BEGIN:VEVENT
-UID:2c51cf7b8c3c@paris-academique
-DTSTAMP:20260924T205557Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Atelier de la Plateforme SHS Santé : « Santé numérique »
-DESCRIPTION:Atelier\nhttps://www.campus-condorcet.fr/fr/agenda/atelier-de-la-plateforme-shs-sante-«-sante-numerique-»
-LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
-URL:https://www.campus-condorcet.fr/fr/agenda/atelier-de-la-plateforme-shs-sante-«-sante-numerique-»
-END:VEVENT
-BEGIN:VEVENT
 UID:abe8979a5a58@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Articuler l’étude de la religion et de la sexualité : socialisations\, institutions\, politisations
@@ -106,8 +96,18 @@ LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
 URL:https://www.campus-condorcet.fr/fr/agenda/articuler-letude-de-la-religion-et-de-la-sexualite-socialisations-institutions-politisations
 END:VEVENT
 BEGIN:VEVENT
+UID:2c51cf7b8c3c@paris-academique
+DTSTAMP:20260924T210820Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Atelier de la Plateforme SHS Santé : « Santé numérique »
+DESCRIPTION:Atelier\nhttps://www.campus-condorcet.fr/fr/agenda/atelier-de-la-plateforme-shs-sante-«-sante-numerique-»
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/atelier-de-la-plateforme-shs-sante-«-sante-numerique-»
+END:VEVENT
+BEGIN:VEVENT
 UID:34f79d51e754@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Guanzhou\, une nouvelle ère
@@ -117,7 +117,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/guanzhou-une-nouvelle-ere
 END:VEVENT
 BEGIN:VEVENT
 UID:2d14b6810a87@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Dé-me(s)-tissages – Postcolonialité\, corps et subjectivités situées
@@ -127,7 +127,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/de-mes-tissages-postcolonialite-co
 END:VEVENT
 BEGIN:VEVENT
 UID:bb779fa10998@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Forum des initiatives 2026
@@ -137,7 +137,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/forum-des-initiatives-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:a6b11569790b@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:« Intimités » : lancement d’un nouveau séminaire
@@ -147,7 +147,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/«-intimites-»-lancement-dun-nouv
 END:VEVENT
 BEGIN:VEVENT
 UID:7674a056dca2@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:« Les Révoltes de la dignité » : Rencontre avec les autrices
@@ -157,7 +157,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/«-les-revoltes-de-la-dignite-»-r
 END:VEVENT
 BEGIN:VEVENT
 UID:4bf168303ac6@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Images en commun - Séminaire automnal du BAL avec l'EHESS
@@ -167,7 +167,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/images-en-commun-seminaire-automna
 END:VEVENT
 BEGIN:VEVENT
 UID:e5e2460dae9e@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Mécaniciens de rue : réparer et vivre\, d’Abidjan au Grand Paris
@@ -177,7 +177,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/mecaniciens-de-rue-reparer-et-vivr
 END:VEVENT
 BEGIN:VEVENT
 UID:b74027878156@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Histoire du temps présent\, mémoire & émotion
@@ -187,7 +187,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/histoire-du-temps-present-memoire-
 END:VEVENT
 BEGIN:VEVENT
 UID:8271522d0c03@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Déconstruire les structures de pouvoir : une relecture décoloniale de l’histoire et de la culture politique au Kurdistan
@@ -197,7 +197,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/deconstruire-les-structures-de-pou
 END:VEVENT
 BEGIN:VEVENT
 UID:b767e39d8880@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Paroles de Travailleuses / Words of Working Women - Grande Marée
@@ -207,7 +207,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/paroles-de-travailleuses-words-of-
 END:VEVENT
 BEGIN:VEVENT
 UID:ead05dc09c35@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Des Pyrénées aux Alpes\, Économies et sociétés dans le Midi "français" à la fin du Moyen Âge (v. 1350 - v. 1500)
@@ -217,7 +217,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/des-pyrenees-aux-alpes-economies-e
 END:VEVENT
 BEGIN:VEVENT
 UID:ec0926b492b2@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Parentalités LGBTI+: faire famille depuis les marges
@@ -227,7 +227,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/parentalites-lgbti-faire-famille-d
 END:VEVENT
 BEGIN:VEVENT
 UID:9d16e73a70a7@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:3e édition de la Journée Internationale Interuniversitaire de Psychanalyse (JIUP)
@@ -236,8 +236,28 @@ LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
 URL:https://www.campus-condorcet.fr/fr/agenda/3e-edition-de-la-journee-internationale-interuniversitaire-de-psychanalyse-jiup
 END:VEVENT
 BEGIN:VEVENT
+UID:7e43a1d907de@paris-academique
+DTSTAMP:20260924T210820Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:Données et documents administratifs : quels usages et implications pour la recherche en sciences sociales ?
+DESCRIPTION:Journée d'étude\nhttps://www.campus-condorcet.fr/fr/agenda/donnees-et-documents-administratifs-quels-usages-et-implications-pour-la-recherche-en-sciences-sociales
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/donnees-et-documents-administratifs-quels-usages-et-implications-pour-la-recherche-en-sciences-sociales
+END:VEVENT
+BEGIN:VEVENT
+UID:ec049ffcc63f@paris-academique
+DTSTAMP:20260924T210820Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:Journées scientifiques de la Plateforme nationale pour la recherche sur la fin de vie
+DESCRIPTION:Journée d'étude\nhttps://www.campus-condorcet.fr/fr/agenda/journees-scientifiques-de-la-plateforme-nationale-pour-la-recherche-sur-la-fin-de-vie
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/journees-scientifiques-de-la-plateforme-nationale-pour-la-recherche-sur-la-fin-de-vie
+END:VEVENT
+BEGIN:VEVENT
 UID:172a7078667b@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Le journal de Sasha
@@ -247,7 +267,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/le-journal-de-sasha
 END:VEVENT
 BEGIN:VEVENT
 UID:7d62fc03843d@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:Terrain d'entente
@@ -256,8 +276,18 @@ LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
 URL:https://www.campus-condorcet.fr/fr/agenda/terrain-dentente
 END:VEVENT
 BEGIN:VEVENT
+UID:9c47da6d68d5@paris-academique
+DTSTAMP:20260924T210820Z
+DTSTART;VALUE=DATE:20270202
+DTEND;VALUE=DATE:20270203
+SUMMARY:Seen Unseen : an anthology of (auto)censorship
+DESCRIPTION:Ciné-débat\nhttps://www.campus-condorcet.fr/fr/agenda/seen-unseen-an-anthology-of-autocensorship
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/seen-unseen-an-anthology-of-autocensorship
+END:VEVENT
+BEGIN:VEVENT
 UID:55477e8a6b85@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20270309
 DTEND;VALUE=DATE:20270310
 SUMMARY:Karma Sichoe : broken lineages and inner portraits & Tidinit - Une passion musicale saharienne
@@ -267,12 +297,32 @@ URL:https://www.campus-condorcet.fr/fr/agenda/karma-sichoe-broken-lineages-and-i
 END:VEVENT
 BEGIN:VEVENT
 UID:e3699fce8256@paris-academique
-DTSTAMP:20260924T205557Z
+DTSTAMP:20260924T210820Z
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
 SUMMARY:Nacemos de la tierra
 DESCRIPTION:Ciné-débat\nhttps://www.campus-condorcet.fr/fr/agenda/nacemos-de-la-tierra
 LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
 URL:https://www.campus-condorcet.fr/fr/agenda/nacemos-de-la-tierra
+END:VEVENT
+BEGIN:VEVENT
+UID:4161ecab367b@paris-academique
+DTSTAMP:20260924T210820Z
+DTSTART;VALUE=DATE:20270511
+DTEND;VALUE=DATE:20270512
+SUMMARY:Entre les lignes & Madidi : vivre dans une forêt protégée
+DESCRIPTION:Ciné-débat\nhttps://www.campus-condorcet.fr/fr/agenda/entre-les-lignes-madidi-vivre-dans-une-foret-protegee
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/entre-les-lignes-madidi-vivre-dans-une-foret-protegee
+END:VEVENT
+BEGIN:VEVENT
+UID:78986092d87b@paris-academique
+DTSTAMP:20260924T210820Z
+DTSTART;VALUE=DATE:20270601
+DTEND;VALUE=DATE:20270602
+SUMMARY:Halesi. Un dieu-lieu & Sansari. La déesse et le corona en Himalaya
+DESCRIPTION:Ciné-débat\nhttps://www.campus-condorcet.fr/fr/agenda/halesi-un-dieu-lieu-sansari-la-deesse-et-le-corona-en-himalaya
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/halesi-un-dieu-lieu-sansari-la-deesse-et-le-corona-en-himalaya
 END:VEVENT
 END:VCALENDAR
