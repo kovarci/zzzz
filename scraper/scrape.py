@@ -1411,6 +1411,8 @@ def _card_date(el):
             if dt:
                 return dt.date(), (dt.strftime("%H:%M") if (dt.hour or dt.minute) else "")
     txt = el.get_text(" ", strip=True)
+    # « 30 - Septembre » (Jeunes IHEDN) → « 30 Septembre »
+    txt = re.sub(r"(\d{1,2})\s*-\s*([^\W\d_]{3,})", r"\1 \2", txt)
     d = parse_french_date_text(txt)
     if not d and len(txt) <= 80:
         # Secours seulement (notre parseur, réglé sur les sources historiques,
@@ -1680,8 +1682,10 @@ def scrape_nanterre():
 _IDF_RE = re.compile(
     r"\b(paris|lpnhe|apc|jussieu|ijclab|orsay|saclay|palaiseau|ihp|henri poincar[ée]|"
     r"meudon|observatoire|condorcet|aubervilliers|gif|bures|villejuif|cr[ée]teil|"
-    r"nanterre|saint-denis|versailles|cergy|[ée]vry|marne-la-vall[ée]e|champs-sur-marne|"
-    r"(?:75|77|78|91|92|93|94|95)\d{3})\b", re.I)            # + codes postaux franciliens
+    r"nanterre|saint-denis|versailles|cergy|[ée]vry|marne-la-vall[ée]e|champs-sur-marne)\b"
+    # + codes postaux franciliens, à la française (« 75016 », « 94270 Le
+    # Kremlin-Bicêtre ») — pas un ZIP américain après l'État (« CA 92697 »).
+    r"|(?<!(?-i:[A-Z][A-Z]) )\b(?:75|77|78|91|92|93|94|95)\d{3}\b(?=\s+[^\W\d_]|\s*$)", re.I)
 
 
 def scrape_ijclab():
@@ -1769,7 +1773,9 @@ def scrape_sciencesconf():
 CARRIERES_FILE = Path(__file__).parent / "carrieres.json"
 _SECTOR_DISCIPLINE = {
     "Banque & finance": "Économie", "Conseil": "Économie", "Audit & conseil": "Économie",
-    "Tech": "Sciences", "Industrie & énergie": "Sciences",
+    "Tech": "Sciences", "Industrie & énergie": "Sciences", "Pharma & santé": "Sciences",
+    "Chimie & matériaux": "Sciences", "Recherche & ingénierie": "Sciences",
+    "Spatial & défense": "Sciences", "Deeptech & IA": "Sciences",
 }
 
 
@@ -1857,6 +1863,54 @@ def scrape_carrieres_verifiees():
             desc=x.get("description", ""), url=x.get("url", ""),
             kind_label=x.get("type") or "Événement recrutement"))
     print(f"   ✓ Total Carrières · sélection: {len(events)} events")
+    return events
+
+
+# ── Associations étudiantes ───────────────────────────────────────────────────
+# Même principe que les carrières : scraper/associations.json liste les
+# associations suivies et les événements vérifiés à la main (celles qui ne
+# publient que sur Instagram / LinkedIn / Eventbrite, illisibles par un robot) ;
+# celles qui ont un agenda lisible ont en plus leur propre scraper.
+
+ASSOCIATIONS_FILE = Path(__file__).parent / "associations.json"
+
+
+def scrape_jeunes_ihedn():
+    # Conférences publiques ; les « Popote » & co (rencontres membres) sont
+    # rangées en « Uncategorized » → écartées.
+    evs = _scrape_cards(
+        "Jeunes IHEDN", "https://www.jeunes-ihedn.org/evenements-a-venir/", ".wildworld_calendar_item",
+        title=".wildworld_calendar_item_title", date=".wildworld_calendar_item_time",
+        kind=".wildworld_calendar_item_category",
+        keep_kind=("conférence", "table ronde", "colloque", "débat", "atelier", "rencontre"),
+        base="https://www.jeunes-ihedn.org", location="Paris")
+    for e in evs:
+        e["source_type"] = "association"
+    return evs
+
+
+def scrape_associations_verifiees():
+    """Événements vérifiés à la main dans scraper/associations.json."""
+    print("→ Associations · sélection vérifiée...")
+    try:
+        cfg = json.loads(ASSOCIATIONS_FILE.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"   [warn] associations.json: {e}")
+        return []
+    events = []
+    for x in cfg.get("evenements", []):
+        try:
+            d = date.fromisoformat(x["date"])
+        except (KeyError, ValueError):
+            continue
+        if not in_window(d):
+            continue
+        events.append(new_event(
+            x.get("association", ""), x.get("titre", ""), d, time_str=x.get("heure", ""),
+            end_time=x.get("fin", ""), location=x.get("lieu", ""),
+            desc=" — ".join(p for p in (x.get("type"), x.get("description")) if p),
+            url=x.get("url", ""), speaker=x.get("intervenants", ""), source_type="association"))
+    print(f"   ✓ Total Associations · sélection: {len(events)} events")
     return events
 
 
@@ -1953,6 +2007,7 @@ STATIC_SOURCES = [
     scrape_sorbonne_nouvelle, scrape_paris8, scrape_nanterre,
     scrape_ijclab, scrape_in2p3_paris, scrape_observatoire, scrape_sciencesconf,
     scrape_eightfold, scrape_carrieres_verifiees,
+    scrape_jeunes_ihedn, scrape_associations_verifiees,
 ]
 
 

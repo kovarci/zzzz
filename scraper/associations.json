@@ -1,0 +1,36 @@
+{
+  "_doc": [
+    "Associations étudiantes et jeunes suivies par Lotent (catégorie Source « Associations »).",
+    "associations : liste suivie par la recherche hebdomadaire. « auto » = déjà lue chaque jour par",
+    "un scraper dédié (ne rien ajouter à la main pour elle). « canaux » = où elle publie ses événements.",
+    "evenements : uniquement des événements publics vérifiés sur une page officielle (url) —",
+    "site de l'association, HelloAsso, Luma, page de l'université hôte. Pas les soirées réservées aux membres.",
+    "Les événements passés sont ignorés par le scraper ; la recherche hebdomadaire peut les retirer."
+  ],
+  "associations": [
+    {"nom": "Article 1", "ecole": "Réseau national (Paris)", "domaine": "Égalité des chances, débats", "auto": "scrape_article1"},
+    {"nom": "Sciences et Cultures", "ecole": "ENS / Citoy.ENS", "domaine": "Sciences et société", "auto": "scrape_sciences_cultures"},
+    {"nom": "Jeunes IHEDN", "ecole": "Inter-écoles", "domaine": "Défense, géopolitique", "auto": "scrape_jeunes_ihedn",
+     "canaux": ["https://www.jeunes-ihedn.org/evenements-a-venir/"]},
+    {"nom": "Taureaux du Panthéon", "ecole": "Université Paris 1 Panthéon-Sorbonne", "domaine": "Finance (marchés, M&A, fintech)",
+     "canaux": ["https://www.helloasso.com/associations/taureaux-du-pantheon", "https://www.instagram.com/taureauxdupantheon/", "https://www.linkedin.com/in/taureauxdupantheon/"]},
+    {"nom": "Institut Open Diplomacy", "ecole": "Think tank jeunes (inter-écoles)", "domaine": "Diplomatie, géopolitique, polycrise",
+     "canaux": ["https://www.open-diplomacy.fr/"]},
+    {"nom": "Sorbonne Finance", "ecole": "Université Paris 1 Panthéon-Sorbonne", "domaine": "Finance",
+     "canaux": []},
+    {"nom": "Association du Master Géopolitique ENS / Paris 1", "ecole": "ENS / Paris 1", "domaine": "Géopolitique",
+     "canaux": ["https://www.facebook.com/mastergeopo/"]}
+  ],
+  "evenements": [
+    {
+      "association": "Institut Open Diplomacy",
+      "titre": "Combattre la polycrise — grand colloque de l'Institut Open Diplomacy",
+      "type": "Colloque",
+      "date": "2026-10-09",
+      "lieu": "Maison de l'Europe de Paris, 35-37 rue des Francs-Bourgeois, Paris 4e",
+      "url": "https://www.open-diplomacy.fr/colloque-polycrise",
+      "description": "Colloque sur la polycrise (crises géopolitique, écologique, économique et politique), organisé par le think tank de jeunes Open Diplomacy.",
+      "verifie_le": "2026-09-24"
+    }
+  ]
+}
