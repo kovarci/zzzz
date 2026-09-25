@@ -1,5 +1,5 @@
 {
-  "last_workflow_run": "2026-09-25T08:08:51Z",
+  "last_workflow_run": "2026-09-25T09:25:55Z",
   "last_manual_run": "2026-09-25T06:33:57Z",
   "fresh_counts": {
     "Institut Henri Poincar\u00e9": 82,
@@ -8,7 +8,7 @@
     "Universit\u00e9 Paris Cit\u00e9": 25,
     "Cnam": 1,
     "BnF": 35,
-    "Institut Pasteur": 19,
+    "Institut Pasteur": 20,
     "Institut Curie": 16,
     "Institut du Cerveau": 16,
     "Inalco": 24,
@@ -91,6 +91,7 @@
     "Mairie de Paris Centre": 1,
     "Maison Heinrich Heine": 1,
     "Mairie du 8e arrondissement": 5,
+    "Chapelle de l'Humanit\u00e9": 1,
     "Biblioth\u00e8que Italie": 2,
     "M\u00e9morial de la Shoah": 9,
     "Coll\u00e8ge de France": 1,
@@ -109,6 +110,8 @@
     "Conseil de quartier Montparnasse-Raspail": 2,
     "Mus\u00e9e Carnavalet - Histoire de Paris": 1,
     "Mairie du 10i\u00e8me": 1,
+    "H\u00f4tel d'Albret - Salle Jean-Musy": 2,
+    "Biblioth\u00e8que de l'H\u00f4tel de Ville": 2,
     "Biblioth\u00e8que Forney": 7,
     "Mus\u00e9e des arts et m\u00e9tiers": 1,
     "Centre Eastman - Service des laboratoires de sant\u00e9 environnementale": 1,
@@ -176,10 +179,11 @@
     "Mairie du 14\u00e8me": 1,
     "Forum des images": 2,
     "M\u00e9diath\u00e8que James Baldwin": 4,
-    "Digital Village": 1,
     "M\u00e9diath\u00e8que Edmond Rostand": 1,
+    "Digital Village": 1,
     "Biblioth\u00e8que V\u00e1clav Havel": 4,
     "Maison de Victor Hugo": 3,
+    "Makesense_space": 1,
     "Institut de physique du globe de Paris": 1,
     "Fondation Maison des Sciences de l'Homme (FMSH)": 5,
     "Mairie du 10e arrondissement": 1,
@@ -204,7 +208,7 @@
     "Sorbonne Universit\u00e9": 14,
     "Universit\u00e9 Paris Dauphine": 9,
     "Paris School of Economics": 26,
-    "Universit\u00e9 PSL": 30,
+    "Universit\u00e9 PSL": 32,
     "{Tech: Europe}": 1,
     "Alberto Fratini": 1,
     "LinQfolio": 1,
@@ -233,9 +237,9 @@
     "Article 1": 17
   },
   "stats": {
-    "total": 6303,
-    "upcoming": 2456,
-    "institutions": 958,
+    "total": 6312,
+    "upcoming": 2471,
+    "institutions": 962,
     "since": "2026-03-09"
   }
 }
