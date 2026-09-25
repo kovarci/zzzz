@@ -35,12 +35,6 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
 
-      # Runs BEFORE the commit: if a major source is broken, the job fails here
-      # and the degraded data is never committed (the site keeps its last good
-      # version). Carry-forward in the scraper means this rarely triggers.
-      - name: Check sources health
-        run: python scraper/check_health.py
-
       - name: Commit updated events
         run: |
           git config user.name "github-actions[bot]"
@@ -60,3 +54,11 @@ jobs:
             done
             exit 1
           fi
+
+      # APRÈS le commit : grâce au report, une source en panne garde ses
+      # événements des jours précédents — rien de dégradé à publier. Placé
+      # avant, un seul site en panne gelait la mise à jour des 60 autres.
+      # Le run échoue quand même (e-mail de GitHub) si une source majeure
+      # n'a rien ramené.
+      - name: Check sources health
+        run: python scraper/check_health.py

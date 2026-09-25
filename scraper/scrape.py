@@ -1503,14 +1503,26 @@ def scrape_dauphine(browser):
 def scrape_pse(browser=None):
     """Cartes WordPress avec <time datetime="2026-09-24 12:30:00">, titre,
     orateur et salle. L'extracteur générique (Playwright) prenait l'étiquette
-    « Séminaire » pour un titre et décalait des dates : parseur dédié."""
-    evs = _scrape_cards(
-        "Paris School of Economics", "https://www.parisschoolofeconomics.eu/evenements/", "article",
+    « Séminaire » pour un titre et décalait des dates : parseur dédié.
+    Depuis GitHub, une requête simple reçoit « 418 » (anti-robot) : les pages
+    passent alors par le navigateur, le parseur reste le même."""
+    kw = dict(
         title="h3.event-item__title", date="time.date__time", kind=".event-item-type",
         speaker=".event-item__speaker", place=".item__salle span:last-child",
         base="https://www.parisschoolofeconomics.eu",
         location="Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
         page_url="https://www.parisschoolofeconomics.eu/evenements/page/{n}/", page_start=2, max_pages=15)
+    url = "https://www.parisschoolofeconomics.eu/evenements/"
+    evs = _scrape_cards("Paris School of Economics", url, "article", **kw)
+    if not evs and browser is not None:
+        ctx = browser.new_context(user_agent=HEADERS["User-Agent"], locale="fr-FR",
+                                  extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"})
+        page = ctx.new_page()
+        try:
+            evs = _scrape_cards("Paris School of Economics", url, "article",
+                                fetch=lambda u: BeautifulSoup(load_page(page, u, exhaustive=False)[0], "lxml"), **kw)
+        finally:
+            ctx.close()
     for e in evs:
         if e["discipline"] == "Autre":
             e["discipline"] = "Économie"
@@ -1656,7 +1668,7 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
                   link=None, place=None, kind=None, keep_kind=None,
                   drop_kind=None, page_url=None, max_pages=8, page_start=1,
                   one_per_title=False, time=None, drop=None, members=None,
-                  speaker=None, keep_loc=None, place_only=False):
+                  speaker=None, keep_loc=None, place_only=False, fetch=None):
     """Parseur générique d'agenda en cartes.
     card/title/date/link/place/kind : sélecteurs CSS (relatifs à la carte).
     keep_kind / drop_kind : filtre sur le texte de `kind` (sous-chaînes).
@@ -1667,14 +1679,15 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
     écartés. members : regex sur le texte de la carte → accès réservé (🔒).
     speaker : sélecteur de l'orateur. keep_loc : regex que le lieu doit
     contenir (sinon carte écartée). place_only : le lieu de la carte est une
-    adresse complète, pas un simple complément de `location`."""
+    adresse complète, pas un simple complément de `location`. fetch : url →
+    BeautifulSoup à la place de _soup (pages servies via Playwright)."""
     print(f"→ {name}...")
     events, seen, stats = [], set(), {"cards": 0, "off": 0, "kind": 0, "date": 0}
     urls = [url] + ([page_url.format(n=n) for n in range(page_start, page_start + max_pages - 1)]
                     if page_url else [])
     for u in urls:
         try:
-            soup = _soup(u)
+            soup = (fetch or _soup)(u)
         except Exception as e:
             print(f"   [warn] {u}: {e}")
             break
