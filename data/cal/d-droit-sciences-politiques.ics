@@ -7,7 +7,7 @@ X-WR-CALNAME:Droit & Sciences politiques · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:c6bfcc3a9c3d@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Forum Carrières 2026
@@ -20,7 +20,7 @@ URL:https://www.sciencespo.fr/fr/evenements/forum-carrieres-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:9e39c019bbe5@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20260925T140000
 DTEND:20260925T160000
 SUMMARY:Séance du séminaire "Penser le droit des majeurs vulnérables" : 
@@ -35,7 +35,7 @@ URL:https://irjs.pantheonsorbonne.fr/evenements/seance-du-seminaire-penser-
 END:VEVENT
 BEGIN:VEVENT
 UID:4b9dae364a45@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Les journées de la mobilité « erasmus days »
@@ -48,7 +48,7 @@ URL:https://www.assas-universite.fr/fr/evenements/journees-mobilite-erasmus
 END:VEVENT
 BEGIN:VEVENT
 UID:dd2c2b312880@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20260928T183000
 DTEND:20260928T203000
 SUMMARY:La gauche peut-elle encore unir ?
@@ -59,7 +59,7 @@ URL:https://www.jean-jaures.org/agenda/la-gauche-peut-elle-encore-unir/
 END:VEVENT
 BEGIN:VEVENT
 UID:dca5b2a31624@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:François Bafoil en dédicace
@@ -74,7 +74,7 @@ URL:https://www.sciencespo.fr/fr/evenements/francois-bafoil-en-dedicace/
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38ae0a068d@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Frontline Responders & Witnesses: Collateral Damage of Banned Acces
@@ -90,7 +90,7 @@ URL:https://www.sciencespo.fr/fr/evenements/frontline-responders-and-witnes
 END:VEVENT
 BEGIN:VEVENT
 UID:c8cb8b131725@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20260929T080000
 DTEND:20260929T100000
 SUMMARY:Paquet Souveraineté numérique européenne 2026-2030
@@ -103,7 +103,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/paquet-s
 END:VEVENT
 BEGIN:VEVENT
 UID:41c96e14420c@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20260929T090000
 DTEND:20260929T110000
 SUMMARY:Risques en milieux festifs - Centre Vaugirard et campus de Melun
@@ -117,7 +117,7 @@ URL:https://www.assas-universite.fr/fr/evenements/risques-en-milieux-festif
 END:VEVENT
 BEGIN:VEVENT
 UID:06dc056afc3d@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20260929T090000
 DTEND:20260929T110000
 SUMMARY:Journée d'intégration des chargés de travaux dirigés
@@ -130,7 +130,7 @@ URL:https://www.assas-universite.fr/fr/evenements/journee-dintegration-char
 END:VEVENT
 BEGIN:VEVENT
 UID:fcca3ce4a37b@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20260929T180000
 DTEND:20260929T200000
 SUMMARY:Se préparer au concours des Douanes (DGDDI)
@@ -142,8 +142,20 @@ URL:https://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-d
  ouanes-dgddi
 END:VEVENT
 BEGIN:VEVENT
+UID:95f07a67d507@paris-academique
+DTSTAMP:20260925T224052Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Les forces qui défient le droit
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/les-for
+ ces-qui-defient-le-droit
+LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
+URL:https://www.collegedesbernardins.fr/agenda/les-forces-qui-defient-le-dr
+ oit
+END:VEVENT
+BEGIN:VEVENT
 UID:1b5f31e28210@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:PARLE M'EN ! La démocratie est un jeu
@@ -158,20 +170,8 @@ URL:https://chiche.makesense.org/events/e/parle-men-la-democratie-est-un-je
  u-6a8450416cd0e90008c89d29
 END:VEVENT
 BEGIN:VEVENT
-UID:95f07a67d507@paris-academique
-DTSTAMP:20260925T221922Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-SUMMARY:Les forces qui défient le droit
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/les-for
- ces-qui-defient-le-droit
-LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/les-forces-qui-defient-le-dr
- oit
-END:VEVENT
-BEGIN:VEVENT
 UID:93e610cd07c0@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:AI Governance and Ethics
@@ -181,8 +181,34 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/ai-governance-and-ethics/
 END:VEVENT
 BEGIN:VEVENT
+UID:35ecb23ca55c@paris-academique
+DTSTAMP:20260925T224052Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Elu.es des banlieues populaires : quels enjeux suite aux élections
+  municipales de 2026 ? Une discussion entre élu.es\, personnes engagées 
+ en politique et chercheur.es
+DESCRIPTION:Discussion\nhttps://www.campus-condorcet.fr
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr
+END:VEVENT
+BEGIN:VEVENT
+UID:a13f9073cb15@paris-academique
+DTSTAMP:20260925T224052Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Cities Ablaze: Tales of the December 2007 Riots in Karachi
+DESCRIPTION:Book discussion : Laurent Gayer and Waseem Yaqoob\, "Quand la v
+ ille brûle. Sur les traces d'une émeute. Karachi\, 2007-2023"\, Paris\, 
+ Anamosa\, 2026.\nhttps://www.sciencespo.fr/fr/evenements/cities-ablaze-tal
+ es-of-the-december-2007-riots-in-karachi/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-dece
+ mber-2007-riots-in-karachi/
+END:VEVENT
+BEGIN:VEVENT
 UID:6b2a3c2434b0@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Penser l’Europe depuis les Balkans. L’élargissement\, levier d
@@ -197,34 +223,8 @@ URL:https://www.sciencespo.fr/fr/evenements/penser-l-europe-depuis-les-balk
  ans-l-elargissement-levier-d-une-europe-geopolitique/
 END:VEVENT
 BEGIN:VEVENT
-UID:35ecb23ca55c@paris-academique
-DTSTAMP:20260925T221922Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Elu.es des banlieues populaires : quels enjeux suite aux élections
-  municipales de 2026 ? Une discussion entre élu.es\, personnes engagées 
- en politique et chercheur.es
-DESCRIPTION:Discussion\nhttps://www.campus-condorcet.fr
-LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
-URL:https://www.campus-condorcet.fr
-END:VEVENT
-BEGIN:VEVENT
-UID:a13f9073cb15@paris-academique
-DTSTAMP:20260925T221922Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Cities Ablaze: Tales of the December 2007 Riots in Karachi
-DESCRIPTION:Book discussion : Laurent Gayer and Waseem Yaqoob\, "Quand la v
- ille brûle. Sur les traces d'une émeute. Karachi\, 2007-2023"\, Paris\, 
- Anamosa\, 2026.\nhttps://www.sciencespo.fr/fr/evenements/cities-ablaze-tal
- es-of-the-december-2007-riots-in-karachi/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-dece
- mber-2007-riots-in-karachi/
-END:VEVENT
-BEGIN:VEVENT
 UID:71d8f26e49e2@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261001T090000
 DTEND:20261001T110000
 SUMMARY:Risques en milieux festifs - Centre Assas
@@ -237,7 +237,7 @@ URL:https://www.assas-universite.fr/fr/evenements/risques-en-milieux-festif
 END:VEVENT
 BEGIN:VEVENT
 UID:f58c25437fbe@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261001T090000
 DTEND:20261001T110000
 SUMMARY:🎙️ Petit déjeuner & Table Ronde : "Automatiser la paie sans p
@@ -248,7 +248,7 @@ URL:https://lu.ma/hdnr5ovf
 END:VEVENT
 BEGIN:VEVENT
 UID:a6b374baa41e@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261001T180000
 DTEND:20261001T200000
 SUMMARY:Se préparer au concours des douanes (DGDDI)
@@ -261,7 +261,7 @@ URL:https://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-d
 END:VEVENT
 BEGIN:VEVENT
 UID:f654d38b4450@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261001T180000
 DTEND:20261001T200000
 SUMMARY:Conférence : Femmes Diplomates
@@ -272,7 +272,7 @@ URL:https://www.paris.fr/evenements/conference-femmes-diplomates-123267
 END:VEVENT
 BEGIN:VEVENT
 UID:bfdf9b9ad0f7@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261001T180000
 DTEND:20261001T200000
 SUMMARY:La Corée aujourd’hui : regards croisés sur un pays en pleine mu
@@ -287,7 +287,7 @@ URL:https://www.paris.fr/evenements/conference-convergences-la-statuaire-fu
 END:VEVENT
 BEGIN:VEVENT
 UID:d3269259c435@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261002T084500
 DTEND:20261002T104500
 SUMMARY:L'arbitrage et les contentieux émergents : droits humains et envir
@@ -301,7 +301,7 @@ URL:https://www.assas-universite.fr/fr/evenements/larbitrage-contentieux-em
 END:VEVENT
 BEGIN:VEVENT
 UID:603a6d9ac508@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261002T093000
 DTEND:20261002T164500
 SUMMARY:À un mois des midterms\, où va l’Amérique de Donald Trump ?
@@ -313,7 +313,7 @@ URL:https://www.ifri.org/fr/un-mois-des-midterms-ou-va-lamerique-de-donald-
 END:VEVENT
 BEGIN:VEVENT
 UID:c0533be94b45@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261002T100000
 DTEND:20261002T120000
 SUMMARY:Rencontre professionnelle avec la direction juridique d'ORANO
@@ -326,7 +326,7 @@ URL:https://www.assas-universite.fr/fr/evenements/rencontre-professionnelle
 END:VEVENT
 BEGIN:VEVENT
 UID:531964cb070a@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:AFRICA DAY 2026
@@ -339,21 +339,8 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/africa-day-2026/
 END:VEVENT
 BEGIN:VEVENT
-UID:2b95dfcae1a8@paris-academique
-DTSTAMP:20260925T221922Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
-SUMMARY:Conférence: Le droit dans la Nuit ?
-DESCRIPTION:2026 05 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
- cation/article/conference-le-droit-dans-la-nuit
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/confere
- nce-le-droit-dans-la-nuit
-END:VEVENT
-BEGIN:VEVENT
 UID:86e45d20aefb@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Cycle de conférences : Les mardis du Master Droits et RSE
@@ -366,8 +353,21 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/cycle-d
  e-conferences-les-mardis-du-master-droits-et-rse-2
 END:VEVENT
 BEGIN:VEVENT
+UID:2b95dfcae1a8@paris-academique
+DTSTAMP:20260925T224052Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:Conférence: Le droit dans la Nuit ?
+DESCRIPTION:2026 05 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
+ cation/article/conference-le-droit-dans-la-nuit
+LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
+ gny\, Paris 16e
+URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/confere
+ nce-le-droit-dans-la-nuit
+END:VEVENT
+BEGIN:VEVENT
 UID:b432828d83a8@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261005T180000
 DTEND:20261005T200000
 SUMMARY:Nuit du droit comparé 2026 : concours de posters scientifiques
@@ -380,7 +380,7 @@ URL:https://isjps.pantheonsorbonne.fr/evenements/nuit-du-droit-compare-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:9b58933e5453@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261006T190000
 DTEND:20261006T210000
 SUMMARY:Faire la ville avec les vivants : rencontre conférence avec Léa M
@@ -398,7 +398,7 @@ URL:https://www.paris.fr/evenements/faire-la-ville-avec-les-vivants-rencont
 END:VEVENT
 BEGIN:VEVENT
 UID:259881c69c97@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Nature\, Risks and Informality in Latin America
@@ -412,7 +412,7 @@ URL:https://www.sciencespo.fr/fr/evenements/nature-risks-and-informality-in
 END:VEVENT
 BEGIN:VEVENT
 UID:c2bebe1913ba@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261007T090000
 DTEND:20261007T110000
 SUMMARY:Colloque "Compliance et droit commun des contrats"
@@ -425,7 +425,7 @@ URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-compliance-et-droi
 END:VEVENT
 BEGIN:VEVENT
 UID:5f2740d90a74@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261007T123000
 DTEND:20261007T140000
 SUMMARY:Pandémies et maladies infectieuses : que peut la communauté inter
@@ -438,7 +438,7 @@ URL:https://www.ifri.org/fr/pandemies-et-maladies-infectieuses-que-peut-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:3842a480c145@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:50 years of the First EU Waste Framework Directive: Assessment and 
@@ -452,7 +452,7 @@ URL:https://www.assas-universite.fr/fr/evenements/50-years-first-eu-waste-f
 END:VEVENT
 BEGIN:VEVENT
 UID:ed5fad4735f8@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:À la découverte des droits de l’enfant
@@ -470,7 +470,7 @@ URL:https://www.paris.fr/evenements/a-la-decouverte-des-droits-de-l-enfant-
 END:VEVENT
 BEGIN:VEVENT
 UID:da77f82606a2@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Sweden at a crossroads: after four years of far-right influence\, w
@@ -485,7 +485,7 @@ URL:https://www.sciencespo.fr/fr/evenements/sweden-at-a-crossroads-after-fo
 END:VEVENT
 BEGIN:VEVENT
 UID:42f84b3487af@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261008T190000
 DTEND:20261008T203000
 SUMMARY:Un cycle pour explorer la démocratie au Théâtre de la Concorde
@@ -500,22 +500,8 @@ LOCATION:Théâtre de la Concorde\, 1 Avenue Gabriel\, 75008 Paris
 URL:https://www.paris.fr/evenements/cycle-la-democratie-pour-tous-102572
 END:VEVENT
 BEGIN:VEVENT
-UID:1685fa91ca04@paris-academique
-DTSTAMP:20260925T221922Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
-SUMMARY:Combattre la polycrise — grand colloque de l'Institut Open Diplom
- acy
-DESCRIPTION:Colloque — Colloque sur la polycrise (crises géopolitique\, 
- écologique\, économique et politique)\, organisé par le think tank de j
- eunes Open Diplomacy.\nhttps://www.open-diplomacy.fr/colloque-polycrise
-LOCATION:Maison de l'Europe de Paris\, 35-37 rue des Francs-Bourgeois\, Par
- is 4e
-URL:https://www.open-diplomacy.fr/colloque-polycrise
-END:VEVENT
-BEGIN:VEVENT
 UID:489c6d596a5b@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Imaginons des droits sociaux émancipateurs
@@ -530,8 +516,22 @@ LOCATION:126 rue de l'Université - Paris (France)
 URL:https://preambule1946.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:1685fa91ca04@paris-academique
+DTSTAMP:20260925T224052Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Combattre la polycrise — grand colloque de l'Institut Open Diplom
+ acy
+DESCRIPTION:Colloque — Colloque sur la polycrise (crises géopolitique\, 
+ écologique\, économique et politique)\, organisé par le think tank de j
+ eunes Open Diplomacy.\nhttps://www.open-diplomacy.fr/colloque-polycrise
+LOCATION:Maison de l'Europe de Paris\, 35-37 rue des Francs-Bourgeois\, Par
+ is 4e
+URL:https://www.open-diplomacy.fr/colloque-polycrise
+END:VEVENT
+BEGIN:VEVENT
 UID:a21789ea3a50@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261009T093000
 DTEND:20261009T113000
 SUMMARY:« Le droit constitutionnel médiatique » - Journée Jus Politicum
@@ -545,7 +545,7 @@ URL:https://www.assas-universite.fr/fr/evenements/droit-constitutionnel-med
 END:VEVENT
 BEGIN:VEVENT
 UID:e2bd1fd39163@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261009T093000
 DTEND:20261009T113000
 SUMMARY:Les grandes réformes du Code civil
@@ -558,7 +558,7 @@ URL:https://www.assas-universite.fr/fr/evenements/grandes-reformes-code-civ
 END:VEVENT
 BEGIN:VEVENT
 UID:80834836a743@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261009T123000
 DTEND:20261009T183000
 SUMMARY:Forum France-Ukraine 2026
@@ -568,7 +568,7 @@ URL:https://www.ifri.org/fr/forum-france-ukraine-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:41313544a6d2@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261009T190000
 DTEND:20261009T210000
 SUMMARY:Les conférences du Collège de droit : présentation de l'ouvrage 
@@ -582,7 +582,7 @@ URL:https://www.assas-universite.fr/fr/evenements/conferences-college-droit
 END:VEVENT
 BEGIN:VEVENT
 UID:f57ac0af0995@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261010T100000
 DTEND:20261010T120000
 SUMMARY:Salon du livre juridique 2026 au Conseil constitutionnel
@@ -595,7 +595,7 @@ URL:https://www.assas-universite.fr/fr/evenements/salon-livre-juridique-202
 END:VEVENT
 BEGIN:VEVENT
 UID:b4f35e04a7d9@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:La géopolitique à l'heure des discours apocalyptiques
@@ -607,7 +607,7 @@ URL:https://www.collegedesbernardins.fr/agenda/la-geopolitique-a-l-heure-de
 END:VEVENT
 BEGIN:VEVENT
 UID:0e166afcf1fe@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261012T170000
 DTEND:20261012T190000
 SUMMARY:La politique commerciale de l’UE entre le néoprotectionnisme am
@@ -622,7 +622,7 @@ URL:https://www.assas-universite.fr/fr/evenements/politique-commerciale-lue
 END:VEVENT
 BEGIN:VEVENT
 UID:ef38c3ad874d@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261013T080000
 DTEND:20261013T100000
 SUMMARY:La relation Directions Juridiques × Cabinets à l’ère de l’IA
@@ -632,7 +632,7 @@ URL:https://lu.ma/nmukxzti
 END:VEVENT
 BEGIN:VEVENT
 UID:1e328f614150@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261013T190000
 DTEND:20261013T203000
 SUMMARY:Menaces sur l’État de droit ! - Cycle de rencontres avec Salomé
@@ -648,7 +648,7 @@ URL:https://www.paris.fr/evenements/menaces-sur-l-etat-de-droit-cycle-de-re
 END:VEVENT
 BEGIN:VEVENT
 UID:0ed2fc3defe3@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Prix Penser le travail 2026
@@ -663,7 +663,7 @@ URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:4798fee88fe7@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261014T080000
 DTEND:20261014T100000
 SUMMARY:Déployer l’IA en Entreprise : gouvernance\, adoption\, passage 
@@ -674,7 +674,7 @@ URL:https://lu.ma/dust-elevenlabs
 END:VEVENT
 BEGIN:VEVENT
 UID:5ebec330e3ee@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261014T093000
 DTEND:20261014T120000
 SUMMARY:Gérer l'incertitude : les puissances asiatiques face à la rivalit
@@ -687,7 +687,7 @@ URL:https://www.ifri.org/fr/gerer-lincertitude-les-puissances-asiatiques-fa
 END:VEVENT
 BEGIN:VEVENT
 UID:fd3b57bbf1f9@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261014T140000
 DTEND:20261014T160000
 SUMMARY:Les grands arrêts politiques de la jurisprudence administrative
@@ -700,7 +700,7 @@ URL:https://www.assas-universite.fr/fr/evenements/grands-arrets-politiques-
 END:VEVENT
 BEGIN:VEVENT
 UID:5a9f463e0a4b@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261014T160000
 DTEND:20261014T180000
 SUMMARY:4ᵉ édition de Bienvenue à Paris : village étudiant de Paris
@@ -713,7 +713,7 @@ URL:https://www.assas-universite.fr/fr/evenements/4-edition-bienvenue-paris
 END:VEVENT
 BEGIN:VEVENT
 UID:1fe165e5ef62@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261015T090000
 DTEND:20261015T110000
 SUMMARY:Forum du livre juridique 2026 au centre Assas
@@ -726,7 +726,7 @@ URL:https://www.assas-universite.fr/fr/evenements/forum-livre-juridique-202
 END:VEVENT
 BEGIN:VEVENT
 UID:54ebf58f2628@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261015T140000
 DTEND:20261015T160000
 SUMMARY:Coupe du Panthéon 2026
@@ -737,7 +737,7 @@ URL:https://www.assas-universite.fr/fr/evenements/coupe-pantheon-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:0bb089478ddc@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261015T180000
 DTEND:20261015T200000
 SUMMARY:Quelle place pour le droit social dans le débat politique ?
@@ -750,7 +750,7 @@ URL:https://www.assas-universite.fr/fr/evenements/quelle-place-droit-social
 END:VEVENT
 BEGIN:VEVENT
 UID:c9bfd38029eb@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261016T090000
 DTEND:20261016T170000
 SUMMARY:Académie Notre Europe #1 – L’Europe Politique et Institutionne
@@ -763,7 +763,7 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-1-leurope-po
 END:VEVENT
 BEGIN:VEVENT
 UID:f9b087566810@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Octobre rose - association sportive (17/10)
@@ -774,8 +774,18 @@ URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-
  sportive-1710
 END:VEVENT
 BEGIN:VEVENT
+UID:3fc952a28fc8@paris-academique
+DTSTAMP:20260925T224052Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Le rendez-vous des droits
+DESCRIPTION:\nhttps://www.univ-paris8.fr/Le-rendez-vous-des-droits
+LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
+URL:https://www.univ-paris8.fr/Le-rendez-vous-des-droits
+END:VEVENT
+BEGIN:VEVENT
 UID:c898baed904a@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Octobre rose - association sportive (22/10)
@@ -786,18 +796,8 @@ URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-
  sportive-2210
 END:VEVENT
 BEGIN:VEVENT
-UID:3fc952a28fc8@paris-academique
-DTSTAMP:20260925T221922Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Le rendez-vous des droits
-DESCRIPTION:\nhttps://www.univ-paris8.fr/Le-rendez-vous-des-droits
-LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Le-rendez-vous-des-droits
-END:VEVENT
-BEGIN:VEVENT
 UID:d31986053279@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
 SUMMARY:4EU+ : réunion annuelle 2026
@@ -809,7 +809,7 @@ URL:https://www.assas-universite.fr/fr/evenements/4eu-reunion-annuelle-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:7f7f87992eef@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
 SUMMARY:Soirée des masters 2026
@@ -821,7 +821,7 @@ URL:https://www.assas-universite.fr/fr/evenements/soiree-masters-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:611dadba4fbb@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Cérémonie du Collège universitaire / Undergraduate College Award
@@ -837,7 +837,7 @@ URL:https://www.sciencespo.fr/fr/evenements/ceremonie-du-college-universita
 END:VEVENT
 BEGIN:VEVENT
 UID:b9f0f9e8beb4@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261103T183000
 DTEND:20261103T203000
 SUMMARY:Nuit du rempart (escalade) - 2e édition
@@ -850,7 +850,7 @@ URL:https://www.assas-universite.fr/fr/evenements/nuit-rempart-escalade-2e-
 END:VEVENT
 BEGIN:VEVENT
 UID:534610543f02@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Protéger les sources : un statut pour la recherche
@@ -862,7 +862,7 @@ URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-
 END:VEVENT
 BEGIN:VEVENT
 UID:c58a150c8c08@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261104T140000
 DTEND:20261104T160000
 SUMMARY:Initiation au droit des images : utiliser des reproductions d’oeu
@@ -875,7 +875,7 @@ URL:https://www.inha.fr/agenda/formation-droit-des-images-novembre-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:bbf81708d79f@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261105T133000
 DTEND:20261105T153000
 SUMMARY:Ecosystem days : Propriété intellectuelle & juridique
@@ -886,7 +886,7 @@ URL:https://lu.ma/9trvdxlg
 END:VEVENT
 BEGIN:VEVENT
 UID:e61061a5b914@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261113T090000
 DTEND:20261113T170000
 SUMMARY:Académie Notre Europe #2 – L’Europe dans le Monde
@@ -898,7 +898,7 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-2-leurope-da
 END:VEVENT
 BEGIN:VEVENT
 UID:146b68f5d8dd@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261113T110000
 DTEND:20261113T130000
 SUMMARY:Representative Democracy in Reflexive Globalization Philipp Dann
@@ -912,7 +912,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/philipp-
 END:VEVENT
 BEGIN:VEVENT
 UID:21fd6694d0a5@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261117T200000
 DTEND:20261117T220000
 SUMMARY:Gala annuel au Théâtre des Champs-Elysées
@@ -929,7 +929,7 @@ URL:https://www.paris.fr/evenements/gala-annuel-au-theatre-des-champs-elyse
 END:VEVENT
 BEGIN:VEVENT
 UID:037b8d20c7a4@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261119T090000
 DTEND:20261119T110000
 SUMMARY:Mois sans tabac - Centre Assas
@@ -942,7 +942,7 @@ URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-as
 END:VEVENT
 BEGIN:VEVENT
 UID:bf36fe3d4708@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261119T090000
 DTEND:20261119T110000
 SUMMARY:Mois sans tabac - Centre Vaugirard et campus de Melun
@@ -956,7 +956,7 @@ URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-va
 END:VEVENT
 BEGIN:VEVENT
 UID:6cde1255b391@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261119T143000
 DTEND:20261119T163000
 SUMMARY:Les masculinismes : quelles réponses du droit en Europe ?
@@ -969,7 +969,7 @@ URL:https://iredies.pantheonsorbonne.fr/evenements/masculinismes-quelles-re
 END:VEVENT
 BEGIN:VEVENT
 UID:c6c7897b20ac@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261119T153000
 DTEND:20261119T173000
 SUMMARY:Notre rapport à la vérité a-t-il changé ?
@@ -986,7 +986,7 @@ URL:https://u-paris.fr/universite-ouverte/notre-rapport-a-la-verite-a-t-il-
 END:VEVENT
 BEGIN:VEVENT
 UID:5ced4e3ed100@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261119T190000
 DTEND:20261119T210000
 SUMMARY:Jeudi de l'actualité : Une démocratie alimentaire est-elle possib
@@ -1005,7 +1005,7 @@ URL:https://www.paris.fr/evenements/jeudi-de-l-actualite-une-democratie-ali
 END:VEVENT
 BEGIN:VEVENT
 UID:f7f36fafae55@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261120T143000
 DTEND:20261120T213000
 SUMMARY:Focus Justice des mineurs - Sonia Chiambretto\, Thibaud Croisy au C
@@ -1021,7 +1021,7 @@ URL:https://www.paris.fr/evenements/focus-justice-des-mineurs-sonia-chiambr
 END:VEVENT
 BEGIN:VEVENT
 UID:aacc5031d998@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261127T110000
 DTEND:20261127T130000
 SUMMARY:Géants technologiques mondiaux et privatisation du droit Vincent M
@@ -1035,7 +1035,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/vincent-
 END:VEVENT
 BEGIN:VEVENT
 UID:0636a3485852@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Droit dans les yeux. Le Louvre en face
@@ -1049,7 +1049,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/dr
 END:VEVENT
 BEGIN:VEVENT
 UID:3fbe4e9dd315@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261130T093000
 DTEND:20261130T113000
 SUMMARY:Journée d'études "20 ans de recherches en droit administratif (20
@@ -1063,7 +1063,7 @@ URL:https://irjs.pantheonsorbonne.fr/evenements/journee-detudes-20-ans-de-r
 END:VEVENT
 BEGIN:VEVENT
 UID:bca28456c0db@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Journée de lutte contre le VIH - Centre Vaugirard et campus de Mel
@@ -1078,7 +1078,7 @@ URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-
 END:VEVENT
 BEGIN:VEVENT
 UID:5038b1ec0ff2@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Journée de lutte contre le VIH - Centre Assas
@@ -1091,7 +1091,7 @@ URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-
 END:VEVENT
 BEGIN:VEVENT
 UID:4e5b96419fb6@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Conférence Annuelle – 30 ans de l’Institut Jacques Delors
@@ -1103,7 +1103,7 @@ URL:https://institutdelors.eu/evenements/conference-annuelle-30-ans-de-lins
 END:VEVENT
 BEGIN:VEVENT
 UID:97e65e89e085@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261208T080000
 DTEND:20261208T100000
 SUMMARY:Colloque "Droit des affaires et droit des contrats dix ans après l
@@ -1118,7 +1118,7 @@ URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-droit-affaires-et-
 END:VEVENT
 BEGIN:VEVENT
 UID:bc80c8c7829d@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261214T083000
 DTEND:20261214T103000
 SUMMARY:Conférence Droits Humains et Entreprises 2026
@@ -1134,7 +1134,7 @@ URL:https://www.hec.edu/fr/center-society-organizations-so/evenements/confe
 END:VEVENT
 BEGIN:VEVENT
 UID:e69cf17aa02f@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261215T090000
 DTEND:20261215T110000
 SUMMARY:Santé mentale et bien être - Centre Vaugirard et campus de Melun
@@ -1148,7 +1148,7 @@ URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-c
 END:VEVENT
 BEGIN:VEVENT
 UID:90a262e4febf@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261216T140000
 DTEND:20261216T160000
 SUMMARY:Initiation au droit des images : utiliser des reproductions d’oeu
@@ -1161,7 +1161,7 @@ URL:https://www.inha.fr/agenda/formation-droit-des-images-decembre-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:4333c956690d@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20261217T090000
 DTEND:20261217T110000
 SUMMARY:Santé mentale et bien être - Centre Assas
@@ -1174,7 +1174,7 @@ URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-c
 END:VEVENT
 BEGIN:VEVENT
 UID:6a2044f9613f@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20270114T083000
 DTEND:20270114T103000
 SUMMARY:🥐 De l'appel à projets au sourcing : comment les fondations d'e
@@ -1185,7 +1185,7 @@ URL:https://lu.ma/1u4sfhdp
 END:VEVENT
 BEGIN:VEVENT
 UID:47bc8c2327e1@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
 SUMMARY:Géopolitique du musée. Pouvoir\, persuasion\, prédation
@@ -1198,7 +1198,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ge
 END:VEVENT
 BEGIN:VEVENT
 UID:460e91d9c4c4@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20270425T090000
 DTEND:20270425T110000
 SUMMARY:6e édition du tournoi Assas Green Volley
@@ -1212,7 +1212,7 @@ URL:https://www.assas-universite.fr/fr/evenements/6e-edition-tournoi-assas-
 END:VEVENT
 BEGIN:VEVENT
 UID:83d0eb333ffd@paris-academique
-DTSTAMP:20260925T221922Z
+DTSTAMP:20260925T224052Z
 DTSTART:20270512T093000
 DTEND:20270512T113000
 SUMMARY:De quels droits Olivier Borraz
