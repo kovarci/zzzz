@@ -185,6 +185,9 @@ _INSTITUTION_DEFAULT = {
     "Institut Louis Bachelier": "Économie", "Citéco": "Économie", "ESCP Business School": "Économie",
     "ENS Paris-Saclay": "Sciences",
     "Institut des actuaires": "Économie", "École polytechnique": "Sciences",
+    "IHES": "Mathématiques", "Labos de maths d'Île-de-France": "Mathématiques", "IPGP": "Sciences",
+    "Maison de l'Amérique latine": "Littérature", "Institut culturel italien": "Arts & Culture",
+    "Maison de la culture du Japon": "Arts & Culture",
     "EHESS": "Sociologie & Anthropologie",
     "Collège des Bernardins": "Philosophie",
     "Université Sorbonne Nouvelle": "Littérature",
@@ -583,6 +586,44 @@ def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
         ))
     print(f"   {len(events)} events")
     return events
+
+
+MATHS_IDF = "Labos de maths d'Île-de-France"
+
+
+def scrape_indico_maths():
+    """indico.math.cnrs.fr est national. On lisait toute l'instance (catégorie
+    0) : un séminaire de Lyon ou de Bordeaux sans lieu recevait l'adresse de
+    l'IHP. On ne lit plus que la catégorie « Région parisienne » (6) — IHP
+    (107), IHES (57), Jussieu, CEREMADE, LAGA, CERMICS… — et, parmi les
+    conférences (55) et GDR (24) nationaux, ceux qui ont lieu en Île-de-France."""
+    base = "https://indico.math.cnrs.fr"
+    ihp = scrape_indico("Institut Henri Poincaré", base, "107",
+                        "IHP, 11 rue Pierre et Marie Curie, Paris 5e")
+    ihes = scrape_indico("IHES", base, "57", "IHES, 35 route de Chartres, Bures-sur-Yvette")
+    seen = {e["url"] for e in ihp + ihes}
+    rest = [e for e in scrape_indico(MATHS_IDF, base, "6",
+                                     "Île-de-France — lieu précisé sur la page de l'événement")
+            if e["url"] not in seen]
+    for categ in ("55", "24"):
+        rest += [e for e in scrape_indico(MATHS_IDF, base, categ, "", keep_loc=_IDF_RE)
+                 if e["url"] not in seen]
+    out, urls = ihp + ihes, set(seen)
+    for e in rest:
+        if e["url"] in urls:
+            continue
+        urls.add(e["url"])
+        if re.search(r"\bIHP\b|Henri Poincar", e["location"]):
+            e["institution"] = "Institut Henri Poincaré"
+        elif re.search(r"\bIHES\b|Bois-Marie", e["location"]):
+            e["institution"] = "IHES"
+        e["id"] = make_id(e["institution"], e["title"], e["date"])
+        out.append(e)
+    for e in out:
+        if e["discipline"] not in ("Mathématiques", "Sciences"):
+            e["discipline"] = "Mathématiques"
+    print(f"   ✓ Total Indico maths Île-de-France: {len(out)} events")
+    return out
 
 
 # ── Playwright helpers ────────────────────────────────────────────────────────
@@ -3070,6 +3111,58 @@ def scrape_institut_engagement():
                         "Institut de l'Engagement, Paris", source_type="association")
 
 
+# ── Quatrième lot : géosciences, instituts culturels ───────────────────────────
+
+def scrape_ipgp():
+    # Institut de physique du globe de Paris : séminaires des équipes
+    evs = _scrape_cards(
+        "IPGP", "https://www.ipgp.fr/agenda/", "div.item.item-event", title="p.titre-item",
+        date="p.date", time="p.date", kind="p.categorie", speaker="p.orateur",
+        base="https://www.ipgp.fr", location="IPGP, 1 rue Jussieu, Paris 5e")
+    for e in evs:
+        e["speaker"] = re.sub(r"^Orat(eur|rice)s?\s*:\s*", "", e.get("speaker", ""))
+        if e["discipline"] == "Autre":
+            e["discipline"] = "Sciences"
+    return evs
+
+
+def scrape_amerique_latine():
+    # Maison de l'Amérique latine : rencontres littéraires, débats (pas les projections ni concerts)
+    evs = _scrape_cards(
+        "Maison de l'Amérique latine", "https://www.mal217.org/fr/agenda", "div.preview-agenda",
+        title="p.title", date="time.date", time="time.date", kind="p.flag",
+        drop_kind=("projection", "concert", "musique", "cinéma", "exposition", "spectacle", "danse"),
+        speaker="p.subtitle", base="https://www.mal217.org",
+        location="Maison de l'Amérique latine, 217 boulevard Saint-Germain, Paris 7e")
+    # Le sous-titre est tantôt l'invité (« Carol Prunhuber »), tantôt la suite
+    # du titre (« Tribune de l'économie » + « latino-américaine et caribéenne »)
+    for e in evs:
+        sub = e.get("speaker", "")
+        if sub and not re.fullmatch(r"(?:[A-ZÀ-Ý][\w'.-]+(?:\s+(?:de|del|da|la|y|et))?\s*){1,4}", sub):
+            e["title"], e["speaker"] = f"{e['title']} — {sub}", ""
+            e["id"] = make_id(e["institution"], e["title"], e["date"])
+    return evs
+
+
+def scrape_institut_italien():
+    # Institut culturel italien : titres « Conférence / … », « Rencontre / … »
+    return _scrape_cards(
+        "Institut culturel italien", "https://iicparigi.esteri.it/fr/gli_eventi/calendario/",
+        "div.row > div.col-12.mt-3", title="h5", date=".category-top span:last-child",
+        drop=re.compile(r"^(?!(conf[ée]rence|rencontre|colloque|d[ée]bat|litt[ée]rature|"
+                        r"pr[ée]sentation|table ronde|s[ée]minaire|journ[ée]e|lecture)\b)", re.I),
+        base="https://iicparigi.esteri.it", location="Institut culturel italien, 50 rue de Varenne, Paris 7e")
+
+
+def scrape_mcjp():
+    # Maison de la culture du Japon : conférences, rencontres (pas les cours ni le cinéma)
+    return _scrape_cards(
+        "Maison de la culture du Japon", "https://www.mcjp.fr/fr/agenda?subsections=conferences",
+        "a.preview", title="div.title", date="div.date", kind="div.genre",
+        drop_kind=("cours", "cinéma", "exposition", "spectacle", "atelier"),
+        base="https://www.mcjp.fr", location="Maison de la culture du Japon, 101 bis quai Jacques Chirac, Paris 15e")
+
+
 # Noms d'institution des sources ci-dessus (carry-forward, hubs i/*.html).
 # Doit rester aligné sur MAIN_INST dans web/src/lib.js.
 NEW_INSTITUTIONS = [
@@ -3084,6 +3177,7 @@ NEW_INSTITUTIONS = [
     "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay",
     "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
     "Institut des actuaires", "École polytechnique",
+    "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon",
 ]
 
 # Ordre = ordre d'exécution dans main() ; tous sans navigateur.
@@ -3103,6 +3197,7 @@ STATIC_SOURCES = [
     scrape_louis_bachelier, scrape_citeco, scrape_ima, scrape_beaux_arts, scrape_ens_saclay,
     scrape_escp, scrape_sorbonne_paris_nord, scrape_chartes,
     scrape_lamsade, scrape_cmap, scrape_actuaires, scrape_institut_engagement,
+    scrape_ipgp, scrape_amerique_latine, scrape_institut_italien, scrape_mcjp,
 ]
 
 
@@ -3560,6 +3655,12 @@ INSTITUTION_COORDS = {
     "École nationale des chartes": [48.8675, 2.3383],
     "Institut des actuaires": [48.8718, 2.3236],
     "École polytechnique": [48.7134, 2.2105],
+    "IHES": [48.701, 2.1734],
+    "Labos de maths d'Île-de-France": [48.8466, 2.3444],
+    "IPGP": [48.8464, 2.3561],
+    "Maison de l'Amérique latine": [48.8573, 2.3237],
+    "Institut culturel italien": [48.8551, 2.3203],
+    "Maison de la culture du Japon": [48.8554, 2.2896],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -3812,6 +3913,12 @@ INSTITUTION_URLS = {
     "École nationale des chartes": "https://www.chartes.psl.eu",
     "Institut des actuaires": "https://www.institutdesactuaires.com",
     "École polytechnique": "https://www.polytechnique.edu",
+    "IHES": "https://www.ihes.fr",
+    "Labos de maths d'Île-de-France": "https://indico.math.cnrs.fr/category/6/",
+    "IPGP": "https://www.ipgp.fr",
+    "Maison de l'Amérique latine": "https://www.mal217.org",
+    "Institut culturel italien": "https://iicparigi.esteri.it",
+    "Maison de la culture du Japon": "https://www.mcjp.fr",
 }
 
 
@@ -4662,11 +4769,9 @@ def main():
     all_events = []
 
     try:
-        all_events.extend(scrape_indico(
-            "Institut Henri Poincaré", "https://indico.math.cnrs.fr", "0",
-            "IHP, 11 rue Pierre et Marie Curie, Paris 5e"))
+        all_events.extend(scrape_indico_maths())
     except Exception as e:
-        print(f"[ERROR] IHP: {e}")
+        print(f"[ERROR] Indico maths: {e}")
         traceback.print_exc()
 
     try:

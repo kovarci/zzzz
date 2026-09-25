@@ -24,7 +24,8 @@ export const MAIN_INST = ["Collège de France", "Institut Henri Poincaré", "Uni
   "INHA", "Ifri", "IRIS", "Institut Jacques Delors", "Fondation Jean-Jaurès",
   "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay",
   "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
-  "Institut des actuaires", "École polytechnique"];
+  "Institut des actuaires", "École polytechnique",
+  "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon"];
 export const WD = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 export const WDS = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
 export const MO = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];

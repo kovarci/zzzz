@@ -24,7 +24,7 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 
 | Source                              | Méthode                              | Type           |
 |-------------------------------------|--------------------------------------|----------------|
-| Institut Henri Poincaré             | API Indico                           | Institution    |
+| Institut Henri Poincaré             | API Indico (catégorie 107)           | Institution    |
 | Collège de France                   | requests + headers navigateur        | Institution    |
 | Paris School of Economics           | scraping HTML paginé                 | Institution    |
 | Université PSL                      | scraping HTML paginé                 | Institution    |
@@ -52,6 +52,9 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | LAMSADE (Dauphine), CMAP (Polytechnique) | cartes HTML (séminaires)         | Laboratoire    |
 | Institut des actuaires              | cartes HTML (prix gratuit/payant)    | Profession     |
 | Institut de l'Engagement            | API The Events Calendar              | Association    |
+| IHES, labos de maths d'Île-de-France | API Indico, catégorie « Région parisienne » (6) | Recherche |
+| IPGP                                | cartes HTML (séminaires)             | Recherche      |
+| Maison de l'Amérique latine, Institut culturel italien, Maison de la culture du Japon | cartes HTML (rencontres, conférences) | Culture |
 | Université Sorbonne Nouvelle        | listes annuelles des colloques       | Institution    |
 | Université Paris 8                  | frise de la page d'accueil (~1 mois) | Institution    |
 | Université Paris Nanterre           | export iCal de l'agenda              | Institution    |
