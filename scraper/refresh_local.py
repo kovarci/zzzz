@@ -84,7 +84,8 @@ def main():
     # robot GitHub), requests suffit depuis la France.
     blocked = []
     for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences, scrape.scrape_jeunes_ihedn,
-               scrape.scrape_ifri, scrape.scrape_iris, scrape.scrape_jean_jaures):
+               scrape.scrape_ifri, scrape.scrape_iris, scrape.scrape_jean_jaures,
+               scrape.scrape_lamsade):
         try:
             blocked += fn()
         except Exception as e:

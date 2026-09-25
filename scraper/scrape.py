@@ -1970,10 +1970,78 @@ def _range_start(text):
         return end
 
 
+SCIENCESCONF_CACHE = OUTPUT_FILE.parent / "sciencesconf-sites.json"
+
+
+def _sc_key(url):
+    return re.sub(r"^https?://", "", url or "").rstrip("/").lower()
+
+
+def _sciencesconf_sitemap(known, *, window=1500, max_fetch=150):
+    """Le portail ne montre que ~4 semaines. Le sitemap officiel liste tous les
+    sites de colloques, les plus récents à la fin ; l'en-tête de chaque site
+    donne « Paris (France) / 2-4 Nov 2026 ». On lit les `window` derniers, en
+    cache (data/sciencesconf-sites.json) : seuls les nouveaux sites, et les
+    colloques à venir vus il y a plus de 30 jours, sont relus (≤ max_fetch)."""
+    try:
+        cache = json.loads(SCIENCESCONF_CACHE.read_text(encoding="utf-8"))
+    except Exception:
+        cache = {}
+    try:
+        r = requests.get("https://portal.sciencesconf.org/data/sitemap/sitemap.xml",
+                         headers=HEADERS, timeout=60)
+        r.raise_for_status()
+        sites = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)[-window:]
+    except Exception as e:
+        print(f"   [warn] sitemap Sciencesconf : {e}")
+        return []
+    stale = (TODAY - timedelta(days=30)).isoformat()
+    todo = [u for u in reversed(sites) if u not in cache] + [
+        u for u in sites if u in cache and cache[u].get("seen", "") < stale
+        and (not cache[u].get("s") or cache[u]["s"] >= TODAY.isoformat())]
+    fetched = 0
+    for u in todo[:max_fetch]:
+        try:
+            b = BeautifulSoup(requests.get(u, headers=HEADERS, timeout=20).content, "lxml")
+        except Exception:
+            continue                                   # retentée au prochain passage
+        entry = {"seen": TODAY.isoformat()}
+        loc, ttl = b.select_one("div.location p"), b.select_one("section p.title")
+        if loc:
+            parts = [clean_text(x) for x in loc.stripped_strings]
+            st = _range_start(parts[1]) if len(parts) > 1 else None
+            entry.update(t=clean_text(ttl.get_text(" ")) if ttl else "", loc=parts[0] if parts else "",
+                         s=st.isoformat() if st and st.year > 2000 else "")
+        cache[u] = entry
+        fetched += 1
+        time.sleep(0.2)
+    cache = {u: cache[u] for u in sites if u in cache}
+    try:
+        SCIENCESCONF_CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")),
+                                      encoding="utf-8")
+    except Exception as e:
+        print(f"   [warn] cache Sciencesconf : {e}")
+    events = []
+    for u in sites:
+        c = cache.get(u) or {}
+        if (not c.get("s") or _sc_key(u) in known or "(France)" not in c.get("loc", "")
+                or not _IDF_RE.search(c.get("loc", ""))):
+            continue
+        d = date.fromisoformat(c["s"])
+        if not in_window(d):
+            continue
+        # « SGAP: a Scientist's Guide to AI - Paris - 2026 » → sans ville ni année
+        title = re.sub(r"\s+-\s+[^-]{2,40}\s+-\s+20\d\d\s*$", "", c.get("t", "")).strip() or _sc_key(u)
+        events.append(new_event("Sciencesconf.org", title, d, location=c["loc"],
+                                url=u.rstrip("/") + "/", desc="Colloque"))
+    print(f"   sitemap : {len(sites)} sites, {fetched} lus, {len(events)} colloques franciliens en plus")
+    return events
+
+
 def scrape_sciencesconf():
-    """Le portail ne liste que ~200 colloques à venir (≈ 3 semaines) : le
-    report quotidien fait le reste. Fiche détaillée lue pour les seuls
-    colloques franciliens : adresse, site du colloque, GPS."""
+    """Le portail ne liste que ~200 colloques à venir (≈ 4 semaines) ; le
+    sitemap (_sciencesconf_sitemap) couvre les mois suivants. Fiche détaillée
+    lue pour les seuls colloques franciliens : adresse, site du colloque, GPS."""
     name = "Sciencesconf.org"
     print(f"→ {name}...")
     base = "https://portal.sciencesconf.org"
@@ -2008,6 +2076,8 @@ def scrape_sciencesconf():
         if lat and lon:
             ev["lat"], ev["lng"], ev["geo_exact"] = lat, lon, True
         events.append(ev)
+    known = {_sc_key(e["url"]) for e in events}
+    events += _sciencesconf_sitemap(known)
     print(f"   ✓ Total {name}: {len(events)} events")
     return events
 
@@ -3332,13 +3402,29 @@ def _richness(ev):
             + bool(ev.get("speaker")) + min(len(ev.get("description") or ""), 300) / 300)
 
 
+_ACRONYM_STOP = {
+    "CNRS", "EHESS", "INHA", "IFRI", "IRIS", "ESCP", "CMAP", "LAMSADE", "ITEM", "CERES",
+    "CIENS", "INSERM", "INRIA", "CNAM", "MNHN", "FMSH", "ESSEC", "IHEDN", "UNESCO", "OCDE",
+    "OECD", "INSEE", "CNES", "ONERA", "INRAE", "EPHE", "INALCO", "BULAC", "IRCAM", "ENSAE",
+    "ESPCI", "IPGG", "ICP", "UPEC", "LPNHE", "IJCLAB", "PSL", "HEC", "ENS", "IHP", "BNF",
+}
+
+
 def merge_cross_source(events):
     """Même titre + même date chez deux organisateurs (BnF + EPHE, PSL +
     Dauphine…) : une seule fiche, la plus complète ; les autres organisateurs
     sont notés dans « also ». Titres trop courts / génériques ignorés."""
     groups = {}
     for ev in events:
-        t = slugify(ev.get("title", ""))
+        title = ev.get("title", "")
+        t = slugify(title)
+        # Titre ouvert par un sigle de colloque (« SGAP 2026 Paris – … »,
+        # « SGAP: a Scientist's Guide… ») : même sigle + même date = même
+        # événement. Pas les titres tout en capitales ni les sigles d'institution.
+        acr = re.match(r"([A-Z][A-Z0-9]{3,})\b", title)
+        if (acr and re.search(r"[a-zé]", title) and acr.group(1) not in _ACRONYM_STOP):
+            groups.setdefault(("acr", acr.group(1), ev.get("date")), []).append(ev)
+            continue
         if len(t) < 20:
             groups[id(ev)] = [ev]
             continue
