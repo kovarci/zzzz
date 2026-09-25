@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
+import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, iso, parse, addDays, norm, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
@@ -45,9 +45,50 @@ function EventCard({ e, fav, onFav, onOpen, distance, past }) {
     </div></div>;
 }
 
+/* ═════════════════════ Fiche : événements liés ═════════════════════ */
+// Même règle que _series_key() dans scraper/scrape.py : titre sans le numéro
+// de séance « (3) » / « (2/6) », sans le nom d'intervenant que le Collège de
+// France colle à la fin, et même organisateur.
+const seriesKey = e => {
+  let b = (e.title || "").replace(/\s*\(\d+(?:\/\d+)?\)\s*/g, " ").trim();
+  const sp = (e.speaker || "").trim();
+  if (sp && b.endsWith(sp)) b = b.slice(0, -sp.length).trim();
+  return e.institution + "|" + norm(b);
+};
+// « A. Dupont, B. Martin et C. Durand » → noms séparés, pour qu'un intervenant
+// d'une table ronde retrouve aussi ses conférences seul.
+const speakerNames = s => norm(s || "").split(/\s*(?:[,;&/]|\bet\b|\band\b)\s*/).map(x => x.replace(/\(.*?\)/g, "").trim()).filter(x => x.length >= 6);
+const byDate = (a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || ""));
+function relatedOf(e, pool) {
+  const others = pool.filter(x => x.id !== e.id && !isSide(x) === !isSide(e));
+  const key = seriesKey(e);
+  const cycle = others.filter(x => x.institution === e.institution && seriesKey(x) === key).sort(byDate);
+  const seen = new Set(cycle.map(x => x.id));
+  const names = new Set(speakerNames(e.speaker));
+  const speaker = names.size ? others.filter(x => !seen.has(x.id) && speakerNames(x.speaker).some(n => names.has(n))).sort(byDate) : [];
+  speaker.forEach(x => seen.add(x.id));
+  const here = typeof e.lat === "number" ? `${e.lat.toFixed(3)},${e.lng.toFixed(3)}` : null;
+  const place = others.filter(x => !seen.has(x.id) && x.date === e.date && (here ? typeof x.lat === "number" && `${x.lat.toFixed(3)},${x.lng.toFixed(3)}` === here : x.location && x.location === e.location)).sort(byDate);
+  return { cycle, speaker, place };
+}
+function RelatedList({ title, items, onOpen, max = 5 }) {
+  const { t, fmtShort } = useI18n();
+  const [all, setAll] = useState(false);
+  if (!items.length) return null;
+  return <section>
+    <h3 className="mb-1.5 flex items-baseline justify-between text-xs font-semibold uppercase tracking-wide text-muted-foreground"><span>{title}</span><span className="tabular-nums font-normal normal-case tracking-normal">{items.length}</span></h3>
+    <ul className="divide-y rounded-lg border">{(all ? items : items.slice(0, max)).map(x => <li key={x.id}>
+      <button onClick={() => onOpen(x)} className="flex w-full items-start gap-3 px-3 py-2 text-left text-sm hover:bg-accent">
+        <span className="w-20 shrink-0 pt-px text-xs leading-snug tabular-nums text-muted-foreground"><span className="block whitespace-nowrap">{fmtShort(x.date)}</span>{x.time && <span className="block">{x.time}</span>}</span>
+        <span className="min-w-0 flex-1 line-clamp-2">{titleOf(x)}</span></button></li>)}</ul>
+    {items.length > max && !all && <button onClick={() => setAll(true)} className="mt-1.5 text-xs font-medium text-muted-foreground hover:text-foreground">{t("rel_more", { n: items.length - max })}</button>}
+  </section>;
+}
+
 /* ═════════════════════ Fiche (sheet) ═════════════════════ */
-function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow }) {
+function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = [], onOpen }) {
   const { t, fmtDay } = useI18n();
+  const rel = useMemo(() => e ? relatedOf(e, pool) : null, [e, pool]);
   useEffect(() => { if (!e) return; const h = ev => ev.key === "Escape" && onClose(); document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, [e]);
   const share = async () => {
     const url = `${SITE}/e/${e.id}.html`;
@@ -60,7 +101,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow }) {
       {(() => { const d = parse(e.date), days = Math.round((d - today) / 864e5); return <>
         <div className="relative aspect-[16/10] shrink-0 group"><Cover e={e} className="absolute inset-0" eager /><button onClick={onClose} className="absolute top-3 right-3 z-[2] inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow hover:bg-background" aria-label={t("fermer")}><Icon d={ICONS.x} size={16} /></button></div>
         <div className="p-6 flex flex-col gap-4">
-          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), color: dc(e) }}>{e.discipline}</Badge><Badge>{kindOf(e)}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
+          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), color: dc(e) }}>{e.discipline}</Badge><Badge>{kindOf(e)}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}{isEnglish(e) && <Badge title={t("filter_en_hint")}>{t("filter_en")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
           <h2 className="text-2xl font-semibold tracking-tight leading-tight [text-wrap:balance]">{e.title}</h2>
           <div className="flex items-center gap-3 rounded-lg border bg-card p-3">
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
@@ -78,6 +119,11 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow }) {
               <Button variant="outline" onClick={share} className="px-2"><Icon d={ICONS.share} size={14} />{t("sheet_share")}</Button>
             </div>
           </div>
+          {rel && <div className="flex flex-col gap-5 pt-2">
+            <RelatedList title={t("rel_cycle")} items={rel.cycle} onOpen={onOpen} />
+            <RelatedList title={t("rel_speaker")} items={rel.speaker} onOpen={onOpen} max={4} />
+            <RelatedList title={t("rel_place")} items={rel.place} onOpen={onOpen} max={4} />
+          </div>}
         </div>
         <p className="mt-auto p-6 pt-0 text-xs text-muted-foreground">{t("sheet_footer_note")}</p></>; })()}
     </motion.aside></React.Fragment>}</AnimatePresence>;
@@ -194,21 +240,33 @@ function MiniMap({ events, onGoMap }) {
   </button>;
 }
 
-/* ═════════════════════ Bandeau institution (filtre unique) ═════════════════════ */
+/* ═════════════════════ Bandeaux institution / discipline (filtre unique) ═════════════════════ */
+// Liens vers la page hub (i/ ou d/) et l'agenda .ics — visibles aussi sur
+// téléphone (ils y étaient masqués) : ils passent sous le nom.
+function FilterBanner({ name, count, color, links, onClear, clearLabel }) {
+  const { t } = useI18n();
+  return <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border bg-card p-3 my-3 shadow-sm">
+    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg font-semibold text-white" style={{ background: color }}>{name[0]}</span>
+    <div className="flex-1 min-w-0"><div className="font-semibold text-sm truncate">{name}</div><div className="text-xs text-muted-foreground">{t("inst_events_count", { n: count })}</div></div>
+    <div className="flex w-full flex-wrap items-center gap-x-4 gap-y-2 sm:ml-auto sm:w-auto">
+      {links.map(([href, label]) => <a key={href} href={href} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline">{label}</a>)}
+      <Button variant="outline" size="sm" className="ml-auto sm:ml-0" onClick={onClear}>{clearLabel}</Button>
+    </div>
+  </div>;
+}
 function InstitutionBanner({ name, events, onClear }) {
   const { t } = useI18n();
   const evs = useMemo(() => events.filter(e => e.institution === name), [events, name]);
   const slug = slugify(name);
-  const isMain = MAIN_INST.includes(name);
-  return <div className="flex flex-wrap items-center gap-3 rounded-xl border bg-card p-3 my-3 shadow-sm">
-    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg font-semibold text-white" style={{ background: evs[0] ? discColor(evs[0].discipline) : "var(--c-aut)" }}>{name[0]}</span>
-    <div className="flex-1 min-w-0"><div className="font-semibold text-sm truncate">{name}</div><div className="text-xs text-muted-foreground">{t("inst_events_count", { n: evs.length })}</div></div>
-    <div className="flex items-center gap-3 shrink-0 ml-auto">
-      {isMain && <a href={`i/${slug}.html`} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline hidden sm:inline">{t("inst_site")}</a>}
-      {isMain && <a href={`data/cal/${slug}.ics`} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline hidden sm:inline">{t("inst_ics")}</a>}
-      <Button variant="outline" size="sm" onClick={onClear}>{t("inst_clear")}</Button>
-    </div>
-  </div>;
+  const links = MAIN_INST.includes(name) ? [[`i/${slug}.html`, t("inst_site")], [`data/cal/${slug}.ics`, t("inst_ics")]] : [];
+  return <FilterBanner name={name} count={evs.length} color={evs[0] ? discColor(evs[0].discipline) : "var(--c-aut)"} links={links} onClear={onClear} clearLabel={t("inst_clear")} />;
+}
+function DisciplineBanner({ name, events, onClear }) {
+  const { t } = useI18n();
+  const n = useMemo(() => events.filter(e => e.discipline === name).length, [events, name]);
+  const slug = slugify(name);
+  const links = name !== "Autre" && DISC[name] ? [[`d/${slug}.html`, t("disc_site")], [`data/cal/d-${slug}.ics`, t("inst_ics")]] : [];
+  return <FilterBanner name={name} count={n} color={`var(${DISC[name] || "--c-aut"})`} links={links} onClear={onClear} clearLabel={t("disc_clear")} />;
 }
 
 /* ═════════════════════ Mes intervenants ═════════════════════ */
@@ -383,7 +441,7 @@ function App() {
     const th = {}; base.forEach(e => (e.luma_categories || []).forEach(t => th[t] = (th[t] || 0) + 1));
     const acc = {}; base.forEach(e => { const a = accessOf(e); acc[a] = (acc[a] || 0) + 1; });
     const side = {}; pool.forEach(e => { if (isSide(e)) side[e.kind] = (side[e.kind] || 0) + 1; });
-    return { disc: c(base, "discipline"), inst: c(base, "institution"), src: c(pool.filter(e => !isSide(e)), "source_type"), side, theme: th, access: acc, online: base.filter(isOnline).length };
+    return { disc: c(base, "discipline"), inst: c(base, "institution"), src: c(pool.filter(e => !isSide(e)), "source_type"), side, theme: th, access: acc, online: base.filter(isOnline).length, free: base.filter(isFree).length, en: base.filter(isEnglish).length };
   }, [pool, filters.src, filters.cat]);
   const nToday = UPc.filter(e => e.date === TODAY).length, nWeek = UPc.filter(e => e.date <= WEEK_END).length, nWe = UPc.filter(e => WE.includes(e.date)).length, nNew = UPc.filter(isNew).length;
   // Carrousel et accroche du haut de page : indépendants des filtres
@@ -422,7 +480,7 @@ function App() {
   const max7 = Math.max(1, ...days7.map(x => x.n));
   const groups = useMemo(() => { const g = []; filtered.slice(0, shown).forEach(e => { if (!g.length || g[g.length - 1].date !== e.date) g.push({ date: e.date, items: [] }); g[g.length - 1].items.push(e); }); return g; }, [filtered, shown]);
   const histMonths = useMemo(() => [...new Set((archive || []).map(e => e.date.slice(0, 7)))].sort().reverse(), [archive]);
-  const activeTags = [...[...filters.disc].map(v => [v, () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...[...filters.cat].map(k => [`${SIDE_KINDS[k].icon} ${t(SIDE_KINDS[k].label)}`, () => toggleIn("cat")(k)])];
+  const activeTags = [...[...filters.disc].map(v => [v, () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.free ? [[t("badge_free"), () => setF({ free: false })]] : []), ...(filters.en ? [[t("filter_en"), () => setF({ en: false })]] : []), ...[...filters.cat].map(k => [`${SIDE_KINDS[k].icon} ${t(SIDE_KINDS[k].label)}`, () => toggleIn("cat")(k)])];
 
   /* actions */
   const onFav = id => { toggleFav(id); notify(favs.has(id) ? t("toast_fav_removed") : t("toast_fav_added")); };
@@ -509,11 +567,16 @@ function App() {
               labelFn={v => v.startsWith("cat:") ? `${SIDE_KINDS[v.slice(4)].icon} ${t(SIDE_KINDS[v.slice(4)].label)}` : SRC_LABEL_T[v]} titleFn={v => v.startsWith("cat:") ? t(SIDE_KINDS[v.slice(4)].hint) : undefined}
               onClear={Object.keys(counts.theme).length ? undefined : () => setF({ src: new Set(), cat: new Set(), theme: new Set() })} clearLabel={t("clear_all")} />
             {Object.keys(counts.theme).length > 0 && <CheckList values={Object.entries(counts.theme).sort((a, b) => b[1] - a[1]).map(([tm, n], k) => [tm, n, k === 0 ? t("group_luma_themes") : null])} set={filters.theme} onToggle={toggleIn("theme")} onClear={() => setF({ src: new Set(), cat: new Set(), theme: new Set() })} clearLabel={t("clear_all")} />}</>}</Popover>
-          <Popover closeLabel={t("fermer")} label={t("pop_access")} count={filters.access.size + (filters.online ? 1 : 0)}>{() => <>
-            <CheckList values={[...["public", "membres"].filter(a => counts.access[a]).map(a => [a, counts.access[a]]), ...(counts.online || filters.online ? [["online", counts.online, t("group_format")]] : [])]}
-              set={new Set([...filters.access, ...(filters.online ? ["online"] : [])])} onToggle={v => v === "online" ? setF({ online: !filters.online }) : toggleIn("access")(v)}
-              labelFn={v => v === "online" ? t("btn_online") : (v === "membres" ? "🔒 " : "") + t(v === "membres" ? "access_members" : "access_public")}
-              onClear={() => setF({ access: new Set(), online: false })} clearLabel={t("clear_all")} /></>}</Popover>
+          {/* Accès : public / membres, puis format, tarif et langue — des critères
+              « oui / non » rangés ici plutôt qu'en boutons dans la barre */}
+          <Popover closeLabel={t("fermer")} label={t("pop_access")} count={filters.access.size + [filters.online, filters.free, filters.en].filter(Boolean).length}>{() => {
+            const FLAGS = { online: ["online", t("group_format"), t("btn_online")], free: ["free", t("group_price"), t("badge_free")], en: ["en", t("group_lang"), t("filter_en")] };
+            return <CheckList values={[...["public", "membres"].filter(a => counts.access[a]).map(a => [a, counts.access[a]]), ...Object.entries(FLAGS).filter(([k]) => counts[k] || filters[k]).map(([k, [, hd]]) => ["flag:" + k, counts[k], hd])]}
+              set={new Set([...filters.access, ...Object.keys(FLAGS).filter(k => filters[k]).map(k => "flag:" + k)])}
+              onToggle={v => v.startsWith("flag:") ? setF({ [v.slice(5)]: !filters[v.slice(5)] }) : toggleIn("access")(v)}
+              labelFn={v => v.startsWith("flag:") ? FLAGS[v.slice(5)][2] : (v === "membres" ? "🔒 " : "") + t(v === "membres" ? "access_members" : "access_public")}
+              titleFn={v => v === "flag:en" ? t("filter_en_hint") : undefined}
+              onClear={() => setF({ access: new Set(), online: false, free: false, en: false })} clearLabel={t("clear_all")} />; }}</Popover>
           <Button variant={filters.fav ? "default" : "outline"} size="sm" className="h-9 shrink-0" onClick={() => setF({ fav: !filters.fav })} aria-pressed={filters.fav}>★<span className="hidden sm:inline"> {t("btn_fav")}</span>{favs.size > 0 && <span className={cn("inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[11px]", filters.fav ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground")}>{favs.size}</span>}</Button>
           <div className="ml-auto flex shrink-0 items-center gap-2">
             {!history && <Tabs value={view} onChange={setView} layoutId="view-pill" items={[["list", <Icon d={ICONS.list} size={15} />], ["week", <Icon d={ICONS.week} size={15} />], ["map", <Icon d={ICONS.map} size={15} />]]} />}
@@ -524,6 +587,7 @@ function App() {
       </div>
 
       {!history && filters.inst.size === 1 && <InstitutionBanner name={[...filters.inst][0]} events={UP.filter(e => inSource(e, { ...filters, q: "", fav: false }))} onClear={() => setF({ inst: new Set() })} />}
+      {!history && filters.disc.size === 1 && <DisciplineBanner name={[...filters.disc][0]} events={UP.filter(e => inSource(e, { ...filters, q: "", fav: false }))} onClear={() => setF({ disc: new Set() })} />}
 
       <section className="py-4 pb-36">
         {!events && <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pt-6">{[...Array(8)].map((_, i) => <div key={i} className="rounded-xl border bg-card overflow-hidden animate-pulse"><div className="aspect-[16/10] bg-muted" /><div className="p-4 space-y-2"><div className="h-3 w-1/3 bg-muted rounded" /><div className="h-4 w-4/5 bg-muted rounded" /><div className="h-3 w-1/2 bg-muted rounded" /></div></div>)}</div>}
@@ -563,7 +627,7 @@ function App() {
       </Dock>
     </div>
 
-    <Sheet e={open} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} following={open ? speakers.has(open.speaker) : false} onFollow={name => { const willFollow = !speakers.has(name); toggleSpeaker(name); notify(willFollow ? t("speaker_followed") : t("speaker_unfollowed")); }} />
+    <Sheet e={open} pool={pool} onOpen={setOpen} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} following={open ? speakers.has(open.speaker) : false} onFollow={name => { const willFollow = !speakers.has(name); toggleSpeaker(name); notify(willFollow ? t("speaker_followed") : t("speaker_unfollowed")); }} />
     <CommandDialog open={cmd} onClose={() => setCmd(false)} onPick={e => { setCmd(false); setOpen(e); }} pool={pool} />
     <SpeakersPanel open={speakersOpen} onClose={() => setSpeakersOpen(false)} speakers={speakers} onUnfollow={toggleSpeaker} pool={UP} onOpenEvent={e => { setSpeakersOpen(false); setOpen(e); }} notifyPerm={notifyPerm} onEnableNotify={enableNotify} />
     <AnimatePresence>{toast && <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg">{toast}</motion.div>}</AnimatePresence>

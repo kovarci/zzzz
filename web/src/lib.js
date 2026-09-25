@@ -25,7 +25,8 @@ export const MAIN_INST = ["Collège de France", "Institut Henri Poincaré", "Uni
   "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay",
   "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
   "Institut des actuaires", "École polytechnique",
-  "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon"];
+  "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon",
+  "Académie nationale de médecine", "Académie des inscriptions et belles-lettres", "Mines Paris - PSL", "Musée de l'Homme", "Ined"];
 export const WD = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
 export const WDS = ["dim", "lun", "mar", "mer", "jeu", "ven", "sam"];
 export const MO = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
@@ -66,6 +67,20 @@ export const titleOf = e => (isMembers(e) ? "🔒 " : "") + e.title;
 export const kindOf = e => { if (isSide(e)) return SIDE_KINDS[e.kind].kind; const m =KIND_RE.exec(e.description || "") || KIND_RE.exec(e.title || ""); return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : (e.source_type === "luma" ? "Rencontre" : "Conférence"); };
 export const isFree = e => e.price === "0" || e.price === 0 || /gratuit|free/i.test(e.price || "");
 export const isOnline = e => ONLINE_RE.test(e.location || "");
+// Événement en anglais, repéré d'après les mots-outils du titre (et de la
+// description) : « of, the, and, with… » sans « le, la, des, pour… ».
+// Calibré sur les données : ~10 % des événements, surtout séminaires de
+// recherche et Luma ; les titres sans aucun mot-outil restent non classés.
+const EN_W = /\b(the|and|of|for|with|from|how|what|why|when|towards?|between|beyond|through|about|into|is|are|to|in|on|an|by|at|its|their|our|your|you|we|this|that|new|after|under|within|without|meets?)\b/gi;
+const FR_W = /(?:^|[\s(«"'’])(le|la|les|des|du|de|et|pour|avec|dans|sur|une|un|au|aux|est|qui|que|en|entre|vers|par|ou|à|sous|sans|chez|son|sa|ses|leur|leurs|nos|vos|ce|cette|ces|l['’]|d['’]|qu['’])(?=[\s,.:;!?»"')]|$)/gi;
+const nWords = (re, s) => (s.match(re) || []).length;
+export const isEnglish = e => {
+  if (e._en !== undefined) return e._en;
+  const t = e.title || "", d = (e.description || "").slice(0, 400);
+  const et = nWords(EN_W, t), ft = nWords(FR_W, t), ed = nWords(EN_W, d), fd = nWords(FR_W, d);
+  const words = t.split(/\s+/).filter(w => /[a-z]{2,}/i.test(w)).length;
+  return (e._en = (ft === 0 && (et >= 2 || (et >= 1 && words >= 4) || (ed >= 5 && ed > 2 * fd))) || (et >= 3 && et > 2 * ft));
+};
 export const isNew = e => e.added_at && e.added_at >= NEW_CUTOFF;
 export const fmtDay = s => { const d = parse(s); return `${WD[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()]}`; };
 export const fmtShort = s => { const d = parse(s); return `${WDS[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()].slice(0, 4)}`; };
@@ -94,7 +109,7 @@ export const relTime = ts => {
 };
 
 /* ── Filtrage ──────────────────────────────────────────────────── */
-export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, cat: new Set(), access: new Set(), q: "" };
+export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, free: false, en: false, cat: new Set(), access: new Set(), q: "" };
 
 // Filtre « Source » : les sources (src) et les catégories à part (cat :
 // soutenances, carrières) sont des cases d'une même liste, cumulables (« Luma
@@ -109,6 +124,8 @@ export function matches(e, f, favs) {
   if (f.fav && !favs.has(e.id)) return false;
   if (!inSource(e, f)) return false;
   if (f.online && !isOnline(e)) return false;
+  if (f.free && !isFree(e)) return false;
+  if (f.en && !isEnglish(e)) return false;
   if (f.when === "today" && e.date !== TODAY) return false;
   if (f.when === "tonight" && !(e.date === TODAY && (e.time || "") >= "17:30")) return false;
   if (f.when === "week" && e.date > WEEK_END) return false;
@@ -133,6 +150,8 @@ export function filtersFromURL() {
   const src = p.get("source"); if (src && src !== "all" && src !== "history") f.src.add(src);
   if (p.get("favoris") === "1") f.fav = true;
   if (p.get("format") === "online") f.online = true;
+  if (p.get("prix") === "gratuit") f.free = true;
+  if (p.get("langue") === "en") f.en = true;
   Object.entries(SIDE_KINDS).forEach(([k, s]) => { if (p.get(s.param) === "1") f.cat.add(k); });
   if (p.get("q")) f.q = norm(p.get("q"));
   return { filters: f, view: p.get("vue") || "list", history: src === "history", event: p.get("event") || null, rawQ: p.get("q") || "" };
@@ -144,6 +163,8 @@ export function urlFromState({ filters: f, view, history, rawQ }) {
   if (rawQ.trim()) p.set("q", rawQ.trim());
   if (f.when !== "all") p.set("date", f.when);
   if (f.online) p.set("format", "online");
+  if (f.free) p.set("prix", "gratuit");
+  if (f.en) p.set("langue", "en");
   if (f.disc.size) p.set("discipline", [...f.disc].join(","));
   if (f.inst.size) p.set("institution", [...f.inst].join(","));
   if (f.theme.size) p.set("theme", [...f.theme].join(","));

@@ -39,6 +39,8 @@ const TR = {
   group_establishments: ["Établissements", "Institutions"], group_others: ["Autres organisateurs", "Other organisers"],
   group_luma_themes: ["Thèmes Luma", "Luma themes"], clear_all: ["Tout effacer", "Clear all"],
   group_side: ["Masqués du fil par défaut", "Hidden from the feed by default"], group_format: ["Format", "Format"],
+  group_price: ["Tarif", "Price"], group_lang: ["Langue", "Language"], filter_en: ["En anglais", "In English"],
+  filter_en_hint: ["Repéré automatiquement d'après le titre et la description", "Detected automatically from the title and description"],
   btn_fav: ["Favoris", "Favourites"], btn_online: ["En ligne", "Online"],
   pop_access: ["Accès", "Access"], access_public: ["Ouvert à tous", "Open to all"], access_members: ["Réservé aux membres", "Members only"],
   badge_members: ["Membres", "Members"], access_members_hint: ["Réservé aux membres de l'organisation (adhérents, bénéficiaires, élèves…)", "Reserved for the organisation's members (members, beneficiaries, students…)"],
@@ -66,6 +68,8 @@ const TR = {
   sheet_terminated: ["terminé", "past"], sheet_today: ["c'est aujourd'hui", "it's today"], sheet_tomorrow: ["c'est demain", "it's tomorrow"],
   sheet_in_days: ["dans {n} jours", "in {n} days"], org_default: ["Universités & instituts", "Universities & institutes"],
   fermer: ["Fermer", "Close"], favori: ["Favori", "Favourite"],
+  rel_cycle: ["Autres séances du cycle", "Other sessions in this series"], rel_speaker: ["Du même intervenant", "Same speaker"],
+  rel_place: ["Au même endroit ce jour-là", "Same place, same day"], rel_more: ["Voir {n} autre{s}", "Show {n} more"],
 
   cmd_ph: ["Un titre, un intervenant, un sujet…", "A title, a speaker, a topic…"], cmd_nav: ["naviguer", "navigate"],
   cmd_open: ["ouvrir", "open"], cmd_none: ["Aucun résultat.", "No results."], cmd_today_tomorrow: ["Aujourd'hui et demain", "Today and tomorrow"],
@@ -106,6 +110,7 @@ const TR = {
   notify_title: ["Tes intervenants reviennent", "Your speakers are back"],
   inst_events_count: ["{n} événement{s} à venir", "{n} upcoming event{s}"], inst_site: ["Fiche institution ↗", "Institution page ↗"],
   inst_ics: ["S'abonner à son agenda", "Subscribe to its calendar"], inst_clear: ["Voir toutes les institutions", "See all institutions"],
+  disc_site: ["Page de la discipline ↗", "Discipline page ↗"], disc_clear: ["Toutes les disciplines", "All disciplines"],
   search_hint: ["Appuie sur / pour rechercher", "Press / to search"],
 
   you_are_here: ["Vous êtes ici", "You are here"],
