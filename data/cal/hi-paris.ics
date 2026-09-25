@@ -1,48 +1,48 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Hi! PARIS · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:98033432f305@paris-academique
-DTSTAMP:20260924T210820Z
-DTSTART:20261012T140000
-DTEND:20261012T151500
-SUMMARY:IP Paris Seminar on Incentives and Computation
-DESCRIPTION:The IP Paris Seminar on Incentives and Computation brings together researchers working at the intersection of economics and computer science to explore how incentives and strategic behavior shape large-scale computational systems. The first session of the 2026–2027 series will feature Jason Hartline (Northwestern University) with a talk titled “Scoring Rules and Foundations of AI.” The seminar cov\nhttps://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computation/
-LOCATION:Bâtiment d’Enseignement Mutualisé (BEM)\, Avenue Augustin Fresnel\, 91120\, Palaiseau
-URL:https://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computation/
-END:VEVENT
-BEGIN:VEVENT
-UID:e424d347657f@paris-academique
-DTSTAMP:20260924T210820Z
-DTSTART:20261013T140000
-DTEND:20261013T153000
-SUMMARY:Hi! PARIS Reading groups “Fairness in AI” – Session 1
-DESCRIPTION:The Hi! PARIS reading groups propose studying a topic using scientific articles from both theoretical and practical perspectives. The reading groups are opportunities for interaction between our corporate donors and our affiliates’ academic teams around selected topics of interest. Each edition is planned for 2-3 sessions\, presenting one topic through 3-4 research papers. For each session: present\nhttps://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-session-1/
-LOCATION:Institut Polytechnique de Paris\, Palaiseau
-URL:https://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-session-1/
-END:VEVENT
-BEGIN:VEVENT
-UID:fca9166c778a@paris-academique
-DTSTAMP:20260924T210820Z
-DTSTART:20261103T180000
-DTEND:20261103T200000
-SUMMARY:Hi! PARIS Career Fair
-DESCRIPTION:We are delighted to announce the Hi! PARIS ’s annual career fair ! Hi! PARIS wishes to offer students at all levels\, including PhD candidates\, an occasion to discover internships and job opportunities within great AI & Data Science companies (L’Oréal\, Capgemini\, TotalEnergies\, VINCI\, Schneider Electric) and AI & Data Science startups from our ecosystem. This year’s career fair will take place on T\nhttps://hi-paris.fr/event/hi-paris-career-fair/
-LOCATION:Télécom Paris\, 19 Pl. Marguerite Perey\, 91120\, Palaiseau
-URL:https://hi-paris.fr/event/hi-paris-career-fair/
-END:VEVENT
-BEGIN:VEVENT
-UID:0b52277e64d3@paris-academique
-DTSTAMP:20260924T210820Z
-DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261128
-SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge
-DESCRIPTION:About the Hi!ckathon: The Hi!ckathon is a flagship AI and Data Science challenge organized by Hi! PARIS\, the interdisciplinary center for data science and artificial intelligence. Open to students from Institut Polytechnique de Paris \, HEC Paris\, and partner universities \, the competition invites participants to work in teams on a real-world AI challenge with strong business and societal impact. T\nhttps://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-challenge/
-LOCATION:Institut Polytechnique de Paris (IP Paris)\, Route de Saclay\, 91120\, Palaiseau
-URL:https://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-challenge/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Hi! PARIS · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:98033432f305@paris-academique
+DTSTAMP:20260925T083151Z
+DTSTART:20261012T140000
+DTEND:20261012T151500
+SUMMARY:IP Paris Seminar on Incentives and Computation
+DESCRIPTION:The IP Paris Seminar on Incentives and Computation brings together researchers working at the intersection of economics and computer science to explore how incentives and strategic behavior shape large-scale computational systems. The first session of the 2026–2027 series will feature Jason Hartline (Northwestern University) with a talk titled “Scoring Rules and Foundations of AI.” The seminar cov\nhttps://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computation/
+LOCATION:Bâtiment d’Enseignement Mutualisé (BEM)\, Avenue Augustin Fresnel\, 91120\, Palaiseau
+URL:https://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computation/
+END:VEVENT
+BEGIN:VEVENT
+UID:e424d347657f@paris-academique
+DTSTAMP:20260925T083151Z
+DTSTART:20261013T140000
+DTEND:20261013T153000
+SUMMARY:Hi! PARIS Reading groups “Fairness in AI” – Session 1
+DESCRIPTION:The Hi! PARIS reading groups propose studying a topic using scientific articles from both theoretical and practical perspectives. The reading groups are opportunities for interaction between our corporate donors and our affiliates’ academic teams around selected topics of interest. Each edition is planned for 2-3 sessions\, presenting one topic through 3-4 research papers. For each session: present\nhttps://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-session-1/
+LOCATION:Institut Polytechnique de Paris\, Palaiseau
+URL:https://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-session-1/
+END:VEVENT
+BEGIN:VEVENT
+UID:fca9166c778a@paris-academique
+DTSTAMP:20260925T083151Z
+DTSTART:20261103T180000
+DTEND:20261103T200000
+SUMMARY:Hi! PARIS Career Fair
+DESCRIPTION:We are delighted to announce the Hi! PARIS ’s annual career fair ! Hi! PARIS wishes to offer students at all levels\, including PhD candidates\, an occasion to discover internships and job opportunities within great AI & Data Science companies (L’Oréal\, Capgemini\, TotalEnergies\, VINCI\, Schneider Electric) and AI & Data Science startups from our ecosystem. This year’s career fair will take place on T\nhttps://hi-paris.fr/event/hi-paris-career-fair/
+LOCATION:Télécom Paris\, 19 Pl. Marguerite Perey\, 91120\, Palaiseau
+URL:https://hi-paris.fr/event/hi-paris-career-fair/
+END:VEVENT
+BEGIN:VEVENT
+UID:0b52277e64d3@paris-academique
+DTSTAMP:20260925T083151Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge
+DESCRIPTION:About the Hi!ckathon: The Hi!ckathon is a flagship AI and Data Science challenge organized by Hi! PARIS\, the interdisciplinary center for data science and artificial intelligence. Open to students from Institut Polytechnique de Paris \, HEC Paris\, and partner universities \, the competition invites participants to work in teams on a real-world AI challenge with strong business and societal impact. T\nhttps://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-challenge/
+LOCATION:Institut Polytechnique de Paris (IP Paris)\, Route de Saclay\, 91120\, Palaiseau
+URL:https://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-challenge/
+END:VEVENT
+END:VCALENDAR

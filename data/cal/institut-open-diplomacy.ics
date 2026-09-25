@@ -1,18 +1,18 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Institut Open Diplomacy · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:1685fa91ca04@paris-academique
-DTSTAMP:20260924T210820Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
-SUMMARY:Combattre la polycrise — grand colloque de l'Institut Open Diplomacy
-DESCRIPTION:Colloque — Colloque sur la polycrise (crises géopolitique\, écologique\, économique et politique)\, organisé par le think tank de jeunes Open Diplomacy.\nhttps://www.open-diplomacy.fr/colloque-polycrise
-LOCATION:Maison de l'Europe de Paris\, 35-37 rue des Francs-Bourgeois\, Paris 4e
-URL:https://www.open-diplomacy.fr/colloque-polycrise
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Institut Open Diplomacy · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:1685fa91ca04@paris-academique
+DTSTAMP:20260925T083151Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Combattre la polycrise — grand colloque de l'Institut Open Diplomacy
+DESCRIPTION:Colloque — Colloque sur la polycrise (crises géopolitique\, écologique\, économique et politique)\, organisé par le think tank de jeunes Open Diplomacy.\nhttps://www.open-diplomacy.fr/colloque-polycrise
+LOCATION:Maison de l'Europe de Paris\, 35-37 rue des Francs-Bourgeois\, Paris 4e
+URL:https://www.open-diplomacy.fr/colloque-polycrise
+END:VEVENT
+END:VCALENDAR
