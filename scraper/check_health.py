@@ -28,7 +28,10 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
          "Hi! PARIS", "PR[AI]RIE", "HEC Paris", "Musée du Louvre", "Centre Pompidou",
          "INHA", "Ifri", "IRIS", "Institut Jacques Delors", "Fondation Jean-Jaurès", "Institut Louis Bachelier", "Citéco", "Institut du monde arabe", "Beaux-Arts de Paris", "ENS Paris-Saclay", "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
          "Institut des actuaires", "École polytechnique",
-         "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon"]
+         "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon",
+         # Ajoutées le 25/09/2026 — l'AIBL ne publie que le trimestre en cours : 0 possible entre deux
+         "Académie nationale de médecine", "Académie des inscriptions et belles-lettres", "Mines Paris - PSL",
+         "Musée de l'Homme", "Ined"]
 
 
 # Lues par maj.bat (scraper/refresh_local.py, LOCAL_INSTITUTIONS) : le robot

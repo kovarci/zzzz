@@ -1,28 +1,28 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:ESCP Business School · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:6f3710f6d0d7@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Governance & stakeholders activism: what are the new challenges
-DESCRIPTION:Event\nhttps://escp.eu/fr/events/governance-stakeholders-activism-what-are-new-challenges
-LOCATION:10 Rue de Bassano\, Paris 75116\, France
-URL:https://escp.eu/fr/events/governance-stakeholders-activism-what-are-new-challenges
-END:VEVENT
-BEGIN:VEVENT
-UID:367ebbab11db@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:L’innovation va-t-elle tuer le Progrès ?
-DESCRIPTION:Event\nhttps://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-progres
-LOCATION:Campus Paris Montparnasse\, 3 rue Armand Moisant\, 75015 Paris\, France
-URL:https://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-progres
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ESCP Business School · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:6f3710f6d0d7@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Governance & stakeholders activism: what are the new challenges
+DESCRIPTION:Event\nhttps://escp.eu/fr/events/governance-stakeholders-activism-what-are-new-challenges
+LOCATION:10 Rue de Bassano\, Paris 75116\, France
+URL:https://escp.eu/fr/events/governance-stakeholders-activism-what-are-new-challenges
+END:VEVENT
+BEGIN:VEVENT
+UID:367ebbab11db@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:L’innovation va-t-elle tuer le Progrès ?
+DESCRIPTION:Event\nhttps://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-progres
+LOCATION:Campus Paris Montparnasse\, 3 rue Armand Moisant\, 75015 Paris\, France
+URL:https://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-progres
+END:VEVENT
+END:VCALENDAR

@@ -188,6 +188,11 @@ _INSTITUTION_DEFAULT = {
     "IHES": "Mathématiques", "Labos de maths d'Île-de-France": "Mathématiques", "IPGP": "Sciences",
     "Maison de l'Amérique latine": "Littérature", "Institut culturel italien": "Arts & Culture",
     "Maison de la culture du Japon": "Arts & Culture",
+    "Académie nationale de médecine": "Sciences",
+    "Académie des inscriptions et belles-lettres": "Histoire",
+    "Mines Paris - PSL": "Sciences",
+    "Musée de l'Homme": "Sociologie & Anthropologie",
+    "Ined": "Sociologie & Anthropologie",
     "EHESS": "Sociologie & Anthropologie",
     "Collège des Bernardins": "Philosophie",
     "Université Sorbonne Nouvelle": "Littérature",
@@ -2939,7 +2944,8 @@ def scrape_jsonld(name, url, location, *, drop=None, keep=None):
             if not isinstance(x, dict) or x.get("@type") not in ("Event", "EducationEvent", "BusinessEvent"):
                 continue
             title = clean_text(html_unescape(x.get("name", "")))
-            dt = parse_date(x.get("startDate", ""))
+            d0, tm0 = _ld_when(x.get("startDate", ""))
+            dt = datetime.combine(d0, datetime.strptime(tm0 or "00:00", "%H:%M").time()) if d0 else None
             if (not title or not dt or title.lower() in seen or not in_window(dt.date())
                     or is_junk_title(title) or _OFF_TOPIC.search(title)
                     or (drop and drop.search(title)) or (keep and not keep.search(title))):
@@ -3229,6 +3235,187 @@ def scrape_mcjp():
         base="https://www.mcjp.fr", location="Maison de la culture du Japon, 101 bis quai Jacques Chirac, Paris 15e")
 
 
+def _ld_when(s):
+    """startDate / endDate schema.org → (date, "HH:MM" ou "").
+    L'heure est lue telle qu'écrite (heure de Paris), convertie seulement si
+    la source dit UTC (« Z », « +00:00 »). Des sites écrivent « +2:00 » toute
+    l'année (Académie de médecine) : convertir décalait d'1 h en hiver. Et
+    leurs dates non complétées (« 2027-1-5 ») étaient lues par dateutil
+    comme le 1er mai."""
+    m = re.match(r"\s*(\d{4})-(\d{1,2})-(\d{1,2})(?:[T ](\d{1,2}):(\d{2}))?(.*)$", s or "")
+    if not m:
+        dt = parse_date(s or "")
+        return (dt.date(), dt.strftime("%H:%M") if (dt.hour or dt.minute) else "") if dt else (None, "")
+    y, mo, d, h, mi, rest = m.groups()
+    try:
+        dt = datetime(int(y), int(mo), int(d), int(h or 0), int(mi or 0))
+    except ValueError:
+        return None, ""
+    if h is not None and re.match(r"\s*(?::\d{2}(?:\.\d+)?)?\s*(?:Z|[+-]00:?00)\s*$", rest or ""):
+        dt = to_paris(dt.replace(tzinfo=dateutil_tz.UTC))
+    return dt.date(), (dt.strftime("%H:%M") if h is not None and (dt.hour or dt.minute) else "")
+
+
+_ANM_SKIP = re.compile(r"^\s*(pas de s[ée]ance|[ée]lections?)\b", re.I)
+
+
+def scrape_academie_medecine():
+    """Académie nationale de médecine : séances publiques du mardi (JSON-LD
+    schema.org). « Séance à 14h » → titre explicite ; « Pas de séance » et
+    « Élections » écartés."""
+    name = "Académie nationale de médecine"
+    loc = "Académie nationale de médecine, 16 rue Bonaparte, Paris 6e"
+    print(f"→ {name}...")
+    soup = _soup("https://www.academie-medecine.fr/agenda/")
+    events, seen = [], set()
+    for sc in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(sc.string or "")
+        except ValueError:
+            continue
+        for x in (data if isinstance(data, list) else [data]):
+            if not isinstance(x, dict) or x.get("@type") != "Event":
+                continue
+            title = clean_text(html_unescape(x.get("name", "")))
+            d, tm = _ld_when(x.get("startDate"))
+            _, end = _ld_when(x.get("endDate"))
+            if not title or not d or not in_window(d) or _ANM_SKIP.search(title):
+                continue
+            title = re.sub(r"\s+à\s+\d{1,2}\s*h(?:\s*\d{2})?\s*$", "", title)      # « … à 14h »
+            if re.fullmatch(r"s[ée]ance", title, re.I):
+                title = "Séance de l'Académie nationale de médecine"
+            if (title.lower(), d) in seen:
+                continue
+            seen.add((title.lower(), d))
+            ev = new_event(name, title, d, time_str=tm, end_time=end if end > tm else "", location=loc,
+                           desc=strip_html(x.get("description", ""))[:400] or "Séance publique de l'Académie nationale de médecine",
+                           url=x.get("url") or "https://www.academie-medecine.fr/agenda/")
+            if ev["discipline"] == "Autre":
+                ev["discipline"] = "Sciences"
+            events.append(ev)
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+def _title_case_caps(s):
+    """« Dominique MICHELET » → « Dominique Michelet » (mots tout en capitales)."""
+    return re.sub(r"\b[A-ZÀ-ÖØ-Þ][A-ZÀ-ÖØ-Þ'’-]{2,}\b", lambda m: m.group(0).title(), s)
+
+
+def scrape_aibl():
+    """Académie des inscriptions et belles-lettres : séances publiques du
+    vendredi, « à 15h30 précises », Grande salle des séances de l'Institut de
+    France (horaires et lieu indiqués sur aibl.fr). Une séance réunit souvent
+    plusieurs communications : une fiche chacune, même créneau. La page ne
+    publie que le trimestre en cours."""
+    name = "Académie des inscriptions et belles-lettres"
+    loc = "Institut de France, 23 quai de Conti, Paris 6e"
+    print(f"→ {name}...")
+    soup = _soup("https://aibl.fr/seances-presentation/seances-du-vendredi/")
+    events = []
+    for it in soup.select("div.seance_vendredi_item"):
+        a = it.select_one("a.filterseancesvendredi_items_title")
+        d = parse_french_date_text(a.get_text(" ", strip=True)) if a else None
+        if not d or not in_window(d):
+            continue
+        desc_el = it.select_one(".filterseancesvendredi_items_description")
+        desc = clean_text(desc_el.get_text(" ")) if desc_el else ""
+        # La liste tronque le texte (« … »), la page de la séance le donne en entier
+        try:
+            main = _soup(make_absolute(a.get("href", ""), "https://aibl.fr")).select_one("main")
+            full = re.sub(r"\bM\s+mes?\b", lambda m: m.group(0).replace(" ", ""), clean_text(main.get_text(" "))) if main else ""
+            i = full.find("– ")
+            if i >= 0 and "«" in full[i:]:
+                desc = full[i:]
+        except Exception as e:
+            print(f"   [warn] AIBL {a.get('href')}: {e}")
+        parts = [p.strip(" –-") for p in re.split(r"\s*–\s*(?=(?:Communication|Note|Pr[ée]sentation|Hommage|Allocution|Lecture|Conf[ée]rence)\b)", desc) if p.strip(" –-")]
+        for p in parts or [desc]:
+            m = re.search(r"«\s*(.+?)\s*(?:»|$)", p)
+            title = (m.group(1) if m else p).strip().rstrip(" .")
+            if not title or is_junk_title(title):
+                continue
+            sp = re.search(r"\bde (?:M\.|Mme|MM\.|Mmes)\s+([^,:«]+)", p)
+            events.append(new_event(
+                name, title[:200], d, time_str="15:30", end_time="17:30", location=loc,
+                desc=p[:400], speaker=_title_case_caps(sp.group(1).strip()) if sp else "",
+                url=make_absolute(a.get("href", ""), "https://aibl.fr")))
+            if events[-1]["discipline"] == "Autre":
+                events[-1]["discipline"] = "Histoire"
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+def scrape_mines():
+    """Mines Paris – PSL : congrès, conférences, journées (pas les
+    expositions du musée de Minéralogie, ni les campus hors Île-de-France)."""
+    name, base = "Mines Paris - PSL", "https://www.minesparis.psl.eu"
+    loc = "Mines Paris – PSL, 60 boulevard Saint-Michel, Paris 6e"
+    print(f"→ {name}...")
+    events = []
+    for c in _soup(f"{base}/evenements/").select("article.item"):
+        a = c.select_one(".title a")
+        title = clean_text(a.get_text(" ")) if a else ""
+        desc_el = c.select_one(".description")
+        desc = clean_text(desc_el.get_text(" ")) if desc_el else ""
+        if (not title or is_junk_title(title) or _OFF_TOPIC.search(title)
+                or re.search(r"\bexposition\b|webinaire d.information|portes? ouvertes?|\badmissions?\b", title, re.I)
+                or NON_PARIS.search(desc)
+                or re.search(r"Sophia|Antipolis|Fontainebleau|\bPau\b|\bÉvry\b", desc)):
+            continue
+        d, tm = _card_date(c.select_one(".date") or c)
+        if not d or not in_window(d):
+            continue
+        t0, t1 = _times(desc)
+        events.append(new_event(name, title, d, time_str=t0 or tm, end_time=t1, location=loc,
+                                desc=desc[:400], url=make_absolute(a.get("href", ""), base)))
+        if events[-1]["discipline"] == "Autre":
+            events[-1]["discipline"] = "Sciences"
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
+
+
+def scrape_musee_homme():
+    # Musée de l'Homme : conférences et rencontres (pas les expositions ni les ateliers)
+    evs = _scrape_cards(
+        "Musée de l'Homme", "https://www.museedelhomme.fr/fr/agenda", "div.node--type-evenement",
+        title="h3.mt-tuile__title", kind="p.mt-tuile-category", date=".field--name-field-dates-text",
+        keep_kind=("conférence", "rencontre", "colloque", "débat", "table ronde", "dialogue"),
+        base="https://www.museedelhomme.fr", location="Musée de l'Homme, 17 place du Trocadéro, Paris 16e",
+        page_url="https://www.museedelhomme.fr/fr/agenda?page={n}", max_pages=6)
+    for e in evs:
+        if e["discipline"] == "Autre":
+            e["discipline"] = "Sociologie & Anthropologie"
+    return evs
+
+
+def _soup_no_noon_utc(url):
+    """Page dont les <time datetime="…T12:00:00Z"> ne sont que des dates
+    (convention Drupal pour « sans horaire ») : l'attribut est retiré, sinon
+    il se lisait 13:00 / 14:00 heure de Paris."""
+    soup = _soup(url)
+    for t in soup.select("time[datetime]"):
+        if t["datetime"].endswith("T12:00:00Z"):
+            del t["datetime"]
+    return soup
+
+
+def scrape_ined():
+    # Ined (démographie) : séminaires, colloques, Lundis de l'Ined — cartes DSFR paginées
+    evs = _scrape_cards(
+        "Ined", "https://www.ined.fr/fr/agenda", ".fr-card--event",
+        title=".fr-card__title", date=".fr-card__date", place=".fr-card__location", place_only=True,
+        kind=".fr-tag", base="https://www.ined.fr", one_per_title=True, fetch=_soup_no_noon_utc,
+        location="Ined, Campus Condorcet, 9 cours des Humanités, Aubervilliers",
+        page_url="https://www.ined.fr/fr/agenda?page={n}", max_pages=6)
+    for e in evs:
+        if e["discipline"] == "Autre":
+            e["discipline"] = "Sociologie & Anthropologie"
+        if re.match(r"visio", e["location"], re.I):
+            e["location"] = "En ligne (visio)"
+    return evs
+
+
 # Noms d'institution des sources ci-dessus (carry-forward, hubs i/*.html).
 # Doit rester aligné sur MAIN_INST dans web/src/lib.js.
 NEW_INSTITUTIONS = [
@@ -3244,6 +3431,7 @@ NEW_INSTITUTIONS = [
     "ESCP Business School", "Université Sorbonne Paris Nord", "École nationale des chartes",
     "Institut des actuaires", "École polytechnique",
     "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon",
+    "Académie nationale de médecine", "Académie des inscriptions et belles-lettres", "Mines Paris - PSL", "Musée de l'Homme", "Ined",
 ]
 
 # Ordre = ordre d'exécution dans main() ; tous sans navigateur.
@@ -3264,6 +3452,7 @@ STATIC_SOURCES = [
     scrape_escp, scrape_sorbonne_paris_nord, scrape_chartes,
     scrape_lamsade, scrape_cmap, scrape_actuaires, scrape_institut_engagement,
     scrape_ipgp, scrape_amerique_latine, scrape_institut_italien, scrape_mcjp,
+    scrape_academie_medecine, scrape_aibl, scrape_mines, scrape_musee_homme, scrape_ined,
 ]
 
 
@@ -3744,6 +3933,11 @@ INSTITUTION_COORDS = {
     "Maison de l'Amérique latine": [48.8573, 2.3237],
     "Institut culturel italien": [48.8551, 2.3203],
     "Maison de la culture du Japon": [48.8554, 2.2896],
+    "Académie nationale de médecine": [48.8556, 2.3345],
+    "Académie des inscriptions et belles-lettres": [48.8574, 2.3372],
+    "Mines Paris - PSL": [48.8455, 2.3398],
+    "Musée de l'Homme": [48.8625, 2.2877],
+    "Ined": [48.9068, 2.3719],
 }
 
 # A location worth geocoding looks like a real street address (postal code,
@@ -3948,6 +4142,18 @@ def write_ics(events):
                                                  encoding="utf-8")
         except Exception as e:
             print(f"[WARN] ics {slug}: {e}")
+    # Un agenda par discipline (d-<slug>.ics), relié depuis d/<slug>.html et
+    # le bandeau du site quand une seule discipline est filtrée
+    for disc in DISC_COLORS:
+        if disc == "Autre":
+            continue
+        name = f"d-{slugify(disc)}.ics"
+        written.add(name)
+        try:
+            (cal_dir / name).write_text(vcal([e for e in events if e.get("discipline") == disc and not e.get("kind")],
+                                             f"{disc} · Lotent"), encoding="utf-8")
+        except Exception as e:
+            print(f"[WARN] ics {name}: {e}")
     for f in cal_dir.glob("*.ics"):       # prune calendars of vanished sources
         if f.name not in written:
             try:
@@ -4048,6 +4254,11 @@ INSTITUTION_URLS = {
     "Maison de l'Amérique latine": "https://www.mal217.org",
     "Institut culturel italien": "https://iicparigi.esteri.it",
     "Maison de la culture du Japon": "https://www.mcjp.fr",
+    "Académie nationale de médecine": "https://www.academie-medecine.fr",
+    "Académie des inscriptions et belles-lettres": "https://aibl.fr",
+    "Mines Paris - PSL": "https://www.minesparis.psl.eu",
+    "Musée de l'Homme": "https://www.museedelhomme.fr",
+    "Ined": "https://www.ined.fr",
 }
 
 
@@ -4396,6 +4607,184 @@ SHARE_INSTITUTIONS = [
 ]
 
 
+_HUB_MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+
+
+def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=None,
+              intro="", chips_title="", chips=()):
+    """Page « hub » (i/<slug>.html par institution, d/<slug>.html par
+    discipline) : même charte que les pages événement e/*.html — Geist, clair
+    / sombre, carte — avec la liste des prochaines conférences (liens vers
+    e/*.html : c'est par ces hubs que Google découvre les pages événement),
+    l'agenda .ics à s'abonner et des liens vers les hubs voisins."""
+    url = f"{SITE_URL}/{path}"
+    plural = "s" if n != 1 else ""
+    short = f"{n} conférence{plural} à venir à Paris."
+    items = []
+    for ev in evts[:60]:
+        eid = ev.get("id") or ""
+        if not re.fullmatch(r"[0-9a-f]{12}", eid):
+            continue
+        try:
+            d = date.fromisoformat(ev.get("date", ""))
+            when = f"{d.day} {_HUB_MOIS[d.month - 1]}"
+        except Exception:
+            when = ""
+        sub = ev.get("institution", "") if kicker == "Discipline" else ""
+        items.append(f'<li><a href="{SITE_URL}/e/{eid}.html"><span class="t">{_esc_attr((ev.get("title") or "")[:110])}'
+                     f'{f"<small>{_esc_attr(sub)}</small>" if sub else ""}</span>'
+                     f'<span class="d">{_esc_attr(when)}{(" · " + _esc_attr(ev["time"])) if ev.get("time") else ""}</span></a></li>')
+    events_html = f'<h2>Prochaines conférences</h2><ul class="rel">{"".join(items)}</ul>' if items else ""
+    chips_html = ""
+    if chips:
+        chips_html = (f'<h2>{_esc_attr(chips_title)}</h2><div class="chips">'
+                      + "".join(f'<a href="{u}">{_esc_attr(label)}</a>' for label, u in chips) + "</div>")
+    crumb_ld = json.dumps({
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": f"{SITE_URL}/"},
+                            {"@type": "ListItem", "position": 2, "name": name, "item": url}]},
+        ensure_ascii=False).replace("</", "<\\/")
+    img = og_image or f"{SITE_URL}/og.png"
+    ics_btn = f'<a class="ext" href="{ics}">S\'abonner à l\'agenda (.ics)</a>' if ics else ""
+    return f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{_esc_attr(name)} — conférences à Paris · Lotent</title>
+<link rel="canonical" href="{url}">
+<meta name="description" content="{_esc_attr(short)} {_esc_attr(intro)} Calendrier mis à jour chaque jour sur lotent.fr.">
+<meta property="og:title" content="{_esc_attr(name)} — {n} conférence{plural} à venir">
+<meta property="og:description" content="{_esc_attr(short)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{img}">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{img}">
+<link rel="icon" href="{SITE_URL}/icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{crumb_ld}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#71717a;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}}
+@media (prefers-color-scheme:dark){{:root{{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted:#27272a;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}}}
+*{{box-sizing:border-box}}
+body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px 16px 40px;line-height:1.5;-webkit-font-smoothing:antialiased}}
+.wrap{{max-width:620px;margin:0 auto}}
+.crumb{{font-size:12px;color:var(--muted-fg);margin:0 0 14px}}
+.crumb a{{color:inherit;text-decoration:none}}.crumb a:hover{{color:var(--fg)}}
+.card{{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -16px rgba(0,0,0,.25)}}
+.head{{position:relative;display:flex;align-items:flex-end;min-height:150px;padding:20px 22px;color:#fff;background:linear-gradient(135deg,var(--dc),color-mix(in srgb,var(--dc) 55%,#000))}}
+.head::before{{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:16px 16px;-webkit-mask-image:radial-gradient(ellipse at top right,#000,transparent 70%);mask-image:radial-gradient(ellipse at top right,#000,transparent 70%)}}
+.head .k{{position:absolute;top:14px;left:16px;background:rgba(255,255,255,.92);color:#18181b;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px}}
+.head h1{{position:relative;margin:0;font-size:28px;line-height:1.15;letter-spacing:-.02em;text-wrap:balance;text-shadow:0 1px 8px rgba(0,0,0,.3)}}
+.body{{padding:20px 22px 22px}}
+.count{{font-size:15px;margin:0 0 6px}}.count b{{font-variant-numeric:tabular-nums}}
+.intro{{font-size:14px;color:var(--muted-fg);margin:0 0 16px}}
+.cta{{display:grid;grid-template-columns:1fr 1fr;gap:8px}}
+.cta a{{display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 12px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;line-height:1.2}}
+.cta .site{{background:var(--primary);color:var(--primary-fg)}}
+.cta .ext{{border:1px solid var(--border);color:inherit}}
+.cta a:hover{{filter:brightness(1.08)}}
+.cta a:only-child{{grid-column:1/-1}}
+@media (max-width:420px){{.cta{{grid-template-columns:1fr}}}}
+h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em}}
+.rel{{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}}
+.rel li{{font-size:14px;line-height:1.4}}
+.rel li+li{{border-top:1px solid var(--border)}}
+.rel a{{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}}
+.rel a:hover{{background:var(--muted)}}
+.rel .t small{{display:block;color:var(--muted-fg);font-size:12px;margin-top:2px}}
+.rel .d{{color:var(--muted-fg);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}}
+.chips{{display:flex;flex-wrap:wrap;gap:6px}}
+.chips a{{border:1px solid var(--border);border-radius:999px;padding:5px 11px;font-size:13px;color:inherit;text-decoration:none;background:var(--card)}}
+.chips a:hover{{background:var(--muted)}}
+.foot{{text-align:center;margin-top:24px;font-size:12px;color:var(--muted-fg)}}
+.foot a{{color:inherit}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="crumb" aria-label="Fil d'Ariane"><a href="{SITE_URL}/">Accueil</a> › {_esc_attr(name)}</nav>
+<main class="card" style="--dc:{color}">
+<div class="head"><span class="k">{_esc_attr(kicker)}</span><h1>{_esc_attr(name)}</h1></div>
+<div class="body">
+<p class="count"><b>{n}</b> conférence{plural} à venir dans l'agenda Lotent.</p>
+{f'<p class="intro">{_esc_attr(intro)}</p>' if intro else ''}
+<div class="cta"><a class="site" href="{target}">Voir dans l'agenda →</a>{ics_btn}</div>
+</div>
+</main>
+{events_html}
+{chips_html}
+<div class="foot"><a href="{SITE_URL}/">Lotent — toutes les conférences de Paris</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">Questions &amp; recommandations</a></div>
+</div>
+</body>
+</html>
+"""
+
+
+def _hub_speakers(evts, exclude=""):
+    """Intervenants distincts (un cycle répète le même nom sur 10 séances ;
+    certaines sources mettent le nom de l'établissement dans « speaker »)."""
+    out, seen = [], set()
+    for ev in evts[:40]:
+        sp = (ev.get("speaker") or "").strip()[:60]
+        key = sp.lower()
+        if not sp or key in seen or key == exclude.lower():
+            continue
+        seen.add(key)
+        out.append(sp)
+    return out
+
+
+DISC_PAGES_DIR = OUTPUT_FILE.parent.parent / "d"
+
+
+def _disc_slug(disc):
+    return slugify(disc)
+
+
+def write_discipline_pages(events):
+    """d/<slug>.html : une page par discipline (hors « Autre »), avec les
+    prochaines conférences, les principaux organisateurs et l'agenda .ics de
+    la discipline (data/cal/d-<slug>.ics, écrit par write_ics)."""
+    from urllib.parse import quote
+    DISC_PAGES_DIR.mkdir(exist_ok=True)
+    today_iso = TODAY.isoformat()
+    upcoming = sorted((e for e in events if e.get("date", "") >= today_iso and not e.get("kind")),
+                      key=lambda e: (e.get("date", ""), e.get("time", "")))
+    hubs = {f.stem for f in INST_PAGES_DIR.glob("*.html")}
+    written = set()
+    discs = [d for d in DISC_COLORS if d != "Autre"]
+    for disc in discs:
+        evts = [e for e in upcoming if e.get("discipline") == disc]
+        slug = _disc_slug(disc)
+        counts = {}
+        for e in evts:
+            counts[e.get("institution", "")] = counts.get(e.get("institution", ""), 0) + 1
+        top = sorted(counts.items(), key=lambda x: -x[1])[:6]
+        org = [f"{i} ({c})" for i, c in top[:4]]
+        speakers = _hub_speakers(evts)
+        intro = ("Principaux organisateurs : " + ", ".join(org) + "." if org else "")
+        if speakers:
+            intro += " Avec notamment " + ", ".join(speakers[:4]) + "."
+        # Hubs voisins : les institutions phares de la discipline, puis les autres disciplines
+        chips = [(i, f"{SITE_URL}/i/{slugify(i)}.html") for i, _ in top if slugify(i) in hubs]
+        chips += [(d, f"{SITE_URL}/d/{_disc_slug(d)}.html") for d in discs if d != disc]
+        page = _hub_page(kicker="Discipline", name=disc, path=f"d/{slug}.html", n=len(evts),
+                         color=DISC_COLORS[disc], evts=evts, target=f"/?discipline={quote(disc)}",
+                         ics=f"{SITE_URL}/data/cal/d-{slug}.ics", intro=intro.strip(),
+                         chips_title="Voir aussi", chips=chips)
+        (DISC_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
+        written.add(f"{slug}.html")
+    for f in DISC_PAGES_DIR.glob("*.html"):
+        if f.name not in written:
+            try: f.unlink()
+            except Exception: pass
+    print(f"Pages discipline : {len(written)}")
+
+
 def write_institution_share_pages(events):
     """Pour chaque grande institution : 1 PNG (data/og/<slug>.png) + 1 page
     HTML (i/<slug>.html) avec balises OG dédiées et redirection vers
@@ -4501,114 +4890,22 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
                 try: tmp.unlink()
                 except Exception: pass
 
-            # Page HTML stub avec balises OG + contenu indexable
+            # Page hub (même charte que les pages événement) : balises OG, liste
+            # des prochaines conférences — sans ces liens les pages e/*.html ne
+            # sont atteignables que par le sitemap et Google les juge orphelines.
             from urllib.parse import quote
-            inst_quoted = quote(inst)
-            target = f"../index.html?institution={inst_quoted}"
-            short = f"{n} conférence{'s' if n != 1 else ''} à venir à Paris."
-            # Dédupliqué et sans le nom de l'institution : un cycle de cours
-            # répète le même intervenant sur 10 séances, et certaines sources
-            # remplissent « speaker » avec le nom de l'établissement.
-            speakers, _seen_sp = [], set()
-            for ev in evts[:40]:
-                sp = (ev.get("speaker") or "").strip()[:60]
-                key = sp.lower()
-                if not sp or key in _seen_sp or key == inst.lower():
-                    continue
-                _seen_sp.add(key)
-                speakers.append(sp)
-            speakers_section = ""
-            if speakers:
-                speakers_section = "<p>Avec : " + ", ".join(_esc_attr(s) for s in speakers[:5]) + (" et d'autres" if len(speakers) > 5 else "") + ".</p>"
-
-            # Liens vers les pages événement. Sans ça les 800+ pages e/*.html
-            # ne sont atteignables que par le sitemap : Google les considère
-            # comme orphelines et n'en indexe presque aucune. Ces 10 pages
-            # institution servent de hubs de crawl vers l'ensemble du site.
-            _MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.",
-                     "août", "sept.", "oct.", "nov.", "déc."]
-            items = []
-            for ev in evts[:60]:
-                eid = ev.get("id") or ""
-                if not re.fullmatch(r"[0-9a-f]{12}", eid):
-                    continue
-                try:
-                    d = date.fromisoformat(ev.get("date", ""))
-                    when = f"{d.day} {_MOIS[d.month - 1]}"
-                except Exception:
-                    when = ""
-                items.append(
-                    f'<li><a href="../e/{eid}.html">'
-                    f'<span class="d">{_esc_attr(when)}</span>'
-                    f'{_esc_attr((ev.get("title") or "")[:110])}</a></li>')
-            events_section = ""
-            if items:
-                events_section = ("<h2>Prochaines conférences</h2><ul class=\"evts\">"
-                                  + "".join(items) + "</ul>")
-            page = f"""<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{_esc_attr(inst)} — Conférences à Paris</title>
-<link rel="canonical" href="{SITE_URL}/i/{slug}.html">
-<meta name="description" content="{_esc_attr(short)} Calendrier mis à jour chaque jour sur lotent.fr.">
-<meta property="og:title" content="{_esc_attr(inst)} — {n} conférence{'s' if n != 1 else ''} à venir">
-<meta property="og:description" content="{_esc_attr(short)}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{SITE_URL}/i/{slug}.html">
-<meta property="og:image" content="{SITE_URL}/data/og/{slug}.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="fr_FR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{_esc_attr(inst)} — {n} conférences à venir">
-<meta name="twitter:description" content="{_esc_attr(short)}">
-<meta name="twitter:image" content="{SITE_URL}/data/og/{slug}.png">
-<style>
-body{{font-family:Inter,system-ui,sans-serif;background:#07070d;color:#ececf2;margin:0;
-display:flex;align-items:flex-start;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}}
-h2{{font-size:15px;margin:26px 0 10px;color:#8888a0;font-weight:600;
-letter-spacing:.04em;text-transform:uppercase}}
-ul.evts{{list-style:none;padding:0;margin:0}}
-ul.evts li{{border-top:1px solid rgba(255,255,255,.08)}}
-ul.evts a{{display:flex;gap:12px;padding:11px 2px;color:#c2c2d0;
-text-decoration:none;font-size:14px;line-height:1.45}}
-ul.evts a:hover{{color:#fff}}
-ul.evts .d{{flex:0 0 62px;color:#8888a0;font-variant-numeric:tabular-nums}}
-.card{{max-width:560px;width:100%;background:linear-gradient(160deg,#1c1c2eb8,#11111db8);
-border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}}
-.k{{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8888a0;margin-bottom:10px}}
-h1{{font-size:26px;line-height:1.25;margin:0 0 14px}}
-p{{color:#c2c2d0;font-size:14.5px;line-height:1.7;margin:8px 0}}
-.btn{{display:block;text-align:center;margin-top:22px;padding:13px;border-radius:12px;font-weight:600;
-text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7dff)}}
-.foot{{text-align:center;margin-top:18px;font-size:12px}}
-.foot a{{color:#8888a0}}
-.crumb{{font-size:12px;color:#8888a0;margin-bottom:14px}}
-.crumb a{{color:#8ab4ff;text-decoration:none}}
-h2{{font-size:14px;color:#8888a0;margin:22px 0 8px;font-weight:600}}
-.rel{{list-style:none;padding:0;margin:0}}
-.rel li{{font-size:13.5px;line-height:1.5;margin:4px 0}}
-.rel a{{color:#c2c2d0;text-decoration:none}}
-.rel a:hover{{color:#fff}}
-.rel .d{{color:#8888a0;font-size:12px}}
-p a{{color:#8ab4ff;text-decoration:none}}
-</style>
-</head>
-<body>
-<main class="card">
-<div class="k">Conférences à Paris</div>
-<h1>{_esc_attr(inst)}</h1>
-<p><strong>{n} conférence{'s' if n != 1 else ''} à venir</strong> dans le calendrier Lotent.</p>
-{speakers_section}
-{events_section}
-<a class="btn" href="{target}">Voir le calendrier →</a>
-<div class="foot"><a href="{SITE_URL}">lotent.fr — toutes les conférences académiques de Paris</a></div>
-</main>
-</body>
-</html>
-"""
+            speakers = _hub_speakers(evts, exclude=inst)
+            intro = ("Avec : " + ", ".join(speakers[:5]) + (" et d'autres" if len(speakers) > 5 else "") + ".") if speakers else ""
+            dcount = {}
+            for ev in evts:
+                if ev.get("discipline") and ev.get("discipline") != "Autre":
+                    dcount[ev["discipline"]] = dcount.get(ev["discipline"], 0) + 1
+            discs = sorted(dcount, key=lambda d: -dcount[d])
+            page = _hub_page(kicker="Institution", name=inst, path=f"i/{slug}.html", n=n,
+                             color=DISC_COLORS.get(discs[0] if discs else "Autre", "#71717A"), evts=evts,
+                             target=f"/?institution={quote(inst)}", ics=f"{SITE_URL}/data/cal/{slug}.ics",
+                             og_image=f"{SITE_URL}/data/og/{slug}.png", intro=intro,
+                             chips_title="Disciplines", chips=[(d, f"{SITE_URL}/d/{_disc_slug(d)}.html") for d in discs[:6]])
             (INST_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
             written_pages.add(f"{slug}.html")
         b.close()
@@ -4749,6 +5046,9 @@ def write_sitemap(events):
     # ils doivent être crawlés souvent.
     for f in sorted(INST_PAGES_DIR.glob("*.html")):
         urls.append(f"<url><loc>{SITE_URL}/i/{f.name}</loc>"
+                    f"<lastmod>{today}</lastmod><changefreq>weekly</changefreq></url>")
+    for f in sorted(DISC_PAGES_DIR.glob("*.html")):
+        urls.append(f"<url><loc>{SITE_URL}/d/{f.name}</loc>"
                     f"<lastmod>{today}</lastmod><changefreq>weekly</changefreq></url>")
     seen, n_past = set(), 0
     for ev in events:
@@ -5122,6 +5422,11 @@ def main():
     except Exception as e:
         print(f"[ERROR] institution pages: {e}")
         traceback.print_exc()
+    try:
+        write_discipline_pages(all_events)
+    except Exception as e:
+        print(f"[ERROR] discipline pages: {e}")
+        traceback.print_exc()
 
     try:
         write_sitemap(all_events + arch)
@@ -5143,8 +5448,8 @@ def main():
         # prochaines conférences a changé en même temps, et ce sont eux qui
         # mènent Bing vers les nouvelles pages événement.
         if fresh_urls:
-            hubs = [f"{SITE_URL}/i/{f.name}"
-                    for f in sorted(INST_PAGES_DIR.glob("*.html"))]
+            hubs = ([f"{SITE_URL}/i/{f.name}" for f in sorted(INST_PAGES_DIR.glob("*.html"))]
+                    + [f"{SITE_URL}/d/{f.name}" for f in sorted(DISC_PAGES_DIR.glob("*.html"))])
             fresh_urls = ([f"{SITE_URL}/", f"{SITE_URL}/sitemap.xml"]
                           + hubs + fresh_urls)
             notify_indexnow(fresh_urls)

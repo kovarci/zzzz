@@ -1,278 +1,278 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Université PSL · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:e514dbe4eb11@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Cours du soir - Les grandes questions de l'astronomie
-DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-les-grandes-questions-de-lastronomie
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/cours-du-soir-les-grandes-questions-de-lastronomie
-END:VEVENT
-BEGIN:VEVENT
-UID:1ca517c4e559@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Game Night 🎲
-DESCRIPTION:\nhttps://psl.eu/agenda/game-night-16
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/game-night-16
-END:VEVENT
-BEGIN:VEVENT
-UID:8711a5ae1d17@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:La nuit des données de l'ENS-PSL
-DESCRIPTION:\nhttps://psl.eu/agenda/la-nuit-des-donnees-de-lens-psl
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/la-nuit-des-donnees-de-lens-psl
-END:VEVENT
-BEGIN:VEVENT
-UID:79f179ca81fe@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Session d'information - 8ème appel conjoint pour des activités des communautés de l'Université européenne EELISA
-DESCRIPTION:\nhttps://psl.eu/agenda/session-dinformation-8eme-appel-conjoint-pour-des-activites-des-communautes-de-luniversite
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/session-dinformation-8eme-appel-conjoint-pour-des-activites-des-communautes-de-luniversite
-END:VEVENT
-BEGIN:VEVENT
-UID:93f7e5f5eb77@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:L’Ecole normale supérieure - PSL présente La nuit des données
-DESCRIPTION:\nhttps://psl.eu/agenda/lecole-normale-superieure-psl-presente-la-nuit-des-donnees
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/lecole-normale-superieure-psl-presente-la-nuit-des-donnees
-END:VEVENT
-BEGIN:VEVENT
-UID:bafa515e2e52@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:26ème Congrès OSE : La décarbonation des systèmes de santé
-DESCRIPTION:\nhttps://psl.eu/agenda/26eme-congres-ose-la-decarbonation-des-systemes-de-sante
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/26eme-congres-ose-la-decarbonation-des-systemes-de-sante
-END:VEVENT
-BEGIN:VEVENT
-UID:e8f8ff85de3e@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Cours du soir - Une histoire de l'IA (1940-2026)
-DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:5757e90308b0@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Cours du soir - La Chimie dans notre quotidien
-DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-la-chimie-dans-notre-quotidien
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/cours-du-soir-la-chimie-dans-notre-quotidien
-END:VEVENT
-BEGIN:VEVENT
-UID:fde64d7e2d88@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-SUMMARY:Cours du soir - Histoire du cinéma d'animation
-DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-histoire-du-cinema-danimation-0
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/cours-du-soir-histoire-du-cinema-danimation-0
-END:VEVENT
-BEGIN:VEVENT
-UID:f5620c915385@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Cours du soir - De l'Empire ottoman à la Turquie moderne
-DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-de-lempire-ottoman-la-turquie-moderne
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/cours-du-soir-de-lempire-ottoman-la-turquie-moderne
-END:VEVENT
-BEGIN:VEVENT
-UID:4339160d5f85@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Cours du soir - La mode sous toutes ses coutures
-DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-la-mode-sous-toutes-ses-coutures
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/cours-du-soir-la-mode-sous-toutes-ses-coutures
-END:VEVENT
-BEGIN:VEVENT
-UID:7b053657eed0@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:La Cellule d’entraide étudiante handicap reprend ses activités !
-DESCRIPTION:\nhttps://psl.eu/agenda/la-cellule-dentraide-etudiante-handicap-reprend-ses-activites
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/la-cellule-dentraide-etudiante-handicap-reprend-ses-activites
-END:VEVENT
-BEGIN:VEVENT
-UID:63013216250d@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261002
-DTEND;VALUE=DATE:20261003
-SUMMARY:Fête de la science à l'Université PSL
-DESCRIPTION:\nhttps://psl.eu/agenda/fete-de-la-science-luniversite-psl
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/fete-de-la-science-luniversite-psl
-END:VEVENT
-BEGIN:VEVENT
-UID:0967d26125f5@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261005
-SUMMARY:Le village des Sciences de l'Université PSL
-DESCRIPTION:\nhttps://psl.eu/agenda/le-village-des-sciences-de-luniversite-psl
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/le-village-des-sciences-de-luniversite-psl
-END:VEVENT
-BEGIN:VEVENT
-UID:2c752d8f4241@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:Conférence PROMESSE – Artiste-auteur\, micro-entreprise\, cumul ... : Quel statut choisir ?
-DESCRIPTION:\nhttps://psl.eu/agenda/conference-promesse-artiste-auteur-micro-entreprise-cumul-quel-statut-choisir
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/conference-promesse-artiste-auteur-micro-entreprise-cumul-quel-statut-choisir
-END:VEVENT
-BEGIN:VEVENT
-UID:7e2a2fc81c35@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:La quête de l’eau atmosphérique
-DESCRIPTION:\nhttps://psl.eu/agenda/la-quete-de-leau-atmospherique
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/la-quete-de-leau-atmospherique
-END:VEVENT
-BEGIN:VEVENT
-UID:cda59fed2ba7@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Design in Nature: The Evolution of Designs - 16th Constructal Law Conference
-DESCRIPTION:\nhttps://psl.eu/agenda/design-nature-evolution-designs-16th-constructal-law-conference
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/design-nature-evolution-designs-16th-constructal-law-conference
-END:VEVENT
-BEGIN:VEVENT
-UID:c72b67a20cb0@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
-SUMMARY:Séminaires de l’Organologia Institute
-DESCRIPTION:\nhttps://psl.eu/agenda/seminaires-de-lorganologia-institute
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/seminaires-de-lorganologia-institute
-END:VEVENT
-BEGIN:VEVENT
-UID:9aeea5d2ced0@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
-SUMMARY:Séminaire inaugural de l’Organologia Institute : « La bourse et la vie : le vitalisme de Georges F. Doriot »
-DESCRIPTION:\nhttps://psl.eu/agenda/seminaire-inaugural-de-lorganologia-institute-la-bourse-et-la-vie-le-vitalisme-de-georges-f
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/seminaire-inaugural-de-lorganologia-institute-la-bourse-et-la-vie-le-vitalisme-de-georges-f
-END:VEVENT
-BEGIN:VEVENT
-UID:56cf635a2378@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Façonner les ondes pour voir l'invisible
-DESCRIPTION:\nhttps://psl.eu/agenda/faconner-les-ondes-pour-voir-linvisible
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/faconner-les-ondes-pour-voir-linvisible
-END:VEVENT
-BEGIN:VEVENT
-UID:cd78e1ba5a27@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Bachelor I-BE³ : webinaire d’information
-DESCRIPTION:\nhttps://psl.eu/agenda/bachelor-i-be3-webinaire-dinformation-0
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/bachelor-i-be3-webinaire-dinformation-0
-END:VEVENT
-BEGIN:VEVENT
-UID:177d55334a2d@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261016
-DTEND;VALUE=DATE:20261017
-SUMMARY:Festival Musique 2026 « Quatuor à cordes »
-DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-quatuor-cordes
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes
-END:VEVENT
-BEGIN:VEVENT
-UID:1fb986609034@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261020
-DTEND;VALUE=DATE:20261021
-SUMMARY:AFTER Project Room : la jeune création de l'École des Arts Décoratifs – PSL s'expose à "Aaaaaah Paris Internationale"
-DESCRIPTION:\nhttps://psl.eu/agenda/after-project-room-la-jeune-creation-de-lecole-des-arts-decoratifs-psl-sexpose-aaaaaah-paris
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/after-project-room-la-jeune-creation-de-lecole-des-arts-decoratifs-psl-sexpose-aaaaaah-paris
-END:VEVENT
-BEGIN:VEVENT
-UID:4362a59a623e@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Groupe de parole pour les doctorants 🗣️
-DESCRIPTION:\nhttps://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
-END:VEVENT
-BEGIN:VEVENT
-UID:c9aef26da023@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:Festival Musique 2026 « Piano/accordéon autour de la danse »
-DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la-danse
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la-danse
-END:VEVENT
-BEGIN:VEVENT
-UID:7d300871fa24@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261107
-DTEND;VALUE=DATE:20261108
-SUMMARY:Festival Musique 2026 « Trio Cornière »
-DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-trio-corniere
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/festival-musique-2026-trio-corniere
-END:VEVENT
-BEGIN:VEVENT
-UID:67081bb7dd38@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
-SUMMARY:Festival Musique 2026 « Quatuor à cordes et percussions »
-DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-quatuor-cordes-et-percussions
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes-et-percussions
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Université PSL · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:e514dbe4eb11@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:Cours du soir - Les grandes questions de l'astronomie
+DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-les-grandes-questions-de-lastronomie
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/cours-du-soir-les-grandes-questions-de-lastronomie
+END:VEVENT
+BEGIN:VEVENT
+UID:1ca517c4e559@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:Game Night 🎲
+DESCRIPTION:\nhttps://psl.eu/agenda/game-night-16
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/game-night-16
+END:VEVENT
+BEGIN:VEVENT
+UID:8711a5ae1d17@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:La nuit des données de l'ENS-PSL
+DESCRIPTION:\nhttps://psl.eu/agenda/la-nuit-des-donnees-de-lens-psl
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/la-nuit-des-donnees-de-lens-psl
+END:VEVENT
+BEGIN:VEVENT
+UID:79f179ca81fe@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:Session d'information - 8ème appel conjoint pour des activités des communautés de l'Université européenne EELISA
+DESCRIPTION:\nhttps://psl.eu/agenda/session-dinformation-8eme-appel-conjoint-pour-des-activites-des-communautes-de-luniversite
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/session-dinformation-8eme-appel-conjoint-pour-des-activites-des-communautes-de-luniversite
+END:VEVENT
+BEGIN:VEVENT
+UID:93f7e5f5eb77@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:L’Ecole normale supérieure - PSL présente La nuit des données
+DESCRIPTION:\nhttps://psl.eu/agenda/lecole-normale-superieure-psl-presente-la-nuit-des-donnees
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/lecole-normale-superieure-psl-presente-la-nuit-des-donnees
+END:VEVENT
+BEGIN:VEVENT
+UID:bafa515e2e52@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:26ème Congrès OSE : La décarbonation des systèmes de santé
+DESCRIPTION:\nhttps://psl.eu/agenda/26eme-congres-ose-la-decarbonation-des-systemes-de-sante
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/26eme-congres-ose-la-decarbonation-des-systemes-de-sante
+END:VEVENT
+BEGIN:VEVENT
+UID:e8f8ff85de3e@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Cours du soir - Une histoire de l'IA (1940-2026)
+DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:5757e90308b0@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Cours du soir - La Chimie dans notre quotidien
+DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-la-chimie-dans-notre-quotidien
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/cours-du-soir-la-chimie-dans-notre-quotidien
+END:VEVENT
+BEGIN:VEVENT
+UID:fde64d7e2d88@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Cours du soir - Histoire du cinéma d'animation
+DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-histoire-du-cinema-danimation-0
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/cours-du-soir-histoire-du-cinema-danimation-0
+END:VEVENT
+BEGIN:VEVENT
+UID:f5620c915385@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Cours du soir - De l'Empire ottoman à la Turquie moderne
+DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-de-lempire-ottoman-la-turquie-moderne
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/cours-du-soir-de-lempire-ottoman-la-turquie-moderne
+END:VEVENT
+BEGIN:VEVENT
+UID:4339160d5f85@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Cours du soir - La mode sous toutes ses coutures
+DESCRIPTION:\nhttps://psl.eu/agenda/cours-du-soir-la-mode-sous-toutes-ses-coutures
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/cours-du-soir-la-mode-sous-toutes-ses-coutures
+END:VEVENT
+BEGIN:VEVENT
+UID:7b053657eed0@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:La Cellule d’entraide étudiante handicap reprend ses activités !
+DESCRIPTION:\nhttps://psl.eu/agenda/la-cellule-dentraide-etudiante-handicap-reprend-ses-activites
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/la-cellule-dentraide-etudiante-handicap-reprend-ses-activites
+END:VEVENT
+BEGIN:VEVENT
+UID:63013216250d@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:Fête de la science à l'Université PSL
+DESCRIPTION:\nhttps://psl.eu/agenda/fete-de-la-science-luniversite-psl
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/fete-de-la-science-luniversite-psl
+END:VEVENT
+BEGIN:VEVENT
+UID:0967d26125f5@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+SUMMARY:Le village des Sciences de l'Université PSL
+DESCRIPTION:\nhttps://psl.eu/agenda/le-village-des-sciences-de-luniversite-psl
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/le-village-des-sciences-de-luniversite-psl
+END:VEVENT
+BEGIN:VEVENT
+UID:2c752d8f4241@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Conférence PROMESSE – Artiste-auteur\, micro-entreprise\, cumul ... : Quel statut choisir ?
+DESCRIPTION:\nhttps://psl.eu/agenda/conference-promesse-artiste-auteur-micro-entreprise-cumul-quel-statut-choisir
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/conference-promesse-artiste-auteur-micro-entreprise-cumul-quel-statut-choisir
+END:VEVENT
+BEGIN:VEVENT
+UID:7e2a2fc81c35@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:La quête de l’eau atmosphérique
+DESCRIPTION:\nhttps://psl.eu/agenda/la-quete-de-leau-atmospherique
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/la-quete-de-leau-atmospherique
+END:VEVENT
+BEGIN:VEVENT
+UID:cda59fed2ba7@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Design in Nature: The Evolution of Designs - 16th Constructal Law Conference
+DESCRIPTION:\nhttps://psl.eu/agenda/design-nature-evolution-designs-16th-constructal-law-conference
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/design-nature-evolution-designs-16th-constructal-law-conference
+END:VEVENT
+BEGIN:VEVENT
+UID:c72b67a20cb0@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Séminaires de l’Organologia Institute
+DESCRIPTION:\nhttps://psl.eu/agenda/seminaires-de-lorganologia-institute
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/seminaires-de-lorganologia-institute
+END:VEVENT
+BEGIN:VEVENT
+UID:9aeea5d2ced0@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Séminaire inaugural de l’Organologia Institute : « La bourse et la vie : le vitalisme de Georges F. Doriot »
+DESCRIPTION:\nhttps://psl.eu/agenda/seminaire-inaugural-de-lorganologia-institute-la-bourse-et-la-vie-le-vitalisme-de-georges-f
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/seminaire-inaugural-de-lorganologia-institute-la-bourse-et-la-vie-le-vitalisme-de-georges-f
+END:VEVENT
+BEGIN:VEVENT
+UID:56cf635a2378@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Façonner les ondes pour voir l'invisible
+DESCRIPTION:\nhttps://psl.eu/agenda/faconner-les-ondes-pour-voir-linvisible
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/faconner-les-ondes-pour-voir-linvisible
+END:VEVENT
+BEGIN:VEVENT
+UID:cd78e1ba5a27@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Bachelor I-BE³ : webinaire d’information
+DESCRIPTION:\nhttps://psl.eu/agenda/bachelor-i-be3-webinaire-dinformation-0
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/bachelor-i-be3-webinaire-dinformation-0
+END:VEVENT
+BEGIN:VEVENT
+UID:177d55334a2d@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Festival Musique 2026 « Quatuor à cordes »
+DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-quatuor-cordes
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes
+END:VEVENT
+BEGIN:VEVENT
+UID:1fb986609034@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:AFTER Project Room : la jeune création de l'École des Arts Décoratifs – PSL s'expose à "Aaaaaah Paris Internationale"
+DESCRIPTION:\nhttps://psl.eu/agenda/after-project-room-la-jeune-creation-de-lecole-des-arts-decoratifs-psl-sexpose-aaaaaah-paris
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/after-project-room-la-jeune-creation-de-lecole-des-arts-decoratifs-psl-sexpose-aaaaaah-paris
+END:VEVENT
+BEGIN:VEVENT
+UID:4362a59a623e@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Groupe de parole pour les doctorants 🗣️
+DESCRIPTION:\nhttps://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
+END:VEVENT
+BEGIN:VEVENT
+UID:c9aef26da023@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Festival Musique 2026 « Piano/accordéon autour de la danse »
+DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la-danse
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la-danse
+END:VEVENT
+BEGIN:VEVENT
+UID:7d300871fa24@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Festival Musique 2026 « Trio Cornière »
+DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-trio-corniere
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/festival-musique-2026-trio-corniere
+END:VEVENT
+BEGIN:VEVENT
+UID:67081bb7dd38@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:Festival Musique 2026 « Quatuor à cordes et percussions »
+DESCRIPTION:\nhttps://psl.eu/agenda/festival-musique-2026-quatuor-cordes-et-percussions
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes-et-percussions
+END:VEVENT
+END:VCALENDAR

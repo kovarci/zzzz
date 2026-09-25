@@ -1,138 +1,138 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:IHES · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:ce049f565a06@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20260930T144500
-DTEND:20260930T160000
-SUMMARY:Dynamical Tidal Response of Neutron Stars from Scattering Amplitudes
-DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) In this talk I will describe an amplitude-based framework for extracting the frequency-dependent tidal response of neutron stars while preserving the tidal resonances associated with their normal modes. The response is obtained by matching the amplitude for gravitational-wave scattering off a neutron star\, equivalently gravitational Comp\nhttps://indico.math.cnrs.fr/event/17400/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17400/
-END:VEVENT
-BEGIN:VEVENT
-UID:ff0fd3daa373@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261001T143000
-DTEND:20261001T160000
-SUMMARY:Zeta Values as Moments: A Random Matrix Theory
-DESCRIPTION:The values of the Riemann zeta-function $\\zeta\\left(\\alpha+\\beta n\\right)$ with $\\alpha>1$\, $\\beta>0$ and $n$ a positive integer can be viewed as moments of a probability distribution. In my talk I will construct the corresponding random matrix model and determine its asymptotic spectral curve\, which exhibits an unusual feature\, the complete asymptotics of its partition function and uniform approx\nhttps://indico.math.cnrs.fr/event/17408/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17408/
-END:VEVENT
-BEGIN:VEVENT
-UID:d0bfe36c9390@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261005T140000
-DTEND:20261005T151500
-SUMMARY:Origami Tori
-DESCRIPTION:An origami torus is a piecewise affine isometric embedding of a flat torus into R 3 . It is surprising that these things exist\, but thanks to the work of Burago and Zalgaller in 1960 they do. 30 years later\, B&Z proved that every flat torus is realized as an origami torus. In 2023\, Lazarus and Tallerie proved that you can realize all flat tori using a single underlying triangulation with about 250\nhttps://indico.math.cnrs.fr/event/17062/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17062/
-END:VEVENT
-BEGIN:VEVENT
-UID:e4af97c28d4e@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261005T160000
-DTEND:20261005T171500
-SUMMARY:Families of Discrete Representations from Incidence Theorems
-DESCRIPTION:Motivated by a family of examples constructed by R. Schwartz based on Pappus's theorem\, we explore constructions of representations of discrete groups arising from incidence theorems in projective spaces. Schwartz recently proved that his construction parametrizes the boundary of a connected component of Anosov representations in a certain moduli space of representations of PSL(2\,Z) into Isom(SL(3\nhttps://indico.math.cnrs.fr/event/17063/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17063/
-END:VEVENT
-BEGIN:VEVENT
-UID:53bf13613051@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261006T144500
-DTEND:20261006T160000
-SUMMARY:On the Wilson-Fisher Fixed Point in the Limit of Integer Spacetime Dimensions
-DESCRIPTION:The Wilson–Fisher (WF) fixed point\, a scalar field theory with a quartic interaction in $d = 4 - \\epsilon$ dimensions\, is the textbook example of a weakly coupled CFT. The epsilon expansion accurately reproduces the critical exponents of the $d = 3$ and the $d = 2$ Ising model. This has led to the common view that WF defines a continuous family of CFTs in non-integer dimensions\, interpolating betw\nhttps://indico.math.cnrs.fr/event/17103/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17103/
-END:VEVENT
-BEGIN:VEVENT
-UID:7ed38ea8f514@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261008T110000
-DTEND:20261008T123000
-SUMMARY:On “Siegel Domains” in p-adic Period Spaces
-DESCRIPTION:Séminaire de géométrie arithmétique A Siegel domain is a finite-volume subset of a symmetric space whose translates under the action of the relevant arithmetic group cover the entire space. In this talk\, we consider an analogue for the p-adic period spaces introduced by Rapoport and Zink. We give a partial criterion for the existence of a Siegel domain and discuss its expected applications. ======\nhttps://indico.math.cnrs.fr/event/17331/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17331/
-END:VEVENT
-BEGIN:VEVENT
-UID:513576072690@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261012T090000
-DTEND:20261012T110000
-SUMMARY:The Pentagram Map and Ramifications
-DESCRIPTION:October 12-15\, 2026 at IHES - Marilyn and James Simons Conference Center How to get to IHES This workshop explores the mathematics connected to the pentagram map and its generalizations. With 3 talks per day\, spread out over 4 days\, leaving time for individualized interactions\, it will not be confined to the special topic of the pentagram map\, but rather an exploration of the kind of mathematics t\nhttps://indico.math.cnrs.fr/event/17361/
-LOCATION:Le Bois-Marie
-URL:https://indico.math.cnrs.fr/event/17361/
-END:VEVENT
-BEGIN:VEVENT
-UID:18975d08334d@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261019T143000
-DTEND:20261019T160000
-SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
-DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17105/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17105/
-END:VEVENT
-BEGIN:VEVENT
-UID:d7f5e719d1a7@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261021T143000
-DTEND:20261021T160000
-SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
-DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17106/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17106/
-END:VEVENT
-BEGIN:VEVENT
-UID:1b18c07975bd@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261026T143000
-DTEND:20261026T160000
-SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
-DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17107/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17107/
-END:VEVENT
-BEGIN:VEVENT
-UID:b393ad05b173@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261028T143000
-DTEND:20261028T160000
-SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
-DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17108/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17108/
-END:VEVENT
-BEGIN:VEVENT
-UID:5355402a7318@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20261207T090000
-DTEND:20261207T190000
-SUMMARY:XMath Physics Day
-DESCRIPTION:XMath Physics Day is a one-day workshop taking place on December 7 at Laboratoire Mathématiques d'Orsay (LMO). It will bring together early-career and senior researchers in mathematical physics working on resurgence\, topological string theory\, and scattering amplitudes. Organisateurs : Veronica Fantini (veronica.fantini@universite-paris-saclay.fr)\, Claudia Rella (rella@ihes.fr)\nhttps://indico.math.cnrs.fr/event/17422/
-LOCATION:Laboratoire de Mathématiques d'Orsay
-URL:https://indico.math.cnrs.fr/event/17422/
-END:VEVENT
-BEGIN:VEVENT
-UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20260925T203806Z
-DTSTART:20270531T093000
-DTEND:20270531T113000
-SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji
-DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji May 31 - June 4\, 2027 at IHES - Marilyn and James Simons Conference Center How to get to IHES This conference\, which is part of a long-standing tradition of French-Japanese collaboration in arithmetic geometry\, will honor two leading figures of this partnership: Professor Takeshi Saito \, on the occasion o\nhttps://indico.math.cnrs.fr/event/15993/
-LOCATION:Le Bois-Marie
-URL:https://indico.math.cnrs.fr/event/15993/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:IHES · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:ce049f565a06@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20260930T144500
+DTEND:20260930T160000
+SUMMARY:Dynamical Tidal Response of Neutron Stars from Scattering Amplitudes
+DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) In this talk I will describe an amplitude-based framework for extracting the frequency-dependent tidal response of neutron stars while preserving the tidal resonances associated with their normal modes. The response is obtained by matching the amplitude for gravitational-wave scattering off a neutron star\, equivalently gravitational Comp\nhttps://indico.math.cnrs.fr/event/17400/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17400/
+END:VEVENT
+BEGIN:VEVENT
+UID:ff0fd3daa373@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261001T143000
+DTEND:20261001T160000
+SUMMARY:Zeta Values as Moments: A Random Matrix Theory
+DESCRIPTION:The values of the Riemann zeta-function $\\zeta\\left(\\alpha+\\beta n\\right)$ with $\\alpha>1$\, $\\beta>0$ and $n$ a positive integer can be viewed as moments of a probability distribution. In my talk I will construct the corresponding random matrix model and determine its asymptotic spectral curve\, which exhibits an unusual feature\, the complete asymptotics of its partition function and uniform approx\nhttps://indico.math.cnrs.fr/event/17408/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17408/
+END:VEVENT
+BEGIN:VEVENT
+UID:d0bfe36c9390@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261005T140000
+DTEND:20261005T151500
+SUMMARY:Origami Tori
+DESCRIPTION:An origami torus is a piecewise affine isometric embedding of a flat torus into R 3 . It is surprising that these things exist\, but thanks to the work of Burago and Zalgaller in 1960 they do. 30 years later\, B&Z proved that every flat torus is realized as an origami torus. In 2023\, Lazarus and Tallerie proved that you can realize all flat tori using a single underlying triangulation with about 250\nhttps://indico.math.cnrs.fr/event/17062/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17062/
+END:VEVENT
+BEGIN:VEVENT
+UID:e4af97c28d4e@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261005T160000
+DTEND:20261005T171500
+SUMMARY:Families of Discrete Representations from Incidence Theorems
+DESCRIPTION:Motivated by a family of examples constructed by R. Schwartz based on Pappus's theorem\, we explore constructions of representations of discrete groups arising from incidence theorems in projective spaces. Schwartz recently proved that his construction parametrizes the boundary of a connected component of Anosov representations in a certain moduli space of representations of PSL(2\,Z) into Isom(SL(3\nhttps://indico.math.cnrs.fr/event/17063/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17063/
+END:VEVENT
+BEGIN:VEVENT
+UID:53bf13613051@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261006T144500
+DTEND:20261006T160000
+SUMMARY:On the Wilson-Fisher Fixed Point in the Limit of Integer Spacetime Dimensions
+DESCRIPTION:The Wilson–Fisher (WF) fixed point\, a scalar field theory with a quartic interaction in $d = 4 - \\epsilon$ dimensions\, is the textbook example of a weakly coupled CFT. The epsilon expansion accurately reproduces the critical exponents of the $d = 3$ and the $d = 2$ Ising model. This has led to the common view that WF defines a continuous family of CFTs in non-integer dimensions\, interpolating betw\nhttps://indico.math.cnrs.fr/event/17103/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17103/
+END:VEVENT
+BEGIN:VEVENT
+UID:7ed38ea8f514@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261008T110000
+DTEND:20261008T123000
+SUMMARY:On “Siegel Domains” in p-adic Period Spaces
+DESCRIPTION:Séminaire de géométrie arithmétique A Siegel domain is a finite-volume subset of a symmetric space whose translates under the action of the relevant arithmetic group cover the entire space. In this talk\, we consider an analogue for the p-adic period spaces introduced by Rapoport and Zink. We give a partial criterion for the existence of a Siegel domain and discuss its expected applications. ======\nhttps://indico.math.cnrs.fr/event/17331/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17331/
+END:VEVENT
+BEGIN:VEVENT
+UID:513576072690@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261012T090000
+DTEND:20261012T110000
+SUMMARY:The Pentagram Map and Ramifications
+DESCRIPTION:October 12-15\, 2026 at IHES - Marilyn and James Simons Conference Center How to get to IHES This workshop explores the mathematics connected to the pentagram map and its generalizations. With 3 talks per day\, spread out over 4 days\, leaving time for individualized interactions\, it will not be confined to the special topic of the pentagram map\, but rather an exploration of the kind of mathematics t\nhttps://indico.math.cnrs.fr/event/17361/
+LOCATION:Le Bois-Marie
+URL:https://indico.math.cnrs.fr/event/17361/
+END:VEVENT
+BEGIN:VEVENT
+UID:18975d08334d@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261019T143000
+DTEND:20261019T160000
+SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
+DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17105/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17105/
+END:VEVENT
+BEGIN:VEVENT
+UID:d7f5e719d1a7@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261021T143000
+DTEND:20261021T160000
+SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
+DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17106/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17106/
+END:VEVENT
+BEGIN:VEVENT
+UID:1b18c07975bd@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261026T143000
+DTEND:20261026T160000
+SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
+DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17107/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17107/
+END:VEVENT
+BEGIN:VEVENT
+UID:b393ad05b173@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261028T143000
+DTEND:20261028T160000
+SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
+DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-commutative) sphere regularization\," a recently proposed non-perturbative approach to 3D CFTs. I will first elucidate its fundamental concepts and then dive into illustrative examples\, including the 3D Ising transition\, fermionic CFTs\, and Chern-Simons matter theories. I will comment on the potential theoretical direction in understandin\nhttps://indico.math.cnrs.fr/event/17108/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17108/
+END:VEVENT
+BEGIN:VEVENT
+UID:5355402a7318@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20261207T090000
+DTEND:20261207T190000
+SUMMARY:XMath Physics Day
+DESCRIPTION:XMath Physics Day is a one-day workshop taking place on December 7 at Laboratoire Mathématiques d'Orsay (LMO). It will bring together early-career and senior researchers in mathematical physics working on resurgence\, topological string theory\, and scattering amplitudes. Organisateurs : Veronica Fantini (veronica.fantini@universite-paris-saclay.fr)\, Claudia Rella (rella@ihes.fr)\nhttps://indico.math.cnrs.fr/event/17422/
+LOCATION:Laboratoire de Mathématiques d'Orsay
+URL:https://indico.math.cnrs.fr/event/17422/
+END:VEVENT
+BEGIN:VEVENT
+UID:cbd8d0b9edde@paris-academique
+DTSTAMP:20260925T224534Z
+DTSTART:20270531T093000
+DTEND:20270531T113000
+SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji
+DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji May 31 - June 4\, 2027 at IHES - Marilyn and James Simons Conference Center How to get to IHES This conference\, which is part of a long-standing tradition of French-Japanese collaboration in arithmetic geometry\, will honor two leading figures of this partnership: Professor Takeshi Saito \, on the occasion o\nhttps://indico.math.cnrs.fr/event/15993/
+LOCATION:Le Bois-Marie
+URL:https://indico.math.cnrs.fr/event/15993/
+END:VEVENT
+END:VCALENDAR

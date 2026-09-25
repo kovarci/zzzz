@@ -3,61 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BnF — Conférences à Paris</title>
+<title>BnF — conférences à Paris · Lotent</title>
 <link rel="canonical" href="https://lotent.fr/i/bnf.html">
-<meta name="description" content="31 conférences à venir à Paris. Calendrier mis à jour chaque jour sur lotent.fr.">
+<meta name="description" content="31 conférences à venir à Paris.  Calendrier mis à jour chaque jour sur lotent.fr.">
 <meta property="og:title" content="BnF — 31 conférences à venir">
 <meta property="og:description" content="31 conférences à venir à Paris.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lotent.fr/i/bnf.html">
 <meta property="og:image" content="https://lotent.fr/data/og/bnf.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BnF — 31 conférences à venir">
-<meta name="twitter:description" content="31 conférences à venir à Paris.">
 <meta name="twitter:image" content="https://lotent.fr/data/og/bnf.png">
+<link rel="icon" href="https://lotent.fr/icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lotent.fr/"}, {"@type": "ListItem", "position": 2, "name": "BnF", "item": "https://lotent.fr/i/bnf.html"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body{font-family:Inter,system-ui,sans-serif;background:#07070d;color:#ececf2;margin:0;
-display:flex;align-items:flex-start;justify-content:center;min-height:100vh;padding:22px;box-sizing:border-box}
-h2{font-size:15px;margin:26px 0 10px;color:#8888a0;font-weight:600;
-letter-spacing:.04em;text-transform:uppercase}
-ul.evts{list-style:none;padding:0;margin:0}
-ul.evts li{border-top:1px solid rgba(255,255,255,.08)}
-ul.evts a{display:flex;gap:12px;padding:11px 2px;color:#c2c2d0;
-text-decoration:none;font-size:14px;line-height:1.45}
-ul.evts a:hover{color:#fff}
-ul.evts .d{flex:0 0 62px;color:#8888a0;font-variant-numeric:tabular-nums}
-.card{max-width:560px;width:100%;background:linear-gradient(160deg,#1c1c2eb8,#11111db8);
-border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}
-.k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8888a0;margin-bottom:10px}
-h1{font-size:26px;line-height:1.25;margin:0 0 14px}
-p{color:#c2c2d0;font-size:14.5px;line-height:1.7;margin:8px 0}
-.btn{display:block;text-align:center;margin-top:22px;padding:13px;border-radius:12px;font-weight:600;
-text-decoration:none;color:#fff;background:linear-gradient(120deg,#7c5cff,#3f7dff)}
-.foot{text-align:center;margin-top:18px;font-size:12px}
-.foot a{color:#8888a0}
-.crumb{font-size:12px;color:#8888a0;margin-bottom:14px}
-.crumb a{color:#8ab4ff;text-decoration:none}
-h2{font-size:14px;color:#8888a0;margin:22px 0 8px;font-weight:600}
-.rel{list-style:none;padding:0;margin:0}
-.rel li{font-size:13.5px;line-height:1.5;margin:4px 0}
-.rel a{color:#c2c2d0;text-decoration:none}
-.rel a:hover{color:#fff}
-.rel .d{color:#8888a0;font-size:12px}
-p a{color:#8ab4ff;text-decoration:none}
+:root{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#71717a;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}
+@media (prefers-color-scheme:dark){:root{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted:#27272a;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}
+*{box-sizing:border-box}
+body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px 16px 40px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:620px;margin:0 auto}
+.crumb{font-size:12px;color:var(--muted-fg);margin:0 0 14px}
+.crumb a{color:inherit;text-decoration:none}.crumb a:hover{color:var(--fg)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -16px rgba(0,0,0,.25)}
+.head{position:relative;display:flex;align-items:flex-end;min-height:150px;padding:20px 22px;color:#fff;background:linear-gradient(135deg,var(--dc),color-mix(in srgb,var(--dc) 55%,#000))}
+.head::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:16px 16px;-webkit-mask-image:radial-gradient(ellipse at top right,#000,transparent 70%);mask-image:radial-gradient(ellipse at top right,#000,transparent 70%)}
+.head .k{position:absolute;top:14px;left:16px;background:rgba(255,255,255,.92);color:#18181b;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px}
+.head h1{position:relative;margin:0;font-size:28px;line-height:1.15;letter-spacing:-.02em;text-wrap:balance;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.body{padding:20px 22px 22px}
+.count{font-size:15px;margin:0 0 6px}.count b{font-variant-numeric:tabular-nums}
+.intro{font-size:14px;color:var(--muted-fg);margin:0 0 16px}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cta a{display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 12px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;line-height:1.2}
+.cta .site{background:var(--primary);color:var(--primary-fg)}
+.cta .ext{border:1px solid var(--border);color:inherit}
+.cta a:hover{filter:brightness(1.08)}
+.cta a:only-child{grid-column:1/-1}
+@media (max-width:420px){.cta{grid-template-columns:1fr}}
+h2{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em}
+.rel{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}
+.rel li{font-size:14px;line-height:1.4}
+.rel li+li{border-top:1px solid var(--border)}
+.rel a{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}
+.rel a:hover{background:var(--muted)}
+.rel .t small{display:block;color:var(--muted-fg);font-size:12px;margin-top:2px}
+.rel .d{color:var(--muted-fg);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips a{border:1px solid var(--border);border-radius:999px;padding:5px 11px;font-size:13px;color:inherit;text-decoration:none;background:var(--card)}
+.chips a:hover{background:var(--muted)}
+.foot{text-align:center;margin-top:24px;font-size:12px;color:var(--muted-fg)}
+.foot a{color:inherit}
 </style>
 </head>
 <body>
-<main class="card">
-<div class="k">Conférences à Paris</div>
-<h1>BnF</h1>
-<p><strong>31 conférences à venir</strong> dans le calendrier Lotent.</p>
+<div class="wrap">
+<nav class="crumb" aria-label="Fil d'Ariane"><a href="https://lotent.fr/">Accueil</a> › BnF</nav>
+<main class="card" style="--dc:#A16207">
+<div class="head"><span class="k">Institution</span><h1>BnF</h1></div>
+<div class="body">
+<p class="count"><b>31</b> conférences à venir dans l'agenda Lotent.</p>
 
-<h2>Prochaines conférences</h2><ul class="evts"><li><a href="../e/29d3eba4ec55.html"><span class="d">29 sept.</span>Gilbert du Motier de La Fayette</a></li><li><a href="../e/82ead6ec1421.html"><span class="d">30 sept.</span>Du neuf</a></li><li><a href="../e/2c5a54430f12.html"><span class="d">1 oct.</span>Présentation de l’exposition sur la photographie japonaise à la BnF</a></li><li><a href="../e/60f1b95356ff.html"><span class="d">1 oct.</span>Le livre chinois et l’Occident au XVIIe siècle – Naissance des collections chinoises de Berlin, Oxford, Paris </a></li><li><a href="../e/f0d12adc20c6.html"><span class="d">2 oct.</span>Le livre chinois et l’Occident au XVIIe siècle – Production des livres chinois et leurs genres</a></li><li><a href="../e/6d07fe3d4288.html"><span class="d">6 oct.</span>Les animaux en marge – Séance inaugurale</a></li><li><a href="../e/f26631162c01.html"><span class="d">6 oct.</span>Conférence-concert – Gaetano Donizetti, Manuscrit autographe du Concertino pour cor anglais et orchestre</a></li><li><a href="../e/4e868ea4e6b0.html"><span class="d">6 oct.</span>Thomas Jefferson</a></li><li><a href="../e/5e0a659feb87.html"><span class="d">9 oct.</span>De pourpre et d&#x27;or. Le Codex « Sinopensis » : un manuscrit biblique à peintures du siècle de Justinien</a></li><li><a href="../e/9a27d0416b46.html"><span class="d">9 oct.</span>Underground ! Presse des marges et renouveau des avant-gardes dans les années 1970</a></li><li><a href="../e/7297204a7a5d.html"><span class="d">14 oct.</span>Photographie, théâtre et théâtralisation des prises de vue au Japon depuis 1945</a></li><li><a href="../e/55e66985a79f.html"><span class="d">16 oct.</span>François Mitterrand, homme de lettres</a></li><li><a href="../e/cc21a17fbb0a.html"><span class="d">23 oct.</span>Regards sur Louise Bourgeois</a></li><li><a href="../e/640bf8118fb1.html"><span class="d">26 oct.</span>La naissance du livre de poésie moderne en français : des premiers incunables aux « Amours » de Ronsard (1552)</a></li><li><a href="../e/221e41ec938e.html"><span class="d">2 nov.</span>Ce que racontent les manuscrits : Anne de Graville, le manuscrit Français 25441 et la transmission de « Palamo</a></li><li><a href="../e/d722d25daca5.html"><span class="d">3 nov.</span>Matière active</a></li><li><a href="../e/ff56c530e69f.html"><span class="d">10 nov.</span>Un rituel de la couleur au Moyen Âge ?</a></li><li><a href="../e/38fcd46c722d.html"><span class="d">10 nov.</span>Benjamin Franklin</a></li><li><a href="../e/162d5e49ea2b.html"><span class="d">18 nov.</span>Rôle du livre et des revues dans la conception photographique japonaise (1945-2025)</a></li><li><a href="../e/d489e8ffd260.html"><span class="d">18 nov.</span>Des milliers de livres spoliés présents dans les bibliothèques : redécouverte, recherches et restitutions</a></li><li><a href="../e/f9504b2f1465.html"><span class="d">19 nov.</span>Des vases sur des monnaies : pour une approche croisée des représentations de vases sur les monnaies grecques </a></li><li><a href="../e/4b2da3e24039.html"><span class="d">19 nov.</span>L’arsenic, renaissance d’un médicament venu de l’Antiquité</a></li><li><a href="../e/ac40f1787fda.html"><span class="d">24 nov.</span>Pierre Augustin Caron de Beaumarchais</a></li><li><a href="../e/ee418a88be8e.html"><span class="d">25 nov.</span>Bicentenaire de la mort de Philippe Pinel, « père » de la psychiatrie moderne (20 avril 1745-25 octobre 1826)</a></li><li><a href="../e/22f147c0a2b3.html"><span class="d">30 nov.</span>Entre archives et manuscrits, du nouveau sur Charles d’Orléans ?</a></li><li><a href="../e/7d9562cb7afd.html"><span class="d">1 déc.</span>Savants et charlatans : le cas Mesmer</a></li><li><a href="../e/342d81a6be06.html"><span class="d">8 déc.</span>Écrire ou figurer la vie du Christ ? L’image à l’épreuve de la Bible dans l’Empire carolingien</a></li><li><a href="../e/d668c16760fd.html"><span class="d">8 déc.</span>Les États-Unis à l’épreuve du trumpisme</a></li><li><a href="../e/5e381b4728df.html"><span class="d">9 déc.</span>Un chef d&#x27;œuvre de l&#x27;art du livre constantinopolitain : le tétraévangile Grec 64 du XIe siècle</a></li><li><a href="../e/3f0b1330a451.html"><span class="d">15 déc.</span>De la philosophie aux mathématiques : de l&#x27;intelligence pas si artificielle</a></li><li><a href="../e/3522ef2d6b80.html"><span class="d">16 déc.</span>Douze à la douzaine</a></li></ul>
-<a class="btn" href="../index.html?institution=BnF">Voir le calendrier →</a>
-<div class="foot"><a href="https://lotent.fr">lotent.fr — toutes les conférences académiques de Paris</a></div>
+<div class="cta"><a class="site" href="/?institution=BnF">Voir dans l'agenda →</a><a class="ext" href="https://lotent.fr/data/cal/bnf.ics">S'abonner à l'agenda (.ics)</a></div>
+</div>
 </main>
+<h2>Prochaines conférences</h2><ul class="rel"><li><a href="https://lotent.fr/e/29d3eba4ec55.html"><span class="t">Gilbert du Motier de La Fayette</span><span class="d">29 sept.</span></a></li><li><a href="https://lotent.fr/e/82ead6ec1421.html"><span class="t">Du neuf</span><span class="d">30 sept.</span></a></li><li><a href="https://lotent.fr/e/2c5a54430f12.html"><span class="t">Présentation de l’exposition sur la photographie japonaise à la BnF</span><span class="d">1 oct.</span></a></li><li><a href="https://lotent.fr/e/60f1b95356ff.html"><span class="t">Le livre chinois et l’Occident au XVIIe siècle – Naissance des collections chinoises de Berlin, Oxford, Paris </span><span class="d">1 oct.</span></a></li><li><a href="https://lotent.fr/e/f0d12adc20c6.html"><span class="t">Le livre chinois et l’Occident au XVIIe siècle – Production des livres chinois et leurs genres</span><span class="d">2 oct.</span></a></li><li><a href="https://lotent.fr/e/6d07fe3d4288.html"><span class="t">Les animaux en marge – Séance inaugurale</span><span class="d">6 oct.</span></a></li><li><a href="https://lotent.fr/e/f26631162c01.html"><span class="t">Conférence-concert – Gaetano Donizetti, Manuscrit autographe du Concertino pour cor anglais et orchestre</span><span class="d">6 oct.</span></a></li><li><a href="https://lotent.fr/e/4e868ea4e6b0.html"><span class="t">Thomas Jefferson</span><span class="d">6 oct.</span></a></li><li><a href="https://lotent.fr/e/5e0a659feb87.html"><span class="t">De pourpre et d&#x27;or. Le Codex « Sinopensis » : un manuscrit biblique à peintures du siècle de Justinien</span><span class="d">9 oct.</span></a></li><li><a href="https://lotent.fr/e/9a27d0416b46.html"><span class="t">Underground ! Presse des marges et renouveau des avant-gardes dans les années 1970</span><span class="d">9 oct.</span></a></li><li><a href="https://lotent.fr/e/7297204a7a5d.html"><span class="t">Photographie, théâtre et théâtralisation des prises de vue au Japon depuis 1945</span><span class="d">14 oct.</span></a></li><li><a href="https://lotent.fr/e/55e66985a79f.html"><span class="t">François Mitterrand, homme de lettres</span><span class="d">16 oct.</span></a></li><li><a href="https://lotent.fr/e/cc21a17fbb0a.html"><span class="t">Regards sur Louise Bourgeois</span><span class="d">23 oct.</span></a></li><li><a href="https://lotent.fr/e/640bf8118fb1.html"><span class="t">La naissance du livre de poésie moderne en français : des premiers incunables aux « Amours » de Ronsard (1552)</span><span class="d">26 oct.</span></a></li><li><a href="https://lotent.fr/e/221e41ec938e.html"><span class="t">Ce que racontent les manuscrits : Anne de Graville, le manuscrit Français 25441 et la transmission de « Palamo</span><span class="d">2 nov.</span></a></li><li><a href="https://lotent.fr/e/d722d25daca5.html"><span class="t">Matière active</span><span class="d">3 nov.</span></a></li><li><a href="https://lotent.fr/e/ff56c530e69f.html"><span class="t">Un rituel de la couleur au Moyen Âge ?</span><span class="d">10 nov.</span></a></li><li><a href="https://lotent.fr/e/38fcd46c722d.html"><span class="t">Benjamin Franklin</span><span class="d">10 nov.</span></a></li><li><a href="https://lotent.fr/e/162d5e49ea2b.html"><span class="t">Rôle du livre et des revues dans la conception photographique japonaise (1945-2025)</span><span class="d">18 nov.</span></a></li><li><a href="https://lotent.fr/e/d489e8ffd260.html"><span class="t">Des milliers de livres spoliés présents dans les bibliothèques : redécouverte, recherches et restitutions</span><span class="d">18 nov.</span></a></li><li><a href="https://lotent.fr/e/f9504b2f1465.html"><span class="t">Des vases sur des monnaies : pour une approche croisée des représentations de vases sur les monnaies grecques </span><span class="d">19 nov.</span></a></li><li><a href="https://lotent.fr/e/4b2da3e24039.html"><span class="t">L’arsenic, renaissance d’un médicament venu de l’Antiquité</span><span class="d">19 nov.</span></a></li><li><a href="https://lotent.fr/e/ac40f1787fda.html"><span class="t">Pierre Augustin Caron de Beaumarchais</span><span class="d">24 nov.</span></a></li><li><a href="https://lotent.fr/e/ee418a88be8e.html"><span class="t">Bicentenaire de la mort de Philippe Pinel, « père » de la psychiatrie moderne (20 avril 1745-25 octobre 1826)</span><span class="d">25 nov.</span></a></li><li><a href="https://lotent.fr/e/22f147c0a2b3.html"><span class="t">Entre archives et manuscrits, du nouveau sur Charles d’Orléans ?</span><span class="d">30 nov.</span></a></li><li><a href="https://lotent.fr/e/7d9562cb7afd.html"><span class="t">Savants et charlatans : le cas Mesmer</span><span class="d">1 déc.</span></a></li><li><a href="https://lotent.fr/e/342d81a6be06.html"><span class="t">Écrire ou figurer la vie du Christ ? L’image à l’épreuve de la Bible dans l’Empire carolingien</span><span class="d">8 déc.</span></a></li><li><a href="https://lotent.fr/e/d668c16760fd.html"><span class="t">Les États-Unis à l’épreuve du trumpisme</span><span class="d">8 déc.</span></a></li><li><a href="https://lotent.fr/e/5e381b4728df.html"><span class="t">Un chef d&#x27;œuvre de l&#x27;art du livre constantinopolitain : le tétraévangile Grec 64 du XIe siècle</span><span class="d">9 déc.</span></a></li><li><a href="https://lotent.fr/e/3f0b1330a451.html"><span class="t">De la philosophie aux mathématiques : de l&#x27;intelligence pas si artificielle</span><span class="d">15 déc.</span></a></li><li><a href="https://lotent.fr/e/3522ef2d6b80.html"><span class="t">Douze à la douzaine</span><span class="d">16 déc.</span></a></li></ul>
+<h2>Disciplines</h2><div class="chips"><a href="https://lotent.fr/d/histoire.html">Histoire</a><a href="https://lotent.fr/d/arts-culture.html">Arts &amp; Culture</a><a href="https://lotent.fr/d/philosophie.html">Philosophie</a><a href="https://lotent.fr/d/litterature.html">Littérature</a><a href="https://lotent.fr/d/mathematiques.html">Mathématiques</a></div>
+<div class="foot"><a href="https://lotent.fr/">Lotent — toutes les conférences de Paris</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">Questions &amp; recommandations</a></div>
+</div>
 </body>
 </html>
