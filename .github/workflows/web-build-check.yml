@@ -6,19 +6,24 @@ name: Front-end build check
 # bundle correspondant aux sources : ce workflow rebuild à l'identique et
 # échoue si le résultat diffère de ce qui est commité, pour repérer un
 # oubli de `npm run build` avant de pousser.
+# Chemins relatifs à la racine du dépôt GitHub (= ce dossier) : avec un
+# préfixe « paris-conferences/ », le filtre ne correspondait jamais et la
+# vérification n'a pas tourné une seule fois avant le 25/09/2026.
 
 on:
   push:
     branches: [main]
     paths:
-      - "paris-conferences/web/**"
-      - "paris-conferences/app.js"
-      - "paris-conferences/app.css"
+      - "web/**"
+      - "app.js"
+      - "app.css"
+      - ".github/workflows/web-build-check.yml"
   pull_request:
     paths:
-      - "paris-conferences/web/**"
-      - "paris-conferences/app.js"
-      - "paris-conferences/app.css"
+      - "web/**"
+      - "app.js"
+      - "app.css"
+      - ".github/workflows/web-build-check.yml"
   workflow_dispatch:
 
 permissions:
@@ -30,7 +35,7 @@ jobs:
     timeout-minutes: 10
     defaults:
       run:
-        working-directory: paris-conferences/web
+        working-directory: web
 
     steps:
       - name: Checkout repo
@@ -41,7 +46,7 @@ jobs:
         with:
           node-version: "22"
           cache: "npm"
-          cache-dependency-path: paris-conferences/web/package-lock.json
+          cache-dependency-path: web/package-lock.json
 
       - name: Install dependencies
         run: npm ci
