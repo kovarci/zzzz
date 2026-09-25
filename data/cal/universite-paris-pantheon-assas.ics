@@ -1,388 +1,368 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Université Paris-Panthéon-Assas · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:fa15029f1188@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20260924T170000
-DTEND:20260924T190000
-SUMMARY:L'état de l'État de droit en Europe
-DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/letat-letat-droit-en-europe
-LOCATION:Institut de Droit Comparé Salle Berthold Goldman 28 rue Saint Guillaume\, 75007 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/letat-letat-droit-en-europe
-END:VEVENT
-BEGIN:VEVENT
-UID:9f7df13b29b7@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20260924T180000
-DTEND:20260924T200000
-SUMMARY:Conférence INA : « Passé composé\, figures du siècle : cultiver sa différence »
-DESCRIPTION:Table ronde\nhttps://www.assas-universite.fr/fr/evenements/conference-ina-passe-compose-figures-siecle-cultiver-difference
-LOCATION:Auditorium du 87NDC 87 rue Notre-Dame-des-Champs 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/conference-ina-passe-compose-figures-siecle-cultiver-difference
-END:VEVENT
-BEGIN:VEVENT
-UID:4b9dae364a45@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Les journées de la mobilité « erasmus days »
-DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/journees-mobilite-erasmus-days
-LOCATION:Centre Assas — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/journees-mobilite-erasmus-days
-END:VEVENT
-BEGIN:VEVENT
-UID:41c96e14420c@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20260929T090000
-DTEND:20260929T110000
-SUMMARY:Risques en milieux festifs - Centre Vaugirard et campus de Melun
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-vaugirard-campus-melun
-LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-vaugirard-campus-melun
-END:VEVENT
-BEGIN:VEVENT
-UID:06dc056afc3d@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20260929T090000
-DTEND:20260929T110000
-SUMMARY:Journée d'intégration des chargés de travaux dirigés
-DESCRIPTION:Séminaire\nhttps://www.assas-universite.fr/fr/evenements/journee-dintegration-charges-travaux-diriges
-LOCATION:Salle 214 Centre Assas 92 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/journee-dintegration-charges-travaux-diriges
-END:VEVENT
-BEGIN:VEVENT
-UID:66d0da439e1c@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20260929T123000
-DTEND:20260929T143000
-SUMMARY:Adaptation au changement climatique et atténuation : deux leviers complémentaires s’inscrivant dans les engagements de l’État pour la transformation écologique.
-DESCRIPTION:Conférence de culture générale et administrative de l'IPAG\nhttps://www.assas-universite.fr/fr/evenements/adaptation-au-changement-climatique-attenuation-deux-leviers-complementaires-sinscrivant
-LOCATION:36 rue Charcot 75 013 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/adaptation-au-changement-climatique-attenuation-deux-leviers-complementaires-sinscrivant
-END:VEVENT
-BEGIN:VEVENT
-UID:fcca3ce4a37b@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20260929T180000
-DTEND:20260929T200000
-SUMMARY:Se préparer au concours des Douanes (DGDDI)
-DESCRIPTION:Conférence d'orientation et d'insertion de l'IPAG\nhttps://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-douanes-dgddi
-LOCATION:36 rue Charcot 75 013 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-douanes-dgddi
-END:VEVENT
-BEGIN:VEVENT
-UID:8515828970bd@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20260930T140000
-DTEND:20260930T160000
-SUMMARY:Conférence métiers de l'assurance - Mission Orientation-Emploi
-DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/conference-metiers-lassurance-mission-orientation-emploi
-LOCATION:Salle 407 (4ème étage) Centre Assas 92 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/conference-metiers-lassurance-mission-orientation-emploi
-END:VEVENT
-BEGIN:VEVENT
-UID:71d8f26e49e2@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261001T090000
-DTEND:20261001T110000
-SUMMARY:Risques en milieux festifs - Centre Assas
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-assas
-LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-assas
-END:VEVENT
-BEGIN:VEVENT
-UID:d3269259c435@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261002T084500
-DTEND:20261002T104500
-SUMMARY:L'arbitrage et les contentieux émergents : droits humains et environnement
-DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/larbitrage-contentieux-emergents-droits-humains-environnement
-LOCATION:Centre 87 NDC Auditorium 87\, rue Notre-Dame-des-Champs\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/larbitrage-contentieux-emergents-droits-humains-environnement
-END:VEVENT
-BEGIN:VEVENT
-UID:c0533be94b45@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261002T100000
-DTEND:20261002T120000
-SUMMARY:Rencontre professionnelle avec la direction juridique d'ORANO
-DESCRIPTION:Rencontres étudiants-entreprises\nhttps://www.assas-universite.fr/fr/evenements/rencontre-professionnelle-direction-juridique-dorano
-LOCATION:Centre Assas — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/rencontre-professionnelle-direction-juridique-dorano
-END:VEVENT
-BEGIN:VEVENT
-UID:3842a480c145@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:50 years of the First EU Waste Framework Directive: Assessment and Perspectives
-DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/50-years-first-eu-waste-framework-directive-assessment-perspectives
-LOCATION:Maison des Sciences de Gestion 1 rue Guy de la Brosse\, 75005 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/50-years-first-eu-waste-framework-directive-assessment-perspectives
-END:VEVENT
-BEGIN:VEVENT
-UID:a21789ea3a50@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261009T093000
-DTEND:20261009T113000
-SUMMARY:« Le droit constitutionnel médiatique » - Journée Jus Politicum - Institut Michel Villey
-DESCRIPTION:Séminaire\nhttps://www.assas-universite.fr/fr/evenements/droit-constitutionnel-mediatique-journee-jus-politicum-institut-michel-villey
-LOCATION:Auditorium du 87NDC 87 rue Notre-Dame-des-Champs 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/droit-constitutionnel-mediatique-journee-jus-politicum-institut-michel-villey
-END:VEVENT
-BEGIN:VEVENT
-UID:e2bd1fd39163@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261009T093000
-DTEND:20261009T113000
-SUMMARY:Les grandes réformes du Code civil
-DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/grandes-reformes-code-civil
-LOCATION:Archivio Antico Palazzo del Bo – Via VIII Febbraio\, 2\, Padoue (Italie) — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/grandes-reformes-code-civil
-END:VEVENT
-BEGIN:VEVENT
-UID:41313544a6d2@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261009T190000
-DTEND:20261009T210000
-SUMMARY:Les conférences du Collège de droit : présentation de l'ouvrage de Simon Porcher « La fin de l'eau »
-DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/conferences-college-droit-presentation-louvrage-simon-porcher-fin-leau
-LOCATION:centre Assas - Amphithéâtre 4 92\, rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/conferences-college-droit-presentation-louvrage-simon-porcher-fin-leau
-END:VEVENT
-BEGIN:VEVENT
-UID:f57ac0af0995@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261010T100000
-DTEND:20261010T120000
-SUMMARY:Salon du livre juridique 2026 au Conseil constitutionnel
-DESCRIPTION:Salon\nhttps://www.assas-universite.fr/fr/evenements/salon-livre-juridique-2026-au-conseil-constitutionnel
-LOCATION:Conseil constitutionnel 2 rue de Montpensier 75001 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/salon-livre-juridique-2026-au-conseil-constitutionnel
-END:VEVENT
-BEGIN:VEVENT
-UID:0e166afcf1fe@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261012T170000
-DTEND:20261012T190000
-SUMMARY:La politique commerciale de l’UE entre le néoprotectionnisme américain et la menace chinoise : quel rôle pour l’OMC
-DESCRIPTION:Paroles de diplomates\nhttps://www.assas-universite.fr/fr/evenements/politique-commerciale-lue-entre-neoprotectionnisme-americain-menace-chinoise-quel-role
-LOCATION:Centre 87 NDC Auditorium 87\, rue Notre-Dame-des-Champs\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/politique-commerciale-lue-entre-neoprotectionnisme-americain-menace-chinoise-quel-role
-END:VEVENT
-BEGIN:VEVENT
-UID:fd3b57bbf1f9@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261014T140000
-DTEND:20261014T160000
-SUMMARY:Les grands arrêts politiques de la jurisprudence administrative
-DESCRIPTION:Séminaire\nhttps://www.assas-universite.fr/fr/evenements/grands-arrets-politiques-jurisprudence-administrative
-LOCATION:Centre Sainte-Barbe - salle Collinet 4 rue Valette 3e étage 75005 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/grands-arrets-politiques-jurisprudence-administrative
-END:VEVENT
-BEGIN:VEVENT
-UID:1fe165e5ef62@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261015T090000
-DTEND:20261015T110000
-SUMMARY:Forum du livre juridique 2026 au centre Assas
-DESCRIPTION:Salon\nhttps://www.assas-universite.fr/fr/evenements/forum-livre-juridique-2026-au-centre-assas
-LOCATION:Hall du centre Assas 2 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/forum-livre-juridique-2026-au-centre-assas
-END:VEVENT
-BEGIN:VEVENT
-UID:54ebf58f2628@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261015T140000
-DTEND:20261015T160000
-SUMMARY:Coupe du Panthéon 2026
-DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/coupe-pantheon-2026
-LOCATION:Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/coupe-pantheon-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:0bb089478ddc@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261015T180000
-DTEND:20261015T200000
-SUMMARY:Quelle place pour le droit social dans le débat politique ?
-DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/quelle-place-droit-social-debat-politique
-LOCATION:Patio de l'Université Paris-Panthéon-Assas 92 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/quelle-place-droit-social-debat-politique
-END:VEVENT
-BEGIN:VEVENT
-UID:f9b087566810@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261017
-DTEND;VALUE=DATE:20261018
-SUMMARY:Octobre rose - association sportive (17/10)
-DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-1710
-LOCATION:Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-1710
-END:VEVENT
-BEGIN:VEVENT
-UID:2daff6b73475@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261020T090000
-DTEND:20261020T110000
-SUMMARY:Alimentation\, nutrition et bien être - Centre Vaugirard et campus de Melun
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-vaugirard-campus-melun
-LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-vaugirard-campus-melun
-END:VEVENT
-BEGIN:VEVENT
-UID:c898baed904a@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Octobre rose - association sportive (22/10)
-DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-2210
-LOCATION:Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-2210
-END:VEVENT
-BEGIN:VEVENT
-UID:20c6977c5e42@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261022T090000
-DTEND:20261022T110000
-SUMMARY:Alimentation\, nutrition et bien être - Centre Assas
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-assas
-LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-assas
-END:VEVENT
-BEGIN:VEVENT
-UID:28d8619ac7f2@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261022T170000
-DTEND:20261022T190000
-SUMMARY:L’évolution du rôle du secrétariat général du gouvernement
-DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/levolution-role-secretariat-general-gouvernement
-LOCATION:Auditorium du 87 NDC — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/levolution-role-secretariat-general-gouvernement
-END:VEVENT
-BEGIN:VEVENT
-UID:d31986053279@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261028
-DTEND;VALUE=DATE:20261029
-SUMMARY:4EU+ : réunion annuelle 2026
-DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/4eu-reunion-annuelle-2026
-LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/4eu-reunion-annuelle-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:7f7f87992eef@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261028
-DTEND;VALUE=DATE:20261029
-SUMMARY:Soirée des masters 2026
-DESCRIPTION:Cérémonie\nhttps://www.assas-universite.fr/fr/evenements/soiree-masters-2026
-LOCATION:Centre Assas 92\, rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/soiree-masters-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:b9f0f9e8beb4@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261103T183000
-DTEND:20261103T203000
-SUMMARY:Nuit du rempart (escalade) - 2e édition
-DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/nuit-rempart-escalade-2e-edition
-LOCATION:Le Rempart 37 RD 306 77240 Vert-Saint-Denis — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/nuit-rempart-escalade-2e-edition
-END:VEVENT
-BEGIN:VEVENT
-UID:037b8d20c7a4@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261119T090000
-DTEND:20261119T110000
-SUMMARY:Mois sans tabac - Centre Assas
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-assas
-LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-assas
-END:VEVENT
-BEGIN:VEVENT
-UID:bf36fe3d4708@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261119T090000
-DTEND:20261119T110000
-SUMMARY:Mois sans tabac - Centre Vaugirard et campus de Melun
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-vaugirard-campus-melun
-LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-vaugirard-campus-melun
-END:VEVENT
-BEGIN:VEVENT
-UID:d2771a3e599a@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261120T121500
-DTEND:20261120T141500
-SUMMARY:Groupe de Travail d’Économie de la Fiscalité - Rencontre du 20 novembre 2026
-DESCRIPTION:Atelier\nhttps://www.assas-universite.fr/fr/evenements/groupe-travail-deconomie-fiscalite-rencontre-20-novembre-2026
-LOCATION:Centre de recherche en économie et droit 31 rue Froidevaux\, Paris 75014 — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/groupe-travail-deconomie-fiscalite-rencontre-20-novembre-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:89cd28ce3283@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261130
-DTEND;VALUE=DATE:20261201
-SUMMARY:Narcotrafic : défis judiciaires\, économiques territoriaux et internationaux
-DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/narcotrafic-defis-judiciaires-economiques-territoriaux-internationaux
-LOCATION:Campus de Melun 19 rue du Château\, Melun 77000 — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/narcotrafic-defis-judiciaires-economiques-territoriaux-internationaux
-END:VEVENT
-BEGIN:VEVENT
-UID:bca28456c0db@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Journée de lutte contre le VIH - Centre Vaugirard et campus de Melun
-DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-vaugirard-campus-melun
-LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-vaugirard-campus-melun
-END:VEVENT
-BEGIN:VEVENT
-UID:5038b1ec0ff2@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261204
-SUMMARY:Journée de lutte contre le VIH - Centre Assas
-DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-assas
-LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-assas
-END:VEVENT
-BEGIN:VEVENT
-UID:e69cf17aa02f@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261215T090000
-DTEND:20261215T110000
-SUMMARY:Santé mentale et bien être - Centre Vaugirard et campus de Melun
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-vaugirard-campus-melun
-LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-vaugirard-campus-melun
-END:VEVENT
-BEGIN:VEVENT
-UID:4333c956690d@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20261217T090000
-DTEND:20261217T110000
-SUMMARY:Santé mentale et bien être - Centre Assas
-DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-assas
-LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-assas
-END:VEVENT
-BEGIN:VEVENT
-UID:460e91d9c4c4@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART:20270425T090000
-DTEND:20270425T110000
-SUMMARY:6e édition du tournoi Assas Green Volley
-DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/6e-edition-tournoi-assas-green-volley
-LOCATION:Cité Internationale Universitaire de Paris\, 17 Boulevard Jourdan\, 75014 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
-URL:https://www.assas-universite.fr/fr/evenements/6e-edition-tournoi-assas-green-volley
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Université Paris-Panthéon-Assas · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:4b9dae364a45@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Les journées de la mobilité « erasmus days »
+DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/journees-mobilite-erasmus-days
+LOCATION:Centre Assas — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/journees-mobilite-erasmus-days
+END:VEVENT
+BEGIN:VEVENT
+UID:06dc056afc3d@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20260929T090000
+DTEND:20260929T110000
+SUMMARY:Journée d'intégration des chargés de travaux dirigés
+DESCRIPTION:Séminaire\nhttps://www.assas-universite.fr/fr/evenements/journee-dintegration-charges-travaux-diriges
+LOCATION:Salle 214 Centre Assas 92 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/journee-dintegration-charges-travaux-diriges
+END:VEVENT
+BEGIN:VEVENT
+UID:41c96e14420c@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20260929T090000
+DTEND:20260929T110000
+SUMMARY:Risques en milieux festifs - Centre Vaugirard et campus de Melun
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-vaugirard-campus-melun
+LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-vaugirard-campus-melun
+END:VEVENT
+BEGIN:VEVENT
+UID:66d0da439e1c@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20260929T123000
+DTEND:20260929T143000
+SUMMARY:Adaptation au changement climatique et atténuation : deux leviers complémentaires s’inscrivant dans les engagements de l’État pour la transformation écologique.
+DESCRIPTION:Conférence de culture générale et administrative de l'IPAG\nhttps://www.assas-universite.fr/fr/evenements/adaptation-au-changement-climatique-attenuation-deux-leviers-complementaires-sinscrivant
+LOCATION:36 rue Charcot 75 013 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/adaptation-au-changement-climatique-attenuation-deux-leviers-complementaires-sinscrivant
+END:VEVENT
+BEGIN:VEVENT
+UID:fcca3ce4a37b@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20260929T180000
+DTEND:20260929T200000
+SUMMARY:Se préparer au concours des Douanes (DGDDI)
+DESCRIPTION:Conférence d'orientation et d'insertion de l'IPAG\nhttps://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-douanes-dgddi
+LOCATION:36 rue Charcot 75 013 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-douanes-dgddi
+END:VEVENT
+BEGIN:VEVENT
+UID:8515828970bd@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20260930T140000
+DTEND:20260930T160000
+SUMMARY:Conférence métiers de l'assurance - Mission Orientation-Emploi
+DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/conference-metiers-lassurance-mission-orientation-emploi
+LOCATION:Salle 407 (4ème étage) Centre Assas 92 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/conference-metiers-lassurance-mission-orientation-emploi
+END:VEVENT
+BEGIN:VEVENT
+UID:71d8f26e49e2@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261001T090000
+DTEND:20261001T110000
+SUMMARY:Risques en milieux festifs - Centre Assas
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-assas
+LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/risques-en-milieux-festifs-centre-assas
+END:VEVENT
+BEGIN:VEVENT
+UID:d3269259c435@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261002T084500
+DTEND:20261002T104500
+SUMMARY:L'arbitrage et les contentieux émergents : droits humains et environnement
+DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/larbitrage-contentieux-emergents-droits-humains-environnement
+LOCATION:Centre 87 NDC Auditorium 87\, rue Notre-Dame-des-Champs\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/larbitrage-contentieux-emergents-droits-humains-environnement
+END:VEVENT
+BEGIN:VEVENT
+UID:c0533be94b45@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261002T100000
+DTEND:20261002T120000
+SUMMARY:Rencontre professionnelle avec la direction juridique d'ORANO
+DESCRIPTION:Rencontres étudiants-entreprises\nhttps://www.assas-universite.fr/fr/evenements/rencontre-professionnelle-direction-juridique-dorano
+LOCATION:Centre Assas — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/rencontre-professionnelle-direction-juridique-dorano
+END:VEVENT
+BEGIN:VEVENT
+UID:3842a480c145@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:50 years of the First EU Waste Framework Directive: Assessment and Perspectives
+DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/50-years-first-eu-waste-framework-directive-assessment-perspectives
+LOCATION:Maison des Sciences de Gestion 1 rue Guy de la Brosse\, 75005 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/50-years-first-eu-waste-framework-directive-assessment-perspectives
+END:VEVENT
+BEGIN:VEVENT
+UID:e2bd1fd39163@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261009T093000
+DTEND:20261009T113000
+SUMMARY:Les grandes réformes du Code civil
+DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/grandes-reformes-code-civil
+LOCATION:Archivio Antico Palazzo del Bo – Via VIII Febbraio\, 2\, Padoue (Italie) — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/grandes-reformes-code-civil
+END:VEVENT
+BEGIN:VEVENT
+UID:a21789ea3a50@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261009T093000
+DTEND:20261009T113000
+SUMMARY:« Le droit constitutionnel médiatique » - Journée Jus Politicum - Institut Michel Villey
+DESCRIPTION:Séminaire\nhttps://www.assas-universite.fr/fr/evenements/droit-constitutionnel-mediatique-journee-jus-politicum-institut-michel-villey
+LOCATION:Auditorium du 87NDC 87 rue Notre-Dame-des-Champs 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/droit-constitutionnel-mediatique-journee-jus-politicum-institut-michel-villey
+END:VEVENT
+BEGIN:VEVENT
+UID:41313544a6d2@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261009T190000
+DTEND:20261009T210000
+SUMMARY:Les conférences du Collège de droit : présentation de l'ouvrage de Simon Porcher « La fin de l'eau »
+DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/conferences-college-droit-presentation-louvrage-simon-porcher-fin-leau
+LOCATION:centre Assas - Amphithéâtre 4 92\, rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/conferences-college-droit-presentation-louvrage-simon-porcher-fin-leau
+END:VEVENT
+BEGIN:VEVENT
+UID:f57ac0af0995@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261010T100000
+DTEND:20261010T120000
+SUMMARY:Salon du livre juridique 2026 au Conseil constitutionnel
+DESCRIPTION:Salon\nhttps://www.assas-universite.fr/fr/evenements/salon-livre-juridique-2026-au-conseil-constitutionnel
+LOCATION:Conseil constitutionnel 2 rue de Montpensier 75001 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/salon-livre-juridique-2026-au-conseil-constitutionnel
+END:VEVENT
+BEGIN:VEVENT
+UID:0e166afcf1fe@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261012T170000
+DTEND:20261012T190000
+SUMMARY:La politique commerciale de l’UE entre le néoprotectionnisme américain et la menace chinoise : quel rôle pour l’OMC
+DESCRIPTION:Paroles de diplomates\nhttps://www.assas-universite.fr/fr/evenements/politique-commerciale-lue-entre-neoprotectionnisme-americain-menace-chinoise-quel-role
+LOCATION:Centre 87 NDC Auditorium 87\, rue Notre-Dame-des-Champs\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/politique-commerciale-lue-entre-neoprotectionnisme-americain-menace-chinoise-quel-role
+END:VEVENT
+BEGIN:VEVENT
+UID:fd3b57bbf1f9@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261014T140000
+DTEND:20261014T160000
+SUMMARY:Les grands arrêts politiques de la jurisprudence administrative
+DESCRIPTION:Séminaire\nhttps://www.assas-universite.fr/fr/evenements/grands-arrets-politiques-jurisprudence-administrative
+LOCATION:Centre Sainte-Barbe - salle Collinet 4 rue Valette 3e étage 75005 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/grands-arrets-politiques-jurisprudence-administrative
+END:VEVENT
+BEGIN:VEVENT
+UID:1fe165e5ef62@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261015T090000
+DTEND:20261015T110000
+SUMMARY:Forum du livre juridique 2026 au centre Assas
+DESCRIPTION:Salon\nhttps://www.assas-universite.fr/fr/evenements/forum-livre-juridique-2026-au-centre-assas
+LOCATION:Hall du centre Assas 2 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/forum-livre-juridique-2026-au-centre-assas
+END:VEVENT
+BEGIN:VEVENT
+UID:54ebf58f2628@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261015T140000
+DTEND:20261015T160000
+SUMMARY:Coupe du Panthéon 2026
+DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/coupe-pantheon-2026
+LOCATION:Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/coupe-pantheon-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:0bb089478ddc@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261015T180000
+DTEND:20261015T200000
+SUMMARY:Quelle place pour le droit social dans le débat politique ?
+DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/quelle-place-droit-social-debat-politique
+LOCATION:Patio de l'Université Paris-Panthéon-Assas 92 rue d'Assas\, 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/quelle-place-droit-social-debat-politique
+END:VEVENT
+BEGIN:VEVENT
+UID:f9b087566810@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:Octobre rose - association sportive (17/10)
+DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-1710
+LOCATION:Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-1710
+END:VEVENT
+BEGIN:VEVENT
+UID:2daff6b73475@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261020T090000
+DTEND:20261020T110000
+SUMMARY:Alimentation\, nutrition et bien être - Centre Vaugirard et campus de Melun
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-vaugirard-campus-melun
+LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-vaugirard-campus-melun
+END:VEVENT
+BEGIN:VEVENT
+UID:c898baed904a@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Octobre rose - association sportive (22/10)
+DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-2210
+LOCATION:Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-sportive-2210
+END:VEVENT
+BEGIN:VEVENT
+UID:20c6977c5e42@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261022T090000
+DTEND:20261022T110000
+SUMMARY:Alimentation\, nutrition et bien être - Centre Assas
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-assas
+LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bien-etre-centre-assas
+END:VEVENT
+BEGIN:VEVENT
+UID:28d8619ac7f2@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261022T170000
+DTEND:20261022T190000
+SUMMARY:L’évolution du rôle du secrétariat général du gouvernement
+DESCRIPTION:Conférence\nhttps://www.assas-universite.fr/fr/evenements/levolution-role-secretariat-general-gouvernement
+LOCATION:Auditorium du 87 NDC — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/levolution-role-secretariat-general-gouvernement
+END:VEVENT
+BEGIN:VEVENT
+UID:d31986053279@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:4EU+ : réunion annuelle 2026
+DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/4eu-reunion-annuelle-2026
+LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/4eu-reunion-annuelle-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:7f7f87992eef@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Soirée des masters 2026
+DESCRIPTION:Cérémonie\nhttps://www.assas-universite.fr/fr/evenements/soiree-masters-2026
+LOCATION:Centre Assas 92\, rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/soiree-masters-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:b9f0f9e8beb4@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261103T183000
+DTEND:20261103T203000
+SUMMARY:Nuit du rempart (escalade) - 2e édition
+DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/nuit-rempart-escalade-2e-edition
+LOCATION:Le Rempart 37 RD 306 77240 Vert-Saint-Denis — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/nuit-rempart-escalade-2e-edition
+END:VEVENT
+BEGIN:VEVENT
+UID:037b8d20c7a4@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261119T090000
+DTEND:20261119T110000
+SUMMARY:Mois sans tabac - Centre Assas
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-assas
+LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-assas
+END:VEVENT
+BEGIN:VEVENT
+UID:bf36fe3d4708@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261119T090000
+DTEND:20261119T110000
+SUMMARY:Mois sans tabac - Centre Vaugirard et campus de Melun
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-vaugirard-campus-melun
+LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-vaugirard-campus-melun
+END:VEVENT
+BEGIN:VEVENT
+UID:d2771a3e599a@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261120T121500
+DTEND:20261120T141500
+SUMMARY:Groupe de Travail d’Économie de la Fiscalité - Rencontre du 20 novembre 2026
+DESCRIPTION:Atelier\nhttps://www.assas-universite.fr/fr/evenements/groupe-travail-deconomie-fiscalite-rencontre-20-novembre-2026
+LOCATION:Centre de recherche en économie et droit 31 rue Froidevaux\, Paris 75014 — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/groupe-travail-deconomie-fiscalite-rencontre-20-novembre-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:89cd28ce3283@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:Narcotrafic : défis judiciaires\, économiques territoriaux et internationaux
+DESCRIPTION:Colloque\nhttps://www.assas-universite.fr/fr/evenements/narcotrafic-defis-judiciaires-economiques-territoriaux-internationaux
+LOCATION:Campus de Melun 19 rue du Château\, Melun 77000 — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/narcotrafic-defis-judiciaires-economiques-territoriaux-internationaux
+END:VEVENT
+BEGIN:VEVENT
+UID:bca28456c0db@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Journée de lutte contre le VIH - Centre Vaugirard et campus de Melun
+DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-vaugirard-campus-melun
+LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-vaugirard-campus-melun
+END:VEVENT
+BEGIN:VEVENT
+UID:5038b1ec0ff2@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:Journée de lutte contre le VIH - Centre Assas
+DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-assas
+LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-centre-assas
+END:VEVENT
+BEGIN:VEVENT
+UID:e69cf17aa02f@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261215T090000
+DTEND:20261215T110000
+SUMMARY:Santé mentale et bien être - Centre Vaugirard et campus de Melun
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-vaugirard-campus-melun
+LOCATION:Centre Vaugirard\, 391 rue de Vaugirard 75015 Paris Campus de Melun (Reine Blanche)\, 19 rue du Château 77000 Melun — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-vaugirard-campus-melun
+END:VEVENT
+BEGIN:VEVENT
+UID:4333c956690d@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20261217T090000
+DTEND:20261217T110000
+SUMMARY:Santé mentale et bien être - Centre Assas
+DESCRIPTION:Petit-déjeuner gratuit\nhttps://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-assas
+LOCATION:centre Assas 92 rue d'Assas 75006 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-centre-assas
+END:VEVENT
+BEGIN:VEVENT
+UID:460e91d9c4c4@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART:20270425T090000
+DTEND:20270425T110000
+SUMMARY:6e édition du tournoi Assas Green Volley
+DESCRIPTION:Rencontre sportive\nhttps://www.assas-universite.fr/fr/evenements/6e-edition-tournoi-assas-green-volley
+LOCATION:Cité Internationale Universitaire de Paris\, 17 Boulevard Jourdan\, 75014 Paris — Université Paris-Panthéon-Assas\, 92 rue d'Assas\, Paris 6e
+URL:https://www.assas-universite.fr/fr/evenements/6e-edition-tournoi-assas-green-volley
+END:VEVENT
+END:VCALENDAR

@@ -1,88 +1,88 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Centre Pompidou · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:8bd7f7d7d5b4@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Mahmoud Darwich Poetry Day
-DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/N0mcO67
-LOCATION:Institut du monde arabe\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/N0mcO67
-END:VEVENT
-BEGIN:VEVENT
-UID:69c510dbbb06@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:L’écologie est-elle soluble dans les rapports de puissances ?
-DESCRIPTION:Conférence · Environnement\, politique mondiale e…\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/eenDRYV
-LOCATION:BULAC\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/eenDRYV
-END:VEVENT
-BEGIN:VEVENT
-UID:c0397239d665@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261004
-SUMMARY:Lire la romance
-DESCRIPTION:Rencontre · Femmes\, patriarcat et littérature p…\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/DmeIUF5
-LOCATION:Bpi\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/DmeIUF5
-END:VEVENT
-BEGIN:VEVENT
-UID:eb0a87c47923@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Dire le monde : quand les revues s’emparent du réel
-DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/dPmcgOi
-LOCATION:Bpi\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/dPmcgOi
-END:VEVENT
-BEGIN:VEVENT
-UID:bbdd191604a9@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Anne Masse
-DESCRIPTION:Rencontre · Rencontre BD\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/5v8zLY2
-LOCATION:Bpi\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/5v8zLY2
-END:VEVENT
-BEGIN:VEVENT
-UID:6aada8e4c9cd@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Le pari de l’œuvre de Dante : La Divine Comédie
-DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/zNm6gXJ
-LOCATION:Ircam\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/zNm6gXJ
-END:VEVENT
-BEGIN:VEVENT
-UID:10b7e827d224@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261020
-SUMMARY:Le message des roches ou l’histoire de la Terre
-DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/kHx57aF
-LOCATION:Bpi\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/kHx57aF
-END:VEVENT
-BEGIN:VEVENT
-UID:4ae7315a00f0@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261020
-DTEND;VALUE=DATE:20261021
-SUMMARY:Rencontre exceptionnelle entre Alain Gomis et Nell Irvin Painter
-DESCRIPTION:Rencontre · Soirée de clôture\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/5atoWYI
-LOCATION:mk2 bibliothèque × Centre Pompidou\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/5atoWYI
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Centre Pompidou · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:8bd7f7d7d5b4@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:Mahmoud Darwich Poetry Day
+DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/N0mcO67
+LOCATION:Institut du monde arabe\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/N0mcO67
+END:VEVENT
+BEGIN:VEVENT
+UID:69c510dbbb06@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:L’écologie est-elle soluble dans les rapports de puissances ?
+DESCRIPTION:Conférence · Environnement\, politique mondiale e…\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/eenDRYV
+LOCATION:BULAC\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/eenDRYV
+END:VEVENT
+BEGIN:VEVENT
+UID:c0397239d665@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:Lire la romance
+DESCRIPTION:Rencontre · Femmes\, patriarcat et littérature p…\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/DmeIUF5
+LOCATION:Bpi\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/DmeIUF5
+END:VEVENT
+BEGIN:VEVENT
+UID:eb0a87c47923@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Dire le monde : quand les revues s’emparent du réel
+DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/dPmcgOi
+LOCATION:Bpi\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/dPmcgOi
+END:VEVENT
+BEGIN:VEVENT
+UID:bbdd191604a9@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Anne Masse
+DESCRIPTION:Rencontre · Rencontre BD\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/5v8zLY2
+LOCATION:Bpi\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/5v8zLY2
+END:VEVENT
+BEGIN:VEVENT
+UID:6aada8e4c9cd@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Le pari de l’œuvre de Dante : La Divine Comédie
+DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/zNm6gXJ
+LOCATION:Ircam\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/zNm6gXJ
+END:VEVENT
+BEGIN:VEVENT
+UID:10b7e827d224@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:Le message des roches ou l’histoire de la Terre
+DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/kHx57aF
+LOCATION:Bpi\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/kHx57aF
+END:VEVENT
+BEGIN:VEVENT
+UID:4ae7315a00f0@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Rencontre exceptionnelle entre Alain Gomis et Nell Irvin Painter
+DESCRIPTION:Rencontre · Soirée de clôture\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/5atoWYI
+LOCATION:mk2 bibliothèque × Centre Pompidou\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/5atoWYI
+END:VEVENT
+END:VCALENDAR

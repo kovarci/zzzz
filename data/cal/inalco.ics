@@ -1,248 +1,238 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Inalco · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:47d26e66ffbf@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
-SUMMARY:Le codeur probabiliste\, réflexions méthodologiques : Sur la validation des données produites par les LLM
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/le-codeur-probabiliste-reflexions-methodologiques-sur-la-validation-des-donnees
-LOCATION:Campus Condorcet – Bâtiment recherche Nord (14\, cr des Humanités\, 93300 Aubervilliers) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/le-codeur-probabiliste-reflexions-methodologiques-sur-la-validation-des-donnees
-END:VEVENT
-BEGIN:VEVENT
-UID:a6ecd57e873d@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:De Bouche à Oreilles : les couleurs de la langue (contes wolof)
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/de-bouche-oreilles-les-couleurs-de-la-langue-contes-wolof
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/de-bouche-oreilles-les-couleurs-de-la-langue-contes-wolof
-END:VEVENT
-BEGIN:VEVENT
-UID:c05285d9491c@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Soutenance de Maksim FEDOTOV
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/soutenance-de-maksim-fedotov
-LOCATION:CNRS - 7 rue Guy Môquet 94800 VILLEJUIF — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/soutenance-de-maksim-fedotov
-END:VEVENT
-BEGIN:VEVENT
-UID:03a6477ca759@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
-SUMMARY:Quand la Hongrie s'est tournée vers l'Ouest. Les impacts du XIIIe siècle : société\, politique\, idéologies\, arts.
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/quand-la-hongrie-sest-tournee-vers-louest-les-impacts-du-xiiie-siecle-societe-politique
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/quand-la-hongrie-sest-tournee-vers-louest-les-impacts-du-xiiie-siecle-societe-politique
-END:VEVENT
-BEGIN:VEVENT
-UID:69ae77626b6d@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261002
-DTEND;VALUE=DATE:20261003
-SUMMARY:Vivre à l'époque du chaos : à la découverte des archives privées russes Bobrikoff-Crichton\, 1914-1945
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/vivre-lepoque-du-chaos-la-decouverte-des-archives-privees-russes-bobrikoff-crichton-1914
-LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/vivre-lepoque-du-chaos-la-decouverte-des-archives-privees-russes-bobrikoff-crichton-1914
-END:VEVENT
-BEGIN:VEVENT
-UID:db39c97dc080@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
-SUMMARY:Regards croisés sur le conte
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/regards-croises-sur-le-conte
-LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/regards-croises-sur-le-conte
-END:VEVENT
-BEGIN:VEVENT
-UID:d120fefd6e95@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
-SUMMARY:Crossing Borders\, Spreading the Dharma: Buddhist Nuns as Transnational Propagators
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/crossing-borders-spreading-dharma-buddhist-nuns-transnational-propagators
-LOCATION:PLC\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/crossing-borders-spreading-dharma-buddhist-nuns-transnational-propagators
-END:VEVENT
-BEGIN:VEVENT
-UID:a84f874479e1@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:Projection du film "Le chauffeur de l'Enfer"\, réalisé par Kullar Viimne
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/projection-du-film-le-chauffeur-de-lenfer-realise-par-kullar-viimne
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/projection-du-film-le-chauffeur-de-lenfer-realise-par-kullar-viimne
-END:VEVENT
-BEGIN:VEVENT
-UID:5087ade1b068@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:L’œuvre de Charles Archaimbault (ethnologie\, philologie\, histoire). Une exploration exceptionnelle aux fondements de la culture lao
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/loeuvre-de-charles-archaimbault-ethnologie-philologie-histoire-une-exploration
-LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/loeuvre-de-charles-archaimbault-ethnologie-philologie-histoire-une-exploration
-END:VEVENT
-BEGIN:VEVENT
-UID:72348305cfd5@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:Usages politiques contemporains du confucianisme et de la « culture traditionnelle » en Chine
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/usages-politiques-contemporains-du-confucianisme-et-de-la-culture-traditionnelle-en
-LOCATION:Fondation Maison des Sciences de l’Homme (54\, boulevard Raspail\, 75006) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/usages-politiques-contemporains-du-confucianisme-et-de-la-culture-traditionnelle-en
-END:VEVENT
-BEGIN:VEVENT
-UID:ff8235570979@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:Représentation de chants anciens et de danses du peuple paiwan de Taïwan
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/representation-de-chants-anciens-et-de-danses-du-peuple-paiwan-de-taiwan
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/representation-de-chants-anciens-et-de-danses-du-peuple-paiwan-de-taiwan
-END:VEVENT
-BEGIN:VEVENT
-UID:3cc7cb5e60a5@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Les animaux marins et l’écriture océanique à Taïwan : Rencontre avec l’écrivain taïwanais Liao Hung-chi
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
-END:VEVENT
-BEGIN:VEVENT
-UID:419d7c688f47@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
-SUMMARY:La politique informationnelle des Gardiens de la Révolution sur le Web : méthodes et enquête du terrain numérique iranien
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/la-politique-informationnelle-des-gardiens-de-la-revolution-sur-le-web-methodes-et
-LOCATION:Inalco\, Pôle des Langues et Civilisations (65\, rue des Grands-Moulins\, 75013) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/la-politique-informationnelle-des-gardiens-de-la-revolution-sur-le-web-methodes-et
-END:VEVENT
-BEGIN:VEVENT
-UID:3d9466fc6d9e@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Taïwan en récits : économie\, cuisine et catastrophes naturelles - Présentation de trois nouveaux ouvrages sur Taïwan
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-catastrophes-naturelles-presentation-de-trois
-LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-catastrophes-naturelles-presentation-de-trois
-END:VEVENT
-BEGIN:VEVENT
-UID:f90535831660@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
-SUMMARY:L'enseignement des langues rares et minoritaires : défis méthodologiques et nouveaux outils pour enseigner l'hébreu et le judéo-espagnol
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/lenseignement-des-langues-rares-et-minoritaires-defis-methodologiques-et-nouveaux-outils
-LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/lenseignement-des-langues-rares-et-minoritaires-defis-methodologiques-et-nouveaux-outils
-END:VEVENT
-BEGIN:VEVENT
-UID:d0937b1099b4@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
-SUMMARY:Tāi-kiap Muî-hue-lo̍k 大俠梅花鹿 - Les aventures fantastiques du Chevalier Cerf
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/tai-kiap-mui-hue-lok-daxiameihualu-les-aventures-fantastiques-du-chevalier-cerf
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/tai-kiap-mui-hue-lok-daxiameihualu-les-aventures-fantastiques-du-chevalier-cerf
-END:VEVENT
-BEGIN:VEVENT
-UID:d53cc200d6aa@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:DÉCRIPT in dialogue | Whose Peace? Warmongers\, peace fictions\, and the narratives of imperial order
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/decript-dialogue-whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
-LOCATION:Fondation Maison des sciences de l'homme (FMSH) - Grand Hall - 54\, boulevard Raspail Paris 6 — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/decript-dialogue-whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
-END:VEVENT
-BEGIN:VEVENT
-UID:6a6916f2b234@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:Making Worlds\, Shaping Selves: Religion\, Museums\, and Cultural Techniques in Contemporary Japan
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/making-worlds-shaping-selves-religion-museums-and-cultural-techniques-contemporary-japan
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/making-worlds-shaping-selves-religion-museums-and-cultural-techniques-contemporary-japan
-END:VEVENT
-BEGIN:VEVENT
-UID:0ad8fd5dafa2@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261029
-DTEND;VALUE=DATE:20261030
-SUMMARY:Projection du film documentaire "Hair\, Paper\, Water..."
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/projection-du-film-documentaire-hair-paper-water
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/projection-du-film-documentaire-hair-paper-water
-END:VEVENT
-BEGIN:VEVENT
-UID:e2b5bb224af0@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Enquêter sans accès au terrain : retrouver la parole des acteurs à partir des sources chinoises en ligne
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/enqueter-sans-acces-au-terrain-retrouver-la-parole-des-acteurs-partir-des-sources
-LOCATION:Campus Condorcet – Centre des colloques (Place du Front populaire\, 93300 Aubervilliers) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/enqueter-sans-acces-au-terrain-retrouver-la-parole-des-acteurs-partir-des-sources
-END:VEVENT
-BEGIN:VEVENT
-UID:b6b670dda929@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261125
-DTEND;VALUE=DATE:20261126
-SUMMARY:La défaite communiste de Kinmen (25-27 octobre 1949) : une nouvelle lecture de l’année 1949 en Chine ?
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/la-defaite-communiste-de-kinmen-25-27-octobre-1949-une-nouvelle-lecture-de-lannee-1949
-LOCATION:PLC\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/la-defaite-communiste-de-kinmen-25-27-octobre-1949-une-nouvelle-lecture-de-lannee-1949
-END:VEVENT
-BEGIN:VEVENT
-UID:b3b241e4bbd8@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261130
-DTEND;VALUE=DATE:20261201
-SUMMARY:5 ans après Kornai : interpréter les transformations des systèmes économiques
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/5-ans-apres-kornai-interpreter-les-transformations-des-systemes-economiques
-LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/5-ans-apres-kornai-interpreter-les-transformations-des-systemes-economiques
-END:VEVENT
-BEGIN:VEVENT
-UID:80cda5c25365@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20261130
-DTEND;VALUE=DATE:20261201
-SUMMARY:En hommage à János Kornai (1928–2021)
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/en-hommage-janos-kornai-1928-2021
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/en-hommage-janos-kornai-1928-2021
-END:VEVENT
-BEGIN:VEVENT
-UID:9224e8e46737@paris-academique
-DTSTAMP:20260925T083151Z
-DTSTART;VALUE=DATE:20270130
-DTEND;VALUE=DATE:20270131
-SUMMARY:Journée portes ouvertes 2027
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/journee-portes-ouvertes-2027
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/journee-portes-ouvertes-2027
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Inalco · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:a6ecd57e873d@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:De Bouche à Oreilles : les couleurs de la langue (contes wolof)
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/de-bouche-oreilles-les-couleurs-de-la-langue-contes-wolof
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/de-bouche-oreilles-les-couleurs-de-la-langue-contes-wolof
+END:VEVENT
+BEGIN:VEVENT
+UID:c05285d9491c@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Soutenance de Maksim FEDOTOV
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/soutenance-de-maksim-fedotov
+LOCATION:CNRS - 7 rue Guy Môquet 94800 VILLEJUIF — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/soutenance-de-maksim-fedotov
+END:VEVENT
+BEGIN:VEVENT
+UID:03a6477ca759@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Quand la Hongrie s'est tournée vers l'Ouest. Les impacts du XIIIe siècle : société\, politique\, idéologies\, arts.
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/quand-la-hongrie-sest-tournee-vers-louest-les-impacts-du-xiiie-siecle-societe-politique
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/quand-la-hongrie-sest-tournee-vers-louest-les-impacts-du-xiiie-siecle-societe-politique
+END:VEVENT
+BEGIN:VEVENT
+UID:69ae77626b6d@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:Vivre à l'époque du chaos : à la découverte des archives privées russes Bobrikoff-Crichton\, 1914-1945
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/vivre-lepoque-du-chaos-la-decouverte-des-archives-privees-russes-bobrikoff-crichton-1914
+LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/vivre-lepoque-du-chaos-la-decouverte-des-archives-privees-russes-bobrikoff-crichton-1914
+END:VEVENT
+BEGIN:VEVENT
+UID:db39c97dc080@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:Regards croisés sur le conte
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/regards-croises-sur-le-conte
+LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/regards-croises-sur-le-conte
+END:VEVENT
+BEGIN:VEVENT
+UID:d120fefd6e95@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:Crossing Borders\, Spreading the Dharma: Buddhist Nuns as Transnational Propagators
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/crossing-borders-spreading-dharma-buddhist-nuns-transnational-propagators
+LOCATION:PLC\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/crossing-borders-spreading-dharma-buddhist-nuns-transnational-propagators
+END:VEVENT
+BEGIN:VEVENT
+UID:a84f874479e1@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Projection du film "Le chauffeur de l'Enfer"\, réalisé par Kullar Viimne
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/projection-du-film-le-chauffeur-de-lenfer-realise-par-kullar-viimne
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/projection-du-film-le-chauffeur-de-lenfer-realise-par-kullar-viimne
+END:VEVENT
+BEGIN:VEVENT
+UID:5087ade1b068@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:L’œuvre de Charles Archaimbault (ethnologie\, philologie\, histoire). Une exploration exceptionnelle aux fondements de la culture lao
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/loeuvre-de-charles-archaimbault-ethnologie-philologie-histoire-une-exploration
+LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/loeuvre-de-charles-archaimbault-ethnologie-philologie-histoire-une-exploration
+END:VEVENT
+BEGIN:VEVENT
+UID:72348305cfd5@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Usages politiques contemporains du confucianisme et de la « culture traditionnelle » en Chine
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/usages-politiques-contemporains-du-confucianisme-et-de-la-culture-traditionnelle-en
+LOCATION:Fondation Maison des Sciences de l’Homme (54\, boulevard Raspail\, 75006) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/usages-politiques-contemporains-du-confucianisme-et-de-la-culture-traditionnelle-en
+END:VEVENT
+BEGIN:VEVENT
+UID:ff8235570979@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:Représentation de chants anciens et de danses du peuple paiwan de Taïwan
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/representation-de-chants-anciens-et-de-danses-du-peuple-paiwan-de-taiwan
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/representation-de-chants-anciens-et-de-danses-du-peuple-paiwan-de-taiwan
+END:VEVENT
+BEGIN:VEVENT
+UID:3cc7cb5e60a5@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Les animaux marins et l’écriture océanique à Taïwan : Rencontre avec l’écrivain taïwanais Liao Hung-chi
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
+END:VEVENT
+BEGIN:VEVENT
+UID:419d7c688f47@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:La politique informationnelle des Gardiens de la Révolution sur le Web : méthodes et enquête du terrain numérique iranien
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/la-politique-informationnelle-des-gardiens-de-la-revolution-sur-le-web-methodes-et
+LOCATION:Inalco\, Pôle des Langues et Civilisations (65\, rue des Grands-Moulins\, 75013) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/la-politique-informationnelle-des-gardiens-de-la-revolution-sur-le-web-methodes-et
+END:VEVENT
+BEGIN:VEVENT
+UID:3d9466fc6d9e@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Taïwan en récits : économie\, cuisine et catastrophes naturelles - Présentation de trois nouveaux ouvrages sur Taïwan
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-catastrophes-naturelles-presentation-de-trois
+LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-catastrophes-naturelles-presentation-de-trois
+END:VEVENT
+BEGIN:VEVENT
+UID:f90535831660@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:L'enseignement des langues rares et minoritaires : défis méthodologiques et nouveaux outils pour enseigner l'hébreu et le judéo-espagnol
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/lenseignement-des-langues-rares-et-minoritaires-defis-methodologiques-et-nouveaux-outils
+LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/lenseignement-des-langues-rares-et-minoritaires-defis-methodologiques-et-nouveaux-outils
+END:VEVENT
+BEGIN:VEVENT
+UID:d0937b1099b4@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Tāi-kiap Muî-hue-lo̍k 大俠梅花鹿 - Les aventures fantastiques du Chevalier Cerf
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/tai-kiap-mui-hue-lok-daxiameihualu-les-aventures-fantastiques-du-chevalier-cerf
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/tai-kiap-mui-hue-lok-daxiameihualu-les-aventures-fantastiques-du-chevalier-cerf
+END:VEVENT
+BEGIN:VEVENT
+UID:d53cc200d6aa@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:DÉCRIPT in dialogue | Whose Peace? Warmongers\, peace fictions\, and the narratives of imperial order
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/decript-dialogue-whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
+LOCATION:Fondation Maison des sciences de l'homme (FMSH) - Grand Hall - 54\, boulevard Raspail Paris 6 — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/decript-dialogue-whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
+END:VEVENT
+BEGIN:VEVENT
+UID:6a6916f2b234@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Making Worlds\, Shaping Selves: Religion\, Museums\, and Cultural Techniques in Contemporary Japan
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/making-worlds-shaping-selves-religion-museums-and-cultural-techniques-contemporary-japan
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/making-worlds-shaping-selves-religion-museums-and-cultural-techniques-contemporary-japan
+END:VEVENT
+BEGIN:VEVENT
+UID:0ad8fd5dafa2@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Projection du film documentaire "Hair\, Paper\, Water..."
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/projection-du-film-documentaire-hair-paper-water
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/projection-du-film-documentaire-hair-paper-water
+END:VEVENT
+BEGIN:VEVENT
+UID:e2b5bb224af0@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Enquêter sans accès au terrain : retrouver la parole des acteurs à partir des sources chinoises en ligne
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/enqueter-sans-acces-au-terrain-retrouver-la-parole-des-acteurs-partir-des-sources
+LOCATION:Campus Condorcet – Centre des colloques (Place du Front populaire\, 93300 Aubervilliers) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/enqueter-sans-acces-au-terrain-retrouver-la-parole-des-acteurs-partir-des-sources
+END:VEVENT
+BEGIN:VEVENT
+UID:b6b670dda929@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:La défaite communiste de Kinmen (25-27 octobre 1949) : une nouvelle lecture de l’année 1949 en Chine ?
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/la-defaite-communiste-de-kinmen-25-27-octobre-1949-une-nouvelle-lecture-de-lannee-1949
+LOCATION:PLC\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/la-defaite-communiste-de-kinmen-25-27-octobre-1949-une-nouvelle-lecture-de-lannee-1949
+END:VEVENT
+BEGIN:VEVENT
+UID:b3b241e4bbd8@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:5 ans après Kornai : interpréter les transformations des systèmes économiques
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/5-ans-apres-kornai-interpreter-les-transformations-des-systemes-economiques
+LOCATION:Inalco\, PLC (65\, rue des Grands Moulins\, Paris 13e) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/5-ans-apres-kornai-interpreter-les-transformations-des-systemes-economiques
+END:VEVENT
+BEGIN:VEVENT
+UID:80cda5c25365@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:En hommage à János Kornai (1928–2021)
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/en-hommage-janos-kornai-1928-2021
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/en-hommage-janos-kornai-1928-2021
+END:VEVENT
+BEGIN:VEVENT
+UID:9224e8e46737@paris-academique
+DTSTAMP:20260925T065349Z
+DTSTART;VALUE=DATE:20270130
+DTEND;VALUE=DATE:20270131
+SUMMARY:Journée portes ouvertes 2027
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/journee-portes-ouvertes-2027
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/journee-portes-ouvertes-2027
+END:VEVENT
+END:VCALENDAR
