@@ -38,13 +38,14 @@ const TR = {
   pop_discipline: ["Discipline", "Discipline"], pop_institution: ["Institution", "Institution"], pop_source: ["Source", "Source"],
   group_establishments: ["Établissements", "Institutions"], group_others: ["Autres organisateurs", "Other organisers"],
   group_luma_themes: ["Thèmes Luma", "Luma themes"], clear_all: ["Tout effacer", "Clear all"],
+  group_side: ["Masqués du fil par défaut", "Hidden from the feed by default"], group_format: ["Format", "Format"],
   btn_fav: ["Favoris", "Favourites"], btn_online: ["En ligne", "Online"],
   pop_access: ["Accès", "Access"], access_public: ["Ouvert à tous", "Open to all"], access_members: ["Réservé aux membres", "Members only"],
   badge_members: ["Membres", "Members"], access_members_hint: ["Réservé aux membres de l'organisation (adhérents, bénéficiaires, élèves…)", "Reserved for the organisation's members (members, beneficiaries, students…)"],
   btn_theses: ["Soutenances", "PhD defences"], btn_theses_hint: ["Soutenances de thèse et HDR, masquées du fil principal", "PhD and habilitation defences, hidden from the main feed"],
   btn_careers: ["Carrières", "Careers"], btn_careers_hint: ["Événements de recrutement des entreprises (banques, conseil, tech…), masqués du fil principal", "Company recruiting events (banks, consulting, tech…), hidden from the main feed"],
   near_locate: ["Localisation…", "Locating…"], near_sorted: ["Tri par distance", "Sorted by distance"], near_label: ["Près de moi", "Near me"],
-  select_btn: ["Sélection", "Select"], noun_event: ["événement{s}", "event{s}"], adj_selected: ["sélectionné{s}", "selected"],
+  noun_event: ["événement{s}", "event{s}"],
   src_institution: ["Universités & instituts", "Universities & institutes"], src_luma: ["Luma", "Luma"], src_association: ["Associations", "Associations"], src_ville: ["Que faire à Paris", "Que faire à Paris (City of Paris)"], src_entreprise: ["Entreprise", "Company"],
 
   badge_new: ["Nouveau", "New"], badge_free: ["Gratuit", "Free"], online_prefix: ["En ligne · ", "Online · "],
@@ -75,12 +76,11 @@ const TR = {
   map_note: ["{n} événement{s} localisé{s} · clique un point pour voir les conférences du lieu.", "{n} located event{s} · click a point to see the conferences there."],
 
   toast_fav_added: ["Ajouté aux favoris", "Added to favourites"], toast_fav_removed: ["Retiré des favoris", "Removed from favourites"],
-  toast_link_copied: ["Lien copié", "Link copied"], toast_exported: ["{n} événement{s} exporté{s}", "{n} event{s} exported"],
+  toast_link_copied: ["Lien copié", "Link copied"],
   toast_geoloc_unavailable: ["Géolocalisation indisponible sur ce navigateur.", "Geolocation unavailable on this browser."],
   toast_locate_error: ["Localisation impossible : {msg}", "Location failed: {msg}"],
   toast_not_found: ["Événement introuvable — il est peut-être terminé.", "Event not found — it may be over."],
 
-  sel_selected: ["{n} sélectionné{s}", "{n} selected"], sel_export: ["Exporter .ics", "Export .ics"], sel_done: ["Terminer", "Done"],
 
   dock_top: ["Haut de page", "Back to top"], dock_today: ["Aujourd'hui", "Today"], dock_history: ["Historique", "History"],
   dock_random: ["Au hasard", "Random"], dock_fav: ["Favoris", "Favourites"], dock_search: ["Rechercher (⌘K)", "Search (⌘K)"],
@@ -137,7 +137,8 @@ export function LangProvider({ children }) {
   const t = useCallback((key, vars) => {
     let s = (TR[key] || [key, key])[lang === "en" ? 1 : 0];
     if (vars) {
-      if ("n" in vars) s = s.split("{s}").join(vars.n > 1 ? "s" : "");
+      // Pluriel : « 0 événement » en français, mais « 0 events » en anglais
+      if ("n" in vars) s = s.split("{s}").join((lang === "en" ? vars.n !== 1 : vars.n > 1) ? "s" : "");
       Object.keys(vars).forEach(k => { s = s.split(`{${k}}`).join(vars[k]); });
     }
     return s;

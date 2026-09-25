@@ -1,6 +1,7 @@
 /* Composants d'interface : ports de Magic UI (magicui.design), d'Aceternity
    (ui.aceternity.com) et primitives façon shadcn/ui. Aucune logique métier. */
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef, useMemo } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useInView, useAnimationFrame } from "framer-motion";
 import { cn } from "./lib.js";
 
@@ -17,7 +18,7 @@ export function NumberTicker({ value, className, delay = 0, locale = "fr-FR" }) 
 }
 // magicui.design/docs/components/animated-shiny-text
 export function AnimatedShinyText({ children, className, shimmerWidth = 100 }) {
-  return <span style={{ "--shiny-width": `${shimmerWidth}px` }} className={cn("mx-auto max-w-md text-neutral-600/70 dark:text-neutral-400/70 animate-shimmer bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shiny-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80", className)}>{children}</span>;
+  return <span style={{ "--shiny-width": `${shimmerWidth}px` }} className={cn("mx-auto max-w-md text-neutral-600/85 dark:text-neutral-300/75 animate-shimmer bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shiny-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80", className)}>{children}</span>;
 }
 // magicui.design/docs/components/marquee
 export function Marquee({ children, className, pauseOnHover = true, repeat = 3 }) {
@@ -48,7 +49,7 @@ export function DotPattern({ width = 16, height = 16, cr = 1, className }) {
 // magicui.design/docs/components/bento-grid
 export function BentoGrid({ children, className }) { return <div className={cn("grid w-full auto-rows-[190px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4", className)}>{children}</div>; }
 export function BentoCard({ name, className, background, description, cta = "Ouvrir", onClick, meta }) {
-  return <div onClick={onClick} className={cn("group relative col-span-1 flex flex-col justify-end overflow-hidden rounded-xl cursor-pointer",
+  return <div role="button" tabIndex={0} aria-label={name} onClick={onClick} onKeyDown={e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick?.(); } }} className={cn("group relative col-span-1 flex flex-col justify-end overflow-hidden rounded-xl cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-ring",
     "bg-card [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
     "dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]", className)}>
     <div className="absolute inset-0">{background}</div>
@@ -101,15 +102,18 @@ export function MovingBorderButton({ children, onClick, href, duration = 3000, c
     <div className="relative flex h-full w-full items-center justify-center border border-border bg-background/90 backdrop-blur-xl px-6 font-medium rounded-[1.75rem] antialiased">{children}</div>
   </Tag>;
 }
+// getTotalLength / getPointAtLength lèvent une exception quand le rect n'est
+// pas rendu : géométrie nulle au tout premier rendu, ou bouton masqué
+// (`hidden sm:inline-flex` sur téléphone). Levée dans la boucle d'animation de
+// framer-motion, elle arrêtait TOUTES les animations de la page — sur mobile,
+// le haut de page (titre, boutons, compteurs) restait invisible.
+function totalLength(el) { try { return el?.getTotalLength() || 0; } catch { return 0; } }
 function pointAt(el, v) {
-  // Le rect peut avoir une géométrie nulle au tout premier rendu (taille 0
-  // avant que Tailwind/les polices ne se chargent) : getPointAtLength lève
-  // alors une exception non rattrapable dans la boucle d'animation.
-  try { const len = el?.getTotalLength(); if (!len) return { x: 0, y: 0 }; return el.getPointAtLength(v % len); } catch { return { x: 0, y: 0 }; }
+  try { const len = totalLength(el); if (!len) return { x: 0, y: 0 }; return el.getPointAtLength(v % len); } catch { return { x: 0, y: 0 }; }
 }
 function MovingBorder({ children, duration, rx, ry }) {
   const pathRef = useRef(null); const progress = useMotionValue(0);
-  useAnimationFrame(time => { const len = pathRef.current?.getTotalLength(); if (len) progress.set((time * (len / duration)) % len); });
+  useAnimationFrame(time => { const len = totalLength(pathRef.current); if (len) progress.set((time * (len / duration)) % len); });
   const x = useTransform(progress, v => pointAt(pathRef.current, v).x);
   const y = useTransform(progress, v => pointAt(pathRef.current, v).y);
   const transform = useTransform([x, y], ([a, b]) => `translateX(${a}px) translateY(${b}px) translateX(-50%) translateY(-50%)`);
@@ -142,22 +146,54 @@ export function Tabs({ value, onChange, items, layoutId = "tab-pill" }) {
       <span className="relative">{l}</span></button>)}
   </div>;
 }
-export function Popover({ label, count, children, align = "left" }) {
-  const [open, setOpen] = useState(false); const ref = useRef(null);
-  useEffect(() => { const h = e => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); }; document.addEventListener("mousedown", h); return () => document.removeEventListener("mousedown", h); }, []);
-  return <div ref={ref} className="relative">
-    <Button variant="outline" size="sm" className={cn("h-9", open && "bg-accent")} onClick={() => setOpen(o => !o)} aria-expanded={open}>{label}{count > 0 && <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[11px] text-primary-foreground">{count}</span>}
+// block : bouton pleine largeur, hauteur des boutons voisins (fiche détail).
+// Sur téléphone (< 640 px), le menu s'ouvre en panneau depuis le bas de
+// l'écran (rendu dans <body>) : la rangée de filtres y défile à l'horizontale,
+// un menu positionné sous son bouton y serait coupé.
+const narrow = () => typeof window !== "undefined" && window.matchMedia("(max-width: 639px)").matches;
+export function Popover({ label, count, children, align = "left", minW = "min-w-[280px]", block, closeLabel = "Fermer" }) {
+  const [open, setOpen] = useState(false), [sheet, setSheet] = useState(false);
+  const ref = useRef(null), popRef = useRef(null);
+  const close = () => setOpen(false);
+  // Menu déroulant : recalé dans la fenêtre s'il en dépasse (8 px de marge)
+  const [dx, setDx] = useState(0);
+  useLayoutEffect(() => {
+    if (!open || sheet) { setDx(0); return; }
+    const r = popRef.current?.getBoundingClientRect(); if (!r) return;
+    const over = r.right - (window.innerWidth - 8);          // dépasse à droite
+    if (over > 0) setDx(-Math.min(over, r.left - 8));        // vers la gauche, sans sortir à gauche
+    else if (r.left < 8) setDx(8 - r.left);
+  }, [open, sheet]);
+  useEffect(() => {
+    const h = e => { if (!ref.current?.contains(e.target) && !popRef.current?.contains(e.target)) setOpen(false); };
+    const k = e => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("mousedown", h); document.addEventListener("keydown", k);
+    return () => { document.removeEventListener("mousedown", h); document.removeEventListener("keydown", k); };
+  }, []);
+  const panel = sheet
+    ? createPortal(<AnimatePresence>{open && <motion.div key="sheet" className="fixed inset-0 z-[70]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .15 }}>
+        <div className="absolute inset-0 bg-black/50" />
+        <motion.div ref={popRef} role="dialog" aria-label={typeof label === "string" ? label : undefined} initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} transition={{ type: "spring", stiffness: 420, damping: 40 }}
+          className="absolute inset-x-0 bottom-0 flex max-h-[75vh] flex-col rounded-t-2xl border-t bg-popover shadow-2xl">
+          <div className="flex items-center justify-between border-b px-4 py-3"><span className="text-sm font-semibold">{label}</span>
+            <button onClick={close} aria-label={closeLabel} className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg></button></div>
+          <div className="overflow-auto p-2 pb-[max(1rem,env(safe-area-inset-bottom))]">{children(close)}</div>
+        </motion.div></motion.div>}</AnimatePresence>, document.body)
+    // align="center" : centré sous le bouton (le décalage passe par framer, qui écrit lui-même `transform`)
+    : <AnimatePresence>{open && <motion.div ref={popRef} style={align === "right" ? { marginRight: -dx } : { marginLeft: dx }} initial={{ opacity: 0, y: -4, scale: .98, x: align === "center" ? "-50%" : 0 }} animate={{ opacity: 1, y: 0, scale: 1, x: align === "center" ? "-50%" : 0 }} exit={{ opacity: 0, y: -4, scale: .98 }} transition={{ duration: .12 }}
+        className={cn("absolute top-[calc(100%+6px)] z-40 max-h-[60vh] overflow-auto rounded-lg border bg-popover p-1 shadow-lg", minW, align === "right" ? "right-0" : align === "center" ? "left-1/2" : "left-0")}>{children(close)}</motion.div>}</AnimatePresence>;
+  return <div ref={ref} className={cn("relative shrink-0", block && "w-full")}>
+    <Button variant="outline" size={block ? "md" : "sm"} className={cn(block ? "w-full px-2" : "h-9", open && "bg-accent")} onClick={() => { setSheet(narrow()); setOpen(o => !o); }} aria-expanded={open}>{label}{count > 0 && <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[11px] text-primary-foreground">{count}</span>}
       <svg className="opacity-50" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6" /></svg></Button>
-    <AnimatePresence>{open && <motion.div initial={{ opacity: 0, y: -4, scale: .98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -4, scale: .98 }} transition={{ duration: .12 }}
-      className={cn("absolute top-[calc(100%+6px)] z-40 min-w-[280px] max-h-[60vh] overflow-auto rounded-lg border bg-popover p-1 shadow-lg", align === "right" ? "right-0" : "left-0")}>{children(() => setOpen(false))}</motion.div>}</AnimatePresence>
+    {panel}
   </div>;
 }
-export function CheckList({ values, set, onToggle, swatch, labelFn, onClear, colorOf, clearLabel = "Tout effacer" }) {
+export function CheckList({ values, set, onToggle, swatch, labelFn, titleFn, onClear, colorOf, clearLabel = "Tout effacer" }) {
   return <>
     {values.map(([v, n, hd]) => <React.Fragment key={v}>{hd && <div className="px-2 pt-2 pb-1 text-xs font-medium text-muted-foreground">{hd}</div>}
-      <label className="flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm cursor-pointer hover:bg-accent"><input type="checkbox" className="accent-[hsl(var(--primary))]" checked={set.has(v)} onChange={() => onToggle(v)} />
+      <label title={titleFn?.(v)} className="flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm cursor-pointer hover:bg-accent"><input type="checkbox" className="accent-[hsl(var(--primary))]" checked={set.has(v)} onChange={() => onToggle(v)} />
         {swatch && <span className="h-2.5 w-2.5 rounded-sm shrink-0" style={{ background: colorOf(v) }} />}<span className="truncate">{labelFn ? labelFn(v) : v}</span><span className="ml-auto text-xs text-muted-foreground tabular-nums">{n}</span></label></React.Fragment>)}
-    <button onClick={onClear} className="w-full text-left rounded-b-md px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent mt-1 border-t">{clearLabel}</button>
+    {onClear && <button onClick={onClear} className="w-full text-left rounded-b-md px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent mt-1 border-t">{clearLabel}</button>}
   </>;
 }
 export const Icon = ({ d, size = 18, ...p }) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}>{Array.isArray(d) ? d.map((x, i) => <path key={i} d={x} />) : <path d={d} />}</svg>;

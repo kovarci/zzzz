@@ -2,7 +2,7 @@
    Strategy: network-first (fresh online), cache fallback when offline.
    Bumped CACHE version forces clients to refresh their precache. */
 
-const CACHE = "lotent-v24";
+const CACHE = "lotent-v26";
 
 // Precached on install : the shell that lets the app boot fully offline,
 // even on first visit-when-offline. Per-event pages (e/<id>.html) are
@@ -78,12 +78,31 @@ self.addEventListener("fetch", (e) => {
         }
         return res;
       })
-      .catch(() =>
-        caches.match(cacheKey, { ignoreSearch: true })
-          .then((cached) => cached
-            || caches.match("./index.html")
-            || new Response("Hors-ligne — ressource non disponible.",
-                            { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8" } }))
-      )
+      .catch(async () => {
+        const cached = await caches.match(cacheKey, { ignoreSearch: true });
+        if (cached) return cached;
+        // La coquille de l'appli seulement pour une page : servie à la place
+        // d'un fichier JSON ou d'un script, elle cassait son lecteur. (Avant,
+        // `caches.match(...) || new Response(...)` ne tombait jamais sur la
+        // Response : une promesse est toujours « vraie ».)
+        if (req.mode === "navigate") {
+          const shell = await caches.match("./index.html");
+          if (shell) return shell;
+        }
+        return new Response("Hors-ligne — ressource non disponible.",
+                            { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+      })
+  );
+});
+
+// Notification « Tes intervenants reviennent » (envoyée via le worker sur
+// Android) : un clic ramène sur le site, dans l'onglet déjà ouvert s'il existe.
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  e.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((list) => {
+      const open = list.find((c) => "focus" in c);
+      return open ? open.focus() : self.clients.openWindow("./");
+    })
   );
 });

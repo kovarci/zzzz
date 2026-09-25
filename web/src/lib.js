@@ -40,11 +40,16 @@ export const today = new Date(); today.setHours(0, 0, 0, 0);
 export const TODAY = iso(today), TOMORROW = iso(addDays(today, 1));
 const dow = today.getDay();
 export const WEEK_END = iso(addDays(today, (7 - dow) % 7 || 7));
-const SAT = addDays(today, (6 - dow + 7) % 7);
+// Le dimanche, « ce week-end » est celui en cours (hier + aujourd'hui), pas le suivant
+const SAT = addDays(today, dow === 0 ? -1 : 6 - dow);
 export const WE = [iso(SAT), iso(addDays(SAT, 1))];
 export const NEW_CUTOFF = new Date(Date.now() - 48 * 3600 * 1000).toISOString().slice(0, 10);
 
 export const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+// Texte ins\u00e9r\u00e9 en HTML brut (popups Leaflet) : les noms d'h\u00f4tes Luma sont saisis librement
+export const escHtml = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+// Liens venus des sources : http(s) seulement (pas de javascript:\u2026)
+export const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "";
 export const cn = (...a) => a.filter(Boolean).join(" ");
 export const dc = e => `var(${DISC[e.discipline] || "--c-aut"})`;
 // Catégories à part : masquées du fil principal, un bouton chacune les affiche.
@@ -89,13 +94,20 @@ export const relTime = ts => {
 };
 
 /* ── Filtrage ──────────────────────────────────────────────────── */
-export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, cat: "", access: new Set(), q: "" };
+export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, cat: new Set(), access: new Set(), q: "" };
+
+// Filtre « Source » : les sources (src) et les catégories à part (cat :
+// soutenances, carrières) sont des cases d'une même liste, cumulables (« Luma
+// + Carrières »). Rien de coché : le fil normal, sans les catégories à part —
+// sauf favori ou recherche (un nom de doctorant doit rester trouvable).
+export function inSource(e, f) {
+  if (f.src.size || f.cat.size) return isSide(e) ? f.cat.has(e.kind) : f.src.has(e.source_type);
+  return !isSide(e) || !!f.q || f.fav;
+}
 
 export function matches(e, f, favs) {
   if (f.fav && !favs.has(e.id)) return false;
-  // Soutenances, carrières : catégories à part, masquées sauf leur bouton
-  // (ou favori / recherche : un nom de doctorant doit rester trouvable).
-  if (f.cat ? e.kind !== f.cat : isSide(e) && !f.q && !f.fav) return false;
+  if (!inSource(e, f)) return false;
   if (f.online && !isOnline(e)) return false;
   if (f.when === "today" && e.date !== TODAY) return false;
   if (f.when === "tonight" && !(e.date === TODAY && (e.time || "") >= "17:30")) return false;
@@ -104,7 +116,6 @@ export function matches(e, f, favs) {
   if (f.when === "new" && !isNew(e)) return false;
   if (f.disc.size && !f.disc.has(e.discipline)) return false;
   if (f.inst.size && !f.inst.has(e.institution)) return false;
-  if (f.src.size && !f.src.has(e.source_type)) return false;
   if (f.access.size && !f.access.has(accessOf(e))) return false;
   if (f.theme.size && !(e.luma_categories || []).some(c => f.theme.has(c))) return false;
   if (f.q) { const hay = norm([e.title, e.speaker, e.institution, e.description, e.location].join(" ")); if (!f.q.split(/\s+/).every(w => hay.includes(w))) return false; }
@@ -114,7 +125,7 @@ export function matches(e, f, favs) {
 /* ── URL ⇄ état (mêmes clés que l'ancien site : les liens partagés et les
    hubs i/*.html?institution=… continuent de fonctionner) ─────────────── */
 export function filtersFromURL() {
-  const p = new URLSearchParams(location.search), f = { ...EMPTY_FILTERS, disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), access: new Set() };
+  const p = new URLSearchParams(location.search), f = { ...EMPTY_FILTERS, disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), access: new Set(), cat: new Set() };
   const list = k => (p.get(k) || "").split(",").filter(Boolean);
   if (p.get("date")) f.when = p.get("date");
   list("acces").forEach(v => f.access.add(v));
@@ -122,7 +133,7 @@ export function filtersFromURL() {
   const src = p.get("source"); if (src && src !== "all" && src !== "history") f.src.add(src);
   if (p.get("favoris") === "1") f.fav = true;
   if (p.get("format") === "online") f.online = true;
-  Object.entries(SIDE_KINDS).forEach(([k, s]) => { if (p.get(s.param) === "1") f.cat = k; });
+  Object.entries(SIDE_KINDS).forEach(([k, s]) => { if (p.get(s.param) === "1") f.cat.add(k); });
   if (p.get("q")) f.q = norm(p.get("q"));
   return { filters: f, view: p.get("vue") || "list", history: src === "history", event: p.get("event") || null, rawQ: p.get("q") || "" };
 }
@@ -138,7 +149,7 @@ export function urlFromState({ filters: f, view, history, rawQ }) {
   if (f.theme.size) p.set("theme", [...f.theme].join(","));
   if (f.access.size) p.set("acces", [...f.access].join(","));
   if (f.fav) p.set("favoris", "1");
-  if (f.cat && SIDE_KINDS[f.cat]) p.set(SIDE_KINDS[f.cat].param, "1");
+  f.cat.forEach(k => SIDE_KINDS[k] && p.set(SIDE_KINDS[k].param, "1"));
   const qs = p.toString(); return qs ? "?" + qs : location.pathname;
 }
 
