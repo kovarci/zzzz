@@ -193,10 +193,23 @@ export function buildIcs(events) {
     else { dtstart = `DTSTART:${s.start}`; const e = icsDt(ev.date, ev.end_time); dtend = e.start && !e.allDay ? `DTEND:${e.start}` : `DTEND:${ev.date.replace(/-/g, "")}T${pad(Math.min(s.h + 2, 23))}${pad(s.m)}00`; }
     out.push("BEGIN:VEVENT", `UID:${ev.id}@lotent.fr`, `DTSTAMP:${stamp}`, dtstart, dtend, `SUMMARY:${icsEsc(ev.title)}`,
       `LOCATION:${icsEsc(ev.location || "Paris")}`, `DESCRIPTION:${icsEsc((ev.description || "") + (ev.url ? "\n" + ev.url : ""))}`,
-      ev.url ? `URL:${ev.url}` : "", `CATEGORIES:${icsEsc(ev.discipline || "")}`, "END:VEVENT");
+      ev.url ? `URL:${ev.url.replace(/[\r\n]/g, "")}` : "", `CATEGORIES:${icsEsc(ev.discipline || "")}`, "END:VEVENT");
   }
   out.push("END:VCALENDAR");
-  return out.filter(Boolean).join("\r\n");
+  return out.filter(Boolean).map(icsFold).join("\r\n") + "\r\n";
+}
+// RFC 5545 : 75 octets par ligne au plus, suite précédée d'une espace (même règle que scrape.py)
+const enc = new TextEncoder();
+function icsFold(line) {
+  if (enc.encode(line).length <= 75) return line;
+  const parts = []; let cur = "", size = 0;
+  for (const ch of line) {
+    const n = enc.encode(ch).length;
+    if (size + n > (parts.length ? 74 : 75)) { parts.push(cur); cur = ""; size = 0; }
+    cur += ch; size += n;
+  }
+  parts.push(cur);
+  return parts.join("\r\n ");
 }
 export function download(name, text, type = "text/calendar") {
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click();

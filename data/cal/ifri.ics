@@ -1,33 +1,38 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Ifri · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:603a6d9ac508@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261002T093000
 DTEND:20261002T164500
 SUMMARY:À un mois des midterms\, où va l’Amérique de Donald Trump ?
-DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/un-mois-des-midterms-ou-va-lamerique-de-donald-trump
+DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/un-mois-des-midterms-ou-va
+ -lamerique-de-donald-trump
 LOCATION:Ifri\, 27 rue de la Procession\, Paris 15e
-URL:https://www.ifri.org/fr/un-mois-des-midterms-ou-va-lamerique-de-donald-trump
+URL:https://www.ifri.org/fr/un-mois-des-midterms-ou-va-lamerique-de-donald-
+ trump
 END:VEVENT
 BEGIN:VEVENT
 UID:5f2740d90a74@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T123000
 DTEND:20261007T140000
-SUMMARY:Pandémies et maladies infectieuses : que peut la communauté internationale ?
-DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/pandemies-et-maladies-infectieuses-que-peut-la-communaute-internationale
+SUMMARY:Pandémies et maladies infectieuses : que peut la communauté inter
+ nationale ?
+DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/pandemies-et-maladies-infe
+ ctieuses-que-peut-la-communaute-internationale
 LOCATION:Ifri\, 27 rue de la Procession\, Paris 15e
-URL:https://www.ifri.org/fr/pandemies-et-maladies-infectieuses-que-peut-la-communaute-internationale
+URL:https://www.ifri.org/fr/pandemies-et-maladies-infectieuses-que-peut-la-
+ communaute-internationale
 END:VEVENT
 BEGIN:VEVENT
 UID:80834836a743@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261009T123000
 DTEND:20261009T183000
 SUMMARY:Forum France-Ukraine 2026
@@ -37,22 +42,28 @@ URL:https://www.ifri.org/fr/forum-france-ukraine-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:1f467feb503b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T090000
 DTEND:20261013T103000
-SUMMARY:Finance sous tension géopolitique : banques centrales\, stablecoins et souveraineté européenne
-DESCRIPTION:Séminaire\nhttps://www.ifri.org/fr/finance-sous-tension-geopolitique-banques-centrales-stablecoins-et-souverainete-europeenne
+SUMMARY:Finance sous tension géopolitique : banques centrales\, stablecoin
+ s et souveraineté européenne
+DESCRIPTION:Séminaire\nhttps://www.ifri.org/fr/finance-sous-tension-geopol
+ itique-banques-centrales-stablecoins-et-souverainete-europeenne
 LOCATION:Ifri\, 27 rue de la Procession\, Paris 15e
-URL:https://www.ifri.org/fr/finance-sous-tension-geopolitique-banques-centrales-stablecoins-et-souverainete-europeenne
+URL:https://www.ifri.org/fr/finance-sous-tension-geopolitique-banques-centr
+ ales-stablecoins-et-souverainete-europeenne
 END:VEVENT
 BEGIN:VEVENT
 UID:5ebec330e3ee@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261014T093000
 DTEND:20261014T120000
-SUMMARY:Gérer l'incertitude : les puissances asiatiques face à la rivalité sino-américaine
-DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/gerer-lincertitude-les-puissances-asiatiques-face-la-rivalite-sino-americaine
+SUMMARY:Gérer l'incertitude : les puissances asiatiques face à la rivalit
+ é sino-américaine
+DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/gerer-lincertitude-les-pui
+ ssances-asiatiques-face-la-rivalite-sino-americaine
 LOCATION:Ifri\, 27 rue de la Procession\, Paris 15e
-URL:https://www.ifri.org/fr/gerer-lincertitude-les-puissances-asiatiques-face-la-rivalite-sino-americaine
+URL:https://www.ifri.org/fr/gerer-lincertitude-les-puissances-asiatiques-fa
+ ce-la-rivalite-sino-americaine
 END:VEVENT
 END:VCALENDAR

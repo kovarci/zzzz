@@ -1,0 +1,2 @@
+# Calendriers : fins de ligne CRLF exigées par la RFC 5545 — git ne doit pas y toucher
+*.ics -text

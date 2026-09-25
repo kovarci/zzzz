@@ -1661,11 +1661,21 @@ def _soup(url):
     r = requests.get(url, headers=CDF_HEADERS, timeout=35, verify=_verify_for(url))
     r.raise_for_status()
     declared = "charset" in r.headers.get("content-type", "").lower()
-    soup = BeautifulSoup(r.content, "lxml", from_encoding=r.encoding if declared else None)
+
+    def parse(enc):
+        # lxml plante sur certaines pages (« not enough values to unpack » avec
+        # bs4 4.12 + lxml 6 : Académie de médecine sur le robot GitHub) :
+        # l'analyseur de Python prend alors le relais au lieu de perdre la source.
+        try:
+            return BeautifulSoup(r.content, "lxml", from_encoding=enc)
+        except Exception as e:
+            print(f"   [warn] lxml a échoué sur {url} ({type(e).__name__}), repli html.parser")
+            return BeautifulSoup(r.content, "html.parser", from_encoding=enc)
+    soup = parse(r.encoding if declared else None)
     if (soup.original_encoding or "").lower() in ("iso-8859-1", "latin-1", "latin1"):
         # Comme les navigateurs (norme WHATWG) : « latin-1 » annoncé = cp1252,
         # sinon les apostrophes typographiques (’) disparaissent.
-        soup = BeautifulSoup(r.content, "lxml", from_encoding="cp1252")
+        soup = parse("cp1252")
     return soup
 
 
@@ -4077,10 +4087,30 @@ def write_ics(events):
     def esc(s):
         return (str(s or "").replace("\\", "\\\\").replace(";", "\\;")
                 .replace(",", "\\,").replace("\r", "").replace("\n", "\\n"))
-    stamp = datetime.now().strftime("%Y%m%dT%H%M%SZ")
+    from datetime import timezone
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")    # « Z » = vraiment UTC
+
+    def fold(line):
+        """RFC 5545 §3.1 : 75 octets par ligne au plus, la suite sur une ligne
+        commençant par une espace — sans couper un caractère UTF-8. Des
+        agendas stricts (Outlook…) refusaient les longues descriptions."""
+        if len(line.encode("utf-8")) <= 75:
+            return line
+        parts, cur, size = [], "", 0
+        for ch in line:
+            n = len(ch.encode("utf-8"))
+            if size + n > (75 if not parts else 74):
+                parts.append(cur)
+                cur, size = "", 0
+            cur += ch
+            size += n
+        parts.append(cur)
+        return "\r\n ".join(parts)
 
     def vcal(evts, calname):
-        out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Paris Academique//FR",
+        # UID en « @paris-academique » gardé tel quel : le changer dédoublerait
+        # les événements chez les abonnés.
+        out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Lotent//FR",
                "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
                f"X-WR-CALNAME:{esc(calname)}",
                "X-WR-TIMEZONE:Europe/Paris"]
@@ -4109,14 +4139,19 @@ def write_ics(events):
                     f"SUMMARY:{esc(ev['title'])}", f"DESCRIPTION:{desc}",
                     f"LOCATION:{esc(ev.get('location', ''))}"]
             if ev.get("url"):
-                out.append(f"URL:{esc(ev['url'])}")
+                # Valeur de type URI : pas d'échappement des virgules (le lien cassait)
+                out.append("URL:" + re.sub(r"[\r\n]", "", ev["url"]))
             out.append("END:VEVENT")
         out.append("END:VCALENDAR")
-        return "\r\n".join(out) + "\r\n"
+        return "\r\n".join(fold(l) for l in out) + "\r\n"
+
+    def save(path, text):
+        # newline="" : sous Windows (maj.bat), write_text transformait chaque
+        # « \r\n » en « \r\r\n » — calendriers illisibles jusqu'au robot suivant.
+        path.write_text(text, encoding="utf-8", newline="")
 
     try:
-        ICS_FILE.write_text(vcal(events, "Conférences académiques · Paris"),
-                            encoding="utf-8")
+        save(ICS_FILE, vcal(events, "Toutes les conférences · Lotent"))
         print(f"Calendar feed: {len(events)} events → calendar.ics")
     except Exception as e:
         print(f"[WARN] ics write: {e}")
@@ -4126,9 +4161,12 @@ def write_ics(events):
     # logic as the frontend.
     cal_dir = OUTPUT_FILE.parent / "cal"
     cal_dir.mkdir(exist_ok=True)
-    by_inst = {}
+    by_inst = {i: [] for i in SHARE_INSTITUTIONS}
     for ev in events:
-        if ev.get("source_type") in ("luma", "ville", "entreprise"):
+        # Les établissements « phares » ont toujours leur agenda, même vide ou
+        # alimenté par une association : leur page i/ et le bandeau du site y
+        # renvoient (4 de ces liens menaient à une page introuvable).
+        if ev.get("source_type") in ("luma", "ville", "entreprise") and ev.get("institution") not in by_inst:
             continue
         by_inst.setdefault(ev.get("institution", ""), []).append(ev)
     written = set()
@@ -4138,8 +4176,7 @@ def write_ics(events):
             continue
         written.add(f"{slug}.ics")
         try:
-            (cal_dir / f"{slug}.ics").write_text(vcal(evts, f"{inst} · Lotent"),
-                                                 encoding="utf-8")
+            save(cal_dir / f"{slug}.ics", vcal(evts, f"{inst} · Lotent"))
         except Exception as e:
             print(f"[WARN] ics {slug}: {e}")
     # Un agenda par discipline (d-<slug>.ics), relié depuis d/<slug>.html et
@@ -4150,8 +4187,8 @@ def write_ics(events):
         name = f"d-{slugify(disc)}.ics"
         written.add(name)
         try:
-            (cal_dir / name).write_text(vcal([e for e in events if e.get("discipline") == disc and not e.get("kind")],
-                                             f"{disc} · Lotent"), encoding="utf-8")
+            save(cal_dir / name, vcal([e for e in events if e.get("discipline") == disc and not e.get("kind")],
+                                      f"{disc} · Lotent"))
         except Exception as e:
             print(f"[WARN] ics {name}: {e}")
     for f in cal_dir.glob("*.ics"):       # prune calendars of vanished sources

@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=26" />
+  <link rel="stylesheet" href="app.css?v=27" />
   <script>
     // Même thème que l'app principale, appliqué avant le premier rendu (pas de flash)
     try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
@@ -79,7 +79,7 @@
     </div>
     <div class="rounded-xl border bg-card p-4 shadow-sm">
       <div class="text-2xl font-bold tabular-nums text-foreground" id="stat-sources">—</div>
-      <div class="text-xs text-muted-foreground mt-1"><span data-fr>sources</span><span data-en>sources</span></div>
+      <div class="text-xs text-muted-foreground mt-1"><span data-fr>organisateurs</span><span data-en>organisers</span></div>
     </div>
     <div class="rounded-xl border bg-card p-4 shadow-sm">
       <div class="text-2xl font-bold tabular-nums text-foreground" id="stat-since">—</div>
@@ -88,10 +88,10 @@
   </div>
 
   <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>Le projet</span><span data-en>The project</span></h2>
-  <p data-fr>Les conférences, séminaires et colloques parisiens sont éparpillés sur une dizaine
+  <p data-fr>Les conférences, séminaires et colloques parisiens sont éparpillés sur des dizaines
   de sites institutionnels, chacun avec son propre agenda, sa propre pagination, son
   propre format. Beaucoup sont ouverts à tous — mais encore faut-il savoir qu'ils existent.</p>
-  <p data-en="block">Conferences, seminars and symposiums in Paris are scattered across a dozen
+  <p data-en="block">Conferences, seminars and symposiums in Paris are scattered across dozens of
   institutional websites, each with its own agenda, its own pagination, its own
   format. Many are open to everyone — but you still need to know they exist.</p>
   <p data-fr>Ce site les rassemble en un calendrier unique, filtrable par discipline,
@@ -136,6 +136,10 @@
     <tr><td>LAMSADE (Dauphine), CMAP (École polytechnique)</td><td><span data-fr>Laboratoires de recherche</span><span data-en>Research labs</span></td></tr>
     <tr><td>IHES, IPGP, labos de maths d'Île-de-France (Indico)</td><td><span data-fr>Recherche</span><span data-en>Research</span></td></tr>
     <tr><td>Maison de l'Amérique latine, Institut culturel italien, Maison de la culture du Japon</td><td><span data-fr>Instituts culturels</span><span data-en>Cultural institutes</span></td></tr>
+    <tr><td>Académie nationale de médecine, Académie des inscriptions et belles-lettres</td><td><span data-fr>Académies (séances publiques)</span><span data-en>Academies (public sessions)</span></td></tr>
+    <tr><td>Mines Paris - PSL</td><td><span data-fr>École</span><span data-en>School</span></td></tr>
+    <tr><td>Musée de l'Homme</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
+    <tr><td>Ined (démographie)</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
     <tr><td>Université Paris Cité</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
     <tr><td>Université Sorbonne Nouvelle</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
     <tr><td>Université Paris 8</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
@@ -152,6 +156,7 @@
     <tr><td>Cité des sciences et de l'industrie</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
     <tr><td>IJCLab, IN2P3 (LPNHE, APC…), Observatoire de Paris</td><td><span data-fr>Laboratoires (Indico)</span><span data-en>Labs (Indico)</span></td></tr>
     <tr><td><span data-fr>Sciencesconf.org (colloques en Île-de-France)</span><span data-en>Sciencesconf.org (conferences in Île-de-France)</span></td><td><span data-fr>Plateforme de colloques</span><span data-en>Conference platform</span></td></tr>
+    <tr><td><span data-fr>Soutenances de thèse et d'HDR (repérées dans toutes les sources)</span><span data-en>PhD and habilitation defences (spotted across all sources)</span></td><td><span data-fr>Catégorie à part</span><span data-en>Separate category</span></td></tr>
     <tr><td><span data-fr>Carrières : événements de recrutement (BCG, Kering… et salons de l'emploi)</span><span data-en>Careers: recruiting events (BCG, Kering… and job fairs)</span></td><td><span data-fr>Entreprises</span><span data-en>Companies</span></td></tr>
     <tr><td>Collège des Bernardins</td><td><span data-fr>Lieu de débat</span><span data-en>Forum</span></td></tr>
     <tr><td><span data-fr>Luma (événements parisiens : tech, IA, arts…)</span><span data-en>Luma (events in Paris: tech, AI, arts…)</span></td><td><span data-fr>Plateforme</span><span data-en>Platform</span></td></tr>
@@ -168,15 +173,15 @@
 
   <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>La mise à jour</span><span data-en>Updates</span></h2>
   <ul data-fr>
-    <li><strong>Chaque jour vers 6h</strong> : récupération automatique de toutes les sources.</li>
+    <li><strong>Chaque matin</strong> : récupération automatique de toutes les sources.</li>
     <li><strong>Chaque semaine</strong> : passage complémentaire pour les sources qui
-    bloquent les robots des data-centers (Collège de France, pages thématiques Luma).</li>
+    bloquent les robots des data-centers (Collège de France, Muséum, Académie des sciences, Ifri, IRIS, pages thématiques Luma…).</li>
     <li>Les événements passés sont conservés dans l'onglet <em>Historique</em> pendant un an.</li>
   </ul>
   <ul data-en="block">
-    <li><strong>Every day around 6 AM Paris time</strong>: automatic refresh of every source.</li>
+    <li><strong>Every morning</strong>: automatic refresh of every source.</li>
     <li><strong>Every week</strong>: a complementary pass for sources that block
-    data-center bots (Collège de France, Luma theme pages).</li>
+    data-center bots (Collège de France, Muséum, Académie des sciences, Ifri, IRIS, Luma theme pages…).</li>
     <li>Past events are kept in the <em>Past events</em> tab for one year.</li>
   </ul>
 

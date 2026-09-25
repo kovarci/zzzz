@@ -1,588 +1,783 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Université Paris 1 Panthéon-Sorbonne · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:c4f78045aedf@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T110000
 DTEND:20260925T130000
 SUMMARY:Actualité éditoriale sur le genre
-DESCRIPTION:Séminaire\nhttps://isjps.pantheonsorbonne.fr/evenements/actualite-editoriale-le-genre-1
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/actualite-editoriale-le-genre-1
+DESCRIPTION:Séminaire\nhttps://isjps.pantheonsorbonne.fr/evenements/actual
+ ite-editoriale-le-genre-1
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/actualite-editoriale-le-ge
+ nre-1
 END:VEVENT
 BEGIN:VEVENT
 UID:9e39c019bbe5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T140000
 DTEND:20260925T160000
-SUMMARY:Séance du séminaire "Penser le droit des majeurs vulnérables" : "Vulnérabilité et expressions du care"
-DESCRIPTION:Séminaire\nhttps://irjs.pantheonsorbonne.fr/evenements/seance-du-seminaire-penser-le-droit-majeurs-vulnerables-vulnerabilite-et-expressions-du
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://irjs.pantheonsorbonne.fr/evenements/seance-du-seminaire-penser-le-droit-majeurs-vulnerables-vulnerabilite-et-expressions-du
+SUMMARY:Séance du séminaire "Penser le droit des majeurs vulnérables" : 
+ "Vulnérabilité et expressions du care"
+DESCRIPTION:Séminaire\nhttps://irjs.pantheonsorbonne.fr/evenements/seance-
+ du-seminaire-penser-le-droit-majeurs-vulnerables-vulnerabilite-et-expressi
+ ons-du
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://irjs.pantheonsorbonne.fr/evenements/seance-du-seminaire-penser-
+ le-droit-majeurs-vulnerables-vulnerabilite-et-expressions-du
 END:VEVENT
 BEGIN:VEVENT
 UID:b516920ab9b9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T160000
 DTEND:20260925T180000
 SUMMARY:Institutions et régulation des économies et des sociétés
-DESCRIPTION:Séminaire\nhttps://idhes.pantheonsorbonne.fr/evenements/institutions-et-regulation-economies-et-societes
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://idhes.pantheonsorbonne.fr/evenements/institutions-et-regulation-economies-et-societes
+DESCRIPTION:Séminaire\nhttps://idhes.pantheonsorbonne.fr/evenements/instit
+ utions-et-regulation-economies-et-societes
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://idhes.pantheonsorbonne.fr/evenements/institutions-et-regulation
+ -economies-et-societes
 END:VEVENT
 BEGIN:VEVENT
 UID:544d96b26ecd@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T170000
 DTEND:20260925T190000
-SUMMARY:Séminaire monnaie sur Knut Wicksell (1851-1926) autour de Lucy Brillant ( LED\, Dijon)
-DESCRIPTION:Séminaire\nhttps://phare.pantheonsorbonne.fr/evenements/seminaire-monnaie-knut-wicksell-1851-1926-autour-de-lucy-brillant-led-dijon
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://phare.pantheonsorbonne.fr/evenements/seminaire-monnaie-knut-wicksell-1851-1926-autour-de-lucy-brillant-led-dijon
+SUMMARY:Séminaire monnaie sur Knut Wicksell (1851-1926) autour de Lucy Bri
+ llant ( LED\, Dijon)
+DESCRIPTION:Séminaire\nhttps://phare.pantheonsorbonne.fr/evenements/semina
+ ire-monnaie-knut-wicksell-1851-1926-autour-de-lucy-brillant-led-dijon
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://phare.pantheonsorbonne.fr/evenements/seminaire-monnaie-knut-wic
+ ksell-1851-1926-autour-de-lucy-brillant-led-dijon
 END:VEVENT
 BEGIN:VEVENT
 UID:6063268cc4a2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260926T090000
 DTEND:20260926T110000
 SUMMARY:Le problème de l'idéologie chez Sartre II
-DESCRIPTION:Journée d'étude\nhttps://philosophie.pantheonsorbonne.fr/evenements/le-probleme-de-lideologie-chez-sartre-ii
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/le-probleme-de-lideologie-chez-sartre-ii
+DESCRIPTION:Journée d'étude\nhttps://philosophie.pantheonsorbonne.fr/even
+ ements/le-probleme-de-lideologie-chez-sartre-ii
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/le-probleme-de-lideo
+ logie-chez-sartre-ii
 END:VEVENT
 BEGIN:VEVENT
 UID:23fda99e0e9e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260926T103000
 DTEND:20260926T123000
 SUMMARY:Faire avec ou sans monde
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/faire-ou-sans-monde
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ faire-ou-sans-monde
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
 URL:https://philosophie.pantheonsorbonne.fr/evenements/faire-ou-sans-monde
 END:VEVENT
 BEGIN:VEVENT
 UID:c6ad8d3b0209@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T180000
 DTEND:20260928T200000
 SUMMARY:Critique de la religion III
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/critique-de-la-religion-iii
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/critique-de-la-religion-iii
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ critique-de-la-religion-iii
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/critique-de-la-relig
+ ion-iii
 END:VEVENT
 BEGIN:VEVENT
 UID:705b8ccc99f8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
-SUMMARY:Visites guidées - Exposition 13 novembre 2015 : que dit la science des attentats ?
-DESCRIPTION:Exposition\nhttps://recherche.pantheonsorbonne.fr/evenements/visites-guidees-exposition-13-novembre-2015-que-dit-la-science-attentats
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://recherche.pantheonsorbonne.fr/evenements/visites-guidees-exposition-13-novembre-2015-que-dit-la-science-attentats
+SUMMARY:Visites guidées - Exposition 13 novembre 2015 : que dit la science
+  des attentats ?
+DESCRIPTION:Exposition\nhttps://recherche.pantheonsorbonne.fr/evenements/vi
+ sites-guidees-exposition-13-novembre-2015-que-dit-la-science-attentats
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://recherche.pantheonsorbonne.fr/evenements/visites-guidees-exposi
+ tion-13-novembre-2015-que-dit-la-science-attentats
 END:VEVENT
 BEGIN:VEVENT
 UID:558a3ee65fbe@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T183000
 DTEND:20260930T203000
 SUMMARY:Projection-débat : Les secrets des jardins du paradis
-DESCRIPTION:Projection\nhttps://www.pantheonsorbonne.fr/evenements/projection-debat-secrets-jardins-du-paradis
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://www.pantheonsorbonne.fr/evenements/projection-debat-secrets-jardins-du-paradis
+DESCRIPTION:Projection\nhttps://www.pantheonsorbonne.fr/evenements/projecti
+ on-debat-secrets-jardins-du-paradis
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://www.pantheonsorbonne.fr/evenements/projection-debat-secrets-jar
+ dins-du-paradis
 END:VEVENT
 BEGIN:VEVENT
 UID:abcd6ee41340@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Résiliences\, résistances\, futurs communs
-DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/resiliences-resistances-futurs-communs
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/resiliences-resistances-futurs-communs
+DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/resilien
+ ces-resistances-futurs-communs
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/resiliences-resistances-fu
+ turs-communs
 END:VEVENT
 BEGIN:VEVENT
 UID:8caf96972f69@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Le cloaque\, un bas-fonds d'un autre genre à explorer ?
-DESCRIPTION:Colloque\nhttps://centrehistoire19esiecle.pantheonsorbonne.fr/evenements/le-cloaque-bas-fonds-dun-autre-genre-explorer
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://centrehistoire19esiecle.pantheonsorbonne.fr/evenements/le-cloaque-bas-fonds-dun-autre-genre-explorer
+DESCRIPTION:Colloque\nhttps://centrehistoire19esiecle.pantheonsorbonne.fr/e
+ venements/le-cloaque-bas-fonds-dun-autre-genre-explorer
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://centrehistoire19esiecle.pantheonsorbonne.fr/evenements/le-cloaq
+ ue-bas-fonds-dun-autre-genre-explorer
 END:VEVENT
 BEGIN:VEVENT
 UID:f1c16db572a6@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T140000
 DTEND:20261001T160000
-SUMMARY:Journée d’études : Élus des banlieues populaires. Au lendemain des municipales 2026\, quels enjeux et dynamiques de représentation politique ?
-DESCRIPTION:Journée d'étude\nhttps://recherche.pantheonsorbonne.fr/evenements/journee-detudes-elus-banlieues-populaires.-lendemain-municipales-2026-quels-enjeux-et
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://recherche.pantheonsorbonne.fr/evenements/journee-detudes-elus-banlieues-populaires.-lendemain-municipales-2026-quels-enjeux-et
+SUMMARY:Journée d’études : Élus des banlieues populaires. Au lendemain
+  des municipales 2026\, quels enjeux et dynamiques de représentation poli
+ tique ?
+DESCRIPTION:Journée d'étude\nhttps://recherche.pantheonsorbonne.fr/evenem
+ ents/journee-detudes-elus-banlieues-populaires.-lendemain-municipales-2026
+ -quels-enjeux-et
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://recherche.pantheonsorbonne.fr/evenements/journee-detudes-elus-b
+ anlieues-populaires.-lendemain-municipales-2026-quels-enjeux-et
 END:VEVENT
 BEGIN:VEVENT
 UID:5718f06a64ff@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T180000
 DTEND:20261001T200000
 SUMMARY:La fabrication de l’absence en Palestine
-DESCRIPTION:Séminaire\nhttps://institut-acte.pantheonsorbonne.fr/evenements/la-fabrication-de-labsence-en-palestine
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://institut-acte.pantheonsorbonne.fr/evenements/la-fabrication-de-labsence-en-palestine
+DESCRIPTION:Séminaire\nhttps://institut-acte.pantheonsorbonne.fr/evenement
+ s/la-fabrication-de-labsence-en-palestine
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://institut-acte.pantheonsorbonne.fr/evenements/la-fabrication-de-
+ labsence-en-palestine
 END:VEVENT
 BEGIN:VEVENT
 UID:4b0088a91415@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T183000
 DTEND:20261001T203000
 SUMMARY:Spinoza\, à travers la correspondance
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/spinoza-travers-la-correspondance-0
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/spinoza-travers-la-correspondance-0
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ spinoza-travers-la-correspondance-0
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/spinoza-travers-la-c
+ orrespondance-0
 END:VEVENT
 BEGIN:VEVENT
 UID:eb28012d774e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261002T160000
 DTEND:20261002T180000
 SUMMARY:Clôture du projet "Violences sexuelles et enfances en guerre"
-DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/cloture-du-projet-violences-sexuelles-et-enfances-en-guerre
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/cloture-du-projet-violences-sexuelles-et-enfances-en-guerre
+DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/cloture-
+ du-projet-violences-sexuelles-et-enfances-en-guerre
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/cloture-du-projet-violence
+ s-sexuelles-et-enfances-en-guerre
 END:VEVENT
 BEGIN:VEVENT
 UID:730964d1bc98@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261003T100000
 DTEND:20261003T120000
 SUMMARY:Hegel Lacan L’éthique
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/hegel-lacan-lethique
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ hegel-lacan-lethique
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
 URL:https://philosophie.pantheonsorbonne.fr/evenements/hegel-lacan-lethique
 END:VEVENT
 BEGIN:VEVENT
 UID:a3d8eeec79e2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261003T103000
 DTEND:20261003T123000
 SUMMARY:Séminaire Wittgenstein 2026-2027
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/seminaire-wittgenstein-2026-2027
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/seminaire-wittgenstein-2026-2027
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ seminaire-wittgenstein-2026-2027
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/seminaire-wittgenste
+ in-2026-2027
 END:VEVENT
 BEGIN:VEVENT
 UID:8d85ac6dd0a6@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T123000
 DTEND:20261005T143000
 SUMMARY:Café Recherche
-DESCRIPTION:Rencontre\nhttps://recherche.pantheonsorbonne.fr/evenements/cafe-recherche-1
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
+DESCRIPTION:Rencontre\nhttps://recherche.pantheonsorbonne.fr/evenements/caf
+ e-recherche-1
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
 URL:https://recherche.pantheonsorbonne.fr/evenements/cafe-recherche-1
 END:VEVENT
 BEGIN:VEVENT
 UID:b432828d83a8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T180000
 DTEND:20261005T200000
 SUMMARY:Nuit du droit comparé 2026 : concours de posters scientifiques
-DESCRIPTION:Cérémonie\nhttps://isjps.pantheonsorbonne.fr/evenements/nuit-du-droit-compare-2026-concours-de-posters-scientifiques
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/nuit-du-droit-compare-2026-concours-de-posters-scientifiques
+DESCRIPTION:Cérémonie\nhttps://isjps.pantheonsorbonne.fr/evenements/nuit-
+ du-droit-compare-2026-concours-de-posters-scientifiques
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/nuit-du-droit-compare-2026
+ -concours-de-posters-scientifiques
 END:VEVENT
 BEGIN:VEVENT
 UID:be61f5e24107@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261006T090000
 DTEND:20261006T110000
-SUMMARY:Colloque "Justice à la cour\, justice pour la cour dans les capitales européennes à la fin du XVIIe et au XVIIIe siècle"
-DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-justice-la-cour-justice-la-cour-dans-capitales-europeennes-la-fin-du-xviie-et
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-justice-la-cour-justice-la-cour-dans-capitales-europeennes-la-fin-du-xviie-et
+SUMMARY:Colloque "Justice à la cour\, justice pour la cour dans les capita
+ les européennes à la fin du XVIIe et au XVIIIe siècle"
+DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-
+ justice-la-cour-justice-la-cour-dans-capitales-europeennes-la-fin-du-xviie
+ -et
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-justice-la-cour-ju
+ stice-la-cour-dans-capitales-europeennes-la-fin-du-xviie-et
 END:VEVENT
 BEGIN:VEVENT
 UID:676f153c86a5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261006T150000
 DTEND:20261006T170000
 SUMMARY:Régulation responsable et création
-DESCRIPTION:Séminaire\nhttps://isjps.pantheonsorbonne.fr/evenements/regulation-responsable-et-creation
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/regulation-responsable-et-creation
+DESCRIPTION:Séminaire\nhttps://isjps.pantheonsorbonne.fr/evenements/regula
+ tion-responsable-et-creation
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/regulation-responsable-et-
+ creation
 END:VEVENT
 BEGIN:VEVENT
 UID:d473c36e53b0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261006T170000
 DTEND:20261006T190000
 SUMMARY:Spectacle "Sorcières"
-DESCRIPTION:Spectacle\nhttps://developpement-durable.pantheonsorbonne.fr/evenements/spectacle-sorcieres
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://developpement-durable.pantheonsorbonne.fr/evenements/spectacle-sorcieres
+DESCRIPTION:Spectacle\nhttps://developpement-durable.pantheonsorbonne.fr/ev
+ enements/spectacle-sorcieres
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://developpement-durable.pantheonsorbonne.fr/evenements/spectacle-
+ sorcieres
 END:VEVENT
 BEGIN:VEVENT
 UID:6c57b483de14@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261006T180000
 DTEND:20261006T200000
 SUMMARY:Histoire et Philosophie de la Psychiatrie II
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/histoire-et-philosophie-de-la-psychiatrie-ii
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/histoire-et-philosophie-de-la-psychiatrie-ii
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ histoire-et-philosophie-de-la-psychiatrie-ii
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/histoire-et-philosop
+ hie-de-la-psychiatrie-ii
 END:VEVENT
 BEGIN:VEVENT
 UID:c2bebe1913ba@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T090000
 DTEND:20261007T110000
 SUMMARY:Colloque "Compliance et droit commun des contrats"
-DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-compliance-et-droit-commun-contrats
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-compliance-et-droit-commun-contrats
+DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-
+ compliance-et-droit-commun-contrats
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-compliance-et-droi
+ t-commun-contrats
 END:VEVENT
 BEGIN:VEVENT
 UID:c60a4978afe5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T120000
 DTEND:20261007T140000
 SUMMARY:Forum des associations au centre Lourcine
-DESCRIPTION:Rencontre\nhttps://www.pantheonsorbonne.fr/evenements/forum-associations-centre-lourcine-2
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://www.pantheonsorbonne.fr/evenements/forum-associations-centre-lourcine-2
+DESCRIPTION:Rencontre\nhttps://www.pantheonsorbonne.fr/evenements/forum-ass
+ ociations-centre-lourcine-2
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://www.pantheonsorbonne.fr/evenements/forum-associations-centre-lo
+ urcine-2
 END:VEVENT
 BEGIN:VEVENT
 UID:38f2357dd009@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Les Rendez-vous de l'histoire 2026
-DESCRIPTION:Table ronde\nhttps://idhes.pantheonsorbonne.fr/evenements/rendez-vous-de-lhistoire-2026
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://idhes.pantheonsorbonne.fr/evenements/rendez-vous-de-lhistoire-2026
+DESCRIPTION:Table ronde\nhttps://idhes.pantheonsorbonne.fr/evenements/rende
+ z-vous-de-lhistoire-2026
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://idhes.pantheonsorbonne.fr/evenements/rendez-vous-de-lhistoire-2
+ 026
 END:VEVENT
 BEGIN:VEVENT
 UID:1ec5b44318e3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-SUMMARY:Penser au bord du monde. État des lieux et perspectives de la philosophie de l’environnement
-DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/penser-bord-du-monde.-etat-lieux-et-perspectives-de-la-philosophie-de-lenvironnement
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/penser-bord-du-monde.-etat-lieux-et-perspectives-de-la-philosophie-de-lenvironnement
+SUMMARY:Penser au bord du monde. État des lieux et perspectives de la phil
+ osophie de l’environnement
+DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/penser-b
+ ord-du-monde.-etat-lieux-et-perspectives-de-la-philosophie-de-lenvironneme
+ nt
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/penser-bord-du-monde.-etat
+ -lieux-et-perspectives-de-la-philosophie-de-lenvironnement
 END:VEVENT
 BEGIN:VEVENT
 UID:470cda76bb28@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T183000
 DTEND:20261013T203000
 SUMMARY:Hobbes@Paris 2026-2027
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/hobbes%40paris-2026-2027
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/hobbes%40paris-2026-2027
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ hobbes%40paris-2026-2027
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/hobbes%40paris-2026-
+ 2027
 END:VEVENT
 BEGIN:VEVENT
 UID:3c3b33dfb0a9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-SUMMARY:De l’os humain à l’objet\, une pratique récurrente depuis la Préhistoire ?
-DESCRIPTION:Colloque\nhttps://www.pantheonsorbonne.fr/evenements/de-los-humain-lobjet-pratique-recurrente-depuis-la-prehistoire
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://www.pantheonsorbonne.fr/evenements/de-los-humain-lobjet-pratique-recurrente-depuis-la-prehistoire
+SUMMARY:De l’os humain à l’objet\, une pratique récurrente depuis la 
+ Préhistoire ?
+DESCRIPTION:Colloque\nhttps://www.pantheonsorbonne.fr/evenements/de-los-hum
+ ain-lobjet-pratique-recurrente-depuis-la-prehistoire
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://www.pantheonsorbonne.fr/evenements/de-los-humain-lobjet-pratiqu
+ e-recurrente-depuis-la-prehistoire
 END:VEVENT
 BEGIN:VEVENT
 UID:36072f1f2c1c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261014T120000
 DTEND:20261014T140000
 SUMMARY:Forum des associations au centre La Chapelle
-DESCRIPTION:Rencontre\nhttps://www.pantheonsorbonne.fr/evenements/forum-associations-centre-la-chapelle
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://www.pantheonsorbonne.fr/evenements/forum-associations-centre-la-chapelle
+DESCRIPTION:Rencontre\nhttps://www.pantheonsorbonne.fr/evenements/forum-ass
+ ociations-centre-la-chapelle
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://www.pantheonsorbonne.fr/evenements/forum-associations-centre-la
+ -chapelle
 END:VEVENT
 BEGIN:VEVENT
 UID:e75af9c1e715@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261014T140000
 DTEND:20261014T160000
-SUMMARY:Colloque « Les 80 ans du Préambule de la Constitution de 1946 : que sont devenus les « principes particulièrement nécessaires à notre temps » ? »
-DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-80-ans-du-preambule-de-la-constitution-de-1946-que-sont-devenus-principes
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-80-ans-du-preambule-de-la-constitution-de-1946-que-sont-devenus-principes
+SUMMARY:Colloque « Les 80 ans du Préambule de la Constitution de 1946 : q
+ ue sont devenus les « principes particulièrement nécessaires à notre t
+ emps » ? »
+DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-
+ 80-ans-du-preambule-de-la-constitution-de-1946-que-sont-devenus-principes
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-80-ans-du-preambul
+ e-de-la-constitution-de-1946-que-sont-devenus-principes
 END:VEVENT
 BEGIN:VEVENT
 UID:52ba1c3762b4@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261014T184500
 DTEND:20261014T204500
 SUMMARY:Soirée Philosophie\, sciences et société à la Sorbonne
-DESCRIPTION:Débat\nhttps://ihpst.pantheonsorbonne.fr/evenements/soiree-philosophie-sciences-et-societe-la-sorbonne-0
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://ihpst.pantheonsorbonne.fr/evenements/soiree-philosophie-sciences-et-societe-la-sorbonne-0
+DESCRIPTION:Débat\nhttps://ihpst.pantheonsorbonne.fr/evenements/soiree-phi
+ losophie-sciences-et-societe-la-sorbonne-0
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://ihpst.pantheonsorbonne.fr/evenements/soiree-philosophie-science
+ s-et-societe-la-sorbonne-0
 END:VEVENT
 BEGIN:VEVENT
 UID:c6c85f69f027@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Les scènes de Jacques Rancière
-DESCRIPTION:Colloque\nhttps://philosophie.pantheonsorbonne.fr/evenements/scenes-de-jacques-ranciere
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/scenes-de-jacques-ranciere
+DESCRIPTION:Colloque\nhttps://philosophie.pantheonsorbonne.fr/evenements/sc
+ enes-de-jacques-ranciere
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/scenes-de-jacques-ra
+ nciere
 END:VEVENT
 BEGIN:VEVENT
 UID:92d101888c6b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T090000
 DTEND:20261016T110000
 SUMMARY:Haptic Encounters: Touch\, Art and Gestures of Care Symposium
-DESCRIPTION:Journée d'étude\nhttps://institut-acte.pantheonsorbonne.fr/evenements/haptic-encounters-touch-art-and-gestures-care-symposium
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://institut-acte.pantheonsorbonne.fr/evenements/haptic-encounters-touch-art-and-gestures-care-symposium
+DESCRIPTION:Journée d'étude\nhttps://institut-acte.pantheonsorbonne.fr/ev
+ enements/haptic-encounters-touch-art-and-gestures-care-symposium
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://institut-acte.pantheonsorbonne.fr/evenements/haptic-encounters-
+ touch-art-and-gestures-care-symposium
 END:VEVENT
 BEGIN:VEVENT
 UID:dad8dc839620@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261019T093000
 DTEND:20261019T113000
-SUMMARY:Analyse de textes philosophiques québécois assistée par ordinateur : quelques résultats
-DESCRIPTION:Rencontre\nhttps://isjps.pantheonsorbonne.fr/evenements/analyse-de-textes-philosophiques-quebecois-assistee-par-ordinateur-quelques-resultats
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/analyse-de-textes-philosophiques-quebecois-assistee-par-ordinateur-quelques-resultats
+SUMMARY:Analyse de textes philosophiques québécois assistée par ordinate
+ ur : quelques résultats
+DESCRIPTION:Rencontre\nhttps://isjps.pantheonsorbonne.fr/evenements/analyse
+ -de-textes-philosophiques-quebecois-assistee-par-ordinateur-quelques-resul
+ tats
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/analyse-de-textes-philosop
+ hiques-quebecois-assistee-par-ordinateur-quelques-resultats
 END:VEVENT
 BEGIN:VEVENT
 UID:55e661db1479@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261021T100000
 DTEND:20261021T120000
 SUMMARY:Journée de la mobilité internationale
-DESCRIPTION:Conférence\nhttps://international.pantheonsorbonne.fr/evenements/journee-de-la-mobilite-internationale
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://international.pantheonsorbonne.fr/evenements/journee-de-la-mobilite-internationale
+DESCRIPTION:Conférence\nhttps://international.pantheonsorbonne.fr/evenemen
+ ts/journee-de-la-mobilite-internationale
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://international.pantheonsorbonne.fr/evenements/journee-de-la-mobi
+ lite-internationale
 END:VEVENT
 BEGIN:VEVENT
 UID:9b82feff158b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261021T120000
 DTEND:20261021T140000
 SUMMARY:Forum des associations au centre Pierre-Mendès-France
-DESCRIPTION:Rencontre\nhttps://www.pantheonsorbonne.fr/evenements/forum-associations-centre-pierre-mendes-france-1
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://www.pantheonsorbonne.fr/evenements/forum-associations-centre-pierre-mendes-france-1
+DESCRIPTION:Rencontre\nhttps://www.pantheonsorbonne.fr/evenements/forum-ass
+ ociations-centre-pierre-mendes-france-1
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://www.pantheonsorbonne.fr/evenements/forum-associations-centre-pi
+ erre-mendes-france-1
 END:VEVENT
 BEGIN:VEVENT
 UID:e40d8cc0efcc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
-SUMMARY:Stanley Cavell at 100 (Boston): Philosophy and Literature\, Tragedy\, Music\, and the Idea of America
-DESCRIPTION:Colloque\nhttps://demoseries.pantheonsorbonne.fr/evenements/stanley-cavell-100-boston-philosophy-and-literature-tragedy-music-and-idea-america
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://demoseries.pantheonsorbonne.fr/evenements/stanley-cavell-100-boston-philosophy-and-literature-tragedy-music-and-idea-america
+SUMMARY:Stanley Cavell at 100 (Boston): Philosophy and Literature\, Tragedy
+ \, Music\, and the Idea of America
+DESCRIPTION:Colloque\nhttps://demoseries.pantheonsorbonne.fr/evenements/sta
+ nley-cavell-100-boston-philosophy-and-literature-tragedy-music-and-idea-am
+ erica
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://demoseries.pantheonsorbonne.fr/evenements/stanley-cavell-100-bo
+ ston-philosophy-and-literature-tragedy-music-and-idea-america
 END:VEVENT
 BEGIN:VEVENT
 UID:3123f6c81c80@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261105T090000
 DTEND:20261105T110000
 SUMMARY:Autour de la réforme de la fin de vie
-DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/autour-de-la-reforme-de-la-fin-de-vie
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/autour-de-la-reforme-de-la-fin-de-vie
+DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/autour-d
+ e-la-reforme-de-la-fin-de-vie
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/autour-de-la-reforme-de-la
+ -fin-de-vie
 END:VEVENT
 BEGIN:VEVENT
 UID:af702110d6ef@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261105T143000
 DTEND:20261105T163000
-SUMMARY:Journée d'études 11 septembre - 13 novembre : Mémoires des attentats
-DESCRIPTION:Journée d'étude\nhttps://recherche.pantheonsorbonne.fr/evenements/journee-detudes-11-septembre-13-novembre-memoires-attentats
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://recherche.pantheonsorbonne.fr/evenements/journee-detudes-11-septembre-13-novembre-memoires-attentats
+SUMMARY:Journée d'études 11 septembre - 13 novembre : Mémoires des atten
+ tats
+DESCRIPTION:Journée d'étude\nhttps://recherche.pantheonsorbonne.fr/evenem
+ ents/journee-detudes-11-septembre-13-novembre-memoires-attentats
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://recherche.pantheonsorbonne.fr/evenements/journee-detudes-11-sep
+ tembre-13-novembre-memoires-attentats
 END:VEVENT
 BEGIN:VEVENT
 UID:ff5a900095eb@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261105T180000
 DTEND:20261105T200000
 SUMMARY:Disparitions en étoilement : un exil constellé
-DESCRIPTION:Séminaire\nhttps://institut-acte.pantheonsorbonne.fr/evenements/disparitions-en-etoilement-exil-constelle
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://institut-acte.pantheonsorbonne.fr/evenements/disparitions-en-etoilement-exil-constelle
+DESCRIPTION:Séminaire\nhttps://institut-acte.pantheonsorbonne.fr/evenement
+ s/disparitions-en-etoilement-exil-constelle
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://institut-acte.pantheonsorbonne.fr/evenements/disparitions-en-et
+ oilement-exil-constelle
 END:VEVENT
 BEGIN:VEVENT
 UID:dbb21f7b0541@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261106T133000
 DTEND:20261106T153000
 SUMMARY:Consonances écosophiques
-DESCRIPTION:Journée d'étude\nhttps://idhes.pantheonsorbonne.fr/evenements/consonances-ecosophiques
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
+DESCRIPTION:Journée d'étude\nhttps://idhes.pantheonsorbonne.fr/evenements
+ /consonances-ecosophiques
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
 URL:https://idhes.pantheonsorbonne.fr/evenements/consonances-ecosophiques
 END:VEVENT
 BEGIN:VEVENT
 UID:0d94a3accd90@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261109T120000
 DTEND:20261109T140000
 SUMMARY:Sorbonne Work in Progress Lunchtime Seminar
-DESCRIPTION:Séminaire\nhttps://iredies.pantheonsorbonne.fr/evenements/sorbonne-work-progress-lunchtime-seminar
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://iredies.pantheonsorbonne.fr/evenements/sorbonne-work-progress-lunchtime-seminar
+DESCRIPTION:Séminaire\nhttps://iredies.pantheonsorbonne.fr/evenements/sorb
+ onne-work-progress-lunchtime-seminar
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://iredies.pantheonsorbonne.fr/evenements/sorbonne-work-progress-l
+ unchtime-seminar
 END:VEVENT
 BEGIN:VEVENT
 UID:e5a72742169a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261114T100000
 DTEND:20261114T120000
 SUMMARY:Foucault en mots 2026-2027
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/foucault-en-mots-2026-2027
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/foucault-en-mots-2026-2027
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ foucault-en-mots-2026-2027
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/foucault-en-mots-202
+ 6-2027
 END:VEVENT
 BEGIN:VEVENT
 UID:f7a841a589c7@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261116T100000
 DTEND:20261116T120000
-SUMMARY:Philipp Dann : Reflexive Globalization and the future of comparative constitutional studies
-DESCRIPTION:Conférence\nhttps://isjps.pantheonsorbonne.fr/evenements/philipp-dann-reflexive-globalization-and-future-comparative-constitutional-studies
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/philipp-dann-reflexive-globalization-and-future-comparative-constitutional-studies
+SUMMARY:Philipp Dann : Reflexive Globalization and the future of comparativ
+ e constitutional studies
+DESCRIPTION:Conférence\nhttps://isjps.pantheonsorbonne.fr/evenements/phili
+ pp-dann-reflexive-globalization-and-future-comparative-constitutional-stud
+ ies
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/philipp-dann-reflexive-glo
+ balization-and-future-comparative-constitutional-studies
 END:VEVENT
 BEGIN:VEVENT
 UID:6c25ac7a15c1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Rencontres d'automne 2026 du GIS Euro-Lab
-DESCRIPTION:Journée d'étude\nhttps://gis-eurolab.pantheonsorbonne.fr/evenements/rencontres-dautomne-2026-du-gis-euro-lab
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://gis-eurolab.pantheonsorbonne.fr/evenements/rencontres-dautomne-2026-du-gis-euro-lab
+DESCRIPTION:Journée d'étude\nhttps://gis-eurolab.pantheonsorbonne.fr/even
+ ements/rencontres-dautomne-2026-du-gis-euro-lab
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://gis-eurolab.pantheonsorbonne.fr/evenements/rencontres-dautomne-
+ 2026-du-gis-euro-lab
 END:VEVENT
 BEGIN:VEVENT
 UID:6cde1255b391@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261119T143000
 DTEND:20261119T163000
 SUMMARY:Les masculinismes : quelles réponses du droit en Europe ?
-DESCRIPTION:Séminaire\nhttps://iredies.pantheonsorbonne.fr/evenements/masculinismes-quelles-reponses-du-droit-en-europe
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://iredies.pantheonsorbonne.fr/evenements/masculinismes-quelles-reponses-du-droit-en-europe
+DESCRIPTION:Séminaire\nhttps://iredies.pantheonsorbonne.fr/evenements/masc
+ ulinismes-quelles-reponses-du-droit-en-europe
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://iredies.pantheonsorbonne.fr/evenements/masculinismes-quelles-re
+ ponses-du-droit-en-europe
 END:VEVENT
 BEGIN:VEVENT
 UID:eaa95df80cca@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261120T090000
 DTEND:20261120T110000
-SUMMARY:25 ans après la loi Taubira\, repenser le crime contre l’humanité
-DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/25-ans-apres-la-loi-taubira-repenser-le-crime-contre-lhumanite
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/25-ans-apres-la-loi-taubira-repenser-le-crime-contre-lhumanite
+SUMMARY:25 ans après la loi Taubira\, repenser le crime contre l’humanit
+ é
+DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/25-ans-a
+ pres-la-loi-taubira-repenser-le-crime-contre-lhumanite
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/25-ans-apres-la-loi-taubir
+ a-repenser-le-crime-contre-lhumanite
 END:VEVENT
 BEGIN:VEVENT
 UID:350465d2be50@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261120T150000
 DTEND:20261120T170000
-SUMMARY:Actualité de l'axe RSE – Benoît Mandelbrot\, l'économie et la finance
-DESCRIPTION:Séminaire\nhttps://isjps.pantheonsorbonne.fr/evenements/actualite-de-laxe-rse-benoit-mandelbrot-leconomie-et-la-finance
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/actualite-de-laxe-rse-benoit-mandelbrot-leconomie-et-la-finance
+SUMMARY:Actualité de l'axe RSE – Benoît Mandelbrot\, l'économie et la 
+ finance
+DESCRIPTION:Séminaire\nhttps://isjps.pantheonsorbonne.fr/evenements/actual
+ ite-de-laxe-rse-benoit-mandelbrot-leconomie-et-la-finance
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/actualite-de-laxe-rse-beno
+ it-mandelbrot-leconomie-et-la-finance
 END:VEVENT
 BEGIN:VEVENT
 UID:50fbf3d72ec9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261121T103000
 DTEND:20261121T123000
 SUMMARY:Foucault et l'Italie
-DESCRIPTION:Conférence\nhttps://philosophie.pantheonsorbonne.fr/evenements/foucault-et-litalie
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
+DESCRIPTION:Conférence\nhttps://philosophie.pantheonsorbonne.fr/evenements
+ /foucault-et-litalie
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
 URL:https://philosophie.pantheonsorbonne.fr/evenements/foucault-et-litalie
 END:VEVENT
 BEGIN:VEVENT
 UID:2adf25633a3d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261123T090000
 DTEND:20261123T110000
 SUMMARY:8e conférence de l'École HED
-DESCRIPTION:Conférence\nhttps://ecolehed.pantheonsorbonne.fr/evenements/8e-conference-de-lecole-hed
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://ecolehed.pantheonsorbonne.fr/evenements/8e-conference-de-lecole-hed
+DESCRIPTION:Conférence\nhttps://ecolehed.pantheonsorbonne.fr/evenements/8e
+ -conference-de-lecole-hed
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://ecolehed.pantheonsorbonne.fr/evenements/8e-conference-de-lecole
+ -hed
 END:VEVENT
 BEGIN:VEVENT
 UID:142a41fbf622@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
-SUMMARY:10 ans du Réseau Droit et Climat. Avancées\, incertitudes\, perspectives
-DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/10-ans-du-reseau-droit-et-climat.-avancees-incertitudes-perspectives
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/10-ans-du-reseau-droit-et-climat.-avancees-incertitudes-perspectives
+SUMMARY:10 ans du Réseau Droit et Climat. Avancées\, incertitudes\, persp
+ ectives
+DESCRIPTION:Colloque\nhttps://isjps.pantheonsorbonne.fr/evenements/10-ans-d
+ u-reseau-droit-et-climat.-avancees-incertitudes-perspectives
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/10-ans-du-reseau-droit-et-
+ climat.-avancees-incertitudes-perspectives
 END:VEVENT
 BEGIN:VEVENT
 UID:24fad0b0c94f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:La littérature\, matière philosophique ?
-DESCRIPTION:Colloque\nhttps://philosophie.pantheonsorbonne.fr/evenements/la-litterature-matiere-philosophique
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/la-litterature-matiere-philosophique
+DESCRIPTION:Colloque\nhttps://philosophie.pantheonsorbonne.fr/evenements/la
+ -litterature-matiere-philosophique
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/la-litterature-matie
+ re-philosophique
 END:VEVENT
 BEGIN:VEVENT
 UID:3fbe4e9dd315@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261130T093000
 DTEND:20261130T113000
-SUMMARY:Journée d'études "20 ans de recherches en droit administratif (2006-2026)"
-DESCRIPTION:Journée d'étude\nhttps://irjs.pantheonsorbonne.fr/evenements/journee-detudes-20-ans-de-recherches-en-droit-administratif-2006-2026
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://irjs.pantheonsorbonne.fr/evenements/journee-detudes-20-ans-de-recherches-en-droit-administratif-2006-2026
+SUMMARY:Journée d'études "20 ans de recherches en droit administratif (20
+ 06-2026)"
+DESCRIPTION:Journée d'étude\nhttps://irjs.pantheonsorbonne.fr/evenements/
+ journee-detudes-20-ans-de-recherches-en-droit-administratif-2006-2026
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://irjs.pantheonsorbonne.fr/evenements/journee-detudes-20-ans-de-r
+ echerches-en-droit-administratif-2006-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:97e65e89e085@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261208T080000
 DTEND:20261208T100000
-SUMMARY:Colloque "Droit des affaires et droit des contrats dix ans après la réforme : entre interrogations\, confrontations et complémentarité"
-DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-droit-affaires-et-droit-contrats-dix-ans-apres-la-reforme-entre-interrogations
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-droit-affaires-et-droit-contrats-dix-ans-apres-la-reforme-entre-interrogations
+SUMMARY:Colloque "Droit des affaires et droit des contrats dix ans après l
+ a réforme : entre interrogations\, confrontations et complémentarité"
+DESCRIPTION:Colloque\nhttps://irjs.pantheonsorbonne.fr/evenements/colloque-
+ droit-affaires-et-droit-contrats-dix-ans-apres-la-reforme-entre-interrogat
+ ions
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-droit-affaires-et-
+ droit-contrats-dix-ans-apres-la-reforme-entre-interrogations
 END:VEVENT
 BEGIN:VEVENT
 UID:7236d90ec252@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261209T180000
 DTEND:20261209T200000
 SUMMARY:L’association libre : tout\, sauf libre ?
-DESCRIPTION:Séminaire\nhttps://institut-acte.pantheonsorbonne.fr/evenements/lassociation-libre-tout-sauf-libre
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://institut-acte.pantheonsorbonne.fr/evenements/lassociation-libre-tout-sauf-libre
+DESCRIPTION:Séminaire\nhttps://institut-acte.pantheonsorbonne.fr/evenement
+ s/lassociation-libre-tout-sauf-libre
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://institut-acte.pantheonsorbonne.fr/evenements/lassociation-libre
+ -tout-sauf-libre
 END:VEVENT
 BEGIN:VEVENT
 UID:b52dfdd58c35@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261210T093000
 DTEND:20261210T113000
 SUMMARY:Contingence et improvisation(s)
-DESCRIPTION:Journée d'étude\nhttps://isjps.pantheonsorbonne.fr/evenements/contingence-et-improvisation-s
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://isjps.pantheonsorbonne.fr/evenements/contingence-et-improvisation-s
+DESCRIPTION:Journée d'étude\nhttps://isjps.pantheonsorbonne.fr/evenements
+ /contingence-et-improvisation-s
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://isjps.pantheonsorbonne.fr/evenements/contingence-et-improvisati
+ on-s
 END:VEVENT
 BEGIN:VEVENT
 UID:9ea66ad7db02@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270202T090000
 DTEND:20270202T110000
 SUMMARY:Les violences au travail
-DESCRIPTION:Journée d'étude\nhttps://cridup.pantheonsorbonne.fr/evenements/violences-travail
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
+DESCRIPTION:Journée d'étude\nhttps://cridup.pantheonsorbonne.fr/evenement
+ s/violences-travail
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
 URL:https://cridup.pantheonsorbonne.fr/evenements/violences-travail
 END:VEVENT
 END:VCALENDAR

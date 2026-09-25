@@ -1,648 +1,816 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Université Paris-Saclay · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:caaa74f68508@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
 SUMMARY:Junior conference on Data Science and Engineering (JDSE)
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/junior-conference-data-science-and-engineering-jdse-1
-LOCATION:Amphithéâtre Hervé Daniel\, bâtiment Henri Moissan — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-data-science-and-engineering-jdse-1
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/junior-conf
+ erence-data-science-and-engineering-jdse-1
+LOCATION:Amphithéâtre Hervé Daniel\, bâtiment Henri Moissan — Univers
+ ité Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-dat
+ a-science-and-engineering-jdse-1
 END:VEVENT
 BEGIN:VEVENT
 UID:dc9fc9e9bf52@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Molière et ses masques
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/moliere-et-ses-masques
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/moliere-et-ses-masques
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/moliere-et-
+ ses-masques
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/moliere-et-ses-masque
+ s
 END:VEVENT
 BEGIN:VEVENT
 UID:49fee46a9985@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Festival Vo-Vf\, Traduire le monde
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/festival-vo-vf-traduire-le-monde-1
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/festival-vo-vf-traduire-le-monde-1
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/festival-vo
+ -vf-traduire-le-monde-1
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/festival-vo-vf-tradui
+ re-le-monde-1
 END:VEVENT
 BEGIN:VEVENT
 UID:adf73ca45f04@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
-SUMMARY:Changement climatique : une réalité physique\, un défi pour l'humanité
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/changement-climatique-une-realite-physique-un-defi-pour-lhumanite
-LOCATION:CentraleSupélec - Amphithéâtre Janet — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/changement-climatique-une-realite-physique-un-defi-pour-lhumanite
+SUMMARY:Changement climatique : une réalité physique\, un défi pour l'hu
+ manité
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/changement-
+ climatique-une-realite-physique-un-defi-pour-lhumanite
+LOCATION:CentraleSupélec - Amphithéâtre Janet — Université Paris-Sacl
+ ay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/changement-climatique
+ -une-realite-physique-un-defi-pour-lhumanite
 END:VEVENT
 BEGIN:VEVENT
 UID:c80a2acafd40@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-SUMMARY:Séminaire COVADO-SHS : Quel équipement pour les sciences humaines et sociales ?
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/seminaire-covado-shs-quel-equipement-pour-les-sciences-humaines-et-sociales
-LOCATION:ENS Paris-Saclay - salle 1 B26\, 4 avenue de Sciences\, 91190 Gif-sur-Yvette — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/seminaire-covado-shs-quel-equipement-pour-les-sciences-humaines-et-sociales
+SUMMARY:Séminaire COVADO-SHS : Quel équipement pour les sciences humaines
+  et sociales ?
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/seminaire-c
+ ovado-shs-quel-equipement-pour-les-sciences-humaines-et-sociales
+LOCATION:ENS Paris-Saclay - salle 1 B26\, 4 avenue de Sciences\, 91190 Gif-
+ sur-Yvette — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/seminaire-covado-shs-
+ quel-equipement-pour-les-sciences-humaines-et-sociales
 END:VEVENT
 BEGIN:VEVENT
 UID:e76f874e3a7c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Le Mitate Lab
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/le-mitate-lab
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/le-mitate-l
+ ab
 LOCATION:INSTN — Université Paris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/le-mitate-lab
 END:VEVENT
 BEGIN:VEVENT
 UID:631fd42d6d14@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-SUMMARY:Café Science @CentraleSupélec - Les défauts du diamant : une fenêtre quantique sur la matière - Par J.F. ROCH\, professeur au laboratoire LuMIn
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-science-centralesupelec-les-defauts-du-diamant-une-fenetre-quantique-sur-la-matiere-par-jf-roch-professeur-au-laboratoire-lumin
-LOCATION:CentraleSupélec - Bâtiment Eiffel\, salle Vi.118 — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/cafe-science-centralesupelec-les-defauts-du-diamant-une-fenetre-quantique-sur-la-matiere-par-jf-roch-professeur-au-laboratoire-lumin
+SUMMARY:Café Science @CentraleSupélec - Les défauts du diamant : une fen
+ être quantique sur la matière - Par J.F. ROCH\, professeur au laboratoir
+ e LuMIn
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-scienc
+ e-centralesupelec-les-defauts-du-diamant-une-fenetre-quantique-sur-la-mati
+ ere-par-jf-roch-professeur-au-laboratoire-lumin
+LOCATION:CentraleSupélec - Bâtiment Eiffel\, salle Vi.118 — Université
+  Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/cafe-science-centrale
+ supelec-les-defauts-du-diamant-une-fenetre-quantique-sur-la-matiere-par-jf
+ -roch-professeur-au-laboratoire-lumin
 END:VEVENT
 BEGIN:VEVENT
 UID:8edfea589a62@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Atelier de co-réparation – Électronique & électroménager
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/atelier-de-co-reparation-electronique-electromenager
-LOCATION:Polytech Paris-Saclay - Université Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/atelier-de-co-reparation-electronique-electromenager
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/atelier-de-
+ co-reparation-electronique-electromenager
+LOCATION:Polytech Paris-Saclay - Université Paris-Saclay — Université P
+ aris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/atelier-de-co-reparat
+ ion-electronique-electromenager
 END:VEVENT
 BEGIN:VEVENT
 UID:2260b786cc50@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Projection du documentaire : Le vivant qui se défend
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/projection-du-documentaire-le-vivant-qui-se-defend
-LOCATION:Lumen - Université Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/projection-du-documentaire-le-vivant-qui-se-defend
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/projection-
+ du-documentaire-le-vivant-qui-se-defend
+LOCATION:Lumen - Université Paris-Saclay — Université Paris-Saclay\, Gi
+ f-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/projection-du-documen
+ taire-le-vivant-qui-se-defend
 END:VEVENT
 BEGIN:VEVENT
 UID:899b331eb3a3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Junior conference on Wireless and Optical Communication (JWOC)
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/junior-conference-wireless-and-optical-communication-jwoc-0
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/junior-conf
+ erence-wireless-and-optical-communication-jwoc-0
 LOCATION:Télécom Paris — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-wireless-and-optical-communication-jwoc-0
+URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-wir
+ eless-and-optical-communication-jwoc-0
 END:VEVENT
 BEGIN:VEVENT
 UID:82033cd25583@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Fête de la science à l'Université Paris-Saclay
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fete-de-la-science-luniversite-paris-saclay
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fete-de-la-
+ science-luniversite-paris-saclay
 LOCATION:Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-luniversite-paris-saclay
+URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-lu
+ niversite-paris-saclay
 END:VEVENT
 BEGIN:VEVENT
 UID:07b7e97fdb34@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Parlons ... écologie !
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/parlons-ecologie
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/parlons-eco
+ logie
 LOCATION:Lumen — Université Paris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/parlons-ecologie
 END:VEVENT
 BEGIN:VEVENT
 UID:dad7cff8ca39@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:VILLAGE DES SCIENCES PARIS-SACLAY
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/village-des-sciences-paris-saclay-0
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/village-des
+ -sciences-paris-saclay-0
 LOCATION:ENS Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/village-des-sciences-paris-saclay-0
+URL:https://www.universite-paris-saclay.fr/evenements/village-des-sciences-
+ paris-saclay-0
 END:VEVENT
 BEGIN:VEVENT
 UID:b89bc668359d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:35ème édition de la Fête de la science au C2N
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/35eme-edition-de-la-fete-de-la-science-au-c2n
-LOCATION:Centre de Nanosciences et de Nanotechnologies — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/35eme-edition-de-la-fete-de-la-science-au-c2n
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/35eme-editi
+ on-de-la-fete-de-la-science-au-c2n
+LOCATION:Centre de Nanosciences et de Nanotechnologies — Université Pari
+ s-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/35eme-edition-de-la-f
+ ete-de-la-science-au-c2n
 END:VEVENT
 BEGIN:VEVENT
 UID:7d621867d90c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:Fête de la science 2026 - Bâtiment Henri Moissan
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements-ufr-pharmacie/fete-de-la-science-2026-batiment-henri-moissan
-LOCATION:Bâtiment Henri Moissan — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements-ufr-pharmacie/fete-de-la-science-2026-batiment-henri-moissan
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements-ufr-pharmac
+ ie/fete-de-la-science-2026-batiment-henri-moissan
+LOCATION:Bâtiment Henri Moissan — Université Paris-Saclay\, Gif-sur-Yve
+ tte
+URL:https://www.universite-paris-saclay.fr/evenements-ufr-pharmacie/fete-de
+ -la-science-2026-batiment-henri-moissan
 END:VEVENT
 BEGIN:VEVENT
 UID:5b3cc4220737@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
-SUMMARY:Fête de la Science à l'Institut d'Astrophysique Spatiale - Université Paris-Saclay
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fete-de-la-science-linstitut-dastrophysique-spatiale-universite-paris-saclay
-LOCATION:Institut d'Astrophysique Spatiale (IAS) — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-linstitut-dastrophysique-spatiale-universite-paris-saclay
+SUMMARY:Fête de la Science à l'Institut d'Astrophysique Spatiale - Univer
+ sité Paris-Saclay
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fete-de-la-
+ science-linstitut-dastrophysique-spatiale-universite-paris-saclay
+LOCATION:Institut d'Astrophysique Spatiale (IAS) — Université Paris-Sacl
+ ay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-li
+ nstitut-dastrophysique-spatiale-universite-paris-saclay
 END:VEVENT
 BEGIN:VEVENT
 UID:8afdc86a6e62@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Tremplin : le forum carrière du doctorat 2026 - 1re édition
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/tremplin-le-forum-carriere-du-doctorat-2026-1re-edition
-LOCATION:Bâtiment Henri Moissan - 640 rue Louis de Broglie — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/tremplin-le-forum-carriere-du-doctorat-2026-1re-edition
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/tremplin-le
+ -forum-carriere-du-doctorat-2026-1re-edition
+LOCATION:Bâtiment Henri Moissan - 640 rue Louis de Broglie — Université
+  Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/tremplin-le-forum-car
+ riere-du-doctorat-2026-1re-edition
 END:VEVENT
 BEGIN:VEVENT
 UID:7f183cc56fbe@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:IA & 6G : construire le monde intelligent de demain
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/ia-6g-construire-le-monde-intelligent-de-demain
-LOCATION:Ministère de l'Enseignement Supérieur et de la Recherche — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/ia-6g-construire-le-monde-intelligent-de-demain
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/ia-6g-const
+ ruire-le-monde-intelligent-de-demain
+LOCATION:Ministère de l'Enseignement Supérieur et de la Recherche — Uni
+ versité Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/ia-6g-construire-le-m
+ onde-intelligent-de-demain
 END:VEVENT
 BEGIN:VEVENT
 UID:adde0c39ef09@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Concert-sandwich 06/10/26
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-sandwich-06/10/26
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-san
+ dwich-06/10/26
 LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-06/10/26
+URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-06/1
+ 0/26
 END:VEVENT
 BEGIN:VEVENT
 UID:de69698ffd73@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Dans le nez du voisin
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/dans-le-nez-du-voisin
-LOCATION:Auditorium\, Bâtiment Lumen\, 8 avenue des Sciences à Gif sur Yvette — Université Paris-Saclay\, Gif-sur-Yvette
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/dans-le-nez
+ -du-voisin
+LOCATION:Auditorium\, Bâtiment Lumen\, 8 avenue des Sciences à Gif sur Yv
+ ette — Université Paris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/dans-le-nez-du-voisin
 END:VEVENT
 BEGIN:VEVENT
 UID:dab31d14bbc5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Biodiversité\, l'autre enjeu vital
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/biodiversite-lautre-enjeu-vital
-LOCATION:CentraleSupélec - Amphithéâtre Janet — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/biodiversite-lautre-enjeu-vital
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/biodiversit
+ e-lautre-enjeu-vital
+LOCATION:CentraleSupélec - Amphithéâtre Janet — Université Paris-Sacl
+ ay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/biodiversite-lautre-e
+ njeu-vital
 END:VEVENT
 BEGIN:VEVENT
 UID:f8b810b73c60@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Prevent'Week 2026
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/preventweek-2026
-LOCATION:Divers campus de l'Université Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/preventweek
+ -2026
+LOCATION:Divers campus de l'Université Paris-Saclay — Université Paris-
+ Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/preventweek-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:15294b4155e1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Soirée jeux au Lumen
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/soiree-jeux-au-lumen
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/soiree-jeux
+ -au-lumen
 LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/soiree-jeux-au-lumen
 END:VEVENT
 BEGIN:VEVENT
 UID:1760f8afc826@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Eurêkartes - Comment protéger les cultures ?
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/eurekartes-comment-proteger-les-cultures
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/eurekartes-
+ comment-proteger-les-cultures
 LOCATION:le deck — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-comment-proteger-les-cultures
+URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-comment-pr
+ oteger-les-cultures
 END:VEVENT
 BEGIN:VEVENT
 UID:27e303de5953@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Atelier de co-création : IA & One Health
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/atelier-de-co-creation-ia-one-health
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/atelier-de-
+ co-creation-ia-one-health
 LOCATION:CentraleSupélec — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/atelier-de-co-creation-ia-one-health
+URL:https://www.universite-paris-saclay.fr/evenements/atelier-de-co-creatio
+ n-ia-one-health
 END:VEVENT
 BEGIN:VEVENT
 UID:2fb0029ba8c9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Junior conference on Informatics: Theory and Applications (JITA)
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/junior-conference-informatics-theory-and-applications-jita
-LOCATION:Digitéo\, Bâtiment 660\, Avenue des Sciences\, 91190\, Gif-sur-Yvette — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-informatics-theory-and-applications-jita
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/junior-conf
+ erence-informatics-theory-and-applications-jita
+LOCATION:Digitéo\, Bâtiment 660\, Avenue des Sciences\, 91190\, Gif-sur-Y
+ vette — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-inf
+ ormatics-theory-and-applications-jita
 END:VEVENT
 BEGIN:VEVENT
 UID:e67379bbf530@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Cataphonie
 DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cataphonie
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/cataphonie
 END:VEVENT
 BEGIN:VEVENT
 UID:f6fe3722d0fd@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
-SUMMARY:Fête de la science au Kremlin Bicêtre : Saveurs savantes : venez explorer l’alimentation autrement !
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fete-de-la-science-au-kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-autrement
-LOCATION:Batiment de recherche — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-au-kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-autrement
+SUMMARY:Fête de la science au Kremlin Bicêtre : Saveurs savantes : venez 
+ explorer l’alimentation autrement !
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fete-de-la-
+ science-au-kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-a
+ utrement
+LOCATION:Batiment de recherche — Université Paris-Saclay\, Gif-sur-Yvett
+ e
+URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-au
+ -kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-autrement
 END:VEVENT
 BEGIN:VEVENT
 UID:c151f4795a61@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
-SUMMARY:Visite du Service Hospitalier Frédéric Joliot - Fête de la Science
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/visite-du-service-hospitalier-frederic-joliot-fete-de-la-science
-LOCATION:Service Hospitalier Frédéric Joliot — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/visite-du-service-hospitalier-frederic-joliot-fete-de-la-science
+SUMMARY:Visite du Service Hospitalier Frédéric Joliot - Fête de la Scien
+ ce
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/visite-du-s
+ ervice-hospitalier-frederic-joliot-fete-de-la-science
+LOCATION:Service Hospitalier Frédéric Joliot — Université Paris-Saclay
+ \, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/visite-du-service-hos
+ pitalier-frederic-joliot-fete-de-la-science
 END:VEVENT
 BEGIN:VEVENT
 UID:9886706e77aa@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Erasmus Days 2026
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/erasmus-days-2026
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/erasmus-day
+ s-2026
 LOCATION:Université Paris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/erasmus-days-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:ff224788a820@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Forum entreprises 2026
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/forum-entreprises-2026
-LOCATION:Polytech Paris-Saclay - Université Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/forum-entreprises-2026
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/forum-entre
+ prises-2026
+LOCATION:Polytech Paris-Saclay - Université Paris-Saclay — Université P
+ aris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/forum-entreprises-202
+ 6
 END:VEVENT
 BEGIN:VEVENT
 UID:7ff555897e01@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-SUMMARY:Venez rencontrer le DAAD France - l’Office allemand d’échanges universitaires !
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/venez-rencontrer-le-daad-france-loffice-allemand-dechanges-universitaires
-LOCATION:Institut Pascal Paris-Saclay - Grand Amphithéâtre — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/venez-rencontrer-le-daad-france-loffice-allemand-dechanges-universitaires
+SUMMARY:Venez rencontrer le DAAD France - l’Office allemand d’échanges
+  universitaires !
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/venez-renco
+ ntrer-le-daad-france-loffice-allemand-dechanges-universitaires
+LOCATION:Institut Pascal Paris-Saclay - Grand Amphithéâtre — Universit
+ é Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/venez-rencontrer-le-d
+ aad-france-loffice-allemand-dechanges-universitaires
 END:VEVENT
 BEGIN:VEVENT
 UID:1a6340ba1f58@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Café des LaboS Soutenables - CLASS
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-des-labos-soutenables-class-0
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-des-la
+ bos-soutenables-class-0
 LOCATION:En ligne — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-soutenables-class-0
+URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-souten
+ ables-class-0
 END:VEVENT
 BEGIN:VEVENT
 UID:aff8ff6a6332@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:HerMINI
 DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/hermini
-LOCATION:Auditorium\, Bâtiment Lumen\, 8 avenue des Sciences à Gif sur Yvette — Université Paris-Saclay\, Gif-sur-Yvette
+LOCATION:Auditorium\, Bâtiment Lumen\, 8 avenue des Sciences à Gif sur Yv
+ ette — Université Paris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/hermini
 END:VEVENT
 BEGIN:VEVENT
 UID:815cfdc5ead1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-SUMMARY:5ème édition des Journées doctorales et Masteriales de la Graduate School Sociologie et Science politique
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/5eme-edition-des-journees-doctorales-et-masteriales-de-la-graduate-school-sociologie-et-science-politique
-LOCATION:Bâtiment Vauban - UVSQ — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/5eme-edition-des-journees-doctorales-et-masteriales-de-la-graduate-school-sociologie-et-science-politique
+SUMMARY:5ème édition des Journées doctorales et Masteriales de la Gradua
+ te School Sociologie et Science politique
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/5eme-editio
+ n-des-journees-doctorales-et-masteriales-de-la-graduate-school-sociologie-
+ et-science-politique
+LOCATION:Bâtiment Vauban - UVSQ — Université Paris-Saclay\, Gif-sur-Yve
+ tte
+URL:https://www.universite-paris-saclay.fr/evenements/5eme-edition-des-jour
+ nees-doctorales-et-masteriales-de-la-graduate-school-sociologie-et-science
+ -politique
 END:VEVENT
 BEGIN:VEVENT
 UID:1cad3ecf405a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Julien Bobroff vs Kim Kardashian
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/julien-bobroff-vs-kim-kardashian
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/julien-bobr
+ off-vs-kim-kardashian
 LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/julien-bobroff-vs-kim-kardashian
+URL:https://www.universite-paris-saclay.fr/evenements/julien-bobroff-vs-kim
+ -kardashian
 END:VEVENT
 BEGIN:VEVENT
 UID:724d6cb139ba@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-SUMMARY:Changement climatique & agriculture : impacts\, adaptations & atténuation. Quelles leçons tirer de l’année 2026 ?
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/changement-climatique-agriculture-impacts-adaptations-attenuation-quelles-lecons-tirer-de-lannee-2026
-LOCATION:CentraleSupélec\, Bâtiment Eiffel\, Auditorium Michelin — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/changement-climatique-agriculture-impacts-adaptations-attenuation-quelles-lecons-tirer-de-lannee-2026
+SUMMARY:Changement climatique & agriculture : impacts\, adaptations & atté
+ nuation. Quelles leçons tirer de l’année 2026 ?
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/changement-
+ climatique-agriculture-impacts-adaptations-attenuation-quelles-lecons-tire
+ r-de-lannee-2026
+LOCATION:CentraleSupélec\, Bâtiment Eiffel\, Auditorium Michelin — Univ
+ ersité Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/changement-climatique
+ -agriculture-impacts-adaptations-attenuation-quelles-lecons-tirer-de-lanne
+ e-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:47ac020740d3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:International SPS Symposium 2026
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/international-sps-symposium-2026
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/internation
+ al-sps-symposium-2026
 LOCATION:INRAE Versailles — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/international-sps-symposium-2026
+URL:https://www.universite-paris-saclay.fr/evenements/international-sps-sym
+ posium-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:c64508d584dd@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Journée scientifique de la GS Chimie
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/journee-scientifique-de-la-gs-chimie
-LOCATION:Amphithéâtre Olivier Kahn\, bâtiment Henri Moissan 2\, 17 avenue des Sciences\, Orsay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/journee-scientifique-de-la-gs-chimie
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/journee-sci
+ entifique-de-la-gs-chimie
+LOCATION:Amphithéâtre Olivier Kahn\, bâtiment Henri Moissan 2\, 17 avenu
+ e des Sciences\, Orsay — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/journee-scientifique-
+ de-la-gs-chimie
 END:VEVENT
 BEGIN:VEVENT
 UID:7d2d99bbcf76@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Penser le patrimoine culturel entre héritages et devenirs
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/penser-le-patrimoine-culturel-entre-heritages-et-devenirs
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/penser-le-p
+ atrimoine-culturel-entre-heritages-et-devenirs
 LOCATION:ancienne mairie — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/penser-le-patrimoine-culturel-entre-heritages-et-devenirs
+URL:https://www.universite-paris-saclay.fr/evenements/penser-le-patrimoine-
+ culturel-entre-heritages-et-devenirs
 END:VEVENT
 BEGIN:VEVENT
 UID:7a0dc7c9724e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:MURDER PARTY 15/10/2026
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/murder-party-15/10/2026
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/murder-part
+ y-15/10/2026
 LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/murder-party-15/10/2026
+URL:https://www.universite-paris-saclay.fr/evenements/murder-party-15/10/20
+ 26
 END:VEVENT
 BEGIN:VEVENT
 UID:237a6c50a3d2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Eurêkartes - Océans\, le grand dérèglement
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/eurekartes-oceans-le-grand-dereglement
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/eurekartes-
+ oceans-le-grand-dereglement
 LOCATION:La Kaz ludik — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-oceans-le-grand-dereglement
+URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-oceans-le-
+ grand-dereglement
 END:VEVENT
 BEGIN:VEVENT
 UID:c39124f93767@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Concert-sandwich 20/10/26
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-sandwich-20/10/26
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-san
+ dwich-20/10/26
 LOCATION:Faculté Jean Monnet — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-20/10/26
+URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-20/1
+ 0/26
 END:VEVENT
 BEGIN:VEVENT
 UID:ed8b3e991939@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Forum De la Mobilité Étudiante EUGLOH
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/forum-de-la-mobilite-etudiante-eugloh
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/forum-de-la
+ -mobilite-etudiante-eugloh
 LOCATION:Online — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/forum-de-la-mobilite-etudiante-eugloh
+URL:https://www.universite-paris-saclay.fr/evenements/forum-de-la-mobilite-
+ etudiante-eugloh
 END:VEVENT
 BEGIN:VEVENT
 UID:9b6b4836887d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
 SUMMARY:20ème congrès français de sédimentologie
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/20eme-congres-francais-de-sedimentologie
-LOCATION:Bâtiment Bouygues Théâtre Joël Rousseau — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/20eme-congres-francais-de-sedimentologie
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/20eme-congr
+ es-francais-de-sedimentologie
+LOCATION:Bâtiment Bouygues Théâtre Joël Rousseau — Université Paris-
+ Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/20eme-congres-francai
+ s-de-sedimentologie
 END:VEVENT
 BEGIN:VEVENT
 UID:a166aaf6e150@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Participez au HABS Neuro-AI Hackathon 2026
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/participez-au-habs-neuro-ai-hackathon-2026
-LOCATION:Amphithéâtre Hervé Daniel\, bâtiment Henri Moissan — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/participez-au-habs-neuro-ai-hackathon-2026
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/participez-
+ au-habs-neuro-ai-hackathon-2026
+LOCATION:Amphithéâtre Hervé Daniel\, bâtiment Henri Moissan — Univers
+ ité Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/participez-au-habs-ne
+ uro-ai-hackathon-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:c34d95b0ef43@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Mélodies françaises
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/melodies-francaises-0
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/melodies-fr
+ ancaises-0
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/melodies-francaises-0
 END:VEVENT
 BEGIN:VEVENT
 UID:a743bacc80da@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Péritopie 1
 DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/peritopie-1
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/peritopie-1
 END:VEVENT
 BEGIN:VEVENT
 UID:f0683ad618af@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Café des LaboS Soutenables - CLASS
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-des-labos-soutenables-class-1
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-des-la
+ bos-soutenables-class-1
 LOCATION:En ligne — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-soutenables-class-1
+URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-souten
+ ables-class-1
 END:VEVENT
 BEGIN:VEVENT
 UID:4393b2d91d55@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Concert-sandwich 17/11/26
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-sandwich-17/11/26
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-san
+ dwich-17/11/26
 LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-17/11/26
+URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-17/1
+ 1/26
 END:VEVENT
 BEGIN:VEVENT
 UID:61aec119d709@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:JOURNÉE SCIENTIFIQUE - Réseau cytométrie
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/journee-scientifique-reseau-cytometrie
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/journee-sci
+ entifique-reseau-cytometrie
 LOCATION:Bâtiment IDEEV — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/journee-scientifique-reseau-cytometrie
+URL:https://www.universite-paris-saclay.fr/evenements/journee-scientifique-
+ reseau-cytometrie
 END:VEVENT
 BEGIN:VEVENT
 UID:16c56ef578d9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
-SUMMARY:Le Blob : De la forêt à l'espace\, l'incroyable parcours d'un organisme unicellulaire.
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/le-blob-de-la-foret-lespace-lincroyable-parcours-dun-organisme-unicellulaire
-LOCATION:Amphithéâtre du Centre de nanosciences et de nanotechnologies (C2N) — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/le-blob-de-la-foret-lespace-lincroyable-parcours-dun-organisme-unicellulaire
+SUMMARY:Le Blob : De la forêt à l'espace\, l'incroyable parcours d'un org
+ anisme unicellulaire.
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/le-blob-de-
+ la-foret-lespace-lincroyable-parcours-dun-organisme-unicellulaire
+LOCATION:Amphithéâtre du Centre de nanosciences et de nanotechnologies (C
+ 2N) — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/le-blob-de-la-foret-l
+ espace-lincroyable-parcours-dun-organisme-unicellulaire
 END:VEVENT
 BEGIN:VEVENT
 UID:873dd9288732@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Conférence musicale : flûte et piano
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/conference-musicale-flute-et-piano
-LOCATION:Auditorium\, Bâtiment Lumen\, 8 avenue des Sciences à Gif sur Yvette — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/conference-musicale-flute-et-piano
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/conference-
+ musicale-flute-et-piano
+LOCATION:Auditorium\, Bâtiment Lumen\, 8 avenue des Sciences à Gif sur Yv
+ ette — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/conference-musicale-f
+ lute-et-piano
 END:VEVENT
 BEGIN:VEVENT
 UID:8da81caa0eb5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Concert-sandwich 24/11/26
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-sandwich-24/11/26
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-san
+ dwich-24/11/26
 LOCATION:IUT de Sceaux — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-24/11/26
+URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-24/1
+ 1/26
 END:VEVENT
 BEGIN:VEVENT
 UID:b4e29de13fe5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:La Vie de Recherche 1
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/la-vie-de-recherche-1
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/la-vie-de-r
+ echerche-1
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/la-vie-de-recherche-1
 END:VEVENT
 BEGIN:VEVENT
 UID:995511abbd29@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Soirées ExTRAS 1 et 2
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/soirees-extras-1-et-2
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/soirees-ext
+ ras-1-et-2
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/soirees-extras-1-et-2
 END:VEVENT
 BEGIN:VEVENT
 UID:60e8a1d24236@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Photographie et bande dessinée
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/photographie-et-bande-dessinee
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/photographi
+ e-et-bande-dessinee
 LOCATION:la contemporaine — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/photographie-et-bande-dessinee
+URL:https://www.universite-paris-saclay.fr/evenements/photographie-et-bande
+ -dessinee
 END:VEVENT
 BEGIN:VEVENT
 UID:5d56f0aaf59f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Fake news - Un ennemi du peuple
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fake-news-un-ennemi-du-peuple
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/fake-news-un-ennemi-du-peuple
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/fake-news-u
+ n-ennemi-du-peuple
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/fake-news-un-ennemi-d
+ u-peuple
 END:VEVENT
 BEGIN:VEVENT
 UID:7bcdc60797c0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Journée Annuelle de l'Axe Astrophysique de la Graduate School de Physique
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/journee-annuelle-de-laxe-astrophysique-de-la-graduate-school-de-physique
-LOCATION:Institut Pascal Paris-Saclay - Grand Amphithéâtre — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/journee-annuelle-de-laxe-astrophysique-de-la-graduate-school-de-physique
+SUMMARY:Journée Annuelle de l'Axe Astrophysique de la Graduate School de P
+ hysique
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/journee-ann
+ uelle-de-laxe-astrophysique-de-la-graduate-school-de-physique
+LOCATION:Institut Pascal Paris-Saclay - Grand Amphithéâtre — Universit
+ é Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/journee-annuelle-de-l
+ axe-astrophysique-de-la-graduate-school-de-physique
 END:VEVENT
 BEGIN:VEVENT
 UID:579cff5e0e62@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Trait(s)
 DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/traits
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
 URL:https://www.universite-paris-saclay.fr/evenements/traits
 END:VEVENT
 BEGIN:VEVENT
 UID:d18631f9d83b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Concert-sandwich 15/12/26
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-sandwich-15/12/26
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/concert-san
+ dwich-15/12/26
 LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-15/12/26
+URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-15/1
+ 2/26
 END:VEVENT
 BEGIN:VEVENT
 UID:2b4798ca79ce@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Festin du mardi midi : Zarlor
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/festin-du-mardi-midi-zarlor
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/festin-du-mardi-midi-zarlor
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/festin-du-m
+ ardi-midi-zarlor
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/festin-du-mardi-midi-
+ zarlor
 END:VEVENT
 BEGIN:VEVENT
 UID:c5d7d8c73621@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Café des LaboS Soutenables - CLASS
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-des-labos-soutenables-class-2
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/cafe-des-la
+ bos-soutenables-class-2
 LOCATION:En ligne — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-soutenables-class-2
+URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-souten
+ ables-class-2
 END:VEVENT
 BEGIN:VEVENT
 UID:bcf07fb975de@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
 SUMMARY:Les inscriptions aux ateliers culturels sont ouvertes !
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/les-inscriptions-aux-ateliers-culturels-sont-ouvertes-4
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/les-inscrip
+ tions-aux-ateliers-culturels-sont-ouvertes-4
 LOCATION:Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/les-inscriptions-aux-ateliers-culturels-sont-ouvertes-4
+URL:https://www.universite-paris-saclay.fr/evenements/les-inscriptions-aux-
+ ateliers-culturels-sont-ouvertes-4
 END:VEVENT
 END:VCALENDAR

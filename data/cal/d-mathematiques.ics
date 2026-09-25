@@ -1,33 +1,39 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Mathématiques · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:3623aa1a44ff@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260924
 DTEND;VALUE=DATE:20260925
-SUMMARY:Topological quantum matter: a conference in memory of Mark Oliver Goerbig
+SUMMARY:Topological quantum matter: a conference in memory of Mark Oliver G
+ oerbig
 DESCRIPTION:Colloque\nhttps://markgoerbigconf.sciencesconf.org/
 LOCATION:Orsay (France)
 URL:https://markgoerbigconf.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:208b9066fec3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T093000
 DTEND:20260925T113000
-SUMMARY:Journée "Évaluer et gérer le risque – À l’interface entre les mathématiques et...
-DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/journee-evaluer-et-gerer-le-risque-a-l-interface-entre-les-mathematiques-et-les-sciences-humaines-et-sociales-8063
+SUMMARY:Journée "Évaluer et gérer le risque – À l’interface entre l
+ es mathématiques et...
+DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/journe
+ e-evaluer-et-gerer-le-risque-a-l-interface-entre-les-mathematiques-et-les-
+ sciences-humaines-et-sociales-8063
 LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/journee-evaluer-et-gerer-le-risque-a-l-interface-entre-les-mathematiques-et-les-sciences-humaines-et-sociales-8063
+URL:https://www.institutdesactuaires.com/agenda/journee-evaluer-et-gerer-le
+ -risque-a-l-interface-entre-les-mathematiques-et-les-sciences-humaines-et-
+ sociales-8063
 END:VEVENT
 BEGIN:VEVENT
 UID:ffd76599552d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T134500
 DTEND:20260925T173000
 SUMMARY:Derived Seminar
@@ -37,7 +43,7 @@ URL:https://indico.math.cnrs.fr/event/16974/
 END:VEVENT
 BEGIN:VEVENT
 UID:9c09e527e288@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T141500
 DTEND:20260925T151500
 SUMMARY:Séminaire 25/09/2026 - Michael I. Jordan
@@ -47,47 +53,71 @@ URL:https://indico.math.cnrs.fr/event/16591/
 END:VEVENT
 BEGIN:VEVENT
 UID:3abc235cb73f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T083000
 DTEND:20260928T103000
 SUMMARY:Workshop 1 - Operator Algebras: Groups and Dynamics
-DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 1 - Operator Algebras: Groups and Dynamics September 28 to October 2\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the interaction between operators algebras\, group representation theory\, group actions\, topological dynamics and ergodic theory. List of speakers: Goulnara Arzhantseva Uri Bade\nhttps://indico.math.cnrs.fr/event/14375/
+DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Works
+ hop 1 - Operator Algebras: Groups and Dynamics September 28 to October 2\,
+  2026 - IHP\, Paris Summary The workshop will feature talks on the latest 
+ developments on the interaction between operators algebras\, group represe
+ ntation theory\, group actions\, topological dynamics and ergodic theory. 
+ List of speakers: Goulnara Arzhantseva Uri Bade\nhttps://indico.math.cnrs.
+ fr/event/14375/
 LOCATION:Institut Henri Poincaré
 URL:https://indico.math.cnrs.fr/event/14375/
 END:VEVENT
 BEGIN:VEVENT
 UID:7d8418777263@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T113000
 DTEND:20260928T160000
 SUMMARY:Rencontres de rentrée
-DESCRIPTION:Nous avons le plaisir de vous annoncer la reprise du NP-coi pour l'année 2026-2027. La journée de rentrée aura lieu le lundi 28 septembre à l'IHP (Institut Henri Poincaré). N'oubliez pas de vous inscrire pour le repas.\nhttps://indico.math.cnrs.fr/event/17284/
+DESCRIPTION:Nous avons le plaisir de vous annoncer la reprise du NP-coi pou
+ r l'année 2026-2027. La journée de rentrée aura lieu le lundi 28 septem
+ bre à l'IHP (Institut Henri Poincaré). N'oubliez pas de vous inscrire po
+ ur le repas.\nhttps://indico.math.cnrs.fr/event/17284/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17284/
 END:VEVENT
 BEGIN:VEVENT
 UID:ce049f565a06@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T144500
 DTEND:20260930T160000
-SUMMARY:Dynamical Tidal Response of Neutron Stars from Scattering Amplitudes
-DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) In this talk I will describe an amplitude-based framework for extracting the frequency-dependent tidal response of neutron stars while preserving the tidal resonances associated with their normal modes. The response is obtained by matching the amplitude for gravitational-wave scattering off a neutron star\, equivalently gravitational Comp\nhttps://indico.math.cnrs.fr/event/17400/
+SUMMARY:Dynamical Tidal Response of Neutron Stars from Scattering Amplitude
+ s
+DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) I
+ n this talk I will describe an amplitude-based framework for extracting th
+ e frequency-dependent tidal response of neutron stars while preserving the
+  tidal resonances associated with their normal modes. The response is obta
+ ined by matching the amplitude for gravitational-wave scattering off a neu
+ tron star\, equivalently gravitational Comp\nhttps://indico.math.cnrs.fr/e
+ vent/17400/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17400/
 END:VEVENT
 BEGIN:VEVENT
 UID:d23643fe3eea@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-SUMMARY:Rencontres francophones sur la Logique Floue et ses Applications 2026 (LFA 2026)
-DESCRIPTION:Les Rencontres Francophones sur la Logique Floue et ses Applications (LFA) sont l'événement scientifique annuel francophone où chercheurs académiques et industriels se réunissent pour faire le point sur les développements récents dans les théories de l'imprécision et de l'incertitude (théories des possibilités\, fonctions de croyance\, probabilités imprécises\, ensembles approximatifs et aléatoires\, \nhttps://lfa2026.sciencesconf.org
-LOCATION:Centre Panthéon - Université Paris Panthéon Assas - Paris (France)
+SUMMARY:Rencontres francophones sur la Logique Floue et ses Applications 20
+ 26 (LFA 2026)
+DESCRIPTION:Les Rencontres Francophones sur la Logique Floue et ses Applica
+ tions (LFA) sont l'événement scientifique annuel francophone où cherche
+ urs académiques et industriels se réunissent pour faire le point sur les
+  développements récents dans les théories de l'imprécision et de l'inc
+ ertitude (théories des possibilités\, fonctions de croyance\, probabilit
+ és imprécises\, ensembles approximatifs et aléatoires\, \nhttps://lfa20
+ 26.sciencesconf.org
+LOCATION:Centre Panthéon - Université Paris Panthéon Assas - Paris (Fran
+ ce)
 URL:https://lfa2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:a6bfa0a6a3b3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T090000
 DTEND:20261001T223000
 SUMMARY:calcul-intensif@CEA
@@ -97,37 +127,57 @@ URL:https://indico.math.cnrs.fr/event/17254/
 END:VEVENT
 BEGIN:VEVENT
 UID:d7e192760858@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T090000
 DTEND:20261001T110000
 SUMMARY:Formation Cast3M Développement
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs avancés. L'objectif est d'apprendre à développer dans Cast3M afin d'ajouter de nouvelles fonctionnalités au code (nouveaux opérateurs/directives\, nouveaux modèles\, ...). Pour le personnel CEA\, en plus de ce formulaire\, veuillez vous inscrire a\nhttps://indico.math.cnrs.fr/event/16609/
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
+  la Maison de la Simulation (pas de visioconférene) . Cette formation s'a
+ dresse aux utilisateurs avancés. L'objectif est d'apprendre à développe
+ r dans Cast3M afin d'ajouter de nouvelles fonctionnalités au code (nouvea
+ ux opérateurs/directives\, nouveaux modèles\, ...). Pour le personnel CE
+ A\, en plus de ce formulaire\, veuillez vous inscrire a\nhttps://indico.ma
+ th.cnrs.fr/event/16609/
 LOCATION:Maison de la Simulation
 URL:https://indico.math.cnrs.fr/event/16609/
 END:VEVENT
 BEGIN:VEVENT
 UID:ff0fd3daa373@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T143000
 DTEND:20261001T160000
 SUMMARY:Zeta Values as Moments: A Random Matrix Theory
-DESCRIPTION:The values of the Riemann zeta-function $\\zeta\\left(\\alpha+\\beta n\\right)$ with $\\alpha>1$\, $\\beta>0$ and $n$ a positive integer can be viewed as moments of a probability distribution. In my talk I will construct the corresponding random matrix model and determine its asymptotic spectral curve\, which exhibits an unusual feature\, the complete asymptotics of its partition function and uniform approx\nhttps://indico.math.cnrs.fr/event/17408/
+DESCRIPTION:The values of the Riemann zeta-function $\\zeta\\left(\\alpha+\
+ \beta n\\right)$ with $\\alpha>1$\, $\\beta>0$ and $n$ a positive integer 
+ can be viewed as moments of a probability distribution. In my talk I will 
+ construct the corresponding random matrix model and determine its asymptot
+ ic spectral curve\, which exhibits an unusual feature\, the complete asymp
+ totics of its partition function and uniform approx\nhttps://indico.math.c
+ nrs.fr/event/17408/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17408/
 END:VEVENT
 BEGIN:VEVENT
 UID:376d47442dd1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T143000
 DTEND:20261001T163000
-SUMMARY:The Finite Groups of Random Walks in the Quarter Plane and Periodic 4-bar Links (Les groupes finis de marches aléatoires dans un quart de plan et les quadrilatères articulés périodiques)
-DESCRIPTION:We present our solutions to two long standing open problems\, the first one from probability theory\, formulated by Malyshev in 1970 and the second one from a crossroad of geometry and dynamics\, posed by Darboux in 1879. The Malyshev problem is of finding effective\, explicit necessary and sufficient conditions in the closed form to characterize all random walks in the quarter plane with the group of\nhttps://indico.obspm.fr/event/3408/
+SUMMARY:The Finite Groups of Random Walks in the Quarter Plane and Periodic
+  4-bar Links (Les groupes finis de marches aléatoires dans un quart de pl
+ an et les quadrilatères articulés périodiques)
+DESCRIPTION:We present our solutions to two long standing open problems\, t
+ he first one from probability theory\, formulated by Malyshev in 1970 and 
+ the second one from a crossroad of geometry and dynamics\, posed by Darbou
+ x in 1879. The Malyshev problem is of finding effective\, explicit necessa
+ ry and sufficient conditions in the closed form to characterize all random
+  walks in the quarter plane with the group of\nhttps://indico.obspm.fr/eve
+ nt/3408/
 LOCATION:PARIS
 URL:https://indico.obspm.fr/event/3408/
 END:VEVENT
 BEGIN:VEVENT
 UID:9588f6c626ae@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261002T143000
 DTEND:20261002T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -137,27 +187,37 @@ URL:https://indico.math.cnrs.fr/event/16934/
 END:VEVENT
 BEGIN:VEVENT
 UID:3842cb3006b2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261002T160000
 DTEND:20261002T170000
-SUMMARY:Amal Omrani - Explicit Computation of Super-Hedging Prices and Strategies under Transaction Costs
-DESCRIPTION:In markets with transaction costs\, can super-hedging prices and strategies be explicitly characterized and computed directly from real market data\, without relying on dual formulations? This talk presents a constructive approach based on conditional supports and dynamic programming\, leading to explicit recursive formulas for super-hedging prices and strategies. The approach is illustrated using re\nhttps://indico.math.cnrs.fr/event/16984/
+SUMMARY:Amal Omrani - Explicit Computation of Super-Hedging Prices and Stra
+ tegies under Transaction Costs
+DESCRIPTION:In markets with transaction costs\, can super-hedging prices an
+ d strategies be explicitly characterized and computed directly from real m
+ arket data\, without relying on dual formulations? This talk presents a co
+ nstructive approach based on conditional supports and dynamic programming\
+ , leading to explicit recursive formulas for super-hedging prices and stra
+ tegies. The approach is illustrated using re\nhttps://indico.math.cnrs.fr/
+ event/16984/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/16984/
 END:VEVENT
 BEGIN:VEVENT
 UID:a3d8eeec79e2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261003T103000
 DTEND:20261003T123000
 SUMMARY:Séminaire Wittgenstein 2026-2027
-DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/seminaire-wittgenstein-2026-2027
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, Paris 5e
-URL:https://philosophie.pantheonsorbonne.fr/evenements/seminaire-wittgenstein-2026-2027
+DESCRIPTION:Séminaire\nhttps://philosophie.pantheonsorbonne.fr/evenements/
+ seminaire-wittgenstein-2026-2027
+LOCATION:Université Paris 1 Panthéon-Sorbonne\, 12 place du Panthéon\, P
+ aris 5e
+URL:https://philosophie.pantheonsorbonne.fr/evenements/seminaire-wittgenste
+ in-2026-2027
 END:VEVENT
 BEGIN:VEVENT
 UID:be9be3667279@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T100000
 DTEND:20261005T120000
 SUMMARY:Séance du 5 Octobre
@@ -167,47 +227,70 @@ URL:https://indico.math.cnrs.fr/event/17322/
 END:VEVENT
 BEGIN:VEVENT
 UID:d0bfe36c9390@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T140000
 DTEND:20261005T151500
 SUMMARY:Origami Tori
-DESCRIPTION:An origami torus is a piecewise affine isometric embedding of a flat torus into R 3 . It is surprising that these things exist\, but thanks to the work of Burago and Zalgaller in 1960 they do. 30 years later\, B&Z proved that every flat torus is realized as an origami torus. In 2023\, Lazarus and Tallerie proved that you can realize all flat tori using a single underlying triangulation with about 250\nhttps://indico.math.cnrs.fr/event/17062/
+DESCRIPTION:An origami torus is a piecewise affine isometric embedding of a
+  flat torus into R 3 . It is surprising that these things exist\, but than
+ ks to the work of Burago and Zalgaller in 1960 they do. 30 years later\, B
+ &Z proved that every flat torus is realized as an origami torus. In 2023\,
+  Lazarus and Tallerie proved that you can realize all flat tori using a si
+ ngle underlying triangulation with about 250\nhttps://indico.math.cnrs.fr/
+ event/17062/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17062/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4af97c28d4e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T160000
 DTEND:20261005T171500
 SUMMARY:Families of Discrete Representations from Incidence Theorems
-DESCRIPTION:Motivated by a family of examples constructed by R. Schwartz based on Pappus's theorem\, we explore constructions of representations of discrete groups arising from incidence theorems in projective spaces. Schwartz recently proved that his construction parametrizes the boundary of a connected component of Anosov representations in a certain moduli space of representations of PSL(2\,Z) into Isom(SL(3\nhttps://indico.math.cnrs.fr/event/17063/
+DESCRIPTION:Motivated by a family of examples constructed by R. Schwartz ba
+ sed on Pappus's theorem\, we explore constructions of representations of d
+ iscrete groups arising from incidence theorems in projective spaces. Schwa
+ rtz recently proved that his construction parametrizes the boundary of a c
+ onnected component of Anosov representations in a certain moduli space of 
+ representations of PSL(2\,Z) into Isom(SL(3\nhttps://indico.math.cnrs.fr/e
+ vent/17063/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17063/
 END:VEVENT
 BEGIN:VEVENT
 UID:53bf13613051@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261006T144500
 DTEND:20261006T160000
-SUMMARY:On the Wilson-Fisher Fixed Point in the Limit of Integer Spacetime Dimensions
-DESCRIPTION:The Wilson–Fisher (WF) fixed point\, a scalar field theory with a quartic interaction in $d = 4 - \\epsilon$ dimensions\, is the textbook example of a weakly coupled CFT. The epsilon expansion accurately reproduces the critical exponents of the $d = 3$ and the $d = 2$ Ising model. This has led to the common view that WF defines a continuous family of CFTs in non-integer dimensions\, interpolating betw\nhttps://indico.math.cnrs.fr/event/17103/
+SUMMARY:On the Wilson-Fisher Fixed Point in the Limit of Integer Spacetime 
+ Dimensions
+DESCRIPTION:The Wilson–Fisher (WF) fixed point\, a scalar field theory wi
+ th a quartic interaction in $d = 4 - \\epsilon$ dimensions\, is the textbo
+ ok example of a weakly coupled CFT. The epsilon expansion accurately repro
+ duces the critical exponents of the $d = 3$ and the $d = 2$ Ising model. T
+ his has led to the common view that WF defines a continuous family of CFTs
+  in non-integer dimensions\, interpolating betw\nhttps://indico.math.cnrs.
+ fr/event/17103/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17103/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b9f4e496e01@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T131500
 DTEND:20261007T141500
 SUMMARY:David Bessis – La chute de l’économie du théorème
-DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/david-bessis-la-chute-de-leconomie-du-theoreme/
+DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajoute
+ r au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps:
+ //www.math.ens.psl.eu/evenement/david-bessis-la-chute-de-leconomie-du-theo
+ reme/
 LOCATION:ENS — amphi Galois\, 45 rue d'Ulm\, Paris
-URL:https://www.math.ens.psl.eu/evenement/david-bessis-la-chute-de-leconomie-du-theoreme/
+URL:https://www.math.ens.psl.eu/evenement/david-bessis-la-chute-de-leconomi
+ e-du-theoreme/
 END:VEVENT
 BEGIN:VEVENT
 UID:23872ed5b477@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T140000
 DTEND:20261007T180000
 SUMMARY:Transport optimal et applications
@@ -217,27 +300,39 @@ URL:https://indico.math.cnrs.fr/event/16928/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ed38ea8f514@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261008T110000
 DTEND:20261008T123000
 SUMMARY:On “Siegel Domains” in p-adic Period Spaces
-DESCRIPTION:Séminaire de géométrie arithmétique A Siegel domain is a finite-volume subset of a symmetric space whose translates under the action of the relevant arithmetic group cover the entire space. In this talk\, we consider an analogue for the p-adic period spaces introduced by Rapoport and Zink. We give a partial criterion for the existence of a Siegel domain and discuss its expected applications. ======\nhttps://indico.math.cnrs.fr/event/17331/
+DESCRIPTION:Séminaire de géométrie arithmétique A Siegel domain is a fi
+ nite-volume subset of a symmetric space whose translates under the action 
+ of the relevant arithmetic group cover the entire space. In this talk\, we
+  consider an analogue for the p-adic period spaces introduced by Rapoport 
+ and Zink. We give a partial criterion for the existence of a Siegel domain
+  and discuss its expected applications. ======\nhttps://indico.math.cnrs.f
+ r/event/17331/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17331/
 END:VEVENT
 BEGIN:VEVENT
 UID:3334264431e8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Stat Mech in Créteil 2026
-DESCRIPTION:Stat-Mech in Créteil is a recurrent statistical mechanics workshop organized by members of the LAMA probability team. For this edition\, we have chosen to focus our discussions on several recent advances in statistical mechanics\, understood in the broad sense as the study of discrete stochastic models (graphs and random walks\, population dynamics\, contact processes\, percolation\, etc.).\nhttps://statmechcreteil.sciencesconf.org
+DESCRIPTION:Stat-Mech in Créteil is a recurrent statistical mechanics work
+ shop organized by members of the LAMA probability team. For this edition\,
+  we have chosen to focus our discussions on several recent advances in sta
+ tistical mechanics\, understood in the broad sense as the study of discret
+ e stochastic models (graphs and random walks\, population dynamics\, conta
+ ct processes\, percolation\, etc.).\nhttps://statmechcreteil.sciencesconf.
+ org
 LOCATION:Université Paris Est Créteil - Créteil (France)
 URL:https://statmechcreteil.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:4306324d17a1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261009T141500
 DTEND:20261009T163000
 SUMMARY:Séminaire 09/10/2026 - Gabriel Peyré et Vianney Perchet
@@ -247,37 +342,50 @@ URL:https://indico.math.cnrs.fr/event/16833/
 END:VEVENT
 BEGIN:VEVENT
 UID:85b8468adb56@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261010T150000
 DTEND:20261010T163000
-SUMMARY:Matteo Ricci 利玛窦 (Macerata\, 1552 – Pékin\, 1610)\, architecte du dialogue sino- occidental. Du langage à la pensée\, un héritage incarné dans le Grand Dictionnaire Ricci.
-DESCRIPTION:Conférence organisée en collaboration avec Asia centre – Institut Ricci dans le cadre du programme Chine Plurielle\nhttps://www.paris.fr/evenements/conference-convergences-la-statuaire-funeraire-123300
-LOCATION:M128 - Missions Etrangères de Paris\, 128\, rue du Bac\, 75007 Paris
-URL:https://www.paris.fr/evenements/conference-convergences-la-statuaire-funeraire-123300
+SUMMARY:Matteo Ricci 利玛窦 (Macerata\, 1552 – Pékin\, 1610)\, archit
+ ecte du dialogue sino- occidental. Du langage à la pensée\, un héritage
+  incarné dans le Grand Dictionnaire Ricci.
+DESCRIPTION:Conférence organisée en collaboration avec Asia centre – 
+ Institut Ricci dans le cadre du programme Chine Plurielle\nhttps://www.par
+ is.fr/evenements/conference-convergences-la-statuaire-funeraire-123300
+LOCATION:M128 - Missions Etrangères de Paris\, 128\, rue du Bac\, 75007 Pa
+ ris
+URL:https://www.paris.fr/evenements/conference-convergences-la-statuaire-fu
+ neraire-123300
 END:VEVENT
 BEGIN:VEVENT
 UID:2bd87bff5740@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Geometry: exchanges and perspectives
-DESCRIPTION:This three-day workshop gathers experts in geometric analysis around a mini-course and research talks.\nhttps://gep2026.sciencesconf.org
+DESCRIPTION:This three-day workshop gathers experts in geometric analysis a
+ round a mini-course and research talks.\nhttps://gep2026.sciencesconf.org
 LOCATION:Institut Henri Poincaré - Paris (France)
 URL:https://gep2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:513576072690@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261012T090000
 DTEND:20261012T110000
 SUMMARY:The Pentagram Map and Ramifications
-DESCRIPTION:October 12-15\, 2026 at IHES - Marilyn and James Simons Conference Center How to get to IHES This workshop explores the mathematics connected to the pentagram map and its generalizations. With 3 talks per day\, spread out over 4 days\, leaving time for individualized interactions\, it will not be confined to the special topic of the pentagram map\, but rather an exploration of the kind of mathematics t\nhttps://indico.math.cnrs.fr/event/17361/
+DESCRIPTION:October 12-15\, 2026 at IHES - Marilyn and James Simons Confere
+ nce Center How to get to IHES This workshop explores the mathematics conne
+ cted to the pentagram map and its generalizations. With 3 talks per day\, 
+ spread out over 4 days\, leaving time for individualized interactions\, it
+  will not be confined to the special topic of the pentagram map\, but rath
+ er an exploration of the kind of mathematics t\nhttps://indico.math.cnrs.f
+ r/event/17361/
 LOCATION:Le Bois-Marie
 URL:https://indico.math.cnrs.fr/event/17361/
 END:VEVENT
 BEGIN:VEVENT
 UID:8e4fa6cd95a0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T090000
 DTEND:20261013T170000
 SUMMARY:Journée de la FP2M 2026
@@ -287,27 +395,41 @@ URL:https://indico.math.cnrs.fr/event/16915/
 END:VEVENT
 BEGIN:VEVENT
 UID:937a9611c7e5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T090000
 DTEND:20261013T110000
 SUMMARY:Formation Cast3M pour Débutants
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene !) . Cette formation s'adresse aux utilisateurs débutants. L'objectif est d'être capable d’utiliser Cast3M pour réaliser des calculs éléments finis en thermo-mécanique\, linéaire et non linéaire\, stationnaire et transitoire. Pour le personnel CEA\, en plus de ce formulaire\, veuillez vous in\nhttps://indico.math.cnrs.fr/event/16605/
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
+  la Maison de la Simulation (pas de visioconférene !) . Cette formation s
+ 'adresse aux utilisateurs débutants. L'objectif est d'être capable d’u
+ tiliser Cast3M pour réaliser des calculs éléments finis en thermo-méca
+ nique\, linéaire et non linéaire\, stationnaire et transitoire. Pour le 
+ personnel CEA\, en plus de ce formulaire\, veuillez vous in\nhttps://indic
+ o.math.cnrs.fr/event/16605/
 LOCATION:Maison de la Simulation
 URL:https://indico.math.cnrs.fr/event/16605/
 END:VEVENT
 BEGIN:VEVENT
 UID:fe76b56820c3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T093000
 DTEND:20261013T123000
-SUMMARY:Thierry Gallay – Dynamique des tourbillons visqueux dans un demi-plan
-DESCRIPTION:| Speaker: Thierry Gallay (Université Grenoble Alpes) Le but de cet exposé est de définir un cadre mathématique permettant de décrire les interactions entre tourbillons et parois pour des écoulements plans à grand nombre de Reynolds. Les phénomènes typiques que l’on souhaite étudier à terme sont le mouvement auto-induit (pour un tourbillon isolé) et l’effet de rebond (pour une paire de tourbillons\nhttps://www.math.ens.psl.eu/evenement/thierry-gallay-universite-grenoble-alpes/
+SUMMARY:Thierry Gallay – Dynamique des tourbillons visqueux dans un demi-
+ plan
+DESCRIPTION:| Speaker: Thierry Gallay (Université Grenoble Alpes) Le but d
+ e cet exposé est de définir un cadre mathématique permettant de décrir
+ e les interactions entre tourbillons et parois pour des écoulements plans
+  à grand nombre de Reynolds. Les phénomènes typiques que l’on souhait
+ e étudier à terme sont le mouvement auto-induit (pour un tourbillon isol
+ é) et l’effet de rebond (pour une paire de tourbillons\nhttps://www.mat
+ h.ens.psl.eu/evenement/thierry-gallay-universite-grenoble-alpes/
 LOCATION:Jussieu — salle 15-16-309\, 4 Place Jussieu\, 75005\, Paris
-URL:https://www.math.ens.psl.eu/evenement/thierry-gallay-universite-grenoble-alpes/
+URL:https://www.math.ens.psl.eu/evenement/thierry-gallay-universite-grenobl
+ e-alpes/
 END:VEVENT
 BEGIN:VEVENT
 UID:49290ed8004a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T140000
 DTEND:20261013T160000
 SUMMARY:Séminaire SPIKE
@@ -317,37 +439,55 @@ URL:https://indico.math.cnrs.fr/event/16846/
 END:VEVENT
 BEGIN:VEVENT
 UID:b871b2c7a822@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261015T140000
 DTEND:20261015T170000
-SUMMARY:An affirmative solution to the generalized Busemann-Petty problem with subspaces dimensions 2 and 3
-DESCRIPTION:The generalized Busemann--Petty problem asks whether two origin-symmetric convex bodies in $\\mathbb{R}^n$ having larger volume of all $m$-dimensional sections necessarily have larger volume. When $m\\geq 4$\, this is known to be false\, but the cases $m=2\, 3$ for $n\\geq 5$ have remained open since the 1990s. In this work\, we resolve these cases. Together with the known results\, the generalized Busema\nhttps://indico.math.cnrs.fr/event/17073/
+SUMMARY:An affirmative solution to the generalized Busemann-Petty problem w
+ ith subspaces dimensions 2 and 3
+DESCRIPTION:The generalized Busemann--Petty problem asks whether two origin
+ -symmetric convex bodies in $\\mathbb{R}^n$ having larger volume of all $m
+ $-dimensional sections necessarily have larger volume. When $m\\geq 4$\, t
+ his is known to be false\, but the cases $m=2\, 3$ for $n\\geq 5$ have rem
+ ained open since the 1990s. In this work\, we resolve these cases. Togethe
+ r with the known results\, the generalized Busema\nhttps://indico.math.cnr
+ s.fr/event/17073/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17073/
 END:VEVENT
 BEGIN:VEVENT
 UID:48d667dad674@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T090000
 DTEND:20261016T163000
 SUMMARY:Formation Cast3M Fabrication Additive
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation "débutants"). L'objectif est de montrer les opérateurs et procédures de Cast3M utiles pour faire la simulation de la fabrication additive. Pour le personnel CEA\, en plus de ce formulaire\, veuil\nhttps://indico.math.cnrs.fr/event/16608/
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
+  la Maison de la Simulation (pas de visioconférene) . Cette formation s'a
+ dresse aux utilisateurs initiés (par exemple en ayant suivit la formation
+  "débutants"). L'objectif est de montrer les opérateurs et procédures d
+ e Cast3M utiles pour faire la simulation de la fabrication additive. Pour 
+ le personnel CEA\, en plus de ce formulaire\, veuil\nhttps://indico.math.c
+ nrs.fr/event/16608/
 LOCATION:Maison de la Simulation
 URL:https://indico.math.cnrs.fr/event/16608/
 END:VEVENT
 BEGIN:VEVENT
 UID:d3b264943c65@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T110000
 DTEND:20261016T130000
-SUMMARY:Seminar: mOdyssey: Revival of murine monocyte-derived dendritic cells – Marc DALOD
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/modyssey-revival-of-murine-monocyte-derived-dendritic-cells-modcs/
-LOCATION:Building : Lwoff – Room : Salle Rétrovirus\, 22-RdC-14 – Address: 28 Rue du Dr Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/modyssey-revival-of-murine-monocyte-derived-dendritic-cells-modcs/
+SUMMARY:Seminar: mOdyssey: Revival of murine monocyte-derived dendritic cel
+ ls – Marc DALOD
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/modyssey-revival-
+ of-murine-monocyte-derived-dendritic-cells-modcs/
+LOCATION:Building : Lwoff – Room : Salle Rétrovirus\, 22-RdC-14 – Addr
+ ess: 28 Rue du Dr Roux\, Paris\, France — Institut Pasteur\, 25-28 rue d
+ u Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/modyssey-revival-of-murine-monocyt
+ e-derived-dendritic-cells-modcs/
 END:VEVENT
 BEGIN:VEVENT
 UID:e7b52676d968@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T134500
 DTEND:20261016T173000
 SUMMARY:Derived Seminar
@@ -357,7 +497,7 @@ URL:https://indico.math.cnrs.fr/event/16964/
 END:VEVENT
 BEGIN:VEVENT
 UID:45641d6684ed@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T143000
 DTEND:20261016T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -367,7 +507,7 @@ URL:https://indico.math.cnrs.fr/event/16939/
 END:VEVENT
 BEGIN:VEVENT
 UID:213a5c7a382b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T160000
 DTEND:20261016T170000
 SUMMARY:Ruben Haalebos
@@ -377,37 +517,51 @@ URL:https://indico.math.cnrs.fr/event/16985/
 END:VEVENT
 BEGIN:VEVENT
 UID:0eb98ecec18b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261021T130000
 DTEND:20261021T180000
 SUMMARY:AI and the future of mathematics and physics
-DESCRIPTION:The Seed seminar of mathematics and physics is a seminar series that aims to foster interactions between mathematicians and theoretical physicists\, especially among young researchers. It is structured into three-month thematic periods\, the autumn 2026 one being on AI and the future of mathematics and physics . We open this thematic trimester with an in-person kick-off event at the Institut Henri P\nhttps://indico.math.cnrs.fr/event/17376/
+DESCRIPTION:The Seed seminar of mathematics and physics is a seminar series
+  that aims to foster interactions between mathematicians and theoretical p
+ hysicists\, especially among young researchers. It is structured into thre
+ e-month thematic periods\, the autumn 2026 one being on AI and the future 
+ of mathematics and physics . We open this thematic trimester with an in-pe
+ rson kick-off event at the Institut Henri P\nhttps://indico.math.cnrs.fr/e
+ vent/17376/
 LOCATION:IHP - Bâtiment Perrin
 URL:https://indico.math.cnrs.fr/event/17376/
 END:VEVENT
 BEGIN:VEVENT
 UID:4b4a5d83498d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261021T131500
 DTEND:20261021T141500
 SUMMARY:Séminaire Des mathématiques : Antoine Joux
-DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/antoine-joux/
+DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajoute
+ r au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps:
+ //www.math.ens.psl.eu/evenement/antoine-joux/
 LOCATION:ENS — amphi Galois\, 45 rue d'Ulm\, Paris
 URL:https://www.math.ens.psl.eu/evenement/antoine-joux/
 END:VEVENT
 BEGIN:VEVENT
 UID:2e5b14531e9b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261026T083000
 DTEND:20261026T103000
 SUMMARY:Workshop 2 - Operator Algebras: Matricial Approximations
-DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 2 - Operator Algebras: Matricial Approximations October 26 to 30\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the interaction between operators algebras and hyperlinearity\, soficity\, stability\, random matrices and noncommutative harmonic analysis. List of speakers: Michael Brannan Michael \nhttps://indico.math.cnrs.fr/event/14379/
+DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Works
+ hop 2 - Operator Algebras: Matricial Approximations October 26 to 30\, 202
+ 6 - IHP\, Paris Summary The workshop will feature talks on the latest deve
+ lopments on the interaction between operators algebras and hyperlinearity\
+ , soficity\, stability\, random matrices and noncommutative harmonic analy
+ sis. List of speakers: Michael Brannan Michael \nhttps://indico.math.cnrs.
+ fr/event/14379/
 LOCATION:Institut Henri Poincaré
 URL:https://indico.math.cnrs.fr/event/14379/
 END:VEVENT
 BEGIN:VEVENT
 UID:ccc2c6d355b4@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:ANF Statimage : Statistiques pour l’imagerie de microscopie
@@ -417,7 +571,7 @@ URL:https://statimage.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b1f66fa8c904@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261102T100000
 DTEND:20261102T120000
 SUMMARY:Séance du 2 Novembre
@@ -427,27 +581,38 @@ URL:https://indico.math.cnrs.fr/event/17323/
 END:VEVENT
 BEGIN:VEVENT
 UID:7f58be029335@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261103T093000
 DTEND:20261103T183000
-SUMMARY:Automath! À qui appartiennent les mathématiques ? Maths + IA Controversy Workshop
-DESCRIPTION:| À qui appartiennent les mathématiques ? En deux ans à peine\, les mathématiques semblent être passées du statut de frontière de l’IA à celui de territoire de l’IA\, du statut d’idéal cognitif servant à tester les capacités de raisonnement des modèles d’IA\, à celui d’infrastructure de connaissance\, productive et mobilisable de façon en partie automatisée. C’est en tous cas le message envoyé par Ope\nhttps://www.math.ens.psl.eu/evenement/automath-a-qui-appartiennent-les-mathematiques-maths-ia-controversy-workshop/
+SUMMARY:Automath! À qui appartiennent les mathématiques ? Maths + IA Cont
+ roversy Workshop
+DESCRIPTION:| À qui appartiennent les mathématiques ? En deux ans à pein
+ e\, les mathématiques semblent être passées du statut de frontière de 
+ l’IA à celui de territoire de l’IA\, du statut d’idéal cognitif se
+ rvant à tester les capacités de raisonnement des modèles d’IA\, à ce
+ lui d’infrastructure de connaissance\, productive et mobilisable de faç
+ on en partie automatisée. C’est en tous cas le message envoyé par Ope\
+ nhttps://www.math.ens.psl.eu/evenement/automath-a-qui-appartiennent-les-ma
+ thematiques-maths-ia-controversy-workshop/
 LOCATION:Institut Henri Poincaré amphithéâtre Hermite
-URL:https://www.math.ens.psl.eu/evenement/automath-a-qui-appartiennent-les-mathematiques-maths-ia-controversy-workshop/
+URL:https://www.math.ens.psl.eu/evenement/automath-a-qui-appartiennent-les-
+ mathematiques-maths-ia-controversy-workshop/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbc462482bc5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261104T131500
 DTEND:20261104T141500
 SUMMARY:Séminaire Des mathématiques : Cristina Toninelli
-DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/cristina-toninelli/
+DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajoute
+ r au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps:
+ //www.math.ens.psl.eu/evenement/cristina-toninelli/
 LOCATION:ENS — amphi Galois\, 45 rue d'Ulm\, Paris
 URL:https://www.math.ens.psl.eu/evenement/cristina-toninelli/
 END:VEVENT
 BEGIN:VEVENT
 UID:9a5bc71a96ac@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Journées de Biostatistique 2026
@@ -457,7 +622,7 @@ URL:https://jbiostat2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e188f09486e9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261106T143000
 DTEND:20261106T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -467,17 +632,20 @@ URL:https://indico.math.cnrs.fr/event/16940/
 END:VEVENT
 BEGIN:VEVENT
 UID:df752dfb6922@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261110T093000
 DTEND:20261110T123000
-SUMMARY:Séminaire Analyse non linéaire et EDP : Monica Musso (University of Bath)
-DESCRIPTION:| Monica Musso (University of Bath) Voir le site Organisateur Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/monica-musso-university-of-bath/
+SUMMARY:Séminaire Analyse non linéaire et EDP : Monica Musso (University 
+ of Bath)
+DESCRIPTION:| Monica Musso (University of Bath) Voir le site Organisateur A
+ jouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nh
+ ttps://www.math.ens.psl.eu/evenement/monica-musso-university-of-bath/
 LOCATION:Campus de Jussieu salle 309 3e étage barre 15-16
 URL:https://www.math.ens.psl.eu/evenement/monica-musso-university-of-bath/
 END:VEVENT
 BEGIN:VEVENT
 UID:97edcdb715b5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261110T140000
 DTEND:20261110T160000
 SUMMARY:Séminaire SPIKE
@@ -487,27 +655,36 @@ URL:https://indico.math.cnrs.fr/event/16847/
 END:VEVENT
 BEGIN:VEVENT
 UID:b222cfa7a144@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261112T090000
 DTEND:20261112T110000
 SUMMARY:UNSTABLE : UNDERSTANDING THE PARABOLIC-PARABOLIC KELLER-SEGEL
-DESCRIPTION:The aim for this workshop is twofold: to bring together people with expertise on the subject of chemotaxis and to foster discussions and interactions among participants from different fields.\nhttps://indico.math.cnrs.fr/event/17424/
+DESCRIPTION:The aim for this workshop is twofold: to bring together people 
+ with expertise on the subject of chemotaxis and to foster discussions and 
+ interactions among participants from different fields.\nhttps://indico.mat
+ h.cnrs.fr/event/17424/
 LOCATION:Île-de-France — lieu précisé sur la page de l'événement
 URL:https://indico.math.cnrs.fr/event/17424/
 END:VEVENT
 BEGIN:VEVENT
 UID:5aef4bcc5455@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261112T090000
 DTEND:20261112T110000
 SUMMARY:Formation Cast3M PASAPAS et procédures utilisateurs
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à la Maison de la Simulation (pas de visioconférene) . Cette formation s'adresse aux utilisateurs initiés (par exemple en ayant suivit la formation "débutants"). L'objectif de cette formation est d'acquérir une connaissance approfondie de la procédure de résolution PASAPAS. L'algorithme de résolution de problèmes non linéaires quasi statiq\nhttps://indico.math.cnrs.fr/event/16606/
+DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
+  la Maison de la Simulation (pas de visioconférene) . Cette formation s'a
+ dresse aux utilisateurs initiés (par exemple en ayant suivit la formation
+  "débutants"). L'objectif de cette formation est d'acquérir une connaiss
+ ance approfondie de la procédure de résolution PASAPAS. L'algorithme de 
+ résolution de problèmes non linéaires quasi statiq\nhttps://indico.math
+ .cnrs.fr/event/16606/
 LOCATION:Maison de la Simulation
 URL:https://indico.math.cnrs.fr/event/16606/
 END:VEVENT
 BEGIN:VEVENT
 UID:73dba593a039@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261113T141500
 DTEND:20261113T163000
 SUMMARY:Séminaire 13/11/2026 - Cyril Letrouit et Pierre Marion
@@ -517,17 +694,20 @@ URL:https://indico.math.cnrs.fr/event/16834/
 END:VEVENT
 BEGIN:VEVENT
 UID:6e2f69627074@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261120T100000
 DTEND:20261120T170000
 SUMMARY:Cinquième rencontre de probabilités intégrables
-DESCRIPTION:La Cinquième rencontre de probabilités intégrables aura lieu le vendredi 20 novembre 2026 à l'Institut Henri Poincaré. Titres et résumés Mini-cours (2x1h) par ... Exposé invité (1h)\nhttps://indico.math.cnrs.fr/event/17001/
+DESCRIPTION:La Cinquième rencontre de probabilités intégrables aura lieu
+  le vendredi 20 novembre 2026 à l'Institut Henri Poincaré. Titres et ré
+ sumés Mini-cours (2x1h) par ... Exposé invité (1h)\nhttps://indico.math
+ .cnrs.fr/event/17001/
 LOCATION:IHP - Bâtiment Perrin
 URL:https://indico.math.cnrs.fr/event/17001/
 END:VEVENT
 BEGIN:VEVENT
 UID:9d6c97f49ea1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261120T134500
 DTEND:20261120T173000
 SUMMARY:Derived Seminar
@@ -537,17 +717,23 @@ URL:https://indico.math.cnrs.fr/event/16975/
 END:VEVENT
 BEGIN:VEVENT
 UID:b036bc8c611f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261120T140000
 DTEND:20261120T180000
 SUMMARY:Séminaire Bourbaki du vendredi 20 novembre 2026
-DESCRIPTION:Le séminaire Bourbaki du vendredi a été créé en 2018. Des collègues y présentent le contexte de certains exposés du séminaire Bourbaki du samedi\, en visant à les rendre accessibles à un large public\, par exemple à travers leur histoire\, en développant des cas particuliers importants\, ou en exposant des outils essentiels. L'entrée est libre. Orateurs et oratrices : Thomas Mordant et Luigi Martinell\nhttps://indico.math.cnrs.fr/event/17061/
+DESCRIPTION:Le séminaire Bourbaki du vendredi a été créé en 2018. Des 
+ collègues y présentent le contexte de certains exposés du séminaire Bo
+ urbaki du samedi\, en visant à les rendre accessibles à un large public\
+ , par exemple à travers leur histoire\, en développant des cas particuli
+ ers importants\, ou en exposant des outils essentiels. L'entrée est libre
+ . Orateurs et oratrices : Thomas Mordant et Luigi Martinell\nhttps://indic
+ o.math.cnrs.fr/event/17061/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17061/
 END:VEVENT
 BEGIN:VEVENT
 UID:f3718a524ff9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261120T143000
 DTEND:20261120T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -557,7 +743,7 @@ URL:https://indico.math.cnrs.fr/event/16941/
 END:VEVENT
 BEGIN:VEVENT
 UID:6f8ae05a5eae@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261120T160000
 DTEND:20261120T170000
 SUMMARY:Grégoire Sempé
@@ -567,17 +753,23 @@ URL:https://indico.math.cnrs.fr/event/16987/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4e95f7fdd6b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261121T100000
 DTEND:20261121T170000
 SUMMARY:Séminaire N. Bourbaki du samedi 21 novembre 2026
-DESCRIPTION:Le séminaire Bourbaki a été fondé en 1948. Au rythme de quatre séances par an\, il tente d'offrir un panorama des développements mathématiques actuels. L'entrée est libre. Exposés : Pierre DEHORNOY Diversité des flots d’Anosov tridimensionnels : éléments de construction et de distinction Bertrand RÉMY Annulations en cohomologie unitaire et théorie géométrique des groupes\, d’après Uri Bader et Roman\nhttps://indico.math.cnrs.fr/event/17059/
+DESCRIPTION:Le séminaire Bourbaki a été fondé en 1948. Au rythme de qua
+ tre séances par an\, il tente d'offrir un panorama des développements ma
+ thématiques actuels. L'entrée est libre. Exposés : Pierre DEHORNOY Dive
+ rsité des flots d’Anosov tridimensionnels : éléments de construction 
+ et de distinction Bertrand RÉMY Annulations en cohomologie unitaire et th
+ éorie géométrique des groupes\, d’après Uri Bader et Roman\nhttps://
+ indico.math.cnrs.fr/event/17059/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17059/
 END:VEVENT
 BEGIN:VEVENT
 UID:ffd0e71f8cc2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261126T140000
 DTEND:20261126T170000
 SUMMARY:Séance de novembre
@@ -587,7 +779,7 @@ URL:https://indico.math.cnrs.fr/event/17074/
 END:VEVENT
 BEGIN:VEVENT
 UID:b82af0e5c1c2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261127T141500
 DTEND:20261127T151500
 SUMMARY:Séminaire 27/11/2026 - Stephane Mallat
@@ -597,27 +789,35 @@ URL:https://indico.math.cnrs.fr/event/16835/
 END:VEVENT
 BEGIN:VEVENT
 UID:5675c284891d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261130T083000
 DTEND:20261130T103000
 SUMMARY:Workshop 3 - Operator Algebras: Rigidity and Classification
-DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Workshop 3 - Operator Algebras: Rigidity and Classification November 30 to December 4\, 2026 - IHP\, Paris Summary The workshop will feature talks on the latest developments on the structure\, classification and rigidity of C ∗ -algebras and von Neumann algebras. List of speakers: Martijn Caspers Soham Chakraborty Milan Donvil Daniel Drimbe Jam\nhttps://indico.math.cnrs.fr/event/14380/
+DESCRIPTION:Operator Algebras: Approximation\, Rigidity and Dynamics. Works
+ hop 3 - Operator Algebras: Rigidity and Classification November 30 to Dece
+ mber 4\, 2026 - IHP\, Paris Summary The workshop will feature talks on the
+  latest developments on the structure\, classification and rigidity of C 
+ ∗ -algebras and von Neumann algebras. List of speakers: Martijn Caspers 
+ Soham Chakraborty Milan Donvil Daniel Drimbe Jam\nhttps://indico.math.cnrs
+ .fr/event/14380/
 LOCATION:Institut Henri Poincaré
 URL:https://indico.math.cnrs.fr/event/14380/
 END:VEVENT
 BEGIN:VEVENT
 UID:5bdc720530e6@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261202T131500
 DTEND:20261202T141500
 SUMMARY:Séminaire Des mathématiques : Estelle Kuhn
-DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/estelle-kuhn/
+DESCRIPTION:| Détails Date : Heure : Séminaires des Mathématiques Ajoute
+ r au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps:
+ //www.math.ens.psl.eu/evenement/estelle-kuhn/
 LOCATION:ENS — amphi Galois\, 45 rue d'Ulm\, Paris
 URL:https://www.math.ens.psl.eu/evenement/estelle-kuhn/
 END:VEVENT
 BEGIN:VEVENT
 UID:4bfac0d429da@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261204T141500
 DTEND:20261204T151500
 SUMMARY:Séminaire 04/12/2026 - Borjan Geshkovski
@@ -627,17 +827,22 @@ URL:https://indico.math.cnrs.fr/event/16836/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261207T090000
 DTEND:20261207T190000
 SUMMARY:XMath Physics Day
-DESCRIPTION:XMath Physics Day is a one-day workshop taking place on December 7 at Laboratoire Mathématiques d'Orsay (LMO). It will bring together early-career and senior researchers in mathematical physics working on resurgence\, topological string theory\, and scattering amplitudes. Organisateurs : Veronica Fantini (veronica.fantini@universite-paris-saclay.fr)\, Claudia Rella (rella@ihes.fr)\nhttps://indico.math.cnrs.fr/event/17422/
+DESCRIPTION:XMath Physics Day is a one-day workshop taking place on Decembe
+ r 7 at Laboratoire Mathématiques d'Orsay (LMO). It will bring together ea
+ rly-career and senior researchers in mathematical physics working on resur
+ gence\, topological string theory\, and scattering amplitudes. Organisateu
+ rs : Veronica Fantini (veronica.fantini@universite-paris-saclay.fr)\, Clau
+ dia Rella (rella@ihes.fr)\nhttps://indico.math.cnrs.fr/event/17422/
 LOCATION:Laboratoire de Mathématiques d'Orsay
 URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:05c1ec10cdb9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261207T100000
 DTEND:20261207T120000
 SUMMARY:Séance du 7 Décembre
@@ -647,17 +852,20 @@ URL:https://indico.math.cnrs.fr/event/17324/
 END:VEVENT
 BEGIN:VEVENT
 UID:b6db22b25ea8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261208T093000
 DTEND:20261208T123000
-SUMMARY:Séminaire Analyse non linéaire et EDP : Jonathan Luk (Stanford University)
-DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/jonathan-luk-stanford-university/
+SUMMARY:Séminaire Analyse non linéaire et EDP : Jonathan Luk (Stanford Un
+ iversity)
+DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 O
+ utlook Live\nhttps://www.math.ens.psl.eu/evenement/jonathan-luk-stanford-u
+ niversity/
 LOCATION:Salle W – ENS PSL\, 45 rue d'Ulm\, 75005\, Paris
 URL:https://www.math.ens.psl.eu/evenement/jonathan-luk-stanford-university/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ae66d1fd3e7@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261208T140000
 DTEND:20261208T160000
 SUMMARY:Séminaire SPIKE
@@ -667,7 +875,7 @@ URL:https://indico.math.cnrs.fr/event/16854/
 END:VEVENT
 BEGIN:VEVENT
 UID:3d37da189fde@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261211T134500
 DTEND:20261211T173000
 SUMMARY:Derived Seminar
@@ -677,37 +885,48 @@ URL:https://indico.math.cnrs.fr/event/16976/
 END:VEVENT
 BEGIN:VEVENT
 UID:88ce6f1c9d79@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261212T150000
 DTEND:20261212T170000
 SUMMARY:Titre à venir
-DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/category/533/\nhttps://indico.math.cnrs.fr/event/17362/
+DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/
+ live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/catego
+ ry/533/\nhttps://indico.math.cnrs.fr/event/17362/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17362/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f0b1330a451@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
-SUMMARY:De la philosophie aux mathématiques : de l'intelligence pas si artificielle
-DESCRIPTION:Le Collège à la Bibliothèque\nhttps://www.bnf.fr/fr/agenda/de-la-philosophie-aux-mathematiques-de-lintelligence-pas-si-artificielle
+SUMMARY:De la philosophie aux mathématiques : de l'intelligence pas si art
+ ificielle
+DESCRIPTION:Le Collège à la Bibliothèque\nhttps://www.bnf.fr/fr/agenda/d
+ e-la-philosophie-aux-mathematiques-de-lintelligence-pas-si-artificielle
 LOCATION:François-Mitterrand — Bibliothèque nationale de France\, Paris
-URL:https://www.bnf.fr/fr/agenda/de-la-philosophie-aux-mathematiques-de-lintelligence-pas-si-artificielle
+URL:https://www.bnf.fr/fr/agenda/de-la-philosophie-aux-mathematiques-de-lin
+ telligence-pas-si-artificielle
 END:VEVENT
 BEGIN:VEVENT
 UID:eaee5427d04e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
-SUMMARY:Journées internationales PLURIMATHS L’activité langagière dans l’enseignement et l’apprentissage de la géométrie
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/journees-internationales-plurimaths-l-activite-langagiere-dans-l-enseignement-et-l-apprentissage-de-la-geometrie-926025.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/journees-internationales-plurimaths-l-activite-langagiere-dans-l-enseignement-et-l-apprentissage-de-la-geometrie-926025.kjsp?RH=1236178100008
+SUMMARY:Journées internationales PLURIMATHS L’activité langagière dans
+  l’enseignement et l’apprentissage de la géométrie
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/journees-internationales-plu
+ rimaths-l-activite-langagiere-dans-l-enseignement-et-l-apprentissage-de-la
+ -geometrie-926025.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/journees-internationales-plurimaths-l-
+ activite-langagiere-dans-l-enseignement-et-l-apprentissage-de-la-geometrie
+ -926025.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:ae4e07a8e7e9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261217T140000
 DTEND:20261217T170000
 SUMMARY:Séance de décembre
@@ -717,7 +936,7 @@ URL:https://indico.math.cnrs.fr/event/17075/
 END:VEVENT
 BEGIN:VEVENT
 UID:3bf09b0220fd@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261218T143000
 DTEND:20261218T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -727,7 +946,7 @@ URL:https://indico.math.cnrs.fr/event/16942/
 END:VEVENT
 BEGIN:VEVENT
 UID:b8495b47f600@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261218T160000
 DTEND:20261218T170000
 SUMMARY:Massyle Dendene
@@ -737,17 +956,24 @@ URL:https://indico.math.cnrs.fr/event/16989/
 END:VEVENT
 BEGIN:VEVENT
 UID:bb06f6cfe686@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270106T100000
 DTEND:20270106T120000
-SUMMARY:Chaos et phénomènes universels en théorie spectrale (1) Nalini Anantharaman
-DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale\nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-1
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-1
+SUMMARY:Chaos et phénomènes universels en théorie spectrale (1) Nalini A
+ nantharaman
+DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale
+ \nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-uni
+ versels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spe
+ ctrale-1
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-un
+ iversels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-sp
+ ectrale-1
 END:VEVENT
 BEGIN:VEVENT
 UID:1835be59ed2a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270108T141500
 DTEND:20270108T163000
 SUMMARY:Séminaire 08/01/2027 - Mathurin Massias et Claire Boyer
@@ -757,7 +983,7 @@ URL:https://indico.math.cnrs.fr/event/16837/
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38c3c6a5bb@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270111T100000
 DTEND:20270111T120000
 SUMMARY:Journée de rentrée du 11 Janvier
@@ -767,7 +993,7 @@ URL:https://indico.math.cnrs.fr/event/17325/
 END:VEVENT
 BEGIN:VEVENT
 UID:f818090006df@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270112T140000
 DTEND:20270112T160000
 SUMMARY:Séminaire SPIKE
@@ -777,17 +1003,24 @@ URL:https://indico.math.cnrs.fr/event/16855/
 END:VEVENT
 BEGIN:VEVENT
 UID:0fdcc563c643@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270113T100000
 DTEND:20270113T120000
-SUMMARY:Chaos et phénomènes universels en théorie spectrale (2) Nalini Anantharaman
-DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale\nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-2
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-2
+SUMMARY:Chaos et phénomènes universels en théorie spectrale (2) Nalini A
+ nantharaman
+DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale
+ \nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-uni
+ versels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spe
+ ctrale-2
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-un
+ iversels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-sp
+ ectrale-2
 END:VEVENT
 BEGIN:VEVENT
 UID:e9be8f32ed04@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270115T134500
 DTEND:20270115T173000
 SUMMARY:Derived Seminar
@@ -797,7 +1030,7 @@ URL:https://indico.math.cnrs.fr/event/16977/
 END:VEVENT
 BEGIN:VEVENT
 UID:9f5383c2c9f9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270115T143000
 DTEND:20270115T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -807,67 +1040,99 @@ URL:https://indico.math.cnrs.fr/event/16943/
 END:VEVENT
 BEGIN:VEVENT
 UID:30123af2c2a2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270116T150000
 DTEND:20270116T170000
 SUMMARY:Titre à venir
-DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/category/533/\nhttps://indico.math.cnrs.fr/event/17363/
+DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/
+ live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/catego
+ ry/533/\nhttps://indico.math.cnrs.fr/event/17363/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17363/
 END:VEVENT
 BEGIN:VEVENT
 UID:e3a2955a6918@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270120T100000
 DTEND:20270120T120000
-SUMMARY:Chaos et phénomènes universels en théorie spectrale (3) Nalini Anantharaman
-DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale\nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-3
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-3
+SUMMARY:Chaos et phénomènes universels en théorie spectrale (3) Nalini A
+ nantharaman
+DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale
+ \nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-uni
+ versels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spe
+ ctrale-3
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-un
+ iversels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-sp
+ ectrale-3
 END:VEVENT
 BEGIN:VEVENT
 UID:4f680e77ca0a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270121T090000
 DTEND:20270121T110000
-SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the occasion of Antonin Chambolle's 60th birthday
-DESCRIPTION:This conference aims to bring together researchers from optimization\, calculus of variations and image processing to celebrate Antonin Chambolle's contributions to these fields. The event brings together collaborators\, colleagues\, friends\, and former students to celebrate his scientific achievements and the thriving community around them. List of confirmed speakers: Grégoire Allaire Claire Boyer L\nhttps://indico.math.cnrs.fr/event/15144/
+SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the
+  occasion of Antonin Chambolle's 60th birthday
+DESCRIPTION:This conference aims to bring together researchers from optimiz
+ ation\, calculus of variations and image processing to celebrate Antonin C
+ hambolle's contributions to these fields. The event brings together collab
+ orators\, colleagues\, friends\, and former students to celebrate his scie
+ ntific achievements and the thriving community around them. List of confir
+ med speakers: Grégoire Allaire Claire Boyer L\nhttps://indico.math.cnrs.f
+ r/event/15144/
 LOCATION:INRIA Paris
 URL:https://indico.math.cnrs.fr/event/15144/
 END:VEVENT
 BEGIN:VEVENT
 UID:98c52bfa4cba@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270121T140000
 DTEND:20270121T170000
-SUMMARY:Ball's conjecture on Santalo type inequality d'après Böröczky\, Patsalos et Saroglou
+SUMMARY:Ball's conjecture on Santalo type inequality d'après Böröczky\, 
+ Patsalos et Saroglou
 DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/17076/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17076/
 END:VEVENT
 BEGIN:VEVENT
 UID:975c949e2d95@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270121T180000
 DTEND:20270121T200000
-SUMMARY:Étudier la propagation des maladies infectieuses : à la croisée de l’épidémiologie\, des mathématiques et de la santé publique Simon Cauchemez
-DESCRIPTION:Leçon inaugurale\nhttps://www.college-de-france.fr/fr/agenda/lecon-inaugurale/etudier-la-propagation-des-maladies-infectieuses-la-croisee-de-epidemiologie-des-mathematiques-et-de/etudier-la-propagation-des-maladies-infectieuses-la-croisee-de-epidemiologie-des-mathematiques-et-de
+SUMMARY:Étudier la propagation des maladies infectieuses : à la croisée 
+ de l’épidémiologie\, des mathématiques et de la santé publique Simon
+  Cauchemez
+DESCRIPTION:Leçon inaugurale\nhttps://www.college-de-france.fr/fr/agenda/l
+ econ-inaugurale/etudier-la-propagation-des-maladies-infectieuses-la-croise
+ e-de-epidemiologie-des-mathematiques-et-de/etudier-la-propagation-des-mala
+ dies-infectieuses-la-croisee-de-epidemiologie-des-mathematiques-et-de
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/etudier-la-propagation-des-maladies-infectieuses-la-croisee-de-epidemiologie-des-mathematiques-et-de/etudier-la-propagation-des-maladies-infectieuses-la-croisee-de-epidemiologie-des-mathematiques-et-de
+URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/etudier-la-
+ propagation-des-maladies-infectieuses-la-croisee-de-epidemiologie-des-math
+ ematiques-et-de/etudier-la-propagation-des-maladies-infectieuses-la-croise
+ e-de-epidemiologie-des-mathematiques-et-de
 END:VEVENT
 BEGIN:VEVENT
 UID:2a7fa756174e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270127T100000
 DTEND:20270127T120000
-SUMMARY:Chaos et phénomènes universels en théorie spectrale (4) Nalini Anantharaman
-DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale\nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-4
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-4
+SUMMARY:Chaos et phénomènes universels en théorie spectrale (4) Nalini A
+ nantharaman
+DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale
+ \nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-uni
+ versels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spe
+ ctrale-4
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-un
+ iversels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-sp
+ ectrale-4
 END:VEVENT
 BEGIN:VEVENT
 UID:e8acedb47f6b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270129T143000
 DTEND:20270129T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -877,7 +1142,7 @@ URL:https://indico.math.cnrs.fr/event/16944/
 END:VEVENT
 BEGIN:VEVENT
 UID:d81d6773c6da@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270201T100000
 DTEND:20270201T120000
 SUMMARY:Séance du 1 Février
@@ -887,17 +1152,21 @@ URL:https://indico.math.cnrs.fr/event/17326/
 END:VEVENT
 BEGIN:VEVENT
 UID:18d74e187473@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270202T093000
 DTEND:20270202T123000
-SUMMARY:Séminaire Analyse non linéaire et EDP : Alexander Kiselev (Duke University)
-DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/alexander-kiselev-duke-university/
+SUMMARY:Séminaire Analyse non linéaire et EDP : Alexander Kiselev (Duke U
+ niversity)
+DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 O
+ utlook Live\nhttps://www.math.ens.psl.eu/evenement/alexander-kiselev-duke-
+ university/
 LOCATION:Salle W – ENS PSL\, 45 rue d'Ulm\, 75005\, Paris
-URL:https://www.math.ens.psl.eu/evenement/alexander-kiselev-duke-university/
+URL:https://www.math.ens.psl.eu/evenement/alexander-kiselev-duke-university
+ /
 END:VEVENT
 BEGIN:VEVENT
 UID:6b61efdb190e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270202T140000
 DTEND:20270202T160000
 SUMMARY:Séminaire SPIKE
@@ -907,27 +1176,41 @@ URL:https://indico.math.cnrs.fr/event/16856/
 END:VEVENT
 BEGIN:VEVENT
 UID:c7c2a3d1a739@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270203T100000
 DTEND:20270203T120000
-SUMMARY:Chaos et phénomènes universels en théorie spectrale (5) Nalini Anantharaman
-DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale\nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-5
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-5
+SUMMARY:Chaos et phénomènes universels en théorie spectrale (5) Nalini A
+ nantharaman
+DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale
+ \nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-uni
+ versels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spe
+ ctrale-5
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-un
+ iversels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-sp
+ ectrale-5
 END:VEVENT
 BEGIN:VEVENT
 UID:f2c0f39741d0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270210T100000
 DTEND:20270210T120000
-SUMMARY:Chaos et phénomènes universels en théorie spectrale (6) Nalini Anantharaman
-DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale\nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-6
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-universels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spectrale-6
+SUMMARY:Chaos et phénomènes universels en théorie spectrale (6) Nalini A
+ nantharaman
+DESCRIPTION:Cours · Chaos et phénomènes universels en théorie spectrale
+ \nhttps://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-uni
+ versels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-spe
+ ctrale-6
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/chaos-et-phenomenes-un
+ iversels-en-theorie-spectrale/chaos-et-phenomenes-universels-en-theorie-sp
+ ectrale-6
 END:VEVENT
 BEGIN:VEVENT
 UID:0e1d109b79d1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270219T134500
 DTEND:20270219T173000
 SUMMARY:Derived Seminar
@@ -937,27 +1220,40 @@ URL:https://indico.math.cnrs.fr/event/16978/
 END:VEVENT
 BEGIN:VEVENT
 UID:978d43394fad@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270222T090000
 DTEND:20270222T110000
-SUMMARY:IHP School: Artificial Intelligence for Mathematicians and Theoretical Physicists
-DESCRIPTION:Artificial Intelligence is revolutioning most human activities\, and research is no exception. Recent breakthroughs have shown that AI is nowadays capable of\, for example\, proving theorems. We believe that it is important for every young researcher to have a working knowledge of AI. This one-week school will cover most of the fundamental concepts. It is designed for PhD students and early career re\nhttps://indico.math.cnrs.fr/event/17079/
+SUMMARY:IHP School: Artificial Intelligence for Mathematicians and Theoreti
+ cal Physicists
+DESCRIPTION:Artificial Intelligence is revolutioning most human activities\
+ , and research is no exception. Recent breakthroughs have shown that AI is
+  nowadays capable of\, for example\, proving theorems. We believe that it 
+ is important for every young researcher to have a working knowledge of AI.
+  This one-week school will cover most of the fundamental concepts. It is d
+ esigned for PhD students and early career re\nhttps://indico.math.cnrs.fr/
+ event/17079/
 LOCATION:Institut Henri Poincaré
 URL:https://indico.math.cnrs.fr/event/17079/
 END:VEVENT
 BEGIN:VEVENT
 UID:90c9aea43a09@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270223T110000
 DTEND:20270223T130000
-SUMMARY:Le développement et l’enseignement des mathématiques (1) Stanislas Dehaene
-DESCRIPTION:Cours · Le développement et l’enseignement des mathématiques\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-1
+SUMMARY:Le développement et l’enseignement des mathématiques (1) Stanis
+ las Dehaene
+DESCRIPTION:Cours · Le développement et l’enseignement des mathématiqu
+ es\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-e
+ nseignement-des-mathematiques/le-developpement-et-enseignement-des-mathema
+ tiques-1
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-1
+URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-en
+ seignement-des-mathematiques/le-developpement-et-enseignement-des-mathemat
+ iques-1
 END:VEVENT
 BEGIN:VEVENT
 UID:fa5e1c45f69f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270225T140000
 DTEND:20270225T170000
 SUMMARY:Séance de février
@@ -967,7 +1263,7 @@ URL:https://indico.math.cnrs.fr/event/17077/
 END:VEVENT
 BEGIN:VEVENT
 UID:41fe6eaaa108@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270226T143000
 DTEND:20270226T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -977,27 +1273,35 @@ URL:https://indico.math.cnrs.fr/event/16945/
 END:VEVENT
 BEGIN:VEVENT
 UID:b4ec9ba0a98f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270227T150000
 DTEND:20270227T170000
 SUMMARY:Titre à venir
-DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/category/533/\nhttps://indico.math.cnrs.fr/event/17364/
+DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/
+ live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/catego
+ ry/533/\nhttps://indico.math.cnrs.fr/event/17364/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17364/
 END:VEVENT
 BEGIN:VEVENT
 UID:463f542a16b8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270302T110000
 DTEND:20270302T130000
-SUMMARY:Le développement et l’enseignement des mathématiques (2) Stanislas Dehaene
-DESCRIPTION:Cours · Le développement et l’enseignement des mathématiques\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-2
+SUMMARY:Le développement et l’enseignement des mathématiques (2) Stanis
+ las Dehaene
+DESCRIPTION:Cours · Le développement et l’enseignement des mathématiqu
+ es\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-e
+ nseignement-des-mathematiques/le-developpement-et-enseignement-des-mathema
+ tiques-2
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-2
+URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-en
+ seignement-des-mathematiques/le-developpement-et-enseignement-des-mathemat
+ iques-2
 END:VEVENT
 BEGIN:VEVENT
 UID:ef2ec3cfef49@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270308T100000
 DTEND:20270308T120000
 SUMMARY:Séance du 8 Mars
@@ -1007,17 +1311,23 @@ URL:https://indico.math.cnrs.fr/event/17327/
 END:VEVENT
 BEGIN:VEVENT
 UID:5d6f3e8a2a1a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270309T110000
 DTEND:20270309T130000
-SUMMARY:Le développement et l’enseignement des mathématiques (3) Stanislas Dehaene
-DESCRIPTION:Cours · Le développement et l’enseignement des mathématiques\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-3
+SUMMARY:Le développement et l’enseignement des mathématiques (3) Stanis
+ las Dehaene
+DESCRIPTION:Cours · Le développement et l’enseignement des mathématiqu
+ es\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-e
+ nseignement-des-mathematiques/le-developpement-et-enseignement-des-mathema
+ tiques-3
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-3
+URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-en
+ seignement-des-mathematiques/le-developpement-et-enseignement-des-mathemat
+ iques-3
 END:VEVENT
 BEGIN:VEVENT
 UID:a2fcedeafa72@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270309T140000
 DTEND:20270309T160000
 SUMMARY:Séminaire SPIKE
@@ -1027,7 +1337,7 @@ URL:https://indico.math.cnrs.fr/event/16857/
 END:VEVENT
 BEGIN:VEVENT
 UID:5744df6639b1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270312T143000
 DTEND:20270312T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -1037,27 +1347,36 @@ URL:https://indico.math.cnrs.fr/event/16946/
 END:VEVENT
 BEGIN:VEVENT
 UID:ca2d9349158f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270316T093000
 DTEND:20270316T123000
-SUMMARY:Séminaire Analyse non linéaire et EDP : Pin Yu (Tsinghua University)
-DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/pin-yu-tsinghua-university/
+SUMMARY:Séminaire Analyse non linéaire et EDP : Pin Yu (Tsinghua Universi
+ ty)
+DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 O
+ utlook Live\nhttps://www.math.ens.psl.eu/evenement/pin-yu-tsinghua-univers
+ ity/
 LOCATION:Campus de Jussieu salle 309 3e étage barre 15-16
 URL:https://www.math.ens.psl.eu/evenement/pin-yu-tsinghua-university/
 END:VEVENT
 BEGIN:VEVENT
 UID:e905e5b34fc9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270316T110000
 DTEND:20270316T130000
-SUMMARY:Le développement et l’enseignement des mathématiques (4) Stanislas Dehaene
-DESCRIPTION:Cours · Le développement et l’enseignement des mathématiques\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-4
+SUMMARY:Le développement et l’enseignement des mathématiques (4) Stanis
+ las Dehaene
+DESCRIPTION:Cours · Le développement et l’enseignement des mathématiqu
+ es\nhttps://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-e
+ nseignement-des-mathematiques/le-developpement-et-enseignement-des-mathema
+ tiques-4
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-enseignement-des-mathematiques/le-developpement-et-enseignement-des-mathematiques-4
+URL:https://www.college-de-france.fr/fr/agenda/cours/le-developpement-et-en
+ seignement-des-mathematiques/le-developpement-et-enseignement-des-mathemat
+ iques-4
 END:VEVENT
 BEGIN:VEVENT
 UID:294153622e24@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270319T134500
 DTEND:20270319T173000
 SUMMARY:Derived Seminar
@@ -1067,17 +1386,19 @@ URL:https://indico.math.cnrs.fr/event/16979/
 END:VEVENT
 BEGIN:VEVENT
 UID:018f6d694e7a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270320T150000
 DTEND:20270320T170000
 SUMMARY:Titre à venir
-DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/category/533/\nhttps://indico.math.cnrs.fr/event/17365/
+DESCRIPTION:[Informations à venir] Retransmission : https://www.ihp.fr/fr/
+ live-0 Tous les séminaires Math Park : https://indico.math.cnrs.fr/catego
+ ry/533/\nhttps://indico.math.cnrs.fr/event/17365/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17365/
 END:VEVENT
 BEGIN:VEVENT
 UID:cd181c288e18@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270325T140000
 DTEND:20270325T170000
 SUMMARY:Séance de mars
@@ -1087,17 +1408,20 @@ URL:https://indico.math.cnrs.fr/event/17078/
 END:VEVENT
 BEGIN:VEVENT
 UID:01262b16c4f7@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270326T100000
 DTEND:20270326T170000
 SUMMARY:Sixième rencontre de probabilités intégrables
-DESCRIPTION:La Sixième rencontre de probabilités intégrables aura lieu le vendredi 26 mars 2027 à l'Institut Henri Poincaré. Titres et résumés Mini-cours (2x1h) par ... Exposé invité (1h)\nhttps://indico.math.cnrs.fr/event/17002/
+DESCRIPTION:La Sixième rencontre de probabilités intégrables aura lieu l
+ e vendredi 26 mars 2027 à l'Institut Henri Poincaré. Titres et résumés
+  Mini-cours (2x1h) par ... Exposé invité (1h)\nhttps://indico.math.cnrs.
+ fr/event/17002/
 LOCATION:IHP - Bâtiment Borel
 URL:https://indico.math.cnrs.fr/event/17002/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ee80dfcdfd9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270326T143000
 DTEND:20270326T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -1107,7 +1431,7 @@ URL:https://indico.math.cnrs.fr/event/16947/
 END:VEVENT
 BEGIN:VEVENT
 UID:559df22cf3f2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270416T134500
 DTEND:20270416T173000
 SUMMARY:Derived Seminar
@@ -1117,27 +1441,37 @@ URL:https://indico.math.cnrs.fr/event/16980/
 END:VEVENT
 BEGIN:VEVENT
 UID:12aa42b8176a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270419T083000
 DTEND:20270419T103000
 SUMMARY:High Dimensional Probability and Analysis\, Continuous and Discrete
-DESCRIPTION:Thematic trimester programme with short courses\, seminars and workshops April 19th to July 9th\, 2027 at the Institut Henri Poincaré\, Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the trimester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-intentioned people may be trying to contact some of participants by email or phone to get money and personal details\, by p\nhttps://indico.math.cnrs.fr/event/16291/
+DESCRIPTION:Thematic trimester programme with short courses\, seminars and 
+ workshops April 19th to July 9th\, 2027 at the Institut Henri Poincaré\, 
+ Paris REGISTRATION IS FREE AND MANDATORY Click here to register for the tr
+ imester IMPORTANT WARNING : Scam / Phishing / SMiShing ! Note that ill-int
+ entioned people may be trying to contact some of participants by email or 
+ phone to get money and personal details\, by p\nhttps://indico.math.cnrs.f
+ r/event/16291/
 LOCATION:IHP
 URL:https://indico.math.cnrs.fr/event/16291/
 END:VEVENT
 BEGIN:VEVENT
 UID:e95bc09f8370@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270420T093000
 DTEND:20270420T123000
-SUMMARY:Séminaire Analyse non linéaire et EDP : Michael Goldman (École Polytechnique)
-DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/michael-goldman-ecole-polytechnique/
+SUMMARY:Séminaire Analyse non linéaire et EDP : Michael Goldman (École P
+ olytechnique)
+DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 O
+ utlook Live\nhttps://www.math.ens.psl.eu/evenement/michael-goldman-ecole-p
+ olytechnique/
 LOCATION:Salle W – ENS PSL\, 45 rue d'Ulm\, 75005\, Paris
-URL:https://www.math.ens.psl.eu/evenement/michael-goldman-ecole-polytechnique/
+URL:https://www.math.ens.psl.eu/evenement/michael-goldman-ecole-polytechniq
+ ue/
 END:VEVENT
 BEGIN:VEVENT
 UID:00c8e891f599@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270420T140000
 DTEND:20270420T160000
 SUMMARY:Séminaire SPIKE
@@ -1147,17 +1481,22 @@ URL:https://indico.math.cnrs.fr/event/16858/
 END:VEVENT
 BEGIN:VEVENT
 UID:e976e6064780@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270422T180000
 DTEND:20270422T200000
-SUMMARY:Quelques problèmes mathématiques issus de l’océanographie Laure Saint-Raymond
-DESCRIPTION:Leçon inaugurale\nhttps://www.college-de-france.fr/fr/agenda/lecon-inaugurale/quelques-problemes-mathematiques-issus-de-oceanographie/quelques-problemes-mathematiques-issus-de-oceanographie
+SUMMARY:Quelques problèmes mathématiques issus de l’océanographie Laur
+ e Saint-Raymond
+DESCRIPTION:Leçon inaugurale\nhttps://www.college-de-france.fr/fr/agenda/l
+ econ-inaugurale/quelques-problemes-mathematiques-issus-de-oceanographie/qu
+ elques-problemes-mathematiques-issus-de-oceanographie
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/quelques-problemes-mathematiques-issus-de-oceanographie/quelques-problemes-mathematiques-issus-de-oceanographie
+URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/quelques-pr
+ oblemes-mathematiques-issus-de-oceanographie/quelques-problemes-mathematiq
+ ues-issus-de-oceanographie
 END:VEVENT
 BEGIN:VEVENT
 UID:631b6031414d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270423T143000
 DTEND:20270423T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -1167,17 +1506,20 @@ URL:https://indico.math.cnrs.fr/event/16948/
 END:VEVENT
 BEGIN:VEVENT
 UID:b9c3d5b9887b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270428T140000
 DTEND:20270428T160000
 SUMMARY:Ondes dans les fluides (1) Laure Saint-Raymond
-DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-1
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-1
+DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.
+ fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-1
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides
+ /ondes-dans-les-fluides-1
 END:VEVENT
 BEGIN:VEVENT
 UID:ae79b412d532@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270503T100000
 DTEND:20270503T120000
 SUMMARY:Séance du 3 Mai
@@ -1187,27 +1529,36 @@ URL:https://indico.math.cnrs.fr/event/17328/
 END:VEVENT
 BEGIN:VEVENT
 UID:a175a5a87329@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270505T140000
 DTEND:20270505T160000
 SUMMARY:Ondes dans les fluides (2) Laure Saint-Raymond
-DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-2
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-2
+DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.
+ fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-2
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides
+ /ondes-dans-les-fluides-2
 END:VEVENT
 BEGIN:VEVENT
 UID:3f8c053b21b9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270510T083000
 DTEND:20270510T103000
 SUMMARY:Workshop 1: Convexity and Information Theory
-DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Discrete Workshop 1: Convexity and Information Theory May 10 to 14\, 2027 - IHP\, Paris Aim of the Workshop The aim of this conference is to bring together experts from Information Theory and Convex Geometry. It will also place a strong emphasis on Functional Inequalities and Optimal Transport. Recent works at the intersection of one or more \nhttps://indico.math.cnrs.fr/event/16296/
+DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Disc
+ rete Workshop 1: Convexity and Information Theory May 10 to 14\, 2027 - IH
+ P\, Paris Aim of the Workshop The aim of this conference is to bring toget
+ her experts from Information Theory and Convex Geometry. It will also plac
+ e a strong emphasis on Functional Inequalities and Optimal Transport. Rece
+ nt works at the intersection of one or more \nhttps://indico.math.cnrs.fr/
+ event/16296/
 LOCATION:Aphithéâtre Hermite
 URL:https://indico.math.cnrs.fr/event/16296/
 END:VEVENT
 BEGIN:VEVENT
 UID:636f460acfff@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270511T140000
 DTEND:20270511T160000
 SUMMARY:Séminaire SPIKE
@@ -1217,17 +1568,20 @@ URL:https://indico.math.cnrs.fr/event/16859/
 END:VEVENT
 BEGIN:VEVENT
 UID:97c6cf06bf1b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270512T140000
 DTEND:20270512T160000
 SUMMARY:Ondes dans les fluides (3) Laure Saint-Raymond
-DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-3
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-3
+DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.
+ fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-3
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides
+ /ondes-dans-les-fluides-3
 END:VEVENT
 BEGIN:VEVENT
 UID:05c1e0bc172e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270514T143000
 DTEND:20270514T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -1237,27 +1591,34 @@ URL:https://indico.math.cnrs.fr/event/16949/
 END:VEVENT
 BEGIN:VEVENT
 UID:4706b2fc7b0c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270518T093000
 DTEND:20270518T123000
-SUMMARY:Séminaire Analyse non linéaire et EDP : Louise Gassot (Université de Rennes)
-DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/louise-gassot-universite-de-rennes/
+SUMMARY:Séminaire Analyse non linéaire et EDP : Louise Gassot (Universit
+ é de Rennes)
+DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 O
+ utlook Live\nhttps://www.math.ens.psl.eu/evenement/louise-gassot-universit
+ e-de-rennes/
 LOCATION:Campus de Jussieu salle 309 3e étage barre 15-16
-URL:https://www.math.ens.psl.eu/evenement/louise-gassot-universite-de-rennes/
+URL:https://www.math.ens.psl.eu/evenement/louise-gassot-universite-de-renne
+ s/
 END:VEVENT
 BEGIN:VEVENT
 UID:8d547af23efc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270519T140000
 DTEND:20270519T160000
 SUMMARY:Ondes dans les fluides (4) Laure Saint-Raymond
-DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-4
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-4
+DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.
+ fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-4
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides
+ /ondes-dans-les-fluides-4
 END:VEVENT
 BEGIN:VEVENT
 UID:834e8431704d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270521T134500
 DTEND:20270521T173000
 SUMMARY:Derived Seminar
@@ -1267,27 +1628,33 @@ URL:https://indico.math.cnrs.fr/event/16981/
 END:VEVENT
 BEGIN:VEVENT
 UID:841f5cf87fd9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270524T090000
 DTEND:20270524T110000
 SUMMARY:Number Theory\, Combinatorics and Related Topics
-DESCRIPTION:This conference aims to bring together specialists working in fields at the interface of Diophantine approximation and combinatorics and related number theory topics This conference is mainly funded by ANR GoDiBAp .\nhttps://indico.math.cnrs.fr/event/17316/
+DESCRIPTION:This conference aims to bring together specialists working in f
+ ields at the interface of Diophantine approximation and combinatorics and 
+ related number theory topics This conference is mainly funded by ANR GoDiB
+ Ap .\nhttps://indico.math.cnrs.fr/event/17316/
 LOCATION:Île-de-France — lieu précisé sur la page de l'événement
 URL:https://indico.math.cnrs.fr/event/17316/
 END:VEVENT
 BEGIN:VEVENT
 UID:5f82942f4942@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270526T140000
 DTEND:20270526T160000
 SUMMARY:Ondes dans les fluides (5) Laure Saint-Raymond
-DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-5
-LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-5
+DESCRIPTION:Cours · Ondes dans les fluides\nhttps://www.college-de-france.
+ fr/fr/agenda/cours/ondes-dans-les-fluides/ondes-dans-les-fluides-5
+LOCATION:Amphithéâtre Mireille Delmas-Marty (salle 5)\, Site Marcelin Ber
+ thelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/ondes-dans-les-fluides
+ /ondes-dans-les-fluides-5
 END:VEVENT
 BEGIN:VEVENT
 UID:d68ea34cf769@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270528T143000
 DTEND:20270528T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -1297,27 +1664,42 @@ URL:https://indico.math.cnrs.fr/event/16950/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270531T093000
 DTEND:20270531T113000
-SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji
-DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of Takeshi Saito and Takeshi Tsuji May 31 - June 4\, 2027 at IHES - Marilyn and James Simons Conference Center How to get to IHES This conference\, which is part of a long-standing tradition of French-Japanese collaboration in arithmetic geometry\, will honor two leading figures of this partnership: Professor Takeshi Saito \, on the occasion o\nhttps://indico.math.cnrs.fr/event/15993/
+SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes
+ hi Saito and Takeshi Tsuji
+DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of T
+ akeshi Saito and Takeshi Tsuji May 31 - June 4\, 2027 at IHES - Marilyn an
+ d James Simons Conference Center How to get to IHES This conference\, whic
+ h is part of a long-standing tradition of French-Japanese collaboration in
+  arithmetic geometry\, will honor two leading figures of this partnership:
+  Professor Takeshi Saito \, on the occasion o\nhttps://indico.math.cnrs.fr
+ /event/15993/
 LOCATION:Le Bois-Marie
 URL:https://indico.math.cnrs.fr/event/15993/
 END:VEVENT
 BEGIN:VEVENT
 UID:4e38a7b82794@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270607T090000
 DTEND:20270607T110000
-SUMMARY:Géométrie Algébrique\, Formes Automorphes et Théorie géométrique des Représentations\, une conférence dédiée à la mémoire de Gérard Laumon
-DESCRIPTION:This conference will gather international experts working on different aspects of the Langlands program\, on the theory of automorphic forms\, and on geometric representation theory\, to discuss recent progress in these fields. This conference is dedicated to the memory of Gérard Laumon\, whose work had a profound influence on the Langlands program\, in all of the above aspects. Laumon spent his whole \nhttps://indico.math.cnrs.fr/event/17038/
+SUMMARY:Géométrie Algébrique\, Formes Automorphes et Théorie géométri
+ que des Représentations\, une conférence dédiée à la mémoire de Gér
+ ard Laumon
+DESCRIPTION:This conference will gather international experts working on di
+ fferent aspects of the Langlands program\, on the theory of automorphic fo
+ rms\, and on geometric representation theory\, to discuss recent progress 
+ in these fields. This conference is dedicated to the memory of Gérard Lau
+ mon\, whose work had a profound influence on the Langlands program\, in al
+ l of the above aspects. Laumon spent his whole \nhttps://indico.math.cnrs.
+ fr/event/17038/
 LOCATION:LMO
 URL:https://indico.math.cnrs.fr/event/17038/
 END:VEVENT
 BEGIN:VEVENT
 UID:690c2931a87b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270607T100000
 DTEND:20270607T120000
 SUMMARY:Séance du 7 Juin
@@ -1327,7 +1709,7 @@ URL:https://indico.math.cnrs.fr/event/17329/
 END:VEVENT
 BEGIN:VEVENT
 UID:8475372a4b2b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270611T143000
 DTEND:20270611T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -1337,17 +1719,23 @@ URL:https://indico.math.cnrs.fr/event/16951/
 END:VEVENT
 BEGIN:VEVENT
 UID:fd25db4eb645@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270614T080000
 DTEND:20270614T100000
 SUMMARY:School: Asymptotic geometric analysis and functional inequalities
-DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Discrete School: Asymptotic geometric analysis and functional inequalities June 14 to 18\, 2027 - IHP\, Paris Summary This school is the 3rd main event of the semester “High Dimensional Probability and Analysis\, Continuous and Discrete”. Its aim is to introduce several concepts at the interface between probability\, analysis and high-dimension\nhttps://indico.math.cnrs.fr/event/16297/
+DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Disc
+ rete School: Asymptotic geometric analysis and functional inequalities Jun
+ e 14 to 18\, 2027 - IHP\, Paris Summary This school is the 3rd main event 
+ of the semester “High Dimensional Probability and Analysis\, Continuous 
+ and Discrete”. Its aim is to introduce several concepts at the interface
+  between probability\, analysis and high-dimension\nhttps://indico.math.cn
+ rs.fr/event/16297/
 LOCATION:Amphithéâtre Hermite
 URL:https://indico.math.cnrs.fr/event/16297/
 END:VEVENT
 BEGIN:VEVENT
 UID:d4bb08330f95@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270618T134500
 DTEND:20270618T173000
 SUMMARY:Derived Seminar
@@ -1357,17 +1745,21 @@ URL:https://indico.math.cnrs.fr/event/16982/
 END:VEVENT
 BEGIN:VEVENT
 UID:002bc0e4e2cc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270622T093000
 DTEND:20270622T123000
-SUMMARY:Séminaire Analyse non linéaire et EDP : Mihaela Ifrim (University of Wisconsin-Madison
-DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 Outlook Live\nhttps://www.math.ens.psl.eu/evenement/mihaela-ifrim-university-of-wisconsin-madison/
+SUMMARY:Séminaire Analyse non linéaire et EDP : Mihaela Ifrim (University
+  of Wisconsin-Madison
+DESCRIPTION:| Ajouter au calendrier Google Calendar iCalendar Outlook 365 O
+ utlook Live\nhttps://www.math.ens.psl.eu/evenement/mihaela-ifrim-universit
+ y-of-wisconsin-madison/
 LOCATION:Salle W – ENS PSL\, 45 rue d'Ulm\, 75005\, Paris
-URL:https://www.math.ens.psl.eu/evenement/mihaela-ifrim-university-of-wisconsin-madison/
+URL:https://www.math.ens.psl.eu/evenement/mihaela-ifrim-university-of-wisco
+ nsin-madison/
 END:VEVENT
 BEGIN:VEVENT
 UID:6413949a52dd@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270625T143000
 DTEND:20270625T153000
 SUMMARY:Séminaire FDD - FiME - MIRTE
@@ -1377,21 +1769,34 @@ URL:https://indico.math.cnrs.fr/event/16952/
 END:VEVENT
 BEGIN:VEVENT
 UID:71f620850c59@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270705T080000
 DTEND:20270705T100000
-SUMMARY:Workshop 2: Asymptotic geometric analysis and functional inequalities
-DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Discrete Workshop 2: Asymptotic geometric analysis and functional inequalities July 5 to 9\, 2027 - IHP\, Paris Summary This will be the final workshop of the 2027-T2 trimester program and it will focus on all core aspects of high-dimensional probability and geometry as well as interactions with other fields\, including metric geometry\, discre\nhttps://indico.math.cnrs.fr/event/16298/
+SUMMARY:Workshop 2: Asymptotic geometric analysis and functional inequaliti
+ es
+DESCRIPTION:High Dimensional Probability and Analysis\, Continuous and Disc
+ rete Workshop 2: Asymptotic geometric analysis and functional inequalities
+  July 5 to 9\, 2027 - IHP\, Paris Summary This will be the final workshop 
+ of the 2027-T2 trimester program and it will focus on all core aspects of 
+ high-dimensional probability and geometry as well as interactions with oth
+ er fields\, including metric geometry\, discre\nhttps://indico.math.cnrs.f
+ r/event/16298/
 LOCATION:Amphitéâtre Hermite
 URL:https://indico.math.cnrs.fr/event/16298/
 END:VEVENT
 BEGIN:VEVENT
 UID:122b5c12b56a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270913T083000
 DTEND:20270913T103000
 SUMMARY:Advances in Quantum Cryptography\, Paris
-DESCRIPTION:This is a thematic trimester programme with short courses\, seminars and workshops on mathematical developments in Advances in Quantum Cryptography (QCRYPTO). September 13th to December 10th\, 2027 at the Institut Henri Poincaré\, Paris ** REGISTRATION IS MANDATORY AND FREE ** Deadline for financial support request is March 15\, 2027 Presentation of the programme Quantum cryptography lies at the inter\nhttps://indico.math.cnrs.fr/event/16600/
+DESCRIPTION:This is a thematic trimester programme with short courses\, sem
+ inars and workshops on mathematical developments in Advances in Quantum Cr
+ yptography (QCRYPTO). September 13th to December 10th\, 2027 at the Instit
+ ut Henri Poincaré\, Paris ** REGISTRATION IS MANDATORY AND FREE ** Deadli
+ ne for financial support request is March 15\, 2027 Presentation of the pr
+ ogramme Quantum cryptography lies at the inter\nhttps://indico.math.cnrs.f
+ r/event/16600/
 LOCATION:IHP
 URL:https://indico.math.cnrs.fr/event/16600/
 END:VEVENT

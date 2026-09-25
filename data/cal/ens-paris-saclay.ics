@@ -1,38 +1,46 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:ENS Paris-Saclay · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:d5f03ae7d46f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T183000
 DTEND:20260928T193000
 SUMMARY:Festival Vo-Vf : Traduire les sciences ?
-DESCRIPTION:Événement\nhttps://www.ens-paris-saclay.fr/agenda/festival-vo-vf-traduire-les-sciences
+DESCRIPTION:Événement\nhttps://www.ens-paris-saclay.fr/agenda/festival-vo
+ -vf-traduire-les-sciences
 LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
-URL:https://www.ens-paris-saclay.fr/agenda/festival-vo-vf-traduire-les-sciences
+URL:https://www.ens-paris-saclay.fr/agenda/festival-vo-vf-traduire-les-scie
+ nces
 END:VEVENT
 BEGIN:VEVENT
 UID:73a2726cb500@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261020T183000
 DTEND:20261020T200000
-SUMMARY:Conférence du diplôme sur les enquêtes Trajectoires et Origines de l'INED
-DESCRIPTION:Conférence du diplôme\nhttps://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-les-enquetes-trajectoires-et-origines-de-lined
+SUMMARY:Conférence du diplôme sur les enquêtes Trajectoires et Origines 
+ de l'INED
+DESCRIPTION:Conférence du diplôme\nhttps://www.ens-paris-saclay.fr/agenda
+ /conference-du-diplome-sur-les-enquetes-trajectoires-et-origines-de-lined
 LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
-URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-les-enquetes-trajectoires-et-origines-de-lined
+URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-les-en
+ quetes-trajectoires-et-origines-de-lined
 END:VEVENT
 BEGIN:VEVENT
 UID:7a6329099f63@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261106T093000
 DTEND:20261106T180000
-SUMMARY:Colloque inter-ENS « Accéder à l’enseignement supérieur : une question de territoire ? »
-DESCRIPTION:\nhttps://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acceder-lenseignement-superieur-une-question-de-territoire
+SUMMARY:Colloque inter-ENS « Accéder à l’enseignement supérieur : une
+  question de territoire ? »
+DESCRIPTION:\nhttps://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acc
+ eder-lenseignement-superieur-une-question-de-territoire
 LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
-URL:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acceder-lenseignement-superieur-une-question-de-territoire
+URL:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acceder-lense
+ ignement-superieur-une-question-de-territoire
 END:VEVENT
 END:VCALENDAR

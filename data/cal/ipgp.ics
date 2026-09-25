@@ -1,28 +1,39 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:IPGP · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:ebf3645e78e3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260929T140000
 DTEND:20260929T160000
-SUMMARY:Reconstructing Earth’s early subaerial environments via process-informed comparative geomorphology and sedimentology
-DESCRIPTION:Séminaires Dynamique des fluides géologiques\nhttps://www.ipgp.fr/actus-et-agenda/agenda/seminaires/reconstructing-earths-early-subaerial-environments-via-process-informed-comparative-geomorphology-and-sedimentology/
+SUMMARY:Reconstructing Earth’s early subaerial environments via process-i
+ nformed comparative geomorphology and sedimentology
+DESCRIPTION:Séminaires Dynamique des fluides géologiques\nhttps://www.ipg
+ p.fr/actus-et-agenda/agenda/seminaires/reconstructing-earths-early-subaeri
+ al-environments-via-process-informed-comparative-geomorphology-and-sedimen
+ tology/
 LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/reconstructing-earths-early-subaerial-environments-via-process-informed-comparative-geomorphology-and-sedimentology/
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/reconstructing-ea
+ rths-early-subaerial-environments-via-process-informed-comparative-geomorp
+ hology-and-sedimentology/
 END:VEVENT
 BEGIN:VEVENT
 UID:3db524fe1bca@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T110000
 DTEND:20260930T130000
-SUMMARY:Subduction zone heterogeneities and the distribution of fluids controlling the occurrence of seismicity
-DESCRIPTION:Séminaires Géosciences Marines\nhttps://www.ipgp.fr/actus-et-agenda/agenda/seminaires/subduction-zone-heterogeneities-and-the-distribution-of-fluids-controlling-the-occurrence-of-seismicity/
+SUMMARY:Subduction zone heterogeneities and the distribution of fluids cont
+ rolling the occurrence of seismicity
+DESCRIPTION:Séminaires Géosciences Marines\nhttps://www.ipgp.fr/actus-et-
+ agenda/agenda/seminaires/subduction-zone-heterogeneities-and-the-distribut
+ ion-of-fluids-controlling-the-occurrence-of-seismicity/
 LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/subduction-zone-heterogeneities-and-the-distribution-of-fluids-controlling-the-occurrence-of-seismicity/
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/subduction-zone-h
+ eterogeneities-and-the-distribution-of-fluids-controlling-the-occurrence-o
+ f-seismicity/
 END:VEVENT
 END:VCALENDAR

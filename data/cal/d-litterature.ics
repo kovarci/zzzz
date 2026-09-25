@@ -1,123 +1,160 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Littérature · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:5f84a3ed800b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260924T100000
 DTEND:20260924T120000
-SUMMARY:Decoding Aneuploidies - using CRISPR technologies in mice to unravel novel cancer driver genes and vulnerabilities in recurrent CNA.
-DESCRIPTION:Séminaire Keynote BDD\nhttps://curie.fr/evenements-scientifiques/decoding-aneuploidies-using-crispr-technologies-mice-unravel-novel-cancer-driver-genes-and-24-09-2026
+SUMMARY:Decoding Aneuploidies - using CRISPR technologies in mice to unrave
+ l novel cancer driver genes and vulnerabilities in recurrent CNA.
+DESCRIPTION:Séminaire Keynote BDD\nhttps://curie.fr/evenements-scientifiqu
+ es/decoding-aneuploidies-using-crispr-technologies-mice-unravel-novel-canc
+ er-driver-genes-and-24-09-2026
 LOCATION:Institut Curie\, 26 rue d'Ulm\, Paris 5e
-URL:https://curie.fr/evenements-scientifiques/decoding-aneuploidies-using-crispr-technologies-mice-unravel-novel-cancer-driver-genes-and-24-09-2026
+URL:https://curie.fr/evenements-scientifiques/decoding-aneuploidies-using-c
+ rispr-technologies-mice-unravel-novel-cancer-driver-genes-and-24-09-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:4929395cfb3e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Les plafonds en Avignon
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/les-plafonds-en-avignon-926096.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/les-plafonds-en-avignon-926096.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/les-plafonds-en-avignon-9260
+ 96.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/les-plafonds-en-avignon-926096.kjsp?RH
+ =1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:dc9fc9e9bf52@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Molière et ses masques
-DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/moliere-et-ses-masques
-LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/moliere-et-ses-masques
+DESCRIPTION:\nhttps://www.universite-paris-saclay.fr/evenements/moliere-et-
+ ses-masques
+LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
+ ris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/moliere-et-ses-masque
+ s
 END:VEVENT
 BEGIN:VEVENT
 UID:8bd7f7d7d5b4@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Mahmoud Darwich Poetry Day
-DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/N0mcO67
+DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/ev
+ enement/N0mcO67
 LOCATION:Institut du monde arabe\, Paris
 URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/N0mcO67
 END:VEVENT
 BEGIN:VEVENT
 UID:1bce809469a3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Soirée inaugurale du Mahmoud Darwich Poetry Day
-DESCRIPTION:\nhttps://www.imarabe.org/fr/agenda/rencontres-et-debats/soiree-inaugurale-du-mahmoud-darwich-poetry-day
-LOCATION:Institut du monde arabe\, 1 rue des Fossés-Saint-Bernard\, Paris 5e
-URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/soiree-inaugurale-du-mahmoud-darwich-poetry-day
+DESCRIPTION:\nhttps://www.imarabe.org/fr/agenda/rencontres-et-debats/soiree
+ -inaugurale-du-mahmoud-darwich-poetry-day
+LOCATION:Institut du monde arabe\, 1 rue des Fossés-Saint-Bernard\, Paris 
+ 5e
+URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/soiree-inaugural
+ e-du-mahmoud-darwich-poetry-day
 END:VEVENT
 BEGIN:VEVENT
 UID:a67ce233efd9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Maillage : le festival littéraire de la Porte Dorée
-DESCRIPTION:En septembre\, au cœur de la rentrée littéraire\, le Palais de la Porte Dorée lance son festival Maillage. Le temps d’un week-end\, la littérature sous toutes ses formes investit le Palais\, du Musée national de l’histoire de l’immigration à l’Aquarium tropical\, pour faire circuler les récits et diffuser de nouvelles narrations.\nhttps://www.paris.fr/evenements/maillage-le-festival-litteraire-de-la-porte-doree-123065
-LOCATION:Musée de l'histoire de l'immigration - Palais de la Porte Dorée - Paris\, 293 avenue Daumesnil\, 75012 Paris
-URL:https://www.paris.fr/evenements/maillage-le-festival-litteraire-de-la-porte-doree-123065
+DESCRIPTION:En septembre\, au cœur de la rentrée littéraire\, le Palais 
+ de la Porte Dorée lance son festival Maillage. Le temps d’un week-end\,
+  la littérature sous toutes ses formes investit le Palais\, du Musée nat
+ ional de l’histoire de l’immigration à l’Aquarium tropical\, pour f
+ aire circuler les récits et diffuser de nouvelles narrations.\nhttps://ww
+ w.paris.fr/evenements/maillage-le-festival-litteraire-de-la-porte-doree-12
+ 3065
+LOCATION:Musée de l'histoire de l'immigration - Palais de la Porte Dorée 
+ - Paris\, 293 avenue Daumesnil\, 75012 Paris
+URL:https://www.paris.fr/evenements/maillage-le-festival-litteraire-de-la-p
+ orte-doree-123065
 END:VEVENT
 BEGIN:VEVENT
 UID:6bb43887374e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T190000
 DTEND:20260925T210000
 SUMMARY:Animaux et Sourds : discriminés par leur absence de parole ?
-DESCRIPTION:Dans le cadre de la Journée Mondiale des Sourds\, conférence par Tiphaine Vandermaesen de l’équipe de Vegan Sign. En présence d'interprètes LSF/FR\nhttps://www.paris.fr/evenements/animaux-et-sourds-discrimines-par-leur-absence-de-parole-114917
-LOCATION:Bibliothèque Saint-Eloi\, 23 rue du Colonel Rozanoff\, 75012 Paris
-URL:https://www.paris.fr/evenements/animaux-et-sourds-discrimines-par-leur-absence-de-parole-114917
+DESCRIPTION:Dans le cadre de la Journée Mondiale des Sourds\, conférence 
+ par Tiphaine Vandermaesen de l’équipe de Vegan Sign. En présence d'int
+ erprètes LSF/FR\nhttps://www.paris.fr/evenements/animaux-et-sourds-discri
+ mines-par-leur-absence-de-parole-114917
+LOCATION:Bibliothèque Saint-Eloi\, 23 rue du Colonel Rozanoff\, 75012 Pari
+ s
+URL:https://www.paris.fr/evenements/animaux-et-sourds-discrimines-par-leur-
+ absence-de-parole-114917
 END:VEVENT
 BEGIN:VEVENT
 UID:2e3cfe61cfdc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T190000
 DTEND:20260925T210000
 SUMMARY:De Venezuela al Kurdistán\, crónicas de un destino
-DESCRIPTION:Littérature\nhttps://www.mal217.org/fr/agenda/de-venezuela-al-kurdistan-cronicas-de-un-destino
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris 7e
-URL:https://www.mal217.org/fr/agenda/de-venezuela-al-kurdistan-cronicas-de-un-destino
+DESCRIPTION:Littérature\nhttps://www.mal217.org/fr/agenda/de-venezuela-al-
+ kurdistan-cronicas-de-un-destino
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
+URL:https://www.mal217.org/fr/agenda/de-venezuela-al-kurdistan-cronicas-de-
+ un-destino
 END:VEVENT
 BEGIN:VEVENT
 UID:37220a404c3f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T180000
 DTEND:20260928T200000
-SUMMARY:Baudelaire à voix haute : Apéro autour de la poésie dans l'exposition d'art "Le Baromètre du Cœur"
+SUMMARY:Baudelaire à voix haute : Apéro autour de la poésie dans l'expos
+ ition d'art "Le Baromètre du Cœur"
 DESCRIPTION:\nhttps://lu.ma/858a87gx
 LOCATION:5 Rue de Médicis\, 75006 Paris\, France
 URL:https://lu.ma/858a87gx
 END:VEVENT
 BEGIN:VEVENT
 UID:9f84d75888ef@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T183000
 DTEND:20260928T213000
-SUMMARY:L'inclusion dans la culture et la création artistique : Concert – débat
-DESCRIPTION:Récital de piano et violoncelle du Duo Kandisky\, suivi d'un débat autour de l'accessibilité à la culture et à la création artistique.\nhttps://www.paris.fr/evenements/l-inclusion-dans-la-culture-et-la-creation-artistique-concert-debat-123321
+SUMMARY:L'inclusion dans la culture et la création artistique : Concert 
+ – débat
+DESCRIPTION:Récital de piano et violoncelle du Duo Kandisky\, suivi d'un d
+ ébat autour de l'accessibilité à la culture et à la création artistiq
+ ue.\nhttps://www.paris.fr/evenements/l-inclusion-dans-la-culture-et-la-cre
+ ation-artistique-concert-debat-123321
 LOCATION:Mairie de Paris Centre\, 2 rue Eugene Spuller\, 75003 Paris
-URL:https://www.paris.fr/evenements/l-inclusion-dans-la-culture-et-la-creation-artistique-concert-debat-123321
+URL:https://www.paris.fr/evenements/l-inclusion-dans-la-culture-et-la-creat
+ ion-artistique-concert-debat-123321
 END:VEVENT
 BEGIN:VEVENT
 UID:f02fda834490@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T183000
 DTEND:20260928T203000
 SUMMARY:Les nouveaux territoires de la littérature
 DESCRIPTION:\nhttps://lu.ma/l7rzbk2o
-LOCATION:Climate House Paris Sentier\, 39 Rue du Caire\, 75002 Paris\, France
+LOCATION:Climate House Paris Sentier\, 39 Rue du Caire\, 75002 Paris\, Fran
+ ce
 URL:https://lu.ma/l7rzbk2o
 END:VEVENT
 BEGIN:VEVENT
 UID:271725ae20c2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260928T193000
 DTEND:20260928T213000
 SUMMARY:Langue En Poésie
@@ -127,907 +164,1316 @@ URL:https://lu.ma/ura2mafa
 END:VEVENT
 BEGIN:VEVENT
 UID:b76ac8b3e78b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:IA : la science rattrape-t-elle la fiction ?
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/ia-la-science-rattrape-t-elle-la-fiction
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/ia-la-s
+ cience-rattrape-t-elle-la-fiction
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/ia-la-science-rattrape-t-elle-la-fiction
+URL:https://www.collegedesbernardins.fr/agenda/ia-la-science-rattrape-t-ell
+ e-la-fiction
 END:VEVENT
 BEGIN:VEVENT
 UID:7b4dae2e1ac6@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260929T190000
 DTEND:20260929T210000
 SUMMARY:Il n'y a plus de ville
-DESCRIPTION:Littérature\nhttps://www.mal217.org/fr/agenda/il-n-y-a-plus-de-ville-94f6a3b5
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris 7e
+DESCRIPTION:Littérature\nhttps://www.mal217.org/fr/agenda/il-n-y-a-plus-de
+ -ville-94f6a3b5
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
 URL:https://www.mal217.org/fr/agenda/il-n-y-a-plus-de-ville-94f6a3b5
 END:VEVENT
 BEGIN:VEVENT
 UID:ea56d2a9bd3a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260929T193000
 DTEND:20260929T210000
 SUMMARY:Auschwitz\, une histoire de femmes de Johanna Lehr
-DESCRIPTION:Les 55 femmes du convoi 58 parti de France le 31 juillet 1943\, et sélectionnées à l’arrivée à Auschwitz pour devenir cobayes pour des expériences sur la stérilisation\, sont en grande majorité tombées aux oubliettes de l’Histoire.\nhttps://www.paris.fr/evenements/auschwitz-une-histoire-de-femmes-de-johanna-lehr-116553
+DESCRIPTION:Les 55 femmes du convoi 58 parti de France le 31 juillet 1943\,
+  et sélectionnées à l’arrivée à Auschwitz pour devenir cobayes pour
+  des expériences sur la stérilisation\, sont en grande majorité tombée
+ s aux oubliettes de l’Histoire.\nhttps://www.paris.fr/evenements/auschwi
+ tz-une-histoire-de-femmes-de-johanna-lehr-116553
 LOCATION:Mémorial de la Shoah\, 17 rue Geoffroy l'Asnier\, 75004 Paris
-URL:https://www.paris.fr/evenements/auschwitz-une-histoire-de-femmes-de-johanna-lehr-116553
+URL:https://www.paris.fr/evenements/auschwitz-une-histoire-de-femmes-de-joh
+ anna-lehr-116553
 END:VEVENT
 BEGIN:VEVENT
 UID:96b5ae0242dc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260929T210000
 DTEND:20260929T230000
-SUMMARY:Les politiques de J.Milei — Le véritable bilan économique et social
-DESCRIPTION:Conférence\nhttps://www.mal217.org/fr/agenda/les-politiques-de-j-milei
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris 7e
+SUMMARY:Les politiques de J.Milei — Le véritable bilan économique et so
+ cial
+DESCRIPTION:Conférence\nhttps://www.mal217.org/fr/agenda/les-politiques-de
+ -j-milei
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
 URL:https://www.mal217.org/fr/agenda/les-politiques-de-j-milei
 END:VEVENT
 BEGIN:VEVENT
 UID:df395d7ac922@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
-SUMMARY:DIGIWISS 5 Textsorten und ihre Entwicklungsprozesse im KI-Zeitalter: linguistische und didaktische Ansätze
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/digiwiss-5-textsorten-und-ihre-entwicklungsprozesse-im-ki-zeitalter-linguistische-und-didaktische-ans-tze-946627.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/digiwiss-5-textsorten-und-ihre-entwicklungsprozesse-im-ki-zeitalter-linguistische-und-didaktische-ans-tze-946627.kjsp?RH=1236178100008
+SUMMARY:DIGIWISS 5 Textsorten und ihre Entwicklungsprozesse im KI-Zeitalter
+ : linguistische und didaktische Ansätze
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/digiwiss-5-textsorten-und-ih
+ re-entwicklungsprozesse-im-ki-zeitalter-linguistische-und-didaktische-ans-
+ tze-946627.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/digiwiss-5-textsorten-und-ihre-entwick
+ lungsprozesse-im-ki-zeitalter-linguistische-und-didaktische-ans-tze-946627
+ .kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:c990a5ebe64d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T180000
 DTEND:20260930T193000
 SUMMARY:Le livre est mort\, vive le livre !
-DESCRIPTION:La lecture est-elle vraiment en train de disparaître ? À l’heure où les écrans\, les flux d’information et les crises permanentes bouleversent notre rapport au temps et à l’attention\, le Théâtre de la Concorde ouvre le débat sur l’avenir du livre et de la lecture. Une rencontre pour dépasser les discours alarmistes\, comprendre les pratiques qui évoluent et interroger ce que la lecture représente encore pour nos vies individuelles et démocratiques.\nhttps://www.paris.fr/evenements/le-livre-est-mort-vive-le-livre-123277
+DESCRIPTION:La lecture est-elle vraiment en train de disparaître ? À l’
+ heure où les écrans\, les flux d’information et les crises permanentes
+  bouleversent notre rapport au temps et à l’attention\, le Théâtre de
+  la Concorde ouvre le débat sur l’avenir du livre et de la lecture. Une
+  rencontre pour dépasser les discours alarmistes\, comprendre les pratiqu
+ es qui évoluent et interroger ce que la lecture représente encore pour n
+ os vies individuelles et démocratiques.\nhttps://www.paris.fr/evenements/
+ le-livre-est-mort-vive-le-livre-123277
 LOCATION:Théâtre de la Concorde\, 1 Avenue Gabriel\, 75008 Paris
 URL:https://www.paris.fr/evenements/le-livre-est-mort-vive-le-livre-123277
 END:VEVENT
 BEGIN:VEVENT
 UID:05a79be0e076@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T190000
 DTEND:20260930T203000
-SUMMARY:Rencontre avec le prix Goncourt du premier roman 2026 : Romain Lemire
-DESCRIPTION:Venez à la rencontre de Romain Lemire qui est auteur\, parolier\, comédien\, chanteur et musicien. Un multi-casquette qui nous offre une autofiction poignante à hauteur d'enfant\, un récit bouleversant sur l'inceste au sein d'une famille en apparence heureuse. Mais en dépit du drame\, envers et contre tout\, Romain Lemire affirme la possibilité de la joie. "Clément" est paru aux éditions Le Cherche Midi\nhttps://www.paris.fr/evenements/rencontre-avec-le-prix-goncourt-du-premier-roman-2026-romain-lemire-114268
-LOCATION:Bibliothèque Valeyre\, 24 rue Marguerite de Rochechouart\, 75009 Paris
-URL:https://www.paris.fr/evenements/rencontre-avec-le-prix-goncourt-du-premier-roman-2026-romain-lemire-114268
+SUMMARY:Rencontre avec le prix Goncourt du premier roman 2026 : Romain Lemi
+ re
+DESCRIPTION:Venez à la rencontre de Romain Lemire qui est auteur\, parolie
+ r\, comédien\, chanteur et musicien. Un multi-casquette qui nous offre un
+ e autofiction poignante à hauteur d'enfant\, un récit bouleversant sur l
+ 'inceste au sein d'une famille en apparence heureuse. Mais en dépit du dr
+ ame\, envers et contre tout\, Romain Lemire affirme la possibilité de la 
+ joie. "Clément" est paru aux éditions Le Cherche Midi\nhttps://www.paris
+ .fr/evenements/rencontre-avec-le-prix-goncourt-du-premier-roman-2026-romai
+ n-lemire-114268
+LOCATION:Bibliothèque Valeyre\, 24 rue Marguerite de Rochechouart\, 75009 
+ Paris
+URL:https://www.paris.fr/evenements/rencontre-avec-le-prix-goncourt-du-prem
+ ier-roman-2026-romain-lemire-114268
 END:VEVENT
 BEGIN:VEVENT
 UID:78411018e9a9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T190000
 DTEND:20260930T210000
 SUMMARY:Rentrée littéraire avec Joséphine Tassy et Iman Ahmed
-DESCRIPTION:Dans le cadre de son cycle « Tout un monde en français »\, l'Alliance française de Paris propose une rencontre littéraire inédite avec Joséphine Tassy\, autrice de « Vagabondes» (Éditions de l'Iconoclaste\, 2026) et Iman Ahmed autrice de « Abdallah superstar» (Éditions Actes Sud\, 2026).\nhttps://www.paris.fr/evenements/rentree-litteraire-avec-josephine-tassy-et-iman-ahmed-123911
-LOCATION:Auditorium de l'Alliance française\, 101\, boulevard Raspail\, 75006 Paris
-URL:https://www.paris.fr/evenements/rentree-litteraire-avec-josephine-tassy-et-iman-ahmed-123911
+DESCRIPTION:Dans le cadre de son cycle « Tout un monde en français »\, l
+ 'Alliance française de Paris propose une rencontre littéraire inédite a
+ vec Joséphine Tassy\, autrice de « Vagabondes» (Éditions de l'Iconocla
+ ste\, 2026) et Iman Ahmed autrice de « Abdallah superstar» (Éditions Ac
+ tes Sud\, 2026).\nhttps://www.paris.fr/evenements/rentree-litteraire-avec-
+ josephine-tassy-et-iman-ahmed-123911
+LOCATION:Auditorium de l'Alliance française\, 101\, boulevard Raspail\, 75
+ 006 Paris
+URL:https://www.paris.fr/evenements/rentree-litteraire-avec-josephine-tassy
+ -et-iman-ahmed-123911
 END:VEVENT
 BEGIN:VEVENT
 UID:62dd53d7e83c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Lancement du projet intégrIA
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/lancement-du-projet-integria-939995.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/lancement-du-projet-integria-939995.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/lancement-du-projet-integria
+ -939995.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/lancement-du-projet-integria-939995.kj
+ sp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:e953dfe35a3a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:« Scopcolor\, le pari d’un média libre »
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/scopcolor-le-pari-d-un-media-libre--927742.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/scopcolor-le-pari-d-un-media-libre--927742.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/scopcolor-le-pari-d-un-media
+ -libre--927742.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/scopcolor-le-pari-d-un-media-libre--92
+ 7742.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:11c4c6fa73c2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T183000
 DTEND:20261001T203000
 SUMMARY:Rencontre littéraire avec Béatrix de L’Aulnoit
-DESCRIPTION:Jeudi 1er octobre\, la Mairie du 8e accueille Béatrix de L’Aulnoit pour une rencontre littéraire autour de son nouvel ouvrage consacré aux mères des présidents de la Ve République.\nhttps://www.paris.fr/evenements/rencontre-litteraire-avec-beatrix-de-l-aulnoit-123691
+DESCRIPTION:Jeudi 1er octobre\, la Mairie du 8e accueille Béatrix de L’A
+ ulnoit pour une rencontre littéraire autour de son nouvel ouvrage consacr
+ é aux mères des présidents de la Ve République.\nhttps://www.paris.fr/
+ evenements/rencontre-litteraire-avec-beatrix-de-l-aulnoit-123691
 LOCATION:Mairie du 8e arrondissement\, 3 rue de Lisbonne\, 75008 Paris
-URL:https://www.paris.fr/evenements/rencontre-litteraire-avec-beatrix-de-l-aulnoit-123691
+URL:https://www.paris.fr/evenements/rencontre-litteraire-avec-beatrix-de-l-
+ aulnoit-123691
 END:VEVENT
 BEGIN:VEVENT
 UID:462fa7d767b9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
-SUMMARY:Evénement scientifique et artistique - Adonis : réinventer la modernité poétique
-DESCRIPTION:\nhttps://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Adonis-reinventer-la-modernite
+SUMMARY:Evénement scientifique et artistique - Adonis : réinventer la mod
+ ernité poétique
+DESCRIPTION:\nhttps://www.univ-paris8.fr/Manifestation-scientifique-et-arti
+ stique-Adonis-reinventer-la-modernite
 LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Adonis-reinventer-la-modernite
+URL:https://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Ado
+ nis-reinventer-la-modernite
 END:VEVENT
 BEGIN:VEVENT
 UID:c0397239d665@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Lire la romance
-DESCRIPTION:Rencontre · Femmes\, patriarcat et littérature p…\nhttps://www.centrepompidou.fr/fr/programme/agenda/evenement/DmeIUF5
+DESCRIPTION:Rencontre · Femmes\, patriarcat et littérature p…\nhttps://
+ www.centrepompidou.fr/fr/programme/agenda/evenement/DmeIUF5
 LOCATION:Bpi\, Paris
 URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/DmeIUF5
 END:VEVENT
 BEGIN:VEVENT
 UID:8b64040c110c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261003T110000
 DTEND:20261003T123000
 SUMMARY:Café littéraire : "La rentrée littéraire"
-DESCRIPTION:Venez échanger avec les bibliothécaires et partager vos coups de cœur littéraires ou autres\, dans une ambiance conviviale !\nhttps://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-112206
+DESCRIPTION:Venez échanger avec les bibliothécaires et partager vos coups
+  de cœur littéraires ou autres\, dans une ambiance conviviale !\nhttps:/
+ /www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-112206
 LOCATION:Médiathèque Virginia Woolf\, 4 rue Germaine Krull\, 75013 Paris
-URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-112206
+URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-1
+ 12206
 END:VEVENT
 BEGIN:VEVENT
 UID:bbbda783d80e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Une heure\, un livre - La Maison vide de Laurent Mauvigner
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-maison-vide-de-laurent-mauvigner
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre---la-maison-vide-de-laurent-mauvigner
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-maison-vide-de-laurent-mauvigner
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-mais
+ on-vide-de-laurent-mauvigner
 END:VEVENT
 BEGIN:VEVENT
 UID:e063481dd2f3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T190000
 DTEND:20261005T200000
 SUMMARY:Rencontre autour de Jane Austen
-DESCRIPTION:Dans le cadre du cycle « Femmes et argent : petites fortunes\, grandes histoires »\, la Bibliothèque publique d'information organise une rencontre autour de Jane Austen.\nhttps://www.paris.fr/evenements/rencontre-autour-de-jane-austen-123863
-LOCATION:Bibliothèque publique d'information\, 40 avenue des Terroirs de France\, 75012 Paris
+DESCRIPTION:Dans le cadre du cycle « Femmes et argent : petites fortunes\,
+  grandes histoires »\, la Bibliothèque publique d'information organise u
+ ne rencontre autour de Jane Austen.\nhttps://www.paris.fr/evenements/renco
+ ntre-autour-de-jane-austen-123863
+LOCATION:Bibliothèque publique d'information\, 40 avenue des Terroirs de F
+ rance\, 75012 Paris
 URL:https://www.paris.fr/evenements/rencontre-autour-de-jane-austen-123863
 END:VEVENT
 BEGIN:VEVENT
 UID:8753c7af76ac@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261006T170000
 DTEND:20261006T190000
 SUMMARY:Louise Michel : le manuscrit infini
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/c-retat-louise-michel-le-manuscrit-infini
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/c-retat-louise-michel-le-manuscrit-infini
 LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
 URL:https://www.item.ens.fr/c-retat-louise-michel-le-manuscrit-infini
 END:VEVENT
 BEGIN:VEVENT
 UID:5087ade1b068@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
-SUMMARY:L’œuvre de Charles Archaimbault (ethnologie\, philologie\, histoire). Une exploration exceptionnelle aux fondements de la culture lao
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/loeuvre-de-charles-archaimbault-ethnologie-philologie-histoire-une-exploration
-LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/loeuvre-de-charles-archaimbault-ethnologie-philologie-histoire-une-exploration
+SUMMARY:L’œuvre de Charles Archaimbault (ethnologie\, philologie\, histo
+ ire). Une exploration exceptionnelle aux fondements de la culture lao
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/loeuvre-de-charles-archaimba
+ ult-ethnologie-philologie-histoire-une-exploration
+LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 r
+ ue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/loeuvre-de-charles-archaimbault-ethnol
+ ogie-philologie-histoire-une-exploration
 END:VEVENT
 BEGIN:VEVENT
 UID:f6463f117306@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T100000
 DTEND:20261007T113000
 SUMMARY:Les mal aimés
-DESCRIPTION:[Conférence] Perruche à collier\, corneille noire\, moustique tigre\, frelon à pattes jaunes…la ville offre à ces animaux des opportunités qu'ils ne manquent pas d'exploiter. Découvrez le récit de cette biodiversité venue parfois enrichir Paris malgré l'irritation qu'elle peut aussi susciter.\nhttps://www.paris.fr/evenements/les-mal-aimes-123343
-LOCATION:Maison Paris Nature\, Pavillons 1 et 2 du Parc Floral de Paris\, route de la Pyramide\, 75012 Paris
+DESCRIPTION:[Conférence] Perruche à collier\, corneille noire\, moustique
+  tigre\, frelon à pattes jaunes…la ville offre à ces animaux des oppor
+ tunités qu'ils ne manquent pas d'exploiter. Découvrez le récit de cette
+  biodiversité venue parfois enrichir Paris malgré l'irritation qu'elle p
+ eut aussi susciter.\nhttps://www.paris.fr/evenements/les-mal-aimes-123343
+LOCATION:Maison Paris Nature\, Pavillons 1 et 2 du Parc Floral de Paris\, r
+ oute de la Pyramide\, 75012 Paris
 URL:https://www.paris.fr/evenements/les-mal-aimes-123343
 END:VEVENT
 BEGIN:VEVENT
 UID:cf65295d9bdc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T163000
 DTEND:20261007T193000
-SUMMARY:Venez rencontrer Kentin Jarno à la Fnac Forum des Halles ! SUR INSCRIPTION
-DESCRIPTION:À l’occasion de la sortie de "L'Encre de la haine"\, son tout nouveau roman\, Kentin Jarno sera présent lors d’une séance de dédicaces le mercredi 7 octobre à partir de 16h30 à la Fnac Forum des Halles. Une belle occasion d’échanger avec l’auteur !* *Événement gratuit sur inscription via le lien de l'Éclaireur Fnac uniquement.\nhttps://www.paris.fr/evenements/venez-rencontrer-kentin-jarno-a-la-fnac-forum-des-halles-sur-inscription-124114
+SUMMARY:Venez rencontrer Kentin Jarno à la Fnac Forum des Halles ! SUR INS
+ CRIPTION
+DESCRIPTION:À l’occasion de la sortie de "L'Encre de la haine"\, son tou
+ t nouveau roman\, Kentin Jarno sera présent lors d’une séance de dédi
+ caces le mercredi 7 octobre à partir de 16h30 à la Fnac Forum des Halles
+ . Une belle occasion d’échanger avec l’auteur !* *Événement gratuit
+  sur inscription via le lien de l'Éclaireur Fnac uniquement.\nhttps://www
+ .paris.fr/evenements/venez-rencontrer-kentin-jarno-a-la-fnac-forum-des-hal
+ les-sur-inscription-124114
 LOCATION:Fnac Forum des Halles\, 1-7 rue Pierre Lescot\, 75001 Paris
-URL:https://www.paris.fr/evenements/venez-rencontrer-kentin-jarno-a-la-fnac-forum-des-halles-sur-inscription-124114
+URL:https://www.paris.fr/evenements/venez-rencontrer-kentin-jarno-a-la-fnac
+ -forum-des-halles-sur-inscription-124114
 END:VEVENT
 BEGIN:VEVENT
 UID:68b9073a6382@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Livres sous surveillance : quand la censure dépasse la fiction
-DESCRIPTION:À l’occasion de la semaine des livres interdits aux États-Unis\, la Bibliothèque et la MAC de Sciences Po\, en partenariat avec la NRF\, organisent une journée consacrée à la censure des livres et à la liberté de lire.\nhttps://www.sciencespo.fr/fr/evenements/livres-sous-surveillance-quand-la-censure-depasse-la-fiction/
+DESCRIPTION:À l’occasion de la semaine des livres interdits aux États-U
+ nis\, la Bibliothèque et la MAC de Sciences Po\, en partenariat avec la N
+ RF\, organisent une journée consacrée à la censure des livres et à la 
+ liberté de lire.\nhttps://www.sciencespo.fr/fr/evenements/livres-sous-sur
+ veillance-quand-la-censure-depasse-la-fiction/
 LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/livres-sous-surveillance-quand-la-censure-depasse-la-fiction/
+URL:https://www.sciencespo.fr/fr/evenements/livres-sous-surveillance-quand-
+ la-censure-depasse-la-fiction/
 END:VEVENT
 BEGIN:VEVENT
 UID:ca4abd46f7a5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261008T190000
 DTEND:20261008T203000
 SUMMARY:George Sand "La Scandaleuse"
-DESCRIPTION:Hommage à la grande Dame des lettres\, éprise de liberté\, dont nous commémorons les 150 ans de la disparition\nhttps://www.paris.fr/evenements/george-sand-la-scandaleuse-113704
-LOCATION:Bibliothèque Saint-Simon\, 116 rue de Grenelle (Mairie du 7e arrondissement\, porte D dans la cour)\, 75007 Paris
+DESCRIPTION:Hommage à la grande Dame des lettres\, éprise de liberté\, d
+ ont nous commémorons les 150 ans de la disparition\nhttps://www.paris.fr/
+ evenements/george-sand-la-scandaleuse-113704
+LOCATION:Bibliothèque Saint-Simon\, 116 rue de Grenelle (Mairie du 7e arro
+ ndissement\, porte D dans la cour)\, 75007 Paris
 URL:https://www.paris.fr/evenements/george-sand-la-scandaleuse-113704
 END:VEVENT
 BEGIN:VEVENT
 UID:66ec30fb1d2e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
-SUMMARY:Journée d'étude internationale "Pasolini\, la voix dénonciatrice des nouveaux spectres du fascisme"
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/journee-d-etude-internationale-pasolini-la-voix-denonciatrice-des-nouveaux-spectres-du-fascisme--926488.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/journee-d-etude-internationale-pasolini-la-voix-denonciatrice-des-nouveaux-spectres-du-fascisme--926488.kjsp?RH=1236178100008
+SUMMARY:Journée d'étude internationale "Pasolini\, la voix dénonciatrice
+  des nouveaux spectres du fascisme"
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/journee-d-etude-internationa
+ le-pasolini-la-voix-denonciatrice-des-nouveaux-spectres-du-fascisme--92648
+ 8.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/journee-d-etude-internationale-pasolin
+ i-la-voix-denonciatrice-des-nouveaux-spectres-du-fascisme--926488.kjsp?RH=
+ 1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:3309f4121594@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Théophile de Viau. Poésie et liberté
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/theophile-de-viau-poesie-et-liberte/2026-10-09t113000
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/theophile-de-viau-poesie-et-lib
+ erte/2026-10-09t113000
 LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/theophile-de-viau-poesie-et-liberte/2026-10-09t113000
+URL:https://www.ens.psl.eu/agenda/theophile-de-viau-poesie-et-liberte/2026-
+ 10-09t113000
 END:VEVENT
 BEGIN:VEVENT
 UID:32b8e2ef1138@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261009T183000
 DTEND:20261009T203000
-SUMMARY:Conférence « Ango le desperado. Un écrivain dans la tourmente du siècle »
-DESCRIPTION:Sakaguchi Ango (1906-1955) occupe une place singulière dans l’histoire de la littérature japonaise. Rendu célèbre par son essai provocateur et paradoxal de 1946\, « Daraku-ron » (La chute)\, il est l’auteur d’une œuvre romanesque trop mal connue en France\, à l’exception de quelques nouvelles comme « Hakuchi » (L'Idiote\, 1946) ou du roman Furenzoku satsujin jiken (Meurtres sans série\, 1948). Dans notre monde incertain\, traversé de crises\, le moment n’est-il pas venu de redécouvrir cette figure attachante et son œuvre protéiforme ?\nhttps://www.paris.fr/evenements/conference-le-quotidien-l-ecriture-et-la-philosophie-117204
-LOCATION:Maison de la culture du Japon à Paris\, 101 bis\, quai Jacques Chirac\, 75015 Paris
-URL:https://www.paris.fr/evenements/conference-le-quotidien-l-ecriture-et-la-philosophie-117204
+SUMMARY:Conférence « Ango le desperado. Un écrivain dans la tourmente du
+  siècle »
+DESCRIPTION:Sakaguchi Ango (1906-1955) occupe une place singulière dans l
+ ’histoire de la littérature japonaise. Rendu célèbre par son essai pr
+ ovocateur et paradoxal de 1946\, « Daraku-ron » (La chute)\, il est l’
+ auteur d’une œuvre romanesque trop mal connue en France\, à l’except
+ ion de quelques nouvelles comme « Hakuchi » (L'Idiote\, 1946) ou du roma
+ n Furenzoku satsujin jiken (Meurtres sans série\, 1948). Dans notre monde
+  incertain\, traversé de crises\, le moment n’est-il pas venu de redéc
+ ouvrir cette figure attachante et son œuvre protéiforme ?\nhttps://www.p
+ aris.fr/evenements/conference-le-quotidien-l-ecriture-et-la-philosophie-11
+ 7204
+LOCATION:Maison de la culture du Japon à Paris\, 101 bis\, quai Jacques Ch
+ irac\, 75015 Paris
+URL:https://www.paris.fr/evenements/conference-le-quotidien-l-ecriture-et-l
+ a-philosophie-117204
 END:VEVENT
 BEGIN:VEVENT
 UID:e52faba6969a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261010T150000
 DTEND:20261010T170000
 SUMMARY:Rencontres surréalistes dans le 10e
-DESCRIPTION:Conférence-balade animée par Marie-Ange Daguillon d’Histoire & Vies du 10e\, Lara Bouvet et Cécile Lasserre de la compagnie Chair et Tendre\nhttps://www.paris.fr/evenements/balade-surrealiste-67111
-LOCATION:Médiathèque Françoise Sagan\, 8 rue Léon Schwartzenberg\, 75010 Paris
+DESCRIPTION:Conférence-balade animée par Marie-Ange Daguillon d’Histoir
+ e & Vies du 10e\, Lara Bouvet et Cécile Lasserre de la compagnie Chair et
+  Tendre\nhttps://www.paris.fr/evenements/balade-surrealiste-67111
+LOCATION:Médiathèque Françoise Sagan\, 8 rue Léon Schwartzenberg\, 7501
+ 0 Paris
 URL:https://www.paris.fr/evenements/balade-surrealiste-67111
 END:VEVENT
 BEGIN:VEVENT
 UID:8f54660e783a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261010T190000
 DTEND:20261010T210000
-SUMMARY:Autour de Naguib Mahfouz : lecture par Grégoire Leprince-Ringuet et rencontre avec Khaled Osman
-DESCRIPTION:A l'occasion de son 50e anniversaire\, la bibliothèque Naguib Mahfouz célèbre l'auteur dont elle porte le nom.\nhttps://www.paris.fr/evenements/autour-de-naguib-mahfouz-lecture-par-gregoire-leprince-ringuet-et-rencontre-avec-khaled-osman-117766
+SUMMARY:Autour de Naguib Mahfouz : lecture par Grégoire Leprince-Ringuet e
+ t rencontre avec Khaled Osman
+DESCRIPTION:A l'occasion de son 50e anniversaire\, la bibliothèque Naguib 
+ Mahfouz célèbre l'auteur dont elle porte le nom.\nhttps://www.paris.fr/e
+ venements/autour-de-naguib-mahfouz-lecture-par-gregoire-leprince-ringuet-e
+ t-rencontre-avec-khaled-osman-117766
 LOCATION:Bibliothèque Naguib Mahfouz\, 66 rue des Couronnes\, 75020 Paris
-URL:https://www.paris.fr/evenements/autour-de-naguib-mahfouz-lecture-par-gregoire-leprince-ringuet-et-rencontre-avec-khaled-osman-117766
+URL:https://www.paris.fr/evenements/autour-de-naguib-mahfouz-lecture-par-gr
+ egoire-leprince-ringuet-et-rencontre-avec-khaled-osman-117766
 END:VEVENT
 BEGIN:VEVENT
 UID:b809425230d3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261010T190000
 DTEND:20261010T203000
 SUMMARY:Le Courage de la nuance\, seul-en-scène de Jean Birnbaum
-DESCRIPTION:Le débat démocratique ne peut exister sans zones de frottement\, de doute\, de complexité et de nuance. Dans ce seul en scène\, Jean Birnbaum nous présente son essai politique « Le Courage de la nuance »\, un bref manuel de survie par temps de vitrification idéologique. Et si la nuance devenait un geste théâtral ?\nhttps://www.paris.fr/evenements/le-courage-de-la-nuance-seul-en-scene-de-jean-birnbaum-117387
+DESCRIPTION:Le débat démocratique ne peut exister sans zones de frottemen
+ t\, de doute\, de complexité et de nuance. Dans ce seul en scène\, Jean 
+ Birnbaum nous présente son essai politique « Le Courage de la nuance »\
+ , un bref manuel de survie par temps de vitrification idéologique. Et si 
+ la nuance devenait un geste théâtral ?\nhttps://www.paris.fr/evenements/
+ le-courage-de-la-nuance-seul-en-scene-de-jean-birnbaum-117387
 LOCATION:Théâtre de la Concorde\, 1 Avenue Gabriel\, 75008 Paris
-URL:https://www.paris.fr/evenements/le-courage-de-la-nuance-seul-en-scene-de-jean-birnbaum-117387
+URL:https://www.paris.fr/evenements/le-courage-de-la-nuance-seul-en-scene-d
+ e-jean-birnbaum-117387
 END:VEVENT
 BEGIN:VEVENT
 UID:3cc7cb5e60a5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
-SUMMARY:Les animaux marins et l’écriture océanique à Taïwan : Rencontre avec l’écrivain taïwanais Liao Hung-chi
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Moulins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
+SUMMARY:Les animaux marins et l’écriture océanique à Taïwan : Rencont
+ re avec l’écrivain taïwanais Liao Hung-chi
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/les-animaux-marins-et-lecrit
+ ure-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
+LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Mou
+ lins\, 75013 Paris) — Inalco\, 65 rue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceani
+ que-taiwan-rencontre-avec-lecrivain-taiwanais-liao
 END:VEVENT
 BEGIN:VEVENT
 UID:383be3bf2217@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261012T200000
 DTEND:20261012T213000
-SUMMARY:Natasha Kanapé Fontaine • Marcel Pititkwew • Jean Sioui • Uashteskun Regards sur les littératures autochtones francophones
-DESCRIPTION:Le Centre culturel canadien vous invite à découvrir quatre grandes voix littéraires autochtones francophones du Canada\, la poétesse et artiste multidisciplinaire innue Natasha Kanapé Fontaine\, l’auteur atikamekw Marcel Pititkwew\, le poète et romancier wendat Jean Sioui et Uashteskun\, auteur pekuakamiulnuatsh.\nhttps://www.paris.fr/evenements/natasha-kanape-fontaine-marcel-pititkwew-jean-sioui-uashteskun-regards-sur-les-litteratures-autochtones-francophones-117515
-LOCATION:Centre culturel canadien à Paris\, 130 rue du Faubourg Saint-Honoré\, 75008 Paris
-URL:https://www.paris.fr/evenements/natasha-kanape-fontaine-marcel-pititkwew-jean-sioui-uashteskun-regards-sur-les-litteratures-autochtones-francophones-117515
+SUMMARY:Natasha Kanapé Fontaine • Marcel Pititkwew • Jean Sioui • Ua
+ shteskun Regards sur les littératures autochtones francophones
+DESCRIPTION:Le Centre culturel canadien vous invite à découvrir quatre gr
+ andes voix littéraires autochtones francophones du Canada\, la poétesse 
+ et artiste multidisciplinaire innue Natasha Kanapé Fontaine\, l’auteur 
+ atikamekw Marcel Pititkwew\, le poète et romancier wendat Jean Sioui et U
+ ashteskun\, auteur pekuakamiulnuatsh.\nhttps://www.paris.fr/evenements/nat
+ asha-kanape-fontaine-marcel-pititkwew-jean-sioui-uashteskun-regards-sur-le
+ s-litteratures-autochtones-francophones-117515
+LOCATION:Centre culturel canadien à Paris\, 130 rue du Faubourg Saint-Hono
+ ré\, 75008 Paris
+URL:https://www.paris.fr/evenements/natasha-kanape-fontaine-marcel-pititkwe
+ w-jean-sioui-uashteskun-regards-sur-les-litteratures-autochtones-francopho
+ nes-117515
 END:VEVENT
 BEGIN:VEVENT
 UID:b0bed1470e87@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T190000
 DTEND:20261013T203000
 SUMMARY:Malraux maintenant
-DESCRIPTION:Pourquoi faut-il lire ou relire Malraux face à la « contagion des ténèbres » ? Une Conférence de Pascal Louvrier accompagnée de lectures d'extraits de son essai et d'œuvres d'André Malraux (1902 – 1976)\nhttps://www.paris.fr/evenements/malraux-maintenant-115319
+DESCRIPTION:Pourquoi faut-il lire ou relire Malraux face à la « contagion
+  des ténèbres » ? Une Conférence de Pascal Louvrier accompagnée de le
+ ctures d'extraits de son essai et d'œuvres d'André Malraux (1902 – 197
+ 6)\nhttps://www.paris.fr/evenements/malraux-maintenant-115319
 LOCATION:Bibliothèque Forney\, 1 rue du Figuier\, 75004 Paris
 URL:https://www.paris.fr/evenements/malraux-maintenant-115319
 END:VEVENT
 BEGIN:VEVENT
 UID:3d9466fc6d9e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-SUMMARY:Taïwan en récits : économie\, cuisine et catastrophes naturelles - Présentation de trois nouveaux ouvrages sur Taïwan
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-catastrophes-naturelles-presentation-de-trois
-LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-catastrophes-naturelles-presentation-de-trois
+SUMMARY:Taïwan en récits : économie\, cuisine et catastrophes naturelles
+  - Présentation de trois nouveaux ouvrages sur Taïwan
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/taiwan-en-recits-economie-cu
+ isine-et-catastrophes-naturelles-presentation-de-trois
+LOCATION:Inalco\, 65 rue des Grands Moulins\, 75013 Paris — Inalco\, 65 r
+ ue des Grands Moulins\, Paris 13e
+URL:https://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-c
+ atastrophes-naturelles-presentation-de-trois
 END:VEVENT
 BEGIN:VEVENT
 UID:fdcd8d037892@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261014T140000
 DTEND:20261014T160000
 SUMMARY:La poésie comme mémoire de l’être
-DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-de-letre
-LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanterre
+DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-d
+ e-letre
+LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
+ re
 URL:https://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-de-letre
 END:VEVENT
 BEGIN:VEVENT
 UID:efb19672eb31@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261014T190000
 DTEND:20261014T210000
-SUMMARY:Mémoires en mouvement : récits d’auto-histoire\, migrations et urbanités
-DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/memoires-en-mouvement-recits-dauto-histoire-migrations-et-urbanites
-LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanterre
-URL:https://www.parisnanterre.fr/agenda/memoires-en-mouvement-recits-dauto-histoire-migrations-et-urbanites
+SUMMARY:Mémoires en mouvement : récits d’auto-histoire\, migrations et 
+ urbanités
+DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/memoires-en-mouvement-rec
+ its-dauto-histoire-migrations-et-urbanites
+LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
+ re
+URL:https://www.parisnanterre.fr/agenda/memoires-en-mouvement-recits-dauto-
+ histoire-migrations-et-urbanites
 END:VEVENT
 BEGIN:VEVENT
 UID:6b39835243f2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:Sonorités du vivant dans la littérature et le texte musical des XIXe\, XXe et XXIe siècles : chants\, bruits\, vocalisations. - Approches écopoétiques\, écocritiques\, zoopoétiques\, intermédiales et postcoloniales.
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/sonorites-du-vivant-dans-la-litterature-et-le-texte-musical-des-xixe-xxe-et-xxie-siecles-chants-bruits-vocalisations-approches-ecopoetiques-ecocritiques-zoopoetiques-intermediales-et-postcoloniales--926574.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/sonorites-du-vivant-dans-la-litterature-et-le-texte-musical-des-xixe-xxe-et-xxie-siecles-chants-bruits-vocalisations-approches-ecopoetiques-ecocritiques-zoopoetiques-intermediales-et-postcoloniales--926574.kjsp?RH=1236178100008
+SUMMARY:Sonorités du vivant dans la littérature et le texte musical des X
+ IXe\, XXe et XXIe siècles : chants\, bruits\, vocalisations. - Approches 
+ écopoétiques\, écocritiques\, zoopoétiques\, intermédiales et postcol
+ oniales.
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/sonorites-du-vivant-dans-la-
+ litterature-et-le-texte-musical-des-xixe-xxe-et-xxie-siecles-chants-bruits
+ -vocalisations-approches-ecopoetiques-ecocritiques-zoopoetiques-intermedia
+ les-et-postcoloniales--926574.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/sonorites-du-vivant-dans-la-litteratur
+ e-et-le-texte-musical-des-xixe-xxe-et-xxie-siecles-chants-bruits-vocalisat
+ ions-approches-ecopoetiques-ecocritiques-zoopoetiques-intermediales-et-pos
+ tcoloniales--926574.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:efc8c87306e8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:Michel Butor au rendez-vous des artistes. "Permettez-moi de naviguer en votre compagnie"
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/michel-butor-au-rendez-vous-des-artistes-permettez-moi-de-naviguer-en-votre-compagnie--926567.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/michel-butor-au-rendez-vous-des-artistes-permettez-moi-de-naviguer-en-votre-compagnie--926567.kjsp?RH=1236178100008
+SUMMARY:Michel Butor au rendez-vous des artistes. "Permettez-moi de navigue
+ r en votre compagnie"
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/michel-butor-au-rendez-vous-
+ des-artistes-permettez-moi-de-naviguer-en-votre-compagnie--926567.kjsp?RH=
+ 1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/michel-butor-au-rendez-vous-des-artist
+ es-permettez-moi-de-naviguer-en-votre-compagnie--926567.kjsp?RH=1236178100
+ 008
 END:VEVENT
 BEGIN:VEVENT
 UID:886c54cc6f9b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:Pratiques hétéroglossiques dans les espaces de contact hispano-lusophones
-DESCRIPTION:Le terme « hétéroglossie » a été utilisé par Bakhtine (voir Emerson & Holquist\, 1981) pour désigner la fonction sémiotique de la variation linguistique dans le roman (langues\, dialectes ou registres). Il a récemment été recontextualisé par la sociolinguistique et l'anthropologie linguistique pour désigner l'utilisation de répertoires linguistiques dans lesquels apparaissent des éléments qui pourra\nhttps://pratheterogloss.sciencesconf.org
-LOCATION:UNIVERSITE SORBONNE NOUVELLE ET CAMPUS CONDORCET - PARIS - AUBERVILLIERS (France)
+SUMMARY:Pratiques hétéroglossiques dans les espaces de contact hispano-lu
+ sophones
+DESCRIPTION:Le terme « hétéroglossie » a été utilisé par Bakhtine (v
+ oir Emerson & Holquist\, 1981) pour désigner la fonction sémiotique de l
+ a variation linguistique dans le roman (langues\, dialectes ou registres).
+  Il a récemment été recontextualisé par la sociolinguistique et l'anth
+ ropologie linguistique pour désigner l'utilisation de répertoires lingui
+ stiques dans lesquels apparaissent des éléments qui pourra\nhttps://prat
+ heterogloss.sciencesconf.org
+LOCATION:UNIVERSITE SORBONNE NOUVELLE ET CAMPUS CONDORCET - PARIS - AUBERVI
+ LLIERS (France)
 URL:https://pratheterogloss.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:152462c81937@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:La littérature viatique en crise au dix-neuvième siècle. Autour de Du Camp et de Flaubert
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/la-litterature-viatique-en-crise-au-dix-neuvieme-siecle-autour-de-du-camp-et-de-flaubert-925223.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/la-litterature-viatique-en-crise-au-dix-neuvieme-siecle-autour-de-du-camp-et-de-flaubert-925223.kjsp?RH=1236178100008
+SUMMARY:La littérature viatique en crise au dix-neuvième siècle. Autour 
+ de Du Camp et de Flaubert
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/la-litterature-viatique-en-c
+ rise-au-dix-neuvieme-siecle-autour-de-du-camp-et-de-flaubert-925223.kjsp?R
+ H=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/la-litterature-viatique-en-crise-au-di
+ x-neuvieme-siecle-autour-de-du-camp-et-de-flaubert-925223.kjsp?RH=12361781
+ 00008
 END:VEVENT
 BEGIN:VEVENT
 UID:349509ec3f4b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:Colloque international - Migrations\, entre frontières et accueil : récits des voies méditerranéennes et d’ailleurs
-DESCRIPTION:\nhttps://www.univ-paris8.fr/Colloque-international-Migrations-entre-frontieres-et-accueil-recits-des-voies-10594
+SUMMARY:Colloque international - Migrations\, entre frontières et accueil 
+ : récits des voies méditerranéennes et d’ailleurs
+DESCRIPTION:\nhttps://www.univ-paris8.fr/Colloque-international-Migrations-
+ entre-frontieres-et-accueil-recits-des-voies-10594
 LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Colloque-international-Migrations-entre-frontieres-et-accueil-recits-des-voies-10594
+URL:https://www.univ-paris8.fr/Colloque-international-Migrations-entre-fron
+ tieres-et-accueil-recits-des-voies-10594
 END:VEVENT
 BEGIN:VEVENT
 UID:34640b3fa5bc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:Changement et variation syntaxiques : les traditions discursives dans les langues germaniques et romanes
-DESCRIPTION:L’objectif de ce colloque est d’étudier le changement et la variation syntaxiques en fonction des traditions discursives\, dans les langues germaniques et romanes. Il s’agit plus largement de favoriser un dialogue entre romanistes et germanistes\, au sujet des approches théoriques et méthodologiques des textes et des discours.\nhttps://td26.sciencesconf.org
+SUMMARY:Changement et variation syntaxiques : les traditions discursives da
+ ns les langues germaniques et romanes
+DESCRIPTION:L’objectif de ce colloque est d’étudier le changement et l
+ a variation syntaxiques en fonction des traditions discursives\, dans les 
+ langues germaniques et romanes. Il s’agit plus largement de favoriser un
+  dialogue entre romanistes et germanistes\, au sujet des approches théori
+ ques et méthodologiques des textes et des discours.\nhttps://td26.science
+ sconf.org
 LOCATION:Sorbonne Université - Paris (France)
 URL:https://td26.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:ae91078dd8d5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261015T183000
 DTEND:20261015T193000
-SUMMARY:Rencontre avec l'autrice de 2025\, L'Odyssée de l'IA. Représentation et usages de l'IA au cinéma"
-DESCRIPTION:Face aux interrogations et aux inquiétudes liées à l’essor de l’intelligence artificielle dans les métiers du cinéma\, cet essai apparait comme un contre-récit nécessaire.\nhttps://www.paris.fr/evenements/rencontre-avec-l-autrice-de-2025-l-odyssee-de-l-ia-representation-et-usages-de-l-ia-au-cinema-123757
-LOCATION:Forum des images\, Westfield Forum des Halles 2 rue du cinéma\, 75001 Paris
-URL:https://www.paris.fr/evenements/rencontre-avec-l-autrice-de-2025-l-odyssee-de-l-ia-representation-et-usages-de-l-ia-au-cinema-123757
+SUMMARY:Rencontre avec l'autrice de 2025\, L'Odyssée de l'IA. Représentat
+ ion et usages de l'IA au cinéma"
+DESCRIPTION:Face aux interrogations et aux inquiétudes liées à l’essor
+  de l’intelligence artificielle dans les métiers du cinéma\, cet essai
+  apparait comme un contre-récit nécessaire.\nhttps://www.paris.fr/evenem
+ ents/rencontre-avec-l-autrice-de-2025-l-odyssee-de-l-ia-representation-et-
+ usages-de-l-ia-au-cinema-123757
+LOCATION:Forum des images\, Westfield Forum des Halles 2 rue du cinéma\, 7
+ 5001 Paris
+URL:https://www.paris.fr/evenements/rencontre-avec-l-autrice-de-2025-l-odys
+ see-de-l-ia-representation-et-usages-de-l-ia-au-cinema-123757
 END:VEVENT
 BEGIN:VEVENT
 UID:d3f70ac93685@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261015T190000
 DTEND:20261015T200000
-SUMMARY:Une rue a disparu : rencontre avec l’écrivain Antonin Crenn pour son livre "Rue des Batailles"
-DESCRIPTION:Une rencontre littéraire et historique autour de la violence politique\, des démolitions à grande échelle\, des bouleversements qui nous dépassent et nous englobent.\nhttps://www.paris.fr/evenements/une-rue-a-disparu-rencontre-avec-l-ecrivain-antonin-crenn-pour-son-livre-rue-des-batailles-115022
-LOCATION:Bibliothèque Germaine Tillion\, 6 rue du Commandant Schlœsing\, 75016 Paris
-URL:https://www.paris.fr/evenements/une-rue-a-disparu-rencontre-avec-l-ecrivain-antonin-crenn-pour-son-livre-rue-des-batailles-115022
+SUMMARY:Une rue a disparu : rencontre avec l’écrivain Antonin Crenn pour
+  son livre "Rue des Batailles"
+DESCRIPTION:Une rencontre littéraire et historique autour de la violence p
+ olitique\, des démolitions à grande échelle\, des bouleversements qui n
+ ous dépassent et nous englobent.\nhttps://www.paris.fr/evenements/une-rue
+ -a-disparu-rencontre-avec-l-ecrivain-antonin-crenn-pour-son-livre-rue-des-
+ batailles-115022
+LOCATION:Bibliothèque Germaine Tillion\, 6 rue du Commandant Schlœsing\, 
+ 75016 Paris
+URL:https://www.paris.fr/evenements/une-rue-a-disparu-rencontre-avec-l-ecri
+ vain-antonin-crenn-pour-son-livre-rue-des-batailles-115022
 END:VEVENT
 BEGIN:VEVENT
 UID:89f5645337c8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261015T190000
 DTEND:20261015T203000
 SUMMARY:Les mots qui soignent : création littéraire et santé mentale
-DESCRIPTION:Mettre des mots sur les maux\, trouver les mots\, les perdre\, en jouer…\nhttps://www.paris.fr/evenements/les-mots-qui-soignent-creation-litteraire-et-sante-mentale-115214
+DESCRIPTION:Mettre des mots sur les maux\, trouver les mots\, les perdre\, 
+ en jouer…\nhttps://www.paris.fr/evenements/les-mots-qui-soignent-creatio
+ n-litteraire-et-sante-mentale-115214
 LOCATION:Bibliothèque Drouot\, 11 rue Drouot\, 75009 Paris
-URL:https://www.paris.fr/evenements/les-mots-qui-soignent-creation-litteraire-et-sante-mentale-115214
+URL:https://www.paris.fr/evenements/les-mots-qui-soignent-creation-litterai
+ re-et-sante-mentale-115214
 END:VEVENT
 BEGIN:VEVENT
 UID:13259e8ed260@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261015T190000
 DTEND:20261015T210000
 SUMMARY:La Voix d'Amara : rencontre avec Joëlle Le Marec et Amara Camara
-DESCRIPTION:Amara Camara et Joëlle Le Marec raconteront La Voix d'Amara\, leur livre publié aux éditions SiKiT en 2020\nhttps://www.paris.fr/evenements/la-voix-d-amara-rencontre-avec-joelle-le-marec-et-amara-camara-115006
-LOCATION:Bibliothèque Václav Havel\, 26 esplanade Nathalie Sarraute\, 75018 Paris
-URL:https://www.paris.fr/evenements/la-voix-d-amara-rencontre-avec-joelle-le-marec-et-amara-camara-115006
+DESCRIPTION:Amara Camara et Joëlle Le Marec raconteront La Voix d'Amara\, 
+ leur livre publié aux éditions SiKiT en 2020\nhttps://www.paris.fr/evene
+ ments/la-voix-d-amara-rencontre-avec-joelle-le-marec-et-amara-camara-11500
+ 6
+LOCATION:Bibliothèque Václav Havel\, 26 esplanade Nathalie Sarraute\, 750
+ 18 Paris
+URL:https://www.paris.fr/evenements/la-voix-d-amara-rencontre-avec-joelle-l
+ e-marec-et-amara-camara-115006
 END:VEVENT
 BEGIN:VEVENT
 UID:71f03aef8e10@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261017T143000
 DTEND:20261017T160000
-SUMMARY:Conférence « Hommage à Bernard Frank (1927-1996) - Grand maître des études japonaises »
-DESCRIPTION:Éminent savant du bouddhisme et fin connaisseur de la culture japonaise\, le professeur Bernard FRANK se tint aux avant-postes pour élargir le domaine de la japonologie. Explorateur des dimensions spirituelles et populaires du bouddhisme\, traducteur exceptionnel\, il redécouvrit\, en France\, une statue mythique d’un temple de Nara et plaida efficacement pour une large diffusion de l’enseignement de la langue et de la littérature de la riche civilisation japonaise.\nhttps://www.paris.fr/evenements/copie-de-conference-hommage-a-bernard-frank-1927-1996-grand-maitre-des-etudes-japonaises-124383
-LOCATION:Maison de la culture du Japon à Paris\, 101 bis\, quai Jacques Chirac\, 75015 Paris
-URL:https://www.paris.fr/evenements/copie-de-conference-hommage-a-bernard-frank-1927-1996-grand-maitre-des-etudes-japonaises-124383
+SUMMARY:Conférence « Hommage à Bernard Frank (1927-1996) - Grand maître
+  des études japonaises »
+DESCRIPTION:Éminent savant du bouddhisme et fin connaisseur de la culture 
+ japonaise\, le professeur Bernard FRANK se tint aux avant-postes pour éla
+ rgir le domaine de la japonologie. Explorateur des dimensions spirituelles
+  et populaires du bouddhisme\, traducteur exceptionnel\, il redécouvrit\,
+  en France\, une statue mythique d’un temple de Nara et plaida efficacem
+ ent pour une large diffusion de l’enseignement de la langue et de la lit
+ térature de la riche civilisation japonaise.\nhttps://www.paris.fr/evenem
+ ents/copie-de-conference-hommage-a-bernard-frank-1927-1996-grand-maitre-de
+ s-etudes-japonaises-124383
+LOCATION:Maison de la culture du Japon à Paris\, 101 bis\, quai Jacques Ch
+ irac\, 75015 Paris
+URL:https://www.paris.fr/evenements/copie-de-conference-hommage-a-bernard-f
+ rank-1927-1996-grand-maitre-des-etudes-japonaises-124383
 END:VEVENT
 BEGIN:VEVENT
 UID:afacf2c96c32@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261017T180000
 DTEND:20261017T210000
 SUMMARY:S'OUVRIR A LA POÉSIE DE THIERRY METZ (rencontre-lecture)
-DESCRIPTION:Lecture-rencontre consacrée à l’œuvre de Thierry Metz avec Isabelle Lévesque (poète)\, Françoise Metz\, (épouse\, la bien-aimée des poèmes)\, Marie-Violaine Brincard (réalisatrice) et les participants aux ateliers d'écriture de l'Adamant qui liront quelques-uns de leur textes en fin de soirée.\nhttps://www.paris.fr/evenements/s-ouvrir-a-la-poesie-de-thierry-metz-115201
+DESCRIPTION:Lecture-rencontre consacrée à l’œuvre de Thierry Metz avec
+  Isabelle Lévesque (poète)\, Françoise Metz\, (épouse\, la bien-aimée
+  des poèmes)\, Marie-Violaine Brincard (réalisatrice) et les participant
+ s aux ateliers d'écriture de l'Adamant qui liront quelques-uns de leur te
+ xtes en fin de soirée.\nhttps://www.paris.fr/evenements/s-ouvrir-a-la-poe
+ sie-de-thierry-metz-115201
 LOCATION:Bibliothèque Marguerite Audoux\, 10 rue Portefoin\, 75003 Paris
-URL:https://www.paris.fr/evenements/s-ouvrir-a-la-poesie-de-thierry-metz-115201
+URL:https://www.paris.fr/evenements/s-ouvrir-a-la-poesie-de-thierry-metz-11
+ 5201
 END:VEVENT
 BEGIN:VEVENT
 UID:586b53e3f344@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Repenser l'objet scénario
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/repenser-l-objet-scenario-928310.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/repenser-l-objet-scenario-928310.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/repenser-l-objet-scenario-92
+ 8310.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/repenser-l-objet-scenario-928310.kjsp?
+ RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:173d69f6c3f7@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261020T183000
 DTEND:20261020T200000
-SUMMARY:Une soirée avec Selma Lagerlöf\, première femme prix Nobel de littérature !
-DESCRIPTION:Cette conférence de Maria Hansson\, ponctuée de lectures de textes par Anny Romand\, retraceront le chemin de Lagerlöf vers le métier d'écrivain et la consécration internationale\nhttps://www.paris.fr/evenements/albert-camus-prix-nobel-de-litterature-104608
+SUMMARY:Une soirée avec Selma Lagerlöf\, première femme prix Nobel de li
+ ttérature !
+DESCRIPTION:Cette conférence de Maria Hansson\, ponctuée de lectures de t
+ extes par Anny Romand\, retraceront le chemin de Lagerlöf vers le métier
+  d'écrivain et la consécration internationale\nhttps://www.paris.fr/even
+ ements/albert-camus-prix-nobel-de-litterature-104608
 LOCATION:Bibliothèque Sainte-Geneviève\, 6\, rue Valette\, 75005 Paris
-URL:https://www.paris.fr/evenements/albert-camus-prix-nobel-de-litterature-104608
+URL:https://www.paris.fr/evenements/albert-camus-prix-nobel-de-litterature-
+ 104608
 END:VEVENT
 BEGIN:VEVENT
 UID:d53cc200d6aa@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-SUMMARY:DÉCRIPT in dialogue | Whose Peace? Warmongers\, peace fictions\, and the narratives of imperial order
-DESCRIPTION:\nhttps://www.inalco.fr/evenements/decript-dialogue-whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
-LOCATION:Fondation Maison des sciences de l'homme (FMSH) - Grand Hall - 54\, boulevard Raspail Paris 6 — Inalco\, 65 rue des Grands Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/decript-dialogue-whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
+SUMMARY:DÉCRIPT in dialogue | Whose Peace? Warmongers\, peace fictions\, a
+ nd the narratives of imperial order
+DESCRIPTION:\nhttps://www.inalco.fr/evenements/decript-dialogue-whose-peace
+ -warmongers-peace-fictions-and-narratives-imperial-order
+LOCATION:Fondation Maison des sciences de l'homme (FMSH) - Grand Hall - 54\
+ , boulevard Raspail Paris 6 — Inalco\, 65 rue des Grands Moulins\, Paris
+  13e
+URL:https://www.inalco.fr/evenements/decript-dialogue-whose-peace-warmonger
+ s-peace-fictions-and-narratives-imperial-order
 END:VEVENT
 BEGIN:VEVENT
 UID:5338f611ca66@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261022T170000
 DTEND:20261022T190000
 SUMMARY:Lecture-Rencontre avec le poète Tahar Bekri
-DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le-poete-tahar-bekri
-LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanterre
-URL:https://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le-poete-tahar-bekri
+DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le
+ -poete-tahar-bekri
+LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
+ re
+URL:https://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le-poete-tah
+ ar-bekri
 END:VEVENT
 BEGIN:VEVENT
 UID:6d7edab23e40@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261022T190000
 DTEND:20261022T210000
-SUMMARY:Whose Peace? Warmongers\, peace fictions\, and the narratives of imperial order
-DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
+SUMMARY:Whose Peace? Warmongers\, peace fictions\, and the narratives of im
+ perial order
+DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/whose-peace-warmongers-pe
+ ace-fictions-and-narratives-imperial-order
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.fmsh.fr/agenda/whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
+URL:https://www.fmsh.fr/agenda/whose-peace-warmongers-peace-fictions-and-na
+ rratives-imperial-order
 END:VEVENT
 BEGIN:VEVENT
 UID:72fc30c20311@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Présences de l’Antiquité tardive dans les récits muséaux
-DESCRIPTION:Une journée d’étude sur la place de l’Antiquité tardive dans les collections permanentes\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/presences-de-l-antiquite-tardive-dans-les-recits-museaux
+DESCRIPTION:Une journée d’étude sur la place de l’Antiquité tardive 
+ dans les collections permanentes\nhttps://www.louvre.fr/expositions-et-eve
+ nements/evenements-activites/presences-de-l-antiquite-tardive-dans-les-rec
+ its-museaux
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
-URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/presences-de-l-antiquite-tardive-dans-les-recits-museaux
+URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
+ esences-de-l-antiquite-tardive-dans-les-recits-museaux
 END:VEVENT
 BEGIN:VEVENT
 UID:a3ef0ff5105e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
-SUMMARY:Littérature et Cinéma chinois - Regards croisés entre texte et écran
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/litterature-et-cinema-chinois-regards-croises-entre-texte-et-ecran/2026-10-23t160000
+SUMMARY:Littérature et Cinéma chinois - Regards croisés entre texte et 
+ écran
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/litterature-et-cinema-chinois-r
+ egards-croises-entre-texte-et-ecran/2026-10-23t160000
 LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/litterature-et-cinema-chinois-regards-croises-entre-texte-et-ecran/2026-10-23t160000
+URL:https://www.ens.psl.eu/agenda/litterature-et-cinema-chinois-regards-cro
+ ises-entre-texte-et-ecran/2026-10-23t160000
 END:VEVENT
 BEGIN:VEVENT
 UID:640bf8118fb1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
-SUMMARY:La naissance du livre de poésie moderne en français : des premiers incunables aux « Amours » de Ronsard (1552)
-DESCRIPTION:École d'automne du livre imprimé\nhttps://www.bnf.fr/fr/agenda/la-naissance-du-livre-de-poesie-moderne-en-francais-des-premiers-incunables-aux-amours-de
+SUMMARY:La naissance du livre de poésie moderne en français : des premier
+ s incunables aux « Amours » de Ronsard (1552)
+DESCRIPTION:École d'automne du livre imprimé\nhttps://www.bnf.fr/fr/agend
+ a/la-naissance-du-livre-de-poesie-moderne-en-francais-des-premiers-incunab
+ les-aux-amours-de
 LOCATION:François-Mitterrand — Bibliothèque nationale de France\, Paris
-URL:https://www.bnf.fr/fr/agenda/la-naissance-du-livre-de-poesie-moderne-en-francais-des-premiers-incunables-aux-amours-de
+URL:https://www.bnf.fr/fr/agenda/la-naissance-du-livre-de-poesie-moderne-en
+ -francais-des-premiers-incunables-aux-amours-de
 END:VEVENT
 BEGIN:VEVENT
 UID:df7a76a97920@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Voyages et dépossessions
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/voyages-et-depossessions-928288.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/voyages-et-depossessions-928288.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/voyages-et-depossessions-928
+ 288.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/voyages-et-depossessions-928288.kjsp?R
+ H=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:38d36dc03721@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-SUMMARY:La littérature\, école de la relation ? Rencontre entre Alice Ferney et Éliette Abécassis
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/la-litterature-ecole-de-la-relation-rencontre-entre-alice-ferney-et-eliette-abecassis
+SUMMARY:La littérature\, école de la relation ? Rencontre entre Alice Fer
+ ney et Éliette Abécassis
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/la-litt
+ erature-ecole-de-la-relation-rencontre-entre-alice-ferney-et-eliette-abeca
+ ssis
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/la-litterature-ecole-de-la-relation-rencontre-entre-alice-ferney-et-eliette-abecassis
+URL:https://www.collegedesbernardins.fr/agenda/la-litterature-ecole-de-la-r
+ elation-rencontre-entre-alice-ferney-et-eliette-abecassis
 END:VEVENT
 BEGIN:VEVENT
 UID:8721a71b87aa@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261105T183000
 DTEND:20261105T194500
 SUMMARY:Rencontre avec Claire Riffard
-DESCRIPTION:Jeudi 5 novembre 18h30 dans la salle bleue sur inscription\nhttps://www.paris.fr/evenements/rencontre-avec-claire-riffard-124295
-LOCATION:Bibliothèque des Batignolles\, 18\, rue des Batignolles\, 75017 Paris
+DESCRIPTION:Jeudi 5 novembre 18h30 dans la salle bleue sur inscription\nhtt
+ ps://www.paris.fr/evenements/rencontre-avec-claire-riffard-124295
+LOCATION:Bibliothèque des Batignolles\, 18\, rue des Batignolles\, 75017 P
+ aris
 URL:https://www.paris.fr/evenements/rencontre-avec-claire-riffard-124295
 END:VEVENT
 BEGIN:VEVENT
 UID:cd485d4f4a0a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Edoardo Cagnan et Claire Riffard : parutions récentes sur Senghor
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/edoardo-cagnan
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/edoardo-cagnan
 LOCATION:Musée du Quai Branly • 37\, quai J. Chirac PARIS 7e
 URL:https://www.item.ens.fr/edoardo-cagnan
 END:VEVENT
 BEGIN:VEVENT
 UID:1d627b88847c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261112T190000
 DTEND:20261112T210000
 SUMMARY:Présentation de l'ouvrage « Vivre les enchères »
-DESCRIPTION:La Fondation Maison des Sciences de l'Homme (FMSH) a le plaisir de vous inviter à une rencontre autour de l’ouvrage « Vivre les enchères »\, en présence de l'autrice Pia Torregrossa\, en dialogue avec le journaliste Jean-Marie Durand.\nhttps://www.paris.fr/evenements/presentation-de-l-ouvrage-vivre-les-encheres-114986
-LOCATION:Fondation Maison des Sciences de l'Homme (FMSH)\, 54\, boulevard Raspail\, 75006 Paris
-URL:https://www.paris.fr/evenements/presentation-de-l-ouvrage-vivre-les-encheres-114986
+DESCRIPTION:La Fondation Maison des Sciences de l'Homme (FMSH) a le plaisir
+  de vous inviter à une rencontre autour de l’ouvrage « Vivre les ench
+ ères »\, en présence de l'autrice Pia Torregrossa\, en dialogue avec le
+  journaliste Jean-Marie Durand.\nhttps://www.paris.fr/evenements/presentat
+ ion-de-l-ouvrage-vivre-les-encheres-114986
+LOCATION:Fondation Maison des Sciences de l'Homme (FMSH)\, 54\, boulevard R
+ aspail\, 75006 Paris
+URL:https://www.paris.fr/evenements/presentation-de-l-ouvrage-vivre-les-enc
+ heres-114986
 END:VEVENT
 BEGIN:VEVENT
 UID:eab68b4c4928@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261112T190000
 DTEND:20261112T210000
-SUMMARY:Conférence "Langue des Signes Japonaise et Langue des Signes Française : regards croisés" avec Élie Vilmin et Rubis Alexandre Daniel
-DESCRIPTION:Élie Vilmin\, étudiant en anthropologie et Rubis Alexandre Daniel\, étudiant en interprétariat\, vous invitent à (re)découvrir la Langue des Signes Japonaise et sa culture\, en provoquant volontairement un choc culturel et linguistique par la mise en regard avec la Langue des Signes Française (LSF).\nhttps://www.paris.fr/evenements/conference-langue-des-signes-japonaise-et-langue-des-signes-francaise-regards-croises-avec-elie-vilmin-et-alexandre-daniel-123927
+SUMMARY:Conférence "Langue des Signes Japonaise et Langue des Signes Fran
+ çaise : regards croisés" avec Élie Vilmin et Rubis Alexandre Daniel
+DESCRIPTION:Élie Vilmin\, étudiant en anthropologie et Rubis Alexandre Da
+ niel\, étudiant en interprétariat\, vous invitent à (re)découvrir la L
+ angue des Signes Japonaise et sa culture\, en provoquant volontairement un
+  choc culturel et linguistique par la mise en regard avec la Langue des Si
+ gnes Française (LSF).\nhttps://www.paris.fr/evenements/conference-langue-
+ des-signes-japonaise-et-langue-des-signes-francaise-regards-croises-avec-e
+ lie-vilmin-et-alexandre-daniel-123927
 LOCATION:Bibliothèque André Malraux\, 112 rue de Rennes\, 75006 Paris
-URL:https://www.paris.fr/evenements/conference-langue-des-signes-japonaise-et-langue-des-signes-francaise-regards-croises-avec-elie-vilmin-et-alexandre-daniel-123927
+URL:https://www.paris.fr/evenements/conference-langue-des-signes-japonaise-
+ et-langue-des-signes-francaise-regards-croises-avec-elie-vilmin-et-alexand
+ re-daniel-123927
 END:VEVENT
 BEGIN:VEVENT
 UID:1ea079458858@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
-SUMMARY:The BBC under Fire : Debates on Impartiality and the Crisis of Legitimacy in Public Service Broadcasting
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/the-bbc-under-fire-debates-on-impartiality-and-the-crisis-of-legitimacy-in-public-service-broadcasting--925833.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/the-bbc-under-fire-debates-on-impartiality-and-the-crisis-of-legitimacy-in-public-service-broadcasting--925833.kjsp?RH=1236178100008
+SUMMARY:The BBC under Fire : Debates on Impartiality and the Crisis of Legi
+ timacy in Public Service Broadcasting
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/the-bbc-under-fire-debates-o
+ n-impartiality-and-the-crisis-of-legitimacy-in-public-service-broadcasting
+ --925833.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/the-bbc-under-fire-debates-on-impartia
+ lity-and-the-crisis-of-legitimacy-in-public-service-broadcasting--925833.k
+ jsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:7c53dd8212ab@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261113T100000
 DTEND:20261113T120000
-SUMMARY:Qu’est-ce que le naturalisme ? Approche médiatique et culturelle d’un objet à identifier
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/marie-astrid-charlier-universite-paul-valery-montpellier-3-rirra-21-et-iuf-quest-ce-que-le-naturalisme-approche-mediatique-et-culturelle-dun-objet-a-identifier
+SUMMARY:Qu’est-ce que le naturalisme ? Approche médiatique et culturelle
+  d’un objet à identifier
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/marie-astrid-charlier-universite-paul-valery-montpellier-3-r
+ irra-21-et-iuf-quest-ce-que-le-naturalisme-approche-mediatique-et-culturel
+ le-dun-objet-a-identifier
 LOCATION:ITEM/CNRS 59\, rue Pouchet 75017 PARIS - salle 255
-URL:https://www.item.ens.fr/marie-astrid-charlier-universite-paul-valery-montpellier-3-rirra-21-et-iuf-quest-ce-que-le-naturalisme-approche-mediatique-et-culturelle-dun-objet-a-identifier
+URL:https://www.item.ens.fr/marie-astrid-charlier-universite-paul-valery-mo
+ ntpellier-3-rirra-21-et-iuf-quest-ce-que-le-naturalisme-approche-mediatiqu
+ e-et-culturelle-dun-objet-a-identifier
 END:VEVENT
 BEGIN:VEVENT
 UID:7b99fc9e9f74@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261113T190000
 DTEND:20261113T210000
 SUMMARY:Rencontre littéraire avec Julien Marsay
-DESCRIPTION:À l’occasion du Festival des Fiertés\, rencontrez Julien Marsay - auteur et enseignant agrégé de lettres modernes - pour une discussion autour de son essai "Queers-Riposter à l’injure" édité chez Payot.\nhttps://www.paris.fr/evenements/rencontre-litteraire-avec-julien-marsay-116124
+DESCRIPTION:À l’occasion du Festival des Fiertés\, rencontrez Julien Ma
+ rsay - auteur et enseignant agrégé de lettres modernes - pour une discus
+ sion autour de son essai "Queers-Riposter à l’injure" édité chez Payo
+ t.\nhttps://www.paris.fr/evenements/rencontre-litteraire-avec-julien-marsa
+ y-116124
 LOCATION:Bibliothèque Aimé Césaire\, 5 rue de Ridder\, 75014 Paris
-URL:https://www.paris.fr/evenements/rencontre-litteraire-avec-julien-marsay-116124
+URL:https://www.paris.fr/evenements/rencontre-litteraire-avec-julien-marsay
+ -116124
 END:VEVENT
 BEGIN:VEVENT
 UID:c98ba619c20d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261114T180000
 DTEND:20261114T193000
-SUMMARY:Rencontre autour de l'œuvre poétique de René Guy et Hélène Cadou
-DESCRIPTION:Une rencontre en compagnie de Jean-François Jacques\, neveu du couple.\nhttps://www.paris.fr/evenements/rencontre-autour-de-l-oeuvre-poetique-de-rene-guy-et-helene-cadou-114199
+SUMMARY:Rencontre autour de l'œuvre poétique de René Guy et Hélène Cad
+ ou
+DESCRIPTION:Une rencontre en compagnie de Jean-François Jacques\, neveu du
+  couple.\nhttps://www.paris.fr/evenements/rencontre-autour-de-l-oeuvre-poe
+ tique-de-rene-guy-et-helene-cadou-114199
 LOCATION:Médiathèque Violette Leduc\, 18 rue Faidherbe\, 75011 Paris
-URL:https://www.paris.fr/evenements/rencontre-autour-de-l-oeuvre-poetique-de-rene-guy-et-helene-cadou-114199
+URL:https://www.paris.fr/evenements/rencontre-autour-de-l-oeuvre-poetique-d
+ e-rene-guy-et-helene-cadou-114199
 END:VEVENT
 BEGIN:VEVENT
 UID:11cd0c15daf5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:Le soleil descendra derrière la montagne de Robert Bober
-DESCRIPTION:Dans le cadre du Festival Paris en toutes lettres P.O.L.\, 2026.\nhttps://www.paris.fr/evenements/le-soleil-descendra-derriere-la-montagne-de-robert-bober-116658
+DESCRIPTION:Dans le cadre du Festival Paris en toutes lettres P.O.L.\, 2026
+ .\nhttps://www.paris.fr/evenements/le-soleil-descendra-derriere-la-montagn
+ e-de-robert-bober-116658
 LOCATION:Mémorial de la Shoah\, 17 rue Geoffroy l'Asnier\, 75004 Paris
-URL:https://www.paris.fr/evenements/le-soleil-descendra-derriere-la-montagne-de-robert-bober-116658
+URL:https://www.paris.fr/evenements/le-soleil-descendra-derriere-la-montagn
+ e-de-robert-bober-116658
 END:VEVENT
 BEGIN:VEVENT
 UID:144d19c7ac4b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Expériences migratoires à l’ère contemporaine
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/experiences-migratoires-a-l-ere-contemporaine-928309.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/experiences-migratoires-a-l-ere-contemporaine-928309.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/experiences-migratoires-a-l-
+ ere-contemporaine-928309.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/experiences-migratoires-a-l-ere-contem
+ poraine-928309.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:436f31c4b597@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261119T190000
 DTEND:20261119T210000
 SUMMARY:Wojciech Tochman\, une voix de la littérature polonaise
-DESCRIPTION:Une rencontre dans le cadre du festival "Weekend à l'est"\nhttps://www.paris.fr/evenements/marta-caraion-et-catalin-mihuleac-deux-voix-de-la-litterature-roumaine-117589
+DESCRIPTION:Une rencontre dans le cadre du festival "Weekend à l'est"\nhtt
+ ps://www.paris.fr/evenements/marta-caraion-et-catalin-mihuleac-deux-voix-d
+ e-la-litterature-roumaine-117589
 LOCATION:Bibliothèque André Malraux\, 112 rue de Rennes\, 75006 Paris
-URL:https://www.paris.fr/evenements/marta-caraion-et-catalin-mihuleac-deux-voix-de-la-litterature-roumaine-117589
+URL:https://www.paris.fr/evenements/marta-caraion-et-catalin-mihuleac-deux-
+ voix-de-la-litterature-roumaine-117589
 END:VEVENT
 BEGIN:VEVENT
 UID:9b947c5cd881@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
-SUMMARY:Nouveaux regards sur la « théâtralité » : entre réel et mise en fiction
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/nouveaux-regards-sur-la-theatralite-entre-reel-et-mise-en-fiction-925463.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/nouveaux-regards-sur-la-theatralite-entre-reel-et-mise-en-fiction-925463.kjsp?RH=1236178100008
+SUMMARY:Nouveaux regards sur la « théâtralité » : entre réel et mise 
+ en fiction
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/nouveaux-regards-sur-la-thea
+ tralite-entre-reel-et-mise-en-fiction-925463.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/nouveaux-regards-sur-la-theatralite-en
+ tre-reel-et-mise-en-fiction-925463.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:c814cd15c66b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
-SUMMARY:Histoire des émotions en littérature et culture d'enfance et de jeunesse
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/histoire-des-emotions-en-litterature-et-culture-d-enfance-et-de-jeunesse-925260.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/histoire-des-emotions-en-litterature-et-culture-d-enfance-et-de-jeunesse-925260.kjsp?RH=1236178100008
+SUMMARY:Histoire des émotions en littérature et culture d'enfance et de j
+ eunesse
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/histoire-des-emotions-en-lit
+ terature-et-culture-d-enfance-et-de-jeunesse-925260.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/histoire-des-emotions-en-litterature-e
+ t-culture-d-enfance-et-de-jeunesse-925260.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:943ca98c936c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261121T150000
 DTEND:20261121T170000
-SUMMARY:Rencontre autour du livre "Baisers du singe" de Virginia Woolf en présence des Editions La Table Ronde
-DESCRIPTION:Venez découvrir cette nouvelle parution de textes de Virginia Woolf : un pan de correspondance avec sa soeur Vanessa Bell au début du 20 ème siècle. L'équipe éditoriale vous présentera ce choix de lettres et vous en fera découvrir les alentours.\nhttps://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-123736
+SUMMARY:Rencontre autour du livre "Baisers du singe" de Virginia Woolf en p
+ résence des Editions La Table Ronde
+DESCRIPTION:Venez découvrir cette nouvelle parution de textes de Virginia 
+ Woolf : un pan de correspondance avec sa soeur Vanessa Bell au début du 2
+ 0 ème siècle. L'équipe éditoriale vous présentera ce choix de lettres
+  et vous en fera découvrir les alentours.\nhttps://www.paris.fr/evenement
+ s/cafe-litteraire-la-rentree-litteraire-123736
 LOCATION:Médiathèque Virginia Woolf\, 4 rue Germaine Krull\, 75013 Paris
-URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-123736
+URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-1
+ 23736
 END:VEVENT
 BEGIN:VEVENT
 UID:1e84de055109@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261121T180000
 DTEND:20261121T203000
 SUMMARY:Lenoir en questions : portrait sensible d'un passeur hors pair
-DESCRIPTION:Une plongée poétique et sensible dans l'univers intime et professionnel de Bernard Lenoir\, figure emblématique de la radio française pendant 40 ans. Un passeur culturel souvent perçu comme un pair\, un ami invisible pour des générations d'auditeurs\, qui ont découvert grâce à lui des artistes devenus cultes tels que Joy Division\, Radiohead ou Cocteau Twins.\nhttps://www.paris.fr/evenements/lenoir-en-questions-portrait-sensible-d-un-passeur-hors-pair-123181
+DESCRIPTION:Une plongée poétique et sensible dans l'univers intime et pro
+ fessionnel de Bernard Lenoir\, figure emblématique de la radio française
+  pendant 40 ans. Un passeur culturel souvent perçu comme un pair\, un ami
+  invisible pour des générations d'auditeurs\, qui ont découvert grâce 
+ à lui des artistes devenus cultes tels que Joy Division\, Radiohead ou Co
+ cteau Twins.\nhttps://www.paris.fr/evenements/lenoir-en-questions-portrait
+ -sensible-d-un-passeur-hors-pair-123181
 LOCATION:Médiathèque Violette Leduc\, 18 rue Faidherbe\, 75011 Paris
-URL:https://www.paris.fr/evenements/lenoir-en-questions-portrait-sensible-d-un-passeur-hors-pair-123181
+URL:https://www.paris.fr/evenements/lenoir-en-questions-portrait-sensible-d
+ -un-passeur-hors-pair-123181
 END:VEVENT
 BEGIN:VEVENT
 UID:5f29e3a8b86b@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Les usages politiques de la complainte en Italie du XIIIe au XVe s.
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/les-usages-politiques-de-la-complainte-en-italie-du-xiiie-au-xve-s--927572.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/les-usages-politiques-de-la-complainte-en-italie-du-xiiie-au-xve-s--927572.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/les-usages-politiques-de-la-
+ complainte-en-italie-du-xiiie-au-xve-s--927572.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/les-usages-politiques-de-la-complainte
+ -en-italie-du-xiiie-au-xve-s--927572.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:7fc87c1e7956@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Collodi hier et aujourd'hui
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/collodi-hier-et-aujourd-hui-926045.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/collodi-hier-et-aujourd-hui-926045.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/collodi-hier-et-aujourd-hui-
+ 926045.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/collodi-hier-et-aujourd-hui-926045.kjs
+ p?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:f31373c0ec7e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261124T150000
 DTEND:20261124T170000
-SUMMARY:Conférence : Le grand amour d’Honoré de Balzac et de la comtesse Hanska
-DESCRIPTION:Découvrez l'histoire de la relation passionnée entre Honoré de Balzac et la comtesse Hanska\, l'une des plus célèbres correspondances amoureuses de la littérature française.\nhttps://www.paris.fr/evenements/conference-le-grand-amour-d-honore-de-balzac-et-de-la-comtesse-hanska-117149
+SUMMARY:Conférence : Le grand amour d’Honoré de Balzac et de la comtess
+ e Hanska
+DESCRIPTION:Découvrez l'histoire de la relation passionnée entre Honoré 
+ de Balzac et la comtesse Hanska\, l'une des plus célèbres correspondance
+ s amoureuses de la littérature française.\nhttps://www.paris.fr/evenemen
+ ts/conference-le-grand-amour-d-honore-de-balzac-et-de-la-comtesse-hanska-1
+ 17149
 LOCATION:Mairie du 8e arrondissement\, 3 rue de Lisbonne\, 75008 Paris
-URL:https://www.paris.fr/evenements/conference-le-grand-amour-d-honore-de-balzac-et-de-la-comtesse-hanska-117149
+URL:https://www.paris.fr/evenements/conference-le-grand-amour-d-honore-de-b
+ alzac-et-de-la-comtesse-hanska-117149
 END:VEVENT
 BEGIN:VEVENT
 UID:1d747150eb2e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:LES DÉFIS DU JAZZ...
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/les-defis-du-jazz--925188.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/les-defis-du-jazz--925188.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/les-defis-du-jazz--925188.kj
+ sp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/les-defis-du-jazz--925188.kjsp?RH=1236
+ 178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:a6cd1b39064e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261126T190000
 DTEND:20261126T203000
 SUMMARY:Récit historique autour de la célèbre tapisserie de Bayeux
-DESCRIPTION:Conférence d'Elise Brisson\, passionnée d'Histoire\nhttps://www.paris.fr/evenements/recit-historique-autour-de-la-celebre-tapisserie-de-bayeux-124273
+DESCRIPTION:Conférence d'Elise Brisson\, passionnée d'Histoire\nhttps://w
+ ww.paris.fr/evenements/recit-historique-autour-de-la-celebre-tapisserie-de
+ -bayeux-124273
 LOCATION:Bibliothèque Drouot\, 11 rue Drouot\, 75009 Paris
-URL:https://www.paris.fr/evenements/recit-historique-autour-de-la-celebre-tapisserie-de-bayeux-124273
+URL:https://www.paris.fr/evenements/recit-historique-autour-de-la-celebre-t
+ apisserie-de-bayeux-124273
 END:VEVENT
 BEGIN:VEVENT
 UID:3e6a405c1454@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261128T153000
 DTEND:20261128T163000
 SUMMARY:A la poursuite d'Agatha Christie
-DESCRIPTION:Pour commémorer les 50 ans de la mort d’Agatha Christie\, Anne Martinetti vous propose une "causerie" intitulée "A la poursuite d’Agatha Christie". Sur inscription à partir du 28 octobre\, pour adultes\nhttps://www.paris.fr/evenements/a-la-poursuite-d-agatha-christie-115013
+DESCRIPTION:Pour commémorer les 50 ans de la mort d’Agatha Christie\, An
+ ne Martinetti vous propose une "causerie" intitulée "A la poursuite d’A
+ gatha Christie". Sur inscription à partir du 28 octobre\, pour adultes\nh
+ ttps://www.paris.fr/evenements/a-la-poursuite-d-agatha-christie-115013
 LOCATION:Bibliothèque Andrée Chedid\, 36\, rue Emeriau\, 75015 Paris
 URL:https://www.paris.fr/evenements/a-la-poursuite-d-agatha-christie-115013
 END:VEVENT
 BEGIN:VEVENT
 UID:3795db93976f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261201T190000
 DTEND:20261201T210000
-SUMMARY:Malraux et les Éditions Kra\, 1919-1921 : un tremplin réciproque ?
-DESCRIPTION:Une occasion de découvrir les débuts du jeune Malraux et d’en apprendre plus sur une maison d’édition d’avant-garde\, aujourd’hui méconnue\nhttps://www.paris.fr/evenements/malraux-et-les-editions-kra-1919-1921-un-tremplin-reciproque-124689
+SUMMARY:Malraux et les Éditions Kra\, 1919-1921 : un tremplin réciproque 
+ ?
+DESCRIPTION:Une occasion de découvrir les débuts du jeune Malraux et d’
+ en apprendre plus sur une maison d’édition d’avant-garde\, aujourd’
+ hui méconnue\nhttps://www.paris.fr/evenements/malraux-et-les-editions-kra
+ -1919-1921-un-tremplin-reciproque-124689
 LOCATION:Bibliothèque Forney\, 1 rue du Figuier\, 75004 Paris
-URL:https://www.paris.fr/evenements/malraux-et-les-editions-kra-1919-1921-un-tremplin-reciproque-124689
+URL:https://www.paris.fr/evenements/malraux-et-les-editions-kra-1919-1921-u
+ n-tremplin-reciproque-124689
 END:VEVENT
 BEGIN:VEVENT
 UID:76c072db0e9c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261201T190000
 DTEND:20261201T203000
 SUMMARY:La bibliothèque idéale de… Martin Page
-DESCRIPTION:Martin Page dévoile une sélection d’œuvres (fiction\, bande dessinée\, poésie et musique) qui ont marqué son imaginaire et nourri sont regard sur le monde. Avec sensibilité et générosité\, iel nous guide dans sa bibliothèque idéale.\nhttps://www.paris.fr/evenements/la-bibliotheque-ideale-de-martin-page-123913
-LOCATION:Médiathèque Jean-Pierre Melville\, 79 rue Nationale\, 75013 Paris
-URL:https://www.paris.fr/evenements/la-bibliotheque-ideale-de-martin-page-123913
+DESCRIPTION:Martin Page dévoile une sélection d’œuvres (fiction\, band
+ e dessinée\, poésie et musique) qui ont marqué son imaginaire et nourri
+  sont regard sur le monde. Avec sensibilité et générosité\, iel nous g
+ uide dans sa bibliothèque idéale.\nhttps://www.paris.fr/evenements/la-bi
+ bliotheque-ideale-de-martin-page-123913
+LOCATION:Médiathèque Jean-Pierre Melville\, 79 rue Nationale\, 75013 Pari
+ s
+URL:https://www.paris.fr/evenements/la-bibliotheque-ideale-de-martin-page-1
+ 23913
 END:VEVENT
 BEGIN:VEVENT
 UID:6c3f078ec7ff@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Littérature et histoire : ce qui résiste
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/litterature-et-histoire-ce-qui-resiste-925754.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/litterature-et-histoire-ce-qui-resiste-925754.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/litterature-et-histoire-ce-q
+ ui-resiste-925754.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/litterature-et-histoire-ce-qui-resiste
+ -925754.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:ba2bbb14e99c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
-SUMMARY:Représenter le handicap dans les arts\, les lettres et les médias : esthétiques\, récits et politiques du visible
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/representer-le-handicap-dans-les-arts-les-lettres-et-les-medias-esthetiques-recits-et-politiques-du-visible-933453.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/representer-le-handicap-dans-les-arts-les-lettres-et-les-medias-esthetiques-recits-et-politiques-du-visible-933453.kjsp?RH=1236178100008
+SUMMARY:Représenter le handicap dans les arts\, les lettres et les médias
+  : esthétiques\, récits et politiques du visible
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/representer-le-handicap-dans
+ -les-arts-les-lettres-et-les-medias-esthetiques-recits-et-politiques-du-vi
+ sible-933453.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/representer-le-handicap-dans-les-arts-
+ les-lettres-et-les-medias-esthetiques-recits-et-politiques-du-visible-9334
+ 53.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:4ff8d87f372c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261203T190000
 DTEND:20261203T210000
 SUMMARY:Céline raconte Madeleine
-DESCRIPTION:Une rencontre de Céline Malraux avec Manon Landowski autour de la vie de Madeleine Malraux\, pianiste concertiste.\nhttps://www.paris.fr/evenements/avec-une-legere-intimite-madeleine-malraux-pianiste-117578
+DESCRIPTION:Une rencontre de Céline Malraux avec Manon Landowski autour de
+  la vie de Madeleine Malraux\, pianiste concertiste.\nhttps://www.paris.fr
+ /evenements/avec-une-legere-intimite-madeleine-malraux-pianiste-117578
 LOCATION:Bibliothèque André Malraux\, 112 rue de Rennes\, 75006 Paris
-URL:https://www.paris.fr/evenements/avec-une-legere-intimite-madeleine-malraux-pianiste-117578
+URL:https://www.paris.fr/evenements/avec-une-legere-intimite-madeleine-malr
+ aux-pianiste-117578
 END:VEVENT
 BEGIN:VEVENT
 UID:4fc79c96fdf0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
-SUMMARY:Ecrire la Russie… sans le russe : traduire la fiction et la non-fiction\, entre anglais et français
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/ecrire-la-russie-sans-le-russe-traduire-la-fiction-et-la-non-fiction-entre-anglais-et-francais-925545.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/ecrire-la-russie-sans-le-russe-traduire-la-fiction-et-la-non-fiction-entre-anglais-et-francais-925545.kjsp?RH=1236178100008
+SUMMARY:Ecrire la Russie… sans le russe : traduire la fiction et la non-f
+ iction\, entre anglais et français
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/ecrire-la-russie-sans-le-rus
+ se-traduire-la-fiction-et-la-non-fiction-entre-anglais-et-francais-925545.
+ kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/ecrire-la-russie-sans-le-russe-traduir
+ e-la-fiction-et-la-non-fiction-entre-anglais-et-francais-925545.kjsp?RH=12
+ 36178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:047ab564a80f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261205T110000
 DTEND:20261205T123000
 SUMMARY:Café littéraire : des mots et des mets
-DESCRIPTION:Venez échanger avec les bibliothécaires et partager vos coups de cœur littéraires ou documentaires autour du grand champ de ce qui se déguste.\nhttps://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-117623
+DESCRIPTION:Venez échanger avec les bibliothécaires et partager vos coups
+  de cœur littéraires ou documentaires autour du grand champ de ce qui se
+  déguste.\nhttps://www.paris.fr/evenements/cafe-litteraire-la-rentree-lit
+ teraire-117623
 LOCATION:Médiathèque Virginia Woolf\, 4 rue Germaine Krull\, 75013 Paris
-URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-117623
+URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-1
+ 17623
 END:VEVENT
 BEGIN:VEVENT
 UID:3ebf5aadbbd4@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261205T153000
 DTEND:20261205T173000
 SUMMARY:Table ronde : parcours de libraires
-DESCRIPTION:Deux professionnels nous partagent leur réalité de ce métier de passion qui fait tant rêver. En présence d'interprètes LSF/FR.\nhttps://www.paris.fr/evenements/table-ronde-parcours-de-libraires-123988
-LOCATION:Bibliothèque Saint-Eloi\, 23 rue du Colonel Rozanoff\, 75012 Paris
-URL:https://www.paris.fr/evenements/table-ronde-parcours-de-libraires-123988
+DESCRIPTION:Deux professionnels nous partagent leur réalité de ce métier
+  de passion qui fait tant rêver. En présence d'interprètes LSF/FR.\nhtt
+ ps://www.paris.fr/evenements/table-ronde-parcours-de-libraires-123988
+LOCATION:Bibliothèque Saint-Eloi\, 23 rue du Colonel Rozanoff\, 75012 Pari
+ s
+URL:https://www.paris.fr/evenements/table-ronde-parcours-de-libraires-12398
+ 8
 END:VEVENT
 BEGIN:VEVENT
 UID:7aae37ce3d64@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Conversing with the Dead / Converser avec les morts
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/conversing-with-the-dead-converser-avec-les-morts-925778.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/conversing-with-the-dead-converser-avec-les-morts-925778.kjsp?RH=1236178100008
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/conversing-with-the-dead-con
+ verser-avec-les-morts-925778.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/conversing-with-the-dead-converser-ave
+ c-les-morts-925778.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:9497033e8a67@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
-SUMMARY:Troisième Rencontre pluridisciplinaire des Colombianistes en France : interconnexions\, réseaux et flux
-DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/troisieme-rencontre-pluridisciplinaire-des-colombianistes-en-france-interconnexions-reseaux-et-flux-927678.kjsp?RH=1236178100008
-LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 12e
-URL:https://www.sorbonne-nouvelle.fr/troisieme-rencontre-pluridisciplinaire-des-colombianistes-en-france-interconnexions-reseaux-et-flux-927678.kjsp?RH=1236178100008
+SUMMARY:Troisième Rencontre pluridisciplinaire des Colombianistes en Franc
+ e : interconnexions\, réseaux et flux
+DESCRIPTION:\nhttps://www.sorbonne-nouvelle.fr/troisieme-rencontre-pluridis
+ ciplinaire-des-colombianistes-en-france-interconnexions-reseaux-et-flux-92
+ 7678.kjsp?RH=1236178100008
+LOCATION:Université Sorbonne Nouvelle\, 8 avenue de Saint-Mandé\, Paris 1
+ 2e
+URL:https://www.sorbonne-nouvelle.fr/troisieme-rencontre-pluridisciplinaire
+ -des-colombianistes-en-france-interconnexions-reseaux-et-flux-927678.kjsp?
+ RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
 UID:40492c5710a1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:Bourbaki et la théorie des catégories
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/bourbaki-et-la-theorie-des-categories
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/bourbaki-et-la-theorie-des-categories
 LOCATION:ITEM (ENS-CNRS)\, 45 rue d'Ulm\, Paris 5e
 URL:https://www.item.ens.fr/bourbaki-et-la-theorie-des-categories
 END:VEVENT
 BEGIN:VEVENT
 UID:7b76a31387b5@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261211T100000
 DTEND:20261211T120000
 SUMMARY:Émile Zola. Scènes d’une vie d’écrivain
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/alain-pages-sorbonne-nouvelle-emile-zola-scenes-dune-vie-decrivain
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/alain-pages-sorbonne-nouvelle-emile-zola-scenes-dune-vie-dec
+ rivain
 LOCATION:ITEM/CNRS 59\, rue Pouchet 75017 PARIS - salle 255
-URL:https://www.item.ens.fr/alain-pages-sorbonne-nouvelle-emile-zola-scenes-dune-vie-decrivain
+URL:https://www.item.ens.fr/alain-pages-sorbonne-nouvelle-emile-zola-scenes
+ -dune-vie-decrivain
 END:VEVENT
 BEGIN:VEVENT
 UID:bf985629fb40@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Une heure\, un livre - La Pharisienne de Mauriac
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-pharisienne-de-mauriac
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre---la-pharisienne-de-mauriac
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-pharisienne-de-mauriac
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-phar
+ isienne-de-mauriac
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a2297de264@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261216T123000
 DTEND:20261216T133000
 SUMMARY:Roland Lehoucq "Science-fiction : le monde de la (dé)mesure"
@@ -1037,382 +1483,499 @@ URL:https://indico.ijclab.in2p3.fr/event/13626/
 END:VEVENT
 BEGIN:VEVENT
 UID:06508c812e37@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261217T190000
 DTEND:20261217T210000
 SUMMARY:Immer-son. Écouter aux pages des romans (Jane Eyre et Dracula)
-DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/immer-son-ecouter-aux-pages-des-romans-jane-eyre-et-dracula
+DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/immer-son-ecouter-aux-pag
+ es-des-romans-jane-eyre-et-dracula
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.fmsh.fr/agenda/immer-son-ecouter-aux-pages-des-romans-jane-eyre-et-dracula
+URL:https://www.fmsh.fr/agenda/immer-son-ecouter-aux-pages-des-romans-jane-
+ eyre-et-dracula
 END:VEVENT
 BEGIN:VEVENT
 UID:c4a1005e4f3d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261217T190000
 DTEND:20261217T210000
-SUMMARY:Présentation de l'ouvrage « Immer-son. Écouter aux pages des romans (Jane Eyre et Dracula) »
-DESCRIPTION:La Fondation Maison des Sciences de l'Homme (FMSH) a le plaisir de vous inviter à une rencontre autour de l’ouvrage « Immer-son. Écouter aux pages des romans (Jane Eyre et Dracula) »\, en présence de l'autrice Anaïs Martin.\nhttps://www.paris.fr/evenements/presentation-de-l-ouvrage-vivre-les-encheres-117285
-LOCATION:Fondation Maison des Sciences de l'Homme (FMSH)\, 54\, boulevard Raspail\, 75006 Paris
-URL:https://www.paris.fr/evenements/presentation-de-l-ouvrage-vivre-les-encheres-117285
+SUMMARY:Présentation de l'ouvrage « Immer-son. Écouter aux pages des rom
+ ans (Jane Eyre et Dracula) »
+DESCRIPTION:La Fondation Maison des Sciences de l'Homme (FMSH) a le plaisir
+  de vous inviter à une rencontre autour de l’ouvrage « Immer-son. Éco
+ uter aux pages des romans (Jane Eyre et Dracula) »\, en présence de l'au
+ trice Anaïs Martin.\nhttps://www.paris.fr/evenements/presentation-de-l-ou
+ vrage-vivre-les-encheres-117285
+LOCATION:Fondation Maison des Sciences de l'Homme (FMSH)\, 54\, boulevard R
+ aspail\, 75006 Paris
+URL:https://www.paris.fr/evenements/presentation-de-l-ouvrage-vivre-les-enc
+ heres-117285
 END:VEVENT
 BEGIN:VEVENT
 UID:4957a89efad0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270105T170000
 DTEND:20270105T190000
 SUMMARY:Trouble dans la littérature (1) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-1
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-1
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-1
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-1
 END:VEVENT
 BEGIN:VEVENT
 UID:9d3ddb4bce9a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270105T180000
 DTEND:20270105T200000
 SUMMARY:Littérature générale et singulière (1) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-1
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-1
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-1
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-1
 END:VEVENT
 BEGIN:VEVENT
 UID:b6d91db82bef@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
 SUMMARY:Une heure\, un livre - Les Hauts de Hurlevent d’Émily Brontë
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-hauts-de-hurlevent-d-emily-bronte
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre---les-hauts-de-hurlevent-d-emily-bronte
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-hauts-de-hurlevent-d-emily-bronte
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-hau
+ ts-de-hurlevent-d-emily-bronte
 END:VEVENT
 BEGIN:VEVENT
 UID:6dd4ed88e8f3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270112T170000
 DTEND:20270112T190000
 SUMMARY:Trouble dans la littérature (2) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-2
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-2
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-2
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-2
 END:VEVENT
 BEGIN:VEVENT
 UID:055150c97ea3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270112T180000
 DTEND:20270112T200000
 SUMMARY:Littérature générale et singulière (2) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-2
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-2
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-2
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-2
 END:VEVENT
 BEGIN:VEVENT
 UID:7b054a057293@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270119T170000
 DTEND:20270119T190000
 SUMMARY:Présentation du n°63 de Genesis : « La Vie des œuvres »
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
 LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
 URL:https://www.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
 END:VEVENT
 BEGIN:VEVENT
 UID:d512c072625a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270119T170000
 DTEND:20270119T190000
 SUMMARY:Trouble dans la littérature (3) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-3
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-3
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-3
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-3
 END:VEVENT
 BEGIN:VEVENT
 UID:c49749e09680@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270119T180000
 DTEND:20270119T200000
 SUMMARY:Littérature générale et singulière (3) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-3
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-3
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-3
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-3
 END:VEVENT
 BEGIN:VEVENT
 UID:ffdbe012b2fc@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270122T100000
 DTEND:20270122T120000
 SUMMARY:D’où viennent les stylèmes naturalistes ?
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/dominique-legallois-sorbonne-nouvelle-dou-viennent-les-stylemes-naturalistes
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/dominique-legallois-sorbonne-nouvelle-dou-viennent-les-style
+ mes-naturalistes
 LOCATION:ITEM/CNRS 59\, rue Pouchet 75017 PARIS - salle 255
-URL:https://www.item.ens.fr/dominique-legallois-sorbonne-nouvelle-dou-viennent-les-stylemes-naturalistes
+URL:https://www.item.ens.fr/dominique-legallois-sorbonne-nouvelle-dou-vienn
+ ent-les-stylemes-naturalistes
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba82c96d700@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270126T170000
 DTEND:20270126T190000
 SUMMARY:Trouble dans la littérature (4) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-4
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-4
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-4
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-4
 END:VEVENT
 BEGIN:VEVENT
 UID:9d774ed7f38c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270126T180000
 DTEND:20270126T200000
 SUMMARY:Littérature générale et singulière (4) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-4
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-4
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-4
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-4
 END:VEVENT
 BEGIN:VEVENT
 UID:880382be1803@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270128T140000
 DTEND:20270128T160000
-SUMMARY:Une certaine perplexité philologique à l'égard des phrases modernistes : Beckett et Musil (1) Carlos Spoerhase
-DESCRIPTION:Conférencier invité · Une certaine perplexité philologique à l'égard des phrases modernistes : Beckett et Musil\nhttps://www.college-de-france.fr/fr/agenda/conferencier-invite/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil-1
+SUMMARY:Une certaine perplexité philologique à l'égard des phrases moder
+ nistes : Beckett et Musil (1) Carlos Spoerhase
+DESCRIPTION:Conférencier invité · Une certaine perplexité philologique 
+ à l'égard des phrases modernistes : Beckett et Musil\nhttps://www.colleg
+ e-de-france.fr/fr/agenda/conferencier-invite/une-certaine-perplexite-philo
+ logique-egard-des-phrases-modernistes-beckett-et-musil/une-certaine-perple
+ xite-philologique-egard-des-phrases-modernistes-beckett-et-musil-1
 LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil-1
+URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/une-cert
+ aine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musi
+ l/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-becke
+ tt-et-musil-1
 END:VEVENT
 BEGIN:VEVENT
 UID:abf7d9a52bd6@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270202T170000
 DTEND:20270202T190000
 SUMMARY:Trouble dans la littérature (5) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-5
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-5
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-5
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-5
 END:VEVENT
 BEGIN:VEVENT
 UID:07cad64a3f72@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270202T180000
 DTEND:20270202T200000
 SUMMARY:Littérature générale et singulière (5) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-5
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-5
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-5
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-5
 END:VEVENT
 BEGIN:VEVENT
 UID:4ee3679e40a2@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
-SUMMARY:Yves Chemla et Alba Pessini : « Les manuscrits de Jean-Claude Charles »
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/yves-chemla-et-alba-pessini-les-manuscrits-de-jean-claude-charles
+SUMMARY:Yves Chemla et Alba Pessini : « Les manuscrits de Jean-Claude Char
+ les »
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/yves-chemla-et-alba-pessini-les-manuscrits-de-jean-claude-ch
+ arles
 LOCATION:Site Pouchet\, 61 rue Pouchet\, 75017 Paris\, salle 124
-URL:https://www.item.ens.fr/yves-chemla-et-alba-pessini-les-manuscrits-de-jean-claude-charles
+URL:https://www.item.ens.fr/yves-chemla-et-alba-pessini-les-manuscrits-de-j
+ ean-claude-charles
 END:VEVENT
 BEGIN:VEVENT
 UID:0f32d1d5681e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270204T140000
 DTEND:20270204T160000
-SUMMARY:Une certaine perplexité philologique à l'égard des phrases modernistes : Beckett et Musil (2) Carlos Spoerhase
-DESCRIPTION:Conférencier invité · Une certaine perplexité philologique à l'égard des phrases modernistes : Beckett et Musil\nhttps://www.college-de-france.fr/fr/agenda/conferencier-invite/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil-2
+SUMMARY:Une certaine perplexité philologique à l'égard des phrases moder
+ nistes : Beckett et Musil (2) Carlos Spoerhase
+DESCRIPTION:Conférencier invité · Une certaine perplexité philologique 
+ à l'égard des phrases modernistes : Beckett et Musil\nhttps://www.colleg
+ e-de-france.fr/fr/agenda/conferencier-invite/une-certaine-perplexite-philo
+ logique-egard-des-phrases-modernistes-beckett-et-musil/une-certaine-perple
+ xite-philologique-egard-des-phrases-modernistes-beckett-et-musil-2
 LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musil-2
+URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/une-cert
+ aine-perplexite-philologique-egard-des-phrases-modernistes-beckett-et-musi
+ l/une-certaine-perplexite-philologique-egard-des-phrases-modernistes-becke
+ tt-et-musil-2
 END:VEVENT
 BEGIN:VEVENT
 UID:5dcbb20ea0df@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270209T170000
 DTEND:20270209T190000
 SUMMARY:Trouble dans la littérature (6) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-6
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-6
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-6
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-6
 END:VEVENT
 BEGIN:VEVENT
 UID:ee40b73313a1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270209T180000
 DTEND:20270209T200000
 SUMMARY:Littérature générale et singulière (6) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-6
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-6
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-6
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-6
 END:VEVENT
 BEGIN:VEVENT
 UID:2b46741764a1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270222
 DTEND;VALUE=DATE:20270223
-SUMMARY:Une heure\, un livre - Le Rhinocéros et Le Roi se meurt d’Eugène Ionesco
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre--le-rhinoceros-et-le-roi-se-meurt-d-eugene-ionesco
+SUMMARY:Une heure\, un livre - Le Rhinocéros et Le Roi se meurt d’Eugèn
+ e Ionesco
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre--le-rhinoceros-et-le-roi-se-meurt-d-eugene-ionesco
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre--le-rhinoceros-et-le-roi-se-meurt-d-eugene-ionesco
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre--le-rhino
+ ceros-et-le-roi-se-meurt-d-eugene-ionesco
 END:VEVENT
 BEGIN:VEVENT
 UID:5e27a8a58aaa@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270222T170000
 DTEND:20270222T190000
-SUMMARY:Olivier Cadiot (écrivain et traducteur) en dialogue avec Nathalie Koble (ENS- ITEM) (séance exceptionnellement un lundi)
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/o-cadiot-n-koble
+SUMMARY:Olivier Cadiot (écrivain et traducteur) en dialogue avec Nathalie 
+ Koble (ENS- ITEM) (séance exceptionnellement un lundi)
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/o-cadiot-n-koble
 LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
 URL:https://www.item.ens.fr/o-cadiot-n-koble
 END:VEVENT
 BEGIN:VEVENT
 UID:182cc0553358@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270223T170000
 DTEND:20270223T190000
 SUMMARY:Trouble dans la littérature (7) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-7
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-7
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-7
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-7
 END:VEVENT
 BEGIN:VEVENT
 UID:1f08103828c9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270223T180000
 DTEND:20270223T200000
 SUMMARY:Littérature générale et singulière (7) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-7
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-7
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-7
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-7
 END:VEVENT
 BEGIN:VEVENT
 UID:e687dc36a04f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270224
 DTEND;VALUE=DATE:20270225
 SUMMARY:Le triptyque impérial Romanov de la maison Fabergé
-DESCRIPTION:à 12h30 par Maximilien Durand \, musée du Louvre\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/le-triptyque-imperial-romanov-de-la-maison-faberge
+DESCRIPTION:à 12h30 par Maximilien Durand \, musée du Louvre\nhttps://www
+ .louvre.fr/expositions-et-evenements/evenements-activites/le-triptyque-imp
+ erial-romanov-de-la-maison-faberge
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
-URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le-triptyque-imperial-romanov-de-la-maison-faberge
+URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
+ -triptyque-imperial-romanov-de-la-maison-faberge
 END:VEVENT
 BEGIN:VEVENT
 UID:8e6925b459f7@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270302T170000
 DTEND:20270302T190000
 SUMMARY:Trouble dans la littérature (8) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-8
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-8
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-8
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-8
 END:VEVENT
 BEGIN:VEVENT
 UID:d0bc6b7a2083@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270302T180000
 DTEND:20270302T200000
 SUMMARY:Littérature générale et singulière (8) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-8
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-8
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-8
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-8
 END:VEVENT
 BEGIN:VEVENT
 UID:fee8c47ec2e9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270309T170000
 DTEND:20270309T190000
 SUMMARY:Trouble dans la littérature (9) William Marx
-DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-9
+DESCRIPTION:Cours · Trouble dans la littérature\nhttps://www.college-de-f
+ rance.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litte
+ rature-9
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litterature/trouble-dans-la-litterature-9
+URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
+ ature/trouble-dans-la-litterature-9
 END:VEVENT
 BEGIN:VEVENT
 UID:67ef2a95c6cf@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270309T180000
 DTEND:20270309T200000
 SUMMARY:Littérature générale et singulière (9) William Marx
-DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-9
+DESCRIPTION:Séminaire · Littérature générale et singulière\nhttps://w
+ ww.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singul
+ iere/litterature-generale-et-singuliere-9
 LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-generale-et-singuliere/litterature-generale-et-singuliere-9
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
+ le-et-singuliere/litterature-generale-et-singuliere-9
 END:VEVENT
 BEGIN:VEVENT
 UID:03510ff72578@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Une heure\, un livre - Mémoires d’Outre-Tombe de Chateaubriand
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre---memoires-d-outre-tombe-de-chateaubriand
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre---memoires-d-outre-tombe-de-chateaubriand
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---memoires-d-outre-tombe-de-chateaubriand
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---memoire
+ s-d-outre-tombe-de-chateaubriand
 END:VEVENT
 BEGIN:VEVENT
 UID:d30e1064bd01@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270316T170000
 DTEND:20270316T190000
 SUMMARY:(sur Gustave Roud\, poète)
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/sur-gustave-roud-poete
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/sur-gustave-roud-poete
 LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
 URL:https://www.item.ens.fr/sur-gustave-roud-poete
 END:VEVENT
 BEGIN:VEVENT
 UID:921c238ed86a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270421T160000
 DTEND:20270421T180000
-SUMMARY:Habib Tengour et Hervé Sanson : « Habib Tengour à l’œuvre » — en lien avec la parution du numéro de Continents manuscrits
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/habib-tengour
-LOCATION:Site Pouchet\, 61 rue Pouchet\, 75017 Paris\, salle 124. (16:00?18:00)
+SUMMARY:Habib Tengour et Hervé Sanson : « Habib Tengour à l’œuvre » 
+ — en lien avec la parution du numéro de Continents manuscrits
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/habib-tengour
+LOCATION:Site Pouchet\, 61 rue Pouchet\, 75017 Paris\, salle 124. (16:00?18
+ :00)
 URL:https://www.item.ens.fr/habib-tengour
 END:VEVENT
 BEGIN:VEVENT
 UID:ed7ead670914@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270423T100000
 DTEND:20270423T120000
-SUMMARY:La première version connue d’ Une vie de Maupassant. Les débuts d’un romancier
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/antonia-fonyi-cnrs-genese-dune-vie-de-maupassant
+SUMMARY:La première version connue d’ Une vie de Maupassant. Les débuts
+  d’un romancier
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/antonia-fonyi-cnrs-genese-dune-vie-de-maupassant
 LOCATION:ITEM/CNRS 59\, rue Pouchet 75017 PARIS - salle 255
-URL:https://www.item.ens.fr/antonia-fonyi-cnrs-genese-dune-vie-de-maupassant
+URL:https://www.item.ens.fr/antonia-fonyi-cnrs-genese-dune-vie-de-maupassan
+ t
 END:VEVENT
 BEGIN:VEVENT
 UID:60a9482eda77@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270426
 DTEND;VALUE=DATE:20270427
-SUMMARY:Une heure\, un livre - Les Matinaux\, La Parole en archipel de René Char
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-matinaux-la-parole-en-archipel-de-rene-char
+SUMMARY:Une heure\, un livre - Les Matinaux\, La Parole en archipel de Ren
+ é Char
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre---les-matinaux-la-parole-en-archipel-de-rene-char
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-matinaux-la-parole-en-archipel-de-rene-char
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-mat
+ inaux-la-parole-en-archipel-de-rene-char
 END:VEVENT
 BEGIN:VEVENT
 UID:af3ac93ede28@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270427T170000
 DTEND:20270427T190000
 SUMMARY:Belinda Cannone (romancière et essayiste)
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/belinda-cannone-romanciere-et-essayiste
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/belinda-cannone-romanciere-et-essayiste
 LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
 URL:https://www.item.ens.fr/belinda-cannone-romanciere-et-essayiste
 END:VEVENT
 BEGIN:VEVENT
 UID:be4f1f8c9951@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270517
 DTEND;VALUE=DATE:20270518
-SUMMARY:Une heure\, un livre - L’Île des Esclaves et Le Jeu de l’Amour et du Hasard de Marivaux
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre---l-ile-des-esclaves-et-le-jeu-de-l-amour-et-du-hasard-de-marivaux
+SUMMARY:Une heure\, un livre - L’Île des Esclaves et Le Jeu de l’Amour
+  et du Hasard de Marivaux
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre---l-ile-des-esclaves-et-le-jeu-de-l-amour-et-du-hasard-de-mari
+ vaux
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---l-ile-des-esclaves-et-le-jeu-de-l-amour-et-du-hasard-de-marivaux
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---l-ile-d
+ es-esclaves-et-le-jeu-de-l-amour-et-du-hasard-de-marivaux
 END:VEVENT
 BEGIN:VEVENT
 UID:da96b7a614d7@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270608T170000
 DTEND:20270608T190000
 SUMMARY:Présentation du n°64 de Genesis : « Jeux vidéo »
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://www.item.ens.fr/presentation-du-n64-de-genesis-jeux-video
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/presentation-du-n64-de-genesis-jeux-video
 LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
 URL:https://www.item.ens.fr/presentation-du-n64-de-genesis-jeux-video
 END:VEVENT
 BEGIN:VEVENT
 UID:e56d70ba125e@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20270614
 DTEND;VALUE=DATE:20270615
 SUMMARY:Une heure\, un livre - Moby Dick de Melville
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heure-un-livre---moby-dick-de-melville
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
+ re-un-livre---moby-dick-de-melville
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---moby-dick-de-melville
+URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---moby-di
+ ck-de-melville
 END:VEVENT
 END:VCALENDAR

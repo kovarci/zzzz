@@ -1,88 +1,119 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Institut Louis Bachelier · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:ae4128223f3d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260926T150000
 DTEND:20260926T170000
 SUMMARY:Où est passée la finance durable ?
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-programme/evenements/ou-est-passee-la-finance-durable
-LOCATION:Cité de l’économie\, 75017 Paris — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/ou-est-passee-la-finance-durable
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/ou-est-passee-la-finance-durable
+LOCATION:Cité de l’économie\, 75017 Paris — Institut Louis Bachelier\
+ , 28 place de la Bourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/ou-est-p
+ assee-la-finance-durable
 END:VEVENT
 BEGIN:VEVENT
 UID:c8cb8b131725@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260929T080000
 DTEND:20260929T100000
 SUMMARY:Paquet Souveraineté numérique européenne 2026-2030
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-programme/evenements/paquet-souverainete-numerique-europeenne-2026-2030
-LOCATION:Hôtel de Bourrienne — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/paquet-souverainete-numerique-europeenne-2026-2030
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/paquet-souverainete-numerique-europeenne-2026-2030
+LOCATION:Hôtel de Bourrienne — Institut Louis Bachelier\, 28 place de la
+  Bourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/paquet-s
+ ouverainete-numerique-europeenne-2026-2030
 END:VEVENT
 BEGIN:VEVENT
 UID:f2fb9acaadf0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261001T153000
 DTEND:20261001T173000
-SUMMARY:PRODURABLE : CSRD\, IA et souveraineté des données : quel avenir pour la RSE ?
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-programme/evenements/produrable-csrd-ia-et-souverainete-des-donnees-quel-avenir-pour-la-rse
-LOCATION:Palais des congrès de Paris — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/produrable-csrd-ia-et-souverainete-des-donnees-quel-avenir-pour-la-rse
+SUMMARY:PRODURABLE : CSRD\, IA et souveraineté des données : quel avenir 
+ pour la RSE ?
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/produrable-csrd-ia-et-souverainete-des-donnees-quel-avenir-p
+ our-la-rse
+LOCATION:Palais des congrès de Paris — Institut Louis Bachelier\, 28 pla
+ ce de la Bourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/produrab
+ le-csrd-ia-et-souverainete-des-donnees-quel-avenir-pour-la-rse
 END:VEVENT
 BEGIN:VEVENT
 UID:7a18403e3297@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T173000
 DTEND:20261005T193000
-SUMMARY:Conversations A\\Venir - Compétitivité et souveraineté européennes : quel avenir pour le marché unique ?
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-programme/evenements/conversations-a-venir---competitivite-et-souverainete-europeennes-quel-avenir-pour-le-marche-unique
-LOCATION:Collège de France — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/conversations-a-venir---competitivite-et-souverainete-europeennes-quel-avenir-pour-le-marche-unique
+SUMMARY:Conversations A\\Venir - Compétitivité et souveraineté européen
+ nes : quel avenir pour le marché unique ?
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/conversations-a-venir---competitivite-et-souverainete-europe
+ ennes-quel-avenir-pour-le-marche-unique
+LOCATION:Collège de France — Institut Louis Bachelier\, 28 place de la B
+ ourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/conversa
+ tions-a-venir---competitivite-et-souverainete-europeennes-quel-avenir-pour
+ -le-marche-unique
 END:VEVENT
 BEGIN:VEVENT
 UID:34e1667d5e97@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261007T083000
 DTEND:20261007T103000
-SUMMARY:Comment mobiliser l’épargne de long terme pour financer les entreprises européennes ?
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-programme/evenements/comment-mobiliser-lepargne-de-long-terme-pour-financer-les-entreprises-europeennes
-LOCATION:Collège de France — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/comment-mobiliser-lepargne-de-long-terme-pour-financer-les-entreprises-europeennes
+SUMMARY:Comment mobiliser l’épargne de long terme pour financer les entr
+ eprises européennes ?
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/comment-mobiliser-lepargne-de-long-terme-pour-financer-les-e
+ ntreprises-europeennes
+LOCATION:Collège de France — Institut Louis Bachelier\, 28 place de la B
+ ourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/comment-
+ mobiliser-lepargne-de-long-terme-pour-financer-les-entreprises-europeennes
 END:VEVENT
 BEGIN:VEVENT
 UID:1c544f80cde7@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261008T160000
 DTEND:20261008T180000
 SUMMARY:Forum Immobilier & Finance
-DESCRIPTION:Forums\nhttps://www.institutlouisbachelier.org/au-programme/evenements/forum-immobilier-finance-2
-LOCATION:Hôtel Lutetia — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/forum-immobilier-finance-2
+DESCRIPTION:Forums\nhttps://www.institutlouisbachelier.org/au-programme/eve
+ nements/forum-immobilier-finance-2
+LOCATION:Hôtel Lutetia — Institut Louis Bachelier\, 28 place de la Bours
+ e\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/forum-im
+ mobilier-finance-2
 END:VEVENT
 BEGIN:VEVENT
 UID:bcbbb9ee2e79@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261013T090000
 DTEND:20261013T110000
 SUMMARY:STABLECOINS : ENJEUX MONÉTAIRES ET RÉGLEMENTAIRES
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-programme/evenements/stablecoins-enjeux-monetaires-et-reglementaires
-LOCATION:Palais Brongniart — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/stablecoins-enjeux-monetaires-et-reglementaires
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/stablecoins-enjeux-monetaires-et-reglementaires
+LOCATION:Palais Brongniart — Institut Louis Bachelier\, 28 place de la Bo
+ urse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/stableco
+ ins-enjeux-monetaires-et-reglementaires
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5705ac1cc0@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261103T090000
 DTEND:20261103T110000
 SUMMARY:AM TECH DAY de l'AGEFI
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-programme/evenements/am-tech-day-de-lagefi
-LOCATION:Palais Brongniart — Institut Louis Bachelier\, 28 place de la Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-day-de-lagefi
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/am-tech-day-de-lagefi
+LOCATION:Palais Brongniart — Institut Louis Bachelier\, 28 place de la Bo
+ urse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-
+ day-de-lagefi
 END:VEVENT
 END:VCALENDAR

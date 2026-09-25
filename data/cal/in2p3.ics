@@ -1,73 +1,100 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:IN2P3 · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:807d124daa2c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260929T091500
 DTEND:20260929T111500
 SUMMARY:News from the Dark 11
-DESCRIPTION:This mini-workshop is aimed at gathering a few experts from different fields (mostly theoretical cosmology\, galactic dynamics\, [astro]particle physics) to discuss current progress\, issues\, and prospects in the understanding of dark matter (DM). The focus is mostly on how different DM scenarios imprint galactic and subgalactic scales\, and how these can in turn be used to discriminate among several \nhttps://indico.in2p3.fr/event/39053/
+DESCRIPTION:This mini-workshop is aimed at gathering a few experts from dif
+ ferent fields (mostly theoretical cosmology\, galactic dynamics\, [astro]p
+ article physics) to discuss current progress\, issues\, and prospects in t
+ he understanding of dark matter (DM). The focus is mostly on how different
+  DM scenarios imprint galactic and subgalactic scales\, and how these can 
+ in turn be used to discriminate among several \nhttps://indico.in2p3.fr/ev
+ ent/39053/
 LOCATION:IPhT-Saclay
 URL:https://indico.in2p3.fr/event/39053/
 END:VEVENT
 BEGIN:VEVENT
 UID:bb27499d573f@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T100000
 DTEND:20260930T130000
 SUMMARY:Jocelyn Bell Burnell Lecture "The Discovery of Pulsars"
-DESCRIPTION:Professor Jocelyn Bell Burnell is a renown astrophysicist worldwide. In 1967\, she made the outstanding discovery of the existence of pulsars during her PhD in Astrophysics at Cambridge under the supervision of Antony Hewish. The discovery of pulsars\, that emit radio waves in the form of pulses at regular intervals\, opened a crucial new field of research in astrophysics. In 1974\, the Nobel Prize in\nhttps://indico.in2p3.fr/event/40486/
-LOCATION:Amphitheater\, John W. Boyer Center\, 41\, rue des Grands Moulins\, 75013 Paris
+DESCRIPTION:Professor Jocelyn Bell Burnell is a renown astrophysicist world
+ wide. In 1967\, she made the outstanding discovery of the existence of pul
+ sars during her PhD in Astrophysics at Cambridge under the supervision of 
+ Antony Hewish. The discovery of pulsars\, that emit radio waves in the for
+ m of pulses at regular intervals\, opened a crucial new field of research 
+ in astrophysics. In 1974\, the Nobel Prize in\nhttps://indico.in2p3.fr/eve
+ nt/40486/
+LOCATION:Amphitheater\, John W. Boyer Center\, 41\, rue des Grands Moulins\
+ , 75013 Paris
 URL:https://indico.in2p3.fr/event/40486/
 END:VEVENT
 BEGIN:VEVENT
 UID:65c1463be8ee@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T090000
 DTEND:20261005T110000
 SUMMARY:Bifrost Hack Week @ LPNHE
-DESCRIPTION:Welcome to the Bifrost Hack Week website. The main goal of the Bifrost Hack Week is to explore\, through practical examples\, how to extract scene-modeling light curves for Rubin/LSST supernovae from the DM data products. A second goal is to investigate how the Rubin SN sample can be intercalibrated with existing low-redshift samples\, notably ZTF\, through comparisons of their calibration star catalo\nhttps://indico.in2p3.fr/event/40820/
+DESCRIPTION:Welcome to the Bifrost Hack Week website. The main goal of the 
+ Bifrost Hack Week is to explore\, through practical examples\, how to extr
+ act scene-modeling light curves for Rubin/LSST supernovae from the DM data
+  products. A second goal is to investigate how the Rubin SN sample can be 
+ intercalibrated with existing low-redshift samples\, notably ZTF\, through
+  comparisons of their calibration star catalo\nhttps://indico.in2p3.fr/eve
+ nt/40820/
 LOCATION:LPNHE
 URL:https://indico.in2p3.fr/event/40820/
 END:VEVENT
 BEGIN:VEVENT
 UID:43c71f2876c1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T110000
 DTEND:20261005T123000
 SUMMARY:Séminaires du DPhP: Testing Hawking’s area law
-DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps://indico.in2p3.fr/event/40823/
+DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps
+ ://indico.in2p3.fr/event/40823/
 LOCATION:CEA Paris-Saclay
 URL:https://indico.in2p3.fr/event/40823/
 END:VEVENT
 BEGIN:VEVENT
 UID:1ea572bbc509@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261005T150000
 DTEND:20261005T170000
 SUMMARY:Formation EPICS Niveau 1 (initiation) 2026
-DESCRIPTION:E PICS est un ensemble structuré d'outils logiciels open-source pour réaliser des systèmes de contrôle distribués sur des installations comme les accélérateurs de particules\, les télescopes ou d'autres grandes infrastructures scientifiques. Il est par exemple utilisé en France sur le projet ITER ou au GANIL à Caen. En savoir plus : https://en.wikipedia.org/wiki/EPICS \; https://epics-controls.org/ \nhttps://indico.in2p3.fr/event/40050/
+DESCRIPTION:E PICS est un ensemble structuré d'outils logiciels open-sourc
+ e pour réaliser des systèmes de contrôle distribués sur des installati
+ ons comme les accélérateurs de particules\, les télescopes ou d'autres 
+ grandes infrastructures scientifiques. Il est par exemple utilisé en Fran
+ ce sur le projet ITER ou au GANIL à Caen. En savoir plus : https://en.wik
+ ipedia.org/wiki/EPICS \; https://epics-controls.org/ \nhttps://indico.in2p
+ 3.fr/event/40050/
 LOCATION:IJCLab
 URL:https://indico.in2p3.fr/event/40050/
 END:VEVENT
 BEGIN:VEVENT
 UID:75c1cc1047ce@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261012T110000
 DTEND:20261012T123000
 SUMMARY:Séminaires du DPhP: CMS scouting
-DESCRIPTION:TBA zoom connection : https://cern.zoom.us/j/67425097284\nhttps://indico.in2p3.fr/event/40427/
+DESCRIPTION:TBA zoom connection : https://cern.zoom.us/j/67425097284\nhttps
+ ://indico.in2p3.fr/event/40427/
 LOCATION:CEA Paris-Saclay
 URL:https://indico.in2p3.fr/event/40427/
 END:VEVENT
 BEGIN:VEVENT
 UID:253e81387643@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261019T100000
 DTEND:20261019T120000
 SUMMARY:Integral
@@ -77,151 +104,227 @@ URL:https://indico.in2p3.fr/event/38385/
 END:VEVENT
 BEGIN:VEVENT
 UID:3205c3f0bdb1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261019T130000
 DTEND:20261019T150000
 SUMMARY:Astro-CC Technology Forum 2
-DESCRIPTION:The second Technology Forum of the Astronomy Competence Center Pilot project will take place at the Observatoire de Paris from Monday 19 to Thursday 22 October 2026 . The Technology Forum is meant to engage the community on the topics of technical standards and interoperability frameworks to enable FAIR data services in the domains of astronomy\, heliospheric physics\, planetary science\, and astro-p\nhttps://indico.in2p3.fr/event/40198/
+DESCRIPTION:The second Technology Forum of the Astronomy Competence Center 
+ Pilot project will take place at the Observatoire de Paris from Monday 19 
+ to Thursday 22 October 2026 . The Technology Forum is meant to engage the 
+ community on the topics of technical standards and interoperability framew
+ orks to enable FAIR data services in the domains of astronomy\, heliospher
+ ic physics\, planetary science\, and astro-p\nhttps://indico.in2p3.fr/even
+ t/40198/
 LOCATION:Observatoire de Paris
 URL:https://indico.in2p3.fr/event/40198/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ee1cf128841@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261026T110000
 DTEND:20261026T123000
 SUMMARY:Séminaires du DPhP: Quantum Casimir effect and Axion Search
-DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps://indico.in2p3.fr/event/40824/
+DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps
+ ://indico.in2p3.fr/event/40824/
 LOCATION:CEA Paris-Saclay
 URL:https://indico.in2p3.fr/event/40824/
 END:VEVENT
 BEGIN:VEVENT
 UID:d726f3e55f00@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261102T133000
 DTEND:20261102T153000
 SUMMARY:Colloque national du WG Dark Energy 2026 - 10ème édition
-DESCRIPTION:Les problématiques autour de l’énergie noire apparaissent comme essentielles dans les axes de recherche de l’INSU\, de l’IN2P3\, de l’INP et de l'IRFU. La communauté française en cosmologie\, avec une forte implication dans plusieurs expériences ambitieuses dont le satellite Euclid et le télescope LSST\, s’est très largement mobilisée sur cette problématique. À l’issue des premiers colloques a émergé \nhttps://indico.in2p3.fr/event/40006/
+DESCRIPTION:Les problématiques autour de l’énergie noire apparaissent c
+ omme essentielles dans les axes de recherche de l’INSU\, de l’IN2P3\, 
+ de l’INP et de l'IRFU. La communauté française en cosmologie\, avec un
+ e forte implication dans plusieurs expériences ambitieuses dont le satell
+ ite Euclid et le télescope LSST\, s’est très largement mobilisée sur 
+ cette problématique. À l’issue des premiers colloques a émergé \nhtt
+ ps://indico.in2p3.fr/event/40006/
 LOCATION:Institut Henri Poincaré
 URL:https://indico.in2p3.fr/event/40006/
 END:VEVENT
 BEGIN:VEVENT
 UID:8b1a5000cfe9@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261103T090000
 DTEND:20261103T110000
 SUMMARY:Physics of Super Heavy Nuclei: status and prospects with S3
-DESCRIPTION:The aim of the meeting is to review the open questions on the physics of super heavy nuclei (both in experiment and theory)\, present the experiments that are foreseen at S3 and discuss beam and target needs and strategies as well as current problems and possible mitigation. The sessions on tuesday and the first session on wednesday with review talks and technical presentations are public. The last\nhttps://indico.in2p3.fr/event/40487/
+DESCRIPTION:The aim of the meeting is to review the open questions on the p
+ hysics of super heavy nuclei (both in experiment and theory)\, present the
+  experiments that are foreseen at S3 and discuss beam and target needs and
+  strategies as well as current problems and possible mitigation. The sessi
+ ons on tuesday and the first session on wednesday with review talks and te
+ chnical presentations are public. The last\nhttps://indico.in2p3.fr/event/
+ 40487/
 LOCATION:IJClab
 URL:https://indico.in2p3.fr/event/40487/
 END:VEVENT
 BEGIN:VEVENT
 UID:bb42bb86d0a3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261109T110000
 DTEND:20261109T123000
 SUMMARY:Séminaires du DPhP: Metrology - Atomic clock
-DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps://indico.in2p3.fr/event/40825/
+DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps
+ ://indico.in2p3.fr/event/40825/
 LOCATION:CEA Paris-Saclay
 URL:https://indico.in2p3.fr/event/40825/
 END:VEVENT
 BEGIN:VEVENT
 UID:bf1cdcc3940c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261118T140000
 DTEND:20261118T160000
-SUMMARY:Journées de l'AT-PEM 2026 - Défis numériques en astrophysique des hautes énergies
-DESCRIPTION:Numerical Challenges in High-Energy Astrophysics Registration deadline: 25/09/2026 The "Action Thématique Phénomènes Extrêmes et Multi-messagers" (AT-PEM\, formerly PNHE) has been an INSU thematic action since 2011 and is also supported by IN2P3\, INP\, CNES\, and CEA/IRFU. Rationale: Multi-messenger astrophysics has opened unprecedented windows onto extreme astrophysical phenomena. Processing and int\nhttps://indico.in2p3.fr/event/39545/
+SUMMARY:Journées de l'AT-PEM 2026 - Défis numériques en astrophysique de
+ s hautes énergies
+DESCRIPTION:Numerical Challenges in High-Energy Astrophysics Registration d
+ eadline: 25/09/2026 The "Action Thématique Phénomènes Extrêmes et Mult
+ i-messagers" (AT-PEM\, formerly PNHE) has been an INSU thematic action sin
+ ce 2011 and is also supported by IN2P3\, INP\, CNES\, and CEA/IRFU. Ration
+ ale: Multi-messenger astrophysics has opened unprecedented windows onto ex
+ treme astrophysical phenomena. Processing and int\nhttps://indico.in2p3.fr
+ /event/39545/
 LOCATION:Sorbonne Université\, campus Jussieu
 URL:https://indico.in2p3.fr/event/39545/
 END:VEVENT
 BEGIN:VEVENT
 UID:f567110d751a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261123T090000
 DTEND:20261123T110000
 SUMMARY:Atelier API "Ondes gravitationnelles et objets compacts"
-DESCRIPTION:L'atelier annuel de l'action incitative "ondes gravitationnelles et objets compacts" aura lieu du 23 au 25 novembre 2026 dans la salle du conseil du bâtiment Perrault à Paris. L'atelier sera organisée autour de présentations de codes communautaires et de contributions orales plus "classiques." Le programme sera annoncé plus tard.\nhttps://indico.in2p3.fr/event/40352/
+DESCRIPTION:L'atelier annuel de l'action incitative "ondes gravitationnelle
+ s et objets compacts" aura lieu du 23 au 25 novembre 2026 dans la salle du
+  conseil du bâtiment Perrault à Paris. L'atelier sera organisée autour 
+ de présentations de codes communautaires et de contributions orales plus 
+ "classiques." Le programme sera annoncé plus tard.\nhttps://indico.in2p3.
+ fr/event/40352/
 LOCATION:Observatoire de Paris - site de Paris
 URL:https://indico.in2p3.fr/event/40352/
 END:VEVENT
 BEGIN:VEVENT
 UID:063b2ebd8a29@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261123T110000
 DTEND:20261123T123000
 SUMMARY:Séminaires du DPhP: Metrology - Atomic interferometer
-DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps://indico.in2p3.fr/event/40904/
+DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps
+ ://indico.in2p3.fr/event/40904/
 LOCATION:CEA Paris-Saclay
 URL:https://indico.in2p3.fr/event/40904/
 END:VEVENT
 BEGIN:VEVENT
 UID:b4d0f5338e7d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261124T140000
 DTEND:20261124T160000
 SUMMARY:Colloque national CMB-France #8
-DESCRIPTION:L'initiative CMB-France vise à mettre en place une animation scientifique au niveau national autour des études CMB ( cmb-france.cnrs.fr ). Le CMB-France #8 aura lieu les 24 et 26 Novembre 2026 à l' Institut d'Astrophysique de Paris (Paris). L'inscription est gratuite mais obligatoire: inscription . CMB-France peut prendre en charge les missions (dans la limite des stocks disponibles). Contactez-n\nhttps://indico.in2p3.fr/event/40591/
+DESCRIPTION:L'initiative CMB-France vise à mettre en place une animation s
+ cientifique au niveau national autour des études CMB ( cmb-france.cnrs.f
+ r ). Le CMB-France #8 aura lieu les 24 et 26 Novembre 2026 à l' Institut 
+ d'Astrophysique de Paris (Paris). L'inscription est gratuite mais obligato
+ ire: inscription . CMB-France peut prendre en charge les missions (dans la
+  limite des stocks disponibles). Contactez-n\nhttps://indico.in2p3.fr/even
+ t/40591/
 LOCATION:Institut Astrophysique de Paris
 URL:https://indico.in2p3.fr/event/40591/
 END:VEVENT
 BEGIN:VEVENT
 UID:86cab15231ad@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261125T120000
 DTEND:20261125T140000
 SUMMARY:Rubin LSST-France\, IJClab Orsay\, 25-27/11/2026
-DESCRIPTION:T he next biannual meeting of the Rubin-LSST France community will be held 25-27 November 2026 \, at IJCLab in Orsay . Details Meeting will begin at 2pm on Wednesday November 25th. Meeting ends around 1pm on Friday November 27th. The persons of contact for the meeting will be TBD Social events We will have a collaboration meeting dinner on Thursday at " le train bleu " in gare de Lyon ! Information\nhttps://indico.in2p3.fr/event/40822/
+DESCRIPTION:T he next biannual meeting of the Rubin-LSST France community w
+ ill be held 25-27 November 2026 \, at IJCLab in Orsay . Details Meeting wi
+ ll begin at 2pm on Wednesday November 25th. Meeting ends around 1pm on Fri
+ day November 27th. The persons of contact for the meeting will be TBD Soci
+ al events We will have a collaboration meeting dinner on Thursday at " le 
+ train bleu " in gare de Lyon ! Information\nhttps://indico.in2p3.fr/event/
+ 40822/
 LOCATION:IJCLab
 URL:https://indico.in2p3.fr/event/40822/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f14fa0aece8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261126T080000
 DTEND:20261126T100000
 SUMMARY:Journées Scientifiques de l'Action Thématique GRAM
-DESCRIPTION:L ’Action Thématique Gravitation\, Références\, Astronomie\, Métrologie ATGRAM a été créé en 2024 \, succédant au Programme Nationale GRAM qui avait été mise en place en 201 6 . Il est financé par trois instituts du CNRS (INSU\, INP et IN2P3) ainsi que par le CNES et le CEA . L ’AT GRAM a vocation à coordonner et développer des actions dans trois grands domaines thématiques : La physique fondamentale\, \nhttps://indico.in2p3.fr/event/40247/
+DESCRIPTION:L ’Action Thématique Gravitation\, Références\, Astronomie
+ \, Métrologie ATGRAM a été créé en 2024 \, succédant au Programme Na
+ tionale GRAM qui avait été mise en place en 201 6 . Il est financé par 
+ trois instituts du CNRS (INSU\, INP et IN2P3) ainsi que par le CNES et le 
+ CEA . L ’AT GRAM a vocation à coordonner et développer des actions dan
+ s trois grands domaines thématiques : La physique fondamentale\, \nhttps:
+ //indico.in2p3.fr/event/40247/
 LOCATION:Université Paris Cité
 URL:https://indico.in2p3.fr/event/40247/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ca2b00e5994@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261130T120000
 DTEND:20261130T140000
 SUMMARY:3ème colloque EIC-France
-DESCRIPTION:The t hird edition of the EIC-France Workshop will take place Novembre 30- Decembre 2\, 2026\, at IJCLab (Orsay). The workshop opens on Monday with several introductory talks\, including presentations on the plans for early physics running at the EIC. Tuesday morning will feature physics presentations and discussions\, aimed at further defining the French community’s contributions to the EIC physics p\nhttps://indico.in2p3.fr/event/40260/
+DESCRIPTION:The t hird edition of the EIC-France Workshop will take place N
+ ovembre 30- Decembre 2\, 2026\, at IJCLab (Orsay). The workshop opens on M
+ onday with several introductory talks\, including presentations on the pla
+ ns for early physics running at the EIC. Tuesday morning will feature phys
+ ics presentations and discussions\, aimed at further defining the French c
+ ommunity’s contributions to the EIC physics p\nhttps://indico.in2p3.fr/e
+ vent/40260/
 LOCATION:IJCLab\, Orsay
 URL:https://indico.in2p3.fr/event/40260/
 END:VEVENT
 BEGIN:VEVENT
 UID:dfee1c1325a8@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261202T130000
 DTEND:20261202T150000
-SUMMARY:Spectral lags as a new window on GeV–TeV emission and particle acceleration in ultra‑relativistic jets
-DESCRIPTION:Spectral lags are time delays between emission peaks observed at different photon energies in the same high‑energy transient or variable source. In simple terms\, they quantify the fact that “hard” (high‑energy) and “soft” (low‑energy) photons do not always arrive at exactly the same time\, and thus provide a direct handle on how emission regions evolve and how particles are accelerated and cooled i\nhttps://indico.in2p3.fr/event/40366/
+SUMMARY:Spectral lags as a new window on GeV–TeV emission and particle ac
+ celeration in ultra‑relativistic jets
+DESCRIPTION:Spectral lags are time delays between emission peaks observed a
+ t different photon energies in the same high‑energy transient or variabl
+ e source. In simple terms\, they quantify the fact that “hard” (high
+ ‑energy) and “soft” (low‑energy) photons do not always arrive at e
+ xactly the same time\, and thus provide a direct handle on how emission re
+ gions evolve and how particles are accelerated and cooled i\nhttps://indic
+ o.in2p3.fr/event/40366/
 LOCATION:LPNHE
 URL:https://indico.in2p3.fr/event/40366/
 END:VEVENT
 BEGIN:VEVENT
 UID:4b7a17deaa10@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261214T080000
 DTEND:20261214T100000
 SUMMARY:Cosmic Rays in the Multi-Messenger Era
-DESCRIPTION:The 'Cosmic Rays in the Multi-Messenger Era' conference aims to bring together the scientific communities working on high-energy cosmic rays\, from an experimental point of view as well as from a theoretical and phenomenological sides. In addition to detailed presentations of theoretical models dealing with the production of cosmic rays and secondary neutrinos and gamma-rays\, the conference will in\nhttps://indico.in2p3.fr/event/39812/
+DESCRIPTION:The 'Cosmic Rays in the Multi-Messenger Era' conference aims to
+  bring together the scientific communities working on high-energy cosmic r
+ ays\, from an experimental point of view as well as from a theoretical and
+  phenomenological sides. In addition to detailed presentations of theoreti
+ cal models dealing with the production of cosmic rays and secondary neutri
+ nos and gamma-rays\, the conference will in\nhttps://indico.in2p3.fr/event
+ /39812/
 LOCATION:Paris
 URL:https://indico.in2p3.fr/event/39812/
 END:VEVENT
 BEGIN:VEVENT
 UID:2623f35a8019@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20270121T093000
 DTEND:20270121T113000
 SUMMARY:Euclid-DESI data synergies
-DESCRIPTION:The goal of this workshop is to combine and integrate the cosmological results of Euclid and DESI\, particularly with the DESI DR2 full-shape results\, which will be available by then. Both surveys provide highly complementary samples and probes\, allowing us to exploit the synergistic information enclosed in galaxy clustering and gravitational lensing. Combining them at the lowest level will open th\nhttps://indico.in2p3.fr/event/40887/
+DESCRIPTION:The goal of this workshop is to combine and integrate the cosmo
+ logical results of Euclid and DESI\, particularly with the DESI DR2 full-s
+ hape results\, which will be available by then. Both surveys provide highl
+ y complementary samples and probes\, allowing us to exploit the synergisti
+ c information enclosed in galaxy clustering and gravitational lensing. Com
+ bining them at the lowest level will open th\nhttps://indico.in2p3.fr/even
+ t/40887/
 LOCATION:Lumen
 URL:https://indico.in2p3.fr/event/40887/
 END:VEVENT

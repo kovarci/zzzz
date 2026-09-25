@@ -1,208 +1,306 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Institut Pasteur · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:bcaf917a1916@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T100000
 DTEND:20260925T120000
-SUMMARY:Genomes and genetics department seminar Marnix H. Medema “Deciphering the Chemical Language of Microbiome Interactionsusing Computational Omics”
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/genomes-and-genetics-department-seminar-marnix-h-medema-deciphering-the-chemical-language-of-microbiome-interactionsusing-computational-omics/
-LOCATION:Building : Lwoff – Room : Retrovirus – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/genomes-and-genetics-department-seminar-marnix-h-medema-deciphering-the-chemical-language-of-microbiome-interactionsusing-computational-omics/
+SUMMARY:Genomes and genetics department seminar Marnix H. Medema “Deciphe
+ ring the Chemical Language of Microbiome Interactionsusing Computational O
+ mics”
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/genomes-and-genet
+ ics-department-seminar-marnix-h-medema-deciphering-the-chemical-language-o
+ f-microbiome-interactionsusing-computational-omics/
+LOCATION:Building : Lwoff – Room : Retrovirus – Address: Institut Paste
+ ur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue
+  du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/genomes-and-genetics-department-se
+ minar-marnix-h-medema-deciphering-the-chemical-language-of-microbiome-inte
+ ractionsusing-computational-omics/
 END:VEVENT
 BEGIN:VEVENT
 UID:0b6b946e7592@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T110000
 DTEND:20260925T130000
-SUMMARY:DSCB Seminar – Dr. Fiona Watt\, EMBL Heidleberg\, Germany – “Exploring the epidermal stem cell niche at single cell resolution”
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/dscb-seminar-dr-fiona-watt-embl-heidleberg-germany-exploring-the-epidermal-stem-cell-niche-at-single-cell-resolution/
-LOCATION:Building : Monod – Room : Amphi Ullmann – Address: 25 Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/dscb-seminar-dr-fiona-watt-embl-heidleberg-germany-exploring-the-epidermal-stem-cell-niche-at-single-cell-resolution/
+SUMMARY:DSCB Seminar – Dr. Fiona Watt\, EMBL Heidleberg\, Germany – “
+ Exploring the epidermal stem cell niche at single cell resolution”
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/dscb-seminar-dr-f
+ iona-watt-embl-heidleberg-germany-exploring-the-epidermal-stem-cell-niche-
+ at-single-cell-resolution/
+LOCATION:Building : Monod – Room : Amphi Ullmann – Address: 25 Rue du D
+ octeur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur R
+ oux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/dscb-seminar-dr-fiona-watt-embl-he
+ idleberg-germany-exploring-the-epidermal-stem-cell-niche-at-single-cell-re
+ solution/
 END:VEVENT
 BEGIN:VEVENT
 UID:acbfbdd60247@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T090000
 DTEND:20260930T110000
-SUMMARY:Amplifying Funds in Infection Biology – 2nd International Symposium
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/amplifying-funds-in-infection-biology-2nd-international-symposium/
-LOCATION:Building : Duclaux – Room : Duclaux Lecture Hall – — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/amplifying-funds-in-infection-biology-2nd-international-symposium/
+SUMMARY:Amplifying Funds in Infection Biology – 2nd International Symposi
+ um
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/amplifying-fun
+ ds-in-infection-biology-2nd-international-symposium/
+LOCATION:Building : Duclaux – Room : Duclaux Lecture Hall – — Institu
+ t Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/amplifying-funds-in-infection-biol
+ ogy-2nd-international-symposium/
 END:VEVENT
 BEGIN:VEVENT
 UID:98f5c81b3384@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260930T120000
 DTEND:20260930T140000
-SUMMARY:Department of Parasites and Insect Vectors Seminar : Joana Faria “The architecture of disguise: how Trypanosoma brucei expresses a single variant surface antigen”
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/department-of-parasites-and-insect-vectors-seminar-joana-faria-the-architecture-of-disguise-how-trypanosoma-brucei-expresses-a-single-variant-surface-antigen/
-LOCATION:Building : Lwoff – Room : Retrovirus – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/department-of-parasites-and-insect-vectors-seminar-joana-faria-the-architecture-of-disguise-how-trypanosoma-brucei-expresses-a-single-variant-surface-antigen/
+SUMMARY:Department of Parasites and Insect Vectors Seminar : Joana Faria 
+ “The architecture of disguise: how Trypanosoma brucei expresses a single
+  variant surface antigen”
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/department-of-par
+ asites-and-insect-vectors-seminar-joana-faria-the-architecture-of-disguise
+ -how-trypanosoma-brucei-expresses-a-single-variant-surface-antigen/
+LOCATION:Building : Lwoff – Room : Retrovirus – Address: Institut Paste
+ ur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue
+  du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/department-of-parasites-and-insect
+ -vectors-seminar-joana-faria-the-architecture-of-disguise-how-trypanosoma-
+ brucei-expresses-a-single-variant-surface-antigen/
 END:VEVENT
 BEGIN:VEVENT
 UID:1bc8407cc17d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261008T090000
 DTEND:20261008T110000
-SUMMARY:Tiny Vectors\, Major Threats: A Deep Dive into Tick-Borne Infections
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/tiny-vectors-major-threats-a-deep-dive-into-tick-borne-infections/
-LOCATION:Building : Metchnikoff – Room : Jules Bordet – — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/tiny-vectors-major-threats-a-deep-dive-into-tick-borne-infections/
+SUMMARY:Tiny Vectors\, Major Threats: A Deep Dive into Tick-Borne Infection
+ s
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/tiny-vectors-m
+ ajor-threats-a-deep-dive-into-tick-borne-infections/
+LOCATION:Building : Metchnikoff – Room : Jules Bordet – — Institut Pa
+ steur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/tiny-vectors-major-threats-a-deep-
+ dive-into-tick-borne-infections/
 END:VEVENT
 BEGIN:VEVENT
 UID:65af0f4c417d@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261008T140000
 DTEND:20261008T160000
-SUMMARY:Soutenance de thèse: Marcela Fuentes Carias “Leishmania hybrid formation: investigation of the role of the nuclear fusogen Gex1”
-DESCRIPTION:phd\nhttps://research.pasteur.fr/en/event/departement-des-parasites-et-insectes-vecteurs/
-LOCATION:Building : Bâtiment François Jacob\, RdC 17c – Room : Auditorium François Jacob – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/departement-des-parasites-et-insectes-vecteurs/
+SUMMARY:Soutenance de thèse: Marcela Fuentes Carias “Leishmania hybrid f
+ ormation: investigation of the role of the nuclear fusogen Gex1”
+DESCRIPTION:phd\nhttps://research.pasteur.fr/en/event/departement-des-paras
+ ites-et-insectes-vecteurs/
+LOCATION:Building : Bâtiment François Jacob\, RdC 17c – Room : Auditori
+ um François Jacob – Address: Institut Pasteur\, Rue du Docteur Roux\, P
+ aris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/departement-des-parasites-et-insec
+ tes-vecteurs/
 END:VEVENT
 BEGIN:VEVENT
 UID:48a6f4558ad1@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261014T140000
 DTEND:20261014T160000
-SUMMARY:PhD Defense thesis – Approche de chimie médicinale et de pharmacologie moléculaire : conception de modulateurs allostériques ciblant la sous-unité a5 des récepteurs nicotiniques neuronaux – Matthieu Sèze
-DESCRIPTION:phd\nhttps://research.pasteur.fr/en/event/phd-defense-thesis-approche-de-chimie-medicinale-et-de-pharmacologie-moleculaire-conception-de-modulateurs-allosteriques-ciblant-la-sous-unite-a5-des-recepteurs-nicotiniques-neuronaux/
-LOCATION:Address: Université Paris-Saclay\, Rue Joliot Curie\, Gif-sur-Yvette\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/phd-defense-thesis-approche-de-chimie-medicinale-et-de-pharmacologie-moleculaire-conception-de-modulateurs-allosteriques-ciblant-la-sous-unite-a5-des-recepteurs-nicotiniques-neuronaux/
+SUMMARY:PhD Defense thesis – Approche de chimie médicinale et de pharmac
+ ologie moléculaire : conception de modulateurs allostériques ciblant la 
+ sous-unité a5 des récepteurs nicotiniques neuronaux – Matthieu Sèze
+DESCRIPTION:phd\nhttps://research.pasteur.fr/en/event/phd-defense-thesis-ap
+ proche-de-chimie-medicinale-et-de-pharmacologie-moleculaire-conception-de-
+ modulateurs-allosteriques-ciblant-la-sous-unite-a5-des-recepteurs-nicotini
+ ques-neuronaux/
+LOCATION:Address: Université Paris-Saclay\, Rue Joliot Curie\, Gif-sur-Yve
+ tte\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/phd-defense-thesis-approche-de-chi
+ mie-medicinale-et-de-pharmacologie-moleculaire-conception-de-modulateurs-a
+ llosteriques-ciblant-la-sous-unite-a5-des-recepteurs-nicotiniques-neuronau
+ x/
 END:VEVENT
 BEGIN:VEVENT
 UID:d3b264943c65@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T110000
 DTEND:20261016T130000
-SUMMARY:Seminar: mOdyssey: Revival of murine monocyte-derived dendritic cells – Marc DALOD
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/modyssey-revival-of-murine-monocyte-derived-dendritic-cells-modcs/
-LOCATION:Building : Lwoff – Room : Salle Rétrovirus\, 22-RdC-14 – Address: 28 Rue du Dr Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/modyssey-revival-of-murine-monocyte-derived-dendritic-cells-modcs/
+SUMMARY:Seminar: mOdyssey: Revival of murine monocyte-derived dendritic cel
+ ls – Marc DALOD
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/modyssey-revival-
+ of-murine-monocyte-derived-dendritic-cells-modcs/
+LOCATION:Building : Lwoff – Room : Salle Rétrovirus\, 22-RdC-14 – Addr
+ ess: 28 Rue du Dr Roux\, Paris\, France — Institut Pasteur\, 25-28 rue d
+ u Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/modyssey-revival-of-murine-monocyt
+ e-derived-dendritic-cells-modcs/
 END:VEVENT
 BEGIN:VEVENT
 UID:f9488cb8a5bf@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261016T143000
 DTEND:20261016T163000
-SUMMARY:Soutenance de thèse de Doctorat : Nathan Ribot « Evidence of plasmotomy division in Plasmodium oocyst »
-DESCRIPTION:phd\nhttps://research.pasteur.fr/en/event/soutenance-de-these-de-doctorat-nathan-ribot-evidence-of-plasmotomy-division-in-plasmodium-oocyst/
-LOCATION:Building : Metchnikoff – Room : Salle Jules Bordet – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/soutenance-de-these-de-doctorat-nathan-ribot-evidence-of-plasmotomy-division-in-plasmodium-oocyst/
+SUMMARY:Soutenance de thèse de Doctorat : Nathan Ribot « Evidence of plas
+ motomy division in Plasmodium oocyst »
+DESCRIPTION:phd\nhttps://research.pasteur.fr/en/event/soutenance-de-these-d
+ e-doctorat-nathan-ribot-evidence-of-plasmotomy-division-in-plasmodium-oocy
+ st/
+LOCATION:Building : Metchnikoff – Room : Salle Jules Bordet – Address: 
+ Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Paste
+ ur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/soutenance-de-these-de-doctorat-na
+ than-ribot-evidence-of-plasmotomy-division-in-plasmodium-oocyst/
 END:VEVENT
 BEGIN:VEVENT
 UID:5e48128af960@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261028T090000
 DTEND:20261028T110000
-SUMMARY:STAPA International Network Congress (SINC) – Mélanie Hamon\, Arnaud Fontanet\, Aude Bernheim\, Nikolaos Vakirlis\, Enrico Palermo\, Koatar Nayme
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/stapa-international-network-congress-sinc/
-LOCATION:Building : CIS – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/stapa-international-network-congress-sinc/
+SUMMARY:STAPA International Network Congress (SINC) – Mélanie Hamon\, Ar
+ naud Fontanet\, Aude Bernheim\, Nikolaos Vakirlis\, Enrico Palermo\, Koata
+ r Nayme
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/stapa-internat
+ ional-network-congress-sinc/
+LOCATION:Building : CIS – Address: Institut Pasteur\, Rue du Docteur Roux
+ \, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris
+  15e
+URL:https://research.pasteur.fr/en/event/stapa-international-network-congre
+ ss-sinc/
 END:VEVENT
 BEGIN:VEVENT
 UID:3a55f0bb648a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261029T090000
 DTEND:20261029T110000
 SUMMARY:Immune variability across the life course
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/immune-variability-across-the-life-course/
-LOCATION:Building : Duclaux – — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/immune-variability-across-the-life-course/
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/immune-variabi
+ lity-across-the-life-course/
+LOCATION:Building : Duclaux – — Institut Pasteur\, 25-28 rue du Docteur
+  Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/immune-variability-across-the-life
+ -course/
 END:VEVENT
 BEGIN:VEVENT
 UID:5694ef65a6de@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261030T090000
 DTEND:20261030T110000
 SUMMARY:LabEx Milieu Intérieur Annual Meeting 2026
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/labex-milieu-interieur-annual-meeting-2026/
-LOCATION:Building : Duclaux – Room : Amphitheatre Duclaux – — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/labex-milieu-interieur-annual-meeting-2026/
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/labex-milieu-i
+ nterieur-annual-meeting-2026/
+LOCATION:Building : Duclaux – Room : Amphitheatre Duclaux – — Institu
+ t Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/labex-milieu-interieur-annual-meet
+ ing-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:63d9bfbf19e3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261103T090000
 DTEND:20261103T110000
 SUMMARY:ShareFAIR and Neurovasc days
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/sharefair-and-neurovasc-days/
-LOCATION:Building : Bâtiment Duclaux – Room : Amphithéâtre Duclaux – Address: 28 Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/sharefair-and-
+ neurovasc-days/
+LOCATION:Building : Bâtiment Duclaux – Room : Amphithéâtre Duclaux –
+  Address: 28 Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 2
+ 5-28 rue du Docteur Roux\, Paris 15e
 URL:https://research.pasteur.fr/en/event/sharefair-and-neurovasc-days/
 END:VEVENT
 BEGIN:VEVENT
 UID:d9d3bd74fe71@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Stuttering Workshop – Paris\, 4-5 Nov 2026
-DESCRIPTION:workshop\nhttps://research.pasteur.fr/en/event/international-workshop-on-stuttering/
-LOCATION:Address: Institut de l'Audition\, Rue de Charenton\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/international-workshop-on-stuttering/
+DESCRIPTION:workshop\nhttps://research.pasteur.fr/en/event/international-wo
+ rkshop-on-stuttering/
+LOCATION:Address: Institut de l'Audition\, Rue de Charenton\, Paris\, Franc
+ e — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/international-workshop-on-stutteri
+ ng/
 END:VEVENT
 BEGIN:VEVENT
 UID:cd564a069433@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261109T130000
 DTEND:20261109T150000
 SUMMARY:Allostery and brain science\, a tribute to Jean-Pierre CHANGEUX
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/allostery-and-brain-science-a-tribute-to-jean-pierre-changeux/
-LOCATION:Building : Duclaux – Room : Amphitheatre – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/allostery-and-brain-science-a-tribute-to-jean-pierre-changeux/
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/allostery-and-
+ brain-science-a-tribute-to-jean-pierre-changeux/
+LOCATION:Building : Duclaux – Room : Amphitheatre – Address: Institut P
+ asteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28
+  rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/allostery-and-brain-science-a-trib
+ ute-to-jean-pierre-changeux/
 END:VEVENT
 BEGIN:VEVENT
 UID:65b656381f29@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261110T110000
 DTEND:20261110T130000
 SUMMARY:How some bacteria swim in higher viscosities than others
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/how-some-bacteria-swim-in-higher-viscosities-than-others/
-LOCATION:Building : F. Jacob – Room : F. Jacob Auditorium – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/how-some-bacteria-swim-in-higher-viscosities-than-others/
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/how-some-bacteria
+ -swim-in-higher-viscosities-than-others/
+LOCATION:Building : F. Jacob – Room : F. Jacob Auditorium – Address: In
+ stitut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur
+ \, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/how-some-bacteria-swim-in-higher-v
+ iscosities-than-others/
 END:VEVENT
 BEGIN:VEVENT
 UID:333d50179922@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261124T110000
 DTEND:20261124T130000
 SUMMARY:Engineering protein catalysts for synthetic applications
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/engineering-protein-catalysts-for-synthetic-applications/
-LOCATION:Building : Monod – Room : Agnès Ullmann – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/engineering-protein-catalysts-for-synthetic-applications/
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/engineering-prote
+ in-catalysts-for-synthetic-applications/
+LOCATION:Building : Monod – Room : Agnès Ullmann – Address: Institut P
+ asteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28
+  rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/engineering-protein-catalysts-for-
+ synthetic-applications/
 END:VEVENT
 BEGIN:VEVENT
 UID:ba12d4a04b40@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261124T133000
 DTEND:20261124T153000
-SUMMARY:Developmental and Stem Cell Origin of Long-Term Stresses – Giacomo Cavalli \, Marie-Hélène Verlhac
-DESCRIPTION:workshop\nhttps://research.pasteur.fr/en/event/long-term-impact-of-embryonic-and-fetal-stresses/
-LOCATION:Building : Monod Building – Room : Amphi Ágnes Ullmann – Address: 28 Rue du Dr Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/long-term-impact-of-embryonic-and-fetal-stresses/
+SUMMARY:Developmental and Stem Cell Origin of Long-Term Stresses – Giacom
+ o Cavalli \, Marie-Hélène Verlhac
+DESCRIPTION:workshop\nhttps://research.pasteur.fr/en/event/long-term-impact
+ -of-embryonic-and-fetal-stresses/
+LOCATION:Building : Monod Building – Room : Amphi Ágnes Ullmann – Addr
+ ess: 28 Rue du Dr Roux\, Paris\, France — Institut Pasteur\, 25-28 rue d
+ u Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/long-term-impact-of-embryonic-and-
+ fetal-stresses/
 END:VEVENT
 BEGIN:VEVENT
 UID:8928f57e4496@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261130T090000
 DTEND:20261130T110000
 SUMMARY:International conferences Integrative Microbiome Program at Pasteur
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/international-conferences-integrative-microbiome-program-at-pasteur/
-LOCATION:Building : CIS – Room : CIS – — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/international-conferences-integrative-microbiome-program-at-pasteur/
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/international-
+ conferences-integrative-microbiome-program-at-pasteur/
+LOCATION:Building : CIS – Room : CIS – — Institut Pasteur\, 25-28 rue
+  du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/international-conferences-integrat
+ ive-microbiome-program-at-pasteur/
 END:VEVENT
 BEGIN:VEVENT
 UID:0c10dc3a3968@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261201T110000
 DTEND:20261201T130000
 SUMMARY:Molecular design by Multi-Task AI and chemographic exploration
-DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/molecular-design-by-multi-task-ai-and-chemographic-exploration/
-LOCATION:Building : F. Jacob – Room : F. Jacob Auditorium – Address: Institut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/molecular-design-by-multi-task-ai-and-chemographic-exploration/
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/molecular-design-
+ by-multi-task-ai-and-chemographic-exploration/
+LOCATION:Building : F. Jacob – Room : F. Jacob Auditorium – Address: In
+ stitut Pasteur\, Rue du Docteur Roux\, Paris\, France — Institut Pasteur
+ \, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/molecular-design-by-multi-task-ai-
+ and-chemographic-exploration/
 END:VEVENT
 END:VCALENDAR

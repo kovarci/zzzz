@@ -1,38 +1,47 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Paris Academique//FR
+PRODID:-//Lotent//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Institut des actuaires · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:208b9066fec3@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20260925T093000
 DTEND:20260925T113000
-SUMMARY:Journée "Évaluer et gérer le risque – À l’interface entre les mathématiques et...
-DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/journee-evaluer-et-gerer-le-risque-a-l-interface-entre-les-mathematiques-et-les-sciences-humaines-et-sociales-8063
+SUMMARY:Journée "Évaluer et gérer le risque – À l’interface entre l
+ es mathématiques et...
+DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/journe
+ e-evaluer-et-gerer-le-risque-a-l-interface-entre-les-mathematiques-et-les-
+ sciences-humaines-et-sociales-8063
 LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/journee-evaluer-et-gerer-le-risque-a-l-interface-entre-les-mathematiques-et-les-sciences-humaines-et-sociales-8063
+URL:https://www.institutdesactuaires.com/agenda/journee-evaluer-et-gerer-le
+ -risque-a-l-interface-entre-les-mathematiques-et-les-sciences-humaines-et-
+ sociales-8063
 END:VEVENT
 BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261126T083000
 DTEND:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
-DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-science-durabilite-7613
+DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/journe
+ e-100-actuaires-data-science-durabilite-7613
 LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-science-durabilite-7613
+URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
+ science-durabilite-7613
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20260925T211841Z
+DTSTAMP:20260925T212407Z
 DTSTART:20261126T174500
 DTEND:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026
-DESCRIPTION:\nhttps://www.institutdesactuaires.com/agenda/ceremonie-des-nouveaux-associes-2026-8059
+DESCRIPTION:\nhttps://www.institutdesactuaires.com/agenda/ceremonie-des-nou
+ veaux-associes-2026-8059
 LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/ceremonie-des-nouveaux-associes-2026-8059
+URL:https://www.institutdesactuaires.com/agenda/ceremonie-des-nouveaux-asso
+ cies-2026-8059
 END:VEVENT
 END:VCALENDAR
