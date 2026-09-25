@@ -31,6 +31,12 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
          "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon"]
 
 
+# Lues par maj.bat (scraper/refresh_local.py, LOCAL_INSTITUTIONS) : le robot
+# GitHub est bloqué chez elles, leur 0 ici est normal.
+LOCAL_ONLY = {"Collège de France", "Muséum national d'Histoire naturelle", "Académie des sciences",
+              "Jeunes IHEDN", "Ifri", "IRIS", "Fondation Jean-Jaurès"}
+
+
 def main():
     try:
         events = json.loads(DATA.read_text(encoding="utf-8"))
@@ -55,15 +61,19 @@ def main():
     def live(source):
         """Nombre ramené aujourd'hui ; retombe sur events.json si le scraper
         n'a pas encore écrit fresh_counts (première exécution)."""
-        return fresh.get(source, counts.get(source, 0)) if fresh else counts.get(source, 0)
+        # Absente de fresh_counts = 0 ramené aujourd'hui (le report la ferait
+        # paraître vivante : c'est le cas que ce contrôle doit attraper).
+        return fresh.get(source, 0) if fresh else counts.get(source, 0)
 
     for s in WATCH:
+        if s in LOCAL_ONLY:
+            continue
         if live(s) == 0:
             kept = counts.get(s, 0)
             extra = f" (events.json en garde {kept} d'un run précédent)" if kept else ""
             print(f"::warning::Source à vérifier — « {s} » n'a rien ramené{extra}")
 
-    broken = [s for s in CRITICAL if live(s) == 0]
+    broken = [s for s in CRITICAL if live(s) == 0 and s not in LOCAL_ONLY]
     for s in broken:
         print(f"::error::Source cassée — « {s} » n'a rien ramené ce run")
 

@@ -40,8 +40,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=22" />
-  <link rel="preload" href="data/events.json" as="fetch" crossorigin="anonymous" />
+  <link rel="stylesheet" href="app.css?v=23" />
+  <script>
+    // Agenda découpé par mois (data/m/) : on lance l'index et les mois des
+    // 7 prochains jours tout de suite, en parallèle du téléchargement d'app.js,
+    // qui reprend ces promesses (window.__lotentData) au lieu de refaire les requêtes.
+    (function () {
+      try {
+        var get = function (u) { return fetch(u).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); };
+        var ym = function (d) { return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2); };
+        var now = new Date(), wk = new Date(now.getTime() + 7 * 864e5);
+        var want = {}; want[ym(now)] = 1; want[ym(wk)] = 1;
+        var d = window.__lotentData = { index: get("data/m/index.json?" + Date.now()), months: {} };
+        d.index.then(function (x) {
+          (x.months || []).forEach(function (m) { if (want[m.m]) { var p = d.months[m.m] = get("data/m/" + m.m + ".json?v=" + m.v); p.catch(function () {}); } });
+        }).catch(function () {});
+      } catch (e) {}
+    })();
+  </script>
   <script>
     // Thème mémorisé (paf_theme) appliqué avant le premier rendu pour éviter le flash
     try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
@@ -169,6 +185,6 @@
       <p><a href="data/calendar.ics">Calendrier .ics</a> · <a href="data/digest.xml">Flux RSS</a> · <a href="apropos.html">À propos</a> · <a href="https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml">Proposer un événement</a> · <a href="https://github.com/kovarci/zzzz/issues">Questions &amp; recommandations (GitHub)</a></p>
     </main>
   </div>
-  <script src="app.js?v=22" defer></script>
+  <script src="app.js?v=23" defer></script>
 </body>
 </html>

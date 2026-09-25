@@ -2,7 +2,7 @@
    Strategy: network-first (fresh online), cache fallback when offline.
    Bumped CACHE version forces clients to refresh their precache. */
 
-const CACHE = "lotent-v23";
+const CACHE = "lotent-v24";
 
 // Precached on install : the shell that lets the app boot fully offline,
 // even on first visit-when-offline. Per-event pages (e/<id>.html) are
@@ -10,9 +10,11 @@ const CACHE = "lotent-v23";
 const SHELL = [
   "./", "./index.html", "./app.js", "./app.css", "./apropos.html",
   "./manifest.json", "./icon.svg", "./og.png",
-  "./data/events.json", "./data/events-archive.json",
-  "./data/digest.json", "./data/meta.json",
+  "./data/m/index.json", "./data/digest.json", "./data/meta.json",
 ];
+// Les mois de l'agenda (data/m/*.json) et l'historique (2 Mo) ne sont plus
+// précachés : chaque installation du worker les retéléchargeait tous. Ils sont
+// mis en cache au fil de la navigation (réseau d'abord, cache hors-ligne).
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
@@ -57,9 +59,11 @@ self.addEventListener("fetch", (e) => {
   // straight to network so we don't bloat the cache with megabytes of tiles.
   if (url.origin !== location.origin) return;
 
-  // events.json comes with a cache-busting ?timestamp ; store it under the
-  // canonical path so the offline lookup always finds it.
-  const isData = url.pathname.endsWith("/events.json")
+  // Data files come with a cache-busting ?timestamp or ?v=hash ; store them
+  // under the canonical path so the offline lookup always finds them (and a
+  // month's old versions don't pile up in the cache).
+  const isData = url.pathname.includes("/data/m/")
+              || url.pathname.endsWith("/events.json")
               || url.pathname.endsWith("/events-archive.json")
               || url.pathname.endsWith("/digest.json")
               || url.pathname.endsWith("/meta.json");

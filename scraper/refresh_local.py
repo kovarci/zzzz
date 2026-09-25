@@ -153,6 +153,8 @@ def main():
     scrape.write_ics(merged)
     out.write_text(json.dumps(merged, ensure_ascii=False, separators=(",", ":")),
                    encoding="utf-8")
+    scrape.write_month_files(merged)
+    scrape.write_stats(merged)
     try:
         try:
             arch = json.loads(scrape.ARCHIVE_FILE.read_text(encoding="utf-8"))

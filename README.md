@@ -11,7 +11,8 @@ dans un seul calendrier filtrable, mis à jour chaque jour.
 Une GitHub Action s'exécute chaque matin (4h UTC). Elle lance un scraper Python
 qui récupère les événements sur les sites des sources, écrit `data/events.json`
 + fichiers annexes, et committe le tout. La page `index.html` lit ces JSON et
-les affiche.
+les affiche : l'agenda est découpé par mois (`data/m/AAAA-MM.json`), le site
+charge d'abord le mois des 7 prochains jours puis les autres en arrière-plan.
 
 Pour deux sources (Collège de France, pages Luma par thème) le robot GitHub est
 bloqué par géolocalisation IP : un rafraîchissement complémentaire est lancé
@@ -215,7 +216,10 @@ sitemap.xml             généré par le scraper
 robots.txt              renvoie vers sitemap.xml
 CNAME                   domaine personnalisé (lotent.fr)
 data/
-  events.json           événements à venir (minifié)
+  events.json           événements à venir (minifié) — référence des scripts
+  m/index.json          mois disponibles, nombre d'événements, hash (?v=)
+  m/AAAA-MM.json        événements du mois : ce que le site charge
+  sciencesconf-sites.json  cache des sites Sciencesconf (sitemap)
   events-archive.json   événements passés (1 an, minifié)
   geocache.json         cache des coordonnées géographiques
   meta.json             dernières dates d'exécution (auto / Windows)

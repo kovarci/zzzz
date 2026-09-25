@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=22" />
+  <link rel="stylesheet" href="app.css?v=23" />
   <script>
     // Même thème que l'app principale, appliqué avant le premier rendu (pas de flash)
     try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
@@ -264,27 +264,19 @@ document.getElementById("theme-btn").addEventListener("click", () => {
 });
 paintThemeIcon();
 
-// Stats publiques calculées à la volée depuis les JSON déjà servis
+// Stats publiques, calculées par le scraper (data/meta.json → stats) :
+// 9 Ko au lieu des 3,5 Mo d'events.json + archive.
 function fmtNumber(n) {
   return new Intl.NumberFormat(document.documentElement.lang === "en" ? "en-US" : "fr-FR").format(n);
 }
 (async () => {
   try {
-    const [evRes, arRes] = await Promise.all([
-      fetch("data/events.json?" + Date.now()),
-      fetch("data/events-archive.json?" + Date.now()),
-    ]);
-    const events = await evRes.json();
-    const archive = await arRes.json();
-    const today = new Date().toISOString().slice(0, 10);
-    const upcoming = events.filter(e => e.date >= today).length;
-    const total = events.length + archive.length;
-    const institutions = new Set(events.concat(archive).map(e => e.institution)).size;
-    const allDates = events.concat(archive).map(e => e.date).filter(Boolean).sort();
-    const earliest = allDates[0];
-    document.getElementById("stat-total").textContent = fmtNumber(total);
-    document.getElementById("stat-upcoming").textContent = fmtNumber(upcoming);
-    document.getElementById("stat-sources").textContent = fmtNumber(institutions);
+    const meta = await (await fetch("data/meta.json?" + Date.now())).json();
+    const s = meta.stats; if (!s) return;
+    const earliest = s.since;
+    document.getElementById("stat-total").textContent = fmtNumber(s.total);
+    document.getElementById("stat-upcoming").textContent = fmtNumber(s.upcoming);
+    document.getElementById("stat-sources").textContent = fmtNumber(s.institutions);
     if (earliest) {
       const d = new Date(earliest + "T12:00:00");
       const lang = document.documentElement.lang === "en" ? "en-GB" : "fr-FR";

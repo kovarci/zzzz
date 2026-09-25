@@ -263,7 +263,7 @@ function useSpeakers() {
 function App() {
   const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO } = useI18n();
   const init = useMemo(filtersFromURL, []);
-  const [events, setEvents] = useState(null); const [loadErr, setLoadErr] = useState(null);
+  const [events, setEvents] = useState(null); const [loadErr, setLoadErr] = useState(null); const [complete, setComplete] = useState(false);
   const [archive, setArchive] = useState(null); const [meta, setMeta] = useState({}); const [digest, setDigest] = useState(null);
   const [filters, setFilters] = useState(init.filters); const [rawQ, setRawQ] = useState(init.rawQ);
   const [view, setView] = useState(init.view); const [history, setHistory] = useState(init.history); const [histMonth, setHistMonth] = useState("all");
@@ -284,13 +284,26 @@ function App() {
   const pendingScroll = useRef(null);
   const SRC_LABEL_T = { institution: t("src_institution"), luma: t("src_luma"), association: t("src_association"), ville: t("src_ville") };
 
-  /* données */
+  /* données — l'agenda arrive mois par mois (data/m/AAAA-MM.json, écrits par le
+     scraper) : d'abord le(s) mois des 7 prochains jours, affichés tout de suite,
+     puis les autres. index.html lance ces premiers téléchargements avant même
+     app.js (window.__lotentData). events.json ne sert plus qu'en secours. */
   useEffect(() => {
-    fetch("data/events.json?" + Date.now()).then(r => r.json()).then(list => {
-      list.forEach(e => { if (!e.source_type) e.source_type = "institution"; });
-      list.sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || "")));
-      setEvents(list);
-    }).catch(e => setLoadErr(e.message));
+    const prep = list => { list.forEach(e => { if (!e.source_type) e.source_type = "institution"; }); return list.sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || ""))); };
+    const getJSON = u => fetch(u).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    const early = window.__lotentData || {};
+    const full = () => getJSON("data/events.json?" + Date.now()).then(list => { setEvents(prep(list)); setComplete(true); });
+    (early.index || getJSON("data/m/index.json?" + Date.now())).then(idx => {
+      const months = idx.months || []; if (!months.length) throw new Error("index vide");
+      const soon = new Set([TODAY.slice(0, 7), WEEK_END.slice(0, 7), iso(addDays(today, 7)).slice(0, 7)]);
+      const get = m => (early.months || {})[m.m] || getJSON(`data/m/${m.m}.json?v=${m.v}`);
+      const first = months.filter(m => soon.has(m.m)), rest = months.filter(m => !soon.has(m.m));
+      return Promise.all((first.length ? first : months.slice(0, 1)).map(get)).then(parts => {
+        const head = parts.flat(); setEvents(prep([...head]));
+        const others = first.length ? rest : months.slice(1);
+        return Promise.all(others.map(get)).then(more => { setEvents(prep(head.concat(more.flat()))); setComplete(true); });
+      });
+    }).catch(() => full()).catch(e => setLoadErr(e.message));
     fetch("data/meta.json?" + Date.now()).then(r => r.json()).then(setMeta).catch(() => {});
     fetch("data/digest.json?" + Date.now()).then(r => r.json()).then(d => d?.events?.length && setDigest(d)).catch(() => {});
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
@@ -307,10 +320,12 @@ function App() {
   }, [history]);
   // ?event=<id> (pages e/*.html) : ouvre la fiche, dans les événements à venir ou l'archive
   useEffect(() => {
-    if (!events || !pendingEvent.current) return; const id = pendingEvent.current; pendingEvent.current = null;
-    const e = events.find(x => x.id === id); if (e) { setOpen(e); return; }
+    if (!events || !pendingEvent.current) return; const id = pendingEvent.current;
+    const e = events.find(x => x.id === id); if (e) { pendingEvent.current = null; setOpen(e); return; }
+    if (!complete) return;          // peut-être dans un mois pas encore chargé
+    pendingEvent.current = null;
     ensureArchive().then(a => { const p = a.find(x => x.id === id); p ? setOpen(p) : notify(t("toast_not_found")); });
-  }, [events]);
+  }, [events, complete]);
   useEffect(() => { window.history.replaceState(null, "", urlFromState({ filters, view, history, rawQ })); }, [filters, view, history, rawQ]);
   useEffect(() => { const h = ev => {
     if ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === "k") { ev.preventDefault(); setCmd(c => !c); }
@@ -341,13 +356,14 @@ function App() {
     return UP.filter(e => e.speaker && !seenSpeakerEvents.has(e.id) && names.some(n => e.speaker.toLowerCase().includes(n)));
   }, [UP, speakers, seenSpeakerEvents]);
   useEffect(() => {
-    if (notifyPerm !== "granted" || !followedNew.length) return;
+    // Une seule notification, sur la liste complète (pas une par mois chargé)
+    if (!complete || notifyPerm !== "granted" || !followedNew.length) return;
     try {
       if (followedNew.length === 1) new Notification(t("notify_title"), { body: followedNew[0].title });
       else new Notification(t("notify_title"), { body: `${followedNew.length} ${t("noun_event", { n: followedNew.length })}` });
     } catch (err) {}
     markSeen(followedNew.map(x => x.id));
-  }, [followedNew, notifyPerm]);
+  }, [followedNew, notifyPerm, complete]);
   const enableNotify = () => {
     if (typeof Notification === "undefined") return;
     Notification.requestPermission().then(p => { setNotifyPerm(p); if (p === "granted") notify(t("notify_enabled")); else if (p === "denied") notify(t("notify_denied")); });
@@ -407,7 +423,7 @@ function App() {
       </section> : <>
       <section className="relative pt-14 pb-8 text-center">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
-        <BlurFade inView={false}><div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-1 text-sm shadow-sm"><AnimatedShinyText>✦ {meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events ? t("live_events_suffix", { n: UP.length }) : ""}</AnimatedShinyText></div></BlurFade>
+        <BlurFade inView={false}><div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-1 text-sm shadow-sm"><AnimatedShinyText>✦ {meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UP.length }) : ""}</AnimatedShinyText></div></BlurFade>
         <BlurFade inView={false} delay={.1}><h1 className="mt-6 text-4xl sm:text-6xl font-bold tracking-tight [text-wrap:balance] max-w-4xl mx-auto leading-[1.05]">{t("hero_title_1")} <span className="bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">{t("hero_title_2")}</span></h1></BlurFade>
         <BlurFade inView={false} delay={.2}><p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto [text-wrap:balance]">{events ? t("hero_lede", { n: Object.keys(counts.inst).length, f: UP.filter(isFree).length }) : t("hero_loading")}</p></BlurFade>
         <BlurFade inView={false} delay={.3}><div className="mt-8 flex flex-wrap justify-center gap-3"><Button onClick={() => { setHistory(false); setF({ when: "today" }); goAgenda(); }} className="h-11 px-6">{t("btn_today")}</Button><Button variant="outline" onClick={() => { setHistory(false); setF({ when: "week" }); goAgenda(); }} className="h-11 px-6">{t("btn_week")}</Button></div></BlurFade>

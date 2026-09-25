@@ -564,7 +564,7 @@ def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
         end_time = ""
         raw_end = item.get("endDate", {})
         dt_end = parse_date(f"{raw_end.get('date', '')} {raw_end.get('time', '')}")
-        if dt_end:
+        if dt_end and dt_end.date() == dt.date():   # pas l'heure du dernier jour d'un colloque
             end_time = dt_end.strftime("%H:%M")
         if skip_meetings and (item.get("type") == "meeting" or _INDICO_INTERNAL.search(title)):
             continue
@@ -1329,7 +1329,7 @@ def scrape_college_de_france(browser=None):
     return events
 
 
-def scrape_ehess(browser):
+def scrape_ehess(browser=None):
     """Dedicated EHESS parser — events are .jnews-event-card elements
     (.jnews-event-title for the title, .chiffre-cle + .month for the date)."""
     print("→ EHESS (dedicated parser)...")
@@ -1337,14 +1337,26 @@ def scrape_ehess(browser):
     BASE = "https://www.ehess.fr"
     LOC = "EHESS, 54 boulevard Raspail, Paris 6e"
 
-    ctx = browser.new_context(
-        user_agent=HEADERS["User-Agent"], locale="fr-FR",
-        viewport={"width": 1366, "height": 900},
-        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
-    )
-    page = ctx.new_page()
-    html, _ = load_page(page, "https://www.ehess.fr/jcms/kmo_28682/fr/agenda-de-l-ehess")
-    ctx.close()
+    url = "https://www.ehess.fr/jcms/kmo_28682/fr/agenda-de-l-ehess"
+    # Page brute d'abord : une fois le JavaScript exécuté (Playwright), les
+    # cartes perdent leur attribut data-jalios-url et tous les liens
+    # retombaient sur la page d'accueil. Navigateur en secours seulement.
+    html = ""
+    try:
+        r = requests.get(url, headers=CDF_HEADERS, timeout=40)
+        r.raise_for_status()
+        html = r.text
+    except Exception as e:
+        print(f"   [warn] EHESS sans navigateur : {e}")
+    if "jnews-event-card" not in html and browser is not None:
+        ctx = browser.new_context(
+            user_agent=HEADERS["User-Agent"], locale="fr-FR",
+            viewport={"width": 1366, "height": 900},
+            extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+        )
+        page = ctx.new_page()
+        html, _ = load_page(page, url)
+        ctx.close()
 
     soup = BeautifulSoup(html, "lxml")
     cards = soup.select(".jnews-event-card")
@@ -1384,7 +1396,8 @@ def scrape_ehess(browser):
             if m:
                 time_str = f"{int(m.group(1)):02d}:{m.group(2) or '00'}"
         # EHESS cards are JS-clickable: the URL is in data-jalios-url, not <a href>
-        href = card.get("data-jalios-url", "")
+        # …ou la carte est elle-même le lien : <a class="jnews-event-card" href="jcms/…">
+        href = card.get("data-jalios-url", "") or card.get("href", "")
         if not href:
             link = card.find("a", href=True)
             href = link.get("href", "") if link else ""
@@ -1487,12 +1500,21 @@ def scrape_dauphine(browser):
     ], max_pages=15)
 
 
-def scrape_pse(browser):
-    return scrape_paginated(browser, "Paris School of Economics", [
-        ("https://www.parisschoolofeconomics.eu/evenements/",
-         "Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
-         "https://www.parisschoolofeconomics.eu"),
-    ], max_pages=15)
+def scrape_pse(browser=None):
+    """Cartes WordPress avec <time datetime="2026-09-24 12:30:00">, titre,
+    orateur et salle. L'extracteur générique (Playwright) prenait l'étiquette
+    « Séminaire » pour un titre et décalait des dates : parseur dédié."""
+    evs = _scrape_cards(
+        "Paris School of Economics", "https://www.parisschoolofeconomics.eu/evenements/", "article",
+        title="h3.event-item__title", date="time.date__time", kind=".event-item-type",
+        speaker=".event-item__speaker", place=".item__salle span:last-child",
+        base="https://www.parisschoolofeconomics.eu",
+        location="Paris School of Economics, 48 boulevard Jourdan, Paris 14e",
+        page_url="https://www.parisschoolofeconomics.eu/evenements/page/{n}/", page_start=2, max_pages=15)
+    for e in evs:
+        if e["discipline"] == "Autre":
+            e["discipline"] = "Économie"
+    return evs
 
 
 def scrape_psl(browser):
@@ -2817,8 +2839,9 @@ def scrape_mardis_philo():
                     "Les Mardis de la Philo",
                     clean_text(t.get_text(" ")) + (f" ({i}/{len(dates)})" if len(dates) > 1 else ""), d,
                     time_str=fmt(tms[0]) if tms else "", end_time=fmt(tms[1]) if len(tms) > 1 else "",
-                    location="Les Mardis de la Philo, 35 bis rue de Sèvres, Paris 6e (et en direct sur Zoom)",
-                    desc=clean_text(content.get_text(" "))[:400] if content else "",
+                    location="Les Mardis de la Philo, 35 bis rue de Sèvres, Paris 6e",
+                    desc=("Aussi en direct sur Zoom. " + clean_text(content.get_text(" ")))[:400]
+                    if content else "Aussi en direct sur Zoom.",
                     url=f"{base}/{path}", source_type="association")
                 ev["discipline"] = disc
                 ev["price"] = "Payant · entrée libre pour les moins de 26 ans"
@@ -3514,6 +3537,12 @@ _ACRONYM_STOP = {
 }
 
 
+_CANCELLED = re.compile(
+    r"[\[(]\s*(?:annul|report|cancel|postpon)\w*[^\])]{0,20}[\])]"
+    r"|^\s*(?:annul[ée]e?s?|report[ée]e?s?|cancell?ed|postponed)\s*[:–-]"
+    r"|(?-i:\b(?:ANNUL[ÉE]E?S?|REPORT[ÉE]E?S?|CANCELL?ED|POSTPONED)\b)", re.I)
+
+
 def merge_cross_source(events):
     """Même titre + même date chez deux organisateurs (BnF + EPHE, PSL +
     Dauphine…) : une seule fiche, la plus complète ; les autres organisateurs
@@ -3709,6 +3738,39 @@ def _nominatim(sess, address):
     return None
 
 
+def _geo_variants(loc):
+    """« Builders Factory, 18 Rue la Condamine, 75017 Paris, France » :
+    Nominatim ne trouve pas avec le nom du lieu devant → on retire les
+    segments de tête un à un, puis on tente « 75017 Paris »."""
+    parts = [x.strip() for x in loc.split(",") if x.strip()]
+    out = [", ".join(parts[i:]) for i in range(1, len(parts)) if re.search(r"\d", ", ".join(parts[i:]))]
+    m = re.search(r"\b(?:75|77|78|91|92|93|94|95)\d{3}\s+[^\d,()]{2,40}", loc)
+    if m:
+        out.append(m.group(0).strip() + ", France")
+    return list(dict.fromkeys(out))[:3]
+
+
+# Lieu réduit à une ville (« Orsay (France) », Sciencesconf) : centre de la
+# commune. « Paris » seul reste hors carte : un point au centre tromperait.
+_CITY_COORDS = {
+    "orsay": [48.6986, 2.1875], "gif-sur-yvette": [48.7018, 2.1336], "gif sur yvette": [48.7018, 2.1336],
+    "palaiseau": [48.7146, 2.2459], "saclay": [48.7310, 2.1680], "bures-sur-yvette": [48.6966, 2.1638],
+    "nanterre": [48.8924, 2.2069], "aubervilliers": [48.9146, 2.3821], "saint-denis": [48.9362, 2.3574],
+    "villetaneuse": [48.9570, 2.3417], "créteil": [48.7904, 2.4556], "creteil": [48.7904, 2.4556],
+    "champs-sur-marne": [48.8416, 2.5870], "marne-la-vallée": [48.8416, 2.5870], "meudon": [48.8130, 2.2380],
+    "cergy": [49.0364, 2.0761], "versailles": [48.8049, 2.1204], "évry": [48.6290, 2.4410],
+    "evry": [48.6290, 2.4410], "jouy-en-josas": [48.7648, 2.1680], "villejuif": [48.7919, 2.3634],
+    "ivry-sur-seine": [48.8157, 2.3849], "boulogne-billancourt": [48.8397, 2.2399],
+    "montrouge": [48.8163, 2.3163], "issy-les-moulineaux": [48.8245, 2.2700],
+    "saint-ouen": [48.9118, 2.3345], "la plaine saint-denis": [48.9170, 2.3610],
+}
+
+
+def _city_coords(loc):
+    k = re.sub(r"\s*\([^)]*\)\s*$", "", loc).strip().lower()
+    return _CITY_COORDS.get(k)
+
+
 def geocode_all(events):
     """Add lat/lng to events. Real addresses are geocoded (Nominatim, cached);
     vague locations fall back to the event's institution coordinates."""
@@ -3733,7 +3795,20 @@ def geocode_all(events):
                 cache[key] = _nominatim(sess, loc)
                 new += 1
                 time.sleep(1.1)   # Nominatim asks for max 1 request/second
-            coords = cache.get(key)
+            # Échec (None) : on retente une fois sans le nom du lieu ; [] = tout essayé
+            if cache.get(key, 0) is None and new < MAX_NEW_GEOCODE:
+                found = []
+                for q in _geo_variants(loc):
+                    new += 1
+                    time.sleep(1.1)
+                    hit = _nominatim(sess, q)
+                    if hit:
+                        found = hit
+                        break
+                cache[key] = found
+            coords = cache.get(key) or None
+        if not coords:                       # ville seule (« Orsay (France) »)
+            coords = _city_coords(loc)
         if not coords:                       # fallback → institution coordinates
             coords = INSTITUTION_COORDS.get(ev.get("institution"))
         if coords:
@@ -4733,6 +4808,51 @@ def load_previous_events():
         return []
 
 
+MONTHS_DIR = OUTPUT_FILE.parent / "m"
+
+
+def write_month_files(events):
+    """Le site charge l'agenda mois par mois (data/m/AAAA-MM.json) : le mois
+    en cours et le suivant d'abord, les autres ensuite. index.json liste les
+    mois, leur nombre d'événements et un hash du contenu (?v=) : l'URL d'un
+    mois ne change que si ses événements changent. events.json reste la
+    référence des scripts (report, santé, mise à jour locale)."""
+    MONTHS_DIR.mkdir(parents=True, exist_ok=True)
+    by_month = {}
+    for e in events:
+        by_month.setdefault(e.get("date", "")[:7], []).append(
+            {k: v for k, v in e.items() if k != "geo_exact"})
+    index = []
+    for m in sorted(k for k in by_month if re.fullmatch(r"\d{4}-\d{2}", k)):
+        payload = json.dumps(by_month[m], ensure_ascii=False, separators=(",", ":"))
+        (MONTHS_DIR / f"{m}.json").write_text(payload, encoding="utf-8")
+        index.append({"m": m, "n": len(by_month[m]),
+                      "v": hashlib.sha1(payload.encode("utf-8")).hexdigest()[:10]})
+    for f in MONTHS_DIR.glob("*.json"):
+        if f.stem != "index" and f.stem not in by_month:
+            f.unlink()
+    (MONTHS_DIR / "index.json").write_text(
+        json.dumps({"total": len(events), "months": index}, separators=(",", ":")), encoding="utf-8")
+    print(f"Fichiers mensuels : {len(index)} mois dans data/m/")
+
+
+def write_stats(events):
+    """Chiffres de la page À propos, calculés ici : elle téléchargeait
+    events.json + l'archive (3,5 Mo) pour afficher quatre nombres."""
+    try:
+        archive = json.loads(ARCHIVE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        archive = []
+    both = events + archive
+    dates = sorted(e["date"] for e in both if e.get("date"))
+    update_meta("stats", {
+        "total": len(both),
+        "upcoming": sum(1 for e in events if e.get("date", "") >= TODAY.isoformat()),
+        "institutions": len({e.get("institution") for e in both}),
+        "since": dates[0] if dates else "",
+    })
+
+
 def update_archive(previous_events):
     """Move events that have aged into the past from the previous events.json
     into the persistent archive. Used by the site's 'Historique' tab."""
@@ -4843,6 +4963,15 @@ def main():
     all_events = merge_cross_source(_drop_city_duplicates(deduplicate(all_events)))
     # Titres parasites (menus lus comme événements) — y compris reportés
     all_events = [e for e in all_events if not is_junk_title(e.get("title", ""))]
+    # « [Reporté] Atelier… », « Meetup 5 (POSTPONED) », « [SÉANCE REPORTÉE] »
+    n = len(all_events)
+    all_events = [e for e in all_events if not _CANCELLED.search(e.get("title", ""))]
+    if len(all_events) < n:
+        print(f"Événements annulés / reportés retirés : {n - len(all_events)}")
+    for e in all_events:
+        # Colloque sur plusieurs jours : l'heure de fin est celle du dernier jour
+        if e.get("end_time") and e.get("time") and e["end_time"] <= e["time"]:
+            e["end_time"] = ""
     for e in all_events:                  # toutes sources, anciennes comprises
         reclassify(e)
         if _SOUTENANCE.search(e.get("title", "")):
@@ -4875,12 +5004,21 @@ def main():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(all_events, f, ensure_ascii=False, separators=(",", ":"))
+    try:
+        write_month_files(all_events)
+    except Exception as e:
+        print(f"[ERROR] fichiers mensuels: {e}")
+        traceback.print_exc()
 
     try:
         update_archive(prev_events)
     except Exception as e:
         print(f"[ERROR] archive: {e}")
         traceback.print_exc()
+    try:
+        write_stats(all_events)
+    except Exception as e:
+        print(f"[ERROR] stats: {e}")
 
     # Per-event share pages (current + archived, so old shared links survive)
     try:
