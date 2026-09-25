@@ -1,5 +1,5 @@
 {
-  "last_workflow_run": "2026-09-25T20:40:06Z",
+  "last_workflow_run": "2026-09-25T21:20:50Z",
   "last_manual_run": "2026-09-25T06:33:57Z",
   "fresh_counts": {
     "Institut Henri Poincar\u00e9": 82,
@@ -36,7 +36,7 @@
     "Universit\u00e9 Paris 1 Panth\u00e9on-Sorbonne": 72,
     "Universit\u00e9 Paris-Panth\u00e9on-Assas": 39,
     "Universit\u00e9 Paris-Saclay": 63,
-    "Campus Condorcet": 21,
+    "Campus Condorcet": 26,
     "Institut d'\u00e9tudes avanc\u00e9es de Paris": 17,
     "Fondation Maison des Sciences de l'Homme": 36,
     "Mus\u00e9e du quai Branly": 19,
@@ -61,6 +61,10 @@
     "IPGP": 2,
     "Maison de l'Am\u00e9rique latine": 7,
     "Maison de la culture du Japon": 9,
+    "Acad\u00e9mie des inscriptions et belles-lettres": 2,
+    "Mines Paris - PSL": 3,
+    "Mus\u00e9e de l'Homme": 17,
+    "Ined": 12,
     "Mus\u00e9e Zadkine": 1,
     "Communale Saint-Ouen": 4,
     "Th\u00e9\u00e2tre Com\u00e9die Bastille": 1,
@@ -71,8 +75,6 @@
     "Th\u00e9\u00e2tre de la Concorde": 8,
     "Mus\u00e9e de l'histoire de l'immigration - Palais de la Porte Dor\u00e9e - Paris": 1,
     "Cin\u00e9ma Saint-Andr\u00e9 des Arts": 1,
-    "Galerie Century 21 Tour Eiffel": 1,
-    "Biblioth\u00e8que Goutte d'Or": 2,
     "Biblioth\u00e8que Saint-Eloi": 2,
     "Biblioth\u00e8que Arthur Rimbaud": 2,
     "Centre culturel suisse Paris": 1,
@@ -203,6 +205,7 @@
     "Conservatoire \u00e0 rayonnement r\u00e9gional de Paris - Ida Rubinstein": 1,
     "Biblioth\u00e8que Mohammed Arkoun": 1,
     "M\u00e9morial de la Shoah de Drancy": 2,
+    "Biblioth\u00e8que Goutte d'Or": 1,
     "La Maison des M\u00e9tallos": 1,
     "EHESS": 10,
     "Sorbonne Universit\u00e9": 14,
@@ -237,9 +240,9 @@
     "Article 1": 17
   },
   "stats": {
-    "total": 6297,
-    "upcoming": 2456,
-    "institutions": 960,
+    "total": 6310,
+    "upcoming": 2469,
+    "institutions": 964,
     "since": "2026-03-09"
   }
 }

@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Mines Paris - PSL · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:0ccc7d9a7043@paris-academique
+DTSTAMP:20260925T211841Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:[Fête de la science 2026] Manipuler\, imaginer\, comprendre à Mines Paris – PSL
+DESCRIPTION:À l’occasion de la Fête de la Science 2026\, Mines Paris – PSL propose une série d’activités interactives et immersives permettant de comprendre les re...\nhttps://www.minesparis.psl.eu/blog/evenements/fete-de-la-science-2026-manipuler-imaginer-comprendre-a-mines-paris-psl/
+LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
+URL:https://www.minesparis.psl.eu/blog/evenements/fete-de-la-science-2026-manipuler-imaginer-comprendre-a-mines-paris-psl/
+END:VEVENT
+BEGIN:VEVENT
+UID:ab2084fccb88@paris-academique
+DTSTAMP:20260925T211841Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:[Workshop] Electrification des usages
+DESCRIPTION:Le Carnot M.I.N.E.S vous invite à une journée d’échanges autour de l’électrification des usages\, un levier majeur pour réduire la dépendance aux énerg...\nhttps://www.minesparis.psl.eu/blog/evenements/workshop-electrification-des-usages/
+LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
+URL:https://www.minesparis.psl.eu/blog/evenements/workshop-electrification-des-usages/
+END:VEVENT
+BEGIN:VEVENT
+UID:c4012016e898@paris-academique
+DTSTAMP:20260925T211841Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270113
+SUMMARY:[SECRE 2027] Colloque Situations Extrêmes\, Crise et Résilience
+DESCRIPTION:L’Association Académique pour l’étude des Situations extrêmes\, des Crises et de la Résilience vous invite à son premier colloque les 12\, 13 et 14 janv...\nhttps://www.minesparis.psl.eu/blog/evenements/secre-2027-colloque-situations-extremes-crise-et-resilience/
+LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
+URL:https://www.minesparis.psl.eu/blog/evenements/secre-2027-colloque-situations-extremes-crise-et-resilience/
+END:VEVENT
+END:VCALENDAR

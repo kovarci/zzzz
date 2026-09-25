@@ -1,18 +1,18 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Paris Academique//FR
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Université Sorbonne Paris Nord · Lotent
-X-WR-TIMEZONE:Europe/Paris
-BEGIN:VEVENT
-UID:77a2b318e225@paris-academique
-DTSTAMP:20260925T224534Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:L’intelligence artificielle générative dans les pratiques de formation et dans la recherche : enjeux et défis
-DESCRIPTION:Déjà bien installée au cœur des débats publics et universitaires\, l’Intelligence Artificielle générative interroge les limites éthiques\, cognitives et environnementales de son usage\, mais aussi les nouvelles possibilités qu’elle ouvre et les défis qu’elle soulève. Pour les enseignants-chercheurs comme pour les personnels administratifs\, elle peut apparaître comme un agent « facilitateur »\, notamme\nhttps://www.univ-spn.fr/events/lintelligence-artificielle-generative-dans-les-pratiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
-LOCATION:Amphi Claudine Hermann - Campus de Villetaneuse\, Université Sorbonne Paris Nord\, 99 avenue Jean-Baptiste Clément\, Villetaneuse
-URL:https://www.univ-spn.fr/events/lintelligence-artificielle-generative-dans-les-pratiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
-END:VEVENT
-END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Paris Academique//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Université Sorbonne Paris Nord · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VEVENT
+UID:77a2b318e225@paris-academique
+DTSTAMP:20260925T211841Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:L’intelligence artificielle générative dans les pratiques de formation et dans la recherche : enjeux et défis
+DESCRIPTION:Déjà bien installée au cœur des débats publics et universitaires\, l’Intelligence Artificielle générative interroge les limites éthiques\, cognitives et environnementales de son usage\, mais aussi les nouvelles possibilités qu’elle ouvre et les défis qu’elle soulève. Pour les enseignants-chercheurs comme pour les personnels administratifs\, elle peut apparaître comme un agent « facilitateur »\, notamme\nhttps://www.univ-spn.fr/events/lintelligence-artificielle-generative-dans-les-pratiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
+LOCATION:Amphi Claudine Hermann - Campus de Villetaneuse\, Université Sorbonne Paris Nord\, 99 avenue Jean-Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/lintelligence-artificielle-generative-dans-les-pratiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
+END:VEVENT
+END:VCALENDAR
