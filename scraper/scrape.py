@@ -1230,7 +1230,9 @@ def scrape_college_de_france(browser=None):
     sess = requests.Session()
     sess.headers.update(CDF_HEADERS)
 
-    deadline = time.monotonic() + 150  # hard wall-clock budget for the whole source
+    # Budget large : le Collège de France n'est plus lu que par maj.bat (le robot
+    # GitHub est bloqué) et son agenda dépasse 17 pages de 30.
+    deadline = time.monotonic() + 420  # hard wall-clock budget for the whole source
     events, seen = [], set()
 
     def fetch(url, tries=2, timeout=30):
@@ -1311,7 +1313,9 @@ def scrape_college_de_france(browser=None):
         n0 = parse_cards(html)
         print(f"   page 0 ({base_url}): +{n0}  ·  total {len(events)}")
         misses = 0
-        for p in range(1, 12):
+        # Jusqu'à la fin de l'agenda (2 pages vides d'affilée) : bornée à 11
+        # pages, la boucle s'arrêtait à ~350 cours sur ~500.
+        for p in range(1, 60):
             if time.monotonic() > deadline:
                 print("   [info] time budget reached — stopping pagination")
                 break
@@ -1698,6 +1702,7 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
     BeautifulSoup à la place de _soup (pages servies via Playwright)."""
     print(f"→ {name}...")
     events, seen, stats = [], set(), {"cards": 0, "off": 0, "kind": 0, "date": 0}
+    raw_seen = set()          # cartes déjà vues, gardées ou non (arrêt de la pagination)
     urls = [url] + ([page_url.format(n=n) for n in range(page_start, page_start + max_pages - 1)]
                     if page_url else [])
     for u in urls:
@@ -1709,6 +1714,12 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
         cards = soup.select(card)
         stats["cards"] += len(cards)
         new = 0
+        # Nouvelles cartes de la page, retenues ou pas : s'arrêter dès qu'une
+        # page ne gardait rien coupait le Muséum après sa 1re page (ateliers et
+        # expos), alors que ses conférences étaient plus loin.
+        sigs = {c.get_text(" ", strip=True)[:160] for c in cards}
+        fresh = len(sigs - raw_seen)
+        raw_seen |= sigs
         for c in cards:
             t_el = c.select_one(title)
             t = clean_text(t_el.get_text(" ")) if t_el else ""
@@ -1754,7 +1765,7 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
             if members and members.search(c.get_text(" ")):
                 events[-1]["members"] = True
             new += 1
-        if page_url and (not cards or not new):
+        if page_url and (not cards or not fresh):
             break
     print(f"   stats: {stats}")
     print(f"   ✓ Total {name}: {len(events)} events")
@@ -1778,15 +1789,32 @@ def scrape_cnam():
         location="Cnam, 292 rue Saint-Martin, Paris 3e")
 
 
+_MNHN_SITES = {   # lieux du Muséum hors Jardin des Plantes : leur vraie adresse
+    "parc zoologique": "Parc zoologique de Paris, avenue Daumesnil, Paris 12e",
+}
+
+
 def scrape_mnhn():
     # L'agenda mêle expos, ateliers enfants et visites : on garde la parole.
-    return _scrape_cards(
+    evs = _scrape_cards(
         "Muséum national d'Histoire naturelle", "https://www.mnhn.fr/fr/l-agenda-du-museum",
         ".mt-tuile", title=".mt-tuile__title", date=".field--name-field-dates-text",
         kind=".mt-tuile-category", keep_kind=("conférence", "rencontre", "colloque", "débat", "table ronde"),
         place=".field--name-extra-field-place-name", base="https://www.mnhn.fr",
         location="Muséum national d'Histoire naturelle, 57 rue Cuvier, Paris 5e",
-        page_url="https://www.mnhn.fr/fr/l-agenda-du-museum?page={n}", max_pages=8)
+        page_url="https://www.mnhn.fr/fr/l-agenda-du-museum?page={n}", max_pages=12)
+    out = []
+    for e in evs:
+        place = e["location"].split(" — ")[0].lower()
+        if place.startswith("musée de l'homme"):
+            continue            # source dédiée (scrape_musee_homme), avec la bonne adresse
+        for k, addr in _MNHN_SITES.items():
+            if place.startswith(k):
+                e["location"] = addr
+        out.append(e)
+    if len(out) < len(evs):
+        print(f"   ({len(evs) - len(out)} du Musée de l'Homme laissés à sa source dédiée)")
+    return out
 
 
 def scrape_bnf():
@@ -3834,6 +3862,15 @@ def deduplicate(events):
         keys = [(ev["title"].lower()[:60], ev["date"], ev["institution"])]
         if ev.get("source_type") == "luma" and ev.get("url"):
             keys.append(("luma", ev["url"].rstrip("/").rsplit("/", 1)[-1]))
+        # Même organisateur, même lien, même créneau, titre qui commence pareil :
+        # deux versions d'un événement retouché (« Traduire les intraduisibles »
+        # / « … ? », intervenant corrigé). Le report les gardait toutes deux
+        # quand la page n'était plus dans l'agenda. Premier = le plus récent
+        # (carry_forward trie par date d'ajout). Deux exposés d'une même séance
+        # de l'AIBL ont des titres différents : ils restent séparés.
+        if ev.get("url") and ev.get("time"):
+            keys.append(("slot", ev["institution"], ev["url"], ev["date"], ev["time"],
+                         slugify(ev["title"])[:25]))
         if not any(k in seen for k in keys):
             seen.update(keys)
             out.append(ev)
@@ -4299,21 +4336,39 @@ INSTITUTION_URLS = {
 }
 
 
+# Communes d'Île-de-France où se tiennent des événements (sinon : Paris)
+_IDF_CITY = re.compile(
+    r"\b(Aubervilliers|Orsay|Palaiseau|Gif-sur-Yvette|Saclay|Bures-sur-Yvette|Nanterre|Saint-Denis|"
+    r"Villetaneuse|Cr[ée]teil|Versailles|Champs-sur-Marne|Marne-la-Vall[ée]e|Meudon|[ÉE]vry|Cergy|"
+    r"Boulogne-Billancourt|Issy-les-Moulineaux|Montrouge|Ivry-sur-Seine|Vincennes|Courbevoie|"
+    r"Neuilly-sur-Seine|Clichy|Pantin|Montreuil|Saint-Ouen|Jouy-en-Josas|Fontainebleau|Cachan|Sceaux)\b")
+
+
 def _event_jsonld(ev):
     """schema.org Event JSON-LD — feeds Google's rich results (date & venue
     shown directly in search). Includes every recommended field (image,
     endDate, performer, organizer.url, offers) so Search Console doesn't
     flag missing properties. '</' is split to be safe inside a <script>."""
     eid = ev["id"]
-    start = ev["date"] + (f"T{ev['time']}:00" if ev.get("time") else "")
+
+    def at(hhmm):
+        # Heure de Paris avec son décalage (+02:00 l'été, +01:00 l'hiver) :
+        # sans lui, Google doit deviner le fuseau.
+        try:
+            h, m = (int(x) for x in hhmm.split(":")[:2])
+            return datetime.combine(date.fromisoformat(ev["date"]), datetime.min.time()).replace(
+                hour=h, minute=m, tzinfo=PARIS_TZ).isoformat()
+        except Exception:
+            return ev["date"]
+    start = at(ev["time"]) if ev.get("time") else ev["date"]
     # endDate : si pas d'heure de fin scrappée, on suppose +2h (cohérent
     # avec le calendrier .ics) plutôt que de laisser le champ absent.
-    if ev.get("end_time"):
-        end = ev["date"] + f"T{ev['end_time']}:00"
+    if ev.get("time") and ev.get("end_time") and ev["end_time"] > ev["time"]:   # archive : fins < débuts
+        end = at(ev["end_time"])
     elif ev.get("time"):
         try:
             h, m = ev["time"].split(":")
-            end = ev["date"] + f"T{min(int(h)+2,23):02d}:{int(m):02d}:00"
+            end = at(f"{min(int(h) + 2, 23):02d}:{int(m):02d}")
         except Exception:
             end = start
     else:
@@ -4336,22 +4391,26 @@ def _event_jsonld(ev):
     img = ev.get("image")
     if not img:
         slug = slugify(inst)
-        img = f"{SITE_URL}/data/og/{slug}.png" if slug else f"{SITE_URL}/og.png"
+        # data/og/<slug>.png n'existe que pour les établissements phares : pour
+        # un hôte Luma ou un lieu de la Ville, c'était une image introuvable.
+        img = (f"{SITE_URL}/data/og/{slug}.png" if slug and (OG_INST_DIR / f"{slug}.png").exists()
+               else f"{SITE_URL}/og.png")
     # offers : Google le demande même pour les confs gratuites. On marque
     # explicitement le prix (Luma a un champ price ; sinon, 0/gratuit).
-    price_str = ev.get("price") or ""
-    if "gratuit" in price_str.lower():
-        price = "0"
-    else:
-        m = re.search(r"(\d+)", price_str)
-        price = m.group(1) if m else "0"
+    price_str = str(ev.get("price") or "")
     offers = {
         "@type": "Offer",
-        "price": price, "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
         "url": ev.get("url") or f"{SITE_URL}/e/{eid}.html",
         "validFrom": ev["date"],
     }
+    # Prix déclaré seulement s'il est connu : avant, un tarif inconnu devenait
+    # « 0 € » et « payant, gratuit pour les moins de 26 ans » devenait 26 €.
+    m = re.search(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|eur\b|euros?\b)", price_str, re.I)
+    if price_str == "0" or re.match(r"\s*(gratuit|free|entr[ée]e libre)", price_str, re.I):
+        offers.update(price="0", priceCurrency="EUR")
+    elif m:
+        offers.update(price=m.group(1).replace(",", "."), priceCurrency="EUR")
     data = {
         "@context": "https://schema.org",
         "@type": "Event",
@@ -4369,11 +4428,12 @@ def _event_jsonld(ev):
         "offers": offers,
     }
     if ev.get("location"):
+        city = _IDF_CITY.search(ev["location"])
         data["location"] = {
             "@type": "Place",
             "name": ev["location"],
-            "address": {"@type": "PostalAddress",
-                        "addressLocality": "Paris", "addressCountry": "FR"},
+            "address": {"@type": "PostalAddress", "streetAddress": ev["location"][:200],
+                        "addressLocality": city.group(1) if city else "Paris", "addressCountry": "FR"},
         }
     if ev.get("description"):
         data["description"] = ev["description"][:500]
@@ -4420,6 +4480,13 @@ def _series_key(ev):
     if sp and base.endswith(sp):
         base = base[:-len(sp)].strip()
     return (ev.get("institution", ""), base)
+
+
+def _is_free(ev):
+    """Même règle que isFree() dans web/src/lib.js (« 0 », « Gratuit »…) : le
+    badge « Entrée libre » des pages e/ ne tenait compte que de « 0 »."""
+    p = str(ev.get("price", "") or "")
+    return p == "0" or bool(re.search(r"gratuit|free", p, re.I))
 
 
 def write_event_pages(events):
@@ -4597,7 +4664,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 <main class="card" style="--dc:{dcolor}">
 {cover_html}
 <div class="body">
-<div class="badges"><span class="badge" style="border-color:{dcolor};color:{dcolor}">{_esc_attr(ev.get('discipline',''))}</span><span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if str(ev.get('price','')) == '0' else ''}</div>
+<div class="badges"><span class="badge" style="border-color:{dcolor};color:{dcolor}">{_esc_attr(ev.get('discipline',''))}</span><span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if _is_free(ev) else ''}</div>
 <h1>{title}</h1>
 <div class="date"><div class="d"><small>{_wds(ev.get('date',''))}</small><b>{_dnum(ev.get('date',''))}</b><small>{_mos(ev.get('date',''))}</small></div><div class="t">{_esc_attr(date_label)}<span>{loc or 'Paris'}</span></div></div>
 <dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{speaker}</dd>' if speaker else ''}</dl>
@@ -5168,6 +5235,17 @@ def build_digest(events):
     except Exception as e:
         print(f"[WARN] digest write: {e}")
 
+    from email.utils import format_datetime
+    from datetime import timezone
+
+    def rfc822(iso_day):
+        # pubDate = jour où l'événement est apparu sur Lotent : sans elle, les
+        # lecteurs RSS ne savaient ni dater ni trier les articles.
+        try:
+            return format_datetime(datetime.combine(date.fromisoformat(iso_day), datetime.min.time())
+                                   .replace(hour=8, tzinfo=PARIS_TZ))
+        except Exception:
+            return format_datetime(datetime.now(timezone.utc))
     items = []
     for e in picked:
         link = f"{SITE_URL}/e/{e['id']}.html"
@@ -5175,6 +5253,7 @@ def build_digest(events):
         items.append(
             f"<item><title>{_esc_attr(e['title'])}</title>"
             f"<link>{link}</link><guid isPermaLink=\"true\">{link}</guid>"
+            f"<pubDate>{rfc822(e.get('added_at') or TODAY.isoformat())}</pubDate>"
             f"<description>{_esc_attr(d + ' — ' + e.get('institution', '') + (' · ' + e['location'] if e.get('location') else ''))}</description>"
             f"</item>")
     rss = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
@@ -5183,6 +5262,7 @@ def build_digest(events):
            f"<link>{SITE_URL}</link>"
            "<description>Les conférences à ne pas manquer cette semaine à Paris, sélection automatique.</description>"
            "<language>fr</language>"
+           f"<lastBuildDate>{format_datetime(datetime.now(timezone.utc))}</lastBuildDate>"
            + "".join(items) + "</channel></rss>")
     try:
         RSS_FILE.write_text(rss, encoding="utf-8")

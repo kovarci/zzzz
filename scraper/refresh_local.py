@@ -57,8 +57,12 @@ LUMA_PAGES = [
 MNHN = "Muséum national d'Histoire naturelle"
 # Ifri (403), IRIS (page vide) et Fondation Jean-Jaurès (réponse invalide)
 # ne répondent pas non plus au robot GitHub depuis septembre 2026.
+# Académie nationale de médecine : le robot reçoit une page sans agenda
+# (0 événement), alors que depuis la France on en lit une quinzaine.
 LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences", "Jeunes IHEDN",
-                      "Ifri", "IRIS", "Fondation Jean-Jaurès"}
+                      "Ifri", "IRIS", "Fondation Jean-Jaurès", "Académie nationale de médecine",
+                      # connexion refusée au robot GitHub (délai dépassé), lues sans souci d'ici
+                      "Maison de l'Amérique latine", "Maison de la culture du Japon"}
 
 
 def _luma_count(events):
@@ -85,7 +89,8 @@ def main():
     blocked = []
     for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences, scrape.scrape_jeunes_ihedn,
                scrape.scrape_ifri, scrape.scrape_iris, scrape.scrape_jean_jaures,
-               scrape.scrape_lamsade):
+               scrape.scrape_lamsade, scrape.scrape_academie_medecine,
+               scrape.scrape_amerique_latine, scrape.scrape_mcjp):
         try:
             blocked += fn()
         except Exception as e:

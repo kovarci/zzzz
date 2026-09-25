@@ -37,7 +37,8 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
 # Lues par maj.bat (scraper/refresh_local.py, LOCAL_INSTITUTIONS) : le robot
 # GitHub est bloqué chez elles, leur 0 ici est normal.
 LOCAL_ONLY = {"Collège de France", "Muséum national d'Histoire naturelle", "Académie des sciences",
-              "Jeunes IHEDN", "Ifri", "IRIS", "Fondation Jean-Jaurès"}
+              "Jeunes IHEDN", "Ifri", "IRIS", "Fondation Jean-Jaurès", "Académie nationale de médecine",
+              "Maison de l'Amérique latine", "Maison de la culture du Japon"}
 
 
 def main():

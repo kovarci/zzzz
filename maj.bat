@@ -4,7 +4,7 @@ cd /d "%~dp0"
 set PYTHONIOENCODING=utf-8
 
 echo ================================================
-echo   Mise a jour : College de France, Museum, Academie, Ifri, IRIS, Jean-Jaures + Luma
+echo   Mise a jour : College de France, Museum, Academies, Ifri, IRIS, Jean-Jaures + Luma
 echo ================================================
 echo.
 
@@ -12,7 +12,7 @@ echo [1/4] Recuperation des dernieres donnees GitHub...
 git pull
 echo.
 
-echo [2/4] College de France, Museum, Academie, Ifri, IRIS, Jean-Jaures + Luma...
+echo [2/4] College de France, Museum, Academies (sciences, medecine), Ifri, IRIS, Jean-Jaures + Luma...
 echo       (plusieurs minutes : 9 pages Luma + geocodage, c'est normal)
 python scraper\refresh_local.py
 echo.
