@@ -454,6 +454,7 @@ NON_PARIS = re.compile(
     r"clermont|besan[çc]on|reims|rouen|metz|brest|angers|limoges|poitiers|"
     r"pau|avignon|le mans|la rochelle|perpignan|toulon|villeurbanne|"
     r"talence|frumam|upjv|braconnier|ljad|insa toulouse|insa lyon|"
+    r"la r[ée]union|guadeloupe|martinique|guyane|mayotte|nouvelle-cal[ée]donie|polyn[ée]sie|"
     # Sites du Muséum et partenaires Inalco hors Île-de-France
     r"menton|concarneau|dinard|eyzies|s[ée]rignan|pessac)\b",
     re.I,
@@ -1997,8 +1998,9 @@ def _sciencesconf_sitemap(known, *, window=1500, max_fetch=150):
         return []
     stale = (TODAY - timedelta(days=30)).isoformat()
     todo = [u for u in reversed(sites) if u not in cache] + [
-        u for u in sites if u in cache and cache[u].get("seen", "") < stale
-        and (not cache[u].get("s") or cache[u]["s"] >= TODAY.isoformat())]
+        u for u in sites if u in cache and (cache[u].get("seen", "") < stale or not cache[u].get("t"))
+        and (not cache[u].get("s") or cache[u]["s"] >= TODAY.isoformat())
+        and (cache[u].get("s") or cache[u].get("seen", "") < stale)]
     fetched = 0
     for u in todo[:max_fetch]:
         try:
@@ -2010,7 +2012,10 @@ def _sciencesconf_sitemap(known, *, window=1500, max_fetch=150):
         if loc:
             parts = [clean_text(x) for x in loc.stripped_strings]
             st = _range_start(parts[1]) if len(parts) > 1 else None
-            entry.update(t=clean_text(ttl.get_text(" ")) if ttl else "", loc=parts[0] if parts else "",
+            t = clean_text(ttl.get_text(" ")) if ttl else ""
+            if not t and b.title:
+                t = re.sub(r"\s*-\s*Sciencesconf\.org\s*$", "", clean_text(b.title.get_text(" ")))
+            entry.update(t=t, loc=parts[0] if parts else "",
                          s=st.isoformat() if st and st.year > 2000 else "")
         cache[u] = entry
         fetched += 1
@@ -2025,13 +2030,17 @@ def _sciencesconf_sitemap(known, *, window=1500, max_fetch=150):
     for u in sites:
         c = cache.get(u) or {}
         if (not c.get("s") or _sc_key(u) in known or "(France)" not in c.get("loc", "")
-                or not _IDF_RE.search(c.get("loc", ""))):
+                or not _IDF_RE.search(c.get("loc", "")) or NON_PARIS.search(c.get("loc", ""))):
             continue
         d = date.fromisoformat(c["s"])
         if not in_window(d):
             continue
         # « SGAP: a Scientist's Guide to AI - Paris - 2026 » → sans ville ni année
-        title = re.sub(r"\s+-\s+[^-]{2,40}\s+-\s+20\d\d\s*$", "", c.get("t", "")).strip() or _sc_key(u)
+        title = re.sub(r"\s+-\s+[^-]{2,40}\s+-\s+20\d\d\s*$", "", c.get("t", "")).strip()
+        # « gep2026 : Geometry… » : identifiant technique en tête
+        title = re.sub(r"^[a-z0-9-]{3,}\s+:\s+", "", title)
+        if not title:
+            continue
         events.append(new_event("Sciencesconf.org", title, d, location=c["loc"],
                                 url=u.rstrip("/") + "/", desc="Colloque"))
     print(f"   sitemap : {len(sites)} sites, {fetched} lus, {len(events)} colloques franciliens en plus")
