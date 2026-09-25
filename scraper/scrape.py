@@ -2399,21 +2399,32 @@ def scrape_que_faire_a_paris():
                 continue
             # Une conférence en plusieurs séances = plusieurs « occurrences » :
             # on garde la prochaine, le scrape du lendemain passera à la suivante.
-            starts = []
+            # Les heures de l'API sont l'heure affichée à Paris, avec un décalage
+            # faux : toujours « +02:00 » dans les occurrences (même en hiver),
+            # « +00:00 » dans date_start. On lit donc l'heure telle qu'écrite,
+            # sans conversion — sinon tout est décalé d'1 h après le passage à
+            # l'heure d'hiver, et un festival « toute la journée » affiche 02:00.
+            slots = []
             for occ in (x.get("occurrences") or x.get("date_start") or "").split(";"):
+                a, _, b = occ.partition("_")
                 try:
-                    starts.append(to_paris(datetime.fromisoformat(occ.split("_")[0])))
+                    s = datetime.fromisoformat(a[:19])
+                    e = datetime.fromisoformat(b[:19]) if b else None
                 except ValueError:
-                    pass
-            dt = next((s for s in sorted(starts) if in_window(s.date())), None)
+                    continue
+                slots.append((s, e))
+            dt, end = next(((s, e) for s, e in sorted(slots, key=lambda p: p[0]) if in_window(s.date())), (None, None))
             if not dt:
                 continue
+            # 00:00 → 23:59 : « toute la journée » (expositions, festivals…)
+            timed = bool(dt.hour or dt.minute)
+            end_s = end.strftime("%H:%M") if timed and end and end.date() == dt.date() and end > dt else ""
             venue = clean_text(x.get("address_name") or x.get("contact_organisation_name")) or "Ville de Paris"
             loc = ", ".join(p for p in (venue, clean_text(x.get("address_street")),
                                          clean_text(f"{x.get('address_zipcode') or ''} {x.get('address_city') or ''}")) if p)
             desc = clean_text(x.get("lead_text")) or strip_html(x.get("description"))[:400]
             ev = new_event(venue, title, dt.date(),
-                           time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
+                           time_str=dt.strftime("%H:%M") if timed else "", end_time=end_s,
                            location=loc, desc=desc, url=x.get("url") or "",
                            source_type="ville", image=x.get("cover_url") or "")
             # Les tags (« Histoire », « Littérature »…) aident le classement
@@ -2552,6 +2563,24 @@ def scrape_prairie():
     return events
 
 
+_ITEM_TITLE = re.compile(r"^(?P<s>[^«»:]{3,220}\([^()]+\)[^«»:]*?)[\s,]*«\s*(?P<t>[^«»]{6,}?)\s*»\s*\.?$")
+
+
+def _split_item_title(title):
+    """« AURÈLE CRASSON (ITEM-ENS), DELPHINE DESVEAUX (BHVP), « Hors-tout… » »
+    → titre « Hors-tout… », intervenants « Aurèle Crasson (ITEM-ENS), Delphine
+    Desveaux (BHVP) » (noms en capitales remis en casse normale, sigles entre
+    parenthèses intacts). Un titre sans affiliation entre parenthèses est
+    laissé tel quel."""
+    m = _ITEM_TITLE.match(title)
+    if not m:
+        return title, ""
+    spk = re.sub(r"\([^)]*\)|[^()]+",
+                 lambda p: p[0] if p[0].startswith("(") or not p[0].isupper() else p[0].title(),
+                 m["s"].strip(" ,–-"))
+    return m["t"].strip(), spk
+
+
 def scrape_item_ens():
     """ITEM (ENS/CNRS, manuscrits modernes) : conférences et colloques,
     triés du plus lointain au plus proche ; « Lieu : … (17h-19h00) »."""
@@ -2580,9 +2609,10 @@ def scrape_item_ens():
                 continue                       # Dakar, Genève…
             t0, t1 = _times(lieu)              # « … Salle Dussane - (17h-19h00) »
             lieu = re.sub(r"[\s.,–-]*\(?\s*\d{1,2}\s*h.*$", "", lieu).strip(" -–.,")
+            title, speaker = _split_item_title(clean_text(a.get_text(" ")))
             events.append(new_event(
-                "ENS Paris", clean_text(a.get_text(" ")), d, time_str=t0, end_time=t1,
-                location=lieu or "ITEM (ENS-CNRS), 45 rue d'Ulm, Paris 5e",
+                "ENS Paris", title, d, time_str=t0, end_time=t1,
+                location=lieu or "ITEM (ENS-CNRS), 45 rue d'Ulm, Paris 5e", speaker=speaker,
                 url=make_absolute(a["href"], base), desc="ITEM — Institut des textes et manuscrits modernes"))
             if events[-1]["discipline"] == "Autre":
                 events[-1]["discipline"] = "Littérature"
@@ -3572,7 +3602,12 @@ def merge_cross_source(events):
             groups.setdefault(("acr", acr.group(1), ev.get("date")), []).append(ev)
             continue
         if len(t) < 20:
-            groups[id(ev)] = [ev]
+            # Titre court (« Africa Day 2026 ») : seulement au même endroit
+            loc = slugify(ev.get("location", ""))[:20]
+            if len(t) >= 8 and len(loc) >= 12:
+                groups.setdefault(("court", t, ev.get("date"), loc), []).append(ev)
+            else:
+                groups[id(ev)] = [ev]
             continue
         groups.setdefault((t[:45], ev.get("date")), []).append(ev)
     out, merged = [], 0
@@ -3591,11 +3626,17 @@ def merge_cross_source(events):
 
 
 def deduplicate(events):
+    """Le premier exemplaire l'emporte (le scrape frais passe avant les
+    événements reportés). Sur Luma, un lien = un événement : le même, vu
+    depuis deux pages avec un hôte différent (« KubeAuto Day » et
+    « Kubernetes Automation Day »), ne compte qu'une fois."""
     seen, out = set(), []
     for ev in events:
-        key = (ev["title"].lower()[:60], ev["date"], ev["institution"])
-        if key not in seen:
-            seen.add(key)
+        keys = [(ev["title"].lower()[:60], ev["date"], ev["institution"])]
+        if ev.get("source_type") == "luma" and ev.get("url"):
+            keys.append(("luma", ev["url"].rstrip("/").rsplit("/", 1)[-1]))
+        if not any(k in seen for k in keys):
+            seen.update(keys)
             out.append(ev)
     return out
 
@@ -4813,12 +4854,70 @@ def build_digest(events):
     print(f"Digest : {len(picked)} immanquables ({period})")
 
 
+def finalize_events(events):
+    """Règles communes au robot (main) et à la maj locale (refresh_local.py),
+    appliquées à toutes les sources, événements reportés compris."""
+    # Titres parasites (menus lus comme événements)
+    events = [e for e in events if not is_junk_title(e.get("title", ""))]
+    # « [Reporté] Atelier… », « Meetup 5 (POSTPONED) », « [SÉANCE REPORTÉE] »
+    n = len(events)
+    events = [e for e in events if not _CANCELLED.search(e.get("title", ""))]
+    if len(events) < n:
+        print(f"Événements annulés / reportés retirés : {n - len(events)}")
+    for e in events:
+        # Colloque sur plusieurs jours : l'heure de fin est celle du dernier jour
+        if e.get("end_time") and e.get("time") and e["end_time"] <= e["time"]:
+            e["end_time"] = ""
+        reclassify(e)
+        if _SOUTENANCE.search(e.get("title", "")):
+            e["kind"] = "soutenance"
+        if _MEMBERS_ONLY.search(f"{e.get('title', '')} {e.get('description', '')}"):
+            e["members"] = True
+    return events
+
+
 def load_previous_events():
     """Read the events.json from the previous run (or [] if none)."""
     try:
         return json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
     except Exception:
         return []
+
+
+def carry_forward(fresh, prev, keep):
+    """Événements à venir du passage précédent que ce scrape n'a pas revus
+    (page lente, pagination partielle…), pour les sources où `keep(e)` est
+    vrai : on les reporte, sauf ceux qui ont été renommés ou déplacés à la
+    source. L'id dépend du titre et de la date : un événement renommé change
+    d'id, et son ancien titre restait affiché en double jusqu'à sa date
+    (« Tim Kretz, TBA » le 26/09 à côté du vrai séminaire du 26/11). On le
+    reconnaît à son lien : une page propre à l'événement — un seul événement
+    frais la porte, et au plus trois la portaient déjà (une page d'agenda
+    commune à toute une source n'est jamais concernée)."""
+    today_iso = TODAY.isoformat()
+    ids = {e.get("id") for e in fresh}
+    fam = lambda e: (e.get("source_type") or "institution", e.get("url"))
+    n_fresh, n_prev = {}, {}
+    for e in fresh:
+        if e.get("url"):
+            n_fresh[fam(e)] = n_fresh.get(fam(e), 0) + 1
+    for e in prev:
+        if e.get("url"):
+            n_prev[fam(e)] = n_prev.get(fam(e), 0) + 1
+    out, renamed = [], 0
+    # Les plus récemment ajoutés d'abord : entre deux versions reportées d'un
+    # même événement Luma, deduplicate() garde ainsi la dernière.
+    for e in sorted(prev, key=lambda e: e.get("added_at") or "", reverse=True):
+        if not keep(e) or e.get("date", "") < today_iso or e.get("id") in ids:
+            continue
+        if e.get("url") and n_fresh.get(fam(e)) == 1 and n_prev.get(fam(e), 0) <= 3:
+            renamed += 1
+            continue
+        out.append(e)
+        ids.add(e.get("id"))
+    if renamed:
+        print(f"Anciennes versions d'événements renommés ou déplacés écartées : {renamed}")
+    return out
 
 
 MONTHS_DIR = OUTPUT_FILE.parent / "m"
@@ -4956,41 +5055,14 @@ def main():
         "Université PSL", "EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
         "Université Paris Dauphine", *NEW_INSTITUTIONS,
     }
-    present_ids = {e.get("id") for e in all_events}
-    today_iso = TODAY.isoformat()
-    carried = 0
-    for e in prev_events:
-        if not (e.get("institution") in KNOWN_SOURCES
-                or e.get("source_type") in ("luma", "association", "ville", "entreprise")):
-            continue
-        if e.get("date", "") < today_iso:
-            continue  # past event — the archive handles it, don't resurrect
-        if e.get("id") in present_ids:
-            continue
-        all_events.append(e)
-        present_ids.add(e.get("id"))
-        carried += 1
+    carried = carry_forward(all_events, prev_events, lambda e: (
+        e.get("institution") in KNOWN_SOURCES
+        or e.get("source_type") in ("luma", "association", "ville", "entreprise")))
+    all_events.extend(carried)
     if carried:
-        print(f"⚠ Carried forward {carried} upcoming events from the previous run")
+        print(f"⚠ Carried forward {len(carried)} upcoming events from the previous run")
 
-    all_events = merge_cross_source(_drop_city_duplicates(deduplicate(all_events)))
-    # Titres parasites (menus lus comme événements) — y compris reportés
-    all_events = [e for e in all_events if not is_junk_title(e.get("title", ""))]
-    # « [Reporté] Atelier… », « Meetup 5 (POSTPONED) », « [SÉANCE REPORTÉE] »
-    n = len(all_events)
-    all_events = [e for e in all_events if not _CANCELLED.search(e.get("title", ""))]
-    if len(all_events) < n:
-        print(f"Événements annulés / reportés retirés : {n - len(all_events)}")
-    for e in all_events:
-        # Colloque sur plusieurs jours : l'heure de fin est celle du dernier jour
-        if e.get("end_time") and e.get("time") and e["end_time"] <= e["time"]:
-            e["end_time"] = ""
-    for e in all_events:                  # toutes sources, anciennes comprises
-        reclassify(e)
-        if _SOUTENANCE.search(e.get("title", "")):
-            e["kind"] = "soutenance"
-        if _MEMBERS_ONLY.search(f"{e.get('title', '')} {e.get('description', '')}"):
-            e["members"] = True
+    all_events = finalize_events(merge_cross_source(_drop_city_duplicates(deduplicate(all_events))))
 
     # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
     # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.

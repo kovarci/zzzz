@@ -115,23 +115,20 @@ def main():
     others = [e for e in events
               if e.get("institution") not in LOCAL_INSTITUTIONS
               and e.get("source_type") != "luma"]
-    merged = others + cdf + blocked + luma
-    merged = scrape.deduplicate(merged)
+    fresh = scrape.deduplicate(cdf + blocked + luma)
 
     # Filet de sécurité (comme le robot) : on réunit le scrape frais avec les
     # événements à venir DÉJÀ connus du Collège de France / Luma que ce passage
     # n'a pas revus (une page n'a pas répondu, etc.). Un rafraîchissement ne
-    # peut donc jamais FAIRE BAISSER une source — au pire il la laisse égale.
-    present_ids = {e.get("id") for e in merged}
-    today_iso = scrape.TODAY.isoformat()
-    for e in events:
-        if e.get("date", "") < today_iso:
-            continue
-        if e.get("id") in present_ids:
-            continue
-        if e.get("institution") in LOCAL_INSTITUTIONS or e.get("source_type") == "luma":
-            merged.append(e)
-            present_ids.add(e.get("id"))
+    # peut donc jamais FAIRE BAISSER une source — au pire il la laisse égale
+    # (sauf les anciennes versions d'événements renommés, cf. carry_forward).
+    carried = scrape.carry_forward(fresh, events, lambda e: (
+        e.get("institution") in LOCAL_INSTITUTIONS or e.get("source_type") == "luma"))
+
+    # Mêmes fusions que le robot : un événement Luma tenu à Sciences Po, une
+    # conférence du Collège de France aussi publiée par la Ville de Paris…
+    merged = scrape.deduplicate(fresh + carried + others)
+    merged = scrape.finalize_events(scrape.merge_cross_source(scrape._drop_city_duplicates(merged)))
 
     merged = [e for e in merged if e.get("date", "") >= scrape.CUTOFF.isoformat()]
     merged.sort(key=lambda e: (e["date"], e.get("time", "")))
