@@ -2222,7 +2222,14 @@ def scrape_sciencesconf():
     print(f"→ {name}...")
     base = "https://portal.sciencesconf.org"
     events = []
-    for td in _soup(base + "/browse/list").select("td.miniconf_bloc"):
+    # Portail injoignable (délai dépassé depuis GitHub, 26/09/2026) : on lit
+    # quand même le sitemap au lieu de perdre toute la source.
+    try:
+        cells = _soup(base + "/browse/list").select("td.miniconf_bloc")
+    except Exception as e:
+        print(f"   [warn] portail Sciencesconf : {e}")
+        cells = []
+    for td in cells:
         raw = clean_text(td.select_one(".miniconf_titre").get_text(" ")) if td.select_one(".miniconf_titre") else ""
         ps = [clean_text(p.get_text(" ")) for p in td.select("p.miniconf_dateou")]
         a = td.select_one("p.miniconf_voir a[href]")
@@ -4887,15 +4894,41 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
             (EVENT_PAGES_DIR / f"{eid}.html").write_text(page, encoding="utf-8")
         except Exception as e:
             print(f"[WARN] event page {eid}: {e}")
-    removed = 0
+    # Événement renommé ou déplacé à la source : nouvel id, mais même lien
+    # officiel. L'ancienne fiche devient une redirection (liens partagés,
+    # favoris ouverts depuis un message…) au lieu d'une 404. Seulement pour un
+    # lien propre à UN événement actuel (pas une page d'agenda commune).
+    by_url = {}
+    for e in upcoming:
+        if e.get("url"):
+            by_url.setdefault(html_unescape(e["url"]), []).append(e["id"])
+    removed = redirected = 0
     for f in EVENT_PAGES_DIR.glob("*.html"):
-        if f.name not in keep:
-            try:
-                f.unlink()
-                removed += 1
-            except Exception:
-                pass
-    print(f"Pages événement : {len(keep)} générées · {removed} obsolètes supprimées")
+        if f.name in keep:
+            continue
+        try:
+            old = f.read_text(encoding="utf-8", errors="replace")
+            m = (re.search(r'<a class="ext" href="([^"]+)"', old)
+                 or re.search(r'<meta name="lotent-src" content="([^"]+)"', old))
+            ids = by_url.get(html_unescape(m.group(1)), []) if m else []
+            if len(ids) == 1 and f"{ids[0]}.html" != f.name:
+                new = ids[0]
+                f.write_text(
+                    '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">'
+                    f'<title>Événement mis à jour · Lotent</title><meta name="robots" content="noindex">'
+                    f'<link rel="canonical" href="{SITE_URL}/e/{new}.html">'
+                    f'<meta http-equiv="refresh" content="0; url={new}.html">'
+                    f'<meta name="lotent-src" content="{_esc_attr(html_unescape(m.group(1)))}"></head>'
+                    f'<body><p>Cet événement a été mis à jour par son organisateur : '
+                    f'<a href="{new}.html">voir la fiche</a>.</p></body></html>', encoding="utf-8")
+                redirected += 1
+                continue
+            f.unlink()
+            removed += 1
+        except Exception:
+            pass
+    print(f"Pages événement : {len(keep)} générées · {redirected} redirigées vers leur nouvelle "
+          f"fiche · {removed} obsolètes supprimées")
 
 
 OG_FILE = OUTPUT_FILE.parent.parent / "og.png"
