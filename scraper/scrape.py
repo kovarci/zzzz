@@ -5038,6 +5038,7 @@ def write_event_pages(events):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{seo_title}</title>
 <link rel="canonical" href="{SITE_URL}/e/{eid}.html">
+<meta name="robots" content="max-image-preview:large, max-snippet:-1">
 <meta name="description" content="{meta_desc}">
 <meta name="keywords" content="conférence Paris, {_esc_attr(ev.get('institution',''))}, {_esc_attr((ev.get('speaker','') or ev.get('discipline','')))}, séminaire académique">
 <meta property="og:title" content="{title}">
@@ -5291,7 +5292,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{_esc_attr(page_title)}</title>
-{robots}<link rel="canonical" href="{url}">
+{robots or '<meta name="robots" content="max-image-preview:large, max-snippet:-1">' + chr(10)}<link rel="canonical" href="{url}">
 <meta name="description" content="{_esc_attr(meta_desc[:300])}">
 <meta property="og:title" content="{_esc_attr(page_title.replace(' · Lotent', ''))}">
 <meta property="og:description" content="{_esc_attr(short)}">
