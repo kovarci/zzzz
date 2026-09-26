@@ -589,8 +589,10 @@ def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
     start = TODAY
     while start <= HORIZON:
         stop = min(start + timedelta(days=60), HORIZON)
+        # tz : heures rendues à l'heure de Paris, quel que soit le fuseau dans
+        # lequel l'événement a été saisi (sinon lues telles quelles, décalées)
         url = (f"{base}/export/categ/{categ}.json"
-               f"?from={start.isoformat()}&to={stop.isoformat()}&limit=300")
+               f"?from={start.isoformat()}&to={stop.isoformat()}&limit=300&tz=Europe/Paris")
         data = None
         for attempt in range(1, 4):
             try:
