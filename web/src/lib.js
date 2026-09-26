@@ -69,7 +69,16 @@ export const splitSpeakers = s => {
   });
   return names.length ? [...new Set(names)] : (s && s.length <= 60 ? [s.trim()] : []);
 };
-export const speaksAt = (e, name) => !!e.speaker && norm(e.speaker).includes(norm(name));
+// Nom entier : suivre « Jean Martin » ne signale pas « Jean Martinez »
+const LETTER = /[\p{L}\p{N}]/u;
+export const speaksAt = (e, name) => {
+  if (!e.speaker) return false;
+  const s = norm(e.speaker), n = norm(name);
+  if (!n) return false;
+  for (let i = s.indexOf(n); i >= 0; i = s.indexOf(n, i + 1))
+    if (!LETTER.test(s[i - 1] || "") && !LETTER.test(s[i + n.length] || "")) return true;
+  return false;
+};
 // Texte ins\u00e9r\u00e9 en HTML brut (popups Leaflet) : les noms d'h\u00f4tes Luma sont saisis librement
 export const escHtml = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 // Liens venus des sources : http(s) seulement (pas de javascript:\u2026)
@@ -170,7 +179,8 @@ export function filtersFromURL() {
   if (p.get("date")) f.when = p.get("date");
   list("acces").forEach(v => f.access.add(v));
   list("discipline").forEach(v => f.disc.add(v)); list("institution").forEach(v => f.inst.add(v)); list("theme").forEach(v => f.theme.add(v));
-  const src = p.get("source"); if (src && src !== "all" && src !== "history") f.src.add(src);
+  // ?source=luma,association : plusieurs sources cochées (une seule était gardée)
+  const src = p.get("source"); list("source").forEach(v => { if (v !== "all" && v !== "history") f.src.add(v); });
   if (p.get("favoris") === "1") f.fav = true;
   if (p.get("format") === "online") f.online = true;
   if (p.get("prix") === "gratuit") f.free = true;
@@ -181,7 +191,7 @@ export function filtersFromURL() {
 }
 export function urlFromState({ filters: f, view, history, rawQ }) {
   const p = new URLSearchParams();
-  if (history) p.set("source", "history"); else if (f.src.size === 1) p.set("source", [...f.src][0]);
+  if (history) p.set("source", "history"); else if (f.src.size) p.set("source", [...f.src].join(","));
   if (view !== "list") p.set("vue", view);
   if (rawQ.trim()) p.set("q", rawQ.trim());
   if (f.when !== "all") p.set("date", f.when);

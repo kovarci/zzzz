@@ -201,7 +201,8 @@ export function Tabs({ value, onChange, items, layoutId = "tab-pill" }) {
 const narrow = () => typeof window !== "undefined" && window.matchMedia("(max-width: 639px)").matches;
 export function Popover({ label, count, children, align = "left", minW = "min-w-[280px]", block, closeLabel = "Fermer" }) {
   const [open, setOpen] = useState(false), [sheet, setSheet] = useState(false);
-  const ref = useRef(null), popRef = useRef(null);
+  const ref = useRef(null), popRef = useRef(null), openRef = useRef(false);
+  openRef.current = open;
   // Panneau du bas (téléphone) = fenêtre modale : même gestion du focus
   const trap = useFocusTrap(open && sheet);
   const sheetRef = el => { popRef.current = el; trap.current = el; };
@@ -217,9 +218,11 @@ export function Popover({ label, count, children, align = "left", minW = "min-w-
   }, [open, sheet]);
   useEffect(() => {
     const h = e => { if (!ref.current?.contains(e.target) && !popRef.current?.contains(e.target)) setOpen(false); };
-    const k = e => { if (e.key === "Escape") setOpen(false); };
-    document.addEventListener("mousedown", h); document.addEventListener("keydown", k);
-    return () => { document.removeEventListener("mousedown", h); document.removeEventListener("keydown", k); };
+    // Échap ferme le menu seulement : en phase de capture, avant la fiche
+    // (menu « Agenda ») qui, sinon, se fermait avec lui.
+    const k = e => { if (e.key === "Escape" && openRef.current) { e.preventDefault(); setOpen(false); } };
+    document.addEventListener("mousedown", h); document.addEventListener("keydown", k, true);
+    return () => { document.removeEventListener("mousedown", h); document.removeEventListener("keydown", k, true); };
   }, []);
   const panel = sheet
     ? createPortal(<AnimatePresence>{open && <motion.div key="sheet" className="fixed inset-0 z-[70]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .15 }}>

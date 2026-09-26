@@ -179,12 +179,14 @@ export function LangProvider({ children }) {
       if (m < 48 * 60) return t("rel_h", { n: Math.round(m / 60) });
       return t("rel_d", { n: Math.round(m / 1440) });
     };
+    // « jeudi 1er octobre » en français (« 1 octobre » est fautif)
+    const dayNum = d => (lang === "fr" && d.getDate() === 1 ? "1er" : d.getDate());
     return {
-      lang, setLang, toggleLang, t, WD, WDS, MO,
+      lang, setLang, toggleLang, t, WD, WDS, MO, dayNum,
       discName: d => (lang === "en" && DISC_EN[d]) || d,
       kindName: k => (lang === "en" && KIND_EN[k]) || k,
-      fmtDay: s => { const d = parseISO(s); return `${WD[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()]}`; },
-      fmtShort: s => { const d = parseISO(s); return `${WDS[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()].slice(0, lang === "en" ? 3 : 4)}`; },
+      fmtDay: s => { const d = parseISO(s); return `${WD[d.getDay()]} ${dayNum(d)} ${MO[d.getMonth()]}`; },
+      fmtShort: s => { const d = parseISO(s); return `${WDS[d.getDay()]} ${dayNum(d)} ${MO[d.getMonth()].slice(0, lang === "en" ? 3 : 4)}`; },
       relDay: (s, TODAY, TOMORROW) => s === TODAY ? t("rel_today") : s === TOMORROW ? t("rel_tomorrow") : "",
       relTime,
     };

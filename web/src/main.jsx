@@ -94,7 +94,8 @@ function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollo
   const { t, fmtDay, discName, kindName } = useI18n();
   const rel = useMemo(() => e ? relatedOf(e, pool) : null, [e, pool]);
   const trap = useFocusTrap(!!e);
-  useEffect(() => { if (!e) return; const h = ev => ev.key === "Escape" && onClose(); document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, [e]);
+  // Échap déjà pris par un menu ou la palette ouverts par-dessus : la fiche reste
+  useEffect(() => { if (!e) return; const h = ev => ev.key === "Escape" && !ev.defaultPrevented && onClose(); document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, [e]);
   const share = async () => {
     const url = `${SITE}/e/${e.id}.html`;
     if (navigator.share && /android|iphone|ipad|mobile/i.test(navigator.userAgent)) { try { await navigator.share({ title: e.title, url }); return; } catch (err) { return; } }
@@ -187,6 +188,12 @@ function CommandDialog({ open, onClose, onPick, pool }) {
   const res = useMemo(() => { const n = norm(q.trim()); return (n ? pool.filter(e => { const hay = norm([e.title, e.speaker, e.institution, e.location, e.discipline, discName(e.discipline), ...(e.also || [])].join(" ")); return n.split(/\s+/).every(w => hay.includes(w)); }) : pool.filter(e => e.date === TODAY || e.date === TOMORROW)).slice(0, 30); }, [q, pool, discName]);
   useEffect(() => { if (open) { setQ(""); setSel(0); setTimeout(() => inputRef.current?.focus(), 30); } }, [open]);
   useEffect(() => setSel(0), [q]);
+  // Ouverte par-dessus une fiche (« / » ou ⌘K) : Échap ne ferme que la palette
+  useEffect(() => {
+    if (!open) return;
+    const k = ev => { if (ev.key === "Escape") { ev.preventDefault(); onClose(); } };
+    document.addEventListener("keydown", k, true); return () => document.removeEventListener("keydown", k, true);
+  }, [open]);
   const onKey = ev => { if (ev.key === "ArrowDown") { ev.preventDefault(); setSel(s => (s + 1) % Math.max(1, res.length)); } else if (ev.key === "ArrowUp") { ev.preventDefault(); setSel(s => (s - 1 + res.length) % Math.max(1, res.length)); } else if (ev.key === "Enter" && res[sel]) onPick(res[sel]); };
   return <AnimatePresence>{open && <motion.div key="cmd" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
@@ -202,7 +209,7 @@ function CommandDialog({ open, onClose, onPick, pool }) {
 
 /* ═════════════════════ Vue semaine ═════════════════════ */
 function WeekView({ events, onOpen, favs }) {
-  const { t, WDS, MO } = useI18n();
+  const { t, WDS, MO, dayNum } = useI18n();
   const [offset, setOffset] = useState(0);
   useEffect(() => {
     const h = ev => {
@@ -221,7 +228,7 @@ function WeekView({ events, onOpen, favs }) {
   return <div className="pt-6">
     <div className="flex items-center justify-between mb-4">
       <Button variant="outline" size="sm" onClick={() => setOffset(o => o - 1)}>{t("week_prev")}</Button>
-      <div className="text-center"><div className="font-semibold">{days[0].getDate()} {MO[days[0].getMonth()]} → {days[6].getDate()} {MO[days[6].getMonth()]} {days[6].getFullYear()}</div><div className="text-xs text-muted-foreground">{inWeek.length} {t("noun_event", { n: inWeek.length })}{offset !== 0 && <button className="ml-2 underline" onClick={() => setOffset(0)}>{t("week_this")}</button>}</div></div>
+      <div className="text-center"><div className="font-semibold">{dayNum(days[0])} {MO[days[0].getMonth()]} → {dayNum(days[6])} {MO[days[6].getMonth()]} {days[6].getFullYear()}</div><div className="text-xs text-muted-foreground">{inWeek.length} {t("noun_event", { n: inWeek.length })}{offset !== 0 && <button className="ml-2 underline" onClick={() => setOffset(0)}>{t("week_this")}</button>}</div></div>
       <Button variant="outline" size="sm" onClick={() => setOffset(o => o + 1)}>{t("week_next")}</Button>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-7 gap-2 overflow-x-auto">
@@ -328,6 +335,12 @@ function SpeakersPanel({ open, onClose, speakers, onUnfollow, pool, onOpenEvent,
   const { t, fmtShort } = useI18n();
   const list = useMemo(() => [...speakers].sort((a, b) => a.localeCompare(b)), [speakers]);
   const trap = useFocusTrap(open);
+  // Échap ferme le panneau (comme les autres fenêtres ; le focus y est retenu)
+  useEffect(() => {
+    if (!open) return;
+    const k = ev => { if (ev.key === "Escape") { ev.preventDefault(); onClose(); } };
+    document.addEventListener("keydown", k, true); return () => document.removeEventListener("keydown", k, true);
+  }, [open]);
   return <AnimatePresence>{open && <motion.div key="speakers" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
     <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} ref={trap} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
@@ -380,7 +393,7 @@ function useSpeakers() {
   return { speakers, toggle, seen, markSeen };
 }
 function App() {
-  const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO, discName } = useI18n();
+  const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO, dayNum, discName } = useI18n();
   const init = useMemo(filtersFromURL, []);
   const [events, setEvents] = useState(null); const [loadErr, setLoadErr] = useState(null); const [complete, setComplete] = useState(false);
   const [archive, setArchive] = useState(null); const [meta, setMeta] = useState({}); const [digest, setDigest] = useState(null);
@@ -553,7 +566,7 @@ function App() {
     const a = parse(TODAY > (digest?.generated || "") ? TODAY : digest.generated), b = parse(digestEnd);
     const y = a.getFullYear() !== b.getFullYear() ? [` ${a.getFullYear()}`, ` ${b.getFullYear()}`] : ["", ""];
     return lang === "en" ? `${MO[a.getMonth()]} ${a.getDate()}${y[0]} – ${MO[b.getMonth()]} ${b.getDate()}${y[1]}`
-      : `du ${a.getDate() === 1 ? "1er" : a.getDate()} ${MO[a.getMonth()]}${y[0]} au ${b.getDate() === 1 ? "1er" : b.getDate()} ${MO[b.getMonth()]}${y[1]}`;
+      : `du ${dayNum(a)} ${MO[a.getMonth()]}${y[0]} au ${dayNum(b)} ${MO[b.getMonth()]}${y[1]}`;
   });
   const tonight = UPc.filter(e => e.date === TODAY && (e.time || "") >= "17:30");
   const days7 = useMemo(() => [...Array(7)].map((_, i) => { const d = addDays(today, i), k = iso(d); return { k, d, n: UPc.filter(e => e.date === k).length }; }), [UPc]);
