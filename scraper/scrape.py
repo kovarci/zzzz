@@ -4053,7 +4053,6 @@ INSTITUTION_COORDS = {
     "Université Paris 8":        [48.9454, 2.3634],
     "Université Paris Nanterre": [48.9035, 2.2129],
     "IJCLab":                    [48.6985, 2.1840],
-    "IN2P3":                     [48.8467, 2.3560],   # LPNHE, Jussieu
     "Observatoire de Paris":     [48.8364, 2.3364],
     "Université Paris 1 Panthéon-Sorbonne": [48.8467, 2.3441],
     "Université Paris-Panthéon-Assas": [48.8436, 2.3325],
@@ -4083,7 +4082,6 @@ INSTITUTION_COORDS = {
     "Institut des actuaires": [48.8718, 2.3236],
     "École polytechnique": [48.7134, 2.2105],
     "IHES": [48.701, 2.1734],
-    "Labos de maths d'Île-de-France": [48.8466, 2.3444],
     "IPGP": [48.8464, 2.3561],
     "Maison de l'Amérique latine": [48.8573, 2.3237],
     "Institut culturel italien": [48.8551, 2.3203],
@@ -4187,6 +4185,37 @@ _CITY_COORDS = {
 }
 
 
+# Lieux nommés sans adresse (« Richelieu — Bibliothèque nationale de
+# France », « CEA Paris-Saclay », « Maison des Métallos, rue J.-P. Timbaud ») :
+# comparés au PREMIER segment du lieu. Sans eux, l'événement prenait le point
+# de son organisateur (BnF Richelieu = BnF François-Mitterrand, Saclay =
+# Jussieu). Coordonnées OpenStreetMap vérifiées le 26/09/2026.
+_PLACE_COORDS = {
+    "françois-mitterrand": [48.8338, 2.3756], "françois mitterrand": [48.8338, 2.3756],
+    "richelieu": [48.8673, 2.3382], "arsenal": [48.8503, 2.3635],
+    "bulac": [48.8271, 2.3756], "institut du monde arabe": [48.8489, 2.3571],
+    "maison des métallos": [48.8674, 2.3780], "observatoire de paris": [48.8370, 2.3367],
+    "ipht-saclay": [48.7118, 2.1497], "ipht": [48.7118, 2.1497],
+    "cea paris-saclay": [48.7290, 2.1457], "cea saclay": [48.7290, 2.1457],
+    "lpnhe": [48.8461, 2.3560], "ijclab": [48.6985, 2.1840], "institut pascal": [48.7066, 2.1771],
+    "université paris-panthéon-assas": [48.8469, 2.3450],
+    "tgcc": [48.5966, 2.1993], "maison de la simulation": [48.7275, 2.1566],
+    "lmo": [48.7004, 2.1777], "institut de mathématique d'orsay": [48.7004, 2.1777],
+    "inria paris": [48.8414, 2.3848], "maison des sciences économiques": [48.8357, 2.3583],
+    "ircam": [48.8598, 2.3514],
+    "institut d'astrophysique de paris": [48.8350, 2.3353], "institut astrophysique de paris": [48.8350, 2.3353],
+    "iap": [48.8350, 2.3353],
+}
+
+
+def _place_coords(loc):
+    first = re.split(r"\s*(?:,|—|–|\s-\s)\s*", re.sub(r"\([^)]*\)", "", loc or "").strip(), maxsplit=1)[0]
+    k = first.strip().lower()
+    # … ou le nom d'une institution connue (séance IN2P3 « Institut Henri Poincaré »)
+    return _PLACE_COORDS.get(k) or next(
+        (c for name, c in INSTITUTION_COORDS.items() if name.lower() == k), None)
+
+
 def _city_coords(loc):
     k = re.sub(r"\s*\([^)]*\)\s*$", "", loc).strip().lower()
     # Sciencesconf : « Université Paris Est Créteil - Créteil (France) » → la
@@ -4239,10 +4268,17 @@ def geocode_all(events):
             coords = cache.get(key) or None
         if not coords:                       # ville seule (« Orsay (France) »)
             coords = _city_coords(loc)
+        if not coords:                       # lieu nommé connu (« Richelieu — BnF »)
+            coords = _place_coords(loc)
         if not coords:                       # fallback → institution coordinates
             coords = INSTITUTION_COORDS.get(ev.get("institution"))
         if coords:
             ev["lat"], ev["lng"] = coords[0], coords[1]
+        else:
+            # Point hérité d'un passage précédent (report) qui n'a plus lieu
+            # d'être : mieux vaut hors carte que mal placé.
+            ev.pop("lat", None)
+            ev.pop("lng", None)
 
     try:
         GEOCACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=1),
