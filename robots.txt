@@ -3,6 +3,13 @@ User-agent: *
 Disallow: /web/
 Disallow: /scraper/
 Disallow: /maj.bat
+# Variantes de l'accueil (?event=… depuis chaque fiche, ?institution=… depuis
+# les hubs) : même page que « / » avec une fiche ou un filtre ouvert. Google
+# les rattachait à l'accueil et affichait pour lotent.fr la description d'un
+# événement au hasard. Les fiches e/ et les hubs i/ d/ restent indexables, et
+# les données (data/…json?v=) restent lisibles pour le rendu.
+Disallow: /?*
+Disallow: /index.html?*
 Allow: /
 
 Sitemap: https://lotent.fr/sitemap.xml
