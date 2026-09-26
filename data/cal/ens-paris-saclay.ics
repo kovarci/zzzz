@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:d5f03ae7d46f@paris-academique
-DTSTAMP:20260926T095718Z
+DTSTAMP:20260926T102357Z
 DTSTART;TZID=Europe/Paris:20260928T183000
 DTEND;TZID=Europe/Paris:20260928T193000
 SUMMARY:Festival Vo-Vf : Traduire les sciences ?
@@ -37,7 +37,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/festival-vo-vf-traduire-les-scie
 END:VEVENT
 BEGIN:VEVENT
 UID:73a2726cb500@paris-academique
-DTSTAMP:20260926T095718Z
+DTSTAMP:20260926T102357Z
 DTSTART;TZID=Europe/Paris:20261020T183000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:Conférence du diplôme sur les enquêtes Trajectoires et Origines 
@@ -50,13 +50,13 @@ URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-les-en
 END:VEVENT
 BEGIN:VEVENT
 UID:7a6329099f63@paris-academique
-DTSTAMP:20260926T095718Z
+DTSTAMP:20260926T102357Z
 DTSTART;TZID=Europe/Paris:20261106T093000
 DTEND;TZID=Europe/Paris:20261106T180000
 SUMMARY:Colloque inter-ENS « Accéder à l’enseignement supérieur : une
   question de territoire ? »
-DESCRIPTION:\nhttps://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acc
- eder-lenseignement-superieur-une-question-de-territoire
+DESCRIPTION:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acced
+ er-lenseignement-superieur-une-question-de-territoire
 LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
 URL:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acceder-lense
  ignement-superieur-une-question-de-territoire
