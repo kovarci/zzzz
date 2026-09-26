@@ -714,6 +714,15 @@ function App() {
         <div><div className="font-semibold">{t("footer_subscribe")}</div><ul className="mt-2 space-y-1.5 text-muted-foreground"><li><a className="hover:text-foreground" href="data/calendar.ics" onClick={ev => { ev.preventDefault(); openSubscribe("data/calendar.ics"); }}>{t("footer_ics")}</a></li><li><a className="hover:text-foreground" href="data/digest.xml">{t("footer_rss")}</a></li><li><a className="hover:text-foreground" href="sitemap.xml">{t("footer_sitemap")}</a></li><li><a className="hover:text-foreground" href="apropos.html">{t("nav_about")}</a></li><li><a className="hover:text-foreground" href={PROPOSE_URL} target="_blank" rel="noopener">{t("nav_propose")}</a></li></ul></div>
         <GithubCard />
       </div>
+      {/* Pages statiques (sélections s/, disciplines d/) : liens visibles aussi
+          dans la page rendue — Google les suit depuis l'accueil */}
+      <nav aria-label={t("footer_browse")} className="mx-auto max-w-7xl px-4 sm:px-6 pb-28 -mt-20 text-xs text-muted-foreground">
+        <span className="font-medium text-foreground">{t("footer_browse")} :</span>{" "}
+        {[["s/cette-semaine.html", t("sel_week")], ["s/ce-week-end.html", t("sel_weekend")], ["s/ce-soir.html", t("sel_tonight")],
+          ["s/gratuites.html", t("sel_free")], ["s/talks-in-english.html", t("sel_en")],
+          ...Object.keys(DISC).filter(d => d !== "Autre").map(d => [`d/${slugify(d)}.html`, discName(d)])]
+          .map(([href, label], i) => <React.Fragment key={href}>{i > 0 && " · "}<a href={href} className="hover:text-foreground hover:underline">{label}</a></React.Fragment>)}
+      </nav>
     </footer>
 
 
