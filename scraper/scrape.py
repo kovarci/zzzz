@@ -2577,7 +2577,9 @@ QFAP_API = ("https://parisdata.opendatasoft.com/api/explore/v2.1/catalog/"
 # petits-déjeuners de réseau, soirées bien-être… hors sujet ici.
 _QFAP_SKIP = re.compile(
     r"^visites?\b|\bvisites?[- ](guid|conf)|astrolog|petit[- ]d[ée]j|ap[ée]ro\b|"
-    r"speed[- ]dating|yoga|m[ée]ditation|sophrolog|tarot|networking", re.I)
+    r"speed[- ]dating|yoga|m[ée]ditation|sophrolog|tarot|networking|"
+    # soirées et animations taguées « Conférence » par la Ville
+    r"^(gala|quiz|vernissage)\b|^troph[ée]es\b|\bcin[ée][- ]club\b|^carte blanche\b", re.I)
 
 
 def scrape_que_faire_a_paris():
@@ -5782,9 +5784,13 @@ def finalize_events(events):
     # Titres parasites (menus lus comme événements)
     events = [e for e in events if not is_junk_title(e.get("title", ""))]
     n = len(events)
-    events = [e for e in events if (e.get("source_type") or "institution") != "institution"
-              or not (_OFF_KIND.match((e.get("description") or "").strip())
-                      or _OFF_TITLE.match(e.get("title", "")))]
+    events = [e for e in events if not (
+        ((e.get("source_type") or "institution") == "institution"
+         and (_OFF_KIND.match((e.get("description") or "").strip()) or _OFF_TITLE.match(e.get("title", ""))
+              # filtre commun de _scrape_cards, que les parseurs dédiés (Sciences
+              # Po, Sorbonne…) n'appliquaient pas
+              or _OFF_TOPIC.search(e.get("title", ""))))
+        or (e.get("source_type") == "ville" and _QFAP_SKIP.search(e.get("title", ""))))]
     if len(events) < n:
         print(f"Concerts, expositions, vie étudiante retirés : {n - len(events)}")
     # « [Reporté] Atelier… », « Meetup 5 (POSTPONED) », « [SÉANCE REPORTÉE] »
