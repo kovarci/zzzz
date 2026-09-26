@@ -2,7 +2,13 @@
     qui est statique mais partage app.css pour rester identique au reste du site. */
 module.exports = {
   content: ["./src/**/*.{js,jsx}", "../index.html", "../apropos.html"],
-  darkMode: ["selector", '[data-theme="dark"]'],
+  // Sombre = choisi avec le bouton (data-theme="dark") OU réglage du système
+  // sans choix contraire. Avant, seul le bouton activait les variantes dark: :
+  // en sombre « système », icône de thème inversée, badges et textes pâles.
+  darkMode: ["variant", [
+    "@media (prefers-color-scheme: dark) { &:not(:where([data-theme=light], [data-theme=light] *)) }",
+    "&:where([data-theme=dark], [data-theme=dark] *)",
+  ]],
   theme: {
     extend: {
       fontFamily: { sans: ["Geist", "ui-sans-serif", "system-ui", "sans-serif"], mono: ["Geist Mono", "ui-monospace", "monospace"] },

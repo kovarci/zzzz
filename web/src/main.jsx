@@ -31,15 +31,17 @@ function Cover({ e, className = "", eager, label = true }) {
 function EventCard({ e, fav, onFav, onOpen, distance, past }) {
   const { t } = useI18n();
   const act = () => onOpen(e);
-  // Carte cliquable au clavier aussi (Tab puis Entrée / Espace)
-  return <div role="button" tabIndex={0} onClick={act} onKeyDown={ev => { if (ev.target === ev.currentTarget && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); act(); } }} className={cn("group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card shadow-sm cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-ring", past && "opacity-80")}>
+  // Le titre est le bouton de la carte (Tab puis Entrée) et sa zone cliquable
+  // (::after) couvre toute la carte : pas de bouton étoile imbriqué dans un
+  // « bouton » carte, que les lecteurs d'écran annonçaient mal.
+  return <div onClick={act} className={cn("group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card shadow-sm cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring", past && "opacity-80")}>
     {/* L'étoile n'apparaît qu'au survol… sauf sur écran tactile (pas de survol) et au clavier */}
-    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/80 backdrop-blur transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
+    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/80 backdrop-blur transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
     <Cover e={e} className="aspect-[16/10]" />
     <div className="p-4 flex flex-col gap-1.5 flex-1">
       <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {e.discipline}</span>
-        {distance !== undefined ? <Badge className="ml-auto shrink-0 tabular-nums">{fmtDist(distance)}</Badge> : isNew(e) && !past ? <Badge className="ml-auto shrink-0 border-sky-500/30 text-sky-600 dark:text-sky-400">{t("badge_new")}</Badge> : isFree(e) ? <Badge className="ml-auto shrink-0 border-emerald-500/30 text-emerald-600 dark:text-emerald-400">{t("badge_free")}</Badge> : null}</div>
-      <h3 className="font-semibold leading-snug tracking-tight line-clamp-3">{e.title}</h3>
+        {distance !== undefined ? <Badge className="ml-auto shrink-0 tabular-nums">{fmtDist(distance)}</Badge> : isNew(e) && !past ? <Badge className="ml-auto shrink-0 border-sky-500/30 text-sky-700 dark:text-sky-400">{t("badge_new")}</Badge> : isFree(e) ? <Badge className="ml-auto shrink-0 border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("badge_free")}</Badge> : null}</div>
+      <h3 className="font-semibold leading-snug tracking-tight line-clamp-3"><button type="button" onClick={ev => { ev.stopPropagation(); act(); }} className="text-left outline-none after:absolute after:inset-0 after:content-['']">{e.title}</button></h3>
       {e.speaker && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
       <p className="mt-auto pt-2 text-xs text-muted-foreground truncate">{isOnline(e) && (t("online_prefix") || "")}{e.institution}{placeOf(e) ? " · " + placeOf(e) : ""}</p>
     </div></div>;
@@ -101,7 +103,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = []
       {(() => { const d = parse(e.date), days = Math.round((d - today) / 864e5); return <>
         <div className="relative aspect-[16/10] shrink-0 group"><Cover e={e} className="absolute inset-0" eager /><button onClick={onClose} className="absolute top-3 right-3 z-[2] inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow hover:bg-background" aria-label={t("fermer")}><Icon d={ICONS.x} size={16} /></button></div>
         <div className="p-6 flex flex-col gap-4">
-          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), color: dc(e) }}>{e.discipline}</Badge><Badge>{kindOf(e)}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-600 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}{isEnglish(e) && <Badge title={t("filter_en_hint")}>{t("filter_en")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
+          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), "--dcol": dc(e) }} className="[color:color-mix(in_srgb,var(--dcol)_62%,#000)] dark:[color:var(--dcol)]">{e.discipline}</Badge><Badge>{kindOf(e)}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}{isEnglish(e) && <Badge title={t("filter_en_hint")}>{t("filter_en")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
           <h2 className="text-2xl font-semibold tracking-tight leading-tight [text-wrap:balance]">{e.title}</h2>
           <div className="flex items-center gap-3 rounded-lg border bg-card p-3">
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
@@ -278,7 +280,7 @@ function SpeakersPanel({ open, onClose, speakers, onUnfollow, pool, onOpenEvent,
     <motion.div initial={{ scale: .97, y: -8 }} animate={{ scale: 1, y: 0 }} exit={{ scale: .97, y: -8 }} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] -translate-x-1/2 rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
       <div className="flex items-center justify-between border-b px-4 py-3"><h2 className="font-semibold text-sm">{t("my_speakers")}</h2><button onClick={onClose} className="inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-accent" aria-label={t("fermer")}><Icon d={ICONS.x} size={15} /></button></div>
       {notifyPerm !== "unsupported" && <div className="px-4 py-2 border-b bg-muted/40 text-xs">
-        {notifyPerm === "granted" ? <span className="text-emerald-600 dark:text-emerald-400 font-medium">{t("notify_enabled")}</span>
+        {notifyPerm === "granted" ? <span className="text-emerald-700 dark:text-emerald-400 font-medium">{t("notify_enabled")}</span>
           : notifyPerm === "denied" ? <span className="text-muted-foreground">{t("notify_denied")}</span>
           : <button onClick={onEnableNotify} className="font-medium underline underline-offset-2 hover:text-foreground">{t("notify_enable")}</button>}
       </div>}
@@ -579,7 +581,7 @@ function App() {
               onClear={() => setF({ access: new Set(), online: false, free: false, en: false })} clearLabel={t("clear_all")} />; }}</Popover>
           <Button variant={filters.fav ? "default" : "outline"} size="sm" className="h-9 shrink-0" onClick={() => setF({ fav: !filters.fav })} aria-pressed={filters.fav}>★<span className="hidden sm:inline"> {t("btn_fav")}</span>{favs.size > 0 && <span className={cn("inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[11px]", filters.fav ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground")}>{favs.size}</span>}</Button>
           <div className="ml-auto flex shrink-0 items-center gap-2">
-            {!history && <Tabs value={view} onChange={setView} layoutId="view-pill" items={[["list", <Icon d={ICONS.list} size={15} />], ["week", <Icon d={ICONS.week} size={15} />], ["map", <Icon d={ICONS.map} size={15} />]]} />}
+            {!history && <Tabs value={view} onChange={setView} layoutId="view-pill" items={[["list", <Icon d={ICONS.list} size={15} />, t("view_list")], ["week", <Icon d={ICONS.week} size={15} />, t("view_week")], ["map", <Icon d={ICONS.map} size={15} />, t("view_map")]]} />}
             {!history && <Button variant={near ? "default" : "outline"} size="sm" className="h-9" onClick={toggleNear} aria-pressed={near} disabled={locating}><Icon d={ICONS.pin} size={14} /><span className="hidden lg:inline">{locating ? t("near_locate") : near ? t("near_sorted") : t("near_label")}</span></Button>}
           </div>
         </div>

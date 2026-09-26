@@ -4613,7 +4613,7 @@ def write_event_pages(events):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#71717a;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}}
+:root{{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#5f5f68;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}}
 @media (prefers-color-scheme:dark){{:root{{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted:#27272a;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}}}
 *{{box-sizing:border-box}}
 body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px 16px 40px;line-height:1.5;-webkit-font-smoothing:antialiased}}
@@ -4630,6 +4630,8 @@ body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background
 .body{{padding:20px 22px 22px}}
 .badges{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}}
 .badge{{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:600}}
+.dbadge{{border-color:var(--dc);color:color-mix(in srgb,var(--dc) 62%,#000)}}
+@media (prefers-color-scheme:dark){{.dbadge{{color:var(--dc)}}}}
 h1{{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}}
 .date{{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:14px}}
 .date .d{{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--muted);border-radius:8px;min-width:56px;padding:6px 10px}}
@@ -4642,7 +4644,7 @@ dt{{color:var(--muted-fg)}}dd{{margin:0;overflow-wrap:anywhere}}dd a{{color:inhe
 .cta{{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}}
 .cta a{{display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 12px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;line-height:1.2}}
 .cta .site{{background:var(--primary);color:var(--primary-fg)}}
-.cta .ext{{background:var(--dc);color:#fff}}
+.cta .ext{{background:color-mix(in srgb,var(--dc) 62%,#000);color:#fff}}
 .cta a:hover{{filter:brightness(1.08)}}
 @media (max-width:420px){{.cta{{grid-template-columns:1fr}}}}
 .note{{font-size:12px;color:var(--muted-fg);text-align:center;margin:10px 0 0}}
@@ -4664,7 +4666,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 <main class="card" style="--dc:{dcolor}">
 {cover_html}
 <div class="body">
-<div class="badges"><span class="badge" style="border-color:{dcolor};color:{dcolor}">{_esc_attr(ev.get('discipline',''))}</span><span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if _is_free(ev) else ''}</div>
+<div class="badges"><span class="badge dbadge">{_esc_attr(ev.get('discipline',''))}</span><span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if _is_free(ev) else ''}</div>
 <h1>{title}</h1>
 <div class="date"><div class="d"><small>{_wds(ev.get('date',''))}</small><b>{_dnum(ev.get('date',''))}</b><small>{_mos(ev.get('date',''))}</small></div><div class="t">{_esc_attr(date_label)}<span>{loc or 'Paris'}</span></div></div>
 <dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{speaker}</dd>' if speaker else ''}</dl>
@@ -4771,7 +4773,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#71717a;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}}
+:root{{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#5f5f68;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}}
 @media (prefers-color-scheme:dark){{:root{{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted:#27272a;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}}}
 *{{box-sizing:border-box}}
 body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px 16px 40px;line-height:1.5;-webkit-font-smoothing:antialiased}}
@@ -4779,7 +4781,7 @@ body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background
 .crumb{{font-size:12px;color:var(--muted-fg);margin:0 0 14px}}
 .crumb a{{color:inherit;text-decoration:none}}.crumb a:hover{{color:var(--fg)}}
 .card{{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -16px rgba(0,0,0,.25)}}
-.head{{position:relative;display:flex;align-items:flex-end;min-height:150px;padding:20px 22px;color:#fff;background:linear-gradient(135deg,var(--dc),color-mix(in srgb,var(--dc) 55%,#000))}}
+.head{{position:relative;display:flex;align-items:flex-end;min-height:150px;padding:20px 22px;color:#fff;background:linear-gradient(135deg,color-mix(in srgb,var(--dc) 78%,#000),color-mix(in srgb,var(--dc) 50%,#000))}}
 .head::before{{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:16px 16px;-webkit-mask-image:radial-gradient(ellipse at top right,#000,transparent 70%);mask-image:radial-gradient(ellipse at top right,#000,transparent 70%)}}
 .head .k{{position:absolute;top:14px;left:16px;background:rgba(255,255,255,.92);color:#18181b;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px}}
 .head h1{{position:relative;margin:0;font-size:28px;line-height:1.15;letter-spacing:-.02em;text-wrap:balance;text-shadow:0 1px 8px rgba(0,0,0,.3)}}

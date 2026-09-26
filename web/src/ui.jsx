@@ -141,7 +141,7 @@ export const Kbd = ({ children, className }) => <kbd className={cn("inline-flex 
 
 export function Tabs({ value, onChange, items, layoutId = "tab-pill" }) {
   return <div className="inline-flex h-9 items-center rounded-lg bg-muted p-1 text-muted-foreground relative">
-    {items.map(([v, l]) => <button key={v} onClick={() => onChange(v)} className={cn("relative z-10 inline-flex h-7 items-center rounded-md px-3 text-sm font-medium transition-colors whitespace-nowrap", value === v && "text-foreground")}>
+    {items.map(([v, l, label]) => <button key={v} onClick={() => onChange(v)} aria-label={label} title={label} aria-pressed={value === v} className={cn("relative z-10 inline-flex h-7 items-center rounded-md px-3 text-sm font-medium transition-colors whitespace-nowrap", value === v && "text-foreground")}>
       {value === v && <motion.span layoutId={layoutId} className="absolute inset-0 rounded-md bg-background shadow-sm" transition={{ type: "spring", stiffness: 500, damping: 40 }} />}
       <span className="relative">{l}</span></button>)}
   </div>;
