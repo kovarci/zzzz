@@ -6,39 +6,21 @@ METHOD:PUBLISH
 X-WR-CALNAME:Université Paris Dauphine · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
-UID:069f6a26ea82@paris-academique
-DTSTAMP:20260926T081748Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Journée d’étude sur les subventions étrangères et la compéti
- tivité
-DESCRIPTION:2026 25 sept.\nhttps://cr2d.dauphine.fr/fr/actualites/detail-de
- -lactualite/article/colloque-journee-detude-internationale-sur-les-subvent
- ions-etrangeres-et-la-competitivite-economi.html
+UID:d0a5252ee039@paris-academique
+DTSTAMP:20260926T083700Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Les Dau’Fis : relevez le défi sportif de la rentrée
+DESCRIPTION:2026 29 sept.\nhttps://dauphine.psl.eu/dauphine/media-et-commun
+ ication/article/les-daufis-relevez-le-defi-sportif-de-la-rentree
 LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
  gny\, Paris 16e
-URL:https://cr2d.dauphine.fr/fr/actualites/detail-de-lactualite/article/col
- loque-journee-detude-internationale-sur-les-subventions-etrangeres-et-la-c
- ompetitivite-economi.html
-END:VEVENT
-BEGIN:VEVENT
-UID:28e2bc6ef472@paris-academique
-DTSTAMP:20260926T081748Z
-DTSTART;VALUE=DATE:20260925
-DTEND;VALUE=DATE:20260926
-SUMMARY:Séminaire en ligne : Family Equity Financing and Startup Innovatio
- n
-DESCRIPTION:2026 25 sept.\nhttps://dauphine.psl.eu/dauphine/media-et-commun
- ication/article/seminar-online-family-equity-financing-and-startup-innovat
- ion
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/seminar
- -online-family-equity-financing-and-startup-innovation
+URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/les-dau
+ fis-relevez-le-defi-sportif-de-la-rentree
 END:VEVENT
 BEGIN:VEVENT
 UID:954eb51f0ffb@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Séminaire LAMSADE (Jeux et Choix Social) : Sports ranking by point
@@ -53,21 +35,8 @@ URL:https://www.lamsade.dauphine.fr/fr/actualites/detail-de-lactualite/arti
  ere-there-is-none.html
 END:VEVENT
 BEGIN:VEVENT
-UID:d0a5252ee039@paris-academique
-DTSTAMP:20260926T081748Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Les Dau’Fis : relevez le défi sportif de la rentrée
-DESCRIPTION:2026 29 sept.\nhttps://dauphine.psl.eu/dauphine/media-et-commun
- ication/article/les-daufis-relevez-le-defi-sportif-de-la-rentree
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/les-dau
- fis-relevez-le-defi-sportif-de-la-rentree
-END:VEVENT
-BEGIN:VEVENT
 UID:7c48337aa72b@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Masterclass : Des terres minées\, 11 enquêtes sur les sols en Fra
@@ -82,7 +51,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/masterc
 END:VEVENT
 BEGIN:VEVENT
 UID:a3c54749d473@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Vertical Artificial Intelligences : Specificities and Challenges
@@ -93,21 +62,8 @@ LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
 URL:https://chairgovreg.fondation-dauphine.fr/fr/%C3%A9v%C3%A9nements/2015
 END:VEVENT
 BEGIN:VEVENT
-UID:2b95dfcae1a8@paris-academique
-DTSTAMP:20260926T081748Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
-SUMMARY:Conférence: Le droit dans la Nuit ?
-DESCRIPTION:2026 05 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
- cation/article/conference-le-droit-dans-la-nuit
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/confere
- nce-le-droit-dans-la-nuit
-END:VEVENT
-BEGIN:VEVENT
 UID:86e45d20aefb@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Cycle de conférences : Les mardis du Master Droits et RSE
@@ -120,8 +76,36 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/cycle-d
  e-conferences-les-mardis-du-master-droits-et-rse-2
 END:VEVENT
 BEGIN:VEVENT
+UID:2b95dfcae1a8@paris-academique
+DTSTAMP:20260926T083700Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:Conférence: Le droit dans la Nuit ?
+DESCRIPTION:2026 05 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
+ cation/article/conference-le-droit-dans-la-nuit
+LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
+ gny\, Paris 16e
+URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/confere
+ nce-le-droit-dans-la-nuit
+END:VEVENT
+BEGIN:VEVENT
+UID:53083ce3c28c@paris-academique
+DTSTAMP:20260926T083700Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Projection : Éclaireurs\, réinventer le travail face aux défis 
+ écologiques
+DESCRIPTION:2026 06 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
+ cation/article/projection-eclaireurs-reinventer-le-travail-face-aux-defis-
+ ecologiques
+LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
+ gny\, Paris 16e
+URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/project
+ ion-eclaireurs-reinventer-le-travail-face-aux-defis-ecologiques
+END:VEVENT
+BEGIN:VEVENT
 UID:c1184cac4b51@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Séminaire LAMSADE (Jeux et Choix Social) : Hayekian Cyborg: Distri
@@ -136,38 +120,8 @@ URL:https://www.lamsade.dauphine.fr/fr/actualites/detail-de-lactualite/arti
  oject.html
 END:VEVENT
 BEGIN:VEVENT
-UID:53083ce3c28c@paris-academique
-DTSTAMP:20260926T081748Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
-SUMMARY:Projection : Éclaireurs\, réinventer le travail face aux défis 
- écologiques
-DESCRIPTION:2026 06 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
- cation/article/projection-eclaireurs-reinventer-le-travail-face-aux-defis-
- ecologiques
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/project
- ion-eclaireurs-reinventer-le-travail-face-aux-defis-ecologiques
-END:VEVENT
-BEGIN:VEVENT
-UID:efec2a64f47a@paris-academique
-DTSTAMP:20260926T081748Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:Entreprises familiales : transmettre pour la souveraineté économi
- que
-DESCRIPTION:2026 07 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
- cation/article/entreprises-familiales-transmettre-pour-la-souverainete-eco
- nomique
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/entrepr
- ises-familiales-transmettre-pour-la-souverainete-economique
-END:VEVENT
-BEGIN:VEVENT
 UID:e199a489871d@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Rencontre autour du DU Passerelle avec l'association Fleur de Bitum
@@ -181,8 +135,23 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/rencont
  re-autour-du-du-passerelle-avec-lassociation-fleur-de-bitume
 END:VEVENT
 BEGIN:VEVENT
+UID:efec2a64f47a@paris-academique
+DTSTAMP:20260926T083700Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Entreprises familiales : transmettre pour la souveraineté économi
+ que
+DESCRIPTION:2026 07 oct.\nhttps://dauphine.psl.eu/dauphine/media-et-communi
+ cation/article/entreprises-familiales-transmettre-pour-la-souverainete-eco
+ nomique
+LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
+ gny\, Paris 16e
+URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/entrepr
+ ises-familiales-transmettre-pour-la-souverainete-economique
+END:VEVENT
+BEGIN:VEVENT
 UID:448641d959dd@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Remise du Prix du journalisme environnemental 2026
@@ -195,7 +164,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/prix-du
 END:VEVENT
 BEGIN:VEVENT
 UID:0ce4704d1217@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Projection : (In)Action\, un documentaire sur l'engagement climatiq
@@ -210,7 +179,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/project
 END:VEVENT
 BEGIN:VEVENT
 UID:c39d980f00bf@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Lancement de la seconde Convention Citoyenne Etudiante
@@ -224,7 +193,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/lanceme
 END:VEVENT
 BEGIN:VEVENT
 UID:e680bfd1b04c@paris-academique
-DTSTAMP:20260926T081748Z
+DTSTAMP:20260926T083700Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Projection : À contre champs\, un mémoire d'étudiantes devenu do
