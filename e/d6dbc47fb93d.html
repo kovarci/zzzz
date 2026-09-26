@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#71717a;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}
+:root{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#5f5f68;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}
 @media (prefers-color-scheme:dark){:root{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted:#27272a;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}
 *{box-sizing:border-box}
 body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px 16px 40px;line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -39,6 +39,8 @@ body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:
 .body{padding:20px 22px 22px}
 .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .badge{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:600}
+.dbadge{border-color:var(--dc);color:color-mix(in srgb,var(--dc) 62%,#000)}
+@media (prefers-color-scheme:dark){.dbadge{color:var(--dc)}}
 h1{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}
 .date{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:14px}
 .date .d{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--muted);border-radius:8px;min-width:56px;padding:6px 10px}
@@ -51,7 +53,7 @@ dt{color:var(--muted-fg)}dd{margin:0;overflow-wrap:anywhere}dd a{color:inherit;t
 .cta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
 .cta a{display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 12px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;line-height:1.2}
 .cta .site{background:var(--primary);color:var(--primary-fg)}
-.cta .ext{background:var(--dc);color:#fff}
+.cta .ext{background:color-mix(in srgb,var(--dc) 62%,#000);color:#fff}
 .cta a:hover{filter:brightness(1.08)}
 @media (max-width:420px){.cta{grid-template-columns:1fr}}
 .note{font-size:12px;color:var(--muted-fg);text-align:center;margin:10px 0 0}
@@ -73,7 +75,7 @@ h2{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-t
 <main class="card" style="--dc:#71717A">
 <div class="cover"><img src="https://images.lumacdn.com/uploads/5t/6a77de85-e6f7-4990-a7b6-b95cb6c5c4b8.png" alt="" loading="eager"><span class="kind">Rencontre</span></div>
 <div class="body">
-<div class="badges"><span class="badge" style="border-color:#71717A;color:#71717A">Autre</span><span class="badge">Rencontre</span></div>
+<div class="badges"><span class="badge dbadge">Autre</span><span class="badge">Rencontre</span></div>
 <h1>Wind&#x27;s Pool Party — VivaTech 26&#x27; Side-Event</h1>
 <div class="date"><div class="d"><small>jeu</small><b>18</b><small>juin</small></div><div class="t">18 juin 2026 à 18:30<span>Paris</span></div></div>
 <dl><dt>Organisé par</dt><dd>Wind</dd></dl>

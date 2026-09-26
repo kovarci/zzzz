@@ -7,7 +7,7 @@ X-WR-CALNAME:ENS Paris · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:bf40c58b953b@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:La donnée comme munition numérique : Table-ronde pour la Nuit de 
@@ -21,7 +21,7 @@ URL:https://ciens.ens.psl.eu/evenements/osint-renseignement-et-recherche-de
 END:VEVENT
 BEGIN:VEVENT
 UID:ac493e5e51fc@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:Nuit des données
@@ -32,7 +32,7 @@ URL:https://www.ens.psl.eu/agenda/nuit-des-donnees/2026-09-25t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:9658016c1e03@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:L’Intelligence Artificielle : entre promesses\, illusions et rév
@@ -45,7 +45,7 @@ URL:https://www.ens.psl.eu/agenda/l-intelligence-artificielle-entre-promess
 END:VEVENT
 BEGIN:VEVENT
 UID:fb36fae8a846@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
 SUMMARY:La Nuit de l'ENS
@@ -56,7 +56,7 @@ URL:https://www.ens.psl.eu/agenda/la-nuit-de-l-ens/2026-09-25t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:cb4dc4811cbd@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Lectures lévinassiennes
@@ -67,7 +67,7 @@ URL:https://www.ens.psl.eu/agenda/lectures-levinassiennes/2026-09-28t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:ef764e63916d@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Existe-t-il une médecine européenne ?
@@ -79,7 +79,7 @@ URL:https://www.ens.psl.eu/agenda/existe-t-il-une-medecine-europeenne/2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:7019f7148cd8@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Assises des études universitaires sur le nucléaire militaire
@@ -92,7 +92,7 @@ URL:https://ciens.ens.psl.eu/evenements/assises-des-etudes-universitaires-s
 END:VEVENT
 BEGIN:VEVENT
 UID:8753c7af76ac@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261006T170000
 DTEND:20261006T190000
 SUMMARY:Louise Michel : le manuscrit infini
@@ -103,7 +103,7 @@ URL:https://www.item.ens.fr/c-retat-louise-michel-le-manuscrit-infini
 END:VEVENT
 BEGIN:VEVENT
 UID:1b9f4e496e01@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261007T131500
 DTEND:20261007T141500
 SUMMARY:David Bessis – La chute de l’économie du théorème
@@ -116,31 +116,8 @@ URL:https://www.math.ens.psl.eu/evenement/david-bessis-la-chute-de-leconomi
  e-du-theoreme/
 END:VEVENT
 BEGIN:VEVENT
-UID:f31262bcf8c6@paris-academique
-DTSTAMP:20260925T224052Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:Atelier Digit_Hum 2026
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-0
- 8t070000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
-END:VEVENT
-BEGIN:VEVENT
-UID:9b05dd97a7de@paris-academique
-DTSTAMP:20260925T224052Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:« Hors tout et débordements »
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/hors-tout-et-debordements/2026-
- 10-08t120000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/hors-tout-et-debordements/2026-10-08t1200
- 00
-END:VEVENT
-BEGIN:VEVENT
 UID:e0bd49eddd4a@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Autodafés. Ces livres qu'on brûle
@@ -151,8 +128,31 @@ URL:https://www.ens.psl.eu/agenda/autodafes-ces-livres-qu-brule/2026-10-08t
  160000
 END:VEVENT
 BEGIN:VEVENT
+UID:9b05dd97a7de@paris-academique
+DTSTAMP:20260926T081748Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:« Hors tout et débordements »
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/hors-tout-et-debordements/2026-
+ 10-08t120000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/hors-tout-et-debordements/2026-10-08t1200
+ 00
+END:VEVENT
+BEGIN:VEVENT
+UID:f31262bcf8c6@paris-academique
+DTSTAMP:20260926T081748Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Atelier Digit_Hum 2026
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-0
+ 8t070000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/atelier-digithum-2026/2026-10-08t070000
+END:VEVENT
+BEGIN:VEVENT
 UID:9f265bae017a@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261008T140000
 DTEND:20261008T163000
 SUMMARY:Hors-tout et débordements : démarches d’émancipation du medium
@@ -168,20 +168,8 @@ URL:https://www.item.ens.fr/aurele-crasson-item-ens-delphine-desveaux-colle
  -du-medium-photographique-presentation-de-l
 END:VEVENT
 BEGIN:VEVENT
-UID:f60f479b82a1@paris-academique
-DTSTAMP:20260925T224052Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
-SUMMARY:Transferts Culturels – Kulturtransfer – Intercultural Transfers
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/transferts-culturels-kulturtran
- sfer-intercultural-transfers/2026-10-09t080000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/transferts-culturels-kulturtransfer-inter
- cultural-transfers/2026-10-09t080000
-END:VEVENT
-BEGIN:VEVENT
 UID:3309f4121594@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Théophile de Viau. Poésie et liberté
@@ -192,8 +180,20 @@ URL:https://www.ens.psl.eu/agenda/theophile-de-viau-poesie-et-liberte/2026-
  10-09t113000
 END:VEVENT
 BEGIN:VEVENT
+UID:f60f479b82a1@paris-academique
+DTSTAMP:20260926T081748Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Transferts Culturels – Kulturtransfer – Intercultural Transfers
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/transferts-culturels-kulturtran
+ sfer-intercultural-transfers/2026-10-09t080000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/transferts-culturels-kulturtransfer-inter
+ cultural-transfers/2026-10-09t080000
+END:VEVENT
+BEGIN:VEVENT
 UID:d77431c9f9b2@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261009T100000
 DTEND:20261009T120000
 SUMMARY:La correspondance zolienne à l’épreuve de la génétique : un n
@@ -206,7 +206,7 @@ URL:https://www.item.ens.fr/la-correspondance-zolienne-a-lepreuve-de-la-gen
 END:VEVENT
 BEGIN:VEVENT
 UID:843fb94aa236@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:L’ENS-PSL vous invite à fêter toutes les sciences
@@ -218,7 +218,7 @@ URL:https://www.ens.psl.eu/agenda/l-ens-psl-vous-invite-feter-toutes-les-sc
 END:VEVENT
 BEGIN:VEVENT
 UID:af474c0cde7e@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:L’Histoire transnationale\, impériale et globale
@@ -230,7 +230,7 @@ URL:https://www.ens.psl.eu/agenda/l-histoire-transnationale-imperiale-et-gl
 END:VEVENT
 BEGIN:VEVENT
 UID:fe76b56820c3@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261013T093000
 DTEND:20261013T123000
 SUMMARY:Thierry Gallay – Dynamique des tourbillons visqueux dans un demi-
@@ -247,19 +247,8 @@ URL:https://www.math.ens.psl.eu/evenement/thierry-gallay-universite-grenobl
  e-alpes/
 END:VEVENT
 BEGIN:VEVENT
-UID:178bb5a0f397@paris-academique
-DTSTAMP:20260925T224052Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Les Europe(s) Spatiale(s)
-DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/les-europes-spatiales/2026-10-1
- 5t143000
-LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
-URL:https://www.ens.psl.eu/agenda/les-europes-spatiales/2026-10-15t143000
-END:VEVENT
-BEGIN:VEVENT
 UID:e6d6d1545a0f@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Histoires de genre
@@ -269,8 +258,19 @@ LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
 URL:https://www.ens.psl.eu/agenda/histoires-de-genre/2026-10-15t150000
 END:VEVENT
 BEGIN:VEVENT
+UID:178bb5a0f397@paris-academique
+DTSTAMP:20260926T081748Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Les Europe(s) Spatiale(s)
+DESCRIPTION:\nhttps://www.ens.psl.eu/agenda/les-europes-spatiales/2026-10-1
+ 5t143000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/les-europes-spatiales/2026-10-15t143000
+END:VEVENT
+BEGIN:VEVENT
 UID:a731676a56da@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261016T170000
 DTEND:20261016T190000
 SUMMARY:Delphine Buysse et Thomas Sazpinar\, « Archive\, contre-archive »
@@ -283,7 +283,7 @@ URL:https://www.item.ens.fr/delphine-buysse-et-thomas-sazpinar
 END:VEVENT
 BEGIN:VEVENT
 UID:e0f7f01d67a7@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261020T123000
 DTEND:20261020T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -295,7 +295,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:4b4a5d83498d@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261021T131500
 DTEND:20261021T141500
 SUMMARY:Séminaire Des mathématiques : Antoine Joux
@@ -307,7 +307,7 @@ URL:https://www.math.ens.psl.eu/evenement/antoine-joux/
 END:VEVENT
 BEGIN:VEVENT
 UID:a3ef0ff5105e@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Littérature et Cinéma chinois - Regards croisés entre texte et 
@@ -320,7 +320,7 @@ URL:https://www.ens.psl.eu/agenda/litterature-et-cinema-chinois-regards-cro
 END:VEVENT
 BEGIN:VEVENT
 UID:7f58be029335@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261103T093000
 DTEND:20261103T183000
 SUMMARY:Automath! À qui appartiennent les mathématiques ? Maths + IA Cont
@@ -339,7 +339,7 @@ URL:https://www.math.ens.psl.eu/evenement/automath-a-qui-appartiennent-les-
 END:VEVENT
 BEGIN:VEVENT
 UID:d4a9e54ec431@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261103T123000
 DTEND:20261103T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -351,7 +351,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:cbc462482bc5@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261104T131500
 DTEND:20261104T141500
 SUMMARY:Séminaire Des mathématiques : Cristina Toninelli
@@ -363,7 +363,7 @@ URL:https://www.math.ens.psl.eu/evenement/cristina-toninelli/
 END:VEVENT
 BEGIN:VEVENT
 UID:cd485d4f4a0a@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Edoardo Cagnan et Claire Riffard : parutions récentes sur Senghor
@@ -374,7 +374,7 @@ URL:https://www.item.ens.fr/edoardo-cagnan
 END:VEVENT
 BEGIN:VEVENT
 UID:df752dfb6922@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261110T093000
 DTEND:20261110T123000
 SUMMARY:Séminaire Analyse non linéaire et EDP : Monica Musso (University 
@@ -387,7 +387,7 @@ URL:https://www.math.ens.psl.eu/evenement/monica-musso-university-of-bath/
 END:VEVENT
 BEGIN:VEVENT
 UID:7c53dd8212ab@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261113T100000
 DTEND:20261113T120000
 SUMMARY:Qu’est-ce que le naturalisme ? Approche médiatique et culturelle
@@ -403,7 +403,7 @@ URL:https://www.item.ens.fr/marie-astrid-charlier-universite-paul-valery-mo
 END:VEVENT
 BEGIN:VEVENT
 UID:3fca33a07c4b@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261117T123000
 DTEND:20261117T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -415,7 +415,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:b65c91e35ebe@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261201T123000
 DTEND:20261201T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -427,7 +427,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:c94f7ebbe77f@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261201T170000
 DTEND:20261201T190000
 SUMMARY:Écrire l’Histoire\, écrire dans l’Histoire : Queneau au trava
@@ -441,7 +441,7 @@ URL:https://www.item.ens.fr/daniela-tononi-universite-de-palerme-ecrire-lhi
 END:VEVENT
 BEGIN:VEVENT
 UID:5bdc720530e6@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261202T131500
 DTEND:20261202T141500
 SUMMARY:Séminaire Des mathématiques : Estelle Kuhn
@@ -453,7 +453,7 @@ URL:https://www.math.ens.psl.eu/evenement/estelle-kuhn/
 END:VEVENT
 BEGIN:VEVENT
 UID:a1b70e8b458c@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261203T180000
 DTEND:20261203T200000
 SUMMARY:Cycle de conférences du CERES : Les environnements face au numéri
@@ -467,7 +467,7 @@ URL:https://ceres.ens.psl.eu/./?Cycle-de-conferences-du-CERES-2026-2027-Les
 END:VEVENT
 BEGIN:VEVENT
 UID:b6db22b25ea8@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261208T093000
 DTEND:20261208T123000
 SUMMARY:Séminaire Analyse non linéaire et EDP : Jonathan Luk (Stanford Un
@@ -480,7 +480,7 @@ URL:https://www.math.ens.psl.eu/evenement/jonathan-luk-stanford-university/
 END:VEVENT
 BEGIN:VEVENT
 UID:40492c5710a1@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:Bourbaki et la théorie des catégories
@@ -491,7 +491,7 @@ URL:https://www.item.ens.fr/bourbaki-et-la-theorie-des-categories
 END:VEVENT
 BEGIN:VEVENT
 UID:7b76a31387b5@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261211T100000
 DTEND:20261211T120000
 SUMMARY:Émile Zola. Scènes d’une vie d’écrivain
@@ -504,7 +504,7 @@ URL:https://www.item.ens.fr/alain-pages-sorbonne-nouvelle-emile-zola-scenes
 END:VEVENT
 BEGIN:VEVENT
 UID:10b4437a4da5@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20261215T123000
 DTEND:20261215T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -516,7 +516,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:2271ef303705@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270105T123000
 DTEND:20270105T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -528,7 +528,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:e63c91276537@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270119T123000
 DTEND:20270119T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -540,7 +540,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:7b054a057293@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270119T170000
 DTEND:20270119T190000
 SUMMARY:Présentation du n°63 de Genesis : « La Vie des œuvres »
@@ -551,7 +551,7 @@ URL:https://www.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
 END:VEVENT
 BEGIN:VEVENT
 UID:b268948dfb91@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270121T180000
 DTEND:20270121T200000
 SUMMARY:Cycle de conférences du CERES : Les environnements face au numéri
@@ -565,7 +565,7 @@ URL:https://ceres.ens.psl.eu/./?Cycle-de-conferences-du-CERES-2026-2027-Les
 END:VEVENT
 BEGIN:VEVENT
 UID:ffdbe012b2fc@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270122T100000
 DTEND:20270122T120000
 SUMMARY:D’où viennent les stylèmes naturalistes ?
@@ -578,7 +578,7 @@ URL:https://www.item.ens.fr/dominique-legallois-sorbonne-nouvelle-dou-vienn
 END:VEVENT
 BEGIN:VEVENT
 UID:50b96e6e179f@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
 SUMMARY:Histoire de la médecine et de la santé : perspectives transnation
@@ -591,7 +591,7 @@ URL:https://www.ens.psl.eu/agenda/histoire-de-la-medecine-et-de-la-sante-pe
 END:VEVENT
 BEGIN:VEVENT
 UID:18d74e187473@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270202T093000
 DTEND:20270202T123000
 SUMMARY:Séminaire Analyse non linéaire et EDP : Alexander Kiselev (Duke U
@@ -605,7 +605,7 @@ URL:https://www.math.ens.psl.eu/evenement/alexander-kiselev-duke-university
 END:VEVENT
 BEGIN:VEVENT
 UID:f0564692556e@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270202T123000
 DTEND:20270202T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -617,7 +617,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:4ee3679e40a2@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
 SUMMARY:Yves Chemla et Alba Pessini : « Les manuscrits de Jean-Claude Char
@@ -631,7 +631,7 @@ URL:https://www.item.ens.fr/yves-chemla-et-alba-pessini-les-manuscrits-de-j
 END:VEVENT
 BEGIN:VEVENT
 UID:6cbfca8f4c46@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270216T123000
 DTEND:20270216T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -643,7 +643,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:5e27a8a58aaa@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270222T170000
 DTEND:20270222T190000
 SUMMARY:Olivier Cadiot (écrivain et traducteur) en dialogue avec Nathalie 
@@ -655,7 +655,7 @@ URL:https://www.item.ens.fr/o-cadiot-n-koble
 END:VEVENT
 BEGIN:VEVENT
 UID:71b3e6b68897@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270226T100000
 DTEND:20270226T120000
 SUMMARY:Marie Duval – « Dreyfus au théâtre et au cinéma : un héros o
@@ -668,7 +668,7 @@ URL:https://www.item.ens.fr/marie-duval-dreyfus-au-theatre-et-au-cinema-un-
 END:VEVENT
 BEGIN:VEVENT
 UID:6579c810570d@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270302T123000
 DTEND:20270302T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -680,7 +680,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:61cb6c4028cb@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270310T160000
 DTEND:20270310T180000
 SUMMARY:Michaël Ferrier\, Jean-Pierre Orban\, Jérôme Villeminoz : « L
@@ -693,7 +693,7 @@ URL:https://www.item.ens.fr/michael-ferrier
 END:VEVENT
 BEGIN:VEVENT
 UID:53f71be14412@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270311T180000
 DTEND:20270311T200000
 SUMMARY:Cycle de conférences du CERES : Les environnements face au numéri
@@ -707,7 +707,7 @@ URL:https://ceres.ens.psl.eu/./?Cycle-de-conferences-du-CERES-2026-2027-Les
 END:VEVENT
 BEGIN:VEVENT
 UID:ca2d9349158f@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270316T093000
 DTEND:20270316T123000
 SUMMARY:Séminaire Analyse non linéaire et EDP : Pin Yu (Tsinghua Universi
@@ -720,7 +720,7 @@ URL:https://www.math.ens.psl.eu/evenement/pin-yu-tsinghua-university/
 END:VEVENT
 BEGIN:VEVENT
 UID:d2c40489bbff@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270316T123000
 DTEND:20270316T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -732,7 +732,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:d30e1064bd01@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270316T170000
 DTEND:20270316T190000
 SUMMARY:(sur Gustave Roud\, poète)
@@ -743,7 +743,7 @@ URL:https://www.item.ens.fr/sur-gustave-roud-poete
 END:VEVENT
 BEGIN:VEVENT
 UID:ea618c01a3c1@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270326T100000
 DTEND:20270326T120000
 SUMMARY:Julia Daudet : Un siècle de vie littéraire
@@ -756,7 +756,7 @@ URL:https://www.item.ens.fr/anne-simone-pierre-dufief-universite-dangers-et
 END:VEVENT
 BEGIN:VEVENT
 UID:423bb4318dee@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270330T123000
 DTEND:20270330T143000
 SUMMARY:Séminaire Futurs écologiques
@@ -768,7 +768,7 @@ URL:https://ceres.ens.psl.eu/./?Seminaire-Futurs-ecologiques-768
 END:VEVENT
 BEGIN:VEVENT
 UID:e95bc09f8370@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270420T093000
 DTEND:20270420T123000
 SUMMARY:Séminaire Analyse non linéaire et EDP : Michael Goldman (École P
@@ -782,7 +782,7 @@ URL:https://www.math.ens.psl.eu/evenement/michael-goldman-ecole-polytechniq
 END:VEVENT
 BEGIN:VEVENT
 UID:921c238ed86a@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270421T160000
 DTEND:20270421T180000
 SUMMARY:Habib Tengour et Hervé Sanson : « Habib Tengour à l’œuvre » 
@@ -795,7 +795,7 @@ URL:https://www.item.ens.fr/habib-tengour
 END:VEVENT
 BEGIN:VEVENT
 UID:3d9f390e2db2@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270422T180000
 DTEND:20270422T200000
 SUMMARY:Cycle de conférences du CERES : Les environnements face au numéri
@@ -809,7 +809,7 @@ URL:https://ceres.ens.psl.eu/./?Cycle-de-conferences-du-CERES-2026-2027-Les
 END:VEVENT
 BEGIN:VEVENT
 UID:ed7ead670914@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270423T100000
 DTEND:20270423T120000
 SUMMARY:La première version connue d’ Une vie de Maupassant. Les débuts
@@ -822,7 +822,7 @@ URL:https://www.item.ens.fr/antonia-fonyi-cnrs-genese-dune-vie-de-maupassan
 END:VEVENT
 BEGIN:VEVENT
 UID:af3ac93ede28@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270427T170000
 DTEND:20270427T190000
 SUMMARY:Belinda Cannone (romancière et essayiste)
@@ -833,7 +833,7 @@ URL:https://www.item.ens.fr/belinda-cannone-romanciere-et-essayiste
 END:VEVENT
 BEGIN:VEVENT
 UID:4706b2fc7b0c@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270518T093000
 DTEND:20270518T123000
 SUMMARY:Séminaire Analyse non linéaire et EDP : Louise Gassot (Universit
@@ -847,7 +847,7 @@ URL:https://www.math.ens.psl.eu/evenement/louise-gassot-universite-de-renne
 END:VEVENT
 BEGIN:VEVENT
 UID:da96b7a614d7@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270608T170000
 DTEND:20270608T190000
 SUMMARY:Présentation du n°64 de Genesis : « Jeux vidéo »
@@ -858,7 +858,7 @@ URL:https://www.item.ens.fr/presentation-du-n64-de-genesis-jeux-video
 END:VEVENT
 BEGIN:VEVENT
 UID:1f472bb88620@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Journée sur les archives de Claude Chevalley
@@ -869,7 +869,7 @@ URL:https://www.item.ens.fr/journee-sur-les-archives-de-claude-chevalley
 END:VEVENT
 BEGIN:VEVENT
 UID:002bc0e4e2cc@paris-academique
-DTSTAMP:20260925T224052Z
+DTSTAMP:20260926T081748Z
 DTSTART:20270622T093000
 DTEND:20270622T123000
 SUMMARY:Séminaire Analyse non linéaire et EDP : Mihaela Ifrim (University

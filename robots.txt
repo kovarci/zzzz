@@ -1,4 +1,8 @@
 User-agent: *
+# Code source et ancienne version du site : servis par GitHub Pages, rien à indexer
+Disallow: /web/
+Disallow: /scraper/
+Disallow: /maj.bat
 Allow: /
 
 Sitemap: https://lotent.fr/sitemap.xml
