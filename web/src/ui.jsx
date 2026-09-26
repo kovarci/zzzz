@@ -9,10 +9,25 @@ import { cn } from "./lib.js";
 // Fenêtre modale : focus déplacé dedans à l'ouverture, Tab et Maj+Tab restent
 // dedans, focus rendu à l'élément qui l'a ouverte à la fermeture.
 const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea,[tabindex]:not([tabindex="-1"])';
+// Page derrière figée tant qu'une fenêtre est ouverte (compteur : fenêtres
+// empilées) ; la largeur de la barre de défilement est compensée.
+let scrollLocks = 0;
+function lockScroll() {
+  if (scrollLocks++) return;
+  const root = document.documentElement, bar = window.innerWidth - root.clientWidth;
+  root.style.overflow = "hidden";
+  if (bar > 0) root.style.paddingRight = `${bar}px`;
+}
+function unlockScroll() {
+  if (--scrollLocks > 0) return;
+  scrollLocks = 0;
+  document.documentElement.style.overflow = ""; document.documentElement.style.paddingRight = "";
+}
 export function useFocusTrap(active) {
   const ref = useRef(null);
   useEffect(() => {
     if (!active) return;
+    lockScroll();
     const opener = document.activeElement;
     const items = () => [...(ref.current?.querySelectorAll(FOCUSABLE) || [])].filter(el => el.getClientRects().length);
     const t = setTimeout(() => {
@@ -31,7 +46,7 @@ export function useFocusTrap(active) {
     };
     document.addEventListener("keydown", onKey);
     return () => {
-      clearTimeout(t); document.removeEventListener("keydown", onKey);
+      clearTimeout(t); document.removeEventListener("keydown", onKey); unlockScroll();
       if (opener && opener !== document.body && opener.isConnected) setTimeout(() => opener.focus?.({ preventScroll: true }), 0);
     };
   }, [active]);
