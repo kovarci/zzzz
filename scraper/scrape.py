@@ -4767,8 +4767,10 @@ def write_event_pages(events):
                 if x.strip()]
         bits = [x for x in bits if not (inst_s and (slugify(x) in inst_s or inst_s in slugify(x)))]
         where = ", ".join(bits[:2])
-        sent = (f"{cut(t_, 90)} — conférence le {when}, organisée par {ev.get('institution','')}"
-                + (f", avec {cut(ev['speaker'], 50)}" if ev.get("speaker") else "")
+        rest = (f" — conférence le {when}, organisée par {ev.get('institution','')}"
+                + (f", avec {cut(ev['speaker'], 50)}" if ev.get("speaker") else ""))
+        # le titre prend ce qui reste : date et organisateur ne sont jamais coupés
+        sent = (cut(t_, max(45, 152 - len(rest))) + rest
                 + (f" · {where}" if where and where.lower() != "paris" else " · Paris") + ".")
         meta_desc = _esc_attr(cut(sent, 155))
         img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
