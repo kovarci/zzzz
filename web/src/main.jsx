@@ -447,6 +447,20 @@ function App() {
     ensureArchive().then(a => { const p = a.find(x => x.id === id); p ? setOpen(p) : notify(t("toast_not_found")); });
   }, [events, complete]);
   useEffect(() => { window.history.replaceState(null, "", urlFromState({ filters, view, history, rawQ })); }, [filters, view, history, rawQ]);
+  // Fiche = une étape d'historique (?event=<id>) : le bouton « retour » du
+  // téléphone la ferme au lieu de quitter le site. Passer d'une fiche à une
+  // autre (séances liées) remplace l'étape au lieu d'en empiler.
+  const sheetStep = useRef(false);
+  useEffect(() => {
+    const url = () => { const u = new URL(location.href); if (open) u.searchParams.set("event", open.id); else u.searchParams.delete("event"); return u; };
+    if (open && !sheetStep.current) { window.history.pushState({ sheet: 1 }, "", url()); sheetStep.current = true; }
+    else if (open) window.history.replaceState({ sheet: 1 }, "", url());
+    else if (sheetStep.current) { sheetStep.current = false; if (window.history.state?.sheet) window.history.back(); }
+  }, [open]);
+  useEffect(() => {
+    const h = () => { if (sheetStep.current) { sheetStep.current = false; setOpen(null); } };
+    window.addEventListener("popstate", h); return () => window.removeEventListener("popstate", h);
+  }, []);
   // « Aujourd'hui », « Ce soir », la semaine… sont calculés au chargement :
   // un onglet (ou l'appli installée) rouvert le lendemain affichait encore la
   // veille. On recharge quand on revient sur la page après minuit.
