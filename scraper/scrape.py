@@ -5067,6 +5067,11 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
             ids = (by_url.get(html_unescape(m.group(1))) or past_url.get(html_unescape(m.group(1)), [])) if m else []
             if f.stem in alias_of:
                 ids = [alias_of[f.stem]]
+            # Redirection déjà en place vers une fiche toujours publiée : on la
+            # garde (la maj locale ne connaît pas tous les alias du robot).
+            prev = re.search(r'http-equiv="refresh" content="0; url=([0-9a-f]{12})\.html"', old)
+            if not ids and prev and f"{prev.group(1)}.html" in keep:
+                continue
             if len(ids) == 1 and f"{ids[0]}.html" != f.name:
                 new = ids[0]
                 f.write_text(
