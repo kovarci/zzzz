@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
+import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
@@ -59,7 +59,9 @@ const seriesKey = e => {
 };
 // « A. Dupont, B. Martin et C. Durand » → noms séparés, pour qu'un intervenant
 // d'une table ronde retrouve aussi ses conférences seul.
-const speakerNames = s => norm(s || "").split(/\s*(?:[,;&/]|\bet\b|\band\b)\s*/).map(x => x.replace(/\(.*?\)/g, "").trim()).filter(x => x.length >= 6);
+// Mêmes noms que la cloche « suivre » (splitSpeakers) : « professeure de
+// philosophie à l'Université… » n'est pas un intervenant commun à deux fiches.
+const speakerNames = s => splitSpeakers(s).map(norm).filter(x => x.length >= 6);
 const byDate = (a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || ""));
 function relatedOf(e, pool) {
   const others = pool.filter(x => x.id !== e.id && !isSide(x) === !isSide(e));
@@ -88,7 +90,7 @@ function RelatedList({ title, items, onOpen, max = 5 }) {
 }
 
 /* ═════════════════════ Fiche (sheet) ═════════════════════ */
-function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = [], onOpen }) {
+function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollow, pool = [], onOpen }) {
   const { t, fmtDay, discName, kindName } = useI18n();
   const rel = useMemo(() => e ? relatedOf(e, pool) : null, [e, pool]);
   useEffect(() => { if (!e) return; const h = ev => ev.key === "Escape" && onClose(); document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, [e]);
@@ -109,7 +111,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = []
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
             <div className="text-sm"><div className="font-medium first-letter:uppercase">{fmtDay(e.date)} {d.getFullYear()}</div><div className="text-muted-foreground">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""} · ` : ""}{days < 0 ? t("sheet_terminated") : days === 0 ? t("sheet_today") : days === 1 ? t("sheet_tomorrow") : t("sheet_in_days", { n: days })}</div></div>
           </div>
-          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">{[[t("sheet_organizer"), e.institution, null], [t("sheet_also"), (e.also || []).join(", "), null], [t("sheet_with"), e.speaker, "speaker"], [t("sheet_place"), e.location, null], [t("sheet_price"), e.price ? (isFree(e) ? t("sheet_free") : e.price) : null, null]].filter(r => r[1]).map(([k, v, kind]) => <React.Fragment key={k}><dt className="text-muted-foreground">{k}</dt><dd className="break-words">{kind === "speaker" ? <span className="inline-flex items-center gap-1.5">{v}<button onClick={() => onFollow(v)} aria-label={following ? t("unfollow_speaker") : t("follow_speaker")} title={following ? t("unfollow_speaker") : t("follow_speaker")} className={cn("inline-flex h-5 w-5 items-center justify-center rounded", following ? "text-amber-500" : "text-muted-foreground hover:text-foreground")}><Icon d={following ? ICONS.bell : ICONS.bellOff} size={13} /></button></span> : v}</dd></React.Fragment>)}</dl>
+          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">{[[t("sheet_organizer"), e.institution, null], [t("sheet_also"), (e.also || []).join(", "), null], [t("sheet_with"), e.speaker, "speaker"], [t("sheet_place"), e.location, null], [t("sheet_price"), e.price ? (isFree(e) ? t("sheet_free") : e.price) : null, null]].filter(r => r[1]).map(([k, v, kind]) => <React.Fragment key={k}><dt className="text-muted-foreground">{k}</dt><dd className="break-words">{kind === "speaker" ? <SpeakerRow text={v} followSet={followSet} onFollow={onFollow} /> : v}</dd></React.Fragment>)}</dl>
           {e.description && e.description.length > 60 && <p className="text-sm leading-relaxed text-muted-foreground whitespace-pre-line">{e.description}</p>}
           <div className="grid gap-2 pt-2">
             {safeUrl(e.url) && <LinkButton href={safeUrl(e.url)} target="_blank" rel="noopener">{t("sheet_official")}</LinkButton>}
@@ -129,6 +131,19 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = []
         </div>
         <p className="mt-auto p-6 pt-0 text-xs text-muted-foreground">{t("sheet_footer_note")}</p></>; })()}
     </motion.aside></React.Fragment>}</AnimatePresence>;
+}
+
+// Ligne « Avec » de la fiche : une cloche par intervenant (plusieurs noms sur
+// une même ligne : chacun se suit séparément).
+function SpeakerRow({ text, followSet, onFollow }) {
+  const { t } = useI18n();
+  const names = splitSpeakers(text);
+  const bell = name => { const on = followSet.has(name); return <button key={name} onClick={() => onFollow(name)} aria-pressed={on}
+    aria-label={`${on ? t("unfollow_speaker") : t("follow_speaker")} : ${name}`} title={on ? t("unfollow_speaker") : t("follow_speaker")}
+    className={cn("inline-flex h-5 w-5 shrink-0 items-center justify-center rounded", on ? "text-amber-500" : "text-muted-foreground hover:text-foreground")}><Icon d={on ? ICONS.bell : ICONS.bellOff} size={13} /></button>; };
+  if (names.length <= 1) return <span className="inline-flex items-center gap-1.5">{text}{names[0] && bell(names[0])}</span>;
+  return <span className="flex flex-col gap-1"><span>{text}</span>
+    <span className="flex flex-wrap gap-1.5">{names.map(n => <span key={n} className={cn("inline-flex items-center gap-1 rounded-md border pl-2 pr-0.5 py-0.5 text-xs", followSet.has(n) && "border-amber-500/40")}>{n}{bell(n)}</span>)}</span></span>;
 }
 
 /* ═════════════════════ Palette ⌘K ═════════════════════ */
@@ -290,7 +305,7 @@ function SpeakersPanel({ open, onClose, speakers, onUnfollow, pool, onOpenEvent,
       <div className="overflow-auto flex-1">
         {!list.length ? <div className="p-8 text-center"><p className="text-sm font-medium">{t("no_speakers")}</p><p className="text-xs text-muted-foreground mt-1">{t("no_speakers_sub")}</p></div>
           : <ul className="divide-y">{list.map(name => {
-            const talks = pool.filter(e => e.speaker && e.speaker.toLowerCase().includes(name.toLowerCase())).slice(0, 3);
+            const talks = pool.filter(e => speaksAt(e, name)).slice(0, 3);
             return <li key={name} className="px-4 py-3">
               <div className="flex items-center justify-between gap-2"><span className="font-medium text-sm truncate">{name}</span><button onClick={() => onUnfollow(name)} className="text-xs text-muted-foreground hover:text-foreground shrink-0">{t("unfollow_speaker")}</button></div>
               {talks.length ? <ul className="mt-1.5 flex flex-col gap-1">{talks.map(e => <li key={e.id}><button onClick={() => onOpenEvent(e)} className="w-full text-left text-xs text-muted-foreground hover:text-foreground flex gap-2"><span className="tabular-nums shrink-0">{fmtShort(e.date)}</span><span className="truncate">{e.title}</span></button></li>)}</ul>
@@ -454,8 +469,7 @@ function App() {
   const topInst = useMemo(() => Object.entries(instAll).sort((a, b) => b[1] - a[1]).slice(0, 18), [instAll]);
   const followedNew = useMemo(() => {
     if (!speakers.size) return [];
-    const names = [...speakers].map(n => n.toLowerCase());
-    return UP.filter(e => e.speaker && !seenSpeakerEvents.has(e.id) && names.some(n => e.speaker.toLowerCase().includes(n)));
+    return UP.filter(e => e.speaker && !seenSpeakerEvents.has(e.id) && [...speakers].some(n => speaksAt(e, n)));
   }, [UP, speakers, seenSpeakerEvents]);
   useEffect(() => {
     // Une seule notification, sur la liste complète (pas une par mois chargé)
@@ -644,7 +658,7 @@ function App() {
       </Dock>
     </div>
 
-    <Sheet e={open} pool={pool} onOpen={setOpen} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} following={open ? speakers.has(open.speaker) : false} onFollow={name => { const willFollow = !speakers.has(name); toggleSpeaker(name); notify(willFollow ? t("speaker_followed") : t("speaker_unfollowed")); }} />
+    <Sheet e={open} pool={pool} onOpen={setOpen} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} followSet={speakers} onFollow={name => { const willFollow = !speakers.has(name); toggleSpeaker(name); notify(willFollow ? t("speaker_followed") : t("speaker_unfollowed")); }} />
     <CommandDialog open={cmd} onClose={() => setCmd(false)} onPick={e => { setCmd(false); setOpen(e); }} pool={pool} />
     <SpeakersPanel open={speakersOpen} onClose={() => setSpeakersOpen(false)} speakers={speakers} onUnfollow={toggleSpeaker} pool={UP} onOpenEvent={e => { setSpeakersOpen(false); setOpen(e); }} notifyPerm={notifyPerm} onEnableNotify={enableNotify} />
     <AnimatePresence>{toast && <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg">{toast}</motion.div>}</AnimatePresence>

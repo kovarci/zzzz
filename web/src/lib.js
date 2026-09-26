@@ -54,6 +54,22 @@ export const WE = [iso(SAT), iso(addDays(SAT, 1))];
 export const NEW_CUTOFF = new Date(Date.now() - 48 * 3600 * 1000).toISOString().slice(0, 10);
 
 export const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+// « Violaine Jeammet, Pauline Maillard et Pascale Ballet », « Claire Denis &
+// Marie NDiaye (Université…) » → une personne par entrée. Les affiliations
+// entre parenthèses et les fonctions (« , professeure de… ») sont écartées ;
+// sans nom reconnaissable, la ligne entière reste suivable telle quelle.
+const PARTICLE = /^(de|du|des|d['’]\S*|van|von|der|den|la|le|di|da|dit|ben|bin|al|el|y|e|of)$/i;
+export const splitSpeakers = s => {
+  let x = s || "", prev;
+  do { prev = x; x = x.replace(/\([^()]*\)/g, " "); } while (x !== prev);
+  x = x.replace(/\([^)]*$/, " ");
+  const names = x.split(/\s*(?:[,;&/]|\s(?:et|and)\s)\s*/).map(t => t.trim().replace(/\s+/g, " ")).filter(t => {
+    const w = t.split(" ");
+    return w.length >= 2 && w.length <= 5 && /^\p{Lu}/u.test(t) && w.every(x => /^\p{Lu}/u.test(x) || PARTICLE.test(x));
+  });
+  return names.length ? [...new Set(names)] : (s && s.length <= 60 ? [s.trim()] : []);
+};
+export const speaksAt = (e, name) => !!e.speaker && norm(e.speaker).includes(norm(name));
 // Texte ins\u00e9r\u00e9 en HTML brut (popups Leaflet) : les noms d'h\u00f4tes Luma sont saisis librement
 export const escHtml = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 // Liens venus des sources : http(s) seulement (pas de javascript:\u2026)
