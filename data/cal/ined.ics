@@ -5,9 +5,27 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Ined · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:135dd5496c89@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Caractéristiques géographiques et facteurs associés aux divergen
@@ -22,7 +40,7 @@ URL:https://www.ined.fr/fr/agenda/caracteristiques-geographiques-et-facteur
 END:VEVENT
 BEGIN:VEVENT
 UID:dde81eddc8ff@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:La santé des femmes en sciences
@@ -34,7 +52,7 @@ URL:https://www.ined.fr/fr/agenda/sante-femmes-en-sciences
 END:VEVENT
 BEGIN:VEVENT
 UID:3da9fafd94cb@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Enquêtes par panel et effets de mode : état des lieux
@@ -46,7 +64,7 @@ URL:https://www.ined.fr/fr/agenda/enquetes-par-panel-et-effets-mode-etat-li
 END:VEVENT
 BEGIN:VEVENT
 UID:903f4696fa96@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Assemblée générale LifeObs 2026
@@ -57,7 +75,7 @@ URL:https://www.ined.fr/fr/agenda/assemblee-generale-lifeobs-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fcc9dd5713b1@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Wealth Inequality and Demographic Events (Wide)
@@ -70,7 +88,7 @@ URL:https://www.ined.fr/fr/agenda/wealth-inequality-and-demographic-events-
 END:VEVENT
 BEGIN:VEVENT
 UID:5b3d205d3a96@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Journée d’étude sur la résidence alternée
@@ -82,7 +100,7 @@ URL:https://www.ined.fr/fr/agenda/journee-etude-sur-residence-alternee
 END:VEVENT
 BEGIN:VEVENT
 UID:ab17f6de33cf@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Un nouveau creuset français ? - Journée d’études Ined-MNHI ouv
@@ -97,7 +115,7 @@ URL:https://www.ined.fr/fr/agenda/nouveau-creuset-francais-journee-etudes-i
 END:VEVENT
 BEGIN:VEVENT
 UID:6c910a5ede21@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Parentalités LGBTI+ : faire famille depuis les marges
@@ -109,7 +127,7 @@ URL:https://www.ined.fr/fr/agenda/parentalites-lgbti-faire-famille-depuis-m
 END:VEVENT
 BEGIN:VEVENT
 UID:3a64bf381dfc@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:En quoi le gradient social des comportements de santé est-il injus
@@ -122,7 +140,7 @@ URL:https://www.ined.fr/fr/agenda/en-quoi-gradient-social-comportements-san
 END:VEVENT
 BEGIN:VEVENT
 UID:7da159eaac4e@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Données et documents administratifs : quels usages et implications
@@ -136,7 +154,7 @@ URL:https://www.ined.fr/fr/agenda/donnees-et-documents-administratifs-quels
 END:VEVENT
 BEGIN:VEVENT
 UID:a7d37721f7db@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Fin de vie 2026
@@ -147,7 +165,7 @@ URL:https://www.ined.fr/fr/agenda/fin-vie-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:7b8bfe79c950@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:2ème symposium ILVV

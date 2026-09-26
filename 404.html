@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page introuvable — Lotent</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<!-- GitHub Pages sert ce fichier pour toute adresse absente (e/<id>.html d'un
+     événement renommé ou passé depuis plus d'un an, lien mal copié…) : chemins
+     absolus obligatoires, la page peut s'afficher sous /e/, /i/ ou /d/. -->
+<style>
+:root{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted-fg:#5f5f68;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}
+@media (prefers-color-scheme:dark){:root{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}
+*{box-sizing:border-box}
+body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.card{width:100%;max-width:480px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 24px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -16px rgba(0,0,0,.25)}
+.logo{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:inherit;text-decoration:none;margin-bottom:20px}
+.logo img{width:22px;height:22px}
+.code{font-size:13px;font-weight:600;color:var(--muted-fg);letter-spacing:.04em}
+h1{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:6px 0 10px;text-wrap:balance}
+p{color:var(--muted-fg);margin:0 0 20px;font-size:15px}
+form{display:flex;gap:8px;margin-bottom:14px}
+input{flex:1;min-width:0;height:40px;border:1px solid var(--border);border-radius:8px;background:transparent;color:inherit;padding:0 12px;font:inherit;font-size:14px}
+button,.btn{height:40px;border-radius:8px;border:0;background:var(--primary);color:var(--primary-fg);font:inherit;font-size:14px;font-weight:600;padding:0 16px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.btn.ghost{background:transparent;color:inherit;border:1px solid var(--border)}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+[data-en]{display:none}
+html[lang=en] [data-fr]{display:none}html[lang=en] [data-en]{display:revert}
+</style>
+<script>
+  // Même clé que le site (paf_lang, valeur JSON « "en" ») : la langue suit le visiteur.
+  try { if (JSON.parse(localStorage.getItem("paf_lang")) === "en") document.documentElement.lang = "en"; } catch (e) {}
+</script>
+</head>
+<body>
+<main class="card">
+  <a class="logo" href="/"><img src="/icon.svg" alt="">Lotent</a>
+  <div class="code">404</div>
+  <h1 id="t"><span data-fr>Cette page n'existe pas (ou plus)</span><span data-en>This page doesn't exist (anymore)</span></h1>
+  <p id="m"><span data-fr>Le lien est peut-être incomplet, ou la page a été déplacée.</span><span data-en>The link may be incomplete, or the page has moved.</span></p>
+  <form action="/" method="get" role="search">
+    <input name="q" type="search" placeholder="Rechercher une conférence…" aria-label="Rechercher une conférence" id="q">
+    <button type="submit"><span data-fr>Chercher</span><span data-en>Search</span></button>
+  </form>
+  <div class="row">
+    <a class="btn ghost" href="/"><span data-fr>← Tout l'agenda</span><span data-en>← Full agenda</span></a>
+    <a class="btn ghost" href="/apropos.html"><span data-fr>À propos</span><span data-en>About</span></a>
+  </div>
+</main>
+<script>
+  // Fiche d'événement disparue : l'organisateur l'a renommée (nouvelle fiche),
+  // annulée, ou elle a plus d'un an. Le dire plutôt qu'un « lien cassé » muet.
+  if (/^\/e\/[0-9a-f]{12}\.html$/.test(location.pathname)) {
+    document.getElementById("t").innerHTML = '<span data-fr>Cet événement n\'est plus en ligne</span><span data-en>This event is no longer listed</span>';
+    document.getElementById("m").innerHTML = '<span data-fr>Il a pu être renommé ou annulé par son organisateur, ou date de plus d\'un an. Cherchez-le par son titre ou son intervenant :</span><span data-en>It may have been renamed or cancelled by its organiser, or be more than a year old. Search for it by title or speaker:</span>';
+  }
+  if (document.documentElement.lang === "en") {
+    var q = document.getElementById("q"); q.placeholder = "Search for a talk…"; q.setAttribute("aria-label", "Search for a talk");
+  }
+</script>
+</body>
+</html>

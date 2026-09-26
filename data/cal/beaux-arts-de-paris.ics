@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Beaux-Arts de Paris · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:66da45f5f793@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T190000
-DTEND:20260929T203000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T190000
+DTEND;TZID=Europe/Paris:20260929T203000
 SUMMARY:Penser le Présent avec Ibrahim Mahama
 DESCRIPTION:Dialogue\nhttps://beauxartsparis.fr/fr/evenement/penser-le-pres
  ent-avec-ibrahim-mahama
@@ -20,9 +38,9 @@ URL:https://beauxartsparis.fr/fr/evenement/penser-le-present-avec-ibrahim-m
 END:VEVENT
 BEGIN:VEVENT
 UID:0f6dbcd65a38@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261015T190000
-DTEND:20261015T203000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261015T190000
+DTEND;TZID=Europe/Paris:20261015T203000
 SUMMARY:Penser le Présent avec Josèfa Ntjam
 DESCRIPTION:Dialogue\nhttps://beauxartsparis.fr/fr/evenement/penser-le-pres
  ent-avec-josefa-ntjam
@@ -33,9 +51,9 @@ URL:https://beauxartsparis.fr/fr/evenement/penser-le-present-avec-josefa-nt
 END:VEVENT
 BEGIN:VEVENT
 UID:80f336a5919d@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261023T190000
-DTEND:20261023T203000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261023T190000
+DTEND;TZID=Europe/Paris:20261023T203000
 SUMMARY:Penser le Présent avec Kader Attia et Jacinto Lageira
 DESCRIPTION:Dialogue\nhttps://beauxartsparis.fr/fr/evenement/penser-le-pres
  ent-avec-kader-attia-et-jacinto-lageira

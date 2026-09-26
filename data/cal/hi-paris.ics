@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Hi! PARIS · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:98033432f305@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261012T140000
-DTEND:20261012T151500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261012T140000
+DTEND;TZID=Europe/Paris:20261012T151500
 SUMMARY:IP Paris Seminar on Incentives and Computation
 DESCRIPTION:The IP Paris Seminar on Incentives and Computation brings toget
  her researchers working at the intersection of economics and computer scie
@@ -25,9 +43,9 @@ URL:https://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computatio
 END:VEVENT
 BEGIN:VEVENT
 UID:e424d347657f@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261013T140000
-DTEND:20261013T153000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261013T140000
+DTEND;TZID=Europe/Paris:20261013T153000
 SUMMARY:Hi! PARIS Reading groups “Fairness in AI” – Session 1
 DESCRIPTION:The Hi! PARIS reading groups propose studying a topic using sci
  entific articles from both theoretical and practical perspectives. The rea
@@ -42,9 +60,9 @@ URL:https://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-sessio
 END:VEVENT
 BEGIN:VEVENT
 UID:fca9166c778a@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261103T180000
-DTEND:20261103T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261103T180000
+DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Hi! PARIS Career Fair
 DESCRIPTION:We are delighted to announce the Hi! PARIS ’s annual career f
  air ! Hi! PARIS wishes to offer students at all levels\, including PhD can
@@ -58,7 +76,7 @@ URL:https://hi-paris.fr/event/hi-paris-career-fair/
 END:VEVENT
 BEGIN:VEVENT
 UID:0b52277e64d3@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge

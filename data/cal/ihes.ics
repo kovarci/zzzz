@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:IHES · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:ce049f565a06@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260930T144500
-DTEND:20260930T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260930T144500
+DTEND;TZID=Europe/Paris:20260930T160000
 SUMMARY:Dynamical Tidal Response of Neutron Stars from Scattering Amplitude
  s
 DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) I
@@ -24,9 +42,9 @@ URL:https://indico.math.cnrs.fr/event/17400/
 END:VEVENT
 BEGIN:VEVENT
 UID:ff0fd3daa373@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T143000
-DTEND:20261001T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T143000
+DTEND;TZID=Europe/Paris:20261001T160000
 SUMMARY:Zeta Values as Moments: A Random Matrix Theory
 DESCRIPTION:The values of the Riemann zeta-function $\\zeta\\left(\\alpha+\
  \beta n\\right)$ with $\\alpha>1$\, $\\beta>0$ and $n$ a positive integer 
@@ -40,9 +58,9 @@ URL:https://indico.math.cnrs.fr/event/17408/
 END:VEVENT
 BEGIN:VEVENT
 UID:d0bfe36c9390@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261005T140000
-DTEND:20261005T151500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261005T140000
+DTEND;TZID=Europe/Paris:20261005T151500
 SUMMARY:Origami Tori
 DESCRIPTION:An origami torus is a piecewise affine isometric embedding of a
   flat torus into R 3 . It is surprising that these things exist\, but than
@@ -56,9 +74,9 @@ URL:https://indico.math.cnrs.fr/event/17062/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4af97c28d4e@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261005T160000
-DTEND:20261005T171500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261005T160000
+DTEND;TZID=Europe/Paris:20261005T171500
 SUMMARY:Families of Discrete Representations from Incidence Theorems
 DESCRIPTION:Motivated by a family of examples constructed by R. Schwartz ba
  sed on Pappus's theorem\, we explore constructions of representations of d
@@ -72,9 +90,9 @@ URL:https://indico.math.cnrs.fr/event/17063/
 END:VEVENT
 BEGIN:VEVENT
 UID:53bf13613051@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261006T144500
-DTEND:20261006T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261006T144500
+DTEND;TZID=Europe/Paris:20261006T160000
 SUMMARY:On the Wilson-Fisher Fixed Point in the Limit of Integer Spacetime 
  Dimensions
 DESCRIPTION:The Wilson–Fisher (WF) fixed point\, a scalar field theory wi
@@ -89,9 +107,9 @@ URL:https://indico.math.cnrs.fr/event/17103/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ed38ea8f514@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261008T110000
-DTEND:20261008T123000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261008T110000
+DTEND;TZID=Europe/Paris:20261008T123000
 SUMMARY:On “Siegel Domains” in p-adic Period Spaces
 DESCRIPTION:Séminaire de géométrie arithmétique A Siegel domain is a fi
  nite-volume subset of a symmetric space whose translates under the action 
@@ -105,9 +123,9 @@ URL:https://indico.math.cnrs.fr/event/17331/
 END:VEVENT
 BEGIN:VEVENT
 UID:513576072690@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261012T090000
-DTEND:20261012T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261012T090000
+DTEND;TZID=Europe/Paris:20261012T110000
 SUMMARY:The Pentagram Map and Ramifications
 DESCRIPTION:October 12-15\, 2026 at IHES - Marilyn and James Simons Confere
  nce Center How to get to IHES This workshop explores the mathematics conne
@@ -121,9 +139,9 @@ URL:https://indico.math.cnrs.fr/event/17361/
 END:VEVENT
 BEGIN:VEVENT
 UID:18975d08334d@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261019T143000
-DTEND:20261019T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261019T143000
+DTEND;TZID=Europe/Paris:20261019T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
 DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  ommutative) sphere regularization\," a recently proposed non-perturbative 
@@ -137,9 +155,9 @@ URL:https://indico.math.cnrs.fr/event/17105/
 END:VEVENT
 BEGIN:VEVENT
 UID:d7f5e719d1a7@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261021T143000
-DTEND:20261021T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261021T143000
+DTEND;TZID=Europe/Paris:20261021T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
 DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  ommutative) sphere regularization\," a recently proposed non-perturbative 
@@ -153,9 +171,9 @@ URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261026T143000
-DTEND:20261026T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261026T143000
+DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
 DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  ommutative) sphere regularization\," a recently proposed non-perturbative 
@@ -169,9 +187,9 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261028T143000
-DTEND:20261028T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261028T143000
+DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
 DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  ommutative) sphere regularization\," a recently proposed non-perturbative 
@@ -185,9 +203,9 @@ URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261207T090000
-DTEND:20261207T190000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261207T090000
+DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
 DESCRIPTION:XMath Physics Day is a one-day workshop bringing together early
  -career and established researchers in mathematical physics for an end-of-
@@ -201,9 +219,9 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270531T093000
-DTEND:20270531T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270531T093000
+DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes
  hi Saito and Takeshi Tsuji
 DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of T

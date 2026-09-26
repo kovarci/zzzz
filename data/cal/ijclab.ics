@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:IJCLab · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:95e8a9c21b55@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260928T100000
-DTEND:20260928T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260928T100000
+DTEND;TZID=Europe/Paris:20260928T120000
 SUMMARY:Marie-Hélène Carron "Dynamique non-adiabatique et structuration s
  patio-temporelle de l'émission cohérente dans les lasers XUV à plasma i
  njectés"
@@ -25,9 +43,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14246/
 END:VEVENT
 BEGIN:VEVENT
 UID:cd8da04157d6@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T100000
-DTEND:20260929T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T100000
+DTEND;TZID=Europe/Paris:20260929T120000
 SUMMARY:Marko Mihovilovic "Recherche de la production de paires de bosons d
  e Higgs et développement du High Granularity Timing Detector avec l'expé
  rience ATLAS au LHC"
@@ -43,9 +61,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14258/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f90d7e3eb05@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T140000
-DTEND:20260929T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T140000
+DTEND;TZID=Europe/Paris:20260929T160000
 SUMMARY:Mariia Buchynska "Analyse des données et développement de détect
  eurs bolométriques pour la recherche de la double désintégration bêta 
  sans émission de neutrinos"
@@ -61,9 +79,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14227/
 END:VEVENT
 BEGIN:VEVENT
 UID:d4520397e7b9@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T140000
-DTEND:20260929T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T140000
+DTEND;TZID=Europe/Paris:20260929T160000
 SUMMARY:LaboBots
 DESCRIPTION:Présentation L’objectif principal de cette école est d'init
  ier les administrateurs de matériel et les développeurs logiciels à l'u
@@ -77,9 +95,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13661/
 END:VEVENT
 BEGIN:VEVENT
 UID:44d6ed2628e4@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T103000
-DTEND:20261001T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T103000
+DTEND;TZID=Europe/Paris:20261001T113000
 SUMMARY:Searches for electric dipole moments of elementary particles with r
  adioactive molecules
 DESCRIPTION:The current standard model of particle physics accommodates vio
@@ -94,9 +112,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14304/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f26f08bacbe@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T140000
-DTEND:20261001T175000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T140000
+DTEND;TZID=Europe/Paris:20261001T175000
 SUMMARY:AG du Pôle Ingénierie
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/14232/
 LOCATION:IJCLab
@@ -104,9 +122,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14232/
 END:VEVENT
 BEGIN:VEVENT
 UID:158e4844496c@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261002T093000
-DTEND:20261002T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261002T093000
+DTEND;TZID=Europe/Paris:20261002T120000
 SUMMARY:Sarah Geffroy "Études de manipulation d’antiprotons de basse én
  ergie et production d’antihydrogène"
 DESCRIPTION:Lien de connexion / Link : A venir Merci de laisser fermés cam
@@ -121,9 +139,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14291/
 END:VEVENT
 BEGIN:VEVENT
 UID:7dc0628057f9@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261005T080000
-DTEND:20261005T181000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261005T080000
+DTEND;TZID=Europe/Paris:20261005T181000
 SUMMARY:Journée de rentrée des groupes de travail de physique - chimie
 DESCRIPTION:Dans le cadre de la journée de rentrée des groupes de travail
   de physique - chimie de l'académie de Versailles\, cette rencontre réun
@@ -137,9 +155,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14149/
 END:VEVENT
 BEGIN:VEVENT
 UID:499600fc3517@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261005T120000
-DTEND:20261005T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261005T120000
+DTEND;TZID=Europe/Paris:20261005T210000
 SUMMARY:Conférence et exposition Accélérateurs
 DESCRIPTION:La division Accélérateurs de la Société Francaise de Physiq
  ue\, le laboratoire CELIA et le CEA Cesta proposent de découvrir par des 
@@ -153,9 +171,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13645/
 END:VEVENT
 BEGIN:VEVENT
 UID:2d58c6fbab3e@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261006T130000
-DTEND:20261006T150000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261006T130000
+DTEND;TZID=Europe/Paris:20261006T150000
 SUMMARY:Rencontres Accélérateurs 2026 de la SFP
 DESCRIPTION:Cette année\, les Rencontres Accélérateurs se dérouleront 
  à Talence (banlieue de Bordeaux) les mardi 6 et mercredi 7 octobre 2026 .
@@ -169,9 +187,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13578/
 END:VEVENT
 BEGIN:VEVENT
 UID:ec52a1a34f97@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261008T160000
-DTEND:20261008T183000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261008T160000
+DTEND;TZID=Europe/Paris:20261008T183000
 SUMMARY:Cecile Engrand "Les micrométéorites : les messagères de notre or
  igine"
 DESCRIPTION:La conférence de Cecile Engrand "Les micrométéorites : les m
@@ -186,9 +204,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13491/
 END:VEVENT
 BEGIN:VEVENT
 UID:765e513f49f8@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261009T103000
-DTEND:20261009T130000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261009T103000
+DTEND;TZID=Europe/Paris:20261009T130000
 SUMMARY:Sarah Antier - L'Astronomie Multi-messagers avec GRANDMA
 DESCRIPTION:Lien de connexion / Link : https://ijclab.zoom.us/j/94169959155
  ?pwd=21zGymxQITSe8HAk0hpG2NO5TAU52b.1 Merci de laisser fermés camera et m
@@ -202,9 +220,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14302/
 END:VEVENT
 BEGIN:VEVENT
 UID:30e3fd1faf87@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261009T103000
-DTEND:20261009T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261009T103000
+DTEND;TZID=Europe/Paris:20261009T113000
 SUMMARY:Neutron-distribution radius from higher moments of nuclear charge d
  istribution
 DESCRIPTION:The nuclear charge density distribution\, $\\rho(r)$\, determin
@@ -219,7 +237,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14306/
 END:VEVENT
 BEGIN:VEVENT
 UID:e7380b3328cd@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:5th Astro-COLIBRI multi-messenger astrophysics workshop
@@ -235,9 +253,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13635/
 END:VEVENT
 BEGIN:VEVENT
 UID:53f665cb13b6@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261015T103000
-DTEND:20261015T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261015T103000
+DTEND;TZID=Europe/Paris:20261015T113000
 SUMMARY:Nuclear Fission in the 21st Century
 DESCRIPTION:In the last two decades\, through technological\, experimental 
  and theoretical advances\, the situation in experimental fission studies h
@@ -251,9 +269,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14307/
 END:VEVENT
 BEGIN:VEVENT
 UID:823128050587@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261015T160000
-DTEND:20261015T183000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261015T160000
+DTEND;TZID=Europe/Paris:20261015T183000
 SUMMARY:Christophe Salomon " Atomes froids et mesure précise du temps "
 DESCRIPTION:La conférence de Christophe Salomon " Atomes froids et mesure 
  précise du temps " aura lieu le jeudi 15 octobre 2026 à 16h à l'Auditor
@@ -267,9 +285,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13426/
 END:VEVENT
 BEGIN:VEVENT
 UID:ffec29cee739@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261016T140000
-DTEND:20261016T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261016T140000
+DTEND;TZID=Europe/Paris:20261016T160000
 SUMMARY:Ragansu Chakkappai "Inférence basée sur la simulation pour l’é
  tude de l’auto-couplage du boson de Higgs dans le canal de désintégrat
  ion (HH → bb𝝉𝝉) avec l’expérience ATLAS et des benchmarks d’a
@@ -286,9 +304,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14298/
 END:VEVENT
 BEGIN:VEVENT
 UID:933eee04ca10@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261019T090000
-DTEND:20261019T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261019T090000
+DTEND;TZID=Europe/Paris:20261019T110000
 SUMMARY:BIDT 2026 "Building the Inflammation Digital Twin"
 DESCRIPTION:Digital Twins are virtual equivalents\, or twins\, of physical 
  objects (eg aerospatial and automotive industries) These digital copies ar
@@ -302,9 +320,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13993/
 END:VEVENT
 BEGIN:VEVENT
 UID:e6a7c8b5e83d@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261026T090000
-DTEND:20261026T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261026T090000
+DTEND;TZID=Europe/Paris:20261026T110000
 SUMMARY:Paris-Saclay Astroparticle Symposium 2026
 DESCRIPTION:Week 1: October 26 - October 30 : Mysteries of the Dark Univers
  e Week 2: November 2 - November 6 : ACME Workshop: The Transient Universe 
@@ -318,9 +336,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13539/
 END:VEVENT
 BEGIN:VEVENT
 UID:201ba857f3cb@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261104T083000
-DTEND:20261104T220000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261104T083000
+DTEND;TZID=Europe/Paris:20261104T220000
 SUMMARY:Séminaire IA en Ingénierie Mécanique
 DESCRIPTION:Séminaire AISSAI – IA en ingénierie mécanique : Cas d’us
  age et retours d’expérience L’IN2P3-IJCLab\, le CEA-Irfu et l’Insti
@@ -334,9 +352,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14257/
 END:VEVENT
 BEGIN:VEVENT
 UID:fd3a2626e5d2@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261105T110000
-DTEND:20261105T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261105T110000
+DTEND;TZID=Europe/Paris:20261105T120000
 SUMMARY:Matheus Martines\, TBA
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/14273/
 LOCATION:IJCLab
@@ -344,9 +362,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14273/
 END:VEVENT
 BEGIN:VEVENT
 UID:d31af6c2b5cb@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261105T160000
-DTEND:20261105T190000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261105T160000
+DTEND;TZID=Europe/Paris:20261105T190000
 SUMMARY:Guillaume Hébrard "Extraordinaires planètes extrasolaires"
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/13798/
 LOCATION:IJCLab\, 15 rue Georges Clemenceau\, Orsay
@@ -354,9 +372,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13798/
 END:VEVENT
 BEGIN:VEVENT
 UID:ee3c1a543356@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261116T090000
-DTEND:20261116T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261116T090000
+DTEND;TZID=Europe/Paris:20261116T110000
 SUMMARY:Conference on Many-Body Systems in Memory of Nguyen Van Giai
 DESCRIPTION:Nguyen Van Giai (1940-2025) was one of the pioneers in the fiel
  d of relativistic and non-relativistic energy density functionals (EDF) in
@@ -370,9 +388,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13530/
 END:VEVENT
 BEGIN:VEVENT
 UID:c7861d871c15@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261123T090000
-DTEND:20261123T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261123T090000
+DTEND;TZID=Europe/Paris:20261123T110000
 SUMMARY:AI for Meta Science
 DESCRIPTION:Overview Artificial Intelligence (AI) has gained significant at
  tention for its applications in science. This workshop will focus on its p
@@ -386,9 +404,9 @@ URL:https://indico.ijclab.in2p3.fr/event/11640/
 END:VEVENT
 BEGIN:VEVENT
 UID:862f75d9f759@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261126T110000
-DTEND:20261126T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261126T110000
+DTEND;TZID=Europe/Paris:20261126T120000
 SUMMARY:Tim Kretz\, "QCD Corrections to Heavy Sterile Neutrino Decays"
 DESCRIPTION:Sterile neutrinos $N$ are a compelling extension of the Standar
  d Model and are realised for example\, by appending right-handed neutrino 
@@ -402,9 +420,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14277/
 END:VEVENT
 BEGIN:VEVENT
 UID:ca686ceefe85@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261203T090000
-DTEND:20261203T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261203T090000
+DTEND;TZID=Europe/Paris:20261203T110000
 SUMMARY:Flavor@LHC Workshop
 DESCRIPTION:The goal of this topical workshop is to bring together theorist
  s and experimentalists interested in probes of flavor-changing transitions
@@ -418,9 +436,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14191/
 END:VEVENT
 BEGIN:VEVENT
 UID:cdf3e8f6515b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261204T090000
-DTEND:20261204T170000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261204T090000
+DTEND;TZID=Europe/Paris:20261204T170000
 SUMMARY:Journée de la GS - Recherche et Innovation
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/14269/
 LOCATION:Institut Pascal
@@ -428,9 +446,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14269/
 END:VEVENT
 BEGIN:VEVENT
 UID:0e93a91e872d@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261207T090000
-DTEND:20261207T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261207T090000
+DTEND;TZID=Europe/Paris:20261207T110000
 SUMMARY:Semaine de la chaire 2026
 DESCRIPTION:Semaine de la Chaire recherche-action 2026 Vous avez une activi
  té en lien avec l’enseignement dans le supérieur ? Vous êtes en prior
@@ -444,9 +462,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14268/
 END:VEVENT
 BEGIN:VEVENT
 UID:1fe2a56518cb@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261214T090000
-DTEND:20261214T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261214T090000
+DTEND;TZID=Europe/Paris:20261214T110000
 SUMMARY:Journées des stagiaires de troisième (14-18 Dec)
 DESCRIPTION:Bienvenue à toutes et à tous au programme ! (dernière versio
  n : 22/09/2026) Les inscriptions ouvriront le lundi 5 octobre. Les tuteurs
@@ -457,9 +475,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14292/
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a2297de264@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261216T123000
-DTEND:20261216T133000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261216T123000
+DTEND;TZID=Europe/Paris:20261216T133000
 SUMMARY:Roland Lehoucq "Science-fiction : le monde de la (dé)mesure"
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/13626/
 LOCATION:IJCLab\, 15 rue Georges Clemenceau\, Orsay
@@ -467,9 +485,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13626/
 END:VEVENT
 BEGIN:VEVENT
 UID:ca79f366727e@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261216T140000
-DTEND:20261216T175000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261216T140000
+DTEND;TZID=Europe/Paris:20261216T175000
 SUMMARY:AG du Pôle Ingénierie
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/14266/
 LOCATION:IJCLab
@@ -477,9 +495,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14266/
 END:VEVENT
 BEGIN:VEVENT
 UID:a5c74eb5c3bc@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261224T160000
-DTEND:20261224T183000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261224T160000
+DTEND;TZID=Europe/Paris:20261224T183000
 SUMMARY:Victor Malka " Enjeux et défis des accélérateurs laser-plasma "
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/11451/
 LOCATION:IJCLab\, 15 rue Georges Clemenceau\, Orsay
@@ -487,9 +505,9 @@ URL:https://indico.ijclab.in2p3.fr/event/11451/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f791c7cbd6c@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270114T160000
-DTEND:20270114T180000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270114T160000
+DTEND;TZID=Europe/Paris:20270114T180000
 SUMMARY:Emilia Robin "Comment on a construit Orsay"
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/13925/
 LOCATION:IJCLab\, 15 rue Georges Clemenceau\, Orsay
@@ -497,9 +515,9 @@ URL:https://indico.ijclab.in2p3.fr/event/13925/
 END:VEVENT
 BEGIN:VEVENT
 UID:13edcf7accf2@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270412T090000
-DTEND:20270412T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270412T090000
+DTEND;TZID=Europe/Paris:20270412T110000
 SUMMARY:SharPredGW 2026 INSTITUT PASCAL
 DESCRIPTION:Program : The direct detection of Gravitational Waves (GW) has 
  opened a new window on the observable universe. The sensitivity of current
@@ -513,9 +531,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14294/
 END:VEVENT
 BEGIN:VEVENT
 UID:50e6bd279145@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270621T090000
-DTEND:20270621T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270621T090000
+DTEND;TZID=Europe/Paris:20270621T110000
 SUMMARY:STORMICANA "Storms & Cyclones in the Anthropocene"
 DESCRIPTION:3 weeks program : · What are the characteristics of hybrid cyc
  lones? Can we study them using already existing tools \, or do we need to 
@@ -529,9 +547,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14286/
 END:VEVENT
 BEGIN:VEVENT
 UID:aa6341f653b9@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270712T090000
-DTEND:20270712T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270712T090000
+DTEND;TZID=Europe/Paris:20270712T110000
 SUMMARY:Young Measured Group Theory (YMGT)
 DESCRIPTION:\nhttps://indico.ijclab.in2p3.fr/event/14161/
 LOCATION:Institut Pascal
@@ -539,9 +557,9 @@ URL:https://indico.ijclab.in2p3.fr/event/14161/
 END:VEVENT
 BEGIN:VEVENT
 UID:60fccaea0a4a@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270915T090000
-DTEND:20270915T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270915T090000
+DTEND;TZID=Europe/Paris:20270915T110000
 SUMMARY:Higgs Hunting 2027
 DESCRIPTION:The origin of Electroweak symmetry breaking is one of the centr
  al topics of research in fundamental physics. The discovery of a Higgs bos

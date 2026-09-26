@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Ifri · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:603a6d9ac508@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261002T093000
-DTEND:20261002T164500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261002T093000
+DTEND;TZID=Europe/Paris:20261002T164500
 SUMMARY:À un mois des midterms\, où va l’Amérique de Donald Trump ?
 DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/un-mois-des-midterms-ou-va
  -lamerique-de-donald-trump
@@ -19,9 +37,9 @@ URL:https://www.ifri.org/fr/un-mois-des-midterms-ou-va-lamerique-de-donald-
 END:VEVENT
 BEGIN:VEVENT
 UID:5f2740d90a74@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261007T123000
-DTEND:20261007T140000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261007T123000
+DTEND;TZID=Europe/Paris:20261007T140000
 SUMMARY:Pandémies et maladies infectieuses : que peut la communauté inter
  nationale ?
 DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/pandemies-et-maladies-infe
@@ -32,9 +50,9 @@ URL:https://www.ifri.org/fr/pandemies-et-maladies-infectieuses-que-peut-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:80834836a743@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261009T123000
-DTEND:20261009T183000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261009T123000
+DTEND;TZID=Europe/Paris:20261009T183000
 SUMMARY:Forum France-Ukraine 2026
 DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/forum-france-ukraine-2026
 LOCATION:Ifri\, 27 rue de la Procession\, Paris 15e
@@ -42,9 +60,9 @@ URL:https://www.ifri.org/fr/forum-france-ukraine-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:1f467feb503b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261013T090000
-DTEND:20261013T103000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261013T090000
+DTEND;TZID=Europe/Paris:20261013T103000
 SUMMARY:Finance sous tension géopolitique : banques centrales\, stablecoin
  s et souveraineté européenne
 DESCRIPTION:Séminaire\nhttps://www.ifri.org/fr/finance-sous-tension-geopol
@@ -55,9 +73,9 @@ URL:https://www.ifri.org/fr/finance-sous-tension-geopolitique-banques-centr
 END:VEVENT
 BEGIN:VEVENT
 UID:5ebec330e3ee@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261014T093000
-DTEND:20261014T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261014T093000
+DTEND;TZID=Europe/Paris:20261014T120000
 SUMMARY:Gérer l'incertitude : les puissances asiatiques face à la rivalit
  é sino-américaine
 DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/gerer-lincertitude-les-pui

@@ -5,9 +5,27 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Université Paris Nanterre · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:3db7e8d2311f@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Fête de la science 2026
@@ -18,9 +36,9 @@ URL:https://www.parisnanterre.fr/agenda/fds
 END:VEVENT
 BEGIN:VEVENT
 UID:5e5d6cf6b787@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261012T120000
-DTEND:20261012T140000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261012T120000
+DTEND;TZID=Europe/Paris:20261012T140000
 SUMMARY:Ouverture de la Saison Méditerranée 2026 - Journées scientifique
  s
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/journee-scientifique-douv
@@ -32,9 +50,9 @@ URL:https://www.parisnanterre.fr/agenda/journee-scientifique-douverture-du-
 END:VEVENT
 BEGIN:VEVENT
 UID:b766259e5a13@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261013T223000
-DTEND:20261013T233000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261013T223000
+DTEND;TZID=Europe/Paris:20261013T233000
 SUMMARY:Projection du film de Raphaël Pillosio\, Les mots qu’elles euren
  t un jour (2025)
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/projection-du-film-de-rap
@@ -46,9 +64,9 @@ URL:https://www.parisnanterre.fr/agenda/projection-du-film-de-raphael-pillo
 END:VEVENT
 BEGIN:VEVENT
 UID:fdcd8d037892@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261014T140000
-DTEND:20261014T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261014T140000
+DTEND;TZID=Europe/Paris:20261014T160000
 SUMMARY:La poésie comme mémoire de l’être
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-d
  e-letre
@@ -58,9 +76,9 @@ URL:https://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-de-letre
 END:VEVENT
 BEGIN:VEVENT
 UID:efb19672eb31@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261014T190000
-DTEND:20261014T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261014T190000
+DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Mémoires en mouvement : récits d’auto-histoire\, migrations et 
  urbanités
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/memoires-en-mouvement-rec
@@ -72,9 +90,9 @@ URL:https://www.parisnanterre.fr/agenda/memoires-en-mouvement-recits-dauto-
 END:VEVENT
 BEGIN:VEVENT
 UID:4d9434a31f66@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261015T180000
-DTEND:20261015T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261015T180000
+DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Recueillir des témoignages\, dire les expériences invisibles : je
  unes d’Algérie et du Maroc dans la France des années 1950-1960
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/recueillir-des-temoignage
@@ -88,7 +106,7 @@ URL:https://www.parisnanterre.fr/agenda/recueillir-des-temoignages-dire-les
 END:VEVENT
 BEGIN:VEVENT
 UID:697504b98a4d@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Colloque Penser la Méditerranée avec les jeunesses méditerranée
@@ -102,7 +120,7 @@ URL:https://www.parisnanterre.fr/agenda/colloque-penser-la-mediterranee-ave
 END:VEVENT
 BEGIN:VEVENT
 UID:66ce755b6686@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Festival Penser la Méditerranée avec les jeunesses méditerranée
@@ -116,9 +134,9 @@ URL:https://www.parisnanterre.fr/agenda/festival-penser-la-mediterranee-ave
 END:VEVENT
 BEGIN:VEVENT
 UID:4bdfb9e7396b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261017T210000
-DTEND:20261017T230000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261017T210000
+DTEND;TZID=Europe/Paris:20261017T230000
 SUMMARY:Jazz à la Cité
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/jazz-a-la-cite
 LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
@@ -127,7 +145,7 @@ URL:https://www.parisnanterre.fr/agenda/jazz-a-la-cite
 END:VEVENT
 BEGIN:VEVENT
 UID:5e383223b6b6@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Siestes littéraires 2026
@@ -138,9 +156,9 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-2
 END:VEVENT
 BEGIN:VEVENT
 UID:8432f40b7ca1@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261019T141500
-DTEND:20261019T161500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261019T141500
+DTEND;TZID=Europe/Paris:20261019T161500
 SUMMARY:Siestes littéraires (octobre)
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/siestes-litteraires-1
 LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
@@ -149,9 +167,9 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
 END:VEVENT
 BEGIN:VEVENT
 UID:5338f611ca66@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261022T170000
-DTEND:20261022T190000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261022T170000
+DTEND;TZID=Europe/Paris:20261022T190000
 SUMMARY:Lecture-Rencontre avec le poète Tahar Bekri
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le
  -poete-tahar-bekri
@@ -162,9 +180,9 @@ URL:https://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le-poete-tah
 END:VEVENT
 BEGIN:VEVENT
 UID:1ce99bcdbb3e@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261022T210000
-DTEND:20261022T230000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261022T210000
+DTEND;TZID=Europe/Paris:20261022T230000
 SUMMARY:Festival d'Automne > L’amour de l’art - Récréation philosophi
  que
 DESCRIPTION:\nhttps://www.parisnanterre.fr/agenda/lamour-de-lart-recreation
@@ -176,7 +194,7 @@ URL:https://www.parisnanterre.fr/agenda/lamour-de-lart-recreation-philosoph
 END:VEVENT
 BEGIN:VEVENT
 UID:a99b05cb08e1@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:17e édition du Festival Nanterre sur Scène

@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Labos de maths d'Île-de-France · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:a6bfa0a6a3b3@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T090000
-DTEND:20261001T223000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T090000
+DTEND;TZID=Europe/Paris:20261001T223000
 SUMMARY:calcul-intensif@CEA
 DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/17254/
 LOCATION:TGCC
@@ -17,9 +35,9 @@ URL:https://indico.math.cnrs.fr/event/17254/
 END:VEVENT
 BEGIN:VEVENT
 UID:d7e192760858@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T090000
-DTEND:20261001T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T090000
+DTEND;TZID=Europe/Paris:20261001T110000
 SUMMARY:Formation Cast3M Développement
 DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
   la Maison de la Simulation (pas de visioconférene) . Cette formation s'a
@@ -33,9 +51,9 @@ URL:https://indico.math.cnrs.fr/event/16609/
 END:VEVENT
 BEGIN:VEVENT
 UID:8e4fa6cd95a0@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261013T090000
-DTEND:20261013T170000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261013T090000
+DTEND;TZID=Europe/Paris:20261013T170000
 SUMMARY:Journée de la FP2M 2026
 DESCRIPTION:\nhttps://indico.math.cnrs.fr/event/16915/
 LOCATION:Maison des Sciences Économiques\, Paris 1
@@ -43,9 +61,9 @@ URL:https://indico.math.cnrs.fr/event/16915/
 END:VEVENT
 BEGIN:VEVENT
 UID:937a9611c7e5@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261013T090000
-DTEND:20261013T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261013T090000
+DTEND;TZID=Europe/Paris:20261013T110000
 SUMMARY:Formation Cast3M pour Débutants
 DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
   la Maison de la Simulation (pas de visioconférene !) . Cette formation s
@@ -59,9 +77,9 @@ URL:https://indico.math.cnrs.fr/event/16605/
 END:VEVENT
 BEGIN:VEVENT
 UID:48d667dad674@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261016T090000
-DTEND:20261016T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261016T090000
+DTEND;TZID=Europe/Paris:20261016T163000
 SUMMARY:Formation Cast3M Fabrication Additive
 DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
   la Maison de la Simulation (pas de visioconférene) . Cette formation s'a
@@ -75,9 +93,9 @@ URL:https://indico.math.cnrs.fr/event/16608/
 END:VEVENT
 BEGIN:VEVENT
 UID:b222cfa7a144@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261112T090000
-DTEND:20261112T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261112T090000
+DTEND;TZID=Europe/Paris:20261112T110000
 SUMMARY:UNSTABLE : UNDERSTANDING THE PARABOLIC-PARABOLIC KELLER-SEGEL
 DESCRIPTION:The aim for this workshop is twofold: to bring together people 
  with expertise on the subject of chemotaxis and to foster discussions and 
@@ -88,9 +106,9 @@ URL:https://indico.math.cnrs.fr/event/17424/
 END:VEVENT
 BEGIN:VEVENT
 UID:5aef4bcc5455@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261112T090000
-DTEND:20261112T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261112T090000
+DTEND;TZID=Europe/Paris:20261112T110000
 SUMMARY:Formation Cast3M PASAPAS et procédures utilisateurs
 DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
   la Maison de la Simulation (pas de visioconférene) . Cette formation s'a
@@ -104,9 +122,9 @@ URL:https://indico.math.cnrs.fr/event/16606/
 END:VEVENT
 BEGIN:VEVENT
 UID:4f680e77ca0a@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270121T090000
-DTEND:20270121T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270121T090000
+DTEND;TZID=Europe/Paris:20270121T110000
 SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the
   occasion of Antonin Chambolle's 60th birthday
 DESCRIPTION:This conference aims to bring together researchers from optimiz
@@ -121,9 +139,9 @@ URL:https://indico.math.cnrs.fr/event/15144/
 END:VEVENT
 BEGIN:VEVENT
 UID:cb576646b33b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270125T090000
-DTEND:20270125T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270125T090000
+DTEND;TZID=Europe/Paris:20270125T110000
 SUMMARY:6th Smilei user & training workshop
 DESCRIPTION:The 6th iteration of the Smilei user & training workshop is hos
  ted in Milan (Italy) by the Department of Energy of Politecnico di Milano 
@@ -137,9 +155,9 @@ URL:https://indico.math.cnrs.fr/event/17096/
 END:VEVENT
 BEGIN:VEVENT
 UID:841f5cf87fd9@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270524T090000
-DTEND:20270524T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270524T090000
+DTEND;TZID=Europe/Paris:20270524T110000
 SUMMARY:Number Theory\, Combinatorics and Related Topics
 DESCRIPTION:This conference aims to bring together specialists working in f
  ields at the interface of Diophantine approximation and combinatorics and 
@@ -150,9 +168,9 @@ URL:https://indico.math.cnrs.fr/event/17316/
 END:VEVENT
 BEGIN:VEVENT
 UID:4e38a7b82794@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20270607T090000
-DTEND:20270607T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20270607T090000
+DTEND;TZID=Europe/Paris:20270607T110000
 SUMMARY:Géométrie Algébrique\, Formes Automorphes et Théorie géométri
  que des Représentations\, une conférence dédiée à la mémoire de Gér
  ard Laumon

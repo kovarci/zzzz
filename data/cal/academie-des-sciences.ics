@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Académie des sciences · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:17a04f7ee66a@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T123000
-DTEND:20260929T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T123000
+DTEND;TZID=Europe/Paris:20260929T143000
 SUMMARY:Que peuvent faire les sciences pour lutter contre les cyber-attaque
  s ? Les Clés pour comprendre
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/que-peuvent-fair
@@ -22,9 +40,9 @@ URL:https://www.academie-sciences.fr/que-peuvent-faire-les-sciences-pour-lu
 END:VEVENT
 BEGIN:VEVENT
 UID:4320b9e85ef0@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T143000
-DTEND:20260929T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T143000
+DTEND;TZID=Europe/Paris:20260929T163000
 SUMMARY:Hommage à Étienne-Émile Baulieu (1926 - 2025)
 DESCRIPTION:Hommages\nhttps://www.academie-sciences.fr/hommage-etienne-emil
  e-baulieu-1926-2025
@@ -35,9 +53,9 @@ URL:https://www.academie-sciences.fr/hommage-etienne-emile-baulieu-1926-202
 END:VEVENT
 BEGIN:VEVENT
 UID:0a5ff7b98022@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T184500
-DTEND:20260929T204500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T184500
+DTEND;TZID=Europe/Paris:20260929T204500
 SUMMARY:Avant-Première - Femmes de Sciences saison 2
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/avant-premiere-f
  emmes-de-sciences-saison-2
@@ -48,9 +66,9 @@ URL:https://www.academie-sciences.fr/avant-premiere-femmes-de-sciences-sais
 END:VEVENT
 BEGIN:VEVENT
 UID:1f6c26e930f5@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261013T143000
-DTEND:20261013T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261013T143000
+DTEND;TZID=Europe/Paris:20261013T163000
 SUMMARY:Innovation thérapeutique
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/innovation-thera
  peutique
@@ -60,9 +78,9 @@ URL:https://www.academie-sciences.fr/innovation-therapeutique
 END:VEVENT
 BEGIN:VEVENT
 UID:7b0137eae8bb@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261117T143000
-DTEND:20261117T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261117T143000
+DTEND;TZID=Europe/Paris:20261117T163000
 SUMMARY:Viruses as Agents of Eukaryotic Genome Evolution
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/viruses-agents-e
  ukaryotic-genome-evolution
@@ -73,9 +91,9 @@ URL:https://www.academie-sciences.fr/viruses-agents-eukaryotic-genome-evolu
 END:VEVENT
 BEGIN:VEVENT
 UID:be8a32d15110@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261120T090000
-DTEND:20261120T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261120T090000
+DTEND;TZID=Europe/Paris:20261120T110000
 SUMMARY:Séquençage du génome humain : 25 ans après
 DESCRIPTION:Colloques\nhttps://www.academie-sciences.fr/index%2Ephp/sequenc
  age-du-genome-humain-25-ans-apres
@@ -86,9 +104,9 @@ URL:https://www.academie-sciences.fr/index%2Ephp/sequencage-du-genome-humai
 END:VEVENT
 BEGIN:VEVENT
 UID:db81a53d5c2e@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261201T140000
-DTEND:20261201T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261201T140000
+DTEND;TZID=Europe/Paris:20261201T160000
 SUMMARY:Prédictabilité\, que peut-on prévoir ?
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/predictabilite-q
  ue-peut-prevoir
@@ -98,9 +116,9 @@ URL:https://www.academie-sciences.fr/predictabilite-que-peut-prevoir
 END:VEVENT
 BEGIN:VEVENT
 UID:b9ab83a8d296@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261208T180000
-DTEND:20261208T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261208T180000
+DTEND;TZID=Europe/Paris:20261208T200000
 SUMMARY:Rencontre avec Mickael Tanter
 DESCRIPTION:Rencontres\nhttps://www.academie-sciences.fr/rencontre-avec-mic
  kael-tanter

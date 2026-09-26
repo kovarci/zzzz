@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Institut Curie · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:529fc9fb548a@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260925T110000
-DTEND:20260925T130000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260925T110000
+DTEND;TZID=Europe/Paris:20260925T130000
 SUMMARY:Regulation of replication timing and chromatin architecture by nucl
  ear membrane tethering of Rif
 DESCRIPTION:Séminaire\nhttps://curie.fr/evenements-scientifiques/regulatio
@@ -21,7 +39,7 @@ URL:https://curie.fr/evenements-scientifiques/regulation-replication-timing
 END:VEVENT
 BEGIN:VEVENT
 UID:906a20981e76@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Développement & Cancer - 16e edition
@@ -33,9 +51,9 @@ URL:https://curie.fr/evenements-scientifiques/developpement-cancer-16e-edit
 END:VEVENT
 BEGIN:VEVENT
 UID:60497fb3bfa3@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260928T110000
-DTEND:20260928T130000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260928T110000
+DTEND;TZID=Europe/Paris:20260928T130000
 SUMMARY:Immune cell compartmentalization and interactions in lymph nodes an
  d spleen\, with a focus on stromal fibroblasts
 DESCRIPTION:Séminaire\nhttps://curie.fr/evenements-scientifiques/immune-ce
@@ -48,9 +66,9 @@ URL:https://curie.fr/evenements-scientifiques/immune-cell-compartmentalizat
 END:VEVENT
 BEGIN:VEVENT
 UID:40fb30fcbc2b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T093000
-DTEND:20260929T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T093000
+DTEND;TZID=Europe/Paris:20260929T113000
 SUMMARY:Beyond Epigenetics: Chromatin as a Metabolic Organelle
 DESCRIPTION:Séminaire Nuclear dynamic series\nhttps://curie.fr/evenements-
  scientifiques/beyond-epigenetics-chromatin-metabolic-organelle-29-09-2026
@@ -60,9 +78,9 @@ URL:https://curie.fr/evenements-scientifiques/beyond-epigenetics-chromatin-
 END:VEVENT
 BEGIN:VEVENT
 UID:30eb27e7ac89@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260930T113000
-DTEND:20260930T133000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260930T113000
+DTEND;TZID=Europe/Paris:20260930T133000
 SUMMARY:A mathematical framework for understanding the timing of cell decis
  ions: from developmental tempo to molecular mechanisms of gene regulation
 DESCRIPTION:PCC Seminar Series\nhttps://curie.fr/evenements-scientifiques/m
@@ -75,9 +93,9 @@ URL:https://curie.fr/evenements-scientifiques/mathematical-framework-unders
 END:VEVENT
 BEGIN:VEVENT
 UID:2542e18eaa07@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T093000
-DTEND:20261001T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T093000
+DTEND;TZID=Europe/Paris:20261001T113000
 SUMMARY:Redundant microtubule abscission mechanisms buffer mechanical heter
  ogeneities
 DESCRIPTION:Séminaire Keynote BDD\nhttps://curie.fr/evenements-scientifiqu
@@ -89,7 +107,7 @@ URL:https://curie.fr/evenements-scientifiques/redundant-microtubule-absciss
 END:VEVENT
 BEGIN:VEVENT
 UID:ccae88496732@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Les Krâneuses qui Tétonnent 5 femmes\, 5 portraits pour sensi
@@ -104,9 +122,9 @@ URL:https://curie.fr/evenements-scientifiques/les-kraneuses-qui-tetonnent-5
 END:VEVENT
 BEGIN:VEVENT
 UID:ea073005f411@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261007T113000
-DTEND:20261007T133000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261007T113000
+DTEND;TZID=Europe/Paris:20261007T133000
 SUMMARY:Investigating biomolecular condensates using molecular simulations 
  at multiple resolutions
 DESCRIPTION:PCC Seminar Series\nhttps://curie.fr/evenements-scientifiques/i
@@ -118,9 +136,9 @@ URL:https://curie.fr/evenements-scientifiques/investigating-biomolecular-co
 END:VEVENT
 BEGIN:VEVENT
 UID:d807b77fec79@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261014T113000
-DTEND:20261014T133000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261014T113000
+DTEND;TZID=Europe/Paris:20261014T133000
 SUMMARY:Decoding the regulation of a state of 'suspended animation' in kill
  ifish
 DESCRIPTION:PCC Seminar Series\nhttps://curie.fr/evenements-scientifiques/d
@@ -131,7 +149,7 @@ URL:https://curie.fr/evenements-scientifiques/decoding-regulation-state-sus
 END:VEVENT
 BEGIN:VEVENT
 UID:9914a2af0af5@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:17e édition - Biologie du Développement
@@ -143,9 +161,9 @@ URL:https://curie.fr/evenements-scientifiques/17e-edition-biologie-du-devel
 END:VEVENT
 BEGIN:VEVENT
 UID:1744483fc87e@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261102T140000
-DTEND:20261102T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261102T140000
+DTEND;TZID=Europe/Paris:20261102T160000
 SUMMARY:"Regulatory T cells for immune tolerance: Their roles in autoimmuni
  ty and tumor immunity"
 DESCRIPTION:Séminaire\nhttps://curie.fr/evenements-scientifiques/regulator
@@ -157,9 +175,9 @@ URL:https://curie.fr/evenements-scientifiques/regulatory-t-cells-immune-tol
 END:VEVENT
 BEGIN:VEVENT
 UID:2dceff8ae767@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261103T093000
-DTEND:20261103T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261103T093000
+DTEND;TZID=Europe/Paris:20261103T113000
 SUMMARY:Single-molecule mechanics of eukaryotic and bacterial SMC complexes
 DESCRIPTION:Séminaire Nuclear dynamic series\nhttps://curie.fr/evenements-
  scientifiques/single-molecule-mechanics-eukaryotic-and-bacterial-smc-compl
@@ -170,7 +188,7 @@ URL:https://curie.fr/evenements-scientifiques/single-molecule-mechanics-euk
 END:VEVENT
 BEGIN:VEVENT
 UID:e61c62a98026@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:8ème édition - Biologie Cellulaire et Cancer
@@ -182,9 +200,9 @@ URL:https://curie.fr/evenements-scientifiques/8eme-edition-biologie-cellula
 END:VEVENT
 BEGIN:VEVENT
 UID:0b5b57403c38@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261207T100000
-DTEND:20261207T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261207T100000
+DTEND;TZID=Europe/Paris:20261207T120000
 SUMMARY:Elemental Legacies\, Ferroptosis and Ferrology
 DESCRIPTION:Séminaire\nhttps://curie.fr/evenements-scientifiques/elemental
  -legacies-ferroptosis-and-ferrology-07-12-2026
@@ -194,9 +212,9 @@ URL:https://curie.fr/evenements-scientifiques/elemental-legacies-ferroptosi
 END:VEVENT
 BEGIN:VEVENT
 UID:55d70d8256c3@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261218T100000
-DTEND:20261218T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261218T100000
+DTEND;TZID=Europe/Paris:20261218T120000
 SUMMARY:New insights into regenerative programs driving cancer plasticity
 DESCRIPTION:Séminaire\nhttps://curie.fr/evenements-scientifiques/new-insig
  hts-regenerative-programs-driving-cancer-plasticity-18-12-2026

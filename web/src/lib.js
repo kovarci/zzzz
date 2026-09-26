@@ -183,16 +183,22 @@ function icsDt(date, time) {
   const [h, m] = time.split(":").map(Number);
   return { start: `${d}T${pad(h)}${pad(m)}00`, allDay: false, h, m };
 }
+// Fuseau de Paris (comme write_ics dans scrape.py) : une heure sans fuseau
+// s'afficherait à l'heure locale de l'appareil.
+const VTIMEZONE = ["BEGIN:VTIMEZONE", "TZID:Europe/Paris", "X-LIC-LOCATION:Europe/Paris",
+  "BEGIN:DAYLIGHT", "TZOFFSETFROM:+0100", "TZOFFSETTO:+0200", "TZNAME:CEST", "DTSTART:19700329T020000", "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU", "END:DAYLIGHT",
+  "BEGIN:STANDARD", "TZOFFSETFROM:+0200", "TZOFFSETTO:+0100", "TZNAME:CET", "DTSTART:19701025T030000", "RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU", "END:STANDARD",
+  "END:VTIMEZONE"];
 export function buildIcs(events) {
   const stamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
   const out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Lotent//Selection//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-    "X-WR-CALNAME:Ma sélection · Lotent", "X-WR-TIMEZONE:Europe/Paris"];
+    "X-WR-CALNAME:Ma sélection · Lotent", "X-WR-TIMEZONE:Europe/Paris", ...VTIMEZONE];
   for (const ev of events) {
     const s = icsDt(ev.date, ev.time); let dtstart, dtend;
     if (s.allDay) { dtstart = `DTSTART;VALUE=DATE:${s.start}`; dtend = `DTEND;VALUE=DATE:${iso(addDays(parse(ev.date), 1)).replace(/-/g, "")}`; }
-    else { dtstart = `DTSTART:${s.start}`; const e = icsDt(ev.date, ev.end_time); dtend = e.start && !e.allDay ? `DTEND:${e.start}` : `DTEND:${ev.date.replace(/-/g, "")}T${pad(Math.min(s.h + 2, 23))}${pad(s.m)}00`; }
+    else { dtstart = `DTSTART;TZID=Europe/Paris:${s.start}`; const e = icsDt(ev.date, ev.end_time); dtend = e.start && !e.allDay ? `DTEND;TZID=Europe/Paris:${e.start}` : `DTEND;TZID=Europe/Paris:${ev.date.replace(/-/g, "")}T${pad(Math.min(s.h + 2, 23))}${pad(s.m)}00`; }
     out.push("BEGIN:VEVENT", `UID:${ev.id}@lotent.fr`, `DTSTAMP:${stamp}`, dtstart, dtend, `SUMMARY:${icsEsc(ev.title)}`,
-      `LOCATION:${icsEsc(ev.location || "Paris")}`, `DESCRIPTION:${icsEsc((ev.description || "") + (ev.url ? "\n" + ev.url : ""))}`,
+      `LOCATION:${icsEsc(ev.location || "Paris")}`, `DESCRIPTION:${icsEsc([ev.description, ev.url].filter(Boolean).join("\n"))}`,
       ev.url ? `URL:${ev.url.replace(/[\r\n]/g, "")}` : "", `CATEGORIES:${icsEsc(ev.discipline || "")}`, "END:VEVENT");
   }
   out.push("END:VCALENDAR");
@@ -218,7 +224,7 @@ export function download(name, text, type = "text/calendar") {
 export function googleCalUrl(ev) {
   const s = icsDt(ev.date, ev.time), e = icsDt(ev.date, ev.end_time);
   const dates = s.allDay ? `${s.start}/${iso(addDays(parse(ev.date), 1)).replace(/-/g, "")}` : `${s.start}/${e.start && !e.allDay ? e.start : ev.date.replace(/-/g, "") + "T" + pad(Math.min(s.h + 2, 23)) + pad(s.m) + "00"}`;
-  const p = new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates, details: (ev.description || "") + (ev.url ? "\n" + ev.url : ""), location: ev.location || "Paris", ctz: "Europe/Paris" });
+  const p = new URLSearchParams({ action: "TEMPLATE", text: ev.title, dates, details: [ev.description, ev.url].filter(Boolean).join("\n"), location: ev.location || "Paris", ctz: "Europe/Paris" });
   return "https://calendar.google.com/calendar/render?" + p.toString();
 }
 

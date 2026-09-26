@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Observatoire de Paris · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:376d47442dd1@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T143000
-DTEND:20261001T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T143000
+DTEND;TZID=Europe/Paris:20261001T163000
 SUMMARY:The Finite Groups of Random Walks in the Quarter Plane and Periodic
   4-bar Links (Les groupes finis de marches aléatoires dans un quart de pl
  an et les quadrilatères articulés périodiques)
@@ -25,9 +43,9 @@ URL:https://indico.obspm.fr/event/3408/
 END:VEVENT
 BEGIN:VEVENT
 UID:45fe471a1a4d@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261005T110000
-DTEND:20261005T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261005T110000
+DTEND;TZID=Europe/Paris:20261005T120000
 SUMMARY:Tang Li (Shanghai Institute of Optics and Fine Mechanics\, CAS) - S
  pace Cold Atom Payloads: from Physics to Applications
 DESCRIPTION:\nhttps://indico.obspm.fr/event/3381/
@@ -36,9 +54,9 @@ URL:https://indico.obspm.fr/event/3381/
 END:VEVENT
 BEGIN:VEVENT
 UID:3c93499275b6@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261102T091500
-DTEND:20261102T111500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261102T091500
+DTEND;TZID=Europe/Paris:20261102T111500
 SUMMARY:Cherenkov Astronomy Data School 2026
 DESCRIPTION:One-week school on gamma-ray astronomy organized at the Observa
  toire de Paris\, designed for PhD students/postdocs/researchers eager to l
@@ -52,9 +70,9 @@ URL:https://indico.obspm.fr/event/2993/
 END:VEVENT
 BEGIN:VEVENT
 UID:7b3aa4a6c7a7@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261126T103000
-DTEND:20261126T123000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261126T103000
+DTEND;TZID=Europe/Paris:20261126T123000
 SUMMARY:Galaxy Cluster France Workshop
 DESCRIPTION:Galaxy clusters are powerful cosmological probes\, tracing the 
  matter content and large-scale structure of the Universe. Observed across 
@@ -68,9 +86,9 @@ URL:https://indico.obspm.fr/event/3124/
 END:VEVENT
 BEGIN:VEVENT
 UID:a2e83f70d48c@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261201T110000
-DTEND:20261201T130000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261201T110000
+DTEND;TZID=Europe/Paris:20261201T130000
 SUMMARY:Débrancher le cloud - IA locale pour la recherche
 DESCRIPTION:Ce séminaire donné par Carlo Maria Zwölf sera une présentat
  ion d'outils qui permettent d'utiliser des modèles d'intelligence artific

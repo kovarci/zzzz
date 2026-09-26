@@ -1315,6 +1315,15 @@ def scrape_college_de_france(browser=None):
                 speaker=clean_text(speaker_el.get_text()) if speaker_el else "",
                 url=make_absolute(href, BASE),
             ))
+            # Le nom de l'intervenant est rangé DANS le titre de la carte
+            # (« Pauvreté, migration et protection sociale Esther Duflo ») et
+            # s'affichait deux fois. Titre affiché = le seul intitulé ; l'id
+            # reste calculé sur l'ancien texte : favoris, liens e/<id> et
+            # UID des agendas abonnés ne changent pas.
+            dec = title_el.select_one(".card-event__title-decorator")
+            shown = clean_text(dec.get_text()) if dec else ""
+            if len(shown) >= 4:
+                events[-1]["title"] = shown
             added += 1
         return added
 
@@ -2702,13 +2711,15 @@ def scrape_item_ens():
                 dates.append(d)
             if not a or not d or not in_window(d):
                 continue
-            txt = c.get_text(" ", strip=True)
+            # Le site perd ses tirets : « 59?61, rue Pouchet », « (16:00?18:00) »
+            txt = re.sub(r"(?<=\d)\?(?=\d)", "–", c.get_text(" ", strip=True))
             m = re.search(r"Lieu\s*:\s*(.+?)(?=\s{2}|$)", txt)
             lieu = clean_text(m.group(1))[:200] if m else ""
             if lieu and not _IDF_RE.search(lieu):
                 continue                       # Dakar, Genève…
             t0, t1 = _times(lieu)              # « … Salle Dussane - (17h-19h00) »
-            lieu = re.sub(r"[\s.,–-]*\(?\s*\d{1,2}\s*h.*$", "", lieu).strip(" -–.,")
+            # horaire (« (17h-19h00) », « (16:00–18:00) ») et tout ce qui suit
+            lieu = re.sub(r"[\s.,–-]*\(?\s*\d{1,2}\s*(?:h|:\d\d).*$", "", lieu).strip(" -–.,")
             title, speaker = _split_item_title(clean_text(a.get_text(" ")))
             events.append(new_event(
                 "ENS Paris", title, d, time_str=t0, end_time=t1,
@@ -2913,7 +2924,13 @@ def scrape_louvre():
             if (title, d) in seen or not in_window(d):
                 continue
             seen.add((title, d))
-            desc = strip_html(re.sub(r"<\?xml[^>]*\?>", "", (x.get("description") or {}).get("html", "")))
+            dsc = x.get("description") or {}
+            links = dsc.get("links") if isinstance(dsc.get("links"), dict) else {}
+            # « … les commissaires de l'exposition "{{ link_0 }} » : gabarit
+            # du site, le lien est dans description.links
+            html = re.sub(r"\{\{\s*(\w+)\s*\}\}",
+                          lambda m: (links.get(m.group(1)) or {}).get("title", "") or "", dsc.get("html", ""))
+            desc = strip_html(re.sub(r"<\?xml[^>]*\?>", "", html))
             sp = re.match(r"Avec\s+(.{3,120}?)(?:\.|$)", desc)
             img = ((x.get("image") or {}).get("hashes") or {}).get("w1200_16_9", "")
             events.append(new_event(
@@ -4233,6 +4250,17 @@ def geocode_all(events):
     print(f"Geocoded: {new} new lookups · {located}/{len(events)} events placed on map")
 
 
+# Fuseau de Paris décrit dans chaque calendrier (RFC 5545 §3.6.5) : sans lui,
+# une heure « flottante » s'affiche à l'heure locale de l'appareil — un
+# séminaire à 18 h devenait 18 h à Londres ou à Montréal.
+ICS_VTIMEZONE = ["BEGIN:VTIMEZONE", "TZID:Europe/Paris", "X-LIC-LOCATION:Europe/Paris",
+                 "BEGIN:DAYLIGHT", "TZOFFSETFROM:+0100", "TZOFFSETTO:+0200", "TZNAME:CEST",
+                 "DTSTART:19700329T020000", "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU", "END:DAYLIGHT",
+                 "BEGIN:STANDARD", "TZOFFSETFROM:+0200", "TZOFFSETTO:+0100", "TZNAME:CET",
+                 "DTSTART:19701025T030000", "RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU", "END:STANDARD",
+                 "END:VTIMEZONE"]
+
+
 def write_ics(events):
     """Write the global subscribable .ics feed + one feed per institution
     (data/cal/<slug>.ics), used by the per-institution header on the site."""
@@ -4265,19 +4293,19 @@ def write_ics(events):
         out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Lotent//FR",
                "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
                f"X-WR-CALNAME:{esc(calname)}",
-               "X-WR-TIMEZONE:Europe/Paris"]
+               "X-WR-TIMEZONE:Europe/Paris", *ICS_VTIMEZONE]
         for ev in evts:
             d = ev["date"].replace("-", "")
             tm = ev.get("time", "")
             if tm and re.match(r"\d{1,2}:\d{2}", tm):
                 h, m = tm.split(":")[:2]
-                dtstart = f"DTSTART:{d}T{int(h):02d}{int(m):02d}00"
+                dtstart = f"DTSTART;TZID=Europe/Paris:{d}T{int(h):02d}{int(m):02d}00"
                 et = ev.get("end_time", "")
                 if et and re.match(r"\d{1,2}:\d{2}", et):
                     eh, em = et.split(":")[:2]
-                    dtend = f"DTEND:{d}T{int(eh):02d}{int(em):02d}00"
+                    dtend = f"DTEND;TZID=Europe/Paris:{d}T{int(eh):02d}{int(em):02d}00"
                 else:
-                    dtend = f"DTEND:{d}T{min(int(h)+2,23):02d}{int(m):02d}00"
+                    dtend = f"DTEND;TZID=Europe/Paris:{d}T{min(int(h)+2,23):02d}{int(m):02d}00"
             else:
                 dtstart = f"DTSTART;VALUE=DATE:{d}"
                 try:
@@ -4285,7 +4313,8 @@ def write_ics(events):
                 except Exception:
                     nd = d
                 dtend = f"DTEND;VALUE=DATE:{nd}"
-            desc = esc((ev.get("description") or "") + (("\n" + ev["url"]) if ev.get("url") else ""))
+            # pas de saut de ligne en tête quand la description est vide
+            desc = esc("\n".join(x for x in (ev.get("description") or "", ev.get("url") or "") if x))
             out += ["BEGIN:VEVENT", f"UID:{ev['id']}@paris-academique",
                     f"DTSTAMP:{stamp}", dtstart, dtend,
                     f"SUMMARY:{esc(ev['title'])}", f"DESCRIPTION:{desc}",
@@ -4669,17 +4698,33 @@ def write_event_pages(events):
         # Title SEO : on rajoute date + institution -> match plus de requêtes
         # long-tail (« conférence X juin 2026 », « X collège de france »).
         # Cap à ~70 caractères pour ne pas se faire tronquer dans Google.
-        seo_title_full = f"{ev.get('title','')[:55]} · {_date_fr(ev.get('date',''))} · {ev.get('institution','')}"
-        seo_title = _esc_attr(seo_title_full[:67])
-        # Meta description : phrase naturelle + mots-clés (intervenant, lieu,
-        # date) — 150 caractères, format optimal pour Google SERP.
-        parts = [f"{ev.get('title','')} — conférence {('à ' + ev['location']) if ev.get('location') else 'à Paris'}"]
-        parts.append(f"organisée par {ev.get('institution','')} le {_date_fr(ev.get('date',''))}")
-        if ev.get("speaker"):
-            parts.append(f"avec {ev['speaker'][:50]}")
-        if ev.get("time"):
-            parts.append(f"à {ev['time']}")
-        meta_desc = _esc_attr((". ".join(parts) + ".")[:155])
+        def cut(text, n):
+            """Coupe au mot (« … »), jamais au milieu d'un mot ou d'une date."""
+            text = text.strip()
+            if len(text) <= n:
+                return text
+            return text[:n - 1].rsplit(" ", 1)[0].rstrip(" ·,;:—-") + "…"
+        t_, d_ = ev.get("title", ""), _date_fr(ev.get("date", ""))
+        seo_title_full = f"{cut(t_, 55)} · {d_} · {ev.get('institution','')}"
+        if len(seo_title_full) > 67:          # l'organisateur ne rentre pas : on le laisse
+            seo_title_full = f"{cut(t_, 67 - len(d_) - 3)} · {d_}"
+        seo_title = _esc_attr(seo_title_full)
+        # Meta description : une phrase naturelle + mots-clés (intervenant,
+        # lieu, date) — ~155 caractères, format optimal pour Google SERP.
+        # Date, heure et organisateur d'abord : avec un long titre et une
+        # adresse complète, ils tombaient au-delà des 155 caractères.
+        when = d_ + (f" à {ev['time']}" if ev.get("time") else "")
+        # Lieu court, sans répéter l'organisateur (« … par Institut Henri
+        # Poincaré · Institut Henri Poincaré, 11 rue… »)
+        inst_s = slugify(ev.get("institution", ""))
+        bits = [x.strip() for x in re.split(r",| — ", re.sub(r"\([^)]*\)", "", ev.get("location") or ""))
+                if x.strip()]
+        bits = [x for x in bits if not (inst_s and (slugify(x) in inst_s or inst_s in slugify(x)))]
+        where = ", ".join(bits[:2])
+        sent = (f"{cut(t_, 90)} — conférence le {when}, organisée par {ev.get('institution','')}"
+                + (f", avec {cut(ev['speaker'], 50)}" if ev.get("speaker") else "")
+                + (f" · {where}" if where and where.lower() != "paris" else " · Paris") + ".")
+        meta_desc = _esc_attr(cut(sent, 155))
         img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
         ext = _esc_attr(ev.get("url") or "")
         # « /?event= » et non « ../index.html?event= » : sinon Google découvre
@@ -5410,6 +5455,14 @@ def finalize_events(events):
         # Colloque sur plusieurs jours : l'heure de fin est celle du dernier jour
         if e.get("end_time") and e.get("time") and e["end_time"] <= e["time"]:
             e["end_time"] = ""
+        # Collège de France : versions enregistrées avant que le scraper ne
+        # sépare l'intervenant du titre (« … sociale Esther Duflo »)
+        sp = (e.get("speaker") or "").strip()
+        if (e.get("institution") == "Collège de France" and sp
+                and e.get("title", "").endswith(" " + sp) and len(e["title"]) > len(sp) + 4):
+            e["title"] = e["title"][:-len(sp)].strip()
+        if (e.get("description") or "").strip().lower() == e.get("title", "").strip().lower():
+            e["description"] = ""
         reclassify(e)
         if _SOUTENANCE.search(e.get("title", "")):
             e["kind"] = "soutenance"

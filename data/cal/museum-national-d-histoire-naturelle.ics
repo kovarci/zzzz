@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Muséum national d'Histoire naturelle · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:78fbc2cc3873@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261008T190000
-DTEND:20261008T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261008T190000
+DTEND;TZID=Europe/Paris:20261008T210000
 SUMMARY:La fabrique des images : la photographie\, entre art et science - C
  ycle « Un état du monde »
 DESCRIPTION:Conférence\nhttps://www.mnhn.fr/fr/conference/la-fabrique-des-
@@ -21,7 +39,7 @@ URL:https://www.mnhn.fr/fr/conference/la-fabrique-des-images-la-photographi
 END:VEVENT
 BEGIN:VEVENT
 UID:2e43742f1eab@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Explorons le monde
@@ -32,9 +50,9 @@ URL:https://www.mnhn.fr/fr/rencontre/explorons-le-monde
 END:VEVENT
 BEGIN:VEVENT
 UID:4d63bb589824@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261017T143000
-DTEND:20261017T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261017T143000
+DTEND;TZID=Europe/Paris:20261017T163000
 SUMMARY:L’Herbier de mots
 DESCRIPTION:Rencontre\nhttps://www.mnhn.fr/fr/rencontre/l-herbier-de-mots
 LOCATION:Grande Galerie de l'Évolution — Muséum national d'Histoire nat
@@ -43,9 +61,9 @@ URL:https://www.mnhn.fr/fr/rencontre/l-herbier-de-mots
 END:VEVENT
 BEGIN:VEVENT
 UID:110775a26473@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261018T143000
-DTEND:20261018T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261018T143000
+DTEND;TZID=Europe/Paris:20261018T163000
 SUMMARY:Conte du Muséum en Live !
 DESCRIPTION:Rencontre\nhttps://www.mnhn.fr/fr/animation/conte-du-museum-en-
  live
@@ -55,9 +73,9 @@ URL:https://www.mnhn.fr/fr/animation/conte-du-museum-en-live
 END:VEVENT
 BEGIN:VEVENT
 UID:43bc19179dfe@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261105T190000
-DTEND:20261105T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261105T190000
+DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:La fabrique du vivant : l'art de la taxidermie - Cycle « Un état 
  du monde »
 DESCRIPTION:Conférence\nhttps://www.mnhn.fr/fr/conference/la-fabrique-du-v
@@ -69,7 +87,7 @@ URL:https://www.mnhn.fr/fr/conference/la-fabrique-du-vivant-l-art-de-la-tax
 END:VEVENT
 BEGIN:VEVENT
 UID:4710c1b81537@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:La photographie\, miroir de l’évolution de nos sociétés
@@ -82,9 +100,9 @@ URL:https://www.mnhn.fr/fr/rencontre/la-photographie-miroir-de-l-evolution-
 END:VEVENT
 BEGIN:VEVENT
 UID:462eac18f12f@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261129T140000
-DTEND:20261129T160000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261129T140000
+DTEND;TZID=Europe/Paris:20261129T160000
 SUMMARY:Effervescience : retour de mission
 DESCRIPTION:Rencontre\nhttps://www.mnhn.fr/fr/rencontre/retour-de-mission
 LOCATION:Grande Galerie de l'Évolution — Muséum national d'Histoire nat
@@ -93,7 +111,7 @@ URL:https://www.mnhn.fr/fr/rencontre/retour-de-mission
 END:VEVENT
 BEGIN:VEVENT
 UID:f9494b18536e@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
 SUMMARY:Poétisation du vivant
@@ -105,7 +123,7 @@ URL:https://www.mnhn.fr/fr/rencontre/poetisation-du-vivant
 END:VEVENT
 BEGIN:VEVENT
 UID:bb194f0fca5b@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY:Sciences et Recherches Participatives : les Journées nationales 20

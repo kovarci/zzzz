@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Institut Jacques Delors · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:c680239492f2@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260928T160000
-DTEND:20260928T173000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260928T160000
+DTEND;TZID=Europe/Paris:20260928T173000
 SUMMARY:Conférence ECFR x CGE x DG ENEST : L’Économie de l’élargisse
  ment de l’Union européenne
 DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/conference
@@ -20,9 +38,9 @@ URL:https://institutdelors.eu/evenements/conference-ecfr-x-cge-leconomie-de
 END:VEVENT
 BEGIN:VEVENT
 UID:07518bb39f8b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261005T173000
-DTEND:20261005T190000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261005T173000
+DTEND;TZID=Europe/Paris:20261005T190000
 SUMMARY:Compétitivité & Souveraineté Européennes | Quel avenir pour le 
  marché unique ? avec Enrico Letta
 DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/competitiv
@@ -34,9 +52,9 @@ URL:https://institutdelors.eu/evenements/competitivite-souverainete-europee
 END:VEVENT
 BEGIN:VEVENT
 UID:7d4c673b15ff@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261006T123000
-DTEND:20261006T133000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261006T123000
+DTEND;TZID=Europe/Paris:20261006T133000
 SUMMARY:Midis d’Europa Experience #6 – Emploi et compétences : vers un
  e vraie mobilité européenne ? avec Sofia Fernandes
 DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/midis-deur
@@ -47,9 +65,9 @@ URL:https://institutdelors.eu/evenements/midis-deuropa-experience-6-emploi-
 END:VEVENT
 BEGIN:VEVENT
 UID:55030921b19b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261006T170000
-DTEND:20261006T180000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261006T170000
+DTEND;TZID=Europe/Paris:20261006T180000
 SUMMARY:IJD x PSIA Trade Rounds | Comment gagner une guerre commerciale ? a
  vec Chad Bown
 DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/ijdxpsia-t
@@ -60,9 +78,9 @@ URL:https://institutdelors.eu/evenements/ijdxpsia-trade-rounds-comment-remp
 END:VEVENT
 BEGIN:VEVENT
 UID:e8ac73a3d660@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261007T083000
-DTEND:20261007T130000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261007T083000
+DTEND;TZID=Europe/Paris:20261007T130000
 SUMMARY:Union de l’Épargne et de l’Investissement | Comment mobiliser 
  l’épargne de long terme des ménages européens pour financer les entre
  prises ?
@@ -75,9 +93,9 @@ URL:https://institutdelors.eu/evenements/comment-mobiliser-lepargne-de-long
 END:VEVENT
 BEGIN:VEVENT
 UID:c9bfd38029eb@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261016T090000
-DTEND:20261016T170000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261016T090000
+DTEND;TZID=Europe/Paris:20261016T170000
 SUMMARY:Académie Notre Europe #1 – L’Europe Politique et Institutionne
  lle
 DESCRIPTION:Hybride\nhttps://institutdelors.eu/evenements/academie-notre-eu
@@ -88,9 +106,9 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-1-leurope-po
 END:VEVENT
 BEGIN:VEVENT
 UID:e61061a5b914@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261113T090000
-DTEND:20261113T170000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261113T090000
+DTEND;TZID=Europe/Paris:20261113T170000
 SUMMARY:Académie Notre Europe #2 – L’Europe dans le Monde
 DESCRIPTION:Hybride\nhttps://institutdelors.eu/evenements/academie-notre-eu
  rope-2-leurope-dans-le-monde/
@@ -100,7 +118,7 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-2-leurope-da
 END:VEVENT
 BEGIN:VEVENT
 UID:4e5b96419fb6@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Conférence Annuelle – 30 ans de l’Institut Jacques Delors

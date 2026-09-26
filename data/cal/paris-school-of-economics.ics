@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Paris School of Economics · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:5b2a046bb7ba@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260925T111500
-DTEND:20260925T131500
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260925T111500
+DTEND;TZID=Europe/Paris:20260925T131500
 SUMMARY:Economics and Psychology Seminar
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/ec
  onomics-and-psychology-seminar/
@@ -20,9 +38,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economics-and-psycholo
 END:VEVENT
 BEGIN:VEVENT
 UID:804a137f6a28@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260925T120000
-DTEND:20260925T140000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260925T120000
+DTEND;TZID=Europe/Paris:20260925T140000
 SUMMARY:Lunch séminaire de l'Observatoire international de la fiscalité
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/se
  minaire-dejeuner-de-lobservatoire-fiscal-de-lue/
@@ -32,9 +50,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-dejeuner-de-
 END:VEVENT
 BEGIN:VEVENT
 UID:293c8565a496@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260925T130000
-DTEND:20260925T150000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260925T130000
+DTEND;TZID=Europe/Paris:20260925T150000
 SUMMARY:Casual Friday Development
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/ca
  sual-friday-development/
@@ -45,7 +63,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/casual-friday-developm
 END:VEVENT
 BEGIN:VEVENT
 UID:8f9e80076d95@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Régulation et Environnement
@@ -58,9 +76,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/regulation-et-environn
 END:VEVENT
 BEGIN:VEVENT
 UID:c4693c7647d9@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260928T123000
-DTEND:20260928T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260928T123000
+DTEND;TZID=Europe/Paris:20260928T143000
 SUMMARY:Séminaire PSE Interne
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/se
  minaire-pse-interne/
@@ -70,9 +88,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-pse-interne/
 END:VEVENT
 BEGIN:VEVENT
 UID:940d3f6352a4@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260928T160000
-DTEND:20260928T180000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260928T160000
+DTEND;TZID=Europe/Paris:20260928T180000
 SUMMARY:Théorie économique Roy-Adres
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/th
  eorie-economique-roy-adres/
@@ -83,9 +101,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/theorie-economique-roy
 END:VEVENT
 BEGIN:VEVENT
 UID:e1be174d3ff0@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260928T160000
-DTEND:20260928T180000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260928T160000
+DTEND;TZID=Europe/Paris:20260928T180000
 SUMMARY:Économétrie
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/ec
  onometrie/
@@ -95,9 +113,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/econometrie/
 END:VEVENT
 BEGIN:VEVENT
 UID:e3dbd307f955@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260929T123000
-DTEND:20260929T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260929T123000
+DTEND;TZID=Europe/Paris:20260929T143000
 SUMMARY:Lunch séminaire d’économie appliquée
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/lu
  nch-seminaire-deconomie-appliquee/
@@ -107,9 +125,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-decono
 END:VEVENT
 BEGIN:VEVENT
 UID:485f44eba3c6@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260930T123000
-DTEND:20260930T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260930T123000
+DTEND;TZID=Europe/Paris:20260930T143000
 SUMMARY:Histoire économique
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/hi
  stoire-economique/
@@ -119,9 +137,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
 END:VEVENT
 BEGIN:VEVENT
 UID:0a3bbc96ebde@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260930T163000
-DTEND:20260930T183000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260930T163000
+DTEND;TZID=Europe/Paris:20260930T183000
 SUMMARY:Économie du développement
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/ec
  onomie-du-developpement/
@@ -132,9 +150,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-du-developpem
 END:VEVENT
 BEGIN:VEVENT
 UID:ee5cd124d2f8@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T123000
-DTEND:20261001T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T123000
+DTEND;TZID=Europe/Paris:20261001T143000
 SUMMARY:Lunch séminaire Théorie\, Organisation et Marchés (TOM)
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/lu
  nch-seminaire-theorie-organisation-et-marches-tom/
@@ -144,9 +162,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/lunch-seminaire-theori
 END:VEVENT
 BEGIN:VEVENT
 UID:a5308bae6560@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T123000
-DTEND:20261001T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T123000
+DTEND;TZID=Europe/Paris:20261001T143000
 SUMMARY:Travail et économie publique (interne)
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/tr
  avail-et-economie-publique-interne/
@@ -157,9 +175,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-pu
 END:VEVENT
 BEGIN:VEVENT
 UID:858a977b629f@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T123000
-DTEND:20261001T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T123000
+DTEND;TZID=Europe/Paris:20261001T143000
 SUMMARY:Groupe de travail : Macro Workshop
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/gr
  oupe-de-travail-macro-workshop/
@@ -170,9 +188,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/groupe-de-travail-macr
 END:VEVENT
 BEGIN:VEVENT
 UID:9672b749274f@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T160000
-DTEND:20261001T180000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T160000
+DTEND;TZID=Europe/Paris:20261001T180000
 SUMMARY:Macroéconomie
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/ma
  croeconomie/
@@ -182,9 +200,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/macroeconomie/
 END:VEVENT
 BEGIN:VEVENT
 UID:8bdf85b47806@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261006T123000
-DTEND:20261006T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261006T123000
+DTEND;TZID=Europe/Paris:20261006T143000
 SUMMARY:Paris trade seminar
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/pa
  ris-trade-seminar/
@@ -193,9 +211,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/paris-trade-seminar/
 END:VEVENT
 BEGIN:VEVENT
 UID:73ca357f9931@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261007T143000
-DTEND:20261007T163000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261007T143000
+DTEND;TZID=Europe/Paris:20261007T163000
 SUMMARY:Financer l'avenir de l'Europe : compétitivité\, marchés des capi
  taux et l'absence d'un actif sûr
 DESCRIPTION:Conférence grand public\nhttps://www.parisschoolofeconomics.eu
@@ -207,9 +225,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/financer-lavenir-de-le
 END:VEVENT
 BEGIN:VEVENT
 UID:e2831de531e0@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261008T123000
-DTEND:20261008T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261008T123000
+DTEND;TZID=Europe/Paris:20261008T143000
 SUMMARY:Paris Empirical Political Economics Seminar (PEPES)
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/se
  minaire-economie-politique-empirique-de-paris-pepes/
@@ -220,9 +238,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/seminaire-economie-pol
 END:VEVENT
 BEGIN:VEVENT
 UID:3091b4f40d93@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261014T123000
-DTEND:20261014T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261014T123000
+DTEND;TZID=Europe/Paris:20261014T143000
 SUMMARY:Offshore Talks #6
 DESCRIPTION:Colloque\nhttps://www.parisschoolofeconomics.eu/evenements/offs
  hore-talks-6/
@@ -232,9 +250,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/offshore-talks-6/
 END:VEVENT
 BEGIN:VEVENT
 UID:f0080cbfa95b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261014T160000
-DTEND:20261014T180000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261014T160000
+DTEND;TZID=Europe/Paris:20261014T180000
 SUMMARY:Histoire des entreprises et de la finance
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/dh
  istoire-des-entreprises-et-de-la-finance/
@@ -245,9 +263,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/dhistoire-des-entrepri
 END:VEVENT
 BEGIN:VEVENT
 UID:296f81f4b76f@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261015T123000
-DTEND:20261015T143000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261015T123000
+DTEND;TZID=Europe/Paris:20261015T143000
 SUMMARY:Travail et économie publique
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/tr
  avail-et-economie-publique/
@@ -258,9 +276,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/travail-et-economie-pu
 END:VEVENT
 BEGIN:VEVENT
 UID:51fdf33c6bd2@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261016T110000
-DTEND:20261016T130000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261016T110000
+DTEND;TZID=Europe/Paris:20261016T130000
 SUMMARY:Économie politique du changement institutionnel (EPCI)
 DESCRIPTION:Séminaire\nhttps://www.parisschoolofeconomics.eu/evenements/ec
  onomie-politique-du-changement-institutionnel-epci/
@@ -271,9 +289,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/economie-politique-du-
 END:VEVENT
 BEGIN:VEVENT
 UID:7a8832bdab96@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261019T150000
-DTEND:20261019T170000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261019T150000
+DTEND;TZID=Europe/Paris:20261019T170000
 SUMMARY:L'économie mondiale postmoderne
 DESCRIPTION:Conférence\nhttps://www.parisschoolofeconomics.eu/evenements/l
  economie-mondiale-postmoderne/
@@ -284,9 +302,9 @@ URL:https://www.parisschoolofeconomics.eu/evenements/leconomie-mondiale-pos
 END:VEVENT
 BEGIN:VEVENT
 UID:2cd3053e4541@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261103T093000
-DTEND:20261103T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261103T093000
+DTEND;TZID=Europe/Paris:20261103T113000
 SUMMARY:Journées de l’économie 2026
 DESCRIPTION:Conférence grand public\nhttps://www.parisschoolofeconomics.eu
  /evenements/journees-de-leconomie-2026/
@@ -296,7 +314,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/journees-de-leconomie-
 END:VEVENT
 BEGIN:VEVENT
 UID:a0f914c128c4@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Réunion annuelle ESOC-ReCIPE 2026
@@ -309,7 +327,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/reunion-annuelle-esoc-
 END:VEVENT
 BEGIN:VEVENT
 UID:2e528fa7db58@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Conférence de l’Association Française d’Économie des Transpo
@@ -323,7 +341,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/conference-de-lassocia
 END:VEVENT
 BEGIN:VEVENT
 UID:05ebeee4df82@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:L’immigration dans les pays de l’OCDE
@@ -336,7 +354,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-
 END:VEVENT
 BEGIN:VEVENT
 UID:4bf60ece4689@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Politiques macroéconomiques avec des agents hétérogènes

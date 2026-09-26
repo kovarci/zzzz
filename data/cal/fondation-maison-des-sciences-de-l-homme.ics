@@ -5,11 +5,29 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Fondation Maison des Sciences de l'Homme · Lotent
 X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:60c38c14c84a@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20260928T150000
-DTEND:20260928T170000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20260928T150000
+DTEND;TZID=Europe/Paris:20260928T170000
 SUMMARY:Les cadres du processus des politiques publiques en pratique
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/les-cadres-du-processus-d
  es-politiques-publiques-en-pratique
@@ -19,9 +37,9 @@ URL:https://www.fmsh.fr/agenda/les-cadres-du-processus-des-politiques-publi
 END:VEVENT
 BEGIN:VEVENT
 UID:d07e67dd3072@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261001T180000
-DTEND:20261001T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261001T180000
+DTEND;TZID=Europe/Paris:20261001T200000
 SUMMARY:Transition ou symbiose?
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/transition-ou-symbiose
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
@@ -29,9 +47,9 @@ URL:https://www.fmsh.fr/agenda/transition-ou-symbiose
 END:VEVENT
 BEGIN:VEVENT
 UID:2a62077111a3@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261007T180000
-DTEND:20261007T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261007T180000
+DTEND;TZID=Europe/Paris:20261007T200000
 SUMMARY:Qu’est-ce qui voyage lorsque les hommes ne voyagent pas ?
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/quest-ce-qui-voyage-lors
  que-les-hommes-ne-voyagent-pas
@@ -41,9 +59,9 @@ URL:https://www.fmsh.fr/agenda/quest-ce-qui-voyage-lorsque-les-hommes-ne-vo
 END:VEVENT
 BEGIN:VEVENT
 UID:e49809f422fe@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261008T170000
-DTEND:20261008T190000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261008T170000
+DTEND;TZID=Europe/Paris:20261008T190000
 SUMMARY:Reconnaître l'informel par les open badges
 DESCRIPTION:Conférence\nhttps://www.fmsh.fr/agenda/reconnaitre-linformel-p
  ar-les-open-badges
@@ -52,9 +70,9 @@ URL:https://www.fmsh.fr/agenda/reconnaitre-linformel-par-les-open-badges
 END:VEVENT
 BEGIN:VEVENT
 UID:351a844f8217@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261008T180000
-DTEND:20261008T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261008T180000
+DTEND;TZID=Europe/Paris:20261008T200000
 SUMMARY:L'évaluation financière des valeurs sociales
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/levaluation-financiere-d
  es-valeurs-sociales
@@ -63,9 +81,9 @@ URL:https://www.fmsh.fr/agenda/levaluation-financiere-des-valeurs-sociales
 END:VEVENT
 BEGIN:VEVENT
 UID:696294a57a9c@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261015T180000
-DTEND:20261015T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261015T180000
+DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Le pouvoir en partage : la communalisation comme idéal politique
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/le-pouvoir-en-partage-la
  -communalisation-comme-ideal-politique
@@ -75,9 +93,9 @@ URL:https://www.fmsh.fr/agenda/le-pouvoir-en-partage-la-communalisation-com
 END:VEVENT
 BEGIN:VEVENT
 UID:562decb428fa@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261019T150000
-DTEND:20261019T170000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261019T150000
+DTEND;TZID=Europe/Paris:20261019T170000
 SUMMARY:Sujet et sciences de l’homme face à l’intelligence artificiell
  e
 DESCRIPTION:Conférence\nhttps://www.fmsh.fr/agenda/sujet-et-sciences-de-lh
@@ -88,9 +106,9 @@ URL:https://www.fmsh.fr/agenda/sujet-et-sciences-de-lhomme-face-lintelligen
 END:VEVENT
 BEGIN:VEVENT
 UID:51ba42bb7473@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261022T180000
-DTEND:20261022T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261022T180000
+DTEND;TZID=Europe/Paris:20261022T200000
 SUMMARY:Repenser le pouvoir public
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/repenser-le-pouvoir-publ
  ic
@@ -99,9 +117,9 @@ URL:https://www.fmsh.fr/agenda/repenser-le-pouvoir-public
 END:VEVENT
 BEGIN:VEVENT
 UID:6d7edab23e40@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261022T190000
-DTEND:20261022T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261022T190000
+DTEND;TZID=Europe/Paris:20261022T210000
 SUMMARY:Whose Peace? Warmongers\, peace fictions\, and the narratives of im
  perial order
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/whose-peace-warmongers-pe
@@ -112,9 +130,9 @@ URL:https://www.fmsh.fr/agenda/whose-peace-warmongers-peace-fictions-and-na
 END:VEVENT
 BEGIN:VEVENT
 UID:70678d19f2e7@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261027T183000
-DTEND:20261027T203000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261027T183000
+DTEND;TZID=Europe/Paris:20261027T203000
 SUMMARY:Plastiques en fin de vie\, une géographie des déchets
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/plastiques-en-fin-de-vie-
  une-geographie-des-dechets
@@ -124,9 +142,9 @@ URL:https://www.fmsh.fr/agenda/plastiques-en-fin-de-vie-une-geographie-des-
 END:VEVENT
 BEGIN:VEVENT
 UID:22f49a7e0474@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261029T180000
-DTEND:20261029T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261029T180000
+DTEND;TZID=Europe/Paris:20261029T200000
 SUMMARY:Quand la ville gagne le littoral
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/quand-la-ville-gagne-le-
  littoral
@@ -135,9 +153,9 @@ URL:https://www.fmsh.fr/agenda/quand-la-ville-gagne-le-littoral
 END:VEVENT
 BEGIN:VEVENT
 UID:3250795ffe9e@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261029T183000
-DTEND:20261029T203000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261029T183000
+DTEND;TZID=Europe/Paris:20261029T203000
 SUMMARY:Le désir d'avant-garde
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/le-desir-davant-garde
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
@@ -145,9 +163,9 @@ URL:https://www.fmsh.fr/agenda/le-desir-davant-garde
 END:VEVENT
 BEGIN:VEVENT
 UID:d1bd79d2283c@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261103T093000
-DTEND:20261103T113000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261103T093000
+DTEND;TZID=Europe/Paris:20261103T113000
 SUMMARY:Rencontres ArTeC
 DESCRIPTION:Conférence\nhttps://www.fmsh.fr/agenda/rencontres-artec
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
@@ -155,9 +173,9 @@ URL:https://www.fmsh.fr/agenda/rencontres-artec
 END:VEVENT
 BEGIN:VEVENT
 UID:847e0f105709@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261106T100000
-DTEND:20261106T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261106T100000
+DTEND;TZID=Europe/Paris:20261106T120000
 SUMMARY:La « bénédiction de l'enfant » à l’épreuve des techniques d
  e procréation
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/la-benediction-de-lenfan
@@ -168,7 +186,7 @@ URL:https://www.fmsh.fr/agenda/la-benediction-de-lenfant-lepreuve-des-techn
 END:VEVENT
 BEGIN:VEVENT
 UID:8ae99284a38a@paris-academique
-DTSTAMP:20260926T094901Z
+DTSTAMP:20260926T095718Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Autour de Bunker Archéologie
@@ -179,9 +197,9 @@ URL:https://www.fmsh.fr/agenda/autour-de-bunker-archeologie
 END:VEVENT
 BEGIN:VEVENT
 UID:642f10d96cac@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261112T180000
-DTEND:20261112T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261112T180000
+DTEND;TZID=Europe/Paris:20261112T200000
 SUMMARY:Populisme\, religion et formation des régimes théoséculiers
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/populisme-religion-et-fo
  rmation-des-regimes-theoseculiers
@@ -191,9 +209,9 @@ URL:https://www.fmsh.fr/agenda/populisme-religion-et-formation-des-regimes-
 END:VEVENT
 BEGIN:VEVENT
 UID:9817c04eaf11@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261112T190000
-DTEND:20261112T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261112T190000
+DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Vivre les enchères
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/vivre-les-encheres
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
@@ -201,9 +219,9 @@ URL:https://www.fmsh.fr/agenda/vivre-les-encheres
 END:VEVENT
 BEGIN:VEVENT
 UID:1c782247c861@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261118T183000
-DTEND:20261118T203000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261118T183000
+DTEND;TZID=Europe/Paris:20261118T203000
 SUMMARY:Merci patrons !
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/merci-patrons
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
@@ -211,9 +229,9 @@ URL:https://www.fmsh.fr/agenda/merci-patrons
 END:VEVENT
 BEGIN:VEVENT
 UID:6541f1982e4a@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261119T180000
-DTEND:20261119T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261119T180000
+DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:Carrefours du fascisme
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/carrefours-du-fascisme
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
@@ -221,9 +239,9 @@ URL:https://www.fmsh.fr/agenda/carrefours-du-fascisme
 END:VEVENT
 BEGIN:VEVENT
 UID:fc667d85ea3f@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261120T100000
-DTEND:20261120T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261120T100000
+DTEND;TZID=Europe/Paris:20261120T120000
 SUMMARY:L'enregistrement civil des mort-nés en France
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/lenregistrement-civil-de
  s-mort-nes-en-france
@@ -232,9 +250,9 @@ URL:https://www.fmsh.fr/agenda/lenregistrement-civil-des-mort-nes-en-france
 END:VEVENT
 BEGIN:VEVENT
 UID:59c56a15b48b@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261126T090000
-DTEND:20261126T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261126T090000
+DTEND;TZID=Europe/Paris:20261126T110000
 SUMMARY:Les humanités en formes
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/les-humanites-en-formes
 LOCATION:FMSH\, 54 boulevard Raspail\, Paris 6e
@@ -242,9 +260,9 @@ URL:https://www.fmsh.fr/agenda/les-humanites-en-formes
 END:VEVENT
 BEGIN:VEVENT
 UID:30535c829d36@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261126T090000
-DTEND:20261126T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261126T090000
+DTEND;TZID=Europe/Paris:20261126T210000
 SUMMARY:Les humanités en formes : sciences humaines et sociales
 DESCRIPTION:Nouveaux formats éditoriaux\, révolution de l'intelligence ar
  tificielle\, transformations du dialogue science-société : le Grand Form
@@ -258,9 +276,9 @@ URL:https://www.paris.fr/evenements/les-humanites-en-formes-117382
 END:VEVENT
 BEGIN:VEVENT
 UID:73dcc92bd604@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261126T180000
-DTEND:20261126T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261126T180000
+DTEND;TZID=Europe/Paris:20261126T200000
 SUMMARY:Urbanisation déplacée et urbanisation étendue
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/urbanisation-deplacee-et
  -urbanisation-etendue
@@ -270,9 +288,9 @@ URL:https://www.fmsh.fr/agenda/urbanisation-deplacee-et-urbanisation-etendu
 END:VEVENT
 BEGIN:VEVENT
 UID:9d25958b1857@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261203T090000
-DTEND:20261203T110000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261203T090000
+DTEND;TZID=Europe/Paris:20261203T110000
 SUMMARY:Exil·s\, guerre·s et création·s : images de résistance au serv
  ice de l’histoire (2024 – 2026)
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/exils-guerres-et-creation
@@ -283,9 +301,9 @@ URL:https://www.fmsh.fr/agenda/exils-guerres-et-creations-images-de-resista
 END:VEVENT
 BEGIN:VEVENT
 UID:ab441ca40d43@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261204T100000
-DTEND:20261204T120000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261204T100000
+DTEND;TZID=Europe/Paris:20261204T120000
 SUMMARY:La petite enfance et les violences sexuelles intra et extra-familia
  les
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/la-petite-enfance-et-les
@@ -296,9 +314,9 @@ URL:https://www.fmsh.fr/agenda/la-petite-enfance-et-les-violences-sexuelles
 END:VEVENT
 BEGIN:VEVENT
 UID:4cda72013f25@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261208T190000
-DTEND:20261208T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261208T190000
+DTEND;TZID=Europe/Paris:20261208T210000
 SUMMARY:#Restitutions. Les objets d'art en question
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/restitutions-les-objets-d
  art-en-question
@@ -307,9 +325,9 @@ URL:https://www.fmsh.fr/agenda/restitutions-les-objets-dart-en-question
 END:VEVENT
 BEGIN:VEVENT
 UID:7da0f631f8aa@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261210T180000
-DTEND:20261210T200000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261210T180000
+DTEND;TZID=Europe/Paris:20261210T200000
 SUMMARY:Les sakhī : alternative ascétique pour femmes « transgenres »
 DESCRIPTION:Séminaire\nhttps://www.fmsh.fr/agenda/les-sakhi-alternative-as
  cetique-pour-femmes-transgenres
@@ -319,9 +337,9 @@ URL:https://www.fmsh.fr/agenda/les-sakhi-alternative-ascetique-pour-femmes-
 END:VEVENT
 BEGIN:VEVENT
 UID:56bb6cfd2ddd@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261215T183000
-DTEND:20261215T203000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261215T183000
+DTEND;TZID=Europe/Paris:20261215T203000
 SUMMARY:Plastiques\, des révélateurs de la crise éthique de notre relati
  on au vivant
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/plastiques-des-revelateur
@@ -332,9 +350,9 @@ URL:https://www.fmsh.fr/agenda/plastiques-des-revelateurs-de-la-crise-ethiq
 END:VEVENT
 BEGIN:VEVENT
 UID:06508c812e37@paris-academique
-DTSTAMP:20260926T094901Z
-DTSTART:20261217T190000
-DTEND:20261217T210000
+DTSTAMP:20260926T095718Z
+DTSTART;TZID=Europe/Paris:20261217T190000
+DTEND;TZID=Europe/Paris:20261217T210000
 SUMMARY:Immer-son. Écouter aux pages des romans (Jane Eyre et Dracula)
 DESCRIPTION:Rencontre\nhttps://www.fmsh.fr/agenda/immer-son-ecouter-aux-pag
  es-des-romans-jane-eyre-et-dracula
