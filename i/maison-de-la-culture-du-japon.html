@@ -40,9 +40,11 @@ body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:
 .cta .ext{border:1px solid var(--border);color:inherit}
 .cta a:hover{filter:brightness(1.08)}
 .cta a:only-child{grid-column:1/-1}
+.subs{font-size:12px;color:var(--muted-fg);margin:10px 0 0;overflow-wrap:anywhere}.subs a{color:inherit}
 @media (max-width:420px){.cta{grid-template-columns:1fr}}
 h2{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em}
 .rel{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}
+.empty{color:var(--muted-fg);border:1px dashed var(--border);border-radius:10px;padding:14px 16px;margin:18px 0 0;font-size:14px}
 .rel li{font-size:14px;line-height:1.4}
 .rel li+li{border-top:1px solid var(--border)}
 .rel a{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}
@@ -64,7 +66,8 @@ h2{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-t
 <div class="body">
 <p class="count"><b>9</b> conférences à venir dans l'agenda Lotent.</p>
 
-<div class="cta"><a class="site" href="/?institution=Maison%20de%20la%20culture%20du%20Japon">Voir dans l'agenda →</a><a class="ext" href="https://lotent.fr/data/cal/maison-de-la-culture-du-japon.ics">S'abonner à l'agenda (.ics)</a></div>
+<div class="cta"><a class="site" href="/?institution=Maison%20de%20la%20culture%20du%20Japon">Voir dans l'agenda →</a><a class="ext" href="webcal://lotent.fr/data/cal/maison-de-la-culture-du-japon.ics">S'abonner à l'agenda</a></div>
+<p class="subs">Abonnement : <a href="webcal://lotent.fr/data/cal/maison-de-la-culture-du-japon.ics">Apple, Outlook</a> · <a href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Flotent.fr%2Fdata%2Fcal%2Fmaison-de-la-culture-du-japon.ics" rel="noopener">Google Agenda</a> · lien à coller dans une autre application : <a href="https://lotent.fr/data/cal/maison-de-la-culture-du-japon.ics">https://lotent.fr/data/cal/maison-de-la-culture-du-japon.ics</a>. Il se met à jour tout seul chaque jour.</p>
 </div>
 </main>
 <h2>Prochaines conférences</h2><ul class="rel"><li><a href="https://lotent.fr/e/2ce43b7999ce.html"><span class="t">Tsunami Trees</span><span class="d">3 oct. · 14:00</span></a></li><li><a href="https://lotent.fr/e/652566379acf.html"><span class="t">Déplacement du regard - La photographie japonaise de l’après-guerre à nos jours</span><span class="d">6 oct. · 18:30</span></a></li><li><a href="https://lotent.fr/e/51ae87104b46.html"><span class="t">Le cinéma japonais a le goût du saké</span><span class="d">8 oct. · 18:00</span></a></li><li><a href="https://lotent.fr/e/404529c36d55.html"><span class="t">Ango le desperado</span><span class="d">9 oct. · 18:30</span></a></li><li><a href="https://lotent.fr/e/eb51375fe13d.html"><span class="t">Design graphique au Japon</span><span class="d">16 oct. · 18:00</span></a></li><li><a href="https://lotent.fr/e/4edc6bf4728e.html"><span class="t">Hommage à Bernard Frank (1927-1996) - Grand maître des études japonaises</span><span class="d">17 oct. · 14:30</span></a></li><li><a href="https://lotent.fr/e/90b37ea067b3.html"><span class="t">Fluxus et le Japon</span><span class="d">22 oct. · 18:30</span></a></li><li><a href="https://lotent.fr/e/5ec133a03b1c.html"><span class="t">Conférence d’ouverture de l’exposition &quot;Shunga - Chefs-d’œuvre de l’art érotique à l’époque Edo (1603-1868)&quot;</span><span class="d">10 nov. · 18:00</span></a></li><li><a href="https://lotent.fr/e/6036b6a370bb.html"><span class="t">NEW TALENTS - Regards d’une nouvelle génération</span><span class="d">12 nov. · 18:30</span></a></li></ul>

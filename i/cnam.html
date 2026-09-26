@@ -40,9 +40,11 @@ body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:
 .cta .ext{border:1px solid var(--border);color:inherit}
 .cta a:hover{filter:brightness(1.08)}
 .cta a:only-child{grid-column:1/-1}
+.subs{font-size:12px;color:var(--muted-fg);margin:10px 0 0;overflow-wrap:anywhere}.subs a{color:inherit}
 @media (max-width:420px){.cta{grid-template-columns:1fr}}
 h2{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em}
 .rel{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}
+.empty{color:var(--muted-fg);border:1px dashed var(--border);border-radius:10px;padding:14px 16px;margin:18px 0 0;font-size:14px}
 .rel li{font-size:14px;line-height:1.4}
 .rel li+li{border-top:1px solid var(--border)}
 .rel a{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}
@@ -64,7 +66,8 @@ h2{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-t
 <div class="body">
 <p class="count"><b>1</b> conférence à venir dans l'agenda Lotent.</p>
 
-<div class="cta"><a class="site" href="/?institution=Cnam">Voir dans l'agenda →</a><a class="ext" href="https://lotent.fr/data/cal/cnam.ics">S'abonner à l'agenda (.ics)</a></div>
+<div class="cta"><a class="site" href="/?institution=Cnam">Voir dans l'agenda →</a><a class="ext" href="webcal://lotent.fr/data/cal/cnam.ics">S'abonner à l'agenda</a></div>
+<p class="subs">Abonnement : <a href="webcal://lotent.fr/data/cal/cnam.ics">Apple, Outlook</a> · <a href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Flotent.fr%2Fdata%2Fcal%2Fcnam.ics" rel="noopener">Google Agenda</a> · lien à coller dans une autre application : <a href="https://lotent.fr/data/cal/cnam.ics">https://lotent.fr/data/cal/cnam.ics</a>. Il se met à jour tout seul chaque jour.</p>
 </div>
 </main>
 <h2>Prochaines conférences</h2><ul class="rel"><li><a href="https://lotent.fr/e/b7bbdc6db79c.html"><span class="t">ASSTI: Transformer pour prospérer dans un monde durable</span><span class="d">7 oct.</span></a></li></ul>
