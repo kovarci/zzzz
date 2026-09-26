@@ -4114,6 +4114,18 @@ def deduplicate(events):
             seen.update(keys)
             slots.setdefault(base, []).append((t, u))
             out.append(ev)
+    # Ces séances distinctes partagent leur id (organisateur + titre + date) :
+    # la plus tardive reçoit un id dérivé, stable d'un passage à l'autre — une
+    # même fiche e/<id>.html, un même favori, un même UID d'agenda pour deux
+    # événements, sinon.
+    by_id = {}
+    for ev in out:
+        by_id.setdefault(ev.get("id"), []).append(ev)
+    for eid, group in by_id.items():
+        if eid and len(group) > 1:
+            group.sort(key=lambda e: (e.get("time") or "", e.get("url") or ""))
+            for ev in group[1:]:
+                ev["id"] = make_id(eid, ev.get("time"), ev.get("url"))
     return out
 
 
