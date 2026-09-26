@@ -82,6 +82,11 @@ const TR = {
 
   toast_fav_added: ["Ajouté aux favoris", "Added to favourites"], toast_fav_removed: ["Retiré des favoris", "Removed from favourites"],
   toast_link_copied: ["Lien copié", "Link copied"],
+  sub_title: ["S'abonner à l'agenda", "Subscribe to the calendar"], sub_all: ["Toutes les conférences", "All conferences"],
+  sub_apple: ["Apple Calendrier, Outlook, Thunderbird", "Apple Calendar, Outlook, Thunderbird"],
+  sub_google: ["Google Agenda", "Google Calendar"], sub_copy: ["Copier le lien", "Copy link"],
+  sub_hint: ["Un abonnement se met à jour tout seul chaque jour : rien à retélécharger. Autre application : collez le lien dans « Ajouter un agenda par URL ».",
+    "A subscription updates itself every day: nothing to download again. Other apps: paste the link into “Add calendar from URL”."],
   toast_geoloc_unavailable: ["Géolocalisation indisponible sur ce navigateur.", "Geolocation unavailable on this browser."],
   toast_locate_error: ["Localisation impossible : {msg}", "Location failed: {msg}"],
   toast_not_found: ["Événement introuvable — il est peut-être terminé.", "Event not found — it may be over."],

@@ -4989,7 +4989,15 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
                             {"@type": "ListItem", "position": 2, "name": name, "item": url}]},
         ensure_ascii=False).replace("</", "<\\/")
     img = og_image or f"{SITE_URL}/og.png"
-    ics_btn = f'<a class="ext" href="{ics}">S\'abonner à l\'agenda (.ics)</a>' if ics else ""
+    ics_btn, ics_more = "", ""
+    if ics:
+        from urllib.parse import quote
+        webcal = re.sub(r"^https?:", "webcal:", ics)
+        ics_btn = f'<a class="ext" href="{webcal}">S\'abonner à l\'agenda</a>'
+        ics_more = (f'<p class="subs">Abonnement : <a href="{webcal}">Apple, Outlook</a> · '
+                    f'<a href="https://calendar.google.com/calendar/render?cid={quote(webcal, safe="")}" rel="noopener">Google Agenda</a> · '
+                    f'lien à coller dans une autre application : <a href="{ics}">{_esc_attr(ics)}</a>. '
+                    f'Il se met à jour tout seul chaque jour.</p>')
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5032,6 +5040,7 @@ body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background
 .cta .ext{{border:1px solid var(--border);color:inherit}}
 .cta a:hover{{filter:brightness(1.08)}}
 .cta a:only-child{{grid-column:1/-1}}
+.subs{{font-size:12px;color:var(--muted-fg);margin:10px 0 0;overflow-wrap:anywhere}}.subs a{{color:inherit}}
 @media (max-width:420px){{.cta{{grid-template-columns:1fr}}}}
 h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em}}
 .rel{{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}}
@@ -5058,6 +5067,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 <p class="count"><b>{n}</b> conférence{plural} à venir dans l'agenda Lotent.</p>
 {f'<p class="intro">{_esc_attr(intro)}</p>' if intro else ''}
 <div class="cta"><a class="site" href="{target}">Voir dans l'agenda →</a>{ics_btn}</div>
+{ics_more}
 </div>
 </main>
 {events_html}

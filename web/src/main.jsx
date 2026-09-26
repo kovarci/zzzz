@@ -133,6 +133,37 @@ function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollo
     </motion.aside></React.Fragment>}</AnimatePresence>;
 }
 
+// Abonnement à un agenda .ics. Un simple lien téléchargeait le fichier : un
+// import unique (2 400 événements d'un coup), jamais mis à jour. Ouverte par
+// l'événement « lotent:subscribe » (bouton S'abonner, bandeaux, pied de page).
+const openSubscribe = (path, name) => window.dispatchEvent(new CustomEvent("lotent:subscribe", { detail: { path, name } }));
+function SubscribeDialog({ onToast }) {
+  const { t } = useI18n();
+  const [feed, setFeed] = useState(null);
+  useEffect(() => {
+    const h = ev => setFeed(ev.detail); window.addEventListener("lotent:subscribe", h);
+    const k = ev => ev.key === "Escape" && setFeed(null); document.addEventListener("keydown", k);
+    return () => { window.removeEventListener("lotent:subscribe", h); document.removeEventListener("keydown", k); };
+  }, []);
+  const https = feed ? `${SITE}/${feed.path}` : "", webcal = https.replace(/^https:/, "webcal:");
+  const copy = async () => { try { await navigator.clipboard.writeText(https); onToast(t("toast_link_copied")); } catch (e) { prompt("", https); } };
+  const row = "flex items-center gap-3 rounded-lg border px-3 py-2.5 text-sm font-medium hover:bg-accent";
+  return <AnimatePresence>{feed && <motion.div key="sub" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
+    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setFeed(null)} />
+    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} role="dialog" aria-modal="true" aria-label={t("sub_title")}
+      className="absolute left-1/2 top-[12vh] w-[min(440px,calc(100%-2rem))] rounded-xl border bg-popover shadow-2xl overflow-hidden">
+      <div className="flex items-center justify-between border-b px-4 py-3"><div><h2 className="font-semibold text-sm">{t("sub_title")}</h2><p className="text-xs text-muted-foreground">{feed.name || t("sub_all")}</p></div>
+        <button onClick={() => setFeed(null)} className="inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-accent" aria-label={t("fermer")}><Icon d={ICONS.x} size={15} /></button></div>
+      <div className="p-4 flex flex-col gap-2">
+        <a className={row} href={webcal} onClick={() => setTimeout(() => setFeed(null), 300)}><Icon d={ICONS.cal} size={16} />{t("sub_apple")}</a>
+        <a className={row} href={`https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcal)}`} target="_blank" rel="noopener"><Icon d={ICONS.cal} size={16} />{t("sub_google")}</a>
+        <div className="flex gap-2"><input readOnly value={https} onFocus={e => e.target.select()} aria-label="URL" className="min-w-0 flex-1 h-10 rounded-lg border bg-transparent px-3 text-xs text-muted-foreground" />
+          <Button variant="outline" onClick={copy}>{t("sub_copy")}</Button></div>
+        <p className="text-xs text-muted-foreground leading-relaxed pt-1">{t("sub_hint")}</p>
+      </div>
+    </motion.div></motion.div>}</AnimatePresence>;
+}
+
 // Ligne « Avec » de la fiche : une cloche par intervenant (plusieurs noms sur
 // une même ligne : chacun se suit séparément).
 function SpeakerRow({ text, followSet, onFollow }) {
@@ -156,9 +187,9 @@ function CommandDialog({ open, onClose, onPick, pool }) {
   const onKey = ev => { if (ev.key === "ArrowDown") { ev.preventDefault(); setSel(s => (s + 1) % Math.max(1, res.length)); } else if (ev.key === "ArrowUp") { ev.preventDefault(); setSel(s => (s - 1 + res.length) % Math.max(1, res.length)); } else if (ev.key === "Enter" && res[sel]) onPick(res[sel]); };
   return <AnimatePresence>{open && <motion.div key="cmd" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-    <motion.div initial={{ scale: .97, y: -8 }} animate={{ scale: 1, y: 0 }} exit={{ scale: .97, y: -8 }} className="absolute left-1/2 top-[12vh] w-[min(640px,calc(100%-2rem))] -translate-x-1/2 rounded-xl border bg-popover shadow-2xl overflow-hidden" role="dialog" aria-modal="true">
+    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} className="absolute left-1/2 top-[12vh] w-[min(640px,calc(100%-2rem))] rounded-xl border bg-popover shadow-2xl overflow-hidden" role="dialog" aria-modal="true">
       <div className="flex items-center gap-2 border-b px-3"><Icon d={ICONS.search} size={16} className="text-muted-foreground" />
-        <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKey} className="h-12 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground" placeholder={t("cmd_ph")} /><Kbd>ESC</Kbd></div>
+        <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKey} className="h-12 flex-1 bg-transparent text-sm outline-none focus-visible:shadow-none placeholder:text-muted-foreground" placeholder={t("cmd_ph")} /><Kbd>ESC</Kbd></div>
       <div className="max-h-[50vh] overflow-auto p-1">{res.length ? res.map((e, i) => <button key={e.id} onMouseEnter={() => setSel(i)} onClick={() => onPick(e)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", i === sel && "bg-accent")}>
         <span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="flex-1 min-w-0"><span className="block truncate">{titleOf(e)}</span><span className="block text-xs text-muted-foreground truncate">{e.institution}{e.speaker ? " · " + e.speaker : ""}</span></span><span className="text-xs text-muted-foreground tabular-nums whitespace-nowrap">{fmtShort(e.date)}{e.time ? " " + e.time : ""}</span></button>)
         : <p className="p-6 text-center text-sm text-muted-foreground">{t("cmd_none")}</p>}</div>
@@ -269,7 +300,7 @@ function FilterBanner({ name, count, color, links, onClear, clearLabel }) {
     <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg font-semibold text-white" style={{ background: color }}>{name[0]}</span>
     <div className="flex-1 min-w-0"><div className="font-semibold text-sm truncate">{name}</div><div className="text-xs text-muted-foreground">{t("inst_events_count", { n: count })}</div></div>
     <div className="flex w-full flex-wrap items-center gap-x-4 gap-y-2 sm:ml-auto sm:w-auto">
-      {links.map(([href, label]) => <a key={href} href={href} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline">{label}</a>)}
+      {links.map(([href, label]) => <a key={href} href={href} onClick={href.endsWith(".ics") ? ev => { ev.preventDefault(); openSubscribe(href, name); } : undefined} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline">{label}</a>)}
       <Button variant="outline" size="sm" className="ml-auto sm:ml-0" onClick={onClear}>{clearLabel}</Button>
     </div>
   </div>;
@@ -295,7 +326,7 @@ function SpeakersPanel({ open, onClose, speakers, onUnfollow, pool, onOpenEvent,
   const list = useMemo(() => [...speakers].sort((a, b) => a.localeCompare(b)), [speakers]);
   return <AnimatePresence>{open && <motion.div key="speakers" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-    <motion.div initial={{ scale: .97, y: -8 }} animate={{ scale: 1, y: 0 }} exit={{ scale: .97, y: -8 }} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] -translate-x-1/2 rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
+    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
       <div className="flex items-center justify-between border-b px-4 py-3"><h2 className="font-semibold text-sm">{t("my_speakers")}</h2><button onClick={onClose} className="inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-accent" aria-label={t("fermer")}><Icon d={ICONS.x} size={15} /></button></div>
       {notifyPerm !== "unsupported" && <div className="px-4 py-2 border-b bg-muted/40 text-xs">
         {notifyPerm === "granted" ? <span className="text-emerald-700 dark:text-emerald-400 font-medium">{t("notify_enabled")}</span>
@@ -539,7 +570,7 @@ function App() {
           <button onClick={() => setCmd(true)} className="inline-flex items-center gap-2 h-9 rounded-md border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent hover:text-foreground w-10 sm:w-52 xl:w-64 justify-center sm:justify-between" aria-label={t("search_ph")}><Icon d={ICONS.search} size={15} className="sm:hidden" /><span className="hidden sm:inline">{t("search_ph")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
           <Button variant="outline" size="icon" onClick={toggleLang} aria-label={t("lang_aria")} className="font-semibold text-xs">{lang === "en" ? "FR" : "EN"}</Button>
           <Button variant="outline" size="icon" onClick={toggleTheme} aria-label={t("theme_aria")}><Icon d={ICONS.moon} size={16} className="dark:hidden" /><Icon d={ICONS.sun} size={16} className="hidden dark:block" /></Button>
-          <MovingBorderButton href="data/calendar.ics" className="hidden sm:inline-flex h-9">{t("subscribe")}</MovingBorderButton>
+          <MovingBorderButton href="data/calendar.ics" onClick={ev => { ev.preventDefault(); openSubscribe("data/calendar.ics"); }} className="hidden sm:inline-flex h-9">{t("subscribe")}</MovingBorderButton>
         </div></div></header>
 
     <main className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -639,7 +670,7 @@ function App() {
     <footer className="border-t">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-10 pb-28 grid grid-cols-1 gap-8 md:grid-cols-3 text-sm">
         <div><div className="font-semibold">Lotent</div><p className="text-muted-foreground mt-2 max-w-xs">{t("footer_tagline")}</p><p className="text-xs text-muted-foreground mt-3">{t("footer_updated", { auto: relTime(meta.last_workflow_run) })}{meta.last_manual_run && t("footer_manual_suffix", { t: relTime(meta.last_manual_run) })}</p></div>
-        <div><div className="font-semibold">{t("footer_subscribe")}</div><ul className="mt-2 space-y-1.5 text-muted-foreground"><li><a className="hover:text-foreground" href="data/calendar.ics">{t("footer_ics")}</a></li><li><a className="hover:text-foreground" href="data/digest.xml">{t("footer_rss")}</a></li><li><a className="hover:text-foreground" href="sitemap.xml">{t("footer_sitemap")}</a></li><li><a className="hover:text-foreground" href="apropos.html">{t("nav_about")}</a></li><li><a className="hover:text-foreground" href={PROPOSE_URL} target="_blank" rel="noopener">{t("nav_propose")}</a></li></ul></div>
+        <div><div className="font-semibold">{t("footer_subscribe")}</div><ul className="mt-2 space-y-1.5 text-muted-foreground"><li><a className="hover:text-foreground" href="data/calendar.ics" onClick={ev => { ev.preventDefault(); openSubscribe("data/calendar.ics"); }}>{t("footer_ics")}</a></li><li><a className="hover:text-foreground" href="data/digest.xml">{t("footer_rss")}</a></li><li><a className="hover:text-foreground" href="sitemap.xml">{t("footer_sitemap")}</a></li><li><a className="hover:text-foreground" href="apropos.html">{t("nav_about")}</a></li><li><a className="hover:text-foreground" href={PROPOSE_URL} target="_blank" rel="noopener">{t("nav_propose")}</a></li></ul></div>
         <GithubCard />
       </div>
     </footer>
@@ -660,8 +691,9 @@ function App() {
 
     <Sheet e={open} pool={pool} onOpen={setOpen} onClose={() => setOpen(null)} fav={open ? favs.has(open.id) : false} onFav={onFav} onToast={notify} followSet={speakers} onFollow={name => { const willFollow = !speakers.has(name); toggleSpeaker(name); notify(willFollow ? t("speaker_followed") : t("speaker_unfollowed")); }} />
     <CommandDialog open={cmd} onClose={() => setCmd(false)} onPick={e => { setCmd(false); setOpen(e); }} pool={pool} />
+    <SubscribeDialog onToast={notify} />
     <SpeakersPanel open={speakersOpen} onClose={() => setSpeakersOpen(false)} speakers={speakers} onUnfollow={toggleSpeaker} pool={UP} onOpenEvent={e => { setSpeakersOpen(false); setOpen(e); }} notifyPerm={notifyPerm} onEnableNotify={enableNotify} />
-    <AnimatePresence>{toast && <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg">{toast}</motion.div>}</AnimatePresence>
+    <AnimatePresence>{toast && <motion.div initial={{ x: "-50%", opacity: 0, y: 8 }} animate={{ x: "-50%", opacity: 1, y: 0 }} exit={{ x: "-50%", opacity: 0 }} className="fixed bottom-24 left-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg">{toast}</motion.div>}</AnimatePresence>
   </>;
 }
 
