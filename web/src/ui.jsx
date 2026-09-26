@@ -187,6 +187,9 @@ const narrow = () => typeof window !== "undefined" && window.matchMedia("(max-wi
 export function Popover({ label, count, children, align = "left", minW = "min-w-[280px]", block, closeLabel = "Fermer" }) {
   const [open, setOpen] = useState(false), [sheet, setSheet] = useState(false);
   const ref = useRef(null), popRef = useRef(null);
+  // Panneau du bas (téléphone) = fenêtre modale : même gestion du focus
+  const trap = useFocusTrap(open && sheet);
+  const sheetRef = el => { popRef.current = el; trap.current = el; };
   const close = () => setOpen(false);
   // Menu déroulant : recalé dans la fenêtre s'il en dépasse (8 px de marge)
   const [dx, setDx] = useState(0);
@@ -206,7 +209,7 @@ export function Popover({ label, count, children, align = "left", minW = "min-w-
   const panel = sheet
     ? createPortal(<AnimatePresence>{open && <motion.div key="sheet" className="fixed inset-0 z-[70]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .15 }}>
         <div className="absolute inset-0 bg-black/50" />
-        <motion.div ref={popRef} role="dialog" aria-label={typeof label === "string" ? label : undefined} initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} transition={{ type: "spring", stiffness: 420, damping: 40 }}
+        <motion.div ref={sheetRef} role="dialog" aria-modal="true" aria-label={typeof label === "string" ? label : undefined} initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} transition={{ type: "spring", stiffness: 420, damping: 40 }}
           className="absolute inset-x-0 bottom-0 flex max-h-[75vh] flex-col rounded-t-2xl border-t bg-popover shadow-2xl">
           <div className="flex items-center justify-between border-b px-4 py-3"><span className="text-sm font-semibold">{label}</span>
             <button onClick={close} aria-label={closeLabel} className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg></button></div>
