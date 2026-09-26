@@ -4958,7 +4958,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
     e/*.html : c'est par ces hubs que Google découvre les pages événement),
     l'agenda .ics à s'abonner et des liens vers les hubs voisins."""
     url = f"{SITE_URL}/{path}"
-    plural = "s" if n != 1 else ""
+    plural = "s" if n > 1 else ""          # « 0 conférence », comme « 1 conférence »
     short = f"{n} conférence{plural} à venir à Paris."
     items = []
     for ev in evts[:60]:
@@ -4974,7 +4974,11 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
         items.append(f'<li><a href="{SITE_URL}/e/{eid}.html"><span class="t">{_esc_attr((ev.get("title") or "")[:110])}'
                      f'{f"<small>{_esc_attr(sub)}</small>" if sub else ""}</span>'
                      f'<span class="d">{_esc_attr(when)}{(" · " + _esc_attr(ev["time"])) if ev.get("time") else ""}</span></a></li>')
-    events_html = f'<h2>Prochaines conférences</h2><ul class="rel">{"".join(items)}</ul>' if items else ""
+    events_html = (f'<h2>Prochaines conférences</h2><ul class="rel">{"".join(items)}</ul>' if items else
+                   '<p class="empty">Aucune conférence annoncée pour le moment. En vous abonnant à '
+                   'l\'agenda, les prochaines s\'y ajouteront d\'elles-mêmes.</p>')
+    # Hub vide : hors index Google (page mince) et hors sitemap (write_sitemap)
+    robots = '<meta name="robots" content="noindex, follow">\n' if not n else ""
     chips_html = ""
     if chips:
         chips_html = (f'<h2>{_esc_attr(chips_title)}</h2><div class="chips">'
@@ -4992,7 +4996,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{_esc_attr(name)} — conférences à Paris · Lotent</title>
-<link rel="canonical" href="{url}">
+{robots}<link rel="canonical" href="{url}">
 <meta name="description" content="{_esc_attr(short)} {_esc_attr(intro)} Calendrier mis à jour chaque jour sur lotent.fr.">
 <meta property="og:title" content="{_esc_attr(name)} — {n} conférence{plural} à venir">
 <meta property="og:description" content="{_esc_attr(short)}">
@@ -5031,6 +5035,7 @@ body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background
 @media (max-width:420px){{.cta{{grid-template-columns:1fr}}}}
 h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em}}
 .rel{{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}}
+.empty{{color:var(--muted-fg);border:1px dashed var(--border);border-radius:10px;padding:14px 16px;margin:18px 0 0;font-size:14px}}
 .rel li{{font-size:14px;line-height:1.4}}
 .rel li+li{{border-top:1px solid var(--border)}}
 .rel a{{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}}
@@ -5384,12 +5389,13 @@ def write_sitemap(events):
             f"<url><loc>{SITE_URL}/apropos.html</loc><changefreq>monthly</changefreq></url>"]
     # Hubs par institution : ce sont eux qui lient vers les pages événement,
     # ils doivent être crawlés souvent.
-    for f in sorted(INST_PAGES_DIR.glob("*.html")):
-        urls.append(f"<url><loc>{SITE_URL}/i/{f.name}</loc>"
-                    f"<lastmod>{today}</lastmod><changefreq>weekly</changefreq></url>")
-    for f in sorted(DISC_PAGES_DIR.glob("*.html")):
-        urls.append(f"<url><loc>{SITE_URL}/d/{f.name}</loc>"
-                    f"<lastmod>{today}</lastmod><changefreq>weekly</changefreq></url>")
+    # (sauf les hubs vides, marqués noindex par _hub_page)
+    for sub, folder in (("i", INST_PAGES_DIR), ("d", DISC_PAGES_DIR)):
+        for f in sorted(folder.glob("*.html")):
+            if 'content="noindex' in f.read_text(encoding="utf-8", errors="replace")[:3000]:
+                continue
+            urls.append(f"<url><loc>{SITE_URL}/{sub}/{f.name}</loc>"
+                        f"<lastmod>{today}</lastmod><changefreq>weekly</changefreq></url>")
     seen, n_past = set(), 0
     for ev in events:
         eid = ev.get("id") or ""

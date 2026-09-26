@@ -37,7 +37,14 @@ export const pad = n => String(n).padStart(2, "0");
 export const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 export const parse = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
 export const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
-export const today = new Date(); today.setHours(0, 0, 0, 0);
+// Date du jour À PARIS (AAAA-MM-JJ) : tout l'agenda est à l'heure de Paris.
+export const parisISO = () => {
+  try {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).map(x => [x.type, x.value]));
+    return `${p.year}-${p.month}-${p.day}`;
+  } catch (e) { return iso(new Date()); }
+};
+export const today = parse(parisISO());
 export const TODAY = iso(today), TOMORROW = iso(addDays(today, 1));
 const dow = today.getDay();
 export const WEEK_END = iso(addDays(today, (7 - dow) % 7 || 7));
