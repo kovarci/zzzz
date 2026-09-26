@@ -4592,8 +4592,11 @@ def write_ics(events):
         path.write_text(text, encoding="utf-8", newline="")
 
     try:
-        save(ICS_FILE, vcal(events, "Toutes les conférences · Lotent"))
-        print(f"Calendar feed: {len(events)} events → calendar.ics")
+        # Comme le fil du site et les agendas par discipline : sans les
+        # catégories à part (soutenances, sessions de recrutement)
+        main = [e for e in events if not e.get("kind")]
+        save(ICS_FILE, vcal(main, "Toutes les conférences · Lotent"))
+        print(f"Calendar feed: {len(main)} events → calendar.ics")
     except Exception as e:
         print(f"[WARN] ics write: {e}")
 
