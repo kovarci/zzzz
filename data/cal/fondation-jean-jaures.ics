@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:e8cbcbefd766@paris-academique
-DTSTAMP:20260926T173633Z
+DTSTAMP:20260926T192511Z
 DTSTART;TZID=Europe/Paris:20260926T110000
 DTEND;TZID=Europe/Paris:20260926T203000
 SUMMARY:Santé mentale : aidons-nous les uns les autres
@@ -37,7 +37,7 @@ URL:https://www.jean-jaures.org/agenda/sante-mentale-aidons-nous-les-uns-le
 END:VEVENT
 BEGIN:VEVENT
 UID:dd2c2b312880@paris-academique
-DTSTAMP:20260926T173633Z
+DTSTAMP:20260926T192511Z
 DTSTART;TZID=Europe/Paris:20260928T183000
 DTEND;TZID=Europe/Paris:20260928T203000
 SUMMARY:La gauche peut-elle encore unir ?
