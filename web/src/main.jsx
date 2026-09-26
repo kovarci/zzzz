@@ -176,7 +176,10 @@ function WeekView({ events, onOpen, favs }) {
       <Button variant="outline" size="sm" onClick={() => setOffset(o => o + 1)}>{t("week_next")}</Button>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-7 gap-2 overflow-x-auto">
-      {days.map(d => { const k = iso(d), evs = inWeek.filter(e => e.date === k); return <div key={k} className={cn("rounded-xl border bg-card min-h-[120px] flex flex-col", k === TODAY && "ring-2 ring-primary")}>
+      {/* Sur téléphone (une colonne), les jours déjà passés de la semaine sont
+          vides (l'agenda ne garde que l'à-venir) : un samedi, on faisait défiler
+          cinq cases vides avant le premier événement. Masqués sous md. */}
+      {days.map(d => { const k = iso(d), evs = inWeek.filter(e => e.date === k); return <div key={k} className={cn("rounded-xl border bg-card flex flex-col md:min-h-[120px]", evs.length ? "min-h-[120px]" : "min-h-0", k < TODAY && !evs.length && "hidden md:flex", k === TODAY && "ring-2 ring-primary")}>
         <div className={cn("px-3 py-2 border-b text-xs font-semibold capitalize flex items-baseline justify-between", k < TODAY && "text-muted-foreground")}><span>{WDS[d.getDay()]} {d.getDate()}</span><span className="text-muted-foreground font-normal tabular-nums">{evs.length || ""}</span></div>
         <div className="flex flex-col divide-y overflow-auto max-h-[60vh]">{evs.map(e => <button key={e.id} onClick={() => onOpen(e)} className="text-left px-3 py-2 hover:bg-accent text-xs flex flex-col gap-0.5">
           <span className="flex items-center gap-1.5 text-muted-foreground tabular-nums"><span className="h-1.5 w-1.5 rounded-full" style={{ background: dc(e) }} />{e.time || "—"}{favs.has(e.id) && <span className="text-amber-500">★</span>}</span>

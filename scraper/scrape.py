@@ -89,7 +89,7 @@ DISCIPLINE_KEYWORDS = {
         "siècle", "égypt", "mésopotam", " antique", "archéolog", "papyr",
         "romain", "rome antique", "grec ancien", "pharaon", "médiév",
         "napoléon", "monarchie", "history", "historical", "ancient",
-        "medieval", "archaeolog",
+        "medieval", "archaeolog", "paléolithi", "palaeolithi", "paleolithi", "prehistor",
     ],
     "Sciences": [
         # FR
@@ -103,6 +103,9 @@ DISCIPLINE_KEYWORDS = {
         # EN
         "physics", "chemistry", "biology", "ecology", "ecological",
         "climate", "quantum", "particle", "atomic", "molecular",
+        # Collège de France, sept. 2026 : séminaires d'informatique et de
+        # paléoanthropologie restés en « Autre »
+        "programmation", "programming", "cryptograph", "hominin", " evolution",
         "cosmic", "cosmolog", "exoplanet", "stellar",
         "machine learning", "deep learning", "data science", "neural network",
         "artificial intelligence", "computational", "computing",

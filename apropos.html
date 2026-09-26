@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=30" />
+  <link rel="stylesheet" href="app.css?v=31" />
   <script>
     // Même thème que l'app principale, appliqué avant le premier rendu (pas de flash)
     try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
@@ -52,8 +52,9 @@
       <button id="theme-btn" aria-label="Changer de thème" class="inline-flex h-9 w-9 items-center justify-center rounded-md border bg-background shadow-sm hover:bg-accent">
         <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
       </button>
-      <a href="index.html" class="inline-flex h-9 items-center rounded-md border bg-background px-3 text-sm shadow-sm hover:bg-accent">
-        <span data-fr>← Retour au calendrier</span><span data-en>← Back to the calendar</span>
+      <!-- Libellé court sur téléphone : « Retour au calendrier » passait sur deux lignes -->
+      <a href="index.html" class="inline-flex h-9 items-center whitespace-nowrap rounded-md border bg-background px-3 text-sm shadow-sm hover:bg-accent">
+        <span data-fr>← <span class="sm:hidden">Agenda</span><span class="hidden sm:inline">Retour au calendrier</span></span><span data-en>← <span class="sm:hidden">Agenda</span><span class="hidden sm:inline">Back to the calendar</span></span>
       </a>
     </div>
   </div>
