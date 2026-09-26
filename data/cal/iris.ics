@@ -23,4 +23,55 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:6320bd6e883f@paris-academique
+DTSTAMP:20260926T171656Z
+DTSTART;TZID=Europe/Paris:20260930T143000
+DTEND;TZID=Europe/Paris:20260930T183000
+SUMMARY:Amérique latine : quelles nouvelles formes de gouvernance territor
+ iale ?
+DESCRIPTION:https://www.iris-france.org/event/amerique-latine-quelles-nouve
+ lles-formes-de-gouvernance-territoriale/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/amerique-latine-quelles-nouvelles-for
+ mes-de-gouvernance-territoriale/
+END:VEVENT
+BEGIN:VEVENT
+UID:64c06d36c073@paris-academique
+DTSTAMP:20260926T171656Z
+DTSTART;TZID=Europe/Paris:20261005T183000
+DTEND;TZID=Europe/Paris:20261005T200000
+SUMMARY:Criminalisation de l’aide et offensive anti-droits : quelle ripos
+ te des acteurs de la solidarité ?
+DESCRIPTION:https://www.iris-france.org/event/criminalisation-de-laide-et-o
+ ffensive-anti-droits-quelle-riposte-des-acteurs-de-la-solidarite/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/criminalisation-de-laide-et-offensive
+ -anti-droits-quelle-riposte-des-acteurs-de-la-solidarite/
+END:VEVENT
+BEGIN:VEVENT
+UID:e55fc4cd4fbf@paris-academique
+DTSTAMP:20260926T171656Z
+DTSTART;TZID=Europe/Paris:20261006T183000
+DTEND;TZID=Europe/Paris:20261006T200000
+SUMMARY:La rivalité Chine/États-unis : le clivage géopolitique majeur ?
+DESCRIPTION:https://www.iris-france.org/event/la-rivalite-chine-etats-unis-
+ le-clivage-geopolitique-majeur/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/la-rivalite-chine-etats-unis-le-cliva
+ ge-geopolitique-majeur/
+END:VEVENT
+BEGIN:VEVENT
+UID:a5c3b70e350e@paris-academique
+DTSTAMP:20260926T171656Z
+DTSTART;TZID=Europe/Paris:20261008T183000
+DTEND;TZID=Europe/Paris:20261008T200000
+SUMMARY:Désinformation et élection présidentielle en France : quels risq
+ ues et comment faire face ?
+DESCRIPTION:https://www.iris-france.org/event/desinformation-et-election-pr
+ esidentielle-en-france-quels-risques-et-comment-faire-face/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/desinformation-et-election-presidenti
+ elle-en-france-quels-risques-et-comment-faire-face/
+END:VEVENT
 END:VCALENDAR
