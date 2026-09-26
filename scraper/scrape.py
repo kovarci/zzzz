@@ -1514,21 +1514,27 @@ def scrape_sorbonne(browser):
 def scrape_dauphine(browser=None):
     """Cartes TYPO3 : « Du lundi 5 octobre 2026 à 17h30 au … » dans le
     surtitre, pages suivantes en /page-2, /page-3… (l'extracteur générique ne
-    lisait ni les heures ni les pages au-delà de la 1re). Si la requête simple
-    ne ramène rien (blocage), on repasse par le navigateur."""
+    lisait ni les heures ni les pages au-delà de la 1re). Depuis GitHub la
+    requête simple ne ramène rien : les pages passent alors par le
+    navigateur, le parseur reste le même (comme PSE)."""
     url = "https://dauphine.psl.eu/dauphine/media-et-communication/evenements/evenements-a-venir"
-    loc = "Université Paris Dauphine, Place du Maréchal de Lattre de Tassigny, Paris 16e"
-    evs = _scrape_cards(
-        "Université Paris Dauphine", url, "div.news-list > div.row",
+    kw = dict(
         title="h3", date=".card_news_surtitle", time=".card_news_surtitle",
         kind=".card_categories", drop_kind=("vie sportive",), summary="h3 ~ p",
-        base="https://dauphine.psl.eu", location=loc,
+        base="https://dauphine.psl.eu",
+        location="Université Paris Dauphine, Place du Maréchal de Lattre de Tassigny, Paris 16e",
         page_url=url + "/page-{n}", page_start=2, max_pages=15)
-    if evs or browser is None:
-        return evs
-    return scrape_paginated(browser, "Université Paris Dauphine",
-                            [(url, loc, "https://dauphine.psl.eu")],
-                            max_pages=15, page_fmt="{url}/page-{n}")
+    evs = _scrape_cards("Université Paris Dauphine", url, "div.news-list > div.row", **kw)
+    if not evs and browser is not None:
+        ctx = browser.new_context(user_agent=HEADERS["User-Agent"], locale="fr-FR",
+                                  extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"})
+        page = ctx.new_page()
+        try:
+            evs = _scrape_cards("Université Paris Dauphine", url, "div.news-list > div.row",
+                                fetch=lambda u: BeautifulSoup(load_page(page, u, exhaustive=False)[0], "lxml"), **kw)
+        finally:
+            ctx.close()
+    return evs
 
 
 def scrape_pse(browser=None):
@@ -2513,7 +2519,7 @@ def scrape_que_faire_a_paris():
 # « Conférence « X » », « Conférence-débat : X », « Table ronde – X »,
 # « [SECRE 2027] X » : l'habillage que chaque site met autour du même titre.
 _TITLE_WRAP = re.compile(
-    r"^\s*(?:\[[^\]]{2,30}\]\s*|(?:conf[ée]rence(?:[- ]d[ée]bat)?|table[- ]ronde|rencontre|"
+    r"^\s*(?:\[[^\]]{2,30}\]\s*|(?:conf[ée]rence(?:[- ](?:d[ée]bat|concert))?|table[- ]ronde|rencontre|"
     r"projection(?:[- ]d[ée]bat)?|d[ée]bat|atelier|lecture|pr[ée]sentation du livre)"
     r"\s*(?=[:–—«\"“-])[:–—-]?\s*)", re.I)
 
@@ -3890,7 +3896,9 @@ def merge_cross_source(events):
     groups = {}
     for ev in events:
         title = ev.get("title", "")
-        t = slugify(title)
+        # Titre nu : l'EHESS écrit « Présentation du livre "Les Balkans…" »,
+        # le Campus Condorcet « Les Balkans… » pour la même soirée.
+        t = core_title(title)
         # Titre ouvert par un sigle de colloque (« SGAP 2026 Paris – … »,
         # « SGAP: a Scientist's Guide… ») : même sigle + même date = même
         # événement. Pas les titres tout en capitales ni les sigles d'institution.
