@@ -519,6 +519,9 @@ def new_event(institution, title, d, time_str="", end_time="", location="",
 # ── Indico (IHP) ──────────────────────────────────────────────────────────────
 
 _INDICO_INTERNAL = re.compile(r"\b(r[ée]union|meeting|sign[- ]up|stage coll[èe]ge|weekly)\b", re.I)
+# Catégories de gestion et d'appels à projets (IHP « Gestion - CEB », « Call
+# for proposals / appel à projets ») : fiches internes, pas des événements.
+_INDICO_ADMIN = re.compile(r"\bgestion\b|call for proposals|appels? [àa] projets|\badmin\b", re.I)
 
 
 def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
@@ -572,6 +575,8 @@ def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
         if dt_end and dt_end.date() == dt.date():   # pas l'heure du dernier jour d'un colloque
             end_time = dt_end.strftime("%H:%M")
         if skip_meetings and (item.get("type") == "meeting" or _INDICO_INTERNAL.search(title)):
+            continue
+        if _INDICO_ADMIN.search(clean_text(item.get("category", ""))) or re.search(r"\s[-–]\s*admin$", title, re.I):
             continue
         where = " ".join(clean_text(item.get(k, "")) for k in ("location", "room", "address"))
         if keep_loc and not keep_loc.search(where):
