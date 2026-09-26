@@ -90,7 +90,9 @@ def main():
     for fn in (scrape.scrape_mnhn, scrape.scrape_academie_sciences, scrape.scrape_jeunes_ihedn,
                scrape.scrape_ifri, scrape.scrape_iris, scrape.scrape_jean_jaures,
                scrape.scrape_lamsade, scrape.scrape_academie_medecine,
-               scrape.scrape_amerique_latine, scrape.scrape_mcjp):
+               scrape.scrape_amerique_latine, scrape.scrape_mcjp,
+               # HEC IA : le robot reçoit une page sans cartes (0 lue)
+               scrape.scrape_hec_ia):
         try:
             blocked += fn()
         except Exception as e:

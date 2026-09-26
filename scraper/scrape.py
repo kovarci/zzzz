@@ -1116,9 +1116,12 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
 
 # ── Paginated HTML scraper (CdF, EHESS, ENS, Sciences Po, Sorbonne) ───────────
 
-def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="institution"):
+def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="institution",
+                     page_fmt=None):
     """Scrape paginated agendas, trying BOTH ?page=N and /page/N/ URL styles
-    (different CMS use different pagination). agenda_urls = [(url, loc, base), ...]."""
+    (different CMS use different pagination). agenda_urls = [(url, loc, base), ...].
+    page_fmt : motif propre au site (« {url}/page-{n} » chez Dauphine, TYPO3),
+    essayé seul à la place des deux styles génériques."""
     print(f"→ {name} (paginated)...")
     all_events, seen = [], set()
     captured = []
@@ -1152,6 +1155,13 @@ def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="inst
         if harvest(base_url, location, site_base, "page 1") is None:
             continue
         sep = "&" if "?" in base_url else "?"
+
+        if page_fmt:
+            for n in range(2, max_pages):
+                if not harvest(page_fmt.format(url=base_url.rstrip("/"), n=n),
+                               location, site_base, f"page {n}"):
+                    break
+            continue
 
         # Style A: ?page=N
         empty = 0
@@ -1501,12 +1511,24 @@ def scrape_sorbonne(browser):
     return events
 
 
-def scrape_dauphine(browser):
-    return scrape_paginated(browser, "Université Paris Dauphine", [
-        ("https://dauphine.psl.eu/dauphine/media-et-communication/evenements/evenements-a-venir",
-         "Université Paris Dauphine, Place du Maréchal de Lattre de Tassigny, Paris 16e",
-         "https://dauphine.psl.eu"),
-    ], max_pages=15)
+def scrape_dauphine(browser=None):
+    """Cartes TYPO3 : « Du lundi 5 octobre 2026 à 17h30 au … » dans le
+    surtitre, pages suivantes en /page-2, /page-3… (l'extracteur générique ne
+    lisait ni les heures ni les pages au-delà de la 1re). Si la requête simple
+    ne ramène rien (blocage), on repasse par le navigateur."""
+    url = "https://dauphine.psl.eu/dauphine/media-et-communication/evenements/evenements-a-venir"
+    loc = "Université Paris Dauphine, Place du Maréchal de Lattre de Tassigny, Paris 16e"
+    evs = _scrape_cards(
+        "Université Paris Dauphine", url, "div.news-list > div.row",
+        title="h3", date=".card_news_surtitle", time=".card_news_surtitle",
+        kind=".card_categories", drop_kind=("vie sportive",), summary="h3 ~ p",
+        base="https://dauphine.psl.eu", location=loc,
+        page_url=url + "/page-{n}", page_start=2, max_pages=15)
+    if evs or browser is None:
+        return evs
+    return scrape_paginated(browser, "Université Paris Dauphine",
+                            [(url, loc, "https://dauphine.psl.eu")],
+                            max_pages=15, page_fmt="{url}/page-{n}")
 
 
 def scrape_pse(browser=None):
@@ -1687,7 +1709,7 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
                   link=None, place=None, kind=None, keep_kind=None,
                   drop_kind=None, page_url=None, max_pages=8, page_start=1,
                   one_per_title=False, time=None, drop=None, members=None,
-                  speaker=None, keep_loc=None, place_only=False, fetch=None):
+                  speaker=None, keep_loc=None, place_only=False, fetch=None, summary=None):
     """Parseur générique d'agenda en cartes.
     card/title/date/link/place/kind : sélecteurs CSS (relatifs à la carte).
     keep_kind / drop_kind : filtre sur le texte de `kind` (sous-chaînes).
@@ -1699,7 +1721,8 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
     speaker : sélecteur de l'orateur. keep_loc : regex que le lieu doit
     contenir (sinon carte écartée). place_only : le lieu de la carte est une
     adresse complète, pas un simple complément de `location`. fetch : url →
-    BeautifulSoup à la place de _soup (pages servies via Playwright)."""
+    BeautifulSoup à la place de _soup (pages servies via Playwright).
+    summary : sélecteur du chapeau (description) ; à défaut, le texte de `kind`."""
     print(f"→ {name}...")
     events, seen, stats = [], set(), {"cards": 0, "off": 0, "kind": 0, "date": 0}
     raw_seen = set()          # cartes déjà vues, gardées ou non (arrêt de la pagination)
@@ -1756,12 +1779,14 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
             sp = clean_text(c.select_one(speaker).get_text(" ")) if speaker and c.select_one(speaker) else ""
             if re.match(r"(journ[ée]e|organis|colloque|s[ée]minaire|conf[ée]rence|table ronde|atelier)", sp, re.I):
                 sp = ""                        # « Journée organisée par… » : pas un orateur
+            s_el = c.select_one(summary) if summary else None
             events.append(new_event(
                 name, t, d, time_str=tm, end_time=end,
                 url=make_absolute(a.get("href", "") if a else "", base),
                 location=(_where_or(p, location) if place_only else
                           f"{p} — {location}" if p and p.lower() not in location.lower() else location),
-                desc=k, speaker=re.sub(r"^(Par|Avec)\s+", "", sp)[:160]))
+                desc=clean_text(s_el.get_text(" ")) if s_el else k,
+                speaker=re.sub(r"^(Par|Avec)\s+", "", sp)[:160]))
             if members and members.search(c.get_text(" ")):
                 events[-1]["members"] = True
             new += 1
@@ -3590,11 +3615,33 @@ def scrape_luma(browser, pages=None) -> list[dict]:
 ARTICLE1_URL = "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeune"
 
 
+_IDF_DEPTS = ("75", "77", "78", "91", "92", "93", "94", "95")
+
+
+def _outside_idf(loc):
+    """Lieu manifestement hors Île-de-France, quelle que soit la source : code
+    postal d'un autre département sans rien de francilien à côté (soirées
+    Luma à Chantilly ou Lamorlaye, dans l'Oise), écoles d'été de l'IJCLab à
+    Cargèse ou au GANIL (Caen). « 76006 Paris » (coquille du Lucernaire)
+    reste gardé : le mot Paris suffit."""
+    if re.search(r"\b(carg[eè]se|ganil)\b", loc or "", re.I):
+        return True
+    cps = re.findall(r"\b(\d{5})\s+(?=[A-ZÀ-Ý])", loc or "")
+    return bool(cps) and not any(cp[:2] in _IDF_DEPTS for cp in cps) and not _IDF_RE.search(loc)
+
+
+def _article1_local(loc):
+    """Lieu Article 1 (ville, sinon région) à garder : Île-de-France ou en ligne."""
+    return (not loc or loc == "En ligne" or bool(_IDF_RE.search(loc))
+            or bool(re.search(r"[iî]le[- ]de[- ]france|^national$", loc, re.I)))
+
+
 def scrape_article1(browser) -> list[dict]:
     """Article 1 calendar — Vue/Salesforce site. Events arrive via a JS Remoting
     XHR (apexremote → AG_ActiveCampaignControllerV2.getAteliers); we capture
-    that response. We keep the entire calendar (jeune + mentors), all cities
-    + online; the user filters by city via the location shown on each card."""
+    that response. We keep the entire calendar (jeune + mentors), Paris /
+    Île-de-France + online only : l'agenda est national (Lyon, Toulouse,
+    Rennes…) et ces soirées passaient pour des événements parisiens."""
     print("→ Article 1 (association)...")
     events, seen = [], set()
     captured = []
@@ -3672,6 +3719,8 @@ def scrape_article1(browser) -> list[dict]:
         region = clean_text(it.get("Region_campagne__c") or "")
         is_digital = bool(it.get("A_distance__c")) or it.get("Physique_ou_Digital__c") == "Digital"
         loc = "En ligne" if is_digital else (city or region or "Paris")
+        if not _article1_local(loc):
+            continue
         # Les champs Description_*__c ont disparu de l'API : on reconstruit
         # une phrase courte à partir de ce qui reste exposé.
         desc = strip_html(it.get("Description_Jeunes__c")
@@ -3992,7 +4041,7 @@ INSTITUTION_COORDS = {
 _ADDR_RE = re.compile(
     r"\b\d{5}\b|"
     r"\b\d{1,4}\s?(?:bis|ter)?\s+(rue|avenue|av\.|bd|boulevard|place|quai|cours|"
-    r"impasse|passage|all[ée]e|chemin|esplanade|square)\b", re.I)
+    r"impasse|passage|all[ée]e|chemin|esplanade|square|parvis|villa|cit[ée]|route)\b", re.I)
 
 
 def looks_like_address(loc):
@@ -4010,8 +4059,15 @@ _FR_CITY_RE = re.compile(
     r"guadeloupe|martinique|mayotte)\b", re.I)
 
 
+class GeoUnavailable(Exception):
+    """Nominatim n'a pas répondu (limite de débit, délai, erreur serveur)."""
+
+
 def _nominatim(sess, address):
-    """Look up one address via OpenStreetMap Nominatim. Returns [lat, lng] or None."""
+    """Look up one address via OpenStreetMap Nominatim. Returns [lat, lng], or
+    None when Nominatim answered but found nothing. Raises GeoUnavailable when
+    it did not answer : ce n'est pas une réponse, rien ne doit être mis en
+    cache (des adresses exactes restaient sinon « introuvables » pour toujours)."""
     if re.search(r"\bonline\b|en ligne|visio|webinaire|zoom|distanciel", address, re.I):
         return None
     q = address
@@ -4019,17 +4075,22 @@ def _nominatim(sess, address):
         # N'ancrer sur Paris que si aucune autre ville n'est nommée. Depuis
         # qu'Article 1 remonte aussi ses événements de province, une adresse
         # nantaise deviendrait sinon « …, Nantes, Paris, France ».
-        anchored = "paris" in q.lower() or _FR_CITY_RE.search(q)
+        ql = q.lower()
+        # Commune francilienne nommée (Saint-Denis, Orsay, Jouy-en-Josas…) :
+        # « …, Saint-Denis, Paris, France » ne donnait rien.
+        anchored = ("paris" in ql or _FR_CITY_RE.search(q) or _IDF_RE.search(q)
+                    or any(re.search(rf"\b{re.escape(c)}\b", ql) for c in _CITY_COORDS))
         q = q + ("" if anchored else ", Paris") + ", France"
     try:
         r = sess.get("https://nominatim.openstreetmap.org/search",
                      params={"q": q, "format": "json", "limit": 1, "countrycodes": "fr"},
                      timeout=15)
-        if r.ok and r.json():
-            d = r.json()[0]
-            return [round(float(d["lat"]), 6), round(float(d["lon"]), 6)]
-    except Exception:
-        pass
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        raise GeoUnavailable(f"{type(e).__name__}: {e}") from e
+    if data:
+        return [round(float(data[0]["lat"]), 6), round(float(data[0]["lon"]), 6)]
     return None
 
 
@@ -4039,9 +4100,12 @@ def _geo_variants(loc):
     segments de tête un à un, puis on tente « 75017 Paris »."""
     parts = [x.strip() for x in loc.split(",") if x.strip()]
     out = [", ".join(parts[i:]) for i in range(1, len(parts)) if re.search(r"\d", ", ".join(parts[i:]))]
-    m = re.search(r"\b(?:75|77|78|91|92|93|94|95)\d{3}\s+[^\d,()]{2,40}", loc)
+    m = re.search(r"\b(?:75|77|78|91|92|93|94|95)\d{3}\s+"
+                  r"(?!(?:salle|amphi|b[aâ]t|hall|niveau|[ée]tage)\b)[^\d,()]{2,40}", loc, re.I)
     if m:
-        out.append(m.group(0).strip() + ", France")
+        city = re.split(r"\s+(?:-|–|salle|amphi\w*|b[aâ]t\w*|hall|niveau|[ée]tage)\b",
+                        m.group(0).strip(), maxsplit=1, flags=re.I)[0]
+        out.append(city.strip() + ", France")
     return list(dict.fromkeys(out))[:3]
 
 
@@ -4058,12 +4122,19 @@ _CITY_COORDS = {
     "ivry-sur-seine": [48.8157, 2.3849], "boulogne-billancourt": [48.8397, 2.2399],
     "montrouge": [48.8163, 2.3163], "issy-les-moulineaux": [48.8245, 2.2700],
     "saint-ouen": [48.9118, 2.3345], "la plaine saint-denis": [48.9170, 2.3610],
+    "cergy-pontoise": [49.0364, 2.0761], "levallois-perret": [48.8950, 2.2870],
+    "puteaux": [48.8840, 2.2390], "vincennes": [48.8474, 2.4390],
+    "la défense": [48.8920, 2.2380], "le bourget": [48.9350, 2.4250],
 }
 
 
 def _city_coords(loc):
     k = re.sub(r"\s*\([^)]*\)\s*$", "", loc).strip().lower()
-    return _CITY_COORDS.get(k)
+    # Sciencesconf : « Université Paris Est Créteil - Créteil (France) » → la
+    # commune est le dernier segment
+    # (ou le dernier après une virgule : « Humathèque, Campus Condorcet, Aubervilliers »)
+    return (_CITY_COORDS.get(k) or _CITY_COORDS.get(re.split(r"\s+-\s+", k)[-1].strip())
+            or _CITY_COORDS.get(k.rsplit(",", 1)[-1].strip()))
 
 
 def geocode_all(events):
@@ -4079,6 +4150,7 @@ def geocode_all(events):
     sess = requests.Session()
     sess.headers.update({"User-Agent": "ParisAcademique/1.0 (github.com/kovarci/zzzz)"})
     new = 0
+    down = False                             # Nominatim ne répond plus : on arrête pour ce passage
     for ev in events:
         if ev.get("geo_exact") and "lat" in ev:
             continue                         # GPS fourni par la source (Ville de Paris, Sciencesconf)
@@ -4086,21 +4158,25 @@ def geocode_all(events):
         coords = None
         if loc and looks_like_address(loc):
             key = loc.lower()[:140]
-            if key not in cache and new < MAX_NEW_GEOCODE:
-                cache[key] = _nominatim(sess, loc)
-                new += 1
-                time.sleep(1.1)   # Nominatim asks for max 1 request/second
-            # Échec (None) : on retente une fois sans le nom du lieu ; [] = tout essayé
-            if cache.get(key, 0) is None and new < MAX_NEW_GEOCODE:
-                found = []
-                for q in _geo_variants(loc):
+            try:
+                if key not in cache and new < MAX_NEW_GEOCODE and not down:
                     new += 1
-                    time.sleep(1.1)
-                    hit = _nominatim(sess, q)
-                    if hit:
-                        found = hit
-                        break
-                cache[key] = found
+                    time.sleep(1.1)   # Nominatim asks for max 1 request/second
+                    cache[key] = _nominatim(sess, loc)
+                # Échec (None) : on retente sans le nom du lieu ; [] = tout essayé
+                if cache.get(key, 0) is None and new < MAX_NEW_GEOCODE and not down:
+                    found = []
+                    for q in _geo_variants(loc):
+                        new += 1
+                        time.sleep(1.1)
+                        hit = _nominatim(sess, q)
+                        if hit:
+                            found = hit
+                            break
+                    cache[key] = found
+            except GeoUnavailable as e:
+                down = True
+                print(f"[WARN] Nominatim indisponible ({e}) : géocodage reporté au prochain passage")
             coords = cache.get(key) or None
         if not coords:                       # ville seule (« Orsay (France) »)
             coords = _city_coords(loc)
@@ -5283,6 +5359,14 @@ def finalize_events(events):
     events = [e for e in events if not _CANCELLED.search(e.get("title", ""))]
     if len(events) < n:
         print(f"Événements annulés / reportés retirés : {n - len(events)}")
+    # Soirées Article 1 hors Île-de-France déjà enregistrées : le report
+    # (carry_forward) les aurait gardées jusqu'à leur date.
+    events = [e for e in events if e.get("institution") != "Article 1"
+              or _article1_local(e.get("location", ""))]
+    n = len(events)
+    events = [e for e in events if not _outside_idf(e.get("location", ""))]
+    if len(events) < n:
+        print(f"Événements hors Île-de-France retirés : {n - len(events)}")
     for e in events:
         # Colloque sur plusieurs jours : l'heure de fin est celle du dernier jour
         if e.get("end_time") and e.get("time") and e["end_time"] <= e["time"]:
