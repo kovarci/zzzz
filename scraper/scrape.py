@@ -5444,6 +5444,16 @@ _DIGEST_WEIGHT = {
 }
 
 
+def _place_sans_inst(e):
+    """Lieu sans l'organisateur en tête (« Sciences Po, 27 rue Saint-Guillaume »
+    → « 27 rue Saint-Guillaume, Paris 7e ») ; le lieu complet s'il ne le répète pas."""
+    inst = slugify(e.get("institution", ""))
+    bits = [b.strip() for b in (e.get("location") or "").split(",") if b.strip()]
+    while bits and inst and (slugify(bits[0]) in inst or inst in slugify(bits[0])):
+        bits.pop(0)
+    return ", ".join(bits)
+
+
 def build_digest(events):
     """Pick the ~10 'immanquables' of the next 7 days and write
     data/digest.json (for the site's strip) + data/digest.xml (RSS feed).
@@ -5506,7 +5516,7 @@ def build_digest(events):
             f"<item><title>{_esc_attr(e['title'])}</title>"
             f"<link>{link}</link><guid isPermaLink=\"true\">{link}</guid>"
             f"<pubDate>{rfc822(e.get('added_at') or TODAY.isoformat())}</pubDate>"
-            f"<description>{_esc_attr(d + ' — ' + e.get('institution', '') + (' · ' + e['location'] if e.get('location') else ''))}</description>"
+            f"<description>{_esc_attr(d + ' — ' + e.get('institution', '') + (' · ' + _place_sans_inst(e) if _place_sans_inst(e) else ''))}</description>"
             f"</item>")
     rss = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
            "<rss version=\"2.0\"><channel>"
