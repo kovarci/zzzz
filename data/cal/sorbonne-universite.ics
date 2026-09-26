@@ -7,7 +7,7 @@ X-WR-CALNAME:Sorbonne Université · Lotent
 X-WR-TIMEZONE:Europe/Paris
 BEGIN:VEVENT
 UID:1ce0ada1c4c6@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:L’éveil du Morpho : bio-inspirez-vous !
@@ -19,7 +19,7 @@ URL:https://www.sorbonne-universite.fr/evenements/leveil-du-morpho-bio-insp
 END:VEVENT
 BEGIN:VEVENT
 UID:a079b788879b@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Rencontres nationales de la sobriété foncière "Le maire et la te
@@ -32,7 +32,7 @@ URL:https://www.sorbonne-universite.fr/evenements/rencontres-nationales-de-
 END:VEVENT
 BEGIN:VEVENT
 UID:740eb4d54f3b@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Mission Bougainville : une opportunité pour les étudiantes et ét
@@ -45,7 +45,7 @@ URL:https://www.sorbonne-universite.fr/evenements/mission-bougainville-une-
 END:VEVENT
 BEGIN:VEVENT
 UID:35575fd3a4f7@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:La Science taille XX elles
@@ -57,7 +57,7 @@ URL:https://www.sorbonne-universite.fr/evenements/la-science-taille-xx-elle
 END:VEVENT
 BEGIN:VEVENT
 UID:9aec0f011578@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Congrès 2026 de France Universités : quel pacte universitaire pou
@@ -70,7 +70,7 @@ URL:https://www.sorbonne-universite.fr/evenements/congres-2026-de-france-un
 END:VEVENT
 BEGIN:VEVENT
 UID:39166fb697d8@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:École thématique MuHaS 2026
@@ -82,7 +82,7 @@ URL:https://www.sorbonne-universite.fr/evenements/ecole-thematique-muhas-20
 END:VEVENT
 BEGIN:VEVENT
 UID:ccfa20e8345c@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Journée d'accueil des doctorants de première année 2026
@@ -94,7 +94,7 @@ URL:https://www.sorbonne-universite.fr/evenements/journee-daccueil-des-doct
 END:VEVENT
 BEGIN:VEVENT
 UID:aab7768acd48@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Patrimoines spoliés : restituer\, réparer\, raconter
@@ -106,7 +106,7 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoines-spolies-resti
 END:VEVENT
 BEGIN:VEVENT
 UID:a8d86a09d7db@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Comment mieux sensibiliser au handicap ?
@@ -118,7 +118,7 @@ URL:https://www.sorbonne-universite.fr/evenements/comment-mieux-sensibilise
 END:VEVENT
 BEGIN:VEVENT
 UID:087e6decab67@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Quand les réseaux sociaux passent à table
@@ -129,20 +129,8 @@ URL:https://www.sorbonne-universite.fr/evenements/quand-les-reseaux-sociaux
  -passent-table
 END:VEVENT
 BEGIN:VEVENT
-UID:e61d475a926c@paris-academique
-DTSTAMP:20260926T092746Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261204
-SUMMARY:Quand les réseaux passent à table
-DESCRIPTION:\nhttps://www.sorbonne-universite.fr/evenements/quand-les-resea
- ux-passent-table
-LOCATION:Sorbonne Université\, Paris
-URL:https://www.sorbonne-universite.fr/evenements/quand-les-reseaux-passent
- -table
-END:VEVENT
-BEGIN:VEVENT
 UID:c7fa0b929e6b@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:L'alimentation à l'ère du numérique
@@ -154,7 +142,7 @@ URL:https://www.sorbonne-universite.fr/evenements/lalimentation-lere-du-num
 END:VEVENT
 BEGIN:VEVENT
 UID:78dc55302068@paris-academique
-DTSTAMP:20260926T092746Z
+DTSTAMP:20260926T094546Z
 DTSTART;VALUE=DATE:20270426
 DTEND;VALUE=DATE:20270427
 SUMMARY:Comment s'adapter au changement climatique ?
