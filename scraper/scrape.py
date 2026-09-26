@@ -3154,10 +3154,16 @@ def scrape_ifri():
 
 
 def scrape_iris():
-    # Institut de relations internationales et stratégiques
+    # Institut de relations internationales et stratégiques. Les prochains
+    # événements : l'article « à la une » + les cartes datées (« 05 OCT »,
+    # « … / OUVERT / 18:30–20:00 ») ; la grille « col-sm-6 » lue avant ne
+    # contenait que les événements PASSÉS (0 conférence depuis des semaines).
     return _scrape_cards(
-        "IRIS", "https://www.iris-france.org/evenements/", "div.row.gy-base.mb-3 > div.col-sm-6",
-        title="h3", date="p.card-subheading", drop=re.compile(r"\breplay\b|webinaire", re.I),
+        "IRIS", "https://www.iris-france.org/evenements/",
+        "article.event-featured, article.card:has(> .card-content > p.card-date)",
+        title="h2.event-title, h3.card-title", date="p.card-date", time="p.card-subheading",
+        link='a[href*="/event/"]', drop=re.compile(r"\breplay\b|webinaire", re.I),
+        members=re.compile(r"sur invitation|réservé", re.I),
         base="https://www.iris-france.org", location="IRIS, 2 bis rue Mercœur, Paris 11e")
 
 
@@ -3206,7 +3212,9 @@ def scrape_ima():
         "Institut du monde arabe", "https://www.imarabe.org/fr/agenda/rencontres-et-debats",
         "div.cards-grid > div.card", title="h3", date=".dates",
         drop=re.compile(r"séance d'écoute|concert", re.I), base="https://www.imarabe.org",
-        location="Institut du monde arabe, 1 rue des Fossés-Saint-Bernard, Paris 5e")
+        location="Institut du monde arabe, 1 rue des Fossés-Saint-Bernard, Paris 5e",
+        # 20 cartes par page ; la suite en ?page=1 (numérotée depuis 0)
+        page_url="https://www.imarabe.org/fr/agenda/rencontres-et-debats?page={n}", page_start=1, max_pages=4)
 
 
 def scrape_beaux_arts():
@@ -5022,10 +5030,16 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
     # officiel. L'ancienne fiche devient une redirection (liens partagés,
     # favoris ouverts depuis un message…) au lieu d'une 404. Seulement pour un
     # lien propre à UN événement actuel (pas une page d'agenda commune).
-    by_url = {}
+    by_url, past_url = {}, {}
     for e in upcoming:
         if e.get("url"):
             by_url.setdefault(html_unescape(e["url"]), []).append(e["id"])
+    # Événement passé : l'Historique garde une seule version d'un événement
+    # renommé (update_archive) ; la page de l'autre version renvoie vers elle.
+    for e in events:
+        if (e.get("url") and e.get("date", "") < today_iso
+                and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")):
+            past_url.setdefault(html_unescape(e["url"]), []).append(e["id"])
     # Doublon fusionné dans une autre fiche (même conférence publiée par deux
     # sources) : sa page renvoie vers la fiche gardée, archivée comprise.
     alias_of = {a: e["id"] for e in events if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")
@@ -5038,7 +5052,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
             old = f.read_text(encoding="utf-8", errors="replace")
             m = (re.search(r'<a class="ext" href="([^"]+)"', old)
                  or re.search(r'<meta name="lotent-src" content="([^"]+)"', old))
-            ids = by_url.get(html_unescape(m.group(1)), []) if m else []
+            ids = (by_url.get(html_unescape(m.group(1))) or past_url.get(html_unescape(m.group(1)), [])) if m else []
             if f.stem in alias_of:
                 ids = [alias_of[f.stem]]
             if len(ids) == 1 and f"{ids[0]}.html" != f.name:
