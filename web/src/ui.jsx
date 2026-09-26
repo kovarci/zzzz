@@ -5,6 +5,39 @@ import { createPortal } from "react-dom";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useInView, useAnimationFrame } from "framer-motion";
 import { cn } from "./lib.js";
 
+/* ═══════════════════ Accessibilité ═══════════════════ */
+// Fenêtre modale : focus déplacé dedans à l'ouverture, Tab et Maj+Tab restent
+// dedans, focus rendu à l'élément qui l'a ouverte à la fermeture.
+const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea,[tabindex]:not([tabindex="-1"])';
+export function useFocusTrap(active) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!active) return;
+    const opener = document.activeElement;
+    const items = () => [...(ref.current?.querySelectorAll(FOCUSABLE) || [])].filter(el => el.getClientRects().length);
+    const t = setTimeout(() => {
+      const el = ref.current;
+      if (!el || el.contains(document.activeElement)) return;
+      const first = items()[0];
+      (first || el).focus?.({ preventScroll: true });
+    }, 40);
+    const onKey = ev => {
+      if (ev.key !== "Tab" || !ref.current) return;
+      const f = items(); if (!f.length) return;
+      const first = f[0], last = f[f.length - 1], cur = document.activeElement;
+      if (!ref.current.contains(cur)) { ev.preventDefault(); first.focus(); }
+      else if (ev.shiftKey && cur === first) { ev.preventDefault(); last.focus(); }
+      else if (!ev.shiftKey && cur === last) { ev.preventDefault(); first.focus(); }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      clearTimeout(t); document.removeEventListener("keydown", onKey);
+      if (opener && opener !== document.body && opener.isConnected) setTimeout(() => opener.focus?.({ preventScroll: true }), 0);
+    };
+  }, [active]);
+  return ref;
+}
+
 /* ═══════════════════ Magic UI ═══════════════════ */
 // magicui.design/docs/components/number-ticker
 export function NumberTicker({ value, className, delay = 0, locale = "fr-FR" }) {

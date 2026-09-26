@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
 import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
-import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS } from "./ui.jsx";
+import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
 const PAGE = 48;
@@ -93,6 +93,7 @@ function RelatedList({ title, items, onOpen, max = 5 }) {
 function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollow, pool = [], onOpen }) {
   const { t, fmtDay, discName, kindName } = useI18n();
   const rel = useMemo(() => e ? relatedOf(e, pool) : null, [e, pool]);
+  const trap = useFocusTrap(!!e);
   useEffect(() => { if (!e) return; const h = ev => ev.key === "Escape" && onClose(); document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, [e]);
   const share = async () => {
     const url = `${SITE}/e/${e.id}.html`;
@@ -101,7 +102,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollo
   };
   return <AnimatePresence>{e && <React.Fragment key={e.id}>
     <motion.div className="fixed inset-0 z-50 bg-black/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
-    <motion.aside className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-lg bg-background border-l shadow-2xl flex flex-col overflow-auto" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "spring", stiffness: 380, damping: 40 }} aria-modal="true" role="dialog">
+    <motion.aside ref={trap} className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-lg bg-background border-l shadow-2xl flex flex-col overflow-auto" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "spring", stiffness: 380, damping: 40 }} aria-modal="true" role="dialog">
       {(() => { const d = parse(e.date), days = Math.round((d - today) / 864e5); return <>
         <div className="relative aspect-[16/10] shrink-0 group"><Cover e={e} className="absolute inset-0" eager /><button onClick={onClose} className="absolute top-3 right-3 z-[2] inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow hover:bg-background" aria-label={t("fermer")}><Icon d={ICONS.x} size={16} /></button></div>
         <div className="p-6 flex flex-col gap-4">
@@ -140,6 +141,7 @@ const openSubscribe = (path, name) => window.dispatchEvent(new CustomEvent("lote
 function SubscribeDialog({ onToast }) {
   const { t } = useI18n();
   const [feed, setFeed] = useState(null);
+  const trap = useFocusTrap(!!feed);
   useEffect(() => {
     const h = ev => setFeed(ev.detail); window.addEventListener("lotent:subscribe", h);
     const k = ev => ev.key === "Escape" && setFeed(null); document.addEventListener("keydown", k);
@@ -150,7 +152,7 @@ function SubscribeDialog({ onToast }) {
   const row = "flex items-center gap-3 rounded-lg border px-3 py-2.5 text-sm font-medium hover:bg-accent";
   return <AnimatePresence>{feed && <motion.div key="sub" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setFeed(null)} />
-    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} role="dialog" aria-modal="true" aria-label={t("sub_title")}
+    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} ref={trap} role="dialog" aria-modal="true" aria-label={t("sub_title")}
       className="absolute left-1/2 top-[12vh] w-[min(440px,calc(100%-2rem))] rounded-xl border bg-popover shadow-2xl overflow-hidden">
       <div className="flex items-center justify-between border-b px-4 py-3"><div><h2 className="font-semibold text-sm">{t("sub_title")}</h2><p className="text-xs text-muted-foreground">{feed.name || t("sub_all")}</p></div>
         <button onClick={() => setFeed(null)} className="inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-accent" aria-label={t("fermer")}><Icon d={ICONS.x} size={15} /></button></div>
@@ -181,13 +183,14 @@ function SpeakerRow({ text, followSet, onFollow }) {
 function CommandDialog({ open, onClose, onPick, pool }) {
   const { t, fmtShort, discName } = useI18n();
   const [q, setQ] = useState(""); const [sel, setSel] = useState(0); const inputRef = useRef(null);
+  const trap = useFocusTrap(open);
   const res = useMemo(() => { const n = norm(q.trim()); return (n ? pool.filter(e => { const hay = norm([e.title, e.speaker, e.institution, e.location, e.discipline, discName(e.discipline), ...(e.also || [])].join(" ")); return n.split(/\s+/).every(w => hay.includes(w)); }) : pool.filter(e => e.date === TODAY || e.date === TOMORROW)).slice(0, 30); }, [q, pool, discName]);
   useEffect(() => { if (open) { setQ(""); setSel(0); setTimeout(() => inputRef.current?.focus(), 30); } }, [open]);
   useEffect(() => setSel(0), [q]);
   const onKey = ev => { if (ev.key === "ArrowDown") { ev.preventDefault(); setSel(s => (s + 1) % Math.max(1, res.length)); } else if (ev.key === "ArrowUp") { ev.preventDefault(); setSel(s => (s - 1 + res.length) % Math.max(1, res.length)); } else if (ev.key === "Enter" && res[sel]) onPick(res[sel]); };
   return <AnimatePresence>{open && <motion.div key="cmd" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} className="absolute left-1/2 top-[12vh] w-[min(640px,calc(100%-2rem))] rounded-xl border bg-popover shadow-2xl overflow-hidden" role="dialog" aria-modal="true">
+    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} ref={trap} className="absolute left-1/2 top-[12vh] w-[min(640px,calc(100%-2rem))] rounded-xl border bg-popover shadow-2xl overflow-hidden" role="dialog" aria-modal="true">
       <div className="flex items-center gap-2 border-b px-3"><Icon d={ICONS.search} size={16} className="text-muted-foreground" />
         <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKey} className="h-12 flex-1 bg-transparent text-sm outline-none focus-visible:shadow-none placeholder:text-muted-foreground" placeholder={t("cmd_ph")} /><Kbd>ESC</Kbd></div>
       <div className="max-h-[50vh] overflow-auto p-1">{res.length ? res.map((e, i) => <button key={e.id} onMouseEnter={() => setSel(i)} onClick={() => onPick(e)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", i === sel && "bg-accent")}>
@@ -324,9 +327,10 @@ function DisciplineBanner({ name, events, onClear }) {
 function SpeakersPanel({ open, onClose, speakers, onUnfollow, pool, onOpenEvent, notifyPerm, onEnableNotify }) {
   const { t, fmtShort } = useI18n();
   const list = useMemo(() => [...speakers].sort((a, b) => a.localeCompare(b)), [speakers]);
+  const trap = useFocusTrap(open);
   return <AnimatePresence>{open && <motion.div key="speakers" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
+    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} ref={trap} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
       <div className="flex items-center justify-between border-b px-4 py-3"><h2 className="font-semibold text-sm">{t("my_speakers")}</h2><button onClick={onClose} className="inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-accent" aria-label={t("fermer")}><Icon d={ICONS.x} size={15} /></button></div>
       {notifyPerm !== "unsupported" && <div className="px-4 py-2 border-b bg-muted/40 text-xs">
         {notifyPerm === "granted" ? <span className="text-emerald-700 dark:text-emerald-400 font-medium">{t("notify_enabled")}</span>
