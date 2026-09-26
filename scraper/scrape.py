@@ -2600,8 +2600,13 @@ def _drop_city_duplicates(events):
     titre nu : la Ville écrit « Conférence « Hommage à Bernard Frank » » là où
     la Maison de la culture du Japon écrit « Hommage à Bernard Frank »."""
     key = lambda e: (core_title(e.get("title", ""))[:50], e.get("date"))
-    known = {key(e) for e in events if e.get("source_type") != "ville"}
-    out = [e for e in events if e.get("source_type") != "ville" or key(e) not in known]
+    known = {key(e): e for e in events if e.get("source_type") != "ville"}
+    out = []
+    for e in events:
+        if e.get("source_type") == "ville" and key(e) in known:
+            _absorb(known[key(e)], e)
+        else:
+            out.append(e)
     if len(out) < len(events):
         print(f"Que faire à Paris : {len(events) - len(out)} doublons d'autres sources écartés")
     return out
@@ -3995,6 +4000,9 @@ def merge_cross_source(events):
         best = max(g, key=_richness)
         others = sorted({e.get("institution") for e in g} - {best.get("institution")})
         best["also"] = sorted(set(best.get("also", [])) | set(others))
+        for e in g:
+            if e is not best:
+                _absorb(best, e)
         out.append(best)
         merged += len(g) - 1
     if merged:
@@ -4004,6 +4012,16 @@ def merge_cross_source(events):
 
 # Sites qui republient les événements des autres (colloques, Ville de Paris)
 _AGGREGATORS = {"Sciencesconf.org"}
+
+
+def _absorb(keep, lose):
+    """Fiche `lose` fusionnée dans `keep` : son id est gardé (« aliases ») pour
+    rediriger sa page e/<id>.html et ses liens ?event= vers `keep`, au lieu
+    d'une page supprimée (404) pour qui l'avait partagée."""
+    ids = {lose.get("id")} | set(lose.get("aliases") or []) | set(keep.get("aliases") or [])
+    ids = sorted(i for i in ids if i and i != keep.get("id"))
+    if ids:
+        keep["aliases"] = ids
 
 
 def _merge_prefix_titles(events):
@@ -4047,6 +4065,7 @@ def _merge_prefix_titles(events):
                     also = ({lose.get("institution")} | set(lose.get("also") or [])) - {keep.get("institution")}
                     if also:
                         keep["also"] = sorted(set(keep.get("also") or []) | also)
+                _absorb(keep, lose)
                 drop.add(j if keep is ea else i)
                 n += 1
                 if i in drop:
@@ -5007,6 +5026,10 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
     for e in upcoming:
         if e.get("url"):
             by_url.setdefault(html_unescape(e["url"]), []).append(e["id"])
+    # Doublon fusionné dans une autre fiche (même conférence publiée par deux
+    # sources) : sa page renvoie vers la fiche gardée, archivée comprise.
+    alias_of = {a: e["id"] for e in events if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")
+                for a in (e.get("aliases") or [])}
     removed = redirected = 0
     for f in EVENT_PAGES_DIR.glob("*.html"):
         if f.name in keep:
@@ -5016,6 +5039,8 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
             m = (re.search(r'<a class="ext" href="([^"]+)"', old)
                  or re.search(r'<meta name="lotent-src" content="([^"]+)"', old))
             ids = by_url.get(html_unescape(m.group(1)), []) if m else []
+            if f.stem in alias_of:
+                ids = [alias_of[f.stem]]
             if len(ids) == 1 and f"{ids[0]}.html" != f.name:
                 new = ids[0]
                 f.write_text(
@@ -5023,7 +5048,8 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
                     f'<title>Événement mis à jour · Lotent</title><meta name="robots" content="noindex">'
                     f'<link rel="canonical" href="{SITE_URL}/e/{new}.html">'
                     f'<meta http-equiv="refresh" content="0; url={new}.html">'
-                    f'<meta name="lotent-src" content="{_esc_attr(html_unescape(m.group(1)))}"></head>'
+                    + (f'<meta name="lotent-src" content="{_esc_attr(html_unescape(m.group(1)))}">' if m else '')
+                    + '</head>'
                     f'<body><p>Cet événement a été mis à jour par son organisateur : '
                     f'<a href="{new}.html">voir la fiche</a>.</p></body></html>', encoding="utf-8")
                 redirected += 1
@@ -5566,6 +5592,7 @@ def build_digest(events):
     pool = [e for e in events
             if TODAY.isoformat() <= e.get("date", "") <= end.isoformat()
             and not e.get("kind")                 # soutenances / carrières : catégories à part
+            and not e.get("members")              # « immanquables » : ouverts à tous
             and not is_junk_title(e.get("title", ""))]
 
     def score(e):

@@ -454,7 +454,8 @@ function App() {
   // ?event=<id> (pages e/*.html) : ouvre la fiche, dans les événements à venir ou l'archive
   useEffect(() => {
     if (!events || !pendingEvent.current) return; const id = pendingEvent.current;
-    const e = events.find(x => x.id === id); if (e) { pendingEvent.current = null; setOpen(e); return; }
+    // aliases : id d'un doublon fusionné dans cette fiche (autre source)
+    const e = events.find(x => x.id === id || x.aliases?.includes(id)); if (e) { pendingEvent.current = null; setOpen(e); return; }
     if (!complete) return;          // peut-être dans un mois pas encore chargé
     pendingEvent.current = null;
     ensureArchive().then(a => { const p = a.find(x => x.id === id); p ? setOpen(p) : notify(t("toast_not_found")); });
