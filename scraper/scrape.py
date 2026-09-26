@@ -1491,9 +1491,6 @@ def scrape_ehess(browser=None):
         cat = " · ".join(t for t in (clean_text(x.get_text()) for x in card.select(".meta-cat"))
                          if t and t.upper() != "EHESS")
         cat = re.sub(r"(?i)journ[ée]\(e\)", "Journée", cat)
-        if re.search(r"vie (étudiante|de l'école)|réunion|inscription", cat, re.I):
-            stats["off"] += 1
-            continue
         pin = card.select_one(".caption p.subtitle")
         where = clean_text(pin.get_text()) if pin else ""
         if where and not re.search(r"\bparis\b", where, re.I):
@@ -2023,7 +2020,6 @@ def scrape_bernardins():
     return _scrape_cards(
         "Collège des Bernardins", "https://www.collegedesbernardins.fr/agenda",
         ".item-agenda", title="h2", date=".tag-date-wrapper", kind=".tag-vignette-agenda-v2",
-        drop_kind=("concert", "famille", "adolescent", "enfant"),
         base="https://www.collegedesbernardins.fr",
         location="Collège des Bernardins, 20 rue de Poissy, Paris 5e")
 
@@ -2119,7 +2115,6 @@ def scrape_paris1():
     for site in (base, "https://recherche.pantheonsorbonne.fr"):
         out += _scrape_cards(name, site + "/evenements", "article.event", title="h2.title",
                              date=".date-style", kind=".categ-style", base=base, location=loc,
-                             drop_kind=("exposition", "spectacle", "cérémonie"),
                              page_url=site + "/evenements?page={n}", max_pages=6)
     return out
 
@@ -2128,8 +2123,6 @@ def scrape_assas():
     return _scrape_cards(
         "Université Paris-Panthéon-Assas", "https://www.assas-universite.fr/fr/evenements",
         ".liste__evenements .event", title="h3", kind=".type__evenement", place=".adresse",
-        # vie étudiante : petits-déjeuners offerts, matchs, salons, remises de prix
-        drop_kind=("petit-déjeuner", "sportive", "salon", "cérémonie"),
         base="https://www.assas-universite.fr",
         location="Université Paris-Panthéon-Assas, 92 rue d'Assas, Paris 6e",
         page_url="https://www.assas-universite.fr/fr/evenements?page={n}", max_pages=6)
@@ -2139,7 +2132,6 @@ def scrape_paris_saclay():
     return _scrape_cards(
         "Université Paris-Saclay", "https://www.universite-paris-saclay.fr/evenements", "article.thumbnail",
         title="h3", date=".thumbnail__info__date", place=".thumbnail__info__place",
-        drop=re.compile(r"^concert", re.I),
         base="https://www.universite-paris-saclay.fr",
         location="Université Paris-Saclay, Gif-sur-Yvette",
         page_url="https://www.universite-paris-saclay.fr/evenements?page={n}", max_pages=6)
@@ -2579,9 +2571,7 @@ QFAP_API = ("https://parisdata.opendatasoft.com/api/explore/v2.1/catalog/"
 # petits-déjeuners de réseau, soirées bien-être… hors sujet ici.
 _QFAP_SKIP = re.compile(
     r"^visites?\b|\bvisites?[- ](guid|conf)|astrolog|petit[- ]d[ée]j|ap[ée]ro\b|"
-    r"speed[- ]dating|yoga|m[ée]ditation|sophrolog|tarot|networking|"
-    # soirées et animations taguées « Conférence » par la Ville
-    r"^(gala|quiz|vernissage)\b|^troph[ée]es\b|\bcin[ée][- ]club\b|^carte blanche\b", re.I)
+    r"speed[- ]dating|yoga|m[ée]ditation|sophrolog|tarot|networking", re.I)
 
 
 def scrape_que_faire_a_paris():
@@ -5102,7 +5092,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 <dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{speaker}</dd>' if speaker else ''}</dl>
 {f'<p class="desc">{body_desc}</p>' if body_desc and len(body_desc) > 40 and body_desc != speaker else ''}
 {f'<p class="desc">{series_note}</p>' if series_note else ''}
-<div class="cta"><a class="site" href="{target}">Voir sur Lotent →</a>{f'<a class="ext" href="{ext}" rel="noopener">Page officielle · inscription ↗</a>' if ext else ''}</div>
+<div class="cta"><a class="site" href="{target}" rel="nofollow">Voir sur Lotent →</a>{f'<a class="ext" href="{ext}" rel="noopener">Page officielle · inscription ↗</a>' if ext else ''}</div>
 <p class="note">Vérifie les horaires sur la page officielle avant de te déplacer.</p>
 </div>
 </main>
@@ -5306,7 +5296,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 <div class="body">
 <p class="count"><b>{n}</b> conférence{plural} à venir dans l'agenda Lotent.</p>
 {f'<p class="intro">{_esc_attr(intro)}</p>' if intro else ''}
-<div class="cta"><a class="site" href="{target}">Voir dans l'agenda →</a>{ics_btn}</div>
+<div class="cta"><a class="site" href="{target}" rel="nofollow">Voir dans l'agenda →</a>{ics_btn}</div>
 {ics_more}
 </div>
 </main>
@@ -5774,30 +5764,11 @@ def build_digest(events):
     print(f"Digest : {len(picked)} immanquables ({period})")
 
 
-# Types écartés à la source (concerts, expositions, vie étudiante) : la carte
-# ne donne que ce type comme description. Même règle ici pour les versions
-# déjà enregistrées, que le report (carry_forward) garderait jusqu'à leur date.
-_OFF_KIND = re.compile(
-    r"^(concerts?|expositions?|spectacles?|c[ée]r[ée]monie|petit-d[ée]jeuner\b.*|"
-    r"rencontre sportive|salon|famille|adolescents?|enfants?)$", re.I)
-_OFF_TITLE = re.compile(r"^concert[- ]sandwich", re.I)
-
-
 def finalize_events(events):
     """Règles communes au robot (main) et à la maj locale (refresh_local.py),
     appliquées à toutes les sources, événements reportés compris."""
     # Titres parasites (menus lus comme événements)
     events = [e for e in events if not is_junk_title(e.get("title", ""))]
-    n = len(events)
-    events = [e for e in events if not (
-        ((e.get("source_type") or "institution") == "institution"
-         and (_OFF_KIND.match((e.get("description") or "").strip()) or _OFF_TITLE.match(e.get("title", ""))
-              # filtre commun de _scrape_cards, que les parseurs dédiés (Sciences
-              # Po, Sorbonne…) n'appliquaient pas
-              or _OFF_TOPIC.search(e.get("title", ""))))
-        or (e.get("source_type") == "ville" and _QFAP_SKIP.search(e.get("title", ""))))]
-    if len(events) < n:
-        print(f"Concerts, expositions, vie étudiante retirés : {n - len(events)}")
     # « [Reporté] Atelier… », « Meetup 5 (POSTPONED) », « [SÉANCE REPORTÉE] »
     n = len(events)
     events = [e for e in events if not _CANCELLED.search(e.get("title", ""))]
