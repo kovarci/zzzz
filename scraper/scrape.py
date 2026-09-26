@@ -267,13 +267,38 @@ _LUMA_CAT_DISCIPLINE = {
 }
 
 
+# Mots-clés qui se déclenchaient au milieu d'autres mots : « théâtre » dans
+# « amphithéâtre » (lieu de presque tous les séminaires), « tribu » dans
+# « contribution », « évolution » dans « révolution », « astronom » dans
+# « gastronomie », « ricci » (flot de Ricci) dans « Matteo Ricci »… Préfixes
+# (ou mots entiers, pour « ricci ») qui annulent la correspondance.
+_KW_NOT_AFTER = {
+    "théâtre": ("amphi",), "tribu": ("con", "dis", "at", "rétri"), "évolution": ("r",),
+    "moire": ("mé",), "pensée": ("dis", "récom"), "élection": ("s",), "tax": ("syn",),
+    "rituel": ("spi",), "étale": ("soci", "vég"), "opera": ("co",), "astronom": ("g",),
+    "terrain": ("sou",), "dance ": ("correspon", "dépen", "abun", "atten", "gui", "indépen"),
+}
+_KW_NOT_BEFORE = {"ricci": re.compile(r"(matteo|institut) ricci")}
+
+
+def _kw_hit(kw, text):
+    if kw not in text:
+        return False
+    pre = _KW_NOT_AFTER.get(kw)
+    if pre:
+        return any(not text[:m.start()].endswith(pre) for m in re.finditer(re.escape(kw), text))
+    if kw in _KW_NOT_BEFORE:
+        return not _KW_NOT_BEFORE[kw].search(text)
+    return True
+
+
 def detect_discipline(title: str, description: str = "",
                       institution: str = "",
                       luma_categories=None) -> str:
     text = " " + (title + " " + description).lower() + " "
     scores = {}
     for discipline, keywords in DISCIPLINE_KEYWORDS.items():
-        score = sum(1 for kw in keywords if kw in text)
+        score = sum(1 for kw in keywords if _kw_hit(kw, text))
         if score:
             scores[discipline] = score
     if scores:
@@ -472,6 +497,28 @@ NON_PARIS = re.compile(
     re.I,
 )
 
+# « 2 rue de Lille, Paris 7e » (Maison de la Recherche de l'Inalco), « rue de
+# Rennes », « boulevard de Strasbourg », « gare de Lyon » : des adresses
+# parisiennes, pas Lille ni Rennes. Tous les tests « hors Paris » passent par ici.
+_STREET_BEFORE = re.compile(
+    r"\b(rue|avenue|av\.?|boulevard|bd|place|pl\.|quai|cours|passage|impasse|square|all[ée]e|"
+    r"gare|porte|faubourg|fbg|villa|cit[ée]|chauss[ée]e|route|chemin|pont|h[ôo]tel)\s+"
+    r"(de\s+la\s+|de\s+|du\s+|des\s+|d['’]\s*)?$", re.I)
+
+
+def _names_city(rx, text):
+    """Première ville de `rx` nommée dans `text` (match truthy), en ignorant
+    les rues parisiennes qui portent un nom de ville."""
+    text = text or ""
+    for m in rx.finditer(text):
+        if not _STREET_BEFORE.search(text[max(0, m.start() - 30):m.start()]):
+            return m
+    return None
+
+
+def _non_paris(text):
+    return _names_city(NON_PARIS, text)
+
 
 def is_junk_title(t: str) -> bool:
     """True if the title is a navigation/UI element, not a real event."""
@@ -588,7 +635,7 @@ def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
         location = (clean_text(item.get("location", "")) or clean_text(item.get("room", ""))
                     or location_default)
         # Indico CNRS-math is nationwide — keep only Paris-area events
-        if NON_PARIS.search(location):
+        if _non_paris(location):
             continue
         desc = strip_html(item.get("description", ""))[:400]
         speakers = ", ".join(s.get("fullName", "") for s in item.get("speakers", []))[:120]
@@ -1401,6 +1448,7 @@ def scrape_ehess(browser=None):
     events, seen = [], set()
     BASE = "https://www.ehess.fr"
     LOC = "EHESS, 54 boulevard Raspail, Paris 6e"
+    LOC_CONDORCET = "EHESS, Campus Condorcet, 2 cours des Humanités, Aubervilliers"
 
     url = "https://www.ehess.fr/jcms/kmo_28682/fr/agenda-de-l-ehess"
     # Page brute d'abord : une fois le JavaScript exécuté (Playwright), les
@@ -1429,13 +1477,27 @@ def scrape_ehess(browser=None):
     if cards:
         print(f"   [SAMPLE CARD] {clean_text(str(cards[0]))[:650]}")
 
-    stats = {"no_title": 0, "no_date": 0, "past": 0, "too_far": 0, "kept": 0}
+    stats = {"no_title": 0, "no_date": 0, "past": 0, "too_far": 0, "kept": 0, "off": 0}
     for card in cards:
         title_el = card.select_one(".jnews-event-title")
         title = clean_text(title_el.get_text()) if title_el else ""
         if not title or is_junk_title(title):
             stats["no_title"] += 1
             continue
+        # Type (« Colloque », « Journé(e) d'études », « Soutenance HDR »…) et
+        # ville (« Paris », « Aubervilliers », « Brasilia - Brésil »)
+        cat = " · ".join(t for t in (clean_text(x.get_text()) for x in card.select(".meta-cat"))
+                         if t and t.upper() != "EHESS")
+        cat = re.sub(r"(?i)journ[ée]\(e\)", "Journée", cat)
+        if re.search(r"vie (étudiante|de l'école)|réunion|inscription", cat, re.I):
+            stats["off"] += 1
+            continue
+        pin = card.select_one(".caption p.subtitle")
+        where = clean_text(pin.get_text()) if pin else ""
+        if where and not re.search(r"\bparis\b", where, re.I):
+            if not _IDF_RE.search(where):
+                stats["off"] += 1          # colloque à Brasilia, Marseille…
+                continue
         # Date: structured day + month first, free-text fallback
         d = None
         day_el = card.select_one(".chiffre-cle")
@@ -1471,8 +1533,14 @@ def scrape_ehess(browser=None):
             continue
         seen.add(key)
         stats["kept"] += 1
-        events.append(new_event("EHESS", title, d, time_str=time_str,
-                                location=LOC, url=make_absolute(href, BASE)))
+        # Une partie de l'EHESS est au Campus Condorcet : ces événements
+        # étaient placés boulevard Raspail (carte, « Près de moi »).
+        loc = (LOC_CONDORCET if re.search(r"aubervilliers|condorcet", where, re.I)
+               else LOC if not where or re.search(r"\bparis\b", where, re.I) else f"{where}, EHESS")
+        events.append(new_event("EHESS", title, d, time_str=time_str, desc=cat,
+                                location=loc, url=make_absolute(href, BASE)))
+        if re.search(r"soutenance", cat, re.I):
+            events[-1]["kind"] = "soutenance"
     print(f"   stats: {stats}")
     print(f"   ✓ Total EHESS: {len(events)} events")
     return events
@@ -1824,7 +1892,7 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
                 or (t_el.find("a", href=True) if t_el else None) \
                 or (t_el.find_parent("a", href=True) if t_el else None) or c.find("a", href=True)
             p = clean_text(c.select_one(place).get_text(" ")) if place and c.select_one(place) else ""
-            if p and (NON_PARIS.search(p) or (keep_loc and not keep_loc.search(p))):
+            if p and (_non_paris(p) or (keep_loc and not keep_loc.search(p))):
                 continue
             end = ""
             if time and c.select_one(time):
@@ -1953,6 +2021,7 @@ def scrape_bernardins():
     return _scrape_cards(
         "Collège des Bernardins", "https://www.collegedesbernardins.fr/agenda",
         ".item-agenda", title="h2", date=".tag-date-wrapper", kind=".tag-vignette-agenda-v2",
+        drop_kind=("concert", "famille", "adolescent", "enfant"),
         base="https://www.collegedesbernardins.fr",
         location="Collège des Bernardins, 20 rue de Poissy, Paris 5e")
 
@@ -2048,6 +2117,7 @@ def scrape_paris1():
     for site in (base, "https://recherche.pantheonsorbonne.fr"):
         out += _scrape_cards(name, site + "/evenements", "article.event", title="h2.title",
                              date=".date-style", kind=".categ-style", base=base, location=loc,
+                             drop_kind=("exposition", "spectacle", "cérémonie"),
                              page_url=site + "/evenements?page={n}", max_pages=6)
     return out
 
@@ -2056,6 +2126,8 @@ def scrape_assas():
     return _scrape_cards(
         "Université Paris-Panthéon-Assas", "https://www.assas-universite.fr/fr/evenements",
         ".liste__evenements .event", title="h3", kind=".type__evenement", place=".adresse",
+        # vie étudiante : petits-déjeuners offerts, matchs, salons, remises de prix
+        drop_kind=("petit-déjeuner", "sportive", "salon", "cérémonie"),
         base="https://www.assas-universite.fr",
         location="Université Paris-Panthéon-Assas, 92 rue d'Assas, Paris 6e",
         page_url="https://www.assas-universite.fr/fr/evenements?page={n}", max_pages=6)
@@ -2065,6 +2137,7 @@ def scrape_paris_saclay():
     return _scrape_cards(
         "Université Paris-Saclay", "https://www.universite-paris-saclay.fr/evenements", "article.thumbnail",
         title="h3", date=".thumbnail__info__date", place=".thumbnail__info__place",
+        drop=re.compile(r"^concert", re.I),
         base="https://www.universite-paris-saclay.fr",
         location="Université Paris-Saclay, Gif-sur-Yvette",
         page_url="https://www.universite-paris-saclay.fr/evenements?page={n}", max_pages=6)
@@ -2228,7 +2301,7 @@ def _sciencesconf_sitemap(known, *, window=1500, max_fetch=150):
     for u in sites:
         c = cache.get(u) or {}
         if (not c.get("s") or _sc_key(u) in known or "(France)" not in c.get("loc", "")
-                or not _IDF_RE.search(c.get("loc", "")) or NON_PARIS.search(c.get("loc", ""))):
+                or not _IDF_RE.search(c.get("loc", "")) or _non_paris(c.get("loc", ""))):
             continue
         d = date.fromisoformat(c["s"])
         if not in_window(d):
@@ -2647,7 +2720,7 @@ def scrape_tribe(name, base, location, *, drop=None, source_type="institution",
             v = it.get("venue") if isinstance(it.get("venue"), dict) else {}
             where = clean_text(html_unescape(", ".join(
                 p for p in (v.get("venue"), v.get("address"), v.get("zip"), v.get("city")) if p)))
-            if where and (NON_PARIS.search(where) or (v.get("city") and not _IDF_RE.search(where))):
+            if where and (_non_paris(where) or (v.get("city") and not _IDF_RE.search(where))):
                 continue
             cats = [clean_text(html_unescape(c.get("name", ""))) for c in it.get("categories") or []]
             # Catégories-séries seulement (pas « ANNÉE 2026-2027 », « Séances suivantes »)
@@ -2712,7 +2785,7 @@ def scrape_prairie():
         a = t_el.find("a", href=True) or t_el.find_parent("a", href=True)
         lines = [clean_text(x) for x in c.stripped_strings]
         place = lines[-1] if lines and lines[-1] != title else ""
-        if place and NON_PARIS.search(place):
+        if place and _non_paris(place):
             continue
         events.append(new_event(
             "PR[AI]RIE", title, dt.date(), url=make_absolute(a["href"], base) if a else f"{base}/agenda/",
@@ -3530,7 +3603,7 @@ def scrape_mines():
         desc = clean_text(desc_el.get_text(" ")) if desc_el else ""
         if (not title or is_junk_title(title) or _OFF_TOPIC.search(title)
                 or re.search(r"\bexposition\b|webinaire d.information|portes? ouvertes?|\badmissions?\b", title, re.I)
-                or NON_PARIS.search(desc)
+                or _non_paris(desc)
                 or re.search(r"Sophia|Antipolis|Fontainebleau|\bPau\b|\bÉvry\b", desc)):
             continue
         d, tm = _card_date(c.select_one(".date") or c)
@@ -4279,7 +4352,7 @@ def _nominatim(sess, address):
         ql = q.lower()
         # Commune francilienne nommée (Saint-Denis, Orsay, Jouy-en-Josas…) :
         # « …, Saint-Denis, Paris, France » ne donnait rien.
-        anchored = ("paris" in ql or _FR_CITY_RE.search(q) or _IDF_RE.search(q)
+        anchored = ("paris" in ql or _names_city(_FR_CITY_RE, q) or _IDF_RE.search(q)
                     or any(re.search(rf"\b{re.escape(c)}\b", ql) for c in _CITY_COORDS))
         q = q + ("" if anchored else ", Paris") + ", France"
     try:
@@ -5694,11 +5767,26 @@ def build_digest(events):
     print(f"Digest : {len(picked)} immanquables ({period})")
 
 
+# Types écartés à la source (concerts, expositions, vie étudiante) : la carte
+# ne donne que ce type comme description. Même règle ici pour les versions
+# déjà enregistrées, que le report (carry_forward) garderait jusqu'à leur date.
+_OFF_KIND = re.compile(
+    r"^(concerts?|expositions?|spectacles?|c[ée]r[ée]monie|petit-d[ée]jeuner\b.*|"
+    r"rencontre sportive|salon|famille|adolescents?|enfants?)$", re.I)
+_OFF_TITLE = re.compile(r"^concert[- ]sandwich", re.I)
+
+
 def finalize_events(events):
     """Règles communes au robot (main) et à la maj locale (refresh_local.py),
     appliquées à toutes les sources, événements reportés compris."""
     # Titres parasites (menus lus comme événements)
     events = [e for e in events if not is_junk_title(e.get("title", ""))]
+    n = len(events)
+    events = [e for e in events if (e.get("source_type") or "institution") != "institution"
+              or not (_OFF_KIND.match((e.get("description") or "").strip())
+                      or _OFF_TITLE.match(e.get("title", "")))]
+    if len(events) < n:
+        print(f"Concerts, expositions, vie étudiante retirés : {n - len(events)}")
     # « [Reporté] Atelier… », « Meetup 5 (POSTPONED) », « [SÉANCE REPORTÉE] »
     n = len(events)
     events = [e for e in events if not _CANCELLED.search(e.get("title", ""))]
