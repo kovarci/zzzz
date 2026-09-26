@@ -4840,7 +4840,9 @@ def _event_jsonld(ev):
         city = _IDF_CITY.search(ev["location"])
         data["location"] = {
             "@type": "Place",
-            "name": ev["location"],
+            # « Amphithéâtre X, 11 place Marcelin-Berthelot, Paris » : le nom du
+            # lieu est le premier segment, l'adresse complète reste à côté
+            "name": re.split(r"\s+—\s+|,", ev["location"])[0].strip()[:120] or ev["location"],
             "address": {"@type": "PostalAddress", "streetAddress": ev["location"][:200],
                         "addressLocality": city.group(1) if city else "Paris", "addressCountry": "FR"},
         }
@@ -4970,10 +4972,23 @@ def write_event_pages(events):
                 return text
             return text[:n - 1].rsplit(" ", 1)[0].rstrip(" ·,;:—-") + "…"
         t_, d_ = ev.get("title", ""), _date_fr(ev.get("date", ""))
-        seo_title_full = f"{cut(t_, 55)} · {d_} · {ev.get('institution','')}"
-        if len(seo_title_full) > 67:          # l'organisateur ne rentre pas : on le laisse
-            seo_title_full = f"{cut(t_, 67 - len(d_) - 3)} · {d_}"
-        seo_title = _esc_attr(seo_title_full)
+        # « Titre · Organisateur · 25 nov. 2026 » : on recherche une conférence
+        # par son titre ET par son organisateur ; la date courte laisse la place
+        # à l'organisateur, que les titres longs faisaient disparaître.
+        try:
+            _d = date.fromisoformat(ev.get("date", ""))
+            d_short = f"{_jour_fr(_d.day)} {_HUB_MOIS[_d.month - 1]} {_d.year}"
+        except Exception:
+            d_short = d_
+        inst_t = ev.get("institution", "") or ""
+        full, short_tail = f" · {inst_t} · {d_short}", f" · {d_short}"
+        if inst_t and len(t_) + len(full) <= 78:
+            seo_title = t_.strip() + full
+        elif inst_t and 74 - len(full) >= 40:        # titre raccourci, organisateur gardé
+            seo_title = cut(t_, 74 - len(full)) + full
+        else:                                         # le titre d'abord
+            seo_title = cut(t_, 74 - len(short_tail)) + short_tail
+        seo_title = _esc_attr(seo_title)
         # Meta description : une phrase naturelle + mots-clés (intervenant,
         # lieu, date) — ~155 caractères, format optimal pour Google SERP.
         # Date, heure et organisateur d'abord : avec un long titre et une
@@ -5001,7 +5016,7 @@ def write_event_pages(events):
         dcolor = DISC_COLORS.get(ev.get("discipline", ""), DISC_COLORS["Autre"])
         kind = _kind_of(ev)
         real_img = ev.get("image") or ""
-        cover_html = (f'<div class="cover"><img src="{_esc_attr(real_img)}" alt="" loading="eager"><span class="kind">{kind}</span></div>' if real_img
+        cover_html = (f'<div class="cover"><img src="{_esc_attr(real_img)}" alt="{title}" loading="eager"><span class="kind">{kind}</span></div>' if real_img
                       else f'<div class="cover typo"><span class="kind">{kind}</span><b>{inst}</b></div>')
         crumbs = [("Accueil", f"{SITE_URL}/")]
         if hub_url:
@@ -5106,6 +5121,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 {f'<h2>Autres séances du cycle</h2>{_links(series, "rel")}' if series else ''}
 {f'<h2>Prochaines conférences · {inst}</h2>{_links(others, "rel")}' if others else ''}
 {f'<a class="more" href="{hub_url}">Toutes les conférences de {inst} →</a>' if hub_url else ''}
+<nav class="foot" aria-label="Sélections">{" · ".join(f'<a href="{SITE_URL}/{sp}">{sl}</a>' for sp, sl in SELECTIONS)}</nav>
 <div class="foot"><a href="{SITE_URL}/">Lotent — toutes les conférences de Paris</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">Questions &amp; recommandations</a></div>
 </div>
 </body>
@@ -5187,33 +5203,61 @@ SHARE_INSTITUTIONS = [
 _HUB_MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
 
 
+_HUB_TXT = {
+    "fr": dict(count="<b>{n}</b> conférence{s} à venir dans l'agenda Lotent.", short="{n} conférence{s} à venir à Paris.",
+               upcoming="Prochaines conférences", cta="Voir dans l'agenda →", home="Accueil",
+               foot="Lotent — toutes les conférences de Paris", questions="Questions &amp; recommandations",
+               crumb="Fil d'Ariane", more="Voir toutes les conférences dans l'agenda →",
+               empty="Aucune conférence annoncée pour le moment. En vous abonnant à l'agenda, "
+                     "les prochaines s'y ajouteront d'elles-mêmes.",
+               updated="Calendrier mis à jour chaque jour sur lotent.fr."),
+    "en": dict(count="<b>{n}</b> upcoming talk{s} in the Lotent calendar.", short="{n} upcoming talk{s} in Paris.",
+               upcoming="Upcoming talks", cta="Open in the calendar →", home="Home",
+               foot="Lotent — every talk in Paris", questions="Questions &amp; suggestions",
+               crumb="Breadcrumb", more="See every talk in the calendar →",
+               empty="No talk announced yet.", updated="Updated every day on lotent.fr."),
+}
+_HUB_MONTHS_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+# Pages « sélection » (s/…) : liées depuis toutes les pages hub et l'accueil
+SELECTIONS = [("s/cette-semaine.html", "Cette semaine"), ("s/ce-week-end.html", "Ce week-end"),
+              ("s/ce-soir.html", "Ce soir"), ("s/gratuites.html", "Conférences gratuites"),
+              ("s/talks-in-english.html", "Talks in English")]
+
+
 def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=None,
-              intro="", chips_title="", chips=()):
+              intro="", chips_title="", chips=(), lang="fr", title=None, desc=None,
+              limit=60, show_inst=None):
     """Page « hub » (i/<slug>.html par institution, d/<slug>.html par
     discipline) : même charte que les pages événement e/*.html — Geist, clair
     / sombre, carte — avec la liste des prochaines conférences (liens vers
     e/*.html : c'est par ces hubs que Google découvre les pages événement),
     l'agenda .ics à s'abonner et des liens vers les hubs voisins."""
     url = f"{SITE_URL}/{path}"
-    plural = "s" if n > 1 else ""          # « 0 conférence », comme « 1 conférence »
-    short = f"{n} conférence{plural} à venir à Paris."
+    T = _HUB_TXT[lang]
+    # « 0 conférence », comme « 1 conférence » — mais « 0 talks » en anglais
+    plural = "s" if (n != 1 if lang == "en" else n > 1) else ""
+    short = T["short"].format(n=n, s=plural)
+    if show_inst is None:
+        show_inst = kicker != "Institution"
     items = []
-    for ev in evts[:60]:
+    for ev in evts[:limit]:
         eid = ev.get("id") or ""
         if not re.fullmatch(r"[0-9a-f]{12}", eid):
             continue
         try:
             d = date.fromisoformat(ev.get("date", ""))
-            when = f"{_jour_fr(d.day)} {_HUB_MOIS[d.month - 1]}"
+            when = (f"{_HUB_MONTHS_EN[d.month - 1]} {d.day}" if lang == "en"
+                    else f"{_jour_fr(d.day)} {_HUB_MOIS[d.month - 1]}")
         except Exception:
             when = ""
-        sub = ev.get("institution", "") if kicker == "Discipline" else ""
+        sub = ev.get("institution", "") if show_inst else ""
         items.append(f'<li><a href="{SITE_URL}/e/{eid}.html"><span class="t">{_esc_attr((ev.get("title") or "")[:110])}'
                      f'{f"<small>{_esc_attr(sub)}</small>" if sub else ""}</span>'
                      f'<span class="d">{_esc_attr(when)}{(" · " + _esc_attr(ev["time"])) if ev.get("time") else ""}</span></a></li>')
-    events_html = (f'<h2>Prochaines conférences</h2><ul class="rel">{"".join(items)}</ul>' if items else
-                   '<p class="empty">Aucune conférence annoncée pour le moment. En vous abonnant à '
-                   'l\'agenda, les prochaines s\'y ajouteront d\'elles-mêmes.</p>')
+    more = (f'<p class="more"><a href="{target}" rel="nofollow">{T["more"]}</a></p>'
+            if len(evts) > limit else "")
+    events_html = (f'<h2>{T["upcoming"]}</h2><ul class="rel">{"".join(items)}</ul>{more}' if items else
+                   f'<p class="empty">{T["empty"]}</p>')
     # Hub vide : hors index Google (page mince) et hors sitemap (write_sitemap)
     robots = '<meta name="robots" content="noindex, follow">\n' if not n else ""
     chips_html = ""
@@ -5222,7 +5266,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
                       + "".join(f'<a href="{u}">{_esc_attr(label)}</a>' for label, u in chips) + "</div>")
     crumb_ld = json.dumps({
         "@context": "https://schema.org", "@type": "BreadcrumbList",
-        "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": f"{SITE_URL}/"},
+        "itemListElement": [{"@type": "ListItem", "position": 1, "name": T["home"], "item": f"{SITE_URL}/"},
                             {"@type": "ListItem", "position": 2, "name": name, "item": url}]},
         ensure_ascii=False).replace("</", "<\\/")
     img = og_image or f"{SITE_URL}/og.png"
@@ -5235,20 +5279,27 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
                     f'<a href="https://calendar.google.com/calendar/render?cid={quote(webcal, safe="")}" rel="noopener">Google Agenda</a> · '
                     f'lien à coller dans une autre application : <a href="{ics}">{_esc_attr(ics)}</a>. '
                     f'Il se met à jour tout seul chaque jour.</p>')
+    # Titre calé sur les recherches (« Collège de France : agenda des
+    # conférences à Paris », « Conférences de philosophie à Paris »)
+    page_title = title or f"{name} : agenda des conférences à Paris · Lotent"
+    meta_desc = desc or f"{short} {intro} {T['updated']}".replace("  ", " ")
+    sel_links = " · ".join(f'<a href="{SITE_URL}/{p}">{_esc_attr(l)}</a>' for p, l in SELECTIONS
+                           if p != path)
     return f"""<!DOCTYPE html>
-<html lang="fr">
+<html lang="{lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{_esc_attr(name)} — conférences à Paris · Lotent</title>
+<title>{_esc_attr(page_title)}</title>
 {robots}<link rel="canonical" href="{url}">
-<meta name="description" content="{_esc_attr(short)} {_esc_attr(intro)} Calendrier mis à jour chaque jour sur lotent.fr.">
-<meta property="og:title" content="{_esc_attr(name)} — {n} conférence{plural} à venir">
+<meta name="description" content="{_esc_attr(meta_desc[:300])}">
+<meta property="og:title" content="{_esc_attr(page_title.replace(' · Lotent', ''))}">
 <meta property="og:description" content="{_esc_attr(short)}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Lotent">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{img}">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:locale" content="{'en_GB' if lang == 'en' else 'fr_FR'}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{img}">
 <link rel="icon" href="{SITE_URL}/icon.svg" type="image/svg+xml">
@@ -5293,23 +5344,26 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 .chips a:hover{{background:var(--muted)}}
 .foot{{text-align:center;margin-top:24px;font-size:12px;color:var(--muted-fg)}}
 .foot a{{color:inherit}}
+.more{{font-size:13px;margin:10px 0 0}}.more a{{color:inherit}}
+.sel{{text-align:center;margin-top:18px;font-size:12px;color:var(--muted-fg)}}.sel a{{color:inherit}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav class="crumb" aria-label="Fil d'Ariane"><a href="{SITE_URL}/">Accueil</a> › {_esc_attr(name)}</nav>
+<nav class="crumb" aria-label="{T['crumb']}"><a href="{SITE_URL}/">{T['home']}</a> › {_esc_attr(name)}</nav>
 <main class="card" style="--dc:{color}">
 <div class="head"><span class="k">{_esc_attr(kicker)}</span><h1>{_esc_attr(name)}</h1></div>
 <div class="body">
-<p class="count"><b>{n}</b> conférence{plural} à venir dans l'agenda Lotent.</p>
+<p class="count">{T['count'].format(n=n, s=plural)}</p>
 {f'<p class="intro">{_esc_attr(intro)}</p>' if intro else ''}
-<div class="cta"><a class="site" href="{target}" rel="nofollow">Voir dans l'agenda →</a>{ics_btn}</div>
+<div class="cta"><a class="site" href="{target}" rel="nofollow">{T['cta']}</a>{ics_btn}</div>
 {ics_more}
 </div>
 </main>
 {events_html}
 {chips_html}
-<div class="foot"><a href="{SITE_URL}/">Lotent — toutes les conférences de Paris</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">Questions &amp; recommandations</a></div>
+<nav class="sel" aria-label="Sélections">{sel_links}</nav>
+<div class="foot"><a href="{SITE_URL}/">{T['foot']}</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">{T['questions']}</a></div>
 </div>
 </body>
 </html>
@@ -5335,6 +5389,15 @@ DISC_PAGES_DIR = OUTPUT_FILE.parent.parent / "d"
 
 def _disc_slug(disc):
     return slugify(disc)
+
+
+# « Conférences de philosophie », « d'économie », « de droit et de sciences politiques »
+_DISC_OF = {
+    "Mathématiques": "de mathématiques", "Sciences": "de sciences", "Économie": "d'économie",
+    "Histoire": "d'histoire", "Philosophie": "de philosophie", "Littérature": "de littérature",
+    "Sociologie & Anthropologie": "de sociologie et d'anthropologie",
+    "Droit & Sciences politiques": "de droit et de sciences politiques", "Arts & Culture": "d'art et de culture",
+}
 
 
 def write_discipline_pages(events):
@@ -5367,7 +5430,8 @@ def write_discipline_pages(events):
         page = _hub_page(kicker="Discipline", name=disc, path=f"d/{slug}.html", n=len(evts),
                          color=DISC_COLORS[disc], evts=evts, target=f"/?discipline={quote(disc)}",
                          ics=f"{SITE_URL}/data/cal/d-{slug}.ics", intro=intro.strip(),
-                         chips_title="Voir aussi", chips=chips)
+                         chips_title="Voir aussi", chips=chips,
+                         title=f"Conférences {_DISC_OF.get(disc, 'de ' + disc.lower())} à Paris : l'agenda · Lotent")
         (DISC_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
         written.add(f"{slug}.html")
     for f in DISC_PAGES_DIR.glob("*.html"):
@@ -5375,6 +5439,150 @@ def write_discipline_pages(events):
             try: f.unlink()
             except Exception: pass
     print(f"Pages discipline : {len(written)}")
+
+
+SEL_PAGES_DIR = OUTPUT_FILE.parent.parent / "s"
+HOME_FILE = OUTPUT_FILE.parent.parent / "index.html"
+
+# Même heuristique que isEnglish() dans web/src/lib.js (mots-outils du titre)
+_EN_W = re.compile(r"\b(the|and|of|for|with|from|how|what|why|when|towards?|between|beyond|through|about|into|"
+                   r"is|are|to|in|on|an|by|at|its|their|our|your|you|we|this|that|new|after|under|within|"
+                   r"without|meets?)\b", re.I)
+_FR_W = re.compile(r"(?:^|[\s(«\"'’])(le|la|les|des|du|de|et|pour|avec|dans|sur|une|un|au|aux|est|qui|que|en|"
+                   r"entre|vers|par|ou|à|sous|sans|chez|son|sa|ses|leur|leurs|nos|vos|ce|cette|ces|l['’]|"
+                   r"d['’]|qu['’])(?=[\s,.:;!?»\"')]|$)", re.I)
+
+
+def _is_english(ev):
+    t, d = ev.get("title") or "", (ev.get("description") or "")[:400]
+    et, ft = len(_EN_W.findall(t)), len(_FR_W.findall(t))
+    ed, fd = len(_EN_W.findall(d)), len(_FR_W.findall(d))
+    words = sum(1 for w in t.split() if re.search(r"[a-z]{2,}", w, re.I))
+    return ((ft == 0 and (et >= 2 or (et >= 1 and words >= 4) or (ed >= 5 and ed > 2 * fd)))
+            or (et >= 3 and et > 2 * ft))
+
+
+def _top_orgs(evts, k=4):
+    c = {}
+    for e in evts:
+        c[e.get("institution", "")] = c.get(e.get("institution", ""), 0) + 1
+    return [i for i, _ in sorted(c.items(), key=lambda x: -x[1])[:k] if i]
+
+
+def write_selection_pages(events):
+    """s/<nom>.html : pages d'atterrissage pour les recherches les plus
+    fréquentes — « conférences Paris cette semaine », « ce week-end »,
+    « ce soir », « conférences gratuites Paris », « talks in English Paris ».
+    Même gabarit que les hubs ; régénérées chaque jour."""
+    SEL_PAGES_DIR.mkdir(exist_ok=True)
+    today = TODAY
+    up = sorted((e for e in events if e.get("date", "") >= today.isoformat() and not e.get("kind")
+                 and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")),
+                key=lambda e: (e.get("date", ""), e.get("time", "")))
+    week_end = (today + timedelta(days=6)).isoformat()
+    # Le dimanche, « ce week-end » = aujourd'hui (comme le site)
+    sat = today + timedelta(days=(5 - today.weekday()) % 7) if today.weekday() != 6 else today - timedelta(days=1)
+    we = {sat.isoformat(), (sat + timedelta(days=1)).isoformat()}
+
+    def fr_day(d):
+        return f"{_jour_fr(d.day)} {_MONTHS_FR[d.month - 1]}"
+
+    d1, d2 = sorted(date.fromisoformat(x) for x in we)
+    we_label = (f"{_jour_fr(d1.day)} et {_jour_fr(d2.day)} {_MONTHS_FR[d2.month - 1]}" if d1.month == d2.month
+                else f"{fr_day(d1)} et {fr_day(d2)}")
+    free = [e for e in up if _is_free(e)]
+    english = [e for e in up if _is_english(e)]
+    week = [e for e in up if e["date"] <= week_end]
+    wkend = [e for e in up if e["date"] in we]
+    tonight = [e for e in up if e["date"] == today.isoformat() and (e.get("time") or "") >= "17:30"]
+    orgs = lambda evts: ", ".join(_top_orgs(evts))
+    pages = [
+        ("cette-semaine", "Cette semaine à Paris", week, "/?date=week",
+         "Conférences à Paris cette semaine : l'agenda · Lotent",
+         f"{len(week)} conférences, cours, séminaires et colloques à Paris du {fr_day(today)} au "
+         f"{fr_day(today + timedelta(days=6))} : {orgs(week)}… Agenda gratuit, mis à jour chaque jour.",
+         f"Du {fr_day(today)} au {fr_day(today + timedelta(days=6))}. Principaux organisateurs : {orgs(week)}.", "fr"),
+        ("ce-week-end", "Ce week-end à Paris", wkend, "/?date=weekend",
+         "Conférences à Paris ce week-end · Lotent",
+         f"{len(wkend)} conférences et rencontres à Paris ce week-end ({we_label}) : "
+         f"{orgs(wkend)}… Mis à jour chaque jour.",
+         f"Samedi et dimanche : {orgs(wkend)}." if wkend else "", "fr"),
+        ("ce-soir", "Ce soir à Paris", tonight, "/?date=tonight",
+         "Conférences ce soir à Paris · Lotent",
+         f"{len(tonight)} conférences ce soir à Paris ({fr_day(today)}), à partir de 17 h 30 : {orgs(tonight)}… "
+         f"Mis à jour chaque matin.",
+         f"Le {fr_day(today)}, à partir de 17 h 30." , "fr"),
+        ("gratuites", "Conférences gratuites à Paris", free, "/?prix=gratuit",
+         "Conférences gratuites à Paris : l'agenda · Lotent",
+         f"{len(free)} conférences gratuites ou en entrée libre à Paris : {orgs(free)}… "
+         f"Agenda mis à jour chaque jour.",
+         f"Entrée libre ou gratuite, souvent sur inscription. Principaux organisateurs : {orgs(free)}.", "fr"),
+        ("talks-in-english", "Talks in English in Paris", english, "/?langue=en",
+         "Talks in English in Paris — lectures & seminars · Lotent",
+         f"{len(english)} upcoming talks, lectures and seminars in English in Paris: {orgs(english)}… "
+         f"Updated every day.",
+         f"Lectures, seminars and meetups given in English. Main organisers: {orgs(english)}.", "en"),
+    ]
+    written = set()
+    for slug, name, evts, target, title, desc, intro, lang in pages:
+        path = f"s/{slug}.html"
+        chips = [(l, f"{SITE_URL}/{p}") for p, l in SELECTIONS if p != path]
+        chips += [(d, f"{SITE_URL}/d/{_disc_slug(d)}.html") for d in DISC_COLORS if d != "Autre"]
+        page = _hub_page(kicker="Sélection" if lang == "fr" else "Selection", name=name, path=path,
+                         n=len(evts), color="#6366F1", evts=evts, target=target, intro=intro,
+                         chips_title="Voir aussi" if lang == "fr" else "See also", chips=chips,
+                         lang=lang, title=title, desc=desc, limit=120, show_inst=True)
+        (SEL_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
+        written.add(f"{slug}.html")
+    for f in SEL_PAGES_DIR.glob("*.html"):
+        if f.name not in written:
+            try: f.unlink()
+            except Exception: pass
+    print(f"Pages sélection : {len(written)}")
+
+
+def write_home_prerender(events):
+    """Contenu de secours de l'accueil (index.html, entre les marqueurs
+    lotent:prerender) : les prochaines conférences en HTML simple, avec leurs
+    liens. Le site le remplace dès que JavaScript démarre ; les moteurs qui
+    n'exécutent pas JavaScript (Bing, aperçus, IA) et Google avant le rendu
+    y trouvent enfin le contenu de la page et le chemin vers les fiches."""
+    import html as _html
+    try:
+        page = HOME_FILE.read_text(encoding="utf-8")
+    except Exception as e:
+        print(f"[WARN] accueil illisible : {e}")
+        return
+    a, b = "<!-- lotent:prerender -->", "<!-- /lotent:prerender -->"
+    if a not in page or b not in page:
+        print("[WARN] accueil : marqueurs lotent:prerender absents")
+        return
+    today = TODAY.isoformat()
+    up = sorted((e for e in events if e.get("date", "") >= today and not e.get("kind")
+                 and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")),
+                key=lambda e: (e.get("date", ""), e.get("time", "")))
+    shown, days = up[:90], {}
+    for e in shown:
+        days.setdefault(e["date"], []).append(e)
+    out = [f'<h2 style="font-size:1.2rem;margin-top:2rem">Prochaines conférences à Paris</h2>',
+           f'<p style="color:#666">{len(up):,} conférences, cours et séminaires à venir.</p>'.replace(",", " ")]
+    for d, evts in days.items():
+        dd = date.fromisoformat(d)
+        label = f"{['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'][dd.weekday()]} {_jour_fr(dd.day)} {_MONTHS_FR[dd.month - 1]}"
+        out.append(f'<h3 style="font-size:1rem;margin:1.2rem 0 .3rem">{label.capitalize()}</h3><ul>')
+        for e in evts:
+            bits = " · ".join(x for x in (e.get("time") or "", e.get("institution") or "") if x)
+            out.append(f'<li><a href="e/{e["id"]}.html">{_html.escape(e.get("title") or "")}</a>'
+                       f'{" — " + _html.escape(bits) if bits else ""}</li>')
+        out.append("</ul>")
+    out.append('<h2 style="font-size:1.1rem;margin-top:2rem">Sélections</h2><ul>'
+               + "".join(f'<li><a href="{p}">{_html.escape(l)}</a></li>' for p, l in SELECTIONS) + "</ul>")
+    block = a + "\n      " + "\n      ".join(out) + "\n      " + b
+    i, j = page.index(a), page.index(b) + len(b)
+    new = page[:i] + block + page[j:]
+    if new != page:
+        HOME_FILE.write_text(new, encoding="utf-8", newline="")
+    print(f"Accueil pré-rendu : {len(shown)} conférences")
 
 
 def write_institution_share_pages(events):
@@ -5637,7 +5845,7 @@ def write_sitemap(events):
     # Hubs par institution : ce sont eux qui lient vers les pages événement,
     # ils doivent être crawlés souvent.
     # (sauf les hubs vides, marqués noindex par _hub_page)
-    for sub, folder in (("i", INST_PAGES_DIR), ("d", DISC_PAGES_DIR)):
+    for sub, folder in (("i", INST_PAGES_DIR), ("d", DISC_PAGES_DIR), ("s", SEL_PAGES_DIR)):
         for f in sorted(folder.glob("*.html")):
             if 'content="noindex' in f.read_text(encoding="utf-8", errors="replace")[:3000]:
                 continue
@@ -6123,6 +6331,12 @@ def main():
     except Exception as e:
         print(f"[ERROR] discipline pages: {e}")
         traceback.print_exc()
+    for fn in (write_selection_pages, write_home_prerender):
+        try:
+            fn(all_events)
+        except Exception as e:
+            print(f"[ERROR] {fn.__name__}: {e}")
+            traceback.print_exc()
 
     try:
         write_sitemap(all_events + arch)
@@ -6145,7 +6359,8 @@ def main():
         # mènent Bing vers les nouvelles pages événement.
         if fresh_urls:
             hubs = ([f"{SITE_URL}/i/{f.name}" for f in sorted(INST_PAGES_DIR.glob("*.html"))]
-                    + [f"{SITE_URL}/d/{f.name}" for f in sorted(DISC_PAGES_DIR.glob("*.html"))])
+                    + [f"{SITE_URL}/d/{f.name}" for f in sorted(DISC_PAGES_DIR.glob("*.html"))]
+                    + [f"{SITE_URL}/s/{f.name}" for f in sorted(SEL_PAGES_DIR.glob("*.html"))])
             fresh_urls = ([f"{SITE_URL}/", f"{SITE_URL}/sitemap.xml"]
                           + hubs + fresh_urls)
             notify_indexnow(fresh_urls)

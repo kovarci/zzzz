@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lotent — toutes les conférences académiques de Paris</title>
-  <meta name="description" content="Toutes les conférences, cours et séminaires académiques de Paris — Collège de France, ENS, EHESS, IHP, Sciences Po, Sorbonne, PSE, PSL, Luma — dans un agenda filtrable, mis à jour chaque jour." />
+  <!-- Titre et description calés sur les recherches (« conférences Paris »,
+       « agenda conférences Paris ») plutôt que sur le seul nom du site -->
+  <title>Conférences à Paris — agenda des conférences et séminaires · Lotent</title>
+  <meta name="description" content="Plus de 2 000 conférences, cours, séminaires et colloques à Paris : Collège de France, Sorbonne, ENS, Sciences Po, BnF, Institut Pasteur… Agenda gratuit, mis à jour chaque jour." />
   <meta name="google-site-verification" content="egGsJoZsgolLY2T5YMWw57qbaTetABJKikfR7ZYZC5E" />
 
   <!-- Les filtres écrivent leur état dans l'URL (?source=…&vue=…&discipline=…) et
@@ -13,11 +15,14 @@
   <link rel="canonical" href="https://lotent.fr/" />
 
   <link rel="icon" href="icon.svg?v=2" type="image/svg+xml" />
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="icon.svg?v=2" />
+  <!-- iOS n'accepte pas d'icône SVG pour l'écran d'accueil -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="Lotent — les immanquables de la semaine" href="https://lotent.fr/data/digest.xml" />
 
-  <meta property="og:title" content="Lotent — toutes les conférences de Paris" />
-  <meta property="og:description" content="Toutes les conférences et séminaires académiques de Paris — Collège de France, ENS, EHESS, IHP, Sciences Po, Sorbonne, PSE, PSL. Mis à jour chaque jour." />
+  <meta property="og:title" content="Conférences à Paris — l'agenda Lotent" />
+  <meta property="og:description" content="Plus de 2 000 conférences, cours, séminaires et colloques à Paris : Collège de France, Sorbonne, ENS, Sciences Po, BnF, Institut Pasteur… Agenda gratuit, mis à jour chaque jour." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Lotent" />
   <meta property="og:url" content="https://lotent.fr/" />
@@ -26,22 +31,21 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="fr_FR" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lotent — toutes les conférences de Paris" />
-  <meta name="twitter:description" content="Toutes les conférences académiques de Paris, en un seul endroit." />
+  <meta name="twitter:title" content="Conférences à Paris — l'agenda Lotent" />
+  <meta name="twitter:description" content="Conférences, cours, séminaires et colloques à Paris : l'agenda complet, gratuit, mis à jour chaque jour." />
   <meta name="twitter:image" content="https://lotent.fr/og.png" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)" />
 
+  <!-- Nom du site et logo dans les résultats Google (WebSite + Organization) -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Lotent","url":"https://lotent.fr/",
-   "description":"Toutes les conférences académiques de Paris, réunies chaque matin en un seul agenda.",
-   "inLanguage":"fr","publisher":{"@type":"Organization","name":"Lotent","url":"https://lotent.fr/"}}
+  [{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://lotent.fr/#website", "name": "Lotent", "alternateName": ["lotent.fr", "Lotent — conférences à Paris"], "url": "https://lotent.fr/", "inLanguage": "fr", "description": "L'agenda de toutes les conférences, cours et séminaires de Paris, mis à jour chaque jour.", "publisher": {"@id": "https://lotent.fr/#organization"}}, {"@context": "https://schema.org", "@type": "Organization", "@id": "https://lotent.fr/#organization", "name": "Lotent", "url": "https://lotent.fr/", "logo": {"@type": "ImageObject", "url": "https://lotent.fr/icon-512.png", "width": 512, "height": 512}, "sameAs": ["https://github.com/kovarci/zzzz"]}]
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=40" />
+  <link rel="stylesheet" href="app.css?v=41" />
   <script>
     // Agenda découpé par mois (data/m/) : on lance l'index et les mois des
     // 7 prochains jours tout de suite, en parallèle du téléchargement d'app.js,
@@ -117,6 +121,9 @@
     <main style="max-width:48rem;margin:0 auto;padding:4rem 1.5rem;font-family:Geist,system-ui,sans-serif;line-height:1.5">
       <h1 style="font-size:2rem;font-weight:700;letter-spacing:-.02em">Toutes les conférences de Paris, en un seul agenda.</h1>
       <p style="color:#666">Cours du Collège de France, séminaires de l'IHP et de PSE, rencontres Luma : réunis chaque matin. Chargement de l'agenda…</p>
+      <!-- Écrit chaque jour par le robot (write_home_prerender) : ne pas modifier à la main -->
+      <!-- lotent:prerender -->
+      <!-- /lotent:prerender -->
       <h2 style="font-size:1.1rem;margin-top:2rem">Par discipline</h2>
       <ul>
         <li><a href="d/mathematiques.html">Mathématiques</a></li>
@@ -203,6 +210,6 @@
       <p><a href="data/calendar.ics">Calendrier .ics</a> · <a href="data/digest.xml">Flux RSS</a> · <a href="apropos.html">À propos</a> · <a href="https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml">Proposer un événement</a> · <a href="https://github.com/kovarci/zzzz/issues">Questions &amp; recommandations (GitHub)</a></p>
     </main>
   </div>
-  <script src="app.js?v=40" defer></script>
+  <script src="app.js?v=41" defer></script>
 </body>
 </html>

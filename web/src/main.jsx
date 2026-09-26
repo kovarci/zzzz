@@ -28,6 +28,15 @@ function Cover({ e, className = "", eager, label = true }) {
     <DotPattern className="[mask-image:radial-gradient(ellipse_at_top_right,#000,transparent_70%)]" />{badge}
     {label && <div className="relative font-semibold text-lg leading-tight tracking-tight [text-wrap:balance] drop-shadow line-clamp-3">{e.institution}</div>}</div>;
 }
+// Titre = vrai lien vers la fiche e/<id>.html : Google suit ces liens depuis
+// l'accueil (il n'en trouvait aucun), et Ctrl/⌘-clic ou clic molette ouvre la
+// fiche dans un nouvel onglet. Clic simple : la fiche s'ouvre dans la page.
+const evHref = e => `e/${e.id}.html`;
+const openIn = (e, onOpen) => ev => {
+  ev.stopPropagation();                  // la carte (onClick) ne rouvre pas la fiche derrière
+  if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+  ev.preventDefault(); onOpen(e);
+};
 function EventCard({ e, fav, onFav, onOpen, distance, past }) {
   const { t, discName } = useI18n();
   const act = () => onOpen(e);
@@ -41,7 +50,7 @@ function EventCard({ e, fav, onFav, onOpen, distance, past }) {
     <div className="p-4 flex flex-col gap-1.5 flex-1">
       <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {discName(e.discipline)}</span>
         {distance !== undefined ? <Badge className="ml-auto shrink-0 tabular-nums">{fmtDist(distance)}</Badge> : isNew(e) && !past ? <Badge className="ml-auto shrink-0 border-sky-500/30 text-sky-700 dark:text-sky-400">{t("badge_new")}</Badge> : isFree(e) ? <Badge className="ml-auto shrink-0 border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("badge_free")}</Badge> : null}</div>
-      <h3 className="font-semibold leading-snug tracking-tight line-clamp-3"><button type="button" onClick={ev => { ev.stopPropagation(); act(); }} className="text-left outline-none after:absolute after:inset-0 after:content-['']">{e.title}</button></h3>
+      <h3 className="font-semibold leading-snug tracking-tight line-clamp-3"><a href={evHref(e)} onClick={openIn(e, onOpen)} className="outline-none after:absolute after:inset-0 after:content-['']">{e.title}</a></h3>
       {e.speaker && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
       <p className="mt-auto pt-2 text-xs text-muted-foreground truncate">{isOnline(e) && (t("online_prefix") || "")}{e.institution}{placeOf(e) ? " · " + placeOf(e) : ""}</p>
     </div></div>;
@@ -82,9 +91,9 @@ function RelatedList({ title, items, onOpen, max = 5 }) {
   return <section>
     <h3 className="mb-1.5 flex items-baseline justify-between text-xs font-semibold uppercase tracking-wide text-muted-foreground"><span>{title}</span><span className="tabular-nums font-normal normal-case tracking-normal">{items.length}</span></h3>
     <ul className="divide-y rounded-lg border">{(all ? items : items.slice(0, max)).map(x => <li key={x.id}>
-      <button onClick={() => onOpen(x)} className="flex w-full items-start gap-3 px-3 py-2 text-left text-sm hover:bg-accent">
+      <a href={evHref(x)} onClick={openIn(x, onOpen)} className="flex w-full items-start gap-3 px-3 py-2 text-left text-sm hover:bg-accent">
         <span className="w-20 shrink-0 pt-px text-xs leading-snug tabular-nums text-muted-foreground"><span className="block whitespace-nowrap">{fmtShort(x.date)}</span>{x.time && <span className="block">{x.time}</span>}</span>
-        <span className="min-w-0 flex-1 line-clamp-2">{titleOf(x)}</span></button></li>)}</ul>
+        <span className="min-w-0 flex-1 line-clamp-2">{titleOf(x)}</span></a></li>)}</ul>
     {items.length > max && !all && <button onClick={() => setAll(true)} className="mt-1.5 text-xs font-medium text-muted-foreground hover:text-foreground">{t("rel_more", { n: items.length - max })}</button>}
   </section>;
 }

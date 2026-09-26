@@ -9,23 +9,42 @@
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "categories": ["education", "events"],
+  "categories": [
+    "education",
+    "events"
+  ],
   "icons": [
     {
       "src": "icon.svg",
       "type": "image/svg+xml",
       "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
       "purpose": "any maskable"
     }
   ],
   "shortcuts": [
-    { "name": "Cette semaine",
+    {
+      "name": "Cette semaine",
       "short_name": "Semaine",
       "url": "./?vue=week",
-      "description": "Voir les conférences de la semaine en cours" },
-    { "name": "Mes favoris",
+      "description": "Voir les conférences de la semaine en cours"
+    },
+    {
+      "name": "Mes favoris",
       "short_name": "Favoris",
       "url": "./?favoris=1",
-      "description": "Conférences mises en favoris" }
+      "description": "Conférences mises en favoris"
+    }
   ]
 }
