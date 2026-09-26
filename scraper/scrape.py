@@ -593,7 +593,7 @@ def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
         # lequel l'événement a été saisi (sinon lues telles quelles, décalées)
         url = (f"{base}/export/categ/{categ}.json"
                f"?from={start.isoformat()}&to={stop.isoformat()}&limit=300&tz=Europe/Paris")
-        data = None
+        data, unreachable = None, False
         for attempt in range(1, 4):
             try:
                 r = requests.get(url, headers=HEADERS, timeout=35)
@@ -601,9 +601,16 @@ def scrape_indico(name, base, categ, location_default, *, skip_meetings=False,
                 data = r.json()
                 break
             except Exception as e:
-                print(f"   [WARN] {start}→{stop} attempt {attempt}: {e}")
+                unreachable = isinstance(e, (requests.ConnectionError, requests.Timeout))
+                print(f"   [WARN] {start}→{stop} attempt {attempt}: {type(e).__name__}")
         if data is None:
             failed += 1
+            # Serveur injoignable dès la 1re tranche : inutile d'essayer les 6
+            # autres (3 × 35 s chacune — l'Indico de l'Observatoire en panne a
+            # allongé le passage du robot de 12 min, près de sa limite de 30).
+            if unreachable and not results:
+                print("   [WARN] serveur injoignable : source passée (le report garde ses événements)")
+                break
         for item in (data or {}).get("results", []):
             if item.get("id") not in seen_ids:
                 seen_ids.add(item.get("id"))
