@@ -128,6 +128,20 @@ const WDS_EN = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MO_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 const MO_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+// Noms affichés en anglais. Les clés restent les valeurs françaises des
+// données (e.discipline, kindOf(e)) : filtres et URL ne changent pas.
+const DISC_EN = {
+  "Mathématiques": "Mathematics", "Sciences": "Sciences", "Économie": "Economics", "Histoire": "History",
+  "Philosophie": "Philosophy", "Littérature": "Literature", "Sociologie & Anthropologie": "Sociology & Anthropology",
+  "Droit & Sciences politiques": "Law & Political science", "Arts & Culture": "Arts & Culture", "Autre": "Other",
+};
+const KIND_EN = {
+  "Cours": "Lecture course", "Séminaire": "Seminar", "Colloque": "Conference", "Conférence": "Talk",
+  "Leçon inaugurale": "Inaugural lecture", "Journée d'étude": "Study day", "Atelier": "Workshop",
+  "Workshop": "Workshop", "Table ronde": "Round table", "Rencontre": "Meetup", "Lecture": "Reading",
+  "Soutenance": "Thesis defence", "Recrutement": "Recruitment",
+};
+
 const LangContext = createContext(null);
 
 function parseISO(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
@@ -162,6 +176,8 @@ export function LangProvider({ children }) {
     };
     return {
       lang, setLang, toggleLang, t, WD, WDS, MO,
+      discName: d => (lang === "en" && DISC_EN[d]) || d,
+      kindName: k => (lang === "en" && KIND_EN[k]) || k,
       fmtDay: s => { const d = parseISO(s); return `${WD[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()]}`; },
       fmtShort: s => { const d = parseISO(s); return `${WDS[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()].slice(0, lang === "en" ? 3 : 4)}`; },
       relDay: (s, TODAY, TOMORROW) => s === TODAY ? t("rel_today") : s === TOMORROW ? t("rel_tomorrow") : "",

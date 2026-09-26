@@ -18,9 +18,9 @@ const placeOf = e => { const i = norm(e.institution); return (e.location || "").
 function Cover({ e, className = "", eager, label = true }) {
   const [broken, setBroken] = useState(false);
   const pos = className.split(" ").includes("absolute") ? "" : "relative";
-  const { t } = useI18n();
+  const { t, kindName } = useI18n();
   const badge = <div className="absolute top-2.5 left-2.5 z-[1] flex flex-wrap gap-1.5">
-    <Badge className="bg-background/90 text-foreground backdrop-blur border-0 shadow-sm">{kindOf(e)}</Badge>
+    <Badge className="bg-background/90 text-foreground backdrop-blur border-0 shadow-sm">{kindName(kindOf(e))}</Badge>
     {isMembers(e) && <Badge className="bg-background/90 text-foreground backdrop-blur border-0 shadow-sm" title={t("access_members_hint")}>🔒 {t("badge_members")}</Badge>}</div>;
   if (e.image && !broken) return <div className={cn(pos, "overflow-hidden bg-muted", className)}>
     <img src={thumb(e.image)} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => setBroken(true)} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
@@ -29,7 +29,7 @@ function Cover({ e, className = "", eager, label = true }) {
     {label && <div className="relative font-semibold text-lg leading-tight tracking-tight [text-wrap:balance] drop-shadow line-clamp-3">{e.institution}</div>}</div>;
 }
 function EventCard({ e, fav, onFav, onOpen, distance, past }) {
-  const { t } = useI18n();
+  const { t, discName } = useI18n();
   const act = () => onOpen(e);
   // Le titre est le bouton de la carte (Tab puis Entrée) et sa zone cliquable
   // (::after) couvre toute la carte : pas de bouton étoile imbriqué dans un
@@ -39,7 +39,7 @@ function EventCard({ e, fav, onFav, onOpen, distance, past }) {
     <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/80 backdrop-blur transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
     <Cover e={e} className="aspect-[16/10]" />
     <div className="p-4 flex flex-col gap-1.5 flex-1">
-      <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {e.discipline}</span>
+      <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {discName(e.discipline)}</span>
         {distance !== undefined ? <Badge className="ml-auto shrink-0 tabular-nums">{fmtDist(distance)}</Badge> : isNew(e) && !past ? <Badge className="ml-auto shrink-0 border-sky-500/30 text-sky-700 dark:text-sky-400">{t("badge_new")}</Badge> : isFree(e) ? <Badge className="ml-auto shrink-0 border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("badge_free")}</Badge> : null}</div>
       <h3 className="font-semibold leading-snug tracking-tight line-clamp-3"><button type="button" onClick={ev => { ev.stopPropagation(); act(); }} className="text-left outline-none after:absolute after:inset-0 after:content-['']">{e.title}</button></h3>
       {e.speaker && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
@@ -89,7 +89,7 @@ function RelatedList({ title, items, onOpen, max = 5 }) {
 
 /* ═════════════════════ Fiche (sheet) ═════════════════════ */
 function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = [], onOpen }) {
-  const { t, fmtDay } = useI18n();
+  const { t, fmtDay, discName, kindName } = useI18n();
   const rel = useMemo(() => e ? relatedOf(e, pool) : null, [e, pool]);
   useEffect(() => { if (!e) return; const h = ev => ev.key === "Escape" && onClose(); document.addEventListener("keydown", h); return () => document.removeEventListener("keydown", h); }, [e]);
   const share = async () => {
@@ -103,7 +103,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = []
       {(() => { const d = parse(e.date), days = Math.round((d - today) / 864e5); return <>
         <div className="relative aspect-[16/10] shrink-0 group"><Cover e={e} className="absolute inset-0" eager /><button onClick={onClose} className="absolute top-3 right-3 z-[2] inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow hover:bg-background" aria-label={t("fermer")}><Icon d={ICONS.x} size={16} /></button></div>
         <div className="p-6 flex flex-col gap-4">
-          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), "--dcol": dc(e) }} className="[color:color-mix(in_srgb,var(--dcol)_62%,#000)] dark:[color:var(--dcol)]">{e.discipline}</Badge><Badge>{kindOf(e)}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}{isEnglish(e) && <Badge title={t("filter_en_hint")}>{t("filter_en")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
+          <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), "--dcol": dc(e) }} className="[color:color-mix(in_srgb,var(--dcol)_62%,#000)] dark:[color:var(--dcol)]">{discName(e.discipline)}</Badge><Badge>{kindName(kindOf(e))}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}{isEnglish(e) && <Badge title={t("filter_en_hint")}>{t("filter_en")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
           <h2 className="text-2xl font-semibold tracking-tight leading-tight [text-wrap:balance]">{e.title}</h2>
           <div className="flex items-center gap-3 rounded-lg border bg-card p-3">
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
@@ -133,9 +133,9 @@ function Sheet({ e, onClose, fav, onFav, onToast, following, onFollow, pool = []
 
 /* ═════════════════════ Palette ⌘K ═════════════════════ */
 function CommandDialog({ open, onClose, onPick, pool }) {
-  const { t, fmtShort } = useI18n();
+  const { t, fmtShort, discName } = useI18n();
   const [q, setQ] = useState(""); const [sel, setSel] = useState(0); const inputRef = useRef(null);
-  const res = useMemo(() => { const n = norm(q.trim()); return (n ? pool.filter(e => { const hay = norm([e.title, e.speaker, e.institution, e.location].join(" ")); return n.split(/\s+/).every(w => hay.includes(w)); }) : pool.filter(e => e.date === TODAY || e.date === TOMORROW)).slice(0, 30); }, [q, pool]);
+  const res = useMemo(() => { const n = norm(q.trim()); return (n ? pool.filter(e => { const hay = norm([e.title, e.speaker, e.institution, e.location, e.discipline, discName(e.discipline), ...(e.also || [])].join(" ")); return n.split(/\s+/).every(w => hay.includes(w)); }) : pool.filter(e => e.date === TODAY || e.date === TOMORROW)).slice(0, 30); }, [q, pool, discName]);
   useEffect(() => { if (open) { setQ(""); setSel(0); setTimeout(() => inputRef.current?.focus(), 30); } }, [open]);
   useEffect(() => setSel(0), [q]);
   const onKey = ev => { if (ev.key === "ArrowDown") { ev.preventDefault(); setSel(s => (s + 1) % Math.max(1, res.length)); } else if (ev.key === "ArrowUp") { ev.preventDefault(); setSel(s => (s - 1 + res.length) % Math.max(1, res.length)); } else if (ev.key === "Enter" && res[sel]) onPick(res[sel]); };
@@ -264,11 +264,11 @@ function InstitutionBanner({ name, events, onClear }) {
   return <FilterBanner name={name} count={evs.length} color={evs[0] ? discColor(evs[0].discipline) : "var(--c-aut)"} links={links} onClear={onClear} clearLabel={t("inst_clear")} />;
 }
 function DisciplineBanner({ name, events, onClear }) {
-  const { t } = useI18n();
+  const { t, discName } = useI18n();
   const n = useMemo(() => events.filter(e => e.discipline === name).length, [events, name]);
   const slug = slugify(name);
   const links = name !== "Autre" && DISC[name] ? [[`d/${slug}.html`, t("disc_site")], [`data/cal/d-${slug}.ics`, t("inst_ics")]] : [];
-  return <FilterBanner name={name} count={n} color={`var(${DISC[name] || "--c-aut"})`} links={links} onClear={onClear} clearLabel={t("disc_clear")} />;
+  return <FilterBanner name={discName(name)} count={n} color={`var(${DISC[name] || "--c-aut"})`} links={links} onClear={onClear} clearLabel={t("disc_clear")} />;
 }
 
 /* ═════════════════════ Mes intervenants ═════════════════════ */
@@ -327,7 +327,7 @@ function useSpeakers() {
   return { speakers, toggle, seen, markSeen };
 }
 function App() {
-  const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO } = useI18n();
+  const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO, discName } = useI18n();
   const init = useMemo(filtersFromURL, []);
   const [events, setEvents] = useState(null); const [loadErr, setLoadErr] = useState(null); const [complete, setComplete] = useState(false);
   const [archive, setArchive] = useState(null); const [meta, setMeta] = useState({}); const [digest, setDigest] = useState(null);
@@ -470,19 +470,31 @@ function App() {
     Notification.requestPermission().then(p => { setNotifyPerm(p); if (p === "granted") notify(t("notify_enabled")); else if (p === "denied") notify(t("notify_denied")); });
   };
   const openSpeakers = () => { setSpeakersOpen(true); if (followedNew.length) markSeen(followedNew.map(x => x.id)); };
+  // Fin de la sélection de la semaine : 7 jours après sa génération (comme
+  // l'infolettre RSS). Borner à dimanche (WEEK_END) vidait la sélection le
+  // week-end alors que le sous-titre annonçait « jusqu'au 3 octobre ».
+  const digestEnd = digest?.generated ? iso(addDays(parse(digest.generated), 7)) : WEEK_END;
   const featured = useMemo(() => {
     // Le digest (data/digest.json) est la sélection éditoriale de la semaine ; sinon sélection automatique
-    const fromDigest = digest ? digest.events.map(d => UPc.find(e => e.id === d.id)).filter(Boolean).filter(e => e.date <= WEEK_END) : [];
+    const fromDigest = digest ? digest.events.map(d => UPc.find(e => e.id === d.id)).filter(Boolean).filter(e => e.date <= digestEnd) : [];
     const pool = fromDigest.length >= 3 ? fromDigest : UPc.filter(e => e.date === TODAY || e.date === TOMORROW);
     const score = e => (e.image ? 2 : 0) + (MAIN_INST.includes(e.institution) ? 1.5 : 0) + (e.speaker ? .5 : 0) + ((e.description || "").length > 80 ? .5 : 0);
     return [...pool].sort((a, b) => score(b) - score(a)).slice(0, 3);
-  }, [UPc, digest]);
+  }, [UPc, digest, digestEnd]);
+  // « du 26 septembre au 3 octobre » / « September 26 – October 3 » : la
+  // période écrite en toutes lettres par le robot restait en français en anglais.
+  const digestPeriod = (() => {
+    const a = parse(TODAY > (digest?.generated || "") ? TODAY : digest.generated), b = parse(digestEnd);
+    const y = a.getFullYear() !== b.getFullYear() ? [` ${a.getFullYear()}`, ` ${b.getFullYear()}`] : ["", ""];
+    return lang === "en" ? `${MO[a.getMonth()]} ${a.getDate()}${y[0]} – ${MO[b.getMonth()]} ${b.getDate()}${y[1]}`
+      : `du ${a.getDate() === 1 ? "1er" : a.getDate()} ${MO[a.getMonth()]}${y[0]} au ${b.getDate() === 1 ? "1er" : b.getDate()} ${MO[b.getMonth()]}${y[1]}`;
+  });
   const tonight = UPc.filter(e => e.date === TODAY && (e.time || "") >= "17:30");
   const days7 = useMemo(() => [...Array(7)].map((_, i) => { const d = addDays(today, i), k = iso(d); return { k, d, n: UPc.filter(e => e.date === k).length }; }), [UPc]);
   const max7 = Math.max(1, ...days7.map(x => x.n));
   const groups = useMemo(() => { const g = []; filtered.slice(0, shown).forEach(e => { if (!g.length || g[g.length - 1].date !== e.date) g.push({ date: e.date, items: [] }); g[g.length - 1].items.push(e); }); return g; }, [filtered, shown]);
   const histMonths = useMemo(() => [...new Set((archive || []).map(e => e.date.slice(0, 7)))].sort().reverse(), [archive]);
-  const activeTags = [...[...filters.disc].map(v => [v, () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.free ? [[t("badge_free"), () => setF({ free: false })]] : []), ...(filters.en ? [[t("filter_en"), () => setF({ en: false })]] : []), ...[...filters.cat].map(k => [`${SIDE_KINDS[k].icon} ${t(SIDE_KINDS[k].label)}`, () => toggleIn("cat")(k)])];
+  const activeTags = [...[...filters.disc].map(v => [discName(v), () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.free ? [[t("badge_free"), () => setF({ free: false })]] : []), ...(filters.en ? [[t("filter_en"), () => setF({ en: false })]] : []), ...[...filters.cat].map(k => [`${SIDE_KINDS[k].icon} ${t(SIDE_KINDS[k].label)}`, () => toggleIn("cat")(k)])];
 
   /* actions */
   const onFav = id => { toggleFav(id); notify(favs.has(id) ? t("toast_fav_removed") : t("toast_fav_added")); };
@@ -537,7 +549,7 @@ function App() {
       </section>}
 
       {events && <section className="py-10">
-        <BlurFade><div className="mb-5 flex items-end justify-between gap-4"><div><h2 className="text-2xl font-semibold tracking-tight">{t("featured_title")}</h2><p className="text-sm text-muted-foreground mt-1">{digest && featured.length >= 3 ? t("featured_sub_digest", { period: digest.period }) : t("featured_sub_auto")}</p></div></div></BlurFade>
+        <BlurFade><div className="mb-5 flex items-end justify-between gap-4"><div><h2 className="text-2xl font-semibold tracking-tight">{t("featured_title")}</h2><p className="text-sm text-muted-foreground mt-1">{digest && featured.length >= 3 ? t("featured_sub_digest", { period: digestPeriod() }) : t("featured_sub_auto")}</p></div></div></BlurFade>
         <BentoGrid>
           {featured[0] && <BentoCard className="lg:col-span-2 lg:row-span-2" name={featured[0].title} meta={`${relDay(featured[0].date, TODAY, TOMORROW) || fmtShort(featured[0].date)}${featured[0].time ? " · " + featured[0].time : ""} · ${featured[0].institution}`} description={featured[0].speaker} onClick={() => setOpen(featured[0])}
             background={<div className="group h-full"><Cover e={featured[0]} className="absolute inset-0" eager label={false} /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" /></div>} />}
@@ -561,7 +573,7 @@ function App() {
           <span className="ml-auto shrink-0 pl-1 text-sm text-muted-foreground tabular-nums whitespace-nowrap"><b className="text-foreground font-medium">{filtered.length}</b> {t("noun_event", { n: filtered.length })}</span>
         </div>
         <div className="mt-2 -mx-4 flex items-center gap-2 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
-          <Popover closeLabel={t("fermer")} label={t("pop_discipline")} count={filters.disc.size}>{() => <CheckList values={Object.keys(DISC).filter(d => counts.disc[d]).map(d => [d, counts.disc[d]])} set={filters.disc} onToggle={toggleIn("disc")} swatch colorOf={v => `var(${DISC[v] || "--c-aut"})`} onClear={() => setF({ disc: new Set() })} clearLabel={t("clear_all")} />}</Popover>
+          <Popover closeLabel={t("fermer")} label={t("pop_discipline")} count={filters.disc.size}>{() => <CheckList values={Object.keys(DISC).filter(d => counts.disc[d]).map(d => [d, counts.disc[d]])} set={filters.disc} onToggle={toggleIn("disc")} labelFn={discName} swatch colorOf={v => `var(${DISC[v] || "--c-aut"})`} onClear={() => setF({ disc: new Set() })} clearLabel={t("clear_all")} />}</Popover>
           <Popover closeLabel={t("fermer")} label={t("pop_institution")} count={filters.inst.size}>{() => <CheckList values={[...MAIN_INST.filter(i => counts.inst[i]).map((i, k) => [i, counts.inst[i], k === 0 ? t("group_establishments") : null]), ...Object.entries(counts.inst).filter(([i]) => !MAIN_INST.includes(i)).sort((a, b) => b[1] - a[1]).slice(0, 30).map(([i, n], k) => [i, n, k === 0 ? t("group_others") : null])]} set={filters.inst} onToggle={toggleIn("inst")} onClear={() => setF({ inst: new Set() })} clearLabel={t("clear_all")} />}</Popover>
           <Popover closeLabel={t("fermer")} label={t("pop_source")} count={filters.src.size + filters.cat.size + filters.theme.size}>{() => <>
             <CheckList values={[...Object.keys(SRC_LABEL_T).filter(v => counts.src[v]).map(v => [v, counts.src[v]]), ...Object.keys(SIDE_KINDS).filter(k => counts.side[k]).map((k, i) => ["cat:" + k, counts.side[k], i === 0 ? t("group_side") : null])]}

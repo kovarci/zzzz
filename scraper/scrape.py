@@ -15,7 +15,7 @@ import hashlib
 import re
 import time
 import traceback
-from datetime import datetime, date, timedelta
+from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 
 import icalendar
@@ -2510,10 +2510,31 @@ def scrape_que_faire_a_paris():
     return events
 
 
+# « Conférence « X » », « Conférence-débat : X », « Table ronde – X »,
+# « [SECRE 2027] X » : l'habillage que chaque site met autour du même titre.
+_TITLE_WRAP = re.compile(
+    r"^\s*(?:\[[^\]]{2,30}\]\s*|(?:conf[ée]rence(?:[- ]d[ée]bat)?|table[- ]ronde|rencontre|"
+    r"projection(?:[- ]d[ée]bat)?|d[ée]bat|atelier|lecture|pr[ée]sentation du livre)"
+    r"\s*(?=[:–—«\"“-])[:–—-]?\s*)", re.I)
+
+
+def core_title(title):
+    """Titre nu, pour comparer deux versions d'un même événement."""
+    t = _TITLE_WRAP.sub("", title or "", count=1)
+    return slugify(t.strip(" «»\"“”'’"))
+
+
+def _similar(a, b, cut=0.85):
+    import difflib
+    return difflib.SequenceMatcher(None, a, b).ratio() >= cut
+
+
 def _drop_city_duplicates(events):
     """Une conférence de Sciences Po ou de la BnF peut aussi être publiée sur
-    Que faire à Paris : la source institutionnelle l'emporte."""
-    key = lambda e: (slugify(e.get("title", ""))[:50], e.get("date"))
+    Que faire à Paris : la source institutionnelle l'emporte. On compare le
+    titre nu : la Ville écrit « Conférence « Hommage à Bernard Frank » » là où
+    la Maison de la culture du Japon écrit « Hommage à Bernard Frank »."""
+    key = lambda e: (core_title(e.get("title", ""))[:50], e.get("date"))
     known = {key(e) for e in events if e.get("source_type") != "ville"}
     out = [e for e in events if e.get("source_type") != "ville" or key(e) not in known]
     if len(out) < len(events):
@@ -3697,7 +3718,7 @@ def scrape_article1(browser) -> list[dict]:
         if not ms:
             continue
         try:
-            d = datetime.utcfromtimestamp(int(ms) / 1000).date()
+            d = datetime.fromtimestamp(int(ms) / 1000, tz=timezone.utc).date()
         except Exception:
             continue
         if d < CUTOFF or d > HORIZON:
@@ -3874,8 +3895,13 @@ def merge_cross_source(events):
         # « SGAP: a Scientist's Guide… ») : même sigle + même date = même
         # événement. Pas les titres tout en capitales ni les sigles d'institution.
         acr = re.match(r"([A-Z][A-Z0-9]{3,})\b", title)
-        if (acr and re.search(r"[a-zé]", title) and acr.group(1) not in _ACRONYM_STOP):
-            groups.setdefault(("acr", acr.group(1), ev.get("date")), []).append(ev)
+        acr = acr.group(1) if acr else None
+        # « [SECRE 2027] Colloque… » = « SECRE2027 : Colloque… »
+        br = re.match(r"\[\s*([A-Z][A-Z0-9]{2,}(?:\s+\d{2,4})?)\s*\]", title)
+        if br:
+            acr = br.group(1).replace(" ", "")
+        if (acr and re.search(r"[a-zé]", title) and acr not in _ACRONYM_STOP):
+            groups.setdefault(("acr", acr, ev.get("date")), []).append(ev)
             continue
         if len(t) < 20:
             # Titre court (« Africa Day 2026 ») : seulement au même endroit
@@ -5407,6 +5433,14 @@ def carry_forward(fresh, prev, keep):
     for e in prev:
         if e.get("url"):
             n_prev[fam(e)] = n_prev.get(fam(e), 0) + 1
+    # Même organisateur, même jour, même heure (ou toutes deux absentes) et
+    # titre voisin : l'ancienne version d'un événement dont le titre ET le
+    # lien ont changé (« agroécologique » → « agro-écologique », « … (6) »
+    # → « … », séance numérotée qui reçoit son vrai titre).
+    slot = {}
+    for f in fresh:
+        slot.setdefault((f.get("institution"), f.get("date"), f.get("time") or ""), []).append(
+            core_title(f.get("title", "")))
     out, renamed = [], 0
     # Les plus récemment ajoutés d'abord : entre deux versions reportées d'un
     # même événement Luma, deduplicate() garde ainsi la dernière.
@@ -5414,6 +5448,11 @@ def carry_forward(fresh, prev, keep):
         if not keep(e) or e.get("date", "") < today_iso or e.get("id") in ids:
             continue
         if e.get("url") and n_fresh.get(fam(e)) == 1 and n_prev.get(fam(e), 0) <= 3:
+            renamed += 1
+            continue
+        ct = core_title(e.get("title", ""))
+        if len(ct) >= 12 and any(_similar(ct, x) for x in slot.get(
+                (e.get("institution"), e.get("date"), e.get("time") or ""), ())):
             renamed += 1
             continue
         out.append(e)
