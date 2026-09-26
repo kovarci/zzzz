@@ -12,6 +12,7 @@ All HTML sources are scraped page-by-page (?page=N) until no new events appear.
 
 import json
 import hashlib
+import os
 import re
 import time
 import traceback
@@ -1125,11 +1126,12 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
 # ── Paginated HTML scraper (CdF, EHESS, ENS, Sciences Po, Sorbonne) ───────────
 
 def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="institution",
-                     page_fmt=None):
+                     page_fmt=None, page_start=2):
     """Scrape paginated agendas, trying BOTH ?page=N and /page/N/ URL styles
     (different CMS use different pagination). agenda_urls = [(url, loc, base), ...].
-    page_fmt : motif propre au site (« {url}/page-{n} » chez Dauphine, TYPO3),
-    essayé seul à la place des deux styles génériques."""
+    page_fmt : motif propre au site (« {url}/{n}/ » chez Sciences Po, dont la
+    2e page est /1/ : page_start=1), essayé seul à la place des deux styles
+    génériques."""
     print(f"→ {name} (paginated)...")
     all_events, seen = [], set()
     captured = []
@@ -1165,7 +1167,7 @@ def scrape_paginated(browser, name, agenda_urls, max_pages=15, source_type="inst
         sep = "&" if "?" in base_url else "?"
 
         if page_fmt:
-            for n in range(2, max_pages):
+            for n in range(page_start, max_pages):
                 if not harvest(page_fmt.format(url=base_url.rstrip("/"), n=n),
                                location, site_base, f"page {n}"):
                     break
@@ -1229,6 +1231,27 @@ CDF_HEADERS = {
     "Sec-Fetch-User": "?1",
     "Upgrade-Insecure-Requests": "1",
 }
+
+
+_NAME_PARTICLE = re.compile(r"^(de|du|des|d['’]\S*|van|von|der|den|la|le|di|da|dit|ben|bin|al|el|y|e|of)$", re.I)
+
+
+def _person_names(s):
+    """Noms de personnes d'une ligne d'intervenants (même règle que
+    splitSpeakers() dans web/src/lib.js) : « Aurèle Méthivier & Sandra
+    Boehringer » → 2 noms, « Agir pour l'éducation » → aucun."""
+    x = s or ""
+    while True:
+        y = re.sub(r"\([^()]*\)", " ", x)
+        if y == x:
+            break
+        x = y
+    out = []
+    for t in re.split(r"\s*(?:[,;&/]|\s(?:et|and)\s)\s*", x):
+        w = t.split()
+        if 2 <= len(w) <= 5 and all(v[:1].isupper() or _NAME_PARTICLE.match(v) for v in w) and w[0][:1].isupper():
+            out.append(" ".join(w))
+    return out
 
 
 def scrape_college_de_france(browser=None):
@@ -1311,11 +1334,17 @@ def scrape_college_de_france(browser=None):
                 clean_text(type_el.get_text()) if type_el else "",
                 clean_text(cycle_el.get_text()) if cycle_el else "",
             ] if x)
+            speaker = clean_text(speaker_el.get_text()) if speaker_el else ""
+            # Certains « grands événements » rangent ici leur sous-titre
+            # (« Forum Éducation 2026 » / « Agir pour l'éducation ») : pas un
+            # intervenant — la fiche proposait de le « suivre ».
+            if speaker and not _person_names(speaker):
+                desc, speaker = " · ".join(x for x in (desc, speaker) if x), ""
             events.append(new_event(
                 "Collège de France", title, d, time_str=time_str,
                 location=clean_text(place_el.get_text()) if place_el else LOC_DEFAULT,
                 desc=desc,
-                speaker=clean_text(speaker_el.get_text()) if speaker_el else "",
+                speaker=speaker,
                 url=make_absolute(href, BASE),
             ))
             # Le nom de l'intervenant est rangé DANS le titre de la carte
@@ -1458,11 +1487,13 @@ def scrape_ens(browser):
 
 
 def scrape_sciences_po(browser):
+    # Pages suivantes : /fr/evenements/1/, /2/… (numérotées à partir de 0) ;
+    # ?page=N et /page/N/ renvoyaient la 1re page : 20 événements sur ~30.
     return scrape_paginated(browser, "Sciences Po", [
         ("https://www.sciencespo.fr/fr/evenements/",
          "Sciences Po, 27 rue Saint-Guillaume, Paris 7e",
          "https://www.sciencespo.fr"),
-    ], max_pages=15)
+    ], max_pages=15, page_fmt="{url}/{n}/", page_start=1)
 
 
 def scrape_sorbonne(browser):
@@ -2544,13 +2575,17 @@ def scrape_que_faire_a_paris():
 # « [SECRE 2027] X » : l'habillage que chaque site met autour du même titre.
 _TITLE_WRAP = re.compile(
     r"^\s*(?:\[[^\]]{2,30}\]\s*|(?:conf[ée]rence(?:[- ](?:d[ée]bat|concert))?|table[- ]ronde|rencontre|"
-    r"projection(?:[- ]d[ée]bat)?|d[ée]bat|atelier|lecture|pr[ée]sentation du livre)"
+    r"projection(?:[- ]d[ée]bat)?|d[ée]bat|atelier|lecture|colloque(?: international)?|"
+    r"pr[ée]sentation (?:du livre|de l['’]ouvrage|d['’]ouvrage))"
     r"\s*(?=[:–—«\"“-])[:–—-]?\s*)", re.I)
+# « DÉCRIPT in dialogue | Whose Peace? … » (Inalco) = « Whose Peace? … » (FMSH)
+_SERIES_LABEL = re.compile(r"^[^|]{3,40}\|\s*(?=.{15})")
 
 
 def core_title(title):
     """Titre nu, pour comparer deux versions d'un même événement."""
     t = _TITLE_WRAP.sub("", title or "", count=1)
+    t = _SERIES_LABEL.sub("", t, count=1)
     return slugify(t.strip(" «»\"“”'’"))
 
 
@@ -3964,7 +3999,61 @@ def merge_cross_source(events):
         merged += len(g) - 1
     if merged:
         print(f"Doublons inter-sources fusionnés : {merged}")
-    return out
+    return _merge_prefix_titles(out)
+
+
+# Sites qui republient les événements des autres (colloques, Ville de Paris)
+_AGGREGATORS = {"Sciencesconf.org"}
+
+
+def _merge_prefix_titles(events):
+    """Un titre qui en prolonge un autre d'un sous-titre, le même jour, à la
+    même heure (ou sans heure) : « Les humanités en formes » (FMSH) et « … :
+    sciences humaines et sociales » (Que faire à Paris), « Tsunami Trees » et
+    « Conférence « Tsunami Trees : Naoya Hatakeyama… » » (Maison de la culture
+    du Japon), « Design in Nature » (Sciencesconf) et « Design in Nature: The
+    Evolution of Designs… » (PSL). Seulement chez le même organisateur, ou
+    quand l'un des deux est un agrégateur : « Erasmus Days 2026 » a lieu à la
+    fois à Paris Cité et à Saclay. Pas Luma : un hôte y publie souvent un même
+    événement par niveau ou par tarif."""
+    by_date = {}
+    for i, e in enumerate(events):
+        if e.get("source_type") != "luma":
+            by_date.setdefault(e.get("date"), []).append(i)
+    drop, n = set(), 0
+    for idx in by_date.values():
+        if len(idx) < 2:
+            continue
+        cores = {i: core_title(events[i].get("title", "")) for i in idx}
+        for i in idx:
+            a = cores[i]
+            if len(a) < 10 or i in drop:
+                continue
+            for j in idx:
+                if j == i or j in drop or not cores[j].startswith(a + "-"):
+                    continue
+                ea, eb = events[i], events[j]
+                ta, tb = ea.get("time") or "", eb.get("time") or ""
+                if ta and tb and ta != tb:
+                    continue
+                agg = any(x.get("source_type") == "ville" or x.get("institution") in _AGGREGATORS
+                          for x in (ea, eb))
+                if not (ea.get("institution") == eb.get("institution") or (agg and len(a) >= 12)):
+                    continue
+                # La source de l'organisateur l'emporte sur la Ville, puis la fiche la plus riche
+                keep = max((ea, eb), key=lambda x: (x.get("source_type") != "ville", _richness(x)))
+                lose = eb if keep is ea else ea
+                if lose.get("source_type") != "ville":
+                    also = ({lose.get("institution")} | set(lose.get("also") or [])) - {keep.get("institution")}
+                    if also:
+                        keep["also"] = sorted(set(keep.get("also") or []) | also)
+                drop.add(j if keep is ea else i)
+                n += 1
+                if i in drop:
+                    break
+    if n:
+        print(f"Titres prolongés d'un sous-titre fusionnés : {n}")
+    return [e for k, e in enumerate(events) if k not in drop]
 
 
 def deduplicate(events):
@@ -3972,9 +4061,17 @@ def deduplicate(events):
     événements reportés). Sur Luma, un lien = un événement : le même, vu
     depuis deux pages avec un hôte différent (« KubeAuto Day » et
     « Kubernetes Automation Day »), ne compte qu'une fois."""
-    seen, out = set(), []
+    seen, out, slots = set(), [], {}
     for ev in events:
-        keys = [(ev["title"].lower()[:60], ev["date"], ev["institution"])]
+        # Même titre, même jour, même organisateur : doublon… sauf deux séances
+        # distinctes, à des heures ET sur des pages différentes (Collège de
+        # France : le cours de 15 h et le séminaire de 16 h 15 portent le même
+        # titre « Sortir de cette chambre à moi… (1) »).
+        base = (ev["title"].lower()[:60], ev["date"], ev["institution"])
+        t, u = ev.get("time") or "", ev.get("url") or ""
+        if base in slots and not all(t and kt and t != kt and u != ku for kt, ku in slots[base]):
+            continue
+        keys = []
         if ev.get("source_type") == "luma" and ev.get("url"):
             keys.append(("luma", ev["url"].rstrip("/").rsplit("/", 1)[-1]))
         # Même organisateur, même lien, même créneau, titre qui commence pareil :
@@ -3988,6 +4085,7 @@ def deduplicate(events):
                          slugify(ev["title"])[:25]))
         if not any(k in seen for k in keys):
             seen.update(keys)
+            slots.setdefault(base, []).append((t, u))
             out.append(ev)
     return out
 
@@ -4441,10 +4539,15 @@ def _esc_attr(s) -> str:
     return _html.escape(str(s or ""), quote=True)
 
 
+def _jour_fr(n: int) -> str:
+    """« 1er octobre », pas « 1 octobre »."""
+    return "1er" if n == 1 else str(n)
+
+
 def _date_fr(iso: str) -> str:
     try:
         d = datetime.strptime(iso, "%Y-%m-%d")
-        return f"{d.day} {_MONTHS_FR[d.month - 1]} {d.year}"
+        return f"{_jour_fr(d.day)} {_MONTHS_FR[d.month - 1]} {d.year}"
     except Exception:
         return iso
 
@@ -4967,7 +5070,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
             continue
         try:
             d = date.fromisoformat(ev.get("date", ""))
-            when = f"{d.day} {_HUB_MOIS[d.month - 1]}"
+            when = f"{_jour_fr(d.day)} {_HUB_MOIS[d.month - 1]}"
         except Exception:
             when = ""
         sub = ev.get("institution", "") if kicker == "Discipline" else ""
@@ -5579,6 +5682,37 @@ def load_previous_events():
         return []
 
 
+def latest_published_events(meta_keys=()):
+    """events.json tel qu'il est publié sur GitHub À CET INSTANT (None si
+    illisible). Le robot et maj.bat publient tous deux les données ; un scrape
+    dure plusieurs minutes et chacun, au moment de pousser, fait gagner sa
+    version (-X theirs). Sans cette relecture, le robot effaçait la mise à
+    jour locale poussée pendant qu'il tournait (Collège de France, Luma…
+    remis à leur état précédent) — et inversement. `meta_keys` : champs de
+    data/meta.json écrits par l'autre pipeline, recopiés ici pour ne pas les
+    remettre à leur ancienne valeur."""
+    import subprocess
+    root = OUTPUT_FILE.parent.parent
+    show = lambda path: subprocess.run(
+        ["git", "show", f"FETCH_HEAD:{path}"], cwd=root, check=True,
+        capture_output=True, timeout=60).stdout.decode("utf-8")
+    try:
+        subprocess.run(["git", "fetch", "--quiet", "origin", "main"], cwd=root,
+                       check=True, timeout=120)
+        events = json.loads(show("data/events.json"))
+    except Exception as e:
+        print(f"[WARN] version publiée illisible ({type(e).__name__}) : on garde la copie locale")
+        return None
+    try:
+        meta = json.loads(show("data/meta.json"))
+        for k in meta_keys:
+            if meta.get(k):
+                update_meta(k, meta[k])
+    except Exception:
+        pass
+    return events
+
+
 def carry_forward(fresh, prev, keep):
     """Événements à venir du passage précédent que ce scrape n'a pas revus
     (page lente, pagination partielle…), pour les sources où `keep(e)` est
@@ -5692,6 +5826,14 @@ def update_archive(previous_events):
     # Cap: keep only the last ARCHIVE_MAX_DAYS days
     cutoff = (TODAY - timedelta(days=ARCHIVE_MAX_DAYS)).isoformat()
     archive = [e for e in archive if e.get("date", "") >= cutoff]
+    # Deux versions d'un même événement (renommé, déplacé : « Founding » →
+    # « Founder Members », même lien Luma) étaient toutes deux à l'agenda
+    # avant d'être archivées : l'Historique les montrait en double. On garde
+    # la plus récemment ajoutée.
+    n = len(archive)
+    archive = deduplicate(sorted(archive, key=lambda e: e.get("added_at") or "", reverse=True))
+    if len(archive) < n:
+        print(f"Archive : {n - len(archive)} anciennes versions en double retirées")
     # Sort: most recent past first
     archive.sort(key=lambda e: (e.get("date", ""), e.get("time", "")), reverse=True)
     try:
@@ -5741,6 +5883,14 @@ def main():
         finally:
             browser.close()
 
+    # maj.bat a pu publier pendant ces ~13 min de scrape : on repart de la
+    # version publiée la plus récente (événements du Collège de France, de
+    # Luma… qu'elle vient de rafraîchir), pas de celle du début du run.
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        latest = latest_published_events(meta_keys=("last_manual_run",))
+        if latest is not None:
+            prev_events = latest
+
     # Compteurs du scrape FRAIS, avant carry-forward : c'est le seul instant
     # où l'on voit ce que chaque source a réellement rendu aujourd'hui. Une
     # fois le report appliqué, une source morte garde ses anciens événements
@@ -5770,7 +5920,10 @@ def main():
     if carried:
         print(f"⚠ Carried forward {len(carried)} upcoming events from the previous run")
 
-    all_events = finalize_events(merge_cross_source(_drop_city_duplicates(deduplicate(all_events))))
+    # Titres nettoyés (finalize_events) AVANT les dédoublonnages : une version
+    # reportée « Forum Éducation 2026 Agir pour l'éducation » ne se rapprochait
+    # pas du « Forum Éducation 2026 » de PSL.
+    all_events = merge_cross_source(_drop_city_duplicates(deduplicate(finalize_events(all_events))))
 
     # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
     # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.

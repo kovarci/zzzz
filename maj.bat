@@ -9,7 +9,11 @@ echo ================================================
 echo.
 
 echo [1/4] Recuperation des dernieres donnees GitHub...
-git pull
+rem --rebase : une maj precedente jamais publiee (push refuse) passe par-dessus
+rem au lieu de laisser des fichiers en conflit ; --autostash : le travail en
+rem cours dans ce dossier est mis de cote le temps de la mise a jour.
+git pull --rebase --autostash -X theirs origin main
+if errorlevel 1 git rebase --abort
 echo.
 
 echo [2/4] College de France, Museum, Academies (sciences, medecine), Ifri, IRIS, Jean-Jaures + Luma...
@@ -23,6 +27,10 @@ git commit -m "maj College de France, Museum, Academie, Ifri, IRIS, Jean-Jaures 
 echo.
 
 echo [4/4] Publication sur GitHub...
+rem Le robot GitHub a pu publier pendant la maj : on se replace par-dessus
+rem (nos donnees l'emportent, elles incluent deja les siennes), puis on pousse.
+git pull --rebase --autostash -X theirs origin main
+if errorlevel 1 git rebase --abort
 git push
 echo.
 

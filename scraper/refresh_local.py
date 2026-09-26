@@ -62,7 +62,10 @@ MNHN = "Muséum national d'Histoire naturelle"
 LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences", "Jeunes IHEDN",
                       "Ifri", "IRIS", "Fondation Jean-Jaurès", "Académie nationale de médecine",
                       # connexion refusée au robot GitHub (délai dépassé), lues sans souci d'ici
-                      "Maison de l'Amérique latine", "Maison de la culture du Japon"}
+                      "Maison de l'Amérique latine", "Maison de la culture du Japon",
+                      # page sans cartes pour le robot (scrape_hec_ia plus bas) : sans
+                      # elle ici, ses événements renommés restaient en double
+                      "HEC IA"}
 
 
 def _luma_count(events):
@@ -118,11 +121,18 @@ def main():
     if not luma:
         print("[!] Luma a renvoyé 0 cette fois.")
 
+    # Le robot GitHub a pu publier pendant ces minutes de scrape : on repart
+    # de la version publiée la plus récente (sinon l'une des deux mises à jour
+    # écrasait l'autre au moment de pousser).
+    latest = scrape.latest_published_events(meta_keys=("last_workflow_run", "fresh_counts"))
+    if latest is not None:
+        events = latest
+
     # Recompose : tout le reste (intact) + sources locales + Luma frais.
     others = [e for e in events
               if e.get("institution") not in LOCAL_INSTITUTIONS
               and e.get("source_type") != "luma"]
-    fresh = scrape.deduplicate(cdf + blocked + luma)
+    fresh = scrape.deduplicate(scrape.finalize_events(cdf + blocked + luma))
 
     # Filet de sécurité (comme le robot) : on réunit le scrape frais avec les
     # événements à venir DÉJÀ connus du Collège de France / Luma que ce passage
@@ -134,8 +144,9 @@ def main():
 
     # Mêmes fusions que le robot : un événement Luma tenu à Sciences Po, une
     # conférence du Collège de France aussi publiée par la Ville de Paris…
-    merged = scrape.deduplicate(fresh + carried + others)
-    merged = scrape.finalize_events(scrape.merge_cross_source(scrape._drop_city_duplicates(merged)))
+    # Titres nettoyés (finalize_events) avant les dédoublonnages, comme le robot
+    merged = scrape.deduplicate(scrape.finalize_events(fresh + carried + others))
+    merged = scrape.merge_cross_source(scrape._drop_city_duplicates(merged))
 
     merged = [e for e in merged if e.get("date", "") >= scrape.CUTOFF.isoformat()]
     merged.sort(key=lambda e: (e["date"], e.get("time", "")))
