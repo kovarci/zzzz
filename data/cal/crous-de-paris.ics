@@ -1,0 +1,112 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lotent//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Crous de Paris · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:f18d7f5002bf@paris-academique
+DTSTAMP:20260929T182747Z
+DTSTART;TZID=Europe/Paris:20260930T130000
+DTEND;TZID=Europe/Paris:20260930T140000
+SUMMARY:Vos droits\, vos aides : le webinaire Caf dédié aux jeunes
+DESCRIPTION:Vous êtes étudiant ou jeune Parisien et vous avez des questio
+ ns sur vos droits\, les aides auxquelles vous pouvez prétendre ou les dé
+ marches à effectuer ? La Caf de Paris organise un webinaire dédié aux j
+ eunes et aux étudiants . Rendez-vous le mercredi 30 septembre de 13h à 1
+ 4h Pendant une heure\, échangez en direct avec des experts de la Caf et d
+ e ses partenaires et découvrez les dispositifs qui pe\nhttps://www.crous-
+ paris.fr/evenement/vos-droits-vos-aides-le-webinaire-caf-dedie-aux-jeunes/
+LOCATION:En ligne (s’inscrire pour avoir le lien)\, Paris
+URL:https://www.crous-paris.fr/evenement/vos-droits-vos-aides-le-webinaire-
+ caf-dedie-aux-jeunes/
+END:VEVENT
+BEGIN:VEVENT
+UID:a3da7bd530c8@paris-academique
+DTSTAMP:20260929T182747Z
+DTSTART;TZID=Europe/Paris:20261010T140000
+DTEND;TZID=Europe/Paris:20261010T180000
+SUMMARY:Octobre Rose : le sport se mobilise avec le PUC
+DESCRIPTION:Le samedi 10 octobre\, de 14h à 18h \, rendez-vous au Stade Ch
+ arléty pour une après-midi consacrée à la prévention contre le cancer
+  du sein . Au programme : activités sportives et ludiques\, conférence\,
+  stands d’information et temps d’échange . Une occasion de s’inform
+ er\, de partager et de bouger ensemble autour d’un enjeu de prévention 
+ qui nous concerne toutes et tous. Que ce soit seul\, en famille o\nhttps:/
+ /www.crous-paris.fr/evenement/octobre-rose-le-sport-se-mobilise-avec-le-pu
+ c/
+LOCATION:Stade Charléty – 17 avenue Pierre de Coubertin\, Paris 13ᵉ
+URL:https://www.crous-paris.fr/evenement/octobre-rose-le-sport-se-mobilise-
+ avec-le-puc/
+END:VEVENT
+BEGIN:VEVENT
+UID:1ef813673f67@paris-academique
+DTSTAMP:20260929T182747Z
+DTSTART;TZID=Europe/Paris:20261010T140000
+DTEND;TZID=Europe/Paris:20261010T180000
+SUMMARY:1 000 casques pour 1 000 vies
+DESCRIPTION:🚲 À vélo ou en trottinette\, la sécurité commence par le
+ s bons réflexes ! À l’occasion de l’opération « 1 000 casques pour
+  1 000 vies » \, 1 000 casques seront distribués gratuitement aux étudi
+ ants de 18 à 25 ans. 🎁 Pour en bénéficier\, rendez-vous place de la 
+ Bastille avec votre carte étudiante . Distribution dans la limite des sto
+ cks disponibles. Au programme également : des conseils et des animati\nht
+ tps://www.crous-paris.fr/evenement/%f0%9f%9a%b2-1-000-casques-pour-1-000-v
+ ies/
+LOCATION:Place de la Bastille 75004 Paris
+URL:https://www.crous-paris.fr/evenement/%f0%9f%9a%b2-1-000-casques-pour-1-
+ 000-vies/
+END:VEVENT
+BEGIN:VEVENT
+UID:dacd24d3e7b2@paris-academique
+DTSTAMP:20260929T182747Z
+DTSTART;TZID=Europe/Paris:20261014T160000
+DTEND;TZID=Europe/Paris:20261014T230000
+SUMMARY:Bienvenue à Paris
+DESCRIPTION:Vous attendiez la Nuit Étudiante\, découvrez désormais l’e
+ xpérience “ Bienvenue à Paris ” ! La Ville de Paris a à cœur d’a
+ ccueillir tous les étudiants et de les accompagner au mieux dans leur nou
+ velle vie. C’est dans cet esprit que la Maison étudiante organise la 4
+ ᵉ édition festive et conviviale pensée pour les étudiants\, autour d
+ ’un village étudiant\, d’un escape game et de concerts. Rendez-vous 
+ à \nhttps://www.crous-paris.fr/evenement/bienvenue-a-paris/
+LOCATION:à l’hôtel de ville de Paris\, Place de l'Hôtel de Ville\, 750
+ 04 Paris
+URL:https://www.crous-paris.fr/evenement/bienvenue-a-paris/
+END:VEVENT
+BEGIN:VEVENT
+UID:6d9b0bb0e8df@paris-academique
+DTSTAMP:20260929T182747Z
+DTSTART;TZID=Europe/Paris:20261014T200000
+DTEND;TZID=Europe/Paris:20261014T233000
+SUMMARY:Beside festival
+DESCRIPTION:🎶 Beside Festival : 3 soirées pour découvrir la scène ém
+ ergente parisienne Du 14 au 16 octobre 2026 \, Beside investit la Péniche
+  Antipode \, au cœur du 19ᵉ arrondissement\, pour la 7ᵉ édition de s
+ on festival ! Pendant trois soirées\, 9 artistes aux univers singuliers e
+ t variés se succéderont sur scène pour faire vibrer la scène musicale 
+ émergente parisienne. 🎤 Au programme : une programmation éclecti\nhtt
+ ps://www.crous-paris.fr/evenement/beside-festival/2026-10-14/
+LOCATION:à bord de la Péniche Antipode 75019 Paris
+URL:https://www.crous-paris.fr/evenement/beside-festival/2026-10-14/
+END:VEVENT
+END:VCALENDAR

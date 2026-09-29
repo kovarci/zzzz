@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lotent//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Jeunes d'Avenirs · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:946bd594df96@paris-academique
+DTSTAMP:20260929T182747Z
+DTSTART;TZID=Europe/Paris:20261015T090000
+DTEND;TZID=Europe/Paris:20261015T180000
+SUMMARY:Salon Jeunes d'Avenirs x WorldSkills France — Île-de-France
+DESCRIPTION:Salon — Salon de l'emploi\, de l'alternance et de la formatio
+ n pour les 16-30 ans\, avec les métiers de WorldSkills France.\nhttp://je
+ unesdavenirs.fr/salon-jeunes-davenirs-ile-de-france/
+LOCATION:Paris Montreuil Expo\, 128 rue de Paris\, Montreuil
+URL:http://jeunesdavenirs.fr/salon-jeunes-davenirs-ile-de-france/
+END:VEVENT
+END:VCALENDAR
