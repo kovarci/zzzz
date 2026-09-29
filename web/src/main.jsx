@@ -720,6 +720,7 @@ function App() {
         <span className="font-medium text-foreground">{t("footer_browse")} :</span>{" "}
         {[["s/cette-semaine.html", t("sel_week")], ["s/ce-week-end.html", t("sel_weekend")], ["s/ce-soir.html", t("sel_tonight")],
           ["s/gratuites.html", t("sel_free")], ["s/talks-in-english.html", t("sel_en")],
+          ["s/soutenances-de-these.html", t("sel_theses")], ["s/carrieres.html", t("sel_careers")],
           ...Object.keys(DISC).filter(d => d !== "Autre").map(d => [`d/${slugify(d)}.html`, discName(d)])]
           .map(([href, label], i) => <React.Fragment key={href}>{i > 0 && " · "}<a href={href} className="hover:text-foreground hover:underline">{label}</a></React.Fragment>)}
       </nav>

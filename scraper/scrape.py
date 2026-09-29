@@ -5123,6 +5123,9 @@ def write_event_pages(events):
             for e in evts)
         return f'<ul class="{cls}">{items}</ul>' if items else ""
 
+    from collections import Counter
+    same_day = Counter(((e.get("title") or "").strip().lower(), e.get("date", ""))
+                       for e in {e.get("id"): e for e in events}.values())
     keep = set()
     for ev in events:
         eid = ev.get("id") or ""
@@ -5170,6 +5173,11 @@ def write_event_pages(events):
             d_short = f"{_jour_fr(_d.day)} {_HUB_MOIS[_d.month - 1]} {_d.year}"
         except Exception:
             d_short = d_
+        # Même intitulé le même jour (Collège de France : cours à 9 h 30 puis
+        # séminaire à 11 h) : l'heure départage les deux <title>, sinon
+        # identiques (« titres en double » pour Google)
+        if same_day[((t_ or "").strip().lower(), ev.get("date", ""))] > 1 and ev.get("time"):
+            d_short += f", {ev['time']}"
         inst_t = ev.get("institution", "") or ""
         full, short_tail = f" · {inst_t} · {d_short}", f" · {d_short}"
         if inst_t and len(t_) + len(full) <= 78:
@@ -5448,12 +5456,14 @@ _HUB_MONTHS_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
 # Pages « sélection » (s/…) : liées depuis toutes les pages hub et l'accueil
 SELECTIONS = [("s/cette-semaine.html", "Cette semaine"), ("s/ce-week-end.html", "Ce week-end"),
               ("s/ce-soir.html", "Ce soir"), ("s/gratuites.html", "Conférences gratuites"),
-              ("s/talks-in-english.html", "Talks in English")]
+              ("s/talks-in-english.html", "Talks in English"),
+              ("s/soutenances-de-these.html", "Soutenances de thèse"),
+              ("s/carrieres.html", "Événements carrières")]
 
 
 def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=None,
               intro="", chips_title="", chips=(), lang="fr", title=None, desc=None,
-              limit=60, show_inst=None):
+              limit=800, show_inst=None):
     """Page « hub » (i/<slug>.html par institution, d/<slug>.html par
     discipline) : même charte que les pages événement e/*.html — Geist, clair
     / sombre, carte — avec la liste des prochaines conférences (liens vers
@@ -5466,7 +5476,12 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
     short = T["short"].format(n=n, s=plural)
     if show_inst is None:
         show_inst = kicker != "Institution"
-    items = []
+    # Toutes les conférences à venir (pas seulement les 60 prochaines) : le
+    # Collège de France en a ~550, et 987 fiches e/ n'étaient liées depuis
+    # aucun hub — Google ne les trouvait que par le sitemap. Intertitre par
+    # mois dès que la liste est longue.
+    items, month = [], None
+    by_month = len(evts) > 40
     for ev in evts[:limit]:
         eid = ev.get("id") or ""
         if not re.fullmatch(r"[0-9a-f]{12}", eid):
@@ -5475,6 +5490,10 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
             d = date.fromisoformat(ev.get("date", ""))
             when = (f"{_HUB_MONTHS_EN[d.month - 1]} {d.day}" if lang == "en"
                     else f"{_jour_fr(d.day)} {_HUB_MOIS[d.month - 1]}")
+            if by_month and (d.year, d.month) != month:
+                month = (d.year, d.month)
+                label = (d.strftime("%B %Y") if lang == "en" else f"{_MONTHS_FR[d.month - 1]} {d.year}")
+                items.append(f'<li class="m">{label[0].upper() + label[1:]}</li>')
         except Exception:
             when = ""
         sub = ev.get("institution", "") if show_inst else ""
@@ -5503,7 +5522,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
         "inLanguage": lang, "isPartOf": {"@id": f"{SITE_URL}/#website"},
         "mainEntity": {"@type": "ItemList", "numberOfItems": n, "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": f"{SITE_URL}/e/{e['id']}.html"}
-            for i, e in enumerate(e for e in evts[:limit] if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or ""))]}},
+            for i, e in enumerate(e for e in evts[:min(limit, 100)] if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or ""))]}},
         ensure_ascii=False).replace("</", "<\\/")
     img = og_image or f"{SITE_URL}/og.png"
     ics_btn, ics_more = "", ""
@@ -5577,6 +5596,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 .rel a{{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}}
 .rel a:hover{{background:var(--muted)}}
 .rel .t small{{display:block;color:var(--muted-fg);font-size:12px;margin-top:2px}}
+.rel li.m{{font-size:12px;font-weight:600;color:var(--muted-fg);background:var(--muted);padding:7px 12px}}
 .rel .d{{color:var(--muted-fg);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}}
 .chips{{display:flex;flex-wrap:wrap;gap:6px}}
 .chips a{{border:1px solid var(--border);border-radius:999px;padding:5px 11px;font-size:13px;color:inherit;text-decoration:none;background:var(--card)}}
@@ -5746,6 +5766,13 @@ def write_selection_pages(events):
     up = sorted((e for e in events if e.get("date", "") >= today.isoformat() and not e.get("kind")
                  and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")),
                 key=lambda e: (e.get("date", ""), e.get("time", "")))
+    # Catégories à part (hors du fil principal) : sans ces pages, aucune
+    # page de liste ne liait leurs fiches e/
+    side = sorted((e for e in events if e.get("date", "") >= today.isoformat() and e.get("kind")
+                   and re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")),
+                  key=lambda e: (e.get("date", ""), e.get("time", "")))
+    theses = [e for e in side if e["kind"] == "soutenance"]
+    careers = [e for e in side if e["kind"] == "carriere"]
     week_end = (today + timedelta(days=6)).isoformat()
     # Le dimanche, « ce week-end » = aujourd'hui (comme le site)
     sat = today + timedelta(days=(5 - today.weekday()) % 7) if today.weekday() != 6 else today - timedelta(days=1)
@@ -5789,6 +5816,17 @@ def write_selection_pages(events):
          f"{len(english)} upcoming talks, lectures and seminars in English in Paris: {orgs(english)}… "
          f"Updated every day.",
          f"Lectures, seminars and meetups given in English. Main organisers: {orgs(english)}.", "en"),
+        ("soutenances-de-these", "Soutenances de thèse à Paris", theses, "/?soutenances=1",
+         "Soutenances de thèse et d'HDR à Paris : l'agenda · Lotent",
+         f"{len(theses)} soutenances de thèse et d'HDR à venir à Paris, ouvertes au public : "
+         f"{orgs(theses)}… Agenda mis à jour chaque jour.",
+         f"Soutenances de thèse et d'habilitation, en général ouvertes au public. Établissements : {orgs(theses)}."
+         if theses else "", "fr"),
+        ("carrieres", "Événements carrières à Paris", careers, "/?carrieres=1",
+         "Forums, afterworks et événements de recrutement à Paris · Lotent",
+         f"{len(careers)} événements carrières à Paris pour étudiants et jeunes diplômés : forums, "
+         f"afterworks et présentations d'entreprises ({orgs(careers)}…).",
+         f"Forums, afterworks et présentations de recruteurs. Entreprises : {orgs(careers)}." if careers else "", "fr"),
     ]
     written = set()
     for slug, name, evts, target, title, desc, intro, lang in pages:
@@ -5798,7 +5836,7 @@ def write_selection_pages(events):
         page = _hub_page(kicker="Sélection" if lang == "fr" else "Selection", name=name, path=path,
                          n=len(evts), color="#6366F1", evts=evts, target=target, intro=intro,
                          chips_title="Voir aussi" if lang == "fr" else "See also", chips=chips,
-                         lang=lang, title=title, desc=desc, limit=120, show_inst=True)
+                         lang=lang, title=title, desc=desc, limit=400, show_inst=True)
         (SEL_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
         written.add(f"{slug}.html")
     for f in SEL_PAGES_DIR.glob("*.html"):
@@ -6287,6 +6325,11 @@ def finalize_events(events):
         reclassify(e)
         if _SOUTENANCE.search(e.get("title", "")):
             e["kind"] = "soutenance"
+        # Prix non indiqué chez un établissement aux conférences gratuites :
+        # « Gratuit », pour que le filtre du site, la page s/gratuites, le
+        # badge « Entrée libre » et le JSON-LD disent tous la même chose
+        if _free_likely(e):
+            e["price"] = e.get("price") or "Gratuit"
         if _MEMBERS_ONLY.search(f"{e.get('title', '')} {e.get('description', '')}"):
             e["members"] = True
     return events
