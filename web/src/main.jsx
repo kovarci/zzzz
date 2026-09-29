@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
 import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
-import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
+import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
 const PAGE = 48;
@@ -20,13 +20,13 @@ function Cover({ e, className = "", eager, label = true }) {
   const pos = className.split(" ").includes("absolute") ? "" : "relative";
   const { t, kindName } = useI18n();
   const badge = <div className="absolute top-2.5 left-2.5 z-[1] flex flex-wrap gap-1.5">
-    <Badge className="bg-background/90 text-foreground backdrop-blur border-0 shadow-sm">{kindName(kindOf(e))}</Badge>
-    {isMembers(e) && <Badge className="bg-background/90 text-foreground backdrop-blur border-0 shadow-sm" title={t("access_members_hint")}>🔒 {t("badge_members")}</Badge>}</div>;
+    <Badge className="bg-background/95 text-foreground border-0 shadow-sm">{kindName(kindOf(e))}</Badge>
+    {isMembers(e) && <Badge className="bg-background/95 text-foreground border-0 shadow-sm" title={t("access_members_hint")}>🔒 {t("badge_members")}</Badge>}</div>;
   if (e.image && !broken) return <div className={cn(pos, "overflow-hidden bg-muted", className)}>
     <img src={thumb(e.image)} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => setBroken(true)} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
   return <div className={cn(pos, "overflow-hidden flex items-end p-4 text-white", className)} style={{ background: `linear-gradient(135deg, ${dc(e)}, color-mix(in srgb, ${dc(e)} 55%, #000))` }}>
-    <DotPattern className="[mask-image:radial-gradient(ellipse_at_top_right,#000,transparent_70%)]" />{badge}
-    {label && <div className="relative font-semibold text-lg leading-tight tracking-tight [text-wrap:balance] drop-shadow line-clamp-3">{e.institution}</div>}</div>;
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 [background-image:radial-gradient(rgba(255,255,255,.3)_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_at_top_right,#000,transparent_70%)]" />{badge}
+    {label && <div className="relative font-semibold text-lg leading-tight tracking-tight [text-wrap:balance] [text-shadow:0_1px_6px_rgba(0,0,0,.35)] line-clamp-3">{e.institution}</div>}</div>;
 }
 // Titre = vrai lien vers la fiche e/<id>.html : Google suit ces liens depuis
 // l'accueil (il n'en trouvait aucun), et Ctrl/⌘-clic ou clic molette ouvre la
@@ -37,7 +37,7 @@ const openIn = (e, onOpen) => ev => {
   if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
   ev.preventDefault(); onOpen(e);
 };
-function EventCard({ e, fav, onFav, onOpen, distance, past }) {
+const EventCard = React.memo(function EventCard({ e, fav, onFav, onOpen, distance, past }) {
   const { t, discName } = useI18n();
   const act = () => onOpen(e);
   // Le titre est le bouton de la carte (Tab puis Entrée) et sa zone cliquable
@@ -45,7 +45,7 @@ function EventCard({ e, fav, onFav, onOpen, distance, past }) {
   // « bouton » carte, que les lecteurs d'écran annonçaient mal.
   return <div onClick={act} className={cn("group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card shadow-sm cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring", past && "opacity-80")}>
     {/* L'étoile n'apparaît qu'au survol… sauf sur écran tactile (pas de survol) et au clavier */}
-    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/80 backdrop-blur transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
+    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow-sm transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
     <Cover e={e} className="aspect-[16/10]" />
     <div className="p-4 flex flex-col gap-1.5 flex-1">
       <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {discName(e.discipline)}</span>
@@ -54,7 +54,7 @@ function EventCard({ e, fav, onFav, onOpen, distance, past }) {
       {e.speaker && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
       <p className="mt-auto pt-2 text-xs text-muted-foreground truncate">{isOnline(e) && (t("online_prefix") || "")}{e.institution}{placeOf(e) ? " · " + placeOf(e) : ""}</p>
     </div></div>;
-}
+});
 
 /* ═════════════════════ Fiche : événements liés ═════════════════════ */
 // Même règle que _series_key() dans scraper/scrape.py : titre sans le numéro
@@ -581,12 +581,15 @@ function App() {
   const tonight = UPc.filter(e => e.date === TODAY && (e.time || "") >= "17:30");
   const days7 = useMemo(() => [...Array(7)].map((_, i) => { const d = addDays(today, i), k = iso(d); return { k, d, n: UPc.filter(e => e.date === k).length }; }), [UPc]);
   const max7 = Math.max(1, ...days7.map(x => x.n));
+  const perDay = useMemo(() => { const c = {}; filtered.forEach(e => { c[e.date] = (c[e.date] || 0) + 1; }); return c; }, [filtered]);
   const groups = useMemo(() => { const g = []; filtered.slice(0, shown).forEach(e => { if (!g.length || g[g.length - 1].date !== e.date) g.push({ date: e.date, items: [] }); g[g.length - 1].items.push(e); }); return g; }, [filtered, shown]);
   const histMonths = useMemo(() => [...new Set((archive || []).map(e => e.date.slice(0, 7)))].sort().reverse(), [archive]);
   const activeTags = [...[...filters.disc].map(v => [discName(v), () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.free ? [[t("badge_free"), () => setF({ free: false })]] : []), ...(filters.en ? [[t("filter_en"), () => setF({ en: false })]] : []), ...[...filters.cat].map(k => [`${SIDE_KINDS[k].icon} ${t(SIDE_KINDS[k].label)}`, () => toggleIn("cat")(k)])];
 
   /* actions */
-  const onFav = id => { toggleFav(id); notify(favs.has(id) ? t("toast_fav_removed") : t("toast_fav_added")); };
+  const onFavRef = useRef();
+  onFavRef.current = id => { toggleFav(id); notify(favs.has(id) ? t("toast_fav_removed") : t("toast_fav_added")); };
+  const onFav = useCallback(id => onFavRef.current(id), []);
   const toggleNear = () => {
     if (near) { setNear(false); return; }
     if (userPos) { setNear(true); return; }
@@ -603,6 +606,7 @@ function App() {
   if (loadErr) return <div className="mx-auto max-w-lg p-10 text-center"><p className="font-semibold">{t("empty_generic_title")}</p><p className="text-sm text-muted-foreground mt-1">{loadErr}</p></div>;
 
   return <>
+    <Ambient />
     <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-4">
         <a href="/" className="flex shrink-0 items-center gap-2 font-semibold tracking-tight"><img src="icon.svg" alt="" width="28" height="28" className="h-7 w-7 rounded-md" /><span>Lotent</span></a>
@@ -654,7 +658,7 @@ function App() {
       </>}
 
       <div ref={agendaRef} className="scroll-mt-14" />
-      <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-background/80 backdrop-blur border-b">
+      <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-background/80 backdrop-blur border-b [box-shadow:0_0_0_100vmax_hsl(var(--background)/.8)] [clip-path:inset(0_-100vmax)]">
         <div className="flex items-center gap-2">
           {history
             ? <div className="flex min-w-0 flex-wrap items-center gap-2"><Badge variant="solid" className="h-9 px-3 text-sm">{t("history_badge")}</Badge><select value={histMonth} onChange={e => setHistMonth(e.target.value)} className="h-9 rounded-md border bg-background px-2 text-sm"><option value="all">{t("history_all_period")}</option>{histMonths.map(m => <option key={m} value={m}>{MO[+m.slice(5, 7) - 1]} {m.slice(0, 4)}</option>)}</select><Button variant="outline" size="sm" className="h-9" onClick={toggleHistory}>{t("history_back")}</Button></div>
@@ -700,7 +704,7 @@ function App() {
         {events && view === "map" && !history && <MapView events={filtered} onOpen={setOpen} userPos={userPos} />}
         {events && (view === "list" || history) && (near && userPos
           ? <div className="pt-6"><p className="text-sm text-muted-foreground mb-2 px-2">{t("sorted_by_distance")}</p><HoverEffect items={filtered.slice(0, shown)} render={e => <EventCard e={e} fav={favs.has(e.id)} onFav={onFav} onOpen={setOpen} distance={e._d} />} /></div>
-          : groups.map(g => { const d = parse(g.date), n = filtered.filter(x => x.date === g.date).length; return <section key={g.date} data-date={g.date} className="pt-8 scroll-mt-32">
+          : groups.map(g => { const d = parse(g.date), n = perDay[g.date]; return <section key={g.date} data-date={g.date} className="pt-8 scroll-mt-32 [content-visibility:auto] [contain-intrinsic-size:auto_900px]">
             <div className="flex items-baseline gap-3 mb-2 px-2"><h2 className="text-xl font-semibold tracking-tight first-letter:uppercase">{fmtDay(g.date)}{d.getFullYear() !== today.getFullYear() ? " " + d.getFullYear() : ""}</h2>{relDay(g.date, TODAY, TOMORROW) && <Badge variant="solid">{relDay(g.date, TODAY, TOMORROW)}</Badge>}<span className="ml-auto text-sm text-muted-foreground tabular-nums">{n}</span></div>
             <HoverEffect items={g.items} render={e => <EventCard e={e} fav={favs.has(e.id)} onFav={onFav} onOpen={setOpen} past={history} />} />
           </section>; }))}

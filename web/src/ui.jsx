@@ -2,7 +2,7 @@
    (ui.aceternity.com) et primitives façon shadcn/ui. Aucune logique métier. */
 import React, { useState, useEffect, useLayoutEffect, useRef, useMemo } from "react";
 import { createPortal } from "react-dom";
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useInView, useAnimationFrame } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useInView } from "framer-motion";
 import { cn } from "./lib.js";
 
 /* ═══════════════════ Accessibilité ═══════════════════ */
@@ -84,8 +84,14 @@ export function BlurFade({ children, className, delay = 0, inView = true, yOffse
 }
 // magicui.design/docs/components/border-beam
 export function BorderBeam({ size = 200, duration = 15, colorFrom = "#ffaa40", colorTo = "#9c40ff", delay = 0 }) {
-  return <div style={{ "--size": size, "--duration": duration, "--color-from": colorFrom, "--color-to": colorTo, "--delay": `-${delay}s` }}
-    className="pointer-events-none absolute inset-0 rounded-[inherit] [border:1px_solid_transparent] ![mask-clip:padding-box,border-box] ![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)] after:absolute after:aspect-square after:w-[calc(var(--size)*1px)] after:animate-border-beam after:[animation-delay:var(--delay)] after:[background:linear-gradient(to_left,var(--color-from),var(--color-to),transparent)] after:[offset-anchor:90%_50%] after:[offset-path:rect(0_auto_auto_0_round_calc(var(--size)*1px))]" />;
+  // Même comète que Magic UI, mais un dégradé conique qui tourne sous un
+  // masque « anneau » : l'animation offset-path d'origine se recalculait dans
+  // le fil principal à chaque image et forçait le navigateur à redécouper
+  // toute la page en calques (~200 ms par seconde, au repos).
+  const arc = Math.max(12, Math.min(60, size / 3));
+  return <div aria-hidden="true" className="beam pointer-events-none absolute inset-0 rounded-[inherit]"
+    style={{ "--beam-from": colorFrom, "--beam-to": colorTo, "--beam-dur": `${duration}s`, "--beam-delay": `-${delay}s`, "--beam-arc": `${arc}deg` }}>
+    <span className="beam-rot" /></div>;
 }
 // magicui.design/docs/components/dot-pattern
 export function DotPattern({ width = 16, height = 16, cr = 1, className }) {
@@ -132,43 +138,50 @@ export const DockSep = () => <span className="w-px h-6 bg-border mx-0.5 self-cen
 
 /* ═══════════════════ Aceternity ═══════════════════ */
 // ui.aceternity.com/components/card-hover-effect
-export function HoverEffect({ items, render, className, layoutId = "hoverBackground" }) {
-  const [hovered, setHovered] = useState(null);
+// Fond « aurore » du mode sombre (l'ancien site l'avait ; la refonte React
+// l'avait perdu : le sombre n'était plus qu'un aplat). Taches de couleur en
+// dégradés radiaux — pas de filter: blur(110px), qui coûtait cher à chaque
+// image — qui dérivent lentement, plus un halo qui suit la souris. Tout passe
+// par transform (compositeur, sans relayout) ; la position de la souris est
+// lue au plus une fois par image. Rien en mode clair, ni avec « réduire les
+// animations » ; sur écran tactile, pas de suivi.
+export function Ambient() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !matchMedia("(hover: hover) and (pointer: fine)").matches
+        || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let x = innerWidth / 2, y = innerHeight / 3, raf = 0;
+    const apply = () => { raf = 0; el.style.setProperty("--mx", x + "px"); el.style.setProperty("--my", y + "px");
+      el.style.setProperty("--px", ((x / innerWidth) - .5).toFixed(3)); el.style.setProperty("--py", ((y / innerHeight) - .5).toFixed(3)); };
+    const move = e => { x = e.clientX; y = e.clientY; if (!raf) raf = requestAnimationFrame(apply); };
+    addEventListener("pointermove", move, { passive: true });
+    apply();
+    return () => { removeEventListener("pointermove", move); cancelAnimationFrame(raf); };
+  }, []);
+  return <div ref={ref} aria-hidden="true" className="ambient pointer-events-none fixed inset-0 -z-10 overflow-hidden hidden dark:block">
+    <div className="ambient-par"><span className="blob b1" /><span className="blob b2" /><span className="blob b3" /><span className="blob b4" /></div>
+    <span className="ambient-spot" />
+  </div>;
+}
+
+export function HoverEffect({ items, render, className }) {
   return <div className={cn("grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4", className)}>
-    {items.map((it, idx) => <div key={it.id} className="relative group block p-2 h-full w-full" onMouseEnter={() => setHovered(idx)} onMouseLeave={() => setHovered(null)}>
-      <AnimatePresence>{hovered === idx && <motion.span layoutId={layoutId} className="absolute inset-0 h-full w-full bg-accent block rounded-2xl"
-        initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.15 } }} exit={{ opacity: 0, transition: { duration: 0.15, delay: 0.2 } }} />}</AnimatePresence>
+    {items.map(it => <div key={it.id} className="relative group/hover block p-2 h-full w-full">
+      <span aria-hidden="true" className="absolute inset-0 h-full w-full bg-accent block rounded-2xl opacity-0 scale-[.97] transition duration-200 group-hover/hover:opacity-100 group-hover/hover:scale-100 [@media(hover:none)]:hidden" />
       <div className="relative z-20 h-full">{render(it)}</div>
     </div>)}
   </div>;
 }
-// ui.aceternity.com/components/moving-border
+// ui.aceternity.com/components/moving-border — la lumière qui fait le tour du
+// bouton est un dégradé conique en rotation (compositeur) : l'original
+// appelait getTotalLength / getPointAtLength à chaque image (~200 ms/s).
 export function MovingBorderButton({ children, onClick, href, duration = 3000, className }) {
   const Tag = href ? "a" : "button";
   return <Tag href={href} onClick={onClick} className={cn("relative h-11 w-auto overflow-hidden bg-transparent p-[1px] text-sm rounded-[1.75rem] inline-flex", className)}>
-    <div className="absolute inset-0 rounded-[1.75rem]"><MovingBorder duration={duration} rx="30%" ry="30%"><div className="h-20 w-20 bg-[radial-gradient(#3B82F6_40%,transparent_60%)] opacity-[0.8]" /></MovingBorder></div>
-    <div className="relative flex h-full w-full items-center justify-center border border-border bg-background/90 backdrop-blur-xl px-6 font-medium rounded-[1.75rem] antialiased">{children}</div>
+    <div aria-hidden="true" className="beam-fill absolute inset-0 rounded-[1.75rem] overflow-hidden" style={{ "--beam-dur": `${duration / 1000}s`, "--beam-from": "#3B82F6", "--beam-to": "#8B5CF6", "--beam-arc": "50deg" }}><span className="beam-rot" /></div>
+    <div className="relative flex h-full w-full items-center justify-center border border-border bg-background px-6 font-medium rounded-[1.75rem] antialiased">{children}</div>
   </Tag>;
-}
-// getTotalLength / getPointAtLength lèvent une exception quand le rect n'est
-// pas rendu : géométrie nulle au tout premier rendu, ou bouton masqué
-// (`hidden sm:inline-flex` sur téléphone). Levée dans la boucle d'animation de
-// framer-motion, elle arrêtait TOUTES les animations de la page — sur mobile,
-// le haut de page (titre, boutons, compteurs) restait invisible.
-function totalLength(el) { try { return el?.getTotalLength() || 0; } catch { return 0; } }
-function pointAt(el, v) {
-  try { const len = totalLength(el); if (!len) return { x: 0, y: 0 }; return el.getPointAtLength(v % len); } catch { return { x: 0, y: 0 }; }
-}
-function MovingBorder({ children, duration, rx, ry }) {
-  const pathRef = useRef(null); const progress = useMotionValue(0);
-  useAnimationFrame(time => { const len = totalLength(pathRef.current); if (len) progress.set((time * (len / duration)) % len); });
-  const x = useTransform(progress, v => pointAt(pathRef.current, v).x);
-  const y = useTransform(progress, v => pointAt(pathRef.current, v).y);
-  const transform = useTransform([x, y], ([a, b]) => `translateX(${a}px) translateY(${b}px) translateX(-50%) translateY(-50%)`);
-  return <>
-    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="absolute h-full w-full" width="100%" height="100%"><rect fill="none" width="100%" height="100%" rx={rx} ry={ry} ref={pathRef} /></svg>
-    <motion.div style={{ position: "absolute", top: 0, left: 0, display: "inline-block", transform }}>{children}</motion.div>
-  </>;
 }
 // ui.aceternity.com/components/spotlight (fond sombre uniquement, cf. app.css .spot)
 export function Spotlight({ className, fill = "white" }) {

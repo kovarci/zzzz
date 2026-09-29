@@ -77,3 +77,38 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
 }
+
+/* ── Fond « aurore » du mode sombre (composant Ambient, ui.jsx) ───────── */
+.ambient { --mx: 50vw; --my: 33vh; --px: 0; --py: 0; }
+.ambient-par { position: absolute; inset: -10%; transform: translate3d(calc(var(--px) * -40px), calc(var(--py) * -40px), 0); transition: transform 1.2s cubic-bezier(.2, .8, .2, 1); }
+.ambient .blob { position: absolute; border-radius: 50%; opacity: .5; will-change: transform; }
+.ambient .b1 { width: 55vw; height: 55vw; top: -18vw; left: -12vw; background: radial-gradient(closest-side, rgba(109, 40, 217, .55), transparent); animation: amb1 26s ease-in-out infinite; }
+.ambient .b2 { width: 48vw; height: 48vw; top: 14vw; right: -16vw; background: radial-gradient(closest-side, rgba(29, 78, 216, .5), transparent); animation: amb2 32s ease-in-out infinite; }
+.ambient .b3 { width: 46vw; height: 46vw; bottom: -20vw; left: 18vw; background: radial-gradient(closest-side, rgba(190, 24, 93, .42), transparent); animation: amb3 29s ease-in-out infinite; }
+.ambient .b4 { width: 36vw; height: 36vw; top: 38vw; left: 40vw; background: radial-gradient(closest-side, rgba(14, 116, 144, .45), transparent); animation: amb1 35s ease-in-out infinite reverse; }
+.ambient-spot { position: absolute; left: 0; top: 0; width: 640px; height: 640px; margin: -320px 0 0 -320px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(139, 92, 246, .16), rgba(59, 130, 246, .06) 55%, transparent);
+  transform: translate3d(var(--mx), var(--my), 0); transition: transform .35s ease-out; will-change: transform; }
+@keyframes amb1 { 0%, 100% { transform: translate3d(0, 0, 0) scale(1) } 50% { transform: translate3d(8vw, 6vw, 0) scale(1.15) } }
+@keyframes amb2 { 0%, 100% { transform: translate3d(0, 0, 0) scale(1) } 50% { transform: translate3d(-7vw, 9vw, 0) scale(1.1) } }
+@keyframes amb3 { 0%, 100% { transform: translate3d(0, 0, 0) scale(1) } 50% { transform: translate3d(6vw, -8vw, 0) scale(1.2) } }
+/* Mode Historique : les mêmes taches, en ambre */
+:root.history-mode .ambient .b1 { background: radial-gradient(closest-side, rgba(146, 64, 14, .5), transparent); }
+:root.history-mode .ambient .b2 { background: radial-gradient(closest-side, rgba(113, 63, 18, .45), transparent); }
+:root.history-mode .ambient .b3 { background: radial-gradient(closest-side, rgba(124, 45, 18, .4), transparent); }
+:root.history-mode .ambient-spot { background: radial-gradient(closest-side, rgba(245, 158, 11, .12), transparent); }
+@media (prefers-reduced-motion: reduce) { .ambient .blob { animation: none; } .ambient-spot { display: none; } }
+
+/* ── Bordures animées (BorderBeam, MovingBorderButton — ui.jsx) ────────
+   Un carré à dégradé conique tourne (transform : animé par le compositeur,
+   sans redessiner la page) ; .beam ne laisse voir que l'anneau de 1 px. */
+.beam { padding: 1px; overflow: hidden;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; }
+.beam-rot { position: absolute; left: 50%; top: 50%; width: max(130%, 160px); aspect-ratio: 1; translate: -50% -50%;
+  background: conic-gradient(from 0deg, transparent 0deg, transparent calc(360deg - var(--beam-arc, 40deg)),
+    var(--beam-to) calc(360deg - var(--beam-arc, 40deg) * .5), var(--beam-from) 360deg);
+  animation: beam-spin var(--beam-dur, 8s) linear infinite; animation-delay: var(--beam-delay, 0s); will-change: transform; }
+.beam-fill .beam-rot { width: max(160%, 220px); opacity: .9; }
+@keyframes beam-spin { to { transform: rotate(1turn); } }
+@media (prefers-reduced-motion: reduce) { .beam-rot { animation: none; } }
