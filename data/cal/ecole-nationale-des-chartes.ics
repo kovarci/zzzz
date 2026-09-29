@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:42753503e5c8@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20260929T140000
 DTEND;TZID=Europe/Paris:20260929T180000
 SUMMARY:Découvrez Wikipédia en compagnie des licornes du musée de Cluny 
@@ -38,7 +38,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/decouvrez-wikipedia
 END:VEVENT
 BEGIN:VEVENT
 UID:eecab44c67df@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261001T180000
 DTEND;TZID=Europe/Paris:20261001T193000
 SUMMARY:Incarner l’alliance franco-russe
@@ -50,7 +50,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/incarner-lalliance-
 END:VEVENT
 BEGIN:VEVENT
 UID:77e3d03e30ce@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261006T093000
 DTEND;TZID=Europe/Paris:20261006T170000
 SUMMARY:Philosophie et théologie au XII e siècle. Recherches récentes
@@ -63,7 +63,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/philosophie-et-theo
 END:VEVENT
 BEGIN:VEVENT
 UID:bea91ae836db@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261006T180000
 DTEND;TZID=Europe/Paris:20261006T193000
 SUMMARY:Sous les toits des cathédrales
@@ -74,8 +74,46 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/sous-les-toits-des-
  cathedrales
 END:VEVENT
 BEGIN:VEVENT
+UID:ae5765fdbfc4@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;TZID=Europe/Paris:20261006T181500
+DTEND;TZID=Europe/Paris:20261006T193000
+SUMMARY:Trésors de Richelieu (2026-2027)
+DESCRIPTION:Conférence\nhttps://www.chartes.psl.eu/gazette-chartiste/agend
+ a/tresors-de-richelieu-2026-2027
+LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
+URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/tresors-de-richelie
+ u-2026-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:a40e54654e24@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;TZID=Europe/Paris:20261006T181500
+DTEND;TZID=Europe/Paris:20261006T193000
+SUMMARY:Gaetano Donizetti\, Concertino pour cor anglais et orchestre (conf
+ érence-concert)
+DESCRIPTION:https://www.chartes.psl.eu/gazette-chartiste/agenda/tresors-de-
+ richelieu-2026-2027/gaetano-donizetti-concertino-pour-cor-anglais-et
+LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
+URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/tresors-de-richelie
+ u-2026-2027/gaetano-donizetti-concertino-pour-cor-anglais-et
+END:VEVENT
+BEGIN:VEVENT
+UID:1bbc030f3558@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:29 e Rendez-vous de l’histoire s ur le thème de « Les marchands
+  »
+DESCRIPTION:Festival\, salon\nhttps://www.chartes.psl.eu/gazette-chartiste/
+ agenda/29e-rendez-vous-de-lhistoire-sur-le-theme-de-les-marchands
+LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
+URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/29e-rendez-vous-de-
+ lhistoire-sur-le-theme-de-les-marchands
+END:VEVENT
+BEGIN:VEVENT
 UID:300d5d9f2f69@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261015T180000
 DTEND;TZID=Europe/Paris:20261015T193000
 SUMMARY:Collectionner au temps de l’Encyclopédie : une curiosité univer
@@ -88,7 +126,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/collectionner-au-te
 END:VEVENT
 BEGIN:VEVENT
 UID:9a44e4dda58f@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261020T180000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:Les sources sur le patrimoine aux Archives nationales
@@ -100,7 +138,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/lier-les-donnees-du
 END:VEVENT
 BEGIN:VEVENT
 UID:72cc9aa84310@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261109T180000
 DTEND;TZID=Europe/Paris:20261109T193000
 SUMMARY:De Jérusalem au Sinaï : les graffitis occidentaux des XIV e - XVI
@@ -113,7 +151,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/de-jerusalem-au-sin
 END:VEVENT
 BEGIN:VEVENT
 UID:ddbd13580338@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261113T084500
 DTEND;TZID=Europe/Paris:20261113T163000
 SUMMARY:Le secrétariat général du Gouvernement
@@ -125,7 +163,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/le-secretariat-gene
 END:VEVENT
 BEGIN:VEVENT
 UID:f22da0e4cd7f@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261116T180000
 DTEND;TZID=Europe/Paris:20261116T193000
 SUMMARY:Archive ou archives ? Les effets d’un néologisme philosophique
@@ -137,7 +175,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/archive-ou-archives
 END:VEVENT
 BEGIN:VEVENT
 UID:11edb28b5015@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T193000
 SUMMARY:La constitution des archives françaises de la photographie
@@ -146,5 +184,29 @@ DESCRIPTION:Conférence\nhttps://www.chartes.psl.eu/gazette-chartiste/agend
 LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
 URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/la-constitution-des
  -archives-francaises-de-la-photographie
+END:VEVENT
+BEGIN:VEVENT
+UID:794cb5b0b60d@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;TZID=Europe/Paris:20261127T090000
+DTEND;TZID=Europe/Paris:20261127T173000
+SUMMARY:Journée de formation aux outils de la recherche sur le XVI e sièc
+ le
+DESCRIPTION:Formation\nhttps://www.chartes.psl.eu/gazette-chartiste/agenda/
+ journee-de-formation-aux-outils-de-la-recherche-sur-le-xvie-siecle
+LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
+URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/journee-de-formatio
+ n-aux-outils-de-la-recherche-sur-le-xvie-siecle
+END:VEVENT
+BEGIN:VEVENT
+UID:5b4a93cf215e@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;TZID=Europe/Paris:20261210T180000
+DTEND;TZID=Europe/Paris:20261210T193000
+SUMMARY:Images de sciences
+DESCRIPTION:Conférence\nhttps://www.chartes.psl.eu/gazette-chartiste/agend
+ a/images-de-sciences
+LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
+URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/images-de-sciences
 END:VEVENT
 END:VCALENDAR

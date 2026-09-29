@@ -24,8 +24,22 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:19c5970168dd@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;TZID=Europe/Paris:20261001T130000
+DTEND;TZID=Europe/Paris:20261001T140000
+SUMMARY:Conférence "Les défauts du diamant : une fenêtre quantique sur l
+ a matière" par Jean-François Roch
+DESCRIPTION:Scientifique\nhttps://www.ens-paris-saclay.fr/agenda/conference
+ -les-defauts-du-diamant-une-fenetre-quantique-sur-la-matiere-par-jean-fran
+ cois
+LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
+URL:https://www.ens-paris-saclay.fr/agenda/conference-les-defauts-du-diaman
+ t-une-fenetre-quantique-sur-la-matiere-par-jean-francois
+END:VEVENT
+BEGIN:VEVENT
 UID:73a2726cb500@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261020T183000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:Conférence du diplôme sur les enquêtes Trajectoires et Origines 
@@ -38,7 +52,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-les-en
 END:VEVENT
 BEGIN:VEVENT
 UID:7a6329099f63@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261106T093000
 DTEND;TZID=Europe/Paris:20261106T180000
 SUMMARY:Colloque inter-ENS « Accéder à l’enseignement supérieur : une

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0f1b16416d34@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261010T100000
 DTEND;TZID=Europe/Paris:20261010T153000
 SUMMARY:Festival Pop & Psy - à l'occasion de la journée de la santé ment
@@ -40,7 +40,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001otrG
 END:VEVENT
 BEGIN:VEVENT
 UID:ee454c2e4d8a@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261012T063000
 DTEND;TZID=Europe/Paris:20261012T080000
 SUMMARY:WEBINAIRE LINKEDIN : DEVELOPPER SON RESEAU PRO
@@ -54,8 +54,23 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXdu
  Y&id=a1NIV00000BSSuH&base=base6
 END:VEVENT
 BEGIN:VEVENT
+UID:cdbef013eb86@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;TZID=Europe/Paris:20261012T180000
+DTEND;TZID=Europe/Paris:20261012T193000
+SUMMARY:Webinaire : rencontre de Valérie Seguy\, marraine DEMA1N+STEM
+DESCRIPTION:✨ Une rencontre à ne pas manquer ! Viens échanger avec notr
+ e marraine\, Valérie Seguy du programme de mentorat STEM 💜 Au programm
+ e : son parcours\, ses déclics\, les coulisses de sa carrière et 5 conse
+ ils pour oser saisir les opportunités 🚀\nhttps://article1.my.salesforc
+ e-sites.com/AG_VFP_Quiz?cid=701IV00001qH9lE&id=a1NIV00000Bwhr3&base=base6
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qH9l
+ E&id=a1NIV00000Bwhr3&base=base6
+END:VEVENT
+BEGIN:VEVENT
 UID:f8ae1b7ffcd2@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261014T183000
 DTEND;TZID=Europe/Paris:20261014T223000
 SUMMARY:Apéro de rentrée 🎉
@@ -69,7 +84,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWD
 END:VEVENT
 BEGIN:VEVENT
 UID:0f3b6adaff8a@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261021T140000
 DTEND;TZID=Europe/Paris:20261021T170000
 SUMMARY:🚀 Challenge ton futur ! - avec Allianz
@@ -84,7 +99,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8v
 END:VEVENT
 BEGIN:VEVENT
 UID:f5e606b1c9e0@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:Webinaire Admissions HEC

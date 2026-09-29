@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0ccc7d9a7043@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:[Fête de la science 2026] Manipuler\, imaginer\, comprendre à Min
@@ -40,8 +40,23 @@ URL:https://www.minesparis.psl.eu/blog/evenements/fete-de-la-science-2026-m
  anipuler-imaginer-comprendre-a-mines-paris-psl/
 END:VEVENT
 BEGIN:VEVENT
+UID:687547607ffa@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:[Webinaire TTI.5] Électrification des transports : technologie\, i
+ ndustrie et souveraineté
+DESCRIPTION:The Transition Institute 1.5 vous invite à son 19ème webinair
+ e le 15 octobre prochain.\nhttps://www.minesparis.psl.eu/blog/evenements/w
+ ebinaire-tti-5-electrification-des-transports-technologie-industrie-et-sou
+ verainete/
+LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
+URL:https://www.minesparis.psl.eu/blog/evenements/webinaire-tti-5-electrifi
+ cation-des-transports-technologie-industrie-et-souverainete/
+END:VEVENT
+BEGIN:VEVENT
 UID:ab2084fccb88@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:[Workshop] Electrification des usages
@@ -54,8 +69,24 @@ URL:https://www.minesparis.psl.eu/blog/evenements/workshop-electrification-
  des-usages/
 END:VEVENT
 BEGIN:VEVENT
+UID:b28193492cb1@paris-academique
+DTSTAMP:20260929T171911Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:[Conférence] Bâtiments\, infrastructures : comment la recherche s
+ cientifique peut-elle nous éclairer ?
+DESCRIPTION:La chaire Lab Recherche Environnement portée par le Centre Én
+ ergie\, Environnement\, Procédés (CEEP) de Mines Paris – PSL et Vinci\
+ , vous invite à sa pro...\nhttps://www.minesparis.psl.eu/blog/evenements/
+ conference-batiments-infrastructures-comment-la-recherche-scientifique-peu
+ t-elle-nous-eclairer/
+LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
+URL:https://www.minesparis.psl.eu/blog/evenements/conference-batiments-infr
+ astructures-comment-la-recherche-scientifique-peut-elle-nous-eclairer/
+END:VEVENT
+BEGIN:VEVENT
 UID:c4012016e898@paris-academique
-DTSTAMP:20260929T102730Z
+DTSTAMP:20260929T171911Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:[SECRE 2027] Colloque Situations Extrêmes\, Crise et Résilience
