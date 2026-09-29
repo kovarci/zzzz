@@ -10,6 +10,7 @@ Sources:
 All HTML sources are scraped page-by-page (?page=N) until no new events appear.
 """
 
+import collections
 import json
 import hashlib
 import os
@@ -5176,6 +5177,18 @@ def _is_free(ev):
     return p == "0" or bool(re.search(r"gratuit|free", p, re.I))
 
 
+def _speaker_links(speaker_html, slugs):
+    """« Aurèle Méthivier &amp; Sandra Boehringer » : chaque nom qui a sa page
+    p/<slug>.html devient un lien (texte déjà échappé)."""
+    out = speaker_html
+    for name in _person_names(html_unescape(speaker_html)):
+        slug = slugify(name)
+        esc = _esc_attr(name)
+        if slug in slugs and esc in out:
+            out = out.replace(esc, f'<a href="{SITE_URL}/p/{slug}.html">{esc}</a>', 1)
+    return out
+
+
 def write_event_pages(events):
     """One small static page per event (e/<id>.html): Open Graph tags for a
     proper link preview on WhatsApp/Discord/Twitter, plus REAL visible content
@@ -5210,6 +5223,7 @@ def write_event_pages(events):
         return f'<ul class="{cls}">{items}</ul>' if items else ""
 
     from collections import Counter
+    speaker_slugs = set(_speaker_groups(events))
     same_day = Counter(((e.get("title") or "").strip().lower(), e.get("date", ""))
                        for e in {e.get("id"): e for e in events}.values())
     keep = set()
@@ -5430,7 +5444,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 <div class="badges">{disc_html}<span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if _is_free(ev) else ''}</div>
 <h1>{title}</h1>
 <div class="date"><div class="d"><small>{_wds(ev.get('date',''))}</small><b>{_dnum(ev.get('date',''))}</b><small>{_mos(ev.get('date',''))}</small></div><div class="t">{_esc_attr(date_label)}<span>{loc or 'Paris'}</span></div></div>
-<dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{speaker}</dd>' if speaker else ''}</dl>
+<dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{_speaker_links(speaker, speaker_slugs)}</dd>' if speaker else ''}</dl>
 {f'<p class="desc">{body_desc}</p>' if body_desc and len(body_desc) > 40 and body_desc != speaker else ''}
 {f'<p class="desc">{series_note}</p>' if series_note else ''}
 <p class="desc about">{about}</p>
@@ -5545,12 +5559,12 @@ SELECTIONS = [("s/cette-semaine.html", "Cette semaine"), ("s/ce-week-end.html", 
               ("s/talks-in-english.html", "Talks in English"),
               ("s/soutenances-de-these.html", "Soutenances de thèse"),
               ("s/carrieres.html", "Événements carrières"),
-              ("s/salons-etudiants.html", "Salons étudiants")]
+              ("s/salons-etudiants.html", "Salons étudiants"), ("p/", "Intervenants")]
 
 
 def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=None,
               intro="", chips_title="", chips=(), lang="fr", title=None, desc=None,
-              limit=800, show_inst=None):
+              limit=800, show_inst=None, past=(), index=None, extra_ld=None, past_title="Conférences passées", count_html=None):
     """Page « hub » (i/<slug>.html par institution, d/<slug>.html par
     discipline) : même charte que les pages événement e/*.html — Geist, clair
     / sombre, carte — avec la liste des prochaines conférences (liens vers
@@ -5590,9 +5604,22 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
     more = (f'<p class="more"><a href="{target}" rel="nofollow">{T["more"]}</a></p>'
             if len(evts) > limit else "")
     events_html = (f'<h2>{T["upcoming"]}</h2><ul class="rel">{"".join(items)}</ul>{more}' if items else
-                   f'<p class="empty">{T["empty"]}</p>')
+                   f'<p class="empty">{T["empty"]}</p>' if not past else "")
+    # Conférences passées (pages intervenant) : date avec l'année
+    if past:
+        rows = []
+        for ev in past[:60]:
+            eid = ev.get("id") or ""
+            if not re.fullmatch(r"[0-9a-f]{12}", eid):
+                continue
+            sub = ev.get("institution", "") if show_inst else ""
+            rows.append(f'<li><a href="{SITE_URL}/e/{eid}.html"><span class="t">{_esc_attr((ev.get("title") or "")[:110])}'
+                        f'{f"<small>{_esc_attr(sub)}</small>" if sub else ""}</span>'
+                        f'<span class="d">{_esc_attr(_date_fr(ev.get("date", "")))}</span></a></li>')
+        if rows:
+            events_html += f'<h2>{_esc_attr(past_title)}</h2><ul class="rel">{"".join(rows)}</ul>'
     # Hub vide : hors index Google (page mince) et hors sitemap (write_sitemap)
-    robots = '<meta name="robots" content="noindex, follow">\n' if not n else ""
+    robots = '<meta name="robots" content="noindex, follow">\n' if not (n if index is None else index) else ""
     chips_html = ""
     if chips:
         chips_html = (f'<h2>{_esc_attr(chips_title)}</h2><div class="chips">'
@@ -5648,7 +5675,7 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
 <link rel="icon" href="{SITE_URL}/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{SITE_URL}/apple-touch-icon.png">
 {f'<link rel="alternate" type="text/calendar" title="{_esc_attr(name)} (.ics)" href="{ics}">' + chr(10) if ics else ''}<script type="application/ld+json">{crumb_ld}</script>
-<script type="application/ld+json">{list_ld}</script>
+<script type="application/ld+json">{list_ld}</script>{chr(10) + '<script type="application/ld+json">' + extra_ld + '</script>' if extra_ld else ''}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -5700,7 +5727,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 <main class="card" style="--dc:{color}">
 <div class="head"><span class="k">{_esc_attr(kicker)}</span><h1>{_esc_attr(name)}</h1></div>
 <div class="body">
-<p class="count">{T['count'].format(n=n, s=plural)}</p>
+<p class="count">{count_html or T['count'].format(n=n, s=plural)}</p>
 {f'<p class="intro">{_esc_attr(intro)}</p>' if intro else ''}
 <div class="cta"><a class="site" href="{target}" rel="nofollow">{T['cta']}</a>{ics_btn}</div>
 {ics_more}
@@ -5816,6 +5843,132 @@ def write_discipline_pages(events):
 
 
 SEL_PAGES_DIR = OUTPUT_FILE.parent.parent / "s"
+SPEAKER_PAGES_DIR = OUTPUT_FILE.parent.parent / "p"
+# Mots qui trahissent une organisation, pas une personne (« Collège de France »)
+_NOT_PERSON = re.compile(r"(?i)\b(universit|institut|[ée]cole|laborato|centre|cnrs|inserm|inria|groupe|team|[ée]quipe|"
+                         r"association|fondation|club|collectif|coll[èe]ge|mus[ée]e|acad[ée]mie|minist|soci[ée]t[ée]|"
+                         r"conseil|comit[ée]|mairie|paris|france)")
+
+
+def _speaker_groups(events):
+    """{slug: {"name", "up": [...], "past": [...]}} des intervenants qui ont
+    une page p/<slug>.html : au moins 2 conférences (à venir + passées),
+    sinon la page ne ferait que répéter la fiche e/ (page mince)."""
+    today = TODAY.isoformat()
+    insts = {slugify(e.get("institution", "")) for e in events}
+    groups, spell, seen = {}, {}, set()
+    for e in _drop_daily_ghosts(events):
+        eid = e.get("id") or ""
+        if (not re.fullmatch(r"[0-9a-f]{12}", eid) or eid in seen
+                or e.get("kind") in ("carriere", "salon")):
+            continue
+        seen.add(eid)
+        for name in _person_names(e.get("speaker") or ""):
+            slug = slugify(name)
+            if len(slug) < 5 or slug in insts or _NOT_PERSON.search(name):
+                continue
+            g = groups.setdefault(slug, {"up": [], "past": []})
+            g["up" if e.get("date", "") >= today else "past"].append(e)
+            spell.setdefault(slug, collections.Counter())[name] += 1
+    out = {}
+    for slug, g in groups.items():
+        if len(g["up"]) + len(g["past"]) < 2:
+            continue
+        # Orthographe la plus fréquente, en évitant les NOMS EN CAPITALES
+        names = sorted(spell[slug].items(), key=lambda x: (x[0].isupper() or any(w.isupper() and len(w) > 2 for w in x[0].split()), -x[1]))
+        name = " ".join(w.capitalize() if w.isupper() and len(w) > 2 else w for w in names[0][0].split())
+        g["up"].sort(key=lambda e: (e.get("date", ""), e.get("time", "")))
+        g["past"].sort(key=lambda e: (e.get("date", ""), e.get("time", "")), reverse=True)
+        out[slug] = {"name": name, **g}
+    return out
+
+
+def _up_past(g):
+    """« 6 à venir », sinon « 3 passées » (annuaire des intervenants)."""
+    if g["up"]:
+        return f"{len(g['up'])} à venir"
+    n = len(g["past"])
+    return f"{n} passée{'s' if n > 1 else ''}"
+
+
+def write_speaker_pages(events):
+    """p/<slug>.html : une page par intervenant (« Esther Duflo : conférences
+    à Paris ») — ses prochaines conférences, les passées, ses établissements.
+    Les recherches sur un nom propre (« conférence Patrick Boucheron ») sont
+    fréquentes et peu disputées. p/index.html : l'annuaire A–Z."""
+    from urllib.parse import quote
+    SPEAKER_PAGES_DIR.mkdir(exist_ok=True)
+    groups = _speaker_groups(events)
+    hubs = {f.stem for f in INST_PAGES_DIR.glob("*.html")}
+    written = {"index.html"}
+    for slug, g in groups.items():
+        name, up, past = g["name"], g["up"], g["past"]
+        allx = up + past
+        inst_c = collections.Counter(e.get("institution", "") for e in allx)
+        disc_c = collections.Counter(e.get("discipline", "") for e in allx if e.get("discipline") not in ("", "Autre"))
+        insts = [i for i, _ in inst_c.most_common(4) if i]
+        discs = [d for d, _ in disc_c.most_common(3)]
+        bits = []
+        if up:
+            nx = up[0]
+            bits.append(f"Prochaine conférence le "
+                        f"{_date_fr(nx['date'])}{(' à ' + nx['time']) if nx.get('time') else ''}"
+                        f"{(', ' + nx['institution']) if nx.get('institution') else ''}.")
+        if past:
+            bits.append(f"{len(past)} conférence{'s' if len(past) > 1 else ''} passée{'s' if len(past) > 1 else ''} dans l'agenda.")
+        if insts:
+            bits.append("Organisateurs : " + ", ".join(insts) + ".")
+        if discs:
+            bits.append("Disciplines : " + ", ".join(d.lower() for d in discs) + ".")
+        intro = " ".join(bits)
+        title = (f"{name} : prochaines conférences à Paris · Lotent" if up
+                 else f"{name} : conférences à Paris · Lotent")
+        desc = (f"Conférences de {name} à Paris : {intro} Agenda gratuit, mis à jour chaque jour.")[:300]
+        chips = [(i, f"{SITE_URL}/i/{slugify(i)}.html") for i in insts if slugify(i) in hubs]
+        chips += [(d, f"{SITE_URL}/d/{_disc_slug(d)}.html") for d in discs]
+        chips.append(("Tous les intervenants", f"{SITE_URL}/p/"))
+        person_ld = json.dumps({
+            "@context": "https://schema.org", "@type": "ProfilePage", "name": title.replace(" · Lotent", ""),
+            "url": f"{SITE_URL}/p/{slug}.html", "inLanguage": "fr",
+            "mainEntity": {"@type": "Person", "name": name,
+                           **({"affiliation": {"@type": "Organization", "name": insts[0]}} if insts else {})}},
+            ensure_ascii=False).replace("</", "<\\/")
+        page = _hub_page(kicker="Intervenant", name=name, path=f"p/{slug}.html", n=len(up),
+                         color=DISC_COLORS.get(discs[0] if discs else "Autre", "#71717A"), evts=up,
+                         target=f"/?q={quote(name)}", intro=intro, chips_title="Voir aussi", chips=chips,
+                         title=title, desc=desc, show_inst=True, past=past,
+                         # indexée si une conférence à venir, ou un vrai parcours passé
+                         index=bool(up) or len(past) >= 3, extra_ld=person_ld,
+                         count_html=(None if up else f"<b>{len(past)}</b> conférence{'s' if len(past) > 1 else ''} passée{'s' if len(past) > 1 else ''} dans l'agenda Lotent."))
+        (SPEAKER_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
+        written.add(f"{slug}.html")
+    # Annuaire A–Z
+    rows = sorted(groups.items(), key=lambda kv: slugify(kv[1]["name"].split()[-1]) + slugify(kv[1]["name"]))
+    letters = {}
+    for slug, g in rows:
+        letters.setdefault(slugify(g["name"].split()[-1])[:1].upper() or "#", []).append((slug, g))
+    body = "".join(
+        f'<h2 id="l-{L}">{L}</h2><ul class="rel">' + "".join(
+            f'<li><a href="{SITE_URL}/p/{slug}.html"><span class="t">{_esc_attr(g["name"])}'
+            f'<small>{_esc_attr(", ".join(sorted({e.get("institution", "") for e in g["up"] + g["past"]})[:2]))}</small></span>'
+            f'<span class="d">{_up_past(g)}</span></a></li>' for slug, g in lst) + "</ul>"
+        for L, lst in sorted(letters.items()))
+    idx = _hub_page(kicker="Annuaire", name="Intervenants", path="p/", n=len(groups),
+                    color="#6366F1", evts=[], target="/", title="Intervenants des conférences à Paris : l'annuaire · Lotent",
+                    desc=f"{len(groups)} chercheurs, professeurs et invités qui donnent des conférences à Paris "
+                         f"(Collège de France, PSE, EHESS…) : leurs prochaines dates et conférences passées.",
+                    intro="Chaque page réunit les conférences à venir et passées d'un intervenant.",
+                    index=True, count_html=f"<b>{len(groups)}</b> intervenants, dont {sum(1 for g in groups.values() if g['up'])} avec une conférence à venir.")
+    idx = idx.replace('<p class="empty">', '<p class="empty" hidden>', 1).replace(
+        "</main>", "</main>" + body, 1)
+    (SPEAKER_PAGES_DIR / "index.html").write_text(idx, encoding="utf-8")
+    for f in SPEAKER_PAGES_DIR.glob("*.html"):
+        if f.name not in written:
+            try: f.unlink()
+            except Exception: pass
+    print(f"Pages intervenant : {len(groups)} (+ annuaire)")
+    return groups
+
 HOME_FILE = OUTPUT_FILE.parent.parent / "index.html"
 
 # Même heuristique que isEnglish() dans web/src/lib.js (mots-outils du titre)
@@ -6245,11 +6398,11 @@ def write_sitemap(events):
     # Hubs par institution : ce sont eux qui lient vers les pages événement,
     # ils doivent être crawlés souvent.
     # (sauf les hubs vides, marqués noindex par _hub_page)
-    for sub, folder in (("i", INST_PAGES_DIR), ("d", DISC_PAGES_DIR), ("s", SEL_PAGES_DIR)):
+    for sub, folder in (("i", INST_PAGES_DIR), ("d", DISC_PAGES_DIR), ("s", SEL_PAGES_DIR), ("p", SPEAKER_PAGES_DIR)):
         for f in sorted(folder.glob("*.html")):
             if 'content="noindex' in f.read_text(encoding="utf-8", errors="replace")[:3000]:
                 continue
-            urls.append(f"<url><loc>{SITE_URL}/{sub}/{f.name}</loc>"
+            urls.append(f"<url><loc>{SITE_URL}/{sub}/{'' if f.name == 'index.html' else f.name}</loc>"
                         f"<lastmod>{today}</lastmod><changefreq>weekly</changefreq></url>")
     seen, n_past = set(), 0
     for ev in events:
@@ -6562,6 +6715,28 @@ def write_stats(events):
     })
 
 
+def _drop_daily_ghosts(events):
+    """Fantômes « datés du jour du scrape » : avant le parseur PSE dédié
+    (25/09/2026), une carte sans date lisible prenait la date du passage du
+    robot — la même conférence (même lien, même titre) a ainsi été archivée
+    chaque jour, jusqu'à 70 fois (586 fiches PSE). Un groupe dont presque
+    toutes les dates sont égales à leur date d'ajout, sur au moins 4 jours
+    différents, n'a pas de vraie date : ces copies sont retirées."""
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for e in events:
+        if e.get("url"):
+            groups[(e.get("institution"), e["url"], (e.get("title") or "").strip().lower())].append(e)
+    ghost = set()
+    for g in groups.values():
+        same = [e for e in g if e.get("date") and e.get("date") == e.get("added_at")]
+        if len({e["date"] for e in g}) >= 4 and len(same) >= 0.8 * len(g):
+            ghost.update(id(e) for e in same)
+    if ghost:
+        print(f"Archive : {len(ghost)} copies « datées du jour du scrape » retirées")
+    return [e for e in events if id(e) not in ghost]
+
+
 def update_archive(previous_events):
     """Move events that have aged into the past from the previous events.json
     into the persistent archive. Used by the site's 'Historique' tab."""
@@ -6582,6 +6757,7 @@ def update_archive(previous_events):
     cutoff = (TODAY - timedelta(days=ARCHIVE_MAX_DAYS)).isoformat()
     # Titres parasites archivés avant que le filtre ne les connaisse
     archive = [e for e in archive if e.get("date", "") >= cutoff and not is_junk_title(e.get("title", ""))]
+    archive = _drop_daily_ghosts(archive)
     # Deux versions d'un même événement (renommé, déplacé : « Founding » →
     # « Founder Members », même lien Luma) étaient toutes deux à l'agenda
     # avant d'être archivées : l'Historique les montrait en double. On garde
@@ -6731,6 +6907,11 @@ def main():
         write_event_pages(all_events + arch)
     except Exception as e:
         print(f"[ERROR] event pages: {e}")
+        traceback.print_exc()
+    try:
+        write_speaker_pages(all_events + arch)
+    except Exception as e:
+        print(f"[ERROR] speaker pages: {e}")
         traceback.print_exc()
 
     # Avant le sitemap : celui-ci liste les hubs i/*.html réellement présents.

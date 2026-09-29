@@ -102,7 +102,7 @@ const TR = {
   footer_manual_suffix: [" · manuelle : {t}", " · manual: {t}"],
   footer_browse: ["Parcourir", "Browse"], sel_week: ["Cette semaine", "This week"], sel_weekend: ["Ce week-end", "This weekend"],
   sel_tonight: ["Ce soir", "Tonight"], sel_free: ["Conférences gratuites", "Free talks"], sel_en: ["Talks in English", "Talks in English"],
-  sel_theses: ["Soutenances de thèse", "PhD defences"], sel_careers: ["Événements carrières", "Career events"], sel_fairs: ["Salons étudiants", "Student fairs"],
+  sel_theses: ["Soutenances de thèse", "PhD defences"], sel_careers: ["Événements carrières", "Career events"], sel_fairs: ["Salons étudiants", "Student fairs"], sel_speakers: ["Intervenants", "Speakers"],
   footer_subscribe: ["S'abonner", "Subscribe"], footer_ics: ["Calendrier complet (.ics)", "Full calendar (.ics)"],
   footer_rss: ["Flux RSS de la semaine", "This week's RSS feed"], footer_sitemap: ["Plan du site", "Sitemap"],
   footer_contact_title: ["Une question, une idée ?", "A question, an idea?"],

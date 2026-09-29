@@ -180,6 +180,7 @@ def main():
         except Exception:
             arch = []
         scrape.write_event_pages(merged + arch)
+        scrape.write_speaker_pages(merged + arch)
         # Avant le sitemap : il liste les hubs i/*.html réellement présents.
         scrape.write_institution_share_pages(merged)
         scrape.write_discipline_pages(merged)
