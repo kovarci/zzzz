@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:98033432f305@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261012T140000
 DTEND;TZID=Europe/Paris:20261012T151500
 SUMMARY:IP Paris Seminar on Incentives and Computation
@@ -43,7 +43,7 @@ URL:https://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computatio
 END:VEVENT
 BEGIN:VEVENT
 UID:e424d347657f@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261013T140000
 DTEND;TZID=Europe/Paris:20261013T153000
 SUMMARY:Hi! PARIS Reading groups “Fairness in AI” – Session 1
@@ -59,8 +59,25 @@ URL:https://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-sessio
  n-1/
 END:VEVENT
 BEGIN:VEVENT
+UID:59d3f6c68724@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;TZID=Europe/Paris:20261102T090000
+DTEND;TZID=Europe/Paris:20261102T110000
+SUMMARY:SGAP 2026 Paris – A Scientist’s Guide to AI
+DESCRIPTION:SGAP 2026\, A Scientist’s Guide to AI \, is a three-day thema
+ tic school designed for researchers\, PhD candidates\, postdocs and academ
+ ics who want to better understand and use AI in their scientific work. Tak
+ ing place from November 2 to 4\, 2026 at Inria Paris \, the program combin
+ es statistical learning\, deep learning\, hands-on sessions and real-world
+  applications across fields such as climate science\nhttps://hi-paris.fr/e
+ vent/sgap-2026-paris-a-scientists-guide-to-ai/
+LOCATION:Inria Paris\, Inria Paris – 48 rue Barrault – Paris 13\, 75013
+ \, Paris
+URL:https://hi-paris.fr/event/sgap-2026-paris-a-scientists-guide-to-ai/
+END:VEVENT
+BEGIN:VEVENT
 UID:fca9166c778a@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261103T180000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Hi! PARIS Career Fair
@@ -76,7 +93,7 @@ URL:https://hi-paris.fr/event/hi-paris-career-fair/
 END:VEVENT
 BEGIN:VEVENT
 UID:0b52277e64d3@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge

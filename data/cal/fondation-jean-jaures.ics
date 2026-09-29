@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:dd2c2b312880@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;TZID=Europe/Paris:20260928T183000
-DTEND;TZID=Europe/Paris:20260928T203000
-SUMMARY:La gauche peut-elle encore unir ?
-DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/la-gauche-peut-
- elle-encore-unir/
-LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
-URL:https://www.jean-jaures.org/agenda/la-gauche-peut-elle-encore-unir/
-END:VEVENT
-BEGIN:VEVENT
 UID:8898d7efc12b@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20260929T190000
 DTEND;TZID=Europe/Paris:20260929T210000
 SUMMARY:Gagner en 2027 : quel mode d’emploi ?

@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a8acdcf36d63@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Taking Stock of the Global IR Debate: What Is the “Non-West”?
-DESCRIPTION:Inaugural hybrid session of the new CERI seminar: "Global IR in
-  the planetary era"\nhttps://www.sciencespo.fr/fr/evenements/taking-stock-
- of-the-global-ir-debate-what-is-the-non-west/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/taking-stock-of-the-global-ir-d
- ebate-what-is-the-non-west/
-END:VEVENT
-BEGIN:VEVENT
 UID:1c00b263e789@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
 SUMMARY:Exposition du Mémorial de la Shoah sur Hélène Berr avec visite g
@@ -55,23 +42,8 @@ URL:https://www.sciencespo.fr/fr/evenements/exposition-du-memorial-de-la-sh
  oah-sur-helene-berr-avec-visite-guidee/
 END:VEVENT
 BEGIN:VEVENT
-UID:7c30c6f134fe@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Accord UE-Turquie sur la migration : état des lieux 10 ans après
-DESCRIPTION:Un webinaire organisé dans le cadre des rencontres Médias\, m
- igrations : la fabrique de l’opinion\, une initiative de Sciences Po (pr
- ojet PACE) et de l’association Désinfox-Migrations.\nhttps://www.scienc
- espo.fr/fr/evenements/accord-ue-turquie-sur-la-migration-etat-des-lieux-10
- -ans-apres/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/accord-ue-turquie-sur-la-migrat
- ion-etat-des-lieux-10-ans-apres/
-END:VEVENT
-BEGIN:VEVENT
 UID:dca5b2a31624@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:François Bafoil en dédicace
@@ -86,7 +58,7 @@ URL:https://www.sciencespo.fr/fr/evenements/francois-bafoil-en-dedicace/
 END:VEVENT
 BEGIN:VEVENT
 UID:be17f8fe3226@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Projection-Débat : Agrotopie
@@ -100,7 +72,7 @@ URL:https://www.sciencespo.fr/fr/evenements/projection-debat-agrotopie/
 END:VEVENT
 BEGIN:VEVENT
 UID:8e38ae0a068d@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Frontline Responders & Witnesses: Collateral Damage of Banned Acces
@@ -116,7 +88,7 @@ URL:https://www.sciencespo.fr/fr/evenements/frontline-responders-and-witnes
 END:VEVENT
 BEGIN:VEVENT
 UID:3066cb5797dd@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Vers la dénumérisation ?
@@ -130,7 +102,7 @@ URL:https://www.sciencespo.fr/fr/evenements/vers-la-denumerisation/
 END:VEVENT
 BEGIN:VEVENT
 UID:93e610cd07c0@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:AI Governance and Ethics
@@ -141,7 +113,7 @@ URL:https://www.sciencespo.fr/fr/evenements/ai-governance-and-ethics/
 END:VEVENT
 BEGIN:VEVENT
 UID:a13f9073cb15@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cities Ablaze: Tales of the December 2007 Riots in Karachi
@@ -155,7 +127,7 @@ URL:https://www.sciencespo.fr/fr/evenements/cities-ablaze-tales-of-the-dece
 END:VEVENT
 BEGIN:VEVENT
 UID:6b2a3c2434b0@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Penser l’Europe depuis les Balkans. L’élargissement\, levier d
@@ -171,7 +143,7 @@ URL:https://www.sciencespo.fr/fr/evenements/penser-l-europe-depuis-les-balk
 END:VEVENT
 BEGIN:VEVENT
 UID:8d135b3888fb@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261001T173000
 DTEND;TZID=Europe/Paris:20261001T190000
 SUMMARY:"Le son inaugural" avec Laurent de Wilde
@@ -186,7 +158,7 @@ URL:https://www.paris.fr/evenements/jerome-ferrari-passe-le-relais-a-tanguy
 END:VEVENT
 BEGIN:VEVENT
 UID:f2845e30ebbb@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Careful Empowerment: Gender and Queer History in Challenging Times
@@ -200,7 +172,7 @@ URL:https://www.sciencespo.fr/fr/evenements/careful-empowerment-gender-and-
 END:VEVENT
 BEGIN:VEVENT
 UID:531964cb070a@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:AFRICA DAY 2026
@@ -214,7 +186,7 @@ URL:https://www.sciencespo.fr/fr/evenements/africa-day-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:39e30ab086e1@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:CERI-Cinéclub : Promis le Ciel de Erige Sehiri
@@ -230,7 +202,7 @@ URL:https://www.sciencespo.fr/fr/evenements/ceri-cineclub-promis-le-ciel/
 END:VEVENT
 BEGIN:VEVENT
 UID:259881c69c97@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Nature\, Risks and Informality in Latin America
@@ -244,22 +216,24 @@ URL:https://www.sciencespo.fr/fr/evenements/nature-risks-and-informality-in
 END:VEVENT
 BEGIN:VEVENT
 UID:68b9073a6382@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Livres sous surveillance : quand la censure dépasse la fiction
-DESCRIPTION:À l’occasion de la semaine des livres interdits aux États-U
- nis\, la Bibliothèque et la MAC de Sciences Po\, en partenariat avec la N
- RF\, organisent une journée consacrée à la censure des livres et à la 
- liberté de lire.\nhttps://www.sciencespo.fr/fr/evenements/livres-sous-sur
- veillance-quand-la-censure-depasse-la-fiction/
+DESCRIPTION:La Bibliothèque et la Maison des Arts & de la Création de Sci
+ ences Po\, en partenariat avec la NRF\, consacrent une journée à la cens
+ ure des livres et à la liberté de lire. Au programme : un book club auto
+ ur de livres interdits\, une table ronde sur la censure en France et aux 
+ États-Unis et un atelier d’écriture sous contraintes.\nhttps://www.sci
+ encespo.fr/fr/evenements/livres-sous-surveillance-quand-la-censure-depasse
+ -la-fiction/
 LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/livres-sous-surveillance-quand-
  la-censure-depasse-la-fiction/
 END:VEVENT
 BEGIN:VEVENT
 UID:da77f82606a2@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Sweden at a crossroads: after four years of far-right influence\, w
@@ -273,8 +247,22 @@ URL:https://www.sciencespo.fr/fr/evenements/sweden-at-a-crossroads-after-fo
  ur-years-of-far-right-influence-what-comes/
 END:VEVENT
 BEGIN:VEVENT
+UID:acc4e42b81b9@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:[Séminaire conjoint] How to Publish (at the American Journal of Po
+ litical Science)
+DESCRIPTION:co-organised by CEVIPOF & CEE (Sciences Po)\nhttps://www.scienc
+ espo.fr/fr/evenements/seminaire-conjoint-how-to-publish-at-the-american-jo
+ urnal-of-political-science/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/seminaire-conjoint-how-to-publi
+ sh-at-the-american-journal-of-political-science/
+END:VEVENT
+BEGIN:VEVENT
 UID:b8af2cba9084@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Campaign Finance Oversight in Comparative Perspective: France and t
@@ -288,7 +276,7 @@ URL:https://www.sciencespo.fr/fr/evenements/campaign-finance-oversight-in-c
 END:VEVENT
 BEGIN:VEVENT
 UID:6db34b25ca72@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:L’affaire des viols de Mazan : Quels héritages pour la justice e
@@ -304,8 +292,23 @@ URL:https://www.sciencespo.fr/fr/evenements/l-affaire-des-viols-de-mazan-qu
  els-heritages-pour-la-justice-et-la-societe/
 END:VEVENT
 BEGIN:VEVENT
+UID:be5649862956@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Colloque : La Corse dans la République
+DESCRIPTION:Sous la direction scientifique de Géraldine Chavrier et Eric K
+ errouche\, ce colloque propose d'aborder les questions d'autonomie\, de di
+ ﬀérenciation et de transformation de l'État territorial\, en croisant 
+ les regards du juridique et de la science politique.\nhttps://www.sciences
+ po.fr/fr/evenements/colloque-la-corse-dans-la-republique/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/colloque-la-corse-dans-la-repub
+ lique/
+END:VEVENT
+BEGIN:VEVENT
 UID:cc3ab567e144@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Favoriser la transition environnementale des plus aisés pour contr
@@ -318,7 +321,7 @@ URL:https://www.sciencespo.fr/fr/evenements/favoriser-la-transition-environ
 END:VEVENT
 BEGIN:VEVENT
 UID:4a86ddd2b77d@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Les Grandes Conférences: Wopke Hoekstra\, European Commissioner fo
@@ -333,7 +336,7 @@ URL:https://www.sciencespo.fr/fr/evenements/les-grandes-conferences-wopke-h
 END:VEVENT
 BEGIN:VEVENT
 UID:e96d7b815e8e@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Intelligence artificielle générative & pratiques professionnelles
@@ -346,7 +349,7 @@ URL:https://www.sciencespo.fr/fr/evenements/intelligence-artificielle-gener
 END:VEVENT
 BEGIN:VEVENT
 UID:0ed2fc3defe3@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Prix Penser le travail 2026
@@ -361,7 +364,7 @@ URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:2fc68cbbe81e@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:La petite bibliothèque de Tanguy Viel
@@ -375,7 +378,7 @@ URL:https://www.sciencespo.fr/fr/evenements/la-petite-bibliotheque-de-tangu
 END:VEVENT
 BEGIN:VEVENT
 UID:af47d299fbe3@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Shared Sacred Sites in South Asia: Negotiating Coexistence and Belo
@@ -389,7 +392,7 @@ URL:https://www.sciencespo.fr/fr/evenements/shared-sacred-sites-in-south-as
 END:VEVENT
 BEGIN:VEVENT
 UID:484d2403bf89@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Enregistrement en public d’un nouvel épisode du podcast Le Nouve
@@ -407,7 +410,7 @@ URL:https://www.sciencespo.fr/fr/evenements/enregistrement-en-public-d-un-n
 END:VEVENT
 BEGIN:VEVENT
 UID:812bf8ead68f@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Élections législatives en Israël : une échéance décisive
@@ -420,7 +423,7 @@ URL:https://www.sciencespo.fr/fr/evenements/elections-legislatives-en-israe
 END:VEVENT
 BEGIN:VEVENT
 UID:b4d1a9b2f300@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:L'Histoire en livres I La Tyrannie du présent\, avec Pierre Rosanv
@@ -436,7 +439,7 @@ URL:https://www.sciencespo.fr/fr/evenements/l-histoire-en-livres-la-tyranni
 END:VEVENT
 BEGIN:VEVENT
 UID:8e4302bfadef@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:La montée des masculinismes en France : regards croisés
@@ -448,7 +451,7 @@ URL:https://www.sciencespo.fr/fr/evenements/la-montee-des-masculinismes-en-
 END:VEVENT
 BEGIN:VEVENT
 UID:611dadba4fbb@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Cérémonie du Collège universitaire / Undergraduate College Award
@@ -464,7 +467,7 @@ URL:https://www.sciencespo.fr/fr/evenements/ceremonie-du-college-universita
 END:VEVENT
 BEGIN:VEVENT
 UID:534610543f02@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Protéger les sources : un statut pour la recherche
@@ -475,8 +478,24 @@ URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-
  pour-la-recherche/
 END:VEVENT
 BEGIN:VEVENT
+UID:f8f29408a56e@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Le trumpisme à l'épreuve du pouvoir : décryptage des midterms
+DESCRIPTION:Deux ans après la victoire de Trump aux présidentielles\, les
+  élections du 3 novembre constituent le premier grand verdict des urnes s
+ ur son second mandat. Cette conférence propose de lire les résultats à 
+ la lumière de ces transformations\, et d'interroger les enjeux en prévis
+ ion des élections 2028.\nhttps://www.sciencespo.fr/fr/evenements/le-trump
+ isme-a-l-epreuve-du-pouvoir-decryptage-des-midterms/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/le-trumpisme-a-l-epreuve-du-pou
+ voir-decryptage-des-midterms/
+END:VEVENT
+BEGIN:VEVENT
 UID:db91a650618f@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:L'Histoire en livres | Une histoire de migrations et de persécutio
@@ -495,7 +514,7 @@ URL:https://www.sciencespo.fr/fr/evenements/l-histoire-en-livres-une-histoi
 END:VEVENT
 BEGIN:VEVENT
 UID:8d254804a3a7@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Canada-Europe : un rapprochement\, au-delà des années Trump ?
@@ -509,7 +528,7 @@ URL:https://www.sciencespo.fr/fr/evenements/canada-europe-un-rapprochement-
 END:VEVENT
 BEGIN:VEVENT
 UID:94e54fd5c558@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:#NPDJ Les nouvelles pratiques du journalisme 2026
@@ -519,5 +538,21 @@ DESCRIPTION:L'édition du mercredi 18 novembre 2026 porte sur les ingérenc
 LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/npdj-les-nouvelles-pratiques-du
  -journalisme-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:dca04573db13@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Les États-Unis peuvent-ils reprendre contrôle de l’Amérique la
+ tine ?
+DESCRIPTION:Il y a près d'un an de cela\, les États-Unis reprennent la ma
+ in sur le Venezuela\, capturant son président et plaçant la nouvelle pr
+ ésidente par intérim sous contrôle étroit.\nhttps://www.sciencespo.fr/
+ fr/evenements/les-etats-unis-peuvent-ils-reprendre-controle-de-l-amerique-
+ latine/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/les-etats-unis-peuvent-ils-repr
+ endre-controle-de-l-amerique-latine/
 END:VEVENT
 END:VCALENDAR

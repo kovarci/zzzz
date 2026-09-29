@@ -24,23 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ee2538b9d87c@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;TZID=Europe/Paris:20260928T190000
-DTEND;TZID=Europe/Paris:20260928T210000
-SUMMARY:Boost ta candidature n°1 - ta recherche d'alternance
-DESCRIPTION:Tu galères pour trouver un contrat d'alternance pour cette ann
- ée ? 2 heures avec l'association WALT - spécialiste de l'apprentissage V
- iens avec ton CV\, tes candidatures\, et on regarde ensemble comment te do
- nner un coup de main dans tes candidatures.\nhttps://article1.my.salesforc
- e-sites.com/AG_VFP_Quiz?cid=701IV00001mt5is&id=a1NIV00000ASSGX&base=base6
-LOCATION:Paris
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mt5i
- s&id=a1NIV00000ASSGX&base=base6
-END:VEVENT
-BEGIN:VEVENT
 UID:0f1b16416d34@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261010T100000
 DTEND;TZID=Europe/Paris:20261010T153000
 SUMMARY:Festival Pop & Psy - à l'occasion de la journée de la santé ment
@@ -55,7 +40,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001otrG
 END:VEVENT
 BEGIN:VEVENT
 UID:ee454c2e4d8a@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261012T063000
 DTEND;TZID=Europe/Paris:20261012T080000
 SUMMARY:WEBINAIRE LINKEDIN : DEVELOPPER SON RESEAU PRO
@@ -70,7 +55,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXdu
 END:VEVENT
 BEGIN:VEVENT
 UID:f8ae1b7ffcd2@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261014T183000
 DTEND;TZID=Europe/Paris:20261014T223000
 SUMMARY:Apéro de rentrée 🎉
@@ -83,8 +68,23 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWD
  f&id=a1NIV00000BUvH3&base=base6
 END:VEVENT
 BEGIN:VEVENT
+UID:0f3b6adaff8a@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;TZID=Europe/Paris:20261021T140000
+DTEND;TZID=Europe/Paris:20261021T170000
+SUMMARY:🚀 Challenge ton futur ! - avec Allianz
+DESCRIPTION:Challenge ton futur 21 octobre 2026 avec Allianz 3 défis pour 
+ prendre une longueur d'avance dans la vie pro : Money : tes réflexes fina
+ nciers LinkedIn : challenge ton profil Network : à la rencontre des pros\
+ nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8vA&
+ id=a1NIV00000BwBRN&base=base6
+LOCATION:Ile-de-France
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8v
+ A&id=a1NIV00000BwBRN&base=base6
+END:VEVENT
+BEGIN:VEVENT
 UID:f5e606b1c9e0@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:Webinaire Admissions HEC

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:43bb283d2fab@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Thought Experiment #1
@@ -36,20 +36,8 @@ LOCATION:Paris School of AI\, Université PSL 16 bis rue de l’Estrapade\,
 URL:https://www.prairie-psai.fr/agenda/thought-experiment-1/
 END:VEVENT
 BEGIN:VEVENT
-UID:c0015e67b31a@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261103
-SUMMARY:SGAP 2026 Paris – A Scientist’s Guide to AI
-DESCRIPTION:Workshops & Seminars\nhttps://www.prairie-psai.fr/agenda/sgap-2
- 026-paris-a-scientists-guide-to-ai/
-LOCATION:Inria Paris – 48 rue Barrault – Paris 13
-URL:https://www.prairie-psai.fr/agenda/sgap-2026-paris-a-scientists-guide-t
- o-ai/
-END:VEVENT
-BEGIN:VEVENT
 UID:d6c37327660e@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Recent Advances in Chemistry and AI

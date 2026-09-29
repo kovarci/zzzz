@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lotent//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elles Bougent · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:a4cf0325ac53@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;TZID=Europe/Paris:20261015T093000
+DTEND;TZID=Europe/Paris:20261015T170000
+SUMMARY:Elles bougent au Mondial de l'Auto 2026
+DESCRIPTION:Atelier — Journée immersive au Mondial de l'Auto : rencontre
+ s avec des marraines ingénieures\, puis échanges avec recruteurs et RH p
+ our les étudiantes. Sur inscription auprès d'Elles bougent (complet).\nh
+ ttps://www.ellesbougent.com/actions/calendrier/elles-bougent-au-mondial-de
+ -auto-2026-8187/
+LOCATION:Paris Expo Porte de Versailles\, Paris 15e
+URL:https://www.ellesbougent.com/actions/calendrier/elles-bougent-au-mondia
+ l-de-auto-2026-8187/
+END:VEVENT
+END:VCALENDAR

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ce049f565a06@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20260930T144500
 DTEND;TZID=Europe/Paris:20260930T160000
 SUMMARY:Dynamical Tidal Response of Neutron Stars from Scattering Amplitude
@@ -42,7 +42,7 @@ URL:https://indico.math.cnrs.fr/event/17400/
 END:VEVENT
 BEGIN:VEVENT
 UID:ff0fd3daa373@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261001T143000
 DTEND;TZID=Europe/Paris:20261001T160000
 SUMMARY:Zeta Values as Moments: A Random Matrix Theory
@@ -58,7 +58,7 @@ URL:https://indico.math.cnrs.fr/event/17408/
 END:VEVENT
 BEGIN:VEVENT
 UID:d0bfe36c9390@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261005T140000
 DTEND;TZID=Europe/Paris:20261005T151500
 SUMMARY:Origami Tori
@@ -74,7 +74,7 @@ URL:https://indico.math.cnrs.fr/event/17062/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4af97c28d4e@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261005T160000
 DTEND;TZID=Europe/Paris:20261005T171500
 SUMMARY:Families of Discrete Representations from Incidence Theorems
@@ -90,7 +90,7 @@ URL:https://indico.math.cnrs.fr/event/17063/
 END:VEVENT
 BEGIN:VEVENT
 UID:53bf13613051@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261006T144500
 DTEND;TZID=Europe/Paris:20261006T160000
 SUMMARY:On the Wilson-Fisher Fixed Point in the Limit of Integer Spacetime 
@@ -107,7 +107,7 @@ URL:https://indico.math.cnrs.fr/event/17103/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ed38ea8f514@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261008T110000
 DTEND;TZID=Europe/Paris:20261008T123000
 SUMMARY:On “Siegel Domains” in p-adic Period Spaces
@@ -123,7 +123,7 @@ URL:https://indico.math.cnrs.fr/event/17331/
 END:VEVENT
 BEGIN:VEVENT
 UID:513576072690@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261012T090000
 DTEND;TZID=Europe/Paris:20261012T110000
 SUMMARY:The Pentagram Map and Ramifications
@@ -139,7 +139,7 @@ URL:https://indico.math.cnrs.fr/event/17361/
 END:VEVENT
 BEGIN:VEVENT
 UID:18975d08334d@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261019T143000
 DTEND;TZID=Europe/Paris:20261019T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -154,10 +154,27 @@ LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17105/
 END:VEVENT
 BEGIN:VEVENT
-UID:d7f5e719d1a7@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;TZID=Europe/Paris:20261021T143000
-DTEND;TZID=Europe/Paris:20261021T160000
+UID:2b34d5802175@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;TZID=Europe/Paris:20261022T110000
+DTEND;TZID=Europe/Paris:20261022T123000
+SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
+ ordell–Schinzel Surfaces
+DESCRIPTION:Séminaire de géométrie arithmétique In 1952\, Mordell erron
+ eously claimed that the surface xyz = G(x\,y) has infinitely many integral
+  points for any G ∈ ℤ [x\,y]. I will discuss a classification for fini
+ teness and Zariski density of (positive) integral points on these log K3 s
+ urfaces when the coefficients of G are non-negative. This combines a dynam
+ ical argument proposed by Mordell\, the theory of gen\nhttps://indico.math
+ .cnrs.fr/event/17461/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17461/
+END:VEVENT
+BEGIN:VEVENT
+UID:629e6be59db5@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;TZID=Europe/Paris:20261022T143000
+DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
 DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  ommutative) sphere regularization\," a recently proposed non-perturbative 
@@ -171,7 +188,7 @@ URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -187,7 +204,7 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -203,7 +220,7 @@ URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -219,7 +236,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes

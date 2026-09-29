@@ -24,8 +24,26 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:45494dd46ed6@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:Une collecte solidaire pour les étudiants en précarité
+DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
+ limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
+ our soutenir les étudiants en situation de précarité. Les dons seront r
+ emis lors d’une distribution solidaire le jeudi 5 novembre\, à partir d
+ e 17 h 30. Ils permettront aussi d’alimenter le service d’aide sociale
+  de la Vie étudiante\, qui pourra constituer des kits pour\nhttps://www.u
+ niv-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
+LOCATION:DAPS – Campus de Villetaneuse\, Université Sorbonne Paris Nord\
+ , 99 avenue Jean-Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
+ s-en-precarite/
+END:VEVENT
+BEGIN:VEVENT
 UID:77a2b318e225@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:L’intelligence artificielle générative dans les pratiques de fo

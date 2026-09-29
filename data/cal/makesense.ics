@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:4a28ec1d42dd@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Atelier - Comprendre ses clients avec l'entretien de découverte
-DESCRIPTION:Organisé par Les Canaux — Découvrez les vrais besoins de vo
- s clients sans biais grâce aux entretiens de découverte !Un atelier anim
- é par Dominique Lequepeys :Dominique Lequepeys est coach d'entrepreneurs 
- depuis 10 ans\, spécialisé sur les ph\nhttps://chiche.makesense.org/even
- ts/e/atelier-comprendre-ses-clients-avec-lentretien-de-decouverte-6a8412bb
- 6cd0e90008c70fee
-LOCATION:6 Quai de la Seine\, 75019 Paris\, France
-URL:https://chiche.makesense.org/events/e/atelier-comprendre-ses-clients-av
- ec-lentretien-de-decouverte-6a8412bb6cd0e90008c70fee
-END:VEVENT
-BEGIN:VEVENT
 UID:58cdae832ce0@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Me préparer à l'entretien d'embauche📍Paris 13
@@ -56,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/me-preparer-a-lentretien-dembauch
 END:VEVENT
 BEGIN:VEVENT
 UID:2c84c13ffd8a@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Où dort votre argent ?… et comment l’orienter vers la transiti
@@ -73,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/ou-dort-votre-argent-et-comment-l
 END:VEVENT
 BEGIN:VEVENT
 UID:476cc34607b8@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Les Utopiennes 2046 - Le retour de l'espoir radical
@@ -88,8 +72,24 @@ URL:https://chiche.makesense.org/events/e/les-utopiennes-2046-le-retour-de-
  lespoir-radical-6a453f6fc0c7ee0008463d2f
 END:VEVENT
 BEGIN:VEVENT
+UID:4a28ec1d42dd@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:Atelier - Comprendre ses clients avec l'entretien de découverte
+DESCRIPTION:Organisé par Les Canaux — Découvrez les vrais besoins de vo
+ s clients sans biais grâce aux entretiens de découverte !Un atelier anim
+ é par Dominique Lequepeys :Dominique Lequepeys est coach d'entrepreneurs 
+ depuis 10 ans\, spécialisé sur les ph\nhttps://chiche.makesense.org/even
+ ts/e/atelier-comprendre-ses-clients-avec-lentretien-de-decouverte-6a8412bb
+ 6cd0e90008c70fee
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/atelier-comprendre-ses-clients-av
+ ec-lentretien-de-decouverte-6a8412bb6cd0e90008c70fee
+END:VEVENT
+BEGIN:VEVENT
 UID:ff721d0095d3@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Cercle de parole Nayoki
@@ -105,7 +105,7 @@ URL:https://chiche.makesense.org/events/e/cercle-de-parole-nayoki-6a858dc26
 END:VEVENT
 BEGIN:VEVENT
 UID:1b5f31e28210@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:PARLE M'EN ! La démocratie est un jeu
@@ -121,7 +121,7 @@ URL:https://chiche.makesense.org/events/e/parle-men-la-democratie-est-un-je
 END:VEVENT
 BEGIN:VEVENT
 UID:7873091e5d85@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:IA\, le choc thermique
@@ -135,7 +135,7 @@ URL:https://chiche.makesense.org/events/e/ia-le-choc-thermique-6a9ed9328f56
 END:VEVENT
 BEGIN:VEVENT
 UID:2de6d366eda0@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Atelier de création théâtrale à destination des femmes
@@ -148,5 +148,36 @@ DESCRIPTION:Organisé par Maison de la Conversation — Atelier de créatio
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/atelier-de-creation-theatrale-a-d
  estination-des-femmes-6aaa851519fd1c0008839756
+END:VEVENT
+BEGIN:VEVENT
+UID:b94e49a8c615@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:Formation à la facilitation graphique
+DESCRIPTION:Organisé par Gaëlle — "Apprendre ensemble d'autres techniqu
+ es de facilitation graphique\, pour rire de nos crayons\, et soutenir nos 
+ réunions."Une fenêtre ouverte à cette pratique ludique\, en simplicité
+  et légèreté.\nhttps://chiche.makesense.org/events/e/formation-a-la-fac
+ ilitation-graphique-6a01ee5b4e5ca500082c275b
+LOCATION:Le Chesnay\, 78150 Le Chesnay-Rocquencourt\, France
+URL:https://chiche.makesense.org/events/e/formation-a-la-facilitation-graph
+ ique-6a01ee5b4e5ca500082c275b
+END:VEVENT
+BEGIN:VEVENT
+UID:7d8fcfaa0219@paris-academique
+DTSTAMP:20260929T102730Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
+DESCRIPTION:Organisé par Jeremy Dumont — Le business model canvas de l
+ ’entreprise régénérativeNotre Business Model Canvas de l’entreprise
+  Régénérative – le REGEN BMC – permet d’identifier les zones de d
+ égénération d’une activité économique et d’identi\nhttps://chiche
+ .makesense.org/events/e/le-business-model-de-lentreprise-regenerative-6ab1
+ 56bf40a4b70008078c26
+LOCATION:Paris\, France
+URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
+ regenerative-6ab156bf40a4b70008078c26
 END:VEVENT
 END:VCALENDAR

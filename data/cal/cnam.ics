@@ -24,48 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:12bc9230c3f9@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Neuf futurs ingénieurs Cnam au Sommet international sur l’espace
-  2026
-DESCRIPTION:https://www.cnam.fr/actualites/formation/neuf-futurs-ingenieurs
- -cnam-au-sommet-international-sur-lespace-2026
-LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
-URL:https://www.cnam.fr/actualites/formation/neuf-futurs-ingenieurs-cnam-au
- -sommet-international-sur-lespace-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:b1faab638d91@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:IA responsable : comment le Cnam forme les professionnels de demain
-DESCRIPTION:https://www.cnam.fr/actualites/formation/ia-responsable-comment
- -le-cnam-forme-les-professionnels-de-demain
-LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
-URL:https://www.cnam.fr/actualites/formation/ia-responsable-comment-le-cnam
- -forme-les-professionnels-de-demain
-END:VEVENT
-BEGIN:VEVENT
-UID:f612b71eea80@paris-academique
-DTSTAMP:20260928T170210Z
-DTSTART;VALUE=DATE:20260928
-DTEND;VALUE=DATE:20260929
-SUMMARY:Innover et adapter les formations du Cnam aux enjeux sociétaux : l
- e rôle clé du chargé d’animation et d’ingénierie pédagogique
-DESCRIPTION:https://www.cnam.fr/actualites/formation/innover-et-adapter-les
- -formations-du-cnam-aux-enjeux-societaux-le-role-cle-du-charge-danimation-
- et-dingenierie-pedagogique
-LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
-URL:https://www.cnam.fr/actualites/formation/innover-et-adapter-les-formati
- ons-du-cnam-aux-enjeux-societaux-le-role-cle-du-charge-danimation-et-dinge
- nierie-pedagogique
-END:VEVENT
-BEGIN:VEVENT
 UID:b7bbdc6db79c@paris-academique
-DTSTAMP:20260928T170210Z
+DTSTAMP:20260929T102730Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:ASSTI: Transformer pour prospérer dans un monde durable
