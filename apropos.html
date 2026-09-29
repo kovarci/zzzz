@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=47" />
+  <link rel="stylesheet" href="app.css?v=48" />
   <script>
     // Même thème que l'app principale, appliqué avant le premier rendu (pas de flash)
     try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
@@ -54,6 +54,8 @@
     html[lang="en"] [data-en] { display: initial; }
     html[lang="en"] [data-en="block"] { display: block; }
   </style>
+  <!-- Mesure d'audience GoatCounter : sans cookie ni donnée personnelle -->
+  <script data-goatcounter="https://lotent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 
@@ -202,11 +204,15 @@
   </ul>
 
   <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>La technique</span><span data-en>The tech</span></h2>
-  <p data-fr>Site statique, sans tracker, sans compte, sans cookie tiers. Les données sont
+  <p data-fr>Site statique, sans compte ni cookie. Seule une mesure d'audience anonyme
+  (<a href="https://www.goatcounter.com" target="_blank" rel="noopener noreferrer">GoatCounter</a> :
+  pages vues, sans donnée personnelle ni pistage d'un site à l'autre) indique ce qui est consulté. Les données sont
   collectées par un scraper Python (exécuté par GitHub Actions), publiées en JSON et
   affichées par une application React. Le tout est open source :
   <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">github.com/kovarci/zzzz</a>.</p>
-  <p data-en="block">Static site, no tracker, no account, no third-party cookie. Data is collected
+  <p data-en="block">Static site, no account, no cookie. Only an anonymous visit counter
+  (<a href="https://www.goatcounter.com" target="_blank" rel="noopener noreferrer">GoatCounter</a>:
+  page views, no personal data, no cross-site tracking) shows what gets read. Data is collected
   by a Python scraper (run by GitHub Actions), published as JSON and rendered by
   a React app. Everything is open source:
   <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">github.com/kovarci/zzzz</a>.</p>

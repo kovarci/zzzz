@@ -5189,6 +5189,11 @@ def _speaker_links(speaker_html, slugs):
     return out
 
 
+# Mesure d'audience GoatCounter (sans cookie, pas de bandeau de consentement) :
+# compte lotent.goatcounter.com. Pas sur les pages de redirection.
+_GC_TAG = '<script data-goatcounter="https://lotent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>'
+
+
 def write_event_pages(events):
     """One small static page per event (e/<id>.html): Open Graph tags for a
     proper link preview on WhatsApp/Discord/Twitter, plus REAL visible content
@@ -5433,6 +5438,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 .foot{{text-align:center;margin-top:24px;font-size:12px;color:var(--muted-fg)}}
 .foot a{{color:inherit}}
 </style>
+{_GC_TAG}
 </head>
 <body>
 <div class="wrap">
@@ -5720,6 +5726,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 .more{{font-size:13px;margin:10px 0 0}}.more a{{color:inherit}}
 .sel{{text-align:center;margin-top:18px;font-size:12px;color:var(--muted-fg)}}.sel a{{color:inherit}}
 </style>
+{_GC_TAG}
 </head>
 <body>
 <div class="wrap">

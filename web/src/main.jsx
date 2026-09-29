@@ -479,6 +479,8 @@ function App() {
     if (open && !sheetStep.current) { window.history.pushState({ sheet: 1 }, "", url()); sheetStep.current = true; }
     else if (open) window.history.replaceState({ sheet: 1 }, "", url());
     else if (sheetStep.current) { sheetStep.current = false; if (window.history.state?.sheet) window.history.back(); }
+    // GoatCounter : la fiche ouverte dans l'app compte comme une vue de e/<id>.html
+    if (open) try { window.goatcounter?.count?.({ path: `/e/${open.id}.html`, title: open.title }); } catch {}
   }, [open]);
   useEffect(() => {
     const h = () => { if (sheetStep.current) { sheetStep.current = false; setOpen(null); } };

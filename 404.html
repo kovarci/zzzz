@@ -32,6 +32,8 @@ html[lang=en] [data-fr]{display:none}html[lang=en] [data-en]{display:revert}
   // Même clé que le site (paf_lang, valeur JSON « "en" ») : la langue suit le visiteur.
   try { if (JSON.parse(localStorage.getItem("paf_lang")) === "en") document.documentElement.lang = "en"; } catch (e) {}
 </script>
+<!-- Mesure d'audience GoatCounter : sans cookie ni donnée personnelle -->
+<script data-goatcounter="https://lotent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <main class="card">
