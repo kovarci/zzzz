@@ -5030,7 +5030,9 @@ def _event_jsonld(ev):
         else:
             data["eventAttendanceMode"] = "https://schema.org/OnlineEventAttendanceMode"
             data["location"] = virtual
-    if ev.get("description"):
+    # Description de la source si elle dit quelque chose (« Démocratie »,
+    # « Séminaire » : une étiquette, pas une description)
+    if len((ev.get("description") or "").strip()) >= 60:
         data["description"] = ev["description"][:500]
     else:
         # Sans description, Google n'a que le titre : on lui donne la phrase
