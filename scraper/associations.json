@@ -6,7 +6,8 @@
     "evenements : uniquement des événements publics vérifiés sur une page officielle (url) —",
     "site de l'association, HelloAsso, Luma, page de l'université hôte. Pas les soirées réservées aux membres.",
     "Les événements passés sont ignorés par le scraper ; la recherche hebdomadaire peut les retirer.",
-    "Propositions du formulaire GitHub (label « proposition ») : ajoutées ici après vérification ; \"source\": \"institution\" pour une conférence de labo / université, \"membres\": true si réservé, \"proposition\": <n° du ticket>."
+    "Propositions du formulaire GitHub (label « proposition ») : ajoutées ici après vérification ; \"source\": \"institution\" pour une conférence de labo / université, \"membres\": true si réservé, \"proposition\": <n° du ticket>.",
+    "« categorie »: \"salon\" range l'événement dans la catégorie « Salons étudiants » (kind=salon) ; « prix » : tarif affiché."
   ],
   "associations": [
     {
@@ -266,6 +267,58 @@
       "canaux": [
         "https://www.lespilotes.fr/"
       ]
+    },
+    {
+      "nom": "Crous de Paris / Créteil / Versailles",
+      "ecole": "Toutes (vie étudiante)",
+      "domaine": "Vie étudiante, aides, culture, sport",
+      "auto": "scrape_crous"
+    },
+    {
+      "nom": "L'Étudiant (salons)",
+      "ecole": "Tous",
+      "domaine": "Salons d'orientation",
+      "auto": "scrape_salons_etudiant"
+    },
+    {
+      "nom": "Jeunes d'Avenirs",
+      "ecole": "16-30 ans",
+      "domaine": "Salons emploi, alternance, formation (catégorie salon)",
+      "canaux": [
+        "http://jeunesdavenirs.fr/salon-jeunes-davenirs-ile-de-france/"
+      ]
+    },
+    {
+      "nom": "Télémaque",
+      "ecole": "Collégiens, lycéens (quartiers prioritaires)",
+      "domaine": "Égalité des chances, mentorat",
+      "canaux": [
+        "https://www.telemaque.org/"
+      ]
+    },
+    {
+      "nom": "NQT",
+      "ecole": "Jeunes diplômés",
+      "domaine": "Égalité des chances, parrainage vers l'emploi",
+      "canaux": [
+        "https://www.nqt.fr/"
+      ]
+    },
+    {
+      "nom": "Viens voir mon taf",
+      "ecole": "Collégiens (REP)",
+      "domaine": "Égalité des chances, stages",
+      "canaux": [
+        "https://www.viensvoirmontaf.fr/"
+      ]
+    },
+    {
+      "nom": "Animafac",
+      "ecole": "Réseau d'associations étudiantes",
+      "domaine": "Engagement étudiant, formations",
+      "canaux": [
+        "https://www.animafac.net/"
+      ]
     }
   ],
   "evenements": [
@@ -291,6 +344,19 @@
       "description": "Journée immersive au Mondial de l'Auto : rencontres avec des marraines ingénieures, puis échanges avec recruteurs et RH pour les étudiantes. Sur inscription auprès d'Elles bougent (complet).",
       "membres": true,
       "verifie_le": "2026-09-28"
+    },
+    {
+      "association": "Jeunes d'Avenirs",
+      "titre": "Salon Jeunes d'Avenirs x WorldSkills France — Île-de-France",
+      "type": "Salon",
+      "categorie": "salon",
+      "date": "2026-10-15",
+      "heure": "09:00",
+      "fin": "18:00",
+      "lieu": "Paris Montreuil Expo, 128 rue de Paris, Montreuil",
+      "url": "http://jeunesdavenirs.fr/salon-jeunes-davenirs-ile-de-france/",
+      "description": "Salon de l'emploi, de l'alternance et de la formation pour les 16-30 ans, avec les métiers de WorldSkills France.",
+      "verifie_le": "2026-09-29"
     }
   ]
 }

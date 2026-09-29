@@ -2398,6 +2398,67 @@ def _career_event(company, sector, title, dt, *, time_str="", end_time="", locat
     return ev
 
 
+def scrape_salons_etudiant():
+    """Salons de L'Étudiant en Île-de-France (grandes écoles, masters,
+    alternance, santé…) : catégorie à part « Salons étudiants » (kind=salon).
+    Liste paginée www.letudiant.fr/etudes/salons[/page-N].html (robots.txt :
+    autorisé) ; horaires et lieu lus sur le site de chaque salon (« Quand ?
+    Samedi 10 et dimanche 11 octobre 2026 de 10h à 18h … Où ? Porte de
+    Versailles - Pavillon 7.2 … 75015 PARIS »). Entrée gratuite sur invitation."""
+    print("→ Salons de L'Étudiant...")
+    base, events, seen = "https://www.letudiant.fr/etudes/salons", [], set()
+    for n in range(1, 16):
+        try:
+            soup = _soup(f"{base}.html" if n == 1 else f"{base}/page-{n}.html")
+        except Exception as e:
+            if n == 1:
+                print(f"   [warn] {e}")
+            break
+        cards = soup.select("article[data-testid=card-salon]")
+        if not cards:
+            break
+        for c in cards:
+            h, t, a = c.select_one("h3"), c.select_one("time[datetime]"), c.select_one("a[href]")
+            if not h or not t or not a:
+                continue
+            for x in h.select(".tw-sr-only"):
+                x.decompose()
+            title, city = clean_text(h.get_text(" ")), c.select_one(".fa-location-dot + span")
+            city = clean_text(city.get_text(" ")) if city else ""
+            # « Saint-Denis (La Réunion) » n'est pas Saint-Denis (93)
+            if re.search(r"R[ée]union|Guadeloupe|Martinique|Guyane|Mayotte", f"{title} {city}"):
+                continue
+            if not (re.search(r"\bParis\b|[IÎ]le-de-France|Massy", f"{title} {city}") or _IDF_CITY.search(city)):
+                continue
+            try:
+                d = date.fromisoformat(t["datetime"][:10])
+            except ValueError:
+                continue
+            if not in_window(d) or (title, d) in seen:
+                continue
+            seen.add((title, d))
+            url = a["href"]
+            when_txt, place, tm = "", "", ("", "")
+            try:
+                txt = clean_text(_soup(url).get_text(" "))
+                w = re.search(r"Quand \?\s*(.+?)\s+(?:Retrouvez|Où \?|Inscrivez)", txt)
+                o = re.search(r"Où \?\s*(.+?)\s+(?:Accédez|Inscrivez|Bien s'orienter|Comment venir|Plan d'accès)", txt)
+                when_txt = w.group(1)[:120] if w else ""
+                place = o.group(1)[:160] if o else ""
+                tm = _times(when_txt) if when_txt else ("", "")
+            except Exception:
+                pass
+            place = re.sub(r"\b(PARIS|MASSY|VILLETANEUSE|CERGY)\b", lambda m: m.group(1).title(), place)
+            ev = new_event("L'Étudiant", title, d, time_str=tm[0], end_time=tm[1],
+                           location=place or f"{city}", url=url, source_type="entreprise",
+                           desc=f"Salon d'orientation · {when_txt}" if when_txt else "Salon d'orientation")
+            ev["kind"] = "salon"
+            ev["price"] = "Gratuit"
+            events.append(ev)
+    print(f"   ✓ Total L'Étudiant (salons): {len(events)} events")
+    return events
+
+
 def _carrieres_config():
     try:
         return json.loads(CARRIERES_FILE.read_text(encoding="utf-8"))
@@ -2568,6 +2629,11 @@ def scrape_associations_verifiees():
             source_type="institution" if x.get("source") == "institution" else "association"))
         if x.get("membres"):                  # réservé aux adhérents / bénéficiaires
             events[-1]["members"] = True
+        # Salon étudiant (Jeunes d'Avenirs, Salon des masters…) : catégorie à part
+        if x.get("categorie") == "salon":
+            events[-1]["kind"] = "salon"
+        if x.get("prix"):
+            events[-1]["price"] = x["prix"]
     print(f"   ✓ Total Associations · sélection: {len(events)} events")
     return events
 
@@ -2709,8 +2775,11 @@ def _where_or(where, default):
     return f"{where}, {default}"
 
 
+_SHORTCODE = re.compile(r"\[/?[a-z][a-z0-9_]*(?:\s[^\]]*)?\]")
+
+
 def scrape_tribe(name, base, location, *, drop=None, source_type="institution",
-                 default_kind="Séminaire", discipline=None):
+                 default_kind="Séminaire", discipline=None, speaker_titles=True):
     """Agenda WordPress « The Events Calendar » : son API REST publique
     (/wp-json/tribe/events/v1) rend dates, lieux et descriptions propres."""
     print(f"→ {name}...")
@@ -2741,7 +2810,7 @@ def scrape_tribe(name, base, location, *, drop=None, source_type="institution",
             # Séminaires titrés du seul nom de l'orateur : « Antoine Joux »,
             # « Monica Musso (University of Bath) »
             bare = re.sub(r"\s*\(.*?\)", "", title)
-            if len(bare.split()) <= 5 and not re.search(r"[:«»?!–]", title):
+            if speaker_titles and len(bare.split()) <= 5 and not re.search(r"[:«»?!–]", title):
                 speaker = title
                 title = f"{cats[0] if cats else default_kind} : {title}"
             else:
@@ -2752,7 +2821,8 @@ def scrape_tribe(name, base, location, *, drop=None, source_type="institution",
                 name, title, dt.date(), time_str=dt.strftime("%H:%M") if timed else "",
                 end_time=end.strftime("%H:%M") if timed and end and end.date() == dt.date() else "",
                 location=_where_or(where, location),
-                desc=strip_html(html_unescape(it.get("description", "")))[:400],
+                # Shortcodes WPBakery (« [vc_row][vc_column width=»2/3″] ») du Crous
+                desc=re.sub(r"\s{2,}", " ", _SHORTCODE.sub(" ", strip_html(html_unescape(it.get("description", ""))))).strip()[:400],
                 url=it.get("url") or base, speaker=speaker, source_type=source_type,
                 image=img.get("url", "")))
             if discipline:
@@ -3463,6 +3533,22 @@ def scrape_actuaires():
     return evs
 
 
+def scrape_crous():
+    """Crous de Paris, Créteil et Versailles : vie étudiante (accueil des
+    étudiants internationaux, sport, culture, aides) — agenda WordPress « The
+    Events Calendar », même API que Hi! PARIS. Créteil et Versailles n'ont
+    rien publié en septembre 2026 : lus quand même, pour la suite."""
+    events = []
+    for name, base, loc in (("Crous de Paris", "https://www.crous-paris.fr", "Paris"),
+                            ("Crous de Créteil", "https://www.crous-creteil.fr", "Créteil"),
+                            ("Crous de Versailles", "https://www.crous-versailles.fr", "Versailles")):
+        try:
+            events += scrape_tribe(name, base, loc, source_type="association", speaker_titles=False)
+        except Exception as e:
+            print(f"   [warn] {name}: {e}")
+    return events
+
+
 def scrape_institut_engagement():
     # Institut de l'Engagement : rencontres des lauréats, ateliers (API The Events Calendar)
     return scrape_tribe("Institut de l'Engagement", "https://www.engagement.fr",
@@ -3727,7 +3813,7 @@ STATIC_SOURCES = [
     scrape_bernardins, scrape_academie_sciences, scrape_cite_sciences,
     scrape_sorbonne_nouvelle, scrape_paris8, scrape_nanterre,
     scrape_ijclab, scrape_in2p3_paris, scrape_observatoire, scrape_sciencesconf,
-    scrape_eightfold, scrape_carrieres_verifiees,
+    scrape_eightfold, scrape_carrieres_verifiees, scrape_salons_etudiant,
     scrape_jeunes_ihedn, scrape_makesense, scrape_associations_verifiees,
     scrape_paris1, scrape_assas, scrape_paris_saclay, scrape_condorcet, scrape_iea, scrape_fmsh, scrape_quai_branly,
     scrape_hi_paris, scrape_ens_maths, scrape_prairie, scrape_item_ens, scrape_ciens, scrape_ceres,
@@ -3736,7 +3822,7 @@ STATIC_SOURCES = [
     scrape_inha, scrape_ifri, scrape_iris, scrape_institut_delors, scrape_jean_jaures,
     scrape_louis_bachelier, scrape_citeco, scrape_ima, scrape_beaux_arts, scrape_ens_saclay,
     scrape_escp, scrape_sorbonne_paris_nord, scrape_chartes,
-    scrape_lamsade, scrape_cmap, scrape_actuaires, scrape_institut_engagement,
+    scrape_lamsade, scrape_cmap, scrape_actuaires, scrape_institut_engagement, scrape_crous,
     scrape_ipgp, scrape_amerique_latine, scrape_institut_italien, scrape_mcjp,
     scrape_academie_medecine, scrape_aibl, scrape_mines, scrape_musee_homme, scrape_ined,
 ]
@@ -4814,7 +4900,7 @@ _FREE_BY_DEFAULT = {
     "Beaux-Arts de Paris", "ENS Paris-Saclay", "ESCP Business School", "Université Sorbonne Paris Nord",
     "École nationale des chartes", "École polytechnique", "IHES", "Labos de maths d'Île-de-France", "IPGP",
     "Académie nationale de médecine", "Académie des inscriptions et belles-lettres", "Mines Paris - PSL",
-    "Ined", "Jeunes IHEDN",
+    "Ined", "Jeunes IHEDN", "Crous de Paris", "Crous de Créteil", "Crous de Versailles",
 }
 
 
@@ -4825,7 +4911,7 @@ def _free_likely(ev):
     if _is_free(ev):
         return True
     return not ev.get("price") and (ev.get("institution") in _FREE_BY_DEFAULT
-                                    or ev.get("kind") in ("soutenance", "carriere"))
+                                    or ev.get("kind") in ("soutenance", "carriere", "salon"))
 
 
 # Les Mardis de la Philo : pas de billet à l'unité, abonnement annuel (tarifs
@@ -5458,7 +5544,8 @@ SELECTIONS = [("s/cette-semaine.html", "Cette semaine"), ("s/ce-week-end.html", 
               ("s/ce-soir.html", "Ce soir"), ("s/gratuites.html", "Conférences gratuites"),
               ("s/talks-in-english.html", "Talks in English"),
               ("s/soutenances-de-these.html", "Soutenances de thèse"),
-              ("s/carrieres.html", "Événements carrières")]
+              ("s/carrieres.html", "Événements carrières"),
+              ("s/salons-etudiants.html", "Salons étudiants")]
 
 
 def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=None,
@@ -5773,6 +5860,7 @@ def write_selection_pages(events):
                   key=lambda e: (e.get("date", ""), e.get("time", "")))
     theses = [e for e in side if e["kind"] == "soutenance"]
     careers = [e for e in side if e["kind"] == "carriere"]
+    fairs = [e for e in side if e["kind"] == "salon"]
     week_end = (today + timedelta(days=6)).isoformat()
     # Le dimanche, « ce week-end » = aujourd'hui (comme le site)
     sat = today + timedelta(days=(5 - today.weekday()) % 7) if today.weekday() != 6 else today - timedelta(days=1)
@@ -5827,6 +5915,12 @@ def write_selection_pages(events):
          f"{len(careers)} événements carrières à Paris pour étudiants et jeunes diplômés : forums, "
          f"afterworks et présentations d'entreprises ({orgs(careers)}…).",
          f"Forums, afterworks et présentations de recruteurs. Entreprises : {orgs(careers)}." if careers else "", "fr"),
+        ("salons-etudiants", "Salons étudiants à Paris", fairs, "/?salons=1",
+         "Salons étudiants à Paris : orientation, grandes écoles, masters · Lotent",
+         f"{len(fairs)} salons étudiants à Paris et en Île-de-France : orientation, grandes écoles, masters, "
+         f"alternance… Dates, horaires et lieux, entrée gratuite sur invitation.",
+         "Salons d'orientation et de recrutement pour lycéens et étudiants, entrée gratuite sur invitation."
+         if fairs else "", "fr"),
     ]
     written = set()
     for slug, name, evts, target, title, desc, intro, lang in pages:

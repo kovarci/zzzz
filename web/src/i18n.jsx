@@ -45,6 +45,7 @@ const TR = {
   pop_access: ["Accès", "Access"], access_public: ["Ouvert à tous", "Open to all"], access_members: ["Réservé aux membres", "Members only"],
   badge_members: ["Membres", "Members"], access_members_hint: ["Réservé aux membres de l'organisation (adhérents, bénéficiaires, élèves…)", "Reserved for the organisation's members (members, beneficiaries, students…)"],
   btn_theses: ["Soutenances", "PhD defences"], btn_theses_hint: ["Soutenances de thèse et HDR, masquées du fil principal", "PhD and habilitation defences, hidden from the main feed"],
+  btn_fairs: ["Salons étudiants", "Student fairs"], btn_fairs_hint: ["Salons d'orientation, grandes écoles, masters, alternance, masqués du fil principal", "Education and career fairs (grandes écoles, masters, apprenticeships), hidden from the main feed"],
   btn_careers: ["Carrières", "Careers"], btn_careers_hint: ["Événements de recrutement des entreprises (banques, conseil, tech…), masqués du fil principal", "Company recruiting events (banks, consulting, tech…), hidden from the main feed"],
   view_list: ["Liste", "List"], view_week: ["Semaine", "Week"], view_map: ["Carte", "Map"],
   near_locate: ["Localisation…", "Locating…"], near_sorted: ["Tri par distance", "Sorted by distance"], near_label: ["Près de moi", "Near me"],
@@ -101,7 +102,7 @@ const TR = {
   footer_manual_suffix: [" · manuelle : {t}", " · manual: {t}"],
   footer_browse: ["Parcourir", "Browse"], sel_week: ["Cette semaine", "This week"], sel_weekend: ["Ce week-end", "This weekend"],
   sel_tonight: ["Ce soir", "Tonight"], sel_free: ["Conférences gratuites", "Free talks"], sel_en: ["Talks in English", "Talks in English"],
-  sel_theses: ["Soutenances de thèse", "PhD defences"], sel_careers: ["Événements carrières", "Career events"],
+  sel_theses: ["Soutenances de thèse", "PhD defences"], sel_careers: ["Événements carrières", "Career events"], sel_fairs: ["Salons étudiants", "Student fairs"],
   footer_subscribe: ["S'abonner", "Subscribe"], footer_ics: ["Calendrier complet (.ics)", "Full calendar (.ics)"],
   footer_rss: ["Flux RSS de la semaine", "This week's RSS feed"], footer_sitemap: ["Plan du site", "Sitemap"],
   footer_contact_title: ["Une question, une idée ?", "A question, an idea?"],
@@ -147,7 +148,7 @@ const KIND_EN = {
   "Cours": "Lecture course", "Séminaire": "Seminar", "Colloque": "Conference", "Conférence": "Talk",
   "Leçon inaugurale": "Inaugural lecture", "Journée d'étude": "Study day", "Atelier": "Workshop",
   "Workshop": "Workshop", "Table ronde": "Round table", "Rencontre": "Meetup", "Lecture": "Reading",
-  "Soutenance": "Thesis defence", "Recrutement": "Recruitment",
+  "Soutenance": "Thesis defence", "Recrutement": "Recruitment", "Salon": "Student fair",
 };
 
 const LangContext = createContext(null);

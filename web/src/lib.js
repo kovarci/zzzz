@@ -90,6 +90,7 @@ export const dc = e => `var(${DISC[e.discipline] || "--c-aut"})`;
 export const SIDE_KINDS = {
   soutenance: { param: "soutenances", icon: "🎓", label: "btn_theses", hint: "btn_theses_hint", kind: "Soutenance" },
   carriere: { param: "carrieres", icon: "💼", label: "btn_careers", hint: "btn_careers_hint", kind: "Recrutement" },
+  salon: { param: "salons", icon: "🧭", label: "btn_fairs", hint: "btn_fairs_hint", kind: "Salon" },
 };
 export const isSide = e => !!SIDE_KINDS[e.kind];
 // Réservé aux membres (adhérents, bénéficiaires, élèves d'une école…) : 🔒

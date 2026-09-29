@@ -31,7 +31,9 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
          "IHES", "Labos de maths d'Île-de-France", "IPGP", "Maison de l'Amérique latine", "Institut culturel italien", "Maison de la culture du Japon",
          # Ajoutées le 25/09/2026 — l'AIBL ne publie que le trimestre en cours : 0 possible entre deux
          "Académie nationale de médecine", "Académie des inscriptions et belles-lettres", "Mines Paris - PSL",
-         "Musée de l'Homme", "Ined"]
+         "Musée de l'Homme", "Ined",
+         # Ajoutées le 29/09/2026 (Crous de Créteil / Versailles : agendas vides à l'ajout, non surveillés)
+         "Crous de Paris", "L'Étudiant"]
 
 
 # Lues par maj.bat (scraper/refresh_local.py, LOCAL_INSTITUTIONS) : le robot
