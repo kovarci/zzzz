@@ -479,7 +479,8 @@ _JUNK_TITLE = re.compile(
     r"param[eè]tres?(\s+d['’e]?\s*accessibilit[eé])?|accessibilit[eé]|"
     r"se connecter|connexion|s['’]inscrire|inscription|"
     r"newsletter|cookies?|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|"
-    r"\d{1,2}\s+\w+\s+\d{4})\s*$",
+    # « 26 Mai 2026 Aujourd'hui » : en-tête de jour du Collège de France
+    r"\d{1,2}\s+\w+\s+\d{4}(?:\s+aujourd['’]?hui)?)\s*$",
     re.I,
 )
 
@@ -2024,11 +2025,12 @@ def scrape_ephe():
 
 def scrape_bernardins():
     # Webflow : jour + mois abrégé anglais (« 30 Sep »), sans année.
-    return _scrape_cards(
+    # Tarif (gratuit sur réservation / 12 €…) : seulement sur chaque fiche.
+    return _add_page_prices(_scrape_cards(
         "Collège des Bernardins", "https://www.collegedesbernardins.fr/agenda",
         ".item-agenda", title="h2", date=".tag-date-wrapper", kind=".tag-vignette-agenda-v2",
         base="https://www.collegedesbernardins.fr",
-        location="Collège des Bernardins, 20 rue de Poissy, Paris 5e")
+        location="Collège des Bernardins, 20 rue de Poissy, Paris 5e"))
 
 
 def scrape_academie_sciences():
@@ -2634,6 +2636,15 @@ def scrape_que_faire_a_paris():
             ev["discipline"] = detect_discipline(title, f"{desc} {tags.replace(';', ' ')}", venue)
             if x.get("price_type") == "gratuit":
                 ev["price"] = "Gratuit"
+            elif x.get("price_type") == "payant":
+                # « 12€ tarif plein, 8€… », « De 10 à 64 € », « Tarif unique : 40 EUR »
+                pd = strip_html(x.get("price_detail") or "")
+                rng = re.search(r"\b[Dd]e\s+(\d+(?:[.,]\d{1,2})?)\s*(?:€|euros?)?\s+à\s+(\d+(?:[.,]\d{1,2})?)\s*(?:€|euros?\b|EUR\b)", pd)
+                one = re.search(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|euros?\b|EUR\b)", pd, re.I)
+                if rng:
+                    ev["price"] = f"{rng.group(1)}–{rng.group(2)} €"
+                elif one:
+                    ev["price"] = f"{one.group(1)} €"
             geo = x.get("lat_lon") or {}
             if geo.get("lat") and geo.get("lon"):
                 ev["lat"], ev["lng"], ev["geo_exact"] = geo["lat"], geo["lon"], True
@@ -3001,6 +3012,36 @@ def scrape_hec_ia():
     return evs
 
 
+def _page_price(url):
+    """Tarif affiché sur la fiche officielle d'un événement (Louvre :
+    « Tarif Entrée libre » ou « Tarif D plein : 10 € » ; Bernardins :
+    « Informations Entrée gratuite sur réservation » ou « Tarif plein : 12€ »).
+    « Gratuit », « Plein tarif : 12 € » ou "" si rien de sûr."""
+    try:
+        r = requests.get(url, headers=CDF_HEADERS, timeout=25, verify=_verify_for(url))
+        r.raise_for_status()
+    except Exception:
+        return ""
+    txt = re.sub(r"\s+", " ", html_unescape(re.sub(r"<[^>]+>", " ", r.text)))
+    if re.search(r"(?:Informations(?: générales)?|Tarif)\s+(?:Entr[ée]e (?:gratuite|libre)|Gratuit)\b", txt, re.I):
+        return "Gratuit"
+    m = re.search(r"\bplein\s*:\s*(\d+(?:[.,]\d{1,2})?)\s*€", txt, re.I)
+    return f"Plein tarif : {m.group(1)} €" if m else ""
+
+
+def _add_page_prices(events):
+    """Complète le prix des événements sans tarif à partir de leur page (en
+    parallèle). Sans prix, Search Console signale « Champ price manquant »."""
+    from concurrent.futures import ThreadPoolExecutor
+    todo = [e for e in events if not e.get("price") and e.get("url")]
+    with ThreadPoolExecutor(8) as ex:
+        for e, p in zip(todo, ex.map(lambda e: _page_price(e["url"]), todo)):
+            if p:
+                e["price"] = p
+    print(f"   prix lus sur les fiches : {sum(1 for e in todo if e.get('price'))}/{len(todo)}")
+    return events
+
+
 def _next_data(soup):
     tag = soup.find("script", id="__NEXT_DATA__")
     return json.loads(tag.string) if tag and tag.string else {}
@@ -3063,6 +3104,7 @@ def scrape_louvre():
                 url=make_absolute(((x.get("link") or {}).get("url") or ""), base),
                 speaker=clean_text(sp.group(1)) if sp else "", image=img))
         m = nxt
+    _add_page_prices(events)
     print(f"   ✓ Total Musée du Louvre: {len(events)} events")
     return events
 
@@ -4753,6 +4795,114 @@ _IDF_CITY = re.compile(
     r"Neuilly-sur-Seine|Clichy|Pantin|Montreuil|Saint-Ouen|Jouy-en-Josas|Fontainebleau|Cachan|Sceaux)\b")
 
 
+# Établissements dont les conférences publiques sont gratuites (universités,
+# grandes écoles, instituts de recherche, académies, think tanks) mais dont
+# l'agenda n'indique pas de prix. Search Console signalait « Champ price
+# manquant » sur 527 fiches, surtout celles-ci. Pas les musées, le Collège
+# des Bernardins, Sciencesconf.org (frais d'inscription aux colloques), la
+# Ville ou Luma, où le prix varie : leur prix reste inconnu.
+_FREE_BY_DEFAULT = {
+    "Collège de France", "Institut Henri Poincaré", "ENS Paris", "EHESS", "Paris School of Economics",
+    "Sciences Po", "Sorbonne Université", "Université PSL", "Université Paris Dauphine", "Article 1",
+    "Sciences et Cultures", "Université Paris Cité", "Cnam", "BnF", "Institut Pasteur", "Institut Curie",
+    "Institut du Cerveau", "Inalco", "EPHE", "Académie des sciences", "Cité des sciences",
+    "Université Sorbonne Nouvelle", "Université Paris 8", "Université Paris Nanterre", "IJCLab", "IN2P3",
+    "Observatoire de Paris", "Université Paris 1 Panthéon-Sorbonne", "Université Paris-Panthéon-Assas",
+    "Université Paris-Saclay", "Campus Condorcet", "Institut d'études avancées de Paris",
+    "Fondation Maison des Sciences de l'Homme", "Hi! PARIS", "PR[AI]RIE", "HEC Paris", "INHA", "Ifri",
+    "IRIS", "Institut Jacques Delors", "Fondation Jean-Jaurès", "Institut Louis Bachelier",
+    "Beaux-Arts de Paris", "ENS Paris-Saclay", "ESCP Business School", "Université Sorbonne Paris Nord",
+    "École nationale des chartes", "École polytechnique", "IHES", "Labos de maths d'Île-de-France", "IPGP",
+    "Académie nationale de médecine", "Académie des inscriptions et belles-lettres", "Mines Paris - PSL",
+    "Ined", "Jeunes IHEDN",
+}
+
+
+def _free_likely(ev):
+    """Gratuit déclaré par la source, ou prix non indiqué chez un
+    établissement dont les conférences sont gratuites (soutenances de thèse
+    et forums de recrutement compris)."""
+    if _is_free(ev):
+        return True
+    return not ev.get("price") and (ev.get("institution") in _FREE_BY_DEFAULT
+                                    or ev.get("kind") in ("soutenance", "carriere"))
+
+
+# Les Mardis de la Philo : pas de billet à l'unité, abonnement annuel (tarifs
+# relevés sur lesmardisdelaphilo.com/tarifs le 29/09/2026), gratuit < 26 ans
+_MARDIS_ABO = {"Philosophie": ("Abonnement annuel Philofil", "660"),
+               "Littérature": ("Abonnement annuel Littofil", "400")}
+
+
+def _attendance(loc):
+    """« offline », « online » ou « mixed » d'après le lieu. « En ligne —
+    Université Paris Cité, 85 bd Saint-Germain » (adresse de l'organisateur)
+    est en ligne ; « Amphi X, 11 rue Y (hybride) » est mixte."""
+    if not loc or not ONLINE_RE.search(loc):
+        return "offline"
+    if re.search(r"hybride|et en ligne|\+\s*(?:en ligne|zoom|visio)|en pr[ée]sentiel|sur place", loc, re.I):
+        return "mixed"
+    if re.match(r"\s*(?:en ligne|online|webinaire|webinar|zoom|teams|visio|distanciel|à distance|streaming)\b",
+                loc, re.I):
+        return "online"
+    return "mixed" if re.search(r"\d", loc) else "online"
+
+
+def _postal_code(loc):
+    """Code postal d'un lieu : « 75005 », ou « Paris 5e » / « Paris 1er » → 75005."""
+    m = re.search(r"\b(7[5789]\d{3}|9[1-5]\d{3})\b", loc or "")
+    if m:
+        return m.group(1)
+    m = re.search(r"\bParis\s*(\d{1,2})\s*(?:e|er|ème|è)\b", loc or "", re.I)
+    if m and 1 <= int(m.group(1)) <= 20:
+        return f"750{int(m.group(1)):02d}"
+    return ""
+
+
+_WEEKDAYS_FR = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+# Genre du type d'événement (« Conférence organisée », « Séminaire organisé »)
+_KIND_FEM = {"Conférence", "Leçon inaugurale", "Journée d'étude", "Table ronde", "Rencontre", "Lecture"}
+
+
+def _about_text(ev):
+    """Phrase de présentation propre à chaque fiche e/ : type, discipline,
+    jour de la semaine, horaires, lieu, organisateur, intervenant, accès,
+    langue. Beaucoup de sources ne donnent qu'un titre : sans ce texte, les
+    fiches d'un même cycle étaient quasi identiques pour Google (« Explorée,
+    actuellement non indexée ») et ne répondaient à aucune requête du type
+    « conférence philosophie mardi soir Paris 5e »."""
+    kind = _kind_of(ev)
+    disc = _DISC_OF.get(ev.get("discipline", ""), "")
+    try:
+        d = date.fromisoformat(ev.get("date", ""))
+        when = f"le {_WEEKDAYS_FR[d.weekday()]} {_date_fr(ev['date'])}"
+    except Exception:
+        when = ""
+    if ev.get("time"):
+        when += (f", de {ev['time']} à {ev['end_time']}" if ev.get("end_time") and ev["end_time"] > ev["time"]
+                 else f" à {ev['time']}")
+    online = _attendance(ev.get("location") or "") == "online"
+    city = _IDF_CITY.search(ev.get("location") or "")
+    where = "en ligne" if online else f"à {city.group(1) if city else 'Paris'}"
+    s = f"{kind}{' ' + disc if disc else ''} {where}, {when}.".replace(" ,", ",")
+    inst = ev.get("institution") or ""
+    if inst:
+        s += f" Organisé{'e' if kind in _KIND_FEM else ''} par {inst}."
+    if ev.get("speaker"):
+        s += f" Avec {ev['speaker'][:120]}."
+    if ev.get("location") and not online:
+        s += f" Lieu : {ev['location'][:160]}."
+    if _free_likely(ev):
+        s += " Entrée gratuite (inscription parfois demandée)."
+    elif ev.get("price") and str(ev["price"]) != "0":
+        s += f" Tarif : {str(ev['price'])[:60]}."
+    if ev.get("members"):
+        s += " Accès réservé aux membres."
+    if _is_english(ev):
+        s += " En anglais."
+    return s
+
+
 def _event_jsonld(ev):
     """schema.org Event JSON-LD — feeds Google's rich results (date & venue
     shown directly in search). Includes every recommended field (image,
@@ -4815,11 +4965,19 @@ def _event_jsonld(ev):
     }
     # Prix déclaré seulement s'il est connu : avant, un tarif inconnu devenait
     # « 0 € » et « payant, gratuit pour les moins de 26 ans » devenait 26 €.
-    m = re.search(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|eur\b|euros?\b)", price_str, re.I)
+    # « 5–7 € » : le prix le plus bas (le premier nombre suivi de « € » était 7)
+    m = (re.search(r"(\d+(?:[.,]\d{1,2})?)(?=\s*[–-]\s*\d+(?:[.,]\d{1,2})?\s*(?:€|eur\b|euros?\b))", price_str, re.I)
+         or re.search(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|eur\b|euros?\b)", price_str, re.I))
     if price_str == "0" or re.match(r"\s*(gratuit|free|entr[ée]e libre)", price_str, re.I):
         offers.update(price="0", priceCurrency="EUR")
     elif m:
         offers.update(price=m.group(1).replace(",", "."), priceCurrency="EUR")
+    elif ev.get("institution") == "Les Mardis de la Philo" and ev.get("discipline") in _MARDIS_ABO:
+        name, amount = _MARDIS_ABO[ev["discipline"]]
+        offers = [dict(offers, name="Moins de 26 ans (dans la limite des places)", price="0", priceCurrency="EUR"),
+                  dict(offers, name=name, price=amount, priceCurrency="EUR")]
+    elif _free_likely(ev):
+        offers.update(price="0", priceCurrency="EUR")
     data = {
         "@context": "https://schema.org",
         "@type": "Event",
@@ -4827,27 +4985,57 @@ def _event_jsonld(ev):
         "startDate": start,
         "endDate": end,
         "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": ("https://schema.org/OnlineEventAttendanceMode"
-                                if ev.get("location") and ONLINE_RE.search(ev["location"])
-                                else "https://schema.org/OfflineEventAttendanceMode"),
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",   # voir _attendance
         "url": f"{SITE_URL}/e/{eid}.html",
         "image": img,
         "organizer": organizer,
         "performer": performer,
         "offers": offers,
     }
+    if isinstance(offers, dict) and offers.get("price") == "0":
+        data["isAccessibleForFree"] = True
+    data["inLanguage"] = "en" if _is_english(ev) else "fr"
     if ev.get("location"):
         city = _IDF_CITY.search(ev["location"])
+        addr = {"@type": "PostalAddress", "streetAddress": ev["location"][:200],
+                "addressLocality": city.group(1) if city else "Paris",
+                "addressRegion": "Île-de-France", "addressCountry": "FR"}
+        cp = _postal_code(ev["location"])
+        if cp:
+            addr["postalCode"] = cp
         data["location"] = {
             "@type": "Place",
             # « Amphithéâtre X, 11 place Marcelin-Berthelot, Paris » : le nom du
             # lieu est le premier segment, l'adresse complète reste à côté
             "name": re.split(r"\s+—\s+|,", ev["location"])[0].strip()[:120] or ev["location"],
-            "address": {"@type": "PostalAddress", "streetAddress": ev["location"][:200],
-                        "addressLocality": city.group(1) if city else "Paris", "addressCountry": "FR"},
+            "address": addr,
         }
+        if ev.get("lat") and ev.get("lng"):
+            data["location"]["geo"] = {"@type": "GeoCoordinates",
+                                       "latitude": ev["lat"], "longitude": ev["lng"]}
+    else:
+        # « location » est obligatoire pour les résultats enrichis Événement :
+        # sans lieu connu, la ville (toutes les sources sont franciliennes)
+        data["location"] = {"@type": "Place", "name": "Paris", "address": {
+            "@type": "PostalAddress", "addressLocality": "Paris",
+            "addressRegion": "Île-de-France", "addressCountry": "FR"}}
+    # En ligne : VirtualLocation (un « Place » nommé « Zoom » est une erreur
+    # pour Google) ; hybride : les deux, mode « Mixed ».
+    mode = _attendance(ev.get("location") or "")
+    if mode != "offline":
+        virtual = {"@type": "VirtualLocation", "url": ev.get("url") or f"{SITE_URL}/e/{eid}.html"}
+        if mode == "mixed":
+            data["eventAttendanceMode"] = "https://schema.org/MixedEventAttendanceMode"
+            data["location"] = [data["location"], virtual]
+        else:
+            data["eventAttendanceMode"] = "https://schema.org/OnlineEventAttendanceMode"
+            data["location"] = virtual
     if ev.get("description"):
         data["description"] = ev["description"][:500]
+    else:
+        # Sans description, Google n'a que le titre : on lui donne la phrase
+        # de présentation affichée sur la page.
+        data["description"] = _about_text(ev)[:500]
     return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 
 
@@ -5031,6 +5219,36 @@ def write_event_pages(events):
             f'<a href="{u}">{_esc_attr(n)}</a>' if i < len(crumbs) - 1 else _esc_attr(n)
             for i, (n, u) in enumerate(crumbs))
         inst_html = (f'<a href="{hub_url}">{inst}</a>' if hub_url else inst)
+        # Badge discipline → page discipline (maillage vers d/)
+        disc = ev.get("discipline", "")
+        disc_html = (f'<a class="badge dbadge" href="{SITE_URL}/d/{_disc_slug(disc)}.html">{_esc_attr(disc)}</a>'
+                     if disc in _DISC_OF else f'<span class="badge dbadge">{_esc_attr(disc)}</span>')
+        about = _esc_attr(_about_text(ev))
+        is_past = ev.get("date", "") < today_iso
+        past_html = (f'<p class="past">Cet événement a eu lieu le {_esc_attr(_date_fr(ev.get("date", "")))}.'
+                     + (f' <a href="{hub_url}">Voir les prochaines conférences de {inst}</a>.' if hub_url else '')
+                     + '</p>') if is_past else ""
+        gcal = ""
+        if not is_past:
+            from urllib.parse import urlencode
+            ymd = (ev.get("date") or "").replace("-", "")
+            if ev.get("time"):
+                t1 = ev["time"].replace(":", "")[:4]
+                t2 = (ev["end_time"] if ev.get("end_time") and ev["end_time"] > ev["time"]
+                      else f"{min(int(ev['time'][:2]) + 2, 23):02d}{ev['time'][3:5]}").replace(":", "")[:4]
+                dates = f"{ymd}T{t1}00/{ymd}T{t2}00"
+            else:
+                try:
+                    dates = f"{ymd}/{(date.fromisoformat(ev['date']) + timedelta(days=1)).strftime('%Y%m%d')}"
+                except Exception:
+                    dates = ""
+            if dates:
+                gcal = ("https://calendar.google.com/calendar/render?" + urlencode({
+                    "action": "TEMPLATE", "text": ev.get("title", "")[:200], "dates": dates,
+                    "ctz": "Europe/Paris", "location": (ev.get("location") or "")[:200],
+                    "details": f"{SITE_URL}/e/{eid}.html"}))
+        gcal_html = (f'<p class="note"><a href="{_esc_attr(gcal)}" rel="nofollow noopener">+ Ajouter à Google Agenda</a></p>'
+                     if gcal else "")
         page = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5091,6 +5309,9 @@ dt{{color:var(--muted-fg)}}dd{{margin:0;overflow-wrap:anywhere}}dd a{{color:inhe
 .cta a:hover{{filter:brightness(1.08)}}
 @media (max-width:420px){{.cta{{grid-template-columns:1fr}}}}
 .note{{font-size:12px;color:var(--muted-fg);text-align:center;margin:10px 0 0}}
+.note a{{color:inherit;font-weight:600}}
+a.badge{{text-decoration:none}}a.badge:hover{{background:var(--muted)}}
+.past{{font-size:13px;background:var(--muted);border-radius:8px;padding:8px 12px;margin:0 0 12px}}.past a{{color:inherit}}
 h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.06em}}
 .rel{{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden}}
 .rel li{{font-size:14px;line-height:1.4}}
@@ -5109,13 +5330,16 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 <main class="card" style="--dc:{dcolor}">
 {cover_html}
 <div class="body">
-<div class="badges"><span class="badge dbadge">{_esc_attr(ev.get('discipline',''))}</span><span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if _is_free(ev) else ''}</div>
+{past_html}
+<div class="badges">{disc_html}<span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if _is_free(ev) else ''}</div>
 <h1>{title}</h1>
 <div class="date"><div class="d"><small>{_wds(ev.get('date',''))}</small><b>{_dnum(ev.get('date',''))}</b><small>{_mos(ev.get('date',''))}</small></div><div class="t">{_esc_attr(date_label)}<span>{loc or 'Paris'}</span></div></div>
 <dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{speaker}</dd>' if speaker else ''}</dl>
 {f'<p class="desc">{body_desc}</p>' if body_desc and len(body_desc) > 40 and body_desc != speaker else ''}
 {f'<p class="desc">{series_note}</p>' if series_note else ''}
+<p class="desc about">{about}</p>
 <div class="cta"><a class="site" href="{target}" rel="nofollow">Voir sur Lotent →</a>{f'<a class="ext" href="{ext}" rel="noopener">Page officielle · inscription ↗</a>' if ext else ''}</div>
+{gcal_html}
 <p class="note">Vérifie les horaires sur la page officielle avant de te déplacer.</p>
 </div>
 </main>
@@ -5270,6 +5494,15 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
         "itemListElement": [{"@type": "ListItem", "position": 1, "name": T["home"], "item": f"{SITE_URL}/"},
                             {"@type": "ListItem", "position": 2, "name": name, "item": url}]},
         ensure_ascii=False).replace("</", "<\\/")
+    # CollectionPage + ItemList des fiches listées : dit à Google que la page
+    # est une liste d'événements (et lui donne leurs URL dans l'ordre)
+    list_ld = json.dumps({
+        "@context": "https://schema.org", "@type": "CollectionPage", "name": name, "url": url,
+        "inLanguage": lang, "isPartOf": {"@id": f"{SITE_URL}/#website"},
+        "mainEntity": {"@type": "ItemList", "numberOfItems": n, "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "url": f"{SITE_URL}/e/{e['id']}.html"}
+            for i, e in enumerate(e for e in evts[:limit] if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or ""))]}},
+        ensure_ascii=False).replace("</", "<\\/")
     img = og_image or f"{SITE_URL}/og.png"
     ics_btn, ics_more = "", ""
     if ics:
@@ -5302,9 +5535,12 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
 <meta property="og:image" content="{img}">
 <meta property="og:locale" content="{'en_GB' if lang == 'en' else 'fr_FR'}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{_esc_attr(page_title.replace(' · Lotent', ''))}">
 <meta name="twitter:image" content="{img}">
 <link rel="icon" href="{SITE_URL}/icon.svg" type="image/svg+xml">
-<script type="application/ld+json">{crumb_ld}</script>
+<link rel="apple-touch-icon" href="{SITE_URL}/apple-touch-icon.png">
+{f'<link rel="alternate" type="text/calendar" title="{_esc_attr(name)} (.ics)" href="{ics}">' + chr(10) if ics else ''}<script type="application/ld+json">{crumb_ld}</script>
+<script type="application/ld+json">{list_ld}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -5371,12 +5607,40 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 """
 
 
+def _inst_desc(inst, n, evts, discs):
+    """Meta description d'un hub institution. L'ancienne (« 4 conférences à
+    venir à Paris. ») ne contenait même pas le nom de l'établissement, que
+    Google cherche dans la description pour la requête « conférences <inst> »."""
+    if not n:
+        return (f"{inst} : l'agenda des conférences, cours et séminaires à Paris. Aucune date annoncée "
+                f"pour le moment : abonnez-vous au calendrier gratuit, mis à jour chaque jour.")
+    s = (f"{inst} : l'agenda des conférences à Paris. {n} conférence{'s' if n > 1 else ''}, "
+         f"cours et séminaires à venir")
+    if discs:
+        s += f" ({', '.join(d.lower() for d in discs[:3])})"
+    s += "."
+    nxt = evts[0] if evts else None
+    if nxt and nxt.get("title"):
+        t = nxt["title"].strip()
+        t = t if len(t) <= 70 else t[:69].rsplit(" ", 1)[0] + "…"
+        try:
+            d = date.fromisoformat(nxt["date"])
+            s += f" Prochaine : « {t} », le {_jour_fr(d.day)} {_MONTHS_FR[d.month - 1]}."
+        except Exception:
+            pass
+    return s + " Calendrier gratuit, mis à jour chaque jour."
+
+
 def _hub_speakers(evts, exclude=""):
     """Intervenants distincts (un cycle répète le même nom sur 10 séances ;
     certaines sources mettent le nom de l'établissement dans « speaker »)."""
     out, seen = [], set()
     for ev in evts[:40]:
-        sp = (ev.get("speaker") or "").strip()[:60]
+        # Le nom seul (« Isabelle Chave, sous-directrice des monuments… » :
+        # la fonction coupée à 60 caractères donnait « …de l'art moder »)
+        sp = re.split(r",|\s[–—-]\s", (ev.get("speaker") or ""))[0].strip()
+        if len(sp) > 60:
+            sp = sp[:59].rsplit(" ", 1)[0] + "…"
         key = sp.lower()
         if not sp or key in seen or key == exclude.lower():
             continue
@@ -5566,7 +5830,7 @@ def write_home_prerender(events):
     for e in shown:
         days.setdefault(e["date"], []).append(e)
     out = [f'<h2 style="font-size:1.2rem;margin-top:2rem">Prochaines conférences à Paris</h2>',
-           f'<p style="color:#666">{len(up):,} conférences, cours et séminaires à venir.</p>'.replace(",", " ")]
+           f'<p style="color:#666">{len(up):_} conférences, cours et séminaires à venir.</p>'.replace("_"," ")]
     for d, evts in days.items():
         dd = date.fromisoformat(d)
         label = f"{['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'][dd.weekday()]} {_jour_fr(dd.day)} {_MONTHS_FR[dd.month - 1]}"
@@ -5706,6 +5970,7 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
                              color=DISC_COLORS.get(discs[0] if discs else "Autre", "#71717A"), evts=evts,
                              target=f"/?institution={quote(inst)}", ics=f"{SITE_URL}/data/cal/{slug}.ics",
                              og_image=f"{SITE_URL}/data/og/{slug}.png", intro=intro,
+                             desc=_inst_desc(inst, n, evts, discs),
                              chips_title="Disciplines", chips=[(d, f"{SITE_URL}/d/{_disc_slug(d)}.html") for d in discs[:6]])
             (INST_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
             written_pages.add(f"{slug}.html")
@@ -5980,6 +6245,9 @@ def build_digest(events):
     print(f"Digest : {len(picked)} immanquables ({period})")
 
 
+_NEWS_URL = re.compile(r"//www\.cnam\.fr/actualites/(?!.*agenda)")
+
+
 def finalize_events(events):
     """Règles communes au robot (main) et à la maj locale (refresh_local.py),
     appliquées à toutes les sources, événements reportés compris."""
@@ -5994,6 +6262,10 @@ def finalize_events(events):
     # (carry_forward) les aurait gardées jusqu'à leur date.
     events = [e for e in events if e.get("institution") != "Article 1"
               or _article1_local(e.get("location", ""))]
+    # Articles d'actualité mêlés à l'agenda (Cnam : /actualites/formation/…,
+    # datés du jour de publication) — pas des événements. Les pages
+    # /actualites/…/agenda-actus/… sont, elles, de vrais rendez-vous.
+    events = [e for e in events if not _NEWS_URL.search(e.get("url") or "")]
     n = len(events)
     events = [e for e in events if not _outside_idf(e.get("location", ""))]
     if len(events) < n:
@@ -6169,7 +6441,8 @@ def update_archive(previous_events):
             added += 1
     # Cap: keep only the last ARCHIVE_MAX_DAYS days
     cutoff = (TODAY - timedelta(days=ARCHIVE_MAX_DAYS)).isoformat()
-    archive = [e for e in archive if e.get("date", "") >= cutoff]
+    # Titres parasites archivés avant que le filtre ne les connaisse
+    archive = [e for e in archive if e.get("date", "") >= cutoff and not is_junk_title(e.get("title", ""))]
     # Deux versions d'un même événement (renommé, déplacé : « Founding » →
     # « Founder Members », même lien Luma) étaient toutes deux à l'agenda
     # avant d'être archivées : l'Historique les montrait en double. On garde
