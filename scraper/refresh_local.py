@@ -151,6 +151,10 @@ def main():
     # Titres nettoyés (finalize_events) avant les dédoublonnages, comme le robot
     merged = scrape.deduplicate(scrape.finalize_events(fresh + carried + others))
     merged = scrape.merge_cross_source(scrape._drop_city_duplicates(merged))
+    try:
+        scrape.add_missing_prices(merged, events)
+    except Exception as e:
+        print(f"[!] prix : {type(e).__name__}: {e}")
 
     merged = [e for e in merged if e.get("date", "") >= scrape.CUTOFF.isoformat()]
     merged.sort(key=lambda e: (e["date"], e.get("time", "")))

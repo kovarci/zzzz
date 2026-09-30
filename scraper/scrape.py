@@ -3083,21 +3083,103 @@ def scrape_hec_ia():
     return evs
 
 
+# Mentions « gratuit » propres à un événement (suivies d'une condition) — pas
+# les « cours de sport gratuits » des menus de paris.fr
+_FREE_PAGE = re.compile(
+    r"(?:Entr[ée]e|Acc[èe]s)\s+(?:libre|gratuite)(?:\s+et\s+gratuite)?\s*(?:,|\(|\.|dans la limite|sur (?:r[ée]servation|inscription))"
+    r"|Gratuit\s*(?:\(|,|\.|sur (?:r[ée]servation|inscription)|dans la limite)"
+    r"|(?:Tarifs?|Billets?|Prix)\s*:?\s*(?:Entr[ée]e (?:libre|gratuite)|Gratuit|Acc[èe]s libre)\b"
+    r"|Informations(?: générales)?\s+(?:Entr[ée]e (?:gratuite|libre)|Gratuit)\b"
+    r"|Inscription (?:gratuite|libre)|(?:free of charge|free admission|free entry|no registration fee)", re.I)
+# « Tarif plein : 12€ », « Tarif D plein : 10 € », « Tarif unique : 3 € »,
+# « Tarif normal : 10€ », « Tarif : 2000€ », « Prix du billet 249,00 $US »
+_PAID_PAGE = re.compile(
+    r"(?:Tarif\s+(?:[A-Z]\s+)?(?:plein|normal|unique)|Plein tarif|Tarifs?|Prix du billet|Billets?)\s*[:—–-]?\s*"
+    r"(\d+(?:[.,]\d{1,2})?)\s*(€|euros?\b|EUR\b|\$|USD\b)", re.I)
+
+
+def _price_in_text(txt):
+    """« Gratuit », « 12 € » (le plus bas des tarifs affichés), « 249 $ » ou ""."""
+    if _FREE_PAGE.search(txt):
+        return "Gratuit"
+    found = [(float(m.group(1).replace(",", ".")), "$" if m.group(2) in ("$", "USD", "usd") else "€")
+             for m in _PAID_PAGE.finditer(txt)]
+    found = [f for f in found if f[0] > 0]
+    if not found:
+        return ""
+    v, cur = min(found)
+    return f"{v:g} {cur}".replace(".", ",")
+
+
+def _page_text(url):
+    r = requests.get(url, headers=CDF_HEADERS, timeout=25, verify=_verify_for(url))
+    r.raise_for_status()
+    return r.text, re.sub(r"\s+", " ", html_unescape(re.sub(r"<[^>]+>", " ", r.text)))
+
+
 def _page_price(url):
-    """Tarif affiché sur la fiche officielle d'un événement (Louvre :
-    « Tarif Entrée libre » ou « Tarif D plein : 10 € » ; Bernardins :
-    « Informations Entrée gratuite sur réservation » ou « Tarif plein : 12€ »).
-    « Gratuit », « Plein tarif : 12 € » ou "" si rien de sûr."""
+    """Tarif affiché sur la fiche officielle d'un événement (Louvre, Bernardins,
+    musées, IMA, Citéco, Centre Pompidou, MCJP, paris.fr, Luma…)."""
     try:
-        r = requests.get(url, headers=CDF_HEADERS, timeout=25, verify=_verify_for(url))
-        r.raise_for_status()
+        return _price_in_text(_page_text(url)[1])
     except Exception:
         return ""
-    txt = re.sub(r"\s+", " ", html_unescape(re.sub(r"<[^>]+>", " ", r.text)))
-    if re.search(r"(?:Informations(?: générales)?|Tarif)\s+(?:Entr[ée]e (?:gratuite|libre)|Gratuit)\b", txt, re.I):
-        return "Gratuit"
-    m = re.search(r"\bplein\s*:\s*(\d+(?:[.,]\d{1,2})?)\s*€", txt, re.I)
-    return f"Plein tarif : {m.group(1)} €" if m else ""
+
+
+def _sciencesconf_price(base):
+    """Colloque Sciencesconf : le tarif est sur la page « Inscription » /
+    « Registration » du site du colloque (frais d'inscription, gratuité)."""
+    try:
+        html, txt = _page_text(base)
+        m = re.search(r'<a[^>]+href="([^"]*(?:registration|inscription)[^"]*)"', html, re.I)
+        if not m:
+            return _price_in_text(txt)
+        u = m.group(1) if m.group(1).startswith("http") else base.rstrip("/") + "/" + m.group(1).lstrip("/")
+        rtxt = _page_text(u)[1]
+        if re.search(r"(?i)inscription (?:est )?(?:gratuite|libre)|gratuite? (?:mais|et) obligatoire|free of charge|"
+                     r"no (?:registration )?fees?|registration is free|participation (?:est )?gratuite", rtxt):
+            return "Gratuit"
+        # frais d'inscription : le plus bas des montants de la page
+        amounts = [float(x.replace(",", ".")) for x in re.findall(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|euros?\b|EUR\b)", rtxt)]
+        amounts = [a for a in amounts if 0 < a < 5000]
+        return f"{min(amounts):g} €".replace(".", ",") if amounts else ""
+    except Exception:
+        return ""
+
+
+# Sources dont le tarif n'est que sur la page de chaque événement
+_PRICE_PAGE_SOURCES = {
+    "Musée du quai Branly", "Musée de l'Homme", "Muséum national d'Histoire naturelle",
+    "Institut du monde arabe", "Citéco", "Centre Pompidou", "Maison de l'Amérique latine",
+    "Maison de la culture du Japon", "Collège des Bernardins", "Musée du Louvre", "Institut des actuaires",
+}
+
+
+def add_missing_prices(events, previous=(), limit=400):
+    """Prix manquants des événements à venir : repris du passage précédent
+    (même id), sinon lus sur la page officielle — l'agenda de ces sources ne
+    les donne pas, et sans prix Search Console signale « Champ price
+    manquant ». Au plus `limit` pages lues par passage."""
+    from concurrent.futures import ThreadPoolExecutor
+    today = TODAY.isoformat()
+    known = {e.get("id"): e["price"] for e in previous if e.get("id") and e.get("price")}
+    todo = []
+    for e in events:
+        if e.get("price") or e.get("date", "") < today or not e.get("url"):
+            continue
+        if known.get(e.get("id")):
+            e["price"] = known[e["id"]]
+        elif (e.get("institution") in _PRICE_PAGE_SOURCES or e.get("institution") == "Sciencesconf.org"
+              or e.get("source_type") in ("ville", "luma")):
+            todo.append(e)
+    todo = todo[:limit]
+    get = lambda e: _sciencesconf_price(e["url"]) if e.get("institution") == "Sciencesconf.org" else _page_price(e["url"])
+    with ThreadPoolExecutor(8) as ex:
+        for e, p in zip(todo, ex.map(get, todo)):
+            if p:
+                e["price"] = p
+    print(f"Prix lus sur les pages officielles : {sum(1 for e in todo if e.get('price'))}/{len(todo)}")
+    return events
 
 
 def _add_page_prices(events):
@@ -5053,12 +5135,13 @@ def _event_jsonld(ev):
     # Prix déclaré seulement s'il est connu : avant, un tarif inconnu devenait
     # « 0 € » et « payant, gratuit pour les moins de 26 ans » devenait 26 €.
     # « 5–7 € » : le prix le plus bas (le premier nombre suivi de « € » était 7)
-    m = (re.search(r"(\d+(?:[.,]\d{1,2})?)(?=\s*[–-]\s*\d+(?:[.,]\d{1,2})?\s*(?:€|eur\b|euros?\b))", price_str, re.I)
-         or re.search(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|eur\b|euros?\b)", price_str, re.I))
+    m = (re.search(r"(\d+(?:[.,]\d{1,2})?)(?=\s*[–-]\s*\d+(?:[.,]\d{1,2})?\s*(?:€|eur\b|euros?\b|\$|usd\b))", price_str, re.I)
+         or re.search(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|eur\b|euros?\b|\$|usd\b)", price_str, re.I))
+    currency = "USD" if re.search(r"\$|usd\b", price_str, re.I) else "EUR"
     if price_str == "0" or re.match(r"\s*(gratuit|free|entr[ée]e libre)", price_str, re.I):
         offers.update(price="0", priceCurrency="EUR")
     elif m:
-        offers.update(price=m.group(1).replace(",", "."), priceCurrency="EUR")
+        offers.update(price=m.group(1).replace(",", "."), priceCurrency=currency)
     elif ev.get("institution") == "Les Mardis de la Philo" and ev.get("discipline") in _MARDIS_ABO:
         name, amount = _MARDIS_ABO[ev["discipline"]]
         offers = [dict(offers, name="Moins de 26 ans (dans la limite des places)", price="0", priceCurrency="EUR"),
@@ -5079,7 +5162,11 @@ def _event_jsonld(ev):
         "performer": performer,
         "offers": offers,
     }
-    if isinstance(offers, dict) and offers.get("price") == "0":
+    # Prix inconnu (colloque sans page d'inscription lisible…) : pas d'offre
+    # plutôt qu'une offre sans prix — on n'invente pas de tarif
+    if isinstance(offers, dict) and "price" not in offers:
+        del data["offers"]
+    if isinstance(offers, dict) and offers.get("price") == "0":  # (offre gratuite)
         data["isAccessibleForFree"] = True
     data["inLanguage"] = "en" if _is_english(ev) else "fr"
     if ev.get("location"):
@@ -6863,6 +6950,10 @@ def main():
     # reportée « Forum Éducation 2026 Agir pour l'éducation » ne se rapprochait
     # pas du « Forum Éducation 2026 » de PSL.
     all_events = merge_cross_source(_drop_city_duplicates(deduplicate(finalize_events(all_events))))
+    try:
+        add_missing_prices(all_events, prev_events)
+    except Exception as e:
+        print(f"[ERROR] prix : {e}")
 
     # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
     # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.
