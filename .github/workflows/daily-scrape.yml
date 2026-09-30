@@ -11,7 +11,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45  # ~18 min en temps normal ; marge pour les sites lents (2e tentative)
 
     steps:
       - name: Checkout repo
