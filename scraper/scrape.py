@@ -6907,6 +6907,11 @@ def finalize_events(events):
         # Bouton de la carte lu avec le texte (IN2P3 : « En savoir plus E PICS est… »)
         if e.get("description"):
             e["description"] = _DESC_LEAD.sub("", e["description"]).strip()
+            # Les scrapers tronquent à 400 caractères, souvent au milieu d'un mot
+            # (« …dématérialisation, conserv ») : coupe au dernier mot entier
+            d = e["description"]
+            if len(d) >= 395 and re.search(r"\w$", d) and " " in d[200:]:
+                e["description"] = d[:d.rindex(" ")].rstrip(" ,;:—–-") + "…"
         if _LABELLED_LOC.match(e.get("location") or ""):
             e["location"] = _clean_labelled_loc(e["location"])
         reclassify(e)
