@@ -5181,6 +5181,19 @@ def _attendance(loc):
     return "mixed" if re.search(r"\d", loc) else "online"
 
 
+def _img_thumb(url, w=800):
+    """Image redimensionnée (même règle que thumb() dans web/src/lib.js) :
+    les originaux Luma pèsent ~3 Mo, ceux de la Ville ~900 Ko."""
+    if not url:
+        return url
+    if "images.lumacdn.com/" in url and "/cdn-cgi/" not in url:
+        return url.replace("images.lumacdn.com/", f"images.lumacdn.com/cdn-cgi/image/width={w},quality=75,format=auto/")
+    if url.startswith("https://cdn.paris.fr/"):
+        from urllib.parse import quote
+        return f"https://wsrv.nl/?url={quote(url[8:], safe='')}&w={w}&q=75&output=jpg"
+    return url
+
+
 def _postal_code(loc):
     """Code postal d'un lieu : « 75005 », ou « Paris 5e » / « Paris 1er » → 75005."""
     m = re.search(r"\b(7[5789]\d{3}|9[1-5]\d{3})\b", loc or "")
@@ -5280,7 +5293,7 @@ def _event_jsonld(ev):
         performer = {"@type": "PerformingGroup", "name": inst or "Conférencier"}
     # image : fallback vers l'og.png par institution (toujours fraîche) ou
     # l'og.png global du site -> tout event a une image.
-    img = ev.get("image")
+    img = _img_thumb(ev.get("image"), 1200)
     if not img:
         slug = slugify(inst)
         # data/og/<slug>.png n'existe que pour les établissements phares : pour
@@ -5568,7 +5581,7 @@ def write_event_pages(events):
         sent = (cut(t_, max(45, 152 - len(rest))) + rest
                 + (f" · {where}" if where and where.lower() != "paris" else " · Paris") + ".")
         meta_desc = _esc_attr(cut(sent, 155))
-        img = _esc_attr(ev.get("image") or f"{SITE_URL}/og.png")
+        img = _esc_attr(_img_thumb(ev.get("image"), 1200) or f"{SITE_URL}/og.png")
         ext = _esc_attr(ev.get("url") or "")
         # « /?event= » et non « ../index.html?event= » : sinon Google découvre
         # des milliers de variantes index.html?… d'une même page.
@@ -5577,7 +5590,8 @@ def write_event_pages(events):
         dcolor = DISC_COLORS.get(ev.get("discipline", ""), DISC_COLORS["Autre"])
         kind = _kind_of(ev)
         real_img = ev.get("image") or ""
-        cover_html = (f'<div class="cover"><img src="{_esc_attr(real_img)}" alt="{title}" loading="eager"><span class="kind">{kind}</span></div>' if real_img
+        cover_html = (f'<div class="cover"><img src="{_esc_attr(_img_thumb(real_img, 800))}" alt="{title}" loading="eager" '
+                      f'onerror="this.onerror=null;this.src=\'{_esc_attr(real_img)}\'"><span class="kind">{kind}</span></div>' if real_img
                       else f'<div class="cover typo"><span class="kind">{kind}</span><b>{inst}</b></div>')
         crumbs = [("Accueil", f"{SITE_URL}/")]
         if hub_url:
@@ -6300,7 +6314,11 @@ def write_selection_pages(events):
     theses = [e for e in side if e["kind"] == "soutenance"]
     careers = [e for e in side if e["kind"] == "carriere"]
     fairs = [e for e in side if e["kind"] == "salon"]
-    week_end = (today + timedelta(days=6)).isoformat()
+    # « Cette semaine » = jusqu'à dimanche (le dimanche : jusqu'au suivant),
+    # comme le filtre du site (WEEK_END dans web/src/lib.js) vers lequel la
+    # page renvoie — avant, 7 jours glissants : les deux listes différaient
+    sunday = today + timedelta(days=(6 - today.weekday()) or 7)
+    week_end = sunday.isoformat()
     # Le dimanche, « ce week-end » = aujourd'hui (comme le site)
     sat = today + timedelta(days=(5 - today.weekday()) % 7) if today.weekday() != 6 else today - timedelta(days=1)
     we = {sat.isoformat(), (sat + timedelta(days=1)).isoformat()}
@@ -6321,8 +6339,8 @@ def write_selection_pages(events):
         ("cette-semaine", "Cette semaine à Paris", week, "/?date=week",
          "Conférences à Paris cette semaine : l'agenda · Lotent",
          f"{len(week)} conférences, cours, séminaires et colloques à Paris du {fr_day(today)} au "
-         f"{fr_day(today + timedelta(days=6))} : {orgs(week)}… Agenda gratuit, mis à jour chaque jour.",
-         f"Du {fr_day(today)} au {fr_day(today + timedelta(days=6))}. Principaux organisateurs : {orgs(week)}.", "fr"),
+         f"{fr_day(sunday)} : {orgs(week)}… Agenda gratuit, mis à jour chaque jour.",
+         f"Du {fr_day(today)} au {fr_day(sunday)}. Principaux organisateurs : {orgs(week)}.", "fr"),
         ("ce-week-end", "Ce week-end à Paris", wkend, "/?date=weekend",
          "Conférences à Paris ce week-end · Lotent",
          f"{len(wkend)} conférences et rencontres à Paris ce week-end ({we_label}) : "

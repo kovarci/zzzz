@@ -120,8 +120,17 @@ export const fmtShort = s => { const d = parse(s); return `${WDS[d.getDay()]} ${
 export const relDay = s => s === TODAY ? "Aujourd'hui" : s === TOMORROW ? "Demain" : "";
 export const when = e => e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : "Horaire à confirmer";
 // Vignette Luma redimensionnée par leur CDN (600px, webp) plutôt que l'original
-export const thumb = url => !url || url.indexOf("images.lumacdn.com/") < 0 || url.indexOf("/cdn-cgi/") >= 0 ? url
-  : url.replace("images.lumacdn.com/", "images.lumacdn.com/cdn-cgi/image/width=600,quality=72,format=auto/");
+// Vignette redimensionnée : Luma sait le faire (cdn-cgi), les images de la
+// Ville (cdn.paris.fr, ~900 Ko, une seule taille) passent par wsrv.nl —
+// 790 Ko → 21 Ko. Même règle que _img_thumb() dans scraper/scrape.py.
+export const thumb = (url, w = 600) => {
+  if (!url) return url;
+  if (url.indexOf("images.lumacdn.com/") >= 0 && url.indexOf("/cdn-cgi/") < 0)
+    return url.replace("images.lumacdn.com/", `images.lumacdn.com/cdn-cgi/image/width=${w},quality=72,format=auto/`);
+  if (/^https:\/\/cdn\.paris\.fr\//.test(url))
+    return `https://wsrv.nl/?url=${encodeURIComponent(url.slice(8))}&w=${w}&q=72&output=webp`;
+  return url;
+};
 
 export function haversine(a, b) {
   const R = 6371, dLat = (b.lat - a.lat) * Math.PI / 180, dLng = (b.lng - a.lng) * Math.PI / 180;

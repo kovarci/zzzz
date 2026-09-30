@@ -17,13 +17,16 @@ const discColor = disc => getComputedStyle(document.documentElement).getProperty
 const placeOf = e => { const i = norm(e.institution); return (e.location || "").split(",").map(x => x.trim()).find(x => x && !i.includes(norm(x)) && !norm(x).includes(i)) || ""; };
 function Cover({ e, className = "", eager, label = true }) {
   const [broken, setBroken] = useState(false);
+  // Vignette d'abord ; si le service de redimensionnement échoue, l'original
+  const [orig, setOrig] = useState(false);
+  const small = thumb(e.image, eager ? 1000 : 600);
   const pos = className.split(" ").includes("absolute") ? "" : "relative";
   const { t, kindName } = useI18n();
   const badge = <div className="absolute top-2.5 left-2.5 z-[1] flex flex-wrap gap-1.5">
     <Badge className="bg-background/95 text-foreground border-0 shadow-sm">{kindName(kindOf(e))}</Badge>
     {isMembers(e) && <Badge className="bg-background/95 text-foreground border-0 shadow-sm" title={t("access_members_hint")}>🔒 {t("badge_members")}</Badge>}</div>;
   if (e.image && !broken) return <div className={cn(pos, "overflow-hidden bg-muted", className)}>
-    <img src={thumb(e.image)} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => setBroken(true)} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
+    <img src={orig ? e.image : small} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => (!orig && small !== e.image ? setOrig(true) : setBroken(true))} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
   return <div className={cn(pos, "overflow-hidden flex items-end p-4 text-white", className)} style={{ background: `linear-gradient(135deg, ${dc(e)}, color-mix(in srgb, ${dc(e)} 55%, #000))` }}>
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 [background-image:radial-gradient(rgba(255,255,255,.3)_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_at_top_right,#000,transparent_70%)]" />{badge}
     {label && <div className="relative font-semibold text-lg leading-tight tracking-tight [text-wrap:balance] [text-shadow:0_1px_6px_rgba(0,0,0,.35)] line-clamp-3">{e.institution}</div>}</div>;
@@ -491,8 +494,11 @@ function App() {
   // veille. On recharge quand on revient sur la page après minuit.
   useEffect(() => {
     const h = () => { if (!document.hidden && parisISO() !== TODAY) location.reload(); };
+    // Page restée ouverte et visible à minuit : même vérification chaque
+    // minute, sauf si une fiche ou un panneau est ouvert (lecture en cours)
+    const tick = setInterval(() => { if (!document.querySelector("[role=dialog]")) h(); }, 60000);
     document.addEventListener("visibilitychange", h); window.addEventListener("focus", h);
-    return () => { document.removeEventListener("visibilitychange", h); window.removeEventListener("focus", h); };
+    return () => { clearInterval(tick); document.removeEventListener("visibilitychange", h); window.removeEventListener("focus", h); };
   }, []);
   useEffect(() => { const h = ev => {
     if ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === "k") { ev.preventDefault(); setCmd(c => !c); }
