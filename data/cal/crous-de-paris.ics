@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:f18d7f5002bf@paris-academique
-DTSTAMP:20260930T101755Z
+DTSTAMP:20260930T171354Z
 DTSTART;TZID=Europe/Paris:20260930T130000
 DTEND;TZID=Europe/Paris:20260930T140000
 SUMMARY:Vos droits\, vos aides : le webinaire Caf dédié aux jeunes
@@ -42,7 +42,7 @@ URL:https://www.crous-paris.fr/evenement/vos-droits-vos-aides-le-webinaire-
 END:VEVENT
 BEGIN:VEVENT
 UID:a3da7bd530c8@paris-academique
-DTSTAMP:20260930T101755Z
+DTSTAMP:20260930T171354Z
 DTSTART;TZID=Europe/Paris:20261010T140000
 DTEND;TZID=Europe/Paris:20261010T180000
 SUMMARY:Octobre Rose : le sport se mobilise avec le PUC
@@ -60,7 +60,7 @@ URL:https://www.crous-paris.fr/evenement/octobre-rose-le-sport-se-mobilise-
 END:VEVENT
 BEGIN:VEVENT
 UID:1ef813673f67@paris-academique
-DTSTAMP:20260930T101755Z
+DTSTAMP:20260930T171354Z
 DTSTART;TZID=Europe/Paris:20261010T140000
 DTEND;TZID=Europe/Paris:20261010T180000
 SUMMARY:1 000 casques pour 1 000 vies
@@ -78,7 +78,7 @@ URL:https://www.crous-paris.fr/evenement/%f0%9f%9a%b2-1-000-casques-pour-1-
 END:VEVENT
 BEGIN:VEVENT
 UID:dacd24d3e7b2@paris-academique
-DTSTAMP:20260930T101755Z
+DTSTAMP:20260930T171354Z
 DTSTART;TZID=Europe/Paris:20261014T160000
 DTEND;TZID=Europe/Paris:20261014T230000
 SUMMARY:Bienvenue à Paris
@@ -95,7 +95,7 @@ URL:https://www.crous-paris.fr/evenement/bienvenue-a-paris/
 END:VEVENT
 BEGIN:VEVENT
 UID:6d9b0bb0e8df@paris-academique
-DTSTAMP:20260930T101755Z
+DTSTAMP:20260930T171354Z
 DTSTART;TZID=Europe/Paris:20261014T200000
 DTEND;TZID=Europe/Paris:20261014T233000
 SUMMARY:Beside festival

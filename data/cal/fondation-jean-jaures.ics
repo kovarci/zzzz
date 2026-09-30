@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ba8f2e817bfc@paris-academique
-DTSTAMP:20260930T101755Z
+DTSTAMP:20260930T171354Z
 DTSTART;TZID=Europe/Paris:20260930T180000
 DTEND;TZID=Europe/Paris:20260930T200000
 SUMMARY:Le livre est mort\, vive le livre !
@@ -33,5 +33,17 @@ DESCRIPTION:Société\nhttps://www.jean-jaures.org/agenda/le-livre-est-mort
  -vive-le-livre/
 LOCATION:Théâtre de la Concorde\, Avenue Gabriel\, Paris\, France
 URL:https://www.jean-jaures.org/agenda/le-livre-est-mort-vive-le-livre/
+END:VEVENT
+BEGIN:VEVENT
+UID:9087276fc512@paris-academique
+DTSTAMP:20260930T171354Z
+DTSTART;TZID=Europe/Paris:20261001T183000
+DTEND;TZID=Europe/Paris:20261001T203000
+SUMMARY:Ce que les dernières municipales racontent du pays
+DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/ce-que-les-dern
+ ieres-municipales-racontent-du-pays/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/ce-que-les-dernieres-municipales-rac
+ ontent-du-pays/
 END:VEVENT
 END:VCALENDAR
