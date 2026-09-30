@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:98033432f305@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261012T140000
 DTEND;TZID=Europe/Paris:20261012T151500
 SUMMARY:IP Paris Seminar on Incentives and Computation
@@ -43,7 +43,7 @@ URL:https://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computatio
 END:VEVENT
 BEGIN:VEVENT
 UID:e424d347657f@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261013T140000
 DTEND;TZID=Europe/Paris:20261013T153000
 SUMMARY:Hi! PARIS Reading groups “Fairness in AI” – Session 1
@@ -60,7 +60,7 @@ URL:https://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-sessio
 END:VEVENT
 BEGIN:VEVENT
 UID:59d3f6c68724@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261102T090000
 DTEND;TZID=Europe/Paris:20261102T110000
 SUMMARY:SGAP 2026 Paris – A Scientist’s Guide to AI
@@ -77,7 +77,7 @@ URL:https://hi-paris.fr/event/sgap-2026-paris-a-scientists-guide-to-ai/
 END:VEVENT
 BEGIN:VEVENT
 UID:fca9166c778a@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261103T180000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Hi! PARIS Career Fair
@@ -93,7 +93,7 @@ URL:https://hi-paris.fr/event/hi-paris-career-fair/
 END:VEVENT
 BEGIN:VEVENT
 UID:0b52277e64d3@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge
@@ -111,7 +111,7 @@ URL:https://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-c
 END:VEVENT
 BEGIN:VEVENT
 UID:82cd8cc7c08e@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Séminaire : ELLIS UnConference 2026

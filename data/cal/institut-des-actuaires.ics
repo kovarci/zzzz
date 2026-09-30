@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4e4d41c8d92f@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261001T093000
 DTEND;TZID=Europe/Paris:20261001T113000
 SUMMARY:Workshop chaire CARE - Modélisation en santé
@@ -37,7 +37,7 @@ URL:https://www.institutdesactuaires.com/agenda/workshop-chaire-care-modeli
 END:VEVENT
 BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -49,7 +49,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026

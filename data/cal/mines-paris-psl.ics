@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0ccc7d9a7043@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:[Fête de la science 2026] Manipuler\, imaginer\, comprendre à Min
@@ -40,8 +40,24 @@ URL:https://www.minesparis.psl.eu/blog/evenements/fete-de-la-science-2026-m
  anipuler-imaginer-comprendre-a-mines-paris-psl/
 END:VEVENT
 BEGIN:VEVENT
+UID:2f148b1e0474@paris-academique
+DTSTAMP:20260930T175729Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:[Conférence] L’histoire de la bibliothèque de l’École des mi
+ nes\, de 1794 à nos jours
+DESCRIPTION:Dans le cadre du cycle « 100 ans de la salle de lecture » (19
+ 26-2026) et à l’occasion du centenaire de sa salle de lecture et\, la b
+ ibliothèque Mines P...\nhttps://www.minesparis.psl.eu/blog/evenements/con
+ ference-lhistoire-de-la-bibliotheque-de-lecole-des-mines-de-1794-a-nos-jou
+ rs/
+LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
+URL:https://www.minesparis.psl.eu/blog/evenements/conference-lhistoire-de-l
+ a-bibliotheque-de-lecole-des-mines-de-1794-a-nos-jours/
+END:VEVENT
+BEGIN:VEVENT
 UID:687547607ffa@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:[Webinaire TTI.5] Électrification des transports : technologie\, i
@@ -56,7 +72,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/webinaire-tti-5-electrifi
 END:VEVENT
 BEGIN:VEVENT
 UID:ab2084fccb88@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:[Workshop] Electrification des usages
@@ -70,7 +86,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/workshop-electrification-
 END:VEVENT
 BEGIN:VEVENT
 UID:b28193492cb1@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:[Conférence] Bâtiments\, infrastructures : comment la recherche s
@@ -86,7 +102,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/conference-batiments-infr
 END:VEVENT
 BEGIN:VEVENT
 UID:c4012016e898@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:[SECRE 2027] Colloque Situations Extrêmes\, Crise et Résilience

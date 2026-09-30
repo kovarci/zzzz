@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:39332b7ea582@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Une collecte solidaire pour les étudiants en précarité
@@ -36,14 +36,13 @@ DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
  e 17 h 30. Ils permettront aussi d’alimenter le service d’aide sociale
   de la Vie étudiante\, qui pourra constituer des kits pour\nhttps://www.u
  niv-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
-LOCATION:DAPS – Campus de Villetaneuse\, Université Sorbonne Paris Nord\
- , 99 avenue Jean-Baptiste Clément\, Villetaneuse
+LOCATION:DAPS – Campus de Villetaneuse
 URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
  s-en-precarite/
 END:VEVENT
 BEGIN:VEVENT
 UID:77a2b318e225@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:L’intelligence artificielle générative dans les pratiques de fo
@@ -56,8 +55,7 @@ DESCRIPTION:Déjà bien installée au cœur des débats publics et universi
   elle peut apparaître comme un agent « facilitateur »\, notamme\nhttps:
  //www.univ-spn.fr/events/lintelligence-artificielle-generative-dans-les-pr
  atiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
-LOCATION:Amphi Claudine Hermann - Campus de Villetaneuse\, Université Sorb
- onne Paris Nord\, 99 avenue Jean-Baptiste Clément\, Villetaneuse
+LOCATION:Amphi Claudine Hermann - Campus de Villetaneuse
 URL:https://www.univ-spn.fr/events/lintelligence-artificielle-generative-da
  ns-les-pratiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
 END:VEVENT

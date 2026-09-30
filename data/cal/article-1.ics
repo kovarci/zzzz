@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0f1b16416d34@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261010T100000
 DTEND;TZID=Europe/Paris:20261010T153000
 SUMMARY:Festival Pop & Psy - à l'occasion de la journée de la santé ment
@@ -40,7 +40,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001otrG
 END:VEVENT
 BEGIN:VEVENT
 UID:ee454c2e4d8a@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261012T063000
 DTEND;TZID=Europe/Paris:20261012T080000
 SUMMARY:WEBINAIRE LINKEDIN : DEVELOPPER SON RESEAU PRO
@@ -55,7 +55,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXdu
 END:VEVENT
 BEGIN:VEVENT
 UID:cdbef013eb86@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261012T180000
 DTEND;TZID=Europe/Paris:20261012T193000
 SUMMARY:Webinaire : rencontre de Valérie Seguy\, marraine DEMA1N+STEM
@@ -70,7 +70,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qH9l
 END:VEVENT
 BEGIN:VEVENT
 UID:f8ae1b7ffcd2@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261014T183000
 DTEND;TZID=Europe/Paris:20261014T223000
 SUMMARY:Apéro de rentrée 🎉
@@ -84,7 +84,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWD
 END:VEVENT
 BEGIN:VEVENT
 UID:0f3b6adaff8a@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261021T140000
 DTEND;TZID=Europe/Paris:20261021T170000
 SUMMARY:🚀 Challenge ton futur ! - avec Allianz
@@ -98,8 +98,24 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8v
  A&id=a1NIV00000BwBRN&base=base6
 END:VEVENT
 BEGIN:VEVENT
+UID:cf8f5e734dba@paris-academique
+DTSTAMP:20260930T175729Z
+DTSTART;TZID=Europe/Paris:20261126T180000
+DTEND;TZID=Europe/Paris:20261126T190000
+SUMMARY:National - Webinaire Agir pour le climat
+DESCRIPTION:🔥 Participe à notre webinaire gratuit sur le climat\, pour 
+ voir ensemble : Quels sont les leviers d’action\, à l’échelle indivi
+ duelle et surtout collective Comment transformer l’éco-anxiété en pou
+ voir d’agir Des ressources concrètes pour agir\nhttps://article1.my.sal
+ esforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vXN&id=a1NIV0000098qCL&base=
+ base6
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vX
+ N&id=a1NIV0000098qCL&base=base6
+END:VEVENT
+BEGIN:VEVENT
 UID:f5e606b1c9e0@paris-academique
-DTSTAMP:20260930T171354Z
+DTSTAMP:20260930T175729Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:Webinaire Admissions HEC
