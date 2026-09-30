@@ -24,46 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:52ee6d1e32d4@paris-academique
-DTSTAMP:20260929T193312Z
-DTSTART;TZID=Europe/Paris:20260929T180000
-DTEND;TZID=Europe/Paris:20260929T200000
-SUMMARY:Se acabo la diversion: La economía cubana: el salto del capitalism
- o al socialismo (1959-1965)
-DESCRIPTION:Actualité\nhttps://www.mal217.org/fr/agenda/omar-sixto-se-acab
- o-la-diversion
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/omar-sixto-se-acabo-la-diversion
-END:VEVENT
-BEGIN:VEVENT
-UID:7b4dae2e1ac6@paris-academique
-DTSTAMP:20260929T193312Z
-DTSTART;TZID=Europe/Paris:20260929T190000
-DTEND;TZID=Europe/Paris:20260929T210000
-SUMMARY:Il n'y a plus de ville
-DESCRIPTION:Littérature\nhttps://www.mal217.org/fr/agenda/il-n-y-a-plus-de
- -ville-94f6a3b5
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/il-n-y-a-plus-de-ville-94f6a3b5
-END:VEVENT
-BEGIN:VEVENT
-UID:332a129c5483@paris-academique
-DTSTAMP:20260929T193312Z
-DTSTART;TZID=Europe/Paris:20260929T210000
-DTEND;TZID=Europe/Paris:20260929T230000
-SUMMARY:Les politiques de Javier Milei — Le véritable bilan économique 
- et social
-DESCRIPTION:Conférence\nhttps://www.mal217.org/fr/agenda/les-politiques-de
- -j-milei
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/les-politiques-de-j-milei
-END:VEVENT
-BEGIN:VEVENT
 UID:fad5031ee593@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20260930T190000
 DTEND;TZID=Europe/Paris:20260930T210000
 SUMMARY:L'Archéologie péruvienne au Féminin
@@ -75,7 +37,7 @@ URL:https://www.mal217.org/fr/agenda/l-archeologie-peruvienne-au-feminin
 END:VEVENT
 BEGIN:VEVENT
 UID:5ff0b5fd086a@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261001T190000
 DTEND;TZID=Europe/Paris:20261001T210000
 SUMMARY:Tribune de l'économie — latino-américaine et caribéenne
@@ -87,7 +49,7 @@ URL:https://www.mal217.org/fr/agenda/tribune-de-l-economie
 END:VEVENT
 BEGIN:VEVENT
 UID:d21fc632fa12@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261002T190000
 DTEND;TZID=Europe/Paris:20261002T210000
 SUMMARY:Milicien basque exilé à bord du Winnipeg
@@ -100,7 +62,7 @@ URL:https://www.mal217.org/fr/agenda/milicien-basque-exile-a-bord-du-winnip
 END:VEVENT
 BEGIN:VEVENT
 UID:82c89cf78830@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261005T190000
 DTEND;TZID=Europe/Paris:20261005T210000
 SUMMARY:L'Œil pense — Résister par le geste
@@ -112,7 +74,7 @@ URL:https://www.mal217.org/fr/agenda/l-oeil-pense-copie-e0428449
 END:VEVENT
 BEGIN:VEVENT
 UID:d7228ca19197@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261006T190000
 DTEND;TZID=Europe/Paris:20261006T210000
 SUMMARY:Dialogue entre fils de Xangô — Correspondance entre R. Bastide e
@@ -125,7 +87,7 @@ URL:https://www.mal217.org/fr/agenda/dialogue-entre-fils-de-xango
 END:VEVENT
 BEGIN:VEVENT
 UID:c2b7b61a5bca@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261006T210000
 DTEND;TZID=Europe/Paris:20261006T230000
 SUMMARY:La psychanalyse du Rio de La Plata
@@ -134,5 +96,19 @@ DESCRIPTION:Conférence/Débat\nhttps://www.mal217.org/fr/agenda/la-psychan
 LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
   7e
 URL:https://www.mal217.org/fr/agenda/la-psychanalyse-du-rio-de-la-plata
+END:VEVENT
+BEGIN:VEVENT
+UID:ecc674ac5041@paris-academique
+DTSTAMP:20260930T101755Z
+DTSTART;TZID=Europe/Paris:20261008T190000
+DTEND;TZID=Europe/Paris:20261008T210000
+SUMMARY:Tribune de l'actualité latino-américaine et caribéenne — Ciné
+ mas d’Amérique latine : un état des lieux
+DESCRIPTION:Actualité\nhttps://www.mal217.org/fr/agenda/tribune-de-l-actua
+ lite-latino-americaine-et-caribeenne-copie-7ea45626
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
+URL:https://www.mal217.org/fr/agenda/tribune-de-l-actualite-latino-americai
+ ne-et-caribeenne-copie-7ea45626
 END:VEVENT
 END:VCALENDAR

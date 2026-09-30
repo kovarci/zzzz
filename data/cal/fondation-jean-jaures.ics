@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:8898d7efc12b@paris-academique
-DTSTAMP:20260929T193312Z
-DTSTART;TZID=Europe/Paris:20260929T190000
-DTEND;TZID=Europe/Paris:20260929T210000
-SUMMARY:Gagner en 2027 : quel mode d’emploi ?
-DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/gagner-en-2027-
- quel-mode-demploi/
-LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
-URL:https://www.jean-jaures.org/agenda/gagner-en-2027-quel-mode-demploi/
-END:VEVENT
-BEGIN:VEVENT
 UID:ba8f2e817bfc@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20260930T180000
 DTEND;TZID=Europe/Paris:20260930T200000
 SUMMARY:Le livre est mort\, vive le livre !

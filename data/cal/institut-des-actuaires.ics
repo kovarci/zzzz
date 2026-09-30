@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3dcdd90a520c@paris-academique
-DTSTAMP:20260929T193312Z
-DTSTART;TZID=Europe/Paris:20260929T180000
-DTEND;TZID=Europe/Paris:20260929T200000
-SUMMARY:Conférence ROAM – Institut des actuaires : Fiscalité de l'assur
- ance vie
-DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/confer
- ence-roam-institut-des-actuaires-fiscalite-de-l-assurance-vie-7947
-LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/conference-roam-institut-de
- s-actuaires-fiscalite-de-l-assurance-vie-7947
-END:VEVENT
-BEGIN:VEVENT
 UID:4e4d41c8d92f@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261001T093000
 DTEND;TZID=Europe/Paris:20261001T113000
 SUMMARY:Workshop chaire CARE - Modélisation en santé
@@ -50,7 +37,7 @@ URL:https://www.institutdesactuaires.com/agenda/workshop-chaire-care-modeli
 END:VEVENT
 BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -62,7 +49,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026

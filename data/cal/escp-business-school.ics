@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:6f3710f6d0d7@paris-academique
-DTSTAMP:20260929T193312Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
-SUMMARY:Governance & stakeholders activism: what are the new challenges
-DESCRIPTION:Event\nhttps://escp.eu/fr/events/governance-stakeholders-activi
- sm-what-are-new-challenges
-LOCATION:10 Rue de Bassano\, Paris 75116\, France
-URL:https://escp.eu/fr/events/governance-stakeholders-activism-what-are-new
- -challenges
-END:VEVENT
-BEGIN:VEVENT
 UID:367ebbab11db@paris-academique
-DTSTAMP:20260929T193312Z
+DTSTAMP:20260930T101755Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:L’innovation va-t-elle tuer le Progrès ?
@@ -46,5 +34,16 @@ DESCRIPTION:Event\nhttps://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-
 LOCATION:Campus Paris Montparnasse\, 3 rue Armand Moisant\, 75015 Paris\, F
  rance
 URL:https://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-progres
+END:VEVENT
+BEGIN:VEVENT
+UID:9dacd5d42c76@paris-academique
+DTSTAMP:20260930T101755Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Finance & Consulting Career Fair 2026
+DESCRIPTION:Event\nhttps://escp.eu/fr/events/paris-finance-consulting-caree
+ r-fair
+LOCATION:ESCP Business School\, 79 avenue de la République\, Paris 11e
+URL:https://escp.eu/fr/events/paris-finance-consulting-career-fair
 END:VEVENT
 END:VCALENDAR
