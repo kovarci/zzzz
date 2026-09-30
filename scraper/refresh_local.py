@@ -67,7 +67,9 @@ LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences", "Jeu
                       # elle ici, ses événements renommés restaient en double
                       "HEC IA",
                       # salons de L'Étudiant : page sans cartes pour le robot (29/09/2026)
-                      "L'Étudiant"}
+                      "L'Étudiant",
+                      # Louvre : 403 pour le robot GitHub depuis le 30/09/2026
+                      "Musée du Louvre"}
 
 
 def _luma_count(events):
@@ -99,7 +101,9 @@ def main():
                # HEC IA : le robot reçoit une page sans cartes (0 lue)
                scrape.scrape_hec_ia,
                # Salons de L'Étudiant : même chose (0 carte depuis GitHub, 19 d'ici)
-               scrape.scrape_salons_etudiant):
+               scrape.scrape_salons_etudiant,
+               # Louvre : même chose (403 depuis GitHub, normal d'ici)
+               scrape.scrape_louvre):
         try:
             blocked += fn()
         except Exception as e:

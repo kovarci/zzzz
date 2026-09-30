@@ -2026,12 +2026,13 @@ def scrape_ephe():
 
 def scrape_bernardins():
     # Webflow : jour + mois abrégé anglais (« 30 Sep »), sans année.
-    # Tarif (gratuit sur réservation / 12 €…) : seulement sur chaque fiche.
-    return _add_page_prices(_scrape_cards(
+    # Tarif (gratuit sur réservation / 12 €…) : seulement sur chaque fiche,
+    # lu par add_missing_prices (mémorisé d'un passage à l'autre).
+    return _scrape_cards(
         "Collège des Bernardins", "https://www.collegedesbernardins.fr/agenda",
         ".item-agenda", title="h2", date=".tag-date-wrapper", kind=".tag-vignette-agenda-v2",
         base="https://www.collegedesbernardins.fr",
-        location="Collège des Bernardins, 20 rue de Poissy, Paris 5e"))
+        location="Collège des Bernardins, 20 rue de Poissy, Paris 5e")
 
 
 def scrape_academie_sciences():
@@ -2207,7 +2208,17 @@ def scrape_quai_branly():
 _IDF_RE = re.compile(
     r"\b(paris|lpnhe|apc|jussieu|ijclab|orsay|saclay|palaiseau|ihp|henri poincar[ée]|"
     r"meudon|observatoire|condorcet|aubervilliers|gif|bures|villejuif|cr[ée]teil|"
-    r"nanterre|saint-denis|versailles|cergy|[ée]vry|marne-la-vall[ée]e|champs-sur-marne)\b"
+    r"nanterre|saint-denis|versailles|cergy|[ée]vry|marne-la-vall[ée]e|champs-sur-marne|"
+    # Communes franciliennes courantes (Roissy passait pour hors IDF, et un
+    # événement du Crous de Créteil à Vitry aurait été écarté par scrape_tribe)
+    r"roissy|massy|montreuil(?!-sur-mer)|vincennes|boulogne-billancourt|issy-les-moulineaux|clichy|pantin|"
+    r"ivry-sur-seine|vitry-sur-seine|montrouge|malakoff|gentilly|arcueil|cachan|sceaux|antony|"
+    r"rueil-malmaison|courbevoie|puteaux|la d[ée]fense|neuilly-sur-seine|levallois|saint-ouen|"
+    r"bobigny|bondy|noisy-le-grand|villetaneuse|le kremlin-bic[êe]tre|charenton|saint-maur|"
+    r"nogent-sur-marne|fontenay|champigny|clamart|ch[âa]tillon|bagneux|s[èe]vres|saint-cloud|"
+    r"suresnes|gennevilliers|asni[èe]res|colombes|argenteuil|pontoise|meaux|melun|corbeil|"
+    r"jouy-en-josas|guyancourt|saint-quentin-en-yvelines|saint-germain-en-laye|poissy|"
+    r"rambouillet|fontainebleau|les ulis|orly|rungis|torcy|chelles|serris|noisiel)\b"
     # + codes postaux franciliens, à la française (« 75016 », « 94270 Le
     # Kremlin-Bicêtre ») — pas un ZIP américain après l'État (« CA 92697 »).
     r"|(?<!(?-i:[A-Z][A-Z]) )\b(?:75|77|78|91|92|93|94|95)\d{3}\b(?=\s+[^\W\d_]|\s*$)", re.I)
@@ -3163,12 +3174,18 @@ def add_missing_prices(events, previous=(), limit=400):
     from concurrent.futures import ThreadPoolExecutor
     today = TODAY.isoformat()
     known = {e.get("id"): e["price"] for e in previous if e.get("id") and e.get("price")}
+    # Page déjà lue sans tarif : on ne la relit qu'au bout d'une semaine (le
+    # Louvre a bloqué le robot après des relectures quotidiennes)
+    checked = {e.get("id"): e["price_checked"] for e in previous if e.get("id") and e.get("price_checked")}
+    week_ago = (TODAY - timedelta(days=7)).isoformat()
     todo = []
     for e in events:
         if e.get("price") or e.get("date", "") < today or not e.get("url"):
             continue
         if known.get(e.get("id")):
             e["price"] = known[e["id"]]
+        elif checked.get(e.get("id"), "") > week_ago:
+            e["price_checked"] = checked[e["id"]]
         elif (e.get("institution") in _PRICE_PAGE_SOURCES or e.get("institution") == "Sciencesconf.org"
               or e.get("source_type") in ("ville", "luma")):
             todo.append(e)
@@ -3178,20 +3195,9 @@ def add_missing_prices(events, previous=(), limit=400):
         for e, p in zip(todo, ex.map(get, todo)):
             if p:
                 e["price"] = p
+            else:
+                e["price_checked"] = today
     print(f"Prix lus sur les pages officielles : {sum(1 for e in todo if e.get('price'))}/{len(todo)}")
-    return events
-
-
-def _add_page_prices(events):
-    """Complète le prix des événements sans tarif à partir de leur page (en
-    parallèle). Sans prix, Search Console signale « Champ price manquant »."""
-    from concurrent.futures import ThreadPoolExecutor
-    todo = [e for e in events if not e.get("price") and e.get("url")]
-    with ThreadPoolExecutor(8) as ex:
-        for e, p in zip(todo, ex.map(lambda e: _page_price(e["url"]), todo)):
-            if p:
-                e["price"] = p
-    print(f"   prix lus sur les fiches : {sum(1 for e in todo if e.get('price'))}/{len(todo)}")
     return events
 
 
@@ -3257,7 +3263,8 @@ def scrape_louvre():
                 url=make_absolute(((x.get("link") or {}).get("url") or ""), base),
                 speaker=clean_text(sp.group(1)) if sp else "", image=img))
         m = nxt
-    _add_page_prices(events)
+    # Tarifs : add_missing_prices (mémorisés d'un passage à l'autre). Relire
+    # les 50 fiches à chaque passage a précédé le blocage du robot (403).
     print(f"   ✓ Total Musée du Louvre: {len(events)} events")
     return events
 
@@ -4251,7 +4258,9 @@ _ACRONYM_STOP = {
 _CANCELLED = re.compile(
     r"[\[(]\s*(?:annul|report|cancel|postpon)\w*[^\])]{0,20}[\])]"
     r"|^\s*(?:annul[ée]e?s?|report[ée]e?s?|cancell?ed|postponed)\s*[:–-]"
-    r"|(?-i:\b(?:ANNUL[ÉE]E?S?|REPORT[ÉE]E?S?|CANCELL?ED|POSTPONED)\b)", re.I)
+    r"|(?-i:\b(?:ANNUL[ÉE]E?S?|REPORT[ÉE]E?S?|CANCELL?ED|POSTPONED)\b)"
+    # AIBL : « Colloque de l'Académie à la Villa Kérylos. Pas de séance. »
+    r"|\bpas de s[ée]ance\b", re.I)
 
 
 def merge_cross_source(events):
@@ -4300,7 +4309,45 @@ def merge_cross_source(events):
         merged += len(g) - 1
     if merged:
         print(f"Doublons inter-sources fusionnés : {merged}")
-    return _merge_prefix_titles(out)
+    return _merge_same_slot(_merge_prefix_titles(out))
+
+
+def _merge_same_slot(events):
+    """Même jour, même heure, et un long titre presque identique (« Journée
+    d'études "20 ans…" » à Paris 1 / « Journée d'étude : "20 ans…" » à Assas)
+    ou contenu dans l'autre (« Décript in dialogue : "Whose Peace?…" » de la
+    Ville / « Whose Peace?… » de la FMSH) : la même séance publiée deux fois.
+    L'heure identique évite de fusionner deux séances d'un cycle. Pas Luma."""
+    import difflib
+    slots = {}
+    for i, e in enumerate(events):
+        if e.get("time") and e.get("source_type") != "luma" and not e.get("kind"):
+            slots.setdefault((e.get("date"), e["time"]), []).append(i)
+    drop, n = set(), 0
+    for idx in slots.values():
+        if len(idx) < 2:
+            continue
+        cores = {i: core_title(events[i].get("title", "")) for i in idx}
+        for a_i in idx:
+            for b_i in idx:
+                if a_i >= b_i or a_i in drop or b_i in drop:
+                    continue
+                a, b = sorted((cores[a_i], cores[b_i]), key=len)
+                if len(a) < 25:
+                    continue
+                if not (b.endswith(a) or b.startswith(a) or difflib.SequenceMatcher(None, a, b).ratio() >= 0.93):
+                    continue
+                ea, eb = events[a_i], events[b_i]
+                keep = max((ea, eb), key=lambda x: (x.get("source_type") != "ville", _richness(x)))
+                lose = eb if keep is ea else ea
+                if lose.get("source_type") != "ville" and lose.get("institution") != keep.get("institution"):
+                    keep["also"] = sorted(set(keep.get("also") or []) | {lose.get("institution")})
+                _absorb(keep, lose)
+                drop.add(b_i if keep is ea else a_i)
+                n += 1
+    if n:
+        print(f"Même séance publiée deux fois (même jour, même heure) : {n} fusionnées")
+    return [e for i, e in enumerate(events) if i not in drop]
 
 
 # Sites qui republient les événements des autres (colloques, Ville de Paris)
@@ -4961,7 +5008,9 @@ _IDF_CITY = re.compile(
     r"\b(Aubervilliers|Orsay|Palaiseau|Gif-sur-Yvette|Saclay|Bures-sur-Yvette|Nanterre|Saint-Denis|"
     r"Villetaneuse|Cr[ée]teil|Versailles|Champs-sur-Marne|Marne-la-Vall[ée]e|Meudon|[ÉE]vry|Cergy|"
     r"Boulogne-Billancourt|Issy-les-Moulineaux|Montrouge|Ivry-sur-Seine|Vincennes|Courbevoie|"
-    r"Neuilly-sur-Seine|Clichy|Pantin|Montreuil|Saint-Ouen|Jouy-en-Josas|Fontainebleau|Cachan|Sceaux)\b")
+    r"Neuilly-sur-Seine|Clichy|Pantin|Montreuil|Saint-Ouen|Jouy-en-Josas|Fontainebleau|Cachan|Sceaux|"
+    r"Massy|Roissy|Vitry-sur-Seine|Malakoff|Gentilly|Arcueil|Antony|Puteaux|Bobigny|Guyancourt|"
+    r"Saint-Germain-en-Laye|Argenteuil|Pontoise|Melun|Meaux|Noisy-le-Grand|Les Ulis|Orly)\b")
 
 
 # Établissements dont les conférences publiques sont gratuites (universités,
@@ -5494,7 +5543,7 @@ body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background
 .badges{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}}
 .badge{{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:600}}
 .dbadge{{border-color:var(--dc);color:color-mix(in srgb,var(--dc) 62%,#000)}}
-@media (prefers-color-scheme:dark){{.dbadge{{color:var(--dc)}}}}
+@media (prefers-color-scheme:dark){{.dbadge{{color:color-mix(in srgb,var(--dc) 60%,#fff)}}}}
 h1{{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}}
 .date{{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:14px}}
 .date .d{{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--muted);border-radius:8px;min-width:56px;padding:6px 10px}}
@@ -6626,6 +6675,29 @@ def build_digest(events):
     print(f"Digest : {len(picked)} immanquables ({period})")
 
 
+_DESC_LEAD = re.compile(r"^\s*(?:En savoir plus|Lire la suite|Read more|Voir plus)\s*(?:[:.…>›»-]\s*)?", re.I)
+_LABELLED_LOC = re.compile(r"^\s*(?:Building|Room)\s*:", re.I)
+
+
+def _clean_labelled_loc(loc):
+    """Institut Pasteur : « Building : Metchnikoff – Room : Jules Bordet –
+    Address: Institut Pasteur, Rue du Docteur Roux, Paris, France — Institut
+    Pasteur, 25-28 rue… » → « Jules Bordet (bâtiment Metchnikoff) — Institut
+    Pasteur, 25-28 rue du Docteur Roux, Paris 15e ». Le scraper ajoutait
+    l'adresse de Pasteur même aux séminaires tenus ailleurs (Institut de
+    l'Audition, Gif-sur-Yvette) : l'adresse indiquée l'emporte alors."""
+    main, _, default = loc.partition(" — ")
+    parts = {k.lower(): v.strip(" –-") for k, v in re.findall(r"(Building|Room|Address)\s*:\s*([^–]*)", main, re.I)}
+    room, bld = parts.get("room", ""), parts.get("building", "")
+    addr = re.sub(r",\s*France\s*$", "", parts.get("address", "")).strip()
+    bname = re.sub(r"^b[âa]timent\s+", "", bld, flags=re.I).split(",")[0].strip()
+    place = room or (f"Bâtiment {bname}" if bname else "")
+    if room and bname and bname.lower().replace(".", "") not in room.lower().replace(".", ""):
+        place = f"{room} (bâtiment {bname})"
+    if addr and not re.search(r"Pasteur|Docteur Roux", addr, re.I):
+        return f"{place} — {addr}" if place else addr
+    where = default.strip() or addr
+    return f"{place} — {where}" if place and where else (place or where or loc)
 _NEWS_URL = re.compile(r"//www\.cnam\.fr/actualites/(?!.*agenda)")
 
 
@@ -6663,6 +6735,11 @@ def finalize_events(events):
             e["title"] = e["title"][:-len(sp)].strip()
         if (e.get("description") or "").strip().lower() == e.get("title", "").strip().lower():
             e["description"] = ""
+        # Bouton de la carte lu avec le texte (IN2P3 : « En savoir plus E PICS est… »)
+        if e.get("description"):
+            e["description"] = _DESC_LEAD.sub("", e["description"]).strip()
+        if _LABELLED_LOC.match(e.get("location") or ""):
+            e["location"] = _clean_labelled_loc(e["location"])
         reclassify(e)
         if _SOUTENANCE.search(e.get("title", "")):
             e["kind"] = "soutenance"
@@ -6826,6 +6903,22 @@ def _drop_daily_ghosts(events):
         same = [e for e in g if e.get("date") and e.get("date") == e.get("added_at")]
         if len({e["date"] for e in g}) >= 4 and len(same) >= 0.8 * len(g):
             ghost.update(id(e) for e in same)
+    # Même bug, version reportée d'un jour sur l'autre (date ≠ date d'ajout) :
+    # un séminaire PSE « tous les jours », week-ends compris, de mai au 25/09
+    # (« Casual Friday Development » 119 fois). Un lien = une série ; au moins
+    # la moitié des écarts d'un jour → copies, antérieures au parseur dédié.
+    by_url = defaultdict(list)
+    for e in events:
+        if e.get("institution") == "Paris School of Economics" and e.get("url") and e.get("date", "") < "2026-09-26":
+            by_url[e["url"]].append(e)
+    for g in by_url.values():
+        ds = sorted({e["date"] for e in g})
+        try:
+            gaps = [(date.fromisoformat(b) - date.fromisoformat(a)).days for a, b in zip(ds, ds[1:])]
+        except ValueError:
+            continue
+        if len(ds) >= 5 and sum(1 for x in gaps if x == 1) >= 0.5 * len(gaps):
+            ghost.update(id(e) for e in g)
     if ghost:
         print(f"Archive : {len(ghost)} copies « datées du jour du scrape » retirées")
     return [e for e in events if id(e) not in ghost]
@@ -6852,6 +6945,16 @@ def update_archive(previous_events):
     # Titres parasites archivés avant que le filtre ne les connaisse
     archive = [e for e in archive if e.get("date", "") >= cutoff and not is_junk_title(e.get("title", ""))]
     archive = _drop_daily_ghosts(archive)
+    # Filtres ajoutés au fil du temps, appliqués aussi à l'historique :
+    # annulés, articles d'actualité, hors Île-de-France (soirées Article 1 à
+    # Bordeaux gardées avant que _article1_local n'existe)
+    n = len(archive)
+    archive = [e for e in archive
+               if not _CANCELLED.search(e.get("title", "")) and not _NEWS_URL.search(e.get("url") or "")
+               and not _outside_idf(e.get("location", ""))
+               and (e.get("institution") != "Article 1" or _article1_local(e.get("location", "")))]
+    if len(archive) < n:
+        print(f"Archive : {n - len(archive)} événements hors sujet retirés (annulés, hors IDF, actualités)")
     # Deux versions d'un même événement (renommé, déplacé : « Founding » →
     # « Founder Members », même lien Luma) étaient toutes deux à l'agenda
     # avant d'être archivées : l'Historique les montrait en double. On garde
