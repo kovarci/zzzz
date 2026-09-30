@@ -5482,7 +5482,7 @@ def write_event_pages(events):
     speaker_slugs = set(_speaker_groups(events))
     same_day = Counter(((e.get("title") or "").strip().lower(), e.get("date", ""))
                        for e in {e.get("id"): e for e in events}.values())
-    keep = set()
+    keep, used_titles = set(), set()
     for ev in events:
         eid = ev.get("id") or ""
         if not re.fullmatch(r"[0-9a-f]{12}", eid):
@@ -5542,6 +5542,13 @@ def write_event_pages(events):
             seo_title = cut(t_, 74 - len(full)) + full
         else:                                         # le titre d'abord
             seo_title = cut(t_, 74 - len(short_tail)) + short_tail
+        # Titre déjà pris par une autre fiche (séances « (1) » et « (2) » d'un
+        # cours, dont le numéro tombait à la coupe) : on ajoute le numéro, sinon l'heure
+        if seo_title in used_titles:
+            num = re.search(r"\((\d+)\)\s*$", t_ or "")
+            extra = f"séance {num.group(1)}" if num else (ev.get("time") or eid[:4])
+            seo_title = f"{seo_title} · {extra}"
+        used_titles.add(seo_title)
         seo_title = _esc_attr(seo_title)
         # Meta description : une phrase naturelle + mots-clés (intervenant,
         # lieu, date) — ~155 caractères, format optimal pour Google SERP.
