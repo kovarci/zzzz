@@ -1830,7 +1830,13 @@ def _verify_for(url):
 def _soup(url):
     """Page → BeautifulSoup. On passe les octets bruts : BeautifulSoup lit le
     charset du <meta> (Sorbonne Nouvelle est en cp1252 sans le dire à HTTP)."""
-    r = requests.get(url, headers=CDF_HEADERS, timeout=35, verify=_verify_for(url))
+    # Une seconde tentative si le site est lent ou coupe la connexion (Paris 8
+    # dépassait parfois les 35 s : 0 événement lu ce jour-là)
+    try:
+        r = requests.get(url, headers=CDF_HEADERS, timeout=35, verify=_verify_for(url))
+    except (requests.Timeout, requests.ConnectionError):
+        time.sleep(3)
+        r = requests.get(url, headers=CDF_HEADERS, timeout=50, verify=_verify_for(url))
     r.raise_for_status()
     declared = "charset" in r.headers.get("content-type", "").lower()
 
