@@ -6676,7 +6676,7 @@ def build_digest(events):
 
 
 _DESC_LEAD = re.compile(r"^\s*(?:En savoir plus|Lire la suite|Read more|Voir plus)\s*(?:[:.…>›»-]\s*)?", re.I)
-_LABELLED_LOC = re.compile(r"^\s*(?:Building|Room)\s*:", re.I)
+_LABELLED_LOC = re.compile(r"^\s*(?:Building|Room|Address)\s*:", re.I)
 
 
 def _clean_labelled_loc(loc):
@@ -6694,7 +6694,7 @@ def _clean_labelled_loc(loc):
     place = room or (f"Bâtiment {bname}" if bname else "")
     if room and bname and bname.lower().replace(".", "") not in room.lower().replace(".", ""):
         place = f"{room} (bâtiment {bname})"
-    if addr and not re.search(r"Pasteur|Docteur Roux", addr, re.I):
+    if addr and not re.search(r"Pasteur|(?:Docteur|Dr\.?) Roux", addr, re.I):
         return f"{place} — {addr}" if place else addr
     where = default.strip() or addr
     return f"{place} — {where}" if place and where else (place or where or loc)
