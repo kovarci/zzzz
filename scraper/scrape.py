@@ -5181,14 +5181,16 @@ def _attendance(loc):
     return "mixed" if re.search(r"\d", loc) else "online"
 
 
-def _img_thumb(url, w=800):
+def _img_thumb(url, w=800, seo=False):
     """Image redimensionnée (même règle que thumb() dans web/src/lib.js) :
-    les originaux Luma pèsent ~3 Mo, ceux de la Ville ~900 Ko."""
+    les originaux Luma pèsent ~3 Mo, ceux de la Ville ~900 Ko. `seo` : image
+    lue par les robots (og:image, JSON-LD) — pas wsrv.nl, dont le robots.txt
+    interdit les URL à paramètres (Googlebot, Twitterbot ne la liraient pas)."""
     if not url:
         return url
     if "images.lumacdn.com/" in url and "/cdn-cgi/" not in url:
         return url.replace("images.lumacdn.com/", f"images.lumacdn.com/cdn-cgi/image/width={w},quality=75,format=auto/")
-    if url.startswith("https://cdn.paris.fr/"):
+    if url.startswith("https://cdn.paris.fr/") and not seo:
         from urllib.parse import quote
         return f"https://wsrv.nl/?url={quote(url[8:], safe='')}&w={w}&q=75&output=jpg"
     return url
@@ -5293,7 +5295,7 @@ def _event_jsonld(ev):
         performer = {"@type": "PerformingGroup", "name": inst or "Conférencier"}
     # image : fallback vers l'og.png par institution (toujours fraîche) ou
     # l'og.png global du site -> tout event a une image.
-    img = _img_thumb(ev.get("image"), 1200)
+    img = _img_thumb(ev.get("image"), 1200, seo=True)
     if not img:
         slug = slugify(inst)
         # data/og/<slug>.png n'existe que pour les établissements phares : pour
@@ -5581,7 +5583,7 @@ def write_event_pages(events):
         sent = (cut(t_, max(45, 152 - len(rest))) + rest
                 + (f" · {where}" if where and where.lower() != "paris" else " · Paris") + ".")
         meta_desc = _esc_attr(cut(sent, 155))
-        img = _esc_attr(_img_thumb(ev.get("image"), 1200) or f"{SITE_URL}/og.png")
+        img = _esc_attr(_img_thumb(ev.get("image"), 1200, seo=True) or f"{SITE_URL}/og.png")
         ext = _esc_attr(ev.get("url") or "")
         # « /?event= » et non « ../index.html?event= » : sinon Google découvre
         # des milliers de variantes index.html?… d'une même page.
