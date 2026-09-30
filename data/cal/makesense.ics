@@ -25,9 +25,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ff721d0095d3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20260930T190000
+DTEND;TZID=Europe/Paris:20260930T213000
 SUMMARY:Cercle de parole Nayoki
 DESCRIPTION:Organisé par Maison de la Conversation — Un espace bienveill
  ant d’échange et d’écoute pour partager\, questionner et se connecte
@@ -41,9 +41,9 @@ URL:https://chiche.makesense.org/events/e/cercle-de-parole-nayoki-6a858dc26
 END:VEVENT
 BEGIN:VEVENT
 UID:1b5f31e28210@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20260930T190000
+DTEND;TZID=Europe/Paris:20260930T210000
 SUMMARY:PARLE M'EN ! La démocratie est un jeu
 DESCRIPTION:Organisé par Maison de la Conversation — PARLE M'EN propose 
  à un groupe de s’essayer à l’exercice du travail des lois. Au cours 
@@ -57,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/parle-men-la-democratie-est-un-je
 END:VEVENT
 BEGIN:VEVENT
 UID:7873091e5d85@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:IA\, le choc thermique
@@ -71,9 +71,9 @@ URL:https://chiche.makesense.org/events/e/ia-le-choc-thermique-6a9ed9328f56
 END:VEVENT
 BEGIN:VEVENT
 UID:2de6d366eda0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261002
-DTEND;VALUE=DATE:20261003
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261002T140000
+DTEND;TZID=Europe/Paris:20261002T160000
 SUMMARY:Atelier de création théâtrale à destination des femmes
 DESCRIPTION:Organisé par Maison de la Conversation — Atelier de créatio
  n théâtrale à destination des femmes.Venez participer à la création c
@@ -87,7 +87,7 @@ URL:https://chiche.makesense.org/events/e/atelier-de-creation-theatrale-a-d
 END:VEVENT
 BEGIN:VEVENT
 UID:b94e49a8c615@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Formation à la facilitation graphique
@@ -102,7 +102,7 @@ URL:https://chiche.makesense.org/events/e/formation-a-la-facilitation-graph
 END:VEVENT
 BEGIN:VEVENT
 UID:7d8fcfaa0219@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
@@ -118,9 +118,9 @@ URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
 END:VEVENT
 BEGIN:VEVENT
 UID:08567294a4ed@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261005T193000
+DTEND;TZID=Europe/Paris:20261005T213000
 SUMMARY:Workshop Capoeira Angola
 DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
   capoeira Angola\, un art martial afro-brésilien qui allie résistance\, 
@@ -131,5 +131,20 @@ DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09b2
  19fd1c00088da888
+END:VEVENT
+BEGIN:VEVENT
+UID:8d483f251afc@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Appel à candidature - Social Starter
+DESCRIPTION:Organisé par Les Canaux — Le Social Starter\, c'est le progr
+ amme de mise en relation entre des porteur·euse·s de projet à impact so
+ cial et/ou environnemental avec l'écosystème de l’accompagnement et du
+  financ\nhttps://chiche.makesense.org/events/e/appel-a-candidature-social-
+ starter-6a842a5b476bed0008f56482
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/appel-a-candidature-social-starte
+ r-6a842a5b476bed0008f56482
 END:VEVENT
 END:VCALENDAR

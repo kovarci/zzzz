@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:e8f8ff85de3e@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20260930
 SUMMARY:Cours du soir - Une histoire de l'IA (1940-2026)
@@ -36,7 +36,7 @@ URL:https://psl.eu/agenda/cours-du-soir-une-histoire-de-lia-1940-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fde64d7e2d88@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Cours du soir - Histoire du cinéma d'animation
@@ -47,9 +47,9 @@ URL:https://psl.eu/agenda/cours-du-soir-histoire-du-cinema-danimation-0
 END:VEVENT
 BEGIN:VEVENT
 UID:4339160d5f85@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T183000
+DTEND;TZID=Europe/Paris:20261001T200000
 SUMMARY:Cours du soir - La mode sous toutes ses coutures
 DESCRIPTION:https://psl.eu/agenda/cours-du-soir-la-mode-sous-toutes-ses-cou
  tures
@@ -58,9 +58,9 @@ URL:https://psl.eu/agenda/cours-du-soir-la-mode-sous-toutes-ses-coutures
 END:VEVENT
 BEGIN:VEVENT
 UID:7b053657eed0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T183000
+DTEND;TZID=Europe/Paris:20261001T203000
 SUMMARY:La Cellule d’entraide étudiante handicap reprend ses activités 
  !
 DESCRIPTION:https://psl.eu/agenda/la-cellule-dentraide-etudiante-handicap-r
@@ -71,9 +71,9 @@ URL:https://psl.eu/agenda/la-cellule-dentraide-etudiante-handicap-reprend-s
 END:VEVENT
 BEGIN:VEVENT
 UID:f5620c915385@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T183000
+DTEND;TZID=Europe/Paris:20261001T200000
 SUMMARY:Cours du soir - De l'Empire ottoman à la Turquie moderne
 DESCRIPTION:https://psl.eu/agenda/cours-du-soir-de-lempire-ottoman-la-turqu
  ie-moderne
@@ -83,9 +83,9 @@ URL:https://psl.eu/agenda/cours-du-soir-de-lempire-ottoman-la-turquie-moder
 END:VEVENT
 BEGIN:VEVENT
 UID:63013216250d@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261002
-DTEND;VALUE=DATE:20261003
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261002T100000
+DTEND;TZID=Europe/Paris:20261002T200000
 SUMMARY:Fête de la science à l'Université PSL
 DESCRIPTION:https://psl.eu/agenda/fete-de-la-science-luniversite-psl
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
@@ -93,9 +93,9 @@ URL:https://psl.eu/agenda/fete-de-la-science-luniversite-psl
 END:VEVENT
 BEGIN:VEVENT
 UID:0967d26125f5@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261005
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261004T100000
+DTEND;TZID=Europe/Paris:20261004T180000
 SUMMARY:Le village des Sciences de l'Université PSL
 DESCRIPTION:https://psl.eu/agenda/le-village-des-sciences-de-luniversite-ps
  l
@@ -104,9 +104,9 @@ URL:https://psl.eu/agenda/le-village-des-sciences-de-luniversite-psl
 END:VEVENT
 BEGIN:VEVENT
 UID:2c752d8f4241@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T180000
+DTEND;TZID=Europe/Paris:20261007T200000
 SUMMARY:Conférence PROMESSE – Artiste-auteur\, micro-entreprise\, cumul 
  ... : Quel statut choisir ?
 DESCRIPTION:https://psl.eu/agenda/conference-promesse-artiste-auteur-micro-
@@ -117,7 +117,7 @@ URL:https://psl.eu/agenda/conference-promesse-artiste-auteur-micro-entrepri
 END:VEVENT
 BEGIN:VEVENT
 UID:7e2a2fc81c35@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:La quête de l’eau atmosphérique
@@ -127,9 +127,9 @@ URL:https://psl.eu/agenda/la-quete-de-leau-atmospherique
 END:VEVENT
 BEGIN:VEVENT
 UID:c72b67a20cb0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261013T121500
+DTEND;TZID=Europe/Paris:20261013T134500
 SUMMARY:Séminaires de l’Organologia Institute
 DESCRIPTION:https://psl.eu/agenda/seminaires-de-lorganologia-institute
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
@@ -137,9 +137,9 @@ URL:https://psl.eu/agenda/seminaires-de-lorganologia-institute
 END:VEVENT
 BEGIN:VEVENT
 UID:9aeea5d2ced0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261013T121500
+DTEND;TZID=Europe/Paris:20261013T134500
 SUMMARY:Séminaire inaugural de l’Organologia Institute : « La bourse et
   la vie : le vitalisme de Georges F. Doriot »
 DESCRIPTION:https://psl.eu/agenda/seminaire-inaugural-de-lorganologia-insti
@@ -150,9 +150,9 @@ URL:https://psl.eu/agenda/seminaire-inaugural-de-lorganologia-institute-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:56cf635a2378@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261014T121500
+DTEND;TZID=Europe/Paris:20261014T133000
 SUMMARY:Façonner les ondes pour voir l'invisible
 DESCRIPTION:https://psl.eu/agenda/faconner-les-ondes-pour-voir-linvisible
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
@@ -160,9 +160,9 @@ URL:https://psl.eu/agenda/faconner-les-ondes-pour-voir-linvisible
 END:VEVENT
 BEGIN:VEVENT
 UID:cd78e1ba5a27@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261014T180000
+DTEND;TZID=Europe/Paris:20261014T200000
 SUMMARY:Bachelor I-BE³ : webinaire d’information
 DESCRIPTION:https://psl.eu/agenda/bachelor-i-be3-webinaire-dinformation-0
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
@@ -170,7 +170,7 @@ URL:https://psl.eu/agenda/bachelor-i-be3-webinaire-dinformation-0
 END:VEVENT
 BEGIN:VEVENT
 UID:177d55334a2d@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Festival Musique 2026 « Quatuor à cordes »
@@ -180,7 +180,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes
 END:VEVENT
 BEGIN:VEVENT
 UID:1fb986609034@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:AFTER Project Room : la jeune création de l'École des Arts Décor
@@ -193,9 +193,9 @@ URL:https://psl.eu/agenda/after-project-room-la-jeune-creation-de-lecole-de
 END:VEVENT
 BEGIN:VEVENT
 UID:4362a59a623e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261022T090000
+DTEND;TZID=Europe/Paris:20261022T103000
 SUMMARY:Groupe de parole pour les doctorants 🗣️
 DESCRIPTION:https://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
@@ -203,9 +203,9 @@ URL:https://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
 END:VEVENT
 BEGIN:VEVENT
 UID:774bc337a99e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261030
-DTEND;VALUE=DATE:20261031
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261030T180000
+DTEND;TZID=Europe/Paris:20261030T203000
 SUMMARY:Peur en panne\, une chasse au trésor scientifique d’Halloween !
 DESCRIPTION:https://psl.eu/agenda/peur-en-panne-une-chasse-au-tresor-scient
  ifique-dhalloween
@@ -214,18 +214,8 @@ URL:https://psl.eu/agenda/peur-en-panne-une-chasse-au-tresor-scientifique-d
  halloween
 END:VEVENT
 BEGIN:VEVENT
-UID:e7efa0ca06b3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:PhD Symposium d'EELISA
-DESCRIPTION:https://psl.eu/agenda/phd-symposium-deelisa
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/phd-symposium-deelisa
-END:VEVENT
-BEGIN:VEVENT
 UID:c9aef26da023@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Festival Musique 2026 « Piano/accordéon autour de la danse »
@@ -236,8 +226,18 @@ URL:https://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la
  -danse
 END:VEVENT
 BEGIN:VEVENT
+UID:e7efa0ca06b3@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261103T083000
+DTEND;TZID=Europe/Paris:20261103T130000
+SUMMARY:PhD Symposium d'EELISA
+DESCRIPTION:https://psl.eu/agenda/phd-symposium-deelisa
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/phd-symposium-deelisa
+END:VEVENT
+BEGIN:VEVENT
 UID:7d300871fa24@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Festival Musique 2026 « Trio Cornière »
@@ -247,7 +247,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-trio-corniere
 END:VEVENT
 BEGIN:VEVENT
 UID:67081bb7dd38@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Festival Musique 2026 « Quatuor à cordes et percussions »

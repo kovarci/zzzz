@@ -25,9 +25,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:70b36d865cc0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T190000
+DTEND;TZID=Europe/Paris:20261001T210000
 SUMMARY:Immigration en France : regarder les faits et penser demain
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/immigrat
  ion-en-france-regarder-les-faits-et-penser-demain
@@ -37,22 +37,8 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/immigration-en-f
  rance-regarder-les-faits-et-penser-demain
 END:VEVENT
 BEGIN:VEVENT
-UID:79652f7d1813@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
-SUMMARY:La guérison de l’âme : architecture et ambition du Kitāb al-Sh
- ifāʾ d’Avicenne
-DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/guerison
- -ame-architecture-et-ambition-du-kitab-al-shifa-avicenne
-LOCATION:Institut du monde arabe\, 1 rue des Fossés-Saint-Bernard\, Paris 
- 5e
-URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/guerison-ame-arc
- hitecture-et-ambition-du-kitab-al-shifa-avicenne
-END:VEVENT
-BEGIN:VEVENT
 UID:7d3249815ac8@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Prix de la mode du monde arabe | Masterclass
@@ -65,7 +51,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/prix-mode-du-mon
 END:VEVENT
 BEGIN:VEVENT
 UID:0e2676a68e2f@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Masterclass dans le cadre du Prix de la mode
@@ -77,10 +63,24 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/masterclass-dans
  -cadre-du-prix-mode
 END:VEVENT
 BEGIN:VEVENT
+UID:79652f7d1813@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261006T190000
+DTEND;TZID=Europe/Paris:20261006T210000
+SUMMARY:La guérison de l’âme : architecture et ambition du Kitāb al-Sh
+ ifāʾ d’Avicenne
+DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/guerison
+ -ame-architecture-et-ambition-du-kitab-al-shifa-avicenne
+LOCATION:Institut du monde arabe\, 1 rue des Fossés-Saint-Bernard\, Paris 
+ 5e
+URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/guerison-ame-arc
+ hitecture-et-ambition-du-kitab-al-shifa-avicenne
+END:VEVENT
+BEGIN:VEVENT
 UID:94c5df42a9bb@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261008T190000
+DTEND;TZID=Europe/Paris:20261008T210000
 SUMMARY:Qui choisit qui ? Les dessous du choix conjugal dans le monde arabe
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/qui-choi
  sit-qui-les-dessous-du-choix-conjugal-dans-monde-arabe
@@ -91,9 +91,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/qui-choisit-qui-
 END:VEVENT
 BEGIN:VEVENT
 UID:f704ccf1245c@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261011
-DTEND;VALUE=DATE:20261012
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261011T150000
+DTEND;TZID=Europe/Paris:20261011T170000
 SUMMARY:La noce comme performance
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/noce-com
  me-performance
@@ -104,9 +104,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/noce-comme-perfo
 END:VEVENT
 BEGIN:VEVENT
 UID:45146763c7bd@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261015T190000
+DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Tenter l'art\, soigner le soin
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/tenter-a
  rt-soigner-soin
@@ -117,9 +117,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/tenter-art-soign
 END:VEVENT
 BEGIN:VEVENT
 UID:592934b5f3f8@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261103T190000
+DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:La réception contemporaine de la prophétie avicennienne
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/receptio
  n-contemporaine-prophetie-avicennienne
@@ -130,9 +130,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/reception-contem
 END:VEVENT
 BEGIN:VEVENT
 UID:94812aeea287@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261105T190000
+DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:Se marier en temps de guerre
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/se-marie
  r-en-temps-guerre
@@ -143,9 +143,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/se-marier-en-tem
 END:VEVENT
 BEGIN:VEVENT
 UID:ff05cb70aba8@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261106T190000
+DTEND;TZID=Europe/Paris:20261106T210000
 SUMMARY:Chants nuptiaux et lamentations de mariage
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/chants-n
  uptiaux-et-lamentations-mariage
@@ -156,9 +156,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/chants-nuptiaux-
 END:VEVENT
 BEGIN:VEVENT
 UID:d21e58cc81ac@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261109T180000
+DTEND;TZID=Europe/Paris:20261109T200000
 SUMMARY:Les États et les sociétés du Golfe dans la guerre : vers une red
  éfinition de leur positionnement international ?
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/les-etat
@@ -170,9 +170,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/les-etats-et-les
 END:VEVENT
 BEGIN:VEVENT
 UID:e958d0591e24@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T093000
+DTEND;TZID=Europe/Paris:20261110T104500
 SUMMARY:Le poids des fondamentaux macro-économiques et les choix stratégi
  ques des pays du Golfe
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/poids-fo
@@ -184,9 +184,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/poids-fondamenta
 END:VEVENT
 BEGIN:VEVENT
 UID:5d7be1605d50@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T111500
+DTEND;TZID=Europe/Paris:20261110T123000
 SUMMARY:Économie informelle du Golfe : réseaux\, flux et circularité
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/economie
  -informelle-du-golfe-reseaux-flux-et-circularite
@@ -197,9 +197,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/economie-informe
 END:VEVENT
 BEGIN:VEVENT
 UID:7eb713c1ee1e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T143000
+DTEND;TZID=Europe/Paris:20261110T154500
 SUMMARY:Démographie\, citoyenneté et construction identitaire dans le Gol
  fe
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/demograp
@@ -211,9 +211,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/demographie-cito
 END:VEVENT
 BEGIN:VEVENT
 UID:8d88b5ef114a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T154500
+DTEND;TZID=Europe/Paris:20261110T170000
 SUMMARY:Jeunesse et renouvellement générationnel dans les sociétés du G
  olfe
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/jeunesse
@@ -225,9 +225,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/jeunesse-et-reno
 END:VEVENT
 BEGIN:VEVENT
 UID:3e276246ab06@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T173000
+DTEND;TZID=Europe/Paris:20261110T184500
 SUMMARY:Recompositions politiques au sein du Golfe
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/recompos
  itions-politiques-au-sein-du-golfe
@@ -238,9 +238,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/recompositions-p
 END:VEVENT
 BEGIN:VEVENT
 UID:cf1a9f724df9@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T191500
+DTEND;TZID=Europe/Paris:20261110T203000
 SUMMARY:Le rôle de l’Europe et la place de la France dans la région du 
  Golfe
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/role-eur
@@ -252,9 +252,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/role-europe-et-p
 END:VEVENT
 BEGIN:VEVENT
 UID:a0660df99fe7@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261126
-DTEND;VALUE=DATE:20261127
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261126T190000
+DTEND;TZID=Europe/Paris:20261126T210000
 SUMMARY:L’Alhambra\, laboratoire d’idées pour l’architecture de dema
  in
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/alhambra
@@ -266,9 +266,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/alhambra-laborat
 END:VEVENT
 BEGIN:VEVENT
 UID:64da85b260ee@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261128T150000
+DTEND;TZID=Europe/Paris:20261128T170000
 SUMMARY:Averroès : 900 ans de pensée vivante et universelle
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/averroes
  -900-ans-pensee-vivante-et-universelle
@@ -279,9 +279,9 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/averroes-900-ans
 END:VEVENT
 BEGIN:VEVENT
 UID:7415b03a2aa5@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261201T190000
+DTEND;TZID=Europe/Paris:20261201T210000
 SUMMARY:Les figures du moi chez Avicenne
 DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/les-figu
  res-du-moi-chez-avicenne

@@ -25,9 +25,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:95f07a67d507@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20260930T193000
+DTEND;TZID=Europe/Paris:20260930T210000
 SUMMARY:Les forces qui défient le droit
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/les-for
  ces-qui-defient-le-droit
@@ -37,9 +37,9 @@ URL:https://www.collegedesbernardins.fr/agenda/les-forces-qui-defient-le-dr
 END:VEVENT
 BEGIN:VEVENT
 UID:36d7e166ffd1@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T150000
+DTEND;TZID=Europe/Paris:20261001T163000
 SUMMARY:Table ronde – Choisir sa transmission de patrimoine
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/table-r
  onde---choisir-sa-transmission-de-patrimoine-2
@@ -49,9 +49,9 @@ URL:https://www.collegedesbernardins.fr/agenda/table-ronde---choisir-sa-tra
 END:VEVENT
 BEGIN:VEVENT
 UID:87c97d6bcbbd@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261004
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261003T150000
+DTEND;TZID=Europe/Paris:20261003T160000
 SUMMARY:Atelier chant “L'eau vive”
 DESCRIPTION:famille\nhttps://www.collegedesbernardins.fr/agenda/atelier-cha
  nt-l-eau-vive
@@ -60,9 +60,9 @@ URL:https://www.collegedesbernardins.fr/agenda/atelier-chant-l-eau-vive
 END:VEVENT
 BEGIN:VEVENT
 UID:533da7a1cd95@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261005T124500
+DTEND;TZID=Europe/Paris:20261005T134500
 SUMMARY:Une heure\, un livre - La Maison vide de Laurent Mauvignier
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
  re-un-livre---la-maison-vide-de-laurent-mauvigner
@@ -72,9 +72,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-mais
 END:VEVENT
 BEGIN:VEVENT
 UID:3833cdb117f6@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261006T193000
+DTEND;TZID=Europe/Paris:20261006T210000
 SUMMARY:Quelle promesse Dieu nous fait-il ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/quelle-
  promesse-dieu-nous-fait-il
@@ -84,9 +84,9 @@ URL:https://www.collegedesbernardins.fr/agenda/quelle-promesse-dieu-nous-fa
 END:VEVENT
 BEGIN:VEVENT
 UID:d3c1b01bb117@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261006T193000
+DTEND;TZID=Europe/Paris:20261006T210000
 SUMMARY:Villes\, campagnes : habitons-nous encore le même pays ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/villes-
  campagnes-habitons-nous-encore-le-meme-pays
@@ -96,9 +96,9 @@ URL:https://www.collegedesbernardins.fr/agenda/villes-campagnes-habitons-no
 END:VEVENT
 BEGIN:VEVENT
 UID:def8eb8778f5@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T160000
+DTEND;TZID=Europe/Paris:20261007T173000
 SUMMARY:La légende des héros : La mer à travers tous les arts
 DESCRIPTION:famille\nhttps://www.collegedesbernardins.fr/agenda/legende-des
  -heros-la-mer-a-travers-tous-les-arts
@@ -107,22 +107,10 @@ URL:https://www.collegedesbernardins.fr/agenda/legende-des-heros-la-mer-a-t
  ravers-tous-les-arts
 END:VEVENT
 BEGIN:VEVENT
-UID:df587c46695f@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:Discerner les forces du progrès
-DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/discern
- er-les-forces-de-progres
-LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/discerner-les-forces-de-prog
- res
-END:VEVENT
-BEGIN:VEVENT
 UID:020af03683d2@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T183000
+DTEND;TZID=Europe/Paris:20261007T203000
 SUMMARY:Séance de recherche ouverte "Pratiques de décentrement" : Fernand
   Deligny et Robert Filiou
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/seance-
@@ -133,10 +121,22 @@ URL:https://www.collegedesbernardins.fr/agenda/seance-de-recherche-ouverte-
  pratiques-de-decentrement-fernand-deligny-et-robert-filiou
 END:VEVENT
 BEGIN:VEVENT
+UID:df587c46695f@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T193000
+DTEND;TZID=Europe/Paris:20261007T210000
+SUMMARY:Discerner les forces du progrès
+DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/discern
+ er-les-forces-de-progres
+LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
+URL:https://www.collegedesbernardins.fr/agenda/discerner-les-forces-de-prog
+ res
+END:VEVENT
+BEGIN:VEVENT
 UID:92571056ed7c@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261008T193000
+DTEND;TZID=Europe/Paris:20261008T210000
 SUMMARY:« Yeshiva » – Juifs et chrétiens en dialogue
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/yeshiva
  ---juifs-et-chretiens-en-dialogue-3
@@ -145,45 +145,10 @@ URL:https://www.collegedesbernardins.fr/agenda/yeshiva---juifs-et-chretiens
  -en-dialogue-3
 END:VEVENT
 BEGIN:VEVENT
-UID:d0c4a9918b5e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:Ciné-club "La révolution silencieuse" de Lars Kraume
-DESCRIPTION:adolescents\nhttps://www.collegedesbernardins.fr/agenda/cine-cl
- ub-la-revolution-silencieuse-de-lars-kraume
-LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/cine-club-la-revolution-sile
- ncieuse-de-lars-kraume
-END:VEVENT
-BEGIN:VEVENT
-UID:5cc67fdd5a8e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:Les Petits philosophes : à la recherche de la vraie joie
-DESCRIPTION:famille\nhttps://www.collegedesbernardins.fr/agenda/petits-phil
- osophes-la-joie
-LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/petits-philosophes-la-joie
-END:VEVENT
-BEGIN:VEVENT
-UID:0d807b8923a0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:Banquet philo : à la source de la Joie
-DESCRIPTION:famille\nhttps://www.collegedesbernardins.fr/agenda/banquet-phi
- lo-la-joie-quel-tresor
-LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/banquet-philo-la-joie-quel-t
- resor
-END:VEVENT
-BEGIN:VEVENT
 UID:b3c0f94ad04d@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261010T093000
+DTEND;TZID=Europe/Paris:20261010T173000
 SUMMARY:L'anthropologie théologique d'Edith Stein : Qu'est-ce que l'homme 
  ?
 DESCRIPTION:colloque-journée d'étude\nhttps://www.collegedesbernardins.fr
@@ -193,10 +158,45 @@ URL:https://www.collegedesbernardins.fr/agenda/l-anthropologie-theologique-
  d-edith-stein-qu-est-ce-que-l-homme
 END:VEVENT
 BEGIN:VEVENT
+UID:d0c4a9918b5e@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261010T150000
+DTEND;TZID=Europe/Paris:20261010T180000
+SUMMARY:Ciné-club "La révolution silencieuse" de Lars Kraume
+DESCRIPTION:adolescents\nhttps://www.collegedesbernardins.fr/agenda/cine-cl
+ ub-la-revolution-silencieuse-de-lars-kraume
+LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
+URL:https://www.collegedesbernardins.fr/agenda/cine-club-la-revolution-sile
+ ncieuse-de-lars-kraume
+END:VEVENT
+BEGIN:VEVENT
+UID:5cc67fdd5a8e@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261010T163000
+DTEND;TZID=Europe/Paris:20261010T173000
+SUMMARY:Les Petits philosophes : à la recherche de la vraie joie
+DESCRIPTION:famille\nhttps://www.collegedesbernardins.fr/agenda/petits-phil
+ osophes-la-joie
+LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
+URL:https://www.collegedesbernardins.fr/agenda/petits-philosophes-la-joie
+END:VEVENT
+BEGIN:VEVENT
+UID:0d807b8923a0@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261010T163000
+DTEND;TZID=Europe/Paris:20261010T180000
+SUMMARY:Banquet philo : à la source de la Joie
+DESCRIPTION:famille\nhttps://www.collegedesbernardins.fr/agenda/banquet-phi
+ lo-la-joie-quel-tresor
+LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
+URL:https://www.collegedesbernardins.fr/agenda/banquet-philo-la-joie-quel-t
+ resor
+END:VEVENT
+BEGIN:VEVENT
 UID:aa20f3aedac9@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261012T124500
+DTEND;TZID=Europe/Paris:20261012T134500
 SUMMARY:La vocation de saint Matthieu de Caravage
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/la-voca
  tion-de-saint-matthieu-de-caravage
@@ -206,9 +206,9 @@ URL:https://www.collegedesbernardins.fr/agenda/la-vocation-de-saint-matthie
 END:VEVENT
 BEGIN:VEVENT
 UID:b4f35e04a7d9@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261012T200000
+DTEND;TZID=Europe/Paris:20261012T213000
 SUMMARY:La géopolitique à l'heure des discours apocalyptiques
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/la-geop
  olitique-a-l-heure-des-discours-apocalyptiques
@@ -218,9 +218,9 @@ URL:https://www.collegedesbernardins.fr/agenda/la-geopolitique-a-l-heure-de
 END:VEVENT
 BEGIN:VEVENT
 UID:1a431db93c48@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261013T193000
+DTEND;TZID=Europe/Paris:20261013T210000
 SUMMARY:Comment Dieu nous parle ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/comment
  -dieu-nous-parle-t-il-est-ce-que-dieu-nous-parle
@@ -230,9 +230,9 @@ URL:https://www.collegedesbernardins.fr/agenda/comment-dieu-nous-parle-t-il
 END:VEVENT
 BEGIN:VEVENT
 UID:6bb7f38ef0bb@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261014T180000
+DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Lorsque Benoît XVI parle aux Français
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/lorsque
  -benoit-xvi-parle-aux-francais
@@ -242,9 +242,9 @@ URL:https://www.collegedesbernardins.fr/agenda/lorsque-benoit-xvi-parle-aux
 END:VEVENT
 BEGIN:VEVENT
 UID:d81eea1dd799@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261014T193000
+DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:À l’écoute des révolutions et des innovations numériques
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/magnifi
  que-humanite-a-l-ecoute-des-revolutions-numeriques
@@ -254,9 +254,9 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-a-l-ecou
 END:VEVENT
 BEGIN:VEVENT
 UID:c6f23ad7bae6@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261015T200000
+DTEND;TZID=Europe/Paris:20261015T213000
 SUMMARY:Jean-Marc Luisada – Mozart\, Intégrale des sonates pour piano\, 
  n°17\, 11\, 13 et « Fantaisie »
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/mozart-inte
@@ -267,9 +267,9 @@ URL:https://www.collegedesbernardins.fr/agenda/mozart-integrale-des-sonates
 END:VEVENT
 BEGIN:VEVENT
 UID:38d36dc03721@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261103T193000
+DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:La littérature\, école de la relation ? Rencontre entre Alice Fer
  ney et Éliette Abécassis
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/la-litt
@@ -281,9 +281,9 @@ URL:https://www.collegedesbernardins.fr/agenda/la-litterature-ecole-de-la-r
 END:VEVENT
 BEGIN:VEVENT
 UID:4e8d56302d4f@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261103T193000
+DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:Moïse : pourquoi est-il si important ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/moise-p
  ourquoi-est-il-si-important
@@ -293,9 +293,9 @@ URL:https://www.collegedesbernardins.fr/agenda/moise-pourquoi-est-il-si-imp
 END:VEVENT
 BEGIN:VEVENT
 UID:c6cf51f4f24a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261104T123000
+DTEND;TZID=Europe/Paris:20261104T133000
 SUMMARY:Concert de midi : Brahms\, Schumann et Khatchatourian
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-de-
  midi-brahms-schumann-khatchatourian
@@ -305,9 +305,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-de-midi-brahms-schum
 END:VEVENT
 BEGIN:VEVENT
 UID:3880b95842e8@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261106T200000
+DTEND;TZID=Europe/Paris:20261106T220000
 SUMMARY:"Clair-obscur" - Constantinople\, Kiya Tabassian & A Filetta
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/clair-obscu
  r-constantinople-kiya-tabassian-a-filetta
@@ -317,9 +317,9 @@ URL:https://www.collegedesbernardins.fr/agenda/clair-obscur-constantinople-
 END:VEVENT
 BEGIN:VEVENT
 UID:91e0fd24d199@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261107
-DTEND;VALUE=DATE:20261108
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261107T163000
+DTEND;TZID=Europe/Paris:20261107T173000
 SUMMARY:Les Petits philosophes : Moi et les autres
 DESCRIPTION:famille\nhttps://www.collegedesbernardins.fr/agenda/petits-phil
  osophes-moi-et-les-autres
@@ -329,9 +329,9 @@ URL:https://www.collegedesbernardins.fr/agenda/petits-philosophes-moi-et-le
 END:VEVENT
 BEGIN:VEVENT
 UID:cef0cd851c8f@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261109T200000
+DTEND;TZID=Europe/Paris:20261109T213000
 SUMMARY:De JD Vance à Léon XIV : le catholicisme américain est-il en cri
  se ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/de-jd-v
@@ -342,9 +342,9 @@ URL:https://www.collegedesbernardins.fr/agenda/de-jd-vance-a-leon-xiv-le-ca
 END:VEVENT
 BEGIN:VEVENT
 UID:f3510bebd820@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T193000
+DTEND;TZID=Europe/Paris:20261110T210000
 SUMMARY:La doctrine sociale de l'Église appliquée à l’IA
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/magnifi
  que-humanite-la-doctrine-sociale-de-l-eglise-appliquee-a-l-ia
@@ -354,9 +354,9 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-la-doctr
 END:VEVENT
 BEGIN:VEVENT
 UID:e536b27ec621@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261117
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261116T093000
+DTEND;TZID=Europe/Paris:20261116T180000
 SUMMARY:Formation - Être administrateur d'associations et fondations
 DESCRIPTION:colloque-journée d'étude\nhttps://www.collegedesbernardins.fr
  /agenda/journees-formation-administrateurs-associations-fondations
@@ -366,9 +366,9 @@ URL:https://www.collegedesbernardins.fr/agenda/journees-formation-administr
 END:VEVENT
 BEGIN:VEVENT
 UID:5496b6be2175@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261117
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261116T124500
+DTEND;TZID=Europe/Paris:20261116T134500
 SUMMARY:Léonard de Vinci ou la révolution du portrait
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/leonard
  -ou-la-revolution-du-portrait
@@ -378,9 +378,9 @@ URL:https://www.collegedesbernardins.fr/agenda/leonard-ou-la-revolution-du-
 END:VEVENT
 BEGIN:VEVENT
 UID:57d4d7dc6b61@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261118
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261117T193000
+DTEND;TZID=Europe/Paris:20261117T210000
 SUMMARY:Dieu nous impose-t-il des règles ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/dieu-no
  us-impose-t-il-des-regles
@@ -390,9 +390,9 @@ URL:https://www.collegedesbernardins.fr/agenda/dieu-nous-impose-t-il-des-re
 END:VEVENT
 BEGIN:VEVENT
 UID:cde111d93098@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261118T193000
+DTEND;TZID=Europe/Paris:20261118T213000
 SUMMARY:Tisser la Paix dans un monde de guerre. L’espérance écrite par 
  des femmes palestiniennes et israéliennes
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/tisser-
@@ -405,9 +405,9 @@ URL:https://www.collegedesbernardins.fr/agenda/tisser-la-paix-dans-un-monde
 END:VEVENT
 BEGIN:VEVENT
 UID:5f90c6393307@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261121T093000
+DTEND;TZID=Europe/Paris:20261121T123000
 SUMMARY:Burn-out\, dépression\, désolation spirituelle : distinguer pour 
  mieux accompagner
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/burn-ou
@@ -418,9 +418,9 @@ URL:https://www.collegedesbernardins.fr/agenda/burn-out-depression-desolati
 END:VEVENT
 BEGIN:VEVENT
 UID:8d5a0dc40ca3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261123
-DTEND;VALUE=DATE:20261124
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261123T124500
+DTEND;TZID=Europe/Paris:20261123T134500
 SUMMARY:Une heure\, un livre - Les Pensées de Blaise Pascal
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
  re-un-livre---les-pensees-de-blaise-pascal
@@ -430,9 +430,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-pen
 END:VEVENT
 BEGIN:VEVENT
 UID:822bb7c344e0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261201T193000
+DTEND;TZID=Europe/Paris:20261201T210000
 SUMMARY:Quand l’humain rencontre l’IA
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/magnifi
  que-humanite-quand-l-humain-rencontre-l-ia
@@ -442,9 +442,9 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-quand-l-
 END:VEVENT
 BEGIN:VEVENT
 UID:170fc7af6bab@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261207
-DTEND;VALUE=DATE:20261208
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261207T124500
+DTEND;TZID=Europe/Paris:20261207T134500
 SUMMARY:L’Annonciation du Prado\, un trésor de Fra Angelico
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/l-annon
  ciation-du-prado-un-tresor-de-fra-angelico
@@ -454,9 +454,9 @@ URL:https://www.collegedesbernardins.fr/agenda/l-annonciation-du-prado-un-t
 END:VEVENT
 BEGIN:VEVENT
 UID:c53e24a9e0ae@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261208
-DTEND;VALUE=DATE:20261209
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261208T193000
+DTEND;TZID=Europe/Paris:20261208T210000
 SUMMARY:Élie : pourquoi a-t-il tout quitté pour Dieu ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/elie-po
  urquoi-a-t-il-tout-quitte-pour-dieu
@@ -465,22 +465,10 @@ URL:https://www.collegedesbernardins.fr/agenda/elie-pourquoi-a-t-il-tout-qu
  itte-pour-dieu
 END:VEVENT
 BEGIN:VEVENT
-UID:8e7c19e6b74f@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261210
-DTEND;VALUE=DATE:20261211
-SUMMARY:Concert "Noël sous les tropiques"
-DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-noe
- l-sous-les-tropiques
-LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
-URL:https://www.collegedesbernardins.fr/agenda/concert-noel-sous-les-tropiq
- ues
-END:VEVENT
-BEGIN:VEVENT
 UID:b04e5b39e360@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261210
-DTEND;VALUE=DATE:20261211
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261210T080000
+DTEND;TZID=Europe/Paris:20261210T180000
 SUMMARY:Colloque inter-institutionnel "L'humanité en milieu numérique"
 DESCRIPTION:colloque-journée d'étude\nhttps://www.collegedesbernardins.fr
  /agenda/colloque-inter-institutionnel-l-humanite-en-milieu-numerique
@@ -489,10 +477,22 @@ URL:https://www.collegedesbernardins.fr/agenda/colloque-inter-institutionne
  l-l-humanite-en-milieu-numerique
 END:VEVENT
 BEGIN:VEVENT
+UID:8e7c19e6b74f@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261210T200000
+DTEND;TZID=Europe/Paris:20261210T213000
+SUMMARY:Concert "Noël sous les tropiques"
+DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-noe
+ l-sous-les-tropiques
+LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
+URL:https://www.collegedesbernardins.fr/agenda/concert-noel-sous-les-tropiq
+ ues
+END:VEVENT
+BEGIN:VEVENT
 UID:bf985629fb40@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261214
-DTEND;VALUE=DATE:20261215
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261214T124500
+DTEND;TZID=Europe/Paris:20261214T134500
 SUMMARY:Une heure\, un livre - La Pharisienne de Mauriac
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
  re-un-livre---la-pharisienne-de-mauriac
@@ -502,9 +502,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-phar
 END:VEVENT
 BEGIN:VEVENT
 UID:17ee9da12edc@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261215
-DTEND;VALUE=DATE:20261216
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261215T193000
+DTEND;TZID=Europe/Paris:20261215T210000
 SUMMARY:Dieu veut-il que nous lui offrions des sacrifices ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/dieu-ve
  ut-il-que-nous-lui-offrions-des-sacrifices
@@ -514,9 +514,9 @@ URL:https://www.collegedesbernardins.fr/agenda/dieu-veut-il-que-nous-lui-of
 END:VEVENT
 BEGIN:VEVENT
 UID:87c1ce8822c3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270104
-DTEND;VALUE=DATE:20270105
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270104T124500
+DTEND;TZID=Europe/Paris:20270104T134500
 SUMMARY:Séquences frissons avec Les têtes coupées de Caravage
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/sequenc
  es-frissons-avec-les-tetes-coupees-de-caravage
@@ -526,9 +526,9 @@ URL:https://www.collegedesbernardins.fr/agenda/sequences-frissons-avec-les-
 END:VEVENT
 BEGIN:VEVENT
 UID:6c5352d8dcc8@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270105
-DTEND;VALUE=DATE:20270106
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270105T193000
+DTEND;TZID=Europe/Paris:20270105T210000
 SUMMARY:Qui est Jésus ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/qui-est
  -jesus
@@ -537,9 +537,9 @@ URL:https://www.collegedesbernardins.fr/agenda/qui-est-jesus
 END:VEVENT
 BEGIN:VEVENT
 UID:8104c4f833c3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270108
-DTEND;VALUE=DATE:20270109
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270108T200000
+DTEND;TZID=Europe/Paris:20270108T220000
 SUMMARY:Concert d'ouverture : La Sultane - André Manoukian et ses invités
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-d-o
  uverture-la-sultane---andre-manoukian-et-ses-invites
@@ -549,9 +549,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-d-ouverture-la-sulta
 END:VEVENT
 BEGIN:VEVENT
 UID:b6d91db82bef@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270111
-DTEND;VALUE=DATE:20270112
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270111T124500
+DTEND;TZID=Europe/Paris:20270111T134500
 SUMMARY:Une heure\, un livre - Les Hauts de Hurlevent d’Émily Brontë
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
  re-un-livre---les-hauts-de-hurlevent-d-emily-bronte
@@ -561,9 +561,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-hau
 END:VEVENT
 BEGIN:VEVENT
 UID:6fb46e56c92c@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270112
-DTEND;VALUE=DATE:20270113
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270112T193000
+DTEND;TZID=Europe/Paris:20270112T210000
 SUMMARY:Si Dieu a créé le monde\, est-il notre Père ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/si-dieu
  -a-cree-le-monde-est-il-notre-pere
@@ -573,9 +573,9 @@ URL:https://www.collegedesbernardins.fr/agenda/si-dieu-a-cree-le-monde-est-
 END:VEVENT
 BEGIN:VEVENT
 UID:22966fb9b1f4@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270119
-DTEND;VALUE=DATE:20270120
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270119T193000
+DTEND;TZID=Europe/Paris:20270119T210000
 SUMMARY:Culture du pouvoir et civilisation de l’amour
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/magnifi
  que-humanite-culture-du-pouvoir-et-civilisation-de-l-amour
@@ -585,9 +585,9 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-culture-
 END:VEVENT
 BEGIN:VEVENT
 UID:555b5ed7be5d@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270126
-DTEND;VALUE=DATE:20270127
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270126T193000
+DTEND;TZID=Europe/Paris:20270126T210000
 SUMMARY:Comment Jésus fait-il pour obéir au point d’offrir sa vie ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/comment
  -jesus-fait-il-pour-obeir-au-point-d-offrir-sa-vie
@@ -597,9 +597,9 @@ URL:https://www.collegedesbernardins.fr/agenda/comment-jesus-fait-il-pour-o
 END:VEVENT
 BEGIN:VEVENT
 UID:2b87a7b7c1e2@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270201T124500
+DTEND;TZID=Europe/Paris:20270201T134500
 SUMMARY:La Chapelle Sixtine ou le chef d’œuvre d’un génie solitaire
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/la-chap
  elle-sixtine-ou-le-chef-d-oeuvre-d-un-genie-solitaire
@@ -609,9 +609,9 @@ URL:https://www.collegedesbernardins.fr/agenda/la-chapelle-sixtine-ou-le-ch
 END:VEVENT
 BEGIN:VEVENT
 UID:5557018c8ca2@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270202
-DTEND;VALUE=DATE:20270203
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270202T193000
+DTEND;TZID=Europe/Paris:20270202T210000
 SUMMARY:Pourquoi fallait-il que Jésus meure ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/pourquo
  i-fallait-il-que-jesus-meure
@@ -621,9 +621,9 @@ URL:https://www.collegedesbernardins.fr/agenda/pourquoi-fallait-il-que-jesu
 END:VEVENT
 BEGIN:VEVENT
 UID:1f18be5bf829@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270205
-DTEND;VALUE=DATE:20270206
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270205T200000
+DTEND;TZID=Europe/Paris:20270205T220000
 SUMMARY:Concert Brooklyn Suite - Zachary Wilder\, Benjamin Lazar\, Ensemble
   Contraste
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-bro
@@ -634,9 +634,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-brooklyn-suite---zac
 END:VEVENT
 BEGIN:VEVENT
 UID:2b46741764a1@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270222
-DTEND;VALUE=DATE:20270223
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270222T124500
+DTEND;TZID=Europe/Paris:20270222T134500
 SUMMARY:Une heure\, un livre - Le Rhinocéros et Le Roi se meurt d’Eugèn
  e Ionesco
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
@@ -647,9 +647,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre--le-rhino
 END:VEVENT
 BEGIN:VEVENT
 UID:28ff9e284c3a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270223
-DTEND;VALUE=DATE:20270224
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270223T193000
+DTEND;TZID=Europe/Paris:20270223T210000
 SUMMARY:De la Tour de Babel à la Pentecôte
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/de-la-t
  our-de-babel-a-la-pentecote-bca98
@@ -659,9 +659,9 @@ URL:https://www.collegedesbernardins.fr/agenda/de-la-tour-de-babel-a-la-pen
 END:VEVENT
 BEGIN:VEVENT
 UID:530f68e229fb@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270224
-DTEND;VALUE=DATE:20270225
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270224T193000
+DTEND;TZID=Europe/Paris:20270224T210000
 SUMMARY:Quand l’artificiel réveille le spirituel : enjeux contemporains 
  du numérique
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/magnifi
@@ -672,9 +672,9 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-quand-l-
 END:VEVENT
 BEGIN:VEVENT
 UID:fe180f76dfe1@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270224
-DTEND;VALUE=DATE:20270225
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270224T200000
+DTEND;TZID=Europe/Paris:20270224T220000
 SUMMARY:Concert Songs from the north country - Rosemary Standley\, Françoi
  s Lazarevitch et les Musiciens de Saint-Julien
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-son
@@ -687,9 +687,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-songs-from-the-north
 END:VEVENT
 BEGIN:VEVENT
 UID:aafb2f7dbaf9@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270226
-DTEND;VALUE=DATE:20270227
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270226T200000
+DTEND;TZID=Europe/Paris:20270226T220000
 SUMMARY:Concert Mayrig - Eva Zaïcik\, David Harountunian\, Xenia Maliarevi
  tchj
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-may
@@ -700,9 +700,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-mayrig---eva-zaicik-
 END:VEVENT
 BEGIN:VEVENT
 UID:7ed736fea5a3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270301
-DTEND;VALUE=DATE:20270302
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270301T124500
+DTEND;TZID=Europe/Paris:20270301T134500
 SUMMARY:La crucifixion blanche\, ou pourquoi Chagall peint-il des Christ en
   croix ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/la-cruc
@@ -713,9 +713,9 @@ URL:https://www.collegedesbernardins.fr/agenda/la-crucifixion-blanche-ou-po
 END:VEVENT
 BEGIN:VEVENT
 UID:427edb5484fa@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270302
-DTEND;VALUE=DATE:20270303
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270302T193000
+DTEND;TZID=Europe/Paris:20270302T210000
 SUMMARY:L'Esprit Saint\, c'est qui vraiment ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/l-espri
  t-saint-c-est-qui-vraiment
@@ -725,9 +725,9 @@ URL:https://www.collegedesbernardins.fr/agenda/l-esprit-saint-c-est-qui-vra
 END:VEVENT
 BEGIN:VEVENT
 UID:444b932bf1ad@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270309
-DTEND;VALUE=DATE:20270310
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270309T193000
+DTEND;TZID=Europe/Paris:20270309T210000
 SUMMARY:Découvrir Marie dans les évangiles : du Fiat au Magnificat
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/decouvr
  ir-marie-dans-les-evangiles-du-fiat-au-magnificat-a1a0a
@@ -737,9 +737,9 @@ URL:https://www.collegedesbernardins.fr/agenda/decouvrir-marie-dans-les-eva
 END:VEVENT
 BEGIN:VEVENT
 UID:03510ff72578@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270315
-DTEND;VALUE=DATE:20270316
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270315T124500
+DTEND;TZID=Europe/Paris:20270315T134500
 SUMMARY:Une heure\, un livre - Mémoires d’Outre-Tombe de Chateaubriand
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
  re-un-livre---memoires-d-outre-tombe-de-chateaubriand
@@ -749,9 +749,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---memoire
 END:VEVENT
 BEGIN:VEVENT
 UID:0f0823c4b1bd@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270316
-DTEND;VALUE=DATE:20270317
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270316T193000
+DTEND;TZID=Europe/Paris:20270316T210000
 SUMMARY:Ce que l’Église croit au sujet de Marie
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/ce-que-
  l-eglise-croit-au-sujet-de-marie
@@ -761,9 +761,9 @@ URL:https://www.collegedesbernardins.fr/agenda/ce-que-l-eglise-croit-au-suj
 END:VEVENT
 BEGIN:VEVENT
 UID:037296728aa7@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270322
-DTEND;VALUE=DATE:20270323
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270322T200000
+DTEND;TZID=Europe/Paris:20270322T220000
 SUMMARY:Concert Printemps Sacré - Ensemble Irini
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-pri
  ntemps-sacre---ensemble-irini
@@ -773,9 +773,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-printemps-sacre---en
 END:VEVENT
 BEGIN:VEVENT
 UID:77e5a7c062f5@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270331
-DTEND;VALUE=DATE:20270401
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270331T200000
+DTEND;TZID=Europe/Paris:20270331T220000
 SUMMARY:Concert Djiyo - Ablaye Cissoko et Cyrille Brotto
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-dji
  yo-ablaye-cissoko-voix-kora-et-cyrille-brotto-accordeon
@@ -785,9 +785,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-djiyo-ablaye-cissoko
 END:VEVENT
 BEGIN:VEVENT
 UID:59a4896feffa@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270419
-DTEND;VALUE=DATE:20270420
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270419T124500
+DTEND;TZID=Europe/Paris:20270419T134500
 SUMMARY:Redécouvrir Le retour du Fils prodigue de Rembrandt
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/redecou
  vrir-le-retour-du-fils-prodigue-de-rembrandt
@@ -797,9 +797,9 @@ URL:https://www.collegedesbernardins.fr/agenda/redecouvrir-le-retour-du-fil
 END:VEVENT
 BEGIN:VEVENT
 UID:eb9ed1452961@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270423
-DTEND;VALUE=DATE:20270424
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270423T200000
+DTEND;TZID=Europe/Paris:20270423T220000
 SUMMARY:Concert Le souffle des Cordes - Renaud Garcia-Fons
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-le-
  souffle-des-cordes---renaud-garcia-fons
@@ -809,9 +809,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-le-souffle-des-corde
 END:VEVENT
 BEGIN:VEVENT
 UID:60a9482eda77@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270426
-DTEND;VALUE=DATE:20270427
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270426T124500
+DTEND;TZID=Europe/Paris:20270426T134500
 SUMMARY:Une heure\, un livre - Les Matinaux\, La Parole en archipel de Ren
  é Char
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
@@ -822,9 +822,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-mat
 END:VEVENT
 BEGIN:VEVENT
 UID:6366a61b8f73@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270503
-DTEND;VALUE=DATE:20270504
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270503T124500
+DTEND;TZID=Europe/Paris:20270503T134500
 SUMMARY:Les femmes en bleu et rose du jeune Pablo Picasso
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/les-fem
  mes-en-bleu-et-rose-du-jeune-pablo-picasso
@@ -834,9 +834,9 @@ URL:https://www.collegedesbernardins.fr/agenda/les-femmes-en-bleu-et-rose-d
 END:VEVENT
 BEGIN:VEVENT
 UID:7a8ca271bbd9@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270512
-DTEND;VALUE=DATE:20270513
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270512T200000
+DTEND;TZID=Europe/Paris:20270512T220000
 SUMMARY:Concert Here and now - Walid Ben Selim et Marie-Marguerite Cano
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-her
  e-and-now---walid-ben-selim-et-marie-marguerite-cano
@@ -846,9 +846,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-here-and-now---walid
 END:VEVENT
 BEGIN:VEVENT
 UID:be4f1f8c9951@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270517
-DTEND;VALUE=DATE:20270518
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270517T124500
+DTEND;TZID=Europe/Paris:20270517T134500
 SUMMARY:Une heure\, un livre - L’Île des Esclaves et Le Jeu de l’Amour
   et du Hasard de Marivaux
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
@@ -860,9 +860,9 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---l-ile-d
 END:VEVENT
 BEGIN:VEVENT
 UID:4d8d11154921@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270607
-DTEND;VALUE=DATE:20270608
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270607T124500
+DTEND;TZID=Europe/Paris:20270607T134500
 SUMMARY:Le repas rouge ou la figure d’Abraham dans l’oeuvre de Chagall
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/le-repa
  s-rouge-ou-la-figure-d-abraham-dans-l-oeuvre-de-chagall
@@ -872,9 +872,9 @@ URL:https://www.collegedesbernardins.fr/agenda/le-repas-rouge-ou-la-figure-
 END:VEVENT
 BEGIN:VEVENT
 UID:db9809af2538@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270610
-DTEND;VALUE=DATE:20270611
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270610T200000
+DTEND;TZID=Europe/Paris:20270610T220000
 SUMMARY:Concert Sarabande Soufie - The Modal Experience Ensemble\, Keyvan C
  hemirani
 DESCRIPTION:concert\nhttps://www.collegedesbernardins.fr/agenda/concert-sar
@@ -885,9 +885,9 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-sarabande-soufie-the
 END:VEVENT
 BEGIN:VEVENT
 UID:e56d70ba125e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270614
-DTEND;VALUE=DATE:20270615
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270614T124500
+DTEND;TZID=Europe/Paris:20270614T134500
 SUMMARY:Une heure\, un livre - Moby Dick de Melville
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/une-heu
  re-un-livre---moby-dick-de-melville

@@ -25,9 +25,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:697b421f9e37@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20260930T150000
+DTEND;TZID=Europe/Paris:20260930T170000
 SUMMARY:Enquête archéologique au cœur des déserts
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/enquete-ar
  cheologique-au-coeur-des-deserts
@@ -37,9 +37,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/enquete-archeologique-au-coeu
 END:VEVENT
 BEGIN:VEVENT
 UID:659591268fc0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261005T180000
+DTEND;TZID=Europe/Paris:20261005T200000
 SUMMARY:Les origines préhistoriques de la domestication animale
 DESCRIPTION:Conférence\nhttps://www.museedelhomme.fr/fr/conference/les-ori
  gines-prehistoriques-de-la-domestication-animale
@@ -49,9 +49,9 @@ URL:https://www.museedelhomme.fr/fr/conference/les-origines-prehistoriques-
 END:VEVENT
 BEGIN:VEVENT
 UID:782d87fb668a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T150000
+DTEND;TZID=Europe/Paris:20261007T170000
 SUMMARY:Quand l'ADN éclaire l'histoire des populations
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/quand-l-ad
  n-eclaire-l-histoire-des-populations
@@ -61,9 +61,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/quand-l-adn-eclaire-l-histoir
 END:VEVENT
 BEGIN:VEVENT
 UID:c31d3aa2fef0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261012T190000
+DTEND;TZID=Europe/Paris:20261012T210000
 SUMMARY:Le néolithique à la lumière du présent (et vice-versa)
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/le-neolith
  ique-a-la-lumiere-du-present-et-vice-versa
@@ -73,9 +73,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/le-neolithique-a-la-lumiere-d
 END:VEVENT
 BEGIN:VEVENT
 UID:ab0db104f805@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261014T150000
+DTEND;TZID=Europe/Paris:20261014T170000
 SUMMARY:L'alimentation\, entre nature et culture
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/l-alimenta
  tion-entre-nature-et-culture
@@ -85,9 +85,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/l-alimentation-entre-nature-e
 END:VEVENT
 BEGIN:VEVENT
 UID:928f5161ed00@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261104T150000
+DTEND;TZID=Europe/Paris:20261104T170000
 SUMMARY:Reconstituer le cerveau des néandertaliens
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/reconstitu
  er-le-cerveau-des-neandertaliens
@@ -97,9 +97,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/reconstituer-le-cerveau-des-n
 END:VEVENT
 BEGIN:VEVENT
 UID:afe8da9dc9a3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261118T150000
+DTEND;TZID=Europe/Paris:20261118T170000
 SUMMARY:Une histoire complexe : l’origine d’Homo sapiens
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/une-histoire-complex
  e-l-origine-d-homo-sapiens
@@ -109,9 +109,9 @@ URL:https://www.museedelhomme.fr/fr/une-histoire-complexe-l-origine-d-homo-
 END:VEVENT
 BEGIN:VEVENT
 UID:065a02c4f923@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261123
-DTEND;VALUE=DATE:20261124
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261123T180000
+DTEND;TZID=Europe/Paris:20261123T200000
 SUMMARY:Drogues\, ivresses et sociétés : une brève histoire des usages d
  e substances psychoactives à travers les siècles et les continents
 DESCRIPTION:Conférence\nhttps://www.museedelhomme.fr/fr/conference/drogues
@@ -123,9 +123,9 @@ URL:https://www.museedelhomme.fr/fr/conference/drogues-ivresses-et-societes
 END:VEVENT
 BEGIN:VEVENT
 UID:a7d729bc71da@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261125
-DTEND;VALUE=DATE:20261126
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261125T150000
+DTEND;TZID=Europe/Paris:20261125T170000
 SUMMARY:Homo sapiens\, Néandertal\, Denisova\, une histoire de métissages
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/homo-sapie
  ns-neandertal-denisova-une-histoire-de-metissages
@@ -135,9 +135,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/homo-sapiens-neandertal-denis
 END:VEVENT
 BEGIN:VEVENT
 UID:2effbd00289b@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261202
-DTEND;VALUE=DATE:20261203
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261202T150000
+DTEND;TZID=Europe/Paris:20261202T170000
 SUMMARY:Faut-il encore faire des enfants ?
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/faut-il-encore-faire
  -des-enfants
@@ -146,9 +146,9 @@ URL:https://www.museedelhomme.fr/fr/faut-il-encore-faire-des-enfants
 END:VEVENT
 BEGIN:VEVENT
 UID:6d71cca75c71@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261207
-DTEND;VALUE=DATE:20261208
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261207T180000
+DTEND;TZID=Europe/Paris:20261207T200000
 SUMMARY:Relation humain / animal : vers la fin d’une longue histoire comm
  une ?
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/relation-h
@@ -159,9 +159,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/relation-humain-animal-vers-l
 END:VEVENT
 BEGIN:VEVENT
 UID:72c20129317a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261209
-DTEND;VALUE=DATE:20261210
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261209T150000
+DTEND;TZID=Europe/Paris:20261209T170000
 SUMMARY:Les grands âges : une exposition entre art et science
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/les-grands
  -ages-une-exposition-entre-art-et-science
@@ -171,9 +171,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/les-grands-ages-une-expositio
 END:VEVENT
 BEGIN:VEVENT
 UID:317b8fdd1217@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261216
-DTEND;VALUE=DATE:20261217
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261216T150000
+DTEND;TZID=Europe/Paris:20261216T170000
 SUMMARY:Les mystères du nomadisme dans les steppes d'Asie centrale durant 
  la période protohistorique
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/les-myster
@@ -184,9 +184,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/les-mysteres-du-nomadisme-dan
 END:VEVENT
 BEGIN:VEVENT
 UID:92b93893c51c@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270106
-DTEND;VALUE=DATE:20270107
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270106T150000
+DTEND;TZID=Europe/Paris:20270106T170000
 SUMMARY:Cultiver la coexistence entre humains\, éléphants et chimpanzés 
  dans le parc national de Kibale en Ouganda
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/cultiver-l
@@ -198,9 +198,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/cultiver-la-coexistence-entre
 END:VEVENT
 BEGIN:VEVENT
 UID:942515aacfa5@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270113
-DTEND;VALUE=DATE:20270114
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270113T150000
+DTEND;TZID=Europe/Paris:20270113T170000
 SUMMARY:L’histoire génétique des couleurs de peau
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/l-histoire
  -genetique-des-couleurs-de-peau
@@ -210,9 +210,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/l-histoire-genetique-des-coul
 END:VEVENT
 BEGIN:VEVENT
 UID:1b04e5fd49c2@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270120
-DTEND;VALUE=DATE:20270121
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270120T150000
+DTEND;TZID=Europe/Paris:20270120T170000
 SUMMARY:Des humains et des animaux : quelles relations au cours de la Préh
  istoire ?
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/des-humain
@@ -223,9 +223,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/des-humains-et-des-animaux-qu
 END:VEVENT
 BEGIN:VEVENT
 UID:43e0b8579e09@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270125
-DTEND;VALUE=DATE:20270126
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270125T180000
+DTEND;TZID=Europe/Paris:20270125T200000
 SUMMARY:Histoire des psychotropes en Occident
 DESCRIPTION:Conférence\nhttps://www.museedelhomme.fr/fr/rencontre/histoire
  -des-psychotropes-en-occident
@@ -235,9 +235,9 @@ URL:https://www.museedelhomme.fr/fr/rencontre/histoire-des-psychotropes-en-
 END:VEVENT
 BEGIN:VEVENT
 UID:9006d46f804e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20270127
-DTEND;VALUE=DATE:20270128
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20270127T150000
+DTEND;TZID=Europe/Paris:20270127T170000
 SUMMARY:Dans la tête de nos ancêtres
 DESCRIPTION:Rencontre\nhttps://www.museedelhomme.fr/fr/rencontre/dans-la-te
  te-de-nos-ancetres

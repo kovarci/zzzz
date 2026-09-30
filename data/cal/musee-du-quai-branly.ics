@@ -25,9 +25,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:d33820a2a231@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20260930
-DTEND;VALUE=DATE:20261001
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20260930T091500
+DTEND;TZID=Europe/Paris:20260930T111500
 SUMMARY:Premières Nations de la côte nord-ouest de l’Amérique du Nord
 DESCRIPTION:Colloques\nhttps://www.quaibranly.fr/fr/recherche-scientifique/
  activites/colloques-et-enseignements/conferences-et-colloques/details-de-l
@@ -42,9 +42,9 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:9aad1de53ca4@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T173000
+DTEND;TZID=Europe/Paris:20261001T200000
 SUMMARY:Les maudits magnifiques
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -57,9 +57,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:d17ec2998ab3@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261005
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261004T150000
+DTEND;TZID=Europe/Paris:20261004T170000
 SUMMARY:À la découverte des recettes de teintures !
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -73,9 +73,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:002192c67b6f@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T170000
+DTEND;TZID=Europe/Paris:20261007T183000
 SUMMARY:Le tour du monde de deux voyageurs français au 19e
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -89,9 +89,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:f17edb73e38a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261013T170000
+DTEND;TZID=Europe/Paris:20261013T183000
 SUMMARY:Éduquer et séduire – Images scolaires de l'Empire au temps colo
  nial (1870-1960)
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
@@ -106,9 +106,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:2e5407c0a8f4@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261014T091500
+DTEND;TZID=Europe/Paris:20261014T170000
 SUMMARY:Autour de Chupícuaro
 DESCRIPTION:Colloques\nhttps://www.quaibranly.fr/fr/recherche-scientifique/
  activites/colloques-et-enseignements/conferences-et-colloques/details-de-l
@@ -121,9 +121,9 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:b967b49a5956@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261015T173000
+DTEND;TZID=Europe/Paris:20261015T190000
 SUMMARY:Les mobilités artistiques féminines à l'époque coloniale
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -137,9 +137,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:565bf1967498@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261016
-DTEND;VALUE=DATE:20261017
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261016T170000
+DTEND;TZID=Europe/Paris:20261016T184500
 SUMMARY:Épices\, soldats et nouveaux horizons :
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -153,9 +153,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:53306ea8c402@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261020
-DTEND;VALUE=DATE:20261021
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261020T170000
+DTEND;TZID=Europe/Paris:20261020T183000
 SUMMARY:Coulisses de l’exposition "Premières nations..."
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -169,9 +169,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:c109bbd9e589@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261104T170000
+DTEND;TZID=Europe/Paris:20261104T183000
 SUMMARY:Le racisme scientifique et médical : Du 19e siècle à nos jours
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -185,9 +185,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:483500e8954a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261105T180000
+DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Atlantique(s) noir(s) :
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -201,9 +201,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:f687e1999431@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T091500
+DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Le temps des épreuves
 DESCRIPTION:Colloques\nhttps://www.quaibranly.fr/fr/recherche-scientifique/
  activites/colloques-et-enseignements/conferences-et-colloques/details-de-l
@@ -216,9 +216,9 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:503dfe4788ff@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261110T170000
+DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Genèses de Léopold Sédar Senghor : actualité éditoriale
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -232,9 +232,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:0e8399c094c0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261118T093000
+DTEND;TZID=Europe/Paris:20261118T173000
 SUMMARY:De l'Afrique vers l'Allemagne et la France
 DESCRIPTION:Colloques\nhttps://www.quaibranly.fr/fr/recherche-scientifique/
  activites/colloques-et-enseignements/conferences-et-colloques/details-de-l
@@ -248,9 +248,9 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:7f4f8361ffb0@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261119T170000
+DTEND;TZID=Europe/Paris:20261119T183000
 SUMMARY:Haïti\, seul peuple de peintres
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -264,9 +264,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:8c4a1242ff87@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261126
-DTEND;VALUE=DATE:20261127
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261126T173000
+DTEND;TZID=Europe/Paris:20261126T184500
 SUMMARY:Le survivant : trois ans parmi les Nootka de l'île de Vancouver
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
@@ -279,9 +279,9 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:eae89d4b6966@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261204
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261203T170000
+DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:« Comment créer un environnement propice à la création artistiq
  ue pour toutes et tous ? »
 DESCRIPTION:Conférences\nhttps://www.quaibranly.fr/fr/recherche-scientifiq

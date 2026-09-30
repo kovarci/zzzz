@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:adf73ca45f04@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Changement climatique : une réalité physique\, un défi pour l'hu
@@ -38,18 +38,8 @@ URL:https://www.universite-paris-saclay.fr/evenements/changement-climatique
  -une-realite-physique-un-defi-pour-lhumanite
 END:VEVENT
 BEGIN:VEVENT
-UID:e76f874e3a7c@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Le Mitate Lab
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/le-mitate-lab
-LOCATION:INSTN — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/le-mitate-lab
-END:VEVENT
-BEGIN:VEVENT
 UID:ef4be278ae22@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:FORUM INNOVATION & ENTREPRENEURIAT
@@ -62,7 +52,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/forum-innovation-entr
 END:VEVENT
 BEGIN:VEVENT
 UID:631fd42d6d14@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Café Science @CentraleSupélec - Les défauts du diamant : une fen
@@ -78,34 +68,8 @@ URL:https://www.universite-paris-saclay.fr/evenements/cafe-science-centrale
  -roch-professeur-au-laboratoire-lumin
 END:VEVENT
 BEGIN:VEVENT
-UID:8edfea589a62@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Atelier de co-réparation – Électronique & électroménager
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/atelier-de-co
- -reparation-electronique-electromenager
-LOCATION:Polytech Paris-Saclay - Université Paris-Saclay — Université P
- aris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/atelier-de-co-reparat
- ion-electronique-electromenager
-END:VEVENT
-BEGIN:VEVENT
-UID:2260b786cc50@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Projection du documentaire : Le vivant qui se défend
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/projection-du
- -documentaire-le-vivant-qui-se-defend
-LOCATION:Lumen - Université Paris-Saclay — Université Paris-Saclay\, Gi
- f-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/projection-du-documen
- taire-le-vivant-qui-se-defend
-END:VEVENT
-BEGIN:VEVENT
 UID:8d9578a4c681@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Être au son - Résonances art-science Paris-Saclay
@@ -117,8 +81,44 @@ URL:https://www.universite-paris-saclay.fr/evenements/etre-au-son-resonance
  s-art-science-paris-saclay
 END:VEVENT
 BEGIN:VEVENT
+UID:e76f874e3a7c@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T100000
+DTEND;TZID=Europe/Paris:20261001T120000
+SUMMARY:Le Mitate Lab
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/le-mitate-lab
+LOCATION:INSTN — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/le-mitate-lab
+END:VEVENT
+BEGIN:VEVENT
+UID:8edfea589a62@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T140000
+DTEND;TZID=Europe/Paris:20261001T180000
+SUMMARY:Atelier de co-réparation – Électronique & électroménager
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/atelier-de-co
+ -reparation-electronique-electromenager
+LOCATION:Polytech Paris-Saclay - Université Paris-Saclay — Université P
+ aris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/atelier-de-co-reparat
+ ion-electronique-electromenager
+END:VEVENT
+BEGIN:VEVENT
+UID:2260b786cc50@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261001T160000
+DTEND;TZID=Europe/Paris:20261001T180000
+SUMMARY:Projection du documentaire : Le vivant qui se défend
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/projection-du
+ -documentaire-le-vivant-qui-se-defend
+LOCATION:Lumen - Université Paris-Saclay — Université Paris-Saclay\, Gi
+ f-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/projection-du-documen
+ taire-le-vivant-qui-se-defend
+END:VEVENT
+BEGIN:VEVENT
 UID:899b331eb3a3@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Junior conference on Wireless and Optical Communication (JWOC)
@@ -130,7 +130,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-wir
 END:VEVENT
 BEGIN:VEVENT
 UID:59fcc9d958a4@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Elixirs du Plateau de Saclay
@@ -142,7 +142,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/elixirs-du-plateau-de
 END:VEVENT
 BEGIN:VEVENT
 UID:82033cd25583@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Fête de la science à l'Université Paris-Saclay
@@ -154,7 +154,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-lu
 END:VEVENT
 BEGIN:VEVENT
 UID:07b7e97fdb34@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Parlons ... écologie !
@@ -165,7 +165,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/parlons-ecologie
 END:VEVENT
 BEGIN:VEVENT
 UID:dad7cff8ca39@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:VILLAGE DES SCIENCES PARIS-SACLAY
@@ -177,7 +177,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/village-des-sciences-
 END:VEVENT
 BEGIN:VEVENT
 UID:6cc82c9d26a0@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Elixirs du plateau de Saclay
@@ -189,7 +189,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/elixirs-du-plateau-de
 END:VEVENT
 BEGIN:VEVENT
 UID:b89bc668359d@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261004
 DTEND;VALUE=DATE:20261005
 SUMMARY:35ème édition de la Fête de la science au C2N
@@ -202,9 +202,9 @@ URL:https://www.universite-paris-saclay.fr/evenements/35eme-edition-de-la-f
 END:VEVENT
 BEGIN:VEVENT
 UID:7d621867d90c@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261005
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261004T133000
+DTEND;TZID=Europe/Paris:20261004T180000
 SUMMARY:Fête de la science 2026 - Bâtiment Henri Moissan
 DESCRIPTION:https://www.universite-paris-saclay.fr/evenements-ufr-pharmacie
  /fete-de-la-science-2026-batiment-henri-moissan
@@ -215,9 +215,9 @@ URL:https://www.universite-paris-saclay.fr/evenements-ufr-pharmacie/fete-de
 END:VEVENT
 BEGIN:VEVENT
 UID:5b3cc4220737@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261004
-DTEND;VALUE=DATE:20261005
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261004T140000
+DTEND;TZID=Europe/Paris:20261004T180000
 SUMMARY:Fête de la Science à l'Institut d'Astrophysique Spatiale - Univer
  sité Paris-Saclay
 DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/fete-de-la-sc
@@ -228,21 +228,8 @@ URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-li
  nstitut-dastrophysique-spatiale-universite-paris-saclay
 END:VEVENT
 BEGIN:VEVENT
-UID:8afdc86a6e62@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
-SUMMARY:Tremplin : le forum carrière du doctorat 2026 - 1re édition
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/tremplin-le-f
- orum-carriere-du-doctorat-2026-1re-edition
-LOCATION:Bâtiment Henri Moissan - 640 rue Louis de Broglie — Université
-  Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/tremplin-le-forum-car
- riere-du-doctorat-2026-1re-edition
-END:VEVENT
-BEGIN:VEVENT
 UID:7f183cc56fbe@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:IA & 6G : construire le monde intelligent de demain
@@ -255,7 +242,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/ia-6g-construire-le-m
 END:VEVENT
 BEGIN:VEVENT
 UID:adde0c39ef09@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Concert-sandwich 06/10/26
@@ -267,7 +254,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-06/1
 END:VEVENT
 BEGIN:VEVENT
 UID:de69698ffd73@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Dans le nez du voisin
@@ -278,8 +265,21 @@ LOCATION:Auditorium\, Bâtiment Lumen\, 8 avenue des Sciences à Gif sur Yv
 URL:https://www.universite-paris-saclay.fr/evenements/dans-le-nez-du-voisin
 END:VEVENT
 BEGIN:VEVENT
+UID:8afdc86a6e62@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261006T100000
+DTEND;TZID=Europe/Paris:20261006T120000
+SUMMARY:Tremplin : le forum carrière du doctorat 2026 - 1re édition
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/tremplin-le-f
+ orum-carriere-du-doctorat-2026-1re-edition
+LOCATION:Bâtiment Henri Moissan - 640 rue Louis de Broglie — Université
+  Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/tremplin-le-forum-car
+ riere-du-doctorat-2026-1re-edition
+END:VEVENT
+BEGIN:VEVENT
 UID:dab31d14bbc5@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Biodiversité\, l'autre enjeu vital
@@ -292,9 +292,9 @@ URL:https://www.universite-paris-saclay.fr/evenements/biodiversite-lautre-e
 END:VEVENT
 BEGIN:VEVENT
 UID:f8b810b73c60@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T170000
+DTEND;TZID=Europe/Paris:20261007T213000
 SUMMARY:Prevent'Week 2026
 DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/preventweek-2
  026
@@ -303,31 +303,8 @@ LOCATION:Divers campus de l'Université Paris-Saclay — Université Paris-
 URL:https://www.universite-paris-saclay.fr/evenements/preventweek-2026
 END:VEVENT
 BEGIN:VEVENT
-UID:15294b4155e1@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:Soirée jeux au Lumen
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/soiree-jeux-a
- u-lumen
-LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/soiree-jeux-au-lumen
-END:VEVENT
-BEGIN:VEVENT
-UID:1760f8afc826@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:Eurêkartes - Comment protéger les cultures ?
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/eurekartes-co
- mment-proteger-les-cultures
-LOCATION:le deck — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-comment-pr
- oteger-les-cultures
-END:VEVENT
-BEGIN:VEVENT
 UID:27e303de5953@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Atelier de co-création : IA & One Health
@@ -338,8 +315,31 @@ URL:https://www.universite-paris-saclay.fr/evenements/atelier-de-co-creatio
  n-ia-one-health
 END:VEVENT
 BEGIN:VEVENT
+UID:15294b4155e1@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261008T180000
+DTEND;TZID=Europe/Paris:20261008T210000
+SUMMARY:Soirée jeux au Lumen
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/soiree-jeux-a
+ u-lumen
+LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/soiree-jeux-au-lumen
+END:VEVENT
+BEGIN:VEVENT
+UID:1760f8afc826@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261008T190000
+DTEND;TZID=Europe/Paris:20261008T210000
+SUMMARY:Eurêkartes - Comment protéger les cultures ?
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/eurekartes-co
+ mment-proteger-les-cultures
+LOCATION:le deck — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-comment-pr
+ oteger-les-cultures
+END:VEVENT
+BEGIN:VEVENT
 UID:2fb0029ba8c9@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Junior conference on Informatics: Theory and Applications (JITA)
@@ -352,7 +352,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/junior-conference-inf
 END:VEVENT
 BEGIN:VEVENT
 UID:e67379bbf530@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Cataphonie
@@ -362,23 +362,8 @@ LOCATION:La Scène de recherche - Théâtre Paris-Saclay — Université Pa
 URL:https://www.universite-paris-saclay.fr/evenements/cataphonie
 END:VEVENT
 BEGIN:VEVENT
-UID:f6fe3722d0fd@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261010
-DTEND;VALUE=DATE:20261011
-SUMMARY:Fête de la science au Kremlin Bicêtre : Saveurs savantes : venez 
- explorer l’alimentation autrement !
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/fete-de-la-sc
- ience-au-kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-aut
- rement
-LOCATION:Batiment de recherche — Université Paris-Saclay\, Gif-sur-Yvett
- e
-URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-au
- -kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-autrement
-END:VEVENT
-BEGIN:VEVENT
 UID:c151f4795a61@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
 SUMMARY:Visite du Service Hospitalier Frédéric Joliot - Fête de la Scien
@@ -391,8 +376,23 @@ URL:https://www.universite-paris-saclay.fr/evenements/visite-du-service-hos
  pitalier-frederic-joliot-fete-de-la-science
 END:VEVENT
 BEGIN:VEVENT
+UID:f6fe3722d0fd@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261010T140000
+DTEND;TZID=Europe/Paris:20261010T170000
+SUMMARY:Fête de la science au Kremlin Bicêtre : Saveurs savantes : venez 
+ explorer l’alimentation autrement !
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/fete-de-la-sc
+ ience-au-kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-aut
+ rement
+LOCATION:Batiment de recherche — Université Paris-Saclay\, Gif-sur-Yvett
+ e
+URL:https://www.universite-paris-saclay.fr/evenements/fete-de-la-science-au
+ -kremlin-bicetre-saveurs-savantes-venez-explorer-lalimentation-autrement
+END:VEVENT
+BEGIN:VEVENT
 UID:9886706e77aa@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Erasmus Days 2026
@@ -403,7 +403,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/erasmus-days-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:ff224788a820@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Forum entreprises 2026
@@ -416,7 +416,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/forum-entreprises-202
 END:VEVENT
 BEGIN:VEVENT
 UID:7ff555897e01@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Venez rencontrer le DAAD France - l’Office allemand d’échanges
@@ -430,7 +430,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/venez-rencontrer-le-d
 END:VEVENT
 BEGIN:VEVENT
 UID:05ff3de108ac@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Science à la coque : "L'art en marche vers la thérapie..."
@@ -443,7 +443,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/science-la-coque-lart
 END:VEVENT
 BEGIN:VEVENT
 UID:1a6340ba1f58@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Café des LaboS Soutenables - CLASS
@@ -455,7 +455,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-souten
 END:VEVENT
 BEGIN:VEVENT
 UID:aff8ff6a6332@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:HerMINI
@@ -466,7 +466,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/hermini
 END:VEVENT
 BEGIN:VEVENT
 UID:815cfdc5ead1@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:5ème édition des Journées doctorales et Masteriales de la Gradua
@@ -481,20 +481,8 @@ URL:https://www.universite-paris-saclay.fr/evenements/5eme-edition-des-jour
  -politique
 END:VEVENT
 BEGIN:VEVENT
-UID:1cad3ecf405a@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Julien Bobroff vs Kim Kardashian
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/julien-bobrof
- f-vs-kim-kardashian
-LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/julien-bobroff-vs-kim
- -kardashian
-END:VEVENT
-BEGIN:VEVENT
 UID:724d6cb139ba@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Changement climatique & agriculture : impacts\, adaptations & atté
@@ -510,7 +498,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/changement-climatique
 END:VEVENT
 BEGIN:VEVENT
 UID:47ac020740d3@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:International SPS Symposium 2026
@@ -521,8 +509,20 @@ URL:https://www.universite-paris-saclay.fr/evenements/international-sps-sym
  posium-2026
 END:VEVENT
 BEGIN:VEVENT
+UID:1cad3ecf405a@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261014T123000
+DTEND;TZID=Europe/Paris:20261014T133000
+SUMMARY:Julien Bobroff vs Kim Kardashian
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/julien-bobrof
+ f-vs-kim-kardashian
+LOCATION:Forum - Lumen — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/julien-bobroff-vs-kim
+ -kardashian
+END:VEVENT
+BEGIN:VEVENT
 UID:c64508d584dd@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Journée scientifique de la GS Chimie
@@ -534,10 +534,22 @@ URL:https://www.universite-paris-saclay.fr/evenements/journee-scientifique-
  de-la-gs-chimie
 END:VEVENT
 BEGIN:VEVENT
-UID:7d2d99bbcf76@paris-academique
-DTSTAMP:20260930T175729Z
+UID:237a6c50a3d2@paris-academique
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
+SUMMARY:Eurêkartes - Océans\, le grand dérèglement
+DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/eurekartes-oc
+ eans-le-grand-dereglement
+LOCATION:La Kaz ludik — Université Paris-Saclay\, Gif-sur-Yvette
+URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-oceans-le-
+ grand-dereglement
+END:VEVENT
+BEGIN:VEVENT
+UID:7d2d99bbcf76@paris-academique
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261015T091500
+DTEND;TZID=Europe/Paris:20261015T180000
 SUMMARY:Penser le patrimoine culturel entre héritages et devenirs
 DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/penser-le-pat
  rimoine-culturel-entre-heritages-et-devenirs
@@ -547,9 +559,9 @@ URL:https://www.universite-paris-saclay.fr/evenements/penser-le-patrimoine-
 END:VEVENT
 BEGIN:VEVENT
 UID:0ba78a579970@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261015T123000
+DTEND;TZID=Europe/Paris:20261015T143000
 SUMMARY:46ème Rendez-Vous BioAnalyse Paris Saclay: Innovation through adap
  tation: Leveraging a commercial solution for analytical and health challen
  ges
@@ -563,9 +575,9 @@ URL:https://www.universite-paris-saclay.fr/evenements/46eme-rendez-vous-bio
 END:VEVENT
 BEGIN:VEVENT
 UID:7a0dc7c9724e@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261015T180000
+DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:MURDER PARTY 15/10/2026
 DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/murder-party-
  15/10/2026
@@ -574,20 +586,8 @@ URL:https://www.universite-paris-saclay.fr/evenements/murder-party-15/10/20
  26
 END:VEVENT
 BEGIN:VEVENT
-UID:237a6c50a3d2@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Eurêkartes - Océans\, le grand dérèglement
-DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/eurekartes-oc
- eans-le-grand-dereglement
-LOCATION:La Kaz ludik — Université Paris-Saclay\, Gif-sur-Yvette
-URL:https://www.universite-paris-saclay.fr/evenements/eurekartes-oceans-le-
- grand-dereglement
-END:VEVENT
-BEGIN:VEVENT
 UID:c39124f93767@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Concert-sandwich 20/10/26
@@ -599,9 +599,9 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-20/1
 END:VEVENT
 BEGIN:VEVENT
 UID:ed8b3e991939@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261022T120000
+DTEND;TZID=Europe/Paris:20261022T140000
 SUMMARY:Forum De la Mobilité Étudiante EUGLOH
 DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/forum-de-la-m
  obilite-etudiante-eugloh
@@ -611,7 +611,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/forum-de-la-mobilite-
 END:VEVENT
 BEGIN:VEVENT
 UID:9b6b4836887d@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
 SUMMARY:20ème congrès français de sédimentologie
@@ -624,7 +624,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/20eme-congres-francai
 END:VEVENT
 BEGIN:VEVENT
 UID:a166aaf6e150@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Participez au HABS Neuro-AI Hackathon 2026
@@ -637,7 +637,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/participez-au-habs-ne
 END:VEVENT
 BEGIN:VEVENT
 UID:313ba07c8b18@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Conférence Art et Architecture autour de La Ligne 18 au Lumen\, 3 
@@ -651,7 +651,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/conference-art-et-arc
 END:VEVENT
 BEGIN:VEVENT
 UID:c34d95b0ef43@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Mélodies françaises
@@ -663,7 +663,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/melodies-francaises-0
 END:VEVENT
 BEGIN:VEVENT
 UID:a743bacc80da@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Péritopie 1
@@ -674,7 +674,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/peritopie-1
 END:VEVENT
 BEGIN:VEVENT
 UID:3f38e95f9bb1@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Journée de rentrée des doctorants de la Graduate School Humanité
@@ -689,7 +689,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/journee-de-rentree-de
 END:VEVENT
 BEGIN:VEVENT
 UID:f0683ad618af@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Café des LaboS Soutenables - CLASS
@@ -701,7 +701,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-souten
 END:VEVENT
 BEGIN:VEVENT
 UID:d0267348e407@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Open science week 2026
@@ -713,7 +713,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/open-science-week-202
 END:VEVENT
 BEGIN:VEVENT
 UID:4393b2d91d55@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Concert-sandwich 17/11/26
@@ -725,7 +725,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-17/1
 END:VEVENT
 BEGIN:VEVENT
 UID:61aec119d709@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:JOURNÉE SCIENTIFIQUE - Réseau cytométrie
@@ -737,7 +737,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/journee-scientifique-
 END:VEVENT
 BEGIN:VEVENT
 UID:16c56ef578d9@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Le Blob : De la forêt à l'espace\, l'incroyable parcours d'un org
@@ -751,7 +751,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/le-blob-de-la-foret-l
 END:VEVENT
 BEGIN:VEVENT
 UID:873dd9288732@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Conférence musicale : flûte et piano
@@ -764,7 +764,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/conference-musicale-f
 END:VEVENT
 BEGIN:VEVENT
 UID:8da81caa0eb5@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Concert-sandwich 24/11/26
@@ -776,7 +776,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-24/1
 END:VEVENT
 BEGIN:VEVENT
 UID:b4e29de13fe5@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:La Vie de Recherche 1
@@ -788,7 +788,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/la-vie-de-recherche-1
 END:VEVENT
 BEGIN:VEVENT
 UID:995511abbd29@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Soirées ExTRAS 1 et 2
@@ -800,9 +800,9 @@ URL:https://www.universite-paris-saclay.fr/evenements/soirees-extras-1-et-2
 END:VEVENT
 BEGIN:VEVENT
 UID:60e8a1d24236@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261126
-DTEND;VALUE=DATE:20261127
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261126T093000
+DTEND;TZID=Europe/Paris:20261126T113000
 SUMMARY:Photographie et bande dessinée
 DESCRIPTION:https://www.universite-paris-saclay.fr/evenements/photographie-
  et-bande-dessinee
@@ -812,7 +812,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/photographie-et-bande
 END:VEVENT
 BEGIN:VEVENT
 UID:5d56f0aaf59f@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Fake news - Un ennemi du peuple
@@ -825,7 +825,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/fake-news-un-ennemi-d
 END:VEVENT
 BEGIN:VEVENT
 UID:7bcdc60797c0@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Journée Annuelle de l'Axe Astrophysique de la Graduate School de P
@@ -839,7 +839,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/journee-annuelle-de-l
 END:VEVENT
 BEGIN:VEVENT
 UID:579cff5e0e62@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Trait(s)
@@ -850,7 +850,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/traits
 END:VEVENT
 BEGIN:VEVENT
 UID:d18631f9d83b@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Concert-sandwich 15/12/26
@@ -862,7 +862,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-15/1
 END:VEVENT
 BEGIN:VEVENT
 UID:2b4798ca79ce@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Festin du mardi midi : Zarlor
@@ -875,7 +875,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/festin-du-mardi-midi-
 END:VEVENT
 BEGIN:VEVENT
 UID:c5d7d8c73621@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Café des LaboS Soutenables - CLASS
@@ -887,7 +887,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/cafe-des-labos-souten
 END:VEVENT
 BEGIN:VEVENT
 UID:bcf07fb975de@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
 SUMMARY:Les inscriptions aux ateliers culturels sont ouvertes !
@@ -899,7 +899,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/les-inscriptions-aux-
 END:VEVENT
 BEGIN:VEVENT
 UID:0c4d06ee9764@paris-academique
-DTSTAMP:20260930T175729Z
+DTSTAMP:20260930T184522Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:Péritopie 2

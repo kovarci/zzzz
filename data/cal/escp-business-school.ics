@@ -25,9 +25,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:367ebbab11db@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261007T180000
+DTEND;TZID=Europe/Paris:20261007T200000
 SUMMARY:L’innovation va-t-elle tuer le Progrès ?
 DESCRIPTION:Event\nhttps://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-
  progres
@@ -37,9 +37,9 @@ URL:https://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-progres
 END:VEVENT
 BEGIN:VEVENT
 UID:9dacd5d42c76@paris-academique
-DTSTAMP:20260930T175729Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
+DTSTAMP:20260930T184522Z
+DTSTART;TZID=Europe/Paris:20261008T090000
+DTEND;TZID=Europe/Paris:20261008T110000
 SUMMARY:Finance & Consulting Career Fair 2026
 DESCRIPTION:Event\nhttps://escp.eu/fr/events/paris-finance-consulting-caree
  r-fair
