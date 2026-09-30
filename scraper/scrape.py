@@ -6974,6 +6974,11 @@ def carry_forward(fresh, prev, keep):
 MONTHS_DIR = OUTPUT_FILE.parent / "m"
 
 
+# Champs réservés aux scripts : inutiles au site, et ils changeaient le hash
+# (?v=) d'un mois chaque jour sans qu'aucun événement ne change
+_INTERNAL_KEYS = {"geo_exact", "price_checked", "time_checked"}
+
+
 def write_month_files(events):
     """Le site charge l'agenda mois par mois (data/m/AAAA-MM.json) : le mois
     en cours et le suivant d'abord, les autres ensuite. index.json liste les
@@ -6984,7 +6989,7 @@ def write_month_files(events):
     by_month = {}
     for e in events:
         by_month.setdefault(e.get("date", "")[:7], []).append(
-            {k: v for k, v in e.items() if k != "geo_exact"})
+            {k: v for k, v in e.items() if k not in _INTERNAL_KEYS})
     index = []
     for m in sorted(k for k in by_month if re.fullmatch(r"\d{4}-\d{2}", k)):
         payload = json.dumps(by_month[m], ensure_ascii=False, separators=(",", ":"))
