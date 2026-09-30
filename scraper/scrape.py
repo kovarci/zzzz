@@ -72,6 +72,8 @@ DISCIPLINE_KEYWORDS = {
         "théolog", "theolog", " dieu", "église", "biblique", "bible",
         "chrétien", "christian", "spiritualit", "évangile", "évangél",
         "pensée", "philosophy",
+        # religions et sagesses (Inalco, EPHE…)
+        "confucian", "bouddhis", "buddhis", "religion", "religieu", "islam", "judaïsme", "taoïs",
     ],
     "Littérature": [
         "littératur", "roman", "poésie", "poème", "narratologi", "récit",
@@ -81,6 +83,8 @@ DISCIPLINE_KEYWORDS = {
         "baudelaire", "verlaine", "molière", "racine", "corneille",
         "une heure, un livre", "écrivaine", "romancier", "romancière",
         "poète", "poésie", "literature", "novel", "poetry",
+        "littéraire", "autrice", "prononciation", "langues étrangères", "plurilingu",
+        "bande dessinée", "traduction",
     ],
     "Histoire": [
         "histoir", "archive", "mémoire collective", "patrimoine", "médiéval",
@@ -132,6 +136,9 @@ DISCIPLINE_KEYWORDS = {
         "chimi", "chemist", "biophys", "cosmic", "supernova",
         "obésité", "traitement", "médicament", "nutrition", "physiolog",
         "plantes", "botani",
+        # « Fête de la science » (Paris-Saclay, ENS, PSL : 5 événements en « Autre »)
+        "fête de la science", "fete de la science", "psychiatr", "cytométr", "hôpital", "hospitalier",
+        "journée scientifique",
     ],
     "Économie": [
         "économi", "economic", "macroéco", "microéco", "macro-", "micro-",
@@ -149,6 +156,7 @@ DISCIPLINE_KEYWORDS = {
         "société", "classe sociale", "genre ", "racisme", "discrimination",
         "migration", "identité", "rituel", "bourdieu", "durkheim", "famille",
         "ethnograph", "kinship", "parenté", "tribu", "rural", "urbain ",
+        " exil", "réfugié", "migrant",
     ],
     "Droit & Sciences politiques": [
         " droit", " droits ", "juridique", "constitutionnel", "science politique",
@@ -163,8 +171,12 @@ DISCIPLINE_KEYWORDS = {
         " art ", " arts ", "musique", "music ", "cinéma", "cinema", " film ",
         " films ", "théâtre", "theatre", "peinture", "painting", "sculpture",
         "architecture", "danse", "dance ", "muséolog", "exposition", "exhibit",
-        "photographi", "photograph", "design", "musical", "ballet", "opéra",
-        "opera", "matisse", "picasso", "monet", "degas", "rodin", "rembrandt",
+        "photographi", "photograph", "design", "musical", "ballet",
+        # « opéra » seul : il était reconnu dans « opérateur », « opération »
+        " opéra ", " opéras", " opéra-", "l'opéra", "d'opéra", " opera ", " operas", "matisse", "picasso", "monet", "degas", "rodin", "rembrandt",
+        # « concert » mais pas « concertation », « chant » mais pas « chantier »
+        " concert ", " concert-", " concerts", " jazz", " chant ", " chants ", "chorale", "orchestre",
+        "récital", "spectacle", "pièce de ", "brecht",
     ],
 }
 
@@ -304,6 +316,10 @@ def detect_discipline(title: str, description: str = "",
             scores[discipline] = score
     if scores:
         return max(scores, key=scores.get)
+    # Une date ancienne dans le titre (« La défaite de Kinmen (1949) »,
+    # « années 1970 », « Bicentenaire de la mort de… ») : un sujet d'histoire
+    if re.search(r"\b(?:1[0-8]\d\d|19[0-7]\d)\b|\bbicentenaire\b|\bcentenaire\b|anniversaire de la mort", title, re.I):
+        return "Histoire"
     # Fallback Luma : la catégorie d'origine sert d'indice
     if luma_categories:
         for cat in luma_categories:
