@@ -240,7 +240,9 @@ export function buildIcs(events) {
     const s = icsDt(ev.date, ev.time); let dtstart, dtend;
     if (s.allDay) { dtstart = `DTSTART;VALUE=DATE:${s.start}`; dtend = `DTEND;VALUE=DATE:${iso(addDays(parse(ev.date), 1)).replace(/-/g, "")}`; }
     else { dtstart = `DTSTART;TZID=Europe/Paris:${s.start}`; const e = icsDt(ev.date, ev.end_time); dtend = e.start && !e.allDay ? `DTEND;TZID=Europe/Paris:${e.start}` : `DTEND;TZID=Europe/Paris:${ev.date.replace(/-/g, "")}T${pad(Math.min(s.h + 2, 23))}${pad(s.m)}00`; }
-    out.push("BEGIN:VEVENT", `UID:${ev.id}@lotent.fr`, `DTSTAMP:${stamp}`, dtstart, dtend, `SUMMARY:${icsEsc(ev.title)}`,
+    // Même UID que les calendriers auxquels on s'abonne (scraper : write_ics) :
+    // un événement ajouté seul puis retrouvé dans l'abonnement n'est pas doublé
+    out.push("BEGIN:VEVENT", `UID:${ev.id}@paris-academique`, `DTSTAMP:${stamp}`, dtstart, dtend, `SUMMARY:${icsEsc(ev.title)}`,
       `LOCATION:${icsEsc(ev.location || "Paris")}`, `DESCRIPTION:${icsEsc([ev.description, ev.url].filter(Boolean).join("\n"))}`,
       ev.url ? `URL:${ev.url.replace(/[\r\n]/g, "")}` : "", `CATEGORIES:${icsEsc(ev.discipline || "")}`, "END:VEVENT");
   }
