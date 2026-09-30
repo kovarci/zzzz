@@ -3175,11 +3175,12 @@ _PRICE_PAGE_SOURCES = {
 
 _MOIS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre",
             "octobre", "novembre", "décembre"]
+_MOIS_ABBR = ["janv", "févr", "mars", "avr", "mai", "juin", "juil", "août", "sept", "oct", "nov", "déc"]
 _MOIS_EN = ["january", "february", "march", "april", "may", "june", "july", "august", "september",
             "october", "november", "december"]
-_T = r"(\d{1,2})\s*(?:h|H|:)\s*(\d{2})?(?!\d)"
+_T = r"(\d{1,2})\s*(?:h|H|:|(?=[ap]\.?m\b))\s*(\d{2})?(?!\d)"
 _TIME_TOK = re.compile(_T)
-_TIME_RANGE = re.compile(_T + r"\s*(?:[-–—]|à|to|jusqu'?à)\s*" + _T)
+_TIME_RANGE = re.compile(_T + r"(?:\s*[ap]\.?m\.?)?\s*(?:[-–—]|à|to|jusqu'?à)\s*" + _T)
 
 
 def _hhmm(h, m):
@@ -3194,8 +3195,12 @@ def _page_time(txt, d):
     après un libellé « Horaires ». Une fin à moins de 45 min du début est
     celle d'un « Accueil » de programme : ignorée."""
     day, mon = d.day, d.month
-    pats = [rf"\b0?{day}(?:er)?\s+{_MOIS_FR[mon - 1]}", rf"\b{_MOIS_EN[mon - 1]}\s+0?{day}\b",
-            rf"\b0?{day}\s+{_MOIS_EN[mon - 1]}", rf"\b0?{day}\s*[./]\s*0?{mon}\b", rf"\b{d.isoformat()}\b"]
+    # mois en toutes lettres ou abrégés (« 09 Oct. 2026 », « 5 janv. »), dates
+    # numériques « 09/10 », « 09.10 », « 09-10-2026 », ISO
+    fr = rf"(?:{_MOIS_FR[mon - 1]}|{_MOIS_ABBR[mon - 1]}\.?)"
+    en = rf"(?:{_MOIS_EN[mon - 1]}|{_MOIS_EN[mon - 1][:3]}\.?)"
+    pats = [rf"\b0?{day}(?:er)?\s+{fr}(?!\w)", rf"\b{en}\s+0?{day}\b", rf"\b0?{day}\s+{en}(?!\w)",
+            rf"\b0?{day}\s*[./-]\s*0?{mon}\b", rf"\b{d.isoformat()}\b"]
     anchors = sorted({m.end() for p in pats for m in re.finditer(p, txt, re.I)}
                      | {m.end() for m in re.finditer(r"(?i)\b(?:horaires?|heure|quand\s*\?|date et heure)\b", txt)})
     for a in anchors:
@@ -3203,11 +3208,13 @@ def _page_time(txt, d):
         t = _TIME_TOK.search(win)
         if not t or t.start() > 45:
             continue
-        start = _hhmm(t.group(1), t.group(2))
+        # « 6:30 pm » (pages en anglais)
+        pm = lambda h, pos: str(int(h) + 12) if int(h) < 12 and re.match(r"\s*p\.?m\b", win[pos:], re.I) else h
+        start = _hhmm(pm(t.group(1), t.end()), t.group(2))
         if not start:
             continue
         r = _TIME_RANGE.match(win, t.start())
-        end = _hhmm(r.group(3), r.group(4)) if r else ""
+        end = _hhmm(pm(r.group(3), r.end()), r.group(4)) if r else ""
         if end:
             mins = lambda x: int(x[:2]) * 60 + int(x[3:])
             if mins(end) - mins(start) < 45:
