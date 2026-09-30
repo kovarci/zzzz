@@ -2027,7 +2027,7 @@ def scrape_ephe():
 def scrape_bernardins():
     # Webflow : jour + mois abrégé anglais (« 30 Sep »), sans année.
     # Tarif (gratuit sur réservation / 12 €…) : seulement sur chaque fiche,
-    # lu par add_missing_prices (mémorisé d'un passage à l'autre).
+    # lu par add_missing_details (mémorisé d'un passage à l'autre).
     return _scrape_cards(
         "Collège des Bernardins", "https://www.collegedesbernardins.fr/agenda",
         ".item-agenda", title="h2", date=".tag-date-wrapper", kind=".tag-vignette-agenda-v2",
@@ -3125,7 +3125,14 @@ def _price_in_text(txt):
 def _page_text(url):
     r = requests.get(url, headers=CDF_HEADERS, timeout=25, verify=_verify_for(url))
     r.raise_for_status()
-    return r.text, re.sub(r"\s+", " ", html_unescape(re.sub(r"<[^>]+>", " ", r.text)))
+    # Sans charset dans l'en-tête HTTP, requests suppose ISO-8859-1 : les
+    # pages UTF-8 de Sciences Po devenaient « OrganisÃ© », « de 17:00 Ã 19:00 »
+    # (fin d'horaire et « Entrée libre » alors illisibles)
+    if "charset" not in r.headers.get("content-type", "").lower():
+        m = re.search(rb"<meta[^>]+charset=[\"']?([\w-]+)", r.content[:3000], re.I)
+        r.encoding = m.group(1).decode() if m else "utf-8"
+    html = r.text
+    return html, re.sub(r"\s+", " ", html_unescape(re.sub(r"<[^>]+>", " ", html)))
 
 
 def _page_price(url):
@@ -3166,38 +3173,117 @@ _PRICE_PAGE_SOURCES = {
 }
 
 
-def add_missing_prices(events, previous=(), limit=400):
-    """Prix manquants des événements à venir : repris du passage précédent
-    (même id), sinon lus sur la page officielle — l'agenda de ces sources ne
-    les donne pas, et sans prix Search Console signale « Champ price
-    manquant ». Au plus `limit` pages lues par passage."""
+_MOIS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre",
+            "octobre", "novembre", "décembre"]
+_MOIS_EN = ["january", "february", "march", "april", "may", "june", "july", "august", "september",
+            "october", "november", "december"]
+_T = r"(\d{1,2})\s*(?:h|H|:)\s*(\d{2})?(?!\d)"
+_TIME_TOK = re.compile(_T)
+_TIME_RANGE = re.compile(_T + r"\s*(?:[-–—]|à|to|jusqu'?à)\s*" + _T)
+
+
+def _hhmm(h, m):
+    h, m = int(h), int(m or 0)
+    return f"{h:02d}:{m:02d}" if 7 <= h <= 23 and m < 60 else ""
+
+
+def _page_time(txt, d):
+    """(début, fin) de l'événement du jour `d` lus sur sa page : la première
+    heure citée juste après la mention de la date (« le 26 novembre de 9h à
+    18h », « 4 octobre 2026 10h00 - 18h00 », « Jeudi 1er octobre à 19h »), ou
+    après un libellé « Horaires ». Une fin à moins de 45 min du début est
+    celle d'un « Accueil » de programme : ignorée."""
+    day, mon = d.day, d.month
+    pats = [rf"\b0?{day}(?:er)?\s+{_MOIS_FR[mon - 1]}", rf"\b{_MOIS_EN[mon - 1]}\s+0?{day}\b",
+            rf"\b0?{day}\s+{_MOIS_EN[mon - 1]}", rf"\b0?{day}\s*[./]\s*0?{mon}\b", rf"\b{d.isoformat()}\b"]
+    anchors = sorted({m.end() for p in pats for m in re.finditer(p, txt, re.I)}
+                     | {m.end() for m in re.finditer(r"(?i)\b(?:horaires?|heure|quand\s*\?|date et heure)\b", txt)})
+    for a in anchors:
+        win = txt[a:a + 90]
+        t = _TIME_TOK.search(win)
+        if not t or t.start() > 45:
+            continue
+        start = _hhmm(t.group(1), t.group(2))
+        if not start:
+            continue
+        r = _TIME_RANGE.match(win, t.start())
+        end = _hhmm(r.group(3), r.group(4)) if r else ""
+        if end:
+            mins = lambda x: int(x[:2]) * 60 + int(x[3:])
+            if mins(end) - mins(start) < 45:
+                end = ""
+        return start, end
+    return "", ""
+
+
+def _fetch_text(url):
+    """Texte d'une page, ou None si elle n'a pas pu être lue (403, délai…)."""
+    try:
+        return _page_text(url)[1]
+    except Exception:
+        return None
+
+
+def add_missing_details(events, previous=(), limit=700):
+    """Prix et horaires manquants des événements à venir : repris du passage
+    précédent (même id), sinon lus sur la page officielle — beaucoup
+    d'agendas n'affichent ni l'un ni l'autre sur leurs cartes (30 % des
+    événements étaient « horaire à confirmer »). Une page lue sans résultat
+    n'est relue qu'au bout d'une semaine (*_checked) ; une page qui n'a pas
+    répondu (403 depuis GitHub…) n'est pas marquée, pour que la maj locale
+    la lise. Au plus `limit` pages par passage."""
     from concurrent.futures import ThreadPoolExecutor
     today = TODAY.isoformat()
-    known = {e.get("id"): e["price"] for e in previous if e.get("id") and e.get("price")}
-    # Page déjà lue sans tarif : on ne la relit qu'au bout d'une semaine (le
-    # Louvre a bloqué le robot après des relectures quotidiennes)
-    checked = {e.get("id"): e["price_checked"] for e in previous if e.get("id") and e.get("price_checked")}
     week_ago = (TODAY - timedelta(days=7)).isoformat()
+    prev = {e.get("id"): e for e in previous if e.get("id")}
     todo = []
     for e in events:
-        if e.get("price") or e.get("date", "") < today or not e.get("url"):
+        if e.get("date", "") < today or not e.get("url"):
             continue
-        if known.get(e.get("id")):
-            e["price"] = known[e["id"]]
-        elif checked.get(e.get("id"), "") > week_ago:
-            e["price_checked"] = checked[e["id"]]
-        elif (e.get("institution") in _PRICE_PAGE_SOURCES or e.get("institution") == "Sciencesconf.org"
-              or e.get("source_type") in ("ville", "luma")):
-            todo.append(e)
+        old = prev.get(e.get("id"), {})
+        want_price = not e.get("price") and (
+            e.get("institution") in _PRICE_PAGE_SOURCES or e.get("institution") == "Sciencesconf.org"
+            or e.get("source_type") in ("ville", "luma"))
+        want_time = (not e.get("time") and e.get("source_type") not in ("ville", "luma")
+                     and e.get("institution") != "Sciencesconf.org")
+        if want_price and old.get("price"):
+            e["price"], want_price = old["price"], False
+        if want_time and old.get("time"):
+            e["time"], e["end_time"], want_time = old["time"], old.get("end_time", ""), False
+        if want_price and old.get("price_checked", "") > week_ago:
+            e["price_checked"], want_price = old["price_checked"], False
+        if want_time and old.get("time_checked", "") > week_ago:
+            e["time_checked"], want_time = old["time_checked"], False
+        if want_price or want_time:
+            todo.append((e, want_price, want_time))
     todo = todo[:limit]
-    get = lambda e: _sciencesconf_price(e["url"]) if e.get("institution") == "Sciencesconf.org" else _page_price(e["url"])
+
+    def job(item):
+        e, wp, wt = item
+        if e.get("institution") == "Sciencesconf.org":
+            return item, None, (_sciencesconf_price(e["url"]) if wp else "")
+        return item, _fetch_text(e["url"]), None
+
+    got_p = got_t = 0
     with ThreadPoolExecutor(8) as ex:
-        for e, p in zip(todo, ex.map(get, todo)):
-            if p:
-                e["price"] = p
-            else:
-                e["price_checked"] = today
-    print(f"Prix lus sur les pages officielles : {sum(1 for e in todo if e.get('price'))}/{len(todo)}")
+        for (e, wp, wt), txt, sc_price in ex.map(job, todo):
+            if sc_price is not None or txt is not None:
+                if wp:
+                    p = sc_price if sc_price is not None else _price_in_text(txt)
+                    if p:
+                        e["price"], got_p = p, got_p + 1
+                    else:
+                        e["price_checked"] = today
+                if wt and txt is not None:
+                    try:
+                        st, en = _page_time(txt, date.fromisoformat(e["date"]))
+                    except ValueError:
+                        st, en = "", ""
+                    if st:
+                        e["time"], e["end_time"], got_t = st, en, got_t + 1
+                    else:
+                        e["time_checked"] = today
+    print(f"Pages officielles lues : {len(todo)} · prix trouvés {got_p} · horaires trouvés {got_t}")
     return events
 
 
@@ -3263,7 +3349,7 @@ def scrape_louvre():
                 url=make_absolute(((x.get("link") or {}).get("url") or ""), base),
                 speaker=clean_text(sp.group(1)) if sp else "", image=img))
         m = nxt
-    # Tarifs : add_missing_prices (mémorisés d'un passage à l'autre). Relire
+    # Tarifs : add_missing_details (mémorisés d'un passage à l'autre). Relire
     # les 50 fiches à chaque passage a précédé le blocage du robot (403).
     print(f"   ✓ Total Musée du Louvre: {len(events)} events")
     return events
@@ -5659,6 +5745,27 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
             removed += 1
         except Exception:
             pass
+    # Fiche fusionnée dans une autre dont la page a disparu (supprimée avant
+    # que la fusion ne soit notée dans « aliases ») : la redirection est
+    # recréée — 47 anciennes adresses publiées donnaient une 404.
+    restored = 0
+    for alias, target in alias_of.items():
+        f = EVENT_PAGES_DIR / f"{alias}.html"
+        if f.name in keep or f.exists() or f"{target}.html" not in keep:
+            continue
+        try:
+            f.write_text(
+                '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">'
+                f'<title>Événement mis à jour · Lotent</title><meta name="robots" content="noindex">'
+                f'<link rel="canonical" href="{SITE_URL}/e/{target}.html">'
+                f'<meta http-equiv="refresh" content="0; url={target}.html"></head>'
+                f'<body><p>Cet événement a été mis à jour par son organisateur : '
+                f'<a href="{target}.html">voir la fiche</a>.</p></body></html>', encoding="utf-8")
+            restored += 1
+        except Exception:
+            pass
+    if restored:
+        print(f"Redirections d'événements fusionnés recréées : {restored}")
     print(f"Pages événement : {len(keep)} générées · {redirected} redirigées vers leur nouvelle "
           f"fiche · {removed} obsolètes supprimées")
 
@@ -7054,7 +7161,7 @@ def main():
     # pas du « Forum Éducation 2026 » de PSL.
     all_events = merge_cross_source(_drop_city_duplicates(deduplicate(finalize_events(all_events))))
     try:
-        add_missing_prices(all_events, prev_events)
+        add_missing_details(all_events, prev_events)
     except Exception as e:
         print(f"[ERROR] prix : {e}")
 

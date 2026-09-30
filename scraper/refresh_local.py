@@ -156,7 +156,7 @@ def main():
     merged = scrape.deduplicate(scrape.finalize_events(fresh + carried + others))
     merged = scrape.merge_cross_source(scrape._drop_city_duplicates(merged))
     try:
-        scrape.add_missing_prices(merged, events)
+        scrape.add_missing_details(merged, events)
     except Exception as e:
         print(f"[!] prix : {type(e).__name__}: {e}")
 
