@@ -4831,6 +4831,12 @@ def geocode_all(events):
     new = 0
     down = False                             # Nominatim ne répond plus : on arrête pour ce passage
     for ev in events:
+        # Uniquement en ligne (« En ligne — Université Paris Cité, 85 bd… » :
+        # l'adresse est celle de l'organisateur) : pas de point sur la carte,
+        # ni de « à 300 m » dans « Près de moi »
+        if _attendance(ev.get("location") or "") == "online":
+            ev.pop("lat", None), ev.pop("lng", None), ev.pop("geo_exact", None)
+            continue
         if ev.get("geo_exact") and "lat" in ev:
             continue                         # GPS fourni par la source (Ville de Paris, Sciencesconf)
         loc = clean_text(ev.get("location") or "")
