@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ba8f2e817bfc@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;TZID=Europe/Paris:20260930T180000
-DTEND;TZID=Europe/Paris:20260930T200000
-SUMMARY:Le livre est mort\, vive le livre !
-DESCRIPTION:Société\nhttps://www.jean-jaures.org/agenda/le-livre-est-mort
- -vive-le-livre/
-LOCATION:Théâtre de la Concorde\, Avenue Gabriel\, Paris\, France
-URL:https://www.jean-jaures.org/agenda/le-livre-est-mort-vive-le-livre/
-END:VEVENT
-BEGIN:VEVENT
 UID:9087276fc512@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261001T183000
 DTEND;TZID=Europe/Paris:20261001T203000
 SUMMARY:Ce que les dernières municipales racontent du pays

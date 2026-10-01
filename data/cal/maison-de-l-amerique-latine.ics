@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:fad5031ee593@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;TZID=Europe/Paris:20260930T190000
-DTEND;TZID=Europe/Paris:20260930T210000
-SUMMARY:L'Archéologie péruvienne au Féminin
-DESCRIPTION:Conférence\nhttps://www.mal217.org/fr/agenda/l-archeologie-per
- uvienne-au-feminin
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/l-archeologie-peruvienne-au-feminin
-END:VEVENT
-BEGIN:VEVENT
 UID:5ff0b5fd086a@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261001T190000
 DTEND;TZID=Europe/Paris:20261001T210000
 SUMMARY:Tribune de l'économie — latino-américaine et caribéenne
@@ -49,7 +37,7 @@ URL:https://www.mal217.org/fr/agenda/tribune-de-l-economie
 END:VEVENT
 BEGIN:VEVENT
 UID:d21fc632fa12@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261002T190000
 DTEND;TZID=Europe/Paris:20261002T210000
 SUMMARY:Milicien basque exilé à bord du Winnipeg
@@ -62,7 +50,7 @@ URL:https://www.mal217.org/fr/agenda/milicien-basque-exile-a-bord-du-winnip
 END:VEVENT
 BEGIN:VEVENT
 UID:82c89cf78830@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261005T190000
 DTEND;TZID=Europe/Paris:20261005T210000
 SUMMARY:L'Œil pense — Résister par le geste
@@ -74,7 +62,7 @@ URL:https://www.mal217.org/fr/agenda/l-oeil-pense-copie-e0428449
 END:VEVENT
 BEGIN:VEVENT
 UID:d7228ca19197@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261006T190000
 DTEND;TZID=Europe/Paris:20261006T210000
 SUMMARY:Dialogue entre fils de Xangô — Correspondance entre R. Bastide e
@@ -87,7 +75,7 @@ URL:https://www.mal217.org/fr/agenda/dialogue-entre-fils-de-xango
 END:VEVENT
 BEGIN:VEVENT
 UID:c2b7b61a5bca@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261006T210000
 DTEND;TZID=Europe/Paris:20261006T230000
 SUMMARY:La psychanalyse du Rio de La Plata
@@ -99,7 +87,7 @@ URL:https://www.mal217.org/fr/agenda/la-psychanalyse-du-rio-de-la-plata
 END:VEVENT
 BEGIN:VEVENT
 UID:ecc674ac5041@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261008T190000
 DTEND;TZID=Europe/Paris:20261008T210000
 SUMMARY:Tribune de l'actualité latino-américaine et caribéenne — Ciné

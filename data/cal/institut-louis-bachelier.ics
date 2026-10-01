@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c8cb8b131725@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;TZID=Europe/Paris:20260929T080000
-DTEND;TZID=Europe/Paris:20260929T100000
-SUMMARY:Paquet Souveraineté numérique européenne 2026-2030
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
- me/evenements/paquet-souverainete-numerique-europeenne-2026-2030
-LOCATION:Hôtel de Bourrienne — Institut Louis Bachelier\, 28 place de la
-  Bourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/paquet-s
- ouverainete-numerique-europeenne-2026-2030
-END:VEVENT
-BEGIN:VEVENT
 UID:f2fb9acaadf0@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261001T153000
 DTEND;TZID=Europe/Paris:20261001T173000
 SUMMARY:PRODURABLE : CSRD\, IA et souveraineté des données : quel avenir 
@@ -53,7 +40,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/produrab
 END:VEVENT
 BEGIN:VEVENT
 UID:7a18403e3297@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261005T173000
 DTEND;TZID=Europe/Paris:20261005T193000
 SUMMARY:Conversations A\\Venir - Compétitivité et souveraineté européen
@@ -69,7 +56,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/conversa
 END:VEVENT
 BEGIN:VEVENT
 UID:34e1667d5e97@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261007T083000
 DTEND;TZID=Europe/Paris:20261007T103000
 SUMMARY:Comment mobiliser l’épargne de long terme pour financer les entr
@@ -84,7 +71,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/comment-
 END:VEVENT
 BEGIN:VEVENT
 UID:1c544f80cde7@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261008T160000
 DTEND;TZID=Europe/Paris:20261008T180000
 SUMMARY:Forum Immobilier & Finance
@@ -97,7 +84,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/forum-im
 END:VEVENT
 BEGIN:VEVENT
 UID:bcbbb9ee2e79@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261013T090000
 DTEND;TZID=Europe/Paris:20261013T110000
 SUMMARY:STABLECOINS : ENJEUX MONÉTAIRES ET RÉGLEMENTAIRES
@@ -110,7 +97,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/stableco
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5705ac1cc0@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261103T090000
 DTEND;TZID=Europe/Paris:20261103T110000
 SUMMARY:AM TECH DAY de l'AGEFI
@@ -120,5 +107,20 @@ LOCATION:Palais Brongniart — Institut Louis Bachelier\, 28 place de la Bo
  urse\, Paris 2e
 URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-
  day-de-lagefi
+END:VEVENT
+BEGIN:VEVENT
+UID:3567d9421905@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261104T090000
+DTEND;TZID=Europe/Paris:20261104T110000
+SUMMARY:Conférence : L’eau\, enjeu d’investissement stratégique et d
+ ’adaptation
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/conference-leau-enjeu-dinvestissement-strategique-et-dadapta
+ tion
+LOCATION:Université Paris-Dauphine-PSL — Institut Louis Bachelier\, 28 p
+ lace de la Bourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/conferen
+ ce-leau-enjeu-dinvestissement-strategique-et-dadaptation
 END:VEVENT
 END:VCALENDAR

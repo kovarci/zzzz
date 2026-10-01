@@ -24,25 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ce049f565a06@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;TZID=Europe/Paris:20260930T144500
-DTEND;TZID=Europe/Paris:20260930T160000
-SUMMARY:Dynamical Tidal Response of Neutron Stars from Scattering Amplitude
- s
-DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) I
- n this talk I will describe an amplitude-based framework for extracting th
- e frequency-dependent tidal response of neutron stars while preserving the
-  tidal resonances associated with their normal modes. The response is obta
- ined by matching the amplitude for gravitational-wave scattering off a neu
- tron star\, equivalently gravitational Comp\nhttps://indico.math.cnrs.fr/e
- vent/17400/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17400/
-END:VEVENT
-BEGIN:VEVENT
 UID:ff0fd3daa373@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261001T143000
 DTEND;TZID=Europe/Paris:20261001T160000
 SUMMARY:Zeta Values as Moments: A Random Matrix Theory
@@ -51,14 +34,14 @@ DESCRIPTION:The values of the Riemann zeta-function $\\zeta\\left(\\alpha+\
  can be viewed as moments of a probability distribution. In my talk I will 
  construct the corresponding random matrix model and determine its asymptot
  ic spectral curve\, which exhibits an unusual feature\, the complete asymp
- totics of its partition function and uniform approx\nhttps://indico.math.c
- nrs.fr/event/17408/
+ totics of its partition function and uniform…\nhttps://indico.math.cnrs.
+ fr/event/17408/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17408/
 END:VEVENT
 BEGIN:VEVENT
 UID:d0bfe36c9390@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261005T140000
 DTEND;TZID=Europe/Paris:20261005T151500
 SUMMARY:Origami Tori
@@ -67,14 +50,14 @@ DESCRIPTION:An origami torus is a piecewise affine isometric embedding of a
  ks to the work of Burago and Zalgaller in 1960 they do. 30 years later\, B
  &Z proved that every flat torus is realized as an origami torus. In 2023\,
   Lazarus and Tallerie proved that you can realize all flat tori using a si
- ngle underlying triangulation with about 250\nhttps://indico.math.cnrs.fr/
- event/17062/
+ ngle underlying triangulation with about…\nhttps://indico.math.cnrs.fr/e
+ vent/17062/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17062/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4af97c28d4e@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261005T160000
 DTEND;TZID=Europe/Paris:20261005T171500
 SUMMARY:Families of Discrete Representations from Incidence Theorems
@@ -83,14 +66,14 @@ DESCRIPTION:Motivated by a family of examples constructed by R. Schwartz ba
  iscrete groups arising from incidence theorems in projective spaces. Schwa
  rtz recently proved that his construction parametrizes the boundary of a c
  onnected component of Anosov representations in a certain moduli space of 
- representations of PSL(2\,Z) into Isom(SL(3\nhttps://indico.math.cnrs.fr/e
- vent/17063/
+ representations of PSL(2\,Z) into…\nhttps://indico.math.cnrs.fr/event/17
+ 063/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17063/
 END:VEVENT
 BEGIN:VEVENT
 UID:53bf13613051@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261006T144500
 DTEND;TZID=Europe/Paris:20261006T160000
 SUMMARY:On the Wilson-Fisher Fixed Point in the Limit of Integer Spacetime 
@@ -100,14 +83,14 @@ DESCRIPTION:The Wilson–Fisher (WF) fixed point\, a scalar field theory wi
  ok example of a weakly coupled CFT. The epsilon expansion accurately repro
  duces the critical exponents of the $d = 3$ and the $d = 2$ Ising model. T
  his has led to the common view that WF defines a continuous family of CFTs
-  in non-integer dimensions\, interpolating betw\nhttps://indico.math.cnrs.
- fr/event/17103/
+  in non-integer dimensions\, interpolating…\nhttps://indico.math.cnrs.fr
+ /event/17103/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17103/
 END:VEVENT
 BEGIN:VEVENT
 UID:8d271c592140@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261007T151500
 DTEND;TZID=Europe/Paris:20261007T163000
 SUMMARY:Gravitational Sommerfeld Effects: Framework and Applications
@@ -116,14 +99,14 @@ DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) S
  by a short-distance source. They play an important role in atomic physics 
  and dark matter phenomenology\, but the same mechanism also arises in grav
  itational-wave radiation from compact binaries. In this talk\, I will deve
- lop a systematic framework for gravitational\nhttps://indico.math.cnrs.fr/
- event/17466/
+ lop a systematic framework for…\nhttps://indico.math.cnrs.fr/event/17466
+ /
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17466/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ed38ea8f514@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261008T110000
 DTEND;TZID=Europe/Paris:20261008T123000
 SUMMARY:On “Siegel Domains” in p-adic Period Spaces
@@ -139,7 +122,7 @@ URL:https://indico.math.cnrs.fr/event/17331/
 END:VEVENT
 BEGIN:VEVENT
 UID:513576072690@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261012T090000
 DTEND;TZID=Europe/Paris:20261012T110000
 SUMMARY:The Pentagram Map and Ramifications
@@ -148,14 +131,14 @@ DESCRIPTION:October 12-15\, 2026 at IHES - Marilyn and James Simons Confere
  cted to the pentagram map and its generalizations. With 3 talks per day\, 
  spread out over 4 days\, leaving time for individualized interactions\, it
   will not be confined to the special topic of the pentagram map\, but rath
- er an exploration of the kind of mathematics t\nhttps://indico.math.cnrs.f
- r/event/17361/
+ er an exploration of the kind of mathematics…\nhttps://indico.math.cnrs.
+ fr/event/17361/
 LOCATION:Le Bois-Marie
 URL:https://indico.math.cnrs.fr/event/17361/
 END:VEVENT
 BEGIN:VEVENT
 UID:504fa91ca75d@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261014T110000
 DTEND;TZID=Europe/Paris:20261014T123000
 SUMMARY:The Doubly Conformal Dispersion Relation
@@ -164,14 +147,14 @@ DESCRIPTION:We provide a simple derivation of the conformal dispersion rela
  from its double discontinuity. We exhibit a hidden conformal symmetry whic
  h explains the appearance of the "magic variable" x as a simple cross-rati
  o\, built from four physical cross-ratios. We also introduce a regulator i
- n the double discontinuity operation and t\nhttps://indico.math.cnrs.fr/ev
- ent/17474/
+ n the double discontinuity operation and…\nhttps://indico.math.cnrs.fr/e
+ vent/17474/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17474/
 END:VEVENT
 BEGIN:VEVENT
 UID:18975d08334d@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261019T143000
 DTEND;TZID=Europe/Paris:20261019T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -180,14 +163,14 @@ DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  approach to 3D CFTs. I will first elucidate its fundamental concepts and t
  hen dive into illustrative examples\, including the 3D Ising transition\, 
  fermionic CFTs\, and Chern-Simons matter theories. I will comment on the p
- otential theoretical direction in understandin\nhttps://indico.math.cnrs.f
- r/event/17105/
+ otential theoretical direction in…\nhttps://indico.math.cnrs.fr/event/17
+ 105/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17105/
 END:VEVENT
 BEGIN:VEVENT
 UID:2b34d5802175@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261022T110000
 DTEND;TZID=Europe/Paris:20261022T123000
 SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
@@ -197,14 +180,14 @@ DESCRIPTION:Séminaire de géométrie arithmétique In 1952\, Mordell erron
   points for any G ∈ ℤ [x\,y]. I will discuss a classification for fini
  teness and Zariski density of (positive) integral points on these log K3 s
  urfaces when the coefficients of G are non-negative. This combines a dynam
- ical argument proposed by Mordell\, the theory of gen\nhttps://indico.math
- .cnrs.fr/event/17461/
+ ical argument proposed by Mordell\, the theory of…\nhttps://indico.math.
+ cnrs.fr/event/17461/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17461/
 END:VEVENT
 BEGIN:VEVENT
 UID:629e6be59db5@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261022T143000
 DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -213,14 +196,14 @@ DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  approach to 3D CFTs. I will first elucidate its fundamental concepts and t
  hen dive into illustrative examples\, including the 3D Ising transition\, 
  fermionic CFTs\, and Chern-Simons matter theories. I will comment on the p
- otential theoretical direction in understandin\nhttps://indico.math.cnrs.f
- r/event/17106/
+ otential theoretical direction in…\nhttps://indico.math.cnrs.fr/event/17
+ 106/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -229,14 +212,14 @@ DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  approach to 3D CFTs. I will first elucidate its fundamental concepts and t
  hen dive into illustrative examples\, including the 3D Ising transition\, 
  fermionic CFTs\, and Chern-Simons matter theories. I will comment on the p
- otential theoretical direction in understandin\nhttps://indico.math.cnrs.f
- r/event/17107/
+ otential theoretical direction in…\nhttps://indico.math.cnrs.fr/event/17
+ 107/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -245,14 +228,14 @@ DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
  approach to 3D CFTs. I will first elucidate its fundamental concepts and t
  hen dive into illustrative examples\, including the 3D Ising transition\, 
  fermionic CFTs\, and Chern-Simons matter theories. I will comment on the p
- otential theoretical direction in understandin\nhttps://indico.math.cnrs.f
- r/event/17108/
+ otential theoretical direction in…\nhttps://indico.math.cnrs.fr/event/17
+ 108/
 LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -261,14 +244,14 @@ DESCRIPTION:XMath Physics Day is a one-day workshop bringing together early
  year gathering at Laboratoire de Mathématiques d'Orsay (LMO). The program
  me will feature talks on a range of topics\, including resurgence\, topolo
  gical strings\, and scattering amplitudes\, with ample time for discussion
- . Organisers : Veronica Fantini (veronica.fant\nhttps://indico.math.cnrs.f
- r/event/17422/
+ . Organisers : Veronica Fantini…\nhttps://indico.math.cnrs.fr/event/1742
+ 2/
 LOCATION:Laboratoire de Mathématiques d'Orsay
 URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes
@@ -278,8 +261,8 @@ DESCRIPTION:French-Japanese Conference on Arithmetic Geometry in Honor of T
  d James Simons Conference Center How to get to IHES This conference\, whic
  h is part of a long-standing tradition of French-Japanese collaboration in
   arithmetic geometry\, will honor two leading figures of this partnership:
-  Professor Takeshi Saito \, on the occasion o\nhttps://indico.math.cnrs.fr
- /event/15993/
+  Professor Takeshi Saito \, on the occasion…\nhttps://indico.math.cnrs.f
+ r/event/15993/
 LOCATION:Le Bois-Marie
 URL:https://indico.math.cnrs.fr/event/15993/
 END:VEVENT

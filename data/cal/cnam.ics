@@ -25,14 +25,29 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:b7bbdc6db79c@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261007T090000
 DTEND;TZID=Europe/Paris:20261007T110000
 SUMMARY:ASSTI: Transformer pour prospérer dans un monde durable
 DESCRIPTION:https://www.cnam.fr/actualites/recherche-innovation/agenda-actu
- s/assti-transformer-pour-prosperer-dans-un-monde-durable
+ s/assti-transformer-pour-prosperer-dans-un-monde-durable-1
 LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
 URL:https://www.cnam.fr/actualites/recherche-innovation/agenda-actus/assti-
- transformer-pour-prosperer-dans-un-monde-durable
+ transformer-pour-prosperer-dans-un-monde-durable-1
+END:VEVENT
+BEGIN:VEVENT
+UID:ff8f2e6a02fc@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:Le Cnam accueille le workshop international ARCANE sur la résistan
+ ce aux antimicrobiens
+DESCRIPTION:https://www.cnam.fr/actualites/recherche-innovation/agenda-actu
+ s/le-cnam-accueille-le-workshop-international-arcane-sur-la-resistance-aux
+ -antimicrobiens
+LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
+URL:https://www.cnam.fr/actualites/recherche-innovation/agenda-actus/le-cna
+ m-accueille-le-workshop-international-arcane-sur-la-resistance-aux-antimic
+ robiens
 END:VEVENT
 END:VCALENDAR

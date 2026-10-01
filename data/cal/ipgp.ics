@@ -24,18 +24,73 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3db524fe1bca@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;TZID=Europe/Paris:20260930T110000
-DTEND;TZID=Europe/Paris:20260930T130000
-SUMMARY:Subduction zone heterogeneities and the distribution of fluids cont
- rolling the occurrence of seismicity
-DESCRIPTION:Séminaires Géosciences Marines\nhttps://www.ipgp.fr/actus-et-
- agenda/agenda/seminaires/subduction-zone-heterogeneities-and-the-distribut
- ion-of-fluids-controlling-the-occurrence-of-seismicity/
+UID:f364af9ef1ce@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261001T093000
+DTEND;TZID=Europe/Paris:20261001T113000
+SUMMARY:Semi-convective planetary cores
+DESCRIPTION:Soutenances de thèses\nhttps://www.ipgp.fr/actus-et-agenda/age
+ nda/seminaires/semi-convective-planetary-cores/
 LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/subduction-zone-h
- eterogeneities-and-the-distribution-of-fluids-controlling-the-occurrence-o
- f-seismicity/
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/semi-convective-p
+ lanetary-cores/
+END:VEVENT
+BEGIN:VEVENT
+UID:0237bedbf359@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261002T140000
+DTEND;TZID=Europe/Paris:20261002T160000
+SUMMARY:Morphodynamique dunaire en présence de végétation et de cohésio
+ n
+DESCRIPTION:Soutenances de thèses\nhttps://www.ipgp.fr/actus-et-agenda/age
+ nda/seminaires/morphodynamique-dunaire-en-presence-de-vegetation-et-de-coh
+ esion/
+LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/morphodynamique-d
+ unaire-en-presence-de-vegetation-et-de-cohesion/
+END:VEVENT
+BEGIN:VEVENT
+UID:f51d9099e8b8@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261006T140000
+DTEND;TZID=Europe/Paris:20261006T160000
+SUMMARY:Tracing Atmospheric Oxidation from the Present to the Deep Past Usi
+ ng Oxygen and Sulfur Isotope Anomalies
+DESCRIPTION:Séminaires thème Origines\nhttps://www.ipgp.fr/actus-et-agend
+ a/agenda/seminaires/tracing-atmospheric-oxidation-from-the-present-to-the-
+ deep-past-using-oxygen-and-sulfur-isotope-anomalies/
+LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/tracing-atmospher
+ ic-oxidation-from-the-present-to-the-deep-past-using-oxygen-and-sulfur-iso
+ tope-anomalies/
+END:VEVENT
+BEGIN:VEVENT
+UID:03854c5ed5ea@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261006T160000
+DTEND;TZID=Europe/Paris:20261006T180000
+SUMMARY:Inelastic Processes in the Source Volume Modulates High-Frequency G
+ round Motions by Coupling Static Stress Drop and Fracture Energy
+DESCRIPTION:Séminaires de Sismologie\nhttps://www.ipgp.fr/actus-et-agenda/
+ agenda/seminaires/inelastic-processes-in-the-source-volume-modulates-high-
+ frequency-ground-motions-by-coupling-static-stress-drop-and-fracture-energ
+ y/
+LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/inelastic-process
+ es-in-the-source-volume-modulates-high-frequency-ground-motions-by-couplin
+ g-static-stress-drop-and-fracture-energy/
+END:VEVENT
+BEGIN:VEVENT
+UID:d50b6be27d66@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261013T110000
+DTEND;TZID=Europe/Paris:20261013T130000
+SUMMARY:The Organisation of Barchan Dune Systems Across Scales
+DESCRIPTION:Séminaires Dynamique des fluides géologiques\nhttps://www.ipg
+ p.fr/actus-et-agenda/agenda/seminaires/the-organisation-of-barchan-dune-sy
+ stems-across-scales/
+LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/the-organisation-
+ of-barchan-dune-systems-across-scales/
 END:VEVENT
 END:VCALENDAR

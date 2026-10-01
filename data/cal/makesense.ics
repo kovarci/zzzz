@@ -24,40 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ff721d0095d3@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;TZID=Europe/Paris:20260930T190000
-DTEND;TZID=Europe/Paris:20260930T213000
-SUMMARY:Cercle de parole Nayoki
-DESCRIPTION:Organisé par Maison de la Conversation — Un espace bienveill
- ant d’échange et d’écoute pour partager\, questionner et se connecte
- r aux autres en profondeur.Un moment d’échange et de partage pour crois
- er nos regards sur les sujets qui façonnent nos vies et nous éprouvent d
- ifféremmen\nhttps://chiche.makesense.org/events/e/cercle-de-parole-nayoki
- -6a858dc26cd0e90008cf8f47
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/cercle-de-parole-nayoki-6a858dc26
- cd0e90008cf8f47
-END:VEVENT
-BEGIN:VEVENT
-UID:1b5f31e28210@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;TZID=Europe/Paris:20260930T190000
-DTEND;TZID=Europe/Paris:20260930T210000
-SUMMARY:PARLE M'EN ! La démocratie est un jeu
-DESCRIPTION:Organisé par Maison de la Conversation — PARLE M'EN propose 
- à un groupe de s’essayer à l’exercice du travail des lois. Au cours 
- d’une séance\, un peu spéciale\, à l'Assemblée\, les participant•e
- s tirent au sort leur rôle. En tant que député•e\, ministre\, lobbyis
- te ou journaliste\, ils et elle\nhttps://chiche.makesense.org/events/e/par
- le-men-la-democratie-est-un-jeu-6a8450416cd0e90008c89d29
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/parle-men-la-democratie-est-un-je
- u-6a8450416cd0e90008c89d29
-END:VEVENT
-BEGIN:VEVENT
 UID:7873091e5d85@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:IA\, le choc thermique
@@ -71,7 +39,7 @@ URL:https://chiche.makesense.org/events/e/ia-le-choc-thermique-6a9ed9328f56
 END:VEVENT
 BEGIN:VEVENT
 UID:2de6d366eda0@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261002T140000
 DTEND;TZID=Europe/Paris:20261002T160000
 SUMMARY:Atelier de création théâtrale à destination des femmes
@@ -87,7 +55,7 @@ URL:https://chiche.makesense.org/events/e/atelier-de-creation-theatrale-a-d
 END:VEVENT
 BEGIN:VEVENT
 UID:b94e49a8c615@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Formation à la facilitation graphique
@@ -102,7 +70,7 @@ URL:https://chiche.makesense.org/events/e/formation-a-la-facilitation-graph
 END:VEVENT
 BEGIN:VEVENT
 UID:7d8fcfaa0219@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
@@ -118,7 +86,7 @@ URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
 END:VEVENT
 BEGIN:VEVENT
 UID:08567294a4ed@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;TZID=Europe/Paris:20261005T193000
 DTEND;TZID=Europe/Paris:20261005T213000
 SUMMARY:Workshop Capoeira Angola
@@ -134,7 +102,7 @@ URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09b2
 END:VEVENT
 BEGIN:VEVENT
 UID:8d483f251afc@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Appel à candidature - Social Starter
@@ -146,5 +114,50 @@ DESCRIPTION:Organisé par Les Canaux — Le Social Starter\, c'est le progr
 LOCATION:6 Quai de la Seine\, 75019 Paris\, France
 URL:https://chiche.makesense.org/events/e/appel-a-candidature-social-starte
  r-6a842a5b476bed0008f56482
+END:VEVENT
+BEGIN:VEVENT
+UID:4d8768765c11@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Pro\, c'est l’
+ atelier pour réfléchir ensemble au métier qui te correspond !2h45 d’a
+ telier collectif pour : &\nhttps://chiche.makesense.org/events/e/reflechir
+ -au-metier-qui-me-correspond-paris-13e-6aa9328319fd1c00087ae80d
+LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
+URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
+ pond-paris-13e-6aa9328319fd1c00087ae80d
+END:VEVENT
+BEGIN:VEVENT
+UID:c71c7a9fff85@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261006T100000
+DTEND;TZID=Europe/Paris:20261006T180000
+SUMMARY:Près des yeux\, près du care
+DESCRIPTION:Organisé par Maison de la Conversation — L’équipe de Work
+  for Social vous convie à Près des yeux\, près du care\, un hackathon d
+ ’un genre un peu spécial. Une journée d’intelligence collective qui 
+ réunira des citoyen·nes\, des expert·es et des professionnel·les issu
+ ·es\nhttps://chiche.makesense.org/events/e/pres-des-yeux-pres-du-care-6aa
+ a8becca9188000758e18f
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/pres-des-yeux-pres-du-care-6aaa8b
+ ecca9188000758e18f
+END:VEVENT
+BEGIN:VEVENT
+UID:d2b6af05cbf8@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261006T170000
+DTEND;TZID=Europe/Paris:20261006T190000
+SUMMARY:Activ'Go - Réfléchir à la mise en œuvre de son projet entrepren
+ eurial 📍 Paris 19
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Go\, c’est l
+ ’atelier du parcours Activ’Entrepreneurs pour définir les besoins de 
+ son projet et trouver des opportunités pour passer de l’idée à l’ac
+ tion\nhttps://chiche.makesense.org/events
+LOCATION:Cité des Sciences et de l'Industrie\, 30 Av. Corentin Cariou\, 75
+ 019 Paris\, France
+URL:https://chiche.makesense.org/events
 END:VEVENT
 END:VCALENDAR

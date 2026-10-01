@@ -24,25 +24,25 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:39332b7ea582@paris-academique
-DTSTAMP:20260930T184522Z
-DTSTART;VALUE=DATE:20260929
-DTEND;VALUE=DATE:20260930
+UID:5dbb281730ed@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
 SUMMARY:Une collecte solidaire pour les étudiants en précarité
 DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
  limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
  our soutenir les étudiants en situation de précarité. Les dons seront r
  emis lors d’une distribution solidaire le jeudi 5 novembre\, à partir d
  e 17 h 30. Ils permettront aussi d’alimenter le service d’aide sociale
-  de la Vie étudiante\, qui pourra constituer des kits pour\nhttps://www.u
- niv-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
+  de la Vie étudiante\, qui pourra constituer des kits…\nhttps://www.uni
+ v-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
 LOCATION:DAPS – Campus de Villetaneuse
 URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
  s-en-precarite/
 END:VEVENT
 BEGIN:VEVENT
 UID:77a2b318e225@paris-academique
-DTSTAMP:20260930T184522Z
+DTSTAMP:20261001T104749Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:L’intelligence artificielle générative dans les pratiques de fo
@@ -52,11 +52,214 @@ DESCRIPTION:Déjà bien installée au cœur des débats publics et universi
  éthiques\, cognitives et environnementales de son usage\, mais aussi les 
  nouvelles possibilités qu’elle ouvre et les défis qu’elle soulève. 
  Pour les enseignants-chercheurs comme pour les personnels administratifs\,
-  elle peut apparaître comme un agent « facilitateur »\, notamme\nhttps:
- //www.univ-spn.fr/events/lintelligence-artificielle-generative-dans-les-pr
- atiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
+  elle peut apparaître comme un agent « facilitateur »…\nhttps://www.u
+ niv-spn.fr/events/lintelligence-artificielle-generative-dans-les-pratiques
+ -de-formation-et-dans-la-recherche-enjeux-et-defis/
 LOCATION:Amphi Claudine Hermann - Campus de Villetaneuse
 URL:https://www.univ-spn.fr/events/lintelligence-artificielle-generative-da
  ns-les-pratiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
+END:VEVENT
+BEGIN:VEVENT
+UID:8d590a546c78@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:Fête de la science 2026 : place aux « Saveurs savantes »
+DESCRIPTION:Du 5 au 9 octobre 2026\, l’Université Sorbonne Paris Nord pa
+ rticipe à la Fête de la science avec une programmation placée sous le t
+ hème « Saveurs savantes ». Pendant cinq jours\, conférences\, ateliers
+ \, stands\, expériences et spectacles permettront à tous les publics de 
+ découvrir les sciences autrement. Répartis sur les campus de Villetaneus
+ e\, Saint-Denis et Bobigny\, ainsi qu’à l’Hôpital d’enfants…\nht
+ tps://www.univ-spn.fr/events/fete-de-la-science-2026-place-aux-saveurs-sav
+ antes/
+LOCATION:Campus de Bobigny
+URL:https://www.univ-spn.fr/events/fete-de-la-science-2026-place-aux-saveur
+ s-savantes/
+END:VEVENT
+BEGIN:VEVENT
+UID:d64b421fc734@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261006T093000
+DTEND;TZID=Europe/Paris:20261006T123000
+SUMMARY:[Médiation scientifique] EfferveSens !
+DESCRIPTION:Réalisation et animation : Compagnie Les Atomes crochus Une gr
+ ande table avec un joyeux fatras de matériel en tout genre : c’est part
+ i pour une pincée de physique et un zeste de chimie au travers d’expér
+ iences inspirées de la diversité que l’on trouve à table… Sous un f
+ ormat très participatif\, un·e médiateur·ice invitera les participant
+ ·es à se questionner et à mettre leurs intuitions à l’épreuve.\nhtt
+ ps://www.univ-spn.fr/events/atelier-effervesens/
+LOCATION:Forum\, Campus de Villetaneuse
+URL:https://www.univ-spn.fr/events/atelier-effervesens/
+END:VEVENT
+BEGIN:VEVENT
+UID:17b272f1956d@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261006T170000
+DTEND;TZID=Europe/Paris:20261006T190000
+SUMMARY:Fabriquer la ville avec l’art et la culture
+DESCRIPTION:Pour la sixième année consécutive\, la MSH Paris Nord et Pla
+ ine Commune collaborent pour la publication d’un appel à projets de rec
+ herche commun Fabriquer la ville avec l’art et la culture ? ainsi que la
+  programmation d’un séminaire annuel réunissant chercheur·es\, acteur
+ ·rices pour réfléchir à la manière dont les projets culturels et les 
+ projets urbains sont dorénavant étroitement liés\, ici et…\nhttps://w
+ ww.univ-spn.fr/events/fabriquer-la-ville-avec-lart-et-la-culture/
+LOCATION:MSH Paris Nord
+URL:https://www.univ-spn.fr/events/fabriquer-la-ville-avec-lart-et-la-cultu
+ re/
+END:VEVENT
+BEGIN:VEVENT
+UID:7aa3e470eb69@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261009T122400
+DTEND;TZID=Europe/Paris:20261009T142400
+SUMMARY:[Médiation scientifique] La science autrement !
+DESCRIPTION:A l'occasion de la Fête de la Science 2026 sur les campus.Déc
+ ouvrez comment les scientifiques abordent la question du "bien-manger" Le 
+ principe de ce nouveau rendez-vous régulier du Service culturel est d’a
+ ccueillir le public de façon conviviale pour un temps d'échange avec un.
+ e scientifique qui parlera de son domaine de recherche de façon accessibl
+ e et passionnée\, le tout ponctué par les…\nhttps://www.univ-spn.fr/ev
+ ents/lascienceautrement-fetescience/
+LOCATION:Salle polyvalente – campus de Bobigny
+URL:https://www.univ-spn.fr/events/lascienceautrement-fetescience/
+END:VEVENT
+BEGIN:VEVENT
+UID:afd72a6cfb60@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261012T120000
+DTEND;TZID=Europe/Paris:20261012T130000
+SUMMARY:Étudiants internationaux : 5 journées pour prendre vos repères
+DESCRIPTION:Vous venez d’arriver à l’Université Sorbonne Paris Nord ?
+  Du 12 au 16 octobre 2026\, les journées d’accueil des étudiants inter
+ nationaux vous donnent l’occasion de découvrir les services de l’univ
+ ersité\, de rencontrer d’autres étudiants et de trouver des réponses 
+ concrètes à vos premières questions. Au programme : temps d’échange\
+ , ateliers et\, à Villetaneuse\, tournoi sportif. Saint-Denis · Lundi…
+ \nhttps://www.univ-spn.fr/events/etudiants-internationaux-5-journees-pour-
+ prendre-vos-reperes/
+LOCATION:Maison des étudiants (MDE) - Campus de Villetaneuse
+URL:https://www.univ-spn.fr/events/etudiants-internationaux-5-journees-pour
+ -prendre-vos-reperes/
+END:VEVENT
+BEGIN:VEVENT
+UID:36d8c8644d08@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261013T120000
+DTEND;TZID=Europe/Paris:20261013T140000
+SUMMARY:[Rencontre littéraire Texto] Beata Umubyeyi Mairesse
+DESCRIPTION:La solidarité des ébranlés (Camera obscura\, Julliard\, sept
+ embre 2026) Écrit à partir d'une photo de 2002\, où Nelson Mandela et l
+ e militant Ackie Achmat arborent la menton HIV Positive sur leurs t-shirt\
+ , ce récit de non-fiction relate les années de lutte en Afrique du Sud p
+ our l'accès aux traitements contre le SIDA\, puis le parcours de l'autric
+ e\, engagée dans plusieurs organisations humanitaires…\nhttps://www.uni
+ v-spn.fr/events/rencontre-litteraire-beata-umaymi-mairesse/
+LOCATION:La Chaufferie\, Université Sorbonne Paris Nord\, 99 avenue Jean-B
+ aptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/rencontre-litteraire-beata-umaymi-maires
+ se/
+END:VEVENT
+BEGIN:VEVENT
+UID:ebb09968e30e@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261013T200000
+DTEND;TZID=Europe/Paris:20261013T212500
+SUMMARY:[Danse] As we are
+DESCRIPTION:https://www.univ-spn.fr/events/danse-as-we-are/
+LOCATION:Théâtre de la Ville\, Université Sorbonne Paris Nord\, 99 avenu
+ e Jean-Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/danse-as-we-are/
+END:VEVENT
+BEGIN:VEVENT
+UID:d648f53dd3c2@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261015T123000
+DTEND;TZID=Europe/Paris:20261015T143000
+SUMMARY:[Cirque] Mauvais Joueurs
+DESCRIPTION:Par les apprentis de 1ère année de l'Académie Fratellini Cet
+ te pièce chorégraphique\, conçue pour les élèves de première année 
+ de l’Académie Fratellini\, est une exploration ludique\, physique et th
+ éâtrale des dynamiques de groupe\, de l’équilibre et de la résilienc
+ e à travers une réinterprétation audacieuse du jeu de la chaise musical
+ e. Avec le soutien financier de la CVEC du Crous de Créteil. Dans…\nhtt
+ ps://www.univ-spn.fr/events/cirque-mauvais-joueurs/
+LOCATION:Université Sorbonne Paris Nord\, 99 avenue Jean-Baptiste Clément
+ \, Villetaneuse
+URL:https://www.univ-spn.fr/events/cirque-mauvais-joueurs/
+END:VEVENT
+BEGIN:VEVENT
+UID:a064a32f983a@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261016T193000
+DTEND;TZID=Europe/Paris:20261016T203000
+SUMMARY:[Danse] Machine à spectacle
+DESCRIPTION:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
+LOCATION:Chaillot – Théâtre national de la Danse\, Université Sorbonne
+  Paris Nord\, 99 avenue Jean-Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
+END:VEVENT
+BEGIN:VEVENT
+UID:643997ff4482@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261017T100000
+DTEND;TZID=Europe/Paris:20261017T180000
+SUMMARY:Études\, métiers\, Parcoursup : rendez-vous à Villetaneuse
+DESCRIPTION:Comment choisir une formation\, comprendre Parcoursup ou envisa
+ ger une réorientation ? Le samedi 17 octobre 2026\, le campus de Villetan
+ euse de l’Université Sorbonne Paris Nord accueillera la première édit
+ ion du Salon de l’Étudiant en Seine-Saint-Denis\, de 10 h à 18 h. Lyc
+ éens\, étudiants et familles pourront y rencontrer des professionnels\, 
+ assister à des conférences et obtenir des conseils pour…\nhttps://www.
+ univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-villetaneuse/
+LOCATION:Forum\, Campus de Villetaneuse
+URL:https://www.univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-
+ villetaneuse/
+END:VEVENT
+BEGIN:VEVENT
+UID:3dc98be47f8a@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261021T123000
+DTEND;TZID=Europe/Paris:20261021T140000
+SUMMARY:[Événement – appel à participation] Open Mic
+DESCRIPTION:Animé par Sarah Ghoulmié (MC) + DJRetour cette année de l’
+ Open Mic made in Canal 93\, fameuse salle de Bobigny qui se déplace sur n
+ otre campus avec un nouveau duo MC/DJ\, la rappeuse et formatrice en éloq
+ uence Sarah Ghoulmié pour animer ce "micro ouvert". Le principe est de pe
+ rmettre aux étudiant·es qui le souhaitent de passer sur scène pour chan
+ ter un morceau de leur choix\, que ce soit leur compo…\nhttps://www.univ
+ -spn.fr/events/openmic-201026/
+LOCATION:Salle polyvalente – campus de Bobigny
+URL:https://www.univ-spn.fr/events/openmic-201026/
+END:VEVENT
+BEGIN:VEVENT
+UID:f819e3de9438@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261021T200000
+DTEND;TZID=Europe/Paris:20261021T213500
+SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
+DESCRIPTION:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-
+ juliette/
+LOCATION:Philharmonie de Paris
+URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
+ /
+END:VEVENT
+BEGIN:VEVENT
+UID:bf009bdcb936@paris-academique
+DTSTAMP:20261001T104749Z
+DTSTART;TZID=Europe/Paris:20261024T140000
+DTEND;TZID=Europe/Paris:20261024T180000
+SUMMARY:En direct de la bibliothèque
+DESCRIPTION:Vous vous intéressez aux métiers du livre et de l’édition\
+ , à la manière dont se construisent les projets éditoriaux ou souhaitez
+  simplement découvrir les coulisses de ce secteur ? L'université Sorbonn
+ e Paris Nord vous invite à venir rencontrer des professionnels de l’éd
+ ition lors d’un rendez-vous organisé à la BU Edgar Morin du campus de 
+ Villetaneuse. Le samedi 24 octobre\, la BU Edgar Morin…\nhttps://www.uni
+ v-spn.fr/events/en-direct-de-la-bibliotheque/
+LOCATION:B.U Edgar Morin Espace Le Kiosque Campus Villetaneuse
+URL:https://www.univ-spn.fr/events/en-direct-de-la-bibliotheque/
 END:VEVENT
 END:VCALENDAR
