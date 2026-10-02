@@ -2302,7 +2302,11 @@ def _sciencesconf_sitemap(known, *, window=1500, max_fetch=150):
         r = requests.get("https://portal.sciencesconf.org/data/sitemap/sitemap.xml",
                          headers=HEADERS, timeout=60)
         r.raise_for_status()
-        sites = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)[-window:]
+        # Depuis le 2/10/2026, le plan du site donne « x.sciencescall.org »,
+        # domaine qui ne répond pas : les colloques sont toujours sur
+        # « x.sciencesconf.org » (et le cache est indexé par ces adresses)
+        sites = [re.sub(r"\.sciencescall\.org\b", ".sciencesconf.org", u)
+                 for u in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)][-window:]
     except Exception as e:
         print(f"   [warn] sitemap Sciencesconf : {e}")
         return []
@@ -2330,7 +2334,15 @@ def _sciencesconf_sitemap(known, *, window=1500, max_fetch=150):
         cache[u] = entry
         fetched += 1
         time.sleep(0.2)
-    cache = {u: cache[u] for u in sites if u in cache}
+    # Les colloques sortis de la fenêtre quittent le cache — sauf si plus de la
+    # moitié disparaît d'un coup : plan du site changé (domaine), pas des
+    # colloques en moins. Le 2/10/2026, 1 472 entrées sur 1 474 avaient été
+    # jetées (60 colloques franciliens absents du passage du soir).
+    kept = {u: cache[u] for u in sites if u in cache}
+    if len(kept) >= len(cache) // 2:
+        cache = kept
+    else:
+        print(f"   [warn] plan du site Sciencesconf méconnaissable ({len(kept)}/{len(cache)} adresses connues) : cache gardé")
     try:
         SCIENCESCONF_CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")),
                                       encoding="utf-8")
