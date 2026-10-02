@@ -89,7 +89,11 @@ const TR = {
   sub_hint: ["Un abonnement se met à jour tout seul chaque jour : rien à retélécharger. Autre application : collez le lien dans « Ajouter un agenda par URL ».",
     "A subscription updates itself every day: nothing to download again. Other apps: paste the link into “Add calendar from URL”."],
   toast_geoloc_unavailable: ["Géolocalisation indisponible sur ce navigateur.", "Geolocation unavailable on this browser."],
-  toast_locate_error: ["Localisation impossible : {msg}", "Location failed: {msg}"],
+  // Message du navigateur (« User denied Geolocation ») remplacé : en anglais
+  // et sans dire quoi faire
+  toast_locate_denied: ["Position refusée : autorise la localisation pour ce site dans les réglages du navigateur.", "Location blocked: allow location for this site in your browser settings."],
+  toast_locate_timeout: ["Position introuvable à temps, réessaie dans un instant.", "Couldn't get your location in time, please try again."],
+  toast_locate_unavailable: ["Position indisponible sur cet appareil.", "Location unavailable on this device."],
   toast_not_found: ["Événement introuvable — il est peut-être terminé.", "Event not found — it may be over."],
 
 

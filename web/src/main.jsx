@@ -650,7 +650,9 @@ function App() {
     if (userPos) { setNear(true); return; }
     if (!navigator.geolocation) { notify(t("toast_geoloc_unavailable")); return; }
     setLocating(true);
-    navigator.geolocation.getCurrentPosition(p => { setUserPos({ lat: p.coords.latitude, lng: p.coords.longitude }); setNear(true); setLocating(false); }, err => { setLocating(false); notify(t("toast_locate_error", { msg: err.message })); });
+    navigator.geolocation.getCurrentPosition(p => { setUserPos({ lat: p.coords.latitude, lng: p.coords.longitude }); setNear(true); setLocating(false); }, err => { setLocating(false); notify(t(err.code === 1 ? "toast_locate_denied" : err.code === 3 ? "toast_locate_timeout" : "toast_locate_unavailable")); },
+      // Sans délai, certains ordinateurs sans service de localisation ne répondaient jamais
+      { timeout: 15000, maximumAge: 600000 });
   };
   const toggleHistory = () => { pendingScroll.current = history ? "agenda" : "top"; setHistory(h => !h); setView("list"); setNear(false); };
   const backToAgenda = () => { if (history) { pendingScroll.current = "agenda"; setHistory(false); } else goAgenda(); };
