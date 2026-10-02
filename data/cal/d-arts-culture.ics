@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:844b91b52363@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:24e édition du festival de cinéma Images mouvementées
@@ -38,7 +38,7 @@ URL:https://www.paris.fr/evenements/24e-edition-du-festival-de-cinema-image
 END:VEVENT
 BEGIN:VEVENT
 UID:2de6d366eda0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T140000
 DTEND;TZID=Europe/Paris:20261002T160000
 SUMMARY:Atelier de création théâtrale à destination des femmes
@@ -54,24 +54,24 @@ URL:https://chiche.makesense.org/events/e/atelier-de-creation-theatrale-a-d
 END:VEVENT
 BEGIN:VEVENT
 UID:d5a2bfeffae0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T153000
 DTEND;TZID=Europe/Paris:20261002T173000
 SUMMARY:Érasme en toutes lettres : présentation des Opera omnia d’Amste
  rdam
-DESCRIPTION:Note d’information de M. Jean-François Cottier \, sous le pa
- tronage de M. Pierre LAURENS et de Mme Nicole BÉRIOU : « Érasme en tout
- es lettres : présentation des Opera omnia d’Amsterdam. » Résumé La p
- ublication\, en 2026\, de l’édition critique des Paraphrases sur Matthi
- eu et Marc d’Érasme (1469-1536) m’offre l’occasion de présenter le
- s méthodes et les enjeux de l’édition contemporaine de ses Opera…\nh
- ttps://aibl.fr/seances/vendredi-2-octobre-2026/
+DESCRIPTION:Note d’information de M. Jean-François Cottier\, sous le pat
+ ronage de M. Pierre LAURENS et de Mme Nicole BÉRIOU : « Érasme en toute
+ s lettres : présentation des Opera omnia d’Amsterdam. » Résumé La pu
+ blication\, en 2026\, de l’édition critique des Paraphrases sur Matthie
+ u et Marc d’Érasme (1469-1536) m’offre l’occasion de présenter les
+  méthodes et les enjeux de l’édition contemporaine de ses Opera…\nht
+ tps://aibl.fr/seances/vendredi-2-octobre-2026/
 LOCATION:Institut de France\, 23 quai de Conti\, Paris 6e
 URL:https://aibl.fr/seances/vendredi-2-octobre-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:328629adb607@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T190000
 DTEND;TZID=Europe/Paris:20261002T210000
 SUMMARY:Marais d’Irak\, soif d’avenir
@@ -87,7 +87,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ma
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a2d7049c8b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T190000
 DTEND;TZID=Europe/Paris:20261002T210000
 SUMMARY:DANSE TON BONHEUR 🌟
@@ -98,7 +98,7 @@ URL:https://lu.ma/6yiiwq1a
 END:VEVENT
 BEGIN:VEVENT
 UID:6602b7987d98@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T193000
 DTEND;TZID=Europe/Paris:20261002T213000
 SUMMARY:🎸 Open Jam by Woodbrass #4
@@ -109,7 +109,7 @@ URL:https://lu.ma/avalon-z4v9
 END:VEVENT
 BEGIN:VEVENT
 UID:6348b69ac620@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T220000
 DTEND;TZID=Europe/Paris:20261002T230000
 SUMMARY:PARIS FASHION WEEK DINNER - PARTY
@@ -119,7 +119,7 @@ URL:https://lu.ma/7ie6k0xo
 END:VEVENT
 BEGIN:VEVENT
 UID:0a25bd4e4aa4@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T103000
 DTEND;TZID=Europe/Paris:20261003T123000
 SUMMARY:TOURNAGE Séquence Finale Documentaire LES RÉSISTANTES
@@ -128,20 +128,8 @@ LOCATION:Paris
 URL:https://lu.ma/5w45lyst
 END:VEVENT
 BEGIN:VEVENT
-UID:2ce43b7999ce@paris-academique
-DTSTAMP:20261002T102029Z
-DTSTART;TZID=Europe/Paris:20261003T140000
-DTEND;TZID=Europe/Paris:20261003T160000
-SUMMARY:Tsunami Trees
-DESCRIPTION:Conférence\nhttps://www.mcjp.fr/fr/la-mcjp/actualites/tsunami-
- trees
-LOCATION:Maison de la culture du Japon\, 101 bis quai Jacques Chirac\, Pari
- s 15e
-URL:https://www.mcjp.fr/fr/la-mcjp/actualites/tsunami-trees
-END:VEVENT
-BEGIN:VEVENT
 UID:50f27b3f00b3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T140000
 DTEND;TZID=Europe/Paris:20261003T143000
 SUMMARY:Journée spéciale autour des neurodivergences
@@ -153,8 +141,20 @@ URL:https://www.paris.fr/evenements/journee-speciale-autour-des-neurodiverg
  ences-125263
 END:VEVENT
 BEGIN:VEVENT
+UID:2ce43b7999ce@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261003T140000
+DTEND;TZID=Europe/Paris:20261003T160000
+SUMMARY:Tsunami Trees
+DESCRIPTION:Conférence\nhttps://www.mcjp.fr/fr/la-mcjp/actualites/tsunami-
+ trees
+LOCATION:Maison de la culture du Japon\, 101 bis quai Jacques Chirac\, Pari
+ s 15e
+URL:https://www.mcjp.fr/fr/la-mcjp/actualites/tsunami-trees
+END:VEVENT
+BEGIN:VEVENT
 UID:a1757d5a0c1e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T150000
 DTEND;TZID=Europe/Paris:20261003T210000
 SUMMARY:Falc en Fête ! Un festival pour découvrir le FALC sous toutes ses
@@ -170,7 +170,7 @@ URL:https://www.paris.fr/evenements/falc-en-fete-un-festival-pour-decouvrir
 END:VEVENT
 BEGIN:VEVENT
 UID:186d78d00fde@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T150000
 DTEND;TZID=Europe/Paris:20261003T163000
 SUMMARY:L'Intégrale #2 : Meredith Monk - On Behalf Of Nature
@@ -184,7 +184,7 @@ URL:https://www.paris.fr/evenements/l-integrale-2-meredith-monk-on-behalf-o
 END:VEVENT
 BEGIN:VEVENT
 UID:0deac7cbf8a5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T150000
 DTEND;TZID=Europe/Paris:20261003T170000
 SUMMARY:CALISTA CHOLEY - NEW WORKS AT MALRO
@@ -194,7 +194,7 @@ URL:https://lu.ma/kl9e3hwo
 END:VEVENT
 BEGIN:VEVENT
 UID:5eceaff4b376@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T160000
 DTEND;TZID=Europe/Paris:20261003T180000
 SUMMARY:AFRICA DAY - AVANT-PREMIÈRE SPINNERS
@@ -205,7 +205,7 @@ URL:https://lu.ma/fdj30y3f
 END:VEVENT
 BEGIN:VEVENT
 UID:01ea39fc5954@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T190000
 DTEND;TZID=Europe/Paris:20261003T210000
 SUMMARY:🎤 Comedy Club : Gwabi au Comptoir Avalon
@@ -216,7 +216,7 @@ URL:https://lu.ma/avalon-comedy-club-octobre-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:c96782678d03@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261003T193000
 DTEND;TZID=Europe/Paris:20261003T230000
 SUMMARY:Opéra Hamlet ✨
@@ -231,7 +231,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qfnK
 END:VEVENT
 BEGIN:VEVENT
 UID:5cd0c13c2a9f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261004T140000
 DTEND;TZID=Europe/Paris:20261004T160000
 SUMMARY:BALL PAINTING WORKSHOP ⚽🎨
@@ -241,7 +241,7 @@ URL:https://lu.ma/qtswm3vc
 END:VEVENT
 BEGIN:VEVENT
 UID:b225385c4e7c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261004T160000
 DTEND;TZID=Europe/Paris:20261004T180000
 SUMMARY:Members-only | Offline Reading Party & Book Swap 📚 | Le Père Ca
@@ -252,7 +252,7 @@ URL:https://lu.ma/4li0myxy
 END:VEVENT
 BEGIN:VEVENT
 UID:c998a2ae5696@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Semaines de sensibilisation et d'information à la santé mentale :
@@ -269,7 +269,7 @@ URL:https://www.paris.fr/evenements/semaines-de-sensibilisation-et-d-inform
 END:VEVENT
 BEGIN:VEVENT
 UID:4fe5607ca841@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261005T110000
 DTEND;TZID=Europe/Paris:20261005T130000
 SUMMARY:SYNC - Paris Private Sale October 5th
@@ -279,20 +279,20 @@ URL:https://lu.ma/qjle3lb3
 END:VEVENT
 BEGIN:VEVENT
 UID:e65857e3183e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261005T123000
 DTEND;TZID=Europe/Paris:20261005T143000
 SUMMARY:Les cartes du tarot enluminé Rothschild
-DESCRIPTION:par Kilian Laclavetine \, C2RMF\, et Victoria Fernandez-Masague
- r \, musée du Louvre\nhttps://www.louvre.fr/expositions-et-evenements/eve
- nements-activites/les-cartes-du-tarot-enlumine-rothschild
+DESCRIPTION:par Kilian Laclavetine\, C2RMF\, et Victoria Fernandez-Masaguer
+ \, musée du Louvre\nhttps://www.louvre.fr/expositions-et-evenements/evene
+ ments-activites/les-cartes-du-tarot-enlumine-rothschild
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
  s-cartes-du-tarot-enlumine-rothschild
 END:VEVENT
 BEGIN:VEVENT
 UID:f46c522fa127@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261005T183000
 DTEND;TZID=Europe/Paris:20261005T200000
 SUMMARY:Ce qui demeure vivant. Rencontres d’art contemporain
@@ -305,7 +305,7 @@ URL:https://www.inha.fr/agenda/ce-qui-demeure-vivant-rencontres-dart-contem
 END:VEVENT
 BEGIN:VEVENT
 UID:82c89cf78830@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261005T190000
 DTEND;TZID=Europe/Paris:20261005T210000
 SUMMARY:L'Œil pense — Résister par le geste
@@ -317,7 +317,7 @@ URL:https://www.mal217.org/fr/agenda/l-oeil-pense-copie-e0428449
 END:VEVENT
 BEGIN:VEVENT
 UID:adde0c39ef09@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Concert-sandwich 06/10/26
@@ -329,7 +329,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-06/1
 END:VEVENT
 BEGIN:VEVENT
 UID:7d3249815ac8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Prix de la mode du monde arabe | Masterclass
@@ -342,7 +342,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/prix-mode-du-mon
 END:VEVENT
 BEGIN:VEVENT
 UID:0e2676a68e2f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Masterclass dans le cadre du Prix de la mode
@@ -355,7 +355,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/masterclass-dans
 END:VEVENT
 BEGIN:VEVENT
 UID:c10c0bd346c2@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T110000
 DTEND;TZID=Europe/Paris:20261006T130000
 SUMMARY:SYNC - Paris Private Sale October 6th
@@ -365,7 +365,7 @@ URL:https://lu.ma/1mp2y6sd
 END:VEVENT
 BEGIN:VEVENT
 UID:3ed15f1bc8ed@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T124500
 DTEND;TZID=Europe/Paris:20261006T133000
 SUMMARY:Présentation de l’ouvrage de Damien Delille\, La carpe et le kim
@@ -380,7 +380,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-de-damien-delille-l
 END:VEVENT
 BEGIN:VEVENT
 UID:d473c36e53b0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T170000
 DTEND;TZID=Europe/Paris:20261006T190000
 SUMMARY:Spectacle "Sorcières"
@@ -393,7 +393,7 @@ URL:https://developpement-durable.pantheonsorbonne.fr/evenements/spectacle-
 END:VEVENT
 BEGIN:VEVENT
 UID:1405c9b148bb@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T170000
 DTEND;TZID=Europe/Paris:20261006T190000
 SUMMARY:Levantis Paris 2026
@@ -404,7 +404,7 @@ URL:https://lu.ma/9atbvt9q
 END:VEVENT
 BEGIN:VEVENT
 UID:c6ca22be1cd5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T181500
 DTEND;TZID=Europe/Paris:20261006T193000
 SUMMARY:Gaetano Donizetti\, manuscrit autographe du Concertino pour cor ang
@@ -418,7 +418,7 @@ URL:https://www.inha.fr/agenda/gaetano-donizetti-manuscrit-autographe-du-co
 END:VEVENT
 BEGIN:VEVENT
 UID:a40e54654e24@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T181500
 DTEND;TZID=Europe/Paris:20261006T193000
 SUMMARY:Gaetano Donizetti\, Concertino pour cor anglais et orchestre (conf
@@ -431,7 +431,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/tresors-de-richelie
 END:VEVENT
 BEGIN:VEVENT
 UID:5736d828158c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T183000
 DTEND;TZID=Europe/Paris:20261006T203000
 SUMMARY:La Vie de Galilée – Une pièce de Bertolt Brecht
@@ -444,7 +444,7 @@ URL:https://u-paris.fr/évènement/la-vie-de-galilee-une-piece-de-bertolt-b
 END:VEVENT
 BEGIN:VEVENT
 UID:652566379acf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T183000
 DTEND;TZID=Europe/Paris:20261006T203000
 SUMMARY:Déplacement du regard - La photographie japonaise de l’après-gu
@@ -457,7 +457,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/deplacement-du-regard
 END:VEVENT
 BEGIN:VEVENT
 UID:79652f7d1813@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T190000
 DTEND;TZID=Europe/Paris:20261006T210000
 SUMMARY:La guérison de l’âme : architecture et ambition du Kitāb al-Sh
@@ -471,7 +471,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/guerison-ame-arc
 END:VEVENT
 BEGIN:VEVENT
 UID:76ed576d865c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T190000
 DTEND;TZID=Europe/Paris:20261006T203000
 SUMMARY:Les facettes de l'art-thérapie : rencontre avec Anne-Marie Dubois\
@@ -496,7 +496,7 @@ URL:https://www.paris.fr/evenements/les-facettes-de-l-art-therapie-rencontr
 END:VEVENT
 BEGIN:VEVENT
 UID:0102eb86d9cf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T190000
 DTEND;TZID=Europe/Paris:20261006T210000
 SUMMARY:AI COULD NEVER: A Maraviya Salon for Creatives
@@ -506,7 +506,7 @@ URL:https://lu.ma/bvoyptnm
 END:VEVENT
 BEGIN:VEVENT
 UID:bda3ab025632@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T190000
 DTEND;TZID=Europe/Paris:20261006T210000
 SUMMARY:Débat Couvert\, Comment convaincre sans manipuler ? x Parle avec p
@@ -518,7 +518,7 @@ URL:https://lu.ma/ih05tra9
 END:VEVENT
 BEGIN:VEVENT
 UID:d16969d15525@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T193000
 DTEND;TZID=Europe/Paris:20261006T213000
 SUMMARY:Les couleurs de la tentation : photographies culinaires\, la couleu
@@ -535,7 +535,7 @@ URL:https://www.paris.fr/evenements/les-couleurs-de-la-tentation-photograph
 END:VEVENT
 BEGIN:VEVENT
 UID:95724b78dc78@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T193000
 DTEND;TZID=Europe/Paris:20261006T213000
 SUMMARY:HEILL Runway Show · Paris Fashion Week
@@ -546,7 +546,7 @@ URL:https://lu.ma/9rxgw179
 END:VEVENT
 BEGIN:VEVENT
 UID:30232ed9d58d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T140000
 DTEND;TZID=Europe/Paris:20261007T160000
 SUMMARY:AGORHA : formation à la recherche et à la consultation des ressou
@@ -560,7 +560,7 @@ URL:https://www.inha.fr/agenda/formation-agorha-ressources-prosopographique
 END:VEVENT
 BEGIN:VEVENT
 UID:ff9f05d4becc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T143000
 DTEND;TZID=Europe/Paris:20261007T183000
 SUMMARY:Réparer par l'art
@@ -574,7 +574,7 @@ URL:https://www.paris.fr/evenements/reparer-par-l-art-124157
 END:VEVENT
 BEGIN:VEVENT
 UID:3d7ba6c12d6a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T180000
 DTEND;TZID=Europe/Paris:20261007T200000
 SUMMARY:Invitation • Soirée d'ouverture ➨ Exposition-résidence "DIE &
@@ -586,7 +586,7 @@ URL:https://lu.ma/y4ctc9vg
 END:VEVENT
 BEGIN:VEVENT
 UID:c1ebc1008131@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T183000
 DTEND;TZID=Europe/Paris:20261007T203000
 SUMMARY:Vernissage BI Norwegian Business School x ESCP
@@ -596,7 +596,7 @@ URL:https://lu.ma/32949n1r
 END:VEVENT
 BEGIN:VEVENT
 UID:a84f874479e1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T190000
 DTEND;TZID=Europe/Paris:20261007T213000
 SUMMARY:Projection du film "Le chauffeur de l'Enfer"\, réalisé par Kullar
@@ -610,7 +610,7 @@ URL:https://www.inalco.fr/evenements/projection-du-film-le-chauffeur-de-len
 END:VEVENT
 BEGIN:VEVENT
 UID:8b03e691ecdf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T190000
 DTEND;TZID=Europe/Paris:20261007T204500
 SUMMARY:La nature\, une invention de peintres ?
@@ -625,7 +625,7 @@ URL:https://www.paris.fr/evenements/conference-la-peinture-est-elle-un-jeu-
 END:VEVENT
 BEGIN:VEVENT
 UID:ef9f1a00a9ce@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T190000
 DTEND;TZID=Europe/Paris:20261007T200000
 SUMMARY:Vers la tendresse : une rencontre avec l'association Safe Place
@@ -642,7 +642,7 @@ URL:https://www.paris.fr/evenements/vers-la-tendresse-une-rencontre-avec-l-
 END:VEVENT
 BEGIN:VEVENT
 UID:84723c549d01@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261007T193000
 DTEND;TZID=Europe/Paris:20261007T213000
 SUMMARY:CHERY LIVE
@@ -652,15 +652,15 @@ URL:https://lu.ma/l0z8n5lo
 END:VEVENT
 BEGIN:VEVENT
 UID:45687f8786fc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T123000
 DTEND;TZID=Europe/Paris:20261008T143000
 SUMMARY:Présentation d'exposition : "Sculpter la couleur. Chefs-d’œuvre
   du musée national de sculpture\, Valladolid"
-DESCRIPTION:à 12h30 par Valérie Carpentier et Alejandro Nuevo \, commissa
- ires\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites
- /presentation-d-exposition-sculpter-la-couleur-chefs-d-oeuvre-du-musee-nat
- ional-de-sculpture-valladolid
+DESCRIPTION:à 12h30 par Valérie Carpentier et Alejandro Nuevo\, commissai
+ res\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/
+ presentation-d-exposition-sculpter-la-couleur-chefs-d-oeuvre-du-musee-nati
+ onal-de-sculpture-valladolid
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
  esentation-d-exposition-sculpter-la-couleur-chefs-d-oeuvre-du-musee-nation
@@ -668,7 +668,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
 END:VEVENT
 BEGIN:VEVENT
 UID:9f265bae017a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T140000
 DTEND;TZID=Europe/Paris:20261008T163000
 SUMMARY:Hors-tout et débordements : démarches d’émancipation du medium
@@ -685,7 +685,7 @@ URL:https://www.item.ens.fr/aurele-crasson-item-ens-delphine-desveaux-colle
 END:VEVENT
 BEGIN:VEVENT
 UID:51ae87104b46@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T180000
 DTEND;TZID=Europe/Paris:20261008T200000
 SUMMARY:Le cinéma japonais a le goût du saké
@@ -698,7 +698,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/le-cinema-japonais-a-le-gout-
 END:VEVENT
 BEGIN:VEVENT
 UID:94c5df42a9bb@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T190000
 DTEND;TZID=Europe/Paris:20261008T210000
 SUMMARY:Qui choisit qui ? Les dessous du choix conjugal dans le monde arabe
@@ -711,7 +711,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/qui-choisit-qui-
 END:VEVENT
 BEGIN:VEVENT
 UID:a386bb4e814e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T190000
 DTEND;TZID=Europe/Paris:20261008T210000
 SUMMARY:Une conférence de Rafaël Ménard\, architecte et ingénieur
@@ -728,7 +728,7 @@ URL:https://www.paris.fr/evenements/une-conference-de-rafael-menard-archite
 END:VEVENT
 BEGIN:VEVENT
 UID:78fbc2cc3873@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T190000
 DTEND;TZID=Europe/Paris:20261008T210000
 SUMMARY:La fabrique des images : la photographie\, entre art et science - C
@@ -742,7 +742,7 @@ URL:https://www.mnhn.fr/fr/conference/la-fabrique-des-images-la-photographi
 END:VEVENT
 BEGIN:VEVENT
 UID:2599357a1afd@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T193000
 DTEND;TZID=Europe/Paris:20261008T213000
 SUMMARY:François Kollar\, un ouvrier du regard
@@ -757,7 +757,7 @@ URL:https://www.paris.fr/evenements/francois-kollar-un-ouvrier-du-regard-11
 END:VEVENT
 BEGIN:VEVENT
 UID:48ef192f987d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T193000
 DTEND;TZID=Europe/Paris:20261008T213000
 SUMMARY:Lancement "Etat partout\, justice nulle part"
@@ -767,7 +767,7 @@ URL:https://lu.ma/3hd5173a
 END:VEVENT
 BEGIN:VEVENT
 UID:0f0d098d3295@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261009T130000
 DTEND;TZID=Europe/Paris:20261009T150000
 SUMMARY:Projection du documentaire « Miroir\, Miroir » suivie d'un ciné 
@@ -785,7 +785,7 @@ URL:https://www.paris.fr/evenements/projection-du-documentaire-miroir-miroi
 END:VEVENT
 BEGIN:VEVENT
 UID:404529c36d55@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261009T183000
 DTEND;TZID=Europe/Paris:20261009T203000
 SUMMARY:Ango le desperado
@@ -797,7 +797,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/ango-le-desperado
 END:VEVENT
 BEGIN:VEVENT
 UID:053787e3e791@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T103000
 DTEND;TZID=Europe/Paris:20261010T130000
 SUMMARY:Festival Viva México - Masterclass de Fernando Eimbcke à la Sorbo
@@ -814,7 +814,7 @@ URL:https://www.paris.fr/evenements/masterclass-de-fernando-eimbcke-a-la-so
 END:VEVENT
 BEGIN:VEVENT
 UID:6974c842945d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T110000
 DTEND;TZID=Europe/Paris:20261010T130000
 SUMMARY:Returning to the Garden of the Heart - Retourner au Jardin du Cœur
@@ -824,7 +824,7 @@ URL:https://lu.ma/jiu28cfh
 END:VEVENT
 BEGIN:VEVENT
 UID:7dce9510dbfc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T144500
 DTEND;TZID=Europe/Paris:20261010T164500
 SUMMARY:Members-Only 💛 | Guided reflection in the Museum 🖼️ | World
@@ -836,7 +836,7 @@ URL:https://lu.ma/dm1ml8m9
 END:VEVENT
 BEGIN:VEVENT
 UID:731d8f3483a3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T150000
 DTEND;TZID=Europe/Paris:20261010T170000
 SUMMARY:SIGNISTRE : une conférence bilingue en LSF/FR sur le cinéma d'hor
@@ -850,7 +850,7 @@ URL:https://www.paris.fr/evenements/signistre-une-conference-bilingue-en-ls
 END:VEVENT
 BEGIN:VEVENT
 UID:0fe54d0ace0d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T150000
 DTEND;TZID=Europe/Paris:20261010T170000
 SUMMARY:Table ronde "Sciences et Design : à la rencontre du corail"
@@ -863,7 +863,7 @@ URL:https://www.paris.fr/evenements/table-ronde-sciences-et-design-a-la-ren
 END:VEVENT
 BEGIN:VEVENT
 UID:ff8235570979@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T160000
 DTEND;TZID=Europe/Paris:20261010T170000
 SUMMARY:Représentation de chants anciens et de danses du peuple paiwan de 
@@ -877,7 +877,7 @@ URL:https://www.inalco.fr/evenements/representation-de-chants-anciens-et-de
 END:VEVENT
 BEGIN:VEVENT
 UID:7f9cf2cc7815@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T160000
 DTEND;TZID=Europe/Paris:20261010T173000
 SUMMARY:Écoute musicale : Chansons de prison
@@ -893,7 +893,7 @@ URL:https://www.paris.fr/evenements/ecoute-musicale-chansons-de-prison-1149
 END:VEVENT
 BEGIN:VEVENT
 UID:f56487506c1b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261010T193000
 DTEND;TZID=Europe/Paris:20261010T213000
 SUMMARY:Movies & Martinis - Private Ciné-club x The Velvet Muse
@@ -904,7 +904,7 @@ URL:https://lu.ma/h4pthnms
 END:VEVENT
 BEGIN:VEVENT
 UID:f704ccf1245c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261011T150000
 DTEND;TZID=Europe/Paris:20261011T170000
 SUMMARY:La noce comme performance
@@ -917,7 +917,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/noce-comme-perfo
 END:VEVENT
 BEGIN:VEVENT
 UID:2f4e65888d33@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261011T150000
 DTEND;TZID=Europe/Paris:20261011T170000
 SUMMARY:Crée ta carte de tarot
@@ -928,7 +928,7 @@ URL:https://lu.ma/ftlpu45v
 END:VEVENT
 BEGIN:VEVENT
 UID:8ded007d8a96@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261011T170000
 DTEND;TZID=Europe/Paris:20261011T190000
 SUMMARY:PFW EVENT BY CLUB 20
@@ -938,7 +938,7 @@ URL:https://lu.ma/ozqfl6az
 END:VEVENT
 BEGIN:VEVENT
 UID:eb0a87c47923@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Dire le monde : quand les revues s’emparent du réel
@@ -948,8 +948,22 @@ LOCATION:Bpi\, Paris
 URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/dPmcgOi
 END:VEVENT
 BEGIN:VEVENT
+UID:2942e7d2de21@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:CYCLE SAINT FRANÇOIS / LITTERATURE / ALESSANDRO BARBERO / LES SEPT
+  VIES DE SAINT FRANÇOIS D’ASSISE
+DESCRIPTION:https://iicparigi.esteri.it/fr/gli_eventi/calendario/cycle-sain
+ t-francois-litterature-alessandro-barbero-les-sept-vies-de-saint-francois-
+ dassise/
+LOCATION:Institut culturel italien\, 50 rue de Varenne\, Paris 7e
+URL:https://iicparigi.esteri.it/fr/gli_eventi/calendario/cycle-saint-franco
+ is-litterature-alessandro-barbero-les-sept-vies-de-saint-francois-dassise/
+END:VEVENT
+BEGIN:VEVENT
 UID:8d1318c800e2@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261012T093000
 DTEND;TZID=Europe/Paris:20261012T120000
 SUMMARY:MASTERCLASSES DE MUSIQUE CARNATIQUE - Inde du Sud - Suryaprakash Cl
@@ -965,20 +979,20 @@ URL:https://www.paris.fr/evenements/masterclasses-de-musique-carnatique-ind
 END:VEVENT
 BEGIN:VEVENT
 UID:7b0c46b59863@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261012T123000
 DTEND;TZID=Europe/Paris:20261012T143000
 SUMMARY:Présentation de l'exposition "Zurbarán\, 1598 – 1664"
-DESCRIPTION:à 12h30 et 19h par Charlotte Chastel-Rousseau \, commissaire d
- e l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/evenements
- -activites/presentation-de-l-exposition-zurbaran-1598-1664
+DESCRIPTION:à 12h30 et 19h par Charlotte Chastel-Rousseau\, commissaire de
+  l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/evenements-
+ activites/presentation-de-l-exposition-zurbaran-1598-1664
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
  esentation-de-l-exposition-zurbaran-1598-1664
 END:VEVENT
 BEGIN:VEVENT
 UID:54c2e5411e34@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261012T133000
 DTEND;TZID=Europe/Paris:20261012T150000
 SUMMARY:Souths At Auction\, un projet au service des provenances
@@ -990,7 +1004,7 @@ URL:https://www.inha.fr/agenda/souths-at-auction-un-projet-au-service-des-p
 END:VEVENT
 BEGIN:VEVENT
 UID:94ba0ccffaa9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T113000
 DTEND;TZID=Europe/Paris:20261013T153000
 SUMMARY:Word with Women - Les femmes s'arrêtent le 13 octobre
@@ -1004,7 +1018,7 @@ URL:https://www.paris.fr/evenements/mardi-13-octobre-les-femmes-s-arretent-
 END:VEVENT
 BEGIN:VEVENT
 UID:8c3c6b85f71d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T124500
 DTEND;TZID=Europe/Paris:20261013T133000
 SUMMARY:Présentation de l’ouvrage de Fabien Lacouture\, Federer (2026)
@@ -1017,7 +1031,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-de-fabien-lacouture
 END:VEVENT
 BEGIN:VEVENT
 UID:b9ef045d236d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T183000
 DTEND;TZID=Europe/Paris:20261013T200000
 SUMMARY:Les Débats de l’INHA : Au-delà de la censure\, comment penser l
@@ -1032,7 +1046,7 @@ URL:https://www.inha.fr/agenda/les-debats-de-linha-au-dela-de-la-censure-co
 END:VEVENT
 BEGIN:VEVENT
 UID:ebb09968e30e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T200000
 DTEND;TZID=Europe/Paris:20261013T212500
 SUMMARY:[Danse] As we are
@@ -1043,7 +1057,7 @@ URL:https://www.univ-spn.fr/events/danse-as-we-are/
 END:VEVENT
 BEGIN:VEVENT
 UID:b766259e5a13@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T223000
 DTEND;TZID=Europe/Paris:20261013T233000
 SUMMARY:Projection du film de Raphaël Pillosio\, Les mots qu’elles euren
@@ -1057,7 +1071,7 @@ URL:https://www.parisnanterre.fr/agenda/projection-du-film-de-raphael-pillo
 END:VEVENT
 BEGIN:VEVENT
 UID:c9147a2f351d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T100000
 DTEND;TZID=Europe/Paris:20261014T120000
 SUMMARY:Focus LA DIRECTION D’ACTEUR·RICE
@@ -1072,7 +1086,7 @@ URL:https://www.paris.fr/evenements/focus-la-direction-d-acteur-rice-125232
 END:VEVENT
 BEGIN:VEVENT
 UID:7297204a7a5d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T123000
 DTEND;TZID=Europe/Paris:20261014T140000
 SUMMARY:Photographie\, théâtre et théâtralisation des prises de vue au 
@@ -1086,7 +1100,7 @@ URL:https://www.bnf.fr/fr/agenda/photographie-theatre-et-theatralisation-de
 END:VEVENT
 BEGIN:VEVENT
 UID:00c70d9f7149@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T123000
 DTEND;TZID=Europe/Paris:20261014T143000
 SUMMARY:Vulci\, grande cité de l'Étrurie
@@ -1099,7 +1113,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/vu
 END:VEVENT
 BEGIN:VEVENT
 UID:dc95e66c96ea@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T180000
 DTEND;TZID=Europe/Paris:20261014T200000
 SUMMARY:[Erasmus Days] Théâtre sur l’inclusivité in english !
@@ -1112,7 +1126,7 @@ URL:https://u-paris.fr/évènement/erasmus-days-theatre-sur-linclusivite-in
 END:VEVENT
 BEGIN:VEVENT
 UID:d820b46d1e51@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T180000
 DTEND;TZID=Europe/Paris:20261014T200000
 SUMMARY:Présentation du livre "Design du peu" de Sophie Fétro
@@ -1125,7 +1139,7 @@ URL:https://institut-acte.pantheonsorbonne.fr/evenements/presentation-du-li
 END:VEVENT
 BEGIN:VEVENT
 UID:a8e1fa38a054@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T180000
 DTEND;TZID=Europe/Paris:20261014T200000
 SUMMARY:Prix Olga Fradiss 2026 : Une passion italienne \; Les Jacquemart-An
@@ -1140,7 +1154,7 @@ URL:https://www.inha.fr/agenda/prix-olga-fradiss-2026-une-passion-italienne
 END:VEVENT
 BEGIN:VEVENT
 UID:df598bf0140b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Bénédicte Savoy en conversation avec Pierre Rosenberg
@@ -1153,7 +1167,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/be
 END:VEVENT
 BEGIN:VEVENT
 UID:46e82bae93c2@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T213000
 SUMMARY:Rencontre avec le compositeur Riccardo Giagni et projection du docu
@@ -1171,7 +1185,7 @@ URL:https://www.paris.fr/evenements/rencontre-avec-le-compositeur-riccardo-
 END:VEVENT
 BEGIN:VEVENT
 UID:2d559004d3f1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Soirée de lancement du nouveau livre d'Ilian Moundib
@@ -1182,7 +1196,7 @@ URL:https://lu.ma/ym7dg647
 END:VEVENT
 BEGIN:VEVENT
 UID:5b47b809b8b0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T193000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:CONCERT DE MUSIQUE CARNATIQUE - Inde du Sud - Suryaprakash Classica
@@ -1198,7 +1212,7 @@ URL:https://www.paris.fr/evenements/concert-de-musique-carnatique-inde-du-s
 END:VEVENT
 BEGIN:VEVENT
 UID:69951009d8cf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Longues durées et disruptions : temporalités des mutations dans l
@@ -1215,7 +1229,7 @@ URL:https://temic.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:bbdd191604a9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Anne Masse
@@ -1226,7 +1240,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/5v8zLY2
 END:VEVENT
 BEGIN:VEVENT
 UID:6aada8e4c9cd@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Le pari de l’œuvre de Dante : La Divine Comédie
@@ -1237,7 +1251,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/zNm6gXJ
 END:VEVENT
 BEGIN:VEVENT
 UID:97dc2962ada5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T160000
 DTEND;TZID=Europe/Paris:20261015T180000
 SUMMARY:Récentes découvertes à Philadelphie (Fayoum) : un lot de figurin
@@ -1253,7 +1267,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/re
 END:VEVENT
 BEGIN:VEVENT
 UID:e1b395327385@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T180000
 DTEND;TZID=Europe/Paris:20261015T190000
 SUMMARY:A quoi donc sert la conscience ?
@@ -1264,7 +1278,7 @@ URL:https://institutducerveau.org/agenda/quoi-donc-sert-conscience
 END:VEVENT
 BEGIN:VEVENT
 UID:45146763c7bd@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Tenter l'art\, soigner le soin
@@ -1277,7 +1291,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/tenter-art-soign
 END:VEVENT
 BEGIN:VEVENT
 UID:0f6dbcd65a38@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T203000
 SUMMARY:Penser le Présent avec Josèfa Ntjam
@@ -1290,7 +1304,7 @@ URL:https://beauxartsparis.fr/fr/evenement/penser-le-present-avec-josefa-nt
 END:VEVENT
 BEGIN:VEVENT
 UID:1917c7c97847@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Le grand absent : rencontre avec Jean-Yves Augros
@@ -1306,7 +1320,7 @@ URL:https://www.paris.fr/evenements/le-grand-absent-rencontre-avec-jean-yve
 END:VEVENT
 BEGIN:VEVENT
 UID:3889f4472e07@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T200000
 DTEND;TZID=Europe/Paris:20261015T213000
 SUMMARY:Jean-Marc Luisada – Mozart\, Intégrale des sonates pour piano\, 
@@ -1319,7 +1333,7 @@ URL:https://www.collegedesbernardins.fr/agenda/mozart-integrale-des-sonates
 END:VEVENT
 BEGIN:VEVENT
 UID:ff3e467f37f2@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T200000
 DTEND;TZID=Europe/Paris:20261015T220000
 SUMMARY:Cinq Maîtres en Perspective: Edvard Munch avec Pierre Wat - Galeri
@@ -1330,7 +1344,7 @@ URL:https://lu.ma/6wz73lsi
 END:VEVENT
 BEGIN:VEVENT
 UID:177d55334a2d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Festival Musique 2026 « Quatuor à cordes »
@@ -1340,7 +1354,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes
 END:VEVENT
 BEGIN:VEVENT
 UID:92d101888c6b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T090000
 DTEND;TZID=Europe/Paris:20261016T110000
 SUMMARY:Haptic Encounters: Touch\, Art and Gestures of Care Symposium
@@ -1353,22 +1367,22 @@ URL:https://institut-acte.pantheonsorbonne.fr/evenements/haptic-encounters-
 END:VEVENT
 BEGIN:VEVENT
 UID:d8e1de72ce63@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T123000
 DTEND;TZID=Europe/Paris:20261016T143000
 SUMMARY:Scénographier les expositions « Zurbarán » et « Sculpter la co
  uleur »
-DESCRIPTION:à 12h30 Avec Valérie Carpentier \, Charlotte Chastel-Rousseau
-  \, musée du Louvre\, Anne Lebas et Héloïse Lévêque \, scénographes\
- nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/scen
- ographier-les-expositions-zurbaran-et-sculpter-la-couleur
+DESCRIPTION:à 12h30 Avec Valérie Carpentier\, Charlotte Chastel-Rousseau\
+ , musée du Louvre\, Anne Lebas et Héloïse Lévêque\, scénographes\nht
+ tps://www.louvre.fr/expositions-et-evenements/evenements-activites/scenogr
+ aphier-les-expositions-zurbaran-et-sculpter-la-couleur
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/sc
  enographier-les-expositions-zurbaran-et-sculpter-la-couleur
 END:VEVENT
 BEGIN:VEVENT
 UID:eb51375fe13d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T180000
 DTEND;TZID=Europe/Paris:20261016T200000
 SUMMARY:Design graphique au Japon
@@ -1380,7 +1394,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/design-graphique-au-japon
 END:VEVENT
 BEGIN:VEVENT
 UID:326b4fb73644@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T185000
 DTEND;TZID=Europe/Paris:20261016T200000
 SUMMARY:Conférence : "Démolir\, préserver\, adapter..?"
@@ -1394,7 +1408,7 @@ URL:https://www.paris.fr/evenements/conference-demolir-preserver-adapter-12
 END:VEVENT
 BEGIN:VEVENT
 UID:b837ab5575b7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T185000
 DTEND;TZID=Europe/Paris:20261016T200000
 SUMMARY:Débats en échos à la reconstruction de Notre-Dame de Paris
@@ -1408,7 +1422,7 @@ URL:https://www.paris.fr/evenements/debats-en-echos-a-la-reconstruction-de-
 END:VEVENT
 BEGIN:VEVENT
 UID:a064a32f983a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T193000
 DTEND;TZID=Europe/Paris:20261016T203000
 SUMMARY:[Danse] Machine à spectacle
@@ -1419,7 +1433,7 @@ URL:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
 END:VEVENT
 BEGIN:VEVENT
 UID:f32a6c4a2ba3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261017T100000
 DTEND;TZID=Europe/Paris:20261017T120000
 SUMMARY:AI × 3D Builders Meetup & Demo Day — Paris | by Tripo AI
@@ -1430,7 +1444,7 @@ URL:https://lu.ma/wtvbpmmk
 END:VEVENT
 BEGIN:VEVENT
 UID:d378f0ddcc9d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261017T100000
 DTEND;TZID=Europe/Paris:20261017T120000
 SUMMARY:✍️ Offline Writing Party | Le Kawaa du Lucernaire | Paris 6th
@@ -1441,7 +1455,7 @@ URL:https://lu.ma/r5n227sj
 END:VEVENT
 BEGIN:VEVENT
 UID:6e1cf253c665@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261017T110000
 DTEND;TZID=Europe/Paris:20261017T130000
 SUMMARY:Paris Pop Up
@@ -1451,7 +1465,7 @@ URL:https://lu.ma/jj71hxdv
 END:VEVENT
 BEGIN:VEVENT
 UID:4bdfb9e7396b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261017T210000
 DTEND;TZID=Europe/Paris:20261017T230000
 SUMMARY:Jazz à la Cité
@@ -1462,7 +1476,7 @@ URL:https://www.parisnanterre.fr/agenda/jazz-a-la-cite
 END:VEVENT
 BEGIN:VEVENT
 UID:3d233f865d29@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261018T160000
 DTEND;TZID=Europe/Paris:20261018T180000
 SUMMARY:Le Café de Kore - Atelier de Maedup
@@ -1472,7 +1486,7 @@ URL:https://lu.ma/eyrkxsll
 END:VEVENT
 BEGIN:VEVENT
 UID:c39124f93767@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Concert-sandwich 20/10/26
@@ -1484,7 +1498,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-20/1
 END:VEVENT
 BEGIN:VEVENT
 UID:4ae7315a00f0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Rencontre exceptionnelle entre Alain Gomis et Nell Irvin Painter
@@ -1495,7 +1509,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/5atoWYI
 END:VEVENT
 BEGIN:VEVENT
 UID:1fb986609034@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:AFTER Project Room : la jeune création de l'École des Arts Décor
@@ -1508,7 +1522,7 @@ URL:https://psl.eu/agenda/after-project-room-la-jeune-creation-de-lecole-de
 END:VEVENT
 BEGIN:VEVENT
 UID:53306ea8c402@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261020T170000
 DTEND;TZID=Europe/Paris:20261020T183000
 SUMMARY:Coulisses de l’exposition "Premières nations..."
@@ -1524,7 +1538,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:3901337cf42a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261020T180000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:La Violence en héritage
@@ -1535,7 +1549,7 @@ URL:https://lu.ma/y2pk826c
 END:VEVENT
 BEGIN:VEVENT
 UID:d3fa7f52ece3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261020T183000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:Chaillot invite POUSH
@@ -1551,7 +1565,7 @@ URL:https://www.paris.fr/evenements/chaillot-invite-poush-112361
 END:VEVENT
 BEGIN:VEVENT
 UID:d19909de91f5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261020T190000
 DTEND;TZID=Europe/Paris:20261020T210000
 SUMMARY:Projection du film documentaire "Hair\, Paper\, Water..."
@@ -1564,7 +1578,7 @@ URL:https://www.inalco.fr/evenements/projection-du-film-documentaire-hair-p
 END:VEVENT
 BEGIN:VEVENT
 UID:764a6687c83f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261020T190000
 DTEND;TZID=Europe/Paris:20261020T210000
 SUMMARY:Vernissage HETEROTOPIES
@@ -1574,7 +1588,7 @@ URL:https://lu.ma/bm8bpr0i
 END:VEVENT
 BEGIN:VEVENT
 UID:641788342ab3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Jacques Herzog
@@ -1585,7 +1599,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/OQuqkO6
 END:VEVENT
 BEGIN:VEVENT
 UID:85fdfc17ead7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261021T150000
 DTEND;TZID=Europe/Paris:20261021T170000
 SUMMARY:UPSCALE DAY PARIS
@@ -1595,7 +1609,7 @@ URL:https://lu.ma/upscaledayparis
 END:VEVENT
 BEGIN:VEVENT
 UID:b02cc1f44da5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261021T183000
 DTEND;TZID=Europe/Paris:20261021T203000
 SUMMARY:Breaking Fast
@@ -1606,23 +1620,23 @@ URL:https://lu.ma/ypbm8diy
 END:VEVENT
 BEGIN:VEVENT
 UID:cecf10f35cd0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261021T190000
 DTEND;TZID=Europe/Paris:20261021T210000
 SUMMARY:Angélica Liddell : « El barroco en la sangre »
 DESCRIPTION:à 19h Figure incontournable du théâtre contemporain\, la met
- teuse en scène espagnole Angélica Liddell \, partage avec le public sa p
- assion pour la peinture de Zurbarán et le baroque espagnol à travers un 
- dialogue animé par Olivia Gesbert\, rédactrice en chef de la NRF\, Galli
- mard.\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activite
- s/angelica-liddell-el-barroco-en-la-sangre
+ teuse en scène espagnole Angélica Liddell\, partage avec le public sa pa
+ ssion pour la peinture de Zurbarán et le baroque espagnol à travers un d
+ ialogue animé par Olivia Gesbert\, rédactrice en chef de la NRF\, Gallim
+ ard.\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites
+ /angelica-liddell-el-barroco-en-la-sangre
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/an
  gelica-liddell-el-barroco-en-la-sangre
 END:VEVENT
 BEGIN:VEVENT
 UID:f819e3de9438@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261021T200000
 DTEND;TZID=Europe/Paris:20261021T213500
 SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
@@ -1634,7 +1648,7 @@ URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
 END:VEVENT
 BEGIN:VEVENT
 UID:b89e486ad0f9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Pariscience\, le festival international du film scientifique
@@ -1651,7 +1665,7 @@ URL:https://www.paris.fr/evenements/pariscience-le-festival-international-d
 END:VEVENT
 BEGIN:VEVENT
 UID:90b37ea067b3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261022T183000
 DTEND;TZID=Europe/Paris:20261022T203000
 SUMMARY:Fluxus et le Japon
@@ -1663,7 +1677,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/fluxus-et-le-japon
 END:VEVENT
 BEGIN:VEVENT
 UID:52680a25bc7c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261023T083000
 DTEND;TZID=Europe/Paris:20261023T103000
 SUMMARY:The Art of Investing
@@ -1673,7 +1687,7 @@ URL:https://lu.ma/mytuvch1
 END:VEVENT
 BEGIN:VEVENT
 UID:80f336a5919d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261023T190000
 DTEND;TZID=Europe/Paris:20261023T203000
 SUMMARY:Penser le Présent avec Kader Attia et Jacinto Lageira
@@ -1686,7 +1700,7 @@ URL:https://beauxartsparis.fr/fr/evenement/penser-le-present-avec-kader-att
 END:VEVENT
 BEGIN:VEVENT
 UID:872d15cdc221@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261023T190000
 DTEND;TZID=Europe/Paris:20261023T210000
 SUMMARY:Deux jours pour mieux comprendre l'industrie pornographique et ses 
@@ -1704,7 +1718,7 @@ URL:https://www.paris.fr/evenements/deux-jours-pour-mieux-comprendre-l-indu
 END:VEVENT
 BEGIN:VEVENT
 UID:ba23c9f174b8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261024T173000
 DTEND;TZID=Europe/Paris:20261024T193000
 SUMMARY:Projeté·e·s
@@ -1714,7 +1728,7 @@ URL:https://lu.ma/2efbehic
 END:VEVENT
 BEGIN:VEVENT
 UID:94e8ccc9e444@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261024T180000
 DTEND;TZID=Europe/Paris:20261024T200000
 SUMMARY:Artist Talk: From the Inner Voice to the Outer Paths
@@ -1724,7 +1738,7 @@ URL:https://lu.ma/y58xuebt
 END:VEVENT
 BEGIN:VEVENT
 UID:f5b687832ad8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261029T180000
 DTEND;TZID=Europe/Paris:20261029T200000
 SUMMARY:Faire mieux
@@ -1736,7 +1750,7 @@ URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/faire-mieux
 END:VEVENT
 BEGIN:VEVENT
 UID:4644acffc135@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Le Mois du doc dans les bibliothèques de la Ville de Paris
@@ -1750,7 +1764,7 @@ URL:https://www.paris.fr/evenements/le-mois-du-doc-dans-les-bibliotheques-d
 END:VEVENT
 BEGIN:VEVENT
 UID:062a7f546352@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261102T150000
 DTEND;TZID=Europe/Paris:20261102T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (1)
@@ -1762,8 +1776,23 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
  e-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavirer-1
 END:VEVENT
 BEGIN:VEVENT
+UID:2fcabb9a2e4e@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261102T161500
+DTEND;TZID=Europe/Paris:20261102T181500
+SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (1)
+DESCRIPTION:Séminaire · Sortir de cette chambre à moi\, chanceler\, chav
+ irer\nhttps://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette
+ -chambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chav
+ irer-1
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette-ch
+ ambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavire
+ r-1
+END:VEVENT
+BEGIN:VEVENT
 UID:313ba07c8b18@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Conférence Art et Architecture autour de La Ligne 18 au Lumen\, 3 
@@ -1777,7 +1806,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/conference-art-et-arc
 END:VEVENT
 BEGIN:VEVENT
 UID:c9aef26da023@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Festival Musique 2026 « Piano/accordéon autour de la danse »
@@ -1789,7 +1818,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la
 END:VEVENT
 BEGIN:VEVENT
 UID:97d48f129f5d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261103T183000
 DTEND;TZID=Europe/Paris:20261103T193000
 SUMMARY:La production parisienne et le style bellifontain : actualités du 
@@ -1803,7 +1832,7 @@ URL:https://www.inha.fr/agenda/la-production-parisienne-et-le-style-bellifo
 END:VEVENT
 BEGIN:VEVENT
 UID:46e41a19f951@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261103T183000
 DTEND;TZID=Europe/Paris:20261103T203000
 SUMMARY:THE OFFICE\, REFRAMED
@@ -1813,7 +1842,7 @@ URL:https://lu.ma/7u1llr1p
 END:VEVENT
 BEGIN:VEVENT
 UID:592934b5f3f8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261103T190000
 DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:La réception contemporaine de la prophétie avicennienne
@@ -1826,7 +1855,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/reception-contem
 END:VEVENT
 BEGIN:VEVENT
 UID:fc35d53a1a20@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Le spectacle au prisme des métiers de photographe (XIXe-XXe siècl
@@ -1840,7 +1869,7 @@ URL:https://www.sorbonne-nouvelle.fr/le-spectacle-au-prisme-des-metiers-de-
 END:VEVENT
 BEGIN:VEVENT
 UID:c6cf51f4f24a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261104T123000
 DTEND;TZID=Europe/Paris:20261104T133000
 SUMMARY:Concert de midi : Brahms\, Schumann et Khatchatourian
@@ -1852,7 +1881,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-de-midi-brahms-schum
 END:VEVENT
 BEGIN:VEVENT
 UID:25aa5134ffbc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261104T123000
 DTEND;TZID=Europe/Paris:20261104T143000
 SUMMARY:Dans l'atelier de Jean Fouquet. La Passion du Maître du Boccace de
@@ -1867,7 +1896,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/da
 END:VEVENT
 BEGIN:VEVENT
 UID:57efc0d674e0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261105T140000
 DTEND;TZID=Europe/Paris:20261105T160000
 SUMMARY:Chemical Technologies for Recycling Plastics Designed to Last
@@ -1883,7 +1912,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/contribu
 END:VEVENT
 BEGIN:VEVENT
 UID:19d2c5f4a86d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T203000
 SUMMARY:DPP : du réglement aux réponses opérationnelles (Crystalchain & 
@@ -1894,7 +1923,7 @@ URL:https://lu.ma/ennq640j
 END:VEVENT
 BEGIN:VEVENT
 UID:64da41c6fdfe@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261105T190000
 DTEND;TZID=Europe/Paris:20261105T213000
 SUMMARY:Projection de "EX-TAZ Citizen Ca$h (1987-1994)" | Mois du film docu
@@ -1910,7 +1939,7 @@ URL:https://www.paris.fr/evenements/projection-de-ex-taz-citizen-ca-h-1987-
 END:VEVENT
 BEGIN:VEVENT
 UID:b46292ae1934@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261105T200000
 DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:Breque - Lisa Biscaro Balle
@@ -1921,21 +1950,8 @@ LOCATION:Le Regard du Cygne\, 210\, rue de Belleville\, 75020 Paris
 URL:https://www.paris.fr/evenements/breque-lisa-biscaro-balle-117331
 END:VEVENT
 BEGIN:VEVENT
-UID:b7606f9f7f53@paris-academique
-DTSTAMP:20261002T102029Z
-DTSTART;TZID=Europe/Paris:20261106T140000
-DTEND;TZID=Europe/Paris:20261106T160000
-SUMMARY:Les arts au défi des sciences sociales (suite) (1)
-DESCRIPTION:Cours · Les arts au défi des sciences sociales (suite)\nhttps
- ://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-sciences-
- sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-1
-LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
- ciences-sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-1
-END:VEVENT
-BEGIN:VEVENT
 UID:ff05cb70aba8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261106T190000
 DTEND;TZID=Europe/Paris:20261106T210000
 SUMMARY:Chants nuptiaux et lamentations de mariage
@@ -1948,7 +1964,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/chants-nuptiaux-
 END:VEVENT
 BEGIN:VEVENT
 UID:724af4da8c5d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261106T193000
 DTEND;TZID=Europe/Paris:20261106T213000
 SUMMARY:Rencontre - Les Reines du Bois : au cœur du bois de Boulogne
@@ -1965,7 +1981,7 @@ URL:https://www.paris.fr/evenements/rencontre-les-reines-du-bois-au-coeur-d
 END:VEVENT
 BEGIN:VEVENT
 UID:3880b95842e8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261106T200000
 DTEND;TZID=Europe/Paris:20261106T220000
 SUMMARY:"Clair-obscur" - Constantinople\, Kiya Tabassian & A Filetta
@@ -1977,7 +1993,7 @@ URL:https://www.collegedesbernardins.fr/agenda/clair-obscur-constantinople-
 END:VEVENT
 BEGIN:VEVENT
 UID:7d300871fa24@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Festival Musique 2026 « Trio Cornière »
@@ -1987,7 +2003,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-trio-corniere
 END:VEVENT
 BEGIN:VEVENT
 UID:f1d9d86c11cf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261107T110000
 DTEND;TZID=Europe/Paris:20261107T123000
 SUMMARY:ApéroDuke | « Mary Lou Williams au coeur de l’histoire du jazz 
@@ -2006,7 +2022,7 @@ URL:https://www.paris.fr/evenements/aperoduke-mary-lou-williams-au-coeur-de
 END:VEVENT
 BEGIN:VEVENT
 UID:bf2bb3dcc116@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261107T150000
 DTEND;TZID=Europe/Paris:20261107T170000
 SUMMARY:Ghost Editing: fanzine workshop
@@ -2016,7 +2032,7 @@ URL:https://lu.ma/iotrdg0k
 END:VEVENT
 BEGIN:VEVENT
 UID:4710c1b81537@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:La photographie\, miroir de l’évolution de nos sociétés
@@ -2029,7 +2045,7 @@ URL:https://www.mnhn.fr/fr/rencontre/la-photographie-miroir-de-l-evolution-
 END:VEVENT
 BEGIN:VEVENT
 UID:cb8f1d3af279@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261109T120000
 DTEND;TZID=Europe/Paris:20261109T180000
 SUMMARY:Masterclass de Trompette avec Lucienne Renaudin
@@ -2045,7 +2061,7 @@ URL:https://www.paris.fr/evenements/masterclass-de-trompette-avec-lucienne-
 END:VEVENT
 BEGIN:VEVENT
 UID:eca0561a4a89@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261109T133000
 DTEND;TZID=Europe/Paris:20261109T150000
 SUMMARY:Revue3.0 et l’avenir des revues en sciences humaines : édition s
@@ -2059,7 +2075,7 @@ URL:https://www.inha.fr/agenda/revue3-0-et-lavenir-des-revues-en-sciences-h
 END:VEVENT
 BEGIN:VEVENT
 UID:5f06c1a5fd5a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261109T150000
 DTEND;TZID=Europe/Paris:20261109T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (2)
@@ -2071,8 +2087,23 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
  e-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavirer-2
 END:VEVENT
 BEGIN:VEVENT
+UID:6adc798a129e@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261109T161500
+DTEND;TZID=Europe/Paris:20261109T181500
+SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (2)
+DESCRIPTION:Séminaire · Sortir de cette chambre à moi\, chanceler\, chav
+ irer\nhttps://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette
+ -chambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chav
+ irer-2
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette-ch
+ ambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavire
+ r-2
+END:VEVENT
+BEGIN:VEVENT
 UID:67081bb7dd38@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Festival Musique 2026 « Quatuor à cordes et percussions »
@@ -2084,7 +2115,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes-et-percussio
 END:VEVENT
 BEGIN:VEVENT
 UID:cd1e64e86b34@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T124500
 DTEND;TZID=Europe/Paris:20261110T133000
 SUMMARY:Présentation de l’ouvrage de Valérie Boudier\, L’Art de tranc
@@ -2099,7 +2130,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-de-valerie-boudier-
 END:VEVENT
 BEGIN:VEVENT
 UID:7eb713c1ee1e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T143000
 DTEND;TZID=Europe/Paris:20261110T154500
 SUMMARY:Démographie\, citoyenneté et construction identitaire dans le Gol
@@ -2113,7 +2144,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/demographie-cito
 END:VEVENT
 BEGIN:VEVENT
 UID:3e276246ab06@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T173000
 DTEND;TZID=Europe/Paris:20261110T184500
 SUMMARY:Recompositions politiques au sein du Golfe
@@ -2126,7 +2157,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/recompositions-p
 END:VEVENT
 BEGIN:VEVENT
 UID:5ec133a03b1c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T180000
 DTEND;TZID=Europe/Paris:20261110T200000
 SUMMARY:Conférence d’ouverture de l’exposition "Shunga - Chefs-d’œu
@@ -2140,7 +2171,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/conference-d-ouverture-de-l-e
 END:VEVENT
 BEGIN:VEVENT
 UID:77d8060bf5dd@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T181500
 DTEND;TZID=Europe/Paris:20261110T193000
 SUMMARY:Entre pointe et pinceau : Le Christ aux outrages d’Henry de Groux
@@ -2155,7 +2186,7 @@ URL:https://www.inha.fr/agenda/entre-pointe-et-pinceau-le-christ-aux-outrag
 END:VEVENT
 BEGIN:VEVENT
 UID:cf1a9f724df9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T191500
 DTEND;TZID=Europe/Paris:20261110T203000
 SUMMARY:Le rôle de l’Europe et la place de la France dans la région du 
@@ -2169,7 +2200,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/role-europe-et-p
 END:VEVENT
 BEGIN:VEVENT
 UID:2b1914cbeabe@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T193000
 DTEND;TZID=Europe/Paris:20261110T223000
 SUMMARY:Le Monde au Grand Rex
@@ -2180,7 +2211,7 @@ URL:https://www.paris.fr/evenements/le-monde-au-grand-rex-115797
 END:VEVENT
 BEGIN:VEVENT
 UID:6036b6a370bb@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T183000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:NEW TALENTS - Regards d’une nouvelle génération
@@ -2193,7 +2224,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/new-talents-regards-d-une-nou
 END:VEVENT
 BEGIN:VEVENT
 UID:95e8dee196d4@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:Conférence Sonia Delaunay
@@ -2206,7 +2237,7 @@ URL:https://www.paris.fr/evenements/conference-artora-sonia-delaunay-108261
 END:VEVENT
 BEGIN:VEVENT
 UID:8d2d7e96fd64@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T213000
 SUMMARY:Projection de "Familly Punk" | Mois du film documentaire
@@ -2222,7 +2253,7 @@ URL:https://www.paris.fr/evenements/projection-de-familly-punk-mois-du-film
 END:VEVENT
 BEGIN:VEVENT
 UID:9e8eea6ff6d1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:Le cinéma allemand contemporain par Gregory Coutaut
@@ -2236,7 +2267,7 @@ URL:https://www.paris.fr/evenements/le-cinema-allemand-contemporain-par-gre
 END:VEVENT
 BEGIN:VEVENT
 UID:f2212fa9a916@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Télétravail du sexe # Jeudi de l'actualité
@@ -2250,7 +2281,7 @@ URL:https://www.paris.fr/evenements/teletravail-du-sexe-jeudi-de-l-actualit
 END:VEVENT
 BEGIN:VEVENT
 UID:cd10f4c56c68@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Conférence participative Epop& - À la rencontre du peuple des cé
@@ -2262,33 +2293,20 @@ URL:https://lu.ma/gxzxo7pj
 END:VEVENT
 BEGIN:VEVENT
 UID:4bcf69aade3b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261113T123000
 DTEND;TZID=Europe/Paris:20261113T143000
 SUMMARY:Présentation de l'exposition "LOUVRE PHOTO"
-DESCRIPTION:à 12h30 par Dominique de Font-Réaulx et Quentin Bajac \, comm
- issaires de l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/
- evenements-activites/presentation-de-l-exposition-louvre-photo
+DESCRIPTION:à 12h30 par Dominique de Font-Réaulx et Quentin Bajac\, commi
+ ssaires de l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/e
+ venements-activites/presentation-de-l-exposition-louvre-photo
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
  esentation-de-l-exposition-louvre-photo
 END:VEVENT
 BEGIN:VEVENT
-UID:4013b6a99dd6@paris-academique
-DTSTAMP:20261002T102029Z
-DTSTART;TZID=Europe/Paris:20261113T140000
-DTEND;TZID=Europe/Paris:20261113T160000
-SUMMARY:Les arts au défi des sciences sociales (suite) (2)
-DESCRIPTION:Cours · Les arts au défi des sciences sociales (suite)\nhttps
- ://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-sciences-
- sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-2
-LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
- ciences-sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-2
-END:VEVENT
-BEGIN:VEVENT
 UID:950a437680d9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261113T180000
 DTEND;TZID=Europe/Paris:20261113T200000
 SUMMARY:Le dialogue des Chaires du Louvre
@@ -2301,7 +2319,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:4ef74fc357f7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261113T190000
 DTEND;TZID=Europe/Paris:20261113T230000
 SUMMARY:Vendredi 13 : projection du film et émission "Monster Squad" en pu
@@ -2316,7 +2334,7 @@ URL:https://www.paris.fr/evenements/vendredi-13-projection-du-film-et-emiss
 END:VEVENT
 BEGIN:VEVENT
 UID:44f9bbd1328e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261114T150000
 DTEND;TZID=Europe/Paris:20261114T170000
 SUMMARY:Rencontre avec la compositrice et artiste sonore Elsa Biston
@@ -2330,7 +2348,7 @@ URL:https://www.paris.fr/evenements/rencontre-avec-la-compositrice-et-artis
 END:VEVENT
 BEGIN:VEVENT
 UID:33921541f3e8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261114T160000
 DTEND;TZID=Europe/Paris:20261114T173000
 SUMMARY:Compositrices : la rhapsodie des oubliées
@@ -2344,7 +2362,7 @@ URL:https://www.paris.fr/evenements/compositrices-la-rhapsodie-des-oubliees
 END:VEVENT
 BEGIN:VEVENT
 UID:056a0ce5f64e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261116T140000
 DTEND;TZID=Europe/Paris:20261116T170000
 SUMMARY:Matérialité : l’objet à la trace (transformations\, déformati
@@ -2358,7 +2376,7 @@ URL:https://www.inha.fr/agenda/materialite-lobjet-a-la-trace-transformation
 END:VEVENT
 BEGIN:VEVENT
 UID:7544c0da0ef2@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261116T150000
 DTEND;TZID=Europe/Paris:20261116T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (3)
@@ -2370,8 +2388,23 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
  e-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavirer-3
 END:VEVENT
 BEGIN:VEVENT
+UID:fb563b8c4d20@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261116T161500
+DTEND;TZID=Europe/Paris:20261116T181500
+SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (3)
+DESCRIPTION:Séminaire · Sortir de cette chambre à moi\, chanceler\, chav
+ irer\nhttps://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette
+ -chambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chav
+ irer-3
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette-ch
+ ambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavire
+ r-3
+END:VEVENT
+BEGIN:VEVENT
 UID:4393b2d91d55@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Concert-sandwich 17/11/26
@@ -2383,7 +2416,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-17/1
 END:VEVENT
 BEGIN:VEVENT
 UID:f3626dfe98a6@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261117T124500
 DTEND;TZID=Europe/Paris:20261117T133000
 SUMMARY:Présentation de l’ouvrage Echoes\, Ripples\, Wake: Casting Art a
@@ -2397,7 +2430,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-echoes-ripples-wake
 END:VEVENT
 BEGIN:VEVENT
 UID:52463bed94e1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261117T180000
 DTEND;TZID=Europe/Paris:20261117T200000
 SUMMARY:Lancement de Perspective\, no 2026-2 : Tournants
@@ -2410,7 +2443,7 @@ URL:https://www.inha.fr/agenda/lancement-de-perspective-no-2026-2-tournants
 END:VEVENT
 BEGIN:VEVENT
 UID:4798ff44ff8c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261117T190000
 DTEND;TZID=Europe/Paris:20261117T200000
 SUMMARY:Vernissage - Exposition sur la victimisation secondaire
@@ -2426,7 +2459,7 @@ URL:https://www.paris.fr/evenements/vernissage-exposition-sur-la-victimisat
 END:VEVENT
 BEGIN:VEVENT
 UID:4b6cd8471bcf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261117T193000
 DTEND;TZID=Europe/Paris:20261117T213000
 SUMMARY:Projection du film "Je suis toujours là" de Walter SALLES - Ciné-
@@ -2440,7 +2473,7 @@ URL:https://www.assas-universite.fr/fr/evenements/projection-film-je-suis-t
 END:VEVENT
 BEGIN:VEVENT
 UID:cc0d2c3fb5cc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261118T100000
 DTEND;TZID=Europe/Paris:20261118T120000
 SUMMARY:AGORHA : formation à la recherche et à la consultation des ressou
@@ -2454,7 +2487,7 @@ URL:https://www.inha.fr/agenda/formation-agorha-ressources-bibliographiques
 END:VEVENT
 BEGIN:VEVENT
 UID:162d5e49ea2b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261118T123000
 DTEND;TZID=Europe/Paris:20261118T140000
 SUMMARY:Rôle du livre et des revues dans la conception photographique japo
@@ -2468,7 +2501,7 @@ URL:https://www.bnf.fr/fr/agenda/role-du-livre-et-des-revues-dans-la-concep
 END:VEVENT
 BEGIN:VEVENT
 UID:ad9ed8fd4b44@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261118T123000
 DTEND;TZID=Europe/Paris:20261118T133000
 SUMMARY:Concert de midi : Inspirations guitare
@@ -2480,7 +2513,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-de-midi-inspirations
 END:VEVENT
 BEGIN:VEVENT
 UID:4ee3581b80a9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261118T140000
 DTEND;TZID=Europe/Paris:20261118T160000
 SUMMARY:Les collections patrimoniales de la bibliothèque
@@ -2493,7 +2526,7 @@ URL:https://www.inha.fr/agenda/formation-collections-patrimoniales-biblioth
 END:VEVENT
 BEGIN:VEVENT
 UID:e96e4104f0ff@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261118T180000
 DTEND;TZID=Europe/Paris:20261118T200000
 SUMMARY:Pioneering Tomorrow - Paris Edition
@@ -2503,7 +2536,7 @@ URL:https://lu.ma/y8exjdj3
 END:VEVENT
 BEGIN:VEVENT
 UID:873dd9288732@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Conférence musicale : flûte et piano
@@ -2516,7 +2549,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/conference-musicale-f
 END:VEVENT
 BEGIN:VEVENT
 UID:7669c7606be0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261119T160000
 DTEND;TZID=Europe/Paris:20261119T180000
 SUMMARY:Légiférer sur la protection des monuments et des objets d’art d
@@ -2530,7 +2563,7 @@ URL:https://www.inha.fr/agenda/legiferer-sur-la-protection-des-monuments-et
 END:VEVENT
 BEGIN:VEVENT
 UID:0e75850019e5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T190000
 SUMMARY:L'épilepsie
@@ -2541,7 +2574,7 @@ URL:https://institutducerveau.org/agenda/lepilepsie
 END:VEVENT
 BEGIN:VEVENT
 UID:11edb28b5015@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T193000
 SUMMARY:La constitution des archives françaises de la photographie
@@ -2553,7 +2586,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/la-constitution-des
 END:VEVENT
 BEGIN:VEVENT
 UID:166105af93bf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Rencontre avec Rob Grams : Le cinéma a-t-il un regard de classe ?
@@ -2567,47 +2600,34 @@ URL:https://www.paris.fr/evenements/rencontre-avec-rob-grams-le-cinema-a-t-
 END:VEVENT
 BEGIN:VEVENT
 UID:2e7c5b55558b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261119T190000
 DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Trop voir\, tout avoir. Le Louvre ou l’hybris de l’accumulation
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/tr
- op-voir-tout-avoir-le-louvre-ou-l-hybris-de-l-accumulation
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/tro
+ p-voir-tout-avoir-le-louvre-ou-l-hybris-de-l-accumulation
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/tr
  op-voir-tout-avoir-le-louvre-ou-l-hybris-de-l-accumulation
 END:VEVENT
 BEGIN:VEVENT
 UID:8cc06e64ca07@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261120T123000
 DTEND;TZID=Europe/Paris:20261120T143000
 SUMMARY:Le musée de sculptures en plein air du jardin des Tuileries
-DESCRIPTION:à 12h30 par Emmanuelle Héran \, musée du Louvre\nhttps://www
- .louvre.fr/expositions-et-evenements/evenements-activites/le-musee-de-scul
- ptures-en-plein-air-du-jardin-des-tuileries
+DESCRIPTION:à 12h30 par Emmanuelle Héran\, musée du Louvre\nhttps://www.
+ louvre.fr/expositions-et-evenements/evenements-activites/le-musee-de-sculp
+ tures-en-plein-air-du-jardin-des-tuileries
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
  -musee-de-sculptures-en-plein-air-du-jardin-des-tuileries
 END:VEVENT
 BEGIN:VEVENT
-UID:9ce53013f23d@paris-academique
-DTSTAMP:20261002T102029Z
-DTSTART;TZID=Europe/Paris:20261120T140000
-DTEND;TZID=Europe/Paris:20261120T160000
-SUMMARY:Les arts au défi des sciences sociales (suite) (3)
-DESCRIPTION:Cours · Les arts au défi des sciences sociales (suite)\nhttps
- ://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-sciences-
- sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-3
-LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
- ciences-sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-3
-END:VEVENT
-BEGIN:VEVENT
 UID:f7f36fafae55@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261120T143000
 DTEND;TZID=Europe/Paris:20261120T213000
 SUMMARY:Focus Justice des mineurs - Sonia Chiambretto\, Thibaud Croisy au C
@@ -2623,7 +2643,7 @@ URL:https://www.paris.fr/evenements/focus-justice-des-mineurs-sonia-chiambr
 END:VEVENT
 BEGIN:VEVENT
 UID:f84fae0f6378@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261120T180000
 DTEND;TZID=Europe/Paris:20261120T200000
 SUMMARY:Présentation de l'exposition "Trop mignon !"
@@ -2636,7 +2656,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
 END:VEVENT
 BEGIN:VEVENT
 UID:aa8e595f0e9e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261120T190000
 DTEND;TZID=Europe/Paris:20261120T201500
 SUMMARY:Anecdotes et petites histoires qui ont fait la grande
@@ -2653,8 +2673,20 @@ URL:https://www.paris.fr/evenements/anecdotes-et-petites-histoires-qui-ont-
  fait-la-grande-124505
 END:VEVENT
 BEGIN:VEVENT
+UID:f6c5dd071952@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261120T200000
+DTEND;TZID=Europe/Paris:20261120T213000
+SUMMARY:Théâtre "Crimes et chuchotements - Retour en URSS"
+DESCRIPTION:spectacle vivant\nhttps://www.collegedesbernardins.fr/agenda/th
+ eatre-crimes-et-chuchotements-retour-en-urss
+LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
+URL:https://www.collegedesbernardins.fr/agenda/theatre-crimes-et-chuchoteme
+ nts-retour-en-urss
+END:VEVENT
+BEGIN:VEVENT
 UID:fedf1bda4922@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261121T100000
 DTEND;TZID=Europe/Paris:20261121T180000
 SUMMARY:Un mois avec Bach : rencontre violon/violon baroque et danse baroqu
@@ -2669,7 +2701,7 @@ URL:https://www.paris.fr/evenements/un-mois-avec-bach-rencontre-violon-viol
 END:VEVENT
 BEGIN:VEVENT
 UID:98c5d0c059ff@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261121T110000
 DTEND;TZID=Europe/Paris:20261121T130000
 SUMMARY:Café ciné : "Le Cinéma de Jim Henson"
@@ -2683,7 +2715,7 @@ URL:https://www.paris.fr/evenements/cafe-cine-le-cinema-de-jim-henson-12391
 END:VEVENT
 BEGIN:VEVENT
 UID:6909c902ef56@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261121T153000
 DTEND;TZID=Europe/Paris:20261121T170000
 SUMMARY:Conférence musicale sur Clara Schumann par Jean-Pierre Armengaud
@@ -2698,7 +2730,7 @@ URL:https://www.paris.fr/evenements/conference-musicale-sur-clara-schumann-
 END:VEVENT
 BEGIN:VEVENT
 UID:399df1b251e8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261121T160000
 DTEND;TZID=Europe/Paris:20261121T190000
 SUMMARY:Un spectacle et un court-métrage LGBTQIA+ suivis d'une table-ronde
@@ -2714,7 +2746,7 @@ URL:https://www.paris.fr/evenements/un-spectacle-et-un-court-metrage-lgbtqi
 END:VEVENT
 BEGIN:VEVENT
 UID:1e84de055109@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261121T180000
 DTEND;TZID=Europe/Paris:20261121T203000
 SUMMARY:Lenoir en questions : portrait sensible d'un passeur hors pair
@@ -2731,7 +2763,7 @@ URL:https://www.paris.fr/evenements/lenoir-en-questions-portrait-sensible-d
 END:VEVENT
 BEGIN:VEVENT
 UID:90ed54a96f32@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261123T150000
 DTEND;TZID=Europe/Paris:20261123T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (4)
@@ -2743,22 +2775,37 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
  e-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavirer-4
 END:VEVENT
 BEGIN:VEVENT
+UID:dbc629cb0c20@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261123T161500
+DTEND;TZID=Europe/Paris:20261123T181500
+SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (4)
+DESCRIPTION:Séminaire · Sortir de cette chambre à moi\, chanceler\, chav
+ irer\nhttps://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette
+ -chambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chav
+ irer-4
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette-ch
+ ambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavire
+ r-4
+END:VEVENT
+BEGIN:VEVENT
 UID:2c4f61b8adcb@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261123T190000
 DTEND;TZID=Europe/Paris:20261123T210000
 SUMMARY:Voir et ne pas voir. Le Louvre et les angles morts du musée
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/vo
- ir-et-ne-pas-voir-le-louvre-et-les-angles-morts-du-musee
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/voi
+ r-et-ne-pas-voir-le-louvre-et-les-angles-morts-du-musee
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/vo
  ir-et-ne-pas-voir-le-louvre-et-les-angles-morts-du-musee
 END:VEVENT
 BEGIN:VEVENT
 UID:8da81caa0eb5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Concert-sandwich 24/11/26
@@ -2770,7 +2817,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-24/1
 END:VEVENT
 BEGIN:VEVENT
 UID:1d747150eb2e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:LES DÉFIS DU JAZZ...
@@ -2783,7 +2830,7 @@ URL:https://www.sorbonne-nouvelle.fr/les-defis-du-jazz--925188.kjsp?RH=1236
 END:VEVENT
 BEGIN:VEVENT
 UID:60e8a1d24236@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T093000
 DTEND;TZID=Europe/Paris:20261126T113000
 SUMMARY:Photographie et bande dessinée
@@ -2795,7 +2842,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/photographie-et-bande
 END:VEVENT
 BEGIN:VEVENT
 UID:822edba19463@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T183000
 DTEND;TZID=Europe/Paris:20261126T200000
 SUMMARY:Les Débats de l’INHA
@@ -2807,7 +2854,7 @@ URL:https://www.inha.fr/agenda/les-debats-de-linha-26-nov-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:260aed3cad63@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T183000
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Le Musée national Jean-Jacques Henner raconté par Maëva Abillard
@@ -2821,21 +2868,21 @@ URL:https://www.paris.fr/evenements/le-musee-national-jean-jacques-henner-r
 END:VEVENT
 BEGIN:VEVENT
 UID:a328270c0a3a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T190000
 DTEND;TZID=Europe/Paris:20261126T210000
 SUMMARY:Extraire. Le Louvre et l’envers matériel du musée
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/ex
- traire-le-louvre-et-l-envers-materiel-du-musee
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/ext
+ raire-le-louvre-et-l-envers-materiel-du-musee
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ex
  traire-le-louvre-et-l-envers-materiel-du-musee
 END:VEVENT
 BEGIN:VEVENT
 UID:a0660df99fe7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T190000
 DTEND;TZID=Europe/Paris:20261126T210000
 SUMMARY:L’Alhambra\, laboratoire d’idées pour l’architecture de dema
@@ -2849,7 +2896,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/alhambra-laborat
 END:VEVENT
 BEGIN:VEVENT
 UID:0d2348cebf1e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T190000
 DTEND;TZID=Europe/Paris:20261126T210000
 SUMMARY:Table ronde Jazzwomen | Festival Monte le son 2026 "Ô féminins"
@@ -2867,21 +2914,8 @@ URL:https://www.paris.fr/evenements/les-40-ans-de-l-album-tutu-conference-p
  ar-vincent-cotro-cycle-miles-davis-123665
 END:VEVENT
 BEGIN:VEVENT
-UID:8799497dfd72@paris-academique
-DTSTAMP:20261002T102029Z
-DTSTART;TZID=Europe/Paris:20261127T140000
-DTEND;TZID=Europe/Paris:20261127T160000
-SUMMARY:Les arts au défi des sciences sociales (suite) (4)
-DESCRIPTION:Cours · Les arts au défi des sciences sociales (suite)\nhttps
- ://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-sciences-
- sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-4
-LOCATION:Amphithéâtre Maurice Halbwachs\, Site Marcelin Berthelot
-URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
- ciences-sociales-suite/les-arts-au-defi-des-sciences-sociales-suite-4
-END:VEVENT
-BEGIN:VEVENT
 UID:a782b44bbdde@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261130T150000
 DTEND;TZID=Europe/Paris:20261130T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (5)
@@ -2893,8 +2927,23 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
  e-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavirer-5
 END:VEVENT
 BEGIN:VEVENT
+UID:3bcf8011a2ee@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261130T161500
+DTEND;TZID=Europe/Paris:20261130T181500
+SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (5)
+DESCRIPTION:Séminaire · Sortir de cette chambre à moi\, chanceler\, chav
+ irer\nhttps://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette
+ -chambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chav
+ irer-5
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette-ch
+ ambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavire
+ r-5
+END:VEVENT
+BEGIN:VEVENT
 UID:88665f046aa6@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261201T124500
 DTEND;TZID=Europe/Paris:20261201T133000
 SUMMARY:Présentation du dossier « 200 ans de photographie » de la revue 
@@ -2909,7 +2958,7 @@ URL:https://www.inha.fr/agenda/presentation-du-dossier-200-ans-de-photograp
 END:VEVENT
 BEGIN:VEVENT
 UID:08894f5b130a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261201T183000
 DTEND;TZID=Europe/Paris:20261201T200000
 SUMMARY:Méliès\, du théâtre d'illusion au début du cinéma
@@ -2922,7 +2971,7 @@ URL:https://www.paris.fr/evenements/melies-du-theatre-d-illusion-au-debut-d
 END:VEVENT
 BEGIN:VEVENT
 UID:7415b03a2aa5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261201T190000
 DTEND;TZID=Europe/Paris:20261201T210000
 SUMMARY:Les figures du moi chez Avicenne
@@ -2935,21 +2984,21 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/les-figures-du-m
 END:VEVENT
 BEGIN:VEVENT
 UID:176f1b26c7aa@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261202T123000
 DTEND;TZID=Europe/Paris:20261202T143000
 SUMMARY:La tapisserie "La riña en la Venta Nueva" d'après Francisco de Go
  ya
-DESCRIPTION:à 12h30 par Pascal Torres Guardiola \, musée du Louvre\nhttps
- ://www.louvre.fr/expositions-et-evenements/evenements-activites/la-tapisse
- rie-la-rina-en-la-venta-nueva-d-apres-francisco-de-goya
+DESCRIPTION:à 12h30 par Pascal Torres Guardiola\, musée du Louvre\nhttps:
+ //www.louvre.fr/expositions-et-evenements/evenements-activites/la-tapisser
+ ie-la-rina-en-la-venta-nueva-d-apres-francisco-de-goya
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  -tapisserie-la-rina-en-la-venta-nueva-d-apres-francisco-de-goya
 END:VEVENT
 BEGIN:VEVENT
 UID:f79c7d9ab424@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261202T140000
 DTEND;TZID=Europe/Paris:20261202T160000
 SUMMARY:Les collections patrimoniales de la bibliothèque
@@ -2962,7 +3011,7 @@ URL:https://www.inha.fr/agenda/formation-collections-patrimoniales-biblioth
 END:VEVENT
 BEGIN:VEVENT
 UID:0d9bf6ac656d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261203T190000
 DTEND;TZID=Europe/Paris:20261203T203000
 SUMMARY:Jeudi de l'actualité : Quand les réseaux passent à table
@@ -2980,7 +3029,7 @@ URL:https://www.paris.fr/evenements/jeudi-de-l-actualite-une-democratie-ali
 END:VEVENT
 BEGIN:VEVENT
 UID:e8cfcc9cf572@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261203T190000
 DTEND;TZID=Europe/Paris:20261203T210000
 SUMMARY:Projection-débat autour du film “Oasis de Paix” de Henri Poula
@@ -2997,7 +3046,7 @@ URL:https://www.paris.fr/evenements/projection-debat-autour-du-film-oasis-d
 END:VEVENT
 BEGIN:VEVENT
 UID:d6900b11b9f1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261205T160000
 DTEND;TZID=Europe/Paris:20261205T173000
 SUMMARY:Ca'fête musicale "Elles rappent\, elles règnent"
@@ -3011,7 +3060,7 @@ URL:https://www.paris.fr/evenements/cafet-musicale-elles-rappent-elles-regn
 END:VEVENT
 BEGIN:VEVENT
 UID:4de7361a4ebf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261205T173000
 DTEND;TZID=Europe/Paris:20261205T190000
 SUMMARY:Cycle Musiques et Exils | Table ronde "La musique après l'exil: co
@@ -3032,7 +3081,7 @@ URL:https://www.paris.fr/evenements/atelier-de-pratique-musicale-workshop-s
 END:VEVENT
 BEGIN:VEVENT
 UID:73303bb2d464@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261207T150000
 DTEND;TZID=Europe/Paris:20261207T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (6)
@@ -3044,8 +3093,23 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
  e-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavirer-6
 END:VEVENT
 BEGIN:VEVENT
+UID:b5459be04079@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20261207T161500
+DTEND;TZID=Europe/Paris:20261207T181500
+SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (6)
+DESCRIPTION:Séminaire · Sortir de cette chambre à moi\, chanceler\, chav
+ irer\nhttps://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette
+ -chambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chav
+ irer-6
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/seminaire/sortir-de-cette-ch
+ ambre-moi-chanceler-chavirer/sortir-de-cette-chambre-moi-chanceler-chavire
+ r-6
+END:VEVENT
+BEGIN:VEVENT
 UID:72c20129317a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261209T150000
 DTEND;TZID=Europe/Paris:20261209T170000
 SUMMARY:Les grands âges : une exposition entre art et science
@@ -3057,7 +3121,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/les-grands-ages-une-expositio
 END:VEVENT
 BEGIN:VEVENT
 UID:c5a92598a279@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261210T190000
 DTEND;TZID=Europe/Paris:20261210T210000
 SUMMARY:Le free jazz en France | Conférence par Vincent Cotro | Cycle Jazz
@@ -3076,7 +3140,7 @@ URL:https://www.paris.fr/evenements/le-free-jazz-en-france-conference-par-v
 END:VEVENT
 BEGIN:VEVENT
 UID:8e7c19e6b74f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261210T200000
 DTEND;TZID=Europe/Paris:20261210T213000
 SUMMARY:Concert "Noël sous les tropiques"
@@ -3088,7 +3152,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-noel-sous-les-tropiq
 END:VEVENT
 BEGIN:VEVENT
 UID:9e9e6b37e8db@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261210T200000
 DTEND;TZID=Europe/Paris:20261210T220000
 SUMMARY:Cinq Maîtres en Perspective: Simon Hantaï avec Pierre Wat - Galer
@@ -3099,7 +3163,7 @@ URL:https://lu.ma/e8vi4klp
 END:VEVENT
 BEGIN:VEVENT
 UID:2cd08d1c041f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261211T093000
 DTEND;TZID=Europe/Paris:20261211T113000
 SUMMARY:Digitalisation hip-hop knowledge and musical innovation: Central as
@@ -3114,23 +3178,22 @@ URL:https://institut-acte.pantheonsorbonne.fr/evenements/digitalisation-hip
 END:VEVENT
 BEGIN:VEVENT
 UID:ad2363b910bd@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261212T150000
 DTEND;TZID=Europe/Paris:20261212T170000
 SUMMARY:Las hijas de Felipe : podcast en direct
-DESCRIPTION:à 15h Anna Garride et Carmen Urbita \, le duo de chercheuses q
- ui dépoussièrent le baroque espagnol enregistrent en public sur la scèn
- e de l'auditorium un épisode inédit de leur podcast "Las Hijas de Felipe
- "\, en lien avec l'exposition "Zurbarán"\nhttps://www.louvre.fr/expositio
- ns-et-evenements/evenements-activites/las-hijas-de-felipe-podcast-en-direc
- t
+DESCRIPTION:à 15h Anna Garride et Carmen Urbita\, le duo de chercheuses qu
+ i dépoussièrent le baroque espagnol enregistrent en public sur la scène
+  de l'auditorium un épisode inédit de leur podcast "Las Hijas de Felipe"
+ \, en lien avec l'exposition "Zurbarán"\nhttps://www.louvre.fr/exposition
+ s-et-evenements/evenements-activites/las-hijas-de-felipe-podcast-en-direct
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  s-hijas-de-felipe-podcast-en-direct
 END:VEVENT
 BEGIN:VEVENT
 UID:ecda48921ed2@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261212T150000
 DTEND;TZID=Europe/Paris:20261212T170000
 SUMMARY:Conférence "Les Maîtres d’art et leurs élèves - Dialogue Fran
@@ -3148,7 +3211,7 @@ URL:https://www.paris.fr/evenements/conference-les-maitres-d-art-et-leurs-e
 END:VEVENT
 BEGIN:VEVENT
 UID:5dbd89f658d5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261212T153000
 DTEND;TZID=Europe/Paris:20261212T170000
 SUMMARY:Agatha Christie portée à l'écran
@@ -3160,7 +3223,7 @@ URL:https://www.paris.fr/evenements/agatha-christie-portee-a-l-ecran-115588
 END:VEVENT
 BEGIN:VEVENT
 UID:ab83ae331d16@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261212T160000
 DTEND;TZID=Europe/Paris:20261212T170000
 SUMMARY:Écoute musicale - Big Science\, de Laurie Anderson
@@ -3176,7 +3239,7 @@ URL:https://www.paris.fr/evenements/ecoute-musicale-big-science-de-laurie-a
 END:VEVENT
 BEGIN:VEVENT
 UID:b83eaa2bc2b9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261214T150000
 DTEND;TZID=Europe/Paris:20261214T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (7)
@@ -3189,7 +3252,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
 END:VEVENT
 BEGIN:VEVENT
 UID:d18631f9d83b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Concert-sandwich 15/12/26
@@ -3201,7 +3264,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/concert-sandwich-15/1
 END:VEVENT
 BEGIN:VEVENT
 UID:e1b4e4bf4ea1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261215T090000
 DTEND;TZID=Europe/Paris:20261215T180000
 SUMMARY:Tout ce qui brille n’est pas d’or… Stratégies de l’éclat 
@@ -3215,7 +3278,7 @@ URL:https://www.inha.fr/agenda/tout-ce-qui-brille-nest-pas-dor-strategies-d
 END:VEVENT
 BEGIN:VEVENT
 UID:ef032a508413@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261216T100000
 DTEND;TZID=Europe/Paris:20261216T120000
 SUMMARY:AGORHA : formation à la recherche et à la consultation des ressou
@@ -3229,7 +3292,7 @@ URL:https://www.inha.fr/agenda/formation-agorha-recherche-peinture-decembre
 END:VEVENT
 BEGIN:VEVENT
 UID:aa39a449896f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261217T190000
 DTEND;TZID=Europe/Paris:20261217T210000
 SUMMARY:Conférence autour de l'exposition "Andy Warhol. La ligne et l'imag
@@ -3244,7 +3307,7 @@ URL:https://www.paris.fr/evenements/conference-autour-de-l-exposition-leono
 END:VEVENT
 BEGIN:VEVENT
 UID:e559ef2c1310@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261219T150000
 DTEND;TZID=Europe/Paris:20261219T170000
 SUMMARY:Le Cinéma de Virginia : Cinématch\, le foot au cinéma
@@ -3258,7 +3321,7 @@ URL:https://www.paris.fr/evenements/le-cinema-de-virginia-cinematch-le-foot
 END:VEVENT
 BEGIN:VEVENT
 UID:7089ff243f2b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270104T150000
 DTEND;TZID=Europe/Paris:20270104T170000
 SUMMARY:Sortir de cette chambre à moi\, chanceler\, chavirer (8)
@@ -3271,20 +3334,20 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/sortir-de-cette-chambr
 END:VEVENT
 BEGIN:VEVENT
 UID:5e558e15accc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270108T123000
 DTEND;TZID=Europe/Paris:20270108T143000
 SUMMARY:L’Ivoire Barberini. Restaurer un chef-d’œuvre des collections
-DESCRIPTION:à 12h30 par Maximilien Durand \, musée du Louvre\nhttps://www
- .louvre.fr/expositions-et-evenements/evenements-activites/l-ivoire-barberi
- ni-restaurer-un-chef-d-oeuvre-des-collections
+DESCRIPTION:à 12h30 par Maximilien Durand\, musée du Louvre\nhttps://www.
+ louvre.fr/expositions-et-evenements/evenements-activites/l-ivoire-barberin
+ i-restaurer-un-chef-d-oeuvre-des-collections
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/l-
  ivoire-barberini-restaurer-un-chef-d-oeuvre-des-collections
 END:VEVENT
 BEGIN:VEVENT
 UID:8104c4f833c3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270108T200000
 DTEND;TZID=Europe/Paris:20270108T220000
 SUMMARY:Concert d'ouverture : La Sultane - André Manoukian et ses invités
@@ -3296,7 +3359,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-d-ouverture-la-sulta
 END:VEVENT
 BEGIN:VEVENT
 UID:8bd54c272a01@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270113T100000
 DTEND;TZID=Europe/Paris:20270113T120000
 SUMMARY:Numériser et manipuler les images
@@ -3309,21 +3372,21 @@ URL:https://www.inha.fr/agenda/formation-manipuler-images-recherche-janvier
 END:VEVENT
 BEGIN:VEVENT
 UID:6c3e383d9991@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270115T123000
 DTEND;TZID=Europe/Paris:20270115T143000
 SUMMARY:La frise de la chasse de la tombe de Philippe II (Grèce)
-DESCRIPTION:à 12h30 par Hariclia Brecoulaki \, Institut de Recherches Hist
- oriques de la Fondation Nationale de la Recherche Scientifique (Grèce)\nh
- ttps://www.louvre.fr/expositions-et-evenements/evenements-activites/la-fri
- se-de-la-chasse-de-la-tombe-de-philippe-ii-grece
+DESCRIPTION:à 12h30 par Hariclia Brecoulaki\, Institut de Recherches Histo
+ riques de la Fondation Nationale de la Recherche Scientifique (Grèce)\nht
+ tps://www.louvre.fr/expositions-et-evenements/evenements-activites/la-fris
+ e-de-la-chasse-de-la-tombe-de-philippe-ii-grece
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  -frise-de-la-chasse-de-la-tombe-de-philippe-ii-grece
 END:VEVENT
 BEGIN:VEVENT
 UID:757a6c623e4a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270115T180000
 DTEND;TZID=Europe/Paris:20270115T200000
 SUMMARY:La sculpture européenne dans la collection royale britannique
@@ -3336,7 +3399,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
 END:VEVENT
 BEGIN:VEVENT
 UID:549bdd9fca7c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270118T140000
 DTEND;TZID=Europe/Paris:20270118T200000
 SUMMARY:Zurbarán et le paradigme de l’artiste dévot
@@ -3348,17 +3411,17 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/zu
 END:VEVENT
 BEGIN:VEVENT
 UID:d701671e69f7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270118T190000
 DTEND;TZID=Europe/Paris:20270118T210000
 SUMMARY:Sculpture et peinture dans l’Espagne du 17e siècle : concurrence
   et dialogues des arts
-DESCRIPTION:à 19h avec Manuel Arias \, Museo Nacional del Prado\, Valérie
-  Carpentier-Vanhaverbeke \, musée du Louvre\, Charlotte Chastel-Rousseau 
- \, musée du Louvre et Cécile Vincent-Cassy \, CY Cergy Paris Université
- \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/scu
- lpture-et-peinture-dans-l-espagne-du-17e-siecle-concurrence-et-dialogues-d
- es-arts
+DESCRIPTION:à 19h avec Manuel Arias\, Museo Nacional del Prado\, Valérie 
+ Carpentier-Vanhaverbeke\, musée du Louvre\, Charlotte Chastel-Rousseau\, 
+ musée du Louvre et Cécile Vincent-Cassy\, CY Cergy Paris Université\nht
+ tps://www.louvre.fr/expositions-et-evenements/evenements-activites/sculptu
+ re-et-peinture-dans-l-espagne-du-17e-siecle-concurrence-et-dialogues-des-a
+ rts
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/sc
  ulpture-et-peinture-dans-l-espagne-du-17e-siecle-concurrence-et-dialogues-
@@ -3366,7 +3429,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/sc
 END:VEVENT
 BEGIN:VEVENT
 UID:bf480719d384@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270121T180000
 DTEND;TZID=Europe/Paris:20270121T190000
 SUMMARY:L'Illusion
@@ -3377,7 +3440,7 @@ URL:https://institutducerveau.org/agenda/lillusion
 END:VEVENT
 BEGIN:VEVENT
 UID:3ebeabb60786@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270127T093000
 DTEND;TZID=Europe/Paris:20270127T180000
 SUMMARY:Musée / Photographie
@@ -3390,20 +3453,20 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/mu
 END:VEVENT
 BEGIN:VEVENT
 UID:e299da71c0a3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270127T190000
 DTEND;TZID=Europe/Paris:20270127T210000
 SUMMARY:Les musées fantômes de la photographie
-DESCRIPTION:à 19h par Eleonore Challine \, historienne de l'art et de la p
- hotographie\nhttps://www.louvre.fr/expositions-et-evenements/evenements-ac
- tivites/les-musees-fantomes-de-la-photographie
+DESCRIPTION:à 19h par Eleonore Challine\, historienne de l'art et de la ph
+ otographie\nhttps://www.louvre.fr/expositions-et-evenements/evenements-act
+ ivites/les-musees-fantomes-de-la-photographie
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
  s-musees-fantomes-de-la-photographie
 END:VEVENT
 BEGIN:VEVENT
 UID:5d7988bf3e55@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270129T180000
 DTEND;TZID=Europe/Paris:20270129T200000
 SUMMARY:Collectionner au temps de l’Encyclopédie
@@ -3415,36 +3478,36 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/co
 END:VEVENT
 BEGIN:VEVENT
 UID:d2a8baedf519@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270201T123000
 DTEND;TZID=Europe/Paris:20270201T143000
 SUMMARY:La "Vierge de Baroilles" et ses sœurs
-DESCRIPTION:à 12h30 par Katharina Christa Schüppel \, Otto-FriedrichUnive
- rsität Bamberg\, et Pierre-Yves Le Pogam \, musée du Louvre.\nhttps://ww
- w.louvre.fr/expositions-et-evenements/evenements-activites/la-vierge-de-ba
- roilles-et-ses-soeurs
+DESCRIPTION:à 12h30 par Katharina Christa Schüppel\, Otto-FriedrichUniver
+ sität Bamberg\, et Pierre-Yves Le Pogam\, musée du Louvre.\nhttps://www.
+ louvre.fr/expositions-et-evenements/evenements-activites/la-vierge-de-baro
+ illes-et-ses-soeurs
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  -vierge-de-baroilles-et-ses-soeurs
 END:VEVENT
 BEGIN:VEVENT
 UID:1936335fd264@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270205T180000
 DTEND;TZID=Europe/Paris:20270205T200000
 SUMMARY:Un témoignage unique des relations artistiques franco-britanniques
   au Louvre
-DESCRIPTION:Avec Kira d’Albuquerque \, Malcolm Baker \, Virginie Guffroy 
- et Guilhem Scherf\nhttps://www.louvre.fr/expositions-et-evenements/eveneme
- nts-activites/un-temoignage-unique-des-relations-artistiques-franco-britan
- niques-au-louvre
+DESCRIPTION:Avec Kira d’Albuquerque\, Malcolm Baker\, Virginie Guffroy et
+  Guilhem Scherf\nhttps://www.louvre.fr/expositions-et-evenements/evenement
+ s-activites/un-temoignage-unique-des-relations-artistiques-franco-britanni
+ ques-au-louvre
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/un
  -temoignage-unique-des-relations-artistiques-franco-britanniques-au-louvre
 END:VEVENT
 BEGIN:VEVENT
 UID:1f18be5bf829@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270205T200000
 DTEND;TZID=Europe/Paris:20270205T220000
 SUMMARY:Concert Brooklyn Suite - Zachary Wilder\, Benjamin Lazar\, Ensemble
@@ -3457,7 +3520,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-brooklyn-suite---zac
 END:VEVENT
 BEGIN:VEVENT
 UID:531b04865b56@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270224T160000
 DTEND;TZID=Europe/Paris:20270224T180000
 SUMMARY:La « tombe de Grenna » à Cyrène et ses sculptures
@@ -3469,7 +3532,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
 END:VEVENT
 BEGIN:VEVENT
 UID:fe180f76dfe1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270224T200000
 DTEND;TZID=Europe/Paris:20270224T220000
 SUMMARY:Concert Songs from the north country - Rosemary Standley\, Françoi
@@ -3484,21 +3547,21 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-songs-from-the-north
 END:VEVENT
 BEGIN:VEVENT
 UID:ad62849deef0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270225T123000
 DTEND;TZID=Europe/Paris:20270225T143000
 SUMMARY:Chefs-d'œuvre en argent
-DESCRIPTION:à 12h30 avec Marie-Anne Loeper-Attia \, restauratrice\, Cécil
- e Giroire\, Stéphanie Deschamps-Tan et Anne Forray-Carlier \, musée du L
- ouvre\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activite
- s/chefs-d-oeuvre-en-argent
+DESCRIPTION:à 12h30 avec Marie-Anne Loeper-Attia\, restauratrice\, Cécile
+  Giroire\, Stéphanie Deschamps-Tan et Anne Forray-Carlier\, musée du Lou
+ vre\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/
+ chefs-d-oeuvre-en-argent
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ch
  efs-d-oeuvre-en-argent
 END:VEVENT
 BEGIN:VEVENT
 UID:71b3e6b68897@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270226T100000
 DTEND;TZID=Europe/Paris:20270226T120000
 SUMMARY:Marie Duval – « Dreyfus au théâtre et au cinéma : un héros o
@@ -3511,7 +3574,7 @@ URL:https://www.item.ens.fr/marie-duval-dreyfus-au-theatre-et-au-cinema-un-
 END:VEVENT
 BEGIN:VEVENT
 UID:aafb2f7dbaf9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270226T200000
 DTEND;TZID=Europe/Paris:20270226T220000
 SUMMARY:Concert Mayrig - Eva Zaïcik\, David Harountunian\, Xenia Maliarevi
@@ -3524,7 +3587,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-mayrig---eva-zaicik-
 END:VEVENT
 BEGIN:VEVENT
 UID:55477e8a6b85@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270309T173000
 DTEND;TZID=Europe/Paris:20270309T193000
 SUMMARY:Karma Sichoe : broken lineages and inner portraits & Tidinit - Une 
@@ -3538,7 +3601,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/karma-sichoe-broken-lineages-
 END:VEVENT
 BEGIN:VEVENT
 UID:f1d14a1133d4@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270316T183000
 DTEND;TZID=Europe/Paris:20270316T200000
 SUMMARY:Chaillot Rencontre Danse et photographie
@@ -3554,7 +3617,7 @@ URL:https://www.paris.fr/evenements/chaillot-rencontre-danse-et-photographi
 END:VEVENT
 BEGIN:VEVENT
 UID:809d766e84d6@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270318T180000
 DTEND;TZID=Europe/Paris:20270318T190000
 SUMMARY:La dépression
@@ -3565,7 +3628,7 @@ URL:https://institutducerveau.org/agenda/depression
 END:VEVENT
 BEGIN:VEVENT
 UID:037296728aa7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270322T200000
 DTEND;TZID=Europe/Paris:20270322T220000
 SUMMARY:Concert Printemps Sacré - Ensemble Irini
@@ -3577,7 +3640,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-printemps-sacre---en
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5391dd328f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20270324
 DTEND;VALUE=DATE:20270325
 SUMMARY:Trophées danse & diversité
@@ -3591,7 +3654,7 @@ URL:https://www.paris.fr/evenements/trophees-danse-diversite-112566
 END:VEVENT
 BEGIN:VEVENT
 UID:4ee779a05f78@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20270324
 DTEND;VALUE=DATE:20270325
 SUMMARY:Rassemblement #5
@@ -3605,7 +3668,7 @@ URL:https://www.paris.fr/evenements/rassemblement-5-112565
 END:VEVENT
 BEGIN:VEVENT
 UID:5baf018dafda@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270325T180000
 DTEND;TZID=Europe/Paris:20270325T200000
 SUMMARY:Les routes de l’image
@@ -3616,8 +3679,21 @@ URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/les-routes-
  de-image/les-routes-de-image
 END:VEVENT
 BEGIN:VEVENT
+UID:8bfdfc45dc38@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20270330T143000
+DTEND;TZID=Europe/Paris:20270330T163000
+SUMMARY:Une histoire spéculaire de la peinture (1)
+DESCRIPTION:Cours · Une histoire spéculaire de la peinture\nhttps://www.c
+ ollege-de-france.fr/fr/agenda/cours/une-histoire-speculaire-de-la-peinture
+ /une-histoire-speculaire-de-la-peinture-1
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/une-histoire-speculair
+ e-de-la-peinture/une-histoire-speculaire-de-la-peinture-1
+END:VEVENT
+BEGIN:VEVENT
 UID:419bc0b7b203@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270331T100000
 DTEND;TZID=Europe/Paris:20270331T120000
 SUMMARY:Matérialités du reflet pictural (1)
@@ -3630,7 +3706,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/materialites-du-re
 END:VEVENT
 BEGIN:VEVENT
 UID:77e5a7c062f5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270331T200000
 DTEND;TZID=Europe/Paris:20270331T220000
 SUMMARY:Concert Djiyo - Ablaye Cissoko et Cyrille Brotto
@@ -3642,7 +3718,7 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-djiyo-ablaye-cissoko
 END:VEVENT
 BEGIN:VEVENT
 UID:8e91f520b527@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270407T140000
 DTEND;TZID=Europe/Paris:20270407T160000
 SUMMARY:Les collections patrimoniales de la bibliothèque
@@ -3655,7 +3731,7 @@ URL:https://www.inha.fr/agenda/formation-collections-patrimoniales-biblioth
 END:VEVENT
 BEGIN:VEVENT
 UID:59a4896feffa@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270419T124500
 DTEND;TZID=Europe/Paris:20270419T134500
 SUMMARY:Redécouvrir Le retour du Fils prodigue de Rembrandt
@@ -3666,8 +3742,21 @@ URL:https://www.collegedesbernardins.fr/agenda/redecouvrir-le-retour-du-fil
  s-prodigue-de-rembrandt
 END:VEVENT
 BEGIN:VEVENT
+UID:b4e739ffc5bf@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20270420T100000
+DTEND;TZID=Europe/Paris:20270420T120000
+SUMMARY:Une histoire spéculaire de la peinture (2)
+DESCRIPTION:Cours · Une histoire spéculaire de la peinture\nhttps://www.c
+ ollege-de-france.fr/fr/agenda/cours/une-histoire-speculaire-de-la-peinture
+ /une-histoire-speculaire-de-la-peinture-2
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/une-histoire-speculair
+ e-de-la-peinture/une-histoire-speculaire-de-la-peinture-2
+END:VEVENT
+BEGIN:VEVENT
 UID:13f2ad91f4dd@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270421T100000
 DTEND;TZID=Europe/Paris:20270421T120000
 SUMMARY:Matérialités du reflet pictural (2)
@@ -3680,7 +3769,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/materialites-du-re
 END:VEVENT
 BEGIN:VEVENT
 UID:963fa14d3045@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270421T140000
 DTEND;TZID=Europe/Paris:20270421T160000
 SUMMARY:Les collections patrimoniales de la bibliothèque
@@ -3693,7 +3782,7 @@ URL:https://www.inha.fr/agenda/formation-collections-patrimoniales-biblioth
 END:VEVENT
 BEGIN:VEVENT
 UID:eb9ed1452961@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270423T200000
 DTEND;TZID=Europe/Paris:20270423T220000
 SUMMARY:Concert Le souffle des Cordes - Renaud Garcia-Fons
@@ -3704,8 +3793,21 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-le-souffle-des-corde
  s---renaud-garcia-fons
 END:VEVENT
 BEGIN:VEVENT
+UID:f8abe335b4a7@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20270427T100000
+DTEND;TZID=Europe/Paris:20270427T120000
+SUMMARY:Une histoire spéculaire de la peinture (3)
+DESCRIPTION:Cours · Une histoire spéculaire de la peinture\nhttps://www.c
+ ollege-de-france.fr/fr/agenda/cours/une-histoire-speculaire-de-la-peinture
+ /une-histoire-speculaire-de-la-peinture-3
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/une-histoire-speculair
+ e-de-la-peinture/une-histoire-speculaire-de-la-peinture-3
+END:VEVENT
+BEGIN:VEVENT
 UID:d6fbd8d43c09@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270428T100000
 DTEND;TZID=Europe/Paris:20270428T120000
 SUMMARY:Matérialités du reflet pictural (3)
@@ -3718,7 +3820,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/materialites-du-re
 END:VEVENT
 BEGIN:VEVENT
 UID:6366a61b8f73@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270503T124500
 DTEND;TZID=Europe/Paris:20270503T134500
 SUMMARY:Les femmes en bleu et rose du jeune Pablo Picasso
@@ -3729,8 +3831,21 @@ URL:https://www.collegedesbernardins.fr/agenda/les-femmes-en-bleu-et-rose-d
  u-jeune-pablo-picasso
 END:VEVENT
 BEGIN:VEVENT
+UID:cdcaada30d1b@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20270504T100000
+DTEND;TZID=Europe/Paris:20270504T120000
+SUMMARY:Une histoire spéculaire de la peinture (4)
+DESCRIPTION:Cours · Une histoire spéculaire de la peinture\nhttps://www.c
+ ollege-de-france.fr/fr/agenda/cours/une-histoire-speculaire-de-la-peinture
+ /une-histoire-speculaire-de-la-peinture-4
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/une-histoire-speculair
+ e-de-la-peinture/une-histoire-speculaire-de-la-peinture-4
+END:VEVENT
+BEGIN:VEVENT
 UID:07cec346c04f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270505T100000
 DTEND;TZID=Europe/Paris:20270505T120000
 SUMMARY:Matérialités du reflet pictural (4)
@@ -3742,8 +3857,21 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/materialites-du-re
  flet-pictural/materialites-du-reflet-pictural-4
 END:VEVENT
 BEGIN:VEVENT
+UID:2fb7c2a20962@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20270511T100000
+DTEND;TZID=Europe/Paris:20270511T120000
+SUMMARY:Une histoire spéculaire de la peinture (5)
+DESCRIPTION:Cours · Une histoire spéculaire de la peinture\nhttps://www.c
+ ollege-de-france.fr/fr/agenda/cours/une-histoire-speculaire-de-la-peinture
+ /une-histoire-speculaire-de-la-peinture-5
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/une-histoire-speculair
+ e-de-la-peinture/une-histoire-speculaire-de-la-peinture-5
+END:VEVENT
+BEGIN:VEVENT
 UID:ca0ad4b16652@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20270512
 DTEND;VALUE=DATE:20270513
 SUMMARY:Rencontres C.A.L.I.P.S.O. Chaillot × TMNlab : Art vivant et enviro
@@ -3762,7 +3890,7 @@ URL:https://www.paris.fr/evenements/rencontres-c-a-l-i-p-s-o-chaillot-x-tmn
 END:VEVENT
 BEGIN:VEVENT
 UID:a600eb7cd5d0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270512T100000
 DTEND;TZID=Europe/Paris:20270512T120000
 SUMMARY:Matérialités du reflet pictural (5)
@@ -3775,7 +3903,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/materialites-du-re
 END:VEVENT
 BEGIN:VEVENT
 UID:7a8ca271bbd9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270512T200000
 DTEND;TZID=Europe/Paris:20270512T220000
 SUMMARY:Concert Here and now - Walid Ben Selim et Marie-Marguerite Cano
@@ -3786,8 +3914,21 @@ URL:https://www.collegedesbernardins.fr/agenda/concert-here-and-now---walid
  -ben-selim-et-marie-marguerite-cano
 END:VEVENT
 BEGIN:VEVENT
+UID:331ca37f0b28@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;TZID=Europe/Paris:20270518T100000
+DTEND;TZID=Europe/Paris:20270518T120000
+SUMMARY:Une histoire spéculaire de la peinture (6)
+DESCRIPTION:Cours · Une histoire spéculaire de la peinture\nhttps://www.c
+ ollege-de-france.fr/fr/agenda/cours/une-histoire-speculaire-de-la-peinture
+ /une-histoire-speculaire-de-la-peinture-6
+LOCATION:Amphithéâtre Marguerite de Navarre\, Site Marcelin Berthelot
+URL:https://www.college-de-france.fr/fr/agenda/cours/une-histoire-speculair
+ e-de-la-peinture/une-histoire-speculaire-de-la-peinture-6
+END:VEVENT
+BEGIN:VEVENT
 UID:ccf20ddbdca6@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270519T100000
 DTEND;TZID=Europe/Paris:20270519T120000
 SUMMARY:Matérialités du reflet pictural (6)
@@ -3800,7 +3941,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/materialites-du-re
 END:VEVENT
 BEGIN:VEVENT
 UID:f63e4a8ea877@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270520T180000
 DTEND;TZID=Europe/Paris:20270520T190000
 SUMMARY:La mémoire dans tous ses états
@@ -3811,7 +3952,7 @@ URL:https://institutducerveau.org/agenda/memoire-dans-tous-ses-etats
 END:VEVENT
 BEGIN:VEVENT
 UID:e7b642d8974f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270605T170000
 DTEND;TZID=Europe/Paris:20270605T230000
 SUMMARY:Carte blanche au Fauvettes City Club
@@ -3826,7 +3967,7 @@ URL:https://www.paris.fr/evenements/carte-blanche-au-fauvettes-city-club-11
 END:VEVENT
 BEGIN:VEVENT
 UID:db9809af2538@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270610T200000
 DTEND;TZID=Europe/Paris:20270610T220000
 SUMMARY:Concert Sarabande Soufie - The Modal Experience Ensemble\, Keyvan C

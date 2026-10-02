@@ -25,28 +25,28 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:398424f3069a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T123000
 DTEND;TZID=Europe/Paris:20261002T143000
 SUMMARY:L'Antiquité tardive au Louvre
-DESCRIPTION:à 12h30 par Hervé Inglebert \, Université de Paris X-Nanterr
- e / musée du Louvre.\nhttps://www.louvre.fr/expositions-et-evenements/eve
- nements-activites/l-antiquite-tardive-au-louvre
+DESCRIPTION:à 12h30 par Hervé Inglebert\, Université de Paris X-Nanterre
+  / musée du Louvre.\nhttps://www.louvre.fr/expositions-et-evenements/even
+ ements-activites/l-antiquite-tardive-au-louvre
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/l-
  antiquite-tardive-au-louvre
 END:VEVENT
 BEGIN:VEVENT
 UID:d74432ecf1ff@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T180000
 DTEND;TZID=Europe/Paris:20261002T200000
 SUMMARY:La sculpture aux mains des peintres. Terres cuites polychromes de l
  a Grèce antique
-DESCRIPTION:Avec Brigitte Bourgeois \, Violaine Jeammet \, Yannick Vandenbe
- rghe \, Agnès Rouveret et Adeline Grand-Clément\nhttps://www.louvre.fr/e
- xpositions-et-evenements/evenements-activites/la-sculpture-aux-mains-des-p
- eintres-terres-cuites-polychromes-de-la-grece-antique
+DESCRIPTION:Avec Brigitte Bourgeois\, Violaine Jeammet\, Yannick Vandenberg
+ he\, Agnès Rouveret et Adeline Grand-Clément\nhttps://www.louvre.fr/expo
+ sitions-et-evenements/evenements-activites/la-sculpture-aux-mains-des-pein
+ tres-terres-cuites-polychromes-de-la-grece-antique
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  -sculpture-aux-mains-des-peintres-terres-cuites-polychromes-de-la-grece-an
@@ -54,7 +54,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
 END:VEVENT
 BEGIN:VEVENT
 UID:328629adb607@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T190000
 DTEND;TZID=Europe/Paris:20261002T210000
 SUMMARY:Marais d’Irak\, soif d’avenir
@@ -70,28 +70,28 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ma
 END:VEVENT
 BEGIN:VEVENT
 UID:e65857e3183e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261005T123000
 DTEND;TZID=Europe/Paris:20261005T143000
 SUMMARY:Les cartes du tarot enluminé Rothschild
-DESCRIPTION:par Kilian Laclavetine \, C2RMF\, et Victoria Fernandez-Masague
- r \, musée du Louvre\nhttps://www.louvre.fr/expositions-et-evenements/eve
- nements-activites/les-cartes-du-tarot-enlumine-rothschild
+DESCRIPTION:par Kilian Laclavetine\, C2RMF\, et Victoria Fernandez-Masaguer
+ \, musée du Louvre\nhttps://www.louvre.fr/expositions-et-evenements/evene
+ ments-activites/les-cartes-du-tarot-enlumine-rothschild
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
  s-cartes-du-tarot-enlumine-rothschild
 END:VEVENT
 BEGIN:VEVENT
 UID:45687f8786fc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261008T123000
 DTEND;TZID=Europe/Paris:20261008T143000
 SUMMARY:Présentation d'exposition : "Sculpter la couleur. Chefs-d’œuvre
   du musée national de sculpture\, Valladolid"
-DESCRIPTION:à 12h30 par Valérie Carpentier et Alejandro Nuevo \, commissa
- ires\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites
- /presentation-d-exposition-sculpter-la-couleur-chefs-d-oeuvre-du-musee-nat
- ional-de-sculpture-valladolid
+DESCRIPTION:à 12h30 par Valérie Carpentier et Alejandro Nuevo\, commissai
+ res\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/
+ presentation-d-exposition-sculpter-la-couleur-chefs-d-oeuvre-du-musee-nati
+ onal-de-sculpture-valladolid
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
  esentation-d-exposition-sculpter-la-couleur-chefs-d-oeuvre-du-musee-nation
@@ -99,20 +99,20 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
 END:VEVENT
 BEGIN:VEVENT
 UID:7b0c46b59863@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261012T123000
 DTEND;TZID=Europe/Paris:20261012T143000
 SUMMARY:Présentation de l'exposition "Zurbarán\, 1598 – 1664"
-DESCRIPTION:à 12h30 et 19h par Charlotte Chastel-Rousseau \, commissaire d
- e l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/evenements
- -activites/presentation-de-l-exposition-zurbaran-1598-1664
+DESCRIPTION:à 12h30 et 19h par Charlotte Chastel-Rousseau\, commissaire de
+  l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/evenements-
+ activites/presentation-de-l-exposition-zurbaran-1598-1664
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
  esentation-de-l-exposition-zurbaran-1598-1664
 END:VEVENT
 BEGIN:VEVENT
 UID:00c70d9f7149@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T123000
 DTEND;TZID=Europe/Paris:20261014T143000
 SUMMARY:Vulci\, grande cité de l'Étrurie
@@ -125,7 +125,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/vu
 END:VEVENT
 BEGIN:VEVENT
 UID:df598bf0140b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Bénédicte Savoy en conversation avec Pierre Rosenberg
@@ -138,7 +138,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/be
 END:VEVENT
 BEGIN:VEVENT
 UID:97dc2962ada5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261015T160000
 DTEND;TZID=Europe/Paris:20261015T180000
 SUMMARY:Récentes découvertes à Philadelphie (Fayoum) : un lot de figurin
@@ -154,52 +154,52 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/re
 END:VEVENT
 BEGIN:VEVENT
 UID:1944fd619695@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T123000
 DTEND;TZID=Europe/Paris:20261016T143000
 SUMMARY:Soudan\, un patrimoine en partage
-DESCRIPTION:à 12h30 par Séverine Marchi \, directrice de la Section fran
- çaise de la Direction des Antiquités du Soudan.\nhttps://www.louvre.fr/e
- xpositions-et-evenements/evenements-activites/soudan-un-patrimoine-en-part
- age
+DESCRIPTION:à 12h30 par Séverine Marchi\, directrice de la Section franç
+ aise de la Direction des Antiquités du Soudan.\nhttps://www.louvre.fr/exp
+ ositions-et-evenements/evenements-activites/soudan-un-patrimoine-en-partag
+ e
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/so
  udan-un-patrimoine-en-partage
 END:VEVENT
 BEGIN:VEVENT
 UID:d8e1de72ce63@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261016T123000
 DTEND;TZID=Europe/Paris:20261016T143000
 SUMMARY:Scénographier les expositions « Zurbarán » et « Sculpter la co
  uleur »
-DESCRIPTION:à 12h30 Avec Valérie Carpentier \, Charlotte Chastel-Rousseau
-  \, musée du Louvre\, Anne Lebas et Héloïse Lévêque \, scénographes\
- nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/scen
- ographier-les-expositions-zurbaran-et-sculpter-la-couleur
+DESCRIPTION:à 12h30 Avec Valérie Carpentier\, Charlotte Chastel-Rousseau\
+ , musée du Louvre\, Anne Lebas et Héloïse Lévêque\, scénographes\nht
+ tps://www.louvre.fr/expositions-et-evenements/evenements-activites/scenogr
+ aphier-les-expositions-zurbaran-et-sculpter-la-couleur
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/sc
  enographier-les-expositions-zurbaran-et-sculpter-la-couleur
 END:VEVENT
 BEGIN:VEVENT
 UID:cecf10f35cd0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261021T190000
 DTEND;TZID=Europe/Paris:20261021T210000
 SUMMARY:Angélica Liddell : « El barroco en la sangre »
 DESCRIPTION:à 19h Figure incontournable du théâtre contemporain\, la met
- teuse en scène espagnole Angélica Liddell \, partage avec le public sa p
- assion pour la peinture de Zurbarán et le baroque espagnol à travers un 
- dialogue animé par Olivia Gesbert\, rédactrice en chef de la NRF\, Galli
- mard.\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activite
- s/angelica-liddell-el-barroco-en-la-sangre
+ teuse en scène espagnole Angélica Liddell\, partage avec le public sa pa
+ ssion pour la peinture de Zurbarán et le baroque espagnol à travers un d
+ ialogue animé par Olivia Gesbert\, rédactrice en chef de la NRF\, Gallim
+ ard.\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites
+ /angelica-liddell-el-barroco-en-la-sangre
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/an
  gelica-liddell-el-barroco-en-la-sangre
 END:VEVENT
 BEGIN:VEVENT
 UID:72fc30c20311@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261023T090000
 DTEND;TZID=Europe/Paris:20261023T180000
 SUMMARY:Présences de l’Antiquité tardive dans les récits muséaux
@@ -213,7 +213,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
 END:VEVENT
 BEGIN:VEVENT
 UID:25aa5134ffbc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261104T123000
 DTEND;TZID=Europe/Paris:20261104T143000
 SUMMARY:Dans l'atelier de Jean Fouquet. La Passion du Maître du Boccace de
@@ -228,7 +228,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/da
 END:VEVENT
 BEGIN:VEVENT
 UID:60ec5593e2a4@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261105T090000
 DTEND;TZID=Europe/Paris:20261105T180000
 SUMMARY:Fonds et collections d'estampages
@@ -244,49 +244,49 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/fo
 END:VEVENT
 BEGIN:VEVENT
 UID:fc13c9b6a07d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T123000
 DTEND;TZID=Europe/Paris:20261112T143000
 SUMMARY:Sur les routes du Karakum médiéval (Turkmenistan)
-DESCRIPTION:à 12h30 par Paul Wordsworth \, University College\, London\, e
- n collaboration avec Martina Rugiadi\, The Metropolitan Museum of Art\, Ne
- w York (sous réserve)\nhttps://www.louvre.fr/expositions-et-evenements/ev
- enements-activites/sur-les-routes-du-karakum-medieval-turkmenistan
+DESCRIPTION:à 12h30 par Paul Wordsworth\, University College\, London\, en
+  collaboration avec Martina Rugiadi\, The Metropolitan Museum of Art\, New
+  York (sous réserve)\nhttps://www.louvre.fr/expositions-et-evenements/eve
+ nements-activites/sur-les-routes-du-karakum-medieval-turkmenistan
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/su
  r-les-routes-du-karakum-medieval-turkmenistan
 END:VEVENT
 BEGIN:VEVENT
 UID:bb6b2d89a7e5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Séjours d’artistes de part et d’autre des Pyrénées (1800 - 1
  905)
-DESCRIPTION:à 19h par Véronique Gerard Powell \, professeur émérite de 
- l'université Paris-Sorbonne.\nhttps://www.louvre.fr/expositions-et-evenem
- ents/evenements-activites/sejours-d-artistes-de-part-et-d-autre-des-pyrene
- es-1800-1905
+DESCRIPTION:à 19h par Véronique Gerard Powell\, professeur émérite de l
+ 'université Paris-Sorbonne.\nhttps://www.louvre.fr/expositions-et-eveneme
+ nts/evenements-activites/sejours-d-artistes-de-part-et-d-autre-des-pyrenee
+ s-1800-1905
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/se
  jours-d-artistes-de-part-et-d-autre-des-pyrenees-1800-1905
 END:VEVENT
 BEGIN:VEVENT
 UID:4bcf69aade3b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261113T123000
 DTEND;TZID=Europe/Paris:20261113T143000
 SUMMARY:Présentation de l'exposition "LOUVRE PHOTO"
-DESCRIPTION:à 12h30 par Dominique de Font-Réaulx et Quentin Bajac \, comm
- issaires de l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/
- evenements-activites/presentation-de-l-exposition-louvre-photo
+DESCRIPTION:à 12h30 par Dominique de Font-Réaulx et Quentin Bajac\, commi
+ ssaires de l'exposition\nhttps://www.louvre.fr/expositions-et-evenements/e
+ venements-activites/presentation-de-l-exposition-louvre-photo
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
  esentation-de-l-exposition-louvre-photo
 END:VEVENT
 BEGIN:VEVENT
 UID:950a437680d9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261113T180000
 DTEND;TZID=Europe/Paris:20261113T200000
 SUMMARY:Le dialogue des Chaires du Louvre
@@ -299,21 +299,21 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:a521df4a2db7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261116T190000
 DTEND;TZID=Europe/Paris:20261116T210000
 SUMMARY:233 ans de controverses. Le Louvre et ses critiques depuis 1793
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/23
- 3-ans-de-controverses-le-louvre-et-ses-critiques-depuis-1793
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/233
+ -ans-de-controverses-le-louvre-et-ses-critiques-depuis-1793
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/23
  3-ans-de-controverses-le-louvre-et-ses-critiques-depuis-1793
 END:VEVENT
 BEGIN:VEVENT
 UID:55f8214ae048@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261118T090000
 DTEND;TZID=Europe/Paris:20261118T180000
 SUMMARY:Le rétablissement des images. Naissance d’une histoire de l’ar
@@ -331,34 +331,34 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:2e7c5b55558b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261119T190000
 DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Trop voir\, tout avoir. Le Louvre ou l’hybris de l’accumulation
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/tr
- op-voir-tout-avoir-le-louvre-ou-l-hybris-de-l-accumulation
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/tro
+ p-voir-tout-avoir-le-louvre-ou-l-hybris-de-l-accumulation
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/tr
  op-voir-tout-avoir-le-louvre-ou-l-hybris-de-l-accumulation
 END:VEVENT
 BEGIN:VEVENT
 UID:8cc06e64ca07@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261120T123000
 DTEND;TZID=Europe/Paris:20261120T143000
 SUMMARY:Le musée de sculptures en plein air du jardin des Tuileries
-DESCRIPTION:à 12h30 par Emmanuelle Héran \, musée du Louvre\nhttps://www
- .louvre.fr/expositions-et-evenements/evenements-activites/le-musee-de-scul
- ptures-en-plein-air-du-jardin-des-tuileries
+DESCRIPTION:à 12h30 par Emmanuelle Héran\, musée du Louvre\nhttps://www.
+ louvre.fr/expositions-et-evenements/evenements-activites/le-musee-de-sculp
+ tures-en-plein-air-du-jardin-des-tuileries
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
  -musee-de-sculptures-en-plein-air-du-jardin-des-tuileries
 END:VEVENT
 BEGIN:VEVENT
 UID:f84fae0f6378@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261120T180000
 DTEND;TZID=Europe/Paris:20261120T200000
 SUMMARY:Présentation de l'exposition "Trop mignon !"
@@ -371,21 +371,21 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
 END:VEVENT
 BEGIN:VEVENT
 UID:2c4f61b8adcb@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261123T190000
 DTEND;TZID=Europe/Paris:20261123T210000
 SUMMARY:Voir et ne pas voir. Le Louvre et les angles morts du musée
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/vo
- ir-et-ne-pas-voir-le-louvre-et-les-angles-morts-du-musee
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/voi
+ r-et-ne-pas-voir-le-louvre-et-les-angles-morts-du-musee
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/vo
  ir-et-ne-pas-voir-le-louvre-et-les-angles-morts-du-musee
 END:VEVENT
 BEGIN:VEVENT
 UID:ebac0b4c84e9@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T180000
 SUMMARY:Anthousa
@@ -398,49 +398,49 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/an
 END:VEVENT
 BEGIN:VEVENT
 UID:a328270c0a3a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261126T190000
 DTEND;TZID=Europe/Paris:20261126T210000
 SUMMARY:Extraire. Le Louvre et l’envers matériel du musée
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/ex
- traire-le-louvre-et-l-envers-materiel-du-musee
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/ext
+ raire-le-louvre-et-l-envers-materiel-du-musee
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ex
  traire-le-louvre-et-l-envers-materiel-du-musee
 END:VEVENT
 BEGIN:VEVENT
 UID:0636a3485852@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261130T190000
 DTEND;TZID=Europe/Paris:20261130T210000
 SUMMARY:Droit dans les yeux. Le Louvre en face
-DESCRIPTION:à 19h par Bénédicte Savoy \, Technische Universität Berlin 
- Dans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non
- .\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/dr
- oit-dans-les-yeux-le-louvre-en-face
+DESCRIPTION:à 19h par Bénédicte Savoy\, Technische Universität Berlin D
+ ans le cadre de la Chaire du Louvre « Faut-il brûler le Louvre ? » Non.
+ \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/dro
+ it-dans-les-yeux-le-louvre-en-face
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/dr
  oit-dans-les-yeux-le-louvre-en-face
 END:VEVENT
 BEGIN:VEVENT
 UID:176f1b26c7aa@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261202T123000
 DTEND;TZID=Europe/Paris:20261202T143000
 SUMMARY:La tapisserie "La riña en la Venta Nueva" d'après Francisco de Go
  ya
-DESCRIPTION:à 12h30 par Pascal Torres Guardiola \, musée du Louvre\nhttps
- ://www.louvre.fr/expositions-et-evenements/evenements-activites/la-tapisse
- rie-la-rina-en-la-venta-nueva-d-apres-francisco-de-goya
+DESCRIPTION:à 12h30 par Pascal Torres Guardiola\, musée du Louvre\nhttps:
+ //www.louvre.fr/expositions-et-evenements/evenements-activites/la-tapisser
+ ie-la-rina-en-la-venta-nueva-d-apres-francisco-de-goya
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  -tapisserie-la-rina-en-la-venta-nueva-d-apres-francisco-de-goya
 END:VEVENT
 BEGIN:VEVENT
 UID:4a54aca6cf38@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261202T190000
 DTEND;TZID=Europe/Paris:20261202T210000
 SUMMARY:Le Centenaire Morellet au Louvre
@@ -458,38 +458,37 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:ad2363b910bd@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261212T150000
 DTEND;TZID=Europe/Paris:20261212T170000
 SUMMARY:Las hijas de Felipe : podcast en direct
-DESCRIPTION:à 15h Anna Garride et Carmen Urbita \, le duo de chercheuses q
- ui dépoussièrent le baroque espagnol enregistrent en public sur la scèn
- e de l'auditorium un épisode inédit de leur podcast "Las Hijas de Felipe
- "\, en lien avec l'exposition "Zurbarán"\nhttps://www.louvre.fr/expositio
- ns-et-evenements/evenements-activites/las-hijas-de-felipe-podcast-en-direc
- t
+DESCRIPTION:à 15h Anna Garride et Carmen Urbita\, le duo de chercheuses qu
+ i dépoussièrent le baroque espagnol enregistrent en public sur la scène
+  de l'auditorium un épisode inédit de leur podcast "Las Hijas de Felipe"
+ \, en lien avec l'exposition "Zurbarán"\nhttps://www.louvre.fr/exposition
+ s-et-evenements/evenements-activites/las-hijas-de-felipe-podcast-en-direct
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  s-hijas-de-felipe-podcast-en-direct
 END:VEVENT
 BEGIN:VEVENT
 UID:c1408828136e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:L’auberge espagnole de François-Regis Gaudry
-DESCRIPTION:à 11h Dans ses célèbres bodegones \, Zurbarán révèle quel
- que chose du quotidien des tables espagnoles et de l’art de vivre du Si
- ècle d’or. Qu’en reste-t-il aujourd’hui?\nhttps://www.louvre.fr/exp
- ositions-et-evenements/evenements-activites/l-auberge-espagnole-de-francoi
- s-regis-gaudry
+DESCRIPTION:à 11h Dans ses célèbres bodegones\, Zurbarán révèle quelq
+ ue chose du quotidien des tables espagnoles et de l’art de vivre du Siè
+ cle d’or. Qu’en reste-t-il aujourd’hui?\nhttps://www.louvre.fr/expos
+ itions-et-evenements/evenements-activites/l-auberge-espagnole-de-francois-
+ regis-gaudry
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/l-
  auberge-espagnole-de-francois-regis-gaudry
 END:VEVENT
 BEGIN:VEVENT
 UID:b17c12f5be1f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261217T160000
 DTEND;TZID=Europe/Paris:20261217T180000
 SUMMARY:Les bronzes grecs et romains de la collection Campana au musée du 
@@ -505,34 +504,34 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:5e558e15accc@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270108T123000
 DTEND;TZID=Europe/Paris:20270108T143000
 SUMMARY:L’Ivoire Barberini. Restaurer un chef-d’œuvre des collections
-DESCRIPTION:à 12h30 par Maximilien Durand \, musée du Louvre\nhttps://www
- .louvre.fr/expositions-et-evenements/evenements-activites/l-ivoire-barberi
- ni-restaurer-un-chef-d-oeuvre-des-collections
+DESCRIPTION:à 12h30 par Maximilien Durand\, musée du Louvre\nhttps://www.
+ louvre.fr/expositions-et-evenements/evenements-activites/l-ivoire-barberin
+ i-restaurer-un-chef-d-oeuvre-des-collections
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/l-
  ivoire-barberini-restaurer-un-chef-d-oeuvre-des-collections
 END:VEVENT
 BEGIN:VEVENT
 UID:6c3e383d9991@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270115T123000
 DTEND;TZID=Europe/Paris:20270115T143000
 SUMMARY:La frise de la chasse de la tombe de Philippe II (Grèce)
-DESCRIPTION:à 12h30 par Hariclia Brecoulaki \, Institut de Recherches Hist
- oriques de la Fondation Nationale de la Recherche Scientifique (Grèce)\nh
- ttps://www.louvre.fr/expositions-et-evenements/evenements-activites/la-fri
- se-de-la-chasse-de-la-tombe-de-philippe-ii-grece
+DESCRIPTION:à 12h30 par Hariclia Brecoulaki\, Institut de Recherches Histo
+ riques de la Fondation Nationale de la Recherche Scientifique (Grèce)\nht
+ tps://www.louvre.fr/expositions-et-evenements/evenements-activites/la-fris
+ e-de-la-chasse-de-la-tombe-de-philippe-ii-grece
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  -frise-de-la-chasse-de-la-tombe-de-philippe-ii-grece
 END:VEVENT
 BEGIN:VEVENT
 UID:757a6c623e4a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270115T180000
 DTEND;TZID=Europe/Paris:20270115T200000
 SUMMARY:La sculpture européenne dans la collection royale britannique
@@ -545,7 +544,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
 END:VEVENT
 BEGIN:VEVENT
 UID:549bdd9fca7c@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270118T140000
 DTEND;TZID=Europe/Paris:20270118T200000
 SUMMARY:Zurbarán et le paradigme de l’artiste dévot
@@ -557,17 +556,17 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/zu
 END:VEVENT
 BEGIN:VEVENT
 UID:d701671e69f7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270118T190000
 DTEND;TZID=Europe/Paris:20270118T210000
 SUMMARY:Sculpture et peinture dans l’Espagne du 17e siècle : concurrence
   et dialogues des arts
-DESCRIPTION:à 19h avec Manuel Arias \, Museo Nacional del Prado\, Valérie
-  Carpentier-Vanhaverbeke \, musée du Louvre\, Charlotte Chastel-Rousseau 
- \, musée du Louvre et Cécile Vincent-Cassy \, CY Cergy Paris Université
- \nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/scu
- lpture-et-peinture-dans-l-espagne-du-17e-siecle-concurrence-et-dialogues-d
- es-arts
+DESCRIPTION:à 19h avec Manuel Arias\, Museo Nacional del Prado\, Valérie 
+ Carpentier-Vanhaverbeke\, musée du Louvre\, Charlotte Chastel-Rousseau\, 
+ musée du Louvre et Cécile Vincent-Cassy\, CY Cergy Paris Université\nht
+ tps://www.louvre.fr/expositions-et-evenements/evenements-activites/sculptu
+ re-et-peinture-dans-l-espagne-du-17e-siecle-concurrence-et-dialogues-des-a
+ rts
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/sc
  ulpture-et-peinture-dans-l-espagne-du-17e-siecle-concurrence-et-dialogues-
@@ -575,7 +574,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/sc
 END:VEVENT
 BEGIN:VEVENT
 UID:3ebeabb60786@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270127T093000
 DTEND;TZID=Europe/Paris:20270127T180000
 SUMMARY:Musée / Photographie
@@ -588,34 +587,34 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/mu
 END:VEVENT
 BEGIN:VEVENT
 UID:e299da71c0a3@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270127T190000
 DTEND;TZID=Europe/Paris:20270127T210000
 SUMMARY:Les musées fantômes de la photographie
-DESCRIPTION:à 19h par Eleonore Challine \, historienne de l'art et de la p
- hotographie\nhttps://www.louvre.fr/expositions-et-evenements/evenements-ac
- tivites/les-musees-fantomes-de-la-photographie
+DESCRIPTION:à 19h par Eleonore Challine\, historienne de l'art et de la ph
+ otographie\nhttps://www.louvre.fr/expositions-et-evenements/evenements-act
+ ivites/les-musees-fantomes-de-la-photographie
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
  s-musees-fantomes-de-la-photographie
 END:VEVENT
 BEGIN:VEVENT
 UID:46101a06c91a@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
 SUMMARY:L'eau dans l'antiquité au Louvre
 DESCRIPTION:à 12h30 avec Christophe Barbotin\, François Bridey\, Ludovic 
- Laugier\, Hélène Le Meaux\, Martin Szewczyk et Ariane Thomas \, musée d
- u Louvre.\nhttps://www.louvre.fr/expositions-et-evenements/evenements-acti
- vites/l-eau-dans-l-antiquite-au-louvre
+ Laugier\, Hélène Le Meaux\, Martin Szewczyk et Ariane Thomas\, musée du
+  Louvre.\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activ
+ ites/l-eau-dans-l-antiquite-au-louvre
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/l-
  eau-dans-l-antiquite-au-louvre
 END:VEVENT
 BEGIN:VEVENT
 UID:5d7988bf3e55@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270129T180000
 DTEND;TZID=Europe/Paris:20270129T200000
 SUMMARY:Collectionner au temps de l’Encyclopédie
@@ -627,21 +626,21 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/co
 END:VEVENT
 BEGIN:VEVENT
 UID:d2a8baedf519@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270201T123000
 DTEND;TZID=Europe/Paris:20270201T143000
 SUMMARY:La "Vierge de Baroilles" et ses sœurs
-DESCRIPTION:à 12h30 par Katharina Christa Schüppel \, Otto-FriedrichUnive
- rsität Bamberg\, et Pierre-Yves Le Pogam \, musée du Louvre.\nhttps://ww
- w.louvre.fr/expositions-et-evenements/evenements-activites/la-vierge-de-ba
- roilles-et-ses-soeurs
+DESCRIPTION:à 12h30 par Katharina Christa Schüppel\, Otto-FriedrichUniver
+ sität Bamberg\, et Pierre-Yves Le Pogam\, musée du Louvre.\nhttps://www.
+ louvre.fr/expositions-et-evenements/evenements-activites/la-vierge-de-baro
+ illes-et-ses-soeurs
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
  -vierge-de-baroilles-et-ses-soeurs
 END:VEVENT
 BEGIN:VEVENT
 UID:47bc8c2327e1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270203T180000
 DTEND;TZID=Europe/Paris:20270203T200000
 SUMMARY:Géopolitique du musée. Pouvoir\, persuasion\, prédation
@@ -654,35 +653,35 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ge
 END:VEVENT
 BEGIN:VEVENT
 UID:1936335fd264@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270205T180000
 DTEND;TZID=Europe/Paris:20270205T200000
 SUMMARY:Un témoignage unique des relations artistiques franco-britanniques
   au Louvre
-DESCRIPTION:Avec Kira d’Albuquerque \, Malcolm Baker \, Virginie Guffroy 
- et Guilhem Scherf\nhttps://www.louvre.fr/expositions-et-evenements/eveneme
- nts-activites/un-temoignage-unique-des-relations-artistiques-franco-britan
- niques-au-louvre
+DESCRIPTION:Avec Kira d’Albuquerque\, Malcolm Baker\, Virginie Guffroy et
+  Guilhem Scherf\nhttps://www.louvre.fr/expositions-et-evenements/evenement
+ s-activites/un-temoignage-unique-des-relations-artistiques-franco-britanni
+ ques-au-louvre
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/un
  -temoignage-unique-des-relations-artistiques-franco-britanniques-au-louvre
 END:VEVENT
 BEGIN:VEVENT
 UID:e687dc36a04f@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270224T123000
 DTEND;TZID=Europe/Paris:20270224T143000
 SUMMARY:Le triptyque impérial Romanov de la maison Fabergé
-DESCRIPTION:à 12h30 par Maximilien Durand \, musée du Louvre\nhttps://www
- .louvre.fr/expositions-et-evenements/evenements-activites/le-triptyque-imp
- erial-romanov-de-la-maison-faberge
+DESCRIPTION:à 12h30 par Maximilien Durand\, musée du Louvre\nhttps://www.
+ louvre.fr/expositions-et-evenements/evenements-activites/le-triptyque-impe
+ rial-romanov-de-la-maison-faberge
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
  -triptyque-imperial-romanov-de-la-maison-faberge
 END:VEVENT
 BEGIN:VEVENT
 UID:531b04865b56@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270224T160000
 DTEND;TZID=Europe/Paris:20270224T180000
 SUMMARY:La « tombe de Grenna » à Cyrène et ses sculptures
@@ -694,30 +693,29 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/la
 END:VEVENT
 BEGIN:VEVENT
 UID:ad62849deef0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270225T123000
 DTEND;TZID=Europe/Paris:20270225T143000
 SUMMARY:Chefs-d'œuvre en argent
-DESCRIPTION:à 12h30 avec Marie-Anne Loeper-Attia \, restauratrice\, Cécil
- e Giroire\, Stéphanie Deschamps-Tan et Anne Forray-Carlier \, musée du L
- ouvre\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activite
- s/chefs-d-oeuvre-en-argent
+DESCRIPTION:à 12h30 avec Marie-Anne Loeper-Attia\, restauratrice\, Cécile
+  Giroire\, Stéphanie Deschamps-Tan et Anne Forray-Carlier\, musée du Lou
+ vre\nhttps://www.louvre.fr/expositions-et-evenements/evenements-activites/
+ chefs-d-oeuvre-en-argent
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ch
  efs-d-oeuvre-en-argent
 END:VEVENT
 BEGIN:VEVENT
 UID:fa858091d02d@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270304T123000
 DTEND;TZID=Europe/Paris:20270304T143000
 SUMMARY:Géoarchéologie des ports antiques de Carthage et de Tyr
-DESCRIPTION:à 12h30 par Jean-Philippe Goiran \, CNRS\, Université de Lyon
-  2\, UMR 5133 Archéorient\, en collaboration avec Ahmed Gadhoum \, Instit
- ut national du patrimoine de Tunisie et Ali Badawi \, Direction Générale
-  des Antiquités du Liban\nhttps://www.louvre.fr/expositions-et-evenements
- /evenements-activites/geoarcheologie-des-ports-antiques-de-carthage-et-de-
- tyr
+DESCRIPTION:à 12h30 par Jean-Philippe Goiran\, CNRS\, Université de Lyon 
+ 2\, UMR 5133 Archéorient\, en collaboration avec Ahmed Gadhoum\, Institut
+  national du patrimoine de Tunisie et Ali Badawi\, Direction Générale de
+ s Antiquités du Liban\nhttps://www.louvre.fr/expositions-et-evenements/ev
+ enements-activites/geoarcheologie-des-ports-antiques-de-carthage-et-de-tyr
 LOCATION:Musée du Louvre\, auditorium Michel Laclotte\, Paris 1er
 URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ge
  oarcheologie-des-ports-antiques-de-carthage-et-de-tyr

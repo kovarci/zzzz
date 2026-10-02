@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:1f6c26e930f5@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T143000
 DTEND;TZID=Europe/Paris:20261013T163000
 SUMMARY:Innovation thérapeutique
@@ -37,7 +37,7 @@ URL:https://www.academie-sciences.fr/innovation-therapeutique
 END:VEVENT
 BEGIN:VEVENT
 UID:7b0137eae8bb@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261117T143000
 DTEND;TZID=Europe/Paris:20261117T163000
 SUMMARY:Viruses as Agents of Eukaryotic Genome Evolution
@@ -50,7 +50,7 @@ URL:https://www.academie-sciences.fr/viruses-agents-eukaryotic-genome-evolu
 END:VEVENT
 BEGIN:VEVENT
 UID:be8a32d15110@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261120T090000
 DTEND;TZID=Europe/Paris:20261120T110000
 SUMMARY:Séquençage du génome humain : 25 ans après
@@ -63,7 +63,7 @@ URL:https://www.academie-sciences.fr/sequencage-du-genome-humain-25-ans-apr
 END:VEVENT
 BEGIN:VEVENT
 UID:db81a53d5c2e@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261201T140000
 DTEND;TZID=Europe/Paris:20261201T160000
 SUMMARY:Prédictabilité\, que peut-on prévoir ?
@@ -75,7 +75,7 @@ URL:https://www.academie-sciences.fr/predictabilite-que-peut-prevoir
 END:VEVENT
 BEGIN:VEVENT
 UID:b9ab83a8d296@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261208T180000
 DTEND;TZID=Europe/Paris:20261208T200000
 SUMMARY:Rencontre avec Mickael Tanter

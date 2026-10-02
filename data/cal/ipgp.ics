@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:f364af9ef1ce@paris-academique
-DTSTAMP:20261002T102029Z
-DTSTART;TZID=Europe/Paris:20261001T093000
-DTEND;TZID=Europe/Paris:20261001T113000
-SUMMARY:Semi-convective planetary cores
-DESCRIPTION:Soutenances de thèses\nhttps://www.ipgp.fr/actus-et-agenda/age
- nda/seminaires/semi-convective-planetary-cores/
-LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/semi-convective-p
- lanetary-cores/
-END:VEVENT
-BEGIN:VEVENT
 UID:0237bedbf359@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261002T140000
 DTEND;TZID=Europe/Paris:20261002T160000
 SUMMARY:Morphodynamique dunaire en présence de végétation et de cohésio
@@ -51,7 +39,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/morphodynamique-d
 END:VEVENT
 BEGIN:VEVENT
 UID:f51d9099e8b8@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T140000
 DTEND;TZID=Europe/Paris:20261006T160000
 SUMMARY:Tracing Atmospheric Oxidation from the Present to the Deep Past Usi
@@ -66,7 +54,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/tracing-atmospher
 END:VEVENT
 BEGIN:VEVENT
 UID:03854c5ed5ea@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T160000
 DTEND;TZID=Europe/Paris:20261006T180000
 SUMMARY:Inelastic Processes in the Source Volume Modulates High-Frequency G
@@ -82,7 +70,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/inelastic-process
 END:VEVENT
 BEGIN:VEVENT
 UID:d50b6be27d66@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T110000
 DTEND;TZID=Europe/Paris:20261013T130000
 SUMMARY:The Organisation of Barchan Dune Systems Across Scales

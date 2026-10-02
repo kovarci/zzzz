@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:3aa9898815ab@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261006T140000
 DTEND;TZID=Europe/Paris:20261006T170000
 SUMMARY:Séance de l'Académie nationale de médecine
@@ -41,26 +41,21 @@ URL:https://www.academie-medecine.fr/agenda/seance-a-14h-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:a915810e136b@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261013T093000
 DTEND;TZID=Europe/Paris:20261013T170000
 SUMMARY:Séance bi-académique Académie nationale de médecine (ANM) - Aca
  démie vétérinaire de France (AVF)
-DESCRIPTION:Séance bi-académique Académie nationale de médecine (ANM) 
- – Académie vétérinaire de France (AVF) Co-organisateurs : Jeanne BRUG
- ÈRE-PICOUX et Denis MALVY Sous la présidence de Marc GENTILINI Zoonoses 
- émergentes et ré-émergentes dans la démarche « une seule santé » 9h
- 30 Accueil. 10h Introduction Pdt AVF Première partie : Denis Malvy modér
- ateur 10h05 Denis Malvy\, ANM Trois santés en une et limites…\nhttps://
- www.academie-medecine.fr/agenda/seance-bi-academique-academie-nationale-de
- -medecine-anm-academie-veterinaire-de-france-avf-a-9h30/
+DESCRIPTION:Programme de la journée bi-académique (PDF) de 9h30 à 17h00\
+ nhttps://www.academie-medecine.fr/agenda/seance-bi-academique-academie-nat
+ ionale-de-medecine-anm-academie-veterinaire-de-france-avf-a-9h30/
 LOCATION:Académie nationale de médecine\, 16 rue Bonaparte\, Paris 6e
 URL:https://www.academie-medecine.fr/agenda/seance-bi-academique-academie-n
  ationale-de-medecine-anm-academie-veterinaire-de-france-avf-a-9h30/
 END:VEVENT
 BEGIN:VEVENT
 UID:1bc4621d3b11@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261020T140000
 DTEND;TZID=Europe/Paris:20261020T170000
 SUMMARY:Séance dédiée : « Les nouveautés en transplantation »
@@ -77,7 +72,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-les-nouveautes-en
 END:VEVENT
 BEGIN:VEVENT
 UID:78354a19d4eb@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261103T140000
 DTEND;TZID=Europe/Paris:20261103T170000
 SUMMARY:Séance de l'Académie nationale de médecine
@@ -93,7 +88,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-a-14h-4/
 END:VEVENT
 BEGIN:VEVENT
 UID:a9957aef1a16@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261110T140000
 DTEND;TZID=Europe/Paris:20261110T170000
 SUMMARY:Séance de l'Académie nationale de médecine
@@ -104,7 +99,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-a-14h-5/
 END:VEVENT
 BEGIN:VEVENT
 UID:1c7c90c1c4b0@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261117T140000
 DTEND;TZID=Europe/Paris:20261117T170000
 SUMMARY:Séance dédiée : « Erreur humaine et erreur artificielle en méd
@@ -123,7 +118,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-erreur-humaine-et
 END:VEVENT
 BEGIN:VEVENT
 UID:6fb50a9aadbf@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261118T140000
 DTEND;TZID=Europe/Paris:20261118T170000
 SUMMARY:Séance bi-académique de l'Académie nationale de Pharmacie et de 
@@ -138,7 +133,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-bi-academique-de-lacadem
 END:VEVENT
 BEGIN:VEVENT
 UID:700829bb3eb1@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261201T140000
 DTEND;TZID=Europe/Paris:20261201T170000
 SUMMARY:Séance dédiée : « La médecine génomique : apports\, écueils 
@@ -153,7 +148,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-la-medecine-genom
 END:VEVENT
 BEGIN:VEVENT
 UID:5d95fc2952f7@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Séance commune de l'Académie nationale de médecine et de la Haut
@@ -167,7 +162,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-commune-de-lacademie-nat
 END:VEVENT
 BEGIN:VEVENT
 UID:645fdb476395@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20261215T140000
 DTEND;TZID=Europe/Paris:20261215T170000
 SUMMARY:Séance solennelle (sur invitation)
@@ -179,7 +174,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-solennelle-sur-invitatio
 END:VEVENT
 BEGIN:VEVENT
 UID:ab6902dbedc4@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270105T140000
 DTEND;TZID=Europe/Paris:20270105T170000
 SUMMARY:Séance inaugurale
@@ -190,7 +185,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-inaugurale/
 END:VEVENT
 BEGIN:VEVENT
 UID:c99ae45c1a40@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270112T140000
 DTEND;TZID=Europe/Paris:20270112T170000
 SUMMARY:Séance dédiée : « Les lésions intracrâniennes de découverte 
@@ -209,7 +204,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-les-lesions-intra
 END:VEVENT
 BEGIN:VEVENT
 UID:e0c16173a3fe@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270119T140000
 DTEND;TZID=Europe/Paris:20270119T170000
 SUMMARY:Séance de l'Académie nationale de médecine
@@ -225,7 +220,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-a-14h-6/
 END:VEVENT
 BEGIN:VEVENT
 UID:cc8f1cacc1ca@paris-academique
-DTSTAMP:20261002T102029Z
+DTSTAMP:20261002T204347Z
 DTSTART;TZID=Europe/Paris:20270126T140000
 DTEND;TZID=Europe/Paris:20270126T170000
 SUMMARY:Séance dédiée : « Les maladies psychiatriques émergentes »

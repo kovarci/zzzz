@@ -23,4 +23,18 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:2942e7d2de21@paris-academique
+DTSTAMP:20261002T204347Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:CYCLE SAINT FRANÇOIS / LITTERATURE / ALESSANDRO BARBERO / LES SEPT
+  VIES DE SAINT FRANÇOIS D’ASSISE
+DESCRIPTION:https://iicparigi.esteri.it/fr/gli_eventi/calendario/cycle-sain
+ t-francois-litterature-alessandro-barbero-les-sept-vies-de-saint-francois-
+ dassise/
+LOCATION:Institut culturel italien\, 50 rue de Varenne\, Paris 7e
+URL:https://iicparigi.esteri.it/fr/gli_eventi/calendario/cycle-saint-franco
+ is-litterature-alessandro-barbero-les-sept-vies-de-saint-francois-dassise/
+END:VEVENT
 END:VCALENDAR
