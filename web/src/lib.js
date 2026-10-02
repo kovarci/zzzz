@@ -125,8 +125,11 @@ export const when = e => e.time ? `${e.time}${e.end_time ? " – " + e.end_time 
 // 790 Ko → 21 Ko. Même règle que _img_thumb() dans scraper/scrape.py.
 export const thumb = (url, w = 600) => {
   if (!url) return url;
+  // GIF animé : « anim=false » (première image). Sans lui, Luma refuse de
+  // réduire les gros GIF (403) et la carte retombait sur l'original — 29 Mo
+  // pour la couverture du « Paris Framer Meetup #04 ».
   if (url.indexOf("images.lumacdn.com/") >= 0 && url.indexOf("/cdn-cgi/") < 0)
-    return url.replace("images.lumacdn.com/", `images.lumacdn.com/cdn-cgi/image/width=${w},quality=72,format=auto/`);
+    return url.replace("images.lumacdn.com/", `images.lumacdn.com/cdn-cgi/image/width=${w},quality=72,format=auto${/\.gif$/i.test(url) ? ",anim=false" : ""}/`);
   if (/^https:\/\/cdn\.paris\.fr\//.test(url))
     return `https://wsrv.nl/?url=${encodeURIComponent(url.slice(8))}&w=${w}&q=72&output=webp`;
   return url;
@@ -162,6 +165,10 @@ export function inSource(e, f) {
   return !isSide(e) || !!f.q || f.fav;
 }
 
+// Texte de recherche normalisé, calculé une fois par événement : les
+// compteurs des menus appellent matches() jusqu'à 8 fois par événement.
+const HAY = new WeakMap();
+const hayOf = e => { let h = HAY.get(e); if (h === undefined) { h = norm([e.title, e.speaker, e.institution, e.description, e.location].join(" ")); HAY.set(e, h); } return h; };
 export function matches(e, f, favs) {
   if (f.fav && !favs.has(e.id)) return false;
   if (!inSource(e, f)) return false;
@@ -177,7 +184,7 @@ export function matches(e, f, favs) {
   if (f.inst.size && !f.inst.has(e.institution)) return false;
   if (f.access.size && !f.access.has(accessOf(e))) return false;
   if (f.theme.size && !(e.luma_categories || []).some(c => f.theme.has(c))) return false;
-  if (f.q) { const hay = norm([e.title, e.speaker, e.institution, e.description, e.location].join(" ")); if (!f.q.split(/\s+/).every(w => hay.includes(w))) return false; }
+  if (f.q) { const hay = hayOf(e); if (!f.q.split(/\s+/).every(w => hay.includes(w))) return false; }
   return true;
 }
 

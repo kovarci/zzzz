@@ -537,14 +537,31 @@ function App() {
   // s'affiche dans la liste des filtres et donne 0 résultat).
   const UPc = useMemo(() => UP.filter(e => !isSide(e)), [UP]);
   const counts = useMemo(() => {
-    // Compteurs des listes de filtres : parmi ce que la case « Source » laisse passer
-    const base = pool.filter(e => inSource(e, { ...filters, q: "", fav: false }));
+    // Compteurs « à facettes » : chaque case compte ce que la liste afficherait
+    // une fois cochée, avec TOUS les autres filtres en place (période,
+    // recherche, favoris, autres menus). Avant, seule la source comptait :
+    // avec « Aujourd'hui », « Paris School of Economics 24 » donnait 0 résultat.
+    const f0 = history ? { ...filters, when: "all" } : filters, S = () => new Set();
+    const pass = over => pool.filter(e => matches(e, { ...f0, ...over }, favs));
     const c = (list, k) => { const m = {}; list.forEach(e => m[e[k]] = (m[e[k]] || 0) + 1); return m; };
-    const th = {}; base.forEach(e => (e.luma_categories || []).forEach(t => th[t] = (th[t] || 0) + 1));
-    const acc = {}; base.forEach(e => { const a = accessOf(e); acc[a] = (acc[a] || 0) + 1; });
-    const side = {}; pool.forEach(e => { if (isSide(e)) side[e.kind] = (side[e.kind] || 0) + 1; });
-    return { disc: c(base, "discipline"), inst: c(base, "institution"), src: c(pool.filter(e => !isSide(e)), "source_type"), side, theme: th, access: acc, online: base.filter(isOnline).length, free: base.filter(isFree).length, en: base.filter(isEnglish).length };
-  }, [pool, filters.src, filters.cat]);
+    const th = {}; pass({ theme: S() }).forEach(e => (e.luma_categories || []).forEach(t => th[t] = (th[t] || 0) + 1));
+    const acc = {}; pass({ access: S() }).forEach(e => { const a = accessOf(e); acc[a] = (acc[a] || 0) + 1; });
+    // Menu Source : ses cases (sources, catégories à part) s'additionnent
+    const side = {}, src = {};
+    pool.forEach(e => {
+      if (isSide(e)) { if (matches(e, { ...f0, src: S(), cat: new Set([e.kind]) }, favs)) side[e.kind] = (side[e.kind] || 0) + 1; }
+      else if (matches(e, { ...f0, src: new Set([e.source_type]), cat: S() }, favs)) src[e.source_type] = (src[e.source_type] || 0) + 1;
+    });
+    return { disc: c(pass({ disc: S() }), "discipline"), inst: c(pass({ inst: S() }), "institution"), src, side, theme: th, access: acc,
+      online: pass({ online: false }).filter(isOnline).length, free: pass({ free: false }).filter(isFree).length, en: pass({ en: false }).filter(isEnglish).length };
+  }, [pool, filters, favs, history]);
+  // Une case cochée reste dans son menu même à 0 (sinon impossible de la
+  // décocher). Institution : établissements principaux, puis les 30 autres
+  // organisateurs les plus actifs.
+  const instOthers = (() => {
+    const top = Object.entries(counts.inst).filter(([i]) => !MAIN_INST.includes(i)).sort((a, b) => b[1] - a[1]).slice(0, 30);
+    return [...top, ...[...filters.inst].filter(i => !MAIN_INST.includes(i) && !top.some(([j]) => j === i)).map(i => [i, counts.inst[i] || 0])];
+  })();
   const nToday = UPc.filter(e => e.date === TODAY).length, nWeek = UPc.filter(e => e.date <= WEEK_END).length, nWe = UPc.filter(e => WE.includes(e.date)).length, nNew = UPc.filter(isNew).length;
   // Carrousel et accroche du haut de page : indépendants des filtres
   const instAll = useMemo(() => { const m = {}; UPc.forEach(e => m[e.institution] = (m[e.institution] || 0) + 1); return m; }, [UPc]);
@@ -681,19 +698,19 @@ function App() {
           <span className="ml-auto shrink-0 pl-1 text-sm text-muted-foreground tabular-nums whitespace-nowrap"><b className="text-foreground font-medium">{filtered.length}</b> {t("noun_event", { n: filtered.length })}</span>
         </div>
         <div className="mt-2 -mx-4 flex items-center gap-2 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
-          <Popover closeLabel={t("fermer")} label={t("pop_discipline")} count={filters.disc.size}>{() => <CheckList values={Object.keys(DISC).filter(d => counts.disc[d]).map(d => [d, counts.disc[d]])} set={filters.disc} onToggle={toggleIn("disc")} labelFn={discName} swatch colorOf={v => `var(${DISC[v] || "--c-aut"})`} onClear={() => setF({ disc: new Set() })} clearLabel={t("clear_all")} />}</Popover>
-          <Popover closeLabel={t("fermer")} label={t("pop_institution")} count={filters.inst.size}>{() => <CheckList values={[...MAIN_INST.filter(i => counts.inst[i]).map((i, k) => [i, counts.inst[i], k === 0 ? t("group_establishments") : null]), ...Object.entries(counts.inst).filter(([i]) => !MAIN_INST.includes(i)).sort((a, b) => b[1] - a[1]).slice(0, 30).map(([i, n], k) => [i, n, k === 0 ? t("group_others") : null])]} set={filters.inst} onToggle={toggleIn("inst")} onClear={() => setF({ inst: new Set() })} clearLabel={t("clear_all")} />}</Popover>
+          <Popover closeLabel={t("fermer")} label={t("pop_discipline")} count={filters.disc.size}>{() => <CheckList values={Object.keys(DISC).filter(d => counts.disc[d] || filters.disc.has(d)).map(d => [d, counts.disc[d] || 0])} set={filters.disc} onToggle={toggleIn("disc")} labelFn={discName} swatch colorOf={v => `var(${DISC[v] || "--c-aut"})`} onClear={() => setF({ disc: new Set() })} clearLabel={t("clear_all")} />}</Popover>
+          <Popover closeLabel={t("fermer")} label={t("pop_institution")} count={filters.inst.size}>{() => <CheckList values={[...MAIN_INST.filter(i => counts.inst[i] || filters.inst.has(i)).map((i, k) => [i, counts.inst[i] || 0, k === 0 ? t("group_establishments") : null]), ...instOthers.map(([i, n], k) => [i, n, k === 0 ? t("group_others") : null])]} set={filters.inst} onToggle={toggleIn("inst")} onClear={() => setF({ inst: new Set() })} clearLabel={t("clear_all")} />}</Popover>
           <Popover closeLabel={t("fermer")} label={t("pop_source")} count={filters.src.size + filters.cat.size + filters.theme.size}>{() => <>
-            <CheckList values={[...Object.keys(SRC_LABEL_T).filter(v => counts.src[v]).map(v => [v, counts.src[v]]), ...Object.keys(SIDE_KINDS).filter(k => counts.side[k]).map((k, i) => ["cat:" + k, counts.side[k], i === 0 ? t("group_side") : null])]}
+            <CheckList values={[...Object.keys(SRC_LABEL_T).filter(v => counts.src[v] || filters.src.has(v)).map(v => [v, counts.src[v] || 0]), ...Object.keys(SIDE_KINDS).filter(k => counts.side[k] || filters.cat.has(k)).map((k, i) => ["cat:" + k, counts.side[k] || 0, i === 0 ? t("group_side") : null])]}
               set={new Set([...filters.src, ...[...filters.cat].map(k => "cat:" + k)])} onToggle={v => v.startsWith("cat:") ? toggleIn("cat")(v.slice(4)) : toggleIn("src")(v)}
               labelFn={v => v.startsWith("cat:") ? `${SIDE_KINDS[v.slice(4)].icon} ${t(SIDE_KINDS[v.slice(4)].label)}` : SRC_LABEL_T[v]} titleFn={v => v.startsWith("cat:") ? t(SIDE_KINDS[v.slice(4)].hint) : undefined}
-              onClear={Object.keys(counts.theme).length ? undefined : () => setF({ src: new Set(), cat: new Set(), theme: new Set() })} clearLabel={t("clear_all")} />
-            {Object.keys(counts.theme).length > 0 && <CheckList values={Object.entries(counts.theme).sort((a, b) => b[1] - a[1]).map(([tm, n], k) => [tm, n, k === 0 ? t("group_luma_themes") : null])} set={filters.theme} onToggle={toggleIn("theme")} onClear={() => setF({ src: new Set(), cat: new Set(), theme: new Set() })} clearLabel={t("clear_all")} />}</>}</Popover>
+              onClear={Object.keys(counts.theme).length || filters.theme.size ? undefined : () => setF({ src: new Set(), cat: new Set(), theme: new Set() })} clearLabel={t("clear_all")} />
+            {(Object.keys(counts.theme).length > 0 || filters.theme.size > 0) && <CheckList values={[...Object.entries(counts.theme).sort((a, b) => b[1] - a[1]), ...[...filters.theme].filter(tm => !counts.theme[tm]).map(tm => [tm, 0])].map(([tm, n], k) => [tm, n, k === 0 ? t("group_luma_themes") : null])} set={filters.theme} onToggle={toggleIn("theme")} onClear={() => setF({ src: new Set(), cat: new Set(), theme: new Set() })} clearLabel={t("clear_all")} />}</>}</Popover>
           {/* Accès : public / membres, puis format, tarif et langue — des critères
               « oui / non » rangés ici plutôt qu'en boutons dans la barre */}
           <Popover closeLabel={t("fermer")} label={t("pop_access")} count={filters.access.size + [filters.online, filters.free, filters.en].filter(Boolean).length}>{() => {
             const FLAGS = { online: ["online", t("group_format"), t("btn_online")], free: ["free", t("group_price"), t("badge_free")], en: ["en", t("group_lang"), t("filter_en")] };
-            return <CheckList values={[...["public", "membres"].filter(a => counts.access[a]).map(a => [a, counts.access[a]]), ...Object.entries(FLAGS).filter(([k]) => counts[k] || filters[k]).map(([k, [, hd]]) => ["flag:" + k, counts[k], hd])]}
+            return <CheckList values={[...["public", "membres"].filter(a => counts.access[a] || filters.access.has(a)).map(a => [a, counts.access[a] || 0]), ...Object.entries(FLAGS).filter(([k]) => counts[k] || filters[k]).map(([k, [, hd]]) => ["flag:" + k, counts[k], hd])]}
               set={new Set([...filters.access, ...Object.keys(FLAGS).filter(k => filters[k]).map(k => "flag:" + k)])}
               onToggle={v => v.startsWith("flag:") ? setF({ [v.slice(5)]: !filters[v.slice(5)] }) : toggleIn("access")(v)}
               labelFn={v => v.startsWith("flag:") ? FLAGS[v.slice(5)][2] : (v === "membres" ? "🔒 " : "") + t(v === "membres" ? "access_members" : "access_public")}
