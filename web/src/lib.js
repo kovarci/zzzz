@@ -53,7 +53,10 @@ const SAT = addDays(today, dow === 0 ? -1 : 6 - dow);
 export const WE = [iso(SAT), iso(addDays(SAT, 1))];
 export const NEW_CUTOFF = new Date(Date.now() - 48 * 3600 * 1000).toISOString().slice(0, 10);
 
-export const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+// Sans accents ; « œ » = « oe », apostrophe courbe = droite : « oeuvre »
+// trouvait 3 événements et « œuvre » 21, « l'europe » ratait « l’Europe ».
+export const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  .replace(/œ/g, "oe").replace(/æ/g, "ae").replace(/[’‘ʼ]/g, "'");
 // « Violaine Jeammet, Pauline Maillard et Pascale Ballet », « Claire Denis &
 // Marie NDiaye (Université…) » → une personne par entrée. Les affiliations
 // entre parenthèses et les fonctions (« , professeure de… ») sont écartées ;

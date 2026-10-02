@@ -193,11 +193,39 @@ function SpeakerRow({ text, followSet, onFollow }) {
 }
 
 /* ═════════════════════ Palette ⌘K ═════════════════════ */
+// Le mot w commence-t-il un mot de h (début, ou précédé d'un caractère non alphanumérique) ?
+const wordStart = (h, w) => { for (let i = h.indexOf(w); i >= 0; i = h.indexOf(w, i + 1)) if (i === 0 || !/[a-z0-9]/.test(h[i - 1])) return true; return false; };
 function CommandDialog({ open, onClose, onPick, pool }) {
   const { t, fmtShort, discName } = useI18n();
   const [q, setQ] = useState(""); const [sel, setSel] = useState(0); const inputRef = useRef(null);
   const trap = useFocusTrap(open);
-  const res = useMemo(() => { const n = norm(q.trim()); return (n ? pool.filter(e => { const hay = norm([e.title, e.speaker, e.institution, e.location, e.discipline, discName(e.discipline), ...(e.also || [])].join(" ")); return n.split(/\s+/).every(w => hay.includes(w)); }) : pool.filter(e => e.date === TODAY || e.date === TOMORROW)).slice(0, 30); }, [q, pool, discName]);
+  // Textes normalisés une fois par ouverture : titre, qui (intervenant,
+  // organisateurs), reste (lieu, discipline)
+  const idx = useMemo(() => open ? pool.map(e => [e, norm(e.title), norm([e.speaker, e.institution, ...(e.also || [])].join(" ")), norm([e.location, e.discipline, discName(e.discipline)].join(" "))]) : [], [open, pool, discName]);
+  const res = useMemo(() => {
+    const words = norm(q.trim()).split(/\s+/).filter(Boolean);
+    if (!words.length) return pool.filter(e => e.date === TODAY || e.date === TOMORROW).slice(0, 30);
+    // Chaque mot doit apparaître ; ceux d'une ou deux lettres en début de mot
+    // seulement (« IA », le « po » de Sciences Po trouvaient « pour », « Gaïas »).
+    // Classement : titre, puis intervenant / organisateur, puis le reste ; à
+    // égalité, l'ordre chronologique. Avant, « sciences po » donnait d'abord
+    // « Approches omiques… » (« po » dans « pour »).
+    const out = [];
+    for (const [e, ...fields] of idx) {
+      let score = 0;
+      for (const w of words) {
+        let best = 0;
+        fields.forEach((h, k) => { const at = wordStart(h, w); if (at || (w.length > 2 && h.includes(w))) best = Math.max(best, [6, 3, 1][k] * (at ? 1.5 : 1)); });
+        if (!best) { score = 0; break; }
+        score += best;
+      }
+      // Expression entière dans le titre ou chez l'organisateur (« sciences
+      // po », « college de france ») : devant les mots trouvés un à un
+      if (score && words.length > 1) { const ph = words.join(" "); fields.forEach((h, k) => { if (wordStart(h, ph)) score += [30, 30, 5][k]; }); }
+      if (score) out.push([score, e]);
+    }
+    return out.sort((a, b) => b[0] - a[0]).slice(0, 30).map(x => x[1]);
+  }, [q, idx, pool]);
   useEffect(() => { if (open) { setQ(""); setSel(0); setTimeout(() => inputRef.current?.focus(), 30); } }, [open]);
   useEffect(() => setSel(0), [q]);
   // Ouverte par-dessus une fiche (« / » ou ⌘K) : Échap ne ferme que la palette
