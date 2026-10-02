@@ -6997,6 +6997,11 @@ def finalize_events(events):
             e["title"] = e["title"][:-len(sp)].strip()
         if (e.get("description") or "").strip().lower() == e.get("title", "").strip().lower():
             e["description"] = ""
+        # Description qui ne fait que redire les intervenants (« Avec Emilie
+        # Girard et Annabelle Ténèze », Louvre) : affichée sous la ligne « Avec »
+        flat = lambda s: re.sub(r"[\s,.;:]+", " ", (s or "").lower()).strip()
+        if e.get("speaker") and re.sub(r"^(?:avec|par|with|by) ", "", flat(e.get("description"))) == flat(e["speaker"]):
+            e["description"] = ""
         # Bouton de la carte lu avec le texte (IN2P3 : « En savoir plus E PICS est… »),
         # virgule finale d'un champ vide (« Conférence , », Jeunes IHEDN)
         if e.get("description"):
