@@ -666,7 +666,12 @@ function App() {
       </>}
 
       <div ref={agendaRef} className="scroll-mt-14" />
-      <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-background/80 backdrop-blur border-b [box-shadow:0_0_0_100vmax_hsl(var(--background)/.8)] [clip-path:inset(0_-100vmax)]">
+      <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-background/80 backdrop-blur border-b">
+        {/* Fond prolongé jusqu'aux bords de l'écran. Sur un calque à part : posé
+            sur la barre, le clip-path qui borne l'ombre en hauteur coupait aussi
+            les menus Discipline / Institution / Source / Accès (cases
+            inaccessibles sur ordinateur). */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 [box-shadow:0_0_0_100vmax_hsl(var(--background)/.8)] [clip-path:inset(0_-100vmax)]" />
         <div className="flex items-center gap-2">
           {history
             ? <div className="flex min-w-0 flex-wrap items-center gap-2"><Badge variant="solid" className="h-9 px-3 text-sm">{t("history_badge")}</Badge><select value={histMonth} onChange={e => setHistMonth(e.target.value)} className="h-9 rounded-md border bg-background px-2 text-sm"><option value="all">{t("history_all_period")}</option>{histMonths.map(m => <option key={m} value={m}>{MO[+m.slice(5, 7) - 1]} {m.slice(0, 4)}</option>)}</select><Button variant="outline" size="sm" className="h-9" onClick={toggleHistory}>{t("history_back")}</Button></div>

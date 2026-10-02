@@ -221,13 +221,23 @@ export function Popover({ label, count, children, align = "left", minW = "min-w-
   const sheetRef = el => { popRef.current = el; trap.current = el; };
   const close = () => setOpen(false);
   // Menu déroulant : recalé dans la fenêtre s'il en dépasse (8 px de marge)
-  const [dx, setDx] = useState(0);
+  const [dx, setDx] = useState(0), [maxH, setMaxH] = useState(0);
   useLayoutEffect(() => {
     if (!open || sheet) { setDx(0); return; }
     const r = popRef.current?.getBoundingClientRect(); if (!r) return;
     const over = r.right - (window.innerWidth - 8);          // dépasse à droite
     if (over > 0) setDx(-Math.min(over, r.left - 8));        // vers la gauche, sans sortir à gauche
     else if (r.left < 8) setDx(8 - r.left);
+  }, [open, sheet]);
+  // Hauteur bornée à la place restante sous le bouton : sur un écran de
+  // portable (~650 px), la fin de la liste Institution passait sous le bas de
+  // la fenêtre. Recalculée au défilement (la barre de filtres est collante).
+  // 84 px : la barre d'outils flottante du bas de l'écran, qui passe au-dessus.
+  useLayoutEffect(() => {
+    if (!open || sheet) return;
+    const upd = () => { const r = ref.current?.getBoundingClientRect(); if (r) setMaxH(Math.max(200, window.innerHeight - r.bottom - 84)); };
+    upd(); window.addEventListener("scroll", upd, { passive: true }); window.addEventListener("resize", upd);
+    return () => { window.removeEventListener("scroll", upd); window.removeEventListener("resize", upd); };
   }, [open, sheet]);
   useEffect(() => {
     const h = e => { if (!ref.current?.contains(e.target) && !popRef.current?.contains(e.target)) setOpen(false); };
@@ -247,7 +257,7 @@ export function Popover({ label, count, children, align = "left", minW = "min-w-
           <div className="overflow-auto p-2 pb-[max(1rem,env(safe-area-inset-bottom))]">{children(close)}</div>
         </motion.div></motion.div>}</AnimatePresence>, document.body)
     // align="center" : centré sous le bouton (le décalage passe par framer, qui écrit lui-même `transform`)
-    : <AnimatePresence>{open && <motion.div ref={popRef} style={align === "right" ? { marginRight: -dx } : { marginLeft: dx }} initial={{ opacity: 0, y: -4, scale: .98, x: align === "center" ? "-50%" : 0 }} animate={{ opacity: 1, y: 0, scale: 1, x: align === "center" ? "-50%" : 0 }} exit={{ opacity: 0, y: -4, scale: .98 }} transition={{ duration: .12 }}
+    : <AnimatePresence>{open && <motion.div ref={popRef} style={{ ...(align === "right" ? { marginRight: -dx } : { marginLeft: dx }), ...(maxH ? { maxHeight: `min(60vh, ${maxH}px)` } : null) }} initial={{ opacity: 0, y: -4, scale: .98, x: align === "center" ? "-50%" : 0 }} animate={{ opacity: 1, y: 0, scale: 1, x: align === "center" ? "-50%" : 0 }} exit={{ opacity: 0, y: -4, scale: .98 }} transition={{ duration: .12 }}
         className={cn("absolute top-[calc(100%+6px)] z-40 max-h-[60vh] overflow-auto rounded-lg border bg-popover p-1 shadow-lg", minW, align === "right" ? "right-0" : align === "center" ? "left-1/2" : "left-0")}>{children(close)}</motion.div>}</AnimatePresence>;
   return <div ref={ref} className={cn("relative shrink-0", block && "w-full")}>
     <Button variant="outline" size={block ? "md" : "sm"} className={cn(block ? "w-full px-2" : "h-9", open && "bg-accent")} onClick={() => { setSheet(narrow()); setOpen(o => !o); }} aria-expanded={open}>{label}{count > 0 && <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[11px] text-primary-foreground">{count}</span>}
