@@ -133,7 +133,7 @@ DISCIPLINE_KEYWORDS = {
         "detector", "neutrino", "photon", "galax", "planét", "planet",
         "astronom", "spectroscop", "matériau", "material", "énergie",
         "energy", "océan", "ocean", "géolog", "geolog", "séisme",
-        "chimi", "chemist", "biophys", "cosmic", "supernova",
+        "chimi", "chemist", "chemical", "pharmaceutic", "biophys", "cosmic", "supernova",
         "obésité", "traitement", "médicament", "nutrition", "physiolog",
         "plantes", "botani",
         # « Fête de la science » (Paris-Saclay, ENS, PSL : 5 événements en « Autre »)
@@ -291,7 +291,9 @@ _KW_NOT_AFTER = {
     "rituel": ("spi",), "étale": ("soci", "vég"), "opera": ("co",), "astronom": ("g",),
     "terrain": ("sou",), "dance ": ("correspon", "dépen", "abun", "atten", "gui", "indépen"),
 }
-_KW_NOT_BEFORE = {"ricci": re.compile(r"(matteo|institut) ricci")}
+_KW_NOT_BEFORE = {"ricci": re.compile(r"(matteo|institut) ricci"),
+                  # « Recycling Plastics Designed to Last » (chimie) en Arts
+                  "design": re.compile(r"\bdesign(?:ed|ing)\b")}
 
 
 def _kw_hit(kw, text):
@@ -3856,7 +3858,9 @@ def scrape_institut_italien():
     return _scrape_cards(
         "Institut culturel italien", "https://iicparigi.esteri.it/fr/gli_eventi/calendario/",
         "div.row > div.col-12.mt-3", title="h5", date=".category-top span:last-child",
-        drop=re.compile(r"^(?!(conf[ée]rence|rencontre|colloque|d[ée]bat|litt[ée]rature|"
+        # Un nom de cycle peut précéder le type : « CYCLE SAINT FRANÇOIS /
+        # LITTERATURE / ALESSANDRO BARBERO / … » (conférence écartée)
+        drop=re.compile(r"^(?!(?:cycle\b[^/]{0,60}/\s*)?(conf[ée]rence|rencontre|colloque|d[ée]bat|litt[ée]rature|"
                         r"pr[ée]sentation|table ronde|s[ée]minaire|journ[ée]e|lecture)\b)", re.I),
         base="https://iicparigi.esteri.it", location="Institut culturel italien, 50 rue de Varenne, Paris 7e")
 
@@ -4305,10 +4309,18 @@ def scrape_article1(browser) -> list[dict]:
         if key in seen:
             continue
         seen.add(key)
+        t0 = _norm_time(it.get("Heure_de_debut_text__c"))
+        t1 = _norm_time(it.get("Heure_de_fin_texte__c"))
+        # Heures saisies à l'anglaise, sans « pm » : « 6:30 - 8:00 » pour un
+        # webinaire du soir, affiché à 6 h 30 du matin. Aucun atelier
+        # Article 1 ne commence avant 8 h.
+        if t0 and t0 < "08:00":
+            pm = lambda t: f"{int(t[:2]) + 12:02d}{t[2:]}" if t and t < "12:00" else t
+            t0, t1 = pm(t0), pm(t1)
         events.append(new_event(
             "Article 1", title, d,
-            time_str=_norm_time(it.get("Heure_de_debut_text__c")),
-            end_time=_norm_time(it.get("Heure_de_fin_texte__c")),
+            time_str=t0,
+            end_time=t1,
             location=loc, desc=desc,
             # Lien direct vers l'inscription quand il existe : plus utile
             # que la page calendrier générique.
@@ -6902,6 +6914,24 @@ def build_digest(events):
 
 
 _DESC_LEAD = re.compile(r"^\s*(?:En savoir plus|Lire la suite|Read more|Voir plus)\s*(?:[:.…>›»-]\s*)?", re.I)
+# Guillemets et apostrophes Windows-1252 lus comme Latin-1 : caractères de
+# contrôle invisibles (« \x93Les Krâneuses qui Tétonnent\x94 », Institut Curie ;
+# « l\x92histoire », Sorbonne Nouvelle) qui s'affichaient en carrés.
+_C1 = re.compile(r"[\x80-\x9f]")
+
+
+def _fix_c1(s):
+    return _C1.sub(lambda m: bytes([ord(m.group())]).decode("cp1252", "ignore"), s)
+
+
+# Espace avant la virgule, laissé par get_text(" ") entre un lien et sa
+# ponctuation (« Brigitte Bourgeois , Violaine Jeammet , … », Louvre)
+_SPACE_COMMA = re.compile(r"(?<=\S) +,(?=\s|$)")
+# Lettrine lue à part (« T he next biannual meeting », « E PICS est… ») :
+# une consonne seule en tête de texte n'est un mot ni en français ni en anglais
+_DROP_CAP = re.compile(r"^([B-HJ-NP-XZ]) (?=[A-Za-zÀ-ÿ])")
+
+
 _LABELLED_LOC = re.compile(r"^\s*(?:Building|Room|Address)\s*:", re.I)
 
 
@@ -6950,6 +6980,12 @@ def finalize_events(events):
     if len(events) < n:
         print(f"Événements hors Île-de-France retirés : {n - len(events)}")
     for e in events:
+        # Après le calcul de l'id (favoris, liens e/<id> inchangés)
+        for k in ("title", "description", "location", "speaker"):
+            if e.get(k) and _C1.search(e[k]):
+                e[k] = _fix_c1(e[k])
+            if e.get(k) and " ," in e[k]:
+                e[k] = _SPACE_COMMA.sub(",", e[k])
         # Colloque sur plusieurs jours : l'heure de fin est celle du dernier jour
         if e.get("end_time") and e.get("time") and e["end_time"] <= e["time"]:
             e["end_time"] = ""
@@ -6961,9 +6997,10 @@ def finalize_events(events):
             e["title"] = e["title"][:-len(sp)].strip()
         if (e.get("description") or "").strip().lower() == e.get("title", "").strip().lower():
             e["description"] = ""
-        # Bouton de la carte lu avec le texte (IN2P3 : « En savoir plus E PICS est… »)
+        # Bouton de la carte lu avec le texte (IN2P3 : « En savoir plus E PICS est… »),
+        # virgule finale d'un champ vide (« Conférence , », Jeunes IHEDN)
         if e.get("description"):
-            e["description"] = _DESC_LEAD.sub("", e["description"]).strip()
+            e["description"] = _DROP_CAP.sub(r"\1", _DESC_LEAD.sub("", e["description"]).strip()).rstrip(" ,")
             # Les scrapers tronquent à 400 caractères, souvent au milieu d'un mot
             # (« …dématérialisation, conserv ») : coupe au dernier mot entier
             d = e["description"]
@@ -6981,6 +7018,29 @@ def finalize_events(events):
             e["price"] = e.get("price") or "Gratuit"
         if _MEMBERS_ONLY.search(f"{e.get('title', '')} {e.get('description', '')}"):
             e["members"] = True
+    # Collège de France : la chaire (professeur connu) passe avant les
+    # mots-clés — « Les Épouses du dieu à Thèbes » (Laurent Coulon,
+    # égyptologue) tombait en Philosophie pour « dieu ». Séminaires et
+    # conférences d'un cycle suivent son cours : ils portent le nom du cours
+    # (« Séminaire · Sortir de cette chambre à moi… ») mais pas celui du
+    # professeur, et restaient en « Autre » ou classés à part.
+    cdf = [e for e in events if e.get("institution") == "Collège de France"]
+    cycle = lambda e: ((e.get("description") or "").split(" · ") + [""])[1].strip().lower()
+    chair, seen = {}, {}
+    for e in cdf:
+        d = _speaker_discipline(e)
+        if d:
+            e["discipline"] = d
+            if cycle(e):
+                chair.setdefault(cycle(e), d)
+        elif cycle(e) and e.get("discipline") not in (None, "", "Autre"):
+            seen.setdefault(cycle(e), collections.Counter())[e["discipline"]] += 1
+    for e in cdf:
+        c = cycle(e)
+        if c in chair:
+            e["discipline"] = chair[c]
+        elif e.get("discipline") in (None, "", "Autre") and c in seen:
+            e["discipline"] = seen[c].most_common(1)[0][0]
     return events
 
 
