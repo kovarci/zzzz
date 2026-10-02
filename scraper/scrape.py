@@ -4573,7 +4573,7 @@ def _merge_prefix_titles(events):
             if len(a) < 10 or i in drop:
                 continue
             for j in idx:
-                if j == i or j in drop or not cores[j].startswith(a + "-"):
+                if j == i or j in drop:
                     continue
                 ea, eb = events[i], events[j]
                 ta, tb = ea.get("time") or "", eb.get("time") or ""
@@ -4581,7 +4581,15 @@ def _merge_prefix_titles(events):
                     continue
                 agg = any(x.get("source_type") == "ville" or x.get("institution") in _AGGREGATORS
                           for x in (ea, eb))
-                if not (ea.get("institution") == eb.get("institution") or (agg and len(a) >= 12)):
+                if not cores[j].startswith(a + "-"):
+                    # Ou le même titre à une coquille près, publié par un
+                    # agrégateur : « Pleins feux sur (i)elles… » (Sorbonne
+                    # Nouvelle) / « Plein feu sur (i)elles… » (Sciencesconf)
+                    if not (agg and i < j and len(a) >= 30 and len(cores[j]) >= 30
+                            and ea.get("institution") != eb.get("institution")
+                            and _similar(a, cores[j], 0.93)):
+                        continue
+                elif not (ea.get("institution") == eb.get("institution") or (agg and len(a) >= 12)):
                     continue
                 # La source de l'organisateur l'emporte sur la Ville, puis la fiche la plus riche
                 keep = max((ea, eb), key=lambda x: (x.get("source_type") != "ville", _richness(x)))
@@ -5265,7 +5273,9 @@ def _img_thumb(url, w=800, seo=False):
     if not url:
         return url
     if "images.lumacdn.com/" in url and "/cdn-cgi/" not in url:
-        return url.replace("images.lumacdn.com/", f"images.lumacdn.com/cdn-cgi/image/width={w},quality=75,format=auto/")
+        # GIF animé : sans anim=false, Luma refuse de réduire les gros (403)
+        anim = ",anim=false" if url.lower().endswith(".gif") else ""
+        return url.replace("images.lumacdn.com/", f"images.lumacdn.com/cdn-cgi/image/width={w},quality=75,format=auto{anim}/")
     if url.startswith("https://cdn.paris.fr/") and not seo:
         from urllib.parse import quote
         return f"https://wsrv.nl/?url={quote(url[8:], safe='')}&w={w}&q=75&output=jpg"
@@ -7358,6 +7368,11 @@ def main():
         add_missing_details(all_events, prev_events)
     except Exception as e:
         print(f"[ERROR] prix : {e}")
+    # Les heures lues sur les pages (add_missing_details) arrivent après les
+    # fusions : « Table ronde : L'enseignement des langues rares… » (sans
+    # heure sur sa carte, 18:00 sur sa page) restait à côté de la même séance
+    # d'Inalco publiée à 18:00 sans « Table ronde ».
+    all_events = _merge_same_slot(all_events)
 
     # Date d'ajout : on garde celle de prev_events si l'id existait déjà,
     # sinon TODAY → le frontend tague "nouveau" tout ce qui a < 48 h.

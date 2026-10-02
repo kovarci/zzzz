@@ -159,6 +159,8 @@ def main():
         scrape.add_missing_details(merged, events)
     except Exception as e:
         print(f"[!] prix : {type(e).__name__}: {e}")
+    # Heures lues sur les pages après les fusions : même séance, même créneau
+    merged = scrape._merge_same_slot(merged)
 
     merged = [e for e in merged if e.get("date", "") >= scrape.CUTOFF.isoformat()]
     merged.sort(key=lambda e: (e["date"], e.get("time", "")))
