@@ -24,26 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:376d47442dd1@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;TZID=Europe/Paris:20261001T143000
-DTEND;TZID=Europe/Paris:20261001T163000
-SUMMARY:The Finite Groups of Random Walks in the Quarter Plane and Periodic
-  4-bar Links (Les groupes finis de marches aléatoires dans un quart de pl
- an et les quadrilatères articulés périodiques)
-DESCRIPTION:We present our solutions to two long standing open problems\, t
- he first one from probability theory\, formulated by Malyshev in 1970 and 
- the second one from a crossroad of geometry and dynamics\, posed by Darbou
- x in 1879. The Malyshev problem is of finding effective\, explicit necessa
- ry and sufficient conditions in the closed form to characterize all random
-  walks in the quarter plane with the group…\nhttps://indico.obspm.fr/eve
- nt/3408/
-LOCATION:PARIS
-URL:https://indico.obspm.fr/event/3408/
-END:VEVENT
-BEGIN:VEVENT
 UID:45fe471a1a4d@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261005T110000
 DTEND;TZID=Europe/Paris:20261005T120000
 SUMMARY:Tang Li (Shanghai Institute of Optics and Fine Mechanics\, CAS) - S
@@ -53,8 +35,18 @@ LOCATION:Paris
 URL:https://indico.obspm.fr/event/3381/
 END:VEVENT
 BEGIN:VEVENT
+UID:a43cf381ac18@paris-academique
+DTSTAMP:20261002T091216Z
+DTSTART;TZID=Europe/Paris:20261010T190000
+DTEND;TZID=Europe/Paris:20261010T230000
+SUMMARY:Jour de la Nuit 2026
+DESCRIPTION:https://indico.obspm.fr/event/3385/
+LOCATION:La Loggia\, Meudon
+URL:https://indico.obspm.fr/event/3385/
+END:VEVENT
+BEGIN:VEVENT
 UID:3c93499275b6@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261102T091500
 DTEND;TZID=Europe/Paris:20261102T111500
 SUMMARY:Cherenkov Astronomy Data School 2026
@@ -70,7 +62,7 @@ URL:https://indico.obspm.fr/event/2993/
 END:VEVENT
 BEGIN:VEVENT
 UID:7b3aa4a6c7a7@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261126T103000
 DTEND;TZID=Europe/Paris:20261126T123000
 SUMMARY:Galaxy Cluster France Workshop
@@ -86,7 +78,7 @@ URL:https://indico.obspm.fr/event/3124/
 END:VEVENT
 BEGIN:VEVENT
 UID:a2e83f70d48c@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261201T110000
 DTEND;TZID=Europe/Paris:20261201T130000
 SUMMARY:Débrancher le cloud - IA locale pour la recherche

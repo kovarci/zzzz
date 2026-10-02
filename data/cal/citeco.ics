@@ -24,30 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:2067adef6542@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;TZID=Europe/Paris:20261001T183000
-DTEND;TZID=Europe/Paris:20261001T200000
-SUMMARY:L’innovation au 21e siècle\, mais pour quoi faire ?
-DESCRIPTION:https://www.citeco.fr/agenda/linnovation-au-21e-siecle-mais-pou
- r-quoi-faire
-LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
-URL:https://www.citeco.fr/agenda/linnovation-au-21e-siecle-mais-pour-quoi-f
- aire
-END:VEVENT
-BEGIN:VEVENT
-UID:feb86010219b@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;TZID=Europe/Paris:20261001T200000
-DTEND;TZID=Europe/Paris:20261001T210000
-SUMMARY:Le ring des idées : débat d’éloquence
-DESCRIPTION:https://www.citeco.fr/agenda/le-ring-des-idees-debat-deloquence
-LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
-URL:https://www.citeco.fr/agenda/le-ring-des-idees-debat-deloquence
-END:VEVENT
-BEGIN:VEVENT
 UID:ccb7ebda2949@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261003T150000
 DTEND;TZID=Europe/Paris:20261003T160000
 SUMMARY:Histoire(s) du Progrès
@@ -56,19 +34,8 @@ LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
 URL:https://www.citeco.fr/agenda/histoires-du-progres
 END:VEVENT
 BEGIN:VEVENT
-UID:e3f060ee7f9c@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;TZID=Europe/Paris:20261003T163000
-DTEND;TZID=Europe/Paris:20261003T173000
-SUMMARY:Riches ensemble !\, d'Anne-Laure Delatte
-DESCRIPTION:https://www.citeco.fr/agenda/riches-ensemble-danne-laure-delatt
- e
-LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
-URL:https://www.citeco.fr/agenda/riches-ensemble-danne-laure-delatte
-END:VEVENT
-BEGIN:VEVENT
 UID:50b887951544@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261003T163000
 DTEND;TZID=Europe/Paris:20261003T173000
 SUMMARY:Le débat mouvant : Parlons d’innovation !
@@ -78,8 +45,19 @@ LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
 URL:https://www.citeco.fr/agenda/le-debat-mouvant-parlons-dinnovation
 END:VEVENT
 BEGIN:VEVENT
+UID:e3f060ee7f9c@paris-academique
+DTSTAMP:20261002T091216Z
+DTSTART;TZID=Europe/Paris:20261003T163000
+DTEND;TZID=Europe/Paris:20261003T173000
+SUMMARY:Riches ensemble !\, d'Anne-Laure Delatte
+DESCRIPTION:https://www.citeco.fr/agenda/riches-ensemble-danne-laure-delatt
+ e
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/riches-ensemble-danne-laure-delatte
+END:VEVENT
+BEGIN:VEVENT
 UID:042eed0d832c@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261004T150000
 DTEND;TZID=Europe/Paris:20261004T173000
 SUMMARY:Metropolis – Fritz Lang
@@ -89,7 +67,7 @@ URL:https://www.citeco.fr/agenda/metropolis-fritz-lang
 END:VEVENT
 BEGIN:VEVENT
 UID:c63b0efde9bb@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261004T163000
 DTEND;TZID=Europe/Paris:20261004T173000
 SUMMARY:Les chemins de l’innovation
@@ -99,12 +77,46 @@ URL:https://www.citeco.fr/agenda/les-chemins-de-linnovation
 END:VEVENT
 BEGIN:VEVENT
 UID:754c48c6a57e@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261010T140000
 DTEND;TZID=Europe/Paris:20261010T190000
 SUMMARY:Fête de la science 2026
 DESCRIPTION:https://www.citeco.fr/agenda/fete-de-la-science-2026
 LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
 URL:https://www.citeco.fr/agenda/fete-de-la-science-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:76991eea6580@paris-academique
+DTSTAMP:20261002T091216Z
+DTSTART;TZID=Europe/Paris:20261010T163000
+DTEND;TZID=Europe/Paris:20261010T173000
+SUMMARY:Débat mouvant : La consommation\, un choix de société
+DESCRIPTION:https://www.citeco.fr/agenda/debat-mouvant-la-consommation-un-c
+ hoix-de-societe
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/debat-mouvant-la-consommation-un-choix-de-
+ societe
+END:VEVENT
+BEGIN:VEVENT
+UID:9acf76f92d1c@paris-academique
+DTSTAMP:20261002T091216Z
+DTSTART;TZID=Europe/Paris:20261011T140000
+DTEND;TZID=Europe/Paris:20261011T180000
+SUMMARY:Fête de la science 2026
+DESCRIPTION:https://www.citeco.fr/agenda/fete-de-la-science-2026
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/fete-de-la-science-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:96d629a78dac@paris-academique
+DTSTAMP:20261002T091216Z
+DTSTART;TZID=Europe/Paris:20261011T163000
+DTEND;TZID=Europe/Paris:20261011T173000
+SUMMARY:Débat mouvant : La consommation\, un choix de société
+DESCRIPTION:https://www.citeco.fr/agenda/debat-mouvant-la-consommation-un-c
+ hoix-de-societe
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/debat-mouvant-la-consommation-un-choix-de-
+ societe
 END:VEVENT
 END:VCALENDAR

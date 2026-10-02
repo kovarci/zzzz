@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:462fa7d767b9@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261002T163000
 DTEND;TZID=Europe/Paris:20261002T180000
 SUMMARY:Evénement scientifique et artistique - Adonis : réinventer la mod
@@ -38,7 +38,7 @@ URL:https://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Ado
 END:VEVENT
 BEGIN:VEVENT
 UID:1d4e73132746@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Fête de la Science 2026
@@ -48,7 +48,7 @@ URL:https://www.univ-paris8.fr/Fete-de-la-Science-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:e0587f2b394d@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Séminaire - Art\, culture et création dans la fabrique des territ
@@ -61,7 +61,7 @@ URL:https://www.univ-paris8.fr/Seminaire-Art-culture-et-creation-dans-la-fa
 END:VEVENT
 BEGIN:VEVENT
 UID:98d8e976b11e@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Table ronde - Cheminements des étudiants en exil\, de leur arrivé
@@ -75,7 +75,7 @@ URL:https://www.univ-paris8.fr/Table-ronde-Cheminements-des-etudiants-en-ex
 END:VEVENT
 BEGIN:VEVENT
 UID:519a8f864258@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Séminaire en ligne “Escrituras y Formas del Descentramiento de l
@@ -87,19 +87,8 @@ URL:https://www.univ-paris8.fr/Seminaire-en-ligne-Escrituras-y-Formas-del-D
  escentramiento-de-la-Hispanofonia-10940
 END:VEVENT
 BEGIN:VEVENT
-UID:765bd5b519dc@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Journée hommage Bernard Charlot
-DESCRIPTION:https://www.univ-paris8.fr/Journee-hommage-Bernard-Charlot-1086
- 5
-LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Journee-hommage-Bernard-Charlot-10865
-END:VEVENT
-BEGIN:VEVENT
 UID:0b131f6ebb13@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Semaine des mobilités / Erasmus days 2026
@@ -109,8 +98,19 @@ LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
 URL:https://www.univ-paris8.fr/Semaine-des-mobilites-Erasmus-days-2026
 END:VEVENT
 BEGIN:VEVENT
+UID:765bd5b519dc@paris-academique
+DTSTAMP:20261002T091216Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Journée hommage Bernard Charlot
+DESCRIPTION:https://www.univ-paris8.fr/Journee-hommage-Bernard-Charlot-1086
+ 5
+LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
+URL:https://www.univ-paris8.fr/Journee-hommage-Bernard-Charlot-10865
+END:VEVENT
+BEGIN:VEVENT
 UID:83b7c8c1a6b3@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261012T180000
 DTEND;TZID=Europe/Paris:20261012T200000
 SUMMARY:Manifestation scientifique et artistique - Redessiner les itinérai
@@ -124,7 +124,7 @@ URL:https://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Red
 END:VEVENT
 BEGIN:VEVENT
 UID:349509ec3f4b@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Colloque international - Migrations\, entre frontières et accueil 
@@ -137,7 +137,7 @@ URL:https://www.univ-paris8.fr/Colloque-international-Migrations-entre-fron
 END:VEVENT
 BEGIN:VEVENT
 UID:3fc952a28fc8@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261022T110000
 DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Le rendez-vous des droits
@@ -147,7 +147,7 @@ URL:https://www.univ-paris8.fr/Le-rendez-vous-des-droits
 END:VEVENT
 BEGIN:VEVENT
 UID:36541a4bbfc7@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Rendez-vous de la Nouvelle table étudiante
@@ -159,7 +159,7 @@ URL:https://www.univ-paris8.fr/Rendez-vous-de-la-Nouvelle-table-etudiante-1
 END:VEVENT
 BEGIN:VEVENT
 UID:60be0c02b1d9@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Comment décrire une société en période de globalisation ?

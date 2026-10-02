@@ -24,50 +24,21 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ab6a40f1d9c4@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;TZID=Europe/Paris:20261001T094000
-DTEND;TZID=Europe/Paris:20261001T114000
-SUMMARY:Why firms make when they can buy? Resource redeployability & firm v
- ertical boundaries
-DESCRIPTION:Faculté et Recherche · Strategy & Business Policy Speaker: Ge
- org Chondrakis Professor - ESADE Conference Jouy-en-Josas / room meeting S
- 121\nhttps://www.hec.edu/fr/faculte-et-recherche/evenements/why-firms-make
- -when-they-can-buy-resource-redeployability-firm-vertical-boundaries
+UID:baaf3e7710a3@paris-academique
+DTSTAMP:20261002T091216Z
+DTSTART;TZID=Europe/Paris:20261008T113000
+DTEND;TZID=Europe/Paris:20261008T133000
+SUMMARY:Exchange Rate Stabilization and Monetary Transmission
+DESCRIPTION:Faculté et Recherche · Département: Finance Intervenant: Pau
+ l Fonantier (LBS) Salle: T022\nhttps://www.hec.edu/fr/faculte-et-recherche
+ /evenements/exchange-rate-stabilization-and-monetary-transmission
 LOCATION:HEC Paris\, 1 rue de la Libération\, Jouy-en-Josas
-URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/why-firms-make-w
- hen-they-can-buy-resource-redeployability-firm-vertical-boundaries
-END:VEVENT
-BEGIN:VEVENT
-UID:896852cae109@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;TZID=Europe/Paris:20261001T111500
-DTEND;TZID=Europe/Paris:20261001T131500
-SUMMARY:Regulation of Algorithmic Collusion
-DESCRIPTION:Faculté et Recherche · Information Systems & Operations Manag
- ement Intervenant: Jason D Hartline (Northwestern) Salle: B Ramanantsoa\nh
- ttps://www.hec.edu/fr/faculte-et-recherche/evenements/regulation-algorithm
- ic-collusion
-LOCATION:HEC Paris\, 1 rue de la Libération\, Jouy-en-Josas
-URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/regulation-algor
- ithmic-collusion
-END:VEVENT
-BEGIN:VEVENT
-UID:6c55a7d0a4f5@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;TZID=Europe/Paris:20261001T113000
-DTEND;TZID=Europe/Paris:20261001T133000
-SUMMARY:Carbon Pricing and Investment
-DESCRIPTION:Faculté et Recherche · Département: Finance Intervenant: Per
-  Stromberg (SSE) Salle: T015\nhttps://www.hec.edu/fr/faculte-et-recherche/
- evenements/carbon-pricing-and-investment
-LOCATION:HEC Paris\, 1 rue de la Libération\, Jouy-en-Josas
-URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/carbon-pricing-a
- nd-investment
+URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/exchange-rate-st
+ abilization-and-monetary-transmission
 END:VEVENT
 BEGIN:VEVENT
 UID:5b599dac0f77@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261008T113000
 DTEND;TZID=Europe/Paris:20261008T133000
 SUMMARY:Séminaire de recherche HEC : Paul Fonantier (LBS)
@@ -79,7 +50,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/tbc
 END:VEVENT
 BEGIN:VEVENT
 UID:d4b0672e11b6@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261013T094000
 DTEND;TZID=Europe/Paris:20261013T114000
 SUMMARY:Pay Equity Pressures and the Organization of AI Talent and Innovati
@@ -94,7 +65,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/pay-equity-press
 END:VEVENT
 BEGIN:VEVENT
 UID:17197b893f05@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261013T094000
 DTEND;TZID=Europe/Paris:20261013T114000
 SUMMARY:Séminaire de recherche HEC : Nan Jia (Marshall USC)
@@ -106,7 +77,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/nan-jia
 END:VEVENT
 BEGIN:VEVENT
 UID:a0f1099bcbee@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261013T120000
 DTEND;TZID=Europe/Paris:20261013T140000
 SUMMARY:S&O–Leadership Center lunch seminar
@@ -121,7 +92,7 @@ URL:https://www.hec.edu/fr/center-society-organizations-so/evenements/so-le
 END:VEVENT
 BEGIN:VEVENT
 UID:926733f75d45@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261015T113000
 DTEND;TZID=Europe/Paris:20261015T133000
 SUMMARY:Séminaire de recherche HEC : Robert Marquez (UC Davis)
@@ -133,7 +104,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/tbc-0
 END:VEVENT
 BEGIN:VEVENT
 UID:ccf28081d5f4@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261110T094000
 DTEND;TZID=Europe/Paris:20261110T114000
 SUMMARY:Séminaire de recherche HEC : Nick Argyres (Wash University)
@@ -146,7 +117,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/nick-argyres
 END:VEVENT
 BEGIN:VEVENT
 UID:38611fc4719d@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261127T111500
 DTEND;TZID=Europe/Paris:20261127T131500
 SUMMARY:Pricing in the Age of AI (MIT Press)
@@ -160,7 +131,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/pricing-age-ai-m
 END:VEVENT
 BEGIN:VEVENT
 UID:a31bd09cbd56@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261203T094000
 DTEND;TZID=Europe/Paris:20261203T114000
 SUMMARY:Séminaire de recherche HEC : Kristina Mc Elheran (U. Toronto)
@@ -174,7 +145,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/kristina-mc-elhe
 END:VEVENT
 BEGIN:VEVENT
 UID:bc80c8c7829d@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261214T083000
 DTEND;TZID=Europe/Paris:20261214T103000
 SUMMARY:Conférence Droits Humains et Entreprises 2026

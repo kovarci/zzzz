@@ -24,33 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:27c53ee3ac0f@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:À L'ÉCOLE DES ARTS. Hybridation\, expérimentation\, transformati
- on
-DESCRIPTION:https://www.paris-iea.fr/fr/evenements/a-l-ecole-des-arts-hybri
- dation-experimentation-transformation
-LOCATION:Institut d'études avancées de Paris\, 17 quai d'Anjou\, Paris 4e
-URL:https://www.paris-iea.fr/fr/evenements/a-l-ecole-des-arts-hybridation-e
- xperimentation-transformation
-END:VEVENT
-BEGIN:VEVENT
-UID:9a4bebe6e1f3@paris-academique
-DTSTAMP:20261001T104749Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Présentation des travaux de Carola Hein à l'Entente Axe Seine
-DESCRIPTION:https://www.paris-iea.fr/fr/evenements/presentation-a-l-entente
- -axe-seine-des-travaux-de-carola-hein-chaire-de-paris-2026-27
-LOCATION:Institut d'études avancées de Paris\, 17 quai d'Anjou\, Paris 4e
-URL:https://www.paris-iea.fr/fr/evenements/presentation-a-l-entente-axe-sei
- ne-des-travaux-de-carola-hein-chaire-de-paris-2026-27
-END:VEVENT
-BEGIN:VEVENT
 UID:61e6bbbb4437@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
 SUMMARY:Beyond Development: Biodiversity conservation and the transformatio
@@ -66,7 +41,7 @@ URL:https://www.paris-iea.fr/fr/evenements/beyond-development-biodiversity-
 END:VEVENT
 BEGIN:VEVENT
 UID:9fa74dcc1501@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261002T140000
 DTEND;TZID=Europe/Paris:20261002T160000
 SUMMARY:AI in the Sky: How Generative AI Reshapes Scientific Discovery in A
@@ -79,7 +54,7 @@ URL:https://www.paris-iea.fr/fr/evenements/ai-in-the-sky-how-generative-ai-
 END:VEVENT
 BEGIN:VEVENT
 UID:60676f6fdf10@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261002T144000
 DTEND;TZID=Europe/Paris:20261002T164000
 SUMMARY:The First Kulturwissenschaft. Topicality and Epistemological Potent
@@ -94,7 +69,7 @@ URL:https://www.paris-iea.fr/fr/evenements/the-first-kulturwissenschaft-cul
 END:VEVENT
 BEGIN:VEVENT
 UID:676f5c5d4670@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261002T152000
 DTEND;TZID=Europe/Paris:20261002T172000
 SUMMARY:AI for the Restoration and Analysis of Cultural Material
@@ -106,7 +81,7 @@ URL:https://www.paris-iea.fr/fr/evenements/ai-for-the-restoration-and-analy
 END:VEVENT
 BEGIN:VEVENT
 UID:27ad424d456d@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261002T160000
 DTEND;TZID=Europe/Paris:20261002T180000
 SUMMARY:From Patterns of Life to Traces of Meaning - On Mobility\, Meaning\
@@ -119,7 +94,7 @@ URL:https://www.paris-iea.fr/fr/evenements/from-patterns-of-life-to-traces-
 END:VEVENT
 BEGIN:VEVENT
 UID:f96e32b8b2a3@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Conseil scientifique et réunion des Directeurs d’unités
@@ -131,7 +106,7 @@ URL:https://www.paris-iea.fr/fr/evenements/conseil-scientifique-et-reunion-
 END:VEVENT
 BEGIN:VEVENT
 UID:c668c3ad2b18@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Érosion démocratique et autoritarisme en Europe
@@ -143,7 +118,7 @@ URL:https://www.paris-iea.fr/fr/evenements/erosion-democratique-et-autorita
 END:VEVENT
 BEGIN:VEVENT
 UID:5e8ee56e08b4@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261013T090000
 DTEND;TZID=Europe/Paris:20261013T120000
 SUMMARY:Conférence de presse de rentrée de l’Université Gustave Eiffel
@@ -155,7 +130,7 @@ URL:https://www.paris-iea.fr/fr/evenements/conference-de-presse-de-rentree-
 END:VEVENT
 BEGIN:VEVENT
 UID:70eced156189@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:9th Early Phase Adaptive Trials Workshop
@@ -167,7 +142,7 @@ URL:https://www.paris-iea.fr/fr/evenements/9th-early-phase-adaptive-trials-
 END:VEVENT
 BEGIN:VEVENT
 UID:0603df79a9db@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261016T093000
 DTEND;TZID=Europe/Paris:20261016T180000
 SUMMARY:Les scènes de Jacques Rancière
@@ -178,7 +153,7 @@ URL:https://www.paris-iea.fr/fr/evenements/les-scenes-de-jacques-ranciere
 END:VEVENT
 BEGIN:VEVENT
 UID:1924dca57fc7@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Approches théoriques des temporalités urbaines
@@ -190,7 +165,7 @@ URL:https://www.paris-iea.fr/fr/evenements/theoriser-le-changement-urbain-c
 END:VEVENT
 BEGIN:VEVENT
 UID:af6aa816f856@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Evénement scientifique annuel du projet HERMES
@@ -202,7 +177,7 @@ URL:https://www.paris-iea.fr/fr/evenements/evenement-scientifique-annuel-du
 END:VEVENT
 BEGIN:VEVENT
 UID:650fb5ed4636@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261023T091500
 DTEND;TZID=Europe/Paris:20261023T111500
 SUMMARY:L’Edition et ses pratiques\, passé et présent
@@ -214,7 +189,7 @@ URL:https://www.paris-iea.fr/fr/evenements/l-edition-et-ses-pratiques-passe
 END:VEVENT
 BEGIN:VEVENT
 UID:a425d8e08351@paris-academique
-DTSTAMP:20261001T104749Z
+DTSTAMP:20261002T091216Z
 DTSTART;TZID=Europe/Paris:20261106T140000
 DTEND;TZID=Europe/Paris:20261106T160000
 SUMMARY:Freedom and Order: The Science of Human Flourishing
