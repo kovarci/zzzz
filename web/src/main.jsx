@@ -238,9 +238,11 @@ function WeekView({ events, onOpen, favs }) {
   const from = iso(days[0]), to = iso(days[6]);
   const inWeek = events.filter(e => e.date >= from && e.date <= to);
   return <div className="pt-6">
-    <div className="flex items-center justify-between mb-4">
+    {/* Téléphone : le titre au-dessus des deux boutons (coincé entre eux, il
+        tenait sur quatre lignes) */}
+    <div className="flex flex-wrap items-center justify-between gap-y-3 mb-4">
       <Button variant="outline" size="sm" onClick={() => setOffset(o => o - 1)}>{t("week_prev")}</Button>
-      <div className="text-center"><div className="font-semibold">{dayNum(days[0])} {MO[days[0].getMonth()]} → {dayNum(days[6])} {MO[days[6].getMonth()]} {days[6].getFullYear()}</div><div className="text-xs text-muted-foreground">{inWeek.length} {t("noun_event", { n: inWeek.length })}{offset !== 0 && <button className="ml-2 underline" onClick={() => setOffset(0)}>{t("week_this")}</button>}</div></div>
+      <div className="order-first w-full text-center sm:order-none sm:w-auto"><div className="font-semibold">{dayNum(days[0])} {MO[days[0].getMonth()]} → {dayNum(days[6])} {MO[days[6].getMonth()]} {days[6].getFullYear()}</div><div className="text-xs text-muted-foreground">{inWeek.length} {t("noun_event", { n: inWeek.length })}{offset !== 0 && <button className="ml-2 underline" onClick={() => setOffset(0)}>{t("week_this")}</button>}</div></div>
       <Button variant="outline" size="sm" onClick={() => setOffset(o => o + 1)}>{t("week_next")}</Button>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-7 gap-2 overflow-x-auto">
