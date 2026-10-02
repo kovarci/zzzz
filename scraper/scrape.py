@@ -3166,25 +3166,83 @@ def _page_price(url):
         return ""
 
 
+_SC_FREE = re.compile(
+    r"inscription (?:est |reste )?(?:gratuite|libre)|inscriptions? gratuites?|gratuite? (?:mais|et) obligatoire|"
+    r"participation (?:au colloque |à la journée )?(?:est )?(?:gratuite|libre)|(?:accès|entrée) (?:libre|gratuite?)|"
+    r"(?:gratuit|libre) et ouvert|ouvert à tous et gratuit|sans frais d'inscription|pas de frais d'inscription|"
+    r"aucuns? frais d'inscription|free of charge|free (?:and open|admission|entry|registration)|"
+    r"no (?:registration )?fees?|registration is free|(?:attendance|participation) is free", re.I)
+# « 300,00 € », « 90 euros », « €90 », « EUR 90 »
+_SC_AMOUNT = re.compile(r"(?<![\d.,])(?<!\d[ \u202f\xa0])(\d+(?:[.,]\d{1,2})?)\s*(?:€|\beuros?\b|\bEUR\b)|(?:€|\bEUR\b)\s*(\d+(?:[.,]\d{1,2})?)", re.I)
+# Montants qui ne sont pas un tarif d'inscription : dîner de gala, croisière,
+# hébergement, majoration (« les frais augmentent de 50 € »)
+_SC_EXTRA = re.compile(r"d[îi]ner|dinner|gala|banquet|cruise|croisi[èe]re|excursion|visite|tour\b|"
+                       r"accompa|h[ôo]tel|h[ée]bergement|accommodation|chambre|room", re.I)
+# (pas « étudiant » / « student » : catégories communes au dîner et au colloque)
+_SC_FEE = re.compile(r"inscription|registration|frais|fees?\b|tarif|rate\b|conf[ée]rence|colloque|"
+                     r"journ[ée]e|workshop|participation", re.I)
+
+
+def _sc_fee_amounts(txt):
+    """Frais d'inscription lus dans le texte : montants dont le dernier
+    mot-clé qui précède (300 caractères) parle d'inscription plutôt que de
+    dîner ou d'hébergement — un tableau « Student 450 € · Academic 700 € »
+    reste rattaché à son titre « Registration fees »."""
+    out = []
+    for m in _SC_AMOUNT.finditer(txt):
+        v = float((m.group(1) or m.group(2)).replace(",", "."))
+        if not 10 <= v < 3000:
+            continue
+        before = txt[max(0, m.start() - 300):m.start()]
+        # « les frais augmentent de 50 € et 10 € », « réduction de 30 € »
+        sentence = re.split(r"[.;!?](?=\s+[A-ZÀ-Ý])", before)[-1]
+        if re.search(r"(?i)\b(?:rises?|increase\w*|augment\w*|major\w*|suppl[ée]ment\w*|r[ée]duction|"
+                     r"discount|remise|rabais|late fee)\b|\+\s*$", sentence):
+            continue
+        last = lambda rx: max((x.end() for x in rx.finditer(before)), default=-1)
+        fee, extra = last(_SC_FEE), last(_SC_EXTRA)
+        if fee > extra:
+            out.append(v)
+    return out
+
+
 def _sciencesconf_price(base):
-    """Colloque Sciencesconf : le tarif est sur la page « Inscription » /
-    « Registration » du site du colloque (frais d'inscription, gratuité)."""
+    """Colloque Sciencesconf : le tarif est sur une page du site du colloque
+    (« Inscription », « Registration fees », « Tarifs »…), plus rarement sur
+    l'accueil. Les menus sont en href='…' (guillemets simples) ; la page
+    /registration par défaut exige une connexion et n'affiche aucun tarif."""
     try:
         html, txt = _page_text(base)
-        m = re.search(r'<a[^>]+href="([^"]*(?:registration|inscription)[^"]*)"', html, re.I)
-        if not m:
-            return _price_in_text(txt)
-        u = m.group(1) if m.group(1).startswith("http") else base.rstrip("/") + "/" + m.group(1).lstrip("/")
-        rtxt = _page_text(u)[1]
-        if re.search(r"(?i)inscription (?:est )?(?:gratuite|libre)|gratuite? (?:mais|et) obligatoire|free of charge|"
-                     r"no (?:registration )?fees?|registration is free|participation (?:est )?gratuite", rtxt):
-            return "Gratuit"
-        # frais d'inscription : le plus bas des montants de la page
-        amounts = [float(x.replace(",", ".")) for x in re.findall(r"(\d+(?:[.,]\d{1,2})?)\s*(?:€|euros?\b|EUR\b)", rtxt)]
-        amounts = [a for a in amounts if 0 < a < 5000]
-        return f"{min(amounts):g} €".replace(".", ",") if amounts else ""
     except Exception:
         return ""
+    root = re.match(r"https?://[^/]+", base).group(0)
+    pages, seen = [], set()
+    for href, label in re.findall(r"<a[^>]+href=[\"']([^\"']+)[\"'][^>]*>\s*([^<]{0,60})<", html):
+        href = html_unescape(href)
+        if not re.search(r"(?i)inscri|regist|fees?\b|tarif|frais|pricing|participation", href + " " + label):
+            continue
+        u = href if href.startswith("http") else root + "/" + href.lstrip("/")
+        path = re.sub(r"^https?://[^/]+", "", u)
+        if (not u.startswith(root) or re.match(r"/(?:registration|user)\b", path)
+                or u in seen or "javascript:" in href):
+            continue
+        seen.add(u)
+        pages.append(u)
+    texts = [txt]
+    for u in pages[:3]:
+        try:
+            texts.append(_page_text(u)[1])
+        except Exception:
+            continue
+    # pages d'inscription d'abord : un tarif chiffré prime sur une gratuité
+    # partielle (« gratuit pour les doctorants, 150 € sinon »)
+    for t in texts[1:] + texts[:1]:
+        amounts = _sc_fee_amounts(t)
+        if amounts:
+            return f"{min(amounts):g} €".replace(".", ",")
+    if any(_SC_FREE.search(t) for t in texts):
+        return "Gratuit"
+    return ""
 
 
 # Sources dont le tarif n'est que sur la page de chaque événement
@@ -5347,10 +5405,9 @@ def _event_jsonld(ev):
         "performer": performer,
         "offers": offers,
     }
-    # Prix inconnu (colloque sans page d'inscription lisible…) : pas d'offre
-    # plutôt qu'une offre sans prix — on n'invente pas de tarif
-    if isinstance(offers, dict) and "price" not in offers:
-        del data["offers"]
+    # Prix inconnu (colloque sans page d'inscription lisible…) : l'offre reste
+    # (lien d'inscription, disponibilité) mais sans prix — on n'invente pas de
+    # tarif. Sans elle, Search Console signale « Champ "offers" manquant ».
     if isinstance(offers, dict) and offers.get("price") == "0":  # (offre gratuite)
         data["isAccessibleForFree"] = True
     data["inLanguage"] = "en" if _is_english(ev) else "fr"
