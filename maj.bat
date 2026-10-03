@@ -13,7 +13,16 @@ rem --rebase : une maj precedente jamais publiee (push refuse) passe par-dessus
 rem au lieu de laisser des fichiers en conflit ; --autostash : le travail en
 rem cours dans ce dossier est mis de cote le temps de la mise a jour.
 git pull --rebase --autostash -X theirs origin main
-if errorlevel 1 git rebase --abort
+if errorlevel 1 (
+  git rebase --abort
+  rem Une maj precedente jamais publiee qui ne passe plus par-dessus la version
+  rem en ligne, un fichier supprime d'un cote et modifie de l'autre : sans ceci,
+  rem toutes les maj suivantes echouaient a leur tour. Mise de cote dans la
+  rem branche maj-non-publiee : celle-ci la refait a partir des donnees en ligne.
+  echo [!] Une maj precedente non publiee est mise de cote : branche maj-non-publiee
+  git branch -f maj-non-publiee
+  git reset --keep origin/main
+)
 echo.
 
 echo [2/4] College de France, Museum, Academies (sciences, medecine), Ifri, IRIS, Jean-Jaures + Luma...
@@ -30,8 +39,27 @@ echo [4/4] Publication sur GitHub...
 rem Le robot GitHub a pu publier pendant la maj : on se replace par-dessus
 rem (nos donnees l'emportent, elles incluent deja les siennes), puis on pousse.
 git pull --rebase --autostash -X theirs origin main
-if errorlevel 1 git rebase --abort
+if errorlevel 1 (
+  git rebase --abort
+  rem Le robot a publie pendant la maj et les deux versions ne se fusionnent pas :
+  rem on repart de la version en ligne et on refait la maj par-dessus.
+  echo [!] La version en ligne a change pendant la maj : on la refait par-dessus...
+  git branch -f maj-non-publiee
+  git reset --keep origin/main
+  python scraper\refresh_local.py
+  git add data/ e/ i/ d/ s/ p/ index.html sitemap.xml og.png *.txt
+  git commit -m "maj College de France, Museum, Academie, Ifri, IRIS, Jean-Jaures + Luma"
+)
 git push
+if errorlevel 1 (
+  rem 3 octobre 2026 : maj enregistree mais jamais publiee, connexion GitHub
+  rem ou reseau indisponible a ce moment-la. Second essai.
+  echo [!] Publication refusee : nouvel essai dans 30 secondes...
+  timeout /t 30 /nobreak >nul
+  git pull --rebase --autostash -X theirs origin main
+  if errorlevel 1 git rebase --abort
+  git push
+)
 echo.
 
 echo ================================================
