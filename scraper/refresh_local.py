@@ -213,10 +213,9 @@ def main():
           f"Muséum {_inst_count(merged, MNHN)}, "
           f"Académie des sciences {_inst_count(merged, 'Académie des sciences')}, "
           f"Luma {_luma_count(merged)})")
-    print("\nÉtape suivante :")
-    print("  git add data/events.json data/calendar.ics")
-    print('  git commit -m "maj manuelle (College de France + Luma)"')
-    print("  git push")
+    # (L'ancien message « Étape suivante : git add data/events.json… » datait
+    # d'avant maj.bat, qui enregistre et publie lui-même tout le dossier.)
+    print("\nmaj.bat enregistre et publie maintenant ces données (étapes 3 et 4).")
 
 
 if __name__ == "__main__":
