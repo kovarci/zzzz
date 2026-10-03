@@ -41,7 +41,9 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
 LOCAL_ONLY = {"Collège de France", "Muséum national d'Histoire naturelle", "Académie des sciences",
               "Jeunes IHEDN", "Ifri", "IRIS", "Fondation Jean-Jaurès", "Académie nationale de médecine",
               "Maison de l'Amérique latine", "Maison de la culture du Japon", "L'Étudiant",
-              "Musée du Louvre"}
+              "Musée du Louvre",
+              # délai dépassé pour le robot depuis le 02/10/2026, lues par maj.bat
+              "Université Paris 8", "IPGP"}
 
 
 def main():

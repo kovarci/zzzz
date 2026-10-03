@@ -420,9 +420,21 @@ function GithubCard() {
 }
 
 /* ═════════════════════ App ═════════════════════ */
-function useFavs() {
+function useFavs(events) {
   const [favs, setFavs] = useState(() => new Set(store.get("paf_favs", [])));
   const toggle = useCallback(id => setFavs(s => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); store.set("paf_favs", [...n]); return n; }), []);
+  // Favori posé sur un doublon fusionné depuis dans une autre fiche (son id
+  // est devenu un alias de celle-ci) : reporté sur la fiche gardée — il
+  // disparaissait des Favoris sans prévenir.
+  useEffect(() => {
+    if (!events) return;
+    setFavs(s => {
+      let n = null;
+      for (const e of events) for (const a of e.aliases || []) if (s.has(a)) { n = n || new Set(s); n.delete(a); n.add(e.id); }
+      if (!n) return s;
+      store.set("paf_favs", [...n]); return n;
+    });
+  }, [events]);
   return [favs, toggle];
 }
 // Intervenants suivis (paf_speakers) + notifications : événements déjà vus
@@ -441,7 +453,7 @@ function App() {
   const [archive, setArchive] = useState(null); const [meta, setMeta] = useState({}); const [digest, setDigest] = useState(null);
   const [filters, setFilters] = useState(init.filters); const [rawQ, setRawQ] = useState(init.rawQ);
   const [view, setView] = useState(init.view); const [history, setHistory] = useState(init.history); const [histMonth, setHistMonth] = useState("all");
-  const [favs, toggleFav] = useFavs(); const [open, setOpen] = useState(null); const [cmd, setCmd] = useState(false); const [shown, setShown] = useState(PAGE); const [toast, setToast] = useState(null);
+  const [favs, toggleFav] = useFavs(events); const [open, setOpen] = useState(null); const [cmd, setCmd] = useState(false); const [shown, setShown] = useState(PAGE); const [toast, setToast] = useState(null);
   const { speakers, toggle: toggleSpeaker, seen: seenSpeakerEvents, markSeen } = useSpeakers();
   const [speakersOpen, setSpeakersOpen] = useState(false);
   const [notifyPerm, setNotifyPerm] = useState(() => (typeof Notification === "undefined" ? "unsupported" : Notification.permission));
@@ -500,7 +512,8 @@ function App() {
     const e = events.find(x => x.id === id || x.aliases?.includes(id)); if (e) { pendingEvent.current = null; setOpen(e); return; }
     if (!complete) return;          // peut-être dans un mois pas encore chargé
     pendingEvent.current = null;
-    ensureArchive().then(a => { const p = a.find(x => x.id === id); p ? setOpen(p) : notify(t("toast_not_found")); });
+    // (archive comprise : ancien id d'un doublon fusionné, lien partagé avant la fusion)
+    ensureArchive().then(a => { const p = a.find(x => x.id === id || x.aliases?.includes(id)); p ? setOpen(p) : notify(t("toast_not_found")); });
   }, [events, complete]);
   useEffect(() => { window.history.replaceState(null, "", urlFromState({ filters, view, history, rawQ })); }, [filters, view, history, rawQ]);
   // Fiche = une étape d'historique (?event=<id>) : le bouton « retour » du
