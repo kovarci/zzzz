@@ -6953,6 +6953,37 @@ _C1 = re.compile(r"[\x80-\x9f]")
 _EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 
 
+def _inst_key(name):
+    """Nom d'organisateur sans sigle final ni initial, article, accents ni
+    casse : « Institut des Cultures d'Islam (ICI) », « L'Institut du Monde
+    Arabe », « QJ - Quartier Jeunes » → même clé que la forme courte."""
+    n = re.sub(r"\s*\([^()]{2,12}\)\s*$", "", name or "")
+    n = re.sub(r"^[A-Z0-9]{2,5}\s+[-–]\s+", "", n)
+    return re.sub(r"^(?:l|le|la|les)-", "", slugify(n))
+
+
+def _unify_institutions(events):
+    """Un même lieu écrit de plusieurs façons (surtout par Que faire à Paris,
+    d'un événement à l'autre) apparaissait deux fois dans le menu Institution
+    et sur deux pages. Forme gardée : celle d'une source dédiée, sinon la
+    plus fréquente. L'id des événements ne change pas (calculé avant)."""
+    groups = {}
+    for e in events:
+        k = _inst_key(e.get("institution", ""))
+        if len(k) >= 6:
+            groups.setdefault(k, collections.Counter())[(e.get("institution"), e.get("source_type") != "ville")] += 1
+    canon = {}
+    for c in groups.values():
+        names = {n for n, _ in c}
+        if len(names) > 1:
+            best = max(c, key=lambda x: (x[1], c[x], -len(x[0])))[0]
+            canon.update({n: best for n in names if n != best})
+    for e in events:
+        if e.get("institution") in canon:
+            e["institution"] = canon[e["institution"]]
+    return events
+
+
 def _fix_c1(s):
     return _C1.sub(lambda m: bytes([ord(m.group())]).decode("cp1252", "ignore"), s)
 
@@ -7061,6 +7092,7 @@ def finalize_events(events):
             e["price"] = e.get("price") or "Gratuit"
         if _MEMBERS_ONLY.search(f"{e.get('title', '')} {e.get('description', '')}"):
             e["members"] = True
+    _unify_institutions(events)
     # Collège de France : la chaire (professeur connu) passe avant les
     # mots-clés — « Les Épouses du dieu à Thèbes » (Laurent Coulon,
     # égyptologue) tombait en Philosophie pour « dieu ». Séminaires et
