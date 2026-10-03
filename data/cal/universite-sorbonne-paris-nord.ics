@@ -24,10 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:77a2b318e225@paris-academique
-DTSTAMP:20261002T204347Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+UID:199c8e37ba92@paris-academique
+DTSTAMP:20261003T094927Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
 SUMMARY:L’intelligence artificielle générative dans les pratiques de fo
  rmation et dans la recherche : enjeux et défis
 DESCRIPTION:Déjà bien installée au cœur des débats publics et universi
@@ -43,10 +43,10 @@ URL:https://www.univ-spn.fr/events/lintelligence-artificielle-generative-da
  ns-les-pratiques-de-formation-et-dans-la-recherche-enjeux-et-defis/
 END:VEVENT
 BEGIN:VEVENT
-UID:d4d89ba69fe9@paris-academique
-DTSTAMP:20261002T204347Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+UID:2dfe75a88b2d@paris-academique
+DTSTAMP:20261003T094927Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
 SUMMARY:Une collecte solidaire pour les étudiants en précarité
 DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
  limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
@@ -61,7 +61,7 @@ URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
 END:VEVENT
 BEGIN:VEVENT
 UID:8d590a546c78@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Fête de la science 2026 : place aux « Saveurs savantes »
@@ -79,7 +79,7 @@ URL:https://www.univ-spn.fr/events/fete-de-la-science-2026-place-aux-saveur
 END:VEVENT
 BEGIN:VEVENT
 UID:d64b421fc734@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261006T093000
 DTEND;TZID=Europe/Paris:20261006T123000
 SUMMARY:[Médiation scientifique] EfferveSens !
@@ -95,7 +95,7 @@ URL:https://www.univ-spn.fr/events/atelier-effervesens/
 END:VEVENT
 BEGIN:VEVENT
 UID:17b272f1956d@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261006T170000
 DTEND;TZID=Europe/Paris:20261006T190000
 SUMMARY:Fabriquer la ville avec l’art et la culture
@@ -112,7 +112,7 @@ URL:https://www.univ-spn.fr/events/fabriquer-la-ville-avec-lart-et-la-cultu
 END:VEVENT
 BEGIN:VEVENT
 UID:7aa3e470eb69@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261009T122400
 DTEND;TZID=Europe/Paris:20261009T142400
 SUMMARY:[Médiation scientifique] La science autrement !
@@ -128,7 +128,7 @@ URL:https://www.univ-spn.fr/events/lascienceautrement-fetescience/
 END:VEVENT
 BEGIN:VEVENT
 UID:afd72a6cfb60@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261012T120000
 DTEND;TZID=Europe/Paris:20261012T130000
 SUMMARY:Étudiants internationaux : 5 journées pour prendre vos repères
@@ -146,7 +146,7 @@ URL:https://www.univ-spn.fr/events/etudiants-internationaux-5-journees-pour
 END:VEVENT
 BEGIN:VEVENT
 UID:36d8c8644d08@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261013T120000
 DTEND;TZID=Europe/Paris:20261013T140000
 SUMMARY:[Rencontre littéraire Texto] Beata Umubyeyi Mairesse
@@ -164,7 +164,7 @@ URL:https://www.univ-spn.fr/events/rencontre-litteraire-beata-umaymi-maires
 END:VEVENT
 BEGIN:VEVENT
 UID:ebb09968e30e@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261013T200000
 DTEND;TZID=Europe/Paris:20261013T212500
 SUMMARY:[Danse] As we are
@@ -175,7 +175,7 @@ URL:https://www.univ-spn.fr/events/danse-as-we-are/
 END:VEVENT
 BEGIN:VEVENT
 UID:d648f53dd3c2@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261015T123000
 DTEND;TZID=Europe/Paris:20261015T143000
 SUMMARY:[Cirque] Mauvais Joueurs
@@ -192,7 +192,7 @@ URL:https://www.univ-spn.fr/events/cirque-mauvais-joueurs/
 END:VEVENT
 BEGIN:VEVENT
 UID:a064a32f983a@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261016T193000
 DTEND;TZID=Europe/Paris:20261016T203000
 SUMMARY:[Danse] Machine à spectacle
@@ -203,7 +203,7 @@ URL:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
 END:VEVENT
 BEGIN:VEVENT
 UID:643997ff4482@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261017T100000
 DTEND;TZID=Europe/Paris:20261017T180000
 SUMMARY:Études\, métiers\, Parcoursup : rendez-vous à Villetaneuse
@@ -220,7 +220,7 @@ URL:https://www.univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-
 END:VEVENT
 BEGIN:VEVENT
 UID:3dc98be47f8a@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261021T123000
 DTEND;TZID=Europe/Paris:20261021T140000
 SUMMARY:[Événement – appel à participation] Open Mic
@@ -236,7 +236,7 @@ URL:https://www.univ-spn.fr/events/openmic-201026/
 END:VEVENT
 BEGIN:VEVENT
 UID:f819e3de9438@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261021T200000
 DTEND;TZID=Europe/Paris:20261021T213500
 SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
@@ -248,7 +248,7 @@ URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
 END:VEVENT
 BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque

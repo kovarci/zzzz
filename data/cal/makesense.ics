@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:2de6d366eda0@paris-academique
-DTSTAMP:20261002T204347Z
-DTSTART;TZID=Europe/Paris:20261002T140000
-DTEND;TZID=Europe/Paris:20261002T160000
-SUMMARY:Atelier de création théâtrale à destination des femmes
-DESCRIPTION:Organisé par Maison de la Conversation — Atelier de créatio
- n théâtrale à destination des femmes.Venez participer à la création c
- ollective et joyeuse de la comédie musicale « À la préfecture ! ».Vou
- s laisserez libre cours à votre imagination et improviserez pour créer\,
-  toute\nhttps://chiche.makesense.org/events/e/atelier-de-creation-theatral
- e-a-destination-des-femmes-6aaa851519fd1c0008839756
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/atelier-de-creation-theatrale-a-d
- estination-des-femmes-6aaa851519fd1c0008839756
-END:VEVENT
-BEGIN:VEVENT
 UID:b94e49a8c615@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Formation à la facilitation graphique
@@ -56,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/formation-a-la-facilitation-graph
 END:VEVENT
 BEGIN:VEVENT
 UID:7d8fcfaa0219@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
@@ -72,7 +56,7 @@ URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
 END:VEVENT
 BEGIN:VEVENT
 UID:08567294a4ed@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261005T193000
 DTEND;TZID=Europe/Paris:20261005T213000
 SUMMARY:Workshop Capoeira Angola
@@ -87,37 +71,8 @@ URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09b2
  19fd1c00088da888
 END:VEVENT
 BEGIN:VEVENT
-UID:8d483f251afc@paris-academique
-DTSTAMP:20261002T204347Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
-SUMMARY:Appel à candidature - Social Starter
-DESCRIPTION:Organisé par Les Canaux — Le Social Starter\, c'est le progr
- amme de mise en relation entre des porteur·euse·s de projet à impact so
- cial et/ou environnemental avec l'écosystème de l’accompagnement et du
-  financ\nhttps://chiche.makesense.org/events/e/appel-a-candidature-social-
- starter-6a842a5b476bed0008f56482
-LOCATION:6 Quai de la Seine\, 75019 Paris\, France
-URL:https://chiche.makesense.org/events/e/appel-a-candidature-social-starte
- r-6a842a5b476bed0008f56482
-END:VEVENT
-BEGIN:VEVENT
-UID:4d8768765c11@paris-academique
-DTSTAMP:20261002T204347Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
-SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
-DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Pro\, c'est l’
- atelier pour réfléchir ensemble au métier qui te correspond !2h45 d’a
- telier collectif pour : &\nhttps://chiche.makesense.org/events/e/reflechir
- -au-metier-qui-me-correspond-paris-13e-6aa9328319fd1c00087ae80d
-LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
-URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
- pond-paris-13e-6aa9328319fd1c00087ae80d
-END:VEVENT
-BEGIN:VEVENT
 UID:86d864d07a2b@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:La prime au vice\, rencontre-dédicace avec Julia Faure et Guillaum
@@ -133,8 +88,37 @@ URL:https://chiche.makesense.org/events/e/la-prime-au-vice-rencontre-dedica
  ce-avec-julia-faure-et-guillaume-declair-6a46990c4866650007e06e47
 END:VEVENT
 BEGIN:VEVENT
+UID:4d8768765c11@paris-academique
+DTSTAMP:20261003T094927Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Pro\, c'est l’
+ atelier pour réfléchir ensemble au métier qui te correspond !2h45 d’a
+ telier collectif pour : &\nhttps://chiche.makesense.org/events/e/reflechir
+ -au-metier-qui-me-correspond-paris-13e-6aa9328319fd1c00087ae80d
+LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
+URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
+ pond-paris-13e-6aa9328319fd1c00087ae80d
+END:VEVENT
+BEGIN:VEVENT
+UID:8d483f251afc@paris-academique
+DTSTAMP:20261003T094927Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Appel à candidature - Social Starter
+DESCRIPTION:Organisé par Les Canaux — Le Social Starter\, c'est le progr
+ amme de mise en relation entre des porteur·euse·s de projet à impact so
+ cial et/ou environnemental avec l'écosystème de l’accompagnement et du
+  financ\nhttps://chiche.makesense.org/events/e/appel-a-candidature-social-
+ starter-6a842a5b476bed0008f56482
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/appel-a-candidature-social-starte
+ r-6a842a5b476bed0008f56482
+END:VEVENT
+BEGIN:VEVENT
 UID:c71c7a9fff85@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261006T100000
 DTEND;TZID=Europe/Paris:20261006T180000
 SUMMARY:Près des yeux\, près du care
@@ -150,7 +134,7 @@ URL:https://chiche.makesense.org/events/e/pres-des-yeux-pres-du-care-6aaa8b
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b6af05cbf8@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;TZID=Europe/Paris:20261006T170000
 DTEND;TZID=Europe/Paris:20261006T190000
 SUMMARY:Activ'Go - Réfléchir à la mise en œuvre de son projet entrepren
@@ -165,7 +149,7 @@ URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:157dd27484e8@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:J'apprends à composter mes biodéchets
@@ -180,7 +164,7 @@ URL:https://chiche.makesense.org/events/e/japprends-a-composter-mes-biodech
 END:VEVENT
 BEGIN:VEVENT
 UID:f6b95b72fb1f@paris-academique
-DTSTAMP:20261002T204347Z
+DTSTAMP:20261003T094927Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:🏠Et toi\, tu connais notre maison ? - makesense space
