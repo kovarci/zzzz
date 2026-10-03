@@ -320,18 +320,28 @@ function MapView({ events, onOpen, userPos }) {
 function MiniMap({ events, onGoMap }) {
   const { t } = useI18n();
   const ref = useRef(null), mapRef = useRef(null), layerRef = useRef(null);
+  // Carte créée à l'approche seulement : sur téléphone elle est loin sous le
+  // premier écran, et ses tuiles (~170 Ko, 4 à 6 requêtes vers OSM)
+  // ralentissaient l'arrivée de l'agenda pour une carte jamais vue
+  const [seen, setSeen] = useState(false);
   useEffect(() => {
+    const el = ref.current; if (!el || typeof IntersectionObserver === "undefined") { setSeen(true); return; }
+    const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { setSeen(true); io.disconnect(); } }, { rootMargin: "400px" });
+    io.observe(el); return () => io.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!seen) return;
     const map = L.map(ref.current, { zoomControl: false, attributionControl: false, dragging: false, scrollWheelZoom: false, doubleClickZoom: false, touchZoom: false, boxZoom: false, keyboard: false, tap: false }).setView([48.8566, 2.349], 11.6);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19 }).addTo(map);
     layerRef.current = L.layerGroup().addTo(map); mapRef.current = map;
     const t0 = setTimeout(() => map.invalidateSize(), 60);
-    return () => { clearTimeout(t0); map.remove(); };
-  }, []);
+    return () => { clearTimeout(t0); map.remove(); layerRef.current = null; };
+  }, [seen]);
   const geo = useMemo(() => events.filter(e => typeof e.lat === "number"), [events]);
   useEffect(() => {
     const layer = layerRef.current; if (!layer) return; layer.clearLayers();
     geo.slice(0, 200).forEach(e => { L.circleMarker([e.lat, e.lng], { radius: 4, weight: 0, fillOpacity: .85, fillColor: discColor(e.discipline) }).addTo(layer); });
-  }, [geo]);
+  }, [geo, seen]);
   // isolate : les calques Leaflet (z-index 400+) passaient au-dessus de l'en-tête collant
   return <button onClick={onGoMap} className="group relative isolate col-span-1 lg:col-span-2 rounded-xl border bg-card shadow-sm overflow-hidden text-left">
     <div ref={ref} className="absolute inset-0 pointer-events-none [&_.leaflet-control-attribution]:hidden" />
@@ -700,13 +710,22 @@ function App() {
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
         <BlurFade inView={false}><div className="inline-flex max-w-full items-center rounded-full border bg-background/60 px-3 sm:px-4 py-1 text-xs sm:text-sm shadow-sm"><AnimatedShinyText>✦ {meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UP.length }) : ""}</AnimatedShinyText></div></BlurFade>
         <BlurFade inView={false} delay={.1}><h1 className="mt-6 text-4xl sm:text-6xl font-bold tracking-tight [text-wrap:balance] max-w-4xl mx-auto leading-[1.05]">{t("hero_title_1")} <span className="bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">{t("hero_title_2")}</span></h1></BlurFade>
-        <BlurFade inView={false} delay={.2}><p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto [text-wrap:balance]">{events ? t("hero_lede", { n: Object.keys(instAll).length, f: UP.filter(isFree).length }) : t("hero_loading")}</p></BlurFade>
+        <BlurFade inView={false} delay={.2}><p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto [text-wrap:balance]">{/* Même phrase pendant le chargement (« … » à la place des nombres) : « chargement… »
+            tenait sur une ligne, la phrase sur quatre (téléphone) — toute la page sautait de 84 px
+            à l'arrivée des données (CLS 0,43, « mauvais » pour Google) */}
+          {t("hero_lede", events ? { n: Object.keys(instAll).length, f: UP.filter(isFree).length } : { n: "…", f: "…" })}</p></BlurFade>
         <BlurFade inView={false} delay={.3}><div className="mt-8 flex flex-wrap justify-center gap-3"><Button onClick={() => { setHistory(false); setF({ when: "today" }); goAgenda(); }} className="h-11 px-6">{t("btn_today")}</Button><Button variant="outline" onClick={() => { setHistory(false); setF({ when: "week" }); goAgenda(); }} className="h-11 px-6">{t("btn_week")}</Button></div></BlurFade>
         <BlurFade inView={false} delay={.4}><div className="relative mt-12 grid grid-cols-3 max-w-xl mx-auto divide-x rounded-xl border bg-card shadow-sm">
           {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w], i) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="flex flex-col items-center py-4 hover:bg-accent first:rounded-l-xl last:rounded-r-xl"><span className="text-3xl font-bold"><NumberTicker value={n} delay={.2 + i * .1} locale={lang === "en" ? "en-US" : "fr-FR"} /></span><span className="text-xs text-muted-foreground mt-1">{l}</span></button>)}
           <BorderBeam size={70} duration={9} colorFrom="#3B82F6" colorTo="#EC4899" /></div></BlurFade>
       </section>
 
+      {/* Avant les données : place du carrousel (74 px) et du bloc « À la une »
+          réservée — même grille, mêmes cases. Sans elle, l'agenda (déjà affiché
+          en squelette) descendait de 830 à 1 450 px à leur arrivée : la page
+          « sautait » pendant le chargement (CLS mesuré par Google). */}
+      {!events && <div aria-hidden="true"><div className="h-[74px]" /><section className="py-10"><div className="mb-5 h-[56px]" />
+        <BentoGrid>{["lg:col-span-2 lg:row-span-2", "", "", "lg:col-span-2", "lg:col-span-2", "lg:col-span-2"].map((c, i) => <div key={i} className={cn("rounded-xl border bg-card/60 animate-pulse", c)} />)}</BentoGrid></section></div>}
       {topInst.length > 0 && <section className="py-2 relative [mask-image:linear-gradient(to_right,transparent,#000_10%,#000_90%,transparent)]">
         <Marquee pauseOnHover>{topInst.map(([i, n]) => <button key={i} onClick={() => { setHistory(false); setF({ inst: new Set([i]) }); goAgenda(); }} className="inline-flex items-center gap-2 rounded-lg border bg-card px-3 py-2 text-sm shadow-sm hover:bg-accent whitespace-nowrap"><span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-muted text-xs font-semibold">{i[0]}</span>{i}<span className="text-xs text-muted-foreground tabular-nums">{n}</span></button>)}</Marquee>
       </section>}

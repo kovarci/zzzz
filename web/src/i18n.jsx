@@ -14,7 +14,6 @@ const TR = {
   live_events_suffix: [" · {n} événement{s} à venir", " · {n} upcoming event{s}"],
   hero_title_1: ["Toutes les conférences de Paris,", "All the conferences in Paris,"],
   hero_title_2: ["en un seul agenda.", "in one single agenda."],
-  hero_loading: ["chargement…", "loading…"],
   hero_lede: ["Cours du Collège de France, séminaires de l'IHP et de PSE, rencontres Luma : {n} organisateurs réunis, {f} événements en entrée libre.",
               "Lectures from the Collège de France, seminars from IHP and PSE, Luma meetups: {n} organisers gathered, {f} free events."],
   btn_today: ["Voir aujourd'hui", "See today"], btn_week: ["Cette semaine", "This week"],
