@@ -1161,8 +1161,11 @@ def extract_events_deep_json(obj, institution_default, source_type="institution"
                         url = f"https://lu.ma/{api_id}"
                     hosts = obj.get("hosts") or obj.get("host_calendars") or ev.get("hosts") or []
                     inst = institution_default
-                    if isinstance(hosts, list) and hosts and isinstance(hosts[0], dict):
-                        inst = clean_text(hosts[0].get("name", "")) or institution_default
+                    if isinstance(hosts, list):
+                        # Hôte sans nom affiché : Luma donne alors son adresse
+                        # e-mail (« info.x…@gmail.com » publiée comme organisateur)
+                        names = [clean_text(h.get("name", "")) for h in hosts if isinstance(h, dict)]
+                        inst = next((n for n in names if n and not _EMAIL.search(n)), "") or institution_default
                     img = ""
                     price = ""
                     if source_type == "luma":
@@ -6945,6 +6948,9 @@ _DESC_LEAD = re.compile(r"^\s*(?:En savoir plus|Lire la suite|Read more|Voir plu
 # contrôle invisibles (« \x93Les Krâneuses qui Tétonnent\x94 », Institut Curie ;
 # « l\x92histoire », Sorbonne Nouvelle) qui s'affichaient en carrés.
 _C1 = re.compile(r"[\x80-\x9f]")
+# Adresse e-mail dans un nom d'organisateur ou d'intervenant (hôte Luma sans
+# nom affiché) : jamais publiée sur le site ni dans les pages e/
+_EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 
 
 def _fix_c1(s):
@@ -7008,6 +7014,11 @@ def finalize_events(events):
         print(f"Événements hors Île-de-France retirés : {n - len(events)}")
     for e in events:
         # Après le calcul de l'id (favoris, liens e/<id> inchangés)
+        if _EMAIL.search(e.get("institution") or ""):
+            e["institution"] = "Luma" if e.get("source_type") == "luma" else (
+                clean_text(_EMAIL.sub("", e["institution"])) or "Organisateur")
+        if _EMAIL.search(e.get("speaker") or ""):
+            e["speaker"] = clean_text(_EMAIL.sub("", e["speaker"])).strip(" ,;·-")
         for k in ("title", "description", "location", "speaker"):
             if e.get(k) and _C1.search(e[k]):
                 e[k] = _fix_c1(e[k])
