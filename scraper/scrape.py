@@ -67,6 +67,9 @@ DISCIPLINE_KEYWORDS = {
         "philosoph", "éthique", "métaphysique", "épistémologie", "ontologie",
         "phénoménologi", "wittgenstein", "hegel", " kant", "nietzsche",
         "platon", "aristote", "esthétique philosophique", "morale",
+        # en anglais (conférences invitées du Collège de France : « The Noetic
+        # Theory of Aesthetic Experience » restait en « Autre »)
+        "aesthetic", " ethics", "metaphysic", "epistemolog", "ontology", "phenomenolog",
         "ricoeur", "deleuze", "foucault", "merleau-ponty", "spinoza",
         # Théologie / spiritualité (Collège des Bernardins…) rangées ici
         "théolog", "theolog", " dieu", "église", "biblique", "bible",
