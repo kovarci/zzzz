@@ -1699,13 +1699,23 @@ def scrape_pse(browser=None):
         page_url="https://www.parisschoolofeconomics.eu/evenements/page/{n}/", page_start=2, max_pages=15)
     url = "https://www.parisschoolofeconomics.eu/evenements/"
     evs = _scrape_cards("Paris School of Economics", url, "article", **kw)
-    if not evs and browser is not None:
+    # Deux essais au navigateur : le 3/10/2026 au soir, le premier a rendu
+    # une page sans cartes (24 les autres jours) — source critique à 0, robot
+    # en échec.
+    for attempt in (1, 2):
+        if evs or browser is None:
+            break
+        if attempt == 2:
+            print("   [info] PSE : aucune carte au navigateur, second essai dans 10 s")
+            time.sleep(10)
         ctx = browser.new_context(user_agent=HEADERS["User-Agent"], locale="fr-FR",
                                   extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"})
         page = ctx.new_page()
         try:
             evs = _scrape_cards("Paris School of Economics", url, "article",
                                 fetch=lambda u: BeautifulSoup(load_page(page, u, exhaustive=False)[0], "lxml"), **kw)
+        except Exception as e:
+            print(f"   [warn] PSE (navigateur, essai {attempt}) : {type(e).__name__}")
         finally:
             ctx.close()
     for e in evs:
