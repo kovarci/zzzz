@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:5990077cc230@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261004T130000
 DTEND;TZID=Europe/Paris:20261004T140000
 SUMMARY:Qui fabrique la science ?
@@ -36,7 +36,7 @@ URL:https://www.ined.fr/fr/agenda/qui-fabrique-science
 END:VEVENT
 BEGIN:VEVENT
 UID:dde81eddc8ff@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261005T100000
 DTEND;TZID=Europe/Paris:20261005T153000
 SUMMARY:La santé des femmes en sciences
@@ -48,7 +48,7 @@ URL:https://www.ined.fr/fr/agenda/sante-femmes-en-sciences
 END:VEVENT
 BEGIN:VEVENT
 UID:eff557df5606@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261005T110000
 DTEND;TZID=Europe/Paris:20261005T124500
 SUMMARY:La base POPP sur les recensements de la population parisienne de l
@@ -62,7 +62,7 @@ URL:https://www.ined.fr/fr/agenda/base-popp-sur-recensements-population-par
 END:VEVENT
 BEGIN:VEVENT
 UID:a30f60d2b1cb@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261005T110000
 DTEND;TZID=Europe/Paris:20261005T124500
 SUMMARY:L’IVG en « désert médical » : comment les professionnel·les 
@@ -76,7 +76,7 @@ URL:https://www.ined.fr/fr/agenda/ivg-en-desert-medical-comment-professionn
 END:VEVENT
 BEGIN:VEVENT
 UID:3da9fafd94cb@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261008T093000
 DTEND;TZID=Europe/Paris:20261008T121500
 SUMMARY:Enquêtes par panel et effets de mode : état des lieux
@@ -88,7 +88,7 @@ URL:https://www.ined.fr/fr/agenda/enquetes-par-panel-et-effets-mode-etat-li
 END:VEVENT
 BEGIN:VEVENT
 UID:903f4696fa96@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261008T133000
 DTEND;TZID=Europe/Paris:20261008T170000
 SUMMARY:Assemblée générale LifeObs 2026
@@ -99,7 +99,7 @@ URL:https://www.ined.fr/fr/agenda/assemblee-generale-lifeobs-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:f9e7e15199b7@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Salon du livre
@@ -110,7 +110,7 @@ URL:https://www.ined.fr/fr/agenda/salon-du-livre
 END:VEVENT
 BEGIN:VEVENT
 UID:fcc9dd5713b1@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261009T090000
 DTEND;TZID=Europe/Paris:20261009T160000
 SUMMARY:Wealth Inequality and Demographic Events (Wide)
@@ -123,7 +123,7 @@ URL:https://www.ined.fr/fr/agenda/wealth-inequality-and-demographic-events-
 END:VEVENT
 BEGIN:VEVENT
 UID:5b3d205d3a96@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261012T143000
 DTEND;TZID=Europe/Paris:20261012T180000
 SUMMARY:Journée d’étude sur la résidence alternée
@@ -135,7 +135,7 @@ URL:https://www.ined.fr/fr/agenda/journee-etude-sur-residence-alternee
 END:VEVENT
 BEGIN:VEVENT
 UID:ab17f6de33cf@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261016T093000
 DTEND;TZID=Europe/Paris:20261016T173000
 SUMMARY:Un nouveau creuset français ? - Journée d’études Ined-MNHI ouv
@@ -150,7 +150,7 @@ URL:https://www.ined.fr/fr/agenda/nouveau-creuset-francais-journee-etudes-i
 END:VEVENT
 BEGIN:VEVENT
 UID:6c910a5ede21@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Parentalités LGBTI+ : faire famille depuis les marges
@@ -162,7 +162,7 @@ URL:https://www.ined.fr/fr/agenda/parentalites-lgbti-faire-famille-depuis-m
 END:VEVENT
 BEGIN:VEVENT
 UID:3a64bf381dfc@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261113T130000
 DTEND;TZID=Europe/Paris:20261113T140000
 SUMMARY:En quoi le gradient social des comportements de santé est-il injus
@@ -175,7 +175,7 @@ URL:https://www.ined.fr/fr/agenda/en-quoi-gradient-social-comportements-san
 END:VEVENT
 BEGIN:VEVENT
 UID:7da159eaac4e@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Données et documents administratifs : quels usages et implications
@@ -189,7 +189,7 @@ URL:https://www.ined.fr/fr/agenda/donnees-et-documents-administratifs-quels
 END:VEVENT
 BEGIN:VEVENT
 UID:259505bc3eb4@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261116T090000
 DTEND;TZID=Europe/Paris:20261116T173000
 SUMMARY:PMA à la veille de la nouvelle révision de la loi de bioéthique
@@ -202,7 +202,7 @@ URL:https://www.ined.fr/fr/agenda/pma-veille-nouvelle-revision-loi-bioethiq
 END:VEVENT
 BEGIN:VEVENT
 UID:a7d37721f7db@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Fin de vie 2026
@@ -213,7 +213,7 @@ URL:https://www.ined.fr/fr/agenda/fin-vie-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:7b8bfe79c950@paris-academique
-DTSTAMP:20261003T094927Z
+DTSTAMP:20261003T175654Z
 DTSTART;TZID=Europe/Paris:20261126T161500
 DTEND;TZID=Europe/Paris:20261126T173000
 SUMMARY:2ème symposium ILVV
