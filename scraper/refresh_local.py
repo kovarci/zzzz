@@ -69,7 +69,10 @@ LOCAL_INSTITUTIONS = {"Collège de France", MNHN, "Académie des sciences", "Jeu
                       # salons de L'Étudiant : page sans cartes pour le robot (29/09/2026)
                       "L'Étudiant",
                       # Louvre : 403 pour le robot GitHub depuis le 30/09/2026
-                      "Musée du Louvre"}
+                      "Musée du Louvre",
+                      # délai dépassé pour le robot GitHub depuis le 02/10/2026 au soir
+                      # (1 à 2 s d'ici)
+                      "Université Paris 8", "IPGP"}
 
 
 def _luma_count(events):
@@ -103,7 +106,9 @@ def main():
                # Salons de L'Étudiant : même chose (0 carte depuis GitHub, 19 d'ici)
                scrape.scrape_salons_etudiant,
                # Louvre : même chose (403 depuis GitHub, normal d'ici)
-               scrape.scrape_louvre):
+               scrape.scrape_louvre,
+               # Paris 8, IPGP : délai dépassé depuis GitHub (02/10/2026)
+               scrape.scrape_paris8, scrape.scrape_ipgp):
         try:
             blocked += fn()
         except Exception as e:

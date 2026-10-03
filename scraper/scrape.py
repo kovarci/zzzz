@@ -3442,7 +3442,9 @@ def scrape_louvre():
             html = re.sub(r"\{\{\s*(\w+)\s*\}\}",
                           lambda m: (links.get(m.group(1)) or {}).get("title", "") or "", dsc.get("html", ""))
             desc = strip_html(re.sub(r"<\?xml[^>]*\?>", "", html))
-            sp = re.match(r"Avec\s+(.{3,120}?)(?:\.|$)", desc)
+            # Jusqu'au point final, pas celui d'une initiale : « Avec Bénédicte
+            # Savoy et Glenn D. Lowry » donnait l'intervenant « … Glenn D »
+            sp = re.match(r"Avec\s+(.{3,160}?)(?:(?<!\b[A-ZÀ-Ý])\.(?=\s|$)|$)", desc)
             img = ((x.get("image") or {}).get("hashes") or {}).get("w1200_16_9", "")
             events.append(new_event(
                 "Musée du Louvre", title, d, desc=desc[:400],
@@ -6948,7 +6950,7 @@ def _fix_c1(s):
 
 # Espace avant la virgule, laissé par get_text(" ") entre un lien et sa
 # ponctuation (« Brigitte Bourgeois , Violaine Jeammet , … », Louvre)
-_SPACE_COMMA = re.compile(r"(?<=\S) +,(?=\s|$)")
+_SPACE_COMMA = re.compile(r"(?<=\S) +,(?: +|(?=\S)|$)")     # « Vieillard-Baron ,sous » aussi
 # Lettrine lue à part (« T he next biannual meeting », « E PICS est… ») :
 # une consonne seule en tête de texte n'est un mot ni en français ni en anglais
 _DROP_CAP = re.compile(r"^([B-HJ-NP-XZ]) (?=[A-Za-zÀ-ÿ])")
@@ -7007,7 +7009,7 @@ def finalize_events(events):
             if e.get(k) and _C1.search(e[k]):
                 e[k] = _fix_c1(e[k])
             if e.get(k) and " ," in e[k]:
-                e[k] = _SPACE_COMMA.sub(",", e[k])
+                e[k] = _SPACE_COMMA.sub(", ", e[k]).rstrip()
         # Colloque sur plusieurs jours : l'heure de fin est celle du dernier jour
         if e.get("end_time") and e.get("time") and e["end_time"] <= e["time"]:
             e["end_time"] = ""
