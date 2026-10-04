@@ -2766,6 +2766,9 @@ def scrape_que_faire_a_paris():
             ev["discipline"] = detect_discipline(title, f"{desc} {tags.replace(';', ' ')}", venue)
             if x.get("price_type") == "gratuit":
                 ev["price"] = "Gratuit"
+            elif x.get("price_type") == "gratuit sous condition":
+                # 3e valeur de l'API (réservation, public visé…), ignorée avant
+                ev["price"] = "Gratuit sous condition"
             elif x.get("price_type") == "payant":
                 # « 12€ tarif plein, 8€… », « De 10 à 64 € », « Tarif unique : 40 EUR »
                 pd = strip_html(x.get("price_detail") or "")
@@ -5703,7 +5706,11 @@ def write_event_pages(events):
         # « /?event= » et non « ../index.html?event= » : sinon Google découvre
         # des milliers de variantes index.html?… d'une même page.
         target = f"/?event={eid}"
-        jsonld = _event_jsonld(ev)
+        # Événement passé : pas de données « Event » — Google n'affiche jamais
+        # un événement terminé en résultat enrichi, et ses 624 offres sans prix
+        # remontaient en « Champ price manquant » dans Search Console. La page
+        # reste indexable (fil d'Ariane, contenu).
+        jsonld = "" if ev.get("date", "") < today_iso else _event_jsonld(ev)
         dcolor = DISC_COLORS.get(ev.get("discipline", ""), DISC_COLORS["Autre"])
         kind = _kind_of(ev)
         real_img = ev.get("image") or ""
@@ -5773,7 +5780,7 @@ def write_event_pages(events):
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{meta_desc}">
 <meta name="twitter:image" content="{img}">
-<script type="application/ld+json">{jsonld}</script>
+{f'<script type="application/ld+json">{jsonld}</script>' if jsonld else ''}
 <script type="application/ld+json">{crumb_ld}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
