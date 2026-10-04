@@ -1,5 +1,5 @@
 {
-  "last_workflow_run": "2026-10-04T08:03:20Z",
+  "last_workflow_run": "2026-10-04T10:33:25Z",
   "last_manual_run": "2026-10-03T18:00:18Z",
   "fresh_counts": {
     "Institut Henri Poincar\u00e9": 88,
@@ -42,7 +42,7 @@
     "Universit\u00e9 Paris 1 Panth\u00e9on-Sorbonne": 89,
     "Universit\u00e9 Paris-Panth\u00e9on-Assas": 40,
     "Universit\u00e9 Paris-Saclay": 60,
-    "Campus Condorcet": 23,
+    "Campus Condorcet": 20,
     "Institut d'\u00e9tudes avanc\u00e9es de Paris": 9,
     "Fondation Maison des Sciences de l'Homme": 31,
     "Mus\u00e9e du quai Branly": 16,
@@ -55,6 +55,7 @@
     "Les Mardis de la Philo": 80,
     "INHA": 56,
     "Institut Jacques Delors": 7,
+    "Fondation Jean-Jaur\u00e8s": 3,
     "Institut Louis Bachelier": 6,
     "Cit\u00e9co": 6,
     "Institut du monde arabe": 18,
@@ -66,9 +67,7 @@
     "Institut des actuaires": 3,
     "Crous de Paris": 5,
     "IPGP": 4,
-    "Maison de l'Am\u00e9rique latine": 6,
     "Institut culturel italien": 1,
-    "Maison de la culture du Japon": 9,
     "Acad\u00e9mie nationale de m\u00e9decine": 14,
     "Acad\u00e9mie des inscriptions et belles-lettres": 6,
     "Mines Paris - PSL": 5,
@@ -165,8 +164,8 @@
     "Maison de la Vie Associative et Citoyenne du 14e arrondissement": 1,
     "Conservatoire Municipal Charles Munch": 1,
     "Mairie du 14\u00e8me": 1,
-    "Biblioth\u00e8que V\u00e1clav Havel": 4,
     "Digital Village": 1,
+    "Biblioth\u00e8que V\u00e1clav Havel": 4,
     "Biblioth\u00e8que historique de la Ville de Paris": 1,
     "M\u00e9diath\u00e8que H\u00e9l\u00e8ne Berr": 2,
     "M\u00e9diath\u00e8que James Baldwin": 4,
@@ -218,7 +217,6 @@
     "Paris School of Economics": 22,
     "Universit\u00e9 PSL": 33,
     "Mistral": 1,
-    "Events @La Montgolfi\u00e8re": 1,
     "WePlayStrong": 1,
     "Snap Collective": 1,
     "Amada Echeverria": 1,
@@ -241,7 +239,7 @@
     "Article 1": 9
   },
   "stats": {
-    "total": 4915,
+    "total": 4919,
     "upcoming": 2534,
     "institutions": 1027,
     "since": "2026-03-09"
