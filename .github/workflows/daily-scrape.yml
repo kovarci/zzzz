@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # figé : ubuntu-latest passe à Ubuntu 26 le 19/10/2026 (Playwright)
     timeout-minutes: 45  # ~18 min en temps normal ; marge pour les sites lents (2e tentative)
 
     steps:

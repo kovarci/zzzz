@@ -31,7 +31,7 @@ permissions:
 
 jobs:
   build-check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # figé, comme le robot
     timeout-minutes: 10
     defaults:
       run:
