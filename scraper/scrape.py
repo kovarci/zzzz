@@ -3152,29 +3152,40 @@ def scrape_hec_ia():
 # Mentions « gratuit » propres à un événement (suivies d'une condition) — pas
 # les « cours de sport gratuits » des menus de paris.fr
 _FREE_PAGE = re.compile(
-    r"(?:Entr[ée]e|Acc[èe]s)\s+(?:libre|gratuite)(?:\s+et\s+gratuite)?\s*(?:,|\(|\.|dans la limite|sur (?:r[ée]servation|inscription))"
+    r"(?:Entr[ée]e|Acc[èe]s)\s+(?:libre|gratuite)(?:\s+et\s+gratuite)?\s*(?:,|\(|\.|dans la limite|dans le cadre|sur (?:r[ée]servation|inscription))"
     r"|Gratuit\s*(?:\(|,|\.|sur (?:r[ée]servation|inscription)|dans la limite)"
     r"|(?:Tarifs?|Billets?|Prix)\s*:?\s*(?:Entr[ée]e (?:libre|gratuite)|Gratuit|Acc[èe]s libre)\b"
-    r"|Informations(?: générales)?\s+(?:Entr[ée]e (?:gratuite|libre)|Gratuit)\b"
+    r"|(?:Informations(?: générales)?|Infos pratiques)\s+(?:Entr[ée]e (?:gratuite|libre)|Gratuit)\b"
     r"|Inscription (?:gratuite|libre)|(?:free of charge|free admission|free entry|no registration fee)", re.I)
 # « Tarif plein : 12€ », « Tarif D plein : 10 € », « Tarif unique : 3 € »,
-# « Tarif normal : 10€ », « Tarif : 2000€ », « Prix du billet 249,00 $US »
+# « Tarif normal : 10€ », « Tarif : 2000€ », « Prix du billet 249,00 $US »,
+# « Tarif plein demi-journée : 15€ », « À partir de 15 euros »,
+# « Tarifs des places : 260€, 160€, 110€, 60€ » (groupe 3 : la suite)
 _PAID_PAGE = re.compile(
-    r"(?:Tarif\s+(?:[A-Z]\s+)?(?:plein|normal|unique)|Plein tarif|Tarifs?|Prix du billet|Billets?)\s*[:—–-]?\s*"
-    r"(\d+(?:[.,]\d{1,2})?)\s*(€|euros?\b|EUR\b|\$|USD\b)", re.I)
+    r"(?:Tarif\s+(?:[A-Z]\s+)?(?:plein|normal|unique)(?:\s+(?:demi-)?journ[ée]e)?|Plein tarif|"
+    r"Tarifs?(?:\s+des\s+places)?|Prix du billet|Billets?|[ÀA] partir de)\s*[:—–-]?\s*"
+    r"(\d+(?:[.,]\d{1,2})?)\s*(€|euros?\b|EUR\b|\$|USD\b)((?:\s*,\s*\d+(?:[.,]\d{1,2})?\s*€)*)", re.I)
+# Centre Pompidou : « 14,90€ / TR 8,90€ » — plein tarif puis tarif réduit
+_PAID_TR = re.compile(r"(\d+(?:,\d{2})?)\s*€\s*/\s*TR\b")
 
 
 def _price_in_text(txt):
     """« Gratuit », « 12 € » (le plus bas des tarifs affichés), « 249 $ » ou ""."""
     if _FREE_PAGE.search(txt):
         return "Gratuit"
-    found = [(float(m.group(1).replace(",", ".")), "$" if m.group(2) in ("$", "USD", "usd") else "€")
-             for m in _PAID_PAGE.finditer(txt)]
+    found = []
+    for m in _PAID_PAGE.finditer(txt):
+        cur = "$" if m.group(2) in ("$", "USD", "usd") else "€"
+        for v in [m.group(1)] + re.findall(r"\d+(?:[.,]\d{1,2})?", m.group(3) or ""):
+            found.append((float(v.replace(",", ".")), cur))
+    tr = _PAID_TR.search(txt)   # le premier : plein tarif (« TR » = réduit)
+    if tr:
+        found.append((float(tr.group(1).replace(",", ".")), "€"))
     found = [f for f in found if f[0] > 0]
     if not found:
         return ""
     v, cur = min(found)
-    return f"{v:g} {cur}".replace(".", ",")
+    return f"{v:.2f} {cur}".replace(".", ",") if v % 1 else f"{v:g} {cur}"   # « 14,90 € », pas « 14,9 € »
 
 
 def _page_text(url):
@@ -5374,7 +5385,8 @@ def _event_jsonld(ev):
     """schema.org Event JSON-LD — feeds Google's rich results (date & venue
     shown directly in search). Includes every recommended field (image,
     endDate, performer, organizer.url, offers) so Search Console doesn't
-    flag missing properties. '</' is split to be safe inside a <script>."""
+    flag missing properties. '</' is split to be safe inside a <script>.
+    "" when the price is unknown (see the offers block)."""
     eid = ev["id"]
 
     def at(hhmm):
@@ -5446,6 +5458,14 @@ def _event_jsonld(ev):
                   dict(offers, name=name, price=amount, priceCurrency="EUR")]
     elif _free_likely(ev):
         offers.update(price="0", priceCurrency="EUR")
+    else:
+        # Prix introuvable (colloque Sciencesconf dont les tarifs sont derrière
+        # une connexion, billetterie externe…) : pas de données « Event » du
+        # tout. Une offre sans prix donne « Champ price/priceCurrency
+        # manquant », pas d'offre « Champ offers manquant » — et tant qu'une
+        # seule fiche reste signalée, Search Console refuse la validation.
+        # On n'invente pas de tarif ; la fiche revient dès qu'il est connu.
+        return ""
     data = {
         "@context": "https://schema.org",
         "@type": "Event",
@@ -5460,9 +5480,6 @@ def _event_jsonld(ev):
         "performer": performer,
         "offers": offers,
     }
-    # Prix inconnu (colloque sans page d'inscription lisible…) : l'offre reste
-    # (lien d'inscription, disponibilité) mais sans prix — on n'invente pas de
-    # tarif. Sans elle, Search Console signale « Champ "offers" manquant ».
     if isinstance(offers, dict) and offers.get("price") == "0":  # (offre gratuite)
         data["isAccessibleForFree"] = True
     data["inLanguage"] = "en" if _is_english(ev) else "fr"
