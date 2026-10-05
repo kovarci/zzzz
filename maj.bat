@@ -36,6 +36,9 @@ git commit -m "maj College de France, Museum, Academie, Ifri, IRIS, Jean-Jaures 
 echo.
 
 echo [4/4] Publication sur GitHub...
+rem Gros envois (5/10/2026 : 18 Mo) : sans tampon assez grand, git echoue sur
+rem « unable to rewind rpc post data » des que la connexion hoquete.
+git config http.postBuffer 524288000
 rem Le robot GitHub a pu publier pendant la maj : on se replace par-dessus
 rem (nos donnees l'emportent, elles incluent deja les siennes), puis on pousse.
 git pull --rebase --autostash -X theirs origin main
@@ -53,12 +56,25 @@ if errorlevel 1 (
 git push
 if errorlevel 1 (
   rem 3 octobre 2026 : maj enregistree mais jamais publiee, connexion GitHub
-  rem ou reseau indisponible a ce moment-la. Second essai.
-  echo [!] Publication refusee : nouvel essai dans 30 secondes...
-  timeout /t 30 /nobreak >nul
+  rem ou reseau indisponible a ce moment-la. 5 octobre : coupure reseau de
+  rem plus de 30 s. Deux nouveaux essais, 1 puis 3 minutes plus tard.
+  echo [!] Publication refusee : nouvel essai dans 1 minute...
+  timeout /t 60 /nobreak >nul
   git pull --rebase --autostash -X theirs origin main
   if errorlevel 1 git rebase --abort
   git push
+)
+if errorlevel 1 (
+  echo [!] Toujours refusee : dernier essai dans 3 minutes...
+  timeout /t 180 /nobreak >nul
+  git pull --rebase --autostash -X theirs origin main
+  if errorlevel 1 git rebase --abort
+  git push
+)
+if errorlevel 1 (
+  echo.
+  echo [!] PUBLICATION IMPOSSIBLE : verifie ta connexion internet.
+  echo     La maj est enregistree sur ce PC ; la prochaine maj.bat la publiera.
 )
 echo.
 
