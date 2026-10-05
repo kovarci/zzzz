@@ -4511,6 +4511,14 @@ _CANCELLED = re.compile(
     # AIBL : « Colloque de l'Académie à la Villa Kérylos. Pas de séance. »
     r"|\bpas de s[ée]ance\b", re.I)
 
+# Avis pratiques publiés dans un agenda : pas des événements auxquels se
+# rendre (Paris Nanterre, 5/10/2026 : « Fermeture du campus de Nanterre lundi
+# 05 octobre 2026 », « Ateliers de l'ACA² : annulation ce lundi 5 octobre… »)
+_NOTICE = re.compile(
+    r"^\s*(?:fermeture (?:exceptionnelle )?(?:du|des|de la|de l.) ?(?:campus|site|b[âa]timent|"
+    r"biblioth[èe]que|m[ée]diath[èe]que|mus[ée]e)|situation sur le campus|perturbations? (?:sur|du|des)\b)"
+    r"|\bannulation ce (?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b", re.I)
+
 
 def merge_cross_source(events):
     """Même titre + même date chez deux organisateurs (BnF + EPHE, PSL +
@@ -4558,7 +4566,38 @@ def merge_cross_source(events):
         merged += len(g) - 1
     if merged:
         print(f"Doublons inter-sources fusionnés : {merged}")
-    return _merge_same_slot(_merge_prefix_titles(out))
+    return _merge_same_speaker(_merge_same_slot(_merge_prefix_titles(out)))
+
+
+def _merge_same_speaker(events):
+    """Même organisateur, même jour, même heure, même intervenant : une seule
+    personne ne donne pas deux exposés à la fois — c'est le même événement,
+    renommé à la source sous un autre lien. Le Collège de France publie ses
+    séances numérotées (« Bioénergétique et métabolisme (1) », juillet) puis
+    leur vrai titre (« Introduction : bioénergétique », septembre) — l'ancien
+    lien redirige vers le nouveau ; HEC passe de « Séminaire de recherche
+    HEC : Paul Fonantier (LBS) » au titre de l'exposé. ~50 doublons. On garde
+    la version la plus récemment ajoutée (le vrai titre)."""
+    groups = {}
+    for i, e in enumerate(events):
+        sp = slugify(e.get("speaker") or "")
+        # Un vrai nom (pas « Divers intervenants » : deux séances parallèles)
+        if (e.get("time") and len(sp) >= 6 and e.get("source_type") != "luma" and not e.get("kind")
+                and _person_names(e.get("speaker"))):
+            groups.setdefault((e.get("institution"), e.get("date"), e["time"], sp), []).append(i)
+    drop = set()
+    for idx in groups.values():
+        if len(idx) < 2:
+            continue
+        # Pas encore de date d'ajout = lu à l'instant : la version la plus fraîche
+        keep = max(idx, key=lambda i: (events[i].get("added_at") or "9999", _richness(events[i])))
+        for i in idx:
+            if i != keep:
+                _absorb(events[keep], events[i])
+                drop.add(i)
+    if drop:
+        print(f"Même intervenant au même créneau (événement renommé à la source) : {len(drop)} fusionnés")
+    return [e for i, e in enumerate(events) if i not in drop]
 
 
 def _merge_same_slot(events):
@@ -7120,7 +7159,8 @@ def finalize_events(events):
     events = [e for e in events if not is_junk_title(e.get("title", ""))]
     # « [Reporté] Atelier… », « Meetup 5 (POSTPONED) », « [SÉANCE REPORTÉE] »
     n = len(events)
-    events = [e for e in events if not _CANCELLED.search(e.get("title", ""))]
+    events = [e for e in events if not _CANCELLED.search(e.get("title", ""))
+              and not _NOTICE.search(e.get("title", ""))]
     if len(events) < n:
         print(f"Événements annulés / reportés retirés : {n - len(events)}")
     # Soirées Article 1 hors Île-de-France déjà enregistrées : le report
@@ -7275,10 +7315,12 @@ def carry_forward(fresh, prev, keep):
     # titre voisin : l'ancienne version d'un événement dont le titre ET le
     # lien ont changé (« agroécologique » → « agro-écologique », « … (6) »
     # → « … », séance numérotée qui reçoit son vrai titre).
-    slot = {}
+    slot, slot_sp = {}, {}
     for f in fresh:
-        slot.setdefault((f.get("institution"), f.get("date"), f.get("time") or ""), []).append(
-            core_title(f.get("title", "")))
+        k = (f.get("institution"), f.get("date"), f.get("time") or "")
+        slot.setdefault(k, []).append(core_title(f.get("title", "")))
+        if f.get("time") and len(slugify(f.get("speaker") or "")) >= 6:
+            slot_sp.setdefault(k, set()).add(slugify(f["speaker"]))
     out, renamed = [], 0
     # Les plus récemment ajoutés d'abord : entre deux versions reportées d'un
     # même événement Luma, deduplicate() garde ainsi la dernière.
@@ -7289,8 +7331,15 @@ def carry_forward(fresh, prev, keep):
             renamed += 1
             continue
         ct = core_title(e.get("title", ""))
-        if len(ct) >= 12 and any(_similar(ct, x) for x in slot.get(
-                (e.get("institution"), e.get("date"), e.get("time") or ""), ())):
+        k = (e.get("institution"), e.get("date"), e.get("time") or "")
+        if len(ct) >= 12 and any(_similar(ct, x) for x in slot.get(k, ())):
+            renamed += 1
+            continue
+        # Ou même intervenant au même créneau : HEC publie d'abord « Séminaire
+        # de recherche HEC : Paul Fonantier (LBS) » (lien …/tbc), puis le titre
+        # de l'exposé (« Exchange Rate Stabilization… ») sous un autre lien —
+        # les deux titres n'ont rien en commun et la fiche d'attente restait.
+        if e.get("time") and slugify(e.get("speaker") or "") in slot_sp.get(k, ()):
             renamed += 1
             continue
         out.append(e)
@@ -7416,7 +7465,8 @@ def update_archive(previous_events):
         fix_stale_discipline(e)
     n = len(archive)
     archive = [e for e in archive
-               if not _CANCELLED.search(e.get("title", "")) and not _NEWS_URL.search(e.get("url") or "")
+               if not _CANCELLED.search(e.get("title", "")) and not _NOTICE.search(e.get("title", ""))
+               and not _NEWS_URL.search(e.get("url") or "")
                and not _outside_idf(e.get("location", ""))
                and (e.get("institution") != "Article 1" or _article1_local(e.get("location", "")))]
     if len(archive) < n:
