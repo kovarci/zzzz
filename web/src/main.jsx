@@ -54,7 +54,8 @@ const EventCard = React.memo(function EventCard({ e, fav, onFav, onOpen, distanc
       <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {discName(e.discipline)}</span>
         {distance !== undefined ? <Badge className="ml-auto shrink-0 tabular-nums">{fmtDist(distance)}</Badge> : isNew(e) && !past ? <Badge className="ml-auto shrink-0 border-sky-500/30 text-sky-700 dark:text-sky-400">{t("badge_new")}</Badge> : isFree(e) ? <Badge className="ml-auto shrink-0 border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("badge_free")}</Badge> : null}</div>
       <h3 className="font-semibold leading-snug tracking-tight line-clamp-3"><a href={evHref(e)} onClick={openIn(e, onOpen)} className="outline-none after:absolute after:inset-0 after:content-['']">{e.title}</a></h3>
-      {e.speaker && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
+      {/* Pas si le titre le donne déjà (« Séminaire de recherche HEC : Paul Fonantier (LBS) ») */}
+      {e.speaker && !norm(e.title).includes(norm(e.speaker)) && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
       <p className="mt-auto pt-2 text-xs text-muted-foreground truncate">{isOnline(e) && (t("online_prefix") || "")}{e.institution}{placeOf(e) ? " · " + placeOf(e) : ""}</p>
     </div></div>;
 });
