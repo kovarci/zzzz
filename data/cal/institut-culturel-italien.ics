@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2942e7d2de21@paris-academique
-DTSTAMP:20261005T051433Z
+DTSTAMP:20261005T111334Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:CYCLE SAINT FRANÇOIS / LITTERATURE / ALESSANDRO BARBERO / LES SEPT
@@ -36,5 +36,17 @@ DESCRIPTION:https://iicparigi.esteri.it/fr/gli_eventi/calendario/cycle-sain
 LOCATION:Institut culturel italien\, 50 rue de Varenne\, Paris 7e
 URL:https://iicparigi.esteri.it/fr/gli_eventi/calendario/cycle-saint-franco
  is-litterature-alessandro-barbero-les-sept-vies-de-saint-francois-dassise/
+END:VEVENT
+BEGIN:VEVENT
+UID:f263f225abab@paris-academique
+DTSTAMP:20261005T111334Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Cycle saint François / Lecture et ciné-concert « Frate Sole »
+DESCRIPTION:https://iicparigi.esteri.it/fr/gli_eventi/calendario/ciclo-san-
+ francesco-lettura-e-cineconcertofrate-sole/
+LOCATION:Institut culturel italien\, 50 rue de Varenne\, Paris 7e
+URL:https://iicparigi.esteri.it/fr/gli_eventi/calendario/ciclo-san-francesc
+ o-lettura-e-cineconcertofrate-sole/
 END:VEVENT
 END:VCALENDAR
