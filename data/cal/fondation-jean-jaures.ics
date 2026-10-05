@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:041adf515510@paris-academique
-DTSTAMP:20261004T103119Z
-DTSTART;TZID=Europe/Paris:20261003T100000
-DTEND;TZID=Europe/Paris:20261003T230000
-SUMMARY:Festival de la fiction politique #2 – Résistance(s)
-DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/festival-de-la-
- fiction-politique-2-resistances/
-LOCATION:Cinemas Du Palais\, Allée Parmentier\, Créteil\, France
-URL:https://www.jean-jaures.org/agenda/festival-de-la-fiction-politique-2-r
- esistances/
-END:VEVENT
-BEGIN:VEVENT
 UID:ec32a635ac92@paris-academique
-DTSTAMP:20261004T103119Z
+DTSTAMP:20261005T051433Z
 DTSTART;TZID=Europe/Paris:20261006T183000
 DTEND;TZID=Europe/Paris:20261006T203000
 SUMMARY:Comment redonner du temps à la démocratie ?
@@ -49,7 +37,7 @@ URL:https://www.jean-jaures.org/agenda/comment-redonner-du-temps-a-la-democ
 END:VEVENT
 BEGIN:VEVENT
 UID:d9868e40d3d3@paris-academique
-DTSTAMP:20261004T103119Z
+DTSTAMP:20261005T051433Z
 DTSTART;TZID=Europe/Paris:20261008T183000
 DTEND;TZID=Europe/Paris:20261008T203000
 SUMMARY:Quel État voulons-nous financer ?
