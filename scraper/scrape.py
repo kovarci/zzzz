@@ -263,6 +263,26 @@ def _speaker_discipline(ev):
     return next((d for name, d in _SPEAKER_DISCIPLINE.items() if name in hay), None)
 
 
+def fix_stale_discipline(ev):
+    """Discipline enregistrée par une ancienne règle de mots-clés, corrigée
+    depuis, que plus rien ne justifie : « PSE Macro Days 2026 » en Arts &
+    Culture (« théâtre » trouvé dans « Amphithéâtre »), deux séminaires de
+    l'IHP en Arts / Sociologie. Seulement quand le texte ne contient AUCUN
+    mot-clé et que l'organisateur a une discipline par défaut — les choix
+    voulus par une source (Mardis de la Philo, chaires du Collège de France,
+    thèmes Luma, dates anciennes → Histoire) ne sont pas touchés."""
+    inst = ev.get("institution", "")
+    dflt = _INSTITUTION_DEFAULT.get(inst)
+    if (not dflt or ev.get("discipline") in (None, "", "Autre", dflt)
+            or ev.get("source_type") == "luma" or inst == "Collège de France" or _speaker_discipline(ev)):
+        return
+    text = " " + (ev.get("title", "") + " " + (ev.get("description") or "")).lower() + " "
+    if any(_kw_hit(k, text) for kws in DISCIPLINE_KEYWORDS.values() for k in kws):
+        return
+    if detect_discipline(ev.get("title", ""), ev.get("description", ""), inst) == dflt:
+        ev["discipline"] = dflt
+
+
 def reclassify(ev):
     """Pour les événements restés en « Autre » (y compris ceux reportés des
     jours précédents) : professeur connu, puis mots-clés, puis institution."""
@@ -7117,6 +7137,7 @@ def finalize_events(events):
         if _LABELLED_LOC.match(e.get("location") or ""):
             e["location"] = _clean_labelled_loc(e["location"])
         reclassify(e)
+        fix_stale_discipline(e)
         if _SOUTENANCE.search(e.get("title", "")):
             e["kind"] = "soutenance"
         # Prix non indiqué chez un établissement aux conférences gratuites :
@@ -7353,6 +7374,8 @@ def update_archive(previous_events):
     # Filtres ajoutés au fil du temps, appliqués aussi à l'historique :
     # annulés, articles d'actualité, hors Île-de-France (soirées Article 1 à
     # Bordeaux gardées avant que _article1_local n'existe)
+    for e in archive:
+        fix_stale_discipline(e)
     n = len(archive)
     archive = [e for e in archive
                if not _CANCELLED.search(e.get("title", "")) and not _NEWS_URL.search(e.get("url") or "")
