@@ -6628,6 +6628,7 @@ def write_institution_share_pages(events):
         by_inst.setdefault(inst, []).append(ev)
 
     written_pngs, written_pages = set(), set()
+    og_labels = _og_labels()
     with sync_playwright() as p:
         b = p.chromium.launch(headless=True)
         for inst in SHARE_INSTITUTIONS:
@@ -6684,7 +6685,7 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
       <h1>{_esc_attr(inst)}</h1>
     </div>
   </div>
-  <div class="count"><b>{n}</b>&nbsp;conférence{'s' if n != 1 else ''} à venir</div>
+  <div class="count"><b>Agenda</b>&nbsp;des conférences à venir</div>
 </div>
 <div class="foot">
   <span><span class="orb"></span>lotent.fr</span>
@@ -6695,11 +6696,14 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
             tmp.write_text(html, encoding="utf-8")
             png_path = OG_INST_DIR / f"{slug}.png"
             try:
-                pg = b.new_page(viewport={"width": 1200, "height": 630})
-                pg.goto(tmp.resolve().as_uri())
-                pg.wait_for_timeout(1500)
-                pg.screenshot(path=str(png_path), type="png")
-                pg.close()
+                # Nom seul, sans nombre : l'image ne change plus d'un jour à l'autre
+                if og_labels.get(slug) != OG_INST_VERSION or not png_path.exists():
+                    pg = b.new_page(viewport={"width": 1200, "height": 630})
+                    pg.goto(tmp.resolve().as_uri())
+                    pg.wait_for_timeout(1500)
+                    pg.screenshot(path=str(png_path), type="png")
+                    pg.close()
+                    og_labels[slug] = OG_INST_VERSION
                 written_pngs.add(f"{slug}.png")
             except Exception as e:
                 print(f"[WARN] OG {slug}: {e}")
@@ -6727,6 +6731,7 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
             (INST_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
             written_pages.add(f"{slug}.html")
         b.close()
+    _og_labels_save(og_labels)
 
     # Nettoyage : si une institution est retirée de SHARE_INSTITUTIONS,
     # supprimer ses anciens fichiers.
@@ -6741,6 +6746,32 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
     print(f"Pages institution : {len(written_pages)} HTML + {len(written_pngs)} PNG")
 
 
+# Images de partage déjà rendues : ce qu'elles affichent. Une image n'est
+# refaite (et republiée) que si ce texte change — avant, chaque passage
+# re-rendait og.png et une douzaine d'images d'institution au nombre exact
+# d'événements : ~3,5 Mo de PNG par passage, ~170 Mo en deux semaines dans
+# l'historique git, et des envois de 18 Mo que la connexion de maj.bat
+# n'arrivait pas toujours à pousser.
+OG_LABELS = OG_INST_DIR / "labels.json"
+OG_INST_VERSION = "nom-seul"    # à changer pour refaire toutes les images d'institution
+
+
+def _og_labels():
+    try:
+        return json.loads(OG_LABELS.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _og_labels_save(labels):
+    try:
+        OG_LABELS.parent.mkdir(parents=True, exist_ok=True)
+        OG_LABELS.write_text(json.dumps(labels, ensure_ascii=False, sort_keys=True, indent=0) + "\n",
+                             encoding="utf-8")
+    except Exception as e:
+        print(f"[WARN] {OG_LABELS.name} : {e}")
+
+
 def write_og_image(events):
     """Re-render og.png (1200x630) with the current event count baked in,
     so any share of lotent.fr unfurls with today's live numbers instead
@@ -6751,6 +6782,11 @@ def write_og_image(events):
         print(f"[WARN] og.png skipped (no Playwright): {e}")
         return
     n = len(events)
+    label = f"Plus de {n // 100 * 100:,}".replace(",", "\u202f") if n >= 200 else str(n)
+    labels = _og_labels()
+    if labels.get("_home") == label and OG_FILE.exists():
+        print(f"og.png inchangé ({label} événements à venir)")
+        return
     html = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap');
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -6795,7 +6831,7 @@ h1 { font-size:74px; font-weight:700; line-height:1.12; letter-spacing:-1px;
   <span class="badge">Gratuit, sans compte</span>
   <span class="badge">Carte · Agenda · iCal</span>
 </div>
-</body></html>""".replace("__N__", str(n))
+</body></html>""".replace("__N__", label)
     tmp = OG_FILE.parent / "_og_template.html"
     tmp.write_text(html, encoding="utf-8")
     try:
@@ -6806,7 +6842,9 @@ h1 { font-size:74px; font-weight:700; line-height:1.12; letter-spacing:-1px;
             pg.wait_for_timeout(1800)  # webfont load
             pg.screenshot(path=str(OG_FILE), type="png")
             b.close()
-        print(f"og.png régénéré avec {n} événements")
+        labels["_home"] = label
+        _og_labels_save(labels)
+        print(f"og.png régénéré : {label} événements à venir")
     except Exception as e:
         print(f"[WARN] og.png render: {e}")
     finally:
