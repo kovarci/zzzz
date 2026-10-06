@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ec32a635ac92@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;TZID=Europe/Paris:20261006T183000
 DTEND;TZID=Europe/Paris:20261006T203000
 SUMMARY:Comment redonner du temps à la démocratie ?
@@ -37,7 +37,7 @@ URL:https://www.jean-jaures.org/agenda/comment-redonner-du-temps-a-la-democ
 END:VEVENT
 BEGIN:VEVENT
 UID:d9868e40d3d3@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;TZID=Europe/Paris:20261008T183000
 DTEND;TZID=Europe/Paris:20261008T203000
 SUMMARY:Quel État voulons-nous financer ?

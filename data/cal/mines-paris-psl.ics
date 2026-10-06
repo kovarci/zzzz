@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2f148b1e0474@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;TZID=Europe/Paris:20261013T180000
 DTEND;TZID=Europe/Paris:20261013T193000
 SUMMARY:[Conférence] L’histoire de la bibliothèque de l’École des mi
@@ -41,7 +41,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/conference-lhistoire-de-l
 END:VEVENT
 BEGIN:VEVENT
 UID:687547607ffa@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;TZID=Europe/Paris:20261015T133000
 DTEND;TZID=Europe/Paris:20261015T153000
 SUMMARY:[Webinaire TTI.5] Électrification des transports : technologie\, i
@@ -56,7 +56,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/webinaire-tti-5-electrifi
 END:VEVENT
 BEGIN:VEVENT
 UID:ab2084fccb88@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:[Workshop] Electrification des usages
@@ -70,7 +70,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/workshop-electrification-
 END:VEVENT
 BEGIN:VEVENT
 UID:b28193492cb1@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;TZID=Europe/Paris:20261209T090000
 DTEND;TZID=Europe/Paris:20261209T123000
 SUMMARY:[Conférence] Bâtiments\, infrastructures : comment la recherche s
@@ -86,7 +86,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/conference-batiments-infr
 END:VEVENT
 BEGIN:VEVENT
 UID:c4012016e898@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:[SECRE 2027] Colloque Situations Extrêmes\, Crise et Résilience

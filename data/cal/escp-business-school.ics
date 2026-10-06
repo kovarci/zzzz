@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:367ebbab11db@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;TZID=Europe/Paris:20261007T180000
 DTEND;TZID=Europe/Paris:20261007T200000
 SUMMARY:L’innovation va-t-elle tuer le Progrès ?
@@ -37,7 +37,7 @@ URL:https://escp.eu/fr/events/linnovation-va-t-elle-tuer-le-progres
 END:VEVENT
 BEGIN:VEVENT
 UID:c056da58790a@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;TZID=Europe/Paris:20261008T090000
 DTEND;TZID=Europe/Paris:20261008T110000
 SUMMARY:Prochain événement dans
@@ -47,7 +47,7 @@ URL:https://escp.eu/fr/events/paris-finance-consulting-career-fair
 END:VEVENT
 BEGIN:VEVENT
 UID:539f9564ec94@paris-academique
-DTSTAMP:20261006T195211Z
+DTSTAMP:20261006T200830Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Adaptation climatique : où en sont vraiment les entreprises ?
