@@ -25,9 +25,9 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4a3d297c9471@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261009T091500
+DTEND;TZID=Europe/Paris:20261009T120000
 SUMMARY:Que deviennent nos déchets ?
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/que-deviennent-no
  s-dechets
@@ -37,9 +37,9 @@ URL:https://www.sorbonne-universite.fr/evenements/que-deviennent-nos-dechet
 END:VEVENT
 BEGIN:VEVENT
 UID:85c4ce92495b@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;TZID=Europe/Paris:20261012T191900
-DTEND;TZID=Europe/Paris:20261012T211900
+DTSTAMP:20261006T195211Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
 SUMMARY:Erasmus Days 2026
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/erasmus-days-2026
 LOCATION:Sorbonne Université\, Paris
@@ -47,9 +47,9 @@ URL:https://www.sorbonne-universite.fr/evenements/erasmus-days-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:4f831a19fe18@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261014T173000
+DTEND;TZID=Europe/Paris:20261014T193000
 SUMMARY:Séminaire : " Cholestérol : bon\, mauvais ou mal compris ? "
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/seminaire-cholest
  erol-bon-mauvais-ou-mal-compris
@@ -59,9 +59,9 @@ URL:https://www.sorbonne-universite.fr/evenements/seminaire-cholesterol-bon
 END:VEVENT
 BEGIN:VEVENT
 UID:9aec0f011578@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261015T090000
+DTEND;TZID=Europe/Paris:20261015T170000
 SUMMARY:Congrès 2026 de France Universités : quel pacte universitaire pou
  r la France de demain ?
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/congres-2026-de-f
@@ -71,20 +71,8 @@ URL:https://www.sorbonne-universite.fr/evenements/congres-2026-de-france-un
  iversites-quel-pacte-universitaire-pour-la-france-de-demain
 END:VEVENT
 BEGIN:VEVENT
-UID:fee573d2825f@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Projection du court métrage « On m'a dit que »
-DESCRIPTION:https://www.sorbonne-universite.fr/evenements/projection-du-cou
- rt-metrage-ma-dit-que
-LOCATION:Sorbonne Université\, Paris
-URL:https://www.sorbonne-universite.fr/evenements/projection-du-court-metra
- ge-ma-dit-que
-END:VEVENT
-BEGIN:VEVENT
 UID:3f392feeea90@paris-academique
-DTSTAMP:20261006T193014Z
+DTSTAMP:20261006T195211Z
 DTSTART;TZID=Europe/Paris:20261015T173000
 DTEND;TZID=Europe/Paris:20261015T193000
 SUMMARY:Patrimoine\, tourisme et environnement
@@ -95,8 +83,20 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoine-tourisme-et-en
  vironnement
 END:VEVENT
 BEGIN:VEVENT
+UID:fee573d2825f@paris-academique
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261015T183000
+DTEND;TZID=Europe/Paris:20261015T203000
+SUMMARY:Projection du court métrage « On m'a dit que »
+DESCRIPTION:https://www.sorbonne-universite.fr/evenements/projection-du-cou
+ rt-metrage-ma-dit-que
+LOCATION:Sorbonne Université\, Paris
+URL:https://www.sorbonne-universite.fr/evenements/projection-du-court-metra
+ ge-ma-dit-que
+END:VEVENT
+BEGIN:VEVENT
 UID:39166fb697d8@paris-academique
-DTSTAMP:20261006T193014Z
+DTSTAMP:20261006T195211Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:École thématique MuHaS 2026
@@ -108,9 +108,9 @@ URL:https://www.sorbonne-universite.fr/evenements/ecole-thematique-muhas-20
 END:VEVENT
 BEGIN:VEVENT
 UID:ccfa20e8345c@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261112T133000
+DTEND;TZID=Europe/Paris:20261112T180000
 SUMMARY:Journée d'accueil des doctorants de première année 2026
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/journee-daccueil-
  des-doctorants-de-premiere-annee-2026
@@ -120,9 +120,9 @@ URL:https://www.sorbonne-universite.fr/evenements/journee-daccueil-des-doct
 END:VEVENT
 BEGIN:VEVENT
 UID:aab7768acd48@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261119T183000
+DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Patrimoines spoliés : restituer\, réparer\, raconter
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/patrimoines-spoli
  es-restituer-reparer-raconter
@@ -132,9 +132,9 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoines-spolies-resti
 END:VEVENT
 BEGIN:VEVENT
 UID:a8d86a09d7db@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261124
-DTEND;VALUE=DATE:20261125
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261124T093000
+DTEND;TZID=Europe/Paris:20261124T113000
 SUMMARY:Comment mieux sensibiliser au handicap ?
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/comment-mieux-sen
  sibiliser-au-handicap-0
@@ -144,9 +144,9 @@ URL:https://www.sorbonne-universite.fr/evenements/comment-mieux-sensibilise
 END:VEVENT
 BEGIN:VEVENT
 UID:087e6decab67@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261204
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261203T190000
+DTEND;TZID=Europe/Paris:20261203T203000
 SUMMARY:Quand les réseaux sociaux passent à table
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/quand-les-reseaux
  -sociaux-passent-table
@@ -156,9 +156,9 @@ URL:https://www.sorbonne-universite.fr/evenements/quand-les-reseaux-sociaux
 END:VEVENT
 BEGIN:VEVENT
 UID:c7fa0b929e6b@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261204
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20261203T190000
+DTEND;TZID=Europe/Paris:20261203T203000
 SUMMARY:L'alimentation à l'ère du numérique
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/lalimentation-ler
  e-du-numerique
@@ -168,9 +168,9 @@ URL:https://www.sorbonne-universite.fr/evenements/lalimentation-lere-du-num
 END:VEVENT
 BEGIN:VEVENT
 UID:78dc55302068@paris-academique
-DTSTAMP:20261006T193014Z
-DTSTART;VALUE=DATE:20270426
-DTEND;VALUE=DATE:20270427
+DTSTAMP:20261006T195211Z
+DTSTART;TZID=Europe/Paris:20270426T093000
+DTEND;TZID=Europe/Paris:20270426T113000
 SUMMARY:Comment s'adapter au changement climatique ?
 DESCRIPTION:https://www.sorbonne-universite.fr/evenements/comment-sadapter-
  au-changement-climatique
