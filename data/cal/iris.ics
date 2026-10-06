@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:64c06d36c073@paris-academique
-DTSTAMP:20261005T170306Z
-DTSTART;TZID=Europe/Paris:20261005T183000
-DTEND;TZID=Europe/Paris:20261005T200000
-SUMMARY:Criminalisation de l’aide et offensive anti-droits : quelle ripos
- te des acteurs de la solidarité ?
-DESCRIPTION:https://www.iris-france.org/event/criminalisation-de-laide-et-o
- ffensive-anti-droits-quelle-riposte-des-acteurs-de-la-solidarite/
-LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
-URL:https://www.iris-france.org/event/criminalisation-de-laide-et-offensive
- -anti-droits-quelle-riposte-des-acteurs-de-la-solidarite/
-END:VEVENT
-BEGIN:VEVENT
 UID:8313cba4aaa7@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261006T183000
 DTEND;TZID=Europe/Paris:20261006T200000
 SUMMARY:La rivalité Chine/États-Unis : le clivage géopolitique majeur ?
@@ -50,7 +37,7 @@ URL:https://www.iris-france.org/event/la-rivalite-chine-etats-unis-le-cliva
 END:VEVENT
 BEGIN:VEVENT
 UID:a5c3b70e350e@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261008T183000
 DTEND;TZID=Europe/Paris:20261008T200000
 SUMMARY:Désinformation et élection présidentielle en France : quels risq
@@ -63,7 +50,7 @@ URL:https://www.iris-france.org/event/desinformation-et-election-presidenti
 END:VEVENT
 BEGIN:VEVENT
 UID:bfb2f00f753f@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261013T183000
 DTEND;TZID=Europe/Paris:20261013T200000
 SUMMARY:International Crises and the Strategic Semiconductor Industry in Ta
@@ -78,7 +65,7 @@ URL:https://www.iris-france.org/event/international-crises-and-the-strategi
 END:VEVENT
 BEGIN:VEVENT
 UID:5334d1eaeca9@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261014T183000
 DTEND;TZID=Europe/Paris:20261014T200000
 SUMMARY:L’Azerbaïdjan et son environnement géopolitique : défis\, enje
@@ -91,7 +78,7 @@ URL:https://www.iris-france.org/event/lazerbaidjan-et-son-environnement-geo
 END:VEVENT
 BEGIN:VEVENT
 UID:e2e75a3ae03b@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261027T090000
 DTEND;TZID=Europe/Paris:20261027T125000
 SUMMARY:Readiness 2030: Are We Heading in the Right Direction?

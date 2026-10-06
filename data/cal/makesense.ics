@@ -24,40 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:7d8fcfaa0219@paris-academique
-DTSTAMP:20261005T170306Z
-DTSTART;VALUE=DATE:20261005
-DTEND;VALUE=DATE:20261006
-SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
-DESCRIPTION:Organisé par Jeremy Dumont — Le business model canvas de l
- ’entreprise régénérativeNotre Business Model Canvas de l’entreprise
-  Régénérative – le REGEN BMC – permet d’identifier les zones de d
- égénération d’une activité économique et d’identi\nhttps://chiche
- .makesense.org/events/e/le-business-model-de-lentreprise-regenerative-6ab1
- 56bf40a4b70008078c26
-LOCATION:Paris\, France
-URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
- regenerative-6ab156bf40a4b70008078c26
-END:VEVENT
-BEGIN:VEVENT
-UID:08567294a4ed@paris-academique
-DTSTAMP:20261005T170306Z
-DTSTART;TZID=Europe/Paris:20261005T193000
-DTEND;TZID=Europe/Paris:20261005T213000
-SUMMARY:Workshop Capoeira Angola
-DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
-  capoeira Angola\, un art martial afro-brésilien qui allie résistance\, 
- gestuelle et culture.Retrouvez-nous pour une pratique ancestrale qui se jo
- ue près du sol. À travers des mouvements lents\, fluides et stratégique
- s\, accom\nhttps://chiche.makesense.org/events/e/workshop-capoeira-angola-
- 6aac09b219fd1c00088da888
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09b2
- 19fd1c00088da888
-END:VEVENT
-BEGIN:VEVENT
 UID:8d483f251afc@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Appel à candidature - Social Starter
@@ -72,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/appel-a-candidature-social-starte
 END:VEVENT
 BEGIN:VEVENT
 UID:4d8768765c11@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -86,7 +54,7 @@ URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
 END:VEVENT
 BEGIN:VEVENT
 UID:86d864d07a2b@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:La prime au vice\, rencontre-dédicace avec Julia Faure et Guillaum
@@ -103,7 +71,7 @@ URL:https://chiche.makesense.org/events/e/la-prime-au-vice-rencontre-dedica
 END:VEVENT
 BEGIN:VEVENT
 UID:c71c7a9fff85@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261006T100000
 DTEND;TZID=Europe/Paris:20261006T180000
 SUMMARY:Près des yeux\, près du care
@@ -119,7 +87,7 @@ URL:https://chiche.makesense.org/events/e/pres-des-yeux-pres-du-care-6aaa8b
 END:VEVENT
 BEGIN:VEVENT
 UID:d2b6af05cbf8@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261006T170000
 DTEND;TZID=Europe/Paris:20261006T190000
 SUMMARY:Activ'Go - Réfléchir à la mise en œuvre de son projet entrepren
@@ -134,7 +102,7 @@ URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:157dd27484e8@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:J'apprends à composter mes biodéchets
@@ -149,7 +117,7 @@ URL:https://chiche.makesense.org/events/e/japprends-a-composter-mes-biodech
 END:VEVENT
 BEGIN:VEVENT
 UID:f6b95b72fb1f@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:🏠Et toi\, tu connais notre maison ? - makesense space
@@ -163,8 +131,21 @@ URL:https://chiche.makesense.org/events/e/et-toi-tu-connais-notre-maison-ma
  kesense-space-6aba5e0c34634e0007daa541
 END:VEVENT
 BEGIN:VEVENT
+UID:d3797549ebed@paris-academique
+DTSTAMP:20261006T040305Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Concert hommage à Charlotte Salomon
+DESCRIPTION:Organisé par Ari BRODACH — Le Mémorial de la gare de dépor
+ tation de Bobigny et\nhttps://chiche.makesense.org/events/e/concert-hommag
+ e-a-charlotte-salomon-6ab6855732f93b0008f5913a
+LOCATION:151 Av. Henri Barbusse\, 93000 Bobigny\, France
+URL:https://chiche.makesense.org/events/e/concert-hommage-a-charlotte-salom
+ on-6ab6855732f93b0008f5913a
+END:VEVENT
+BEGIN:VEVENT
 UID:38277b0e8878@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261007T164500
 DTEND;TZID=Europe/Paris:20261007T184500
 SUMMARY:Visite de la maison de la Conversation
@@ -179,7 +160,7 @@ URL:https://chiche.makesense.org/events/e/visite-de-la-maison-de-la-convers
 END:VEVENT
 BEGIN:VEVENT
 UID:252be565ccee@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261007T170000
 DTEND;TZID=Europe/Paris:20261007T190000
 SUMMARY:Mais c'est quoi ce langage (inclusif) ?
@@ -195,7 +176,7 @@ URL:https://chiche.makesense.org/events/e/mais-cest-quoi-ce-langage-inclusi
 END:VEVENT
 BEGIN:VEVENT
 UID:f449ca7d8512@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261007T190000
 DTEND;TZID=Europe/Paris:20261007T220000
 SUMMARY:Cine-repas avec Andréa Le Guellec
@@ -208,5 +189,21 @@ DESCRIPTION:Organisé par Maison de la Conversation — Cinédar vous invit
 LOCATION:10 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/cine-repas-avec-andrea-le-guellec
  -6ab3f0b940a4b7000819d898
+END:VEVENT
+BEGIN:VEVENT
+UID:90a3a8c17a4a@paris-academique
+DTSTAMP:20261006T040305Z
+DTSTART;TZID=Europe/Paris:20261007T200000
+DTEND;TZID=Europe/Paris:20261007T220000
+SUMMARY:Mouvement organique
+DESCRIPTION:Organisé par Maison de la Conversation — Dans la vie de tous
+  les jours\, nous utilisons notre corps de façon mécanique\, sans penser
+  à son état.Cet atelier est une invitation à se connecter et à communi
+ quer avec notre corps par le biais d'une danse instinctive et à explorer 
+ avec cur\nhttps://chiche.makesense.org/events/e/mouvement-organique-6abbad
+ 8934634e0007e43fc4
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/mouvement-organique-6abbad8934634
+ e0007e43fc4
 END:VEVENT
 END:VCALENDAR

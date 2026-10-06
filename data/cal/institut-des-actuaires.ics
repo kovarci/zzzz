@@ -24,31 +24,20 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c065760099e5@paris-academique
-DTSTAMP:20261005T170306Z
-DTSTART;TZID=Europe/Paris:20261005T120000
-DTEND;TZID=Europe/Paris:20261005T140000
-SUMMARY:Copil CJA
+UID:bd2842c87539@paris-academique
+DTSTAMP:20261006T040305Z
+DTSTART;TZID=Europe/Paris:20261006T170000
+DTEND;TZID=Europe/Paris:20261006T190000
+SUMMARY:GT Cartographie des risques
 DESCRIPTION:Réunion réservée aux membres du groupe\nhttps://www.institut
- desactuaires.com/agenda/copil-cja-7939
+ desactuaires.com/agenda/gt-cartographie-des-risques-8135
 LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/copil-cja-7939
-END:VEVENT
-BEGIN:VEVENT
-UID:ef0dacdbc4c7@paris-academique
-DTSTAMP:20261005T170306Z
-DTSTART;TZID=Europe/Paris:20261005T180000
-DTEND;TZID=Europe/Paris:20261005T200000
-SUMMARY:Conférence annuelle Actu'Elles
-DESCRIPTION:https://www.institutdesactuaires.com/agenda/conference-annuelle
- -actu-elles-7885
-LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/conference-annuelle-actu-el
- les-7885
+URL:https://www.institutdesactuaires.com/agenda/gt-cartographie-des-risques
+ -8135
 END:VEVENT
 BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -60,7 +49,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20261005T170306Z
+DTSTAMP:20261006T040305Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026
