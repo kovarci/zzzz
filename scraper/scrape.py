@@ -3333,12 +3333,33 @@ def _hhmm(h, m):
     return f"{h:02d}:{m:02d}" if 7 <= h <= 23 and m < 60 else ""
 
 
+# Bouton « Ajouter à mon agenda » (Sorbonne Université…) : « 14-10-2026 17:30
+# 14-10-2026 19:30 » = début et fin. Sans heure connue, le site y met l'heure
+# de la visite sur des jours différents (« 12-10-2026 19:23 17-10-2026 19:23 ») :
+# « Erasmus Days 2026 » était annoncé à 19:19, l'heure du passage du robot.
+_ATC_RE = re.compile(r"\b(\d{2})-(\d{2})-(\d{4})\s+(\d{1,2}):(\d{2})\s+(\d{2})-(\d{2})-(\d{4})\s+(\d{1,2}):(\d{2})\b")
+
+
 def _page_time(txt, d):
     """(début, fin) de l'événement du jour `d` lus sur sa page : la première
     heure citée juste après la mention de la date (« le 26 novembre de 9h à
     18h », « 4 octobre 2026 10h00 - 18h00 », « Jeudi 1er octobre à 19h »), ou
     après un libellé « Horaires ». Une fin à moins de 45 min du début est
     celle d'un « Accueil » de programme : ignorée."""
+    for m in _ATC_RE.finditer(txt):
+        g = m.groups()
+        try:
+            d1, d2 = date(int(g[2]), int(g[1]), int(g[0])), date(int(g[7]), int(g[6]), int(g[5]))
+        except ValueError:
+            continue
+        if d1 != d:
+            continue
+        if d2 != d1 and g[3:5] == g[8:10]:
+            return "", ""                    # heure de la visite : l'événement n'a pas d'heure
+        if d2 == d1:
+            st, en = _hhmm(g[3], g[4]), _hhmm(g[8], g[9])
+            if st:
+                return st, (en if en and en > st else "")
     day, mon = d.day, d.month
     # mois en toutes lettres ou abrégés (« 09 Oct. 2026 », « 5 janv. »), dates
     # numériques « 09/10 », « 09.10 », « 09-10-2026 », ISO
