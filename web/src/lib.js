@@ -157,7 +157,10 @@ export const relTime = ts => {
 };
 
 /* ── Filtrage ──────────────────────────────────────────────────── */
-export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, free: false, en: false, cat: new Set(), access: new Set(), q: "" };
+export const EMPTY_FILTERS = { when: "all", disc: new Set(), inst: new Set(), src: new Set(), theme: new Set(), fav: false, online: false, free: false, en: false, cat: new Set(), access: new Set(), q: "", place: "" };
+// Lieu = coordonnées arrondies (le même point de la carte) : filtre « ?lieu= »
+// ouvert depuis la bulle d'un point de la carte
+export const placeKey = e => typeof e.lat === "number" ? `${e.lat.toFixed(4)},${e.lng.toFixed(4)}` : "";
 
 // Filtre « Source » : les sources (src) et les catégories à part (cat :
 // soutenances, carrières) sont des cases d'une même liste, cumulables (« Luma
@@ -178,6 +181,7 @@ export function matches(e, f, favs) {
   if (f.online && !isOnline(e)) return false;
   if (f.free && !isFree(e)) return false;
   if (f.en && !isEnglish(e)) return false;
+  if (f.place && placeKey(e) !== f.place) return false;
   if (f.when === "today" && e.date !== TODAY) return false;
   if (f.when === "tonight" && !(e.date === TODAY && (e.time || "") >= "17:30")) return false;
   if (f.when === "week" && e.date > WEEK_END) return false;
@@ -207,6 +211,7 @@ export function filtersFromURL() {
   if (p.get("langue") === "en") f.en = true;
   Object.entries(SIDE_KINDS).forEach(([k, s]) => { if (p.get(s.param) === "1") f.cat.add(k); });
   if (p.get("q")) f.q = norm(p.get("q"));
+  if (/^-?\d+\.\d{4},-?\d+\.\d{4}$/.test(p.get("lieu") || "")) f.place = p.get("lieu");
   return { filters: f, view: p.get("vue") || "list", history: src === "history", event: p.get("event") || null, rawQ: p.get("q") || "" };
 }
 export function urlFromState({ filters: f, view, history, rawQ }) {
@@ -223,6 +228,7 @@ export function urlFromState({ filters: f, view, history, rawQ }) {
   if (f.theme.size) p.set("theme", [...f.theme].join(","));
   if (f.access.size) p.set("acces", [...f.access].join(","));
   if (f.fav) p.set("favoris", "1");
+  if (f.place) p.set("lieu", f.place);
   f.cat.forEach(k => SIDE_KINDS[k] && p.set(SIDE_KINDS[k].param, "1"));
   const qs = p.toString(); return qs ? "?" + qs : location.pathname;
 }

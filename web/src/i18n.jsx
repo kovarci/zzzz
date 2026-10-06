@@ -78,6 +78,7 @@ const TR = {
 
   week_prev: ["← Semaine préc.", "← Prev week"], week_next: ["Semaine suiv. →", "Next week →"], week_this: ["cette semaine", "this week"],
 
+  map_more: ["+ {n} autre{s} · voir la liste →", "+ {n} more · see the list →"],
   map_note: ["{n} événement{s} localisé{s} · clique un point pour voir les conférences du lieu.", "{n} located event{s} · click a point to see the conferences there."],
 
   toast_fav_added: ["Ajouté aux favoris", "Added to favourites"], toast_fav_removed: ["Retiré des favoris", "Removed from favourites"],

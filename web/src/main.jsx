@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
+import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, placeKey, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 
@@ -288,28 +288,35 @@ function WeekView({ events, onOpen, favs }) {
 }
 
 /* ═════════════════════ Carte Leaflet (pleine) ═════════════════════ */
-function MapView({ events, onOpen, userPos }) {
+function MapView({ events, onOpen, onPlace, userPos }) {
   const { t, fmtShort } = useI18n();
-  const ref = useRef(null), mapRef = useRef(null), layerRef = useRef(null), live = useRef({ events, onOpen });
-  live.current = { events, onOpen };
+  const ref = useRef(null), mapRef = useRef(null), layerRef = useRef(null), live = useRef({ events, onOpen, onPlace });
+  live.current = { events, onOpen, onPlace };
   useEffect(() => {
     const map = L.map(ref.current, { scrollWheelZoom: true }).setView(userPos ? [userPos.lat, userPos.lng] : [48.8566, 2.349], userPos ? 13 : 12);
     // OSM (CARTO exige désormais une clé) ; en sombre, les tuiles sont inversées en CSS (.leaflet-tile)
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19 }).addTo(map);
     layerRef.current = L.layerGroup().addTo(map); mapRef.current = map;
-    map.on("popupopen", ev => { ev.popup.getElement().querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => { const e = live.current.events.find(x => x.id === b.dataset.open); if (e) live.current.onOpen(e); })); });
+    map.on("popupopen", ev => {
+      const el = ev.popup.getElement();
+      el.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => { const e = live.current.events.find(x => x.id === b.dataset.open); if (e) live.current.onOpen(e); }));
+      el.querySelectorAll("[data-place]").forEach(b => b.addEventListener("click", () => live.current.onPlace?.(b.dataset.place)));
+    });
     return () => map.remove();
   }, []);
   useEffect(() => {
     const layer = layerRef.current; if (!layer) return; layer.clearLayers();
     const byLoc = new Map();
-    events.forEach(e => { if (typeof e.lat !== "number") return; const k = `${e.lat.toFixed(4)},${e.lng.toFixed(4)}`; if (!byLoc.has(k)) byLoc.set(k, []); byLoc.get(k).push(e); });
+    events.forEach(e => { const k = placeKey(e); if (!k) return; if (!byLoc.has(k)) byLoc.set(k, []); byLoc.get(k).push(e); });
     byLoc.forEach((evs, k) => {
       const [lat, lng] = k.split(",").map(Number), first = evs[0];
       const icon = L.divIcon({ className: "", html: `<div class="pin" style="background:${discColor(first.discipline)}"></div>`, iconSize: [12, 12], iconAnchor: [6, 6] });
-      const html = `<div style="max-width:240px"><div style="font-weight:600;margin-bottom:6px">${escHtml(first.location ? first.location.split(",")[0] : first.institution)}</div>` +
+      const label = first.location ? first.location.split(",")[0] : first.institution;
+      const html = `<div style="max-width:240px"><div style="font-weight:600;margin-bottom:6px">${escHtml(label)}</div>` +
         evs.slice(0, 6).map(e => `<div style="margin:4px 0"><span style="opacity:.7">${fmtShort(e.date)}${e.time ? " " + e.time : ""}</span> · <a href="#" data-open="${escHtml(e.id)}" onclick="return false">${escHtml(e.title)}</a></div>`).join("") +
-        (evs.length > 6 ? `<div style="opacity:.7">+ ${evs.length - 6}</div>` : "") + "</div>";
+        // « + 494 » restait du texte : au Collège de France, 98 % des événements du
+        // lieu étaient introuvables depuis la carte. Lien vers la liste du lieu.
+        (evs.length > 6 ? `<div style="margin-top:6px"><a href="#" data-place="${k}" onclick="return false">${escHtml(t("map_more", { n: evs.length - 6 }))}</a></div>` : "") + "</div>";
       L.marker([lat, lng], { icon }).bindPopup(html).addTo(layer);
     });
     if (userPos) L.marker([userPos.lat, userPos.lng], { icon: L.divIcon({ className: "", html: '<div class="pin-me"></div>', iconSize: [14, 14], iconAnchor: [7, 7] }) }).bindPopup(t("you_are_here")).addTo(layer);
@@ -663,7 +670,8 @@ function App() {
   const perDay = useMemo(() => { const c = {}; filtered.forEach(e => { c[e.date] = (c[e.date] || 0) + 1; }); return c; }, [filtered]);
   const groups = useMemo(() => { const g = []; filtered.slice(0, shown).forEach(e => { if (!g.length || g[g.length - 1].date !== e.date) g.push({ date: e.date, items: [] }); g[g.length - 1].items.push(e); }); return g; }, [filtered, shown]);
   const histMonths = useMemo(() => [...new Set((archive || []).map(e => e.date.slice(0, 7)))].sort().reverse(), [archive]);
-  const activeTags = [...[...filters.disc].map(v => [discName(v), () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.free ? [[t("badge_free"), () => setF({ free: false })]] : []), ...(filters.en ? [[t("filter_en"), () => setF({ en: false })]] : []), ...[...filters.cat].map(k => [`${SIDE_KINDS[k].icon} ${t(SIDE_KINDS[k].label)}`, () => toggleIn("cat")(k)])];
+  const activeTags = [...[...filters.disc].map(v => [discName(v), () => toggleIn("disc")(v)]), ...[...filters.inst].map(v => [v, () => toggleIn("inst")(v)]), ...[...filters.src].map(v => [SRC_LABEL_T[v], () => toggleIn("src")(v)]), ...[...filters.access].map(v => [t(v === "membres" ? "access_members" : "access_public"), () => toggleIn("access")(v)]), ...[...filters.theme].map(v => ["Luma · " + v, () => toggleIn("theme")(v)]), ...(filters.online ? [[t("btn_online"), () => setF({ online: false })]] : []), ...(filters.free ? [[t("badge_free"), () => setF({ free: false })]] : []), ...(filters.en ? [[t("filter_en"), () => setF({ en: false })]] : []), ...[...filters.cat].map(k => [`${SIDE_KINDS[k].icon} ${t(SIDE_KINDS[k].label)}`, () => toggleIn("cat")(k)]),
+    ...(filters.place ? [["📍 " + ((pool.find(e => placeKey(e) === filters.place)?.location || "").split(",")[0] || t("map_title")), () => setF({ place: "" })]] : [])];
 
   /* actions */
   const onFavRef = useRef();
@@ -678,6 +686,8 @@ function App() {
       // Sans délai, certains ordinateurs sans service de localisation ne répondaient jamais
       { timeout: 15000, maximumAge: 600000 });
   };
+  // Carte → « + N autres » : la liste des événements de ce point de la carte
+  const showPlace = key => { setF({ place: key }); setView("list"); goAgenda(); };
   const toggleHistory = () => { pendingScroll.current = history ? "agenda" : "top"; setHistory(h => !h); setView("list"); setNear(false); };
   const backToAgenda = () => { if (history) { pendingScroll.current = "agenda"; setHistory(false); } else goAgenda(); };
   const toggleTheme = () => { const r = document.documentElement, dark = r.dataset.theme === "dark" || (!r.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches); r.dataset.theme = dark ? "light" : "dark"; store.set("paf_theme", dark ? "light" : "dark"); };
@@ -796,7 +806,7 @@ function App() {
         {events && history && !archive && <p className="pt-6 text-sm text-muted-foreground">{t("history_loading")}</p>}
         {events && !filtered.length && (!history || archive) && <div className="mt-6 rounded-xl border border-dashed p-12 text-center"><p className="font-medium">{filters.fav && !favs.size ? t("empty_fav_title") : t("empty_generic_title")}</p><p className="text-sm text-muted-foreground mt-1">{filters.fav && !favs.size ? t("empty_fav_sub") : t("empty_generic_sub")}</p></div>}
         {events && view === "week" && !history && <WeekView events={filtered} onOpen={setOpen} favs={favs} />}
-        {events && view === "map" && !history && <MapView events={filtered} onOpen={setOpen} userPos={userPos} />}
+        {events && view === "map" && !history && <MapView events={filtered} onOpen={setOpen} onPlace={showPlace} userPos={userPos} />}
         {events && (view === "list" || history) && (near && userPos
           ? <div className="pt-6"><p className="text-sm text-muted-foreground mb-2 px-2">{t("sorted_by_distance")}</p><HoverEffect items={filtered.slice(0, shown)} render={e => <EventCard e={e} fav={favs.has(e.id)} onFav={onFav} onOpen={setOpen} distance={e._d} />} /></div>
           : groups.map(g => { const d = parse(g.date), n = perDay[g.date]; return <section key={g.date} data-date={g.date} className="pt-8 scroll-mt-32 [content-visibility:auto] [contain-intrinsic-size:auto_900px]">
