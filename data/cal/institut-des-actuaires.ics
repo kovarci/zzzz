@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd2842c87539@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261006T170000
 DTEND;TZID=Europe/Paris:20261006T190000
 SUMMARY:GT Cartographie des risques
@@ -36,8 +36,35 @@ URL:https://www.institutdesactuaires.com/agenda/gt-cartographie-des-risques
  -8135
 END:VEVENT
 BEGIN:VEVENT
+UID:e92fe3173f56@paris-academique
+DTSTAMP:20261006T173436Z
+DTSTART;TZID=Europe/Paris:20261007T083000
+DTEND;TZID=Europe/Paris:20261007T103000
+SUMMARY:Conférence ILB - Comment mobiliser l’épargne de long terme pour
+  financer les...
+DESCRIPTION:Conférence\nhttps://www.institutdesactuaires.com/agenda/confer
+ ence-ilb-comment-mobiliser-l-epargne-de-long-terme-pour-financer-les-entre
+ prises-europeennes-8096
+LOCATION:Paris — lieu précisé sur la page de l'événement
+URL:https://www.institutdesactuaires.com/agenda/conference-ilb-comment-mobi
+ liser-l-epargne-de-long-terme-pour-financer-les-entreprises-europeennes-80
+ 96
+END:VEVENT
+BEGIN:VEVENT
+UID:5e514b5f69be@paris-academique
+DTSTAMP:20261006T173436Z
+DTSTART;TZID=Europe/Paris:20261007T100000
+DTEND;TZID=Europe/Paris:20261007T120000
+SUMMARY:SGT PSC Fonction publique
+DESCRIPTION:Réunion réservée aux membres du groupe\nhttps://www.institut
+ desactuaires.com/agenda/sgt-psc-fonction-publique-7998
+LOCATION:Paris — lieu précisé sur la page de l'événement
+URL:https://www.institutdesactuaires.com/agenda/sgt-psc-fonction-publique-7
+ 998
+END:VEVENT
+BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -49,7 +76,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026

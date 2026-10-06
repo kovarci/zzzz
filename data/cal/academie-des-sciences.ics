@@ -25,64 +25,60 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:1f6c26e930f5@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261013T143000
 DTEND;TZID=Europe/Paris:20261013T163000
 SUMMARY:Innovation thérapeutique
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/innovation-thera
  peutique
-LOCATION:Grande Salle des séances | 23 Quai de Conti 75006 Paris — Acad
- émie des sciences\, 23 quai de Conti\, Paris 6e
+LOCATION:Grande Salle des séances | 23 Quai de Conti 75006 Paris
 URL:https://www.academie-sciences.fr/innovation-therapeutique
 END:VEVENT
 BEGIN:VEVENT
 UID:7b0137eae8bb@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261117T143000
 DTEND;TZID=Europe/Paris:20261117T163000
 SUMMARY:Viruses as Agents of Eukaryotic Genome Evolution
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/viruses-agents-e
  ukaryotic-genome-evolution
-LOCATION:Grande salle des séances - Institut de France - 23 quai de Conti 
- — Académie des sciences\, 23 quai de Conti\, Paris 6e
+LOCATION:Grande salle des séances - Institut de France - 23 quai de Conti
 URL:https://www.academie-sciences.fr/viruses-agents-eukaryotic-genome-evolu
  tion
 END:VEVENT
 BEGIN:VEVENT
 UID:be8a32d15110@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261120T090000
 DTEND;TZID=Europe/Paris:20261120T110000
 SUMMARY:Séquençage du génome humain : 25 ans après
 DESCRIPTION:Colloques\nhttps://www.academie-sciences.fr/sequencage-du-genom
  e-humain-25-ans-apres
 LOCATION:Auditorium André et Liliane Bettencourt - 3 rue Mazarine - Instit
- ut de France — Académie des sciences\, 23 quai de Conti\, Paris 6e
+ ut de France
 URL:https://www.academie-sciences.fr/sequencage-du-genome-humain-25-ans-apr
  es
 END:VEVENT
 BEGIN:VEVENT
 UID:db81a53d5c2e@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261201T140000
 DTEND;TZID=Europe/Paris:20261201T160000
 SUMMARY:Prédictabilité\, que peut-on prévoir ?
 DESCRIPTION:Conférences\nhttps://www.academie-sciences.fr/predictabilite-q
  ue-peut-prevoir
-LOCATION:Grande Salle des séances | 23 Quai de Conti 75006 Paris — Acad
- émie des sciences\, 23 quai de Conti\, Paris 6e
+LOCATION:Grande Salle des séances | 23 Quai de Conti 75006 Paris
 URL:https://www.academie-sciences.fr/predictabilite-que-peut-prevoir
 END:VEVENT
 BEGIN:VEVENT
 UID:b9ab83a8d296@paris-academique
-DTSTAMP:20261006T110815Z
+DTSTAMP:20261006T173436Z
 DTSTART;TZID=Europe/Paris:20261208T180000
 DTEND;TZID=Europe/Paris:20261208T200000
 SUMMARY:Rencontre avec Mickael Tanter
 DESCRIPTION:Rencontres\nhttps://www.academie-sciences.fr/rencontre-avec-mic
  kael-tanter
-LOCATION:Grande salle des séances - Institut de France - 23 quai de Conti 
- — Académie des sciences\, 23 quai de Conti\, Paris 6e
+LOCATION:Grande salle des séances - Institut de France - 23 quai de Conti
 URL:https://www.academie-sciences.fr/rencontre-avec-mickael-tanter
 END:VEVENT
 END:VCALENDAR
