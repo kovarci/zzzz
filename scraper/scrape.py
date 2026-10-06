@@ -4258,13 +4258,22 @@ ARTICLE1_URL = "https://article1.my.salesforce-sites.com/AG_VFP_Calendar?bv=jeun
 _IDF_DEPTS = ("75", "77", "78", "91", "92", "93", "94", "95")
 
 
+# Pays étranger entre parenthèses ou en fin d'adresse : « Via VIII Febbraio, 2,
+# Padoue (Italie) » (Assas, 2026). Pas « Maison de l'Italie » (Cité
+# universitaire) ni « Institut culturel italien ».
+_FOREIGN = re.compile(
+    r"\((?:italie|italy|belgique|belgium|suisse|switzerland|allemagne|germany|espagne|spain|"
+    r"royaume-uni|united kingdom|uk|pays-bas|netherlands|portugal|luxembourg|autriche|austria|"
+    r"canada|[ée]tats-unis|usa|grèce|greece)\)", re.I)
+
+
 def _outside_idf(loc):
     """Lieu manifestement hors Île-de-France, quelle que soit la source : code
     postal d'un autre département sans rien de francilien à côté (soirées
     Luma à Chantilly ou Lamorlaye, dans l'Oise), écoles d'été de l'IJCLab à
     Cargèse ou au GANIL (Caen). « 76006 Paris » (coquille du Lucernaire)
     reste gardé : le mot Paris suffit."""
-    if re.search(r"\b(carg[eè]se|ganil)\b", loc or "", re.I):
+    if re.search(r"\b(carg[eè]se|ganil)\b", loc or "", re.I) or _FOREIGN.search(loc or ""):
         return True
     cps = re.findall(r"\b(\d{5})\s+(?=[A-ZÀ-Ý])", loc or "")
     return bool(cps) and not any(cp[:2] in _IDF_DEPTS for cp in cps) and not _IDF_RE.search(loc)
@@ -6039,14 +6048,14 @@ _HUB_MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août",
 
 _HUB_TXT = {
     "fr": dict(count="<b>{n}</b> conférence{s} à venir dans l'agenda Lotent.", short="{n} conférence{s} à venir à Paris.",
-               upcoming="Prochaines conférences", cta="Voir dans l'agenda →", home="Accueil",
+               upcoming="Prochaines conférences", cta="Voir dans l'agenda →", cta_all="Voir tout l'agenda →", home="Accueil",
                foot="Lotent — toutes les conférences de Paris", questions="Questions &amp; recommandations",
                crumb="Fil d'Ariane", more="Voir toutes les conférences dans l'agenda →",
                empty="Aucune conférence annoncée pour le moment. En vous abonnant à l'agenda, "
                      "les prochaines s'y ajouteront d'elles-mêmes.",
                updated="Calendrier mis à jour chaque jour sur lotent.fr."),
     "en": dict(count="<b>{n}</b> upcoming talk{s} in the Lotent calendar.", short="{n} upcoming talk{s} in Paris.",
-               upcoming="Upcoming talks", cta="Open in the calendar →", home="Home",
+               upcoming="Upcoming talks", cta="Open in the calendar →", cta_all="See the whole calendar →", home="Home",
                foot="Lotent — every talk in Paris", questions="Questions &amp; suggestions",
                crumb="Breadcrumb", more="See every talk in the calendar →",
                empty="No talk announced yet.", updated="Updated every day on lotent.fr."),
@@ -6229,7 +6238,7 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-
 <div class="body">
 <p class="count">{count_html or T['count'].format(n=n, s=plural)}</p>
 {f'<p class="intro">{_esc_attr(intro)}</p>' if intro else ''}
-<div class="cta"><a class="site" href="{target}" rel="nofollow">{T['cta']}</a>{ics_btn}</div>
+<div class="cta"><a class="site" href="{target if n else SITE_URL + '/'}" rel="nofollow">{T['cta'] if n else T['cta_all']}</a>{ics_btn}</div>
 {ics_more}
 </div>
 </main>
@@ -7136,6 +7145,10 @@ _SPACE_COMMA = re.compile(r"(?<=\S) +,(?: +|(?=\S)|$)")     # « Vieillard-Baron
 _DROP_CAP = re.compile(r"^([B-HJ-NP-XZ]) (?=[A-Za-zÀ-ÿ])")
 
 
+# Adresse précise : numéro + voie, ou code postal francilien (« 75 013 » compris)
+_HAS_STREET = re.compile(
+    r"\b\d{1,4}\s*(?:bis|ter)?,?\s+(?:rue|avenue|av\.|bd|boulevard|place|quai|all[ée]e|cours|square|"
+    r"impasse|chemin|route|rd|via|voie|esplanade|parvis|passage)\b|\b(?:75|77|78|91|92|93|94|95)\s?\d{3}\b", re.I)
 _LABELLED_LOC = re.compile(r"^\s*(?:Building|Room|Address)\s*:", re.I)
 
 
@@ -7223,6 +7236,17 @@ def finalize_events(events):
                 e["description"] = d[:d.rindex(" ")].rstrip(" ,;:—–-") + "…"
         if _LABELLED_LOC.match(e.get("location") or ""):
             e["location"] = _clean_labelled_loc(e["location"])
+        # « 36 rue Charcot 75 013 Paris — Université Paris-Panthéon-Assas, 92
+        # rue d'Assas, Paris 6e » : l'adresse par défaut de la source, collée
+        # derrière une adresse précise, était géocodée à sa place (tous les
+        # événements d'Assas au 92 rue d'Assas, Conseil constitutionnel, Melun
+        # et Padoue compris) et la fiche affichait deux adresses.
+        loc = e.get("location") or ""
+        if " — " in loc:
+            head, tail = loc.split(" — ", 1)
+            inst = (e.get("institution") or "").lower()
+            if _HAS_STREET.search(head) and inst and tail.lower().startswith(inst[:15]):
+                e["location"] = head.strip()
         reclassify(e)
         fix_stale_discipline(e)
         if _SOUTENANCE.search(e.get("title", "")):
