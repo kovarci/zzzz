@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4a3d297c9471@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Que deviennent nos déchets ?
@@ -37,7 +37,7 @@ URL:https://www.sorbonne-universite.fr/evenements/que-deviennent-nos-dechet
 END:VEVENT
 BEGIN:VEVENT
 UID:85c4ce92495b@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261012T191900
 DTEND;TZID=Europe/Paris:20261012T211900
 SUMMARY:Erasmus Days 2026
@@ -47,7 +47,7 @@ URL:https://www.sorbonne-universite.fr/evenements/erasmus-days-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:4f831a19fe18@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Séminaire : " Cholestérol : bon\, mauvais ou mal compris ? "
@@ -59,7 +59,7 @@ URL:https://www.sorbonne-universite.fr/evenements/seminaire-cholesterol-bon
 END:VEVENT
 BEGIN:VEVENT
 UID:9aec0f011578@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Congrès 2026 de France Universités : quel pacte universitaire pou
@@ -72,7 +72,7 @@ URL:https://www.sorbonne-universite.fr/evenements/congres-2026-de-france-un
 END:VEVENT
 BEGIN:VEVENT
 UID:fee573d2825f@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Projection du court métrage « On m'a dit que »
@@ -84,7 +84,7 @@ URL:https://www.sorbonne-universite.fr/evenements/projection-du-court-metra
 END:VEVENT
 BEGIN:VEVENT
 UID:3f392feeea90@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261015T173000
 DTEND;TZID=Europe/Paris:20261015T193000
 SUMMARY:Patrimoine\, tourisme et environnement
@@ -96,7 +96,7 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoine-tourisme-et-en
 END:VEVENT
 BEGIN:VEVENT
 UID:39166fb697d8@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:École thématique MuHaS 2026
@@ -108,7 +108,7 @@ URL:https://www.sorbonne-universite.fr/evenements/ecole-thematique-muhas-20
 END:VEVENT
 BEGIN:VEVENT
 UID:ccfa20e8345c@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Journée d'accueil des doctorants de première année 2026
@@ -120,7 +120,7 @@ URL:https://www.sorbonne-universite.fr/evenements/journee-daccueil-des-doct
 END:VEVENT
 BEGIN:VEVENT
 UID:aab7768acd48@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Patrimoines spoliés : restituer\, réparer\, raconter
@@ -132,7 +132,7 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoines-spolies-resti
 END:VEVENT
 BEGIN:VEVENT
 UID:a8d86a09d7db@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Comment mieux sensibiliser au handicap ?
@@ -144,7 +144,7 @@ URL:https://www.sorbonne-universite.fr/evenements/comment-mieux-sensibilise
 END:VEVENT
 BEGIN:VEVENT
 UID:087e6decab67@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Quand les réseaux sociaux passent à table
@@ -156,7 +156,7 @@ URL:https://www.sorbonne-universite.fr/evenements/quand-les-reseaux-sociaux
 END:VEVENT
 BEGIN:VEVENT
 UID:c7fa0b929e6b@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:L'alimentation à l'ère du numérique
@@ -168,7 +168,7 @@ URL:https://www.sorbonne-universite.fr/evenements/lalimentation-lere-du-num
 END:VEVENT
 BEGIN:VEVENT
 UID:78dc55302068@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20270426
 DTEND;VALUE=DATE:20270427
 SUMMARY:Comment s'adapter au changement climatique ?

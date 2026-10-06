@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:8d483f251afc@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Appel à candidature - Social Starter
@@ -39,8 +39,23 @@ URL:https://chiche.makesense.org/events/e/appel-a-candidature-social-starte
  r-6a842a5b476bed0008f56482
 END:VEVENT
 BEGIN:VEVENT
+UID:c4f928fef0d0@paris-academique
+DTSTAMP:20261006T193014Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Appel à candidatures Innovation sociale de Paris&Co
+DESCRIPTION:Organisé par Baptiste DREVETON — Les candidatures pour la pr
+ omotion 2027 du Programme Innovation Sociale de Paris&Co sont ouvertes du 
+ 5 octobre au 15 novembre 2026.Ce programme accompagne gratuitement pendant
+  12 mois des entrepreneurs\nhttps://chiche.makesense.org/events/e/appel-a-
+ candidatures-innovation-sociale-de-parisandco-6ac4f0dfcc49190007cc1d68
+LOCATION:48 Rue René Clair\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/appel-a-candidatures-innovation-s
+ ociale-de-parisandco-6ac4f0dfcc49190007cc1d68
+END:VEVENT
+BEGIN:VEVENT
 UID:86d864d07a2b@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:La prime au vice\, rencontre-dédicace avec Julia Faure et Guillaum
@@ -56,23 +71,8 @@ URL:https://chiche.makesense.org/events/e/la-prime-au-vice-rencontre-dedica
  ce-avec-julia-faure-et-guillaume-declair-6a46990c4866650007e06e47
 END:VEVENT
 BEGIN:VEVENT
-UID:c4f928fef0d0@paris-academique
-DTSTAMP:20261006T173436Z
-DTSTART;VALUE=DATE:20261006
-DTEND;VALUE=DATE:20261007
-SUMMARY:Appel à candidatures Innovation sociale de Paris&Co
-DESCRIPTION:Organisé par Baptiste DREVETON — Les candidatures pour la pr
- omotion 2027 du Programme Innovation Sociale de Paris&Co sont ouvertes du 
- 5 octobre au 15 novembre 2026.Ce programme accompagne gratuitement pendant
-  12 mois des entrepreneurs\nhttps://chiche.makesense.org/events/e/appel-a-
- candidatures-innovation-sociale-de-parisandco-6ac4f0dfcc49190007cc1d68
-LOCATION:48 Rue René Clair\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/appel-a-candidatures-innovation-s
- ociale-de-parisandco-6ac4f0dfcc49190007cc1d68
-END:VEVENT
-BEGIN:VEVENT
 UID:4d8768765c11@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -86,7 +86,7 @@ URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
 END:VEVENT
 BEGIN:VEVENT
 UID:c71c7a9fff85@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261006T100000
 DTEND;TZID=Europe/Paris:20261006T180000
 SUMMARY:Près des yeux\, près du care
@@ -102,7 +102,7 @@ URL:https://chiche.makesense.org/events/e/pres-des-yeux-pres-du-care-6aaa8b
 END:VEVENT
 BEGIN:VEVENT
 UID:157dd27484e8@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:J'apprends à composter mes biodéchets
@@ -117,7 +117,7 @@ URL:https://chiche.makesense.org/events/e/japprends-a-composter-mes-biodech
 END:VEVENT
 BEGIN:VEVENT
 UID:f6b95b72fb1f@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:🏠Et toi\, tu connais notre maison ? - makesense space
@@ -132,7 +132,7 @@ URL:https://chiche.makesense.org/events/e/et-toi-tu-connais-notre-maison-ma
 END:VEVENT
 BEGIN:VEVENT
 UID:d3797549ebed@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Concert hommage à Charlotte Salomon
@@ -145,7 +145,7 @@ URL:https://chiche.makesense.org/events/e/concert-hommage-a-charlotte-salom
 END:VEVENT
 BEGIN:VEVENT
 UID:38277b0e8878@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261007T164500
 DTEND;TZID=Europe/Paris:20261007T184500
 SUMMARY:Visite de la maison de la Conversation
@@ -160,7 +160,7 @@ URL:https://chiche.makesense.org/events/e/visite-de-la-maison-de-la-convers
 END:VEVENT
 BEGIN:VEVENT
 UID:252be565ccee@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261007T170000
 DTEND;TZID=Europe/Paris:20261007T190000
 SUMMARY:Mais c'est quoi ce langage (inclusif) ?
@@ -176,7 +176,7 @@ URL:https://chiche.makesense.org/events/e/mais-cest-quoi-ce-langage-inclusi
 END:VEVENT
 BEGIN:VEVENT
 UID:f449ca7d8512@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261007T190000
 DTEND;TZID=Europe/Paris:20261007T220000
 SUMMARY:Cine-repas avec Andréa Le Guellec
@@ -192,7 +192,7 @@ URL:https://chiche.makesense.org/events/e/cine-repas-avec-andrea-le-guellec
 END:VEVENT
 BEGIN:VEVENT
 UID:90a3a8c17a4a@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261007T200000
 DTEND;TZID=Europe/Paris:20261007T220000
 SUMMARY:Mouvement organique

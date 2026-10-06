@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ac9b37cf400b@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
 SUMMARY:Ateliers de l'ACA² : annulations et changements de salles
@@ -37,7 +37,7 @@ URL:https://www.parisnanterre.fr/agenda/infos-pratiques-ateliers-aca2
 END:VEVENT
 BEGIN:VEVENT
 UID:c96248794d6c@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261006
 DTEND;VALUE=DATE:20261007
 SUMMARY:Fermeture temporaire des locaux de l’université mardi 6 octobre
@@ -49,8 +49,21 @@ URL:https://www.parisnanterre.fr/agenda/fermeture-temporaire-des-locaux-de-
  luniversite-mardi-6-octobre
 END:VEVENT
 BEGIN:VEVENT
+UID:8082d9f0f74a@paris-academique
+DTSTAMP:20261006T193014Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Ouverture de l’Université mercredi 7 octobre
+DESCRIPTION:https://www.parisnanterre.fr/agenda/ouverture-de-luniversite-me
+ rcredi-7-octobre
+LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
+ re
+URL:https://www.parisnanterre.fr/agenda/ouverture-de-luniversite-mercredi-7
+ -octobre
+END:VEVENT
+BEGIN:VEVENT
 UID:3db7e8d2311f@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;VALUE=DATE:20261008
 DTEND;VALUE=DATE:20261009
 SUMMARY:Fête de la science 2026
@@ -61,7 +74,7 @@ URL:https://www.parisnanterre.fr/agenda/fds
 END:VEVENT
 BEGIN:VEVENT
 UID:8d6b29fde5ba@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261009T120000
 DTEND;TZID=Europe/Paris:20261009T140000
 SUMMARY:MDL - Journée Portes Ouvertes
@@ -72,7 +85,7 @@ URL:https://www.parisnanterre.fr/agenda/mdl-journee-portes-ouvertes
 END:VEVENT
 BEGIN:VEVENT
 UID:004cf077f9f2@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261010T180000
 DTEND;TZID=Europe/Paris:20261010T200000
 SUMMARY:16h samedi - Tracer sa voix : regards croisés sur l'émigration-im
@@ -86,7 +99,7 @@ URL:https://www.parisnanterre.fr/agenda/racines-mobiles-resister-creer-heri
 END:VEVENT
 BEGIN:VEVENT
 UID:5e5d6cf6b787@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261012T120000
 DTEND;TZID=Europe/Paris:20261012T140000
 SUMMARY:Ouverture de la Saison Méditerranée 2026 - Journées scientifique
@@ -100,7 +113,7 @@ URL:https://www.parisnanterre.fr/agenda/journee-scientifique-douverture-du-
 END:VEVENT
 BEGIN:VEVENT
 UID:1d3532c78270@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261013T190000
 DTEND;TZID=Europe/Paris:20261013T210000
 SUMMARY:Cercle de lecture / Lancement de la micro-édition "Entre-tenir"
@@ -113,7 +126,7 @@ URL:https://www.parisnanterre.fr/agenda/cercle-de-lecture-lancement-de-la-m
 END:VEVENT
 BEGIN:VEVENT
 UID:afcbab0ad22c@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261013T220000
 DTEND;TZID=Europe/Paris:20261013T230000
 SUMMARY:Concert de jazz : Second Heart
@@ -125,7 +138,7 @@ URL:https://www.parisnanterre.fr/agenda/concert-de-jazz-second-heart
 END:VEVENT
 BEGIN:VEVENT
 UID:b766259e5a13@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261013T223000
 DTEND;TZID=Europe/Paris:20261013T233000
 SUMMARY:Projection du film de Raphaël Pillosio\, Les mots qu’elles euren
@@ -139,7 +152,7 @@ URL:https://www.parisnanterre.fr/agenda/projection-du-film-de-raphael-pillo
 END:VEVENT
 BEGIN:VEVENT
 UID:fdcd8d037892@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261014T140000
 DTEND;TZID=Europe/Paris:20261014T160000
 SUMMARY:La poésie comme mémoire de l’être
@@ -151,7 +164,7 @@ URL:https://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-de-letre
 END:VEVENT
 BEGIN:VEVENT
 UID:efb19672eb31@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Mémoires en mouvement : récits d’auto-histoire\, migrations et 
@@ -165,7 +178,7 @@ URL:https://www.parisnanterre.fr/agenda/memoires-en-mouvement-recits-dauto-
 END:VEVENT
 BEGIN:VEVENT
 UID:8da786806c25@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261014T210000
 DTEND;TZID=Europe/Paris:20261014T230000
 SUMMARY:« Ce que la Méditerranée donne à voir : politiques du regard »
@@ -178,7 +191,7 @@ URL:https://www.parisnanterre.fr/agenda/«-ce-que-la-mediterranee-donne-a-v
 END:VEVENT
 BEGIN:VEVENT
 UID:4d9434a31f66@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261015T180000
 DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Recueillir des témoignages\, dire les expériences invisibles : je
@@ -194,7 +207,7 @@ URL:https://www.parisnanterre.fr/agenda/recueillir-des-temoignages-dire-les
 END:VEVENT
 BEGIN:VEVENT
 UID:03012ca9337f@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Ateliers de l'ACA² : annulations et changements de salles
@@ -206,7 +219,7 @@ URL:https://www.parisnanterre.fr/agenda/infos-pratiques-ateliers-aca2
 END:VEVENT
 BEGIN:VEVENT
 UID:64afc8356ba2@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Table ronde et représentation > La Vague
@@ -219,7 +232,7 @@ URL:https://www.parisnanterre.fr/agenda/conference-et-representation-la-vag
 END:VEVENT
 BEGIN:VEVENT
 UID:697504b98a4d@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261016T090000
 DTEND;TZID=Europe/Paris:20261016T130000
 SUMMARY:Colloque Penser la Méditerranée avec les jeunesses méditerranée
@@ -233,7 +246,7 @@ URL:https://www.parisnanterre.fr/agenda/colloque-penser-la-mediterranee-ave
 END:VEVENT
 BEGIN:VEVENT
 UID:56563e2b94eb@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261016T180000
 DTEND;TZID=Europe/Paris:20261016T200000
 SUMMARY:LA COMPAGNIE CÁ E LÁ PRÉSENTE TRANSMISSIONS – TRANSMISSÕES : 
@@ -247,7 +260,7 @@ URL:https://www.parisnanterre.fr/agenda/transmissions-transmissoes-nous-all
 END:VEVENT
 BEGIN:VEVENT
 UID:56e854b1ba2b@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261016T203000
 DTEND;TZID=Europe/Paris:20261016T223000
 SUMMARY:Rencontre Cinéma "Les mots qu'elles eurent un jour"
@@ -260,7 +273,7 @@ URL:https://www.parisnanterre.fr/agenda/rencontre-cinema-les-mots-quelles-e
 END:VEVENT
 BEGIN:VEVENT
 UID:66ce755b6686@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261017T100000
 DTEND;TZID=Europe/Paris:20261017T120000
 SUMMARY:Festival Penser la Méditerranée avec les jeunesses méditerranée
@@ -274,7 +287,7 @@ URL:https://www.parisnanterre.fr/agenda/festival-penser-la-mediterranee-ave
 END:VEVENT
 BEGIN:VEVENT
 UID:29e9b6863a42@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261017T170000
 DTEND;TZID=Europe/Paris:20261017T190000
 SUMMARY:Forum international du livre arabe en France\, 3e édition
@@ -287,7 +300,7 @@ URL:https://www.parisnanterre.fr/agenda/forum-international-du-livre-arabe-
 END:VEVENT
 BEGIN:VEVENT
 UID:4bdfb9e7396b@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261017T210000
 DTEND;TZID=Europe/Paris:20261017T230000
 SUMMARY:Jazz à la Cité
@@ -298,7 +311,7 @@ URL:https://www.parisnanterre.fr/agenda/jazz-a-la-cite
 END:VEVENT
 BEGIN:VEVENT
 UID:b1e502466eb7@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261018T210000
 DTEND;TZID=Europe/Paris:20261018T230000
 SUMMARY:Concert de clôture : Slim Abida\, Contrast
@@ -311,7 +324,7 @@ URL:https://www.parisnanterre.fr/agenda/concert-de-cloture-slim-abida-contr
 END:VEVENT
 BEGIN:VEVENT
 UID:5e383223b6b6@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261019T121500
 DTEND;TZID=Europe/Paris:20261019T130000
 SUMMARY:Siestes littéraires 2026
@@ -322,7 +335,7 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-2
 END:VEVENT
 BEGIN:VEVENT
 UID:8432f40b7ca1@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261019T141500
 DTEND;TZID=Europe/Paris:20261019T161500
 SUMMARY:Siestes littéraires (octobre)
@@ -333,7 +346,7 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
 END:VEVENT
 BEGIN:VEVENT
 UID:5338f611ca66@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261022T170000
 DTEND;TZID=Europe/Paris:20261022T190000
 SUMMARY:Lecture-Rencontre avec le poète Tahar Bekri
@@ -346,7 +359,7 @@ URL:https://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le-poete-tah
 END:VEVENT
 BEGIN:VEVENT
 UID:1ce99bcdbb3e@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261022T210000
 DTEND;TZID=Europe/Paris:20261022T230000
 SUMMARY:Festival d'Automne > L’amour de l’art - Récréation philosophi
@@ -360,7 +373,7 @@ URL:https://www.parisnanterre.fr/agenda/lamour-de-lart-recreation-philosoph
 END:VEVENT
 BEGIN:VEVENT
 UID:a99b05cb08e1@paris-academique
-DTSTAMP:20261006T173436Z
+DTSTAMP:20261006T193014Z
 DTSTART;TZID=Europe/Paris:20261123T174500
 DTEND;TZID=Europe/Paris:20261123T194500
 SUMMARY:17e édition du Festival Nanterre sur Scène
