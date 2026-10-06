@@ -7031,9 +7031,16 @@ def build_digest(events):
     picked.sort(key=lambda e: (e["date"], e.get("time", "")))
 
     period = f"du {_date_fr(TODAY.isoformat())} au {_date_fr(end.isoformat())}"
+    # Jour d'entrée de chaque événement dans la sélection, gardé d'un passage à
+    # l'autre : c'est la date de publication de l'article RSS
+    try:
+        prev_since = json.loads(DIGEST_FILE.read_text(encoding="utf-8")).get("since") or {}
+    except Exception:
+        prev_since = {}
+    since = {e["id"]: prev_since.get(e["id"], TODAY.isoformat()) for e in picked}
     try:
         DIGEST_FILE.write_text(json.dumps(
-            {"generated": TODAY.isoformat(), "period": period, "events": picked},
+            {"generated": TODAY.isoformat(), "period": period, "events": picked, "since": since},
             ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     except Exception as e:
         print(f"[WARN] digest write: {e}")
@@ -7042,8 +7049,10 @@ def build_digest(events):
     from datetime import timezone
 
     def rfc822(iso_day):
-        # pubDate = jour où l'événement est apparu sur Lotent : sans elle, les
-        # lecteurs RSS ne savaient ni dater ni trier les articles.
+        # pubDate = jour où l'événement est entré dans la sélection. C'était
+        # le jour de son ajout à Lotent (« 9 juillet » pour une conférence du
+        # 6 octobre) : les lecteurs RSS, qui trient par cette date, rangeaient
+        # les immanquables de la semaine parmi des articles de juillet.
         try:
             return format_datetime(datetime.combine(date.fromisoformat(iso_day), datetime.min.time())
                                    .replace(hour=8, tzinfo=PARIS_TZ))
@@ -7056,7 +7065,7 @@ def build_digest(events):
         items.append(
             f"<item><title>{_esc_attr(e['title'])}</title>"
             f"<link>{link}</link><guid isPermaLink=\"true\">{link}</guid>"
-            f"<pubDate>{rfc822(e.get('added_at') or TODAY.isoformat())}</pubDate>"
+            f"<pubDate>{rfc822(since.get(e['id']) or TODAY.isoformat())}</pubDate>"
             f"<description>{_esc_attr(d + ' — ' + e.get('institution', '') + (' · ' + _place_sans_inst(e) if _place_sans_inst(e) else ''))}</description>"
             f"</item>")
     rss = ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
