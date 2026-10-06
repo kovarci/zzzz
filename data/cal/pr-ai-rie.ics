@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:43bb283d2fab@paris-academique
-DTSTAMP:20261006T040305Z
+DTSTAMP:20261006T110815Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Thought Experiment #1
@@ -36,8 +36,20 @@ LOCATION:Paris School of AI\, Université PSL 16 bis rue de l’Estrapade\,
 URL:https://www.prairie-psai.fr/agenda/thought-experiment-1/
 END:VEVENT
 BEGIN:VEVENT
+UID:6ac1a94d78ac@paris-academique
+DTSTAMP:20261006T110815Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Dauphine Digital Days 2026
+DESCRIPTION:AfterWork · AI & Society · Partners\nhttps://www.prairie-psai
+ .fr/agenda/dauphine-digital-days-2026/
+LOCATION:Université Paris Dauphine-PSL – Place du Maréchal de Lattre de
+  Tassigny – Paris 16e
+URL:https://www.prairie-psai.fr/agenda/dauphine-digital-days-2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:d6c37327660e@paris-academique
-DTSTAMP:20261006T040305Z
+DTSTAMP:20261006T110815Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Recent Advances in Chemistry and AI
