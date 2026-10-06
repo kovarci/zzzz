@@ -3390,11 +3390,18 @@ def _page_time(txt, d):
 
 
 def _fetch_text(url):
-    """Texte d'une page, ou None si elle n'a pas pu être lue (403, délai…)."""
+    """(texte complet, texte visible) d'une page, ou None si elle n'a pas pu
+    être lue (403, délai…). Le texte visible, sans scripts ni styles, sert aux
+    horaires : la date de publication d'un script (« datePublished":
+    "2026-07-22T12:24 », Sorbonne Paris Nord) passait pour l'heure de
+    l'événement. Le texte complet sert aux tarifs : « gratuit » n'est parfois
+    que dans un script (Institut des actuaires)."""
     try:
-        return _page_text(url)[1]
+        html, txt = _page_text(url)
     except Exception:
         return None
+    vis = re.sub(r"<(script|style|noscript|template)\b.*?</\1\s*>", " ", html, flags=re.S | re.I)
+    return txt, re.sub(r"\s+", " ", html_unescape(re.sub(r"<[^>]+>", " ", vis)))
 
 
 def add_missing_details(events, previous=(), limit=700):
@@ -3442,14 +3449,14 @@ def add_missing_details(events, previous=(), limit=700):
         for (e, wp, wt), txt, sc_price in ex.map(job, todo):
             if sc_price is not None or txt is not None:
                 if wp:
-                    p = sc_price if sc_price is not None else _price_in_text(txt)
+                    p = sc_price if sc_price is not None else _price_in_text(txt[0])
                     if p:
                         e["price"], got_p = p, got_p + 1
                     else:
                         e["price_checked"] = today
                 if wt and txt is not None:
                     try:
-                        st, en = _page_time(txt, date.fromisoformat(e["date"]))
+                        st, en = _page_time(txt[1], date.fromisoformat(e["date"]))
                     except ValueError:
                         st, en = "", ""
                     if st:
