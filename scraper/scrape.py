@@ -13,6 +13,7 @@ All HTML sources are scraped page-by-page (?page=N) until no new events appear.
 import collections
 import json
 import hashlib
+import math
 import os
 import re
 import time
@@ -2799,7 +2800,7 @@ def scrape_que_faire_a_paris():
                 elif one:
                     ev["price"] = f"{one.group(1)} €"
             geo = x.get("lat_lon") or {}
-            if geo.get("lat") and geo.get("lon"):
+            if geo.get("lat") and geo.get("lon") and not _paris_placeholder(geo["lat"], geo["lon"]):
                 ev["lat"], ev["lng"], ev["geo_exact"] = geo["lat"], geo["lon"], True
             events.append(ev)
         if len(rows) < 100 or offset >= 900:
@@ -5006,6 +5007,61 @@ def _city_coords(loc):
             or _CITY_COORDS.get(k.rsplit(",", 1)[-1].strip()))
 
 
+# Centre et rayon approximatifs (km) des arrondissements : un point tombé loin
+# de l'arrondissement écrit dans l'adresse est faux (Nominatim a reconnu autre
+# chose : « Centre de recherche en économie et droit 31 rue Froidevaux, Paris
+# 75014 » placé dans le 7e, « Site Pouchet, 61 rue Pouchet, 75017 » dans le 6e).
+_ARR_CENTER = {
+    1: (48.8625, 2.3363), 2: (48.8683, 2.3428), 3: (48.8630, 2.3600), 4: (48.8543, 2.3576),
+    5: (48.8445, 2.3507), 6: (48.8491, 2.3328), 7: (48.8562, 2.3122), 8: (48.8727, 2.3125),
+    9: (48.8770, 2.3375), 10: (48.8762, 2.3608), 11: (48.8591, 2.3800), 12: (48.8350, 2.4213),
+    13: (48.8283, 2.3623), 14: (48.8292, 2.3266), 15: (48.8401, 2.2932), 16: (48.8604, 2.2620),
+    17: (48.8873, 2.3067), 18: (48.8925, 2.3484), 19: (48.8871, 2.3848), 20: (48.8634, 2.4012)}
+_ARR_RADIUS = {12: 3.2, 16: 3.5, 13: 2.6, 15: 2.6, 14: 2.4, 17: 2.4, 19: 2.4, 18: 2.2, 20: 2.2}
+_STREET_NO = re.compile(
+    r"(\d{1,4})(?:\s*(?:bis|ter))?,?\s+((?:rue|avenue|av\.|bd|boulevard|place|quai|all[ée]e|cours|square|"
+    r"impasse|chemin|route|villa|cit[ée]|passage|esplanade|parvis)\b[^,;.()•\d]*)", re.I)
+
+
+def _paris_placeholder(lat, lng):
+    """Point par défaut de Que faire à Paris (Hôtel de Ville) quand le lieu
+    n'est pas géolocalisé : pas une position. Théâtre Comédie Bastille (11e),
+    Alliance française (bd Raspail, 6e), BPI… s'empilaient devant l'Hôtel de Ville."""
+    try:
+        return abs(float(lat) - 48.8566) < 0.0006 and abs(float(lng) - 2.3518) < 0.0006
+    except (TypeError, ValueError):
+        return False
+
+
+def _paris_arr(loc):
+    """Arrondissement écrit dans l'adresse (« 75017 », « 75 013 », « Paris 17e »), sinon None."""
+    m = (re.search(r"\b75\s?0(\d\d)\b", loc or "")
+         or re.search(r"\bparis\s*(\d{1,2})\s*(?:e|er|[èe]me)\b", loc or "", re.I))
+    return int(m.group(1)) if m and 1 <= int(m.group(1)) <= 20 else None
+
+
+def _fits_arr(coords, arr):
+    if not coords or not arr:
+        return bool(coords)
+    (a, b), (c, d) = coords, _ARR_CENTER[arr]
+    km = 6371 * 2 * math.asin(math.sqrt(math.sin(math.radians(c - a) / 2) ** 2 + math.cos(math.radians(a))
+                                        * math.cos(math.radians(c)) * math.sin(math.radians(d - b) / 2) ** 2))
+    return km <= _ARR_RADIUS.get(arr, 1.8) + 1.0
+
+
+def _street_query(loc, arr):
+    """Le numéro et la voie seuls, avec le code postal : « 31 rue Froidevaux,
+    75014 Paris » (sans le nom du lieu, la salle ni une seconde adresse)."""
+    m = _STREET_NO.search(loc or "")
+    if not m:
+        return None
+    street = re.split(r"\s(?:[-–]|paris|salle|amphi\w*|b[aâ]t\w*)\b", m.group(2), maxsplit=1, flags=re.I)[0].strip(" ,")
+    if arr:
+        return f"{m.group(1)} {street}, 750{arr:02d} Paris"
+    mc = re.search(r"\b((?:77|78|91|92|93|94|95)\d{3})\s+([A-Za-zÀ-ÿ'-]+(?:[- ][A-Za-zÀ-ÿ'-]+){0,3})", loc)
+    return f"{m.group(1)} {street}, {mc.group(1)} {mc.group(2)}" if mc else None
+
+
 def geocode_all(events):
     """Add lat/lng to events. Real addresses are geocoded (Nominatim, cached);
     vague locations fall back to the event's institution coordinates."""
@@ -5027,6 +5083,8 @@ def geocode_all(events):
         if _attendance(ev.get("location") or "") == "online":
             ev.pop("lat", None), ev.pop("lng", None), ev.pop("geo_exact", None)
             continue
+        if ev.get("geo_exact") and "lat" in ev and _paris_placeholder(ev["lat"], ev["lng"]):
+            ev.pop("geo_exact")              # point par défaut enregistré avant ce contrôle
         if ev.get("geo_exact") and "lat" in ev:
             continue                         # GPS fourni par la source (Ville de Paris, Sciencesconf)
         loc = clean_text(ev.get("location") or "")
@@ -5053,12 +5111,40 @@ def geocode_all(events):
                 down = True
                 print(f"[WARN] Nominatim indisponible ({e}) : géocodage reporté au prochain passage")
             coords = cache.get(key) or None
-        if not coords:                       # ville seule (« Orsay (France) »)
-            coords = _city_coords(loc)
-        if not coords:                       # lieu nommé connu (« Richelieu — BnF »)
-            coords = _place_coords(loc)
-        if not coords:                       # fallback → institution coordinates
-            coords = INSTITUTION_COORDS.get(ev.get("institution"))
+        arr = _paris_arr(loc)
+        rejected = bool(coords) and not _fits_arr(coords, arr)
+        if not _fits_arr(coords, arr):       # point loin de l'arrondissement de l'adresse
+            coords = None
+            sq = _street_query(loc, arr)     # → le numéro et la voie seuls
+            if sq and not down:
+                k2 = sq.lower()[:140]
+                try:
+                    if k2 not in cache and new < MAX_NEW_GEOCODE:
+                        new += 1
+                        time.sleep(1.1)
+                        cache[k2] = _nominatim(sess, sq) or []
+                except GeoUnavailable as e:
+                    down = True
+                    print(f"[WARN] Nominatim indisponible ({e}) : géocodage reporté au prochain passage")
+                if _fits_arr(cache.get(k2) or None, arr):
+                    coords = cache[k2]
+        ll = loc.lower()
+        for fallback in (
+                lambda: _city_coords(loc),       # ville seule (« Orsay (France) »)
+                lambda: _place_coords(loc),      # lieu nommé connu (« Richelieu — BnF »)
+                # institution connue nommée dans le lieu (« Université Paris Dauphine,
+                # Place du Maréchal de Lattre de Tassigny, Paris 16e » chez PR[AI]RIE)
+                lambda: next((c for n, c in sorted(INSTITUTION_COORDS.items(), key=lambda x: -len(x[0]))
+                              if len(n) >= 8 and n.lower() in ll and _fits_arr(c, arr)), None),
+                # au moins le bon arrondissement, à la place d'un point faux — pas pour
+                # un lieu jamais trouvé : un point au centre de l'arrondissement tromperait
+                lambda: _ARR_CENTER.get(arr) if rejected else None,
+                lambda: INSTITUTION_COORDS.get(ev.get("institution"))):   # coordonnées de l'organisateur
+            if coords:
+                break
+            c = fallback()
+            rejected = rejected or (bool(c) and not _fits_arr(c, arr))
+            coords = c if _fits_arr(c, arr) else None
         if coords:
             ev["lat"], ev["lng"] = coords[0], coords[1]
         else:
