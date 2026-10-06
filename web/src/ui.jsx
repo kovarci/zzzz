@@ -243,7 +243,9 @@ export function Popover({ label, count, children, align = "left", minW = "min-w-
     const h = e => { if (!ref.current?.contains(e.target) && !popRef.current?.contains(e.target)) setOpen(false); };
     // Échap ferme le menu seulement : en phase de capture, avant la fiche
     // (menu « Agenda ») qui, sinon, se fermait avec lui.
-    const k = e => { if (e.key === "Escape" && openRef.current) { e.preventDefault(); setOpen(false); } };
+    // Focus rendu au bouton du menu : il retombait en haut de la page (clavier,
+    // lecteur d'écran). Le panneau du bas (téléphone) le fait déjà via useFocusTrap.
+    const k = e => { if (e.key === "Escape" && openRef.current) { e.preventDefault(); setOpen(false); ref.current?.querySelector("button")?.focus({ preventScroll: true }); } };
     document.addEventListener("mousedown", h); document.addEventListener("keydown", k, true);
     return () => { document.removeEventListener("mousedown", h); document.removeEventListener("keydown", k, true); };
   }, []);
