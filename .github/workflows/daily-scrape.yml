@@ -8,6 +8,13 @@ on:
 permissions:
   contents: write
 
+# Un seul passage à la fois : un lancement manuel et le passage programmé
+# (souvent retardé de plusieurs heures par GitHub) tournaient en parallèle et
+# publiaient l'un par-dessus l'autre. Le second attend la fin du premier.
+concurrency:
+  group: daily-scrape
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-24.04  # figé : ubuntu-latest passe à Ubuntu 26 le 19/10/2026 (Playwright)
