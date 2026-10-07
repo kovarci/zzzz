@@ -208,7 +208,10 @@
   48.862135,
   2.360548
  ],
- "1 rue grenier sur l'eau, 75004 paris, france": null,
+ "1 rue grenier sur l'eau, 75004 paris, france": [
+  48.854342,
+  2.35763
+ ],
  "chāo pâtisserie 巴黎超.甜坊, 17 bd du temple, 75003 paris, france": null,
  "musée cernuschi, 7 av. velasquez, 75008 paris, france": [
   48.879432,
@@ -366,7 +369,10 @@
   2.338347
  ],
  "herbert smith freehills kramer paris llp, 66 av. marceau, 75008 paris, france": null,
- "exalt, 10 rue vauvilliers, 75001 paris, france": null,
+ "exalt, 10 rue vauvilliers, 75001 paris, france": [
+  48.861659,
+  2.343337
+ ],
  "little home paris, 69 rue jean-pierre timbaud, 75011 paris, france": null,
  "le meurice, 228 rue de rivoli, 75001 paris, france": [
   48.865136,
@@ -916,7 +922,10 @@
  ],
  "comptoir rivoli, 24 rue de rivoli, 75004 paris, france": null,
  "kolo community space, 10 rue henri chevreau, 75020 paris, france": null,
- "omvida holistic spaces, 3 rue valadon, 75007 paris, france": null,
+ "omvida holistic spaces, 3 rue valadon, 75007 paris, france": [
+  48.857305,
+  2.305537
+ ],
  "colorz | agence shopify platinum, 16bis ave parmentier, 75011 paris, france": null,
  "forvis mazars, 45 rue kléber, 92300 levallois-perret, france": null,
  "21 rue du bouloi, 75001 paris, france": [
@@ -1427,7 +1436,7 @@
   48.827414,
   2.383188
  ],
- "capturism studio flagship | studio photo, bookshop, gallery, & coffee, 5 rue mabillon, 75006 paris, france": null,
+ "capturism studio flagship | studio photo, bookshop, gallery, & coffee, 5 rue mabillon, 75006 paris, france": [],
  "jivamukti yoga paris, 92 quai de jemmapes, 75010 paris, france": null,
  "hd diner, 2 rue du roule, 75001 paris, france": null,
  "glouglou ménilmontant, 11 rue victor letalle, 75020 paris, france": null,
@@ -4184,5 +4193,65 @@
  "salon de la direction, 45 rue d'ulm": [
   48.841837,
   2.34404
+ ],
+ "le jardin de verre by locke, 7 rue lacépède, 75005 paris, france": [
+  48.843644,
+  2.353687
+ ],
+ "la villette, 211 av. jean jaurès, 75019 paris, france": [
+  48.894208,
+  2.393178
+ ],
+ "27 rue mazarine, 75006 paris, france": [
+  48.854786,
+  2.33809
+ ],
+ "5 rue mabillon, 75006 paris": [
+  48.851549,
+  2.335384
+ ],
+ "le beurre noisette, 68 rue vasco de gama, 75015 paris, france": [
+  48.835657,
+  2.28487
+ ],
+ "2 rue dieu, 75010 paris, france": [
+  48.870036,
+  2.364121
+ ],
+ "tour initiale, 1 terr. bellini, 92800 puteaux, france": [
+  48.883614,
+  2.238729
+ ],
+ "maison du jardinage et du compostage, 41 rue paul-belmondo, 75012 paris, france": [
+  48.836131,
+  2.383105
+ ],
+ "78000 versailles, france": [
+  48.802308,
+  2.117446
+ ],
+ "magnum la cave, 26 rue beautreillis, 75004 paris, france": [
+  48.853569,
+  2.36444
+ ],
+ "shana, 14 rue saint-sauveur, 75002 paris, france": [
+  48.866058,
+  2.348672
+ ],
+ "126 rue de provence, 75008 paris, france": [
+  48.874224,
+  2.326126
+ ],
+ "84 av. de la république, 75011 paris, france": [
+  48.864146,
+  2.379704
+ ],
+ "19 rue jules guesde, 94270 le kremlin-bicêtre, france": [
+  48.808744,
+  2.355828
+ ],
+ "97 rue balard 15e, 75015 paris, france": [
+  48.837672,
+  2.278663
  ]
 }

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:157dd27484e8@paris-academique
-DTSTAMP:20261007T105526Z
+DTSTAMP:20261007T164751Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:J'apprends à composter mes biodéchets
@@ -40,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/japprends-a-composter-mes-biodech
 END:VEVENT
 BEGIN:VEVENT
 UID:f6b95b72fb1f@paris-academique
-DTSTAMP:20261007T105526Z
+DTSTAMP:20261007T164751Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:🏠Et toi\, tu connais notre maison ? - makesense space
@@ -55,7 +55,7 @@ URL:https://chiche.makesense.org/events/e/et-toi-tu-connais-notre-maison-ma
 END:VEVENT
 BEGIN:VEVENT
 UID:d3797549ebed@paris-academique
-DTSTAMP:20261007T105526Z
+DTSTAMP:20261007T164751Z
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261008
 SUMMARY:Concert hommage à Charlotte Salomon
@@ -68,7 +68,7 @@ URL:https://chiche.makesense.org/events/e/concert-hommage-a-charlotte-salom
 END:VEVENT
 BEGIN:VEVENT
 UID:38277b0e8878@paris-academique
-DTSTAMP:20261007T105526Z
+DTSTAMP:20261007T164751Z
 DTSTART;TZID=Europe/Paris:20261007T164500
 DTEND;TZID=Europe/Paris:20261007T184500
 SUMMARY:Visite de la maison de la Conversation
@@ -83,7 +83,7 @@ URL:https://chiche.makesense.org/events/e/visite-de-la-maison-de-la-convers
 END:VEVENT
 BEGIN:VEVENT
 UID:252be565ccee@paris-academique
-DTSTAMP:20261007T105526Z
+DTSTAMP:20261007T164751Z
 DTSTART;TZID=Europe/Paris:20261007T170000
 DTEND;TZID=Europe/Paris:20261007T190000
 SUMMARY:Mais c'est quoi ce langage (inclusif) ?
@@ -99,7 +99,7 @@ URL:https://chiche.makesense.org/events/e/mais-cest-quoi-ce-langage-inclusi
 END:VEVENT
 BEGIN:VEVENT
 UID:f449ca7d8512@paris-academique
-DTSTAMP:20261007T105526Z
+DTSTAMP:20261007T164751Z
 DTSTART;TZID=Europe/Paris:20261007T190000
 DTEND;TZID=Europe/Paris:20261007T220000
 SUMMARY:Cine-repas avec Andréa Le Guellec
@@ -115,7 +115,7 @@ URL:https://chiche.makesense.org/events/e/cine-repas-avec-andrea-le-guellec
 END:VEVENT
 BEGIN:VEVENT
 UID:90a3a8c17a4a@paris-academique
-DTSTAMP:20261007T105526Z
+DTSTAMP:20261007T164751Z
 DTSTART;TZID=Europe/Paris:20261007T200000
 DTEND;TZID=Europe/Paris:20261007T220000
 SUMMARY:Mouvement organique
