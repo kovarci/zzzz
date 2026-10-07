@@ -24,25 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:4d427c8f2dfc@paris-academique
-DTSTAMP:20261006T200830Z
-DTSTART;TZID=Europe/Paris:20261006T090000
-DTEND;TZID=Europe/Paris:20261006T123000
-SUMMARY:De Paris Plages au bassin versant de la Seine : hydrologie\, gouver
- nance et culture en période de transition (années 1950-2020)
-DESCRIPTION:https://www.paris-iea.fr/fr/evenements/de-paris-plages-au-bassi
- n-versant-de-la-seine-hydrologie-gouvernance-et-culture-en-periode-de-tran
- sition-annees-1950-2020
-LOCATION:Institut d'études avancées de Paris\, 17 quai d'Anjou\, Paris 4e
-URL:https://www.paris-iea.fr/fr/evenements/de-paris-plages-au-bassin-versan
- t-de-la-seine-hydrologie-gouvernance-et-culture-en-periode-de-transition-a
- nnees-1950-2020
-END:VEVENT
-BEGIN:VEVENT
 UID:f96e32b8b2a3@paris-academique
-DTSTAMP:20261006T200830Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
+DTSTAMP:20261007T105526Z
+DTSTART;TZID=Europe/Paris:20261007T094500
+DTEND;TZID=Europe/Paris:20261007T170000
 SUMMARY:Conseil scientifique et réunion des Directeurs d’unités
 DESCRIPTION:https://www.paris-iea.fr/fr/evenements/conseil-scientifique-et-
  reunion-des-directeurs-d-unites
@@ -52,9 +37,9 @@ URL:https://www.paris-iea.fr/fr/evenements/conseil-scientifique-et-reunion-
 END:VEVENT
 BEGIN:VEVENT
 UID:c668c3ad2b18@paris-academique
-DTSTAMP:20261006T200830Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
+DTSTAMP:20261007T105526Z
+DTSTART;TZID=Europe/Paris:20261009T100000
+DTEND;TZID=Europe/Paris:20261009T170000
 SUMMARY:Érosion démocratique et autoritarisme en Europe
 DESCRIPTION:https://www.paris-iea.fr/fr/evenements/erosion-democratique-et-
  autoritarisme-en-europe
@@ -64,7 +49,7 @@ URL:https://www.paris-iea.fr/fr/evenements/erosion-democratique-et-autorita
 END:VEVENT
 BEGIN:VEVENT
 UID:c14131097443@paris-academique
-DTSTAMP:20261006T200830Z
+DTSTAMP:20261007T105526Z
 DTSTART;TZID=Europe/Paris:20261012T093000
 DTEND;TZID=Europe/Paris:20261012T120000
 SUMMARY:Présentation des doctorant.e.s Cifre de la Ville de Paris
@@ -76,7 +61,7 @@ URL:https://www.paris-iea.fr/fr/evenements/presentation-des-doctorant-e-s-c
 END:VEVENT
 BEGIN:VEVENT
 UID:5e8ee56e08b4@paris-academique
-DTSTAMP:20261006T200830Z
+DTSTAMP:20261007T105526Z
 DTSTART;TZID=Europe/Paris:20261013T090000
 DTEND;TZID=Europe/Paris:20261013T120000
 SUMMARY:Conférence de presse de rentrée de l’Université Gustave Eiffel
@@ -88,9 +73,9 @@ URL:https://www.paris-iea.fr/fr/evenements/conference-de-presse-de-rentree-
 END:VEVENT
 BEGIN:VEVENT
 UID:70eced156189@paris-academique
-DTSTAMP:20261006T200830Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
+DTSTAMP:20261007T105526Z
+DTSTART;TZID=Europe/Paris:20261015T160000
+DTEND;TZID=Europe/Paris:20261015T180000
 SUMMARY:9th Early Phase Adaptive Trials Workshop
 DESCRIPTION:https://www.paris-iea.fr/fr/evenements/9th-early-phase-adaptive
  -trials-workshop
@@ -100,7 +85,7 @@ URL:https://www.paris-iea.fr/fr/evenements/9th-early-phase-adaptive-trials-
 END:VEVENT
 BEGIN:VEVENT
 UID:0603df79a9db@paris-academique
-DTSTAMP:20261006T200830Z
+DTSTAMP:20261007T105526Z
 DTSTART;TZID=Europe/Paris:20261016T093000
 DTEND;TZID=Europe/Paris:20261016T180000
 SUMMARY:Les scènes de Jacques Rancière
@@ -111,9 +96,9 @@ URL:https://www.paris-iea.fr/fr/evenements/les-scenes-de-jacques-ranciere
 END:VEVENT
 BEGIN:VEVENT
 UID:1924dca57fc7@paris-academique
-DTSTAMP:20261006T200830Z
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
+DTSTAMP:20261007T105526Z
+DTSTART;TZID=Europe/Paris:20261021T090000
+DTEND;TZID=Europe/Paris:20261021T180000
 SUMMARY:Approches théoriques des temporalités urbaines
 DESCRIPTION:https://www.paris-iea.fr/fr/evenements/theoriser-le-changement-
  urbain-contemporain-a-partir-des-temporalites
@@ -123,9 +108,9 @@ URL:https://www.paris-iea.fr/fr/evenements/theoriser-le-changement-urbain-c
 END:VEVENT
 BEGIN:VEVENT
 UID:af6aa816f856@paris-academique
-DTSTAMP:20261006T200830Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
+DTSTAMP:20261007T105526Z
+DTSTART;TZID=Europe/Paris:20261022T093000
+DTEND;TZID=Europe/Paris:20261022T183000
 SUMMARY:Evénement scientifique annuel du projet HERMES
 DESCRIPTION:https://www.paris-iea.fr/fr/evenements/evenement-scientifique-a
  nnuel-du-projet-hermes
@@ -135,7 +120,7 @@ URL:https://www.paris-iea.fr/fr/evenements/evenement-scientifique-annuel-du
 END:VEVENT
 BEGIN:VEVENT
 UID:650fb5ed4636@paris-academique
-DTSTAMP:20261006T200830Z
+DTSTAMP:20261007T105526Z
 DTSTART;TZID=Europe/Paris:20261023T091500
 DTEND;TZID=Europe/Paris:20261023T111500
 SUMMARY:L’Edition et ses pratiques\, passé et présent
@@ -147,7 +132,7 @@ URL:https://www.paris-iea.fr/fr/evenements/l-edition-et-ses-pratiques-passe
 END:VEVENT
 BEGIN:VEVENT
 UID:a425d8e08351@paris-academique
-DTSTAMP:20261006T200830Z
+DTSTAMP:20261007T105526Z
 DTSTART;TZID=Europe/Paris:20261106T140000
 DTEND;TZID=Europe/Paris:20261106T160000
 SUMMARY:Freedom and Order: The Science of Human Flourishing
