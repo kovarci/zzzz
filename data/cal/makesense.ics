@@ -24,109 +24,85 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:157dd27484e8@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:J'apprends à composter mes biodéchets
-DESCRIPTION:Organisé par Envie Le Labo — Que deviennent nos déchets apr
- ès les avoir jetés à la poubelle ? Quelles alternatives durables sont p
- ossibles ? Découvrez de façon ludique en famille l’art du compostage d
- es déchets organiques.En\nhttps://chiche.makesense.org/events/e/japprends
- -a-composter-mes-biodechets-6a992a341c5b4f0008b96eca
-LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
-URL:https://chiche.makesense.org/events/e/japprends-a-composter-mes-biodech
- ets-6a992a341c5b4f0008b96eca
+UID:4718b1cfb302@paris-academique
+DTSTAMP:20261008T111847Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:Grande Braderie Solidaire avec Emmaüs Défi !
+DESCRIPTION:Organisé par Les Canaux — Le samedi 10 octobre 2026\, Les Ca
+ naux vous invitent à sa Braderie Solidaire\, un événement incontournabl
+ e du parcours « Consommation circulaire » de la Semaine des Autres Modes
+ . Cette journée prouve qu’une mode ten\nhttps://chiche.makesense.org/ev
+ ents/e/grande-braderie-solidaire-avec-emmaus-defi-6ab14eb640a4b70008074a62
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/grande-braderie-solidaire-avec-em
+ maus-defi-6ab14eb640a4b70008074a62
 END:VEVENT
 BEGIN:VEVENT
-UID:f6b95b72fb1f@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:🏠Et toi\, tu connais notre maison ? - makesense space
-DESCRIPTION:Organisé par Laura Groen — Et toi\, tu connais notre maison 
- ?Chaque 2nds mercredi du mois\, à 16h30\, on ouvre les portes du makesens
- e space\, notre tiers lieu…Le makesense_spac\nhttps://chiche.makesense.o
- rg/events/e/et-toi-tu-connais-notre-maison-makesense-space-6aba5e0c34634e0
- 007daa541
+UID:66adfc30cf90@paris-academique
+DTSTAMP:20261008T111847Z
+DTSTART;TZID=Europe/Paris:20261010T100000
+DTEND;TZID=Europe/Paris:20261010T190000
+SUMMARY:Vente au kilo solidaire proposée par l'association Grand Paris col
+ lecte
+DESCRIPTION:Organisé par Adele DORLIPO — Vente au kilo (vêtements\, cha
+ ussures\, accessoires)\, 10€/kg organisée par Grand Paris Collecte 👉
+  Rendez-vous le samedi 10 octobre de 10h à 19h à La Maison du Zéro Déc
+ het pour soutenir une association éco-solidaire dédiée au\nhttps://chic
+ he.makesense.org/events/e/vente-au-kilo-solidaire-proposee-par-lassociatio
+ n-grand-paris-collecte-6ac65dde06b4310007ca3c94
+LOCATION:1 Pass. Jaqueline Giraud\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/vente-au-kilo-solidaire-proposee-
+ par-lassociation-grand-paris-collecte-6ac65dde06b4310007ca3c94
+END:VEVENT
+BEGIN:VEVENT
+UID:e81641640440@paris-academique
+DTSTAMP:20261008T111847Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:Magm'à Paris #8 🌋 Le programme en présentiel sur les oppressio
+ ns systémiques
+DESCRIPTION:Organisé par Magma Collectif — C'est reparti pour une nouvel
+ le édition de notre programme collectif en présentiel à Paris pour mieu
+ x comprendre les luttes et agir sur les systèmes de domination (racisme\,
+  sexisme\, capitalisme\, tous les trucs en -isme) tout en faisant le lien 
+ ent\nhttps://chiche.makesense.org/events/e/magma-paris-8-le-programme-en-p
+ resentiel-sur-les-oppressions-systemiques-6a949b5f72e06000074d9b3f
+LOCATION:17 Rue Jenner\, 75013 Paris\, France
+URL:https://chiche.makesense.org/events/e/magma-paris-8-le-programme-en-pre
+ sentiel-sur-les-oppressions-systemiques-6a949b5f72e06000074d9b3f
+END:VEVENT
+BEGIN:VEVENT
+UID:c4aa98c4fad1@paris-academique
+DTSTAMP:20261008T111847Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:2 collines\, 1000 chemins : une plongée dans les parcours d'engage
+ ment
+DESCRIPTION:Organisé par Anastasia Dereppe — Un atelier émotionnel et i
+ nteractif pour explorer son parcours d’engagement écologique\, basé su
+ r un modèle sociologique inédit.❓Pourquoi certain·es basculent-ils ve
+ rs des modes de vie plus sobres\, engagés\, écologiques - et d’autres 
+ pas ?\nhttps://chiche.makesense.org/events/e/2-collines-1000-chemins-une-p
+ longee-dans-les-parcours-dengagement-6a05b20a2035560008e93da6
 LOCATION:11 Rue Biscornet\, 75012 Paris\, France
-URL:https://chiche.makesense.org/events/e/et-toi-tu-connais-notre-maison-ma
- kesense-space-6aba5e0c34634e0007daa541
+URL:https://chiche.makesense.org/events/e/2-collines-1000-chemins-une-plong
+ ee-dans-les-parcours-dengagement-6a05b20a2035560008e93da6
 END:VEVENT
 BEGIN:VEVENT
-UID:d3797549ebed@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;VALUE=DATE:20261007
-DTEND;VALUE=DATE:20261008
-SUMMARY:Concert hommage à Charlotte Salomon
-DESCRIPTION:Organisé par Ari BRODACH — Le Mémorial de la gare de dépor
- tation de Bobigny et\nhttps://chiche.makesense.org/events/e/concert-hommag
- e-a-charlotte-salomon-6ab6855732f93b0008f5913a
-LOCATION:151 Av. Henri Barbusse\, 93000 Bobigny\, France
-URL:https://chiche.makesense.org/events/e/concert-hommage-a-charlotte-salom
- on-6ab6855732f93b0008f5913a
-END:VEVENT
-BEGIN:VEVENT
-UID:38277b0e8878@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261007T164500
-DTEND;TZID=Europe/Paris:20261007T184500
-SUMMARY:Visite de la maison de la Conversation
-DESCRIPTION:Organisé par Maison de la Conversation — 🏠 Visite guidée
-  de la maison de la ConversationChaque 1ᵉʳ mercredi du mois\, à 16h45\
- , poussez la porte de la maison de la Conversation pour une visite des lie
- ux avec un membre de\nhttps://chiche.makesense.org/events/e/visite-de-la-m
- aison-de-la-conversation-6aaa8ce419fd1c000883dc26
+UID:8ad46f1fceaa@paris-academique
+DTSTAMP:20261008T111847Z
+DTSTART;TZID=Europe/Paris:20261012T193000
+DTEND;TZID=Europe/Paris:20261012T213000
+SUMMARY:Workshop Capoeira Angola
+DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
+  capoeira Angola\, un art martial afro-brésilien qui allie résistance\, 
+ gestuelle et culture.Retrouvez-nous pour une pratique ancestrale qui se jo
+ ue près du sol. À travers des mouvements lents\, fluides et stratégique
+ s\, accom\nhttps://chiche.makesense.org/events/e/workshop-capoeira-angola-
+ 6aac09d519fd1c00088da98b
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/visite-de-la-maison-de-la-convers
- ation-6aaa8ce419fd1c000883dc26
-END:VEVENT
-BEGIN:VEVENT
-UID:252be565ccee@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261007T170000
-DTEND;TZID=Europe/Paris:20261007T190000
-SUMMARY:Mais c'est quoi ce langage (inclusif) ?
-DESCRIPTION:Organisé par Maison de la Conversation — "L'écriture inclus
- ive" fait débat : beaucoup de gens en parlent mais les avis sont souvent 
- basés sur des idées préconçues plus que sur des fondements scientifiqu
- es\, linguistiques et historiques.Ce cycle de 4 ateliers propose d\nhttps:
- //chiche.makesense.org/events/e/mais-cest-quoi-ce-langage-inclusif-6aaa8df
- eca9188000758f362
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/mais-cest-quoi-ce-langage-inclusi
- f-6aaa8dfeca9188000758f362
-END:VEVENT
-BEGIN:VEVENT
-UID:f449ca7d8512@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261007T190000
-DTEND;TZID=Europe/Paris:20261007T220000
-SUMMARY:Cine-repas avec Andréa Le Guellec
-DESCRIPTION:Organisé par Maison de la Conversation — Cinédar vous invit
- e à découvrir les films d’Andréa Le Guellec et à discuter de son tra
- vail avec elle\, autour d’une dégustation de gelées.Lors du ciné-repa
- s\, les courts-métrages d’Andréa Le Guellec sont entrecoupés de momen
- ts de discussion e\nhttps://chiche.makesense.org/events/e/cine-repas-avec-
- andrea-le-guellec-6ab3f0b940a4b7000819d898
-LOCATION:10 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/cine-repas-avec-andrea-le-guellec
- -6ab3f0b940a4b7000819d898
-END:VEVENT
-BEGIN:VEVENT
-UID:90a3a8c17a4a@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261007T200000
-DTEND;TZID=Europe/Paris:20261007T220000
-SUMMARY:Mouvement organique
-DESCRIPTION:Organisé par Maison de la Conversation — Dans la vie de tous
-  les jours\, nous utilisons notre corps de façon mécanique\, sans penser
-  à son état.Cet atelier est une invitation à se connecter et à communi
- quer avec notre corps par le biais d'une danse instinctive et à explorer 
- avec cur\nhttps://chiche.makesense.org/events/e/mouvement-organique-6abbad
- 8934634e0007e43fc4
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/mouvement-organique-6abbad8934634
- e0007e43fc4
+URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09d5
+ 19fd1c00088da98b
 END:VEVENT
 END:VCALENDAR

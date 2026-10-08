@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4d98091368a7@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261008T200000
 DTEND;TZID=Europe/Paris:20261008T213000
 SUMMARY:Spectacle de Danse - As we are
@@ -39,7 +39,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qwuY
 END:VEVENT
 BEGIN:VEVENT
 UID:0f1b16416d34@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261010T100000
 DTEND;TZID=Europe/Paris:20261010T153000
 SUMMARY:Festival Pop & Psy - à l'occasion de la journée de la santé ment
@@ -47,14 +47,14 @@ SUMMARY:Festival Pop & Psy - à l'occasion de la journée de la santé ment
 DESCRIPTION:🧠✨ On t’emmène au Festival Pop & Psy ! Un festival qui 
  permet de s’informer\, réfléchir\, discuter… sans que ça ressemble 
  à un cours ! 😄\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?c
- id=701IV00001otrGA&id=a1NIV00000Bkn2b&base=base6
+ id=701IV00001otrGA&id=a1NIV00000Bkn2b&base=base4&form=jeune
 LOCATION:Paris
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001otrG
- A&id=a1NIV00000Bkn2b&base=base6
+ A&id=a1NIV00000Bkn2b&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:cdbef013eb86@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261012T180000
 DTEND;TZID=Europe/Paris:20261012T193000
 SUMMARY:Webinaire : rencontre de Valérie Seguy\, marraine DEMA1N+STEM
@@ -62,14 +62,15 @@ DESCRIPTION:✨ Une rencontre à ne pas manquer ! Viens échanger avec notr
  e marraine\, Valérie Seguy du programme de mentorat STEM 💜 Au programm
  e : son parcours\, ses déclics\, les coulisses de sa carrière et 5 conse
  ils pour oser saisir les opportunités 🚀\nhttps://article1.my.salesforc
- e-sites.com/AG_VFP_Quiz?cid=701IV00001qH9lE&id=a1NIV00000Bwhr3&base=base6
+ e-sites.com/AG_VFP_Quiz?cid=701IV00001qH9lE&id=a1NIV00000Bwhr3&base=base4&
+ form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qH9l
- E&id=a1NIV00000Bwhr3&base=base6
+ E&id=a1NIV00000Bwhr3&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:ee454c2e4d8a@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261012T183000
 DTEND;TZID=Europe/Paris:20261012T200000
 SUMMARY:WEBINAIRE LINKEDIN : DEVELOPPER SON RESEAU PRO
@@ -77,28 +78,28 @@ DESCRIPTION:Au cours de ce webinaire\, découvrez comment utiliser LinkedIn
   de manière stratégique pour élargir votre réseau professionnel\, valo
  riser votre profil et entrer en contact avec les bonnes personnes\, sans d
  émarche commerciale intrusive.\nhttps://article1.my.salesforce-sites.com/
- AG_VFP_Quiz?cid=701IV00001mXduY&id=a1NIV00000BSSuH&base=base6
+ AG_VFP_Quiz?cid=701IV00001mXduY&id=a1NIV00000BSSuH&base=base4&form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXdu
- Y&id=a1NIV00000BSSuH&base=base6
+ Y&id=a1NIV00000BSSuH&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:f8ae1b7ffcd2@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261014T183000
 DTEND;TZID=Europe/Paris:20261014T223000
 SUMMARY:Apéro de rentrée 🎉
 DESCRIPTION:La rentrée approche\, et nous avons hâte de vous retrouver po
  ur l’événement incontournable de l’année : l’Apéro de rentrée !
  \nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWDf
- &id=a1NIV00000BUvH3&base=base6
+ &id=a1NIV00000BUvH3&base=base4&form=jeune
 LOCATION:Ile-de-France
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWD
- f&id=a1NIV00000BUvH3&base=base6
+ f&id=a1NIV00000BUvH3&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:0f3b6adaff8a@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261021T140000
 DTEND;TZID=Europe/Paris:20261021T170000
 SUMMARY:🚀 Challenge ton futur ! - avec Allianz
@@ -106,14 +107,30 @@ DESCRIPTION:Challenge ton futur 21 octobre 2026 avec Allianz 3 défis pour
  prendre une longueur d'avance dans la vie pro : Money : tes réflexes fina
  nciers LinkedIn : challenge ton profil Network : à la rencontre des pros\
  nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8vA&
- id=a1NIV00000BwBRN&base=base6
+ id=a1NIV00000BwBRN&base=base4&form=jeune
 LOCATION:Ile-de-France
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8v
- A&id=a1NIV00000BwBRN&base=base6
+ A&id=a1NIV00000BwBRN&base=base4&form=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:dc447b7cfae2@paris-academique
+DTSTAMP:20261008T111847Z
+DTSTART;TZID=Europe/Paris:20261028T183000
+DTEND;TZID=Europe/Paris:20261028T213000
+SUMMARY:Soirée des métiers : Cybersécurité & IA - KYNDRYL
+DESCRIPTION:Viens assister à notre première édition de la soirée des m
+ étiers : Cybersécurité & IA le jeudi 22 octobre 2026 à partir de 18h30
+  au siège social de KYNDRYL à la Défense ! Rencontres avec des professi
+ onnels du métier en Cybersécurité & IA.\nhttps://article1.my.salesforce
+ -sites.com/AG_VFP_Quiz?cid=701IV00001mEoNR&id=a1NIV000009RgXR&base=base4&f
+ orm=jeune
+LOCATION:Courbevoie
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEoN
+ R&id=a1NIV000009RgXR&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:cf8f5e734dba@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261126T180000
 DTEND;TZID=Europe/Paris:20261126T190000
 SUMMARY:National - Webinaire Agir pour le climat
@@ -122,28 +139,28 @@ DESCRIPTION:🔥 Participe à notre webinaire gratuit sur le climat\, pour
  duelle et surtout collective Comment transformer l’éco-anxiété en pou
  voir d’agir Des ressources concrètes pour agir\nhttps://article1.my.sal
  esforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vXN&id=a1NIV0000098qCL&base=
- base6
+ base4&form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vX
- N&id=a1NIV0000098qCL&base=base6
+ N&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:50b2a4b2635f@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261202T180000
 DTEND;TZID=Europe/Paris:20261202T190000
 SUMMARY:Ready set go
 DESCRIPTION:Bienvenue dans le programme DEMAIN1 + STEM. Cette réunion en v
  isio te permettra d'avoir toutes les informations dont tu as besoin.\nhttp
  s://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r1ULI&id=a1
- NIV0000098qCL&base=base6
+ NIV0000098qCL&base=base4&form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r1UL
- I&id=a1NIV0000098qCL&base=base6
+ I&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:f5e606b1c9e0@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:Webinaire Admissions HEC
@@ -152,63 +169,63 @@ DESCRIPTION:HEC Paris ouvre un accès exceptionnel à son Master in Managem
  sitaires de candidater directement à l’oral du Round 3 des admissions\,
   sans passer par les épreuves écrites du concours.\nhttps://article1.my.
  salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001owt3r&id=a1NIV0000098qCL&ba
- se=base6
+ se=base4&form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001owt3
- r&id=a1NIV0000098qCL&base=base6
+ r&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:112704b18e40@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20270114T183000
 DTEND;TZID=Europe/Paris:20270114T193000
 SUMMARY:Webinaire Gestion de Stress Session 1
 DESCRIPTION:Réussite des études · Etudiants\nhttps://article1.my.salesfo
  rce-sites.com/AG_VFP_Quiz?cid=701IV00001n0wyZ&id=a1NIV0000098qCL&base=base
- 6
+ 4&form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n0wy
- Z&id=a1NIV0000098qCL&base=base6
+ Z&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:cb33c13ece47@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20270121T183000
 DTEND;TZID=Europe/Paris:20270121T193000
 SUMMARY:Webinaire Gestion de stress Session 2
 DESCRIPTION:Réussite des études · Etudiants\nhttps://article1.my.salesfo
  rce-sites.com/AG_VFP_Quiz?cid=701IV00001n1kH0&id=a1NIV0000098qCL&base=base
- 6
+ 4&form=jeune
 LOCATION:National
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1kH
- 0&id=a1NIV0000098qCL&base=base6
+ 0&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:4c89c5d7d96a@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20270203T180000
 DTEND;TZID=Europe/Paris:20270203T190000
 SUMMARY:Ready set go
 DESCRIPTION:Bienvenue dans le programme DEMAIN1 + STEM. Cette réunion en v
  isio te permettra d'avoir toutes les informations dont tu as besoin.\nhttp
  s://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r25ZG&id=a1
- NIV0000098qCL&base=base6
+ NIV0000098qCL&base=base4&form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r25Z
- G&id=a1NIV0000098qCL&base=base6
+ G&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:39b2174729ab@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20270331T180000
 DTEND;TZID=Europe/Paris:20270331T190000
 SUMMARY:Ready set go
 DESCRIPTION:Bienvenue dans le programme DEMAIN1 + STEM. Cette réunion en v
  isio te permettra d'avoir toutes les informations dont tu as besoin.\nhttp
  s://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r12Ln&id=a1
- NIV0000098qCL&base=base6
+ NIV0000098qCL&base=base4&form=jeune
 LOCATION:En ligne
 URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r12L
- n&id=a1NIV0000098qCL&base=base6
+ n&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 END:VCALENDAR

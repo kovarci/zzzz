@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:8d271c592140@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261007T151500
-DTEND;TZID=Europe/Paris:20261007T163000
-SUMMARY:Gravitational Sommerfeld Effects: Framework and Applications
-DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) S
- ommerfeld effects describe long-distance corrections to radiation emitted 
- by a short-distance source. They play an important role in atomic physics 
- and dark matter phenomenology\, but the same mechanism also arises in grav
- itational-wave radiation from compact binaries. In this talk\, I will deve
- lop a systematic framework for…\nhttps://indico.math.cnrs.fr/event/17466
- /
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17466/
-END:VEVENT
-BEGIN:VEVENT
 UID:7ed38ea8f514@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261008T110000
 DTEND;TZID=Europe/Paris:20261008T123000
 SUMMARY:On “Siegel Domains” in p-adic Period Spaces
@@ -57,7 +41,7 @@ URL:https://indico.math.cnrs.fr/event/17331/
 END:VEVENT
 BEGIN:VEVENT
 UID:841055aba11c@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261009T140000
 DTEND;TZID=Europe/Paris:20261009T150000
 SUMMARY:Maximal functions\, Nikodym sets and local smoothing estimates
@@ -73,7 +57,7 @@ URL:https://indico.math.cnrs.fr/event/17508/
 END:VEVENT
 BEGIN:VEVENT
 UID:513576072690@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261012T090000
 DTEND;TZID=Europe/Paris:20261012T110000
 SUMMARY:The Pentagram Map and Ramifications
@@ -89,7 +73,7 @@ URL:https://indico.math.cnrs.fr/event/17361/
 END:VEVENT
 BEGIN:VEVENT
 UID:7531a84d6e98@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261014T110000
 DTEND;TZID=Europe/Paris:20261014T121500
 SUMMARY:Horizon flux-balance laws in the multiscale perturbation
@@ -105,7 +89,7 @@ URL:https://indico.math.cnrs.fr/event/17505/
 END:VEVENT
 BEGIN:VEVENT
 UID:ff5f3556d13a@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261016T144500
 DTEND;TZID=Europe/Paris:20261016T161500
 SUMMARY:The Doubly Conformal Dispersion Relation
@@ -121,7 +105,7 @@ URL:https://indico.math.cnrs.fr/event/17474/
 END:VEVENT
 BEGIN:VEVENT
 UID:18975d08334d@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261019T143000
 DTEND;TZID=Europe/Paris:20261019T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -137,7 +121,7 @@ URL:https://indico.math.cnrs.fr/event/17105/
 END:VEVENT
 BEGIN:VEVENT
 UID:f88d492659c6@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261021T173000
 DTEND;TZID=Europe/Paris:20261021T203000
 SUMMARY:Conférence de Stéphanie Debette\, « Santé cérébrale\, défi s
@@ -154,7 +138,7 @@ URL:https://indico.math.cnrs.fr/event/16581/
 END:VEVENT
 BEGIN:VEVENT
 UID:2b34d5802175@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261022T110000
 DTEND;TZID=Europe/Paris:20261022T123000
 SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
@@ -171,7 +155,7 @@ URL:https://indico.math.cnrs.fr/event/17461/
 END:VEVENT
 BEGIN:VEVENT
 UID:629e6be59db5@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261022T143000
 DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -187,7 +171,7 @@ URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -203,7 +187,7 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -219,7 +203,7 @@ URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -235,7 +219,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes

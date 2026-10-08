@@ -24,52 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:07da030e3682@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261006T140000
-DTEND;TZID=Europe/Paris:20261006T160000
-SUMMARY:Comment est née la carte géologique du rift d'Asal
-DESCRIPTION:Séminaires Planétologie et Sciences Spatiales\nhttps://www.ip
- gp.fr/actus-et-agenda/agenda/seminaires/comment-est-nee-la-carte-geologiqu
- e-du-rift-dasal/
-LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/comment-est-nee-l
- a-carte-geologique-du-rift-dasal/
-END:VEVENT
-BEGIN:VEVENT
-UID:f51d9099e8b8@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261006T150000
-DTEND;TZID=Europe/Paris:20261006T170000
-SUMMARY:Tracing Atmospheric Oxidation from the Present to the Deep Past Usi
- ng Oxygen and Sulfur Isotope Anomalies
-DESCRIPTION:Séminaires thème Origines\nhttps://www.ipgp.fr/actus-et-agend
- a/agenda/seminaires/tracing-atmospheric-oxidation-from-the-present-to-the-
- deep-past-using-oxygen-and-sulfur-isotope-anomalies/
-LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/tracing-atmospher
- ic-oxidation-from-the-present-to-the-deep-past-using-oxygen-and-sulfur-iso
- tope-anomalies/
-END:VEVENT
-BEGIN:VEVENT
-UID:03854c5ed5ea@paris-academique
-DTSTAMP:20261007T164751Z
-DTSTART;TZID=Europe/Paris:20261006T160000
-DTEND;TZID=Europe/Paris:20261006T180000
-SUMMARY:Inelastic Processes in the Source Volume Modulates High-Frequency G
- round Motions by Coupling Static Stress Drop and Fracture Energy
-DESCRIPTION:Séminaires de Sismologie\nhttps://www.ipgp.fr/actus-et-agenda/
- agenda/seminaires/inelastic-processes-in-the-source-volume-modulates-high-
- frequency-ground-motions-by-coupling-static-stress-drop-and-fracture-energ
- y/
-LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/inelastic-process
- es-in-the-source-volume-modulates-high-frequency-ground-motions-by-couplin
- g-static-stress-drop-and-fracture-energy/
-END:VEVENT
-BEGIN:VEVENT
 UID:d50b6be27d66@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261013T110000
 DTEND;TZID=Europe/Paris:20261013T130000
 SUMMARY:The Organisation of Barchan Dune Systems Across Scales
@@ -82,7 +38,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/the-organisation-
 END:VEVENT
 BEGIN:VEVENT
 UID:27e60384985c@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261013T150000
 DTEND;TZID=Europe/Paris:20261013T170000
 SUMMARY:Probing fault hydromechanics through physics-based modeling of eart
@@ -96,7 +52,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/probing-fault-hyd
 END:VEVENT
 BEGIN:VEVENT
 UID:709692a6cf7d@paris-academique
-DTSTAMP:20261007T164751Z
+DTSTAMP:20261008T111847Z
 DTSTART;TZID=Europe/Paris:20261014T110000
 DTEND;TZID=Europe/Paris:20261014T130000
 SUMMARY:Dense mantle flow periodically spaced beneath ocean basins
