@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:00419aa44d4f@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261008T093000
 DTEND;TZID=Europe/Paris:20261008T113000
 SUMMARY:Autour du livre Éclats du romantisme de Raymond Bellour
@@ -36,35 +36,8 @@ URL:https://www.ehess.fr/jcms/279420_JEvent/fr/autour-du-livre-eclats-du-ro
  mantisme-de-raymond-bellour
 END:VEVENT
 BEGIN:VEVENT
-UID:37005af812f3@paris-academique
-DTSTAMP:20261008T111847Z
-DTSTART;TZID=Europe/Paris:20261008T093000
-DTEND;TZID=Europe/Paris:20261008T113000
-SUMMARY:Journées de rentrée et d'intégration du 22 septembre au 8 octobr
- e 2026
-DESCRIPTION:Vie étudiante\nhttps://www.ehess.fr/jcms/242380_JEvent/fr/jour
- nees-de-rentree-et-d-integration-du-22-septembre-au-8-octobre-2026
-LOCATION:EHESS\, Campus Condorcet\, 2 cours des Humanités\, Aubervilliers
-URL:https://www.ehess.fr/jcms/242380_JEvent/fr/journees-de-rentree-et-d-int
- egration-du-22-septembre-au-8-octobre-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:b02fdba57ade@paris-academique
-DTSTAMP:20261008T111847Z
-DTSTART;TZID=Europe/Paris:20261012T090000
-DTEND;TZID=Europe/Paris:20261012T110000
-SUMMARY:Articuler étude de la sexualité et de la religion : socialisation
- s\, institutions et politisations
-DESCRIPTION:Journée d'études\nhttps://www.ehess.fr/jcms/278053_JEvent/fr/
- articuler-etude-de-la-sexualite-et-de-la-religion-socialisations-instituti
- ons-et-politisations
-LOCATION:EHESS\, Campus Condorcet\, 2 cours des Humanités\, Aubervilliers
-URL:https://www.ehess.fr/jcms/278053_JEvent/fr/articuler-etude-de-la-sexual
- ite-et-de-la-religion-socialisations-institutions-et-politisations
-END:VEVENT
-BEGIN:VEVENT
 UID:dbddbe836a9e@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261012T140000
 DTEND;TZID=Europe/Paris:20261012T160000
 SUMMARY:Réunions d'information "Reprise d'études"
@@ -76,7 +49,7 @@ URL:https://www.ehess.fr/jcms/37175_JEvent/fr/reunions-d-information-repris
 END:VEVENT
 BEGIN:VEVENT
 UID:0f093111b7b2@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261015T090000
 DTEND;TZID=Europe/Paris:20261015T110000
 SUMMARY:Les violences en milieux éducatifs : quelle histoire\, quelles act
@@ -90,7 +63,7 @@ URL:https://www.ehess.fr/jcms/268470_JEvent/fr/les-violences-en-milieux-edu
 END:VEVENT
 BEGIN:VEVENT
 UID:0bab98429f9e@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261016T100000
 DTEND;TZID=Europe/Paris:20261016T120000
 SUMMARY:Institution und Technik. Das Subjekt und die Frage der Autonomie in
@@ -104,8 +77,20 @@ URL:https://www.ehess.fr/jcms/281612_JEvent/fr/institution-und-technik-das-
  er-kunstlicher-intelligenz
 END:VEVENT
 BEGIN:VEVENT
+UID:555bc2d816ba@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;TZID=Europe/Paris:20261020T090000
+DTEND;TZID=Europe/Paris:20261020T110000
+SUMMARY:Petits-déjeuners de la vie étudiante 2026-2027
+DESCRIPTION:Vie étudiante\nhttps://www.ehess.fr/jcms/291798_JEvent/fr/peti
+ ts-dejeuners-de-la-vie-etudiante-2026-2027
+LOCATION:EHESS\, Campus Condorcet\, 2 cours des Humanités\, Aubervilliers
+URL:https://www.ehess.fr/jcms/291798_JEvent/fr/petits-dejeuners-de-la-vie-e
+ tudiante-2026-2027
+END:VEVENT
+BEGIN:VEVENT
 UID:e67f8476334d@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:La psychologisation des violences faites aux femmes

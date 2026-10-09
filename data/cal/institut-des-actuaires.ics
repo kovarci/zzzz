@@ -24,19 +24,21 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:bb84a920ed21@paris-academique
-DTSTAMP:20261008T111847Z
-DTSTART;TZID=Europe/Paris:20261008T170000
-DTEND;TZID=Europe/Paris:20261008T190000
-SUMMARY:SGT 100% Santé
+UID:5c51acd8d0d1@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;TZID=Europe/Paris:20261012T113000
+DTEND;TZID=Europe/Paris:20261012T133000
+SUMMARY:SGT Prévoyance - Nouveaux facteurs de risque en arrêt de travail
 DESCRIPTION:Réunion réservée aux membres du groupe\nhttps://www.institut
- desactuaires.com/agenda/sgt-100-sante-8043
+ desactuaires.com/agenda/sgt-prevoyance-nouveaux-facteurs-de-risque-en-arre
+ t-de-travail-7982
 LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/sgt-100-sante-8043
+URL:https://www.institutdesactuaires.com/agenda/sgt-prevoyance-nouveaux-fac
+ teurs-de-risque-en-arret-de-travail-7982
 END:VEVENT
 BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -48,7 +50,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026

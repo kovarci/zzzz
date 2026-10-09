@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:d9868e40d3d3@paris-academique
-DTSTAMP:20261008T111847Z
-DTSTART;TZID=Europe/Paris:20261008T183000
-DTEND;TZID=Europe/Paris:20261008T203000
-SUMMARY:Quel État voulons-nous financer ?
-DESCRIPTION:Économie / social\nhttps://www.jean-jaures.org/agenda/quel-eta
- t-voulons-nous-financer/
-LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
-URL:https://www.jean-jaures.org/agenda/quel-etat-voulons-nous-financer/
-END:VEVENT
-BEGIN:VEVENT
 UID:0dec5898b6c7@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261012T183000
 DTEND;TZID=Europe/Paris:20261012T203000
 SUMMARY:Où faire campagne pour comprendre le pays ?

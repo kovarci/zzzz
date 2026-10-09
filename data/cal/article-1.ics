@@ -24,22 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:4d98091368a7@paris-academique
-DTSTAMP:20261008T111847Z
-DTSTART;TZID=Europe/Paris:20261008T200000
-DTEND;TZID=Europe/Paris:20261008T213000
-SUMMARY:Spectacle de Danse - As we are
-DESCRIPTION:Envie de découvrir un spectacle de danse autour des héritages
-  et des imaginaires des danses africaines ? On vous emmène voir AS WE ARE
-  ! ✨\nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV0000
- 1qwuY4&id=a1NIV00000C17QQ&base=base6
-LOCATION:Ile-de-France
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qwuY
- 4&id=a1NIV00000C17QQ&base=base6
-END:VEVENT
-BEGIN:VEVENT
 UID:0f1b16416d34@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261010T100000
 DTEND;TZID=Europe/Paris:20261010T153000
 SUMMARY:Festival Pop & Psy - à l'occasion de la journée de la santé ment
@@ -54,7 +40,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001otrG
 END:VEVENT
 BEGIN:VEVENT
 UID:cdbef013eb86@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261012T180000
 DTEND;TZID=Europe/Paris:20261012T193000
 SUMMARY:Webinaire : rencontre de Valérie Seguy\, marraine DEMA1N+STEM
@@ -70,7 +56,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qH9l
 END:VEVENT
 BEGIN:VEVENT
 UID:ee454c2e4d8a@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261012T183000
 DTEND;TZID=Europe/Paris:20261012T200000
 SUMMARY:WEBINAIRE LINKEDIN : DEVELOPPER SON RESEAU PRO
@@ -85,7 +71,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mXdu
 END:VEVENT
 BEGIN:VEVENT
 UID:f8ae1b7ffcd2@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261014T183000
 DTEND;TZID=Europe/Paris:20261014T223000
 SUMMARY:Apéro de rentrée 🎉
@@ -99,7 +85,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mdWD
 END:VEVENT
 BEGIN:VEVENT
 UID:0f3b6adaff8a@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261021T140000
 DTEND;TZID=Europe/Paris:20261021T170000
 SUMMARY:🚀 Challenge ton futur ! - avec Allianz
@@ -114,7 +100,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8v
 END:VEVENT
 BEGIN:VEVENT
 UID:dc447b7cfae2@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261028T183000
 DTEND;TZID=Europe/Paris:20261028T213000
 SUMMARY:Soirée des métiers : Cybersécurité & IA - KYNDRYL
@@ -130,7 +116,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEoN
 END:VEVENT
 BEGIN:VEVENT
 UID:cf8f5e734dba@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261126T180000
 DTEND;TZID=Europe/Paris:20261126T190000
 SUMMARY:National - Webinaire Agir pour le climat
@@ -146,7 +132,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vX
 END:VEVENT
 BEGIN:VEVENT
 UID:50b2a4b2635f@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261202T180000
 DTEND;TZID=Europe/Paris:20261202T190000
 SUMMARY:Ready set go
@@ -160,7 +146,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r1UL
 END:VEVENT
 BEGIN:VEVENT
 UID:f5e606b1c9e0@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:Webinaire Admissions HEC
@@ -175,8 +161,36 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001owt3
  r&id=a1NIV0000098qCL&base=base4&form=jeune
 END:VEVENT
 BEGIN:VEVENT
+UID:f5a3e257200c@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;TZID=Europe/Paris:20270104T180000
+DTEND;TZID=Europe/Paris:20270104T193000
+SUMMARY:BOOST MON CV
+DESCRIPTION:🔥 Prêt à booster ton avenir ? Ton CV est ta carte d’iden
+ tité professionnelle. C’est celui qui va t'ouvrir les portes des stages
+ \, des alternances et des premiers emplois.\nhttps://article1.my.salesforc
+ e-sites.com/AG_VFP_Quiz?cid=701IV00001pAsPY&id=a1NIV000009fCkn&base=base4&
+ form=jeune
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
+ Y&id=a1NIV000009fCkn&base=base4&form=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:be179ab07ef3@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;TZID=Europe/Paris:20270113T180000
+DTEND;TZID=Europe/Paris:20270113T193000
+SUMMARY:BOOST MY RESUME
+DESCRIPTION:Boost mon CV · Etudiants\nhttps://article1.my.salesforce-sites
+ .com/AG_VFP_Quiz?cid=701IV00001pAsPa&id=a1NIV00000C3NPN&base=base4&form=je
+ une
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
+ a&id=a1NIV00000C3NPN&base=base4&form=jeune
+END:VEVENT
+BEGIN:VEVENT
 UID:112704b18e40@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20270114T183000
 DTEND;TZID=Europe/Paris:20270114T193000
 SUMMARY:Webinaire Gestion de Stress Session 1
@@ -189,7 +203,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n0wy
 END:VEVENT
 BEGIN:VEVENT
 UID:cb33c13ece47@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20270121T183000
 DTEND;TZID=Europe/Paris:20270121T193000
 SUMMARY:Webinaire Gestion de stress Session 2
@@ -202,7 +216,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1kH
 END:VEVENT
 BEGIN:VEVENT
 UID:4c89c5d7d96a@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20270203T180000
 DTEND;TZID=Europe/Paris:20270203T190000
 SUMMARY:Ready set go
@@ -216,7 +230,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r25Z
 END:VEVENT
 BEGIN:VEVENT
 UID:39b2174729ab@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20270331T180000
 DTEND;TZID=Europe/Paris:20270331T190000
 SUMMARY:Ready set go

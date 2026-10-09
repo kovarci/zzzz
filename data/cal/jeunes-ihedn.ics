@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:92f31bf91a19@paris-academique
-DTSTAMP:20261008T111847Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
-SUMMARY:Conférence – QUI OSE GAGNE : la méthode des Forces Spéciales p
- our vaincre l’incertitude
-DESCRIPTION:Conférence\nhttps://www.jeunes-ihedn.org/events/conference-qui
- -ose-gagne-la-methode-des-forces-speciales-pour-vaincre-lincertitude/
-LOCATION:Paris
-URL:https://www.jeunes-ihedn.org/events/conference-qui-ose-gagne-la-methode
- -des-forces-speciales-pour-vaincre-lincertitude/
-END:VEVENT
-BEGIN:VEVENT
 UID:dd7f4247fe83@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Popote
@@ -48,7 +35,7 @@ URL:https://www.jeunes-ihedn.org/events/popote/
 END:VEVENT
 BEGIN:VEVENT
 UID:d48c5fc0b27b@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Conférence avec Raphaël Schellenberger sur l’électrification d

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:d50b6be27d66@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261013T110000
 DTEND;TZID=Europe/Paris:20261013T130000
 SUMMARY:The Organisation of Barchan Dune Systems Across Scales
@@ -38,7 +38,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/the-organisation-
 END:VEVENT
 BEGIN:VEVENT
 UID:27e60384985c@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261013T150000
 DTEND;TZID=Europe/Paris:20261013T170000
 SUMMARY:Probing fault hydromechanics through physics-based modeling of eart
@@ -52,7 +52,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/probing-fault-hyd
 END:VEVENT
 BEGIN:VEVENT
 UID:709692a6cf7d@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261014T110000
 DTEND;TZID=Europe/Paris:20261014T130000
 SUMMARY:Dense mantle flow periodically spaced beneath ocean basins
@@ -60,5 +60,19 @@ DESCRIPTION:Séminaires Géosciences Marines\nhttps://www.ipgp.fr/actus-et-
  agenda/agenda/seminaires/tba-8/
 LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
 URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/tba-8/
+END:VEVENT
+BEGIN:VEVENT
+UID:debaa50dfbb1@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;TZID=Europe/Paris:20261028T110000
+DTEND;TZID=Europe/Paris:20261028T130000
+SUMMARY:A seafloor spreading event captured by in-situ seismo-geodetic moni
+ toring
+DESCRIPTION:Séminaires Géosciences Marines\nhttps://www.ipgp.fr/actus-et-
+ agenda/agenda/seminaires/a-seafloor-spreading-event-captured-by-in-situ-se
+ ismo-geodetic-monitoring/
+LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/a-seafloor-spread
+ ing-event-captured-by-in-situ-seismo-geodetic-monitoring/
 END:VEVENT
 END:VCALENDAR

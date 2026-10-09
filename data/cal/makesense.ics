@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4718b1cfb302@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
 SUMMARY:Grande Braderie Solidaire avec Emmaüs Défi !
@@ -40,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/grande-braderie-solidaire-avec-em
 END:VEVENT
 BEGIN:VEVENT
 UID:66adfc30cf90@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261010T100000
 DTEND;TZID=Europe/Paris:20261010T190000
 SUMMARY:Vente au kilo solidaire proposée par l'association Grand Paris col
@@ -57,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/vente-au-kilo-solidaire-proposee-
 END:VEVENT
 BEGIN:VEVENT
 UID:e81641640440@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Magm'à Paris #8 🌋 Le programme en présentiel sur les oppressio
@@ -74,7 +74,7 @@ URL:https://chiche.makesense.org/events/e/magma-paris-8-le-programme-en-pre
 END:VEVENT
 BEGIN:VEVENT
 UID:c4aa98c4fad1@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:2 collines\, 1000 chemins : une plongée dans les parcours d'engage
@@ -91,7 +91,7 @@ URL:https://chiche.makesense.org/events/e/2-collines-1000-chemins-une-plong
 END:VEVENT
 BEGIN:VEVENT
 UID:8ad46f1fceaa@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261012T193000
 DTEND;TZID=Europe/Paris:20261012T213000
 SUMMARY:Workshop Capoeira Angola
@@ -104,5 +104,70 @@ DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09d5
  19fd1c00088da98b
+END:VEVENT
+BEGIN:VEVENT
+UID:1fd291148d6c@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:"Ce qui nous relie"\, rencontre spectacle avec Boris Cyrulnik et Pa
+ trick Scheyder
+DESCRIPTION:Organisé par Hélène Binet — " Ce qui nous relie"La crise 
+ écologique n'est-elle pas aussi une crise du lien : lien à soi-même\, l
+ ien à l'altérité\, lien aux autres vivants humains et non-humains ? Et 
+ que serait une écologie sans Amour ? Boris Cyrulnik et\nhttps://chiche.ma
+ kesense.org/events/e/ce-qui-nous-relie-rencontre-spectacle-avec-boris-cyru
+ lnik-et-patrick-scheyder-6aad345619fd1c0008952adc
+LOCATION:3bis Rue Papin\, 75003 Paris\, France
+URL:https://chiche.makesense.org/events/e/ce-qui-nous-relie-rencontre-spect
+ acle-avec-boris-cyrulnik-et-patrick-scheyder-6aad345619fd1c0008952adc
+END:VEVENT
+BEGIN:VEVENT
+UID:511b0b722bf4@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Politique Non Violente
+DESCRIPTION:Organisé par Maison de la Conversation — Les ateliers sont d
+ es cercles de parole pour échanger autour des questions de société et d
+ e politique. Chaque fois\, un sujet en lien avec l’actualité est propos
+ é tout en restant ouvert (on peut aborder d’autres sujets).Nous utili\n
+ https://chiche.makesense.org/events/e/politique-non-violente-6aaa9a56ca918
+ 80007595750
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/politique-non-violente-6aaa9a56ca
+ 91880007595750
+END:VEVENT
+BEGIN:VEVENT
+UID:df85965edd98@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;TZID=Europe/Paris:20261013T180000
+DTEND;TZID=Europe/Paris:20261013T200000
+SUMMARY:Laboratoire des conflictualités
+DESCRIPTION:Organisé par Maison de la Conversation — Appel à participat
+ ion : laboratoire de 10 séances\, au rythme d’une séance par mois\, su
+ r la notion de conflictualité dans le cadre d’une recherche-création m
+ enée par Lena Karson.Ces séances seront un terrain d’expériences ent\
+ nhttps://chiche.makesense.org/events/e/laboratoire-des-conflictualites-6aa
+ a9bafca91880007595f22
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/laboratoire-des-conflictualites-6
+ aaa9bafca91880007595f22
+END:VEVENT
+BEGIN:VEVENT
+UID:97aa5281a1f7@paris-academique
+DTSTAMP:20261009T111451Z
+DTSTART;TZID=Europe/Paris:20261013T203000
+DTEND;TZID=Europe/Paris:20261013T223000
+SUMMARY:FABRICE BONNIFET : Cinévénement du film "THE COST OF GROWTH" au G
+ rand Rex !
+DESCRIPTION:Organisé par Anne-Lou de Maillard — Une projection pas comme
+  les autres au Grand Rex le mardi 13 octobre à 20h30 en présence de Fabr
+ ice Bonnifet !Au programme de la soirée :\nhttps://chiche.makesense.org/e
+ vents/e/fabrice-bonnifet-cinevenement-du-film-the-cost-of-growth-au-grand-
+ rex-6a9947252701ed0007e4081d
+LOCATION:1 Bd Poissonnière\, 75002 Paris\, France
+URL:https://chiche.makesense.org/events/e/fabrice-bonnifet-cinevenement-du-
+ film-the-cost-of-growth-au-grand-rex-6a9947252701ed0007e4081d
 END:VEVENT
 END:VCALENDAR

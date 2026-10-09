@@ -24,23 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:34e1667d5e97@paris-academique
-DTSTAMP:20261008T111847Z
-DTSTART;TZID=Europe/Paris:20261007T083000
-DTEND;TZID=Europe/Paris:20261007T103000
-SUMMARY:Comment mobiliser l’épargne de long terme pour financer les entr
- eprises européennes ?
-DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
- me/evenements/comment-mobiliser-lepargne-de-long-terme-pour-financer-les-e
- ntreprises-europeennes
-LOCATION:Collège de France — Institut Louis Bachelier\, 28 place de la B
- ourse\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/comment-
- mobiliser-lepargne-de-long-terme-pour-financer-les-entreprises-europeennes
-END:VEVENT
-BEGIN:VEVENT
 UID:1c544f80cde7@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261008T160000
 DTEND;TZID=Europe/Paris:20261008T180000
 SUMMARY:Forum Immobilier & Finance
@@ -53,7 +38,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/forum-im
 END:VEVENT
 BEGIN:VEVENT
 UID:bcbbb9ee2e79@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261013T090000
 DTEND;TZID=Europe/Paris:20261013T110000
 SUMMARY:STABLECOINS : ENJEUX MONÉTAIRES ET RÉGLEMENTAIRES
@@ -66,7 +51,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/stableco
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5705ac1cc0@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261103T090000
 DTEND;TZID=Europe/Paris:20261103T110000
 SUMMARY:AM TECH DAY de l'AGEFI
@@ -79,7 +64,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-
 END:VEVENT
 BEGIN:VEVENT
 UID:3567d9421905@paris-academique
-DTSTAMP:20261008T111847Z
+DTSTAMP:20261009T111451Z
 DTSTART;TZID=Europe/Paris:20261104T090000
 DTEND;TZID=Europe/Paris:20261104T110000
 SUMMARY:Conférence : L’eau\, enjeu d’investissement stratégique et d
