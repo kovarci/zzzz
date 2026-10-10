@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:5c51acd8d0d1@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261012T113000
 DTEND;TZID=Europe/Paris:20261012T133000
 SUMMARY:SGT Prévoyance - Nouveaux facteurs de risque en arrêt de travail
@@ -37,8 +37,19 @@ URL:https://www.institutdesactuaires.com/agenda/sgt-prevoyance-nouveaux-fac
  teurs-de-risque-en-arret-de-travail-7982
 END:VEVENT
 BEGIN:VEVENT
+UID:4dcf5a2297a6@paris-academique
+DTSTAMP:20261010T102812Z
+DTSTART;TZID=Europe/Paris:20261012T130000
+DTEND;TZID=Europe/Paris:20261012T150000
+SUMMARY:Commission Vie - Epargne
+DESCRIPTION:Réunion réservée aux membres du groupe\nhttps://www.institut
+ desactuaires.com/agenda/commission-vie-epargne-8038
+LOCATION:Paris — lieu précisé sur la page de l'événement
+URL:https://www.institutdesactuaires.com/agenda/commission-vie-epargne-8038
+END:VEVENT
+BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -50,7 +61,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026

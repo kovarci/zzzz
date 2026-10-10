@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:841055aba11c@paris-academique
-DTSTAMP:20261010T080653Z
-DTSTART;TZID=Europe/Paris:20261009T140000
-DTEND;TZID=Europe/Paris:20261009T150000
-SUMMARY:Maximal functions\, Nikodym sets and local smoothing estimates
-DESCRIPTION:Séminaire d'Analyse I will discuss some recent works related t
- o maximal operators and Nikodym sets in the plane. Nikodym constructed a m
- easure-zero Borel set in the plane that contains a line segment passing th
- rough each point in the unit square. Fenton and Falconer asked whether a s
- imilar construction is possible when “lines through a point” are repla
- ced by ”circles with a prescribed center.”…\nhttps://indico.math.cnr
- s.fr/event/17508/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17508/
-END:VEVENT
-BEGIN:VEVENT
 UID:513576072690@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261012T090000
 DTEND;TZID=Europe/Paris:20261012T110000
 SUMMARY:The Pentagram Map and Ramifications
@@ -57,7 +41,7 @@ URL:https://indico.math.cnrs.fr/event/17361/
 END:VEVENT
 BEGIN:VEVENT
 UID:7531a84d6e98@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261014T110000
 DTEND;TZID=Europe/Paris:20261014T121500
 SUMMARY:Horizon flux-balance laws in the multiscale perturbation
@@ -73,7 +57,7 @@ URL:https://indico.math.cnrs.fr/event/17505/
 END:VEVENT
 BEGIN:VEVENT
 UID:ff5f3556d13a@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261016T144500
 DTEND;TZID=Europe/Paris:20261016T161500
 SUMMARY:The Doubly Conformal Dispersion Relation
@@ -89,7 +73,7 @@ URL:https://indico.math.cnrs.fr/event/17474/
 END:VEVENT
 BEGIN:VEVENT
 UID:18975d08334d@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261019T143000
 DTEND;TZID=Europe/Paris:20261019T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -105,7 +89,7 @@ URL:https://indico.math.cnrs.fr/event/17105/
 END:VEVENT
 BEGIN:VEVENT
 UID:f88d492659c6@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261021T173000
 DTEND;TZID=Europe/Paris:20261021T203000
 SUMMARY:Conférence de Stéphanie Debette\, « Santé cérébrale\, défi s
@@ -122,7 +106,7 @@ URL:https://indico.math.cnrs.fr/event/16581/
 END:VEVENT
 BEGIN:VEVENT
 UID:2b34d5802175@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261022T110000
 DTEND;TZID=Europe/Paris:20261022T123000
 SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
@@ -139,7 +123,7 @@ URL:https://indico.math.cnrs.fr/event/17461/
 END:VEVENT
 BEGIN:VEVENT
 UID:629e6be59db5@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261022T143000
 DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -155,7 +139,7 @@ URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -171,7 +155,7 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -187,7 +171,7 @@ URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -203,7 +187,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes

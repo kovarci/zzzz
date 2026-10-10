@@ -24,26 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:61149b95c0d3@paris-academique
-DTSTAMP:20261010T080653Z
-DTSTART;TZID=Europe/Paris:20261009T190000
-DTEND;TZID=Europe/Paris:20261009T230000
-SUMMARY:Soirée karaoké à la Barge vendredi 9 octobre !
-DESCRIPTION:🎤✨ Préparez vos plus belles chansons et venez donner de l
- a voix à La Barge ! Que vous soyez chanteur dans l’âme\, amateur de gr
- ands classiques ou simplement là pour passer un bon moment entre amis\, l
- e micro est à vous ! 🎶 Seul ou entre amis\, prenez le micro et faites 
- vibrer la Barge ! Que vous soyez une véritable star de la chanson ou un a
- mateur de refrains incontournables\, préparez-vous à passer…\nhttps://
- www.crous-paris.fr/evenement/soiree-karaoke-a-la-barge-vendredi-9-octobre/
-LOCATION:à la Barge du Crous de Paris\, Quai François Mauriac\, Port de l
- a Gare\, 75013 Paris
-URL:https://www.crous-paris.fr/evenement/soiree-karaoke-a-la-barge-vendredi
- -9-octobre/
-END:VEVENT
-BEGIN:VEVENT
 UID:a3da7bd530c8@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261010T140000
 DTEND;TZID=Europe/Paris:20261010T180000
 SUMMARY:Octobre Rose : le sport se mobilise avec le PUC
@@ -61,7 +43,7 @@ URL:https://www.crous-paris.fr/evenement/octobre-rose-le-sport-se-mobilise-
 END:VEVENT
 BEGIN:VEVENT
 UID:1ef813673f67@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261010T140000
 DTEND;TZID=Europe/Paris:20261010T180000
 SUMMARY:1 000 casques pour 1 000 vies
@@ -78,7 +60,7 @@ URL:https://www.crous-paris.fr/evenement/%f0%9f%9a%b2-1-000-casques-pour-1-
 END:VEVENT
 BEGIN:VEVENT
 UID:dacd24d3e7b2@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261014T160000
 DTEND;TZID=Europe/Paris:20261014T230000
 SUMMARY:Bienvenue à Paris
@@ -95,7 +77,7 @@ URL:https://www.crous-paris.fr/evenement/bienvenue-a-paris/
 END:VEVENT
 BEGIN:VEVENT
 UID:6d9b0bb0e8df@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261014T200000
 DTEND;TZID=Europe/Paris:20261014T233000
 SUMMARY:Beside festival

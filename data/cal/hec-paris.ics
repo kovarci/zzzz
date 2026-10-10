@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:d4b0672e11b6@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261013T094000
 DTEND;TZID=Europe/Paris:20261013T114000
 SUMMARY:Pay Equity Pressures and the Organization of AI Talent and Innovati
@@ -40,7 +40,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/pay-equity-press
 END:VEVENT
 BEGIN:VEVENT
 UID:a0f1099bcbee@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261013T120000
 DTEND;TZID=Europe/Paris:20261013T140000
 SUMMARY:S&O–Leadership Center lunch seminar
@@ -54,20 +54,21 @@ URL:https://www.hec.edu/fr/center-society-organizations-so/evenements/so-le
  adership-center-lunch-seminar
 END:VEVENT
 BEGIN:VEVENT
-UID:926733f75d45@paris-academique
-DTSTAMP:20261010T080653Z
+UID:cbc253dd0931@paris-academique
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261015T113000
 DTEND;TZID=Europe/Paris:20261015T133000
-SUMMARY:Séminaire de recherche HEC : Robert Marquez (UC Davis)
+SUMMARY:Technology Adoption and the Design of Incentives
 DESCRIPTION:Faculté et Recherche · Département: Finance Intervenant: Rob
  ert Marquez (UC Davis) Salle: T022\nhttps://www.hec.edu/fr/faculte-et-rech
- erche/evenements/tbc-0
+ erche/evenements/technology-adoption-and-design-incentives
 LOCATION:HEC Paris\, 1 rue de la Libération\, Jouy-en-Josas
-URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/tbc-0
+URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/technology-adopt
+ ion-and-design-incentives
 END:VEVENT
 BEGIN:VEVENT
 UID:0ff994a7390d@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261023T104500
 DTEND;TZID=Europe/Paris:20261023T124500
 SUMMARY:Jenny van Doorn - On campus - Room T004
@@ -81,7 +82,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/jenny-van-doorn-
 END:VEVENT
 BEGIN:VEVENT
 UID:ccf28081d5f4@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261110T094000
 DTEND;TZID=Europe/Paris:20261110T114000
 SUMMARY:Séminaire de recherche HEC : Nick Argyres (Wash University)
@@ -94,7 +95,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/nick-argyres
 END:VEVENT
 BEGIN:VEVENT
 UID:38611fc4719d@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261127T111500
 DTEND;TZID=Europe/Paris:20261127T131500
 SUMMARY:Pricing in the Age of AI (MIT Press)
@@ -108,7 +109,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/pricing-age-ai-m
 END:VEVENT
 BEGIN:VEVENT
 UID:a31bd09cbd56@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261203T094000
 DTEND;TZID=Europe/Paris:20261203T114000
 SUMMARY:Séminaire de recherche HEC : Kristina Mc Elheran (U. Toronto)
@@ -122,7 +123,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/kristina-mc-elhe
 END:VEVENT
 BEGIN:VEVENT
 UID:bc80c8c7829d@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261214T083000
 DTEND;TZID=Europe/Paris:20261214T103000
 SUMMARY:Conférence Droits Humains et Entreprises 2026

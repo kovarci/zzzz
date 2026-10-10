@@ -24,10 +24,27 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:694934a1c78c@paris-academique
+DTSTAMP:20261010T102812Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Une collecte solidaire pour les étudiants en précarité
+DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
+ limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
+ our soutenir les étudiants en situation de précarité. Les dons seront r
+ emis lors d’une distribution solidaire le jeudi 5 novembre\, à partir d
+ e 17 h 30. Ils permettront aussi d’alimenter le service d’aide sociale
+  de la Vie étudiante\, qui pourra constituer des kits…\nhttps://www.uni
+ v-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
+LOCATION:DAPS – Campus de Villetaneuse
+URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
+ s-en-precarite/
+END:VEVENT
+BEGIN:VEVENT
 UID:7aa3e470eb69@paris-academique
-DTSTAMP:20261010T080653Z
-DTSTART;TZID=Europe/Paris:20261009T120000
-DTEND;TZID=Europe/Paris:20261009T130000
+DTSTAMP:20261010T102812Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
 SUMMARY:[Médiation scientifique] La science autrement !
 DESCRIPTION:A l'occasion de la Fête de la Science 2026 sur les campus.Déc
  ouvrez comment les scientifiques abordent la question du "bien-manger" Le 
@@ -41,7 +58,7 @@ URL:https://www.univ-spn.fr/events/lascienceautrement-fetescience/
 END:VEVENT
 BEGIN:VEVENT
 UID:afd72a6cfb60@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261012T120000
 DTEND;TZID=Europe/Paris:20261012T130000
 SUMMARY:Étudiants internationaux : 5 journées pour prendre vos repères
@@ -59,7 +76,7 @@ URL:https://www.univ-spn.fr/events/etudiants-internationaux-5-journees-pour
 END:VEVENT
 BEGIN:VEVENT
 UID:67f045a7617f@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Erasmus Days
@@ -75,7 +92,7 @@ URL:https://www.univ-spn.fr/events/erasmus-days/
 END:VEVENT
 BEGIN:VEVENT
 UID:36d8c8644d08@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261013T120000
 DTEND;TZID=Europe/Paris:20261013T140000
 SUMMARY:[Rencontre littéraire Texto] Beata Umubyeyi Mairesse
@@ -93,7 +110,7 @@ URL:https://www.univ-spn.fr/events/rencontre-litteraire-beata-umaymi-maires
 END:VEVENT
 BEGIN:VEVENT
 UID:ebb09968e30e@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261013T200000
 DTEND;TZID=Europe/Paris:20261013T212500
 SUMMARY:[Danse] As we are
@@ -104,7 +121,7 @@ URL:https://www.univ-spn.fr/events/danse-as-we-are/
 END:VEVENT
 BEGIN:VEVENT
 UID:d648f53dd3c2@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261015T123000
 DTEND;TZID=Europe/Paris:20261015T143000
 SUMMARY:[Cirque] Mauvais Joueurs
@@ -121,7 +138,7 @@ URL:https://www.univ-spn.fr/events/cirque-mauvais-joueurs/
 END:VEVENT
 BEGIN:VEVENT
 UID:a064a32f983a@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261016T193000
 DTEND;TZID=Europe/Paris:20261016T203000
 SUMMARY:[Danse] Machine à spectacle
@@ -132,7 +149,7 @@ URL:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
 END:VEVENT
 BEGIN:VEVENT
 UID:643997ff4482@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261017T100000
 DTEND;TZID=Europe/Paris:20261017T180000
 SUMMARY:Études\, métiers\, Parcoursup : rendez-vous à Villetaneuse
@@ -149,7 +166,7 @@ URL:https://www.univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-
 END:VEVENT
 BEGIN:VEVENT
 UID:3dc98be47f8a@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261021T123000
 DTEND;TZID=Europe/Paris:20261021T140000
 SUMMARY:[Événement – appel à participation] Open Mic
@@ -165,7 +182,7 @@ URL:https://www.univ-spn.fr/events/openmic-201026/
 END:VEVENT
 BEGIN:VEVENT
 UID:f819e3de9438@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261021T200000
 DTEND;TZID=Europe/Paris:20261021T213500
 SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
@@ -177,7 +194,7 @@ URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
 END:VEVENT
 BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque

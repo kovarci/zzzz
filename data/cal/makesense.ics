@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4718b1cfb302@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
 SUMMARY:Grande Braderie Solidaire avec Emmaüs Défi !
@@ -40,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/grande-braderie-solidaire-avec-em
 END:VEVENT
 BEGIN:VEVENT
 UID:66adfc30cf90@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261010T100000
 DTEND;TZID=Europe/Paris:20261010T190000
 SUMMARY:Vente au kilo solidaire proposée par l'association Grand Paris col
@@ -57,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/vente-au-kilo-solidaire-proposee-
 END:VEVENT
 BEGIN:VEVENT
 UID:e81641640440@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:Magm'à Paris #8 🌋 Le programme en présentiel sur les oppressio
@@ -74,7 +74,7 @@ URL:https://chiche.makesense.org/events/e/magma-paris-8-le-programme-en-pre
 END:VEVENT
 BEGIN:VEVENT
 UID:c4aa98c4fad1@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:2 collines\, 1000 chemins : une plongée dans les parcours d'engage
@@ -91,7 +91,7 @@ URL:https://chiche.makesense.org/events/e/2-collines-1000-chemins-une-plong
 END:VEVENT
 BEGIN:VEVENT
 UID:8ad46f1fceaa@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261012T193000
 DTEND;TZID=Europe/Paris:20261012T213000
 SUMMARY:Workshop Capoeira Angola
@@ -107,7 +107,7 @@ URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09d5
 END:VEVENT
 BEGIN:VEVENT
 UID:1fd291148d6c@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:"Ce qui nous relie"\, rencontre spectacle avec Boris Cyrulnik et Pa
@@ -124,7 +124,7 @@ URL:https://chiche.makesense.org/events/e/ce-qui-nous-relie-rencontre-spect
 END:VEVENT
 BEGIN:VEVENT
 UID:511b0b722bf4@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Politique Non Violente
@@ -140,7 +140,7 @@ URL:https://chiche.makesense.org/events/e/politique-non-violente-6aaa9a56ca
 END:VEVENT
 BEGIN:VEVENT
 UID:df85965edd98@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261013T180000
 DTEND;TZID=Europe/Paris:20261013T200000
 SUMMARY:Laboratoire des conflictualités
@@ -156,7 +156,7 @@ URL:https://chiche.makesense.org/events/e/laboratoire-des-conflictualites-6
 END:VEVENT
 BEGIN:VEVENT
 UID:97aa5281a1f7@paris-academique
-DTSTAMP:20261010T080653Z
+DTSTAMP:20261010T102812Z
 DTSTART;TZID=Europe/Paris:20261013T203000
 DTEND;TZID=Europe/Paris:20261013T223000
 SUMMARY:FABRICE BONNIFET : Cinévénement du film "THE COST OF GROWTH" au G
@@ -169,5 +169,32 @@ DESCRIPTION:Organisé par Anne-Lou de Maillard — Une projection pas comme
 LOCATION:1 Bd Poissonnière\, 75002 Paris\, France
 URL:https://chiche.makesense.org/events/e/fabrice-bonnifet-cinevenement-du-
  film-the-cost-of-growth-au-grand-rex-6a9947252701ed0007e4081d
+END:VEVENT
+BEGIN:VEVENT
+UID:2cd93bd068e2@paris-academique
+DTSTAMP:20261010T102812Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Mettons nous à table
+DESCRIPTION:Organisé par Marion Soissons — Le 14 octobre\, c’est vous\
+ , consommateurs\, que nous attendons !À Paris\, à l’Ambassade d’Auve
+ rgne\, 25 agriculteurs vous donnent rendez-vous de 8h30 à 9h30 pour une m
+ atinée de speed-meeting.Le principe\nhttps://chiche.makesense.org/events/
+ e/mettons-nous-a-table-6aaa523a19fd1c0008820537
+LOCATION:22 Rue du Grenier-Saint-Lazare\, 75003 Paris\, France
+URL:https://chiche.makesense.org/events/e/mettons-nous-a-table-6aaa523a19fd
+ 1c0008820537
+END:VEVENT
+BEGIN:VEVENT
+UID:327f8b9f2c18@paris-academique
+DTSTAMP:20261010T102812Z
+DTSTART;TZID=Europe/Paris:20261014T080000
+DTEND;TZID=Europe/Paris:20261014T100000
+SUMMARY:M-Otion
+DESCRIPTION:Organisé par Marine Pouchard — Les ateliers M-Otion sont des
+  ateliers d'expression corporelle/ méditation en mouvemen\nhttps://chiche
+ .makesense.org/events/e/m-otion-6a79c9c009db940008865609
+LOCATION:11 Rue Biscornet\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/m-otion-6a79c9c009db940008865609
 END:VEVENT
 END:VCALENDAR
