@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0dec5898b6c7@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261012T183000
 DTEND;TZID=Europe/Paris:20261012T203000
 SUMMARY:Où faire campagne pour comprendre le pays ?
@@ -34,5 +34,16 @@ DESCRIPTION:Société\nhttps://www.jean-jaures.org/agenda/ou-faire-campagne
 LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
 URL:https://www.jean-jaures.org/agenda/ou-faire-campagne-pour-comprendre-le
  -pays/
+END:VEVENT
+BEGIN:VEVENT
+UID:89ff84e61717@paris-academique
+DTSTAMP:20261010T080653Z
+DTSTART;TZID=Europe/Paris:20261013T183000
+DTEND;TZID=Europe/Paris:20261013T203000
+SUMMARY:1940 : autopsie d’un effondrement
+DESCRIPTION:Histoire\nhttps://www.jean-jaures.org/agenda/1940-autopsie-dun-
+ effondrement/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/1940-autopsie-dun-effondrement/
 END:VEVENT
 END:VCALENDAR

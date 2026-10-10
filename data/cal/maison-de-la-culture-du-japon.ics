@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:404529c36d55@paris-academique
-DTSTAMP:20261009T111451Z
-DTSTART;TZID=Europe/Paris:20261009T183000
-DTEND;TZID=Europe/Paris:20261009T203000
-SUMMARY:Ango le desperado
-DESCRIPTION:Conférence\nhttps://www.mcjp.fr/fr/la-mcjp/actualites/ango-le-
- desperado
-LOCATION:Maison de la culture du Japon\, 101 bis quai Jacques Chirac\, Pari
- s 15e
-URL:https://www.mcjp.fr/fr/la-mcjp/actualites/ango-le-desperado
-END:VEVENT
-BEGIN:VEVENT
 UID:eb51375fe13d@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261016T180000
 DTEND;TZID=Europe/Paris:20261016T200000
 SUMMARY:Design graphique au Japon
@@ -49,7 +37,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/design-graphique-au-japon
 END:VEVENT
 BEGIN:VEVENT
 UID:4edc6bf4728e@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261017T143000
 DTEND;TZID=Europe/Paris:20261017T163000
 SUMMARY:Hommage à Bernard Frank (1927-1996) - Grand maître des études ja
@@ -63,7 +51,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/hommage-a-bernard-frank-1927-
 END:VEVENT
 BEGIN:VEVENT
 UID:ddf8a893b798@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261020T160000
 DTEND;TZID=Europe/Paris:20261020T180000
 SUMMARY:Les secrets des MIYADAIKU\, transmis depuis 1 400 ans au Japon
@@ -76,7 +64,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/les-secrets-des-miyadaiku-tra
 END:VEVENT
 BEGIN:VEVENT
 UID:90b37ea067b3@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261022T183000
 DTEND;TZID=Europe/Paris:20261022T203000
 SUMMARY:Fluxus et le Japon
@@ -88,7 +76,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/fluxus-et-le-japon
 END:VEVENT
 BEGIN:VEVENT
 UID:5ec133a03b1c@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261110T180000
 DTEND;TZID=Europe/Paris:20261110T200000
 SUMMARY:Conférence d’ouverture de l’exposition "Shunga - Chefs-d’œu
@@ -102,7 +90,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/conference-d-ouverture-de-l-e
 END:VEVENT
 BEGIN:VEVENT
 UID:6036b6a370bb@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261112T183000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:NEW TALENTS - Regards d’une nouvelle génération
@@ -115,7 +103,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/new-talents-regards-d-une-nou
 END:VEVENT
 BEGIN:VEVENT
 UID:8f321fcf514f@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261120T180000
 DTEND;TZID=Europe/Paris:20261120T200000
 SUMMARY:Conférence - Dans une composition\, une fleur est une personne
@@ -125,5 +113,30 @@ LOCATION:Maison de la culture du Japon\, 101 bis quai Jacques Chirac\, Pari
  s 15e
 URL:https://www.mcjp.fr/fr/la-mcjp/actualites/dans-une-composition-une-fleu
  r-est-une-personne-conference
+END:VEVENT
+BEGIN:VEVENT
+UID:8cb60228c62f@paris-academique
+DTSTAMP:20261010T080653Z
+DTSTART;TZID=Europe/Paris:20261128T150000
+DTEND;TZID=Europe/Paris:20261128T170000
+SUMMARY:Décoder le Japon
+DESCRIPTION:Conférence\nhttps://www.mcjp.fr/fr/la-mcjp/actualites/decoder-
+ le-japon
+LOCATION:Maison de la culture du Japon\, 101 bis quai Jacques Chirac\, Pari
+ s 15e
+URL:https://www.mcjp.fr/fr/la-mcjp/actualites/decoder-le-japon
+END:VEVENT
+BEGIN:VEVENT
+UID:9e4e13c9475f@paris-academique
+DTSTAMP:20261010T080653Z
+DTSTART;TZID=Europe/Paris:20261212T150000
+DTEND;TZID=Europe/Paris:20261212T170000
+SUMMARY:Les Maîtres d’art et leurs élèves
+DESCRIPTION:Conférence\nhttps://www.mcjp.fr/fr/la-mcjp/actualites/les-mait
+ res-d-art-et-leurs-eleves
+LOCATION:Maison de la culture du Japon\, 101 bis quai Jacques Chirac\, Pari
+ s 15e
+URL:https://www.mcjp.fr/fr/la-mcjp/actualites/les-maitres-d-art-et-leurs-el
+ eves
 END:VEVENT
 END:VCALENDAR

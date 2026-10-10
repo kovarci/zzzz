@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:00419aa44d4f@paris-academique
-DTSTAMP:20261009T111451Z
-DTSTART;TZID=Europe/Paris:20261008T093000
-DTEND;TZID=Europe/Paris:20261008T113000
-SUMMARY:Autour du livre Éclats du romantisme de Raymond Bellour
-DESCRIPTION:Journée d'études\nhttps://www.ehess.fr/jcms/279420_JEvent/fr/
- autour-du-livre-eclats-du-romantisme-de-raymond-bellour
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr/jcms/279420_JEvent/fr/autour-du-livre-eclats-du-ro
- mantisme-de-raymond-bellour
-END:VEVENT
-BEGIN:VEVENT
 UID:dbddbe836a9e@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261012T140000
 DTEND;TZID=Europe/Paris:20261012T160000
 SUMMARY:Réunions d'information "Reprise d'études"
@@ -49,7 +37,7 @@ URL:https://www.ehess.fr/jcms/37175_JEvent/fr/reunions-d-information-repris
 END:VEVENT
 BEGIN:VEVENT
 UID:0f093111b7b2@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261015T090000
 DTEND;TZID=Europe/Paris:20261015T110000
 SUMMARY:Les violences en milieux éducatifs : quelle histoire\, quelles act
@@ -63,7 +51,7 @@ URL:https://www.ehess.fr/jcms/268470_JEvent/fr/les-violences-en-milieux-edu
 END:VEVENT
 BEGIN:VEVENT
 UID:0bab98429f9e@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261016T100000
 DTEND;TZID=Europe/Paris:20261016T120000
 SUMMARY:Institution und Technik. Das Subjekt und die Frage der Autonomie in
@@ -78,7 +66,7 @@ URL:https://www.ehess.fr/jcms/281612_JEvent/fr/institution-und-technik-das-
 END:VEVENT
 BEGIN:VEVENT
 UID:555bc2d816ba@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261020T090000
 DTEND;TZID=Europe/Paris:20261020T110000
 SUMMARY:Petits-déjeuners de la vie étudiante 2026-2027
@@ -90,7 +78,7 @@ URL:https://www.ehess.fr/jcms/291798_JEvent/fr/petits-dejeuners-de-la-vie-e
 END:VEVENT
 BEGIN:VEVENT
 UID:e67f8476334d@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:La psychologisation des violences faites aux femmes

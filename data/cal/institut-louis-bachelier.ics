@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:1c544f80cde7@paris-academique
-DTSTAMP:20261009T111451Z
-DTSTART;TZID=Europe/Paris:20261008T160000
-DTEND;TZID=Europe/Paris:20261008T180000
-SUMMARY:Forum Immobilier & Finance
-DESCRIPTION:Forums\nhttps://www.institutlouisbachelier.org/au-programme/eve
- nements/forum-immobilier-finance-2
-LOCATION:Hôtel Lutetia — Institut Louis Bachelier\, 28 place de la Bours
- e\, Paris 2e
-URL:https://www.institutlouisbachelier.org/au-programme/evenements/forum-im
- mobilier-finance-2
-END:VEVENT
-BEGIN:VEVENT
 UID:bcbbb9ee2e79@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261013T090000
 DTEND;TZID=Europe/Paris:20261013T110000
 SUMMARY:STABLECOINS : ENJEUX MONÉTAIRES ET RÉGLEMENTAIRES
@@ -51,7 +38,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/stableco
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5705ac1cc0@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261103T090000
 DTEND;TZID=Europe/Paris:20261103T110000
 SUMMARY:AM TECH DAY de l'AGEFI
@@ -64,7 +51,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-
 END:VEVENT
 BEGIN:VEVENT
 UID:3567d9421905@paris-academique
-DTSTAMP:20261009T111451Z
+DTSTAMP:20261010T080653Z
 DTSTART;TZID=Europe/Paris:20261104T090000
 DTEND;TZID=Europe/Paris:20261104T110000
 SUMMARY:Conférence : L’eau\, enjeu d’investissement stratégique et d
