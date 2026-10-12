@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bcbbb9ee2e79@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T090000
 DTEND;TZID=Europe/Paris:20261013T110000
 SUMMARY:STABLECOINS : ENJEUX MONÉTAIRES ET RÉGLEMENTAIRES
@@ -38,7 +38,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/stableco
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5705ac1cc0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261103T090000
 DTEND;TZID=Europe/Paris:20261103T110000
 SUMMARY:AM TECH DAY de l'AGEFI
@@ -51,7 +51,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-
 END:VEVENT
 BEGIN:VEVENT
 UID:3567d9421905@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261104T090000
 DTEND;TZID=Europe/Paris:20261104T110000
 SUMMARY:Conférence : L’eau\, enjeu d’investissement stratégique et d
@@ -63,5 +63,44 @@ LOCATION:Université Paris-Dauphine-PSL — Institut Louis Bachelier\, 28 p
  lace de la Bourse\, Paris 2e
 URL:https://www.institutlouisbachelier.org/au-programme/evenements/conferen
  ce-leau-enjeu-dinvestissement-strategique-et-dadaptation
+END:VEVENT
+BEGIN:VEVENT
+UID:6f91b803b6bd@paris-academique
+DTSTAMP:20261012T114557Z
+DTSTART;TZID=Europe/Paris:20261109T140000
+DTEND;TZID=Europe/Paris:20261109T160000
+SUMMARY:Accélérer et financer l'adaptation au changement climatique
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/accelerer-et-financer-ladaptation-au-changement-climatique
+LOCATION:Société d'Encouragement pour l'Industrie Nationale — Institut 
+ Louis Bachelier\, 28 place de la Bourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/accelere
+ r-et-financer-ladaptation-au-changement-climatique
+END:VEVENT
+BEGIN:VEVENT
+UID:7ef07d9b75d5@paris-academique
+DTSTAMP:20261012T114557Z
+DTSTART;TZID=Europe/Paris:20261208T090000
+DTEND;TZID=Europe/Paris:20261208T110000
+SUMMARY:Green Finance Research Advances 2026
+DESCRIPTION:Conférences\nhttps://www.institutlouisbachelier.org/au-program
+ me/evenements/green-finance-research-advances-2026
+LOCATION:Banque de France — Institut Louis Bachelier\, 28 place de la Bou
+ rse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/green-fi
+ nance-research-advances-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:2964c301909c@paris-academique
+DTSTAMP:20261012T114557Z
+DTSTART;TZID=Europe/Paris:20261211T180000
+DTEND;TZID=Europe/Paris:20261211T200000
+SUMMARY:Hommage à André Lévy-Lang
+DESCRIPTION:Rencontres\nhttps://www.institutlouisbachelier.org/au-programme
+ /evenements/hommage-a-andre-levy-lang
+LOCATION:Palais Brongniart — Institut Louis Bachelier\, 28 place de la Bo
+ urse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/hommage-
+ a-andre-levy-lang
 END:VEVENT
 END:VCALENDAR

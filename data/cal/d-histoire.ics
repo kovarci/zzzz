@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:c2750145e423@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:Un siècle de francophonie transatlantique : la Maison des étudian
@@ -41,7 +41,7 @@ URL:https://www.sorbonne-nouvelle.fr/un-siecle-de-francophonie-transatlanti
 END:VEVENT
 BEGIN:VEVENT
 UID:f5f26d2c2fd9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261012T183000
 DTEND;TZID=Europe/Paris:20261012T194000
 SUMMARY:Le Radeau de la Méduse
@@ -52,7 +52,7 @@ URL:https://www.paris.fr/evenements/le-radeau-de-la-meduse-118090
 END:VEVENT
 BEGIN:VEVENT
 UID:c31d3aa2fef0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261012T190000
 DTEND;TZID=Europe/Paris:20261012T210000
 SUMMARY:Le néolithique à la lumière du présent (et vice-versa)
@@ -63,8 +63,20 @@ URL:https://www.museedelhomme.fr/fr/rencontre/le-neolithique-a-la-lumiere-d
  u-present-et-vice-versa
 END:VEVENT
 BEGIN:VEVENT
+UID:2954ccd8431a@paris-academique
+DTSTAMP:20261012T114557Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Les sources du patrimoine
+DESCRIPTION:Séminaire\nhttps://www.chartes.psl.eu/gazette-chartiste/agenda
+ /les-sources-du-patrimoine
+LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
+URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/les-sources-du-patr
+ imoine
+END:VEVENT
+BEGIN:VEVENT
 UID:fcf9cab2601b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T150000
 DTEND;TZID=Europe/Paris:20261013T170000
 SUMMARY:Conférence : Gustave Doré
@@ -77,7 +89,7 @@ URL:https://www.paris.fr/evenements/conference-gustave-dore-117147
 END:VEVENT
 BEGIN:VEVENT
 UID:6e084d19c1b7@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T160000
 DTEND;TZID=Europe/Paris:20261013T180000
 SUMMARY:Palaeolithic Origins of Seafaring: Theoretical\, Simulation\, and E
@@ -92,7 +104,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/yousuke-
 END:VEVENT
 BEGIN:VEVENT
 UID:f17edb73e38a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T170000
 DTEND;TZID=Europe/Paris:20261013T183000
 SUMMARY:Éduquer et séduire – Images scolaires de l'Empire au temps colo
@@ -109,7 +121,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:af474c0cde7e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T170000
 DTEND;TZID=Europe/Paris:20261013T190000
 SUMMARY:L’Histoire transnationale\, impériale et globale
@@ -121,7 +133,7 @@ URL:https://www.ens.psl.eu/agenda/l-histoire-transnationale-imperiale-et-gl
 END:VEVENT
 BEGIN:VEVENT
 UID:011f88e9ef3b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T173000
 DTEND;TZID=Europe/Paris:20261013T193000
 SUMMARY:Foucault et la vie du Collège : dialogue avec les pairs\, créatio
@@ -137,7 +149,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-fouca
 END:VEVENT
 BEGIN:VEVENT
 UID:2f148b1e0474@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T180000
 DTEND;TZID=Europe/Paris:20261013T193000
 SUMMARY:[Conférence] L’histoire de la bibliothèque de l’École des mi
@@ -153,7 +165,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/conference-lhistoire-de-l
 END:VEVENT
 BEGIN:VEVENT
 UID:c9c4c5043869@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T180000
 DTEND;TZID=Europe/Paris:20261013T193000
 SUMMARY:Café géopolitique : La DMZ coréenne. Rencontre avec Valérie Gel
@@ -172,7 +184,7 @@ URL:https://www.paris.fr/evenements/cafe-geopolitique-la-dmz-coreenne-renco
 END:VEVENT
 BEGIN:VEVENT
 UID:1356d6da15ee@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T183000
 DTEND;TZID=Europe/Paris:20261013T203000
 SUMMARY:Conférence : Germaine de Staël (1766-1817)
@@ -188,7 +200,7 @@ URL:https://www.paris.fr/evenements/conference-germaine-de-stael-1766-1817-
 END:VEVENT
 BEGIN:VEVENT
 UID:89ff84e61717@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T183000
 DTEND;TZID=Europe/Paris:20261013T203000
 SUMMARY:1940 : autopsie d’un effondrement
@@ -199,7 +211,7 @@ URL:https://www.jean-jaures.org/agenda/1940-autopsie-dun-effondrement/
 END:VEVENT
 BEGIN:VEVENT
 UID:af534b16bf99@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T190000
 DTEND;TZID=Europe/Paris:20261013T210000
 SUMMARY:Le fabuleux piano de Sonia Devillers
@@ -215,7 +227,7 @@ URL:https://www.paris.fr/evenements/le-fabuleux-piano-de-sonia-devillers-11
 END:VEVENT
 BEGIN:VEVENT
 UID:1438354eb354@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T190000
 DTEND;TZID=Europe/Paris:20261013T210000
 SUMMARY:Rencontre autour de la proposition de panthéonisation de Samuel Pa
@@ -235,7 +247,7 @@ URL:https://www.paris.fr/evenements/rencontre-autour-de-la-proposition-de-p
 END:VEVENT
 BEGIN:VEVENT
 UID:c5ad96e88288@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261013T193000
 DTEND;TZID=Europe/Paris:20261013T223000
 SUMMARY:Le RDV des curieux\, tous les mardis à 19h30
@@ -248,7 +260,7 @@ URL:https://www.paris.fr/evenements/le-rdv-des-curieux-tous-les-mardis-a-19
 END:VEVENT
 BEGIN:VEVENT
 UID:3c3b33dfb0a9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261014T094500
 DTEND;TZID=Europe/Paris:20261014T114500
 SUMMARY:De l’os humain à l’objet\, une pratique récurrente depuis la 
@@ -262,7 +274,7 @@ URL:https://www.pantheonsorbonne.fr/evenements/de-los-humain-lobjet-pratiqu
 END:VEVENT
 BEGIN:VEVENT
 UID:ce12f5c9d611@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261014T123000
 DTEND;TZID=Europe/Paris:20261014T143000
 SUMMARY:Histoire économique
@@ -274,7 +286,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/histoire-economique/
 END:VEVENT
 BEGIN:VEVENT
 UID:e75af9c1e715@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261014T140000
 DTEND;TZID=Europe/Paris:20261014T160000
 SUMMARY:Colloque « Les 80 ans du Préambule de la Constitution de 1946 : q
@@ -289,7 +301,7 @@ URL:https://irjs.pantheonsorbonne.fr/evenements/colloque-80-ans-du-preambul
 END:VEVENT
 BEGIN:VEVENT
 UID:d81eea1dd799@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261014T193000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:À l’écoute des révolutions et des innovations numériques
@@ -301,7 +313,7 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-a-l-ecou
 END:VEVENT
 BEGIN:VEVENT
 UID:f64f8fab5ef0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Genre et âge dans les littératures médiévales
@@ -313,22 +325,22 @@ URL:https://www.sorbonne-nouvelle.fr/genre-et-age-dans-les-litteratures-med
  ievales-925451.kjsp?RH=1236178100008
 END:VEVENT
 BEGIN:VEVENT
-UID:0f093111b7b2@paris-academique
-DTSTAMP:20261011T103759Z
+UID:ea0f69f6f5c8@paris-academique
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T090000
-DTEND;TZID=Europe/Paris:20261015T110000
+DTEND;TZID=Europe/Paris:20261015T190000
 SUMMARY:Les violences en milieux éducatifs : quelle histoire\, quelles act
  rices et quels acteurs\, quels enjeux ?
-DESCRIPTION:Journée d'études\nhttps://www.ehess.fr/jcms/268470_JEvent/fr/
- les-violences-en-milieux-educatifs-quelle-histoire-quelles-actrices-et-que
- ls-acteurs-quels-enjeux
-LOCATION:EHESS\, Campus Condorcet\, 2 cours des Humanités\, Aubervilliers
-URL:https://www.ehess.fr/jcms/268470_JEvent/fr/les-violences-en-milieux-edu
- catifs-quelle-histoire-quelles-actrices-et-quels-acteurs-quels-enjeux
+DESCRIPTION:Journée d'étude\nhttps://www.campus-condorcet.fr/fr/agenda/le
+ s-violences-en-milieux-educatifs-quelle-histoire-quelles-actrices-et-quels
+ -acteurs-quels-enjeux
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/les-violences-en-milieux-educ
+ atifs-quelle-histoire-quelles-actrices-et-quels-acteurs-quels-enjeux
 END:VEVENT
 BEGIN:VEVENT
 UID:7d2d99bbcf76@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T091500
 DTEND;TZID=Europe/Paris:20261015T180000
 SUMMARY:Penser le patrimoine culturel entre héritages et devenirs
@@ -340,7 +352,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/penser-le-patrimoine-
 END:VEVENT
 BEGIN:VEVENT
 UID:e6d6d1545a0f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T170000
 DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Histoires de genre
@@ -351,7 +363,7 @@ URL:https://www.ens.psl.eu/agenda/histoires-de-genre/2026-10-15t150000
 END:VEVENT
 BEGIN:VEVENT
 UID:3f392feeea90@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T173000
 DTEND;TZID=Europe/Paris:20261015T193000
 SUMMARY:Patrimoine\, tourisme et environnement
@@ -363,7 +375,7 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoine-tourisme-et-en
 END:VEVENT
 BEGIN:VEVENT
 UID:4d9434a31f66@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T180000
 DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Recueillir des témoignages\, dire les expériences invisibles : je
@@ -379,7 +391,7 @@ URL:https://www.parisnanterre.fr/agenda/recueillir-des-temoignages-dire-les
 END:VEVENT
 BEGIN:VEVENT
 UID:300d5d9f2f69@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T180000
 DTEND;TZID=Europe/Paris:20261015T193000
 SUMMARY:Collectionner au temps de l’Encyclopédie : une curiosité univer
@@ -391,8 +403,23 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/collectionner-au-te
  mps-de-lencyclopedie-une-curiosite-universelle
 END:VEVENT
 BEGIN:VEVENT
+UID:ed45aac59b41@paris-academique
+DTSTAMP:20261012T114557Z
+DTSTART;TZID=Europe/Paris:20261015T190000
+DTEND;TZID=Europe/Paris:20261015T210000
+SUMMARY:Pourquoi les juifs n’aiment pas les antisémites de Jean‑Claude
+  Grumberg
+DESCRIPTION:Seuil\, 2026. Comment l’antisémitisme se manifeste-t-il aujo
+ urd’hui\, alors que l’actualité exacerbe les tensions ?\nhttps://www.
+ paris.fr/evenements/pourquoi-les-juifs-n-aiment-pas-les-antisemites-de-jea
+ n-claude-grumberg-116584
+LOCATION:Mémorial de la Shoah\, 17 rue Geoffroy l'Asnier\, 75004 Paris
+URL:https://www.paris.fr/evenements/pourquoi-les-juifs-n-aiment-pas-les-ant
+ isemites-de-jean-claude-grumberg-116584
+END:VEVENT
+BEGIN:VEVENT
 UID:2c7e2934d836@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:La généalogie juive - Conférence.
@@ -404,7 +431,7 @@ URL:https://www.paris.fr/evenements/la-genealogie-juive-conference-108316
 END:VEVENT
 BEGIN:VEVENT
 UID:25f9468ac479@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Conférence théâtralisée "Questions de ”races” " | Semaine d
@@ -420,23 +447,8 @@ URL:https://www.paris.fr/evenements/conference-theatralisee-semaine-de-lutt
  e-contre-les-discriminations-124270
 END:VEVENT
 BEGIN:VEVENT
-UID:ed45aac59b41@paris-academique
-DTSTAMP:20261011T103759Z
-DTSTART;TZID=Europe/Paris:20261015T190000
-DTEND;TZID=Europe/Paris:20261015T210000
-SUMMARY:Pourquoi les juifs n’aiment pas les antisémites de Jean‑Claude
-  Grumberg
-DESCRIPTION:Seuil\, 2026. Comment l’antisémitisme se manifeste-t-il aujo
- urd’hui\, alors que l’actualité exacerbe les tensions ?\nhttps://www.
- paris.fr/evenements/pourquoi-les-juifs-n-aiment-pas-les-antisemites-de-jea
- n-claude-grumberg-116584
-LOCATION:Mémorial de la Shoah\, 17 rue Geoffroy l'Asnier\, 75004 Paris
-URL:https://www.paris.fr/evenements/pourquoi-les-juifs-n-aiment-pas-les-ant
- isemites-de-jean-claude-grumberg-116584
-END:VEVENT
-BEGIN:VEVENT
 UID:b87103c37493@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Une préhistoire des femmes : la domination masculine existait-elle
@@ -452,7 +464,7 @@ URL:https://www.paris.fr/evenements/une-prehistoire-des-femmes-la-dominatio
 END:VEVENT
 BEGIN:VEVENT
 UID:28b01e38859d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T203000
 SUMMARY:Lancement du livre « C'était Paris en 1970 »
@@ -465,7 +477,7 @@ URL:https://www.paris.fr/evenements/lancement-du-livre-c-etait-paris-en-197
 END:VEVENT
 BEGIN:VEVENT
 UID:1944fd619695@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261016T123000
 DTEND;TZID=Europe/Paris:20261016T143000
 SUMMARY:Soudan\, un patrimoine en partage
@@ -479,7 +491,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/so
 END:VEVENT
 BEGIN:VEVENT
 UID:00f46a3afe91@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261016T140000
 DTEND;TZID=Europe/Paris:20261016T160000
 SUMMARY:Les deux morts civiles. Enquête sur le concept de mort civile des 
@@ -493,7 +505,7 @@ URL:https://www.assas-universite.fr/fr/recherche/soutenances-de-theses/deux
 END:VEVENT
 BEGIN:VEVENT
 UID:c4e7e4ddbede@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261016T153000
 DTEND;TZID=Europe/Paris:20261016T173000
 SUMMARY:À l’automne 2026\, où en est l’édition du PHerc.Paris. 4 ?
@@ -506,7 +518,7 @@ URL:https://aibl.fr/seances/vendredi-16-octobre-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:af983764f068@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261016T153000
 DTEND;TZID=Europe/Paris:20261016T173000
 SUMMARY:Archéologie funéraire\, migrations et transmission culturelle à 
@@ -523,7 +535,7 @@ URL:https://aibl.fr/seances/vendredi-16-octobre-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:de2ce365700c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261016T153000
 DTEND;TZID=Europe/Paris:20261016T173000
 SUMMARY:Isidore de Séville\, boîte à outils des manuscrits juridiques du
@@ -537,7 +549,7 @@ URL:https://aibl.fr/seances/vendredi-16-octobre-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:a731676a56da@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261016T170000
 DTEND;TZID=Europe/Paris:20261016T190000
 SUMMARY:Delphine Buysse et Thomas Sazpinar\, « Archive\, contre-archive »
@@ -548,7 +560,7 @@ URL:https://www.item.ens.fr/delphine-buysse-et-thomas-sazpinar
 END:VEVENT
 BEGIN:VEVENT
 UID:89c460d919b9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261016T185000
 DTEND;TZID=Europe/Paris:20261016T200000
 SUMMARY:Conférence : patrimoine religieux\, patrimoine national
@@ -561,8 +573,21 @@ URL:https://www.paris.fr/evenements/conference-patrimoine-religieux-patrimo
  ine-national-124678
 END:VEVENT
 BEGIN:VEVENT
+UID:614567fe7ba0@paris-academique
+DTSTAMP:20261012T114557Z
+DTSTART;TZID=Europe/Paris:20261016T203000
+DTEND;TZID=Europe/Paris:20261016T223000
+SUMMARY:Dialogue croisé : Mémoires d’Algérie\, histoires partagées
+DESCRIPTION:https://www.parisnanterre.fr/agenda/rencontre-cinema-les-mots-q
+ uelles-eurent-un-jour
+LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
+ re
+URL:https://www.parisnanterre.fr/agenda/rencontre-cinema-les-mots-quelles-e
+ urent-un-jour
+END:VEVENT
+BEGIN:VEVENT
 UID:4edc6bf4728e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261017T143000
 DTEND;TZID=Europe/Paris:20261017T163000
 SUMMARY:Hommage à Bernard Frank (1927-1996) - Grand maître des études ja
@@ -576,7 +601,7 @@ URL:https://www.mcjp.fr/fr/la-mcjp/actualites/hommage-a-bernard-frank-1927-
 END:VEVENT
 BEGIN:VEVENT
 UID:2767f9881756@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261019T110000
 DTEND;TZID=Europe/Paris:20261019T130000
 SUMMARY:L’épouse du dieu\, introduction historiographique 1. Les auteurs
@@ -592,7 +617,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:10b7e827d224@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261019T190000
 DTEND;TZID=Europe/Paris:20261019T210000
 SUMMARY:Le message des roches ou l’histoire de la Terre
@@ -603,7 +628,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/kHx57aF
 END:VEVENT
 BEGIN:VEVENT
 UID:b6a3a5b2881d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261020T170000
 DTEND;TZID=Europe/Paris:20261020T183000
 SUMMARY:Annoter les images : humanités numériques\, histoire de l’art e
@@ -617,7 +642,7 @@ URL:https://www.inha.fr/agenda/annoter-les-images-humanites-numeriques-hist
 END:VEVENT
 BEGIN:VEVENT
 UID:9a44e4dda58f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261020T180000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:Les sources sur le patrimoine aux Archives nationales
@@ -629,7 +654,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/lier-les-donnees-du
 END:VEVENT
 BEGIN:VEVENT
 UID:227be5792a10@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261021T140000
 DTEND;TZID=Europe/Paris:20261021T160000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -648,7 +673,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:b4616481b933@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Sous le charme
@@ -659,7 +684,7 @@ URL:https://www.ephe.psl.eu/sous-le-charme
 END:VEVENT
 BEGIN:VEVENT
 UID:0da4020b3e62@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:La ciudad (des)dibujada: representaciones y usos del espacio públi
@@ -681,7 +706,7 @@ URL:https://www.sorbonne-nouvelle.fr/la-ciudad-des-dibujada-representacione
 END:VEVENT
 BEGIN:VEVENT
 UID:b74027878156@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261022T100000
 DTEND;TZID=Europe/Paris:20261022T170000
 SUMMARY:Histoire du temps présent\, mémoire & émotion
@@ -693,7 +718,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/histoire-du-temps-present-mem
 END:VEVENT
 BEGIN:VEVENT
 UID:b4d1a9b2f300@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261022T170000
 DTEND;TZID=Europe/Paris:20261022T190000
 SUMMARY:L'Histoire en livres I La Tyrannie du présent\, avec Pierre Rosanv
@@ -709,7 +734,7 @@ URL:https://www.sciencespo.fr/fr/evenements/l-histoire-en-livres-la-tyranni
 END:VEVENT
 BEGIN:VEVENT
 UID:eecf89e9480d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261022T180000
 DTEND;TZID=Europe/Paris:20261022T200000
 SUMMARY:La vie privée des chefs d'États africains
@@ -724,7 +749,7 @@ URL:https://www.sciencespo.fr/fr/evenements/la-vie-privee-des-chefs-d-etats
 END:VEVENT
 BEGIN:VEVENT
 UID:a6f3c9612968@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20261025
 SUMMARY:En détention
@@ -737,7 +762,7 @@ URL:https://www.paris.fr/evenements/en-detention-124375
 END:VEVENT
 BEGIN:VEVENT
 UID:af59a356813e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T153000
 SUMMARY:Comment les anciens Égyptiens faisaient-ils leurs calculs ?
@@ -751,7 +776,7 @@ URL:https://www.paris.fr/evenements/comment-les-anciens-egyptiens-faisaient
 END:VEVENT
 BEGIN:VEVENT
 UID:0aa450a6b55c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261024T150000
 DTEND;TZID=Europe/Paris:20261024T170000
 SUMMARY:La gestion de la prostitution à Paris : de la police des Demoisell
@@ -768,7 +793,7 @@ URL:https://www.paris.fr/evenements/la-gestion-de-la-prostitution-a-paris-d
 END:VEVENT
 BEGIN:VEVENT
 UID:91ec85a4dfb8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261024T170000
 DTEND;TZID=Europe/Paris:20261024T190000
 SUMMARY:Artist Talk: The Archive
@@ -778,7 +803,7 @@ URL:https://lu.ma/lgiutnu8
 END:VEVENT
 BEGIN:VEVENT
 UID:6e606d2928b8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261026T110000
 DTEND;TZID=Europe/Paris:20261026T130000
 SUMMARY:L’épouse du dieu\, introduction historiographique 2. Démarches 
@@ -794,7 +819,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:777e68ed0d1e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261028T110000
 DTEND;TZID=Europe/Paris:20261028T130000
 SUMMARY:Représenter les Adoratrices aux époques tardives
@@ -810,7 +835,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:9b57ae0ebd3a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261028T110000
 DTEND;TZID=Europe/Paris:20261028T130000
 SUMMARY:Autour des « Épouses du dieu» en Égypte ancienne: recherches r
@@ -829,21 +854,21 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:4fc445bffc9b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261029T170000
 DTEND;TZID=Europe/Paris:20261029T183000
 SUMMARY:Le patrimoine des villes du Levant : mémoire\, reconstruction et r
  enouveau
-DESCRIPTION:https://www.imarabe.org/index%2Ephp/fr/agenda/rencontres-et-deb
- ats/patrimoine-villes-du-levant-memoire-reconstruction-et-renouveau
+DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/patrimoi
+ ne-villes-du-levant-memoire-reconstruction-et-renouveau
 LOCATION:Institut du monde arabe\, 1 rue des Fossés-Saint-Bernard\, Paris 
  5e
-URL:https://www.imarabe.org/index%2Ephp/fr/agenda/rencontres-et-debats/patr
- imoine-villes-du-levant-memoire-reconstruction-et-renouveau
+URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/patrimoine-ville
+ s-du-levant-memoire-reconstruction-et-renouveau
 END:VEVENT
 BEGIN:VEVENT
 UID:ffe72ec19d6c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261029T190000
 DTEND;TZID=Europe/Paris:20261029T203000
 SUMMARY:Le Mahomet des historiens : Un Mahomet des Lumières\, le Prophète
@@ -861,7 +886,7 @@ URL:https://www.paris.fr/evenements/le-mahomet-des-historiens-un-mahomet-de
 END:VEVENT
 BEGIN:VEVENT
 UID:8271522d0c03@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261030T140000
 DTEND;TZID=Europe/Paris:20261030T170000
 SUMMARY:Déconstruire les structures de pouvoir : une relecture décolonial
@@ -876,7 +901,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/deconstruire-les-structures-d
 END:VEVENT
 BEGIN:VEVENT
 UID:3fd125bd1e63@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Roadmap for EvoDevoMec
@@ -894,7 +919,7 @@ URL:https://evodevmec2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:07c38b4ebabe@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261102T103000
 DTEND;TZID=Europe/Paris:20261102T123000
 SUMMARY:Lecture de textes en lien avec le cours (1)
@@ -907,7 +932,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lecture-de-textes-
 END:VEVENT
 BEGIN:VEVENT
 UID:9f7237325723@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261102T110000
 DTEND;TZID=Europe/Paris:20261102T130000
 SUMMARY:Les nouveaux territoires de l’épouse du dieu 1. Palais et posses
@@ -921,7 +946,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:8db48f5cbe8b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261102T180000
 DTEND;TZID=Europe/Paris:20261102T200000
 SUMMARY:From Witness to Responsibility: A Child Survivor’s Journey 32 Yea
@@ -937,7 +962,7 @@ URL:https://www.sciencespo.fr/fr/evenements/a-child-survivor-s-journey-32-y
 END:VEVENT
 BEGIN:VEVENT
 UID:a205d916b0d8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261102T183000
 DTEND;TZID=Europe/Paris:20261102T200000
 SUMMARY:Comment l'IA transforme-t-elle la guerre ?
@@ -948,7 +973,7 @@ URL:https://www.ifri.org/fr/comment-lia-transforme-t-elle-la-guerre
 END:VEVENT
 BEGIN:VEVENT
 UID:ac4bfbb5ab31@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261103T124500
 DTEND;TZID=Europe/Paris:20261103T133000
 SUMMARY:Présentation de l’ouvrage La carnation des patrimoines. Une hist
@@ -962,7 +987,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-la-carnation-des-pa
 END:VEVENT
 BEGIN:VEVENT
 UID:778bb1b09762@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261103T173000
 DTEND;TZID=Europe/Paris:20261103T193000
 SUMMARY:Foucault enseignant : cohérence d’une trajectoire et place dans 
@@ -978,7 +1003,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-fouca
 END:VEVENT
 BEGIN:VEVENT
 UID:2ef6aa2f48d1@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261103T190000
 DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:Claude Monet et le 9e arrondissement
@@ -994,7 +1019,7 @@ URL:https://www.paris.fr/evenements/claude-monet-et-le-9e-arrondissement-12
 END:VEVENT
 BEGIN:VEVENT
 UID:2b9ca21be512@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Cycle de conférences « Histoire ouvrière\, histoires d’ouvriè
@@ -1011,7 +1036,7 @@ URL:https://www.paris.fr/evenements/cycle-de-conferences-histoire-ouvriere-
 END:VEVENT
 BEGIN:VEVENT
 UID:689926ed48c6@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261104T100000
 DTEND;TZID=Europe/Paris:20261104T120000
 SUMMARY:La question de la Palestine au XXIe siècle (1)
@@ -1024,7 +1049,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-question-de-la-pale
 END:VEVENT
 BEGIN:VEVENT
 UID:594af57d95f5@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261104T110000
 DTEND;TZID=Europe/Paris:20261104T130000
 SUMMARY:Une prêtresse en Grèce ancienne : un prêtre comme un autre ?
@@ -1040,7 +1065,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:6443e591eccf@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261104T110000
 DTEND;TZID=Europe/Paris:20261104T130000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -1059,7 +1084,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:c109bbd9e589@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261104T170000
 DTEND;TZID=Europe/Paris:20261104T183000
 SUMMARY:Le racisme scientifique et médical : Du 19e siècle à nos jours
@@ -1075,7 +1100,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:fa5e05db0bec@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261104T190000
 DTEND;TZID=Europe/Paris:20261104T203000
 SUMMARY:Conférence « Les midinettes\, ces grandes oubliées du monde de l
@@ -1093,7 +1118,7 @@ URL:https://www.paris.fr/evenements/conference-paris-a-50-dentelle-urbaine-
 END:VEVENT
 BEGIN:VEVENT
 UID:38ecc3fe5f7f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Autour du projet numérique Corr Ca : histoire\, langues\, toponyme
@@ -1109,7 +1134,7 @@ URL:https://www.sorbonne-nouvelle.fr/autour-du-projet-numerique-corr-si-ca-
 END:VEVENT
 BEGIN:VEVENT
 UID:ead05dc09c35@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Des Pyrénées aux Alpes\, Économies et sociétés dans le Midi "f
@@ -1123,7 +1148,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/des-pyrenees-aux-alpes-econom
 END:VEVENT
 BEGIN:VEVENT
 UID:60ec5593e2a4@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261105T090000
 DTEND;TZID=Europe/Paris:20261105T180000
 SUMMARY:Fonds et collections d'estampages
@@ -1139,7 +1164,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/fo
 END:VEVENT
 BEGIN:VEVENT
 UID:d31af6c2b5cb@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261105T160000
 DTEND;TZID=Europe/Paris:20261105T190000
 SUMMARY:Guillaume Hébrard "Extraordinaires planètes extrasolaires"
@@ -1155,7 +1180,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13798/
 END:VEVENT
 BEGIN:VEVENT
 UID:94812aeea287@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261105T190000
 DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:Se marier en temps de guerre
@@ -1168,7 +1193,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/se-marier-en-tem
 END:VEVENT
 BEGIN:VEVENT
 UID:9c19b107b1cb@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261106T143000
 DTEND;TZID=Europe/Paris:20261106T163000
 SUMMARY:Un trésor mythologique inédit : la mosaïque romaine d'Aréthuse 
@@ -1185,7 +1210,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/un-treso
 END:VEVENT
 BEGIN:VEVENT
 UID:a81265b0c7db@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261107T170000
 DTEND;TZID=Europe/Paris:20261107T190000
 SUMMARY:Conférences Art-Sciences : "Sur les chemins du vivant – Histoire
@@ -1205,7 +1230,7 @@ URL:https://www.paris.fr/evenements/conferences-art-sciences-sur-les-chemin
 END:VEVENT
 BEGIN:VEVENT
 UID:8ae99284a38a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261109T080000
 DTEND;TZID=Europe/Paris:20261109T190000
 SUMMARY:Autour de Bunker Archéologie
@@ -1216,7 +1241,7 @@ URL:https://www.fmsh.fr/agenda/autour-de-bunker-archeologie
 END:VEVENT
 BEGIN:VEVENT
 UID:b4363faa835d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261109T103000
 DTEND;TZID=Europe/Paris:20261109T123000
 SUMMARY:Lecture de textes en lien avec le cours (2)
@@ -1229,7 +1254,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lecture-de-textes-
 END:VEVENT
 BEGIN:VEVENT
 UID:2d57948ef10e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261109T110000
 DTEND;TZID=Europe/Paris:20261109T130000
 SUMMARY:Les nouveaux territoires de l’épouse du dieu 2. Chapelles et dom
@@ -1244,21 +1269,21 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:d21e58cc81ac@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261109T180000
 DTEND;TZID=Europe/Paris:20261109T200000
 SUMMARY:Les États et les sociétés du Golfe dans la guerre : vers une red
  éfinition de leur positionnement international ?
-DESCRIPTION:https://www.imarabe.org/index%2Ephp/fr/agenda/rencontres-et-deb
- ats/les-etats-et-les-societes-du-golfe-dans-guerre-vers-redefinition-leur
+DESCRIPTION:https://www.imarabe.org/fr/agenda/rencontres-et-debats/les-etat
+ s-et-les-societes-du-golfe-dans-guerre-vers-redefinition-leur
 LOCATION:Institut du monde arabe\, 1 rue des Fossés-Saint-Bernard\, Paris 
  5e
-URL:https://www.imarabe.org/index%2Ephp/fr/agenda/rencontres-et-debats/les-
- etats-et-les-societes-du-golfe-dans-guerre-vers-redefinition-leur
+URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/les-etats-et-les
+ -societes-du-golfe-dans-guerre-vers-redefinition-leur
 END:VEVENT
 BEGIN:VEVENT
 UID:72cc9aa84310@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261109T180000
 DTEND;TZID=Europe/Paris:20261109T193000
 SUMMARY:De Jérusalem au Sinaï : les graffitis occidentaux des XIV e - XVI
@@ -1271,7 +1296,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/de-jerusalem-au-sin
 END:VEVENT
 BEGIN:VEVENT
 UID:ff56c530e69f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Un rituel de la couleur au Moyen Âge ?
@@ -1282,7 +1307,7 @@ URL:https://www.bnf.fr/fr/agenda/un-rituel-de-la-couleur-au-moyen-age
 END:VEVENT
 BEGIN:VEVENT
 UID:38fcd46c722d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261110T183000
 DTEND;TZID=Europe/Paris:20261110T200000
 SUMMARY:Benjamin Franklin
@@ -1293,7 +1318,7 @@ URL:https://www.bnf.fr/fr/agenda/benjamin-franklin
 END:VEVENT
 BEGIN:VEVENT
 UID:6210685590cd@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261110T183000
 DTEND;TZID=Europe/Paris:20261110T200000
 SUMMARY:Les kiosques à musique du 15e arrondissement
@@ -1306,7 +1331,7 @@ URL:https://www.paris.fr/evenements/les-kiosques-a-musique-du-15e-arrondiss
 END:VEVENT
 BEGIN:VEVENT
 UID:ffdaf9ec572a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261112T110000
 DTEND;TZID=Europe/Paris:20261112T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (1)
@@ -1319,7 +1344,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:3f38e95f9bb1@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261112T120000
 DTEND;TZID=Europe/Paris:20261112T140000
 SUMMARY:Journée de rentrée des doctorants de la Graduate School Humanité
@@ -1334,7 +1359,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/journee-de-rentree-de
 END:VEVENT
 BEGIN:VEVENT
 UID:fc13c9b6a07d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261112T123000
 DTEND;TZID=Europe/Paris:20261112T143000
 SUMMARY:Sur les routes du Karakum médiéval (Turkmenistan)
@@ -1348,7 +1373,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/su
 END:VEVENT
 BEGIN:VEVENT
 UID:9f7b66a51d5e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261112T163000
 DTEND;TZID=Europe/Paris:20261112T180000
 SUMMARY:Domingos Sequeira\, peintre d’histoire au temps des révolutions
@@ -1361,7 +1386,7 @@ URL:https://www.inha.fr/agenda/domingos-sequeira-peintre-dhistoire-au-temps
 END:VEVENT
 BEGIN:VEVENT
 UID:bb6b2d89a7e5@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Séjours d’artistes de part et d’autre des Pyrénées (1800 - 1
@@ -1375,23 +1400,8 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/se
  jours-d-artistes-de-part-et-d-autre-des-pyrenees-1800-1905
 END:VEVENT
 BEGIN:VEVENT
-UID:7c162e72e9ac@paris-academique
-DTSTAMP:20261011T103759Z
-DTSTART;TZID=Europe/Paris:20261112T190000
-DTEND;TZID=Europe/Paris:20261112T203000
-SUMMARY:Queer cinéma : rencontre avec Didier Roth-Bettoni
-DESCRIPTION:La bibliothèque accueille le journaliste et historien du ciné
- ma à l’occasion de la parution de son ouvrage "Queer cinéma : 1895-202
- 5\, une histoire mondiale des représentations LGBTQI à l'écran" (La Mus
- ardine\, 2026).\nhttps://www.paris.fr/evenements/queer-cinema-rencontre-av
- ec-didier-roth-bettoni-117775
-LOCATION:Bibliothèque Georges Brassens\, 38 rue Gassendi\, 75014 Paris
-URL:https://www.paris.fr/evenements/queer-cinema-rencontre-avec-didier-roth
- -bettoni-117775
-END:VEVENT
-BEGIN:VEVENT
 UID:b564389aad44@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T220000
 SUMMARY:GTA VI\, déjà le "plus grand jeu de tous les temps" ? avec Angelo
@@ -1409,8 +1419,23 @@ URL:https://www.paris.fr/evenements/gta-vi-deja-le-plus-grand-jeu-de-tous-l
  es-temps-avec-angelo-careri-123961
 END:VEVENT
 BEGIN:VEVENT
+UID:7c162e72e9ac@paris-academique
+DTSTAMP:20261012T114557Z
+DTSTART;TZID=Europe/Paris:20261112T190000
+DTEND;TZID=Europe/Paris:20261112T203000
+SUMMARY:Queer cinéma : rencontre avec Didier Roth-Bettoni
+DESCRIPTION:La bibliothèque accueille le journaliste et historien du ciné
+ ma à l’occasion de la parution de son ouvrage "Queer cinéma : 1895-202
+ 5\, une histoire mondiale des représentations LGBTQI à l'écran" (La Mus
+ ardine\, 2026).\nhttps://www.paris.fr/evenements/queer-cinema-rencontre-av
+ ec-didier-roth-bettoni-117775
+LOCATION:Bibliothèque Georges Brassens\, 38 rue Gassendi\, 75014 Paris
+URL:https://www.paris.fr/evenements/queer-cinema-rencontre-avec-didier-roth
+ -bettoni-117775
+END:VEVENT
+BEGIN:VEVENT
 UID:ddbd13580338@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261113T084500
 DTEND;TZID=Europe/Paris:20261113T163000
 SUMMARY:Le secrétariat général du Gouvernement
@@ -1422,7 +1447,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/le-secretariat-gene
 END:VEVENT
 BEGIN:VEVENT
 UID:2b305d94c9a4@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261113T093000
 DTEND;TZID=Europe/Paris:20261113T180000
 SUMMARY:Nathalie Magnan (1956-2016)\, une trajectoire queer : théories\, a
@@ -1437,7 +1462,7 @@ URL:https://www.inha.fr/agenda/nathalie-magnan-1956-2016-une-trajectoire-qu
 END:VEVENT
 BEGIN:VEVENT
 UID:93b5c52d7cf5@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261113T150000
 DTEND;TZID=Europe/Paris:20261113T170000
 SUMMARY:Histoire sociale\, culturelle et politique de l’économie\, XIXe-
@@ -1451,7 +1476,7 @@ URL:https://idhes.pantheonsorbonne.fr/evenements/histoire-sociale-culturell
 END:VEVENT
 BEGIN:VEVENT
 UID:e29b33d21416@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261114T093000
 DTEND;TZID=Europe/Paris:20261114T180000
 SUMMARY:Nathalie Magnan (1956-2016)\, une trajectoire queer : théories\, a
@@ -1466,7 +1491,7 @@ URL:https://www.inha.fr/agenda/nathalie-magnan-1956-2016-une-trajectoire-qu
 END:VEVENT
 BEGIN:VEVENT
 UID:76c279acaa97@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261116T103000
 DTEND;TZID=Europe/Paris:20261116T123000
 SUMMARY:Lecture de textes en lien avec le cours (3)
@@ -1479,7 +1504,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lecture-de-textes-
 END:VEVENT
 BEGIN:VEVENT
 UID:0b24dad2bcd5@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261116T110000
 DTEND;TZID=Europe/Paris:20261116T130000
 SUMMARY:Royauté et divinité de l’épouse du dieu 1. Aspects théologiqu
@@ -1493,7 +1518,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:5496b6be2175@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261116T124500
 DTEND;TZID=Europe/Paris:20261116T134500
 SUMMARY:Léonard de Vinci ou la révolution du portrait
@@ -1505,7 +1530,7 @@ URL:https://www.collegedesbernardins.fr/agenda/leonard-ou-la-revolution-du-
 END:VEVENT
 BEGIN:VEVENT
 UID:a521df4a2db7@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261116T190000
 DTEND;TZID=Europe/Paris:20261116T210000
 SUMMARY:233 ans de controverses. Le Louvre et ses critiques depuis 1793
@@ -1519,7 +1544,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/23
 END:VEVENT
 BEGIN:VEVENT
 UID:7059b3bafa4b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261116T190000
 DTEND;TZID=Europe/Paris:20261116T203000
 SUMMARY:Manuscrit Caumont
@@ -1532,7 +1557,7 @@ URL:https://www.paris.fr/evenements/manuscrit-caumont-116810
 END:VEVENT
 BEGIN:VEVENT
 UID:2cbdd8a312d7@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Où (en) est le médiévalisme? Where is medievalism (at)? ¿Dónde
@@ -1548,7 +1573,7 @@ URL:https://www.sorbonne-nouvelle.fr/ou-en-est-le-medievalisme-where-is-med
 END:VEVENT
 BEGIN:VEVENT
 UID:500446f38697@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261117T160000
 DTEND;TZID=Europe/Paris:20261117T190000
 SUMMARY:Enquêtes en musée : documenter les œuvres grâce aux archives
@@ -1561,7 +1586,7 @@ URL:https://www.inha.fr/agenda/enquetes-en-musee-documenter-les-oeuvres-gra
 END:VEVENT
 BEGIN:VEVENT
 UID:335212e66138@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261117T180000
 DTEND;TZID=Europe/Paris:20261117T193000
 SUMMARY:Le chocolat chaud de Madame de Sévigné
@@ -1579,7 +1604,7 @@ URL:https://www.paris.fr/evenements/le-chocolat-chaud-de-madame-de-sevigne-
 END:VEVENT
 BEGIN:VEVENT
 UID:cd5359e9c78b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261117T183000
 DTEND;TZID=Europe/Paris:20261117T200000
 SUMMARY:La guerre des théâtres : concurrence et inventivité à la Foire 
@@ -1594,7 +1619,7 @@ URL:https://www.paris.fr/evenements/le-9e-arrondissement-epicentre-des-debu
 END:VEVENT
 BEGIN:VEVENT
 UID:55f8214ae048@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261118T090000
 DTEND;TZID=Europe/Paris:20261118T180000
 SUMMARY:Le rétablissement des images. Naissance d’une histoire de l’ar
@@ -1612,7 +1637,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:9abe6d0a6f7c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261118T090000
 DTEND;TZID=Europe/Paris:20261118T180000
 SUMMARY:Déplacer la sculpture à l’époque moderne (XVe -XVIIIe siècle)
@@ -1625,7 +1650,7 @@ URL:https://www.inha.fr/agenda/deplacer-la-sculpture-a-lepoque-moderne-xve-
 END:VEVENT
 BEGIN:VEVENT
 UID:283bbe0cc8d9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261118T100000
 DTEND;TZID=Europe/Paris:20261118T120000
 SUMMARY:La question de la Palestine au XXIe siècle (2)
@@ -1638,7 +1663,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-question-de-la-pale
 END:VEVENT
 BEGIN:VEVENT
 UID:2b15a103c214@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261118T110000
 DTEND;TZID=Europe/Paris:20261118T130000
 SUMMARY:Karomâmâ : figure de bronze d’une Adoratrice d’Amon au servic
@@ -1656,7 +1681,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:5d42960014a5@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261118T110000
 DTEND;TZID=Europe/Paris:20261118T130000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -1675,7 +1700,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:afe8da9dc9a3@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261118T150000
 DTEND;TZID=Europe/Paris:20261118T170000
 SUMMARY:Une histoire complexe : l’origine d’Homo sapiens
@@ -1687,7 +1712,7 @@ URL:https://www.museedelhomme.fr/fr/une-histoire-complexe-l-origine-d-homo-
 END:VEVENT
 BEGIN:VEVENT
 UID:cde111d93098@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261118T193000
 DTEND;TZID=Europe/Paris:20261118T213000
 SUMMARY:Tisser la Paix dans un monde de guerre. L’espérance écrite par 
@@ -1702,7 +1727,7 @@ URL:https://www.collegedesbernardins.fr/agenda/tisser-la-paix-dans-un-monde
 END:VEVENT
 BEGIN:VEVENT
 UID:72a6d8fc1541@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Politique et productions culturelles en Espagne : relectures contem
@@ -1718,7 +1743,7 @@ URL:https://www.sorbonne-nouvelle.fr/politique-et-productions-culturelles-e
 END:VEVENT
 BEGIN:VEVENT
 UID:1d3c967803ae@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261119T110000
 DTEND;TZID=Europe/Paris:20261119T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (2)
@@ -1731,7 +1756,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:f9504b2f1465@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T193000
 SUMMARY:Des vases sur des monnaies : pour une approche croisée des représ
@@ -1745,7 +1770,7 @@ URL:https://www.bnf.fr/fr/agenda/des-vases-sur-des-monnaies-pour-une-approc
 END:VEVENT
 BEGIN:VEVENT
 UID:32649b1e98de@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T193000
 SUMMARY:Des vases sur des monnaies grecques et romaines
@@ -1756,7 +1781,7 @@ URL:https://www.ephe.psl.eu/des-vases-sur-des-monnaies-grecques-et-romaines
 END:VEVENT
 BEGIN:VEVENT
 UID:4b2da3e24039@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:L’arsenic\, renaissance d’un médicament venu de l’Antiquité
@@ -1768,7 +1793,7 @@ URL:https://www.bnf.fr/fr/agenda/larsenic-renaissance-dun-medicament-venu-d
 END:VEVENT
 BEGIN:VEVENT
 UID:aab7768acd48@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Patrimoines spoliés : restituer\, réparer\, raconter
@@ -1780,7 +1805,7 @@ URL:https://www.sorbonne-universite.fr/evenements/patrimoines-spolies-resti
 END:VEVENT
 BEGIN:VEVENT
 UID:721854545a2a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261119T190000
 DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Halle Pajol : sur les rails de la reconversion\, un patrimoine en m
@@ -1797,7 +1822,7 @@ URL:https://www.paris.fr/evenements/halle-pajol-sur-les-rails-de-la-reconve
 END:VEVENT
 BEGIN:VEVENT
 UID:c25465b933ff@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Psychothérapies à l'épreuve du XXIe siècle : recompositions\, r
@@ -1808,7 +1833,7 @@ URL:https://epp-congres2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:c227743c551d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:PSL Week : Cyber\, lutte informationnelle et guerre hybride : les n
@@ -1822,7 +1847,7 @@ URL:https://ciens.ens.psl.eu/evenements/psl-week-cyber-lutte-informationnel
 END:VEVENT
 BEGIN:VEVENT
 UID:3168946ecdd3@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261123T103000
 DTEND;TZID=Europe/Paris:20261123T123000
 SUMMARY:Lecture de textes en lien avec le cours (4)
@@ -1835,7 +1860,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lecture-de-textes-
 END:VEVENT
 BEGIN:VEVENT
 UID:c029ed44c9aa@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261123T110000
 DTEND;TZID=Europe/Paris:20261123T130000
 SUMMARY:Royauté et divinité de l’épouse du dieu 2. Des attributs phara
@@ -1851,7 +1876,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:065a02c4f923@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261123T180000
 DTEND;TZID=Europe/Paris:20261123T200000
 SUMMARY:Drogues\, ivresses et sociétés : une brève histoire des usages d
@@ -1865,7 +1890,7 @@ URL:https://www.museedelhomme.fr/fr/conference/drogues-ivresses-et-societes
 END:VEVENT
 BEGIN:VEVENT
 UID:aa7d607d4b4e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Les 10 ans de la plateforme EMAN\, et après ? Histoire et position
@@ -1876,7 +1901,7 @@ URL:https://eman10ans.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:931fb79c886f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261124T123000
 DTEND;TZID=Europe/Paris:20261124T143000
 SUMMARY:Partage de la ressource : la guerre de l'eau aura-t-elle lieu ?
@@ -1889,7 +1914,7 @@ URL:https://www.assas-universite.fr/fr/evenements/partage-ressource-guerre-
 END:VEVENT
 BEGIN:VEVENT
 UID:19b34e5e06bd@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T183000
 SUMMARY:Annoter les images : humanités numériques\, histoire de l’art e
@@ -1903,7 +1928,7 @@ URL:https://www.inha.fr/agenda/annoter-les-images-humanites-numeriques-hist
 END:VEVENT
 BEGIN:VEVENT
 UID:0defde4da6c8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261124T173000
 DTEND;TZID=Europe/Paris:20261124T193000
 SUMMARY:Travailler avec Foucault : les séminaires du Collège
@@ -1917,7 +1942,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-fouca
 END:VEVENT
 BEGIN:VEVENT
 UID:ac40f1787fda@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261124T183000
 DTEND;TZID=Europe/Paris:20261124T200000
 SUMMARY:Pierre Augustin Caron de Beaumarchais
@@ -1929,7 +1954,7 @@ URL:https://www.bnf.fr/fr/agenda/pierre-augustin-caron-de-beaumarchais
 END:VEVENT
 BEGIN:VEVENT
 UID:6872b3ecaa08@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261124T183000
 DTEND;TZID=Europe/Paris:20261124T200000
 SUMMARY:Les débuts du cinématographe dans le 10e arrondissement
@@ -1945,7 +1970,7 @@ URL:https://www.paris.fr/evenements/les-debuts-du-cinematographe-dans-le-10
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb47689f2a7@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261125T090000
 DTEND;TZID=Europe/Paris:20261125T170000
 SUMMARY:Les archives photographiques françaises et le patrimoine du Moyen-
@@ -1959,7 +1984,7 @@ URL:https://www.inha.fr/agenda/archives-photographiques-francaises-et-patri
 END:VEVENT
 BEGIN:VEVENT
 UID:e208a587616f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261125T100000
 DTEND;TZID=Europe/Paris:20261125T120000
 SUMMARY:La question de la Palestine au XXIe siècle (3)
@@ -1972,7 +1997,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-question-de-la-pale
 END:VEVENT
 BEGIN:VEVENT
 UID:06bdc2e2bfed@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261125T110000
 DTEND;TZID=Europe/Paris:20261125T130000
 SUMMARY:Les ouchebtis des Divines Adoratrices et la question de leur lieu d
@@ -1990,7 +2015,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:fffe07303dda@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261125T110000
 DTEND;TZID=Europe/Paris:20261125T130000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -2009,7 +2034,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:a7d729bc71da@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261125T150000
 DTEND;TZID=Europe/Paris:20261125T170000
 SUMMARY:Homo sapiens\, Néandertal\, Denisova\, une histoire de métissages
@@ -2021,7 +2046,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/homo-sapiens-neandertal-denis
 END:VEVENT
 BEGIN:VEVENT
 UID:b6b670dda929@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261125T160000
 DTEND;TZID=Europe/Paris:20261125T173000
 SUMMARY:La défaite communiste de Kinmen (25-27 octobre 1949) : une nouvell
@@ -2034,7 +2059,7 @@ URL:https://www.inalco.fr/evenements/la-defaite-communiste-de-kinmen-25-27-
 END:VEVENT
 BEGIN:VEVENT
 UID:d5d214ebc053@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T120000
 SUMMARY:Les archives photographiques françaises et le patrimoine du Moyen-
@@ -2048,7 +2073,7 @@ URL:https://www.inha.fr/agenda/archives-photographiques-francaises-et-patri
 END:VEVENT
 BEGIN:VEVENT
 UID:512ec5978148@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261126T110000
 DTEND;TZID=Europe/Paris:20261126T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (3)
@@ -2061,7 +2086,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:889f34a72e40@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261126T140000
 DTEND;TZID=Europe/Paris:20261126T160000
 SUMMARY:Les territoires croisés de l’architecture et de l’archéologie
@@ -2074,7 +2099,7 @@ URL:https://www.inha.fr/agenda/les-territoires-croises-de-larchitecture-et-
 END:VEVENT
 BEGIN:VEVENT
 UID:ed80dda401b2@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261126T160000
 DTEND;TZID=Europe/Paris:20261126T171500
 SUMMARY:Usages\, impacts et enjeux de l'IA en recherche
@@ -2089,7 +2114,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/usages-
 END:VEVENT
 BEGIN:VEVENT
 UID:0635cfe4929a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261127T090000
 DTEND;TZID=Europe/Paris:20261127T120000
 SUMMARY:Les archives photographiques françaises et le patrimoine du Moyen-
@@ -2103,7 +2128,7 @@ URL:https://www.inha.fr/agenda/archives-photographiques-francaises-et-patri
 END:VEVENT
 BEGIN:VEVENT
 UID:794cb5b0b60d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261127T090000
 DTEND;TZID=Europe/Paris:20261127T173000
 SUMMARY:Journée de formation aux outils de la recherche sur le XVI e sièc
@@ -2116,7 +2141,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/journee-de-formatio
 END:VEVENT
 BEGIN:VEVENT
 UID:d4c7c6e2451d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Blanche de Castille. Exercer le pouvoir au féminin (1226-1252)
@@ -2128,7 +2153,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/blanche-de-castille-exercer-l
 END:VEVENT
 BEGIN:VEVENT
 UID:f436eb43a202@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261128T150000
 DTEND;TZID=Europe/Paris:20261128T170000
 SUMMARY:La naissance du paysage moderne
@@ -2140,7 +2165,7 @@ URL:https://www.paris.fr/evenements/la-naissance-du-paysage-moderne-124158
 END:VEVENT
 BEGIN:VEVENT
 UID:002902e85dd1@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261129T143000
 DTEND;TZID=Europe/Paris:20261129T163000
 SUMMARY:70e anniversaire du Mémorial du Martyr juif inconnu devenu Mémori
@@ -2154,7 +2179,7 @@ URL:https://www.paris.fr/evenements/70e-anniversaire-du-memorial-du-martyr-
 END:VEVENT
 BEGIN:VEVENT
 UID:80cda5c25365@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261130T080000
 DTEND;TZID=Europe/Paris:20261130T220000
 SUMMARY:En hommage à János Kornai (1928–2021)
@@ -2166,7 +2191,7 @@ URL:https://www.inalco.fr/evenements/en-hommage-janos-kornai-1928-2021
 END:VEVENT
 BEGIN:VEVENT
 UID:7684cf07ab6c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261130T103000
 DTEND;TZID=Europe/Paris:20261130T123000
 SUMMARY:Lecture de textes en lien avec le cours (5)
@@ -2179,7 +2204,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lecture-de-textes-
 END:VEVENT
 BEGIN:VEVENT
 UID:c950db5f1078@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261130T110000
 DTEND;TZID=Europe/Paris:20261130T130000
 SUMMARY:La cour de l’épouse du dieu 1. Organisation\, hiérarchie\, déc
@@ -2193,7 +2218,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:22f147c0a2b3@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261130T170000
 DTEND;TZID=Europe/Paris:20261130T183000
 SUMMARY:Entre archives et manuscrits\, du nouveau sur Charles d’Orléans 
@@ -2206,7 +2231,7 @@ URL:https://www.bnf.fr/fr/agenda/entre-archives-et-manuscrits-du-nouveau-su
 END:VEVENT
 BEGIN:VEVENT
 UID:c94f7ebbe77f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261201T170000
 DTEND;TZID=Europe/Paris:20261201T190000
 SUMMARY:Écrire l’Histoire\, écrire dans l’Histoire : Queneau au trava
@@ -2220,7 +2245,7 @@ URL:https://www.item.ens.fr/daniela-tononi-universite-de-palerme-ecrire-lhi
 END:VEVENT
 BEGIN:VEVENT
 UID:ef50410dd462@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261201T181500
 DTEND;TZID=Europe/Paris:20261201T193000
 SUMMARY:La « presse des sables » : journaux des réfugiés de la guerre c
@@ -2234,7 +2259,7 @@ URL:https://www.inha.fr/agenda/la-presse-des-sables-journaux-des-refugies-d
 END:VEVENT
 BEGIN:VEVENT
 UID:85a813de5f8a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261202T100000
 DTEND;TZID=Europe/Paris:20261202T120000
 SUMMARY:La question de la Palestine au XXIe siècle (4)
@@ -2247,7 +2272,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-question-de-la-pale
 END:VEVENT
 BEGIN:VEVENT
 UID:ce11b22cd54b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261202T110000
 DTEND;TZID=Europe/Paris:20261202T130000
 SUMMARY:Les sarcophages des épouses du dieu et de leurs plus hauts fonctio
@@ -2266,7 +2291,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:c4d70932d7b8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261202T110000
 DTEND;TZID=Europe/Paris:20261202T130000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -2285,7 +2310,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:937598a1e043@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261202T180000
 DTEND;TZID=Europe/Paris:20261202T193000
 SUMMARY:Surveiller et punir en Chine. Laogaï et technosurveillance\, de 19
@@ -2298,7 +2323,7 @@ URL:https://www.inalco.fr/evenements/surveiller-et-punir-en-chine-laogai-et
 END:VEVENT
 BEGIN:VEVENT
 UID:4a54aca6cf38@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261202T190000
 DTEND;TZID=Europe/Paris:20261202T210000
 SUMMARY:Le Centenaire Morellet au Louvre
@@ -2316,7 +2341,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:a55086fc6d60@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261202T190000
 DTEND;TZID=Europe/Paris:20261202T204500
 SUMMARY:"Je n'y comprends rien… c'est du chinois !"
@@ -2333,7 +2358,7 @@ URL:https://www.paris.fr/evenements/je-n-y-comprends-rien-c-est-du-chinois-
 END:VEVENT
 BEGIN:VEVENT
 UID:9d25958b1857@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261203T090000
 DTEND;TZID=Europe/Paris:20261203T110000
 SUMMARY:Exil·s\, guerre·s et création·s : images de résistance au serv
@@ -2346,7 +2371,7 @@ URL:https://www.fmsh.fr/agenda/exils-guerres-et-creations-images-de-resista
 END:VEVENT
 BEGIN:VEVENT
 UID:ff6e57ff7a72@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261203T110000
 DTEND;TZID=Europe/Paris:20261203T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (4)
@@ -2359,7 +2384,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:d75821883ee9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261205T150000
 DTEND;TZID=Europe/Paris:20261205T173000
 SUMMARY:Taxi Driver. Ciné-club de la bibliothèque Germaine Tillion
@@ -2376,7 +2401,7 @@ URL:https://www.paris.fr/evenements/taxi-driver-6eme-seance-du-cine-club-de
 END:VEVENT
 BEGIN:VEVENT
 UID:ccb1575992c2@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261205T153000
 DTEND;TZID=Europe/Paris:20261205T173000
 SUMMARY:Bécaye Diaïté\, un tirailleur sénégalais de la deuxième guerr
@@ -2391,7 +2416,7 @@ URL:https://www.paris.fr/evenements/becaye-diaite-un-tirailleur-senegalais-
 END:VEVENT
 BEGIN:VEVENT
 UID:780ca2cae295@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261207T100000
 DTEND;TZID=Europe/Paris:20261207T120000
 SUMMARY:Frontières. Pour une anthropologie religieuse de l'espace et du po
@@ -2405,7 +2430,7 @@ URL:https://www.ephe.psl.eu/frontieres-pour-une-anthropologie-religieuse-de
 END:VEVENT
 BEGIN:VEVENT
 UID:34cffd0379e9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261207T103000
 DTEND;TZID=Europe/Paris:20261207T123000
 SUMMARY:Lecture de textes en lien avec le cours (6)
@@ -2418,7 +2443,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lecture-de-textes-
 END:VEVENT
 BEGIN:VEVENT
 UID:6d71cca75c71@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261207T180000
 DTEND;TZID=Europe/Paris:20261207T200000
 SUMMARY:Relation humain / animal : vers la fin d’une longue histoire comm
@@ -2431,7 +2456,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/relation-humain-animal-vers-l
 END:VEVENT
 BEGIN:VEVENT
 UID:afb012407496@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261207T193000
 DTEND;TZID=Europe/Paris:20261207T214500
 SUMMARY:Marc Bloch et l’engagement
@@ -2444,7 +2469,7 @@ URL:https://www.paris.fr/evenements/marc-bloch-et-l-engagement-125734
 END:VEVENT
 BEGIN:VEVENT
 UID:5bc4ce70b687@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261208T124500
 DTEND;TZID=Europe/Paris:20261208T133000
 SUMMARY:Présentation de l’ouvrage C.A.S.A Casablanca Art School Archives
@@ -2458,7 +2483,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-c-a-s-a-casablanca-
 END:VEVENT
 BEGIN:VEVENT
 UID:3626b2cd9aef@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261208T150000
 DTEND;TZID=Europe/Paris:20261208T170000
 SUMMARY:Conférence : Les Camondo : une famille de banquiers\, mécènes et
@@ -2474,7 +2499,7 @@ URL:https://www.paris.fr/evenements/conference-les-camondo-une-famille-de-b
 END:VEVENT
 BEGIN:VEVENT
 UID:342d81a6be06@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261208T170000
 DTEND;TZID=Europe/Paris:20261208T183000
 SUMMARY:Écrire ou figurer la vie du Christ ? L’image à l’épreuve de 
@@ -2488,7 +2513,7 @@ URL:https://www.bnf.fr/fr/agenda/ecrire-ou-figurer-la-vie-du-christ-limage-
 END:VEVENT
 BEGIN:VEVENT
 UID:f8276b0e34e9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261208T190000
 DTEND;TZID=Europe/Paris:20261208T203000
 SUMMARY:Une œuvre / Une heure : « La grande Odalisque\, le premier tablea
@@ -2503,7 +2528,7 @@ URL:https://www.paris.fr/evenements/une-oeuvre-une-heure-la-grande-odalisqu
 END:VEVENT
 BEGIN:VEVENT
 UID:8c92144dc9e7@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261209T100000
 DTEND;TZID=Europe/Paris:20261209T120000
 SUMMARY:La question de la Palestine au XXIe siècle (5)
@@ -2516,7 +2541,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-question-de-la-pale
 END:VEVENT
 BEGIN:VEVENT
 UID:10944a1fc5d4@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261209T110000
 DTEND;TZID=Europe/Paris:20261209T130000
 SUMMARY:Les réseaux de pouvoir de reines\, princesses et prêtresses de l
@@ -2534,7 +2559,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:9d945ab585bd@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261209T110000
 DTEND;TZID=Europe/Paris:20261209T130000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -2553,7 +2578,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:27aa9e63eff9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261209T143000
 DTEND;TZID=Europe/Paris:20261209T163000
 SUMMARY:Prêtresses et femmes consacrées dans la Babylonie du IIe milléna
@@ -2570,7 +2595,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:83b11af5a9ff@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261210T110000
 DTEND;TZID=Europe/Paris:20261210T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (5)
@@ -2583,7 +2608,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:25fab80aad7b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261210T163000
 DTEND;TZID=Europe/Paris:20261210T180000
 SUMMARY:La peinture au Mexique et dans les Amériques espagnoles au XVIIIe 
@@ -2598,7 +2623,7 @@ URL:https://www.inha.fr/agenda/la-peinture-au-mexique-et-dans-les-ameriques
 END:VEVENT
 BEGIN:VEVENT
 UID:200ad1b5bf7d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261210T180000
 DTEND;TZID=Europe/Paris:20261210T193000
 SUMMARY:Hippocrate à Constantinople : le Parisinus gr. 2144 et ses lecteur
@@ -2612,7 +2637,7 @@ URL:https://www.ephe.psl.eu/hippocrate-constantinople-le-parisinus-gr-2144-
 END:VEVENT
 BEGIN:VEVENT
 UID:5b4a93cf215e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261210T180000
 DTEND;TZID=Europe/Paris:20261210T193000
 SUMMARY:Images de sciences
@@ -2623,7 +2648,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/images-de-sciences
 END:VEVENT
 BEGIN:VEVENT
 UID:2e0b3ad51637@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261212T150000
 DTEND;TZID=Europe/Paris:20261212T160000
 SUMMARY:Petites histoires électriques
@@ -2635,7 +2660,7 @@ URL:https://www.paris.fr/evenements/petites-histoires-electriques-115602
 END:VEVENT
 BEGIN:VEVENT
 UID:c1408828136e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:L’auberge espagnole de François-Regis Gaudry
@@ -2650,7 +2675,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/l-
 END:VEVENT
 BEGIN:VEVENT
 UID:aaf7f426af24@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261213T140000
 DTEND;TZID=Europe/Paris:20261213T160000
 SUMMARY:Bella Ariel et Sonia Mossé : deux icônes parisiennes sous l’Occ
@@ -2663,7 +2688,7 @@ URL:https://www.paris.fr/evenements/temoigner-contre-l-oubli-117423
 END:VEVENT
 BEGIN:VEVENT
 UID:7ce191224818@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261213T161500
 DTEND;TZID=Europe/Paris:20261213T180000
 SUMMARY:Conférence inaugurale de l'exposition "Histoire des Juifs de la ba
@@ -2677,7 +2702,7 @@ URL:https://www.paris.fr/evenements/visite-guidee-de-drancy-117426
 END:VEVENT
 BEGIN:VEVENT
 UID:bf9e8f9e30bc@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261214T103000
 DTEND;TZID=Europe/Paris:20261214T123000
 SUMMARY:Lecture de textes en lien avec le cours (7)
@@ -2690,7 +2715,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lecture-de-textes-
 END:VEVENT
 BEGIN:VEVENT
 UID:b5d0d605f818@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261214T110000
 DTEND;TZID=Europe/Paris:20261214T130000
 SUMMARY:La cour de l’épouse du dieu 2. Les « chanteuses de l’intérie
@@ -2704,7 +2729,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:ef707536e69c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261214T133000
 DTEND;TZID=Europe/Paris:20261214T150000
 SUMMARY:DesignSHS : design graphique\, recherche et patrimoine des sciences
@@ -2717,7 +2742,7 @@ URL:https://www.inha.fr/agenda/designshs-design-graphique-recherche-et-patr
 END:VEVENT
 BEGIN:VEVENT
 UID:d83d3e540673@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261215T170000
 DTEND;TZID=Europe/Paris:20261215T183000
 SUMMARY:Archaeological Interactive Report (AIR) : un outil d’annotation 3
@@ -2730,7 +2755,7 @@ URL:https://www.inha.fr/agenda/archaeological-interactive-report/
 END:VEVENT
 BEGIN:VEVENT
 UID:aa284cd8bbaf@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261215T170000
 DTEND;TZID=Europe/Paris:20261215T183000
 SUMMARY:Annoter les images : humanités numériques\, histoire de l’art e
@@ -2744,7 +2769,7 @@ URL:https://www.inha.fr/agenda/annoter-les-images-humanites-numeriques-hist
 END:VEVENT
 BEGIN:VEVENT
 UID:88fd7d5e0fe9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261215T173000
 DTEND;TZID=Europe/Paris:20261215T193000
 SUMMARY:Histoire et postérité d’une leçon : « Qu’est-ce que les Lum
@@ -2760,7 +2785,7 @@ URL:https://www.college-de-france.fr/fr/agenda/grand-evenement/michel-fouca
 END:VEVENT
 BEGIN:VEVENT
 UID:58a8f49fd13e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261215T183000
 DTEND;TZID=Europe/Paris:20261215T200000
 SUMMARY:Le 9e arrondissement\, épicentre des débuts du jazz en France
@@ -2774,7 +2799,7 @@ URL:https://www.paris.fr/evenements/le-9e-arrondissement-epicentre-des-debu
 END:VEVENT
 BEGIN:VEVENT
 UID:54e221e952bd@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261216T100000
 DTEND;TZID=Europe/Paris:20261216T120000
 SUMMARY:La question de la Palestine au XXIe siècle (6)
@@ -2787,7 +2812,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-question-de-la-pale
 END:VEVENT
 BEGIN:VEVENT
 UID:911b9041bfe0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261216T110000
 DTEND;TZID=Europe/Paris:20261216T130000
 SUMMARY:Agency in Image Making: Visual Strategies of the God’s Wives of A
@@ -2804,7 +2829,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:beb9d3b36ad1@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261216T110000
 DTEND;TZID=Europe/Paris:20261216T130000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -2823,7 +2848,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:e109bd268317@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261216T200000
 DTEND;TZID=Europe/Paris:20261216T220000
 SUMMARY:Sad Girl Pop avec Legit Girl DJ
@@ -2836,7 +2861,7 @@ URL:https://www.paris.fr/evenements/sad-girl-pop-avec-legit-girl-dj-116760
 END:VEVENT
 BEGIN:VEVENT
 UID:beb88ec241c4@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261217T110000
 DTEND;TZID=Europe/Paris:20261217T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (6)
@@ -2849,7 +2874,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:563bc8f11fb8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261217T140000
 DTEND;TZID=Europe/Paris:20261217T160000
 SUMMARY:Les territoires croisés de l’architecture et de l’archéologie
@@ -2862,7 +2887,7 @@ URL:https://www.inha.fr/agenda/les-territoires-croises-de-larchitecture-et-
 END:VEVENT
 BEGIN:VEVENT
 UID:bb5b6562a484@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261217T150000
 DTEND;TZID=Europe/Paris:20261217T170000
 SUMMARY:Retraités et révolutionnaires ? Usages politiques d’un nouvelle
@@ -2875,7 +2900,7 @@ URL:https://www.inalco.fr/evenements/retraites-et-revolutionnaires-usages-p
 END:VEVENT
 BEGIN:VEVENT
 UID:b17c12f5be1f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261217T160000
 DTEND;TZID=Europe/Paris:20261217T180000
 SUMMARY:Les bronzes grecs et romains de la collection Campana au musée du 
@@ -2890,7 +2915,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:18858ca0f64c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20261217T183000
 DTEND;TZID=Europe/Paris:20261217T193000
 SUMMARY:Présentation de l’ouvrage Histoire de l’art (Seuil\, 2026)
@@ -2903,7 +2928,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-histoire-de-lart-se
 END:VEVENT
 BEGIN:VEVENT
 UID:39522d91f576@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270104T110000
 DTEND;TZID=Europe/Paris:20270104T130000
 SUMMARY:Conclusions
@@ -2915,7 +2940,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-epouses-du-dieu-th
 END:VEVENT
 BEGIN:VEVENT
 UID:46c19d884f8b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270105T140000
 DTEND;TZID=Europe/Paris:20270105T160000
 SUMMARY:Vies et morts de François Villon (1)
@@ -2928,7 +2953,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:5b3f91805b4e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270106T110000
 DTEND;TZID=Europe/Paris:20270106T130000
 SUMMARY:Vierges ou épouses : le statut des prêtresses romaines
@@ -2944,7 +2969,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:62f6351a967c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270106T110000
 DTEND;TZID=Europe/Paris:20270106T130000
 SUMMARY:Autour des « Épouses du dieu » en Égypte ancienne : recherches 
@@ -2963,7 +2988,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-des-epouses
 END:VEVENT
 BEGIN:VEVENT
 UID:8310fd663b62@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270106T140000
 DTEND;TZID=Europe/Paris:20270106T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (1)
@@ -2976,7 +3001,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:08f4b4c8a702@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270107T110000
 DTEND;TZID=Europe/Paris:20270107T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (7)
@@ -2989,7 +3014,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:9c1eac911b4a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270111T110000
 DTEND;TZID=Europe/Paris:20270111T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3005,7 +3030,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:8d11a330df7a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270112T140000
 DTEND;TZID=Europe/Paris:20270112T160000
 SUMMARY:Vies et morts de François Villon (2)
@@ -3018,7 +3043,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:e0ab40970ab9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270113T140000
 DTEND;TZID=Europe/Paris:20270113T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (2)
@@ -3031,7 +3056,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:942515aacfa5@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270113T150000
 DTEND;TZID=Europe/Paris:20270113T170000
 SUMMARY:L’histoire génétique des couleurs de peau
@@ -3043,7 +3068,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/l-histoire-genetique-des-coul
 END:VEVENT
 BEGIN:VEVENT
 UID:457b0adebf6b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270114T143000
 DTEND;TZID=Europe/Paris:20270114T163000
 SUMMARY:Retour vers le Dao : entre empire et emprise (8)
@@ -3056,7 +3081,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:8b974efe6994@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270118T110000
 DTEND;TZID=Europe/Paris:20270118T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3072,7 +3097,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:1cb7fdb2467a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270118T140000
 DTEND;TZID=Europe/Paris:20270118T160000
 SUMMARY:Villes en été\, villages en hiver : récentes découvertes au suj
@@ -3091,7 +3116,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-en-ete-villages
 END:VEVENT
 BEGIN:VEVENT
 UID:39b368ca72f0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270119T140000
 DTEND;TZID=Europe/Paris:20270119T160000
 SUMMARY:Vies et morts de François Villon (3)
@@ -3104,7 +3129,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:d21baa395543@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270120T140000
 DTEND;TZID=Europe/Paris:20270120T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (3)
@@ -3117,7 +3142,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:1b04e5fd49c2@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270120T150000
 DTEND;TZID=Europe/Paris:20270120T170000
 SUMMARY:Des humains et des animaux : quelles relations au cours de la Préh
@@ -3130,7 +3155,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/des-humains-et-des-animaux-qu
 END:VEVENT
 BEGIN:VEVENT
 UID:58c8c08b77e8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270121T110000
 DTEND;TZID=Europe/Paris:20270121T130000
 SUMMARY:Retour vers le Dao : entre empire et emprise (9)
@@ -3143,7 +3168,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/retour-vers-le-dao-ent
 END:VEVENT
 BEGIN:VEVENT
 UID:1f52add5da64@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270125T110000
 DTEND;TZID=Europe/Paris:20270125T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3159,7 +3184,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:b8a2826b76cc@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270125T140000
 DTEND;TZID=Europe/Paris:20270125T160000
 SUMMARY:Villes en été\, villages en hiver : récentes découvertes au suj
@@ -3179,7 +3204,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-en-ete-villages
 END:VEVENT
 BEGIN:VEVENT
 UID:43e0b8579e09@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270125T180000
 DTEND;TZID=Europe/Paris:20270125T200000
 SUMMARY:Histoire des psychotropes en Occident
@@ -3191,7 +3216,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/histoire-des-psychotropes-en-
 END:VEVENT
 BEGIN:VEVENT
 UID:56d780c19cf4@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270126T140000
 DTEND;TZID=Europe/Paris:20270126T160000
 SUMMARY:Vies et morts de François Villon (4)
@@ -3204,7 +3229,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:a112d56028b1@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270127T140000
 DTEND;TZID=Europe/Paris:20270127T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (4)
@@ -3217,7 +3242,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:50b96e6e179f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270127T160000
 DTEND;TZID=Europe/Paris:20270127T190000
 SUMMARY:Histoire de la médecine et de la santé : perspectives transnation
@@ -3230,7 +3255,7 @@ URL:https://www.ens.psl.eu/agenda/histoire-de-la-medecine-et-de-la-sante-pe
 END:VEVENT
 BEGIN:VEVENT
 UID:b525a74c7ce4@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270128T110000
 DTEND;TZID=Europe/Paris:20270128T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (1)
@@ -3245,7 +3270,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:46101a06c91a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
 SUMMARY:L'eau dans l'antiquité au Louvre
@@ -3259,7 +3284,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/l-
 END:VEVENT
 BEGIN:VEVENT
 UID:7a98134b3be0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270201T110000
 DTEND;TZID=Europe/Paris:20270201T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3275,7 +3300,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:88bd0d28ed06@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270201T140000
 DTEND;TZID=Europe/Paris:20270201T160000
 SUMMARY:Villes en été\, villages en hiver : récentes découvertes au suj
@@ -3295,7 +3320,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-en-ete-villages
 END:VEVENT
 BEGIN:VEVENT
 UID:7b85b3bd68c9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270202T140000
 DTEND;TZID=Europe/Paris:20270202T160000
 SUMMARY:Vies et morts de François Villon (5)
@@ -3308,7 +3333,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:204261430489@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270203T110000
 DTEND;TZID=Europe/Paris:20270203T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -3325,7 +3350,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:ee2dd545e3a6@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270203T140000
 DTEND;TZID=Europe/Paris:20270203T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (5)
@@ -3338,7 +3363,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:3c946b0200e6@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270204T110000
 DTEND;TZID=Europe/Paris:20270204T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (2)
@@ -3353,7 +3378,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:7e8248bcc242@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270204T153000
 DTEND;TZID=Europe/Paris:20270204T173000
 SUMMARY:Nouveautés papyrologiques (1)
@@ -3366,7 +3391,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:c92d28ae6c57@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270208T110000
 DTEND;TZID=Europe/Paris:20270208T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3382,7 +3407,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:73f2747d3480@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270210T110000
 DTEND;TZID=Europe/Paris:20270210T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -3399,7 +3424,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:b4aa08465fc3@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270210T140000
 DTEND;TZID=Europe/Paris:20270210T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (6)
@@ -3412,7 +3437,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:66506da7312b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270210T143000
 DTEND;TZID=Europe/Paris:20270210T163000
 SUMMARY:Sacrifices en comparaison (3) (1)
@@ -3425,7 +3450,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/sacrifices-en-comp
 END:VEVENT
 BEGIN:VEVENT
 UID:c5dfd8363d0e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270211T110000
 DTEND;TZID=Europe/Paris:20270211T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (3)
@@ -3440,7 +3465,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:9fc8b0c9f116@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270211T153000
 DTEND;TZID=Europe/Paris:20270211T173000
 SUMMARY:Nouveautés papyrologiques (2)
@@ -3453,7 +3478,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:44ca36f5caf0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270215T110000
 DTEND;TZID=Europe/Paris:20270215T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3469,7 +3494,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:01352ff56eef@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270215T140000
 DTEND;TZID=Europe/Paris:20270215T160000
 SUMMARY:Villes en été\, villages en hiver : récentes découvertes au suj
@@ -3488,7 +3513,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-en-ete-villages
 END:VEVENT
 BEGIN:VEVENT
 UID:000f9fb8ce6a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270217T110000
 DTEND;TZID=Europe/Paris:20270217T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -3505,7 +3530,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:476d748a70da@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270218T110000
 DTEND;TZID=Europe/Paris:20270218T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (4)
@@ -3520,7 +3545,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:36fc387c3cdf@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270218T153000
 DTEND;TZID=Europe/Paris:20270218T173000
 SUMMARY:Nouveautés papyrologiques (3)
@@ -3533,7 +3558,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:37c22c5e0019@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270222T110000
 DTEND;TZID=Europe/Paris:20270222T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3549,7 +3574,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:056b80721b0f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270222T140000
 DTEND;TZID=Europe/Paris:20270222T160000
 SUMMARY:Villes en été\, villages en hiver : récentes découvertes au suj
@@ -3569,7 +3594,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-en-ete-villages
 END:VEVENT
 BEGIN:VEVENT
 UID:1558f20a23ee@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270223T140000
 DTEND;TZID=Europe/Paris:20270223T160000
 SUMMARY:Vies et morts de François Villon (6)
@@ -3582,7 +3607,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:feb797ebac54@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270224T110000
 DTEND;TZID=Europe/Paris:20270224T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -3599,7 +3624,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:2f2476eff672@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270224T140000
 DTEND;TZID=Europe/Paris:20270224T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (7)
@@ -3612,7 +3637,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:67f2160c84ff@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270224T143000
 DTEND;TZID=Europe/Paris:20270224T163000
 SUMMARY:Sacrifices en comparaison (3) (2)
@@ -3625,7 +3650,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/sacrifices-en-comp
 END:VEVENT
 BEGIN:VEVENT
 UID:7a0fc4e11a20@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270225T110000
 DTEND;TZID=Europe/Paris:20270225T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (5)
@@ -3640,7 +3665,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:629fdd08021e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270225T140000
 DTEND;TZID=Europe/Paris:20270225T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -3657,7 +3682,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:b26988f27688@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270225T153000
 DTEND;TZID=Europe/Paris:20270225T173000
 SUMMARY:Nouveautés papyrologiques (4)
@@ -3670,7 +3695,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:146469de7c61@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270301T110000
 DTEND;TZID=Europe/Paris:20270301T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3686,7 +3711,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:2fe3a7c3eda0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270301T140000
 DTEND;TZID=Europe/Paris:20270301T160000
 SUMMARY:Villes en été\, villages en hiver : récentes découvertes au suj
@@ -3706,7 +3731,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-en-ete-villages
 END:VEVENT
 BEGIN:VEVENT
 UID:022962af1a10@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270302T140000
 DTEND;TZID=Europe/Paris:20270302T160000
 SUMMARY:Vies et morts de François Villon (7)
@@ -3719,7 +3744,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:101bc2acaf44@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270303T110000
 DTEND;TZID=Europe/Paris:20270303T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -3736,7 +3761,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:db3ecf5832bc@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270303T140000
 DTEND;TZID=Europe/Paris:20270303T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (8)
@@ -3749,7 +3774,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:64d10230d5e8@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270303T153000
 DTEND;TZID=Europe/Paris:20270303T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -3765,7 +3790,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:15247c34107c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270303T170000
 DTEND;TZID=Europe/Paris:20270303T190000
 SUMMARY:Le droit à travers ses lieux communs : regards du Moyen Âge à l
@@ -3782,7 +3807,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/le-droit-travers-s
 END:VEVENT
 BEGIN:VEVENT
 UID:f69f7bd790bf@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270304T110000
 DTEND;TZID=Europe/Paris:20270304T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (6)
@@ -3797,7 +3822,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:fa858091d02d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270304T123000
 DTEND;TZID=Europe/Paris:20270304T143000
 SUMMARY:Géoarchéologie des ports antiques de Carthage et de Tyr
@@ -3812,7 +3837,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/ge
 END:VEVENT
 BEGIN:VEVENT
 UID:339bc7d6c09c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270304T140000
 DTEND;TZID=Europe/Paris:20270304T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -3829,7 +3854,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:19853e695043@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270304T153000
 DTEND;TZID=Europe/Paris:20270304T173000
 SUMMARY:Nouveautés papyrologiques (5)
@@ -3842,7 +3867,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:e78eedc88435@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270308T110000
 DTEND;TZID=Europe/Paris:20270308T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -3858,7 +3883,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:fb63c4582e74@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270309T140000
 DTEND;TZID=Europe/Paris:20270309T160000
 SUMMARY:Vies et morts de François Villon (8)
@@ -3871,7 +3896,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:d4c4924c8675@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270310T110000
 DTEND;TZID=Europe/Paris:20270310T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -3888,7 +3913,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:4723d93a0a8f@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270310T140000
 DTEND;TZID=Europe/Paris:20270310T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (9)
@@ -3901,7 +3926,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:5b8a636b15bf@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270310T143000
 DTEND;TZID=Europe/Paris:20270310T163000
 SUMMARY:Sacrifices en comparaison (3) (3)
@@ -3914,7 +3939,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/sacrifices-en-comp
 END:VEVENT
 BEGIN:VEVENT
 UID:5b8ce16c39ee@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270310T153000
 DTEND;TZID=Europe/Paris:20270310T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -3930,7 +3955,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:61cb6c4028cb@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270310T160000
 DTEND;TZID=Europe/Paris:20270310T180000
 SUMMARY:Michaël Ferrier\, Jean-Pierre Orban\, Jérôme Villeminoz : « L
@@ -3942,7 +3967,7 @@ URL:https://www.item.ens.fr/michael-ferrier
 END:VEVENT
 BEGIN:VEVENT
 UID:fed7152f414e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270311T110000
 DTEND;TZID=Europe/Paris:20270311T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (7)
@@ -3957,7 +3982,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:3146f9acd5bd@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270311T140000
 DTEND;TZID=Europe/Paris:20270311T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -3974,7 +3999,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:5e944df5b0ef@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270311T153000
 DTEND;TZID=Europe/Paris:20270311T173000
 SUMMARY:Nouveautés papyrologiques (6)
@@ -3987,7 +4012,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:8f59b17763dd@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270315T110000
 DTEND;TZID=Europe/Paris:20270315T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -4003,7 +4028,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:bd20d94f56a3@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270316T140000
 DTEND;TZID=Europe/Paris:20270316T160000
 SUMMARY:Vies et morts de François Villon (9)
@@ -4016,7 +4041,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:a5242c864710@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270317T110000
 DTEND;TZID=Europe/Paris:20270317T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -4033,7 +4058,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:197dbc13143e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270317T140000
 DTEND;TZID=Europe/Paris:20270317T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (10)
@@ -4046,7 +4071,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:abd8c9113101@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270317T153000
 DTEND;TZID=Europe/Paris:20270317T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4062,7 +4087,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:b439e79e7c7a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270317T170000
 DTEND;TZID=Europe/Paris:20270317T190000
 SUMMARY:Le droit à travers ses lieux communs : regards du Moyen Âge à l
@@ -4079,7 +4104,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/le-droit-travers-s
 END:VEVENT
 BEGIN:VEVENT
 UID:b1aecf412c28@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270318T110000
 DTEND;TZID=Europe/Paris:20270318T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (8)
@@ -4094,7 +4119,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:f363424e87e9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270318T140000
 DTEND;TZID=Europe/Paris:20270318T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -4111,7 +4136,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:349503b26613@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270318T153000
 DTEND;TZID=Europe/Paris:20270318T173000
 SUMMARY:Nouveautés papyrologiques (7)
@@ -4124,7 +4149,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:36fb21262d0e@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270322T110000
 DTEND;TZID=Europe/Paris:20270322T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -4140,7 +4165,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:716f63d6860c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270323T140000
 DTEND;TZID=Europe/Paris:20270323T160000
 SUMMARY:Vies et morts de François Villon (10)
@@ -4153,7 +4178,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/vies-et-morts-de-franc
 END:VEVENT
 BEGIN:VEVENT
 UID:06fbf772a615@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270324T110000
 DTEND;TZID=Europe/Paris:20270324T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -4170,7 +4195,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:d3eacd56a16a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270324T140000
 DTEND;TZID=Europe/Paris:20270324T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (11)
@@ -4183,7 +4208,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:275eb512765d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270324T143000
 DTEND;TZID=Europe/Paris:20270324T163000
 SUMMARY:Sacrifices en comparaison (3) (4)
@@ -4196,7 +4221,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/sacrifices-en-comp
 END:VEVENT
 BEGIN:VEVENT
 UID:c81ce0b602b3@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270324T153000
 DTEND;TZID=Europe/Paris:20270324T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4212,7 +4237,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:7f0afc80b988@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270325T110000
 DTEND;TZID=Europe/Paris:20270325T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (9)
@@ -4227,7 +4252,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:62964577b968@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270325T140000
 DTEND;TZID=Europe/Paris:20270325T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -4244,7 +4269,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:789e2bd68b2c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270325T153000
 DTEND;TZID=Europe/Paris:20270325T173000
 SUMMARY:Nouveautés papyrologiques (8)
@@ -4257,7 +4282,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:07333674febc@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270331T110000
 DTEND;TZID=Europe/Paris:20270331T130000
 SUMMARY:Autour du Traité sur les hiéroglyphes d’Horapollon : hellénism
@@ -4274,7 +4299,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/autour-du-traite-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:b23c6ebb9bee@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270331T140000
 DTEND;TZID=Europe/Paris:20270331T160000
 SUMMARY:Charlatans (2) : trouble dans l’autorité (12)
@@ -4287,7 +4312,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/charlatans-2-trouble-d
 END:VEVENT
 BEGIN:VEVENT
 UID:79d5bbcf10ef@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270331T143000
 DTEND;TZID=Europe/Paris:20270331T163000
 SUMMARY:Sacrifices en comparaison (3) (5)
@@ -4300,7 +4325,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/sacrifices-en-comp
 END:VEVENT
 BEGIN:VEVENT
 UID:4f1a37579569@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270331T153000
 DTEND;TZID=Europe/Paris:20270331T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4316,7 +4341,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:40bebfa65462@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270331T170000
 DTEND;TZID=Europe/Paris:20270331T190000
 SUMMARY:Le droit à travers ses lieux communs : regards du Moyen Âge à l
@@ -4333,7 +4358,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/le-droit-travers-s
 END:VEVENT
 BEGIN:VEVENT
 UID:bd3a24981c34@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270401T110000
 DTEND;TZID=Europe/Paris:20270401T130000
 SUMMARY:Dans les cités (2) : la Grèce comme culture sacrifiante (3) (10)
@@ -4348,7 +4373,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/dans-les-cites-2-la-gr
 END:VEVENT
 BEGIN:VEVENT
 UID:2d71cd36b4a2@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270401T140000
 DTEND;TZID=Europe/Paris:20270401T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -4365,7 +4390,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:99611ff03e0d@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270401T153000
 DTEND;TZID=Europe/Paris:20270401T173000
 SUMMARY:Nouveautés papyrologiques (9)
@@ -4378,7 +4403,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/nouveautes-papyrol
 END:VEVENT
 BEGIN:VEVENT
 UID:a336cd878bc0@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270419T110000
 DTEND;TZID=Europe/Paris:20270419T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -4394,7 +4419,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:f5989bcde478@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270421T153000
 DTEND;TZID=Europe/Paris:20270421T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4410,7 +4435,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:492d1abf5827@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270421T170000
 DTEND;TZID=Europe/Paris:20270421T190000
 SUMMARY:Le droit à travers ses lieux communs : regards du Moyen Âge à l
@@ -4427,7 +4452,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/le-droit-travers-s
 END:VEVENT
 BEGIN:VEVENT
 UID:ac198833508a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270422T140000
 DTEND;TZID=Europe/Paris:20270422T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -4444,7 +4469,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:1504927d52e1@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270426T110000
 DTEND;TZID=Europe/Paris:20270426T130000
 SUMMARY:Villes de Mésopotamie à l’époque paléo-babylonienne : un tour
@@ -4460,7 +4485,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/villes-de-mesopotamie-
 END:VEVENT
 BEGIN:VEVENT
 UID:cf79904cdf82@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270428T153000
 DTEND;TZID=Europe/Paris:20270428T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4476,7 +4501,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:ae21ef871004@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270429T140000
 DTEND;TZID=Europe/Paris:20270429T160000
 SUMMARY:L'histoire des royautés israélites et judéennes : de Salomon à 
@@ -4493,7 +4518,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/histoire-des-royautes-
 END:VEVENT
 BEGIN:VEVENT
 UID:0359ef331d1a@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270503T180000
 DTEND;TZID=Europe/Paris:20270503T200000
 SUMMARY:Vingt ans après
@@ -4505,7 +4530,7 @@ URL:https://www.college-de-france.fr/fr/agenda/lecon-de-cloture/vingt-ans-a
 END:VEVENT
 BEGIN:VEVENT
 UID:3aef58f42c5b@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270505T153000
 DTEND;TZID=Europe/Paris:20270505T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4521,7 +4546,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:9abe4e6c9919@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270505T170000
 DTEND;TZID=Europe/Paris:20270505T190000
 SUMMARY:Le droit à travers ses lieux communs : regards du Moyen Âge à l
@@ -4538,7 +4563,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/le-droit-travers-s
 END:VEVENT
 BEGIN:VEVENT
 UID:2b9bcd95de7c@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270512T153000
 DTEND;TZID=Europe/Paris:20270512T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4554,7 +4579,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:e8c240c3ad61@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270518T160000
 DTEND;TZID=Europe/Paris:20270518T180000
 SUMMARY:Lieux de parole\, lieux d’écoute. Politiques de l’audience dep
@@ -4571,7 +4596,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lieux-de-parole-li
 END:VEVENT
 BEGIN:VEVENT
 UID:615609caa704@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270519T153000
 DTEND;TZID=Europe/Paris:20270519T173000
 SUMMARY:Lieux communs. Histoire critique des idées reçues sur le droit ro
@@ -4587,7 +4612,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lieux-communs-histoire
 END:VEVENT
 BEGIN:VEVENT
 UID:52485b4709d7@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270519T170000
 DTEND;TZID=Europe/Paris:20270519T190000
 SUMMARY:Le droit à travers ses lieux communs : regards du Moyen Âge à l
@@ -4604,7 +4629,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/le-droit-travers-s
 END:VEVENT
 BEGIN:VEVENT
 UID:c39c5edbfe20@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270525T160000
 DTEND;TZID=Europe/Paris:20270525T180000
 SUMMARY:Lieux de parole\, lieux d’écoute. Politiques de l’audience dep
@@ -4621,7 +4646,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lieux-de-parole-li
 END:VEVENT
 BEGIN:VEVENT
 UID:e5ac811c9a77@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270527T140000
 DTEND;TZID=Europe/Paris:20270527T160000
 SUMMARY:Autour de l’authenticité : lectures de textes (1)
@@ -4634,7 +4659,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-de-authenti
 END:VEVENT
 BEGIN:VEVENT
 UID:146f88045da4@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270527T183000
 DTEND;TZID=Europe/Paris:20270527T193000
 SUMMARY:Piano-voix\, les duos au sommet
@@ -4648,7 +4673,7 @@ URL:https://www.paris.fr/evenements/piano-voix-les-duos-au-sommet-125398
 END:VEVENT
 BEGIN:VEVENT
 UID:9b0746823206@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270601T160000
 DTEND;TZID=Europe/Paris:20270601T180000
 SUMMARY:Lieux de parole\, lieux d’écoute. Politiques de l’audience dep
@@ -4665,7 +4690,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lieux-de-parole-li
 END:VEVENT
 BEGIN:VEVENT
 UID:93d08b380b42@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270603T140000
 DTEND;TZID=Europe/Paris:20270603T160000
 SUMMARY:Autour de l’authenticité : lectures de textes (2)
@@ -4678,7 +4703,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-de-authenti
 END:VEVENT
 BEGIN:VEVENT
 UID:5616ef5545b9@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270608T160000
 DTEND;TZID=Europe/Paris:20270608T180000
 SUMMARY:Lieux de parole\, lieux d’écoute. Politiques de l’audience dep
@@ -4695,7 +4720,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lieux-de-parole-li
 END:VEVENT
 BEGIN:VEVENT
 UID:5f2e2f8b7071@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270610T140000
 DTEND;TZID=Europe/Paris:20270610T160000
 SUMMARY:Autour de l’authenticité : lectures de textes (3)
@@ -4708,7 +4733,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/autour-de-authenti
 END:VEVENT
 BEGIN:VEVENT
 UID:1f472bb88620@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270616
 SUMMARY:Journée sur les archives de Claude Chevalley
@@ -4719,7 +4744,7 @@ URL:https://www.item.ens.fr/journee-sur-les-archives-de-claude-chevalley
 END:VEVENT
 BEGIN:VEVENT
 UID:9912a23f90bd@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270615T160000
 DTEND;TZID=Europe/Paris:20270615T180000
 SUMMARY:Lieux de parole\, lieux d’écoute. Politiques de l’audience dep
@@ -4736,7 +4761,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/lieux-de-parole-li
 END:VEVENT
 BEGIN:VEVENT
 UID:d71fe59f2c00@paris-academique
-DTSTAMP:20261011T103759Z
+DTSTAMP:20261012T114557Z
 DTSTART;TZID=Europe/Paris:20270624T183000
 DTEND;TZID=Europe/Paris:20270624T193000
 SUMMARY:Panonnica\, la baronne du jazz
