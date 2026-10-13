@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:2f148b1e0474@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261013T180000
-DTEND;TZID=Europe/Paris:20261013T193000
-SUMMARY:[Conférence] L’histoire de la bibliothèque de l’École des mi
- nes\, de 1794 à nos jours
-DESCRIPTION:Dans le cadre du cycle « 100 ans de la salle de lecture » (19
- 26-2026) et à l’occasion du centenaire de sa salle de lecture et\, la b
- ibliothèque Mines P...\nhttps://www.minesparis.psl.eu/blog/evenements/con
- ference-lhistoire-de-la-bibliotheque-de-lecole-des-mines-de-1794-a-nos-jou
- rs/
-LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
-URL:https://www.minesparis.psl.eu/blog/evenements/conference-lhistoire-de-l
- a-bibliotheque-de-lecole-des-mines-de-1794-a-nos-jours/
-END:VEVENT
-BEGIN:VEVENT
 UID:687547607ffa@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261015T133000
 DTEND;TZID=Europe/Paris:20261015T153000
 SUMMARY:[Webinaire TTI.5] Électrification des transports : technologie\, i
@@ -55,8 +39,24 @@ URL:https://www.minesparis.psl.eu/blog/evenements/webinaire-tti-5-electrifi
  cation-des-transports-technologie-industrie-et-souverainete/
 END:VEVENT
 BEGIN:VEVENT
+UID:d0e677f8e968@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261023T093000
+DTEND;TZID=Europe/Paris:20261023T170000
+SUMMARY:Science Camp « Glaciologie » : une expédition scientifique au c
+ œur des glaciers à Versailles Satory
+DESCRIPTION:Du 19 au 23 octobre 2026\, l’AFPER propose aux jeunes de 10 
+ à 14 ans une semaine d’immersion scientifique consacrée aux glaciers\,
+  sur le campus de l’In...\nhttps://www.minesparis.psl.eu/blog/evenements
+ /science-camp-glaciologie-une-expedition-scientifique-au-coeur-des-glacier
+ s-a-versailles-satory/
+LOCATION:Mines Paris – PSL\, 60 boulevard Saint-Michel\, Paris 6e
+URL:https://www.minesparis.psl.eu/blog/evenements/science-camp-glaciologie-
+ une-expedition-scientifique-au-coeur-des-glaciers-a-versailles-satory/
+END:VEVENT
+BEGIN:VEVENT
 UID:ab2084fccb88@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:[Workshop] Electrification des usages
@@ -70,7 +70,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/workshop-electrification-
 END:VEVENT
 BEGIN:VEVENT
 UID:b28193492cb1@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261209T090000
 DTEND;TZID=Europe/Paris:20261209T123000
 SUMMARY:[Conférence] Bâtiments\, infrastructures : comment la recherche s
@@ -86,7 +86,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/conference-batiments-infr
 END:VEVENT
 BEGIN:VEVENT
 UID:c4012016e898@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:[SECRE 2027] Colloque Situations Extrêmes\, Crise et Résilience

@@ -24,123 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:8220fc974678@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Après Quand dire\, c’est faire : vie et survie de la notion de p
- erformatif │ How to Do Things with Performatives: the life and afterlive
- s of a concept
-DESCRIPTION:La journée d'étude s’inscrit dans la continuité du sémina
- ire mensuel Jeux de Langage du Cercle anthropologique linguistique de Pari
- s\, mené sous l’égide du Lacito. Description de la journée d'étude :
-  Dans la foulée de la nouvelle traduction française de l’ouvrage de Jo
- hn L. Austin\, Quand dire\, c’est faire\, par le philosophe Bruno Ambroi
- se (Seuil\, 2024)\, les interventions de cette journée d’études…\nht
- tps://dire-faire.sciencesconf.org
-LOCATION:Maison de la recherche\, Université Sorbonne-Nouvelle\, 4 rue des
-  Irlandais\, 75005 Paris - Paris (France)
-URL:https://dire-faire.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:28e886ec5d89@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T090000
-DTEND;TZID=Europe/Paris:20261012T110000
-SUMMARY:Joaquín Ferrer — Transculturations artistiques
-DESCRIPTION:Journée d'étude\nhttps://www.mal217.org/fr/agenda/joaquin-fer
- rer-b87c90d0
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/joaquin-ferrer-b87c90d0
-END:VEVENT
-BEGIN:VEVENT
-UID:3cc7cb5e60a5@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T103000
-DTEND;TZID=Europe/Paris:20261012T120000
-SUMMARY:Les animaux marins et l’écriture océanique à Taïwan : Rencont
- re avec l’écrivain taïwanais Liao Hung-chi
-DESCRIPTION:https://www.inalco.fr/evenements/les-animaux-marins-et-lecritur
- e-oceanique-taiwan-rencontre-avec-lecrivain-taiwanais-liao
-LOCATION:Inalco - Pôle des langues et civilisations (65 rue des Grands Mou
- lins\, 75013 Paris)
-URL:https://www.inalco.fr/evenements/les-animaux-marins-et-lecriture-oceani
- que-taiwan-rencontre-avec-lecrivain-taiwanais-liao
-END:VEVENT
-BEGIN:VEVENT
-UID:4cd75b61e039@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T130000
-DTEND;TZID=Europe/Paris:20261012T150000
-SUMMARY:[Erasmus Day’s] Escape Game Plurilingue
-DESCRIPTION:https://u-paris.fr/évènement/erasmus-days-escape-game-plurili
- ngue/?instance_id=5352
-LOCATION:Salle 449C à la Halle aux Farines\, Campus des Grands Moulins —
-  Université Paris Cité\, 85 boulevard Saint-Germain\, Paris 6e
-URL:https://u-paris.fr/évènement/erasmus-days-escape-game-plurilingue/?in
- stance_id=5352
-END:VEVENT
-BEGIN:VEVENT
-UID:589341d60fcf@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T150000
-DTEND;TZID=Europe/Paris:20261012T163000
-SUMMARY:[CHANGEMENT DE LIEU] Les animaux marins et l’écriture océanique
-  à Taïwan : Rencontre avec l’écrivain taïwanais Liao Hung-chi
-DESCRIPTION:https://www.inalco.fr/evenements/changement-de-lieu-les-animaux
- -marins-et-lecriture-oceanique-taiwan-rencontre-avec
-LOCATION:Librairie Le Phenix (72 Boulevard de Sébastopol - Paris 3e)
-URL:https://www.inalco.fr/evenements/changement-de-lieu-les-animaux-marins-
- et-lecriture-oceanique-taiwan-rencontre-avec
-END:VEVENT
-BEGIN:VEVENT
-UID:83b7c8c1a6b3@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T180000
-DTEND;TZID=Europe/Paris:20261012T200000
-SUMMARY:Manifestation scientifique et artistique - Redessiner les itinérai
- res de migrations. Journées de la bande dessinée arabe et des (im)mobili
- tés méditerranéennes contemporaines
-DESCRIPTION:https://www.univ-paris8.fr/Manifestation-scientifique-et-artist
- ique-Redessiner-les-itineraires-de
-LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Red
- essiner-les-itineraires-de
-END:VEVENT
-BEGIN:VEVENT
-UID:e07b820337a2@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T193000
-DTEND;TZID=Europe/Paris:20261012T213000
-SUMMARY:Langue En Poésie E3
-DESCRIPTION:https://lu.ma/sknzl432
-LOCATION:YIYI Sphère\, 32 Rue de Palestro\, 75002 Paris\, France
-URL:https://lu.ma/sknzl432
-END:VEVENT
-BEGIN:VEVENT
-UID:383be3bf2217@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T200000
-DTEND;TZID=Europe/Paris:20261012T213000
-SUMMARY:Natasha Kanapé Fontaine • Marcel Pititkwew • Jean Sioui • Ua
- shteskun Regards sur les littératures autochtones francophones
-DESCRIPTION:Le Centre culturel canadien vous invite à découvrir quatre gr
- andes voix littéraires autochtones francophones du Canada\, la poétesse 
- et artiste multidisciplinaire innue Natasha Kanapé Fontaine\, l’auteur 
- atikamekw Marcel Pititkwew\, le poète et romancier wendat Jean Sioui et U
- ashteskun\, auteur pekuakamiulnuatsh.\nhttps://www.paris.fr/evenements/nat
- asha-kanape-fontaine-marcel-pititkwew-jean-sioui-uashteskun-regards-sur-le
- s-litteratures-autochtones-francophones-117515
-LOCATION:Centre culturel canadien à Paris\, 130 rue du Faubourg Saint-Hono
- ré\, 75008 Paris
-URL:https://www.paris.fr/evenements/natasha-kanape-fontaine-marcel-pititkwe
- w-jean-sioui-uashteskun-regards-sur-les-litteratures-autochtones-francopho
- nes-117515
-END:VEVENT
-BEGIN:VEVENT
 UID:fbeb7952f763@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T100000
 DTEND;TZID=Europe/Paris:20261013T120000
 SUMMARY:[Erasmus Day’s] Escape Game Plurilingue
@@ -153,7 +38,7 @@ URL:https://u-paris.fr/évènement/erasmus-days-escape-game-plurilingue/?in
 END:VEVENT
 BEGIN:VEVENT
 UID:36d8c8644d08@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T120000
 DTEND;TZID=Europe/Paris:20261013T140000
 SUMMARY:[Rencontre littéraire Texto] Beata Umubyeyi Mairesse
@@ -171,7 +56,7 @@ URL:https://www.univ-spn.fr/events/rencontre-litteraire-beata-umaymi-maires
 END:VEVENT
 BEGIN:VEVENT
 UID:be3f98dcf58f@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T180000
 DTEND;TZID=Europe/Paris:20261013T190000
 SUMMARY:Rencontre avec Érik Leborgne
@@ -188,7 +73,7 @@ URL:https://www.paris.fr/evenements/rencontre-avec-erik-leborgne-125714
 END:VEVENT
 BEGIN:VEVENT
 UID:71b07e11bb87@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T190000
 DTEND;TZID=Europe/Paris:20261013T203000
 SUMMARY:Le Courage de la nuance\, seul-en-scène de Jean Birnbaum
@@ -205,7 +90,7 @@ URL:https://www.paris.fr/evenements/le-courage-de-la-nuance-seul-en-scene-d
 END:VEVENT
 BEGIN:VEVENT
 UID:b0bed1470e87@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T190000
 DTEND;TZID=Europe/Paris:20261013T203000
 SUMMARY:Malraux maintenant
@@ -218,7 +103,7 @@ URL:https://www.paris.fr/evenements/malraux-maintenant-115319
 END:VEVENT
 BEGIN:VEVENT
 UID:37c3e33a5dfb@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T100000
 DTEND;TZID=Europe/Paris:20261014T120000
 SUMMARY:[Erasmus Day’s] Escape Game Plurilingue
@@ -230,20 +115,8 @@ URL:https://u-paris.fr/évènement/erasmus-days-escape-game-plurilingue/?in
  stance_id=5354
 END:VEVENT
 BEGIN:VEVENT
-UID:fdcd8d037892@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261014T140000
-DTEND;TZID=Europe/Paris:20261014T160000
-SUMMARY:La poésie comme mémoire de l’être
-DESCRIPTION:https://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-de-
- letre
-LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
- re
-URL:https://www.parisnanterre.fr/agenda/la-poesie-comme-memoire-de-letre
-END:VEVENT
-BEGIN:VEVENT
 UID:3d9466fc6d9e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T173000
 DTEND;TZID=Europe/Paris:20261014T193000
 SUMMARY:Taïwan en récits : économie\, cuisine et catastrophes naturelles
@@ -256,7 +129,7 @@ URL:https://www.inalco.fr/evenements/taiwan-en-recits-economie-cuisine-et-c
 END:VEVENT
 BEGIN:VEVENT
 UID:d68cc6da4564@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T180000
 DTEND;TZID=Europe/Paris:20261014T203000
 SUMMARY:[CHANGEMENT DE LIEU] Taïwan en récits : économie\, cuisine et ca
@@ -271,7 +144,7 @@ URL:https://www.inalco.fr/evenements/changement-de-lieu-taiwan-en-recits-ec
 END:VEVENT
 BEGIN:VEVENT
 UID:05cc77f91b1e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T183000
 DTEND;TZID=Europe/Paris:20261014T193000
 SUMMARY:Conférence gesticulée : Faut que je vous raconte !
@@ -287,7 +160,7 @@ URL:https://www.paris.fr/evenements/conference-gesticulee-faut-que-je-vous-
 END:VEVENT
 BEGIN:VEVENT
 UID:efb19672eb31@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Mémoires en mouvement : récits d’auto-histoire\, migrations et 
@@ -301,7 +174,7 @@ URL:https://www.parisnanterre.fr/agenda/memoires-en-mouvement-recits-dauto-
 END:VEVENT
 BEGIN:VEVENT
 UID:ffce07b90fa2@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Multikulti Editions\, une collection contre toute forme de discrimi
@@ -315,8 +188,21 @@ URL:https://www.paris.fr/evenements/multikulti-editions-une-collection-cont
  re-toute-forme-de-discrimination-125348
 END:VEVENT
 BEGIN:VEVENT
+UID:0db898c60e93@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261014T190000
+DTEND;TZID=Europe/Paris:20261014T203000
+SUMMARY:Miles Davis\, la nuit aussi est un soleil
+DESCRIPTION:Venez redécouvrir l'histoire de Miles Davis - Rencontre avec E
+ rwann Gauthier\nhttps://www.paris.fr/evenements/miles-davis-la-nuit-aussi-
+ est-un-soleil-125765
+LOCATION:Fondation des États-Unis\, 15 boulevard Jourdan\, 75014 Paris
+URL:https://www.paris.fr/evenements/miles-davis-la-nuit-aussi-est-un-soleil
+ -125765
+END:VEVENT
+BEGIN:VEVENT
 UID:bc44241ca076@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T210000
 DTEND;TZID=Europe/Paris:20261014T230000
 SUMMARY:Psychanalyse et transferts culturels — L'acte analytique aujourd'
@@ -329,21 +215,8 @@ URL:https://www.mal217.org/fr/agenda/psychanalyse-et-transferts-culturels-3
  f0e8837
 END:VEVENT
 BEGIN:VEVENT
-UID:349509ec3f4b@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Colloque international - Migrations\, entre frontières et accueil 
- : récits des voies méditerranéennes et d’ailleurs
-DESCRIPTION:https://www.univ-paris8.fr/Colloque-international-Migrations-en
- tre-frontieres-et-accueil-recits-des-voies-10594
-LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Colloque-international-Migrations-entre-fron
- tieres-et-accueil-recits-des-voies-10594
-END:VEVENT
-BEGIN:VEVENT
 UID:efc8c87306e8@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Michel Butor au rendez-vous des artistes. "Permettez-moi de navigue
@@ -359,7 +232,7 @@ URL:https://www.sorbonne-nouvelle.fr/michel-butor-au-rendez-vous-des-artist
 END:VEVENT
 BEGIN:VEVENT
 UID:e08e3da4b10f@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Dépendance et autonomie : Les Alliés face à Washington (2016-202
@@ -373,7 +246,7 @@ URL:https://www.sorbonne-nouvelle.fr/dependance-et-autonomie-les-allies-fac
 END:VEVENT
 BEGIN:VEVENT
 UID:6b39835243f2@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Sonorités du vivant dans la littérature et le texte musical des X
@@ -393,7 +266,7 @@ URL:https://www.sorbonne-nouvelle.fr/sonorites-du-vivant-dans-la-litteratur
 END:VEVENT
 BEGIN:VEVENT
 UID:886c54cc6f9b@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Pratiques hétéroglossiques dans les espaces de contact hispano-lu
@@ -411,7 +284,7 @@ URL:https://pratheterogloss.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:152462c81937@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:La littérature viatique en crise au dix-neuvième siècle. Autour 
@@ -427,7 +300,7 @@ URL:https://www.sorbonne-nouvelle.fr/la-litterature-viatique-en-crise-au-di
 END:VEVENT
 BEGIN:VEVENT
 UID:34640b3fa5bc@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Changement et variation syntaxiques : les traditions discursives da
@@ -442,8 +315,21 @@ LOCATION:Sorbonne Université - Paris (France)
 URL:https://td26.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:349509ec3f4b@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Colloque international - Migrations\, entre frontières et accueil 
+ : récits des voies méditerranéennes et d’ailleurs
+DESCRIPTION:https://www.univ-paris8.fr/Colloque-international-Migrations-en
+ tre-frontieres-et-accueil-recits-des-voies-10594
+LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
+URL:https://www.univ-paris8.fr/Colloque-international-Migrations-entre-fron
+ tieres-et-accueil-recits-des-voies-10594
+END:VEVENT
+BEGIN:VEVENT
 UID:438d20f9c810@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261015T093000
 DTEND;TZID=Europe/Paris:20261015T113000
 SUMMARY:Le tour de la Maison de l'Amérique latine — en quatre-vingts ans
@@ -456,7 +342,7 @@ URL:https://www.mal217.org/fr/agenda/le-tour-de-la-maison-de-l-amerique-lat
 END:VEVENT
 BEGIN:VEVENT
 UID:d028383e2d76@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261015T100000
 DTEND;TZID=Europe/Paris:20261015T120000
 SUMMARY:[Erasmus Day’s] Escape Game Plurilingue
@@ -469,7 +355,7 @@ URL:https://u-paris.fr/évènement/erasmus-days-escape-game-plurilingue/?in
 END:VEVENT
 BEGIN:VEVENT
 UID:ae91078dd8d5@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261015T183000
 DTEND;TZID=Europe/Paris:20261015T193000
 SUMMARY:Rencontre avec l'autrice de 2025\, L'Odyssée de l'IA. Représentat
@@ -485,21 +371,8 @@ URL:https://www.paris.fr/evenements/rencontre-avec-l-autrice-de-2025-l-odys
  see-de-l-ia-representation-et-usages-de-l-ia-au-cinema-123757
 END:VEVENT
 BEGIN:VEVENT
-UID:89f5645337c8@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261015T190000
-DTEND;TZID=Europe/Paris:20261015T203000
-SUMMARY:Les mots qui soignent : création littéraire et santé mentale
-DESCRIPTION:Mettre des mots sur les maux\, trouver les mots\, les perdre\, 
- en jouer…\nhttps://www.paris.fr/evenements/les-mots-qui-soignent-creatio
- n-litteraire-et-sante-mentale-115214
-LOCATION:Bibliothèque Drouot\, 11 rue Drouot\, 75009 Paris
-URL:https://www.paris.fr/evenements/les-mots-qui-soignent-creation-litterai
- re-et-sante-mentale-115214
-END:VEVENT
-BEGIN:VEVENT
 UID:d3f70ac93685@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Une rue a disparu : rencontre avec l’écrivain Antonin Crenn pour
@@ -515,8 +388,21 @@ URL:https://www.paris.fr/evenements/une-rue-a-disparu-rencontre-avec-l-ecri
  vain-antonin-crenn-pour-son-livre-rue-des-batailles-115022
 END:VEVENT
 BEGIN:VEVENT
+UID:89f5645337c8@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261015T190000
+DTEND;TZID=Europe/Paris:20261015T203000
+SUMMARY:Les mots qui soignent : création littéraire et santé mentale
+DESCRIPTION:Mettre des mots sur les maux\, trouver les mots\, les perdre\, 
+ en jouer…\nhttps://www.paris.fr/evenements/les-mots-qui-soignent-creatio
+ n-litteraire-et-sante-mentale-115214
+LOCATION:Bibliothèque Drouot\, 11 rue Drouot\, 75009 Paris
+URL:https://www.paris.fr/evenements/les-mots-qui-soignent-creation-litterai
+ re-et-sante-mentale-115214
+END:VEVENT
+BEGIN:VEVENT
 UID:13259e8ed260@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261015T190000
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:La Voix d'Amara : rencontre avec Joëlle Le Marec et Amara Camara
@@ -531,7 +417,7 @@ URL:https://www.paris.fr/evenements/la-voix-d-amara-rencontre-avec-joelle-l
 END:VEVENT
 BEGIN:VEVENT
 UID:93e438687b83@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261015T194500
 DTEND;TZID=Europe/Paris:20261015T210000
 SUMMARY:Les Grandes Conférences : Giuliano da Empoli\, écrivain\, l’aut
@@ -546,8 +432,24 @@ URL:https://www.sciencespo.fr/fr/evenements/grande-conference-avec-giuliano
  -da-empoli-ecrivain-l-auteur-du-mage-du-kremlin/
 END:VEVENT
 BEGIN:VEVENT
+UID:afacf2c96c32@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261017T180000
+DTEND;TZID=Europe/Paris:20261017T210000
+SUMMARY:S'OUVRIR A LA POÉSIE DE THIERRY METZ (rencontre-lecture)
+DESCRIPTION:Lecture-rencontre consacrée à l’œuvre de Thierry Metz avec
+  Isabelle Lévesque (poète)\, Françoise Metz\, (épouse\, la bien-aimée
+  des poèmes)\, Marie-Violaine Brincard (réalisatrice) et les participant
+ s aux ateliers d'écriture de l'Adamant qui liront quelques-uns de leur te
+ xtes en fin de soirée.\nhttps://www.paris.fr/evenements/s-ouvrir-a-la-poe
+ sie-de-thierry-metz-115201
+LOCATION:Bibliothèque Marguerite Audoux\, 10 rue Portefoin\, 75003 Paris
+URL:https://www.paris.fr/evenements/s-ouvrir-a-la-poesie-de-thierry-metz-11
+ 5201
+END:VEVENT
+BEGIN:VEVENT
 UID:6f5b4083f453@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261017T180000
 DTEND;TZID=Europe/Paris:20261017T203000
 SUMMARY:Confidences\, le festival de toutes les intimités signé Libérati
@@ -564,24 +466,8 @@ URL:https://www.paris.fr/evenements/confidences-le-festival-de-toutes-les-i
  ntimites-signe-liberation-125099
 END:VEVENT
 BEGIN:VEVENT
-UID:afacf2c96c32@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261017T180000
-DTEND;TZID=Europe/Paris:20261017T210000
-SUMMARY:S'OUVRIR A LA POÉSIE DE THIERRY METZ (rencontre-lecture)
-DESCRIPTION:Lecture-rencontre consacrée à l’œuvre de Thierry Metz avec
-  Isabelle Lévesque (poète)\, Françoise Metz\, (épouse\, la bien-aimée
-  des poèmes)\, Marie-Violaine Brincard (réalisatrice) et les participant
- s aux ateliers d'écriture de l'Adamant qui liront quelques-uns de leur te
- xtes en fin de soirée.\nhttps://www.paris.fr/evenements/s-ouvrir-a-la-poe
- sie-de-thierry-metz-115201
-LOCATION:Bibliothèque Marguerite Audoux\, 10 rue Portefoin\, 75003 Paris
-URL:https://www.paris.fr/evenements/s-ouvrir-a-la-poesie-de-thierry-metz-11
- 5201
-END:VEVENT
-BEGIN:VEVENT
 UID:0b0d9a69351e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261017T181500
 DTEND;TZID=Europe/Paris:20261017T200000
 SUMMARY:Día de muertos : conférence de Benjamin Lambert
@@ -595,18 +481,8 @@ URL:https://www.paris.fr/evenements/dia-de-muertos-conference-de-benjamin-l
  ambert-125797
 END:VEVENT
 BEGIN:VEVENT
-UID:9c888b2e7fdb@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261018T150000
-DTEND;TZID=Europe/Paris:20261018T170000
-SUMMARY:CHAPITRE IRL 2 : Meet Up Littéraire & Talk Auteur
-DESCRIPTION:https://lu.ma/0dvqwpny
-LOCATION:L'Ours et la Vieille Grille\, 9 Rue Larrey\, 75005 Paris\, France
-URL:https://lu.ma/0dvqwpny
-END:VEVENT
-BEGIN:VEVENT
 UID:243777a29a87@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261018T150000
 DTEND;TZID=Europe/Paris:20261018T160000
 SUMMARY:Les petites conférences #12 « peut-on vraiment rester seul sur ma
@@ -621,8 +497,18 @@ URL:https://www.paris.fr/evenements/les-petites-conferences-12-peut-on-vrai
  ment-rester-seul-sur-mars-125265
 END:VEVENT
 BEGIN:VEVENT
+UID:9c888b2e7fdb@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261018T150000
+DTEND;TZID=Europe/Paris:20261018T170000
+SUMMARY:CHAPITRE IRL 2 : Meet Up Littéraire & Talk Auteur
+DESCRIPTION:https://lu.ma/0dvqwpny
+LOCATION:L'Ours et la Vieille Grille\, 9 Rue Larrey\, 75005 Paris\, France
+URL:https://lu.ma/0dvqwpny
+END:VEVENT
+BEGIN:VEVENT
 UID:586b53e3f344@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Repenser l'objet scénario
@@ -635,7 +521,7 @@ URL:https://www.sorbonne-nouvelle.fr/repenser-l-objet-scenario-928310.kjsp?
 END:VEVENT
 BEGIN:VEVENT
 UID:5e383223b6b6@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261019T121500
 DTEND;TZID=Europe/Paris:20261019T130000
 SUMMARY:Siestes littéraires 2026
@@ -645,19 +531,8 @@ LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
 URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-2
 END:VEVENT
 BEGIN:VEVENT
-UID:8432f40b7ca1@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261019T141500
-DTEND;TZID=Europe/Paris:20261019T161500
-SUMMARY:Siestes littéraires (octobre)
-DESCRIPTION:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
-LOCATION:Université Paris Nanterre\, 200 avenue de la République\, Nanter
- re
-URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
-END:VEVENT
-BEGIN:VEVENT
 UID:7674a056dca2@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261019T160000
 DTEND;TZID=Europe/Paris:20261019T190000
 SUMMARY:« Les Révoltes de la dignité » : Rencontre avec les autrices
@@ -669,7 +544,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/«-les-revoltes-de-la-dignite
 END:VEVENT
 BEGIN:VEVENT
 UID:baea52cb5c39@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261019T180000
 DTEND;TZID=Europe/Paris:20261019T200000
 SUMMARY:Rencontre avec Kim Jiyun sur la tendance littéraire du k-healing
@@ -686,7 +561,7 @@ URL:https://u-paris.fr/universite-ouverte/rencontre-avec-kim-jiyun-sur-la-t
 END:VEVENT
 BEGIN:VEVENT
 UID:003ed8dd1dee@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Louise Michel : le manuscrit infini
@@ -696,8 +571,25 @@ LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – salle WEIL
 URL:https://www.item.ens.fr/c-retat-louise-michel-le-manuscrit-infini
 END:VEVENT
 BEGIN:VEVENT
+UID:225ba01dfac9@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261020T144500
+DTEND;TZID=Europe/Paris:20261020T170000
+SUMMARY:Conférence goûter – Les courtisanes\, une histoire d’horizont
+ ales
+DESCRIPTION:Sacrées reines de la belle époque\, Liane de Pougy\, la Belle
+  Otero\, Cléo de Mérode ou la Païva vont faire étinceler de tous leurs
+  feux les années 1900. Accompagnez-nous dans l’ascension de ces croqueu
+ ses de diamants !\nhttps://www.paris.fr/evenements/conference-gouter-les-c
+ ourtisanes-une-histoire-d-horizontales-125788
+LOCATION:Hôtel littéraire Le Swann\, 11/15 rue de Constantinople\, 75008 
+ Paris
+URL:https://www.paris.fr/evenements/conference-gouter-les-courtisanes-une-h
+ istoire-d-horizontales-125788
+END:VEVENT
+BEGIN:VEVENT
 UID:173d69f6c3f7@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261020T183000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:Une soirée avec Selma Lagerlöf\, première femme prix Nobel de li
@@ -711,22 +603,22 @@ URL:https://www.paris.fr/evenements/albert-camus-prix-nobel-de-litterature-
  104608
 END:VEVENT
 BEGIN:VEVENT
-UID:660450fdd5a0@paris-academique
-DTSTAMP:20261012T183015Z
+UID:b2b3a5829b67@paris-academique
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261021T085000
 DTEND;TZID=Europe/Paris:20261021T105000
-SUMMARY:De la poésie préislamique\, 1926–2026 : Bilan et perspectives s
- ur un siècle de débat
-DESCRIPTION:https://www.inalco.fr/evenements/de-la-poesie-preislamique-1926
- -2026-bilan-et-perspectives-sur-un-siecle-de-debat
-LOCATION:Pôle des Langues et Civilisations — Inalco\, 65 rue des Grands 
- Moulins\, Paris 13e
-URL:https://www.inalco.fr/evenements/de-la-poesie-preislamique-1926-2026-bi
- lan-et-perspectives-sur-un-siecle-de-debat
+SUMMARY:[CHANGEMENT DE LIEU] De la poésie préislamique\, 1926–2026 : Bi
+ lan et perspectives sur un siècle de débat
+DESCRIPTION:https://www.inalco.fr/evenements/changement-de-lieu-de-la-poesi
+ e-preislamique-1926-2026-bilan-et-perspectives-sur-un
+LOCATION:Maison de la recherche et CAREP — Inalco\, 65 rue des Grands Mou
+ lins\, Paris 13e
+URL:https://www.inalco.fr/evenements/changement-de-lieu-de-la-poesie-preisl
+ amique-1926-2026-bilan-et-perspectives-sur-un
 END:VEVENT
 BEGIN:VEVENT
 UID:b75dda352e03@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261021T134500
 DTEND;TZID=Europe/Paris:20261021T154500
 SUMMARY:Migration et bande dessinée : quêtes esthétiques\, imaginaires m
@@ -738,8 +630,33 @@ URL:https://www.inalco.fr/evenements/migration-et-bande-dessinee-quetes-est
  hetiques-imaginaires-memoriels
 END:VEVENT
 BEGIN:VEVENT
+UID:069896b3ef70@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261021T183000
+DTEND;TZID=Europe/Paris:20261021T200000
+SUMMARY:Romanticism across Borders
+DESCRIPTION:https://www.ens.psl.eu/agenda/romanticism-across-borders/2026-1
+ 0-21t163000
+LOCATION:ENS\, 45 rue d'Ulm\, Paris 5e
+URL:https://www.ens.psl.eu/agenda/romanticism-across-borders/2026-10-21t163
+ 000
+END:VEVENT
+BEGIN:VEVENT
+UID:1a9eeb1b58f3@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261021T190000
+DTEND;TZID=Europe/Paris:20261021T210000
+SUMMARY:Les disparitions forcées en Mésoamérique
+DESCRIPTION:Conférence/Débat\nhttps://www.mal217.org/fr/agenda/les-dispar
+ itions-forcees-en-mesoamerique
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
+URL:https://www.mal217.org/fr/agenda/les-disparitions-forcees-en-mesoameriq
+ ue
+END:VEVENT
+BEGIN:VEVENT
 UID:e3cc45ab5c71@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Plein feu sur (i)elles : Visibiliser le genre en traduction / Gende
@@ -756,8 +673,24 @@ LOCATION:4\, rue des Irlandais 75005 (Maison de la recherche de la Sorbonne
 URL:https://gendertrad.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:82234c3539a7@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261022T141500
+DTEND;TZID=Europe/Paris:20261022T161500
+SUMMARY:Conférence – L’enluminure occidentale
+DESCRIPTION:De la fabrication du parchemin\, à la reliure\, beaucoup de sa
+ voir-faire et de talent sont déployés pour produire ces manuscrits qui s
+ ont parfois de véritables bijoux. Dans cette conférence\, nous nous penc
+ herons sur quelques-uns des plus beaux manuscrits d’Europe occidentale.\
+ nhttps://www.paris.fr/evenements/conference-l-enluminure-occidentale-12578
+ 9
+LOCATION:Club Montparnasse\, 92 bis rue du Bld Montparnasse\, 75014 Paris
+URL:https://www.paris.fr/evenements/conference-l-enluminure-occidentale-125
+ 789
+END:VEVENT
+BEGIN:VEVENT
 UID:5338f611ca66@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261022T170000
 DTEND;TZID=Europe/Paris:20261022T190000
 SUMMARY:Lecture-Rencontre avec le poète Tahar Bekri
@@ -770,7 +703,7 @@ URL:https://www.parisnanterre.fr/agenda/lecture-rencontre-avec-le-poete-tah
 END:VEVENT
 BEGIN:VEVENT
 UID:72d55fcb9e83@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261022T190000
 DTEND;TZID=Europe/Paris:20261022T210000
 SUMMARY:DÉCRIPT in dialogue | Whose Peace? Warmongers\, peace fictions\, a
@@ -784,8 +717,19 @@ URL:https://sorbonne-alliance.pantheonsorbonne.fr/evenements/decript-dialog
  ue-whose-peace-warmongers-peace-fictions-and-narratives-imperial-order
 END:VEVENT
 BEGIN:VEVENT
+UID:444962ba0b88@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261022T190000
+DTEND;TZID=Europe/Paris:20261022T210000
+SUMMARY:Luz\, cahier d´Amour et de Transformation
+DESCRIPTION:Littérature\nhttps://www.mal217.org/fr/agenda/luz-e82d8378
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
+URL:https://www.mal217.org/fr/agenda/luz-e82d8378
+END:VEVENT
+BEGIN:VEVENT
 UID:72fc30c20311@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261023T090000
 DTEND;TZID=Europe/Paris:20261023T180000
 SUMMARY:Présences de l’Antiquité tardive dans les récits muséaux
@@ -799,7 +743,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/pr
 END:VEVENT
 BEGIN:VEVENT
 UID:7ac105a2dd76@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261023T153000
 DTEND;TZID=Europe/Paris:20261023T173000
 SUMMARY:Les Mémoires poétiques d’Ukyô no Daibu\, dame d’honneur d’
@@ -816,7 +760,7 @@ URL:https://aibl.fr/seances/vendredi-23-octobre-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:a3ef0ff5105e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261023T180000
 DTEND;TZID=Europe/Paris:20261023T210000
 SUMMARY:Littérature et Cinéma chinois - Regards croisés entre texte et 
@@ -829,7 +773,7 @@ URL:https://www.ens.psl.eu/agenda/litterature-et-cinema-chinois-regards-cro
 END:VEVENT
 BEGIN:VEVENT
 UID:308a064c6c17@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261023T190000
 DTEND;TZID=Europe/Paris:20261023T210000
 SUMMARY:Rencontre avec Nicolas Martin
@@ -843,7 +787,7 @@ URL:https://www.paris.fr/evenements/rencontre-avec-nicolas-martin-125505
 END:VEVENT
 BEGIN:VEVENT
 UID:640bf8118fb1@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261026T180000
 DTEND;TZID=Europe/Paris:20261026T200000
 SUMMARY:La naissance du livre de poésie moderne en français : des premier
@@ -857,7 +801,7 @@ URL:https://www.bnf.fr/fr/agenda/la-naissance-du-livre-de-poesie-moderne-en
 END:VEVENT
 BEGIN:VEVENT
 UID:0c2525dfd2b4@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261026T190000
 DTEND;TZID=Europe/Paris:20261026T210000
 SUMMARY:Accueil des étudiants péruviens
@@ -869,7 +813,7 @@ URL:https://www.mal217.org/fr/agenda/accueil-des-etudiants-peruviens
 END:VEVENT
 BEGIN:VEVENT
 UID:f19f67014077@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261028T170000
 DTEND;TZID=Europe/Paris:20261028T190000
 SUMMARY:[Film screening] 'Walter L.' - How to shoot a fiction film based on
@@ -884,7 +828,7 @@ URL:https://www.sciencespo.fr/fr/evenements/projection-walter-l-how-to-shoo
 END:VEVENT
 BEGIN:VEVENT
 UID:df7a76a97920@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Voyages et dépossessions
@@ -897,7 +841,7 @@ URL:https://www.sorbonne-nouvelle.fr/voyages-et-depossessions-928288.kjsp?R
 END:VEVENT
 BEGIN:VEVENT
 UID:e5535296bc3d@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261029T153000
 DTEND;TZID=Europe/Paris:20261029T170000
 SUMMARY:Raconter le Levant : littérature et cinéma
@@ -910,7 +854,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/raconter-levant-
 END:VEVENT
 BEGIN:VEVENT
 UID:38d36dc03721@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261103T193000
 DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:La littérature\, école de la relation ? Rencontre entre Alice Fer
@@ -924,7 +868,7 @@ URL:https://www.collegedesbernardins.fr/agenda/la-litterature-ecole-de-la-r
 END:VEVENT
 BEGIN:VEVENT
 UID:f83c6e3e8ada@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261105T180000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:L'IA peut-elle être créative ? Écrire à l’heure de l’intell
@@ -940,7 +884,7 @@ URL:https://www.sciencespo.fr/fr/evenements/l-ia-peut-elle-etre-creative-ec
 END:VEVENT
 BEGIN:VEVENT
 UID:43726e7f9a78@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T193000
 SUMMARY:Fabrique féministe de l’histoire de l’art : enjeux d’éditio
@@ -955,7 +899,7 @@ URL:https://www.inha.fr/agenda/fabrique-feministe-de-lhistoire-de-lart-enje
 END:VEVENT
 BEGIN:VEVENT
 UID:8721a71b87aa@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T194500
 SUMMARY:Rencontre avec Claire Riffard
@@ -967,7 +911,7 @@ URL:https://www.paris.fr/evenements/rencontre-avec-claire-riffard-124295
 END:VEVENT
 BEGIN:VEVENT
 UID:f70364fff8a2@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261107T180000
 DTEND;TZID=Europe/Paris:20261107T200000
 SUMMARY:Rencontre avec Thibault Lafargue
@@ -981,7 +925,7 @@ URL:https://www.paris.fr/evenements/rencontre-avec-thibault-lafargue-125503
 END:VEVENT
 BEGIN:VEVENT
 UID:cd485d4f4a0a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Edoardo Cagnan et Claire Riffard : parutions récentes sur Senghor
@@ -992,7 +936,7 @@ URL:https://www.item.ens.fr/edoardo-cagnan
 END:VEVENT
 BEGIN:VEVENT
 UID:c3ca7e2a3359@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T181500
 SUMMARY:Traduire l’anthropologie en bande dessinée. Réflexions sur les 
@@ -1006,7 +950,7 @@ URL:https://www.inalco.fr/evenements/traduire-lanthropologie-en-bande-dessi
 END:VEVENT
 BEGIN:VEVENT
 UID:ae52b5162b01@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:L'enseignement de la prononciation dans les cours de langues étran
@@ -1017,7 +961,7 @@ URL:https://prononciation.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:db91a650618f@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261112T170000
 DTEND;TZID=Europe/Paris:20261112T190000
 SUMMARY:L'Histoire en livres | Une histoire de migrations et de persécutio
@@ -1036,7 +980,7 @@ URL:https://www.sciencespo.fr/fr/evenements/l-histoire-en-livres-une-histoi
 END:VEVENT
 BEGIN:VEVENT
 UID:eab68b4c4928@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Conférence "Langue des Signes Japonaise et Langue des Signes Fran
@@ -1055,7 +999,7 @@ URL:https://www.paris.fr/evenements/conference-langue-des-signes-japonaise-
 END:VEVENT
 BEGIN:VEVENT
 UID:ad798ca89809@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261112T193000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Discussion avec Elodie Potente
@@ -1067,7 +1011,7 @@ URL:https://www.paris.fr/evenements/discussion-avec-elodie-potente-124979
 END:VEVENT
 BEGIN:VEVENT
 UID:1ea079458858@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:The BBC under Fire : Debates on Impartiality and the Crisis of Legi
@@ -1083,7 +1027,7 @@ URL:https://www.sorbonne-nouvelle.fr/the-bbc-under-fire-debates-on-impartia
 END:VEVENT
 BEGIN:VEVENT
 UID:7c53dd8212ab@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261113T100000
 DTEND;TZID=Europe/Paris:20261113T120000
 SUMMARY:Qu’est-ce que le naturalisme ? Approche médiatique et culturelle
@@ -1099,7 +1043,7 @@ URL:https://www.item.ens.fr/marie-astrid-charlier-universite-paul-valery-mo
 END:VEVENT
 BEGIN:VEVENT
 UID:7b99fc9e9f74@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261113T190000
 DTEND;TZID=Europe/Paris:20261113T210000
 SUMMARY:Rencontre littéraire avec Julien Marsay
@@ -1114,7 +1058,7 @@ URL:https://www.paris.fr/evenements/rencontre-litteraire-avec-julien-marsay
 END:VEVENT
 BEGIN:VEVENT
 UID:c98ba619c20d@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261114T180000
 DTEND;TZID=Europe/Paris:20261114T193000
 SUMMARY:Rencontre autour de l'œuvre poétique de René Guy et Hélène Cad
@@ -1128,7 +1072,7 @@ URL:https://www.paris.fr/evenements/rencontre-autour-de-l-oeuvre-poetique-d
 END:VEVENT
 BEGIN:VEVENT
 UID:11cd0c15daf5@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:Le soleil descendra derrière la montagne de Robert Bober
@@ -1141,7 +1085,7 @@ URL:https://www.paris.fr/evenements/le-soleil-descendra-derriere-la-montagn
 END:VEVENT
 BEGIN:VEVENT
 UID:f0664cb62daa@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261116T180000
 DTEND;TZID=Europe/Paris:20261116T190000
 SUMMARY:Rencontre avec Isabelle Grégoire
@@ -1155,7 +1099,7 @@ URL:https://www.paris.fr/evenements/rencontre-avec-isabelle-gregoire-125593
 END:VEVENT
 BEGIN:VEVENT
 UID:2715c872ed03@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261117T180000
 DTEND;TZID=Europe/Paris:20261117T190000
 SUMMARY:Les dessous lesbiens de la littérature
@@ -1171,7 +1115,7 @@ URL:https://www.paris.fr/evenements/les-dessous-lesbiens-de-la-litterature-
 END:VEVENT
 BEGIN:VEVENT
 UID:144d19c7ac4b@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Expériences migratoires à l’ère contemporaine
@@ -1184,7 +1128,7 @@ URL:https://www.sorbonne-nouvelle.fr/experiences-migratoires-a-l-ere-contem
 END:VEVENT
 BEGIN:VEVENT
 UID:5ced4e3ed100@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261119T190000
 DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Jeudi de l'actualité : Une démocratie alimentaire est-elle possib
@@ -1203,7 +1147,7 @@ URL:https://www.paris.fr/evenements/jeudi-de-l-actualite-une-democratie-ali
 END:VEVENT
 BEGIN:VEVENT
 UID:436f31c4b597@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261119T190000
 DTEND;TZID=Europe/Paris:20261119T210000
 SUMMARY:Wojciech Tochman\, une voix de la littérature polonaise
@@ -1216,7 +1160,7 @@ URL:https://www.paris.fr/evenements/marta-caraion-et-catalin-mihuleac-deux-
 END:VEVENT
 BEGIN:VEVENT
 UID:9b947c5cd881@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Nouveaux regards sur la « théâtralité » : entre réel et mise 
@@ -1230,7 +1174,7 @@ URL:https://www.sorbonne-nouvelle.fr/nouveaux-regards-sur-la-theatralite-en
 END:VEVENT
 BEGIN:VEVENT
 UID:c814cd15c66b@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Histoire des émotions en littérature et culture d'enfance et de j
@@ -1244,7 +1188,7 @@ URL:https://www.sorbonne-nouvelle.fr/histoire-des-emotions-en-litterature-e
 END:VEVENT
 BEGIN:VEVENT
 UID:d5fca7df4518@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261120T190000
 DTEND;TZID=Europe/Paris:20261120T210000
 SUMMARY:Conférence de Jennifer Padjemi | Monte le Son
@@ -1259,7 +1203,7 @@ URL:https://www.paris.fr/evenements/conference-de-jennifer-padjemi-monte-le
 END:VEVENT
 BEGIN:VEVENT
 UID:a498030a53d7@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261121T110000
 DTEND;TZID=Europe/Paris:20261121T123000
 SUMMARY:François Racine de Monville\, créateur du Désert de Retz
@@ -1275,7 +1219,7 @@ URL:https://www.paris.fr/evenements/francois-racine-de-monville-createur-du
 END:VEVENT
 BEGIN:VEVENT
 UID:943ca98c936c@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261121T150000
 DTEND;TZID=Europe/Paris:20261121T170000
 SUMMARY:Rencontre autour du livre "Baisers du singe" de Virginia Woolf en p
@@ -1291,7 +1235,7 @@ URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-1
 END:VEVENT
 BEGIN:VEVENT
 UID:5f29e3a8b86b@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Les usages politiques de la complainte en Italie du XIIIe au XVe s.
@@ -1304,7 +1248,7 @@ URL:https://www.sorbonne-nouvelle.fr/les-usages-politiques-de-la-complainte
 END:VEVENT
 BEGIN:VEVENT
 UID:7fc87c1e7956@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:Collodi hier et aujourd'hui
@@ -1317,23 +1261,23 @@ URL:https://www.sorbonne-nouvelle.fr/collodi-hier-et-aujourd-hui-926045.kjs
 END:VEVENT
 BEGIN:VEVENT
 UID:f31373c0ec7e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261124T150000
 DTEND;TZID=Europe/Paris:20261124T170000
 SUMMARY:Conférence : Le grand amour d’Honoré de Balzac et de la comtess
  e Hanska
-DESCRIPTION:Découvrez l'histoire de la relation passionnée entre Honoré 
- de Balzac et la comtesse Hanska\, l'une des plus célèbres correspondance
- s amoureuses de la littérature française.\nhttps://www.paris.fr/evenemen
- ts/conference-le-grand-amour-d-honore-de-balzac-et-de-la-comtesse-hanska-1
- 17149
+DESCRIPTION:Mardi 24 novembre\, Jacques Marec revient sur l’histoire d’
+ amour entre Honoré de Balzac et la comtesse polonaise Evelyne Hanska\, de
+  leur première correspondance à leur mariage.\nhttps://www.paris.fr/even
+ ements/conference-le-grand-amour-d-honore-de-balzac-et-de-la-comtesse-hans
+ ka-124964
 LOCATION:Mairie du 8e arrondissement\, 3 rue de Lisbonne\, 75008 Paris
 URL:https://www.paris.fr/evenements/conference-le-grand-amour-d-honore-de-b
- alzac-et-de-la-comtesse-hanska-117149
+ alzac-et-de-la-comtesse-hanska-124964
 END:VEVENT
 BEGIN:VEVENT
 UID:3f058c0f6096@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261126T190000
 DTEND;TZID=Europe/Paris:20261126T203000
 SUMMARY:Un numérique responsable est-il vraiment possible ?
@@ -1349,7 +1293,7 @@ URL:https://www.paris.fr/evenements/un-numerique-responsable-est-il-vraimen
 END:VEVENT
 BEGIN:VEVENT
 UID:a6cd1b39064e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261126T190000
 DTEND;TZID=Europe/Paris:20261126T203000
 SUMMARY:Récit historique autour de la célèbre tapisserie de Bayeux
@@ -1362,7 +1306,7 @@ URL:https://www.paris.fr/evenements/recit-historique-autour-de-la-celebre-t
 END:VEVENT
 BEGIN:VEVENT
 UID:97a6a8cbc729@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261126T193000
 DTEND;TZID=Europe/Paris:20261126T210000
 SUMMARY:Le Cabaret Voltaire
@@ -1375,7 +1319,7 @@ URL:https://www.paris.fr/evenements/le-cabaret-voltaire-124692
 END:VEVENT
 BEGIN:VEVENT
 UID:3e6a405c1454@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261128T153000
 DTEND;TZID=Europe/Paris:20261128T163000
 SUMMARY:A la poursuite d'Agatha Christie
@@ -1388,7 +1332,7 @@ URL:https://www.paris.fr/evenements/a-la-poursuite-d-agatha-christie-115013
 END:VEVENT
 BEGIN:VEVENT
 UID:76c072db0e9c@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261201T190000
 DTEND;TZID=Europe/Paris:20261201T203000
 SUMMARY:La bibliothèque idéale de… Martin Page
@@ -1404,7 +1348,7 @@ URL:https://www.paris.fr/evenements/la-bibliotheque-ideale-de-martin-page-1
 END:VEVENT
 BEGIN:VEVENT
 UID:3795db93976f@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261201T190000
 DTEND;TZID=Europe/Paris:20261201T210000
 SUMMARY:Malraux et les Éditions Kra\, 1919-1921 : un tremplin réciproque 
@@ -1419,7 +1363,7 @@ URL:https://www.paris.fr/evenements/malraux-et-les-editions-kra-1919-1921-u
 END:VEVENT
 BEGIN:VEVENT
 UID:6c3f078ec7ff@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Littérature et histoire : ce qui résiste
@@ -1432,7 +1376,7 @@ URL:https://www.sorbonne-nouvelle.fr/litterature-et-histoire-ce-qui-resiste
 END:VEVENT
 BEGIN:VEVENT
 UID:ba2bbb14e99c@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Représenter le handicap dans les arts\, les lettres et les médias
@@ -1448,7 +1392,7 @@ URL:https://www.sorbonne-nouvelle.fr/representer-le-handicap-dans-les-arts-
 END:VEVENT
 BEGIN:VEVENT
 UID:4ff8d87f372c@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261203T190000
 DTEND;TZID=Europe/Paris:20261203T210000
 SUMMARY:Céline raconte Madeleine
@@ -1461,7 +1405,7 @@ URL:https://www.paris.fr/evenements/avec-une-legere-intimite-madeleine-malr
 END:VEVENT
 BEGIN:VEVENT
 UID:4fc79c96fdf0@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:Ecrire la Russie… sans le russe : traduire la fiction et la non-f
@@ -1477,7 +1421,7 @@ URL:https://www.sorbonne-nouvelle.fr/ecrire-la-russie-sans-le-russe-traduir
 END:VEVENT
 BEGIN:VEVENT
 UID:047ab564a80f@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261205T110000
 DTEND;TZID=Europe/Paris:20261205T123000
 SUMMARY:Café littéraire : des mots et des mets
@@ -1491,7 +1435,7 @@ URL:https://www.paris.fr/evenements/cafe-litteraire-la-rentree-litteraire-1
 END:VEVENT
 BEGIN:VEVENT
 UID:3ebf5aadbbd4@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261205T153000
 DTEND;TZID=Europe/Paris:20261205T173000
 SUMMARY:Table ronde : parcours de libraires
@@ -1505,7 +1449,7 @@ URL:https://www.paris.fr/evenements/table-ronde-parcours-de-libraires-12398
 END:VEVENT
 BEGIN:VEVENT
 UID:9497033e8a67@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Troisième Rencontre pluridisciplinaire des Colombianistes en Franc
@@ -1521,7 +1465,7 @@ URL:https://www.sorbonne-nouvelle.fr/troisieme-rencontre-pluridisciplinaire
 END:VEVENT
 BEGIN:VEVENT
 UID:7aae37ce3d64@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Conversing with the Dead / Converser avec les morts
@@ -1534,7 +1478,7 @@ URL:https://www.sorbonne-nouvelle.fr/conversing-with-the-dead-converser-ave
 END:VEVENT
 BEGIN:VEVENT
 UID:e2f8707c1538@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261210T193000
 DTEND;TZID=Europe/Paris:20261210T210000
 SUMMARY:La peinture en lettres
@@ -1547,7 +1491,7 @@ URL:https://www.paris.fr/evenements/la-peinture-en-lettres-124691
 END:VEVENT
 BEGIN:VEVENT
 UID:40492c5710a1@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:Bourbaki et la théorie des catégories
@@ -1558,7 +1502,7 @@ URL:https://www.item.ens.fr/bourbaki-et-la-theorie-des-categories
 END:VEVENT
 BEGIN:VEVENT
 UID:7b76a31387b5@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261211T100000
 DTEND;TZID=Europe/Paris:20261211T120000
 SUMMARY:Émile Zola. Scènes d’une vie d’écrivain
@@ -1571,7 +1515,7 @@ URL:https://www.item.ens.fr/alain-pages-sorbonne-nouvelle-emile-zola-scenes
 END:VEVENT
 BEGIN:VEVENT
 UID:bf985629fb40@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261214T124500
 DTEND;TZID=Europe/Paris:20261214T134500
 SUMMARY:Une heure\, un livre - La Pharisienne de Mauriac
@@ -1583,7 +1527,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---la-phar
 END:VEVENT
 BEGIN:VEVENT
 UID:20cbb1e42514@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:La linguistique fonctionnelle : bilan et perspectives
@@ -1593,7 +1537,7 @@ URL:https://silf2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a2297de264@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261216T123000
 DTEND;TZID=Europe/Paris:20261216T133000
 SUMMARY:Roland Lehoucq "Science-fiction : le monde de la (dé)mesure"
@@ -1603,7 +1547,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13626/
 END:VEVENT
 BEGIN:VEVENT
 UID:06508c812e37@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261217T190000
 DTEND;TZID=Europe/Paris:20261217T210000
 SUMMARY:Immer-son. Écouter aux pages des romans (Jane Eyre et Dracula)
@@ -1615,7 +1559,7 @@ URL:https://www.fmsh.fr/agenda/immer-son-ecouter-aux-pages-des-romans-jane-
 END:VEVENT
 BEGIN:VEVENT
 UID:4957a89efad0@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270105T170000
 DTEND;TZID=Europe/Paris:20270105T190000
 SUMMARY:Trouble dans la littérature (1)
@@ -1628,7 +1572,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:9d3ddb4bce9a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270105T180000
 DTEND;TZID=Europe/Paris:20270105T200000
 SUMMARY:Littérature générale et singulière (1)
@@ -1641,7 +1585,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:b6d91db82bef@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270111T124500
 DTEND;TZID=Europe/Paris:20270111T134500
 SUMMARY:Une heure\, un livre - Les Hauts de Hurlevent d’Émily Brontë
@@ -1653,7 +1597,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-hau
 END:VEVENT
 BEGIN:VEVENT
 UID:6dd4ed88e8f3@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270112T170000
 DTEND;TZID=Europe/Paris:20270112T190000
 SUMMARY:Trouble dans la littérature (2)
@@ -1666,7 +1610,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:055150c97ea3@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270112T180000
 DTEND;TZID=Europe/Paris:20270112T200000
 SUMMARY:Littérature générale et singulière (2)
@@ -1678,8 +1622,19 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
  le-et-singuliere/litterature-generale-et-singuliere-2
 END:VEVENT
 BEGIN:VEVENT
+UID:7b054a057293@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20270119T170000
+DTEND;TZID=Europe/Paris:20270119T190000
+SUMMARY:Présentation du n°63 de Genesis : « La Vie des œuvres »
+DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
+ w.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
+LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
+URL:https://www.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
+END:VEVENT
+BEGIN:VEVENT
 UID:d512c072625a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270119T170000
 DTEND;TZID=Europe/Paris:20270119T190000
 SUMMARY:Trouble dans la littérature (3)
@@ -1691,19 +1646,8 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
  ature/trouble-dans-la-litterature-3
 END:VEVENT
 BEGIN:VEVENT
-UID:7b054a057293@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20270119T170000
-DTEND;TZID=Europe/Paris:20270119T190000
-SUMMARY:Présentation du n°63 de Genesis : « La Vie des œuvres »
-DESCRIPTION:ITEM — Institut des textes et manuscrits modernes\nhttps://ww
- w.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
-LOCATION:ENS\, 45 rue d’Ulm\, 75005 Paris – Salle Dussane
-URL:https://www.item.ens.fr/presentation-genesis-63-la-vie-des-oeuvres
-END:VEVENT
-BEGIN:VEVENT
 UID:c49749e09680@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270119T180000
 DTEND;TZID=Europe/Paris:20270119T200000
 SUMMARY:Littérature générale et singulière (3)
@@ -1716,7 +1660,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:ffdbe012b2fc@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270122T100000
 DTEND;TZID=Europe/Paris:20270122T120000
 SUMMARY:D’où viennent les stylèmes naturalistes ?
@@ -1729,7 +1673,7 @@ URL:https://www.item.ens.fr/dominique-legallois-sorbonne-nouvelle-dou-vienn
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba82c96d700@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270126T170000
 DTEND;TZID=Europe/Paris:20270126T190000
 SUMMARY:Trouble dans la littérature (4)
@@ -1742,7 +1686,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:9d774ed7f38c@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270126T180000
 DTEND;TZID=Europe/Paris:20270126T200000
 SUMMARY:Littérature générale et singulière (4)
@@ -1755,7 +1699,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:880382be1803@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270128T140000
 DTEND;TZID=Europe/Paris:20270128T160000
 SUMMARY:Une certaine perplexité philologique à l'égard des phrases moder
@@ -1773,7 +1717,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/une-cert
 END:VEVENT
 BEGIN:VEVENT
 UID:abf7d9a52bd6@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270202T170000
 DTEND;TZID=Europe/Paris:20270202T190000
 SUMMARY:Trouble dans la littérature (5)
@@ -1786,7 +1730,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:07cad64a3f72@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270202T180000
 DTEND;TZID=Europe/Paris:20270202T200000
 SUMMARY:Littérature générale et singulière (5)
@@ -1799,7 +1743,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:4ee3679e40a2@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
 SUMMARY:Yves Chemla et Alba Pessini : « Les manuscrits de Jean-Claude Char
@@ -1813,7 +1757,7 @@ URL:https://www.item.ens.fr/yves-chemla-et-alba-pessini-les-manuscrits-de-j
 END:VEVENT
 BEGIN:VEVENT
 UID:0f32d1d5681e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270204T140000
 DTEND;TZID=Europe/Paris:20270204T160000
 SUMMARY:Une certaine perplexité philologique à l'égard des phrases moder
@@ -1831,7 +1775,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/une-cert
 END:VEVENT
 BEGIN:VEVENT
 UID:5dcbb20ea0df@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270209T170000
 DTEND;TZID=Europe/Paris:20270209T190000
 SUMMARY:Trouble dans la littérature (6)
@@ -1844,7 +1788,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:ee40b73313a1@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270209T180000
 DTEND;TZID=Europe/Paris:20270209T200000
 SUMMARY:Littérature générale et singulière (6)
@@ -1857,7 +1801,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:2b46741764a1@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270222T124500
 DTEND;TZID=Europe/Paris:20270222T134500
 SUMMARY:Une heure\, un livre - Le Rhinocéros et Le Roi se meurt d’Eugèn
@@ -1870,7 +1814,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre--le-rhino
 END:VEVENT
 BEGIN:VEVENT
 UID:5e27a8a58aaa@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270222T170000
 DTEND;TZID=Europe/Paris:20270222T190000
 SUMMARY:Olivier Cadiot (écrivain et traducteur) en dialogue avec Nathalie 
@@ -1882,7 +1826,7 @@ URL:https://www.item.ens.fr/o-cadiot-n-koble
 END:VEVENT
 BEGIN:VEVENT
 UID:182cc0553358@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270223T170000
 DTEND;TZID=Europe/Paris:20270223T190000
 SUMMARY:Trouble dans la littérature (7)
@@ -1895,7 +1839,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:1f08103828c9@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270223T180000
 DTEND;TZID=Europe/Paris:20270223T200000
 SUMMARY:Littérature générale et singulière (7)
@@ -1908,7 +1852,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:e687dc36a04f@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270224T123000
 DTEND;TZID=Europe/Paris:20270224T143000
 SUMMARY:Le triptyque impérial Romanov de la maison Fabergé
@@ -1921,7 +1865,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/le
 END:VEVENT
 BEGIN:VEVENT
 UID:8e6925b459f7@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270302T170000
 DTEND;TZID=Europe/Paris:20270302T190000
 SUMMARY:Trouble dans la littérature (8)
@@ -1934,7 +1878,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:d0bc6b7a2083@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270302T180000
 DTEND;TZID=Europe/Paris:20270302T200000
 SUMMARY:Littérature générale et singulière (8)
@@ -1947,7 +1891,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:fee8c47ec2e9@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270309T170000
 DTEND;TZID=Europe/Paris:20270309T190000
 SUMMARY:Trouble dans la littérature (9)
@@ -1960,7 +1904,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/trouble-dans-la-litter
 END:VEVENT
 BEGIN:VEVENT
 UID:67ef2a95c6cf@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270309T180000
 DTEND;TZID=Europe/Paris:20270309T200000
 SUMMARY:Littérature générale et singulière (9)
@@ -1973,7 +1917,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/litterature-genera
 END:VEVENT
 BEGIN:VEVENT
 UID:03510ff72578@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270315T124500
 DTEND;TZID=Europe/Paris:20270315T134500
 SUMMARY:Une heure\, un livre - Mémoires d’Outre-Tombe de Chateaubriand
@@ -1985,7 +1929,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---memoire
 END:VEVENT
 BEGIN:VEVENT
 UID:d30e1064bd01@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270316T170000
 DTEND;TZID=Europe/Paris:20270316T190000
 SUMMARY:(sur Gustave Roud\, poète)
@@ -1996,7 +1940,7 @@ URL:https://www.item.ens.fr/sur-gustave-roud-poete
 END:VEVENT
 BEGIN:VEVENT
 UID:ea618c01a3c1@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270326T100000
 DTEND;TZID=Europe/Paris:20270326T120000
 SUMMARY:Julia Daudet : Un siècle de vie littéraire
@@ -2009,7 +1953,7 @@ URL:https://www.item.ens.fr/anne-simone-pierre-dufief-universite-dangers-et
 END:VEVENT
 BEGIN:VEVENT
 UID:921c238ed86a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270421T160000
 DTEND;TZID=Europe/Paris:20270421T180000
 SUMMARY:Habib Tengour et Hervé Sanson : « Habib Tengour à l’œuvre » 
@@ -2021,7 +1965,7 @@ URL:https://www.item.ens.fr/habib-tengour
 END:VEVENT
 BEGIN:VEVENT
 UID:ed7ead670914@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270423T100000
 DTEND;TZID=Europe/Paris:20270423T120000
 SUMMARY:La première version connue d’ Une vie de Maupassant. Les débuts
@@ -2034,7 +1978,7 @@ URL:https://www.item.ens.fr/antonia-fonyi-cnrs-genese-dune-vie-de-maupassan
 END:VEVENT
 BEGIN:VEVENT
 UID:60a9482eda77@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270426T124500
 DTEND;TZID=Europe/Paris:20270426T134500
 SUMMARY:Une heure\, un livre - Les Matinaux\, La Parole en archipel de Ren
@@ -2047,7 +1991,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-mat
 END:VEVENT
 BEGIN:VEVENT
 UID:af3ac93ede28@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270427T170000
 DTEND;TZID=Europe/Paris:20270427T190000
 SUMMARY:Belinda Cannone (romancière et essayiste)
@@ -2058,7 +2002,7 @@ URL:https://www.item.ens.fr/belinda-cannone-romanciere-et-essayiste
 END:VEVENT
 BEGIN:VEVENT
 UID:be4f1f8c9951@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270517T124500
 DTEND;TZID=Europe/Paris:20270517T134500
 SUMMARY:Une heure\, un livre - L’Île des Esclaves et Le Jeu de l’Amour
@@ -2072,7 +2016,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---l-ile-d
 END:VEVENT
 BEGIN:VEVENT
 UID:da96b7a614d7@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270608T170000
 DTEND;TZID=Europe/Paris:20270608T190000
 SUMMARY:Présentation du n°64 de Genesis : « Jeux vidéo »
@@ -2083,7 +2027,7 @@ URL:https://www.item.ens.fr/presentation-du-n64-de-genesis-jeux-video
 END:VEVENT
 BEGIN:VEVENT
 UID:e56d70ba125e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270614T124500
 DTEND;TZID=Europe/Paris:20270614T134500
 SUMMARY:Une heure\, un livre - Moby Dick de Melville
@@ -2095,7 +2039,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---moby-di
 END:VEVENT
 BEGIN:VEVENT
 UID:3fdaecd1590e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270915T150000
 DTEND;TZID=Europe/Paris:20270915T170000
 SUMMARY:Rencontre auteurs You Young-kwang × Audrey Pleynet

@@ -24,26 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:98033432f305@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T140000
-DTEND;TZID=Europe/Paris:20261012T151500
-SUMMARY:IP Paris Seminar on Incentives and Computation
-DESCRIPTION:The IP Paris Seminar on Incentives and Computation brings toget
- her researchers working at the intersection of economics and computer scie
- nce to explore how incentives and strategic behavior shape large-scale com
- putational systems. The first session of the 2026–2027 series will featu
- re Jason Hartline (Northwestern University) with a talk titled “Scoring 
- Rules and Foundations of AI.” The seminar…\nhttps://hi-paris.fr/event/
- ip-paris-seminar-on-incentives-and-computation/
-LOCATION:Bâtiment d’Enseignement Mutualisé (BEM)\, Avenue Augustin Fres
- nel\, 91120\, Palaiseau
-URL:https://hi-paris.fr/event/ip-paris-seminar-on-incentives-and-computatio
- n/
-END:VEVENT
-BEGIN:VEVENT
 UID:e424d347657f@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T140000
 DTEND;TZID=Europe/Paris:20261013T153000
 SUMMARY:Hi! PARIS Reading groups “Fairness in AI” – Session 1
@@ -60,7 +42,7 @@ URL:https://hi-paris.fr/event/hi-paris-reading-groups-fairness-in-ai-sessio
 END:VEVENT
 BEGIN:VEVENT
 UID:c0ed6125d258@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261021T090000
 DTEND;TZID=Europe/Paris:20261021T160000
 SUMMARY:Séminaire : Paris NLP Pre-Conference
@@ -77,7 +59,7 @@ URL:https://hi-paris.fr/event/paris-nlp-pre-conference/
 END:VEVENT
 BEGIN:VEVENT
 UID:59d3f6c68724@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261102T090000
 DTEND;TZID=Europe/Paris:20261102T110000
 SUMMARY:SGAP 2026 Paris – A Scientist’s Guide to AI
@@ -94,7 +76,7 @@ URL:https://hi-paris.fr/event/sgap-2026-paris-a-scientists-guide-to-ai/
 END:VEVENT
 BEGIN:VEVENT
 UID:fca9166c778a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261103T180000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Hi! PARIS Career Fair
@@ -110,7 +92,7 @@ URL:https://hi-paris.fr/event/hi-paris-career-fair/
 END:VEVENT
 BEGIN:VEVENT
 UID:f422396e312a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261104T110000
 DTEND;TZID=Europe/Paris:20261104T120000
 SUMMARY:AI Seminar Cycle: Jes Frellsen (DTU)
@@ -125,7 +107,7 @@ URL:https://hi-paris.fr/event/ai-seminar-cycle-jes-frellsen-dtu/
 END:VEVENT
 BEGIN:VEVENT
 UID:0b52277e64d3@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge
@@ -142,8 +124,27 @@ URL:https://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-c
  hallenge/
 END:VEVENT
 BEGIN:VEVENT
+UID:0651395df470@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261130T110000
+DTEND;TZID=Europe/Paris:20261130T120000
+SUMMARY:AI Seminar Cycle: When Generators Condition on Themselves – Expos
+ ure Bias in Visual Autoregressive Models
+DESCRIPTION:Autoregressive models have emerged as a powerful alternative to
+  diffusion for image and video generation\, making them a natural fit for 
+ streaming and interactive video world models. However\, because they gener
+ ate content step by step and condition on their own previous outputs\, the
+ y remain vulnerable to exposure bias —where early errors propagate and s
+ hape the entire generation process. In this…\nhttps://hi-paris.fr/event/
+ ai-seminar-cycle-when-generators-condition-on-themselves-exposure-bias-in-
+ visual-autoregressive-models/
+LOCATION:Institut Polytechnique de Paris\, Palaiseau
+URL:https://hi-paris.fr/event/ai-seminar-cycle-when-generators-condition-on
+ -themselves-exposure-bias-in-visual-autoregressive-models/
+END:VEVENT
+BEGIN:VEVENT
 UID:bad0a6e26f5a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:CTRL+SOUND: AI for Sound and Creative Technologies Workshop
@@ -160,7 +161,7 @@ URL:https://hi-paris.fr/event/ctrlsound-ai-for-sound-and-creative-technolog
 END:VEVENT
 BEGIN:VEVENT
 UID:82cd8cc7c08e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Séminaire : ELLIS UnConference 2026
@@ -177,7 +178,7 @@ URL:https://hi-paris.fr/event/ellis-unconference-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:b32301b0b466@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20270414T110000
 DTEND;TZID=Europe/Paris:20270414T120000
 SUMMARY:AI Seminar Cycle: Nuria Oliver (ELLIS Alicante)

@@ -24,30 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:9acf76f92d1c@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261011T140000
-DTEND;TZID=Europe/Paris:20261011T180000
-SUMMARY:Fête de la science 2026
-DESCRIPTION:https://www.citeco.fr/agenda/fete-de-la-science-2026
-LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
-URL:https://www.citeco.fr/agenda/fete-de-la-science-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:96d629a78dac@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261011T163000
-DTEND;TZID=Europe/Paris:20261011T173000
-SUMMARY:Débat mouvant : La consommation\, un choix de société
-DESCRIPTION:https://www.citeco.fr/agenda/debat-mouvant-la-consommation-un-c
- hoix-de-societe
-LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
-URL:https://www.citeco.fr/agenda/debat-mouvant-la-consommation-un-choix-de-
- societe
-END:VEVENT
-BEGIN:VEVENT
 UID:83f968b9b39a@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261017T150000
 DTEND;TZID=Europe/Paris:20261017T160000
 SUMMARY:Histoire du capitalisme français de Christian Chavagneux et Enzo

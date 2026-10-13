@@ -24,58 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:e81641640440@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Magm'à Paris #8 🌋 Le programme en présentiel sur les oppressio
- ns systémiques
-DESCRIPTION:Organisé par Magma Collectif — C'est reparti pour une nouvel
- le édition de notre programme collectif en présentiel à Paris pour mieu
- x comprendre les luttes et agir sur les systèmes de domination (racisme\,
-  sexisme\, capitalisme\, tous les trucs en -isme) tout en faisant le lien 
- ent\nhttps://chiche.makesense.org/events/e/magma-paris-8-le-programme-en-p
- resentiel-sur-les-oppressions-systemiques-6a949b5f72e06000074d9b3f
-LOCATION:17 Rue Jenner\, 75013 Paris\, France
-URL:https://chiche.makesense.org/events/e/magma-paris-8-le-programme-en-pre
- sentiel-sur-les-oppressions-systemiques-6a949b5f72e06000074d9b3f
-END:VEVENT
-BEGIN:VEVENT
-UID:c4aa98c4fad1@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:2 collines\, 1000 chemins : une plongée dans les parcours d'engage
- ment
-DESCRIPTION:Organisé par Anastasia Dereppe — Un atelier émotionnel et i
- nteractif pour explorer son parcours d’engagement écologique\, basé su
- r un modèle sociologique inédit.❓Pourquoi certain·es basculent-ils ve
- rs des modes de vie plus sobres\, engagés\, écologiques - et d’autres 
- pas ?\nhttps://chiche.makesense.org/events/e/2-collines-1000-chemins-une-p
- longee-dans-les-parcours-dengagement-6a05b20a2035560008e93da6
-LOCATION:11 Rue Biscornet\, 75012 Paris\, France
-URL:https://chiche.makesense.org/events/e/2-collines-1000-chemins-une-plong
- ee-dans-les-parcours-dengagement-6a05b20a2035560008e93da6
-END:VEVENT
-BEGIN:VEVENT
-UID:8ad46f1fceaa@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;TZID=Europe/Paris:20261012T193000
-DTEND;TZID=Europe/Paris:20261012T213000
-SUMMARY:Workshop Capoeira Angola
-DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
-  capoeira Angola\, un art martial afro-brésilien qui allie résistance\, 
- gestuelle et culture.Retrouvez-nous pour une pratique ancestrale qui se jo
- ue près du sol. À travers des mouvements lents\, fluides et stratégique
- s\, accom\nhttps://chiche.makesense.org/events/e/workshop-capoeira-angola-
- 6aac09d519fd1c00088da98b
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09d5
- 19fd1c00088da98b
-END:VEVENT
-BEGIN:VEVENT
 UID:1fd291148d6c@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:"Ce qui nous relie"\, rencontre spectacle avec Boris Cyrulnik et Pa
@@ -92,7 +42,7 @@ URL:https://chiche.makesense.org/events/e/ce-qui-nous-relie-rencontre-spect
 END:VEVENT
 BEGIN:VEVENT
 UID:511b0b722bf4@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Politique Non Violente
@@ -108,7 +58,7 @@ URL:https://chiche.makesense.org/events/e/politique-non-violente-6aaa9a56ca
 END:VEVENT
 BEGIN:VEVENT
 UID:df85965edd98@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T180000
 DTEND;TZID=Europe/Paris:20261013T200000
 SUMMARY:Laboratoire des conflictualités
@@ -124,7 +74,7 @@ URL:https://chiche.makesense.org/events/e/laboratoire-des-conflictualites-6
 END:VEVENT
 BEGIN:VEVENT
 UID:97aa5281a1f7@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261013T203000
 DTEND;TZID=Europe/Paris:20261013T223000
 SUMMARY:FABRICE BONNIFET : Cinévénement du film "THE COST OF GROWTH" au G
@@ -140,7 +90,7 @@ URL:https://chiche.makesense.org/events/e/fabrice-bonnifet-cinevenement-du-
 END:VEVENT
 BEGIN:VEVENT
 UID:2cd93bd068e2@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Mettons nous à table
@@ -155,7 +105,7 @@ URL:https://chiche.makesense.org/events/e/mettons-nous-a-table-6aaa523a19fd
 END:VEVENT
 BEGIN:VEVENT
 UID:6efb551b0a78@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:[Des idées et des croissants] Prescription sociale et bien vieilli
@@ -174,7 +124,7 @@ URL:https://chiche.makesense.org/events/e/des-idees-et-des-croissants-presc
 END:VEVENT
 BEGIN:VEVENT
 UID:355ef885dbcb@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Construire la trame de mon CV📍Paris 13
@@ -188,7 +138,7 @@ URL:https://chiche.makesense.org/events/e/construire-la-trame-de-mon-cvpari
 END:VEVENT
 BEGIN:VEVENT
 UID:b8aedcf56a4e@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Dépasser les sentiments négatifs liés à la recherche d'emploi 
@@ -204,8 +154,25 @@ URL:https://chiche.makesense.org/events/e/depasser-les-sentiments-negatifs-
  lies-a-la-recherche-demploi-paris-6aaaa63219fd1c0008849ce5
 END:VEVENT
 BEGIN:VEVENT
+UID:ef0b762d5fb1@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:2 collines\, 1000 chemins : une plongée dans les parcours d'engage
+ ment
+DESCRIPTION:Organisé par Anastasia Dereppe — Un atelier émotionnel et i
+ nteractif pour explorer son parcours d’engagement écologique\, basé su
+ r un modèle sociologique inédit.❓Pourquoi certain·es basculent-ils ve
+ rs des modes de vie plus sobres\, engagés\, écologiques - et d’autres 
+ pas ?\nhttps://chiche.makesense.org/events/e/2-collines-1000-chemins-une-p
+ longee-dans-les-parcours-dengagement-6a05dc944e5ca5000849401d
+LOCATION:2 Pl. Baudoyer\, 75004 Paris\, France
+URL:https://chiche.makesense.org/events/e/2-collines-1000-chemins-une-plong
+ ee-dans-les-parcours-dengagement-6a05dc944e5ca5000849401d
+END:VEVENT
+BEGIN:VEVENT
 UID:327f8b9f2c18@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T080000
 DTEND;TZID=Europe/Paris:20261014T100000
 SUMMARY:M-Otion
@@ -217,7 +184,7 @@ URL:https://chiche.makesense.org/events/e/m-otion-6a79c9c009db940008865609
 END:VEVENT
 BEGIN:VEVENT
 UID:3e20f69e3fd2@paris-academique
-DTSTAMP:20261012T183015Z
+DTSTAMP:20261013T112913Z
 DTSTART;TZID=Europe/Paris:20261014T092000
 DTEND;TZID=Europe/Paris:20261014T112000
 SUMMARY:Atelier - Financer sa création d'entreprise
@@ -229,5 +196,53 @@ DESCRIPTION:Organisé par Les Canaux — Envie de mieux comprendre comment
 LOCATION:6 Quai de la Seine\, 75019 Paris\, France
 URL:https://chiche.makesense.org/events/e/atelier-financer-sa-creation-dent
  reprise-6a9823762701ed0007dda115
+END:VEVENT
+BEGIN:VEVENT
+UID:f628454ac506@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261014T190000
+DTEND;TZID=Europe/Paris:20261014T210000
+SUMMARY:Éducation : quelle école pour demain ?
+DESCRIPTION:Organisé par Maison de la Conversation — Un cycle d'ateliers
+  mêlant théâtre\, improvisation et débat pour préparer la présidenti
+ elle 2027\, en partenariat avec l'Academie citoyenne.Déconstruire pour mi
+ eux construire ensemble ! 🎭L’Académie citoyenne et la maison de\nhtt
+ ps://chiche.makesense.org/events/e/education-quelle-ecole-pour-demain-6ac3
+ b15ecc49190007c3d4a2
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/education-quelle-ecole-pour-demai
+ n-6ac3b15ecc49190007c3d4a2
+END:VEVENT
+BEGIN:VEVENT
+UID:b177f3f0a10d@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261014T190000
+DTEND;TZID=Europe/Paris:20261014T210000
+SUMMARY:Au fil des voix
+DESCRIPTION:Organisé par Maison de la Conversation — La lecture de texte
+  à voix haute a de nombreuses vertus parfois insoupçonnées : elle exige
+  une compréhension fine du texte et nécessite un désir profond d'inclur
+ e l'autre\, le public\, dans un moment partagé. La lecture de texte à vo
+ ix haute est un\nhttps://chiche.makesense.org/events/e/au-fil-des-voix-6aa
+ a9f05ca9188000759772b
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/au-fil-des-voix-6aaa9f05ca9188000
+ 759772b
+END:VEVENT
+BEGIN:VEVENT
+UID:6066c5c1a850@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261014T200000
+DTEND;TZID=Europe/Paris:20261014T220000
+SUMMARY:Mouvement organique
+DESCRIPTION:Organisé par Maison de la Conversation — Dans la vie de tous
+  les jours\, nous utilisons notre corps de façon mécanique\, sans penser
+  à son état.Cet atelier est une invitation à se connecter et à communi
+ quer avec notre corps par le biais d'une danse instinctive et à explorer 
+ avec cur\nhttps://chiche.makesense.org/events/e/mouvement-organique-6abbb5
+ 4634634e0007e47e09
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/mouvement-organique-6abbb54634634
+ e0007e47e09
 END:VEVENT
 END:VCALENDAR

@@ -24,15 +24,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:539f9564ec94@paris-academique
-DTSTAMP:20261012T183015Z
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-SUMMARY:Adaptation climatique : où en sont vraiment les entreprises ?
-DESCRIPTION:https://escp.eu/fr/events/adaptation-climatique-ou-en-sont-vrai
- ment-les-entreprises
-LOCATION:Paris Campus / Montparnasse\, France
-URL:https://escp.eu/fr/events/adaptation-climatique-ou-en-sont-vraiment-les
- -entreprises
+UID:f29a6048d5aa@paris-academique
+DTSTAMP:20261013T112913Z
+DTSTART;TZID=Europe/Paris:20261016T180000
+DTEND;TZID=Europe/Paris:20261016T190000
+SUMMARY:Coffee Chats in Germany
+DESCRIPTION:Event\nhttps://escp.eu/fr/events/coffee-chats-germany
+LOCATION:ESCP Business School\, 79 avenue de la République\, Paris 11e
+URL:https://escp.eu/fr/events/coffee-chats-germany
 END:VEVENT
 END:VCALENDAR
