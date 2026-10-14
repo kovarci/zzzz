@@ -1988,11 +1988,40 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
     return events
 
 
+def _paris_cite_soup(url):
+    """Agenda All-in-One Event Calendar. Depuis oct. 2026 la carte ne porte
+    plus sa date (« Oct 14 @ 12 h 00 min », mois anglais, sans année) : elle
+    est dans l'en-tête du jour (lien …exact_date~14-10-2026) qui regroupe les
+    cartes. On la recopie en <time datetime> dans chaque carte, on sort le
+    lieu du titre (il y était imbriqué) et on retire le ?instance_id du lien."""
+    soup = _soup(url)
+    for day in soup.select(".ai1ec-date"):
+        a = day.select_one("a.ai1ec-date-title[href]")
+        m = re.search(r"exact_date~(\d{2})-(\d{2})-(\d{4})", a["href"]) if a else None
+        if not m:
+            continue
+        iso = f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
+        for card in day.select(".ai1ec-event"):
+            tm = _times((card.select_one(".ai1ec-event-time") or card).get_text(" ")
+                        .replace(" h ", "h").replace(" min", ""))[0]
+            stamp = soup.new_tag("time", datetime=f"{iso}T{tm}" if tm else iso)
+            card.append(stamp)
+            title, loc = card.select_one(".ai1ec-event-title"), card.select_one(".ai1ec-event-location")
+            if loc:
+                loc.string = re.sub(r"^@\s*", "", loc.get_text())
+            if title and loc:
+                title.insert_after(loc.extract())
+            for link in card.select("a.ai1ec-load-event[href]"):
+                link["href"] = link["href"].split("?")[0]
+    return soup
+
+
 def scrape_paris_cite():
     # All-in-One Event Calendar : ~12 événements par vue, pages via ?ai1ec=…
     return _scrape_cards(
-        "Université Paris Cité", "https://u-paris.fr/agenda/", ".ai1ec-univ-event",
-        title=".ai1ec-event-title", date=".ai1ec-event-date", place=".ai1ec-event-location",
+        "Université Paris Cité", "https://u-paris.fr/agenda/", ".ai1ec-event",
+        title=".ai1ec-event-title", time=".ai1ec-event-time", place=".ai1ec-event-location",
+        link="a.ai1ec-load-event", fetch=_paris_cite_soup,
         base="https://u-paris.fr",
         location="Université Paris Cité, 85 boulevard Saint-Germain, Paris 6e",
         page_url="https://u-paris.fr/agenda/?ai1ec=action~agenda|page_offset~{n}", max_pages=6)
