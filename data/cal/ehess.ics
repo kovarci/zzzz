@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0bab98429f9e@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261016T100000
 DTEND;TZID=Europe/Paris:20261016T120000
 SUMMARY:Institution und Technik. Das Subjekt und die Frage der Autonomie in
@@ -40,7 +40,7 @@ URL:https://www.ehess.fr/jcms/281612_JEvent/fr/institution-und-technik-das-
 END:VEVENT
 BEGIN:VEVENT
 UID:555bc2d816ba@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261020T090000
 DTEND;TZID=Europe/Paris:20261020T110000
 SUMMARY:Petits-déjeuners de la vie étudiante 2026-2027
@@ -51,8 +51,36 @@ URL:https://www.ehess.fr/jcms/291798_JEvent/fr/petits-dejeuners-de-la-vie-e
  tudiante-2026-2027
 END:VEVENT
 BEGIN:VEVENT
+UID:c4ff04bb0acc@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261020T173000
+DTEND;TZID=Europe/Paris:20261020T193000
+SUMMARY:Voix aux Chapitres #21 autour de l'ouvrage "Citoyennes soignantes. 
+ Guerre\, femmes et fabrique du commun en Ukraine"
+DESCRIPTION:Rencontre\nhttps://www.ehess.fr/jcms/296532_JEvent/fr/voix-aux-
+ chapitres-21-autour-de-l-ouvrage-citoyennes-soignantes-guerre-femmes-et-fa
+ brique-du-commun-en-ukraine
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr/jcms/296532_JEvent/fr/voix-aux-chapitres-21-autour
+ -de-l-ouvrage-citoyennes-soignantes-guerre-femmes-et-fabrique-du-commun-en
+ -ukraine
+END:VEVENT
+BEGIN:VEVENT
+UID:8902b0a16985@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261117T183000
+DTEND;TZID=Europe/Paris:20261117T203000
+SUMMARY:L'incomplétude en mouvement : perspectives africaines et pensée d
+ e Marc Bloch
+DESCRIPTION:Conférence\nhttps://www.ehess.fr/jcms/284673_JEvent/fr/l-incom
+ pletude-en-mouvement-perspectives-africaines-et-pensee-de-marc-bloch
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr/jcms/284673_JEvent/fr/l-incompletude-en-mouvement-
+ perspectives-africaines-et-pensee-de-marc-bloch
+END:VEVENT
+BEGIN:VEVENT
 UID:e67f8476334d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:La psychologisation des violences faites aux femmes
@@ -64,7 +92,7 @@ URL:https://www.ehess.fr/jcms/258092_JEvent/fr/la-psychologisation-des-viol
 END:VEVENT
 BEGIN:VEVENT
 UID:25f806336c48@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T113000
 SUMMARY:Semaine de l'Afrique

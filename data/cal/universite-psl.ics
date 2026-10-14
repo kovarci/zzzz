@@ -24,67 +24,41 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:9aeea5d2ced0@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T121500
-DTEND;TZID=Europe/Paris:20261013T134500
-SUMMARY:Séminaire inaugural de l’Organologia Institute : « La bourse et
-  la vie : le vitalisme de Georges F. Doriot »
-DESCRIPTION:https://psl.eu/agenda/seminaire-inaugural-de-lorganologia-insti
- tute-la-bourse-et-la-vie-le-vitalisme-de-georges-f
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/seminaire-inaugural-de-lorganologia-institute-la-
- bourse-et-la-vie-le-vitalisme-de-georges-f
-END:VEVENT
-BEGIN:VEVENT
-UID:c72b67a20cb0@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T121500
-DTEND;TZID=Europe/Paris:20261013T134500
-SUMMARY:Séminaires de l’Organologia Institute
-DESCRIPTION:https://psl.eu/agenda/seminaires-de-lorganologia-institute
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/seminaires-de-lorganologia-institute
-END:VEVENT
-BEGIN:VEVENT
 UID:1ddbdda19645@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T123000
-DTEND;TZID=Europe/Paris:20261013T133000
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
 SUMMARY:Les Rendez-vous Carrière - Alumni PSL
 DESCRIPTION:https://psl.eu/agenda/les-rendez-vous-carriere-alumni-psl
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
 URL:https://psl.eu/agenda/les-rendez-vous-carriere-alumni-psl
 END:VEVENT
 BEGIN:VEVENT
-UID:93cd85d5eea4@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T130000
-DTEND;TZID=Europe/Paris:20261013T140000
-SUMMARY:Trajectoires d'innovations - Quel contrat choisir pour mes activit
- és de recherche ?
-DESCRIPTION:https://psl.eu/agenda/trajectoires-dinnovations-quel-contrat-ch
- oisir-pour-mes-activites-de-recherche
+UID:c72b67a20cb0@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:Séminaires de l’Organologia Institute
+DESCRIPTION:https://psl.eu/agenda/seminaires-de-lorganologia-institute
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/trajectoires-dinnovations-quel-contrat-choisir-po
- ur-mes-activites-de-recherche
+URL:https://psl.eu/agenda/seminaires-de-lorganologia-institute
 END:VEVENT
 BEGIN:VEVENT
-UID:9a11d340f3ea@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T180000
-DTEND;TZID=Europe/Paris:20261013T193000
-SUMMARY:L’histoire de la bibliothèque de l’École des mines\, de 1794 
- à nos jours
-DESCRIPTION:https://psl.eu/agenda/lhistoire-de-la-bibliotheque-de-lecole-de
- s-mines-de-1794-nos-jours
+UID:c6bc7e28f3a5@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Projection : (In)Action\, un documentaire sur l'engagement climatiq
+ ue
+DESCRIPTION:https://psl.eu/agenda/projection-inaction-un-documentaire-sur-l
+ engagement-climatique
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/lhistoire-de-la-bibliotheque-de-lecole-des-mines-
- de-1794-nos-jours
+URL:https://psl.eu/agenda/projection-inaction-un-documentaire-sur-lengageme
+ nt-climatique
 END:VEVENT
 BEGIN:VEVENT
 UID:1638390b0dcb@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T100000
 DTEND;TZID=Europe/Paris:20261014T180000
 SUMMARY:Cosmetic 360
@@ -94,7 +68,7 @@ URL:https://psl.eu/agenda/cosmetic-360
 END:VEVENT
 BEGIN:VEVENT
 UID:56cf635a2378@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T121500
 DTEND;TZID=Europe/Paris:20261014T133000
 SUMMARY:Façonner les ondes pour voir l'invisible
@@ -104,7 +78,7 @@ URL:https://psl.eu/agenda/faconner-les-ondes-pour-voir-linvisible
 END:VEVENT
 BEGIN:VEVENT
 UID:cd78e1ba5a27@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T180000
 DTEND;TZID=Europe/Paris:20261014T200000
 SUMMARY:Bachelor I-BE³ : webinaire d’information
@@ -114,7 +88,7 @@ URL:https://psl.eu/agenda/bachelor-i-be3-webinaire-dinformation-0
 END:VEVENT
 BEGIN:VEVENT
 UID:fa42622c4957@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261015T120000
 DTEND;TZID=Europe/Paris:20261015T140000
 SUMMARY:Erasmus Days 2026 : Découvrez la mobilité doctorale en Europe
@@ -126,7 +100,7 @@ URL:https://psl.eu/agenda/erasmus-days-2026-decouvrez-la-mobilite-doctorale
 END:VEVENT
 BEGIN:VEVENT
 UID:177d55334a2d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Festival Musique 2026 « Quatuor à cordes »
@@ -136,7 +110,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes
 END:VEVENT
 BEGIN:VEVENT
 UID:1fb986609034@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:AFTER Project Room : la jeune création de l'École des Arts Décor
@@ -149,7 +123,7 @@ URL:https://psl.eu/agenda/after-project-room-la-jeune-creation-de-lecole-de
 END:VEVENT
 BEGIN:VEVENT
 UID:4362a59a623e@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261022T090000
 DTEND;TZID=Europe/Paris:20261022T103000
 SUMMARY:Groupe de parole pour les doctorants 🗣️
@@ -159,7 +133,7 @@ URL:https://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
 END:VEVENT
 BEGIN:VEVENT
 UID:3c3ee0988d9a@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261022T090000
 DTEND;TZID=Europe/Paris:20261022T170000
 SUMMARY:Séminaire doctoral du LIAT + SACRe
@@ -169,7 +143,7 @@ URL:https://psl.eu/agenda/seminaire-doctoral-du-liat-sacre
 END:VEVENT
 BEGIN:VEVENT
 UID:1057b1dff36d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261026T170000
 DTEND;TZID=Europe/Paris:20261026T200000
 SUMMARY:L'eau dans la ville : restitution de films photographiques et écha
@@ -182,7 +156,7 @@ URL:https://psl.eu/agenda/leau-dans-la-ville-restitution-de-films-photograp
 END:VEVENT
 BEGIN:VEVENT
 UID:774bc337a99e@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261030T180000
 DTEND;TZID=Europe/Paris:20261030T203000
 SUMMARY:Peur en panne\, une chasse au trésor scientifique d’Halloween !
@@ -194,7 +168,7 @@ URL:https://psl.eu/agenda/peur-en-panne-une-chasse-au-tresor-scientifique-d
 END:VEVENT
 BEGIN:VEVENT
 UID:c9aef26da023@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Festival Musique 2026 « Piano/accordéon autour de la danse »
@@ -206,7 +180,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la
 END:VEVENT
 BEGIN:VEVENT
 UID:e7efa0ca06b3@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261103T083000
 DTEND;TZID=Europe/Paris:20261103T130000
 SUMMARY:PhD Symposium d'EELISA
@@ -216,7 +190,7 @@ URL:https://psl.eu/agenda/phd-symposium-deelisa
 END:VEVENT
 BEGIN:VEVENT
 UID:a0d7b16abae4@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261106T100000
 DTEND;TZID=Europe/Paris:20261106T120000
 SUMMARY:Ateliers d’Art-Thérapie
@@ -226,7 +200,7 @@ URL:https://psl.eu/agenda/ateliers-dart-therapie-2
 END:VEVENT
 BEGIN:VEVENT
 UID:7d300871fa24@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Festival Musique 2026 « Trio Cornière »
@@ -236,7 +210,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-trio-corniere
 END:VEVENT
 BEGIN:VEVENT
 UID:67081bb7dd38@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Festival Musique 2026 « Quatuor à cordes et percussions »
@@ -248,7 +222,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes-et-percussio
 END:VEVENT
 BEGIN:VEVENT
 UID:c5a1254ec48f@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261110T110000
 DTEND;TZID=Europe/Paris:20261110T140000
 SUMMARY:Agir Etudiant.e - Permanence juridique pour les étudiantes et étu
@@ -261,7 +235,7 @@ URL:https://psl.eu/agenda/agir-etudiante-permanence-juridique-pour-les-etud
 END:VEVENT
 BEGIN:VEVENT
 UID:f3d9d0787c67@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261208T200000
 DTEND;TZID=Europe/Paris:20261208T223000
 SUMMARY:Un concert solidaire au profit des étudiants

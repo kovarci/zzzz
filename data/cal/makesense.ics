@@ -24,88 +24,56 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:1fd291148d6c@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
-SUMMARY:"Ce qui nous relie"\, rencontre spectacle avec Boris Cyrulnik et Pa
- trick Scheyder
-DESCRIPTION:Organisé par Hélène Binet — " Ce qui nous relie"La crise 
- écologique n'est-elle pas aussi une crise du lien : lien à soi-même\, l
- ien à l'altérité\, lien aux autres vivants humains et non-humains ? Et 
- que serait une écologie sans Amour ? Boris Cyrulnik et\nhttps://chiche.ma
- kesense.org/events/e/ce-qui-nous-relie-rencontre-spectacle-avec-boris-cyru
- lnik-et-patrick-scheyder-6aad345619fd1c0008952adc
-LOCATION:3bis Rue Papin\, 75003 Paris\, France
-URL:https://chiche.makesense.org/events/e/ce-qui-nous-relie-rencontre-spect
- acle-avec-boris-cyrulnik-et-patrick-scheyder-6aad345619fd1c0008952adc
-END:VEVENT
-BEGIN:VEVENT
-UID:511b0b722bf4@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
-SUMMARY:Politique Non Violente
-DESCRIPTION:Organisé par Maison de la Conversation — Les ateliers sont d
- es cercles de parole pour échanger autour des questions de société et d
- e politique. Chaque fois\, un sujet en lien avec l’actualité est propos
- é tout en restant ouvert (on peut aborder d’autres sujets).Nous utili\n
- https://chiche.makesense.org/events/e/politique-non-violente-6aaa9a56ca918
- 80007595750
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/politique-non-violente-6aaa9a56ca
- 91880007595750
-END:VEVENT
-BEGIN:VEVENT
-UID:df85965edd98@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T180000
-DTEND;TZID=Europe/Paris:20261013T200000
-SUMMARY:Laboratoire des conflictualités
-DESCRIPTION:Organisé par Maison de la Conversation — Appel à participat
- ion : laboratoire de 10 séances\, au rythme d’une séance par mois\, su
- r la notion de conflictualité dans le cadre d’une recherche-création m
- enée par Lena Karson.Ces séances seront un terrain d’expériences ent\
- nhttps://chiche.makesense.org/events/e/laboratoire-des-conflictualites-6aa
- a9bafca91880007595f22
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/laboratoire-des-conflictualites-6
- aaa9bafca91880007595f22
-END:VEVENT
-BEGIN:VEVENT
-UID:97aa5281a1f7@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T203000
-DTEND;TZID=Europe/Paris:20261013T223000
-SUMMARY:FABRICE BONNIFET : Cinévénement du film "THE COST OF GROWTH" au G
- rand Rex !
-DESCRIPTION:Organisé par Anne-Lou de Maillard — Une projection pas comme
-  les autres au Grand Rex le mardi 13 octobre à 20h30 en présence de Fabr
- ice Bonnifet !Au programme de la soirée :\nhttps://chiche.makesense.org/e
- vents/e/fabrice-bonnifet-cinevenement-du-film-the-cost-of-growth-au-grand-
- rex-6a9947252701ed0007e4081d
-LOCATION:1 Bd Poissonnière\, 75002 Paris\, France
-URL:https://chiche.makesense.org/events/e/fabrice-bonnifet-cinevenement-du-
- film-the-cost-of-growth-au-grand-rex-6a9947252701ed0007e4081d
-END:VEVENT
-BEGIN:VEVENT
-UID:2cd93bd068e2@paris-academique
-DTSTAMP:20261014T080459Z
+UID:355ef885dbcb@paris-academique
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-SUMMARY:Mettons nous à table
-DESCRIPTION:Organisé par Marion Soissons — Le 14 octobre\, c’est vous\
- , consommateurs\, que nous attendons !À Paris\, à l’Ambassade d’Auve
- rgne\, 25 agriculteurs vous donnent rendez-vous de 8h30 à 9h30 pour une m
- atinée de speed-meeting.Le principe\nhttps://chiche.makesense.org/events/
- e/mettons-nous-a-table-6aaa523a19fd1c0008820537
-LOCATION:22 Rue du Grenier-Saint-Lazare\, 75003 Paris\, France
-URL:https://chiche.makesense.org/events/e/mettons-nous-a-table-6aaa523a19fd
- 1c0008820537
+SUMMARY:Construire la trame de mon CV📍Paris 13
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’CV\, c'est l’a
+ telier pour construire ensemble la trame de ton CV !2h45 d’atelier colle
+ ctif pour :\nhttps://chiche.makesense.org/events/e/construire-la-trame-de-
+ mon-cvparis-13-6aa933a919fd1c00087aeef0
+LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
+URL:https://chiche.makesense.org/events/e/construire-la-trame-de-mon-cvpari
+ s-13-6aa933a919fd1c00087aeef0
+END:VEVENT
+BEGIN:VEVENT
+UID:b8aedcf56a4e@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Dépasser les sentiments négatifs liés à la recherche d'emploi 
+ 📍Paris
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Boost\, c’est 
+ l’atelier qui permet d’aller au-delà des sentiments négatifs liés 
+ à la période de recherche d’emploi ou de transition professionnelle\, 
+ tout en prenant conscience de ses\nhttps://chiche.makesense.org/events/e/d
+ epasser-les-sentiments-negatifs-lies-a-la-recherche-demploi-paris-6aaaa632
+ 19fd1c0008849ce5
+LOCATION:40 Av. des Terroirs de France\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/depasser-les-sentiments-negatifs-
+ lies-a-la-recherche-demploi-paris-6aaaa63219fd1c0008849ce5
+END:VEVENT
+BEGIN:VEVENT
+UID:ef0b762d5fb1@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:2 collines\, 1000 chemins : une plongée dans les parcours d'engage
+ ment
+DESCRIPTION:Organisé par Anastasia Dereppe — Un atelier émotionnel et i
+ nteractif pour explorer son parcours d’engagement écologique\, basé su
+ r un modèle sociologique inédit.❓Pourquoi certain·es basculent-ils ve
+ rs des modes de vie plus sobres\, engagés\, écologiques - et d’autres 
+ pas ?\nhttps://chiche.makesense.org/events/e/2-collines-1000-chemins-une-p
+ longee-dans-les-parcours-dengagement-6a05dc944e5ca5000849401d
+LOCATION:2 Pl. Baudoyer\, 75004 Paris\, France
+URL:https://chiche.makesense.org/events/e/2-collines-1000-chemins-une-plong
+ ee-dans-les-parcours-dengagement-6a05dc944e5ca5000849401d
 END:VEVENT
 BEGIN:VEVENT
 UID:6efb551b0a78@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:[Des idées et des croissants] Prescription sociale et bien vieilli
@@ -123,56 +91,23 @@ URL:https://chiche.makesense.org/events/e/des-idees-et-des-croissants-presc
  2701ed0007d5b143
 END:VEVENT
 BEGIN:VEVENT
-UID:355ef885dbcb@paris-academique
-DTSTAMP:20261014T080459Z
+UID:2cd93bd068e2@paris-academique
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
-SUMMARY:Construire la trame de mon CV📍Paris 13
-DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’CV\, c'est l’a
- telier pour construire ensemble la trame de ton CV !2h45 d’atelier colle
- ctif pour :\nhttps://chiche.makesense.org/events/e/construire-la-trame-de-
- mon-cvparis-13-6aa933a919fd1c00087aeef0
-LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
-URL:https://chiche.makesense.org/events/e/construire-la-trame-de-mon-cvpari
- s-13-6aa933a919fd1c00087aeef0
-END:VEVENT
-BEGIN:VEVENT
-UID:b8aedcf56a4e@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Dépasser les sentiments négatifs liés à la recherche d'emploi 
- 📍Paris
-DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Boost\, c’est 
- l’atelier qui permet d’aller au-delà des sentiments négatifs liés 
- à la période de recherche d’emploi ou de transition professionnelle\, 
- tout en prenant conscience de ses\nhttps://chiche.makesense.org/events/e/d
- epasser-les-sentiments-negatifs-lies-a-la-recherche-demploi-paris-6aaaa632
- 19fd1c0008849ce5
-LOCATION:40 Av. des Terroirs de France\, 75012 Paris\, France
-URL:https://chiche.makesense.org/events/e/depasser-les-sentiments-negatifs-
- lies-a-la-recherche-demploi-paris-6aaaa63219fd1c0008849ce5
-END:VEVENT
-BEGIN:VEVENT
-UID:ef0b762d5fb1@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:2 collines\, 1000 chemins : une plongée dans les parcours d'engage
- ment
-DESCRIPTION:Organisé par Anastasia Dereppe — Un atelier émotionnel et i
- nteractif pour explorer son parcours d’engagement écologique\, basé su
- r un modèle sociologique inédit.❓Pourquoi certain·es basculent-ils ve
- rs des modes de vie plus sobres\, engagés\, écologiques - et d’autres 
- pas ?\nhttps://chiche.makesense.org/events/e/2-collines-1000-chemins-une-p
- longee-dans-les-parcours-dengagement-6a05dc944e5ca5000849401d
-LOCATION:2 Pl. Baudoyer\, 75004 Paris\, France
-URL:https://chiche.makesense.org/events/e/2-collines-1000-chemins-une-plong
- ee-dans-les-parcours-dengagement-6a05dc944e5ca5000849401d
+SUMMARY:Mettons nous à table
+DESCRIPTION:Organisé par Marion Soissons — Le 14 octobre\, c’est vous\
+ , consommateurs\, que nous attendons !À Paris\, à l’Ambassade d’Auve
+ rgne\, 25 agriculteurs vous donnent rendez-vous de 8h30 à 9h30 pour une m
+ atinée de speed-meeting.Le principe\nhttps://chiche.makesense.org/events/
+ e/mettons-nous-a-table-6aaa523a19fd1c0008820537
+LOCATION:22 Rue du Grenier-Saint-Lazare\, 75003 Paris\, France
+URL:https://chiche.makesense.org/events/e/mettons-nous-a-table-6aaa523a19fd
+ 1c0008820537
 END:VEVENT
 BEGIN:VEVENT
 UID:327f8b9f2c18@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T080000
 DTEND;TZID=Europe/Paris:20261014T100000
 SUMMARY:M-Otion
@@ -184,7 +119,7 @@ URL:https://chiche.makesense.org/events/e/m-otion-6a79c9c009db940008865609
 END:VEVENT
 BEGIN:VEVENT
 UID:3e20f69e3fd2@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T092000
 DTEND;TZID=Europe/Paris:20261014T112000
 SUMMARY:Atelier - Financer sa création d'entreprise
@@ -199,7 +134,7 @@ URL:https://chiche.makesense.org/events/e/atelier-financer-sa-creation-dent
 END:VEVENT
 BEGIN:VEVENT
 UID:f628454ac506@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Éducation : quelle école pour demain ?
@@ -215,7 +150,7 @@ URL:https://chiche.makesense.org/events/e/education-quelle-ecole-pour-demai
 END:VEVENT
 BEGIN:VEVENT
 UID:b177f3f0a10d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T190000
 DTEND;TZID=Europe/Paris:20261014T210000
 SUMMARY:Au fil des voix
@@ -231,7 +166,7 @@ URL:https://chiche.makesense.org/events/e/au-fil-des-voix-6aaa9f05ca9188000
 END:VEVENT
 BEGIN:VEVENT
 UID:6066c5c1a850@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T200000
 DTEND;TZID=Europe/Paris:20261014T220000
 SUMMARY:Mouvement organique
@@ -244,5 +179,117 @@ DESCRIPTION:Organisé par Maison de la Conversation — Dans la vie de tous
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/mouvement-organique-6abbb54634634
  e0007e47e09
+END:VEVENT
+BEGIN:VEVENT
+UID:418c57b32a76@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:11e édition des Journées nationales de l’architecture : « Réh
+ abiliter : bâtir l’avenir »
+DESCRIPTION:Organisé par Paloma Benel — 11e édition des Journées natio
+ nales de l’architecture : « Réhabiliter : bâtir l’avenir »Du 15 au
+  18 octobre 2026\, les Journées nationales de l’architecture reviennent
+  partou\nhttps://chiche.makesense.org/events/e/11e-edition-des-journees-na
+ tionales-de-larchitecture-rehabiliter-batir-lavenir-6abfc2c2825ba2000735e2
+ 26
+LOCATION:Pl. du Trocadéro et du 11 Novembre\, 75016 Paris\, France
+URL:https://chiche.makesense.org/events/e/11e-edition-des-journees-national
+ es-de-larchitecture-rehabiliter-batir-lavenir-6abfc2c2825ba2000735e226
+END:VEVENT
+BEGIN:VEVENT
+UID:e7cc6df14019@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Forum des métiers de la terre et du goût
+DESCRIPTION:Organisé par Anna Six — Abiosol et Coeur d'Essonne Agglomér
+ ation vous donnent rendez-vous le jeudi 15 octobre 2026 au Modul'Air de Br
+ étigny-sur-Orge pour une journée de découverte des métiers agricoles\,
+  alimentaires et de plein air accessible à tous-tes dès le collège!\nht
+ tps://chiche.makesense.org/events/e/forum-des-metiers-de-la-terre-et-du-go
+ ut-6aa918a29078030007c45c8f
+LOCATION:Essai en Vol\, 6 avenue du Centre d\, 91220 Brétigny-sur-Orge\, F
+ rance
+URL:https://chiche.makesense.org/events/e/forum-des-metiers-de-la-terre-et-
+ du-gout-6aa918a29078030007c45c8f
+END:VEVENT
+BEGIN:VEVENT
+UID:317315a9aad2@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261015T190000
+DTEND;TZID=Europe/Paris:20261015T210000
+SUMMARY:La FourmiParty des 10 ans de La Fourmilière ! 🐜
+DESCRIPTION:Organisé par Charlotte Jouanneau — 🐜⚡ FOURMIS PARTY —
+  On remet ça pour 10 ans !Chères fourmis\, chers partenaires\,Prépare t
+ on DeLorean : on t'embarque pour un voyage dans le temps !Direction 2016. 
+ Il y a 10 ans\, on lançait\nhttps://chiche.makesense.org/events/e/la-four
+ miparty-des-10-ans-de-la-fourmiliere-6ab2ac9e32f93b0008da23ff
+LOCATION:200 Quai de Valmy\, 75010 Paris\, France
+URL:https://chiche.makesense.org/events/e/la-fourmiparty-des-10-ans-de-la-f
+ ourmiliere-6ab2ac9e32f93b0008da23ff
+END:VEVENT
+BEGIN:VEVENT
+UID:693b3100e1a3@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261015T190000
+DTEND;TZID=Europe/Paris:20261015T210000
+SUMMARY:Sourire à l'Inconnu
+DESCRIPTION:Organisé par Maison de la Conversation — Guidé par Nicolas 
+ Bernagaud\, explorateur de l’Inconnu\, cette soirée sera une invitation
+  à découvrir la richesse insoupçonnée de l'autre.Et si la rencontre av
+ ec l’Inconnu devenait un art de vivre ? Osez\, le temps d’un soir\, so
+ urire à l’Inco\nhttps://chiche.makesense.org/events/e/sourire-a-linconn
+ u-6aaaa65d19fd1c0008849ed4
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/sourire-a-linconnu-6aaaa65d19fd1c
+ 0008849ed4
+END:VEVENT
+BEGIN:VEVENT
+UID:75faca0528d1@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261015T200000
+DTEND;TZID=Europe/Paris:20261015T213000
+SUMMARY:Peindre l’exil
+DESCRIPTION:Organisé par Maison de la Conversation — PEINDRE L’EXILMé
+ diation participative autour de l’exposition Couloirs irréguliersÀ par
+ tir du parcours de l’exposition Couloirs irréguliers\, cette médiation
+  invite à découvrir la naissance du pr\nhttps://chiche.makesense.org/eve
+ nts/e/peindre-lexil-6aad42c8ca918800076aa8d0
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/peindre-lexil-6aad42c8ca918800076
+ aa8d0
+END:VEVENT
+BEGIN:VEVENT
+UID:b1c4f0e82f6d@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:J’apprends les bases de la réparation (niveau 1)
+DESCRIPTION:Organisé par Envie Le Labo — [Atelier gratuit - Inscription 
+ obligatoire]Vous en avez assez de vous sentir démuni.e.s face à un appar
+ eil électroménager qui tombe en panne ? Participez à un atelier pratiqu
+ e pour apprendre les bases de la réparation et découvrir les bonne\nhttp
+ s://chiche.makesense.org/events/e/japprends-les-bases-de-la-reparation-niv
+ eau-1-6a992bd11c5b4f0008b97f45
+LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
+URL:https://chiche.makesense.org/events/e/japprends-les-bases-de-la-reparat
+ ion-niveau-1-6a992bd11c5b4f0008b97f45
+END:VEVENT
+BEGIN:VEVENT
+UID:14f648b7d1ff@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261016T140000
+DTEND;TZID=Europe/Paris:20261016T160000
+SUMMARY:Atelier de création théâtrale à destination des femmes
+DESCRIPTION:Organisé par Maison de la Conversation — Atelier de créatio
+ n théâtrale à destination des femmes.Venez participer à la création c
+ ollective et joyeuse de la comédie musicale « À la préfecture ! ».Vou
+ s laisserez libre cours à votre imagination et improviserez pour créer\,
+  toute\nhttps://chiche.makesense.org/events/e/atelier-de-creation-theatral
+ e-a-destination-des-femmes-6aaa853f19fd1c000883986c
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/atelier-de-creation-theatrale-a-d
+ estination-des-femmes-6aaa853f19fd1c000883986c
 END:VEVENT
 END:VCALENDAR

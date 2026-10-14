@@ -24,98 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:e92308a8aca4@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;VALUE=DATE:20261013
-DTEND;VALUE=DATE:20261014
-SUMMARY:Séminaire LAMSADE (À la Une\, Actualités\, Aide à la décision)
-  : École thématique STS et pouvoir
-DESCRIPTION:À la Une\, Actualités\, Aide à la décision\nhttps://cak.ehe
- ss.fr/evenement/sts-et-pouvoir
-LOCATION:Université Paris Dauphine-PSL\, place du Maréchal de Lattre de T
- assigny\, Paris 16e
-URL:https://cak.ehess.fr/evenement/sts-et-pouvoir
-END:VEVENT
-BEGIN:VEVENT
-UID:f35e1749ac88@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T093000
-DTEND;TZID=Europe/Paris:20261013T173000
-SUMMARY:Journée d’études « L’extension de la parité et ses effets 
- »
-DESCRIPTION:Une journée d’études consacrée aux effets de la parité da
- ns la vie politique\, la fonction publique\, les syndicats et le sport.\nh
- ttps://dauphine.psl.eu/dauphine/media-et-communication/article/journee-det
- udes-lextension-de-la-parite-et-ses-effets
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/journee
- -detudes-lextension-de-la-parite-et-ses-effets
-END:VEVENT
-BEGIN:VEVENT
-UID:448641d959dd@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261013T173000
-DTEND;TZID=Europe/Paris:20261013T193000
-SUMMARY:Remise du Prix du journalisme environnemental 2026
-DESCRIPTION:Organisés par l'association des journalistes-écrivains pour l
- a nature et l’écologie\, et l'université Paris Dauphine-PSL.\nhttps://
- dauphine.psl.eu/dauphine/media-et-communication/article/prix-du-journalism
- e-environnemental-2026
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/prix-du
- -journalisme-environnemental-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:0ce4704d1217@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261014T173000
-DTEND;TZID=Europe/Paris:20261014T200000
-SUMMARY:Projection : (In)Action\, un documentaire sur l'engagement climatiq
- ue
-DESCRIPTION:Un documentaire pour questionner les freins à l'action climati
- que au travers de témoignages à échelle humaine. Projection suivie d'un
-  débat.\nhttps://dauphine.psl.eu/dauphine/media-et-communication/article/
- projection-debat-inaction-un-documentaire-sur-lengagement-climatique
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/project
- ion-debat-inaction-un-documentaire-sur-lengagement-climatique
-END:VEVENT
-BEGIN:VEVENT
-UID:9409a792e551@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261014T190000
-DTEND;TZID=Europe/Paris:20261014T203000
-SUMMARY:Atelier juridique - Entreprendre en mode agent secret
-DESCRIPTION:Échangez avec Simon Azan\, avocat en droit des affaires et dé
- couvrez les principaux enjeux juridiques à connaître pour lancer son ent
- reprise.\nhttps://dauphine.psl.eu/dauphine/media-et-communication/article/
- default-149ebd690792a3d019105e2d148267a9
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/default
- -149ebd690792a3d019105e2d148267a9
-END:VEVENT
-BEGIN:VEVENT
-UID:c39d980f00bf@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261017T090000
-DTEND;TZID=Europe/Paris:20261017T170000
-SUMMARY:Lancement de la seconde Convention Citoyenne Etudiante
-DESCRIPTION:Une démarche participative et démocratique des étudiants pou
- r faire émerger des propositions sur le thème de l'égalité des chances
- .\nhttps://dauphine.psl.eu/dauphine/media-et-communication/article/lanceme
- nt-de-la-seconde-convention-citoyenne-etudiante
-LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
- gny\, Paris 16e
-URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/lanceme
- nt-de-la-seconde-convention-citoyenne-etudiante
-END:VEVENT
-BEGIN:VEVENT
 UID:c252cb9deb77@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261021T170000
 DTEND;TZID=Europe/Paris:20261021T200000
 SUMMARY:Colloque : repenser les défis du libéralisme
@@ -129,8 +39,22 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/colloqu
  e-repenser-les-defis-du-liberalisme
 END:VEVENT
 BEGIN:VEVENT
+UID:7e06cea56624@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261104T090000
+DTEND;TZID=Europe/Paris:20261104T120000
+SUMMARY:L’eau\, enjeu d’investissement stratégique et d’adaptation
+DESCRIPTION:Conférence organisée par l’Institut d’Économie de l’ea
+ u.\nhttps://institut-economie-eau.fr/evenements/conference-leau-enjeu-dinv
+ estissement-strategique-et-dadaptation/
+LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
+ gny\, Paris 16e
+URL:https://institut-economie-eau.fr/evenements/conference-leau-enjeu-dinve
+ stissement-strategique-et-dadaptation/
+END:VEVENT
+BEGIN:VEVENT
 UID:fd483c1cca35@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261104T140000
 DTEND;TZID=Europe/Paris:20261104T170000
 SUMMARY:Après-midi des lycéennes : découvrir les métiers scientifiques
@@ -144,8 +68,23 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/apres-m
  idi-des-lyceennes-decouvrir-les-metiers-scientifiques
 END:VEVENT
 BEGIN:VEVENT
+UID:8160d17a5a49@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261104T190000
+DTEND;TZID=Europe/Paris:20261104T203000
+SUMMARY:Atelier juridique - Entreprendre en mode agent secret
+DESCRIPTION:Échangez avec Simon Azan\, avocat en droit des affaires et dé
+ couvrez les principaux enjeux juridiques à connaître pour lancer son ent
+ reprise.\nhttps://dauphine.psl.eu/dauphine/media-et-communication/article/
+ default-149ebd690792a3d019105e2d148267a9
+LOCATION:Université Paris Dauphine\, Place du Maréchal de Lattre de Tassi
+ gny\, Paris 16e
+URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/default
+ -149ebd690792a3d019105e2d148267a9
+END:VEVENT
+BEGIN:VEVENT
 UID:e680bfd1b04c@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T203000
 SUMMARY:Projection : À contre champs\, un mémoire d'étudiantes devenu do
@@ -161,7 +100,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/project
 END:VEVENT
 BEGIN:VEVENT
 UID:1eee692683f2@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261106T090000
 DTEND;TZID=Europe/Paris:20261106T170000
 SUMMARY:Colloque : pensés et impensés de la loi « biodiversité »\, dix
@@ -177,7 +116,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/colloqu
 END:VEVENT
 BEGIN:VEVENT
 UID:341f78ff2473@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261116T090000
 DTEND;TZID=Europe/Paris:20261116T180000
 SUMMARY:ADT 2026 - International Conference on Algorithmic Decision Theory
@@ -192,7 +131,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/adt-202
 END:VEVENT
 BEGIN:VEVENT
 UID:6dfd7e28908d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261117T180000
 DTEND;TZID=Europe/Paris:20261117T203000
 SUMMARY:Projection : Promesse\, ou comment sauver des vies par le don
@@ -207,7 +146,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/project
 END:VEVENT
 BEGIN:VEVENT
 UID:196438012a26@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261118T190000
 DTEND;TZID=Europe/Paris:20261118T223000
 SUMMARY:9e cérémonie des prix Made In Dauphine
@@ -222,7 +161,7 @@ URL:https://www.dauphine-alumni.org/fr/event/9e-ceremonie-made-in-dauphine/
 END:VEVENT
 BEGIN:VEVENT
 UID:3a4ecfdeff9e@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261120T090000
 DTEND;TZID=Europe/Paris:20261120T173000
 SUMMARY:Le handicap\, un rapport social comme/avec les autres ?
@@ -237,7 +176,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/le-hand
 END:VEVENT
 BEGIN:VEVENT
 UID:e0ad3d1cda04@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261123T173000
 DTEND;TZID=Europe/Paris:20261123T193000
 SUMMARY:Égalité et accès aux droits
@@ -252,7 +191,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/egalite
 END:VEVENT
 BEGIN:VEVENT
 UID:f3711bd5656d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261124T090000
 DTEND;TZID=Europe/Paris:20261124T123000
 SUMMARY:Données de santé : produire\, partager\, protéger
@@ -266,7 +205,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/donnees
 END:VEVENT
 BEGIN:VEVENT
 UID:e17262f478f2@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261124T123000
 DTEND;TZID=Europe/Paris:20261124T140000
 SUMMARY:Atelier-jeu : la bataille de l'IA
@@ -281,7 +220,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/atelier
 END:VEVENT
 BEGIN:VEVENT
 UID:c9150e768053@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261124T143000
 DTEND;TZID=Europe/Paris:20261124T170000
 SUMMARY:IA et médias : qui paiera encore pour l’information ?
@@ -295,7 +234,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/ia-et-m
 END:VEVENT
 BEGIN:VEVENT
 UID:008f30185eb3@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T200000
 SUMMARY:Afterwork "Métiers de l'IA\, du numérique et des mathématiques"
@@ -310,7 +249,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/lafterw
 END:VEVENT
 BEGIN:VEVENT
 UID:4c1d9e087fbe@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261125T090000
 DTEND;TZID=Europe/Paris:20261125T183000
 SUMMARY:Présentation des posters scientifiques par les doctorants
@@ -325,7 +264,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/present
 END:VEVENT
 BEGIN:VEVENT
 UID:42d7447e202b@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261125T093000
 DTEND;TZID=Europe/Paris:20261125T123000
 SUMMARY:Prévenir et gérer les risques liés aux usages des IA générativ
@@ -341,7 +280,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/preveni
 END:VEVENT
 BEGIN:VEVENT
 UID:4c18ffb899d8@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261125T130000
 DTEND;TZID=Europe/Paris:20261125T180000
 SUMMARY:Le hackathon des Dauphine Digital Days
@@ -355,7 +294,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/le-hack
 END:VEVENT
 BEGIN:VEVENT
 UID:5ee58fb72190@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261126T093000
 DTEND;TZID=Europe/Paris:20261126T120000
 SUMMARY:IA et responsabilité : état des lieux et enjeux
@@ -370,7 +309,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/ia-resp
 END:VEVENT
 BEGIN:VEVENT
 UID:7e34b6658e45@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261126T140000
 DTEND;TZID=Europe/Paris:20261126T153000
 SUMMARY:Finance(s) : à qui profite l'IA ?
@@ -384,7 +323,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/finance
 END:VEVENT
 BEGIN:VEVENT
 UID:ed80dda401b2@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261126T160000
 DTEND;TZID=Europe/Paris:20261126T171500
 SUMMARY:Usages\, impacts et enjeux de l'IA en recherche
@@ -399,7 +338,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/usages-
 END:VEVENT
 BEGIN:VEVENT
 UID:b862f5a7054f@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261126T173000
 DTEND;TZID=Europe/Paris:20261126T190000
 SUMMARY:Comment reconnaître le travail demain ?
@@ -414,7 +353,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/regards
 END:VEVENT
 BEGIN:VEVENT
 UID:d1b70407020f@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261128T140000
 DTEND;TZID=Europe/Paris:20261128T163000
 SUMMARY:Finale du concours Éloquence du bégaiement 2026
@@ -429,7 +368,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/finale-
 END:VEVENT
 BEGIN:VEVENT
 UID:1a48f1dca035@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261130T173000
 DTEND;TZID=Europe/Paris:20261130T203000
 SUMMARY:Soirée Alumni "Carrières responsables" 2026
@@ -443,7 +382,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/soiree-
 END:VEVENT
 BEGIN:VEVENT
 UID:5d8af4705bb8@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261204T134500
 DTEND;TZID=Europe/Paris:20261204T164500
 SUMMARY:Présentation du Hotspot Terrae-PSL Habiterra
@@ -458,7 +397,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/present
 END:VEVENT
 BEGIN:VEVENT
 UID:2efd15332f6f@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261208T183000
 DTEND;TZID=Europe/Paris:20261208T220000
 SUMMARY:Égalité des chances : Dauphine à l’heure des possibles

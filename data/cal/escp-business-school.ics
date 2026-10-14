@@ -24,8 +24,20 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:a853489f015e@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261014T123000
+DTEND;TZID=Europe/Paris:20261014T143000
+SUMMARY:Prochain événement dans
+DESCRIPTION:https://escp.eu/fr/events/finance-pour-managers-decryptez-les-c
+ hiffres-pour-mieux-decider
+LOCATION:Paris\, France
+URL:https://escp.eu/fr/events/finance-pour-managers-decryptez-les-chiffres-
+ pour-mieux-decider
+END:VEVENT
+BEGIN:VEVENT
 UID:f29a6048d5aa@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261016T180000
 DTEND;TZID=Europe/Paris:20261016T190000
 SUMMARY:Coffee Chats in Germany

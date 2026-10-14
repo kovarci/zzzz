@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2d14b6810a87@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261015
 SUMMARY:Dé-me(s)-tissages – Postcolonialité\, corps et subjectivités s
@@ -37,8 +37,21 @@ URL:https://www.campus-condorcet.fr/fr/agenda/de-mes-tissages-postcoloniali
  te-corps-et-subjectivites-situees
 END:VEVENT
 BEGIN:VEVENT
+UID:d3fb0023c43d@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261014T170000
+DTEND;TZID=Europe/Paris:20261014T183000
+SUMMARY:Espaces de vie\, espaces d’attente. Présentation croisée de deu
+ x ouvrages récents
+DESCRIPTION:https://www.campus-condorcet.fr/fr/agenda/espaces-de-vie-espace
+ s-dattente-presentation-croisee-de-deux-ouvrages-recents-1
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/espaces-de-vie-espaces-datten
+ te-presentation-croisee-de-deux-ouvrages-recents-1
+END:VEVENT
+BEGIN:VEVENT
 UID:153fe091b85c@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261014T170000
 DTEND;TZID=Europe/Paris:20261014T183000
 SUMMARY:The Omnivore’s Dilemma : Are Inclusivity and Exclusivity Actually
@@ -51,21 +64,8 @@ URL:https://www.campus-condorcet.fr/fr/agenda/the-omnivores-dilemma-are-inc
  lusivity-and-exclusivity-actually-balanced-in-high-status-tastes
 END:VEVENT
 BEGIN:VEVENT
-UID:d3fb0023c43d@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261014T170000
-DTEND;TZID=Europe/Paris:20261014T183000
-SUMMARY:Espaces de vie\, espaces d’attente. Présentation croisée de deu
- x ouvrages récents
-DESCRIPTION:https://www.campus-condorcet.fr/fr/agenda/espaces-de-vie-espace
- s-dattente-presentation-croisee-de-deux-ouvrages-recents-1
-LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
-URL:https://www.campus-condorcet.fr/fr/agenda/espaces-de-vie-espaces-datten
- te-presentation-croisee-de-deux-ouvrages-recents-1
-END:VEVENT
-BEGIN:VEVENT
 UID:ea0f69f6f5c8@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261015T090000
 DTEND;TZID=Europe/Paris:20261015T190000
 SUMMARY:Les violences en milieux éducatifs : quelle histoire\, quelles act
@@ -78,19 +78,8 @@ URL:https://www.campus-condorcet.fr/fr/agenda/les-violences-en-milieux-educ
  atifs-quelle-histoire-quelles-actrices-et-quels-acteurs-quels-enjeux
 END:VEVENT
 BEGIN:VEVENT
-UID:bb779fa10998@paris-academique
-DTSTAMP:20261014T080459Z
-DTSTART;TZID=Europe/Paris:20261015T113000
-DTEND;TZID=Europe/Paris:20261015T143000
-SUMMARY:Forum des initiatives 2026
-DESCRIPTION:https://www.campus-condorcet.fr/fr/agenda/forum-des-initiatives
- -2026
-LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
-URL:https://www.campus-condorcet.fr/fr/agenda/forum-des-initiatives-2026
-END:VEVENT
-BEGIN:VEVENT
 UID:1f6f2b94fa4c@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261015T143000
 DTEND;TZID=Europe/Paris:20261015T163000
 SUMMARY:Retour d’expérience sur les collections des archives du web : us
@@ -104,7 +93,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/retour-dexperience-sur-les-co
 END:VEVENT
 BEGIN:VEVENT
 UID:0d3cdc6b166a@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261015T180000
 DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Au pays des hypers - Spectacle au Campus Condorcet
@@ -116,7 +105,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/au-pays-des-hypers-spectacle-
 END:VEVENT
 BEGIN:VEVENT
 UID:a6b11569790b@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261016T140000
 DTEND;TZID=Europe/Paris:20261016T163000
 SUMMARY:« Intimités » : lancement d’un nouveau séminaire
@@ -128,7 +117,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/«-intimites-»-lancement-dun
 END:VEVENT
 BEGIN:VEVENT
 UID:5f67597ea921@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261017T100000
 DTEND;TZID=Europe/Paris:20261017T120000
 SUMMARY:Les savoirs sympathiques les plus précieux : Jane Addams et les ex
@@ -142,7 +131,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/les-savoirs-sympathiques-les-
 END:VEVENT
 BEGIN:VEVENT
 UID:7674a056dca2@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261019T160000
 DTEND;TZID=Europe/Paris:20261019T190000
 SUMMARY:« Les Révoltes de la dignité » : Rencontre avec les autrices
@@ -154,7 +143,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/«-les-revoltes-de-la-dignite
 END:VEVENT
 BEGIN:VEVENT
 UID:529a1f6f827b@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Permanence RePOD en octobre
@@ -166,7 +155,7 @@ URL:https://www.campus-condorcet.fr/fr/actualites/permanence-repod-en-octob
 END:VEVENT
 BEGIN:VEVENT
 UID:4bf168303ac6@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261020T090000
 DTEND;TZID=Europe/Paris:20261020T180000
 SUMMARY:Images en commun - Séminaire automnal du BAL avec l'EHESS
@@ -178,7 +167,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/images-en-commun-seminaire-au
 END:VEVENT
 BEGIN:VEVENT
 UID:e5e2460dae9e@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261021T160000
 DTEND;TZID=Europe/Paris:20261021T180000
 SUMMARY:Mécaniciens de rue : réparer et vivre\, d’Abidjan au Grand Pari
@@ -191,7 +180,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/mecaniciens-de-rue-reparer-et
 END:VEVENT
 BEGIN:VEVENT
 UID:b74027878156@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261022T100000
 DTEND;TZID=Europe/Paris:20261022T170000
 SUMMARY:Histoire du temps présent\, mémoire & émotion
@@ -203,7 +192,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/histoire-du-temps-present-mem
 END:VEVENT
 BEGIN:VEVENT
 UID:e3063705f1f1@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261027T140000
 DTEND;TZID=Europe/Paris:20261027T180000
 SUMMARY:Territoires délaissés et LGBTQI+
@@ -215,7 +204,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/territoires-delaisses-et-lgbt
 END:VEVENT
 BEGIN:VEVENT
 UID:8271522d0c03@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261030T140000
 DTEND;TZID=Europe/Paris:20261030T170000
 SUMMARY:Déconstruire les structures de pouvoir : une relecture décolonial
@@ -230,7 +219,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/deconstruire-les-structures-d
 END:VEVENT
 BEGIN:VEVENT
 UID:ba0dd21e2423@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261031T100000
 DTEND;TZID=Europe/Paris:20261031T120000
 SUMMARY:Café psychanalytique
@@ -241,7 +230,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique
 END:VEVENT
 BEGIN:VEVENT
 UID:b767e39d8880@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261103T173000
 DTEND;TZID=Europe/Paris:20261103T193000
 SUMMARY:Paroles de Travailleuses / Words of Working Women - Grande Marée
@@ -253,7 +242,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/paroles-de-travailleuses-word
 END:VEVENT
 BEGIN:VEVENT
 UID:5e9b578620a7@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261104T110000
 DTEND;TZID=Europe/Paris:20261104T123000
 SUMMARY:Complex tastes : what they are\, and why they matter
@@ -265,7 +254,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/complex-tastes-what-they-are-
 END:VEVENT
 BEGIN:VEVENT
 UID:ead05dc09c35@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Des Pyrénées aux Alpes\, Économies et sociétés dans le Midi "f
@@ -279,7 +268,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/des-pyrenees-aux-alpes-econom
 END:VEVENT
 BEGIN:VEVENT
 UID:ec0926b492b2@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Parentalités LGBTI+: faire famille depuis les marges
@@ -291,7 +280,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/parentalites-lgbti-faire-fami
 END:VEVENT
 BEGIN:VEVENT
 UID:9d16e73a70a7@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261107T093000
 DTEND;TZID=Europe/Paris:20261107T180000
 SUMMARY:3e édition de la Journée Internationale Interuniversitaire de Psy
@@ -304,11 +293,12 @@ URL:https://www.campus-condorcet.fr/fr/agenda/3e-edition-de-la-journee-inte
  rnationale-interuniversitaire-de-psychanalyse-jiup
 END:VEVENT
 BEGIN:VEVENT
-UID:51b483c550b1@paris-academique
-DTSTAMP:20261014T080459Z
+UID:bb8cc6233db8@paris-academique
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261109T080000
 DTEND;TZID=Europe/Paris:20261109T200000
-SUMMARY:Géographie intime des capitales. Rêves d'Etat\, vie des citoyens.
+SUMMARY:Géographie intime des capitales. Rêves d’État\, vie des citoye
+ ns.
 DESCRIPTION:Exposition\nhttps://www.campus-condorcet.fr/fr/agenda/geographi
  e-intime-des-capitales-reves-detat-vie-des-citoyens
 LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
@@ -317,7 +307,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/geographie-intime-des-capital
 END:VEVENT
 BEGIN:VEVENT
 UID:132acf255ef9@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261118T150000
 DTEND;TZID=Europe/Paris:20261118T163000
 SUMMARY:Prophets without profit : The unequal fates of past- and future-fac
@@ -330,8 +320,20 @@ URL:https://www.campus-condorcet.fr/fr/agenda/prophets-without-profit-the-u
  nequal-fates-of-past-and-future-facing-unconventionality-in-popular-music
 END:VEVENT
 BEGIN:VEVENT
+UID:6e5ff4d7abaa@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20261119T160000
+DTEND;TZID=Europe/Paris:20261119T180000
+SUMMARY:Genre et représentations des violences en temps de guerre
+DESCRIPTION:Séminaire\nhttps://www.campus-condorcet.fr/fr/agenda/genre-et-
+ representations-des-violences-en-temps-de-guerre
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/genre-et-representations-des-
+ violences-en-temps-de-guerre
+END:VEVENT
+BEGIN:VEVENT
 UID:37bdf1c7e3b5@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261121T100000
 DTEND;TZID=Europe/Paris:20261121T120000
 SUMMARY:Café psychanalytique
@@ -342,7 +344,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-1
 END:VEVENT
 BEGIN:VEVENT
 UID:ec049ffcc63f@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Journées scientifiques de la Plateforme nationale pour la recherch
@@ -356,7 +358,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/journees-scientifiques-de-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:d4c7c6e2451d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Blanche de Castille. Exercer le pouvoir au féminin (1226-1252)
@@ -368,7 +370,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/blanche-de-castille-exercer-l
 END:VEVENT
 BEGIN:VEVENT
 UID:89f8b35b1c31@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261128T100000
 DTEND;TZID=Europe/Paris:20261128T120000
 SUMMARY:Café psychanalytique
@@ -379,7 +381,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-2
 END:VEVENT
 BEGIN:VEVENT
 UID:172a7078667b@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261208T173000
 DTEND;TZID=Europe/Paris:20261208T193000
 SUMMARY:Le journal de Sasha
@@ -390,7 +392,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/le-journal-de-sasha
 END:VEVENT
 BEGIN:VEVENT
 UID:61f45a03c9b8@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20261216T150000
 DTEND;TZID=Europe/Paris:20261216T163000
 SUMMARY:Anatomy of (co-)listening practices among people subscribing to a f
@@ -404,7 +406,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/anatomy-of-co-listening-pract
 END:VEVENT
 BEGIN:VEVENT
 UID:7d62fc03843d@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270112T173000
 DTEND;TZID=Europe/Paris:20270112T193000
 SUMMARY:Terrain d'entente
@@ -415,7 +417,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/terrain-dentente
 END:VEVENT
 BEGIN:VEVENT
 UID:72aad5cf1093@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270130T100000
 DTEND;TZID=Europe/Paris:20270130T120000
 SUMMARY:Café psychanalytique
@@ -426,7 +428,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-3
 END:VEVENT
 BEGIN:VEVENT
 UID:9c47da6d68d5@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270202T173000
 DTEND;TZID=Europe/Paris:20270202T193000
 SUMMARY:Seen Unseen : an anthology of (auto)censorship
@@ -437,8 +439,21 @@ URL:https://www.campus-condorcet.fr/fr/agenda/seen-unseen-an-anthology-of-a
  utocensorship
 END:VEVENT
 BEGIN:VEVENT
+UID:6c07fceb1b6b@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20270225T160000
+DTEND;TZID=Europe/Paris:20270225T180000
+SUMMARY:Solidarités européennes face à la dictature dans la péninsule i
+ bérique
+DESCRIPTION:Séminaire\nhttps://www.campus-condorcet.fr/fr/agenda/solidarit
+ es-europeennes-face-a-la-dictature-dans-la-peninsule-iberique
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/solidarites-europeennes-face-
+ a-la-dictature-dans-la-peninsule-iberique
+END:VEVENT
+BEGIN:VEVENT
 UID:55477e8a6b85@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270309T173000
 DTEND;TZID=Europe/Paris:20270309T193000
 SUMMARY:Karma Sichoe : broken lineages and inner portraits & Tidinit - Une 
@@ -451,8 +466,20 @@ URL:https://www.campus-condorcet.fr/fr/agenda/karma-sichoe-broken-lineages-
  and-inner-portraits-tidinit-une-passion-musicale-saharienne
 END:VEVENT
 BEGIN:VEVENT
+UID:711bccd61dc9@paris-academique
+DTSTAMP:20261014T092155Z
+DTSTART;TZID=Europe/Paris:20270318T160000
+DTEND;TZID=Europe/Paris:20270318T180000
+SUMMARY:Mobilisations féministes contre les violences faites aux femmes
+DESCRIPTION:Séminaire\nhttps://www.campus-condorcet.fr/fr/agenda/mobilisat
+ ions-feministes-contre-les-violences-faites-aux-femmes
+LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
+URL:https://www.campus-condorcet.fr/fr/agenda/mobilisations-feministes-cont
+ re-les-violences-faites-aux-femmes
+END:VEVENT
+BEGIN:VEVENT
 UID:95c695bd9ab5@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270327T100000
 DTEND;TZID=Europe/Paris:20270327T120000
 SUMMARY:Café psychanalytique
@@ -463,7 +490,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-4
 END:VEVENT
 BEGIN:VEVENT
 UID:e3699fce8256@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270420T173000
 DTEND;TZID=Europe/Paris:20270420T193000
 SUMMARY:Nacemos de la tierra
@@ -474,7 +501,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/nacemos-de-la-tierra
 END:VEVENT
 BEGIN:VEVENT
 UID:4161ecab367b@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270511T173000
 DTEND;TZID=Europe/Paris:20270511T193000
 SUMMARY:Entre les lignes & Madidi : vivre dans une forêt protégée
@@ -486,7 +513,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/entre-les-lignes-madidi-vivre
 END:VEVENT
 BEGIN:VEVENT
 UID:0822a96bbb19@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270529T100000
 DTEND;TZID=Europe/Paris:20270529T120000
 SUMMARY:Café psychanalytique
@@ -497,7 +524,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-5
 END:VEVENT
 BEGIN:VEVENT
 UID:78986092d87b@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270601T173000
 DTEND;TZID=Europe/Paris:20270601T193000
 SUMMARY:Halesi. Un dieu-lieu & Sansari. La déesse et le corona en Himalaya
@@ -509,7 +536,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/halesi-un-dieu-lieu-sansari-l
 END:VEVENT
 BEGIN:VEVENT
 UID:34e4f7da7ac8@paris-academique
-DTSTAMP:20261014T080459Z
+DTSTAMP:20261014T092155Z
 DTSTART;TZID=Europe/Paris:20270626T100000
 DTEND;TZID=Europe/Paris:20270626T120000
 SUMMARY:Café psychanalytique
