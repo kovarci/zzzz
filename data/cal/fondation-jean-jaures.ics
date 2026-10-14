@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:89ff84e61717@paris-academique
-DTSTAMP:20261013T112913Z
-DTSTART;TZID=Europe/Paris:20261013T183000
-DTEND;TZID=Europe/Paris:20261013T203000
-SUMMARY:1940 : autopsie d’un effondrement
-DESCRIPTION:Histoire\nhttps://www.jean-jaures.org/agenda/1940-autopsie-dun-
- effondrement/
-LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
-URL:https://www.jean-jaures.org/agenda/1940-autopsie-dun-effondrement/
-END:VEVENT
-BEGIN:VEVENT
 UID:6985a08ca1f2@paris-academique
-DTSTAMP:20261013T112913Z
+DTSTAMP:20261014T080459Z
 DTSTART;TZID=Europe/Paris:20261015T183000
 DTEND;TZID=Europe/Paris:20261015T203000
 SUMMARY:Syndicats dans le viseur : Trump\, Orbán\, Meloni et l’offensive
@@ -46,5 +35,31 @@ DESCRIPTION:Économie / social\nhttps://www.jean-jaures.org/agenda/syndicat
 LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
 URL:https://www.jean-jaures.org/agenda/syndicats-dans-le-viseur-trump-orban
  -meloni-et-loffensive-de-lextreme-droite/
+END:VEVENT
+BEGIN:VEVENT
+UID:887dec0c9085@paris-academique
+DTSTAMP:20261014T080459Z
+DTSTART;TZID=Europe/Paris:20261022T190000
+DTEND;TZID=Europe/Paris:20261022T210000
+SUMMARY:À l’approche des élections de mi-mandat\, quel bilan de Trump I
+ I ?
+DESCRIPTION:International\nhttps://www.jean-jaures.org/agenda/a-lapproche-d
+ es-elections-de-mi-mandat-quel-bilan-de-trump-ii/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/a-lapproche-des-elections-de-mi-mand
+ at-quel-bilan-de-trump-ii/
+END:VEVENT
+BEGIN:VEVENT
+UID:c400e221696e@paris-academique
+DTSTAMP:20261014T080459Z
+DTSTART;TZID=Europe/Paris:20261028T183000
+DTEND;TZID=Europe/Paris:20261028T203000
+SUMMARY:Des valeurs au réel : l’avenir du progressisme passe-t-il par le
+  matérialisme ?
+DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/des-valeurs-au-
+ reel-lavenir-du-progressisme-passe-t-il-par-le-materialisme/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/des-valeurs-au-reel-lavenir-du-progr
+ essisme-passe-t-il-par-le-materialisme/
 END:VEVENT
 END:VCALENDAR
