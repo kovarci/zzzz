@@ -24,22 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:bc44241ca076@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T210000
-DTEND;TZID=Europe/Paris:20261014T230000
-SUMMARY:Psychanalyse et transferts culturels — L'acte analytique aujourd'
- hui\, après Lacan
-DESCRIPTION:Conférence/Débat\nhttps://www.mal217.org/fr/agenda/psychanaly
- se-et-transferts-culturels-3f0e8837
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/psychanalyse-et-transferts-culturels-3
- f0e8837
-END:VEVENT
-BEGIN:VEVENT
 UID:438d20f9c810@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T093000
 DTEND;TZID=Europe/Paris:20261015T113000
 SUMMARY:Le tour de la Maison de l'Amérique latine — en quatre-vingts ans
@@ -52,7 +38,7 @@ URL:https://www.mal217.org/fr/agenda/le-tour-de-la-maison-de-l-amerique-lat
 END:VEVENT
 BEGIN:VEVENT
 UID:1a9eeb1b58f3@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261021T190000
 DTEND;TZID=Europe/Paris:20261021T210000
 SUMMARY:Les disparitions forcées en Mésoamérique
@@ -65,7 +51,7 @@ URL:https://www.mal217.org/fr/agenda/les-disparitions-forcees-en-mesoameriq
 END:VEVENT
 BEGIN:VEVENT
 UID:444962ba0b88@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261022T190000
 DTEND;TZID=Europe/Paris:20261022T210000
 SUMMARY:Luz\, cahier d´Amour et de Transformation
@@ -76,7 +62,7 @@ URL:https://www.mal217.org/fr/agenda/luz-e82d8378
 END:VEVENT
 BEGIN:VEVENT
 UID:0c2525dfd2b4@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261026T190000
 DTEND;TZID=Europe/Paris:20261026T210000
 SUMMARY:Accueil des étudiants péruviens

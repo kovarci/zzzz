@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5ebec330e3ee@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T093000
-DTEND;TZID=Europe/Paris:20261014T120000
-SUMMARY:Gérer l'incertitude : les puissances asiatiques face à la rivalit
- é sino-américaine
-DESCRIPTION:Conférence\nhttps://www.ifri.org/fr/gerer-lincertitude-les-pui
- ssances-asiatiques-face-la-rivalite-sino-americaine
-LOCATION:Ifri\, 27 rue de la Procession\, Paris 15e
-URL:https://www.ifri.org/fr/gerer-lincertitude-les-puissances-asiatiques-fa
- ce-la-rivalite-sino-americaine
-END:VEVENT
-BEGIN:VEVENT
 UID:b44f5aacbf99@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T090000
 DTEND;TZID=Europe/Paris:20261015T093000
 SUMMARY:Brésil : vers une continuité décevante\, avec Lula ou Bolsonaro
@@ -50,7 +37,7 @@ URL:https://www.ifri.org/fr/bresil-vers-une-continuite-decevante-avec-lula-
 END:VEVENT
 BEGIN:VEVENT
 UID:587caed16161@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261021T123000
 DTEND;TZID=Europe/Paris:20261021T140000
 SUMMARY:La sécurité environnementale : nouvel enjeu de l’autonomie stra
@@ -64,7 +51,7 @@ URL:https://www.ifri.org/fr/la-securite-environnementale-nouvel-enjeu-de-la
 END:VEVENT
 BEGIN:VEVENT
 UID:e59179564823@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261102T123000
 DTEND;TZID=Europe/Paris:20261102T140000
 SUMMARY:Le renseignement peut-il encore anticiper les ruptures ?
@@ -76,7 +63,7 @@ URL:https://www.ifri.org/fr/le-renseignement-peut-il-encore-anticiper-les-r
 END:VEVENT
 BEGIN:VEVENT
 UID:a205d916b0d8@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261102T183000
 DTEND;TZID=Europe/Paris:20261102T200000
 SUMMARY:Comment l'IA transforme-t-elle la guerre ?
@@ -87,7 +74,7 @@ URL:https://www.ifri.org/fr/comment-lia-transforme-t-elle-la-guerre
 END:VEVENT
 BEGIN:VEVENT
 UID:b57d7ea2f582@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261105T123000
 DTEND;TZID=Europe/Paris:20261105T140000
 SUMMARY:Europe-Chine : L'UE est-elle prête à répondre au "2e Choc chinoi

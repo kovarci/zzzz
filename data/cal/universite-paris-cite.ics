@@ -24,48 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:37c3e33a5dfb@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T100000
-DTEND;TZID=Europe/Paris:20261014T120000
-SUMMARY:[Erasmus Day’s] Escape Game Plurilingue
-DESCRIPTION:https://u-paris.fr/évènement/erasmus-days-escape-game-plurili
- ngue/?instance_id=5354
-LOCATION:Salle 449C à la Halle aux Farines\, Campus des Grands Moulins —
-  Université Paris Cité\, 85 boulevard Saint-Germain\, Paris 6e
-URL:https://u-paris.fr/évènement/erasmus-days-escape-game-plurilingue/?in
- stance_id=5354
-END:VEVENT
-BEGIN:VEVENT
-UID:19137eefc3fe@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T120000
-DTEND;TZID=Europe/Paris:20261014T140000
-SUMMARY:[Erasmus Days] Circle U. tour : découvrez toutes nos universités 
- !
-DESCRIPTION:https://u-paris.fr/évènement/erasmus-days-circle-u-tour-decou
- vrez-toutes-nos-universites/?instance_id=5346
-LOCATION:En ligne — Université Paris Cité\, 85 boulevard Saint-Germain\
- , Paris 6e
-URL:https://u-paris.fr/évènement/erasmus-days-circle-u-tour-decouvrez-tou
- tes-nos-universites/?instance_id=5346
-END:VEVENT
-BEGIN:VEVENT
-UID:dc95e66c96ea@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T180000
-DTEND;TZID=Europe/Paris:20261014T200000
-SUMMARY:[Erasmus Days] Théâtre sur l’inclusivité in english !
-DESCRIPTION:https://u-paris.fr/évènement/erasmus-days-theatre-sur-linclus
- ivite-in-english/?instance_id=5350
-LOCATION:Amphithéâtre 1 à Olympe de Gouges. — Université Paris Cité\
- , 85 boulevard Saint-Germain\, Paris 6e
-URL:https://u-paris.fr/évènement/erasmus-days-theatre-sur-linclusivite-in
- -english/?instance_id=5350
-END:VEVENT
-BEGIN:VEVENT
 UID:d028383e2d76@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T100000
 DTEND;TZID=Europe/Paris:20261015T120000
 SUMMARY:[Erasmus Day’s] Escape Game Plurilingue
@@ -78,20 +38,20 @@ URL:https://u-paris.fr/évènement/erasmus-days-escape-game-plurilingue/?in
 END:VEVENT
 BEGIN:VEVENT
 UID:aa28dacae195@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T110000
-DTEND;TZID=Europe/Paris:20261015T130000
+DTEND;TZID=Europe/Paris:20261015T123000
 SUMMARY:[Erasmus Days] Comment trouver un stage à l’étranger?
 DESCRIPTION:https://u-paris.fr/évènement/erasmus-days-comment-trouver-un-
- stage-a-letranger/?instance_id=5359
+ stage-a-letranger/
 LOCATION:En ligne — Université Paris Cité\, 85 boulevard Saint-Germain\
  , Paris 6e
 URL:https://u-paris.fr/évènement/erasmus-days-comment-trouver-un-stage-a-
- letranger/?instance_id=5359
+ letranger/
 END:VEVENT
 BEGIN:VEVENT
 UID:e82273ecdec4@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T120000
 DTEND;TZID=Europe/Paris:20261015T140000
 SUMMARY:[Erasmus Days] Stand Mobilité internationale : infos et conseils
@@ -104,7 +64,7 @@ URL:https://u-paris.fr/évènement/erasmus-days-stand-mobilite/?instance_id
 END:VEVENT
 BEGIN:VEVENT
 UID:cb40524ba24c@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T120000
 DTEND;TZID=Europe/Paris:20261015T124500
 SUMMARY:[Eramsus Days] Café des langues
@@ -116,34 +76,34 @@ URL:https://u-paris.fr/évènement/eramsus-days-cafe-des-langues/?instance_
  id=5356
 END:VEVENT
 BEGIN:VEVENT
-UID:d4bd691c1fab@paris-academique
-DTSTAMP:20261014T092155Z
+UID:b06f68882db5@paris-academique
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261016T120000
-DTEND;TZID=Europe/Paris:20261016T140000
-SUMMARY:[Erasmus Days] Conférences : mobilité internationale
+DTEND;TZID=Europe/Paris:20261016T130000
+SUMMARY:[Erasmus Days] Conférences sur la mobilité internationale
 DESCRIPTION:https://u-paris.fr/évènement/erasmus-days-conferences-mobilit
- e-internationale/?instance_id=5349
+ e-internationale/
 LOCATION:mphi Turing\, bâtiment Sophie Germain\, Grands Moulins et en lign
  e — Université Paris Cité\, 85 boulevard Saint-Germain\, Paris 6e
 URL:https://u-paris.fr/évènement/erasmus-days-conferences-mobilite-intern
- ationale/?instance_id=5349
+ ationale/
 END:VEVENT
 BEGIN:VEVENT
 UID:b19427509f3a@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261019T153000
 DTEND;TZID=Europe/Paris:20261019T173000
 SUMMARY:[Circle U.] Global Health: Where Does the Future Lie?
 DESCRIPTION:https://u-paris.fr/évènement/circle-u-global-health-where-doe
- s-the-future-lie/?instance_id=5362
+ s-the-future-lie/
 LOCATION:En ligne — Université Paris Cité\, 85 boulevard Saint-Germain\
  , Paris 6e
 URL:https://u-paris.fr/évènement/circle-u-global-health-where-does-the-fu
- ture-lie/?instance_id=5362
+ ture-lie/
 END:VEVENT
 BEGIN:VEVENT
 UID:baea52cb5c39@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261019T180000
 DTEND;TZID=Europe/Paris:20261019T200000
 SUMMARY:Rencontre avec Kim Jiyun sur la tendance littéraire du k-healing
@@ -160,33 +120,33 @@ URL:https://u-paris.fr/universite-ouverte/rencontre-avec-kim-jiyun-sur-la-t
 END:VEVENT
 BEGIN:VEVENT
 UID:8b014fd1bce9@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261021T093000
-DTEND;TZID=Europe/Paris:20261021T113000
+DTEND;TZID=Europe/Paris:20261021T130000
 SUMMARY:[Circle U.] Sharing Science\, Opening Knowledge
 DESCRIPTION:https://u-paris.fr/évènement/circle-u-sharing-science-opening
- -knowledge/?instance_id=5360
+ -knowledge/
 LOCATION:En ligne — Université Paris Cité\, 85 boulevard Saint-Germain\
  , Paris 6e
 URL:https://u-paris.fr/évènement/circle-u-sharing-science-opening-knowled
- ge/?instance_id=5360
+ ge/
 END:VEVENT
 BEGIN:VEVENT
 UID:ee6e102f8fee@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261025T181500
 DTEND;TZID=Europe/Paris:20261025T201500
 SUMMARY:L’Université Paris Cité au Festival Pariscience
 DESCRIPTION:https://u-paris.fr/évènement/luniversite-paris-cite-au-festiv
- al-pariscience/?instance_id=5334
+ al-pariscience/
 LOCATION:Amphithéâtre Verniquet — Université Paris Cité\, 85 boulevar
  d Saint-Germain\, Paris 6e
 URL:https://u-paris.fr/évènement/luniversite-paris-cite-au-festival-paris
- cience/?instance_id=5334
+ cience/
 END:VEVENT
 BEGIN:VEVENT
 UID:ccf74deb4628@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261105T083000
 DTEND;TZID=Europe/Paris:20261105T103000
 SUMMARY:Journée Initiatives Pédagogiques 2026 : Les pédagogies actives
@@ -199,7 +159,7 @@ URL:https://u-paris.fr/évènement/journee-initiatives-pedagogiques-2026-le
 END:VEVENT
 BEGIN:VEVENT
 UID:4c73a717fa7d@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261117T143000
 DTEND;TZID=Europe/Paris:20261117T163000
 SUMMARY:La vie sensible des plantes
@@ -214,7 +174,7 @@ URL:https://u-paris.fr/universite-ouverte/la-vie-sensible-des-plantes/
 END:VEVENT
 BEGIN:VEVENT
 UID:c6c7897b20ac@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261119T153000
 DTEND;TZID=Europe/Paris:20261119T173000
 SUMMARY:Notre rapport à la vérité a-t-il changé ?
@@ -231,21 +191,21 @@ URL:https://u-paris.fr/universite-ouverte/notre-rapport-a-la-verite-a-t-il-
 END:VEVENT
 BEGIN:VEVENT
 UID:60a8d7302577@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:[EXPO] Traverser le monde. L’Exposition universelle de 1867 et la
   photographie
 DESCRIPTION:https://u-paris.fr/évènement/expo-traverser-le-monde-lexposit
- ion-universelle-de-1867-et-la-photographie/?instance_id=5366
+ ion-universelle-de-1867-et-la-photographie/
 LOCATION:Musée des Archives nationales — Université Paris Cité\, 85 bo
  ulevard Saint-Germain\, Paris 6e
 URL:https://u-paris.fr/évènement/expo-traverser-le-monde-lexposition-univ
- erselle-de-1867-et-la-photographie/?instance_id=5366
+ erselle-de-1867-et-la-photographie/
 END:VEVENT
 BEGIN:VEVENT
 UID:cac9b64fbe69@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261126T153000
 DTEND;TZID=Europe/Paris:20261126T173000
 SUMMARY:Les nouveaux traitements de l’obésité\, comprendre la révoluti
@@ -262,8 +222,22 @@ URL:https://u-paris.fr/universite-ouverte/les-nouveaux-traitements-de-lobes
  ite-comprendre-la-revolution-des-analogues-du-glp-1/
 END:VEVENT
 BEGIN:VEVENT
+UID:7eef6642ef8b@paris-academique
+DTSTAMP:20261015T085533Z
+DTSTART;TZID=Europe/Paris:20261215T083000
+DTEND;TZID=Europe/Paris:20261215T140000
+SUMMARY:HRS4R : une première Journée annuelle pour construire la recherch
+ e de demain
+DESCRIPTION:https://u-paris.fr/évènement/hrs4r-une-premiere-journee-annue
+ lle-pour-construire-la-recherche-de-demain/
+LOCATION:Grand Amphi – site Odéon\, Université Paris Cité — Universi
+ té Paris Cité\, 85 boulevard Saint-Germain\, Paris 6e
+URL:https://u-paris.fr/évènement/hrs4r-une-premiere-journee-annuelle-pour
+ -construire-la-recherche-de-demain/
+END:VEVENT
+BEGIN:VEVENT
 UID:3fdaecd1590e@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20270915T150000
 DTEND;TZID=Europe/Paris:20270915T170000
 SUMMARY:Rencontre auteurs You Young-kwang × Audrey Pleynet

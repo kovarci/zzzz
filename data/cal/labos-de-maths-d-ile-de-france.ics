@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:937a9611c7e5@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261013T090000
-DTEND;TZID=Europe/Paris:20261013T110000
-SUMMARY:Formation Cast3M pour Débutants
-DESCRIPTION:Cette formation est gratuite et sera dispensée en français à
-  la Maison de la Simulation (pas de visioconférene !) . Cette formation s
- 'adresse aux utilisateurs débutants. L'objectif est d'être capable d’u
- tiliser Cast3M pour réaliser des calculs éléments finis en thermo-méca
- nique\, linéaire et non linéaire\, stationnaire et transitoire. Pour le 
- personnel CEA\, en plus de ce formulaire\, veuillez vous…\nhttps://indic
- o.math.cnrs.fr/event/16605/
-LOCATION:Maison de la Simulation
-URL:https://indico.math.cnrs.fr/event/16605/
-END:VEVENT
-BEGIN:VEVENT
 UID:48d667dad674@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261016T090000
 DTEND;TZID=Europe/Paris:20261016T163000
 SUMMARY:Formation Cast3M Fabrication Additive
@@ -57,7 +41,7 @@ URL:https://indico.math.cnrs.fr/event/16608/
 END:VEVENT
 BEGIN:VEVENT
 UID:5aef4bcc5455@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261112T090000
 DTEND;TZID=Europe/Paris:20261112T110000
 SUMMARY:Formation Cast3M PASAPAS et procédures utilisateurs
@@ -73,7 +57,7 @@ URL:https://indico.math.cnrs.fr/event/16606/
 END:VEVENT
 BEGIN:VEVENT
 UID:b222cfa7a144@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261112T090000
 DTEND;TZID=Europe/Paris:20261112T110000
 SUMMARY:UNSTABLE : UNDERSTANDING THE PARABOLIC-PARABOLIC KELLER-SEGEL
@@ -85,8 +69,25 @@ LOCATION:Île-de-France — lieu précisé sur la page de l'événement
 URL:https://indico.math.cnrs.fr/event/17424/
 END:VEVENT
 BEGIN:VEVENT
+UID:3c47ad4e4920@paris-academique
+DTSTAMP:20261015T085533Z
+DTSTART;TZID=Europe/Paris:20270120T083000
+DTEND;TZID=Europe/Paris:20270120T103000
+SUMMARY:39ème séminaire de mécanique des fluides numérique - édition 2
+ 027
+DESCRIPTION:Programme CEA-SMAI/GAMNI La Direction des énergies du Commissa
+ riat à l'Energie Atomique et aux Energies Alternatives (CEA) et le Groupe
+  pour l'Avancement des Méthodes Numériques de l'Ingénieur (SMAI/GAMNI\,
+  groupe thématique de la Société de Mathématiques Appliquées et Indus
+ trielles) organisent pour la trente-hutitème année consécutive un Sémi
+ naire sur : LA MECANIQUE DES FLUIDES NUMERIQUE\, qui se…\nhttps://indico
+ .math.cnrs.fr/event/17558/
+LOCATION:Île-de-France — lieu précisé sur la page de l'événement
+URL:https://indico.math.cnrs.fr/event/17558/
+END:VEVENT
+BEGIN:VEVENT
 UID:4f680e77ca0a@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20270121T090000
 DTEND;TZID=Europe/Paris:20270121T110000
 SUMMARY:Calculus of Variations\, Optimization and Image Processing - on the
@@ -103,7 +104,7 @@ URL:https://indico.math.cnrs.fr/event/15144/
 END:VEVENT
 BEGIN:VEVENT
 UID:cb576646b33b@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20270125T090000
 DTEND;TZID=Europe/Paris:20270125T110000
 SUMMARY:6th Smilei user & training workshop
@@ -119,7 +120,7 @@ URL:https://indico.math.cnrs.fr/event/17096/
 END:VEVENT
 BEGIN:VEVENT
 UID:841f5cf87fd9@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20270524T090000
 DTEND;TZID=Europe/Paris:20270524T110000
 SUMMARY:Number Theory\, Combinatorics and Related Topics
@@ -132,7 +133,7 @@ URL:https://indico.math.cnrs.fr/event/17316/
 END:VEVENT
 BEGIN:VEVENT
 UID:4e38a7b82794@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20270607T090000
 DTEND;TZID=Europe/Paris:20270607T110000
 SUMMARY:Géométrie Algébrique\, Formes Automorphes et Théorie géométri

@@ -24,32 +24,19 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:146ef0a2def5@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T120000
-DTEND;TZID=Europe/Paris:20261014T140000
-SUMMARY:GT Impact du changement climatique sur la santé
+UID:ce65cfd76e85@paris-academique
+DTSTAMP:20261015T085533Z
+DTSTART;TZID=Europe/Paris:20261015T170000
+DTEND;TZID=Europe/Paris:20261015T190000
+SUMMARY:SGT 100% Santé
 DESCRIPTION:Réunion réservée aux membres du groupe\nhttps://www.institut
- desactuaires.com/agenda/gt-impact-du-changement-climatique-sur-la-sante-77
- 31
+ desactuaires.com/agenda/sgt-100-sante-8044
 LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/gt-impact-du-changement-cli
- matique-sur-la-sante-7731
-END:VEVENT
-BEGIN:VEVENT
-UID:da753f202af2@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T160000
-DTEND;TZID=Europe/Paris:20261014T180000
-SUMMARY:Commission IARD
-DESCRIPTION:Réunion réservée aux membres du groupe\nhttps://www.institut
- desactuaires.com/agenda/commission-iard-8077
-LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://www.institutdesactuaires.com/agenda/commission-iard-8077
+URL:https://www.institutdesactuaires.com/agenda/sgt-100-sante-8044
 END:VEVENT
 BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -61,7 +48,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026

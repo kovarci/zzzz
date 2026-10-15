@@ -23,16 +23,4 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-UID:f263f225abab@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Cycle saint François / Lecture et ciné-concert « Frate Sole »
-DESCRIPTION:https://iicparigi.esteri.it/fr/gli_eventi/calendario/ciclo-san-
- francesco-lettura-e-cineconcertofrate-sole/
-LOCATION:Institut culturel italien\, 50 rue de Varenne\, Paris 7e
-URL:https://iicparigi.esteri.it/fr/gli_eventi/calendario/ciclo-san-francesc
- o-lettura-e-cineconcertofrate-sole/
-END:VEVENT
 END:VCALENDAR

@@ -24,59 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:dacd24d3e7b2@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T160000
-DTEND;TZID=Europe/Paris:20261014T230000
-SUMMARY:Bienvenue à Paris
-DESCRIPTION:Vous attendiez la Nuit Étudiante\, découvrez désormais l’e
- xpérience “ Bienvenue à Paris ” ! La Ville de Paris a à cœur d’a
- ccueillir tous les étudiants et de les accompagner au mieux dans leur nou
- velle vie. C’est dans cet esprit que la Maison étudiante organise la 4
- ᵉ édition festive et conviviale pensée pour les étudiants\, autour d
- ’un village étudiant\, d’un escape game et de concerts. Rendez-vous
- …\nhttps://www.crous-paris.fr/evenement/bienvenue-a-paris/
-LOCATION:à l’hôtel de ville de Paris\, Place de l'Hôtel de Ville\, 750
- 04 Paris
-URL:https://www.crous-paris.fr/evenement/bienvenue-a-paris/
-END:VEVENT
-BEGIN:VEVENT
-UID:6d9b0bb0e8df@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T200000
-DTEND;TZID=Europe/Paris:20261014T233000
-SUMMARY:Beside festival
-DESCRIPTION:🎶 Beside Festival : 3 soirées pour découvrir la scène ém
- ergente parisienne Du 14 au 16 octobre 2026\, Beside investit la Péniche 
- Antipode\, au cœur du 19ᵉ arrondissement\, pour la 7ᵉ édition de son
-  festival ! Pendant trois soirées\, 9 artistes aux univers singuliers et 
- variés se succéderont sur scène pour faire vibrer la scène musicale é
- mergente parisienne. 🎤 Au programme : une programmation…\nhttps://www
- .crous-paris.fr/evenement/beside-festival/2026-10-14/
-LOCATION:à bord de la Péniche Antipode 75019 Paris
-URL:https://www.crous-paris.fr/evenement/beside-festival/2026-10-14/
-END:VEVENT
-BEGIN:VEVENT
-UID:32cd9be1d847@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T210000
-DTEND;TZID=Europe/Paris:20261014T230000
-SUMMARY:Diffusion à la Barge : match Manchester VS PSG
-DESCRIPTION:⚽ Soirée Champions League : Manchester City VS P SG ! La Lig
- ue des Champions s’invite à la Barge ! Bonne nouvelle pour tous les ama
- teurs de ballon rond ! La Barge du Crous de Paris se transforme en vérita
- ble QG du football européen. Au programme : Diffusion des grands matchs d
- e Ligue des Champions sur grand écran à l’intérieur Snacks et boisson
- s proposés à prix étudiant (tarif Crous) Une…\nhttps://www.crous-pari
- s.fr/evenement/diffusion-a-la-barge-match-manchester-vs-psg/
-LOCATION:à la Barge du Crous de Paris\, Quai François Mauriac\, Port de l
- a Gare\, 75013 Paris
-URL:https://www.crous-paris.fr/evenement/diffusion-a-la-barge-match-manches
- ter-vs-psg/
-END:VEVENT
-BEGIN:VEVENT
 UID:30e422e55d88@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261020T210000
 DTEND;TZID=Europe/Paris:20261020T230000
 SUMMARY:Diffusion à la Barge : match PSG VS Barcelone !

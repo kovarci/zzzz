@@ -24,33 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:fd3b57bbf1f9@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T140000
-DTEND;TZID=Europe/Paris:20261014T160000
-SUMMARY:Les grands arrêts politiques de la jurisprudence administrative
-DESCRIPTION:Séminaire\nhttps://www.assas-universite.fr/fr/evenements/grand
- s-arrets-politiques-jurisprudence-administrative
-LOCATION:Centre Sainte-Barbe - salle Collinet 4 rue Valette 3e étage 75005
-  Paris
-URL:https://www.assas-universite.fr/fr/evenements/grands-arrets-politiques-
- jurisprudence-administrative
-END:VEVENT
-BEGIN:VEVENT
-UID:5a9f463e0a4b@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261014T160000
-DTEND;TZID=Europe/Paris:20261014T180000
-SUMMARY:4ᵉ édition de Bienvenue à Paris : village étudiant de Paris
-DESCRIPTION:Événement\nhttps://www.assas-universite.fr/fr/evenements/4-ed
- ition-bienvenue-paris-village-etudiant-paris
-LOCATION:Hôtel de Ville 3 Rue de lobau\, Paris 75004
-URL:https://www.assas-universite.fr/fr/evenements/4-edition-bienvenue-paris
- -village-etudiant-paris
-END:VEVENT
-BEGIN:VEVENT
 UID:2bcb594f6b9b@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T081500
 DTEND;TZID=Europe/Paris:20261015T101500
 SUMMARY:5e atelier sur les jeux dynamiques et applications
@@ -61,20 +36,8 @@ URL:https://www.assas-universite.fr/fr/evenements/5e-atelier-jeux-dynamique
  s-applications
 END:VEVENT
 BEGIN:VEVENT
-UID:1fe165e5ef62@paris-academique
-DTSTAMP:20261014T092155Z
-DTSTART;TZID=Europe/Paris:20261015T090000
-DTEND;TZID=Europe/Paris:20261015T110000
-SUMMARY:Forum du livre juridique 2026 au centre Assas
-DESCRIPTION:Salon\nhttps://www.assas-universite.fr/fr/evenements/forum-livr
- e-juridique-2026-au-centre-assas
-LOCATION:Hall du centre Assas 2 rue d'Assas\, 75006 Paris
-URL:https://www.assas-universite.fr/fr/evenements/forum-livre-juridique-202
- 6-au-centre-assas
-END:VEVENT
-BEGIN:VEVENT
 UID:57b5cbafe6ac@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T090000
 DTEND;TZID=Europe/Paris:20261015T110000
 SUMMARY:Intelligence artificielle militaire : Regards croisés sur une (r)
@@ -88,7 +51,7 @@ URL:https://www.assas-universite.fr/fr/evenements/intelligence-artificielle
 END:VEVENT
 BEGIN:VEVENT
 UID:0d51168b78d7@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T110000
 DTEND;TZID=Europe/Paris:20261015T130000
 SUMMARY:Optimal Belief Equilibrium - Jeanne Hagenbach
@@ -100,21 +63,22 @@ URL:https://www.assas-universite.fr/fr/evenements/optimal-belief-equilibriu
 END:VEVENT
 BEGIN:VEVENT
 UID:3ff2ab4d0abd@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T140000
 DTEND;TZID=Europe/Paris:20261015T160000
 SUMMARY:Principes généraux du droit en contentieux international des inve
  stissements
 DESCRIPTION:soutenance : Droit public\nhttps://www.assas-universite.fr/fr/r
  echerche/soutenances-de-theses/principes-generaux-droit-en-contentieux-int
- ernational
-LOCATION:Centre Sainte-Barbe - 4 rue Valette\, 75005 Paris - Salle Collinet
+ ernational-0
+LOCATION:Lieu Centre Sainte-Barbe - 4 rue Valette\, 75005 Paris - Salle Col
+ linet
 URL:https://www.assas-universite.fr/fr/recherche/soutenances-de-theses/prin
- cipes-generaux-droit-en-contentieux-international
+ cipes-generaux-droit-en-contentieux-international-0
 END:VEVENT
 BEGIN:VEVENT
 UID:54ebf58f2628@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T140000
 DTEND;TZID=Europe/Paris:20261015T160000
 SUMMARY:Coupe du Panthéon 2026
@@ -125,7 +89,7 @@ URL:https://www.assas-universite.fr/fr/evenements/coupe-pantheon-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:0bb089478ddc@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261015T180000
 DTEND;TZID=Europe/Paris:20261015T200000
 SUMMARY:Quelle place pour le droit social dans le débat politique ?
@@ -138,7 +102,7 @@ URL:https://www.assas-universite.fr/fr/evenements/quelle-place-droit-social
 END:VEVENT
 BEGIN:VEVENT
 UID:55c3a015cb54@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261016T093000
 DTEND;TZID=Europe/Paris:20261016T113000
 SUMMARY:Rencontres annuelles du droit public économique - 2nde édition
@@ -151,7 +115,7 @@ URL:https://www.assas-universite.fr/fr/evenements/rencontres-annuelles-droi
 END:VEVENT
 BEGIN:VEVENT
 UID:00f46a3afe91@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261016T140000
 DTEND;TZID=Europe/Paris:20261016T160000
 SUMMARY:Les deux morts civiles. Enquête sur le concept de mort civile des 
@@ -165,7 +129,7 @@ URL:https://www.assas-universite.fr/fr/recherche/soutenances-de-theses/deux
 END:VEVENT
 BEGIN:VEVENT
 UID:0b4c5bf9b2a4@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261017T130000
 DTEND;TZID=Europe/Paris:20261017T150000
 SUMMARY:Octobre rose : tournoi de volley
@@ -177,7 +141,7 @@ URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-tournoi-voll
 END:VEVENT
 BEGIN:VEVENT
 UID:f9b087566810@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261017T130000
 DTEND;TZID=Europe/Paris:20261017T180000
 SUMMARY:Octobre rose - association sportive (17/10)
@@ -189,7 +153,7 @@ URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-
 END:VEVENT
 BEGIN:VEVENT
 UID:2daff6b73475@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261020T090000
 DTEND;TZID=Europe/Paris:20261020T110000
 SUMMARY:Alimentation\, nutrition et bien être - Centre Vaugirard et campus
@@ -203,7 +167,7 @@ URL:https://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bi
 END:VEVENT
 BEGIN:VEVENT
 UID:40a62e88d3a7@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261020T123000
 DTEND;TZID=Europe/Paris:20261020T143000
 SUMMARY:Qu'est-ce que la communauté du renseignement en France ? Une prés
@@ -217,7 +181,7 @@ URL:https://www.assas-universite.fr/fr/evenements/quest-communaute-renseign
 END:VEVENT
 BEGIN:VEVENT
 UID:87f447110ea5@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261020T180000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:SE préparer au concours de la Ville de Paris
@@ -229,7 +193,7 @@ URL:https://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-v
 END:VEVENT
 BEGIN:VEVENT
 UID:1e95915816f0@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Octobre rose : tournois multisports (22/10)
@@ -241,7 +205,7 @@ URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-tournois-mul
 END:VEVENT
 BEGIN:VEVENT
 UID:c898baed904a@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Octobre rose - association sportive (22/10)
@@ -252,8 +216,20 @@ URL:https://www.assas-universite.fr/fr/evenements/octobre-rose-association-
  sportive-2210
 END:VEVENT
 BEGIN:VEVENT
+UID:5e46109fe0c5@paris-academique
+DTSTAMP:20261015T085533Z
+DTSTART;TZID=Europe/Paris:20261022T090000
+DTEND;TZID=Europe/Paris:20261022T110000
+SUMMARY:Forum du livre juridique 2026 au centre Assas
+DESCRIPTION:Salon\nhttps://www.assas-universite.fr/fr/evenements/forum-livr
+ e-juridique-2026-au-centre-assas
+LOCATION:Hall du centre Assas 2 rue d'Assas\, 75006 Paris
+URL:https://www.assas-universite.fr/fr/evenements/forum-livre-juridique-202
+ 6-au-centre-assas
+END:VEVENT
+BEGIN:VEVENT
 UID:20c6977c5e42@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261022T090000
 DTEND;TZID=Europe/Paris:20261022T110000
 SUMMARY:Alimentation\, nutrition et bien être - Centre Assas
@@ -265,7 +241,7 @@ URL:https://www.assas-universite.fr/fr/evenements/alimentation-nutrition-bi
 END:VEVENT
 BEGIN:VEVENT
 UID:28d8619ac7f2@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261022T170000
 DTEND;TZID=Europe/Paris:20261022T190000
 SUMMARY:L’évolution du rôle du secrétariat général du gouvernement
@@ -278,7 +254,7 @@ URL:https://www.assas-universite.fr/fr/evenements/levolution-role-secretari
 END:VEVENT
 BEGIN:VEVENT
 UID:8c95e0c8b1a0@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261023T090000
 DTEND;TZID=Europe/Paris:20261023T110000
 SUMMARY:Colloque CERCOL - Le bail réel et solidaire
@@ -290,7 +266,7 @@ URL:https://www.assas-universite.fr/fr/evenements/colloque-cercol-bail-reel
 END:VEVENT
 BEGIN:VEVENT
 UID:ffe4182a59b5@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261027T123000
 DTEND;TZID=Europe/Paris:20261027T143000
 SUMMARY:Les politiques publiques territorialisées (Politique de la ville\,
@@ -304,7 +280,7 @@ URL:https://www.assas-universite.fr/fr/evenements/politiques-publiques-terr
 END:VEVENT
 BEGIN:VEVENT
 UID:c5241c9b9bd2@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261027T180000
 DTEND;TZID=Europe/Paris:20261027T200000
 SUMMARY:Retex d'une attachée de l'administration de l'Etat en poste dans u
@@ -318,7 +294,7 @@ URL:https://www.assas-universite.fr/fr/evenements/retex-dune-attachee-ladmi
 END:VEVENT
 BEGIN:VEVENT
 UID:d31986053279@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
 SUMMARY:4EU+ : réunion annuelle 2026
@@ -329,7 +305,7 @@ URL:https://www.assas-universite.fr/fr/evenements/4eu-reunion-annuelle-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:7f7f87992eef@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261028T180000
 DTEND;TZID=Europe/Paris:20261028T200000
 SUMMARY:Soirée des masters 2026
@@ -340,7 +316,7 @@ URL:https://www.assas-universite.fr/fr/evenements/soiree-masters-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:874b1e6f90bb@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261103T123000
 DTEND;TZID=Europe/Paris:20261103T143000
 SUMMARY:Crise politique et état du droit
@@ -352,7 +328,7 @@ URL:https://www.assas-universite.fr/fr/evenements/crise-politique-etat-droi
 END:VEVENT
 BEGIN:VEVENT
 UID:2213d0b8c95c@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261103T180000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Se préparer au concours de cadre de la Banque de France
@@ -365,7 +341,7 @@ URL:https://www.assas-universite.fr/fr/evenements/se-preparer-au-concours-c
 END:VEVENT
 BEGIN:VEVENT
 UID:b9f0f9e8beb4@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261103T183000
 DTEND;TZID=Europe/Paris:20261103T203000
 SUMMARY:Nuit du rempart (escalade) - 2e édition
@@ -377,7 +353,7 @@ URL:https://www.assas-universite.fr/fr/evenements/nuit-rempart-escalade-2e-
 END:VEVENT
 BEGIN:VEVENT
 UID:063cd0521c3a@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:La recherche en terrains sensibles : enjeux\, définition\, expéri
@@ -391,7 +367,7 @@ URL:https://www.assas-universite.fr/fr/evenements/recherche-en-terrains-sen
 END:VEVENT
 BEGIN:VEVENT
 UID:0e34facf983e@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261109T170000
 DTEND;TZID=Europe/Paris:20261109T190000
 SUMMARY:La politique commerciale de l’UE entre le neoprotectionnisme amé
@@ -406,7 +382,7 @@ URL:https://www.assas-universite.fr/fr/evenements/politique-commerciale-lue
 END:VEVENT
 BEGIN:VEVENT
 UID:85dfd36ecc79@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261109T180000
 DTEND;TZID=Europe/Paris:20261109T200000
 SUMMARY:La recherche de la paix par la conciliation de deux conceptions du 
@@ -419,7 +395,7 @@ URL:https://www.assas-universite.fr/fr/evenements/recherche-paix-conciliati
 END:VEVENT
 BEGIN:VEVENT
 UID:102c2e920c51@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261110T110000
 DTEND;TZID=Europe/Paris:20261110T130000
 SUMMARY:Reproducibility and Robustness of Nature Human Behaviour Papers in 
@@ -432,7 +408,7 @@ URL:https://www.assas-universite.fr/fr/evenements/reproducibility-robustnes
 END:VEVENT
 BEGIN:VEVENT
 UID:ef64243fd1c7@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261110T123000
 DTEND;TZID=Europe/Paris:20261110T143000
 SUMMARY:L'organisation territoriale de la France : situation et perspective
@@ -446,7 +422,7 @@ URL:https://www.assas-universite.fr/fr/evenements/lorganisation-territorial
 END:VEVENT
 BEGIN:VEVENT
 UID:d20a45e4cecc@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261110T180000
 DTEND;TZID=Europe/Paris:20261110T200000
 SUMMARY:Etre attaché d'administration d'Etat en préfecture : rôle et mis
@@ -460,7 +436,7 @@ URL:https://www.assas-universite.fr/fr/evenements/etre-attache-dadministrat
 END:VEVENT
 BEGIN:VEVENT
 UID:d0b2fa6f6cdc@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261112T100000
 DTEND;TZID=Europe/Paris:20261112T120000
 SUMMARY:La journée des réservistes 2026
@@ -471,7 +447,7 @@ URL:https://www.assas-universite.fr/fr/evenements/journee-reservistes-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:3a5f525f0a75@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261112T180000
 DTEND;TZID=Europe/Paris:20261112T200000
 SUMMARY:Quel modèle pour les relations de travail ?
@@ -483,7 +459,7 @@ URL:https://www.assas-universite.fr/fr/evenements/quel-modele-relations-tra
 END:VEVENT
 BEGIN:VEVENT
 UID:a3473d9983fe@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261117T123000
 DTEND;TZID=Europe/Paris:20261117T143000
 SUMMARY:Les limites de l'endettement public
@@ -496,7 +472,7 @@ URL:https://www.assas-universite.fr/fr/evenements/limites-lendettement-publ
 END:VEVENT
 BEGIN:VEVENT
 UID:4b6cd8471bcf@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261117T193000
 DTEND;TZID=Europe/Paris:20261117T213000
 SUMMARY:Projection du film "Je suis toujours là" de Walter SALLES - Ciné-
@@ -509,7 +485,7 @@ URL:https://www.assas-universite.fr/fr/evenements/projection-film-je-suis-t
 END:VEVENT
 BEGIN:VEVENT
 UID:037b8d20c7a4@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:Mois sans tabac - Centre Assas
@@ -521,7 +497,7 @@ URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-as
 END:VEVENT
 BEGIN:VEVENT
 UID:bf36fe3d4708@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:Mois sans tabac - Centre Vaugirard et campus de Melun
@@ -534,7 +510,7 @@ URL:https://www.assas-universite.fr/fr/evenements/mois-sans-tabac-centre-va
 END:VEVENT
 BEGIN:VEVENT
 UID:444861cf9692@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:L'esprit de défense en milieu universitaire : témoignages et reto
@@ -549,7 +525,7 @@ URL:https://www.assas-universite.fr/fr/evenements/lesprit-defense-en-milieu
 END:VEVENT
 BEGIN:VEVENT
 UID:d2771a3e599a@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261120T121500
 DTEND;TZID=Europe/Paris:20261120T141500
 SUMMARY:Groupe de Travail d’Économie de la Fiscalité - Rencontre du 20 
@@ -563,7 +539,7 @@ URL:https://www.assas-universite.fr/fr/evenements/groupe-travail-deconomie-
 END:VEVENT
 BEGIN:VEVENT
 UID:931fb79c886f@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261124T123000
 DTEND;TZID=Europe/Paris:20261124T143000
 SUMMARY:Partage de la ressource : la guerre de l'eau aura-t-elle lieu ?
@@ -576,7 +552,7 @@ URL:https://www.assas-universite.fr/fr/evenements/partage-ressource-guerre-
 END:VEVENT
 BEGIN:VEVENT
 UID:b9b9daedbd53@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261124T180000
 DTEND;TZID=Europe/Paris:20261124T200000
 SUMMARY:Les différents métiers exercés par les secrétaires de chancelle
@@ -590,7 +566,7 @@ URL:https://www.assas-universite.fr/fr/evenements/differents-metiers-exerce
 END:VEVENT
 BEGIN:VEVENT
 UID:89cd28ce3283@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261130T083000
 DTEND;TZID=Europe/Paris:20261130T103000
 SUMMARY:Narcotrafic : défis judiciaires\, économiques territoriaux et int
@@ -604,7 +580,7 @@ URL:https://www.assas-universite.fr/fr/evenements/narcotrafic-defis-judicia
 END:VEVENT
 BEGIN:VEVENT
 UID:bca28456c0db@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Journée de lutte contre le VIH - Centre Vaugirard et campus de Mel
@@ -618,7 +594,7 @@ URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-
 END:VEVENT
 BEGIN:VEVENT
 UID:fb289d0532ec@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261201T123000
 DTEND;TZID=Europe/Paris:20261201T143000
 SUMMARY:L'évolution du management public
@@ -630,7 +606,7 @@ URL:https://www.assas-universite.fr/fr/evenements/levolution-management-pub
 END:VEVENT
 BEGIN:VEVENT
 UID:5038b1ec0ff2@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Journée de lutte contre le VIH - Centre Assas
@@ -642,7 +618,7 @@ URL:https://www.assas-universite.fr/fr/evenements/journee-lutte-contre-vih-
 END:VEVENT
 BEGIN:VEVENT
 UID:e69cf17aa02f@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261215T090000
 DTEND;TZID=Europe/Paris:20261215T110000
 SUMMARY:Santé mentale et bien être - Centre Vaugirard et campus de Melun
@@ -655,7 +631,7 @@ URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-c
 END:VEVENT
 BEGIN:VEVENT
 UID:4333c956690d@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20261217T090000
 DTEND;TZID=Europe/Paris:20261217T110000
 SUMMARY:Santé mentale et bien être - Centre Assas
@@ -667,7 +643,7 @@ URL:https://www.assas-universite.fr/fr/evenements/sante-mentale-bien-etre-c
 END:VEVENT
 BEGIN:VEVENT
 UID:460e91d9c4c4@paris-academique
-DTSTAMP:20261014T092155Z
+DTSTAMP:20261015T085533Z
 DTSTART;TZID=Europe/Paris:20270425T090000
 DTEND;TZID=Europe/Paris:20270425T110000
 SUMMARY:6e édition du tournoi Assas Green Volley
