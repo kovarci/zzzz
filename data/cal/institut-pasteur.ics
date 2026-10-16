@@ -24,35 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5e4baaebf24c@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261015T020000
-DTEND;TZID=Europe/Paris:20261015T040000
-SUMMARY:PhD Defense- Soutenance de Thèse
-DESCRIPTION:phd\nhttps://research.pasteur.fr/en/event/phd-defense-soutenanc
- e-de-these/
-LOCATION:amphitheatre (bâtiment Duclaux) — Institut Pasteur\, 25-28 rue 
- du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/phd-defense-soutenance-de-these/
-END:VEVENT
-BEGIN:VEVENT
-UID:25be74552191@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261015T140000
-DTEND;TZID=Europe/Paris:20261015T160000
-SUMMARY:Webinaire de l’enseignement – Le microbiome\, un acteur déterm
- inant de la santé mère-enfant avec Pascale Vonaesch
-DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/webinaire-de-l
- enseignement-le-microbiome-un-acteur-determinant-de-la-sante-mere-enfant-a
- vec-pascale-vonaesch/
-LOCATION:Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
-URL:https://research.pasteur.fr/en/event/webinaire-de-lenseignement-le-micr
- obiome-un-acteur-determinant-de-la-sante-mere-enfant-avec-pascale-vonaesch
- /
-END:VEVENT
-BEGIN:VEVENT
 UID:d3b264943c65@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T110000
 DTEND;TZID=Europe/Paris:20261016T130000
 SUMMARY:Seminar: mOdyssey: Revival of murine monocyte-derived dendritic cel
@@ -66,7 +39,7 @@ URL:https://research.pasteur.fr/en/event/modyssey-revival-of-murine-monocyt
 END:VEVENT
 BEGIN:VEVENT
 UID:c764c4a03ee0@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T113000
 DTEND;TZID=Europe/Paris:20261016T133000
 SUMMARY:BCI & Microbiology Dpt Joint Seminar – “New Tricks for an Old P
@@ -83,20 +56,20 @@ URL:https://research.pasteur.fr/en/event/bci-microbiology-dpt-joint-seminar
 END:VEVENT
 BEGIN:VEVENT
 UID:6b244ab0ba0a@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T120000
 DTEND;TZID=Europe/Paris:20261016T140000
 SUMMARY:GM-CSF: from growth factor to inflammation and back
 DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/gm-csf-from-growt
- h-factor-to-inflammation-and-back__trashed/
-LOCATION:Jules Bordet (bâtiment Metchnikoff) — Institut Pasteur\, 25-28 
- rue du Docteur Roux\, Paris 15e
+ h-factor-to-inflammation-and-back/
+LOCATION:Jules bordet room (bâtiment Metchnikoff) — Institut Pasteur\, 2
+ 5-28 rue du Docteur Roux\, Paris 15e
 URL:https://research.pasteur.fr/en/event/gm-csf-from-growth-factor-to-infla
- mmation-and-back__trashed/
+ mmation-and-back/
 END:VEVENT
 BEGIN:VEVENT
 UID:6e5c7ec660c2@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T140000
 DTEND;TZID=Europe/Paris:20261016T160000
 SUMMARY:Thesis defense Hippolyte DEBARNOT: A lymphoid organ-on-chip to deci
@@ -110,7 +83,7 @@ URL:https://research.pasteur.fr/en/event/thesis-defense-hippolyte-debarnot/
 END:VEVENT
 BEGIN:VEVENT
 UID:f9488cb8a5bf@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T143000
 DTEND;TZID=Europe/Paris:20261016T163000
 SUMMARY:Soutenance de thèse de Doctorat : Nathan Ribot « Evidence of plas
@@ -125,7 +98,7 @@ URL:https://research.pasteur.fr/en/event/soutenance-de-these-de-doctorat-na
 END:VEVENT
 BEGIN:VEVENT
 UID:059c0b7c8c08@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261019T120000
 DTEND;TZID=Europe/Paris:20261019T140000
 SUMMARY:BCI Seminar – “Mechanics of malignancy\, migration and metastas
@@ -139,7 +112,7 @@ URL:https://research.pasteur.fr/en/event/bci-seminar-mechanics-of-malignanc
 END:VEVENT
 BEGIN:VEVENT
 UID:9c1d5b16271e@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261019T160000
 DTEND;TZID=Europe/Paris:20261019T180000
 SUMMARY:IdA Seminar | Regulation of Cell Fates in the Mammalian Cochlea –
@@ -152,8 +125,23 @@ URL:https://research.pasteur.fr/en/event/ida-seminar-regulation-of-cell-fat
  es-in-the-mammalian-cochlea/
 END:VEVENT
 BEGIN:VEVENT
+UID:2a7c1db6daa1@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261020T133000
+DTEND;TZID=Europe/Paris:20261020T153000
+SUMMARY:Annual Organ-on-Chip Users’ Meeting 2026 – Khadija Oukacha\, An
+ ni Herranen\, Marwan Selhami\, Noemie Kempf\, Asli Akidil\, Lisa Chakrabar
+ ti\, Bárbara Fonseca
+DESCRIPTION:workshop\nhttps://research.pasteur.fr/en/event/annual-organ-on-
+ chip-users-meeting-2026/
+LOCATION:CFJ Auditorium (bâtiment 26) — Institut Pasteur\, 25-28 rue du 
+ Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/annual-organ-on-chip-users-meeting
+ -2026/
+END:VEVENT
+BEGIN:VEVENT
 UID:a84f01f97cc1@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261021T120000
 DTEND;TZID=Europe/Paris:20261021T140000
 SUMMARY:Feed your Microbiomes
@@ -164,8 +152,22 @@ LOCATION:Duclaux Amphitheater — Institut Pasteur\, 25-28 rue du Docteur R
 URL:https://research.pasteur.fr/en/event/feed-your-microbiome/
 END:VEVENT
 BEGIN:VEVENT
+UID:97c302364090@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261023T110000
+DTEND;TZID=Europe/Paris:20261023T130000
+SUMMARY:“The host tRNA epitranscriptome: a new player in viral infection.
+ ” – Juana DIEZ
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/the-host-trna-epi
+ transcriptome-a-new-player-in-viral-infection/
+LOCATION:Retrovirus (bâtiment LWOFF) — Institut Pasteur\, 25-28 rue du D
+ octeur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/the-host-trna-epitranscriptome-a-n
+ ew-player-in-viral-infection/
+END:VEVENT
+BEGIN:VEVENT
 UID:3fd809ea4ef3@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261023T110000
 DTEND;TZID=Europe/Paris:20261023T130000
 SUMMARY:Seminar [Cryo-ET & AI] – From Simulations to Cells: Learning Tran
@@ -181,8 +183,28 @@ URL:https://research.pasteur.fr/en/event/seminar-cryo-et-ai-from-simulation
  phy-by-frosina-stojanovska/
 END:VEVENT
 BEGIN:VEVENT
+UID:f30a100e1162@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261023T113000
+DTEND;TZID=Europe/Paris:20261023T133000
+SUMMARY:Seminar Dept Microbiology “Host cell subversion by listeriolysin 
+ O and phospholipases C during the L. monocytogenes intracellular lifecycle
+ : from plasma membrane repair to cell-to-cell spread.” – Prof. Stephan
+ ie Seveau
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/seminar-dept-micr
+ obiology-host-cell-subversion-by-listeriolysin-o-and-phospholipases-c-duri
+ ng-the-l-monocytogenes-intracellular-lifecycle-from-plasma-membrane-repair
+ -to-cell-to-cell-spread/
+LOCATION:Bâtiment Auditorium Centre François Jacob — Institut Pasteur\,
+  25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/seminar-dept-microbiology-host-cel
+ l-subversion-by-listeriolysin-o-and-phospholipases-c-during-the-l-monocyto
+ genes-intracellular-lifecycle-from-plasma-membrane-repair-to-cell-to-cell-
+ spread/
+END:VEVENT
+BEGIN:VEVENT
 UID:a0206ac780d8@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261026T140000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Dept of Global Health | “The view from inside Science” by Cheri
@@ -196,7 +218,7 @@ URL:https://research.pasteur.fr/en/event/dept-of-global-health-the-view-fro
 END:VEVENT
 BEGIN:VEVENT
 UID:5e48128af960@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261028T090000
 DTEND;TZID=Europe/Paris:20261028T110000
 SUMMARY:STAPA International Network Congress (SINC) – Mélanie Hamon\, Ar
@@ -211,7 +233,7 @@ URL:https://research.pasteur.fr/en/event/stapa-international-network-congre
 END:VEVENT
 BEGIN:VEVENT
 UID:3a55f0bb648a@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261029T090000
 DTEND;TZID=Europe/Paris:20261029T110000
 SUMMARY:Immune variability across the life course
@@ -224,7 +246,7 @@ URL:https://research.pasteur.fr/en/event/immune-variability-across-the-life
 END:VEVENT
 BEGIN:VEVENT
 UID:5694ef65a6de@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261030T090000
 DTEND;TZID=Europe/Paris:20261030T110000
 SUMMARY:LabEx Milieu Intérieur Annual Meeting 2026
@@ -236,11 +258,12 @@ URL:https://research.pasteur.fr/en/event/labex-milieu-interieur-annual-meet
  ing-2026/
 END:VEVENT
 BEGIN:VEVENT
-UID:67daed864a7a@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261102T113000
-DTEND;TZID=Europe/Paris:20261102T133000
-SUMMARY:Dept of Global Health | Seminar by Xavier JOUVEN – Xavier JOUVEN
+UID:6105f62e0b5e@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261102T110000
+DTEND;TZID=Europe/Paris:20261102T130000
+SUMMARY:Dept of Global Health seminar | “Presentation of the Paris Cité 
+ Global Health Institute” by Xavier JOUVEN – Xavier JOUVEN
 DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/dept-of-global-he
  alth-seminar-by-xavier-jouven/
 LOCATION:Amphi Jules Bordet (bâtiment Metchnikoff building) — Institut P
@@ -250,7 +273,7 @@ URL:https://research.pasteur.fr/en/event/dept-of-global-health-seminar-by-x
 END:VEVENT
 BEGIN:VEVENT
 UID:63d9bfbf19e3@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261103T090000
 DTEND;TZID=Europe/Paris:20261103T110000
 SUMMARY:ShareFAIR and Neurovasc days
@@ -262,7 +285,7 @@ URL:https://research.pasteur.fr/en/event/sharefair-and-neurovasc-days/
 END:VEVENT
 BEGIN:VEVENT
 UID:d9d3bd74fe71@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Stuttering Workshop – Paris\, 4-5 Nov 2026
@@ -273,8 +296,54 @@ URL:https://research.pasteur.fr/en/event/international-workshop-on-stutteri
  ng/
 END:VEVENT
 BEGIN:VEVENT
+UID:92ba25d9e584@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261105T110000
+DTEND;TZID=Europe/Paris:20261105T130000
+SUMMARY:Coincident epithelial signals restrain commensal-specific CD8αβ
+ ⁺ T cells in the intestine
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/coincident-epithe
+ lial-signals-restrain-commensal-specific-cd8%ce%b1%ce%b2%e2%81%ba-t-cells-
+ in-the-intestine/
+LOCATION:Salle JEAN-PAUL AUBERT (bâtiment Fernbach) — Institut Pasteur\,
+  25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/coincident-epithelial-signals-rest
+ rain-commensal-specific-cd8%ce%b1%ce%b2%e2%81%ba-t-cells-in-the-intestine/
+END:VEVENT
+BEGIN:VEVENT
+UID:6084a20e7529@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261105T163000
+DTEND;TZID=Europe/Paris:20261105T183000
+SUMMARY:Understanding Leishmaniasis in the Americas: Parasite Diversity\, T
+ ransmission Dynamics\, and Implications for Control and Diagnosis – Elis
+ a CUPOLILLO
+DESCRIPTION:sc conference\nhttps://research.pasteur.fr/en/event/understandi
+ ng-leishmaniasis-in-the-americas-parasite-diversity-transmission-dynamics-
+ and-implications-for-control-and-diagnosis/
+LOCATION:Amphitheater Duclaux — Institut Pasteur\, 25-28 rue du Docteur R
+ oux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/understanding-leishmaniasis-in-the
+ -americas-parasite-diversity-transmission-dynamics-and-implications-for-co
+ ntrol-and-diagnosis/
+END:VEVENT
+BEGIN:VEVENT
+UID:6ae276e043a9@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261106T120000
+DTEND;TZID=Europe/Paris:20261106T140000
+SUMMARY:Dying to get noticed: Immune responses to regulated cell death in v
+ ivo
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/dying-to-get-noti
+ ced-immune-responses-to-regulated-cell-death-in-vivo/
+LOCATION:Jules Bordet (bâtiment Metchnikoff) — Institut Pasteur\, 25-28 
+ rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/dying-to-get-noticed-immune-respon
+ ses-to-regulated-cell-death-in-vivo/
+END:VEVENT
+BEGIN:VEVENT
 UID:34dbc1ecd992@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261109T093000
 DTEND;TZID=Europe/Paris:20261109T113000
 SUMMARY:Multidisciplinary conference | Eating: one behavior\, many sciences
@@ -285,8 +354,39 @@ URL:https://research.pasteur.fr/en/event/multidisciplinary-conference-eatin
  g-one-behavior-many-sciences/
 END:VEVENT
 BEGIN:VEVENT
+UID:8ce2a0abb4e3@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261109T120000
+DTEND;TZID=Europe/Paris:20261109T140000
+SUMMARY:Dept of Global Health seminar | “genomeRxiv: a web server for gen
+ ome-based identification that bridges the gap between taxonomy and strain 
+ typing” by Boris Vinatzer – Boris VINATZER
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/dept-of-global-he
+ alth-seminar-genomerxiv-a-web-server-for-genome-based-identification-that-
+ bridges-the-gap-between-taxonomy-and-strain-typing-by-boris-vinatzer/
+LOCATION:Retrovirus (bâtiment Lwoff) — Institut Pasteur\, 25-28 rue du D
+ octeur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/dept-of-global-health-seminar-geno
+ merxiv-a-web-server-for-genome-based-identification-that-bridges-the-gap-b
+ etween-taxonomy-and-strain-typing-by-boris-vinatzer/
+END:VEVENT
+BEGIN:VEVENT
+UID:91e2c5ab2070@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261109T120000
+DTEND;TZID=Europe/Paris:20261109T140000
+SUMMARY:BCI Seminar – “Speak friend and enter – deconstructing the vi
+ rus-cell infection synapse” – Prof. Dr. Christian SIEBEN
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/bci-seminar-speak
+ -friend-and-enter-deconstructing-the-virus-cell-infection-synapse-2/
+LOCATION:Jules BORDET (bâtiment Metchnikoff) — Institut Pasteur\, 25-28 
+ rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/bci-seminar-speak-friend-and-enter
+ -deconstructing-the-virus-cell-infection-synapse-2/
+END:VEVENT
+BEGIN:VEVENT
 UID:cd564a069433@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261109T130000
 DTEND;TZID=Europe/Paris:20261109T150000
 SUMMARY:Allostery and brain science\, a tribute to Jean-Pierre CHANGEUX
@@ -298,8 +398,22 @@ URL:https://research.pasteur.fr/en/event/allostery-and-brain-science-a-trib
  ute-to-jean-pierre-changeux/
 END:VEVENT
 BEGIN:VEVENT
+UID:4811be7ac868@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261109T133000
+DTEND;TZID=Europe/Paris:20261109T153000
+SUMMARY:Join us for the joint 2026 Seed Grants Retrospective Symposium of t
+ he PA1\, PA3 and PA4 !
+DESCRIPTION:conference\nhttps://research.pasteur.fr/en/event/join-us-for-th
+ e-joint-2026-seed-grants-retrospective-symposium-of-the-pa1-pa3-and-pa4/
+LOCATION:Auditorium François Jacob (bâtiment Centre François Jacob) — 
+ Institut Pasteur\, 25-28 rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/join-us-for-the-joint-2026-seed-gr
+ ants-retrospective-symposium-of-the-pa1-pa3-and-pa4/
+END:VEVENT
+BEGIN:VEVENT
 UID:65b656381f29@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261110T110000
 DTEND;TZID=Europe/Paris:20261110T130000
 SUMMARY:How some bacteria swim in higher viscosities than others
@@ -311,8 +425,38 @@ URL:https://research.pasteur.fr/en/event/how-some-bacteria-swim-in-higher-v
  iscosities-than-others/
 END:VEVENT
 BEGIN:VEVENT
+UID:fcdfa9ea26cb@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261112T150000
+DTEND;TZID=Europe/Paris:20261112T170000
+SUMMARY:IdA Seminar | From Colonization to Vascular Guardians: Microglia in
+  Early Brain Development – Morgane Thion
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/ida-seminar-from-
+ colonization-to-vascular-guardians-microglia-in-early-brain-development/
+LOCATION:Institut de l'Audition\, Rue de Charenton\, Paris
+URL:https://research.pasteur.fr/en/event/ida-seminar-from-colonization-to-v
+ ascular-guardians-microglia-in-early-brain-development/
+END:VEVENT
+BEGIN:VEVENT
+UID:d498bf166a3d@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261113T140000
+DTEND;TZID=Europe/Paris:20261113T160000
+SUMMARY:Dept of Computational Biology seminar | “Biomolecular structure m
+ odeling beyond Alphafold: RNA\, cryo-EM\, and folding” by Daisuke KIHARA
+  – Daisuke KIHARA
+DESCRIPTION:seminar\nhttps://research.pasteur.fr/en/event/dept-of-computati
+ onal-biology-seminar-biomolecular-structure-modeling-beyond-alphafold-rna-
+ cryo-em-and-folding-by-daisuke-kihara/
+LOCATION:Jules Bordet (bâtiment Metchnikoff) — Institut Pasteur\, 25-28 
+ rue du Docteur Roux\, Paris 15e
+URL:https://research.pasteur.fr/en/event/dept-of-computational-biology-semi
+ nar-biomolecular-structure-modeling-beyond-alphafold-rna-cryo-em-and-foldi
+ ng-by-daisuke-kihara/
+END:VEVENT
+BEGIN:VEVENT
 UID:333d50179922@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261124T110000
 DTEND;TZID=Europe/Paris:20261124T130000
 SUMMARY:Engineering protein catalysts for synthetic applications
@@ -325,7 +469,7 @@ URL:https://research.pasteur.fr/en/event/engineering-protein-catalysts-for-
 END:VEVENT
 BEGIN:VEVENT
 UID:ba12d4a04b40@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261124T133000
 DTEND;TZID=Europe/Paris:20261124T153000
 SUMMARY:Developmental and Stem Cell Origin of Long-Term Stresses – Giacom
@@ -339,7 +483,7 @@ URL:https://research.pasteur.fr/en/event/long-term-impact-of-embryonic-and-
 END:VEVENT
 BEGIN:VEVENT
 UID:eab467e28dea@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261130T090000
 DTEND;TZID=Europe/Paris:20261130T110000
 SUMMARY:International conference Integrative Microbiome Program at Pasteur
@@ -351,7 +495,7 @@ URL:https://research.pasteur.fr/en/event/international-conferences-integrat
 END:VEVENT
 BEGIN:VEVENT
 UID:0c10dc3a3968@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261201T110000
 DTEND;TZID=Europe/Paris:20261201T130000
 SUMMARY:Molecular design by Multi-Task AI and chemographic exploration
@@ -364,7 +508,7 @@ URL:https://research.pasteur.fr/en/event/molecular-design-by-multi-task-ai-
 END:VEVENT
 BEGIN:VEVENT
 UID:8b9045a8995d@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20270126T080000
 DTEND;TZID=Europe/Paris:20270126T100000
 SUMMARY:Annual meeting of the AC41 ANRS Emerging Infectious Diseases – Ja

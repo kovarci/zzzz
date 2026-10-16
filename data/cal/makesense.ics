@@ -24,88 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:418c57b32a76@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:11e édition des Journées nationales de l’architecture : « Réh
- abiliter : bâtir l’avenir »
-DESCRIPTION:Organisé par Paloma Benel — 11e édition des Journées natio
- nales de l’architecture : « Réhabiliter : bâtir l’avenir »Du 15 au
-  18 octobre 2026\, les Journées nationales de l’architecture reviennent
-  partou\nhttps://chiche.makesense.org/events/e/11e-edition-des-journees-na
- tionales-de-larchitecture-rehabiliter-batir-lavenir-6abfc2c2825ba2000735e2
- 26
-LOCATION:Pl. du Trocadéro et du 11 Novembre\, 75016 Paris\, France
-URL:https://chiche.makesense.org/events/e/11e-edition-des-journees-national
- es-de-larchitecture-rehabiliter-batir-lavenir-6abfc2c2825ba2000735e226
-END:VEVENT
-BEGIN:VEVENT
-UID:e7cc6df14019@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:Forum des métiers de la terre et du goût
-DESCRIPTION:Organisé par Anna Six — Abiosol et Coeur d'Essonne Agglomér
- ation vous donnent rendez-vous le jeudi 15 octobre 2026 au Modul'Air de Br
- étigny-sur-Orge pour une journée de découverte des métiers agricoles\,
-  alimentaires et de plein air accessible à tous-tes dès le collège!\nht
- tps://chiche.makesense.org/events/e/forum-des-metiers-de-la-terre-et-du-go
- ut-6aa918a29078030007c45c8f
-LOCATION:Essai en Vol\, 6 avenue du Centre d\, 91220 Brétigny-sur-Orge\, F
- rance
-URL:https://chiche.makesense.org/events/e/forum-des-metiers-de-la-terre-et-
- du-gout-6aa918a29078030007c45c8f
-END:VEVENT
-BEGIN:VEVENT
-UID:317315a9aad2@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261015T190000
-DTEND;TZID=Europe/Paris:20261015T210000
-SUMMARY:La FourmiParty des 10 ans de La Fourmilière ! 🐜
-DESCRIPTION:Organisé par Charlotte Jouanneau — 🐜⚡ FOURMIS PARTY —
-  On remet ça pour 10 ans !Chères fourmis\, chers partenaires\,Prépare t
- on DeLorean : on t'embarque pour un voyage dans le temps !Direction 2016. 
- Il y a 10 ans\, on lançait\nhttps://chiche.makesense.org/events/e/la-four
- miparty-des-10-ans-de-la-fourmiliere-6ab2ac9e32f93b0008da23ff
-LOCATION:200 Quai de Valmy\, 75010 Paris\, France
-URL:https://chiche.makesense.org/events/e/la-fourmiparty-des-10-ans-de-la-f
- ourmiliere-6ab2ac9e32f93b0008da23ff
-END:VEVENT
-BEGIN:VEVENT
-UID:693b3100e1a3@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261015T190000
-DTEND;TZID=Europe/Paris:20261015T210000
-SUMMARY:Sourire à l'Inconnu
-DESCRIPTION:Organisé par Maison de la Conversation — Guidé par Nicolas 
- Bernagaud\, explorateur de l’Inconnu\, cette soirée sera une invitation
-  à découvrir la richesse insoupçonnée de l'autre.Et si la rencontre av
- ec l’Inconnu devenait un art de vivre ? Osez\, le temps d’un soir\, so
- urire à l’Inco\nhttps://chiche.makesense.org/events/e/sourire-a-linconn
- u-6aaaa65d19fd1c0008849ed4
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/sourire-a-linconnu-6aaaa65d19fd1c
- 0008849ed4
-END:VEVENT
-BEGIN:VEVENT
-UID:75faca0528d1@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261015T200000
-DTEND;TZID=Europe/Paris:20261015T213000
-SUMMARY:Peindre l’exil
-DESCRIPTION:Organisé par Maison de la Conversation — PEINDRE L’EXILMé
- diation participative autour de l’exposition Couloirs irréguliersÀ par
- tir du parcours de l’exposition Couloirs irréguliers\, cette médiation
-  invite à découvrir la naissance du pr\nhttps://chiche.makesense.org/eve
- nts/e/peindre-lexil-6aad42c8ca918800076aa8d0
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/peindre-lexil-6aad42c8ca918800076
- aa8d0
-END:VEVENT
-BEGIN:VEVENT
 UID:b1c4f0e82f6d@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:J’apprends les bases de la réparation (niveau 1)
@@ -121,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/japprends-les-bases-de-la-reparat
 END:VEVENT
 BEGIN:VEVENT
 UID:14f648b7d1ff@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T140000
 DTEND;TZID=Europe/Paris:20261016T160000
 SUMMARY:Atelier de création théâtrale à destination des femmes
@@ -137,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/atelier-de-creation-theatrale-a-d
 END:VEVENT
 BEGIN:VEVENT
 UID:a549226c7472@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T190000
 DTEND;TZID=Europe/Paris:20261016T210000
 SUMMARY:Festival Et maintenant ?
@@ -152,7 +72,7 @@ URL:https://chiche.makesense.org/events/e/festival-et-maintenant-6ab28c4a40
 END:VEVENT
 BEGIN:VEVENT
 UID:f7d8e09a7b81@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Hackathon Spark : De l’idée à l’action\, j’agis pour demain
@@ -168,7 +88,7 @@ URL:https://chiche.makesense.org/events/e/hackathon-spark-de-lidee-a-lactio
 END:VEVENT
 BEGIN:VEVENT
 UID:21a45f9a3c1d@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Je sauve mon doudou
@@ -182,7 +102,7 @@ URL:https://chiche.makesense.org/events/e/je-sauve-mon-doudou-6a992d8f1c5b4
 END:VEVENT
 BEGIN:VEVENT
 UID:f54ba15576c9@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Facettes Festival
@@ -197,7 +117,7 @@ URL:https://chiche.makesense.org/events/e/facettes-festival-6a5dd5927b04120
 END:VEVENT
 BEGIN:VEVENT
 UID:cd8c4036f47c@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261017T103000
 DTEND;TZID=Europe/Paris:20261017T171600
 SUMMARY:Formation : Mobiliser pour passer à l'action ! ✊
@@ -211,7 +131,7 @@ URL:https://chiche.makesense.org/events/e/formation-mobiliser-pour-passer-a
 END:VEVENT
 BEGIN:VEVENT
 UID:0fd45ad488ef@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261017T143000
 DTEND;TZID=Europe/Paris:20261017T163000
 SUMMARY:"Lettres en soi" - Atelier d'écriture créative
@@ -227,7 +147,7 @@ URL:https://chiche.makesense.org/events/e/lettres-en-soi-atelier-decriture-
 END:VEVENT
 BEGIN:VEVENT
 UID:076455524684@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261017T150000
 DTEND;TZID=Europe/Paris:20261017T163000
 SUMMARY:La vingtaine\, on en parle ?
@@ -242,7 +162,7 @@ URL:https://chiche.makesense.org/events/e/la-vingtaine-on-en-parle-6aabf6b9
 END:VEVENT
 BEGIN:VEVENT
 UID:f00538d017b2@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Habiter un monde qui change - conférence d'Aimée Bouchet
@@ -258,7 +178,7 @@ URL:https://chiche.makesense.org/events/e/habiter-un-monde-qui-change-confe
 END:VEVENT
 BEGIN:VEVENT
 UID:3337e752610a@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261019T193000
 DTEND;TZID=Europe/Paris:20261019T213000
 SUMMARY:Workshop Capoeira Angola
@@ -274,7 +194,7 @@ URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09f8
 END:VEVENT
 BEGIN:VEVENT
 UID:ec1c318eabff@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261020T095000
 DTEND;TZID=Europe/Paris:20261020T115000
 SUMMARY:Atelier - Communiquer de façon inclusive\, accessible et durable
@@ -287,5 +207,83 @@ DESCRIPTION:Organisé par Les Canaux — Un atelier animé par Loane Chulev
 LOCATION:6 Quai de la Seine\, 75019 Paris\, France
 URL:https://chiche.makesense.org/events/e/atelier-communiquer-de-facon-incl
  usive-accessible-et-durable-6a983a062701ed0007de4221
+END:VEVENT
+BEGIN:VEVENT
+UID:478db6fbd534@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261020T163000
+DTEND;TZID=Europe/Paris:20261020T193000
+SUMMARY:2ème rencontre du Collectif Insertion & Transition Écologique
+DESCRIPTION:Organisé par Talia Sarfati — Le Groupe ARES\, makesense\, Vi
+ tamine T\, La Pile\, la Fédération des Acteurs de la Solidarité\, Lemon
+  Tri et des +20 structures partenaires du Collectif Insertion et Transitio
+ n Ecologique\, ont le plaisir\nhttps://chiche.makesense.org/events/e/2eme-
+ rencontre-du-collectif-insertion-and-transition-ecologique-6aa2dfbdff04500
+ 007b7ca31
+LOCATION:29 Rue du Soleil\, 75020 Paris\, France
+URL:https://chiche.makesense.org/events/e/2eme-rencontre-du-collectif-inser
+ tion-and-transition-ecologique-6aa2dfbdff04500007b7ca31
+END:VEVENT
+BEGIN:VEVENT
+UID:c5dc3d70deda@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Développer son aisance à l'oral 📍 Paris
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Pitch\, c’est 
+ l’atelier pour développer son aisance à l’oral en créant le pitch d
+ e sa recherche d’emploi ou son projet de création d’activité\nhttps:
+ //chiche.makesense.org/events/e/developper-son-aisance-a-loral-paris-6aaaa
+ 71019fd1c000884a457
+LOCATION:40 Av. des Terroirs de France\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/developper-son-aisance-a-loral-pa
+ ris-6aaaa71019fd1c000884a457
+END:VEVENT
+BEGIN:VEVENT
+UID:bdfe9ddd3368@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Je préserve la vie des oiseaux
+DESCRIPTION:Organisé par Envie Le Labo — Comment reconnaître un rouge-g
+ orge\, une mésange charbonnière ou encore un troglodyte mignon ? Que man
+ gent les oiseaux ? Quel est leur habitat et où vivent-ils ? Participez av
+ ec vos enfants à un atelier ludique et créatif pour tout connaître sur 
+ la\nhttps://chiche.makesense.org/events/e/je-preserve-la-vie-des-oiseaux-6
+ a992e0d2701ed0007e3654a
+LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
+URL:https://chiche.makesense.org/events/e/je-preserve-la-vie-des-oiseaux-6a
+ 992e0d2701ed0007e3654a
+END:VEVENT
+BEGIN:VEVENT
+UID:d3b9bff0a92a@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261021T193000
+DTEND;TZID=Europe/Paris:20261021T213000
+SUMMARY:RENCONTRE AVEC SOS MÉDITERRANÉE
+DESCRIPTION:Organisé par Maison de la Conversation — À l’occasion du 
+ finissage de l’exposition Couloirs irréguliers\, SOS MÉDITERRANÉE ser
+ a présente pour une rencontre consacrée à ses missions de sauvetage en 
+ mer et aux réalités humaines des traversées migratoires en Méditerran
+ ée.\nhttps://chiche.makesense.org/events/e/rencontre-avec-sos-mediterrane
+ e-6aad45f7ca918800076ac899
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/rencontre-avec-sos-mediterranee-6
+ aad45f7ca918800076ac899
+END:VEVENT
+BEGIN:VEVENT
+UID:13179c2d0396@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261022T142000
+DTEND;TZID=Europe/Paris:20261022T162000
+SUMMARY:Atelier - Lancer sa structure sur les réseaux sociaux
+DESCRIPTION:Organisé par Les Canaux — Dans cet atelier\, on déconstruit
+  quelques idées reçues\, on passe en revue les principaux réseaux & leu
+ rs spécificités.Un atelier animé par Salomé Tshibola du Comenfleur\nht
+ tps://chiche.makesense.org/events/e/atelier-lancer-sa-structure-sur-les-re
+ seaux-sociaux-6a992ba31c5b4f0008b97e36
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/atelier-lancer-sa-structure-sur-l
+ es-reseaux-sociaux-6a992ba31c5b4f0008b97e36
 END:VEVENT
 END:VCALENDAR

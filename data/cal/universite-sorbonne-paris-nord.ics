@@ -24,10 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:9abfc4f63e2e@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+UID:07a29f6a6011@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
 SUMMARY:Une collecte solidaire pour les étudiants en précarité
 DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
  limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
@@ -41,10 +41,10 @@ URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
  s-en-precarite/
 END:VEVENT
 BEGIN:VEVENT
-UID:7e44f4ab1b20@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
+UID:8975d58a3e3b@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
 SUMMARY:Étudiants internationaux : 5 journées pour prendre vos repères
 DESCRIPTION:Vous venez d’arriver à l’Université Sorbonne Paris Nord ?
   Du 12 au 16 octobre 2026\, les journées d’accueil des étudiants inter
@@ -60,9 +60,9 @@ URL:https://www.univ-spn.fr/events/etudiants-internationaux-5-journees-pour
 END:VEVENT
 BEGIN:VEVENT
 UID:d648f53dd3c2@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261015T123000
-DTEND;TZID=Europe/Paris:20261015T143000
+DTSTAMP:20261016T085007Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
 SUMMARY:[Cirque] Mauvais Joueurs
 DESCRIPTION:Par les apprentis de 1ère année de l'Académie Fratellini Cet
  te pièce chorégraphique\, conçue pour les élèves de première année 
@@ -77,7 +77,7 @@ URL:https://www.univ-spn.fr/events/cirque-mauvais-joueurs/
 END:VEVENT
 BEGIN:VEVENT
 UID:a064a32f983a@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T193000
 DTEND;TZID=Europe/Paris:20261016T203000
 SUMMARY:[Danse] Machine à spectacle
@@ -88,7 +88,7 @@ URL:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
 END:VEVENT
 BEGIN:VEVENT
 UID:643997ff4482@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261017T100000
 DTEND;TZID=Europe/Paris:20261017T180000
 SUMMARY:Études\, métiers\, Parcoursup : rendez-vous à Villetaneuse
@@ -105,7 +105,7 @@ URL:https://www.univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-
 END:VEVENT
 BEGIN:VEVENT
 UID:3dc98be47f8a@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261021T123000
 DTEND;TZID=Europe/Paris:20261021T140000
 SUMMARY:[Événement – appel à participation] Open Mic
@@ -121,7 +121,7 @@ URL:https://www.univ-spn.fr/events/openmic-201026/
 END:VEVENT
 BEGIN:VEVENT
 UID:f819e3de9438@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261021T200000
 DTEND;TZID=Europe/Paris:20261021T213500
 SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
@@ -133,7 +133,7 @@ URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
 END:VEVENT
 BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque

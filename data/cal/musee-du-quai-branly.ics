@@ -24,39 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:2e5407c0a8f4@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;VALUE=DATE:20261014
-DTEND;VALUE=DATE:20261015
-SUMMARY:Autour de Chupícuaro
-DESCRIPTION:Colloques\nhttps://www.quaibranly.fr/fr/recherche-scientifique/
- activites/colloques-et-enseignements/conferences-et-colloques/details-de-l
- evenement/e/autour-de-chupicuaro-new6a4f6c37ea1ff878421345
-LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
- 7e
-URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
- -et-enseignements/conferences-et-colloques/details-de-levenement/e/autour-
- de-chupicuaro-new6a4f6c37ea1ff878421345
-END:VEVENT
-BEGIN:VEVENT
-UID:b967b49a5956@paris-academique
-DTSTAMP:20261015T085533Z
-DTSTART;TZID=Europe/Paris:20261015T173000
-DTEND;TZID=Europe/Paris:20261015T190000
-SUMMARY:Les mobilités artistiques féminines à l'époque coloniale
-DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
- re-jacques-kerchache/details-de-levenement/e/les-mobilites-artistiques-fem
- inines-a-lepoque-coloniale-41147
-LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
- 7e
-URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
- s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/les-mobili
- tes-artistiques-feminines-a-lepoque-coloniale-41147
-END:VEVENT
-BEGIN:VEVENT
 UID:565bf1967498@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T170000
 DTEND;TZID=Europe/Paris:20261016T184500
 SUMMARY:Épices\, soldats et nouveaux horizons :
@@ -72,7 +41,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:53306ea8c402@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261020T170000
 DTEND;TZID=Europe/Paris:20261020T183000
 SUMMARY:Coulisses de l’exposition "Premières nations..."
@@ -88,7 +57,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:5698dbf106fd@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261021T143000
 DTEND;TZID=Europe/Paris:20261021T173000
 SUMMARY:Les savoirs autochtones à l’école et à l’Université frança
@@ -105,7 +74,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:1b84d02a2881@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261029T160000
 DTEND;TZID=Europe/Paris:20261029T180000
 SUMMARY:Le projet éclat métallique
@@ -119,11 +88,11 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
  eclat-metallique
 END:VEVENT
 BEGIN:VEVENT
-UID:c109bbd9e589@paris-academique
-DTSTAMP:20261015T085533Z
+UID:97d8612796fa@paris-academique
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261104T170000
 DTEND;TZID=Europe/Paris:20261104T183000
-SUMMARY:Le racisme scientifique et médical : Du 19e siècle à nos jours
+SUMMARY:Le racisme scientifique et médical : du 19e siècle à nos jours
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
  branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
  re-jacques-kerchache/details-de-levenement/e/le-racisme-scientifique-et-me
@@ -136,7 +105,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:483500e8954a@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261105T180000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Atlantique(s) noir(s) :
@@ -152,7 +121,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:f687e1999431@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261110T091500
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Le temps des épreuves
@@ -167,7 +136,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:503dfe4788ff@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Genèses de Léopold Sédar Senghor : actualité éditoriale
@@ -183,7 +152,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:0e8399c094c0@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261118T093000
 DTEND;TZID=Europe/Paris:20261118T173000
 SUMMARY:De l'Afrique vers l'Allemagne et la France
@@ -199,7 +168,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:5dd66cc4b19c@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:"Haïti\, seul peuple de peintres"
@@ -214,8 +183,24 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
  -peuple-de-peintres-41151
 END:VEVENT
 BEGIN:VEVENT
+UID:a20f9f5625f3@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261124T170000
+DTEND;TZID=Europe/Paris:20261124T183000
+SUMMARY:L'archéologie et l'anthropologie face au pillage
+DESCRIPTION:Conférences\nhttps://www.quaibranly.fr/fr/recherche-scientifiq
+ ue/activites/colloques-et-enseignements/conferences-et-colloques/details-d
+ e-levenement/e/larcheologie-et-lanthropologie-face-au-pillage-new6ad0a2923
+ 7e11533860718
+LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
+ 7e
+URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
+ -et-enseignements/conferences-et-colloques/details-de-levenement/e/larcheo
+ logie-et-lanthropologie-face-au-pillage-new6ad0a29237e11533860718
+END:VEVENT
+BEGIN:VEVENT
 UID:3a86f96752dc@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T184500
 SUMMARY:Rencontre avec George Nuku
@@ -230,7 +215,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:8c4a1242ff87@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261126T173000
 DTEND;TZID=Europe/Paris:20261126T184500
 SUMMARY:Le survivant : trois ans parmi les Nootka de l'île de Vancouver
@@ -245,7 +230,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:eae89d4b6966@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261203T170000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:« Comment créer un environnement propice à la création artistiq

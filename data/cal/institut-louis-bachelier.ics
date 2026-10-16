@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:b2956c91953f@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261016T083000
 DTEND;TZID=Europe/Paris:20261016T103000
 SUMMARY:Séminaire : Risque grêle et assurance en France : diagnostics et 
@@ -41,7 +41,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/seminair
 END:VEVENT
 BEGIN:VEVENT
 UID:559ed294a21f@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261022T190000
 DTEND;TZID=Europe/Paris:20261022T210000
 SUMMARY:FiDurable - événement de rentrée 2026-2027
@@ -54,7 +54,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/fidurabl
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5705ac1cc0@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261103T090000
 DTEND;TZID=Europe/Paris:20261103T110000
 SUMMARY:AM TECH DAY de l'AGEFI
@@ -67,7 +67,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-
 END:VEVENT
 BEGIN:VEVENT
 UID:6f91b803b6bd@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T160000
 SUMMARY:Accélérer et financer l'adaptation au changement climatique
@@ -79,8 +79,21 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/accelere
  r-et-financer-ladaptation-au-changement-climatique
 END:VEVENT
 BEGIN:VEVENT
+UID:b710e94e1c4a@paris-academique
+DTSTAMP:20261016T085007Z
+DTSTART;TZID=Europe/Paris:20261112T170000
+DTEND;TZID=Europe/Paris:20261112T190000
+SUMMARY:Les Invitations DIALog avec Adrien Bilal
+DESCRIPTION:https://www.institutlouisbachelier.org/au-programme/evenements/
+ les-invitations-dialog-avec-adrien-bilal
+LOCATION:En ligne\, Microsoft Teams — Institut Louis Bachelier\, 28 place
+  de la Bourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/les-invi
+ tations-dialog-avec-adrien-bilal
+END:VEVENT
+BEGIN:VEVENT
 UID:7ef07d9b75d5@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261208T090000
 DTEND;TZID=Europe/Paris:20261208T110000
 SUMMARY:Green Finance Research Advances 2026
@@ -93,7 +106,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/green-fi
 END:VEVENT
 BEGIN:VEVENT
 UID:2964c301909c@paris-academique
-DTSTAMP:20261015T085533Z
+DTSTAMP:20261016T085007Z
 DTSTART;TZID=Europe/Paris:20261211T180000
 DTEND;TZID=Europe/Paris:20261211T200000
 SUMMARY:Hommage à André Lévy-Lang
