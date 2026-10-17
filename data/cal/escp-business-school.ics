@@ -24,18 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:f29a6048d5aa@paris-academique
-DTSTAMP:20261017T080618Z
-DTSTART;TZID=Europe/Paris:20261016T180000
-DTEND;TZID=Europe/Paris:20261016T190000
-SUMMARY:Coffee Chats in Germany
-DESCRIPTION:Event\nhttps://escp.eu/fr/events/coffee-chats-germany
-LOCATION:ESCP Business School\, 79 avenue de la République\, Paris 11e
-URL:https://escp.eu/fr/events/coffee-chats-germany
-END:VEVENT
-BEGIN:VEVENT
 UID:c8173cb3b157@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261019T183000
 DTEND;TZID=Europe/Paris:20261019T203000
 SUMMARY:Clés pour une montée en gamme

@@ -24,27 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ffec29cee739@paris-academique
-DTSTAMP:20261017T080618Z
-DTSTART;TZID=Europe/Paris:20261016T140000
-DTEND;TZID=Europe/Paris:20261016T160000
-SUMMARY:Ragansu Chakkappai "Inférence basée sur la simulation pour l’é
- tude de l’auto-couplage du boson de Higgs dans le canal de désintégrat
- ion (HH → bb𝝉𝝉) avec l’expérience ATLAS et des benchmarks d’a
- pprentissage automatique pour la quantification des incertitudes"
-DESCRIPTION:Lien de connexion / Link : https://ijclab.zoom.us/j/91504258919
- ?pwd=pGLgXEAUm610A3bOSHmKDQbPzfR0we.1 Merci de laisser fermés camera et m
- icro de votre ordinateur pendant la soutenance. Please keep your camera an
- d microphone switched off throughout the defense. "Inférence basée sur l
- a simulation pour l’étude de l’auto-couplage du boson de Higgs dans l
- e canal de désintégration (HH → bb𝝉𝝉) avec…\nhttps://indico.ij
- clab.in2p3.fr/event/14298/
-LOCATION:IJCLab
-URL:https://indico.ijclab.in2p3.fr/event/14298/
-END:VEVENT
-BEGIN:VEVENT
 UID:933eee04ca10@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261019T090000
 DTEND;TZID=Europe/Paris:20261019T110000
 SUMMARY:BIDT 2026 "Building the Inflammation Digital Twin"
@@ -60,7 +41,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13993/
 END:VEVENT
 BEGIN:VEVENT
 UID:e6a7c8b5e83d@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261026T090000
 DTEND;TZID=Europe/Paris:20261026T110000
 SUMMARY:Paris-Saclay Astroparticle Symposium 2026
@@ -76,7 +57,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13539/
 END:VEVENT
 BEGIN:VEVENT
 UID:d9a1ea99e281@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261026T140000
 DTEND;TZID=Europe/Paris:20261026T150000
 SUMMARY:Energy Correlators: A New Lens on Nuclear Structure
@@ -92,7 +73,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14514/
 END:VEVENT
 BEGIN:VEVENT
 UID:201ba857f3cb@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261104T083000
 DTEND;TZID=Europe/Paris:20261104T232500
 SUMMARY:Séminaire IA en Ingénierie Mécanique
@@ -108,7 +89,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14257/
 END:VEVENT
 BEGIN:VEVENT
 UID:8b2df2d60b3e@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261105T110000
 DTEND;TZID=Europe/Paris:20261105T120000
 SUMMARY:Giuseppe Gagliardi\, "New avenues for flavour physics on the lattic
@@ -125,7 +106,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14273/
 END:VEVENT
 BEGIN:VEVENT
 UID:d31af6c2b5cb@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261105T160000
 DTEND;TZID=Europe/Paris:20261105T190000
 SUMMARY:Guillaume Hébrard "Extraordinaires planètes extrasolaires"
@@ -141,7 +122,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13798/
 END:VEVENT
 BEGIN:VEVENT
 UID:23f69b63fdd4@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261106T103000
 DTEND;TZID=Europe/Paris:20261106T113000
 SUMMARY:Testing gravity's attraction on quantum vacuum: the state of art of
@@ -158,7 +139,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14518/
 END:VEVENT
 BEGIN:VEVENT
 UID:3afd710f31ec@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261109T090000
 DTEND;TZID=Europe/Paris:20261109T140500
 SUMMARY:Journée des Nouveaux Entrants du Pôle Théorie (JNE)
@@ -173,7 +154,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14516/
 END:VEVENT
 BEGIN:VEVENT
 UID:c83db2ace038@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261112T140000
 DTEND;TZID=Europe/Paris:20261112T160000
 SUMMARY:Hao Huang "Diffusion Compton profondément virtuelle dans le Hall C
@@ -190,7 +171,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14524/
 END:VEVENT
 BEGIN:VEVENT
 UID:ee3c1a543356@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261116T090000
 DTEND;TZID=Europe/Paris:20261116T110000
 SUMMARY:Conference on Many-Body Systems in Memory of Nguyen Van Giai
@@ -206,7 +187,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13530/
 END:VEVENT
 BEGIN:VEVENT
 UID:40da29b78987@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261119T110000
 DTEND;TZID=Europe/Paris:20261119T120000
 SUMMARY:Matheus Martines\, "Probing Flavorful EFTs at the LHC"
@@ -222,7 +203,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14408/
 END:VEVENT
 BEGIN:VEVENT
 UID:c7861d871c15@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261123T090000
 DTEND;TZID=Europe/Paris:20261123T110000
 SUMMARY:AI for Meta Science
@@ -238,7 +219,7 @@ URL:https://indico.ijclab.in2p3.fr/event/11640/
 END:VEVENT
 BEGIN:VEVENT
 UID:862f75d9f759@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261126T110000
 DTEND;TZID=Europe/Paris:20261126T120000
 SUMMARY:Tim Kretz\, "QCD Corrections to Heavy Sterile Neutrino Decays"
@@ -254,7 +235,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14277/
 END:VEVENT
 BEGIN:VEVENT
 UID:2c1425437e9b@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261130T090000
 DTEND;TZID=Europe/Paris:20261130T180000
 SUMMARY:Journée Laserix
@@ -270,7 +251,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14366/
 END:VEVENT
 BEGIN:VEVENT
 UID:ca686ceefe85@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261203T090000
 DTEND;TZID=Europe/Paris:20261203T110000
 SUMMARY:Flavor@LHC Workshop
@@ -286,7 +267,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14191/
 END:VEVENT
 BEGIN:VEVENT
 UID:cdf3e8f6515b@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261204T090000
 DTEND;TZID=Europe/Paris:20261204T170000
 SUMMARY:Journée de la GS - Recherche et Innovation
@@ -296,7 +277,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14269/
 END:VEVENT
 BEGIN:VEVENT
 UID:0e93a91e872d@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T110000
 SUMMARY:Semaine de la chaire 2026
@@ -312,22 +293,23 @@ URL:https://indico.ijclab.in2p3.fr/event/14268/
 END:VEVENT
 BEGIN:VEVENT
 UID:1fe2a56518cb@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261214T090000
 DTEND;TZID=Europe/Paris:20261214T110000
 SUMMARY:Journées des stagiaires de troisième (14-18 Dec)
 DESCRIPTION:Ce programme est actuellement en cours d’élaboration. Il ser
- a finalisé d’ici la fin du mois d’octobre. (dernière version : 15 /1
- 0/2026) Bienvenue à toutes et à tous au programme ! Le nombre de places 
- est limité à 30 stagiaires. Pour toute question\, n’hésitez pas à no
- us contacter. María-Belén LOVINO lovino@ijclab.in2p3.fr\nhttps://indico.
- ijclab.in2p3.fr/event/14292/
+ a finalisé d’ici la fin du mois d’octobre. (dernière version : 16 /1
+ 0/2026) Le nombre de places est limité à 30 stagiaires. Bienvenue à tou
+ tes et à tous au programme ! Pour toute question\, n’hésite pas à me 
+ contacter. Je suis ici pour faire de ton séjour une expérience mémorabl
+ e : lovino@ijclab.in2p3.fr María-Belén LOVINO (Coordinatrice…\nhttps:/
+ /indico.ijclab.in2p3.fr/event/14292/
 LOCATION:IJCLab
 URL:https://indico.ijclab.in2p3.fr/event/14292/
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a2297de264@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261216T123000
 DTEND;TZID=Europe/Paris:20261216T133000
 SUMMARY:Roland Lehoucq "Science-fiction : le monde de la (dé)mesure"
@@ -337,7 +319,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13626/
 END:VEVENT
 BEGIN:VEVENT
 UID:ca79f366727e@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261216T140000
 DTEND;TZID=Europe/Paris:20261216T175000
 SUMMARY:AG du Pôle Ingénierie
@@ -347,7 +329,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14266/
 END:VEVENT
 BEGIN:VEVENT
 UID:a5c74eb5c3bc@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261224T160000
 DTEND;TZID=Europe/Paris:20261224T183000
 SUMMARY:Victor Malka " Enjeux et défis des accélérateurs laser-plasma "
@@ -357,7 +339,7 @@ URL:https://indico.ijclab.in2p3.fr/event/11451/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f791c7cbd6c@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20270114T160000
 DTEND;TZID=Europe/Paris:20270114T180000
 SUMMARY:Emilia Robin "Comment on a construit Orsay"
@@ -367,7 +349,7 @@ URL:https://indico.ijclab.in2p3.fr/event/13925/
 END:VEVENT
 BEGIN:VEVENT
 UID:06d348434d2f@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20270205T110000
 DTEND;TZID=Europe/Paris:20270205T120000
 SUMMARY:(high-Q/high-G SRF cavities)
@@ -377,7 +359,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14382/
 END:VEVENT
 BEGIN:VEVENT
 UID:40e71c848d4b@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20270412T090000
 DTEND;TZID=Europe/Paris:20270412T110000
 SUMMARY:Sharpening Predictions for the Gravitational-Wave Era [SharPredGW]
@@ -393,7 +375,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14294/
 END:VEVENT
 BEGIN:VEVENT
 UID:50e6bd279145@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20270621T090000
 DTEND;TZID=Europe/Paris:20270621T110000
 SUMMARY:STORMICANA "Storms & Cyclones in the Anthropocene"
@@ -409,7 +391,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14286/
 END:VEVENT
 BEGIN:VEVENT
 UID:aa6341f653b9@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20270712T090000
 DTEND;TZID=Europe/Paris:20270712T110000
 SUMMARY:Young Measured Group Theory (YMGT)
@@ -425,7 +407,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14161/
 END:VEVENT
 BEGIN:VEVENT
 UID:60fccaea0a4a@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20270915T090000
 DTEND;TZID=Europe/Paris:20270915T110000
 SUMMARY:Higgs Hunting 2027

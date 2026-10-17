@@ -24,25 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:17c5386d05c5@paris-academique
-DTSTAMP:20261017T080618Z
-DTSTART;TZID=Europe/Paris:20261016T100000
-DTEND;TZID=Europe/Paris:20261016T120000
-SUMMARY:Beyond Keywords: Impact of LLM-Powered Search in Online Marketplace
- s
-DESCRIPTION:Faculté et Recherche · Information Systems and Operations Man
- agement Speaker: Santiago Gallino. The Charles W. Evans Distinguished Facu
- lty Scholar and AssociateProfessor of Operations\, Information and Decisio
- ns. Room: Ramanantsoa – HEC Paris Campus\nhttps://www.hec.edu/fr/faculte
- -et-recherche/evenements/beyond-keywords-impact-llm-powered-search-online-
- marketplaces
-LOCATION:HEC Paris\, 1 rue de la Libération\, Jouy-en-Josas
-URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/beyond-keywords-
- impact-llm-powered-search-online-marketplaces
-END:VEVENT
-BEGIN:VEVENT
 UID:0ff994a7390d@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261023T104500
 DTEND;TZID=Europe/Paris:20261023T124500
 SUMMARY:Jenny van Doorn - On campus - Room T004
@@ -56,7 +39,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/jenny-van-doorn-
 END:VEVENT
 BEGIN:VEVENT
 UID:d77ae363a717@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261105T113000
 DTEND;TZID=Europe/Paris:20261105T133000
 SUMMARY:Séminaire de recherche HEC : Stephan Luck (Fed)
@@ -68,7 +51,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/tbc
 END:VEVENT
 BEGIN:VEVENT
 UID:ccf28081d5f4@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261110T094000
 DTEND;TZID=Europe/Paris:20261110T114000
 SUMMARY:Séminaire de recherche HEC : Nick Argyres (Wash University)
@@ -81,7 +64,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/nick-argyres
 END:VEVENT
 BEGIN:VEVENT
 UID:5cecf419a3c6@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261112T113000
 DTEND;TZID=Europe/Paris:20261112T133000
 SUMMARY:Séminaire de recherche HEC : Nicola Pavanini (University of Tilbur
@@ -94,7 +77,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/tbc-0
 END:VEVENT
 BEGIN:VEVENT
 UID:38611fc4719d@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261127T111500
 DTEND;TZID=Europe/Paris:20261127T131500
 SUMMARY:Pricing in the Age of AI (MIT Press)
@@ -108,7 +91,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/pricing-age-ai-m
 END:VEVENT
 BEGIN:VEVENT
 UID:a31bd09cbd56@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261203T094000
 DTEND;TZID=Europe/Paris:20261203T114000
 SUMMARY:Séminaire de recherche HEC : Kristina Mc Elheran (U. Toronto)
@@ -122,7 +105,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/kristina-mc-elhe
 END:VEVENT
 BEGIN:VEVENT
 UID:bc80c8c7829d@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261214T083000
 DTEND;TZID=Europe/Paris:20261214T103000
 SUMMARY:Conférence Droits Humains et Entreprises 2026

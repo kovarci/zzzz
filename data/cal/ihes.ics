@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ff5f3556d13a@paris-academique
-DTSTAMP:20261017T080618Z
-DTSTART;TZID=Europe/Paris:20261016T144500
-DTEND;TZID=Europe/Paris:20261016T161500
-SUMMARY:The Doubly Conformal Dispersion Relation
-DESCRIPTION:We provide a simple derivation of the conformal dispersion rela
- tion of Carmi and Caron-Huot which reconstructs a CFT four-point function 
- from its double discontinuity. We exhibit a hidden conformal symmetry whic
- h explains the appearance of the "magic variable" x as a simple cross-rati
- o\, built from four physical cross-ratios. We also introduce a regulator i
- n the double discontinuity operation and…\nhttps://indico.math.cnrs.fr/e
- vent/17474/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17474/
-END:VEVENT
-BEGIN:VEVENT
 UID:18975d08334d@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261019T143000
 DTEND;TZID=Europe/Paris:20261019T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -57,7 +41,7 @@ URL:https://indico.math.cnrs.fr/event/17105/
 END:VEVENT
 BEGIN:VEVENT
 UID:f88d492659c6@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261021T173000
 DTEND;TZID=Europe/Paris:20261021T203000
 SUMMARY:Conférence de Stéphanie Debette\, « Santé cérébrale\, défi s
@@ -74,7 +58,7 @@ URL:https://indico.math.cnrs.fr/event/16581/
 END:VEVENT
 BEGIN:VEVENT
 UID:2b34d5802175@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261022T110000
 DTEND;TZID=Europe/Paris:20261022T123000
 SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
@@ -91,7 +75,7 @@ URL:https://indico.math.cnrs.fr/event/17461/
 END:VEVENT
 BEGIN:VEVENT
 UID:629e6be59db5@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261022T143000
 DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -107,7 +91,7 @@ URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -123,7 +107,7 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -139,7 +123,7 @@ URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -155,7 +139,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261017T080618Z
+DTSTAMP:20261017T082351Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes
