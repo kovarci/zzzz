@@ -439,7 +439,10 @@
  "doccity suresnes, 5 rue gardenat lapostol, 92150 suresnes, france": null,
  "paris marriott rive gauche hotel, 17 bd saint-jacques, 75014 paris, france": null,
  "treize au jardin, 5 rue de médicis, 75006 paris, france": null,
- "25hours hotel paris terminus nord, 12 bd de denain, 75010 paris, france": null,
+ "25hours hotel paris terminus nord, 12 bd de denain, 75010 paris, france": [
+  48.879657,
+  2.354918
+ ],
  "quai d'orsay, 75007 paris, france": [
   48.861864,
   2.31593
@@ -1115,7 +1118,10 @@
   2.355793
  ],
  "le boudoir, 202 bd saint-germain, 75007 paris, france": null,
- "le tê, 41 bis rue de montpensier, 75001 paris, france": null,
+ "le tê, 41 bis rue de montpensier, 75001 paris, france": [
+  48.863905,
+  2.336323
+ ],
  "dock b, 1 place de la pointe, 93500 pantin, france": null,
  "café des arts, 2 rue de l'amiral de coligny, 75001 paris, france": [
   48.859242,
@@ -1480,7 +1486,10 @@
   48.893177,
   2.226908
  ],
- "revoliva, 80 rue des haies, 75020 paris, france": null,
+ "revoliva, 80 rue des haies, 75020 paris, france": [
+  48.854836,
+  2.403567
+ ],
  "le mazette, 69 port de la rapée, 75012 paris, france": [
   48.843258,
   2.369371
@@ -4652,5 +4661,101 @@
  "ens paris-saclay - salle 1 b26, 4 avenue de sciences, 91190 gif-sur-yvette": [
   48.709907,
   2.127947
+ ],
+ "3 rue de constantine, 75007 paris, france": [
+  48.860785,
+  2.315059
+ ],
+ "yithé belleville, 24 rue de belleville, 75020 paris, france": [
+  48.872611,
+  2.379189
+ ],
+ "2 rue commines, 75003 paris, france": [
+  48.861529,
+  2.364876
+ ],
+ "services continu, 6 rue pecquay, 75004 paris, france": [
+  48.859748,
+  2.355786
+ ],
+ "hangari 항아리, 7 rue de louvois, 75002 paris, france": [
+  48.868341,
+  2.33672
+ ],
+ "bagarre coffee club / speciality coffee, 90 bd richard-lenoir, 75011 paris, france": [
+  48.862654,
+  2.372508
+ ],
+ "les p'tits potes - bar à vin de copains - dames, 33 rue des dames, 75017 paris, france": [
+  48.884246,
+  2.323761
+ ],
+ "centre culturel du vietnam, 19 rue albert, 75013 paris, france": [
+  48.824431,
+  2.372859
+ ],
+ "76 rue réaumur, 75002 paris, france": [
+  48.866494,
+  2.351826
+ ],
+ "i am flow, 55 rue des petits champs, 75001 paris, france": [
+  48.867194,
+  2.334779
+ ],
+ "châteauform' city monceau vélasquez, 2 av. velasquez, 75008 paris, france": [
+  48.880107,
+  2.312863
+ ],
+ "47 quai du président carnot, 92210 saint-cloud, france": [
+  48.842557,
+  2.208684
+ ],
+ "the blue moon, 55 rue de la roquette, 75011 paris, france": [
+  48.856009,
+  2.375485
+ ],
+ "facebook france, 6 rue ménars, 75002 paris, france": [
+  48.869607,
+  2.338106
+ ],
+ "delaville, 34-36 bd de bonne nouvelle, 75010 paris, france": [
+  48.870199,
+  2.350261
+ ],
+ "thiga, 23 rue taitbout, 75009 paris, france": [
+  48.873124,
+  2.335272
+ ],
+ "renaissance paris république hotel, 40 rue rené boulanger, 75010 paris, france": [
+  48.868817,
+  2.361067
+ ],
+ "boudoir des muses hotel, 6 rue de saintonge, 75003 paris, france": [
+  48.861168,
+  2.361833
+ ],
+ "8 rue st sabin, 75011 paris, france": [
+  48.855074,
+  2.372066
+ ],
+ "académie du climat, 2 pl. baudoyer, 75004 paris, france": [
+  48.856148,
+  2.355782
+ ],
+ "13 rue de phalsbourg, 75017 paris, france": [
+  48.88215,
+  2.308882
+ ],
+ "stelliant, tour edf, 20 pl. de la défense, 92800 puteaux, france": [
+  48.889776,
+  2.241513
+ ],
+ "le solaris, 25 rue boyer, 75020 paris, france": [
+  48.868691,
+  2.392005
+ ],
+ "shangri-la paris, 10 av. d'iéna, 75116 paris, france": [
+  48.863719,
+  2.293426
  ]
 }

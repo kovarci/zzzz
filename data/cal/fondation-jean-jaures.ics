@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:887dec0c9085@paris-academique
-DTSTAMP:20261016T085007Z
+DTSTAMP:20261017T080618Z
 DTSTART;TZID=Europe/Paris:20261022T190000
 DTEND;TZID=Europe/Paris:20261022T210000
 SUMMARY:À l’approche des élections de mi-mandat\, quel bilan de Trump I
@@ -38,7 +38,7 @@ URL:https://www.jean-jaures.org/agenda/a-lapproche-des-elections-de-mi-mand
 END:VEVENT
 BEGIN:VEVENT
 UID:c400e221696e@paris-academique
-DTSTAMP:20261016T085007Z
+DTSTAMP:20261017T080618Z
 DTSTART;TZID=Europe/Paris:20261028T183000
 DTEND;TZID=Europe/Paris:20261028T203000
 SUMMARY:Des valeurs au réel : l’avenir du progressisme passe-t-il par le
@@ -48,5 +48,17 @@ DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/des-valeurs-au-
 LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
 URL:https://www.jean-jaures.org/agenda/des-valeurs-au-reel-lavenir-du-progr
  essisme-passe-t-il-par-le-materialisme/
+END:VEVENT
+BEGIN:VEVENT
+UID:454afcda7cea@paris-academique
+DTSTAMP:20261017T080618Z
+DTSTART;TZID=Europe/Paris:20261105T183000
+DTEND;TZID=Europe/Paris:20261105T203000
+SUMMARY:Sommes-nous condamnés à la société de marché ?
+DESCRIPTION:Société\nhttps://www.jean-jaures.org/agenda/sommes-nous-conda
+ mnes-a-la-societe-de-marche/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/sommes-nous-condamnes-a-la-societe-d
+ e-marche/
 END:VEVENT
 END:VCALENDAR
