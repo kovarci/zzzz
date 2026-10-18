@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:c8173cb3b157@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261019T183000
 DTEND;TZID=Europe/Paris:20261019T203000
 SUMMARY:Clés pour une montée en gamme
@@ -33,5 +33,17 @@ DESCRIPTION:Atelier\nhttps://escp.eu/fr/events/leadership-et-montee-en-gamm
  e
 LOCATION:Campus Montparnasse - 3\, rue Armand Moisant - Paris\, France
 URL:https://escp.eu/fr/events/leadership-et-montee-en-gamme
+END:VEVENT
+BEGIN:VEVENT
+UID:6a9594836ed0@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;TZID=Europe/Paris:20261026T133000
+DTEND;TZID=Europe/Paris:20261026T153000
+SUMMARY:YFU Symposium on Intercultural Exchange and Democratic Engagement
+DESCRIPTION:EVENT\nhttps://escp.eu/fr/events/yfu-symposium-intercultural-ex
+ change-and-democratic-engagement
+LOCATION:Paris\, France
+URL:https://escp.eu/fr/events/yfu-symposium-intercultural-exchange-and-demo
+ cratic-engagement
 END:VEVENT
 END:VCALENDAR

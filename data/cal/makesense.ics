@@ -24,98 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:f7d8e09a7b81@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;VALUE=DATE:20261017
-DTEND;VALUE=DATE:20261018
-SUMMARY:Hackathon Spark : De l’idée à l’action\, j’agis pour demain
-DESCRIPTION:Organisé par Live for Good — 💡 Tu as entre 18 et 30 ans e
- t envie d’entreprendre pour le climat\, mais tu n’as pas encore d’id
- ée ?Et si\, plutôt que de chercher LA bonne idée\, tu commençais par t
- e poser les bonnes questions ?🌍 Comment ré\nhttps://chiche.makesense.o
- rg/events/e/hackathon-spark-de-lidee-a-laction-jagis-pour-demain-6abd284b3
- 34fdc0008621b9e
-LOCATION:3 Pl. Martin Levasseur\, 93400 Saint-Ouen-sur-Seine\, France
-URL:https://chiche.makesense.org/events/e/hackathon-spark-de-lidee-a-lactio
- n-jagis-pour-demain-6abd284b334fdc0008621b9e
-END:VEVENT
-BEGIN:VEVENT
-UID:21a45f9a3c1d@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;VALUE=DATE:20261017
-DTEND;VALUE=DATE:20261018
-SUMMARY:Je sauve mon doudou
-DESCRIPTION:Organisé par Envie Le Labo — Votre doudou fétiche est amoch
- é avec le temps ? Participez avec vos enfants à atelier pratique pour em
- bellir\, personnaliser et réparer votre doudou.Envie Le Labo et\nhttps://
- chiche.makesense.org/events/e/je-sauve-mon-doudou-6a992d8f1c5b4f0008b98a63
-LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
-URL:https://chiche.makesense.org/events/e/je-sauve-mon-doudou-6a992d8f1c5b4
- f0008b98a63
-END:VEVENT
-BEGIN:VEVENT
-UID:f54ba15576c9@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;VALUE=DATE:20261017
-DTEND;VALUE=DATE:20261018
-SUMMARY:Facettes Festival
-DESCRIPTION:Organisé par Charlène Hameau — Facettes défend une approch
- e accessible\, sensible et déstigmatisante de la santé mentale\, en cré
- ant des espaces où culture\, soin et pouvoir d’agir peuvent se rencontr
- er autrement. Tout est co-co\nhttps://chiche.makesense.org/events/e/facett
- es-festival-6a5dd5927b04120008d0c09a
-LOCATION:13 Rue Santeuil\, 75005 Paris\, France
-URL:https://chiche.makesense.org/events/e/facettes-festival-6a5dd5927b04120
- 008d0c09a
-END:VEVENT
-BEGIN:VEVENT
-UID:cd8c4036f47c@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T103000
-DTEND;TZID=Europe/Paris:20261017T171600
-SUMMARY:Formation : Mobiliser pour passer à l'action ! ✊
-DESCRIPTION:Organisé par Frères des Hommes — Comment transformer une en
- vie d’agir en véritable dynamique collective ?Le 17 octobre\, viens par
- ticiper à une formation exception\nhttps://chiche.makesense.org/events/e/
- formation-mobiliser-pour-passer-a-laction-6ac6575c06b4310007c9f9bf
-LOCATION:16 Rue Cugnot\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/formation-mobiliser-pour-passer-a
- -laction-6ac6575c06b4310007c9f9bf
-END:VEVENT
-BEGIN:VEVENT
-UID:0fd45ad488ef@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T143000
-DTEND;TZID=Europe/Paris:20261017T163000
-SUMMARY:"Lettres en soi" - Atelier d'écriture créative
-DESCRIPTION:Organisé par Maison de la Conversation — "Lettres en soi" es
- t un atelier d'écriture créative conçu pour libérer votre imagination 
- et l'expression de vos émotions. Accompagnés par une animatrice professi
- onnelle et soutenus par un petit groupe bienveillant\, vous pourrez tisser
-  des relation\nhttps://chiche.makesense.org/events/e/lettres-en-soi-atelie
- r-decriture-creative-6aabf3bdca91880007621e70
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/lettres-en-soi-atelier-decriture-
- creative-6aabf3bdca91880007621e70
-END:VEVENT
-BEGIN:VEVENT
-UID:076455524684@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T150000
-DTEND;TZID=Europe/Paris:20261017T163000
-SUMMARY:La vingtaine\, on en parle ?
-DESCRIPTION:Organisé par Maison de la Conversation — La vingtaine est un
- e période flou et on en parle !Vous avez 20-29 ans et vous vous posez des
-  questions ? Vous vous demandez comment naviguer dans cette étape de votr
- e vie ? Vous aimeriez en parler avec d'autre\nhttps://chiche.makesense.org
- /events/e/la-vingtaine-on-en-parle-6aabf6b9ca9188000762373f
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/la-vingtaine-on-en-parle-6aabf6b9
- ca9188000762373f
-END:VEVENT
-BEGIN:VEVENT
 UID:f00538d017b2@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:Habiter un monde qui change - conférence d'Aimée Bouchet
@@ -131,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/habiter-un-monde-qui-change-confe
 END:VEVENT
 BEGIN:VEVENT
 UID:3337e752610a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261019T193000
 DTEND;TZID=Europe/Paris:20261019T213000
 SUMMARY:Workshop Capoeira Angola
@@ -147,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09f8
 END:VEVENT
 BEGIN:VEVENT
 UID:ec1c318eabff@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261020T095000
 DTEND;TZID=Europe/Paris:20261020T115000
 SUMMARY:Atelier - Communiquer de façon inclusive\, accessible et durable
@@ -163,7 +73,7 @@ URL:https://chiche.makesense.org/events/e/atelier-communiquer-de-facon-incl
 END:VEVENT
 BEGIN:VEVENT
 UID:478db6fbd534@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261020T163000
 DTEND;TZID=Europe/Paris:20261020T193000
 SUMMARY:2ème rencontre du Collectif Insertion & Transition Écologique
@@ -179,7 +89,7 @@ URL:https://chiche.makesense.org/events/e/2eme-rencontre-du-collectif-inser
 END:VEVENT
 BEGIN:VEVENT
 UID:c5dc3d70deda@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Développer son aisance à l'oral 📍 Paris
@@ -194,7 +104,7 @@ URL:https://chiche.makesense.org/events/e/developper-son-aisance-a-loral-pa
 END:VEVENT
 BEGIN:VEVENT
 UID:bdfe9ddd3368@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Je préserve la vie des oiseaux
@@ -210,7 +120,7 @@ URL:https://chiche.makesense.org/events/e/je-preserve-la-vie-des-oiseaux-6a
 END:VEVENT
 BEGIN:VEVENT
 UID:d3b9bff0a92a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261021T193000
 DTEND;TZID=Europe/Paris:20261021T213000
 SUMMARY:RENCONTRE AVEC SOS MÉDITERRANÉE
@@ -226,7 +136,7 @@ URL:https://chiche.makesense.org/events/e/rencontre-avec-sos-mediterranee-6
 END:VEVENT
 BEGIN:VEVENT
 UID:216b1f2b58de@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Masterclass L-Invest x 50 partners : Comprendre les attentes d’un
@@ -246,7 +156,7 @@ URL:https://chiche.makesense.org/events/e/masterclass-l-invest-x-50-partner
 END:VEVENT
 BEGIN:VEVENT
 UID:dca80831fd02@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Soirée Stand-up avec le Greenwashing Comedy Club
@@ -262,7 +172,7 @@ URL:https://chiche.makesense.org/events/e/soiree-stand-up-avec-le-greenwash
 END:VEVENT
 BEGIN:VEVENT
 UID:13179c2d0396@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261022T142000
 DTEND;TZID=Europe/Paris:20261022T162000
 SUMMARY:Atelier - Lancer sa structure sur les réseaux sociaux
@@ -276,8 +186,22 @@ URL:https://chiche.makesense.org/events/e/atelier-lancer-sa-structure-sur-l
  es-reseaux-sociaux-6a992ba31c5b4f0008b97e36
 END:VEVENT
 BEGIN:VEVENT
+UID:b89c641fa482@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Façon de voir : santé mentale & identités diasporiques
+DESCRIPTION:Organisé par Maison de la Conversation — Une conversation co
+ llective pour explorer les liens entre vécus diasporiques\, santé mental
+ e et réappropriation du soin.Comment nos parcours diasporiques façonnent
+ -ils notre rapport à la santé mentale ? Et comment réinventer collectiv
+ ement\nhttps://chiche.makesense.org/events
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events
+END:VEVENT
+BEGIN:VEVENT
 UID:3312a3eb9be5@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261024T130000
 DTEND;TZID=Europe/Paris:20261024T160000
 SUMMARY:Atelier Santé mentale (entre jeunes) - 3rd Space
@@ -290,5 +214,83 @@ DESCRIPTION:Organisé par Maison de la Conversation — On se retrouve same
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/atelier-sante-mentale-entre-jeune
  s-3rd-space-6aad54c7ca918800076b4a49
+END:VEVENT
+BEGIN:VEVENT
+UID:ce50aedcc788@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;TZID=Europe/Paris:20261024T140000
+DTEND;TZID=Europe/Paris:20261024T170000
+SUMMARY:Cycle de Courts Métrage Tibétain
+DESCRIPTION:Organisé par Maison de la Conversation — Histoires courtes\,
+  regards singuliers et nouvelles voix. Un cycle de courts métrages\, un r
+ dv régulier pour découvrir le cinéma tibétain.Le Tibet Film Festival P
+ aris lance son Cycle de courts métrages\, un nouveau rendez-vous régulie
+ r pour\nhttps://chiche.makesense.org/events/e/cycle-de-courts-metrage-tibe
+ tain-6abb893a34634e0007e31898
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/cycle-de-courts-metrage-tibetain-
+ 6abb893a34634e0007e31898
+END:VEVENT
+BEGIN:VEVENT
+UID:091b13e364c1@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;TZID=Europe/Paris:20261024T150000
+DTEND;TZID=Europe/Paris:20261024T180000
+SUMMARY:La Trocante
+DESCRIPTION:Organisé par Maison de la Conversation — COOP’HUMA organis
+ e une trocante ouverte à toutes et tous à la Maison de la Conversation.C
+ ette action repose sur l’échange d’objets entre participant·es via u
+ n système de points : chacun·e peut apporter des objets en bon état (v
+ ête\nhttps://chiche.makesense.org/events/e/la-trocante-6aad327eca91880007
+ 6a3036
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/la-trocante-6aad327eca918800076a3
+ 036
+END:VEVENT
+BEGIN:VEVENT
+UID:5fc9304cf446@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:Marche du Temps Profond au Bois de Vincennes
+DESCRIPTION:Organisé par Sandrine Laplace — Un voyage immersif de 4\,6 m
+ illiards d'années pour explorer l'histoire de la Terre et du vivant. Une 
+ expérience sensible pour prendre conscience de notre lien avec la planèt
+ e et imaginer notre futur.\nhttps://chiche.makesense.org/events/e/marche-d
+ u-temps-profond-au-bois-de-vincennes-6a8b03b56cd0e90008ee1724
+LOCATION:100 Av. de Gravelle\, 94410 Saint-Maurice\, France
+URL:https://chiche.makesense.org/events/e/marche-du-temps-profond-au-bois-d
+ e-vincennes-6a8b03b56cd0e90008ee1724
+END:VEVENT
+BEGIN:VEVENT
+UID:6b3daa7d4e3f@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;TZID=Europe/Paris:20261026T193000
+DTEND;TZID=Europe/Paris:20261026T213000
+SUMMARY:Workshop Capoeira Angola
+DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
+  capoeira Angola\, un art martial afro-brésilien qui allie résistance\, 
+ gestuelle et culture.Retrouvez-nous pour une pratique ancestrale qui se jo
+ ue près du sol. À travers des mouvements lents\, fluides et stratégique
+ s\, accom\nhttps://chiche.makesense.org/events/e/workshop-capoeira-angola-
+ 6aac09f8ca9188000762bdbc
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09f8
+ ca9188000762bdbc
+END:VEVENT
+BEGIN:VEVENT
+UID:c0162d670b3a@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Me préparer à l'entretien d'embauche📍Paris 13
+DESCRIPTION:Organisé par Raphaëlle Afota — Notre devise : ensemble\, tr
+ ansformons le chômage en une expérience constructive !Au travers des ate
+ liers gratuits et collaboratifs Activ’Action\, la période de transition
+  professionnelle se transforme en une\nhttps://chiche.makesense.org/events
+ /e/me-preparer-a-lentretien-dembaucheparis-13-6aaaa759ca9188000759b80e
+LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
+URL:https://chiche.makesense.org/events/e/me-preparer-a-lentretien-dembauch
+ eparis-13-6aaaa759ca9188000759b80e
 END:VEVENT
 END:VCALENDAR

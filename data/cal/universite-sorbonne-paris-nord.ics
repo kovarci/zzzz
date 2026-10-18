@@ -24,10 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c995bb36735e@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;VALUE=DATE:20261016
-DTEND;VALUE=DATE:20261017
+UID:bf72e22a5694@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
 SUMMARY:Une collecte solidaire pour les étudiants en précarité
 DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
  limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
@@ -41,54 +41,8 @@ URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
  s-en-precarite/
 END:VEVENT
 BEGIN:VEVENT
-UID:f29664ce1130@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;VALUE=DATE:20261016
-DTEND;VALUE=DATE:20261017
-SUMMARY:Étudiants internationaux : 5 journées pour prendre vos repères
-DESCRIPTION:Vous venez d’arriver à l’Université Sorbonne Paris Nord ?
-  Du 12 au 16 octobre 2026\, les journées d’accueil des étudiants inter
- nationaux vous donnent l’occasion de découvrir les services de l’univ
- ersité\, de rencontrer d’autres étudiants et de trouver des réponses 
- concrètes à vos premières questions. Au programme : temps d’échange\
- , ateliers et\, à Villetaneuse\, tournoi sportif. Saint-Denis · Lundi…
- \nhttps://www.univ-spn.fr/events/etudiants-internationaux-5-journees-pour-
- prendre-vos-reperes/
-LOCATION:Maison des étudiants (MDE) - Campus de Villetaneuse
-URL:https://www.univ-spn.fr/events/etudiants-internationaux-5-journees-pour
- -prendre-vos-reperes/
-END:VEVENT
-BEGIN:VEVENT
-UID:a064a32f983a@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;VALUE=DATE:20261016
-DTEND;VALUE=DATE:20261017
-SUMMARY:[Danse] Machine à spectacle
-DESCRIPTION:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
-LOCATION:Chaillot – Théâtre national de la Danse\, Université Sorbonne
-  Paris Nord\, 99 avenue Jean-Baptiste Clément\, Villetaneuse
-URL:https://www.univ-spn.fr/events/danse-machine-a-spectacle/
-END:VEVENT
-BEGIN:VEVENT
-UID:643997ff4482@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T100000
-DTEND;TZID=Europe/Paris:20261017T180000
-SUMMARY:Études\, métiers\, Parcoursup : rendez-vous à Villetaneuse
-DESCRIPTION:Comment choisir une formation\, comprendre Parcoursup ou envisa
- ger une réorientation ? Le samedi 17 octobre 2026\, le campus de Villetan
- euse de l’Université Sorbonne Paris Nord accueillera la première édit
- ion du Salon de l’Étudiant en Seine-Saint-Denis\, de 10 h à 18 h. Lyc
- éens\, étudiants et familles pourront y rencontrer des professionnels\, 
- assister à des conférences et obtenir des conseils pour…\nhttps://www.
- univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-villetaneuse/
-LOCATION:Forum\, Campus de Villetaneuse
-URL:https://www.univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-
- villetaneuse/
-END:VEVENT
-BEGIN:VEVENT
 UID:f04dbc4bc3b8@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261019T120000
 DTEND;TZID=Europe/Paris:20261019T133000
 SUMMARY:Envie d’étudier à l’étranger en 2027-2028 ?
@@ -104,7 +58,7 @@ URL:https://www.univ-spn.fr/events/envie-detudier-a-letranger-en-2027-2028/
 END:VEVENT
 BEGIN:VEVENT
 UID:3dc98be47f8a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261021T123000
 DTEND;TZID=Europe/Paris:20261021T140000
 SUMMARY:[Événement – appel à participation] Open Mic
@@ -120,7 +74,7 @@ URL:https://www.univ-spn.fr/events/openmic-201026/
 END:VEVENT
 BEGIN:VEVENT
 UID:a868e1c19848@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261021T173000
 DTEND;TZID=Europe/Paris:20261021T190000
 SUMMARY:Comment changer de filière après un 1er semestre ?
@@ -139,7 +93,7 @@ URL:https://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre
 END:VEVENT
 BEGIN:VEVENT
 UID:f819e3de9438@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261021T200000
 DTEND;TZID=Europe/Paris:20261021T213500
 SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
@@ -151,7 +105,7 @@ URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
 END:VEVENT
 BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque

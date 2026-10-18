@@ -24,53 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:d6ef2528c010@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T100000
-DTEND;TZID=Europe/Paris:20261017T180000
-SUMMARY:Inauguration du Campus de la Résilience
-DESCRIPTION:Le samedi 17 octobre\, le Campus de la Résilience ouvre ses po
- rtes pour la première fois au grand public pour une journée 100 % gratui
- te\, ludique et immersive\, à vivre en famille ou entre amis.\nhttps://ww
- w.paris.fr/evenements/inauguration-du-campus-de-la-resilience-125408
-LOCATION:Campus de la Résilience\, 97 rue Balard\, 75015 Paris
-URL:https://www.paris.fr/evenements/inauguration-du-campus-de-la-resilience
- -125408
-END:VEVENT
-BEGIN:VEVENT
-UID:643997ff4482@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T100000
-DTEND;TZID=Europe/Paris:20261017T180000
-SUMMARY:Études\, métiers\, Parcoursup : rendez-vous à Villetaneuse
-DESCRIPTION:Comment choisir une formation\, comprendre Parcoursup ou envisa
- ger une réorientation ? Le samedi 17 octobre 2026\, le campus de Villetan
- euse de l’Université Sorbonne Paris Nord accueillera la première édit
- ion du Salon de l’Étudiant en Seine-Saint-Denis\, de 10 h à 18 h. Lyc
- éens\, étudiants et familles pourront y rencontrer des professionnels\, 
- assister à des conférences et obtenir des conseils pour…\nhttps://www.
- univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-villetaneuse/
-LOCATION:Forum\, Campus de Villetaneuse
-URL:https://www.univ-spn.fr/events/etudes-metiers-parcoursup-rendez-vous-a-
- villetaneuse/
-END:VEVENT
-BEGIN:VEVENT
-UID:5f67597ea921@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T100000
-DTEND;TZID=Europe/Paris:20261017T120000
-SUMMARY:Les savoirs sympathiques les plus précieux : Jane Addams et les ex
- périences des femmes
-DESCRIPTION:Conférence\nhttps://www.campus-condorcet.fr/fr/agenda/les-savo
- irs-sympathiques-les-plus-precieux-jane-addams-et-les-experiences-des-femm
- es
-LOCATION:Campus Condorcet\, 8 cours des Humanités\, Aubervilliers
-URL:https://www.campus-condorcet.fr/fr/agenda/les-savoirs-sympathiques-les-
- plus-precieux-jane-addams-et-les-experiences-des-femmes
-END:VEVENT
-BEGIN:VEVENT
 UID:059c0b7c8c08@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261019T120000
 DTEND;TZID=Europe/Paris:20261019T140000
 SUMMARY:BCI Seminar – “Mechanics of malignancy\, migration and metastas
@@ -84,7 +39,7 @@ URL:https://research.pasteur.fr/en/event/bci-seminar-mechanics-of-malignanc
 END:VEVENT
 BEGIN:VEVENT
 UID:529a1f6f827b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
 SUMMARY:Permanence RePOD en octobre
@@ -95,20 +50,8 @@ URL:https://www.campus-condorcet.fr/fr/actualites/permanence-repod-en-octob
  re
 END:VEVENT
 BEGIN:VEVENT
-UID:555bc2d816ba@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261020T090000
-DTEND;TZID=Europe/Paris:20261020T110000
-SUMMARY:Petits-déjeuners de la vie étudiante 2026-2027
-DESCRIPTION:Vie étudiante\nhttps://www.ehess.fr/jcms/291798_JEvent/fr/peti
- ts-dejeuners-de-la-vie-etudiante-2026-2027
-LOCATION:EHESS\, Campus Condorcet\, 2 cours des Humanités\, Aubervilliers
-URL:https://www.ehess.fr/jcms/291798_JEvent/fr/petits-dejeuners-de-la-vie-e
- tudiante-2026-2027
-END:VEVENT
-BEGIN:VEVENT
 UID:4bf168303ac6@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261020T090000
 DTEND;TZID=Europe/Paris:20261020T180000
 SUMMARY:Images en commun - Séminaire automnal du BAL avec l'EHESS
@@ -119,8 +62,20 @@ URL:https://www.campus-condorcet.fr/fr/agenda/images-en-commun-seminaire-au
  tomnal-du-bal-avec-lehess
 END:VEVENT
 BEGIN:VEVENT
+UID:555bc2d816ba@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;TZID=Europe/Paris:20261020T090000
+DTEND;TZID=Europe/Paris:20261020T110000
+SUMMARY:Petits-déjeuners de la vie étudiante 2026-2027
+DESCRIPTION:Vie étudiante\nhttps://www.ehess.fr/jcms/291798_JEvent/fr/peti
+ ts-dejeuners-de-la-vie-etudiante-2026-2027
+LOCATION:EHESS\, Campus Condorcet\, 2 cours des Humanités\, Aubervilliers
+URL:https://www.ehess.fr/jcms/291798_JEvent/fr/petits-dejeuners-de-la-vie-e
+ tudiante-2026-2027
+END:VEVENT
+BEGIN:VEVENT
 UID:73a2726cb500@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261020T183000
 DTEND;TZID=Europe/Paris:20261020T200000
 SUMMARY:Conférence du diplôme sur les enquêtes Trajectoires et Origines 
@@ -133,7 +88,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-les-en
 END:VEVENT
 BEGIN:VEVENT
 UID:5698dbf106fd@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261021T143000
 DTEND;TZID=Europe/Paris:20261021T173000
 SUMMARY:Les savoirs autochtones à l’école et à l’Université frança
@@ -150,7 +105,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:e5e2460dae9e@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261021T160000
 DTEND;TZID=Europe/Paris:20261021T180000
 SUMMARY:Mécaniciens de rue : réparer et vivre\, d’Abidjan au Grand Pari
@@ -163,7 +118,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/mecaniciens-de-rue-reparer-et
 END:VEVENT
 BEGIN:VEVENT
 UID:811402d50188@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261022T160000
 DTEND;TZID=Europe/Paris:20261022T180000
 SUMMARY:Résistances féministes aux régimes fascistes et autoritaires eur
@@ -176,7 +131,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/resistances-feministes-aux-re
 END:VEVENT
 BEGIN:VEVENT
 UID:6b89c6301720@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261022T170000
 DTEND;TZID=Europe/Paris:20261022T190000
 SUMMARY:Le Laboratoire Junior fait sa première rentrée
@@ -188,7 +143,7 @@ URL:https://www.ehess.fr/jcms/297910_JEvent/fr/le-laboratoire-junior-fait-s
 END:VEVENT
 BEGIN:VEVENT
 UID:51ba42bb7473@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261022T180000
 DTEND;TZID=Europe/Paris:20261022T200000
 SUMMARY:Repenser le pouvoir public
@@ -199,7 +154,7 @@ URL:https://www.fmsh.fr/agenda/repenser-le-pouvoir-public
 END:VEVENT
 BEGIN:VEVENT
 UID:7f5cb81b2246@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261023T110000
 DTEND;TZID=Europe/Paris:20261023T130000
 SUMMARY:Actualité éditoriale sur le genre
@@ -211,8 +166,22 @@ URL:https://isjps.pantheonsorbonne.fr/evenements/actualite-editoriale-le-ge
  nre-1
 END:VEVENT
 BEGIN:VEVENT
+UID:b89c641fa482@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Façon de voir : santé mentale & identités diasporiques
+DESCRIPTION:Organisé par Maison de la Conversation — Une conversation co
+ llective pour explorer les liens entre vécus diasporiques\, santé mental
+ e et réappropriation du soin.Comment nos parcours diasporiques façonnent
+ -ils notre rapport à la santé mentale ? Et comment réinventer collectiv
+ ement\nhttps://chiche.makesense.org/events
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events
+END:VEVENT
+BEGIN:VEVENT
 UID:14a45dc6f358@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261027T093000
 DTEND;TZID=Europe/Paris:20261027T180000
 SUMMARY:Symposium - Demeuré.es Vivant.es
@@ -224,7 +193,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/symposium-demeure-es-vivant-e
 END:VEVENT
 BEGIN:VEVENT
 UID:e3063705f1f1@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261027T140000
 DTEND;TZID=Europe/Paris:20261027T180000
 SUMMARY:Territoires délaissés et LGBTQI+
@@ -236,7 +205,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/territoires-delaisses-et-lgbt
 END:VEVENT
 BEGIN:VEVENT
 UID:c5241c9b9bd2@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261027T180000
 DTEND;TZID=Europe/Paris:20261027T200000
 SUMMARY:Retex d'une attachée de l'administration de l'Etat en poste dans u
@@ -250,7 +219,7 @@ URL:https://www.assas-universite.fr/fr/evenements/retex-dune-attachee-ladmi
 END:VEVENT
 BEGIN:VEVENT
 UID:70678d19f2e7@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261027T183000
 DTEND;TZID=Europe/Paris:20261027T203000
 SUMMARY:Plastiques en fin de vie\, une géographie des déchets
@@ -262,7 +231,7 @@ URL:https://www.fmsh.fr/agenda/plastiques-en-fin-de-vie-une-geographie-des-
 END:VEVENT
 BEGIN:VEVENT
 UID:ac647ea13209@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
 SUMMARY:Faire de la sociologie des sciences et des techniques aujourd’hui
@@ -280,7 +249,7 @@ URL:https://rt29-2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:004bdc8bce71@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261028T150000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Raconte-moi les "Eaux Vives" : rencontre et création avec l'artist
@@ -293,7 +262,7 @@ URL:https://www.collegedesbernardins.fr/agenda/raconte-moi-les-eaux-vives-r
 END:VEVENT
 BEGIN:VEVENT
 UID:1b84d02a2881@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261029T160000
 DTEND;TZID=Europe/Paris:20261029T180000
 SUMMARY:Le projet éclat métallique
@@ -308,7 +277,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:22f49a7e0474@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261029T180000
 DTEND;TZID=Europe/Paris:20261029T200000
 SUMMARY:Quand la ville gagne le littoral
@@ -319,7 +288,7 @@ URL:https://www.fmsh.fr/agenda/quand-la-ville-gagne-le-littoral
 END:VEVENT
 BEGIN:VEVENT
 UID:3250795ffe9e@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261029T183000
 DTEND;TZID=Europe/Paris:20261029T203000
 SUMMARY:Le désir d'avant-garde
@@ -329,7 +298,7 @@ URL:https://www.fmsh.fr/agenda/le-desir-davant-garde
 END:VEVENT
 BEGIN:VEVENT
 UID:60be0c02b1d9@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Comment décrire une société en période de globalisation ?
@@ -341,7 +310,7 @@ URL:https://www.univ-paris8.fr/Comment-decrire-une-societe-en-periode-de-gl
 END:VEVENT
 BEGIN:VEVENT
 UID:ba0dd21e2423@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261031T100000
 DTEND;TZID=Europe/Paris:20261031T120000
 SUMMARY:Café psychanalytique
@@ -352,7 +321,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique
 END:VEVENT
 BEGIN:VEVENT
 UID:5752f86ec989@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261102T190000
 DTEND;TZID=Europe/Paris:20261102T210000
 SUMMARY:Grands âges : le temps des possibles
@@ -364,7 +333,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/vieillir-peut-il-devenir-desi
 END:VEVENT
 BEGIN:VEVENT
 UID:2f99dd59c284@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Journée d'étude « Valorisation et médiation scientifique des tr
@@ -382,7 +351,7 @@ URL:https://valoris.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:d1bd79d2283c@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261103T093000
 DTEND;TZID=Europe/Paris:20261103T113000
 SUMMARY:Rencontres ArTeC
@@ -392,7 +361,7 @@ URL:https://www.fmsh.fr/agenda/rencontres-artec
 END:VEVENT
 BEGIN:VEVENT
 UID:d4dafe80e286@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261103T123000
 DTEND;TZID=Europe/Paris:20261103T133000
 SUMMARY:De l’enquête à l’image\, de l’image au livre : photographie
@@ -409,7 +378,7 @@ URL:https://www.sciencespo.fr/fr/evenements/de-l-enquete-a-l-image-de-l-ima
 END:VEVENT
 BEGIN:VEVENT
 UID:b767e39d8880@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261103T173000
 DTEND;TZID=Europe/Paris:20261103T193000
 SUMMARY:Paroles de Travailleuses / Words of Working Women - Grande Marée
@@ -421,7 +390,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/paroles-de-travailleuses-word
 END:VEVENT
 BEGIN:VEVENT
 UID:33018a207cf6@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:55ème Colloque de la Société Française pour l'Etude du Comporte
@@ -433,7 +402,7 @@ URL:https://sfeca2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:5e9b578620a7@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261104T110000
 DTEND;TZID=Europe/Paris:20261104T123000
 SUMMARY:Complex tastes : what they are\, and why they matter
@@ -445,7 +414,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/complex-tastes-what-they-are-
 END:VEVENT
 BEGIN:VEVENT
 UID:063cd0521c3a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:La recherche en terrains sensibles : enjeux\, définition\, expéri
@@ -459,7 +428,7 @@ URL:https://www.assas-universite.fr/fr/evenements/recherche-en-terrains-sen
 END:VEVENT
 BEGIN:VEVENT
 UID:6c910a5ede21@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Parentalités LGBTI+ : faire famille depuis les marges
@@ -471,7 +440,7 @@ URL:https://www.ined.fr/fr/agenda/parentalites-lgbti-faire-famille-depuis-m
 END:VEVENT
 BEGIN:VEVENT
 UID:e2b5bb224af0@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261105T100000
 DTEND;TZID=Europe/Paris:20261105T120000
 SUMMARY:Enquêter sans accès au terrain : retrouver la parole des acteurs 
@@ -485,7 +454,7 @@ URL:https://www.inalco.fr/evenements/enqueter-sans-acces-au-terrain-retrouv
 END:VEVENT
 BEGIN:VEVENT
 UID:ff5a900095eb@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261105T180000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Disparitions en étoilement : un exil constellé
@@ -498,7 +467,7 @@ URL:https://institut-acte.pantheonsorbonne.fr/evenements/disparitions-en-et
 END:VEVENT
 BEGIN:VEVENT
 UID:483500e8954a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261105T180000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Atlantique(s) noir(s) :
@@ -514,7 +483,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:ec0926b492b2@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Parentalités LGBTI+: faire famille depuis les marges
@@ -526,7 +495,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/parentalites-lgbti-faire-fami
 END:VEVENT
 BEGIN:VEVENT
 UID:847e0f105709@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261106T100000
 DTEND;TZID=Europe/Paris:20261106T120000
 SUMMARY:La « bénédiction de l'enfant » à l’épreuve des techniques d
@@ -539,7 +508,7 @@ URL:https://www.fmsh.fr/agenda/la-benediction-de-lenfant-lepreuve-des-techn
 END:VEVENT
 BEGIN:VEVENT
 UID:cfe97f4ca9e9@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261106T120000
 DTEND;TZID=Europe/Paris:20261106T140000
 SUMMARY:Journée Sciences\, Terre et Société - L'Habitabilité
@@ -552,7 +521,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/journee-sciences-terr
 END:VEVENT
 BEGIN:VEVENT
 UID:7f8cba3bafce@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261106T140000
 DTEND;TZID=Europe/Paris:20261106T160000
 SUMMARY:Une science des œuvres ? Collaborations et compétitions entre dis
@@ -568,7 +537,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
 END:VEVENT
 BEGIN:VEVENT
 UID:4b30ef1b52ce@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261107T090000
 DTEND;TZID=Europe/Paris:20261107T110000
 SUMMARY:Journée des sciences humaines et sociales #1 : Où penser libremen
@@ -581,7 +550,7 @@ URL:https://www.ehess.fr/jcms/298487_JEvent/fr/journee-des-sciences-humaine
 END:VEVENT
 BEGIN:VEVENT
 UID:9d16e73a70a7@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261107T093000
 DTEND;TZID=Europe/Paris:20261107T180000
 SUMMARY:3e édition de la Journée Internationale Interuniversitaire de Psy
@@ -595,7 +564,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/3e-edition-de-la-journee-inte
 END:VEVENT
 BEGIN:VEVENT
 UID:d15b53794d2b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T160000
 SUMMARY:Réunions d'information "Reprise d'études"
@@ -607,7 +576,7 @@ URL:https://www.ehess.fr/jcms/37175_JEvent/fr/reunions-d-information-repris
 END:VEVENT
 BEGIN:VEVENT
 UID:f687e1999431@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261110T091500
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Le temps des épreuves
@@ -622,7 +591,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:8d88b5ef114a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261110T154500
 DTEND;TZID=Europe/Paris:20261110T170000
 SUMMARY:Jeunesse et renouvellement générationnel dans les sociétés du G
@@ -636,7 +605,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/jeunesse-et-reno
 END:VEVENT
 BEGIN:VEVENT
 UID:503dfe4788ff@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Genèses de Léopold Sédar Senghor : actualité éditoriale
@@ -652,7 +621,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:db70ccd4ca56@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261112T183000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:Vieillir LGBTQIA+ / Festival des Fiertés
@@ -665,7 +634,7 @@ URL:https://www.paris.fr/evenements/festival-des-fiertes-125512
 END:VEVENT
 BEGIN:VEVENT
 UID:9817c04eaf11@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Vivre les enchères
@@ -675,7 +644,7 @@ URL:https://www.fmsh.fr/agenda/vivre-les-encheres
 END:VEVENT
 BEGIN:VEVENT
 UID:dfe145bdae89@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:Conférence - « Vieillir LGBTQIA+ : quelle place pour les identit
@@ -692,7 +661,7 @@ URL:https://www.paris.fr/evenements/conference-vieillir-lgbtqia-quelle-plac
 END:VEVENT
 BEGIN:VEVENT
 UID:3a64bf381dfc@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261113T130000
 DTEND;TZID=Europe/Paris:20261113T140000
 SUMMARY:En quoi le gradient social des comportements de santé est-il injus
@@ -705,7 +674,7 @@ URL:https://www.ined.fr/fr/agenda/en-quoi-gradient-social-comportements-san
 END:VEVENT
 BEGIN:VEVENT
 UID:70a5b863fe00@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261113T140000
 DTEND;TZID=Europe/Paris:20261113T160000
 SUMMARY:Comment peindre la société ? Deux représentations opposées
@@ -719,7 +688,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
 END:VEVENT
 BEGIN:VEVENT
 UID:c982dc19bb13@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261115T160000
 DTEND;TZID=Europe/Paris:20261115T180000
 SUMMARY:Faire de l'immigration une chance ?
@@ -733,7 +702,7 @@ URL:https://www.paris.fr/evenements/faire-de-l-immigration-une-chance-12591
 END:VEVENT
 BEGIN:VEVENT
 UID:0e8399c094c0@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261118T093000
 DTEND;TZID=Europe/Paris:20261118T173000
 SUMMARY:De l'Afrique vers l'Allemagne et la France
@@ -749,7 +718,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:e9e37af61348@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261118T140000
 DTEND;TZID=Europe/Paris:20261118T160000
 SUMMARY:Migrations et sociétés
@@ -761,7 +730,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/migrations-et-soci
 END:VEVENT
 BEGIN:VEVENT
 UID:1c782247c861@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261118T183000
 DTEND;TZID=Europe/Paris:20261118T203000
 SUMMARY:Merci patrons !
@@ -771,7 +740,7 @@ URL:https://www.fmsh.fr/agenda/merci-patrons
 END:VEVENT
 BEGIN:VEVENT
 UID:e67f8476334d@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:La psychologisation des violences faites aux femmes
@@ -783,7 +752,7 @@ URL:https://www.ehess.fr/jcms/258092_JEvent/fr/la-psychologisation-des-viol
 END:VEVENT
 BEGIN:VEVENT
 UID:9e01cdf98257@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261119T093000
 DTEND;TZID=Europe/Paris:20261119T113000
 SUMMARY:Espaces de sociabilité et fabrique du genre dans le monde anglopho
@@ -797,7 +766,7 @@ URL:https://www.sorbonne-nouvelle.fr/espaces-de-sociabilite-et-fabrique-du-
 END:VEVENT
 BEGIN:VEVENT
 UID:64ac3d1d6a1d@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261119T150000
 DTEND;TZID=Europe/Paris:20261119T170000
 SUMMARY:Produire l’enfance et la jeunesse socialiste : socialisations pol
@@ -810,7 +779,7 @@ URL:https://www.inalco.fr/evenements/produire-lenfance-et-la-jeunesse-socia
 END:VEVENT
 BEGIN:VEVENT
 UID:d531a9919683@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261119T163000
 DTEND;TZID=Europe/Paris:20261119T183000
 SUMMARY:« Agir contre les discriminations » : comprendre\, témoigner et 
@@ -827,7 +796,7 @@ URL:https://www.paris.fr/evenements/agir-contre-les-discriminations-compren
 END:VEVENT
 BEGIN:VEVENT
 UID:6541f1982e4a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:Carrefours du fascisme
@@ -837,7 +806,7 @@ URL:https://www.fmsh.fr/agenda/carrefours-du-fascisme
 END:VEVENT
 BEGIN:VEVENT
 UID:5dd66cc4b19c@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:"Haïti\, seul peuple de peintres"
@@ -853,7 +822,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:fc667d85ea3f@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261120T100000
 DTEND;TZID=Europe/Paris:20261120T120000
 SUMMARY:L'enregistrement civil des mort-nés en France
@@ -864,7 +833,7 @@ URL:https://www.fmsh.fr/agenda/lenregistrement-civil-des-mort-nes-en-france
 END:VEVENT
 BEGIN:VEVENT
 UID:7c4e703691cd@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261120T140000
 DTEND;TZID=Europe/Paris:20261120T160000
 SUMMARY:Comment peindre la société ? Deux représentations opposées (sui
@@ -880,7 +849,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
 END:VEVENT
 BEGIN:VEVENT
 UID:2c70c0268502@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261120T183000
 DTEND;TZID=Europe/Paris:20261120T200000
 SUMMARY:Festival Monte le Son Ô féminins - Table ronde
@@ -897,7 +866,7 @@ URL:https://www.paris.fr/evenements/festival-monte-le-son-o-feminins-table-
 END:VEVENT
 BEGIN:VEVENT
 UID:37bdf1c7e3b5@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261121T100000
 DTEND;TZID=Europe/Paris:20261121T120000
 SUMMARY:Café psychanalytique
@@ -908,7 +877,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-1
 END:VEVENT
 BEGIN:VEVENT
 UID:25f806336c48@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T113000
 SUMMARY:Semaine de l'Afrique
@@ -919,7 +888,7 @@ URL:https://www.ehess.fr/jcms/293183_JEvent/fr/semaine-de-l-afrique
 END:VEVENT
 BEGIN:VEVENT
 UID:3a86f96752dc@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T184500
 SUMMARY:Rencontre avec George Nuku
@@ -934,7 +903,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:ec049ffcc63f@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Journées scientifiques de la Plateforme nationale pour la recherch
@@ -948,7 +917,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/journees-scientifiques-de-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:a7d37721f7db@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Fin de vie 2026
@@ -959,7 +928,7 @@ URL:https://www.ined.fr/fr/agenda/fin-vie-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:4c1d9e087fbe@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261125T090000
 DTEND;TZID=Europe/Paris:20261125T183000
 SUMMARY:Présentation des posters scientifiques par les doctorants
@@ -974,7 +943,7 @@ URL:https://dauphine.psl.eu/dauphine/media-et-communication/article/present
 END:VEVENT
 BEGIN:VEVENT
 UID:59c56a15b48b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T110000
 SUMMARY:Les humanités en formes
@@ -984,7 +953,7 @@ URL:https://www.fmsh.fr/agenda/les-humanites-en-formes
 END:VEVENT
 BEGIN:VEVENT
 UID:7b8bfe79c950@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261126T161500
 DTEND;TZID=Europe/Paris:20261126T173000
 SUMMARY:2ème symposium ILVV
@@ -995,7 +964,7 @@ URL:https://www.ined.fr/fr/agenda/2eme-symposium-ilvv
 END:VEVENT
 BEGIN:VEVENT
 UID:8c4a1242ff87@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261126T173000
 DTEND;TZID=Europe/Paris:20261126T184500
 SUMMARY:Le survivant : trois ans parmi les Nootka de l'île de Vancouver
@@ -1010,7 +979,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:73dcc92bd604@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261126T180000
 DTEND;TZID=Europe/Paris:20261126T200000
 SUMMARY:Urbanisation déplacée et urbanisation étendue
@@ -1022,7 +991,7 @@ URL:https://www.fmsh.fr/agenda/urbanisation-deplacee-et-urbanisation-etendu
 END:VEVENT
 BEGIN:VEVENT
 UID:481f8db57692@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261126T183000
 DTEND;TZID=Europe/Paris:20261126T193000
 SUMMARY:George Gershwin\, de Brodway à Porgy and Bess
@@ -1036,7 +1005,7 @@ URL:https://www.paris.fr/evenements/george-gershwin-de-brodway-a-porgy-and-
 END:VEVENT
 BEGIN:VEVENT
 UID:126f55eb6343@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261127T100000
 DTEND;TZID=Europe/Paris:20261127T120000
 SUMMARY:Voix aux Chapitres #22 autour de l'ouvrage "Chroniques de l’intra
@@ -1052,7 +1021,7 @@ URL:https://www.ehess.fr/jcms/296672_JEvent/fr/voix-aux-chapitres-22-autour
 END:VEVENT
 BEGIN:VEVENT
 UID:c473fa5bfaab@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261127T140000
 DTEND;TZID=Europe/Paris:20261127T160000
 SUMMARY:La sociologie face aux œuvres musicales. Conclusion du cours
@@ -1067,7 +1036,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-arts-au-defi-des-s
 END:VEVENT
 BEGIN:VEVENT
 UID:89f8b35b1c31@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261128T100000
 DTEND;TZID=Europe/Paris:20261128T120000
 SUMMARY:Café psychanalytique
@@ -1078,7 +1047,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-2
 END:VEVENT
 BEGIN:VEVENT
 UID:2050b75de245@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:5ème édition des Journées doctorales et Masteriales de la Gradua
@@ -1094,7 +1063,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/5eme-edition-des-jour
 END:VEVENT
 BEGIN:VEVENT
 UID:2effbd00289b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261202T150000
 DTEND;TZID=Europe/Paris:20261202T170000
 SUMMARY:Faut-il encore faire des enfants ?
@@ -1105,7 +1074,7 @@ URL:https://www.museedelhomme.fr/fr/faut-il-encore-faire-des-enfants
 END:VEVENT
 BEGIN:VEVENT
 UID:8c091a754e53@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261203T140000
 DTEND;TZID=Europe/Paris:20261203T150000
 SUMMARY:🎄 Fêtes de fin d'année : recevoir chez soi en toute sécurité
@@ -1120,7 +1089,7 @@ URL:https://www.paris.fr/evenements/fetes-de-fin-d-annee-recevoir-chez-soi-
 END:VEVENT
 BEGIN:VEVENT
 UID:94f76b6e05a1@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T200000
 SUMMARY:Quand la da‘wah et la politique se rencontrent
@@ -1132,7 +1101,7 @@ URL:https://www.fmsh.fr/agenda/quand-la-dawah-et-la-politique-se-rencontren
 END:VEVENT
 BEGIN:VEVENT
 UID:ab441ca40d43@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261204T100000
 DTEND;TZID=Europe/Paris:20261204T120000
 SUMMARY:La petite enfance et les violences sexuelles intra et extra-familia
@@ -1145,7 +1114,7 @@ URL:https://www.fmsh.fr/agenda/la-petite-enfance-et-les-violences-sexuelles
 END:VEVENT
 BEGIN:VEVENT
 UID:172a7078667b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261208T173000
 DTEND;TZID=Europe/Paris:20261208T193000
 SUMMARY:Le journal de Sasha
@@ -1156,7 +1125,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/le-journal-de-sasha
 END:VEVENT
 BEGIN:VEVENT
 UID:4cda72013f25@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261208T190000
 DTEND;TZID=Europe/Paris:20261208T210000
 SUMMARY:#Restitutions. Les objets d'art en question
@@ -1167,7 +1136,7 @@ URL:https://www.fmsh.fr/agenda/restitutions-les-objets-dart-en-question
 END:VEVENT
 BEGIN:VEVENT
 UID:e931f209406d@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261209T173000
 DTEND;TZID=Europe/Paris:20261209T193000
 SUMMARY:Voix aux Chapitres #24 autour de l'ouvrage "Coluche"
@@ -1179,7 +1148,7 @@ URL:https://www.ehess.fr/jcms/296757_JEvent/fr/voix-aux-chapitres-24-autour
 END:VEVENT
 BEGIN:VEVENT
 UID:266be4f0275d@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Construire les mobilités actives de demain : recherche\, société
@@ -1190,7 +1159,7 @@ URL:https://mobactives.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:0dc929563ac6@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:16th Annual Conference on Immigration in OECD Countries
@@ -1200,7 +1169,7 @@ URL:https://immigoecd16.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:05ebeee4df82@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:L’immigration dans les pays de l’OCDE
@@ -1213,7 +1182,7 @@ URL:https://www.parisschoolofeconomics.eu/evenements/limmigration-dans-les-
 END:VEVENT
 BEGIN:VEVENT
 UID:7da0f631f8aa@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261210T180000
 DTEND;TZID=Europe/Paris:20261210T200000
 SUMMARY:Les sakhī : alternative ascétique pour femmes « transgenres »
@@ -1225,7 +1194,7 @@ URL:https://www.fmsh.fr/agenda/les-sakhi-alternative-ascetique-pour-femmes-
 END:VEVENT
 BEGIN:VEVENT
 UID:317b8fdd1217@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261216T150000
 DTEND;TZID=Europe/Paris:20261216T170000
 SUMMARY:Les mystères du nomadisme dans les steppes d'Asie centrale durant 
@@ -1238,7 +1207,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/les-mysteres-du-nomadisme-dan
 END:VEVENT
 BEGIN:VEVENT
 UID:52c93549d3b4@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261217T160000
 DTEND;TZID=Europe/Paris:20261217T180000
 SUMMARY:Ethnographie et acquisitions d’œuvres africaines dans les musée
@@ -1252,7 +1221,7 @@ URL:https://www.inha.fr/agenda/ethnographie-et-acquisitions-doeuvres-africa
 END:VEVENT
 BEGIN:VEVENT
 UID:92b93893c51c@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270106T150000
 DTEND;TZID=Europe/Paris:20270106T170000
 SUMMARY:Cultiver la coexistence entre humains\, éléphants et chimpanzés 
@@ -1266,7 +1235,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/cultiver-la-coexistence-entre
 END:VEVENT
 BEGIN:VEVENT
 UID:7d62fc03843d@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270112T173000
 DTEND;TZID=Europe/Paris:20270112T193000
 SUMMARY:Terrain d'entente
@@ -1277,7 +1246,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/terrain-dentente
 END:VEVENT
 BEGIN:VEVENT
 UID:341fb659f551@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270126T173000
 DTEND;TZID=Europe/Paris:20270126T193000
 SUMMARY:Guangzhou\, une nouvelle ère
@@ -1288,7 +1257,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/guanzhou-une-nouvelle-ere
 END:VEVENT
 BEGIN:VEVENT
 UID:9006d46f804e@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270127T150000
 DTEND;TZID=Europe/Paris:20270127T170000
 SUMMARY:Dans la tête de nos ancêtres
@@ -1299,7 +1268,7 @@ URL:https://www.museedelhomme.fr/fr/rencontre/dans-la-tete-de-nos-ancetres
 END:VEVENT
 BEGIN:VEVENT
 UID:eb9f457196d0@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270128T160000
 DTEND;TZID=Europe/Paris:20270128T180000
 SUMMARY:Quand les féministes recourent à la violence
@@ -1311,7 +1280,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/quand-les-feministes-recouren
 END:VEVENT
 BEGIN:VEVENT
 UID:1437365418df@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270128T183000
 DTEND;TZID=Europe/Paris:20270128T230000
 SUMMARY:Les exils des jazzmen israeliens
@@ -1324,7 +1293,7 @@ URL:https://www.paris.fr/evenements/les-exils-des-jazzmen-israeliens-125394
 END:VEVENT
 BEGIN:VEVENT
 UID:72aad5cf1093@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270130T100000
 DTEND;TZID=Europe/Paris:20270130T120000
 SUMMARY:Café psychanalytique
@@ -1335,7 +1304,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-3
 END:VEVENT
 BEGIN:VEVENT
 UID:9c47da6d68d5@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270202T173000
 DTEND;TZID=Europe/Paris:20270202T193000
 SUMMARY:Seen Unseen : an anthology of (auto)censorship
@@ -1347,7 +1316,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/seen-unseen-an-anthology-of-a
 END:VEVENT
 BEGIN:VEVENT
 UID:6c07fceb1b6b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270225T160000
 DTEND;TZID=Europe/Paris:20270225T180000
 SUMMARY:Solidarités européennes face à la dictature dans la péninsule i
@@ -1360,7 +1329,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/solidarites-europeennes-face-
 END:VEVENT
 BEGIN:VEVENT
 UID:53106b291eef@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270311T180000
 DTEND;TZID=Europe/Paris:20270311T200000
 SUMMARY:L’épidémiologie des crises
@@ -1372,7 +1341,7 @@ URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/epidemiolog
 END:VEVENT
 BEGIN:VEVENT
 UID:19f1a34367d5@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270317T093000
 DTEND;TZID=Europe/Paris:20270317T113000
 SUMMARY:L’invention de la sécurité sanitaire
@@ -1386,7 +1355,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:9161d9e3fa5b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270317T104500
 DTEND;TZID=Europe/Paris:20270317T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1402,7 +1371,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:711bccd61dc9@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270318T160000
 DTEND;TZID=Europe/Paris:20270318T180000
 SUMMARY:Mobilisations féministes contre les violences faites aux femmes
@@ -1414,7 +1383,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/mobilisations-feministes-cont
 END:VEVENT
 BEGIN:VEVENT
 UID:48ce253da049@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270324T093000
 DTEND;TZID=Europe/Paris:20270324T113000
 SUMMARY:Quand l’incertitude est controversée
@@ -1428,7 +1397,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:bd29e82bdab1@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270324T104500
 DTEND;TZID=Europe/Paris:20270324T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1444,7 +1413,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:95c695bd9ab5@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270327T100000
 DTEND;TZID=Europe/Paris:20270327T120000
 SUMMARY:Café psychanalytique
@@ -1455,7 +1424,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-4
 END:VEVENT
 BEGIN:VEVENT
 UID:5665e9396e68@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270331T093000
 DTEND;TZID=Europe/Paris:20270331T113000
 SUMMARY:Le temps des crises
@@ -1468,7 +1437,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:cb801d593e78@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270331T104500
 DTEND;TZID=Europe/Paris:20270331T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1484,7 +1453,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:e3699fce8256@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270420T173000
 DTEND;TZID=Europe/Paris:20270420T193000
 SUMMARY:Nacemos de la tierra
@@ -1495,7 +1464,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/nacemos-de-la-tierra
 END:VEVENT
 BEGIN:VEVENT
 UID:a2766d0f72e1@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270421T093000
 DTEND;TZID=Europe/Paris:20270421T113000
 SUMMARY:Agir dans la crise
@@ -1508,7 +1477,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:aa81c9f8cd26@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270421T104500
 DTEND;TZID=Europe/Paris:20270421T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1524,7 +1493,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:99fc560161dc@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270427T140000
 DTEND;TZID=Europe/Paris:20270427T160000
 SUMMARY:Lexique du désordre (1)
@@ -1536,7 +1505,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lexique-du-desordre/le
 END:VEVENT
 BEGIN:VEVENT
 UID:7ecb308808d2@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270427T163000
 DTEND;TZID=Europe/Paris:20270427T183000
 SUMMARY:Étude de cas (1)
@@ -1548,7 +1517,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/etude-de-cas/etude
 END:VEVENT
 BEGIN:VEVENT
 UID:ae08994b8f8d@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270428T093000
 DTEND;TZID=Europe/Paris:20270428T113000
 SUMMARY:Peut-on apprendre des crises ?
@@ -1561,7 +1530,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:f12d63d6caab@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270428T104500
 DTEND;TZID=Europe/Paris:20270428T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1577,7 +1546,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:66abccd8f04d@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270504T140000
 DTEND;TZID=Europe/Paris:20270504T160000
 SUMMARY:Lexique du désordre (2)
@@ -1589,7 +1558,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lexique-du-desordre/le
 END:VEVENT
 BEGIN:VEVENT
 UID:31c4025b21f3@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270504T163000
 DTEND;TZID=Europe/Paris:20270504T183000
 SUMMARY:Étude de cas (2)
@@ -1601,7 +1570,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/etude-de-cas/etude
 END:VEVENT
 BEGIN:VEVENT
 UID:f82e44b67cb9@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270505T093000
 DTEND;TZID=Europe/Paris:20270505T113000
 SUMMARY:Prendre la mesure des crises
@@ -1614,7 +1583,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:afed92360c97@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270505T104500
 DTEND;TZID=Europe/Paris:20270505T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1630,7 +1599,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:2fe0a44fc5eb@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270511T140000
 DTEND;TZID=Europe/Paris:20270511T160000
 SUMMARY:Lexique du désordre (3)
@@ -1642,7 +1611,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lexique-du-desordre/le
 END:VEVENT
 BEGIN:VEVENT
 UID:d09e5c4f6675@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270511T163000
 DTEND;TZID=Europe/Paris:20270511T183000
 SUMMARY:Étude de cas (3)
@@ -1654,7 +1623,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/etude-de-cas/etude
 END:VEVENT
 BEGIN:VEVENT
 UID:4161ecab367b@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270511T173000
 DTEND;TZID=Europe/Paris:20270511T193000
 SUMMARY:Entre les lignes & Madidi : vivre dans une forêt protégée
@@ -1666,7 +1635,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/entre-les-lignes-madidi-vivre
 END:VEVENT
 BEGIN:VEVENT
 UID:83d0eb333ffd@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270512T093000
 DTEND;TZID=Europe/Paris:20270512T113000
 SUMMARY:De quels droits
@@ -1679,7 +1648,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:3d1e803256dd@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270512T104500
 DTEND;TZID=Europe/Paris:20270512T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1695,7 +1664,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:5426505e6afc@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270518T140000
 DTEND;TZID=Europe/Paris:20270518T160000
 SUMMARY:Lexique du désordre (4)
@@ -1707,7 +1676,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lexique-du-desordre/le
 END:VEVENT
 BEGIN:VEVENT
 UID:7e439458cf4a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270518T163000
 DTEND;TZID=Europe/Paris:20270518T183000
 SUMMARY:Étude de cas (4)
@@ -1719,7 +1688,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/etude-de-cas/etude
 END:VEVENT
 BEGIN:VEVENT
 UID:91b57028ab95@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270519T093000
 DTEND;TZID=Europe/Paris:20270519T113000
 SUMMARY:Qu’est-ce qui n’est pas crise ?
@@ -1732,7 +1701,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/ere-de-incertitude-ris
 END:VEVENT
 BEGIN:VEVENT
 UID:379c75a4fbbb@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270519T104500
 DTEND;TZID=Europe/Paris:20270519T124500
 SUMMARY:L’ère de l’incertitude. Risques et crises dans l’organocène
@@ -1748,7 +1717,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/ere-de-incertitude
 END:VEVENT
 BEGIN:VEVENT
 UID:8ec3dec179f8@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270525T140000
 DTEND;TZID=Europe/Paris:20270525T160000
 SUMMARY:Lexique du désordre (5)
@@ -1760,7 +1729,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/lexique-du-desordre/le
 END:VEVENT
 BEGIN:VEVENT
 UID:bb1d803ca38a@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270525T163000
 DTEND;TZID=Europe/Paris:20270525T183000
 SUMMARY:Étude de cas (5)
@@ -1772,7 +1741,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/etude-de-cas/etude
 END:VEVENT
 BEGIN:VEVENT
 UID:0822a96bbb19@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270529T100000
 DTEND;TZID=Europe/Paris:20270529T120000
 SUMMARY:Café psychanalytique
@@ -1783,7 +1752,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/cafe-psychanalytique-5
 END:VEVENT
 BEGIN:VEVENT
 UID:4c98ac27c5b1@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270614T160000
 DTEND;TZID=Europe/Paris:20270614T180000
 SUMMARY:Homo Probabilis
@@ -1795,7 +1764,7 @@ URL:https://www.college-de-france.fr/fr/agenda/lecon-de-cloture/homo-probab
 END:VEVENT
 BEGIN:VEVENT
 UID:34e4f7da7ac8@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20270626T100000
 DTEND;TZID=Europe/Paris:20270626T120000
 SUMMARY:Café psychanalytique

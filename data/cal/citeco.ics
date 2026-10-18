@@ -24,25 +24,23 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:83f968b9b39a@paris-academique
-DTSTAMP:20261017T082351Z
-DTSTART;TZID=Europe/Paris:20261017T150000
-DTEND;TZID=Europe/Paris:20261017T160000
-SUMMARY:Histoire du capitalisme français de Christian Chavagneux et Enzo
-DESCRIPTION:https://www.citeco.fr/agenda/histoire-du-capitalisme-francais-d
- e-christian-chavagneux-et-enzo
-LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
-URL:https://www.citeco.fr/agenda/histoire-du-capitalisme-francais-de-christ
- ian-chavagneux-et-enzo
-END:VEVENT
-BEGIN:VEVENT
 UID:4da5ea75ed63@paris-academique
-DTSTAMP:20261017T082351Z
+DTSTAMP:20261018T083540Z
 DTSTART;TZID=Europe/Paris:20261022T103000
 DTEND;TZID=Europe/Paris:20261022T120000
 SUMMARY:Art d'éco
 DESCRIPTION:https://www.citeco.fr/agenda/art-deco
 LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
 URL:https://www.citeco.fr/agenda/art-deco
+END:VEVENT
+BEGIN:VEVENT
+UID:d055acb95fb4@paris-academique
+DTSTAMP:20261018T083540Z
+DTSTART;TZID=Europe/Paris:20261022T143000
+DTEND;TZID=Europe/Paris:20261022T153000
+SUMMARY:Écogame – Le loup de la finance
+DESCRIPTION:https://www.citeco.fr/agenda/le-loup-de-la-finance
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/le-loup-de-la-finance
 END:VEVENT
 END:VCALENDAR

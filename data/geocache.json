@@ -146,7 +146,10 @@
  "université de technologie de compiègne": null,
  "i001": null,
  "1r3, 1er étage": null,
- "parisanté campus, 2 - 10 rue d'oradour-sur-glane, 75015 paris, france": null,
+ "parisanté campus, 2 - 10 rue d'oradour-sur-glane, 75015 paris, france": [
+  48.831257,
+  2.282933
+ ],
  "ufr sciences et techniques - bâtiment mirande": null,
  "campus des cézeaux - aubière": null,
  "relais des quatre vents, lac de saint-ferréol (31)": null,
@@ -4765,5 +4768,9 @@
  "62 rue jean-jacques rousseau, 75001 paris, france": [
   48.864095,
   2.343802
+ ],
+ "100 av. de gravelle, 94410 saint-maurice, france": [
+  48.824179,
+  2.425155
  ]
 }
