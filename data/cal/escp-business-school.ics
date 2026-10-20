@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c8173cb3b157@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;TZID=Europe/Paris:20261019T183000
-DTEND;TZID=Europe/Paris:20261019T203000
-SUMMARY:Clés pour une montée en gamme
-DESCRIPTION:Atelier\nhttps://escp.eu/fr/events/leadership-et-montee-en-gamm
- e
-LOCATION:Campus Montparnasse - 3\, rue Armand Moisant - Paris\, France
-URL:https://escp.eu/fr/events/leadership-et-montee-en-gamme
-END:VEVENT
-BEGIN:VEVENT
 UID:6a9594836ed0@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261026T133000
 DTEND;TZID=Europe/Paris:20261026T153000
 SUMMARY:YFU Symposium on Intercultural Exchange and Democratic Engagement
@@ -45,5 +34,17 @@ DESCRIPTION:EVENT\nhttps://escp.eu/fr/events/yfu-symposium-intercultural-ex
 LOCATION:Paris\, France
 URL:https://escp.eu/fr/events/yfu-symposium-intercultural-exchange-and-demo
  cratic-engagement
+END:VEVENT
+BEGIN:VEVENT
+UID:44935e0d2c93@paris-academique
+DTSTAMP:20261020T092018Z
+DTSTART;TZID=Europe/Paris:20261029T180000
+DTEND;TZID=Europe/Paris:20261029T200000
+SUMMARY:Come creare la tua startup da zero: From Zero to Startup
+DESCRIPTION:Scopri il percorso di Blue Factory\nhttps://escp.eu/fr/events/c
+ ome-creare-la-tua-startup-da-zero-zero-startup
+LOCATION:ESCP Business School\, 79 avenue de la République\, Paris 11e
+URL:https://escp.eu/fr/events/come-creare-la-tua-startup-da-zero-zero-start
+ up
 END:VEVENT
 END:VCALENDAR

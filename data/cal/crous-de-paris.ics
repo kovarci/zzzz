@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:30e422e55d88@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261020T210000
 DTEND;TZID=Europe/Paris:20261020T230000
 SUMMARY:Diffusion à la Barge : match PSG VS Barcelone !
@@ -42,8 +42,27 @@ URL:https://www.crous-paris.fr/evenement/diffusion-a-la-barge-match-psg-vs-
  barcelone/
 END:VEVENT
 BEGIN:VEVENT
+UID:909d7972c69f@paris-academique
+DTSTAMP:20261020T092018Z
+DTSTART;TZID=Europe/Paris:20261030T180000
+DTEND;TZID=Europe/Paris:20261030T230000
+SUMMARY:Soirée Halloween à la Barge vendredi 30 octobre
+DESCRIPTION:🎃 Halloween à La Barge : une soirée explosive ! La program
+ mation à La Barge s’annonce explosive💥 Le vendredi 30 octobre\, sort
+ ez vos plus beaux déguisements et préparez-vous à frissonner\, danser e
+ t faire la fête à l’occasion de notre grande soirée Halloween. Au pro
+ gramme 💄 Dès 18h — Stand de maquillage avec Si Si La Paillette Paill
+ ettes\, couleurs et looks ensorcelants : préparez-vous à briller…\nhtt
+ ps://www.crous-paris.fr/evenement/soiree-halloween-a-la-barge-vendredi-30-
+ octobre/
+LOCATION:à la Barge du Crous de Paris\, Quai François Mauriac\, Port de l
+ a Gare\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/soiree-halloween-a-la-barge-vendre
+ di-30-octobre/
+END:VEVENT
+BEGIN:VEVENT
 UID:435325817acf@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261120T190000
 DTEND;TZID=Europe/Paris:20261120T230000
 SUMMARY:Soirée karaoké à la Barge vendredi 20 novembre

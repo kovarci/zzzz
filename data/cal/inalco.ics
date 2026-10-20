@@ -24,30 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:cb39f6734338@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;TZID=Europe/Paris:20261019T130000
-DTEND;TZID=Europe/Paris:20261019T170000
-SUMMARY:Demi-journée d'étude des doctorants Ifrae
-DESCRIPTION:https://www.inalco.fr/evenements/demi-journee-detude-des-doctor
- ants-ifrae
-LOCATION:Maison de la Recherche (2 rue de Lille\, 75007 Paris)
-URL:https://www.inalco.fr/evenements/demi-journee-detude-des-doctorants-ifr
- ae
-END:VEVENT
-BEGIN:VEVENT
-UID:8ea959c7ca3d@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;TZID=Europe/Paris:20261019T140000
-DTEND;TZID=Europe/Paris:20261019T160000
-SUMMARY:Soutenance de Jinyuan XU
-DESCRIPTION:https://www.inalco.fr/evenements/soutenance-de-jinyuan-xu
-LOCATION:Maison de la Recherche - 2 rue de Lille - 75007 Paris
-URL:https://www.inalco.fr/evenements/soutenance-de-jinyuan-xu
-END:VEVENT
-BEGIN:VEVENT
 UID:337518330c6e@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261020T140000
 DTEND;TZID=Europe/Paris:20261020T170000
 SUMMARY:Institutions\, Civilisation\, and Freedom: Taha Hussein’s Anti-Co
@@ -60,7 +38,7 @@ URL:https://www.inalco.fr/evenements/institutions-civilisation-and-freedom-
 END:VEVENT
 BEGIN:VEVENT
 UID:d19909de91f5@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261020T190000
 DTEND;TZID=Europe/Paris:20261020T210000
 SUMMARY:Projection du film documentaire "Hair\, Paper\, Water..."
@@ -73,7 +51,7 @@ URL:https://www.inalco.fr/evenements/projection-du-film-documentaire-hair-p
 END:VEVENT
 BEGIN:VEVENT
 UID:b2b3a5829b67@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T085000
 DTEND;TZID=Europe/Paris:20261021T105000
 SUMMARY:[CHANGEMENT DE LIEU] De la poésie préislamique\, 1926–2026 : Bi
@@ -87,7 +65,7 @@ URL:https://www.inalco.fr/evenements/changement-de-lieu-de-la-poesie-preisl
 END:VEVENT
 BEGIN:VEVENT
 UID:fd3f71792f94@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T090000
 DTEND;TZID=Europe/Paris:20261021T110000
 SUMMARY:Soutenance de thèse de Zechen CHEN
@@ -98,7 +76,7 @@ URL:https://www.inalco.fr/evenements/soutenance-de-these-de-zechen-chen
 END:VEVENT
 BEGIN:VEVENT
 UID:b75dda352e03@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T134500
 DTEND;TZID=Europe/Paris:20261021T154500
 SUMMARY:Migration et bande dessinée : quêtes esthétiques\, imaginaires m
@@ -111,7 +89,7 @@ URL:https://www.inalco.fr/evenements/migration-et-bande-dessinee-quetes-est
 END:VEVENT
 BEGIN:VEVENT
 UID:d3caa72fb0b3@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T150000
 DTEND;TZID=Europe/Paris:20261021T170000
 SUMMARY:Les découvertes de l’enfance en Chine impériale : cosmologie\, 
@@ -124,7 +102,7 @@ URL:https://www.inalco.fr/evenements/les-decouvertes-de-lenfance-en-chine-i
 END:VEVENT
 BEGIN:VEVENT
 UID:1f2e6b9e3929@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T180000
 DTEND;TZID=Europe/Paris:20261021T193000
 SUMMARY:[CHANGEMENT DE LIEU] Table ronde : L'enseignement des langues rares
@@ -139,7 +117,7 @@ URL:https://www.inalco.fr/evenements/changement-de-lieu-table-ronde-lenseig
 END:VEVENT
 BEGIN:VEVENT
 UID:d0937b1099b4@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T180000
 DTEND;TZID=Europe/Paris:20261021T200000
 SUMMARY:Tāi-kiap Muî-hue-lo̍k 大俠梅花鹿 - Les aventures fantastiqu
@@ -153,7 +131,7 @@ URL:https://www.inalco.fr/evenements/tai-kiap-mui-hue-lok-daxiameihualu-les
 END:VEVENT
 BEGIN:VEVENT
 UID:7ab0004a9226@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261022T153000
 DTEND;TZID=Europe/Paris:20261022T173000
 SUMMARY:Atelier des doctorantes et doctorants du CERMOM
@@ -165,7 +143,7 @@ URL:https://www.inalco.fr/evenements/atelier-des-doctorantes-et-doctorants-
 END:VEVENT
 BEGIN:VEVENT
 UID:6eb9e0d3ccf7@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261023T100000
 DTEND;TZID=Europe/Paris:20261023T120000
 SUMMARY:[CHANGEMENT DE LIEU] Making Worlds\, Shaping Selves: Religion\, Mus
@@ -178,7 +156,7 @@ URL:https://www.inalco.fr/evenements/changement-de-lieu-making-worlds-shapi
 END:VEVENT
 BEGIN:VEVENT
 UID:5ad410046701@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261023T140000
 DTEND;TZID=Europe/Paris:20261023T160000
 SUMMARY:[CHANGEMENT DE LIEU] Des usages d’un faux qui n’est pas faux\, 
@@ -191,7 +169,7 @@ URL:https://www.inalco.fr/evenements/changement-de-lieu-des-usages-dun-faux
 END:VEVENT
 BEGIN:VEVENT
 UID:3428045ae551@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261026T183000
 DTEND;TZID=Europe/Paris:20261026T213000
 SUMMARY:Kosa Pan au royaume de Louis XIV (1686–1698) : une voix siamoise 
@@ -204,7 +182,7 @@ URL:https://www.inalco.fr/evenements/kosa-pan-au-royaume-de-louis-xiv-1686-
 END:VEVENT
 BEGIN:VEVENT
 UID:96796d3554b5@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261102T170000
 DTEND;TZID=Europe/Paris:20261102T190000
 SUMMARY:What’s in a Shāhnāma manuscript? Reflections on the Shāhnāma 
@@ -217,7 +195,7 @@ URL:https://www.inalco.fr/evenements/whats-shahnama-manuscript-reflections-
 END:VEVENT
 BEGIN:VEVENT
 UID:40a27ddec5fa@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261104T083000
 DTEND;TZID=Europe/Paris:20261104T113000
 SUMMARY:Les nouveaux chants pour les terrasses de jade
@@ -229,7 +207,7 @@ URL:https://www.inalco.fr/evenements/les-nouveaux-chants-pour-les-terrasses
 END:VEVENT
 BEGIN:VEVENT
 UID:e2b5bb224af0@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261105T100000
 DTEND;TZID=Europe/Paris:20261105T120000
 SUMMARY:Enquêter sans accès au terrain : retrouver la parole des acteurs 
@@ -243,7 +221,7 @@ URL:https://www.inalco.fr/evenements/enqueter-sans-acces-au-terrain-retrouv
 END:VEVENT
 BEGIN:VEVENT
 UID:c33372393585@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261106T140000
 DTEND;TZID=Europe/Paris:20261106T190000
 SUMMARY:Ruines & monuments face à la modernité
@@ -254,7 +232,7 @@ URL:https://www.inalco.fr/evenements/ruines-monuments-face-la-modernite
 END:VEVENT
 BEGIN:VEVENT
 UID:0f3ce59b667d@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261106T170000
 DTEND;TZID=Europe/Paris:20261106T190000
 SUMMARY:Revisiting the Shāhnāma demons: narrative and pictorial patterns 
@@ -267,7 +245,7 @@ URL:https://www.inalco.fr/evenements/revisiting-shahnama-demons-narrative-a
 END:VEVENT
 BEGIN:VEVENT
 UID:c3ca7e2a3359@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T181500
 SUMMARY:Traduire l’anthropologie en bande dessinée. Réflexions sur les 
@@ -281,7 +259,7 @@ URL:https://www.inalco.fr/evenements/traduire-lanthropologie-en-bande-dessi
 END:VEVENT
 BEGIN:VEVENT
 UID:c2aece0b8c6a@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T190000
 SUMMARY:Witches\, sorcerers\, and witchcraft in the Shāhnāma and a closer
@@ -294,7 +272,7 @@ URL:https://www.inalco.fr/evenements/witches-sorcerers-and-witchcraft-shahn
 END:VEVENT
 BEGIN:VEVENT
 UID:e5d3fafa8e16@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261112T150000
 DTEND;TZID=Europe/Paris:20261112T170000
 SUMMARY:Faire la jeunesse\, faire la nation? Institutions\, savoirs et mobi
@@ -307,7 +285,7 @@ URL:https://www.inalco.fr/evenements/faire-la-jeunesse-faire-la-nation-inst
 END:VEVENT
 BEGIN:VEVENT
 UID:997652fbee42@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261113T170000
 DTEND;TZID=Europe/Paris:20261113T190000
 SUMMARY:The Wise Counsels of Anūshīrvān: The Pandnāma-yi Anūshīrvān 
@@ -320,7 +298,7 @@ URL:https://www.inalco.fr/evenements/wise-counsels-anushirvan-pandnama-yi-a
 END:VEVENT
 BEGIN:VEVENT
 UID:eadacb875e40@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261116T170000
 DTEND;TZID=Europe/Paris:20261116T190000
 SUMMARY:Firdawsī and the story of Joseph between Shiraz and Herat in the e
@@ -333,7 +311,7 @@ URL:https://www.inalco.fr/evenements/firdawsi-and-story-joseph-between-shir
 END:VEVENT
 BEGIN:VEVENT
 UID:64ac3d1d6a1d@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261119T150000
 DTEND;TZID=Europe/Paris:20261119T170000
 SUMMARY:Produire l’enfance et la jeunesse socialiste : socialisations pol
@@ -346,7 +324,7 @@ URL:https://www.inalco.fr/evenements/produire-lenfance-et-la-jeunesse-socia
 END:VEVENT
 BEGIN:VEVENT
 UID:b6b670dda929@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261125T160000
 DTEND;TZID=Europe/Paris:20261125T173000
 SUMMARY:La défaite communiste de Kinmen (25-27 octobre 1949) : une nouvell
@@ -359,7 +337,7 @@ URL:https://www.inalco.fr/evenements/la-defaite-communiste-de-kinmen-25-27-
 END:VEVENT
 BEGIN:VEVENT
 UID:80cda5c25365@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261130T080000
 DTEND;TZID=Europe/Paris:20261130T220000
 SUMMARY:En hommage à János Kornai (1928–2021)
@@ -371,7 +349,7 @@ URL:https://www.inalco.fr/evenements/en-hommage-janos-kornai-1928-2021
 END:VEVENT
 BEGIN:VEVENT
 UID:b3774f81ba7d@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261130T160000
 DTEND;TZID=Europe/Paris:20261130T193000
 SUMMARY:International Workshop : Digital Humanities and Intangible Cultural
@@ -384,7 +362,7 @@ URL:https://www.inalco.fr/evenements/international-workshop-digital-humanit
 END:VEVENT
 BEGIN:VEVENT
 UID:b3b241e4bbd8@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261130T170000
 DTEND;TZID=Europe/Paris:20261130T190000
 SUMMARY:5 ans après Kornai : interpréter les transformations des système
@@ -397,7 +375,7 @@ URL:https://www.inalco.fr/evenements/5-ans-apres-kornai-interpreter-les-tra
 END:VEVENT
 BEGIN:VEVENT
 UID:e47529e01fae@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261201T150000
 DTEND;TZID=Europe/Paris:20261201T170000
 SUMMARY:Vieillissement\, longévité et socialisme : la gérontologie en Ch
@@ -410,7 +388,7 @@ URL:https://www.inalco.fr/evenements/vieillissement-longevite-et-socialisme
 END:VEVENT
 BEGIN:VEVENT
 UID:b14bd2866bc1@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261201T170000
 DTEND;TZID=Europe/Paris:20261201T181500
 SUMMARY:La métamorphose du bouddhisme dans la « nouvelle ère » chinoise
@@ -422,7 +400,7 @@ URL:https://www.inalco.fr/evenements/la-metamorphose-du-bouddhisme-dans-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:937598a1e043@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261202T180000
 DTEND;TZID=Europe/Paris:20261202T193000
 SUMMARY:Surveiller et punir en Chine. Laogaï et technosurveillance\, de 19
@@ -435,7 +413,7 @@ URL:https://www.inalco.fr/evenements/surveiller-et-punir-en-chine-laogai-et
 END:VEVENT
 BEGIN:VEVENT
 UID:bb5b6562a484@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261217T150000
 DTEND;TZID=Europe/Paris:20261217T170000
 SUMMARY:Retraités et révolutionnaires ? Usages politiques d’un nouvelle
@@ -448,7 +426,7 @@ URL:https://www.inalco.fr/evenements/retraites-et-revolutionnaires-usages-p
 END:VEVENT
 BEGIN:VEVENT
 UID:9224e8e46737@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20270130T091500
 DTEND;TZID=Europe/Paris:20270130T170000
 SUMMARY:Journée portes ouvertes 2027

@@ -23,19 +23,4 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-UID:ff8f2e6a02fc@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261020
-SUMMARY:Le Cnam accueille le workshop international ARCANE sur la résistan
- ce aux antimicrobiens
-DESCRIPTION:https://www.cnam.fr/actualites/recherche-innovation/agenda-actu
- s/le-cnam-accueille-le-workshop-international-arcane-sur-la-resistance-aux
- -antimicrobiens
-LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
-URL:https://www.cnam.fr/actualites/recherche-innovation/agenda-actus/le-cna
- m-accueille-le-workshop-international-arcane-sur-la-resistance-aux-antimic
- robiens
-END:VEVENT
 END:VCALENDAR

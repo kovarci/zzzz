@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:6ac1a94d78ac@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;VALUE=DATE:20261124
-DTEND;VALUE=DATE:20261125
-SUMMARY:Dauphine Digital Days 2026
-DESCRIPTION:AfterWork · AI & Society · Partners\nhttps://www.prairie-psai
- .fr/agenda/dauphine-digital-days-2026/
-LOCATION:Université Paris Dauphine-PSL – Place du Maréchal de Lattre de
-  Tassigny – Paris 16e
-URL:https://www.prairie-psai.fr/agenda/dauphine-digital-days-2026/
-END:VEVENT
-BEGIN:VEVENT
 UID:d6c37327660e@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Recent Advances in Chemistry and AI

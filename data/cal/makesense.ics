@@ -24,40 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:f00538d017b2@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261020
-SUMMARY:Habiter un monde qui change - conférence d'Aimée Bouchet
-DESCRIPTION:Organisé par Eva Le Callennec — Quand on parle de changement
-  climatique et d'effondrement de la biodiversité\, on parle de degrés\, 
- de courbes\, de fonte des glaces ou de disparition des espèces. Mais beau
- coup moins souvent de ce que ces bouleversements tra\nhttps://chiche.makes
- ense.org/events/e/habiter-un-monde-qui-change-conference-daimee-bouchet-6a
- b24d8b40a4b700080e20b6
-LOCATION:11 Rue Biscornet\, 75012 Paris\, France
-URL:https://chiche.makesense.org/events/e/habiter-un-monde-qui-change-confe
- rence-daimee-bouchet-6ab24d8b40a4b700080e20b6
-END:VEVENT
-BEGIN:VEVENT
-UID:3337e752610a@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;TZID=Europe/Paris:20261019T193000
-DTEND;TZID=Europe/Paris:20261019T213000
-SUMMARY:Workshop Capoeira Angola
-DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
-  capoeira Angola\, un art martial afro-brésilien qui allie résistance\, 
- gestuelle et culture.Retrouvez-nous pour une pratique ancestrale qui se jo
- ue près du sol. À travers des mouvements lents\, fluides et stratégique
- s\, accom\nhttps://chiche.makesense.org/events/e/workshop-capoeira-angola-
- 6aac09f8ca9188000762bdbc
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09f8
- ca9188000762bdbc
-END:VEVENT
-BEGIN:VEVENT
 UID:ec1c318eabff@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261020T095000
 DTEND;TZID=Europe/Paris:20261020T115000
 SUMMARY:Atelier - Communiquer de façon inclusive\, accessible et durable
@@ -73,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/atelier-communiquer-de-facon-incl
 END:VEVENT
 BEGIN:VEVENT
 UID:478db6fbd534@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261020T163000
 DTEND;TZID=Europe/Paris:20261020T193000
 SUMMARY:2ème rencontre du Collectif Insertion & Transition Écologique
@@ -89,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/2eme-rencontre-du-collectif-inser
 END:VEVENT
 BEGIN:VEVENT
 UID:c5dc3d70deda@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Développer son aisance à l'oral 📍 Paris
@@ -104,7 +72,7 @@ URL:https://chiche.makesense.org/events/e/developper-son-aisance-a-loral-pa
 END:VEVENT
 BEGIN:VEVENT
 UID:bdfe9ddd3368@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Je préserve la vie des oiseaux
@@ -120,7 +88,7 @@ URL:https://chiche.makesense.org/events/e/je-preserve-la-vie-des-oiseaux-6a
 END:VEVENT
 BEGIN:VEVENT
 UID:d3b9bff0a92a@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T193000
 DTEND;TZID=Europe/Paris:20261021T213000
 SUMMARY:RENCONTRE AVEC SOS MÉDITERRANÉE
@@ -136,7 +104,7 @@ URL:https://chiche.makesense.org/events/e/rencontre-avec-sos-mediterranee-6
 END:VEVENT
 BEGIN:VEVENT
 UID:216b1f2b58de@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Masterclass L-Invest x 50 partners : Comprendre les attentes d’un
@@ -156,7 +124,7 @@ URL:https://chiche.makesense.org/events/e/masterclass-l-invest-x-50-partner
 END:VEVENT
 BEGIN:VEVENT
 UID:dca80831fd02@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
 SUMMARY:Soirée Stand-up avec le Greenwashing Comedy Club
@@ -172,7 +140,7 @@ URL:https://chiche.makesense.org/events/e/soiree-stand-up-avec-le-greenwash
 END:VEVENT
 BEGIN:VEVENT
 UID:13179c2d0396@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261022T142000
 DTEND;TZID=Europe/Paris:20261022T162000
 SUMMARY:Atelier - Lancer sa structure sur les réseaux sociaux
@@ -187,7 +155,7 @@ URL:https://chiche.makesense.org/events/e/atelier-lancer-sa-structure-sur-l
 END:VEVENT
 BEGIN:VEVENT
 UID:b89c641fa482@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20261025
 SUMMARY:Façon de voir : santé mentale & identités diasporiques
@@ -201,7 +169,7 @@ URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:3312a3eb9be5@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261024T130000
 DTEND;TZID=Europe/Paris:20261024T160000
 SUMMARY:Atelier Santé mentale (entre jeunes) - 3rd Space
@@ -217,7 +185,7 @@ URL:https://chiche.makesense.org/events/e/atelier-sante-mentale-entre-jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:ce50aedcc788@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T170000
 SUMMARY:Cycle de Courts Métrage Tibétain
@@ -233,7 +201,7 @@ URL:https://chiche.makesense.org/events/e/cycle-de-courts-metrage-tibetain-
 END:VEVENT
 BEGIN:VEVENT
 UID:091b13e364c1@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261024T150000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:La Trocante
@@ -249,7 +217,7 @@ URL:https://chiche.makesense.org/events/e/la-trocante-6aad327eca918800076a3
 END:VEVENT
 BEGIN:VEVENT
 UID:5fc9304cf446@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261026
 SUMMARY:Marche du Temps Profond au Bois de Vincennes
@@ -264,7 +232,7 @@ URL:https://chiche.makesense.org/events/e/marche-du-temps-profond-au-bois-d
 END:VEVENT
 BEGIN:VEVENT
 UID:6b3daa7d4e3f@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261026T193000
 DTEND;TZID=Europe/Paris:20261026T213000
 SUMMARY:Workshop Capoeira Angola
@@ -273,14 +241,14 @@ DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
  gestuelle et culture.Retrouvez-nous pour une pratique ancestrale qui se jo
  ue près du sol. À travers des mouvements lents\, fluides et stratégique
  s\, accom\nhttps://chiche.makesense.org/events/e/workshop-capoeira-angola-
- 6aac09f8ca9188000762bdbc
+ 6aac0a4819fd1c00088dac8c
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac09f8
- ca9188000762bdbc
+URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac0a48
+ 19fd1c00088dac8c
 END:VEVENT
 BEGIN:VEVENT
 UID:c0162d670b3a@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Me préparer à l'entretien d'embauche📍Paris 13

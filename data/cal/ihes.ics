@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:18975d08334d@paris-academique
-DTSTAMP:20261019T094028Z
-DTSTART;TZID=Europe/Paris:20261019T143000
-DTEND;TZID=Europe/Paris:20261019T160000
-SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
-DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
- ommutative) sphere regularization\," a recently proposed non-perturbative 
- approach to 3D CFTs. I will first elucidate its fundamental concepts and t
- hen dive into illustrative examples\, including the 3D Ising transition\, 
- fermionic CFTs\, and Chern-Simons matter theories. I will comment on the p
- otential theoretical direction in…\nhttps://indico.math.cnrs.fr/event/17
- 105/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17105/
-END:VEVENT
-BEGIN:VEVENT
 UID:f4d6cbfae372@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261020T144500
 DTEND;TZID=Europe/Paris:20261020T160000
 SUMMARY:Near-horizon Collisions at the Extreme: Naturalness and Observabili
@@ -58,7 +42,7 @@ URL:https://indico.math.cnrs.fr/event/17573/
 END:VEVENT
 BEGIN:VEVENT
 UID:f88d492659c6@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261021T173000
 DTEND;TZID=Europe/Paris:20261021T203000
 SUMMARY:Conférence de Stéphanie Debette\, « Santé cérébrale\, défi s
@@ -75,7 +59,7 @@ URL:https://indico.math.cnrs.fr/event/16581/
 END:VEVENT
 BEGIN:VEVENT
 UID:2b34d5802175@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261022T110000
 DTEND;TZID=Europe/Paris:20261022T123000
 SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
@@ -92,7 +76,7 @@ URL:https://indico.math.cnrs.fr/event/17461/
 END:VEVENT
 BEGIN:VEVENT
 UID:629e6be59db5@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261022T143000
 DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -108,7 +92,7 @@ URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -124,7 +108,7 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -139,8 +123,24 @@ LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
+UID:d5c2c9991d22@paris-academique
+DTSTAMP:20261020T092018Z
+DTSTART;TZID=Europe/Paris:20261126T110000
+DTEND;TZID=Europe/Paris:20261126T123000
+SUMMARY:The Stratified Shape
+DESCRIPTION:In this talk\, I will try to address the question of how to do 
+ algebraic topology with stratified spaces and schemes in a meaningful way.
+  I will begin by recalling and motivating some of the main historical atte
+ mpts to approach this question\, both in topology and in algebraic geometr
+ y\, passing through the work of Nash\, Quinn\, Siebenmann\, Edwards–Hast
+ ings\, Deligne\, and\, more recently\, Lurie and…\nhttps://indico.math.c
+ nrs.fr/event/17578/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17578/
+END:VEVENT
+BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -155,8 +155,24 @@ LOCATION:Laboratoire de Mathématiques d'Orsay
 URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
+UID:bd1701d69489@paris-academique
+DTSTAMP:20261020T092018Z
+DTSTART;TZID=Europe/Paris:20261217T110000
+DTEND;TZID=Europe/Paris:20261217T123000
+SUMMARY:Algebraic Theory of Indefinite Theta Functions
+DESCRIPTION:Séminaire de géométrie arithmétique Jacobi's theta function
+  $\\Theta(q) := 1 + 2q + 2q^4 + 2q^9 + \\cdots $\, and more generally the 
+ theta functions associated to positive-definite quadratic forms\, have the
+  property that they are modular forms of half-integral weight. The usual p
+ roof of this fact is completely analytic in nature\, using the Poisson sum
+ mation formula. However\, $\\Theta$ is also…\nhttps://indico.math.cnrs.f
+ r/event/17585/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17585/
+END:VEVENT
+BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes

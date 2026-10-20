@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0666e0f5ecea@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
 SUMMARY:[CHANGEMENT DE DATES] Siestes littéraires 2026
@@ -36,7 +36,7 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-2
 END:VEVENT
 BEGIN:VEVENT
 UID:bde6e069aa52@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261020T210000
 DTEND;TZID=Europe/Paris:20261020T230000
 SUMMARY:LA PLACE N°4 / Revue féministe algérienne
@@ -49,7 +49,7 @@ URL:https://www.parisnanterre.fr/agenda/la-place-n4-revue-feministe-algerie
 END:VEVENT
 BEGIN:VEVENT
 UID:06316bcd08d4@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261022T210000
 DTEND;TZID=Europe/Paris:20261022T230000
 SUMMARY:[CHANGEMENT DE LIEU] Festival d'Automne > L’amour de l’art
@@ -60,7 +60,7 @@ URL:https://www.parisnanterre.fr/agenda/lamour-de-lart
 END:VEVENT
 BEGIN:VEVENT
 UID:a99b05cb08e1@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261123T174500
 DTEND;TZID=Europe/Paris:20261123T194500
 SUMMARY:17e édition du Festival Nanterre sur Scène
@@ -71,7 +71,7 @@ URL:https://www.parisnanterre.fr/agenda/festival-nss
 END:VEVENT
 BEGIN:VEVENT
 UID:3286b7dcb352@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20261130T131500
 DTEND;TZID=Europe/Paris:20261130T151500
 SUMMARY:Siestes littéraires (décembre)
@@ -82,7 +82,7 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
 END:VEVENT
 BEGIN:VEVENT
 UID:260a87edc829@paris-academique
-DTSTAMP:20261019T094028Z
+DTSTAMP:20261020T092018Z
 DTSTART;TZID=Europe/Paris:20270206T100000
 DTEND;TZID=Europe/Paris:20270206T120000
 SUMMARY:Journée Portes Ouvertes (JPO) - STAPS - Campus de Nanterre - Samed
