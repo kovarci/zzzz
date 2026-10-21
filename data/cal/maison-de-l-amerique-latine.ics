@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:1a9eeb1b58f3@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261021T190000
 DTEND;TZID=Europe/Paris:20261021T210000
 SUMMARY:Les disparitions forcées en Mésoamérique
@@ -38,7 +38,7 @@ URL:https://www.mal217.org/fr/agenda/les-disparitions-forcees-en-mesoameriq
 END:VEVENT
 BEGIN:VEVENT
 UID:444962ba0b88@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261022T190000
 DTEND;TZID=Europe/Paris:20261022T210000
 SUMMARY:Luz\, cahier d´Amour et de Transformation
@@ -49,7 +49,7 @@ URL:https://www.mal217.org/fr/agenda/luz-e82d8378
 END:VEVENT
 BEGIN:VEVENT
 UID:0c2525dfd2b4@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261026T190000
 DTEND;TZID=Europe/Paris:20261026T210000
 SUMMARY:Accueil des étudiants péruviens
@@ -61,7 +61,7 @@ URL:https://www.mal217.org/fr/agenda/accueil-des-etudiants-peruviens
 END:VEVENT
 BEGIN:VEVENT
 UID:0aa7c1d26b1a@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261027T190000
 DTEND;TZID=Europe/Paris:20261027T210000
 SUMMARY:Navigation dans l’Ancien Pérou
@@ -72,8 +72,21 @@ LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
 URL:https://www.mal217.org/fr/agenda/navigation-dans-l-ancien-perou
 END:VEVENT
 BEGIN:VEVENT
+UID:72207430ccc9@paris-academique
+DTSTAMP:20261021T080634Z
+DTSTART;TZID=Europe/Paris:20261028T193000
+DTEND;TZID=Europe/Paris:20261028T213000
+SUMMARY:Fête des morts à Paris — Inauguration : Autel des morts - Expos
+ ition
+DESCRIPTION:Festival\nhttps://www.mal217.org/fr/agenda/fete-des-morts-4ec49
+ 2fd
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
+URL:https://www.mal217.org/fr/agenda/fete-des-morts-4ec492fd
+END:VEVENT
+BEGIN:VEVENT
 UID:267fbceb2b45@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261028T193000
 DTEND;TZID=Europe/Paris:20261028T213000
 SUMMARY:Fête des morts - concert — 24ème édition

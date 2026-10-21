@@ -24,41 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:19e6e38a67de@paris-academique
-DTSTAMP:20261020T092018Z
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261020
-SUMMARY:Une collecte solidaire pour les étudiants en précarité
-DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
- limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
- our soutenir les étudiants en situation de précarité. Les dons seront r
- emis lors d’une distribution solidaire le jeudi 5 novembre\, à partir d
- e 17 h 30. Ils permettront aussi d’alimenter le service d’aide sociale
-  de la Vie étudiante\, qui pourra constituer des kits…\nhttps://www.uni
- v-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
-LOCATION:DAPS – Campus de Villetaneuse
-URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
- s-en-precarite/
-END:VEVENT
-BEGIN:VEVENT
-UID:f04dbc4bc3b8@paris-academique
-DTSTAMP:20261020T092018Z
-DTSTART;VALUE=DATE:20261019
-DTEND;VALUE=DATE:20261020
-SUMMARY:Envie d’étudier à l’étranger en 2027-2028 ?
-DESCRIPTION:Canada francophone\, Corée du Sud\, Brésil... Partez à la d
- écouverte d'une nouvelle culture et vivez une expérience universitaire 
- à l'international ! Grâce aux accords bilatéraux\, vous pouvez effectue
- r un échange universitaire d'un semestre ou d'une année complète au sei
- n d'une université partenaire\, sous réserve de l'accord de votre compos
- ante. Le petit plus ? En tant qu'étudiant en échange\, vous…\nhttps://
- www.univ-spn.fr/events/envie-detudier-a-letranger-en-2027-2028/
-LOCATION:Amphi 2 – IUT de Villetaneuse
-URL:https://www.univ-spn.fr/events/envie-detudier-a-letranger-en-2027-2028/
-END:VEVENT
-BEGIN:VEVENT
 UID:3dc98be47f8a@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261021T123000
 DTEND;TZID=Europe/Paris:20261021T140000
 SUMMARY:[Événement – appel à participation] Open Mic
@@ -74,7 +41,7 @@ URL:https://www.univ-spn.fr/events/openmic-201026/
 END:VEVENT
 BEGIN:VEVENT
 UID:a868e1c19848@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261021T173000
 DTEND;TZID=Europe/Paris:20261021T190000
 SUMMARY:Comment changer de filière après un 1er semestre ?
@@ -93,7 +60,7 @@ URL:https://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre
 END:VEVENT
 BEGIN:VEVENT
 UID:f819e3de9438@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261021T200000
 DTEND;TZID=Europe/Paris:20261021T213500
 SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
@@ -105,7 +72,7 @@ URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
 END:VEVENT
 BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261020T092018Z
+DTSTAMP:20261021T080634Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque
