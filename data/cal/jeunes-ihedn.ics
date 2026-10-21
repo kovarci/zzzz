@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:d48c5fc0b27b@paris-academique
-DTSTAMP:20261021T080634Z
-DTSTART;VALUE=DATE:20261020
-DTEND;VALUE=DATE:20261021
-SUMMARY:Conférence avec Raphaël Schellenberger sur l’électrification d
- e l’industrie
-DESCRIPTION:Conférence\nhttps://www.jeunes-ihedn.org/events/conference-ave
- c-raphael-schellenberger-sur-lelectrification-de-lindustrie/
-LOCATION:Paris
-URL:https://www.jeunes-ihedn.org/events/conference-avec-raphael-schellenber
- ger-sur-lelectrification-de-lindustrie/
-END:VEVENT
-BEGIN:VEVENT
 UID:8686a7a38183@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261114T133000
 DTEND;TZID=Europe/Paris:20261114T190000
 SUMMARY:Colloque : Repenser l’offre sécuritaire française en Afrique

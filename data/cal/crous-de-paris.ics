@@ -24,26 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:30e422e55d88@paris-academique
-DTSTAMP:20261021T080634Z
-DTSTART;TZID=Europe/Paris:20261020T210000
-DTEND;TZID=Europe/Paris:20261020T230000
-SUMMARY:Diffusion à la Barge : match PSG VS Barcelone !
-DESCRIPTION:⚽ Soirée Champions League : P SG VS Barcelone ! La Ligue des
-  Champions s’invite à la Barge ! Bonne nouvelle pour tous les amateurs 
- de ballon rond ! La Barge du Crous de Paris se transforme en véritable QG
-  du football européen. Au programme : Diffusion des grands matchs de Ligu
- e des Champions sur grand écran à l’intérieur Snacks et boissons prop
- osés à prix étudiant (tarif Crous) Une ambiance…\nhttps://www.crous-p
- aris.fr/evenement/diffusion-a-la-barge-match-psg-vs-barcelone/
-LOCATION:à la Barge du Crous de Paris\, Quai François Mauriac\, Port de l
- a Gare\, 75013 Paris
-URL:https://www.crous-paris.fr/evenement/diffusion-a-la-barge-match-psg-vs-
- barcelone/
-END:VEVENT
-BEGIN:VEVENT
 UID:909d7972c69f@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261030T180000
 DTEND;TZID=Europe/Paris:20261030T230000
 SUMMARY:Soirée Halloween à la Barge vendredi 30 octobre
@@ -62,7 +44,7 @@ URL:https://www.crous-paris.fr/evenement/soiree-halloween-a-la-barge-vendre
 END:VEVENT
 BEGIN:VEVENT
 UID:435325817acf@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261120T190000
 DTEND;TZID=Europe/Paris:20261120T230000
 SUMMARY:Soirée karaoké à la Barge vendredi 20 novembre

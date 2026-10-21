@@ -24,25 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:f4d6cbfae372@paris-academique
-DTSTAMP:20261021T080634Z
-DTSTART;TZID=Europe/Paris:20261020T144500
-DTEND;TZID=Europe/Paris:20261020T160000
-SUMMARY:Near-horizon Collisions at the Extreme: Naturalness and Observabili
- ty of Critical Near-horizon Collisions around Near-extremal Black Holes
-DESCRIPTION:Séminaire Amplitudes et Gravitation sur l'Yvette (IHES/IPhT) I
- n principle\, rapidly rotating black holes could naturally act as particle
-  colliders because geodesics particles that collide can exhibit center-of-
- mass (CM) energies that diverges in the limit that the black hole approach
- es extremality and the collision radius approaches the horizon\, provided 
- that one particle has a critically tuned…\nhttps://indico.math.cnrs.fr/e
- vent/17573/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17573/
-END:VEVENT
-BEGIN:VEVENT
 UID:f88d492659c6@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261021T173000
 DTEND;TZID=Europe/Paris:20261021T203000
 SUMMARY:Conférence de Stéphanie Debette\, « Santé cérébrale\, défi s
@@ -59,7 +42,7 @@ URL:https://indico.math.cnrs.fr/event/16581/
 END:VEVENT
 BEGIN:VEVENT
 UID:2b34d5802175@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261022T110000
 DTEND;TZID=Europe/Paris:20261022T123000
 SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
@@ -76,7 +59,7 @@ URL:https://indico.math.cnrs.fr/event/17461/
 END:VEVENT
 BEGIN:VEVENT
 UID:629e6be59db5@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261022T143000
 DTEND;TZID=Europe/Paris:20261022T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -92,7 +75,7 @@ URL:https://indico.math.cnrs.fr/event/17106/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -108,7 +91,7 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -123,8 +106,24 @@ LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
+UID:878dbfa010be@paris-academique
+DTSTAMP:20261021T091500Z
+DTSTART;TZID=Europe/Paris:20261126T090000
+DTEND;TZID=Europe/Paris:20261126T110000
+SUMMARY:Combinatorics and Arithmetic for Physics
+DESCRIPTION:Combinatorics and Arithmetic for Physics The meeting’s focus 
+ is about questions of discrete mathematics and number theory with an empha
+ sis on computability. Problems are drawn mainly from theoretical physics :
+  renormalisation\, combinatorial physics\, geometry\, evolution equations 
+ (commutative and noncommutative) or related to their models. Computations\
+ , based on combinatorial structures…\nhttps://indico.math.cnrs.fr/event/
+ 17588/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17588/
+END:VEVENT
+BEGIN:VEVENT
 UID:d5c2c9991d22@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261126T110000
 DTEND;TZID=Europe/Paris:20261126T123000
 SUMMARY:The Stratified Shape
@@ -140,7 +139,7 @@ URL:https://indico.math.cnrs.fr/event/17578/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -156,7 +155,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd1701d69489@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261217T110000
 DTEND;TZID=Europe/Paris:20261217T123000
 SUMMARY:Algebraic Theory of Indefinite Theta Functions
@@ -172,7 +171,7 @@ URL:https://indico.math.cnrs.fr/event/17585/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes

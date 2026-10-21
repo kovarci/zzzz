@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4836b0727b13@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261021T113000
 DTEND;TZID=Europe/Paris:20261021T133000
 SUMMARY:How do secretory cells release their cargo so fast ?
@@ -37,7 +37,7 @@ URL:https://curie.fr/evenements-scientifiques/how-do-secretory-cells-releas
 END:VEVENT
 BEGIN:VEVENT
 UID:84b71cca1a3e@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261029T100000
 DTEND;TZID=Europe/Paris:20261029T120000
 SUMMARY:Mechanisms regulating stem cell plasticity during tumor initiation
@@ -49,8 +49,20 @@ URL:https://curie.fr/evenements-scientifiques/mechanisms-regulating-stem-ce
  ll-plasticity-during-tumor-initiation-29-10-2026
 END:VEVENT
 BEGIN:VEVENT
+UID:1789cf1e182b@paris-academique
+DTSTAMP:20261021T091500Z
+DTSTART;TZID=Europe/Paris:20261030T113000
+DTEND;TZID=Europe/Paris:20261030T133000
+SUMMARY:"The cytoplasm in organelle scaling"
+DESCRIPTION:Séminaire Cell Biology Series\nhttps://curie.fr/evenements-sci
+ entifiques/cytoplasm-organelle-scaling-30-10-2026
+LOCATION:Institut Curie\, 26 rue d'Ulm\, Paris 5e
+URL:https://curie.fr/evenements-scientifiques/cytoplasm-organelle-scaling-3
+ 0-10-2026
+END:VEVENT
+BEGIN:VEVENT
 UID:1744483fc87e@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261102T140000
 DTEND;TZID=Europe/Paris:20261102T160000
 SUMMARY:"Regulatory T cells for immune tolerance: Their roles in autoimmuni
@@ -64,7 +76,7 @@ URL:https://curie.fr/evenements-scientifiques/regulatory-t-cells-immune-tol
 END:VEVENT
 BEGIN:VEVENT
 UID:2dceff8ae767@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261103T093000
 DTEND;TZID=Europe/Paris:20261103T113000
 SUMMARY:Single-molecule mechanics of eukaryotic and bacterial SMC complexes
@@ -77,7 +89,7 @@ URL:https://curie.fr/evenements-scientifiques/single-molecule-mechanics-euk
 END:VEVENT
 BEGIN:VEVENT
 UID:e61c62a98026@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:8ème édition - Biologie Cellulaire et Cancer
@@ -89,7 +101,7 @@ URL:https://curie.fr/evenements-scientifiques/8eme-edition-biologie-cellula
 END:VEVENT
 BEGIN:VEVENT
 UID:568622133a67@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261125T113000
 DTEND;TZID=Europe/Paris:20261125T133000
 SUMMARY:Recombination\, fork regression\, or translation synthesis: Pathway
@@ -103,7 +115,7 @@ URL:https://curie.fr/evenements-scientifiques/recombination-fork-regression
 END:VEVENT
 BEGIN:VEVENT
 UID:a26a87885375@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261202T110000
 DTEND;TZID=Europe/Paris:20261202T130000
 SUMMARY:Mechanism of homologous recombination: Analysis of pathway intermed
@@ -118,7 +130,7 @@ URL:https://curie.fr/evenements-scientifiques/mechanism-homologous-recombin
 END:VEVENT
 BEGIN:VEVENT
 UID:0b5b57403c38@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261207T100000
 DTEND;TZID=Europe/Paris:20261207T120000
 SUMMARY:Elemental Legacies\, Ferroptosis and Ferrology
@@ -130,7 +142,7 @@ URL:https://curie.fr/evenements-scientifiques/elemental-legacies-ferroptosi
 END:VEVENT
 BEGIN:VEVENT
 UID:8dd47560c354@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261207T140000
 DTEND;TZID=Europe/Paris:20261207T160000
 SUMMARY:Building Life: Growth\, Morphogenesis and Physiology
@@ -142,7 +154,7 @@ URL:https://curie.fr/evenements-scientifiques/building-life-growth-morphoge
 END:VEVENT
 BEGIN:VEVENT
 UID:55d70d8256c3@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261218T100000
 DTEND;TZID=Europe/Paris:20261218T120000
 SUMMARY:New insights into regenerative programs driving cancer plasticity

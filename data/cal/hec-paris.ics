@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0ff994a7390d@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261023T104500
 DTEND;TZID=Europe/Paris:20261023T124500
 SUMMARY:Jenny van Doorn - On campus - Room T004
@@ -39,7 +39,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/jenny-van-doorn-
 END:VEVENT
 BEGIN:VEVENT
 UID:d77ae363a717@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261105T113000
 DTEND;TZID=Europe/Paris:20261105T133000
 SUMMARY:Séminaire de recherche HEC : Stephan Luck (Fed)
@@ -51,7 +51,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/tbc
 END:VEVENT
 BEGIN:VEVENT
 UID:f2e97e1af494@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261110T094000
 DTEND;TZID=Europe/Paris:20261110T114000
 SUMMARY:The Firm as a Cultivator of Internal Relationships: How Rotation Su
@@ -67,7 +67,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/firm-cultivator-
 END:VEVENT
 BEGIN:VEVENT
 UID:5cecf419a3c6@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261112T113000
 DTEND;TZID=Europe/Paris:20261112T133000
 SUMMARY:Séminaire de recherche HEC : Nicola Pavanini (University of Tilbur
@@ -80,7 +80,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/tbc-0
 END:VEVENT
 BEGIN:VEVENT
 UID:38611fc4719d@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261127T111500
 DTEND;TZID=Europe/Paris:20261127T131500
 SUMMARY:Pricing in the Age of AI (MIT Press)
@@ -94,7 +94,7 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/pricing-age-ai-m
 END:VEVENT
 BEGIN:VEVENT
 UID:a31bd09cbd56@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261203T094000
 DTEND;TZID=Europe/Paris:20261203T114000
 SUMMARY:Séminaire de recherche HEC : Kristina Mc Elheran (U. Toronto)
@@ -108,9 +108,9 @@ URL:https://www.hec.edu/fr/faculte-et-recherche/evenements/kristina-mc-elhe
 END:VEVENT
 BEGIN:VEVENT
 UID:bc80c8c7829d@paris-academique
-DTSTAMP:20261021T080634Z
-DTSTART;TZID=Europe/Paris:20261214T083000
-DTEND;TZID=Europe/Paris:20261214T103000
+DTSTAMP:20261021T091500Z
+DTSTART;TZID=Europe/Paris:20261214T140000
+DTEND;TZID=Europe/Paris:20261214T160000
 SUMMARY:Conférence Droits Humains et Entreprises 2026
 DESCRIPTION:Sustainability & Organizations Center · Le Centre Sustainabili
  ty & Organizations d'HEC Paris et le Groupe Volkswagen\, en partenariat av

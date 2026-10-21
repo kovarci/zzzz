@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:cc21a17fbb0a@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261023T180000
 DTEND;TZID=Europe/Paris:20261023T200000
 SUMMARY:Regards sur Louise Bourgeois
@@ -35,7 +35,7 @@ URL:https://www.bnf.fr/fr/agenda/regards-sur-louise-bourgeois
 END:VEVENT
 BEGIN:VEVENT
 UID:640bf8118fb1@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261026T180000
 DTEND;TZID=Europe/Paris:20261026T200000
 SUMMARY:La naissance du livre de poésie moderne en français : des premier
@@ -49,7 +49,7 @@ URL:https://www.bnf.fr/fr/agenda/la-naissance-du-livre-de-poesie-moderne-en
 END:VEVENT
 BEGIN:VEVENT
 UID:221e41ec938e@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261102T170000
 DTEND;TZID=Europe/Paris:20261102T183000
 SUMMARY:Ce que racontent les manuscrits : Anne de Graville\, le manuscrit F
@@ -61,8 +61,22 @@ URL:https://www.bnf.fr/fr/agenda/ce-que-racontent-les-manuscrits-anne-de-gr
  aville-le-manuscrit-francais-25441-et-la
 END:VEVENT
 BEGIN:VEVENT
+UID:673da7d7e342@paris-academique
+DTSTAMP:20261021T091500Z
+DTSTART;TZID=Europe/Paris:20261103T183000
+DTEND;TZID=Europe/Paris:20261103T200000
+SUMMARY:Matière passive et matière active. Avec Blaise Pascal\, Jean d’
+ Alembert et Edme Mariotte
+DESCRIPTION:Le Collège à la Bibliothèque\nhttps://www.bnf.fr/fr/agenda/m
+ atiere-passive-et-matiere-active-avec-blaise-pascal-jean-dalembert-et-edme
+ -mariotte
+LOCATION:François-Mitterrand — Bibliothèque nationale de France\, Paris
+URL:https://www.bnf.fr/fr/agenda/matiere-passive-et-matiere-active-avec-bla
+ ise-pascal-jean-dalembert-et-edme-mariotte
+END:VEVENT
+BEGIN:VEVENT
 UID:d722d25daca5@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261103T183000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Matière active
@@ -73,7 +87,7 @@ URL:https://www.bnf.fr/fr/agenda/matiere-active
 END:VEVENT
 BEGIN:VEVENT
 UID:ff56c530e69f@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Un rituel de la couleur au Moyen Âge ?
@@ -84,7 +98,7 @@ URL:https://www.bnf.fr/fr/agenda/un-rituel-de-la-couleur-au-moyen-age
 END:VEVENT
 BEGIN:VEVENT
 UID:38fcd46c722d@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261110T183000
 DTEND;TZID=Europe/Paris:20261110T200000
 SUMMARY:Benjamin Franklin
@@ -95,7 +109,7 @@ URL:https://www.bnf.fr/fr/agenda/benjamin-franklin
 END:VEVENT
 BEGIN:VEVENT
 UID:162d5e49ea2b@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261118T123000
 DTEND;TZID=Europe/Paris:20261118T140000
 SUMMARY:Rôle du livre et des revues dans la conception photographique japo
@@ -109,7 +123,7 @@ URL:https://www.bnf.fr/fr/agenda/role-du-livre-et-des-revues-dans-la-concep
 END:VEVENT
 BEGIN:VEVENT
 UID:bc53265ca11f@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261118T183000
 DTEND;TZID=Europe/Paris:20261118T200000
 SUMMARY:Livres spoliés et reconstitution des bibliothèques publiques apr
@@ -123,7 +137,7 @@ URL:https://www.bnf.fr/fr/agenda/livres-spolies-et-reconstitution-des-bibli
 END:VEVENT
 BEGIN:VEVENT
 UID:d489e8ffd260@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261118T183000
 DTEND;TZID=Europe/Paris:20261118T200000
 SUMMARY:Des milliers de livres spoliés présents dans les bibliothèques :
@@ -137,7 +151,7 @@ URL:https://www.bnf.fr/fr/agenda/des-milliers-de-livres-spolies-presents-da
 END:VEVENT
 BEGIN:VEVENT
 UID:f9504b2f1465@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T193000
 SUMMARY:Des vases sur des monnaies : pour une approche croisée des représ
@@ -151,7 +165,7 @@ URL:https://www.bnf.fr/fr/agenda/des-vases-sur-des-monnaies-pour-une-approc
 END:VEVENT
 BEGIN:VEVENT
 UID:4b2da3e24039@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:L’arsenic\, renaissance d’un médicament venu de l’Antiquité
@@ -163,7 +177,7 @@ URL:https://www.bnf.fr/fr/agenda/larsenic-renaissance-dun-medicament-venu-d
 END:VEVENT
 BEGIN:VEVENT
 UID:ac40f1787fda@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261124T183000
 DTEND;TZID=Europe/Paris:20261124T200000
 SUMMARY:Pierre Augustin Caron de Beaumarchais
@@ -175,7 +189,7 @@ URL:https://www.bnf.fr/fr/agenda/pierre-augustin-caron-de-beaumarchais
 END:VEVENT
 BEGIN:VEVENT
 UID:ee418a88be8e@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261125T093000
 DTEND;TZID=Europe/Paris:20261125T170000
 SUMMARY:Bicentenaire de la mort de Philippe Pinel\, « père » de la psych
@@ -188,7 +202,7 @@ URL:https://www.bnf.fr/fr/agenda/bicentenaire-de-la-mort-de-philippe-pinel-
 END:VEVENT
 BEGIN:VEVENT
 UID:22f147c0a2b3@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261130T170000
 DTEND;TZID=Europe/Paris:20261130T183000
 SUMMARY:Entre archives et manuscrits\, du nouveau sur Charles d’Orléans 
@@ -201,7 +215,7 @@ URL:https://www.bnf.fr/fr/agenda/entre-archives-et-manuscrits-du-nouveau-su
 END:VEVENT
 BEGIN:VEVENT
 UID:7d9562cb7afd@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261201T183000
 DTEND;TZID=Europe/Paris:20261201T200000
 SUMMARY:Savants et charlatans : le cas Mesmer
@@ -212,7 +226,7 @@ URL:https://www.bnf.fr/fr/agenda/savants-et-charlatans-le-cas-mesmer
 END:VEVENT
 BEGIN:VEVENT
 UID:342d81a6be06@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261208T170000
 DTEND;TZID=Europe/Paris:20261208T183000
 SUMMARY:Écrire ou figurer la vie du Christ ? L’image à l’épreuve de 
@@ -226,7 +240,7 @@ URL:https://www.bnf.fr/fr/agenda/ecrire-ou-figurer-la-vie-du-christ-limage-
 END:VEVENT
 BEGIN:VEVENT
 UID:d668c16760fd@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261208T183000
 DTEND;TZID=Europe/Paris:20261208T200000
 SUMMARY:Les États-Unis à l’épreuve du trumpisme
@@ -237,7 +251,7 @@ URL:https://www.bnf.fr/fr/agenda/les-etats-unis-lepreuve-du-trumpisme
 END:VEVENT
 BEGIN:VEVENT
 UID:5e381b4728df@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261209T170000
 DTEND;TZID=Europe/Paris:20261209T183000
 SUMMARY:Un chef d'œuvre de l'art du livre constantinopolitain : le tétra
@@ -251,7 +265,7 @@ URL:https://www.bnf.fr/fr/agenda/un-chef-doeuvre-de-lart-du-livre-constanti
 END:VEVENT
 BEGIN:VEVENT
 UID:4a5298111119@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261209T183000
 DTEND;TZID=Europe/Paris:20261209T200000
 SUMMARY:Les travaux de Grace Wahba
@@ -261,21 +275,22 @@ LOCATION:François-Mitterrand — Bibliothèque nationale de France\, Paris
 URL:https://www.bnf.fr/fr/agenda/les-travaux-de-grace-wahba
 END:VEVENT
 BEGIN:VEVENT
-UID:3f0b1330a451@paris-academique
-DTSTAMP:20261021T080634Z
+UID:76135cfa9805@paris-academique
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261215T183000
 DTEND;TZID=Europe/Paris:20261215T200000
 SUMMARY:De la philosophie aux mathématiques : de l'intelligence pas si art
- ificielle
+ ificielle. Avec Emmanuel Kant
 DESCRIPTION:Le Collège à la Bibliothèque\nhttps://www.bnf.fr/fr/agenda/d
- e-la-philosophie-aux-mathematiques-de-lintelligence-pas-si-artificielle
+ e-la-philosophie-aux-mathematiques-de-lintelligence-pas-si-artificielle-av
+ ec-emmanuel-kant
 LOCATION:François-Mitterrand — Bibliothèque nationale de France\, Paris
 URL:https://www.bnf.fr/fr/agenda/de-la-philosophie-aux-mathematiques-de-lin
- telligence-pas-si-artificielle
+ telligence-pas-si-artificielle-avec-emmanuel-kant
 END:VEVENT
 BEGIN:VEVENT
 UID:5bdd6f0768ec@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261216T123000
 DTEND;TZID=Europe/Paris:20261216T140000
 SUMMARY:L’enfance dans la photographie japonaise après 1945
@@ -288,7 +303,7 @@ URL:https://www.bnf.fr/fr/agenda/lenfance-dans-la-photographie-japonaise-ap
 END:VEVENT
 BEGIN:VEVENT
 UID:3522ef2d6b80@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261216T183000
 DTEND;TZID=Europe/Paris:20261216T200000
 SUMMARY:Douze à la douzaine
@@ -299,7 +314,7 @@ URL:https://www.bnf.fr/fr/agenda/douze-la-douzaine
 END:VEVENT
 BEGIN:VEVENT
 UID:96169a7645af@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20270112T181500
 DTEND;TZID=Europe/Paris:20270112T193000
 SUMMARY:« L’Œil’s de Moscou »
@@ -310,7 +325,7 @@ URL:https://www.bnf.fr/fr/agenda/loeils-de-moscou
 END:VEVENT
 BEGIN:VEVENT
 UID:150dfd35e86d@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20270126T183000
 DTEND;TZID=Europe/Paris:20270126T200000
 SUMMARY:Voir ou ne pas voir la guerre. Reporters et reportages sur les gran
@@ -324,7 +339,7 @@ URL:https://www.bnf.fr/fr/agenda/voir-ou-ne-pas-voir-la-guerre-reporters-et
 END:VEVENT
 BEGIN:VEVENT
 UID:77ae843dd1ee@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20270202T181500
 DTEND;TZID=Europe/Paris:20270202T193000
 SUMMARY:Les « Épîtres » de saint Cyprien : un manifeste de l’humanism

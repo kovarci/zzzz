@@ -24,32 +24,19 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:73a2726cb500@paris-academique
-DTSTAMP:20261021T080634Z
-DTSTART;TZID=Europe/Paris:20261020T183000
-DTEND;TZID=Europe/Paris:20261020T200000
-SUMMARY:Conférence du diplôme sur les enquêtes Trajectoires et Origines 
- de l'INED
-DESCRIPTION:Conférence du diplôme\nhttps://www.ens-paris-saclay.fr/agenda
- /conference-du-diplome-sur-les-enquetes-trajectoires-et-origines-de-lined
-LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
-URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-les-en
- quetes-trajectoires-et-origines-de-lined
-END:VEVENT
-BEGIN:VEVENT
-UID:1fbb3660dfb9@paris-academique
-DTSTAMP:20261021T080634Z
+UID:fb6b6606c835@paris-academique
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261022T120000
 DTEND;TZID=Europe/Paris:20261022T180000
-SUMMARY:Course solidaire
+SUMMARY:Course solidaire 2026
 DESCRIPTION:Vie étudiante\nhttps://www.ens-paris-saclay.fr/agenda/course-s
- olidaire
+ olidaire-2026
 LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
-URL:https://www.ens-paris-saclay.fr/agenda/course-solidaire
+URL:https://www.ens-paris-saclay.fr/agenda/course-solidaire-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:7a6329099f63@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261106T093000
 DTEND;TZID=Europe/Paris:20261106T180000
 SUMMARY:Colloque inter-ENS « Accéder à l’enseignement supérieur : une
@@ -62,7 +49,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acceder-lense
 END:VEVENT
 BEGIN:VEVENT
 UID:72e19a27838b@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261110T190000
 DTEND;TZID=Europe/Paris:20261110T203000
 SUMMARY:Arts & Sciences : Péritopie 1
@@ -73,7 +60,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/arts-sciences-peritopie-1
 END:VEVENT
 BEGIN:VEVENT
 UID:e1fac47f83af@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261113T093000
 DTEND;TZID=Europe/Paris:20261113T120000
 SUMMARY:Soutenance HDR de Pierre Penet
@@ -83,8 +70,21 @@ LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
 URL:https://www.ens-paris-saclay.fr/agenda/soutenance-hdr-de-pierre-penet
 END:VEVENT
 BEGIN:VEVENT
+UID:3dc7e87b91f6@paris-academique
+DTSTAMP:20261021T091500Z
+DTSTART;TZID=Europe/Paris:20261117T183000
+DTEND;TZID=Europe/Paris:20261117T200000
+SUMMARY:Conférence du diplôme sur l'histoire environnementale des infrast
+ ructures
+DESCRIPTION:Conférence du diplôme\nhttps://www.ens-paris-saclay.fr/agenda
+ /conference-du-diplome-sur-lhistoire-environnementale-des-infrastructures
+LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
+URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-lhisto
+ ire-environnementale-des-infrastructures
+END:VEVENT
+BEGIN:VEVENT
 UID:639624e75bb5@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261124T190000
 DTEND;TZID=Europe/Paris:20261124T203000
 SUMMARY:La vie de recherche : Jean Jouzel
@@ -95,7 +95,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/la-vie-de-recherche-jean-jouzel
 END:VEVENT
 BEGIN:VEVENT
 UID:67a32f5728f3@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261205T140000
 DTEND;TZID=Europe/Paris:20261205T144000
 SUMMARY:Spectacle : Trait(s)
@@ -105,7 +105,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/spectacle-traits
 END:VEVENT
 BEGIN:VEVENT
 UID:7c452be96618@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20270112T190000
 DTEND;TZID=Europe/Paris:20270112T203000
 SUMMARY:Arts & Sciences : Péritopie 2

@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:9a44e4dda58f@paris-academique
-DTSTAMP:20261021T080634Z
-DTSTART;TZID=Europe/Paris:20261020T180000
-DTEND;TZID=Europe/Paris:20261020T200000
-SUMMARY:Les sources sur le patrimoine aux Archives nationales
-DESCRIPTION:https://www.chartes.psl.eu/gazette-chartiste/agenda/lier-les-do
- nnees-du-patrimoine/les-sources-sur-le-patrimoine-aux-archives-nationales
-LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
-URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/lier-les-donnees-du
- -patrimoine/les-sources-sur-le-patrimoine-aux-archives-nationales
-END:VEVENT
-BEGIN:VEVENT
 UID:72cc9aa84310@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261109T180000
 DTEND;TZID=Europe/Paris:20261109T193000
 SUMMARY:De Jérusalem au Sinaï : les graffitis occidentaux des XIV e - XVI
@@ -50,7 +38,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/de-jerusalem-au-sin
 END:VEVENT
 BEGIN:VEVENT
 UID:a74d91770fef@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261110T181500
 DTEND;TZID=Europe/Paris:20261110T193000
 SUMMARY:Entre pointe et pinceau : Le Christ aux outrages d’Henry de Groux
@@ -64,7 +52,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/tresors-de-richelie
 END:VEVENT
 BEGIN:VEVENT
 UID:ddbd13580338@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261113T084500
 DTEND;TZID=Europe/Paris:20261113T163000
 SUMMARY:Le secrétariat général du Gouvernement
@@ -76,7 +64,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/le-secretariat-gene
 END:VEVENT
 BEGIN:VEVENT
 UID:f22da0e4cd7f@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261116T180000
 DTEND;TZID=Europe/Paris:20261116T193000
 SUMMARY:Archive ou archives ? Les effets d’un néologisme philosophique
@@ -87,8 +75,20 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/archive-ou-archives
  -les-effets-dun-neologisme-philosophique
 END:VEVENT
 BEGIN:VEVENT
+UID:c6af97ed27d2@paris-academique
+DTSTAMP:20261021T091500Z
+DTSTART;TZID=Europe/Paris:20261117T093000
+DTEND;TZID=Europe/Paris:20261117T170000
+SUMMARY:L’État et les arts (1791-1914)
+DESCRIPTION:Colloque et journée d’étude\nhttps://www.chartes.psl.eu/gaz
+ ette-chartiste/agenda/letat-et-les-arts-1791-1914
+LOCATION:École nationale des chartes\, 65 rue de Richelieu\, Paris 2e
+URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/letat-et-les-arts-1
+ 791-1914
+END:VEVENT
+BEGIN:VEVENT
 UID:11edb28b5015@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T193000
 SUMMARY:La constitution des archives françaises de la photographie
@@ -100,7 +100,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/la-constitution-des
 END:VEVENT
 BEGIN:VEVENT
 UID:794cb5b0b60d@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261127T090000
 DTEND;TZID=Europe/Paris:20261127T173000
 SUMMARY:Journée de formation aux outils de la recherche sur le XVI e sièc
@@ -113,7 +113,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/journee-de-formatio
 END:VEVENT
 BEGIN:VEVENT
 UID:5b4a93cf215e@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;TZID=Europe/Paris:20261210T180000
 DTEND;TZID=Europe/Paris:20261210T193000
 SUMMARY:Images de sciences
@@ -124,7 +124,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/images-de-sciences
 END:VEVENT
 BEGIN:VEVENT
 UID:5a9976f46e56@paris-academique
-DTSTAMP:20261021T080634Z
+DTSTAMP:20261021T091500Z
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
 SUMMARY:Les sources du patrimoine
