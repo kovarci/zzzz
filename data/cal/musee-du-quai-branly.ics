@@ -24,25 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5698dbf106fd@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;TZID=Europe/Paris:20261021T143000
-DTEND;TZID=Europe/Paris:20261021T173000
-SUMMARY:Les savoirs autochtones à l’école et à l’Université frança
- ises ?
-DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
- re-jacques-kerchache/details-de-levenement/e/les-savoirs-autochtones-a-lec
- ole-et-a-luniversite-francaises
-LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
- 7e
-URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
- s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/les-savoir
- s-autochtones-a-lecole-et-a-luniversite-francaises
-END:VEVENT
-BEGIN:VEVENT
 UID:6aa80cef6ec0@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261025T140000
 DTEND;TZID=Europe/Paris:20261025T180000
 SUMMARY:Bingo Icono
@@ -57,7 +40,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:1b84d02a2881@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261029T160000
 DTEND;TZID=Europe/Paris:20261029T180000
 SUMMARY:Le projet éclat métallique
@@ -72,7 +55,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:97d8612796fa@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261104T170000
 DTEND;TZID=Europe/Paris:20261104T183000
 SUMMARY:Le racisme scientifique et médical : du 19e siècle à nos jours
@@ -88,7 +71,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:483500e8954a@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261105T180000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Atlantique(s) noir(s) :
@@ -104,7 +87,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:05140ab13bd7@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261106T170000
 DTEND;TZID=Europe/Paris:20261106T184500
 SUMMARY:Célébrer la vie\, honorer les morts
@@ -120,7 +103,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:f687e1999431@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261110T091500
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Le temps des épreuves
@@ -135,7 +118,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:503dfe4788ff@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Genèses de Léopold Sédar Senghor : actualité éditoriale
@@ -151,7 +134,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:426f20d0be52@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261118T093000
 DTEND;TZID=Europe/Paris:20261118T173000
 SUMMARY:Objets de mémoires
@@ -167,7 +150,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:5dd66cc4b19c@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:"Haïti\, seul peuple de peintres"
@@ -183,7 +166,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:a20f9f5625f3@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T183000
 SUMMARY:L'archéologie et l'anthropologie face au pillage
@@ -199,7 +182,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:3a86f96752dc@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T184500
 SUMMARY:Rencontre avec George Nuku
@@ -214,7 +197,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:8c4a1242ff87@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261126T173000
 DTEND;TZID=Europe/Paris:20261126T184500
 SUMMARY:Le survivant : trois ans parmi les Nootka de l'île de Vancouver
@@ -229,7 +212,7 @@ URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
 END:VEVENT
 BEGIN:VEVENT
 UID:eae89d4b6966@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261203T170000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:« Comment créer un environnement propice à la création artistiq
@@ -247,7 +230,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:a7129bd2cf8d@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261208T170000
 DTEND;TZID=Europe/Paris:20261208T184500
 SUMMARY:Au cœur du dialogue des cultures

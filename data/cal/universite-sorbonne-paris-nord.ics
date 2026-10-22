@@ -24,10 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:26c88f5c6fe5@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;VALUE=DATE:20261020
-DTEND;VALUE=DATE:20261021
+UID:6ca94129701c@paris-academique
+DTSTAMP:20261022T091551Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
 SUMMARY:Une collecte solidaire pour les étudiants en précarité
 DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
  limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
@@ -42,9 +42,9 @@ URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
 END:VEVENT
 BEGIN:VEVENT
 UID:3dc98be47f8a@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;TZID=Europe/Paris:20261021T123000
-DTEND;TZID=Europe/Paris:20261021T140000
+DTSTAMP:20261022T091551Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
 SUMMARY:[Événement – appel à participation] Open Mic
 DESCRIPTION:Animé par Sarah Ghoulmié (MC) + Selecta Majayéorimi (DJ)Reto
  ur cette année de l’Open Mic made in Canal 93\, fameuse salle de Bobign
@@ -58,9 +58,9 @@ URL:https://www.univ-spn.fr/events/openmic-201026/
 END:VEVENT
 BEGIN:VEVENT
 UID:a868e1c19848@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;TZID=Europe/Paris:20261021T173000
-DTEND;TZID=Europe/Paris:20261021T190000
+DTSTAMP:20261022T091551Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
 SUMMARY:Comment changer de filière après un 1er semestre ?
 DESCRIPTION:Vous êtes étudiant en 1ère année à l’Université Sorbonn
  e Paris Nord et vous souhaitez vous réorienter ? Pour en savoir plus sur 
@@ -77,9 +77,9 @@ URL:https://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre
 END:VEVENT
 BEGIN:VEVENT
 UID:f819e3de9438@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;TZID=Europe/Paris:20261021T200000
-DTEND;TZID=Europe/Paris:20261021T213500
+DTSTAMP:20261022T091551Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
 SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
 DESCRIPTION:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-
  juliette/
@@ -89,7 +89,7 @@ URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
 END:VEVENT
 BEGIN:VEVENT
 UID:b8f6fa7038cf@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261022T120000
 DTEND;TZID=Europe/Paris:20261022T133000
 SUMMARY:Envie d’étudier à l’étranger en 2027-2028 ?
@@ -106,7 +106,7 @@ URL:https://www.univ-spn.fr/events/envie-detudier-a-letranger-en-2027-2028-
 END:VEVENT
 BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque

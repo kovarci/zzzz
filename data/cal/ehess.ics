@@ -24,22 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:f07fede3aeb7@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;TZID=Europe/Paris:20261020T173000
-DTEND;TZID=Europe/Paris:20261020T193000
-SUMMARY:Voix aux Chapitres #21 : "Citoyennes soignantes. Guerre\, femmes et
-  fabrique du commun en Ukraine"
-DESCRIPTION:Rencontre\nhttps://www.ehess.fr/jcms/296532_JEvent/fr/voix-aux-
- chapitres-21-citoyennes-soignantes-guerre-femmes-et-fabrique-du-commun-en-
- ukraine
-LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
-URL:https://www.ehess.fr/jcms/296532_JEvent/fr/voix-aux-chapitres-21-citoye
- nnes-soignantes-guerre-femmes-et-fabrique-du-commun-en-ukraine
-END:VEVENT
-BEGIN:VEVENT
 UID:6b89c6301720@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261022T170000
 DTEND;TZID=Europe/Paris:20261022T190000
 SUMMARY:Le Laboratoire Junior fait sa première rentrée
@@ -50,8 +36,22 @@ URL:https://www.ehess.fr/jcms/297910_JEvent/fr/le-laboratoire-junior-fait-s
  a-premiere-rentree
 END:VEVENT
 BEGIN:VEVENT
+UID:c39ee18542a6@paris-academique
+DTSTAMP:20261022T091551Z
+DTSTART;TZID=Europe/Paris:20261102T093000
+DTEND;TZID=Europe/Paris:20261102T113000
+SUMMARY:Pratiques artistiques et pluralité sociologique : Quelle place pou
+ r les approches praxéologiques ?
+DESCRIPTION:Journée d'études\nhttps://www.ehess.fr/jcms/302399_JEvent/fr/
+ pratiques-artistiques-et-pluralite-sociologique-quelle-place-pour-les-appr
+ oches-praxeologiques
+LOCATION:EHESS\, Campus Condorcet\, 2 cours des Humanités\, Aubervilliers
+URL:https://www.ehess.fr/jcms/302399_JEvent/fr/pratiques-artistiques-et-plu
+ ralite-sociologique-quelle-place-pour-les-approches-praxeologiques
+END:VEVENT
+BEGIN:VEVENT
 UID:4b30ef1b52ce@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261107T090000
 DTEND;TZID=Europe/Paris:20261107T110000
 SUMMARY:Journée des sciences humaines et sociales #1 : Où penser libremen
@@ -64,7 +64,7 @@ URL:https://www.ehess.fr/jcms/298487_JEvent/fr/journee-des-sciences-humaine
 END:VEVENT
 BEGIN:VEVENT
 UID:d15b53794d2b@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T160000
 SUMMARY:Réunions d'information "Reprise d'études"
@@ -75,8 +75,21 @@ URL:https://www.ehess.fr/jcms/37175_JEvent/fr/reunions-d-information-repris
  e-d-etudes
 END:VEVENT
 BEGIN:VEVENT
+UID:5d49993288de@paris-academique
+DTSTAMP:20261022T091551Z
+DTSTART;TZID=Europe/Paris:20261112T190000
+DTEND;TZID=Europe/Paris:20261112T210000
+SUMMARY:Langue des Signes Japonaise et Langue des Signes Française : regar
+ ds croisés
+DESCRIPTION:Rencontre\nhttps://www.ehess.fr/jcms/302138_JEvent/fr/langue-de
+ s-signes-japonaise-et-langue-des-signes-francaise-regards-croises
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr/jcms/302138_JEvent/fr/langue-des-signes-japonaise-
+ et-langue-des-signes-francaise-regards-croises
+END:VEVENT
+BEGIN:VEVENT
 UID:8902b0a16985@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261117T183000
 DTEND;TZID=Europe/Paris:20261117T203000
 SUMMARY:L'incomplétude en mouvement : perspectives africaines et pensée d
@@ -89,7 +102,7 @@ URL:https://www.ehess.fr/jcms/284673_JEvent/fr/l-incompletude-en-mouvement-
 END:VEVENT
 BEGIN:VEVENT
 UID:e67f8476334d@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:La psychologisation des violences faites aux femmes
@@ -101,7 +114,7 @@ URL:https://www.ehess.fr/jcms/258092_JEvent/fr/la-psychologisation-des-viol
 END:VEVENT
 BEGIN:VEVENT
 UID:25f806336c48@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T113000
 SUMMARY:Semaine de l'Afrique
@@ -112,7 +125,7 @@ URL:https://www.ehess.fr/jcms/293183_JEvent/fr/semaine-de-l-afrique
 END:VEVENT
 BEGIN:VEVENT
 UID:126f55eb6343@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261127T100000
 DTEND;TZID=Europe/Paris:20261127T120000
 SUMMARY:Voix aux Chapitres #22 autour de l'ouvrage "Chroniques de l’intra
@@ -128,7 +141,7 @@ URL:https://www.ehess.fr/jcms/296672_JEvent/fr/voix-aux-chapitres-22-autour
 END:VEVENT
 BEGIN:VEVENT
 UID:a497b7772165@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261201T173000
 DTEND;TZID=Europe/Paris:20261201T193000
 SUMMARY:Voix aux Chapitres #23 autour de l'ouvrage "Une histoire économiqu
@@ -143,7 +156,7 @@ URL:https://www.ehess.fr/jcms/296719_JEvent/fr/voix-aux-chapitres-23-autour
 END:VEVENT
 BEGIN:VEVENT
 UID:e931f209406d@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261209T173000
 DTEND;TZID=Europe/Paris:20261209T193000
 SUMMARY:Voix aux Chapitres #24 autour de l'ouvrage "Coluche"

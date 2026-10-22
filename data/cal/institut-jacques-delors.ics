@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:793453628e82@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261022T090000
 DTEND;TZID=Europe/Paris:20261022T130000
 SUMMARY:Caisse des Dépôts – Institut pour la Recherche x Institut Jacqu
@@ -41,7 +41,7 @@ URL:https://institutdelors.eu/evenements/caisse-des-depots-x-institut-jacqu
 END:VEVENT
 BEGIN:VEVENT
 UID:35b864af5fa3@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261027T183000
 DTEND;TZID=Europe/Paris:20261027T200000
 SUMMARY:Macif x IJD – Rencontre européenne #3 Repenser la prévention en
@@ -55,7 +55,7 @@ URL:https://institutdelors.eu/evenements/macif-x-ijd-rencontre-europeenne-3
 END:VEVENT
 BEGIN:VEVENT
 UID:e61061a5b914@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261113T090000
 DTEND;TZID=Europe/Paris:20261113T170000
 SUMMARY:Académie Notre Europe #2 – L’Europe dans le Monde
@@ -66,8 +66,22 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-2-leurope-da
  ns-le-monde/
 END:VEVENT
 BEGIN:VEVENT
+UID:36ab9dd9f9cf@paris-academique
+DTSTAMP:20261022T091551Z
+DTSTART;TZID=Europe/Paris:20261117T123000
+DTEND;TZID=Europe/Paris:20261117T133000
+SUMMARY:Midis d’Europa Experience #7 | Crise du logement : l’Europe log
+ ée à la même enseigne ? avec Sarah Coupechoux
+DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/midis-deur
+ opa-experience-7-crise-du-logement-leurope-logee-a-la-meme-enseigne-avec-s
+ arah-coupechoux/
+LOCATION:Paris — lieu précisé sur la page de l'événement
+URL:https://institutdelors.eu/evenements/midis-deuropa-experience-7-crise-d
+ u-logement-leurope-logee-a-la-meme-enseigne-avec-sarah-coupechoux/
+END:VEVENT
+BEGIN:VEVENT
 UID:4e5b96419fb6@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Conférence Annuelle – 30 ans de l’Institut Jacques Delors

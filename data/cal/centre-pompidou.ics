@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:641788342ab3@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;TZID=Europe/Paris:20261021T180000
-DTEND;TZID=Europe/Paris:20261021T193000
-SUMMARY:Jacques Herzog
-DESCRIPTION:Conférence\nhttps://www.centrepompidou.fr/fr/programme/agenda/
- evenement/OQuqkO6
-LOCATION:Université Paris 1 Panthéon-Sorbonne\, Paris
-URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/OQuqkO6
-END:VEVENT
-BEGIN:VEVENT
 UID:6c9a578135d9@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261022T160000
 DTEND;TZID=Europe/Paris:20261022T180000
 SUMMARY:Archéologies futures : commandes\, artistes et naissance d’un mu
@@ -48,7 +37,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/Hfs5xZg
 END:VEVENT
 BEGIN:VEVENT
 UID:5fc22e00b864@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261023T113000
 DTEND;TZID=Europe/Paris:20261023T121500
 SUMMARY:Conversations : musées de demain
@@ -59,7 +48,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/XLl3Xhs
 END:VEVENT
 BEGIN:VEVENT
 UID:d834c17bd88c@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261029T190000
 DTEND;TZID=Europe/Paris:20261029T210000
 SUMMARY:Tout savoir sur le business de la mort
@@ -70,7 +59,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/jq8q494
 END:VEVENT
 BEGIN:VEVENT
 UID:7b0574ba2bd5@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Le pari de l'œuvre de Michèle Audin
@@ -81,7 +70,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/VkVzlE5
 END:VEVENT
 BEGIN:VEVENT
 UID:595420e1818a@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261217T190000
 DTEND;TZID=Europe/Paris:20261217T210000
 SUMMARY:Le pari de l’œuvre de Mouna Ouafik et la plateforme Shaeirat

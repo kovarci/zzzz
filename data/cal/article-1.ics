@@ -24,23 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:0f3b6adaff8a@paris-academique
-DTSTAMP:20261021T091500Z
-DTSTART;TZID=Europe/Paris:20261021T140000
-DTEND;TZID=Europe/Paris:20261021T170000
-SUMMARY:🚀 Challenge ton futur ! - avec Allianz
-DESCRIPTION:Challenge ton futur 21 octobre 2026 avec Allianz 3 défis pour 
- prendre une longueur d'avance dans la vie pro : Money : tes réflexes fina
- nciers LinkedIn : challenge ton profil Network : à la rencontre des pros\
- nhttps://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8vA&
- id=a1NIV00000BwBRN&base=base5&form=jeune
-LOCATION:Courbevoie
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001qB8v
- A&id=a1NIV00000BwBRN&base=base5&form=jeune
-END:VEVENT
-BEGIN:VEVENT
 UID:170187a29e7f@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261024T090000
 DTEND;TZID=Europe/Paris:20261024T170000
 SUMMARY:Campus de rentrée 2026
@@ -55,7 +40,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001msTD
 END:VEVENT
 BEGIN:VEVENT
 UID:dc447b7cfae2@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261028T183000
 DTEND;TZID=Europe/Paris:20261028T213000
 SUMMARY:Soirée des métiers : Cybersécurité & IA - KYNDRYL
@@ -70,8 +55,21 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001mEoN
  R&id=a1NIV000009RgXR&base=base5&form=jeune
 END:VEVENT
 BEGIN:VEVENT
+UID:7b5df0e2bfe6@paris-academique
+DTSTAMP:20261022T091551Z
+DTSTART;TZID=Europe/Paris:20261102T180000
+DTEND;TZID=Europe/Paris:20261102T190000
+SUMMARY:Webinaire : CV et candidature
+DESCRIPTION:Insertion Pro · Etudiants\nhttps://article1.my.salesforce-site
+ s.com/AG_VFP_Quiz?cid=701IV00001pCmB3&id=a1NIV00000BnRjt&base=base5&form=j
+ eune
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pCmB
+ 3&id=a1NIV00000BnRjt&base=base5&form=jeune
+END:VEVENT
+BEGIN:VEVENT
 UID:4b97bafe5020@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261103T183000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:WEBINAIRE : METIERS DU NUMERIQUE
@@ -84,8 +82,34 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001nLcw
  w&id=a1NIV00000BcT4H&base=base5&form=jeune
 END:VEVENT
 BEGIN:VEVENT
+UID:18d8adef42d5@paris-academique
+DTSTAMP:20261022T091551Z
+DTSTART;TZID=Europe/Paris:20261109T180000
+DTEND;TZID=Europe/Paris:20261109T190000
+SUMMARY:Webinaire Méthodologie
+DESCRIPTION:Réussite des études · Etudiants\nhttps://article1.my.salesfo
+ rce-sites.com/AG_VFP_Quiz?cid=701IV00001pD9u4&id=a1NIV0000098qCL&base=base
+ 5&form=jeune
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pD9u
+ 4&id=a1NIV0000098qCL&base=base5&form=jeune
+END:VEVENT
+BEGIN:VEVENT
+UID:f26cc0827418@paris-academique
+DTSTAMP:20261022T091551Z
+DTSTART;TZID=Europe/Paris:20261116T180000
+DTEND;TZID=Europe/Paris:20261116T190000
+SUMMARY:Webinaire : Canaux de recrutement
+DESCRIPTION:Insertion Pro · Etudiants\nhttps://article1.my.salesforce-site
+ s.com/AG_VFP_Quiz?cid=701IV00001pCXFJ&id=a1NIV00000BnRqL&base=base5&form=j
+ eune
+LOCATION:En ligne
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pCXF
+ J&id=a1NIV00000BnRqL&base=base5&form=jeune
+END:VEVENT
+BEGIN:VEVENT
 UID:a31efd6a9b5d@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261124T183000
 DTEND;TZID=Europe/Paris:20261124T200000
 SUMMARY:WEBINAIRE : METIERS VERTS
@@ -98,7 +122,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
 END:VEVENT
 BEGIN:VEVENT
 UID:cf8f5e734dba@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261126T180000
 DTEND;TZID=Europe/Paris:20261126T190000
 SUMMARY:National - Webinaire Agir pour le climat
@@ -114,7 +138,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vX
 END:VEVENT
 BEGIN:VEVENT
 UID:50b2a4b2635f@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261202T180000
 DTEND;TZID=Europe/Paris:20261202T190000
 SUMMARY:Ready set go
@@ -128,7 +152,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r1UL
 END:VEVENT
 BEGIN:VEVENT
 UID:f5e606b1c9e0@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:Webinaire Admissions HEC
@@ -144,7 +168,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001owt3
 END:VEVENT
 BEGIN:VEVENT
 UID:f5a3e257200c@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20270104T180000
 DTEND;TZID=Europe/Paris:20270104T193000
 SUMMARY:BOOST MON CV
@@ -159,7 +183,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
 END:VEVENT
 BEGIN:VEVENT
 UID:be179ab07ef3@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20270113T180000
 DTEND;TZID=Europe/Paris:20270113T193000
 SUMMARY:BOOST MY RESUME
@@ -172,7 +196,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
 END:VEVENT
 BEGIN:VEVENT
 UID:112704b18e40@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20270114T183000
 DTEND;TZID=Europe/Paris:20270114T193000
 SUMMARY:Webinaire Gestion de Stress Session 1
@@ -185,7 +209,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n0wy
 END:VEVENT
 BEGIN:VEVENT
 UID:cb33c13ece47@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20270121T183000
 DTEND;TZID=Europe/Paris:20270121T193000
 SUMMARY:Webinaire Gestion de stress Session 2
@@ -198,7 +222,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1kH
 END:VEVENT
 BEGIN:VEVENT
 UID:4c89c5d7d96a@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20270203T180000
 DTEND;TZID=Europe/Paris:20270203T190000
 SUMMARY:Ready set go
@@ -212,7 +236,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r25Z
 END:VEVENT
 BEGIN:VEVENT
 UID:39b2174729ab@paris-academique
-DTSTAMP:20261021T091500Z
+DTSTAMP:20261022T091551Z
 DTSTART;TZID=Europe/Paris:20270331T180000
 DTEND;TZID=Europe/Paris:20270331T190000
 SUMMARY:Ready set go
