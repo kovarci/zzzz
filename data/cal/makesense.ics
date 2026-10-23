@@ -24,59 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:216b1f2b58de@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Masterclass L-Invest x 50 partners : Comprendre les attentes d’un
-  fonds de capital Risk
-DESCRIPTION:Organisé par Nathalie PERIN — 𝗖𝗼𝗻𝘃𝗮𝗶𝗻
- 𝗰𝗿𝗲 𝘂𝗻 𝗳𝗼𝗻𝗱𝘀 𝗱𝗲 𝗰𝗮𝗽𝗶𝘁
- 𝗮𝗹-𝗿𝗶𝘀𝗾𝘂𝗲 𝗻𝗲 𝗿𝗲𝗽𝗼𝘀𝗲 𝗽
- 𝗮𝘀 𝘂𝗻𝗶𝗾𝘂𝗲𝗺𝗲𝗻𝘁 𝘀𝘂𝗿 𝗹𝗮 
- 𝗾𝘂𝗮𝗹𝗶𝘁𝗲́ 𝗱𝗲 𝘃𝗼𝘁𝗿𝗲 𝗽𝗿𝗼
- 𝗷𝗲𝘁.\nhttps://chiche.makesense.org/events/e/masterclass-l-invest-
- x-50-partners-comprendre-les-attentes-dun-fonds-de-capital-risk-6ac8ae209f
- dbd600085b2a45
-LOCATION:62 Rue Jean-Jacques Rousseau\, 75001 Paris\, France
-URL:https://chiche.makesense.org/events/e/masterclass-l-invest-x-50-partner
- s-comprendre-les-attentes-dun-fonds-de-capital-risk-6ac8ae209fdbd600085b2a
- 45
-END:VEVENT
-BEGIN:VEVENT
-UID:dca80831fd02@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Soirée Stand-up avec le Greenwashing Comedy Club
-DESCRIPTION:Organisé par Envie Le Labo — [Evènement gratuit - Inscripti
- on obligatoire]On peut rire de tout... même de la crise environnementale 
- ! Venez découvrir\, pendant une heure\, la nouvelle génération d'humori
- stes engagés.es du Greenwashing Comedy Club au sein d’Envie Le Labo.\nh
- ttps://chiche.makesense.org/events/e/soiree-stand-up-avec-le-greenwashing-
- comedy-club-6a992e6b2701ed0007e367fe
-LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
-URL:https://chiche.makesense.org/events/e/soiree-stand-up-avec-le-greenwash
- ing-comedy-club-6a992e6b2701ed0007e367fe
-END:VEVENT
-BEGIN:VEVENT
-UID:13179c2d0396@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T142000
-DTEND;TZID=Europe/Paris:20261022T162000
-SUMMARY:Atelier - Lancer sa structure sur les réseaux sociaux
-DESCRIPTION:Organisé par Les Canaux — Dans cet atelier\, on déconstruit
-  quelques idées reçues\, on passe en revue les principaux réseaux & leu
- rs spécificités.Un atelier animé par Salomé Tshibola du Comenfleur\nht
- tps://chiche.makesense.org/events/e/atelier-lancer-sa-structure-sur-les-re
- seaux-sociaux-6a992ba31c5b4f0008b97e36
-LOCATION:6 Quai de la Seine\, 75019 Paris\, France
-URL:https://chiche.makesense.org/events/e/atelier-lancer-sa-structure-sur-l
- es-reseaux-sociaux-6a992ba31c5b4f0008b97e36
-END:VEVENT
-BEGIN:VEVENT
 UID:b89c641fa482@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261024
 DTEND;VALUE=DATE:20261025
 SUMMARY:Façon de voir : santé mentale & identités diasporiques
@@ -90,7 +39,7 @@ URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:3312a3eb9be5@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261024T130000
 DTEND;TZID=Europe/Paris:20261024T160000
 SUMMARY:Atelier Santé mentale (entre jeunes) - 3rd Space
@@ -106,7 +55,7 @@ URL:https://chiche.makesense.org/events/e/atelier-sante-mentale-entre-jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:ce50aedcc788@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T170000
 SUMMARY:Cycle de Courts Métrage Tibétain
@@ -122,7 +71,7 @@ URL:https://chiche.makesense.org/events/e/cycle-de-courts-metrage-tibetain-
 END:VEVENT
 BEGIN:VEVENT
 UID:091b13e364c1@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261024T150000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:La Trocante
@@ -138,7 +87,7 @@ URL:https://chiche.makesense.org/events/e/la-trocante-6aad327eca918800076a3
 END:VEVENT
 BEGIN:VEVENT
 UID:5fc9304cf446@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261026
 SUMMARY:Marche du Temps Profond au Bois de Vincennes
@@ -153,7 +102,7 @@ URL:https://chiche.makesense.org/events/e/marche-du-temps-profond-au-bois-d
 END:VEVENT
 BEGIN:VEVENT
 UID:6b3daa7d4e3f@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261026T193000
 DTEND;TZID=Europe/Paris:20261026T213000
 SUMMARY:Workshop Capoeira Angola
@@ -169,7 +118,7 @@ URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac0a48
 END:VEVENT
 BEGIN:VEVENT
 UID:c0162d670b3a@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Me préparer à l'entretien d'embauche📍Paris 13
@@ -184,7 +133,7 @@ URL:https://chiche.makesense.org/events/e/me-preparer-a-lentretien-dembauch
 END:VEVENT
 BEGIN:VEVENT
 UID:160ddf10fb24@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Et soudain\, le spectacle (de Titiou Lecoq)
@@ -199,8 +148,22 @@ URL:https://chiche.makesense.org/events/e/et-soudain-le-spectacle-de-titiou
  -lecoq-6ac7b49c06b4310007d42642
 END:VEVENT
 BEGIN:VEVENT
+UID:8909967e0ce2@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261027T180000
+DTEND;TZID=Europe/Paris:20261027T200000
+SUMMARY:Et soudain\, la conférence de Titiou Lecoq
+DESCRIPTION:Organisé par Hélène Binet — Alors que l’atmosphère gén
+ érale se tend\, que les échéances électorales de 2027 angoissent de pl
+ us en plus de gens\, Titiou Lecoq monte sur scène pour faire une réponse
+  féministe aux idées d’extrême-droite. Il ne s’agit pas de caric\nh
+ ttps://chiche.makesense.org/events
+LOCATION:3bis Rue Papin\, 75003 Paris\, France
+URL:https://chiche.makesense.org/events
+END:VEVENT
+BEGIN:VEVENT
 UID:5ea514217010@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Startup For Girls : devenez facilitateur.rice bénévole
@@ -216,7 +179,7 @@ URL:https://chiche.makesense.org/events/e/startup-for-girls-devenez-facilit
 END:VEVENT
 BEGIN:VEVENT
 UID:04bed74c8491@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:STARTUP for Girls - Édition spéciale IA : filles de la 4ème à l
@@ -232,7 +195,7 @@ URL:https://chiche.makesense.org/events/e/startup-for-girls-edition-special
 END:VEVENT
 BEGIN:VEVENT
 UID:b9968bd884fd@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
@@ -248,7 +211,7 @@ URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
 END:VEVENT
 BEGIN:VEVENT
 UID:3f3a141157c4@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261029T095000
 DTEND;TZID=Europe/Paris:20261029T115000
 SUMMARY:Atelier - Quel statut pour entreprendre ?
@@ -260,5 +223,53 @@ DESCRIPTION:Organisé par Les Canaux — Découvrir les différentes formes
 LOCATION:6 Quai de la Seine\, 75019 Paris\, France
 URL:https://chiche.makesense.org/events/e/atelier-quel-statut-pour-entrepre
  ndre-6a9969a31c5b4f0008bb0c0e
+END:VEVENT
+BEGIN:VEVENT
+UID:2e1d5e6f752b@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261029T190000
+DTEND;TZID=Europe/Paris:20261029T210000
+SUMMARY:Ne vous inquiétez pas
+DESCRIPTION:Organisé par Maison de la Conversation — "Ne vous inquiétez
+  pas" est un spectacle-débat en 2 temps. D'abord l'adaptation théâtrale
+  du témoignage de Nina et Thierry Delcroix « Papa\, viens me chercher ! 
+ » qui retrace la descente aux enfers d’une jeune adolescente dans la\nh
+ ttps://chiche.makesense.org/events/e/ne-vous-inquietez-pas-6aad574819fd1c0
+ 008964bd8
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/ne-vous-inquietez-pas-6aad574819f
+ d1c0008964bd8
+END:VEVENT
+BEGIN:VEVENT
+UID:7957934e1b11@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261029T193000
+DTEND;TZID=Europe/Paris:20261029T210000
+SUMMARY:Greenwashing Comedy Club
+DESCRIPTION:Organisé par Maison de la Conversation — Contre le réchauff
+ ement climatique\, on n’a pas de solution. Mais on a des blagues !Venez 
+ découvrir l’univers d'une sélection d'humoristes préparées aux petit
+ s oignons\, qui rigolent de leur éco anxiété\, leurs contradictions et 
+ de la pas si g\nhttps://chiche.makesense.org/events/e/greenwashing-comedy-
+ club-6aad384dca918800076a5d71
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/greenwashing-comedy-club-6aad384d
+ ca918800076a5d71
+END:VEVENT
+BEGIN:VEVENT
+UID:3a472c3119d4@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261031T130000
+DTEND;TZID=Europe/Paris:20261031T160000
+SUMMARY:Cercle de parole : santé mentale et identité rascisée
+DESCRIPTION:Organisé par Maison de la Conversation — Un cercle de parole
+  en mixité choisie pour les jeunes issu·es des diasporas\, autour de la 
+ santé mentale.Ce cercle de parole est un espace de confiance. On y racont
+ e son expérience\, on écoute celle des autres\, et l'on réalise q\nhttp
+ s://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et-identi
+ te-rascisee-6ac7b19906b4310007d40e9a
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et
+ -identite-rascisee-6ac7b19906b4310007d40e9a
 END:VEVENT
 END:VCALENDAR

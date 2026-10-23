@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:793453628e82@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T090000
-DTEND;TZID=Europe/Paris:20261022T130000
-SUMMARY:Caisse des Dépôts – Institut pour la Recherche x Institut Jacqu
- es Delors | Financement de la souveraineté : Enjeux de souveraineté\, av
- ec Arnaud Magnier
-DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/caisse-des
- -depots-x-institut-jacques-delors-financement-de-la-souverainete-enjeux-de
- -souverainete-avec-arnaud-magnier/
-LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://institutdelors.eu/evenements/caisse-des-depots-x-institut-jacqu
- es-delors-financement-de-la-souverainete-enjeux-de-souverainete-avec-arnau
- d-magnier/
-END:VEVENT
-BEGIN:VEVENT
 UID:35b864af5fa3@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261027T183000
 DTEND;TZID=Europe/Paris:20261027T200000
 SUMMARY:Macif x IJD – Rencontre européenne #3 Repenser la prévention en
@@ -55,7 +39,7 @@ URL:https://institutdelors.eu/evenements/macif-x-ijd-rencontre-europeenne-3
 END:VEVENT
 BEGIN:VEVENT
 UID:e61061a5b914@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261113T090000
 DTEND;TZID=Europe/Paris:20261113T170000
 SUMMARY:Académie Notre Europe #2 – L’Europe dans le Monde
@@ -66,12 +50,12 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-2-leurope-da
  ns-le-monde/
 END:VEVENT
 BEGIN:VEVENT
-UID:36ab9dd9f9cf@paris-academique
-DTSTAMP:20261022T091551Z
+UID:58fc5f7c15fc@paris-academique
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261117T123000
 DTEND;TZID=Europe/Paris:20261117T133000
-SUMMARY:Midis d’Europa Experience #7 | Crise du logement : l’Europe log
- ée à la même enseigne ? avec Sarah Coupechoux
+SUMMARY:Midis d’Europa Experience #7 – Crise du logement : l’Europe l
+ ogée à la même enseigne ? avec Sarah Coupechoux
 DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/midis-deur
  opa-experience-7-crise-du-logement-leurope-logee-a-la-meme-enseigne-avec-s
  arah-coupechoux/
@@ -80,11 +64,24 @@ URL:https://institutdelors.eu/evenements/midis-deuropa-experience-7-crise-d
  u-logement-leurope-logee-a-la-meme-enseigne-avec-sarah-coupechoux/
 END:VEVENT
 BEGIN:VEVENT
-UID:4e5b96419fb6@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;VALUE=DATE:20261208
-DTEND;VALUE=DATE:20261209
-SUMMARY:Conférence Annuelle – 30 ans de l’Institut Jacques Delors
+UID:9bded1386cf6@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261124T093000
+DTEND;TZID=Europe/Paris:20261124T183000
+SUMMARY:Paris Energy Week 2026 | Les défis de l’électrification
+DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/paris-ener
+ gy-week-2026-the-challenges-of-electrification/
+LOCATION:Paris — lieu précisé sur la page de l'événement
+URL:https://institutdelors.eu/evenements/paris-energy-week-2026-the-challen
+ ges-of-electrification/
+END:VEVENT
+BEGIN:VEVENT
+UID:39da0bbbb3e2@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261207T140000
+DTEND;TZID=Europe/Paris:20261207T183000
+SUMMARY:30 ans de l’Institut Jacques Delors : Conférence annuelle 2026 |
+  Une Europe. Un marché.
 DESCRIPTION:Hybride\nhttps://institutdelors.eu/evenements/conference-annuel
  le-30-ans-de-linstitut-jacques-delors/
 LOCATION:Paris — lieu précisé sur la page de l'événement

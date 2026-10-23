@@ -24,20 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3c3ee0988d9a@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T090000
-DTEND;TZID=Europe/Paris:20261022T170000
-SUMMARY:Séminaire doctoral du LIAT + SACRe
-DESCRIPTION:https://psl.eu/agenda/seminaire-doctoral-du-liat-sacre
-LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
-URL:https://psl.eu/agenda/seminaire-doctoral-du-liat-sacre
-END:VEVENT
-BEGIN:VEVENT
 UID:4362a59a623e@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T090000
-DTEND;TZID=Europe/Paris:20261022T103000
+DTSTAMP:20261023T092233Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
 SUMMARY:Groupe de parole pour les doctorants 🗣️
 DESCRIPTION:https://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
 LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
@@ -45,7 +35,7 @@ URL:https://psl.eu/agenda/groupe-de-parole-pour-les-doctorants-0
 END:VEVENT
 BEGIN:VEVENT
 UID:fcfebde94d4b@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261026T100000
 DTEND;TZID=Europe/Paris:20261026T180000
 SUMMARY:Histoires intersexes : expositions et lecture-performance
@@ -57,7 +47,7 @@ URL:https://psl.eu/agenda/histoires-intersexes-expositions-et-lecture-perfo
 END:VEVENT
 BEGIN:VEVENT
 UID:1057b1dff36d@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261026T170000
 DTEND;TZID=Europe/Paris:20261026T200000
 SUMMARY:L'eau dans la ville : restitution de films photographiques et écha
@@ -70,7 +60,7 @@ URL:https://psl.eu/agenda/leau-dans-la-ville-restitution-de-films-photograp
 END:VEVENT
 BEGIN:VEVENT
 UID:774bc337a99e@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261030T180000
 DTEND;TZID=Europe/Paris:20261030T203000
 SUMMARY:Peur en panne\, une chasse au trésor scientifique d’Halloween !
@@ -81,8 +71,20 @@ URL:https://psl.eu/agenda/peur-en-panne-une-chasse-au-tresor-scientifique-d
  halloween
 END:VEVENT
 BEGIN:VEVENT
+UID:9fce2c6f0601@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261102T100000
+DTEND;TZID=Europe/Paris:20261102T120000
+SUMMARY:Le mentorat dans l’enseignement supérieur et la recherche
+DESCRIPTION:https://psl.eu/agenda/le-mentorat-dans-lenseignement-superieur-
+ et-la-recherche
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/le-mentorat-dans-lenseignement-superieur-et-la-re
+ cherche
+END:VEVENT
+BEGIN:VEVENT
 UID:c9aef26da023@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Festival Musique 2026 « Piano/accordéon autour de la danse »
@@ -94,7 +96,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-pianoaccordeon-autour-de-la
 END:VEVENT
 BEGIN:VEVENT
 UID:e7efa0ca06b3@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261103T083000
 DTEND;TZID=Europe/Paris:20261103T130000
 SUMMARY:PhD Symposium d'EELISA
@@ -103,8 +105,32 @@ LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
 URL:https://psl.eu/agenda/phd-symposium-deelisa
 END:VEVENT
 BEGIN:VEVENT
+UID:1c497b6b883f@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261103T093000
+DTEND;TZID=Europe/Paris:20261103T180000
+SUMMARY:Gagnez en impact dans vos prises de parole
+DESCRIPTION:https://psl.eu/agenda/gagnez-en-impact-dans-vos-prises-de-parol
+ e
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/gagnez-en-impact-dans-vos-prises-de-parole
+END:VEVENT
+BEGIN:VEVENT
+UID:1076bfb44608@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261103T183000
+DTEND;TZID=Europe/Paris:20261103T203000
+SUMMARY:Cycle de conférences « Faire École\, Faire Territoire » : Renco
+ ntre avec Noé Duchaufour-Lawrance
+DESCRIPTION:https://psl.eu/agenda/cycle-de-conferences-faire-ecole-faire-te
+ rritoire-rencontre-avec-noe-duchaufour-lawrance
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/cycle-de-conferences-faire-ecole-faire-territoire
+ -rencontre-avec-noe-duchaufour-lawrance
+END:VEVENT
+BEGIN:VEVENT
 UID:c895763becd3@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261104T121500
 DTEND;TZID=Europe/Paris:20261104T133000
 SUMMARY:Quand les données éclairent les cultures et les sociétés
@@ -115,8 +141,18 @@ URL:https://psl.eu/agenda/quand-les-donnees-eclairent-les-cultures-et-les-s
  ocietes
 END:VEVENT
 BEGIN:VEVENT
+UID:6def49de6c2d@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261104T180000
+DTEND;TZID=Europe/Paris:20261104T193000
+SUMMARY:Salon de la mobilité d'EELISA
+DESCRIPTION:https://psl.eu/agenda/salon-de-la-mobilite-deelisa
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/salon-de-la-mobilite-deelisa
+END:VEVENT
+BEGIN:VEVENT
 UID:a0d7b16abae4@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261106T100000
 DTEND;TZID=Europe/Paris:20261106T120000
 SUMMARY:Ateliers d’Art-Thérapie
@@ -126,7 +162,7 @@ URL:https://psl.eu/agenda/ateliers-dart-therapie-2
 END:VEVENT
 BEGIN:VEVENT
 UID:7d300871fa24@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Festival Musique 2026 « Trio Cornière »
@@ -136,7 +172,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-trio-corniere
 END:VEVENT
 BEGIN:VEVENT
 UID:67081bb7dd38@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Festival Musique 2026 « Quatuor à cordes et percussions »
@@ -148,7 +184,7 @@ URL:https://psl.eu/agenda/festival-musique-2026-quatuor-cordes-et-percussio
 END:VEVENT
 BEGIN:VEVENT
 UID:cdca2f7aa72e@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261110T100000
 DTEND;TZID=Europe/Paris:20261110T120000
 SUMMARY:Mines Magic 3D : de la stéréoscopie aux images 3D numériques
@@ -160,7 +196,7 @@ URL:https://psl.eu/agenda/mines-magic-3d-de-la-stereoscopie-aux-images-3d-n
 END:VEVENT
 BEGIN:VEVENT
 UID:c5a1254ec48f@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261110T110000
 DTEND;TZID=Europe/Paris:20261110T140000
 SUMMARY:Agir Etudiant.e - Permanence juridique pour les étudiantes et étu
@@ -172,8 +208,41 @@ URL:https://psl.eu/agenda/agir-etudiante-permanence-juridique-pour-les-etud
  iantes-et-etudiants-en-situation-de
 END:VEVENT
 BEGIN:VEVENT
+UID:dc5b2e292a97@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261110T183000
+DTEND;TZID=Europe/Paris:20261110T220000
+SUMMARY:Afterwork Alumni Université PSL
+DESCRIPTION:https://psl.eu/agenda/afterwork-alumni-universite-psl
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/afterwork-alumni-universite-psl
+END:VEVENT
+BEGIN:VEVENT
+UID:4e49d364821c@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261119T170000
+DTEND;TZID=Europe/Paris:20261119T183000
+SUMMARY:Séminaire AGIR : Femmes et Sciences
+DESCRIPTION:https://psl.eu/agenda/seminaire-agir-femmes-et-sciences
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/seminaire-agir-femmes-et-sciences
+END:VEVENT
+BEGIN:VEVENT
+UID:858325ce3480@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Course des Lumières 2026 : ils sont déjà des milliers à s'engag
+ er\, à vous de jouer !
+DESCRIPTION:https://psl.eu/agenda/course-des-lumieres-2026-ils-sont-deja-de
+ s-milliers-sengager-vous-de-jouer
+LOCATION:Université PSL\, 60 rue Mazarine\, Paris 6e
+URL:https://psl.eu/agenda/course-des-lumieres-2026-ils-sont-deja-des-millie
+ rs-sengager-vous-de-jouer
+END:VEVENT
+BEGIN:VEVENT
 UID:f3d9d0787c67@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261208T200000
 DTEND;TZID=Europe/Paris:20261208T223000
 SUMMARY:Un concert solidaire au profit des étudiants
@@ -184,7 +253,7 @@ URL:https://psl.eu/agenda/un-concert-solidaire-au-profit-des-etudiants
 END:VEVENT
 BEGIN:VEVENT
 UID:05977d12e951@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20270226T180000
 DTEND;TZID=Europe/Paris:20270226T200000
 SUMMARY:Mines Magic 3D : de la stéréoscopie aux images 3D numériques

@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:af6aa816f856@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T093000
-DTEND;TZID=Europe/Paris:20261022T183000
-SUMMARY:Evénement scientifique annuel du projet HERMES
-DESCRIPTION:https://www.paris-iea.fr/fr/evenements/evenement-scientifique-a
- nnuel-du-projet-hermes
-LOCATION:Institut d'études avancées de Paris\, 17 quai d'Anjou\, Paris 4e
-URL:https://www.paris-iea.fr/fr/evenements/evenement-scientifique-annuel-du
- -projet-hermes
-END:VEVENT
-BEGIN:VEVENT
 UID:650fb5ed4636@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261023T091500
 DTEND;TZID=Europe/Paris:20261023T111500
 SUMMARY:L’Edition et ses pratiques\, passé et présent
@@ -49,7 +37,7 @@ URL:https://www.paris-iea.fr/fr/evenements/l-edition-et-ses-pratiques-passe
 END:VEVENT
 BEGIN:VEVENT
 UID:082a689a37c0@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261102T140000
 DTEND;TZID=Europe/Paris:20261102T180000
 SUMMARY:Rencontres annuelles OPUS 2026
@@ -60,7 +48,7 @@ URL:https://www.paris-iea.fr/fr/evenements/rencontres-annuelles-opus-37320
 END:VEVENT
 BEGIN:VEVENT
 UID:a425d8e08351@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261106T140000
 DTEND;TZID=Europe/Paris:20261106T160000
 SUMMARY:Freedom and Order: The Science of Human Flourishing
@@ -72,7 +60,7 @@ URL:https://www.paris-iea.fr/fr/evenements/freedom-and-order-the-science-of
 END:VEVENT
 BEGIN:VEVENT
 UID:74d928e3e5f3@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261118T091500
 DTEND;TZID=Europe/Paris:20261118T163000
 SUMMARY:Gouverner le numérique
@@ -82,7 +70,7 @@ URL:https://www.paris-iea.fr/fr/evenements/gouverner-le-numerique
 END:VEVENT
 BEGIN:VEVENT
 UID:13de0b475fff@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261120T130000
 DTEND;TZID=Europe/Paris:20261120T150000
 SUMMARY:Séminaire inter PPI 2026

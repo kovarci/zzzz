@@ -24,41 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:2b34d5802175@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T110000
-DTEND;TZID=Europe/Paris:20261022T123000
-SUMMARY:Finiteness and Density Problems for (Positive) Integral Points on M
- ordell–Schinzel Surfaces
-DESCRIPTION:Séminaire de géométrie arithmétique In 1952\, Mordell erron
- eously claimed that the surface xyz = G(x\,y) has infinitely many integral
-  points for any G ∈ ℤ [x\,y]. I will discuss a classification for fini
- teness and Zariski density of (positive) integral points on these log K3 s
- urfaces when the coefficients of G are non-negative. This combines a dynam
- ical argument proposed by Mordell\, the theory of…\nhttps://indico.math.
- cnrs.fr/event/17461/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17461/
-END:VEVENT
-BEGIN:VEVENT
-UID:629e6be59db5@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T143000
-DTEND;TZID=Europe/Paris:20261022T160000
-SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
-DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
- ommutative) sphere regularization\," a recently proposed non-perturbative 
- approach to 3D CFTs. I will first elucidate its fundamental concepts and t
- hen dive into illustrative examples\, including the 3D Ising transition\, 
- fermionic CFTs\, and Chern-Simons matter theories. I will comment on the p
- otential theoretical direction in…\nhttps://indico.math.cnrs.fr/event/17
- 106/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17106/
-END:VEVENT
-BEGIN:VEVENT
 UID:1b18c07975bd@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261026T143000
 DTEND;TZID=Europe/Paris:20261026T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -74,7 +41,7 @@ URL:https://indico.math.cnrs.fr/event/17107/
 END:VEVENT
 BEGIN:VEVENT
 UID:b393ad05b173@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261028T143000
 DTEND;TZID=Europe/Paris:20261028T160000
 SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
@@ -89,8 +56,39 @@ LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17108/
 END:VEVENT
 BEGIN:VEVENT
+UID:e3ed9ac30ec4@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261109T140000
+DTEND;TZID=Europe/Paris:20261109T151500
+SUMMARY:Representations and Harmonic Maps into Spheres
+DESCRIPTION:I will discuss some recent progress on harmonic maps from surfa
+ ces to spheres which are energy minimizing representatives of orthogonal r
+ epresentations. What can be said about their shapes and their limit geomet
+ ry as the dimension of the representations grows to infinity? This is part
+ ly joint with Riccardo Caniato and Xingzhe Li.\nhttps://indico.math.cnrs.f
+ r/event/17586/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17586/
+END:VEVENT
+BEGIN:VEVENT
+UID:1366ba57232b@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261109T160000
+DTEND;TZID=Europe/Paris:20261109T171500
+SUMMARY:Combinations of Non-Archimedean Discrete Groups
+DESCRIPTION:Chatterji and Venkataramana\, motivated by Nori's problem\, ask
+ ed for a real algebraic semisimple Lie group G and a simple Lie subgroup H
+  of G\, whether a Zariski-dense discrete subgroup of G\, intersecting H in
+  a lattice\, is itself a lattice in G. After discussing what is known rela
+ ted to this question and Nori's problem\, we will address a similar versio
+ n of this question for the k-points of…\nhttps://indico.math.cnrs.fr/eve
+ nt/17587/
+LOCATION:IHES
+URL:https://indico.math.cnrs.fr/event/17587/
+END:VEVENT
+BEGIN:VEVENT
 UID:878dbfa010be@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T110000
 SUMMARY:Combinatorics and Arithmetic for Physics
@@ -106,7 +104,7 @@ URL:https://indico.math.cnrs.fr/event/17588/
 END:VEVENT
 BEGIN:VEVENT
 UID:d5c2c9991d22@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261126T110000
 DTEND;TZID=Europe/Paris:20261126T123000
 SUMMARY:The Stratified Shape
@@ -121,8 +119,25 @@ LOCATION:IHES
 URL:https://indico.math.cnrs.fr/event/17578/
 END:VEVENT
 BEGIN:VEVENT
+UID:687f749ff7e4@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;TZID=Europe/Paris:20261201T093000
+DTEND;TZID=Europe/Paris:20261201T160000
+SUMMARY:14e séminaire ITZYKSON - Dualité markovienne : méthodes algébri
+ ques et applications
+DESCRIPTION:14e séminaire ITZYKSON : Dualité markovienne : méthodes alg
+ ébriques et applications Le 14e séminaire Itzykson est organisé par Jea
+ n-René Chazottes (CPHT)\, Guillaume Dubach (CMLS)\, Ruben Minasian (IPhT)
+  et Julio Parra-Martinez (IHES) . Depuis bientôt une quinzaine d’année
+ s l’axe math-physique de la FMJH organise un séminaire Itzykson tous le
+ s ans à l’IHES. Il s’agit d’une journée consacrée à un…\nhttps
+ ://indico.math.cnrs.fr/event/17599/
+LOCATION:Le Bois-Marie
+URL:https://indico.math.cnrs.fr/event/17599/
+END:VEVENT
+BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -138,7 +153,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd1701d69489@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261217T110000
 DTEND;TZID=Europe/Paris:20261217T123000
 SUMMARY:Algebraic Theory of Indefinite Theta Functions
@@ -154,7 +169,7 @@ URL:https://indico.math.cnrs.fr/event/17585/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes

@@ -24,10 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:6ca94129701c@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
+UID:255a925c8ea0@paris-academique
+DTSTAMP:20261023T092233Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
 SUMMARY:Une collecte solidaire pour les étudiants en précarité
 DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
  limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
@@ -41,57 +41,10 @@ URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
  s-en-precarite/
 END:VEVENT
 BEGIN:VEVENT
-UID:3dc98be47f8a@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
-SUMMARY:[Événement – appel à participation] Open Mic
-DESCRIPTION:Animé par Sarah Ghoulmié (MC) + Selecta Majayéorimi (DJ)Reto
- ur cette année de l’Open Mic made in Canal 93\, fameuse salle de Bobign
- y qui se déplace sur notre campus avec un nouveau duo MC/DJ\, la rappeuse
-  et formatrice en éloquence Sarah Ghoulmié pour animer ce "micro ouvert"
- . Le principe est de permettre aux étudiant·es qui le souhaitent de pass
- er sur scène pour chanter un morceau de leur choix…\nhttps://www.univ-s
- pn.fr/events/openmic-201026/
-LOCATION:Salle polyvalente – campus de Bobigny
-URL:https://www.univ-spn.fr/events/openmic-201026/
-END:VEVENT
-BEGIN:VEVENT
-UID:a868e1c19848@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
-SUMMARY:Comment changer de filière après un 1er semestre ?
-DESCRIPTION:Vous êtes étudiant en 1ère année à l’Université Sorbonn
- e Paris Nord et vous souhaitez vous réorienter ? Pour en savoir plus sur 
- les différentes possibilités de réorientation\, participez à la réuni
- on d’information en visioconférence Teams organisée par le service VOI
- E. Seront présentés : un rappel des principales filières de l’enseign
- ement supérieur\, les différentes procédures de réorientation…\nhttp
- s://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre-187-54
- 2/
-LOCATION:En visioconférence (Teams)\, Université Sorbonne Paris Nord\, 99
-  avenue Jean-Baptiste Clément\, Villetaneuse
-URL:https://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre
- -187-542/
-END:VEVENT
-BEGIN:VEVENT
-UID:f819e3de9438@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;VALUE=DATE:20261021
-DTEND;VALUE=DATE:20261022
-SUMMARY:[Musique] Hector Berlioz : Roméo et Juliette
-DESCRIPTION:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-
- juliette/
-LOCATION:Philharmonie de Paris
-URL:https://www.univ-spn.fr/events/musique-hector-berlioz-romeo-et-juliette
- /
-END:VEVENT
-BEGIN:VEVENT
 UID:b8f6fa7038cf@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T120000
-DTEND;TZID=Europe/Paris:20261022T133000
+DTSTAMP:20261023T092233Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
 SUMMARY:Envie d’étudier à l’étranger en 2027-2028 ?
 DESCRIPTION:Espagne\, Finlande\, Pologne\, Grèce... Partez à la découver
  te d'un nouveau pays\, d'une nouvelle culture et d'un système universitai
@@ -106,7 +59,7 @@ URL:https://www.univ-spn.fr/events/envie-detudier-a-letranger-en-2027-2028-
 END:VEVENT
 BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque

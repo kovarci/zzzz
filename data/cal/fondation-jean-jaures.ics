@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:887dec0c9085@paris-academique
-DTSTAMP:20261022T091551Z
-DTSTART;TZID=Europe/Paris:20261022T190000
-DTEND;TZID=Europe/Paris:20261022T210000
-SUMMARY:À l’approche des élections de mi-mandat\, quel bilan de Trump I
- I ?
-DESCRIPTION:International\nhttps://www.jean-jaures.org/agenda/a-lapproche-d
- es-elections-de-mi-mandat-quel-bilan-de-trump-ii/
-LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
-URL:https://www.jean-jaures.org/agenda/a-lapproche-des-elections-de-mi-mand
- at-quel-bilan-de-trump-ii/
-END:VEVENT
-BEGIN:VEVENT
 UID:c400e221696e@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261028T183000
 DTEND;TZID=Europe/Paris:20261028T203000
 SUMMARY:Des valeurs au réel : l’avenir du progressisme passe-t-il par le
@@ -51,7 +38,7 @@ URL:https://www.jean-jaures.org/agenda/des-valeurs-au-reel-lavenir-du-progr
 END:VEVENT
 BEGIN:VEVENT
 UID:454afcda7cea@paris-academique
-DTSTAMP:20261022T091551Z
+DTSTAMP:20261023T092233Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T203000
 SUMMARY:Sommes-nous condamnés à la société de marché ?
