@@ -24,42 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:255a925c8ea0@paris-academique
-DTSTAMP:20261023T092233Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Une collecte solidaire pour les étudiants en précarité
-DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
- limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
- our soutenir les étudiants en situation de précarité. Les dons seront r
- emis lors d’une distribution solidaire le jeudi 5 novembre\, à partir d
- e 17 h 30. Ils permettront aussi d’alimenter le service d’aide sociale
-  de la Vie étudiante\, qui pourra constituer des kits…\nhttps://www.uni
- v-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
-LOCATION:DAPS – Campus de Villetaneuse
-URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
- s-en-precarite/
-END:VEVENT
-BEGIN:VEVENT
-UID:b8f6fa7038cf@paris-academique
-DTSTAMP:20261023T092233Z
-DTSTART;VALUE=DATE:20261022
-DTEND;VALUE=DATE:20261023
-SUMMARY:Envie d’étudier à l’étranger en 2027-2028 ?
-DESCRIPTION:Espagne\, Finlande\, Pologne\, Grèce... Partez à la découver
- te d'un nouveau pays\, d'une nouvelle culture et d'un système universitai
- re différent grâce au programme Erasmus+ ! Effectuez un échange univers
- itaire d'un semestre ou d'une année dans l'un de nos établissements part
- enaires\, sous réserve de l'accord de votre composante. Le petit plus ? E
- n tant qu'étudiant en échange\, vous êtes exonéré des…\nhttps://www
- .univ-spn.fr/events/envie-detudier-a-letranger-en-2027-2028-860/
-LOCATION:Amphi 1 - IUT de Villetaneuse
-URL:https://www.univ-spn.fr/events/envie-detudier-a-letranger-en-2027-2028-
- 860/
-END:VEVENT
-BEGIN:VEVENT
 UID:bf009bdcb936@paris-academique
-DTSTAMP:20261023T092233Z
+DTSTAMP:20261024T081322Z
 DTSTART;TZID=Europe/Paris:20261024T140000
 DTEND;TZID=Europe/Paris:20261024T180000
 SUMMARY:En direct de la bibliothèque

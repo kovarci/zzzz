@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:e2e75a3ae03b@paris-academique
-DTSTAMP:20261023T092233Z
+DTSTAMP:20261024T081322Z
 DTSTART;TZID=Europe/Paris:20261027T090000
 DTEND;TZID=Europe/Paris:20261027T125000
 SUMMARY:Readiness 2030: Are We Heading in the Right Direction?
@@ -36,11 +36,11 @@ URL:https://www.iris-france.org/event/readiness-2030-are-we-heading-in-the-
  right-direction/
 END:VEVENT
 BEGIN:VEVENT
-UID:6d72019bdb89@paris-academique
-DTSTAMP:20261023T092233Z
+UID:380bff899ef1@paris-academique
+DTSTAMP:20261024T081322Z
 DTSTART;TZID=Europe/Paris:20261029T183000
 DTEND;TZID=Europe/Paris:20261029T200000
-SUMMARY:Qui gouverne le monde ? Une géopolitique des acteurs non-étatique
+SUMMARY:Qui gouverne le monde ? Une géopolitique des acteurs non étatique
  s
 DESCRIPTION:https://www.iris-france.org/event/qui-gouverne-le-monde-une-geo
  politique-des-acteurs-non-etatiques/
@@ -49,8 +49,33 @@ URL:https://www.iris-france.org/event/qui-gouverne-le-monde-une-geopolitiqu
  e-des-acteurs-non-etatiques/
 END:VEVENT
 BEGIN:VEVENT
+UID:904768f55fac@paris-academique
+DTSTAMP:20261024T081322Z
+DTSTART;TZID=Europe/Paris:20261103T123000
+DTEND;TZID=Europe/Paris:20261103T140000
+SUMMARY:États-Unis : les midterms ou le spectre d’une crise de régime
+DESCRIPTION:https://www.iris-france.org/event/etats-unis-les-midterms-ou-le
+ -spectre-dune-crise-de-regime/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/etats-unis-les-midterms-ou-le-spectre
+ -dune-crise-de-regime/
+END:VEVENT
+BEGIN:VEVENT
+UID:a2d349dad93d@paris-academique
+DTSTAMP:20261024T081322Z
+DTSTART;TZID=Europe/Paris:20261105T183000
+DTEND;TZID=Europe/Paris:20261105T200000
+SUMMARY:Epidémie et conflit : quelle riposte contre Ebola en République D
+ émocratique du Congo ?
+DESCRIPTION:https://www.iris-france.org/event/epidemie-et-conflit-quelle-ri
+ poste-contre-ebola-en-republique-democratique-du-congo/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/epidemie-et-conflit-quelle-riposte-co
+ ntre-ebola-en-republique-democratique-du-congo/
+END:VEVENT
+BEGIN:VEVENT
 UID:bce4008998f0@paris-academique
-DTSTAMP:20261023T092233Z
+DTSTAMP:20261024T081322Z
 DTSTART;TZID=Europe/Paris:20261120T140000
 DTEND;TZID=Europe/Paris:20261120T160000
 SUMMARY:Les Géopolitiques de Grenoble – 2e édition
