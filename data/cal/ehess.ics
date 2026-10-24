@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:c39ee18542a6@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261102T093000
 DTEND;TZID=Europe/Paris:20261102T113000
 SUMMARY:Pratiques artistiques et pluralité sociologique : Quelle place pou
@@ -38,8 +38,37 @@ URL:https://www.ehess.fr/jcms/302399_JEvent/fr/pratiques-artistiques-et-plu
  ralite-sociologique-quelle-place-pour-les-approches-praxeologiques
 END:VEVENT
 BEGIN:VEVENT
+UID:4d1bb6d94e86@paris-academique
+DTSTAMP:20261024T084942Z
+DTSTART;TZID=Europe/Paris:20261103T143000
+DTEND;TZID=Europe/Paris:20261103T163000
+SUMMARY:Bâtir un système colonial. Autour du livre de Gildas Salmon\, "L
+ ’Empire de la supervision" (La Découverte\, 2026)
+DESCRIPTION:Séminaire\nhttps://www.ehess.fr/jcms/301580_JEvent/fr/batir-un
+ -systeme-colonial-autour-du-livre-de-gildas-salmon-l-empire-de-la-supervis
+ ion-la-decouverte-2026
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr/jcms/301580_JEvent/fr/batir-un-systeme-colonial-au
+ tour-du-livre-de-gildas-salmon-l-empire-de-la-supervision-la-decouverte-20
+ 26
+END:VEVENT
+BEGIN:VEVENT
+UID:e06787aa29b7@paris-academique
+DTSTAMP:20261024T084942Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:PARIS PARIS Quand Paris s’est réapproprié le concept d’art et
+  l’a fusionné avec la mode
+DESCRIPTION:Colloque\nhttps://www.ehess.fr/jcms/301477_JEvent/fr/paris-pari
+ s-quand-paris-s-est-reapproprie-le-concept-d-art-et-l-a-fusionne-avec-la-m
+ ode
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr/jcms/301477_JEvent/fr/paris-paris-quand-paris-s-es
+ t-reapproprie-le-concept-d-art-et-l-a-fusionne-avec-la-mode
+END:VEVENT
+BEGIN:VEVENT
 UID:4b30ef1b52ce@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261107T090000
 DTEND;TZID=Europe/Paris:20261107T110000
 SUMMARY:Journée des sciences humaines et sociales #1 : Où penser libremen
@@ -52,7 +81,7 @@ URL:https://www.ehess.fr/jcms/298487_JEvent/fr/journee-des-sciences-humaine
 END:VEVENT
 BEGIN:VEVENT
 UID:d15b53794d2b@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T160000
 SUMMARY:Réunions d'information "Reprise d'études"
@@ -64,7 +93,7 @@ URL:https://www.ehess.fr/jcms/37175_JEvent/fr/reunions-d-information-repris
 END:VEVENT
 BEGIN:VEVENT
 UID:5d49993288de@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Langue des Signes Japonaise et Langue des Signes Française : regar
@@ -77,7 +106,7 @@ URL:https://www.ehess.fr/jcms/302138_JEvent/fr/langue-des-signes-japonaise-
 END:VEVENT
 BEGIN:VEVENT
 UID:8902b0a16985@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261117T183000
 DTEND;TZID=Europe/Paris:20261117T203000
 SUMMARY:L'incomplétude en mouvement : perspectives africaines et pensée d
@@ -90,7 +119,7 @@ URL:https://www.ehess.fr/jcms/284673_JEvent/fr/l-incompletude-en-mouvement-
 END:VEVENT
 BEGIN:VEVENT
 UID:e67f8476334d@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:La psychologisation des violences faites aux femmes
@@ -102,7 +131,7 @@ URL:https://www.ehess.fr/jcms/258092_JEvent/fr/la-psychologisation-des-viol
 END:VEVENT
 BEGIN:VEVENT
 UID:25f806336c48@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T113000
 SUMMARY:Semaine de l'Afrique
@@ -113,7 +142,7 @@ URL:https://www.ehess.fr/jcms/293183_JEvent/fr/semaine-de-l-afrique
 END:VEVENT
 BEGIN:VEVENT
 UID:126f55eb6343@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261127T100000
 DTEND;TZID=Europe/Paris:20261127T120000
 SUMMARY:Voix aux Chapitres #22 autour de l'ouvrage "Chroniques de l’intra
@@ -129,7 +158,7 @@ URL:https://www.ehess.fr/jcms/296672_JEvent/fr/voix-aux-chapitres-22-autour
 END:VEVENT
 BEGIN:VEVENT
 UID:a497b7772165@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261201T173000
 DTEND;TZID=Europe/Paris:20261201T193000
 SUMMARY:Voix aux Chapitres #23 autour de l'ouvrage "Une histoire économiqu
@@ -143,8 +172,21 @@ URL:https://www.ehess.fr/jcms/296719_JEvent/fr/voix-aux-chapitres-23-autour
  re-a-nos-jours
 END:VEVENT
 BEGIN:VEVENT
+UID:8a1bb38da24d@paris-academique
+DTSTAMP:20261024T084942Z
+DTSTART;TZID=Europe/Paris:20261209T120000
+DTEND;TZID=Europe/Paris:20261209T140000
+SUMMARY:Atelier-rencontre de l'IISMM "Changer d’alphabet. Turquie 1850-19
+ 50"
+DESCRIPTION:Rencontre · Table ronde\nhttps://www.ehess.fr/jcms/302060_JEve
+ nt/fr/atelier-rencontre-de-l-iismm-changer-d-alphabet-turquie-1850-1950
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr/jcms/302060_JEvent/fr/atelier-rencontre-de-l-iismm
+ -changer-d-alphabet-turquie-1850-1950
+END:VEVENT
+BEGIN:VEVENT
 UID:e931f209406d@paris-academique
-DTSTAMP:20261024T081322Z
+DTSTAMP:20261024T084942Z
 DTSTART;TZID=Europe/Paris:20261209T173000
 DTEND;TZID=Europe/Paris:20261209T193000
 SUMMARY:Voix aux Chapitres #24 autour de l'ouvrage "Coluche"

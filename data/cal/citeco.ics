@@ -23,4 +23,24 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:4bc45877ab90@paris-academique
+DTSTAMP:20261024T084942Z
+DTSTART;TZID=Europe/Paris:20261029T103000
+DTEND;TZID=Europe/Paris:20261029T120000
+SUMMARY:Art d'éco
+DESCRIPTION:https://www.citeco.fr/agenda/art-deco
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/art-deco
+END:VEVENT
+BEGIN:VEVENT
+UID:aacc72fb364e@paris-academique
+DTSTAMP:20261024T084942Z
+DTSTART;TZID=Europe/Paris:20261029T143000
+DTEND;TZID=Europe/Paris:20261029T153000
+SUMMARY:Écogame – Le loup de la finance
+DESCRIPTION:https://www.citeco.fr/agenda/le-loup-de-la-finance
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/le-loup-de-la-finance
+END:VEVENT
 END:VCALENDAR
