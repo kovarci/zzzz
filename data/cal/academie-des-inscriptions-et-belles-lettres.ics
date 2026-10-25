@@ -23,38 +23,4 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-UID:a615f2e08a4a@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;TZID=Europe/Paris:20261023T153000
-DTEND;TZID=Europe/Paris:20261023T173000
-SUMMARY:Palawan au carrefour des mondes maritimes et forestiers : société
- s\, environnements et échanges dans le Sud-Ouest des Philippines
-DESCRIPTION:Note d’information de Mme Hermine Xhauflair\, sous le patrona
- ge du Secrétaire perpétuel Nicolas GRIMAL : « Palawan au carrefour des 
- mondes maritimes et forestiers : sociétés\, environnements et échanges 
- dans le Sud-Ouest des Philippines » Résumé Située à l’extrême limi
- te de la plaque continentale de la Sonde\, entre Bornéo et les îles de l
- a Wallacea\, Palawan occupe une position singulière en Asie…\nhttps://a
- ibl.fr/seances/vendredi-23-octobre-2026/
-LOCATION:Institut de France\, 23 quai de Conti\, Paris 6e
-URL:https://aibl.fr/seances/vendredi-23-octobre-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:7ac105a2dd76@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;TZID=Europe/Paris:20261023T153000
-DTEND;TZID=Europe/Paris:20261023T173000
-SUMMARY:Les Mémoires poétiques d’Ukyô no Daibu\, dame d’honneur d’
- une impératrice du XII e siècle
-DESCRIPTION:Communication de M. Michel Vieillard-Baron\, sous le patronage 
- de M. Jean-Noël ROBERT : « Les Mémoires poétiques d’Ukyô no Daibu\,
-  dame d’honneur d’une impératrice du XII e siècle. » Résumé : Les
-  Mémoires poétiques d’Ukyô no Daibu dame d’honneur de l’impératr
- ice Kenreimon-in\, Kenreimon-in Ukyô no Daibu shû sont l’œuvre d’un
- e femme qui vécut au Japon (à Kyôto) à la charnière des XII e et XIII
-  e…\nhttps://aibl.fr/seances/vendredi-23-octobre-2026/
-LOCATION:Institut de France\, 23 quai de Conti\, Paris 6e
-URL:https://aibl.fr/seances/vendredi-23-octobre-2026/
-END:VEVENT
 END:VCALENDAR

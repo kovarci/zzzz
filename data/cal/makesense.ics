@@ -24,70 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:b89c641fa482@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;VALUE=DATE:20261024
-DTEND;VALUE=DATE:20261025
-SUMMARY:Façon de voir : santé mentale & identités diasporiques
-DESCRIPTION:Organisé par Maison de la Conversation — Une conversation co
- llective pour explorer les liens entre vécus diasporiques\, santé mental
- e et réappropriation du soin.Comment nos parcours diasporiques façonnent
- -ils notre rapport à la santé mentale ? Et comment réinventer collectiv
- ement\nhttps://chiche.makesense.org/events
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events
-END:VEVENT
-BEGIN:VEVENT
-UID:3312a3eb9be5@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;TZID=Europe/Paris:20261024T130000
-DTEND;TZID=Europe/Paris:20261024T160000
-SUMMARY:Atelier Santé mentale (entre jeunes) - 3rd Space
-DESCRIPTION:Organisé par Maison de la Conversation — On se retrouve same
- di 24 octobre pour un atelier autour de la santé mentale des jeunes adult
- es. 🌱Entre la pression de réussir\, les études\, les relations ou enc
- ore les problèmes d’argent … nos vies de jeunes adultes sont marquée
- s\nhttps://chiche.makesense.org/events/e/atelier-sante-mentale-entre-jeune
- s-3rd-space-6aad54c7ca918800076b4a49
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/atelier-sante-mentale-entre-jeune
- s-3rd-space-6aad54c7ca918800076b4a49
-END:VEVENT
-BEGIN:VEVENT
-UID:ce50aedcc788@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;TZID=Europe/Paris:20261024T140000
-DTEND;TZID=Europe/Paris:20261024T170000
-SUMMARY:Cycle de Courts Métrage Tibétain
-DESCRIPTION:Organisé par Maison de la Conversation — Histoires courtes\,
-  regards singuliers et nouvelles voix. Un cycle de courts métrages\, un r
- dv régulier pour découvrir le cinéma tibétain.Le Tibet Film Festival P
- aris lance son Cycle de courts métrages\, un nouveau rendez-vous régulie
- r pour\nhttps://chiche.makesense.org/events/e/cycle-de-courts-metrage-tibe
- tain-6abb893a34634e0007e31898
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/cycle-de-courts-metrage-tibetain-
- 6abb893a34634e0007e31898
-END:VEVENT
-BEGIN:VEVENT
-UID:091b13e364c1@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;TZID=Europe/Paris:20261024T150000
-DTEND;TZID=Europe/Paris:20261024T180000
-SUMMARY:La Trocante
-DESCRIPTION:Organisé par Maison de la Conversation — COOP’HUMA organis
- e une trocante ouverte à toutes et tous à la Maison de la Conversation.C
- ette action repose sur l’échange d’objets entre participant·es via u
- n système de points : chacun·e peut apporter des objets en bon état (v
- ête\nhttps://chiche.makesense.org/events/e/la-trocante-6aad327eca91880007
- 6a3036
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/la-trocante-6aad327eca918800076a3
- 036
-END:VEVENT
-BEGIN:VEVENT
 UID:5fc9304cf446@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261026
 SUMMARY:Marche du Temps Profond au Bois de Vincennes
@@ -102,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/marche-du-temps-profond-au-bois-d
 END:VEVENT
 BEGIN:VEVENT
 UID:6b3daa7d4e3f@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261026T193000
 DTEND;TZID=Europe/Paris:20261026T213000
 SUMMARY:Workshop Capoeira Angola
@@ -118,7 +56,7 @@ URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac0a48
 END:VEVENT
 BEGIN:VEVENT
 UID:c0162d670b3a@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Me préparer à l'entretien d'embauche📍Paris 13
@@ -133,7 +71,7 @@ URL:https://chiche.makesense.org/events/e/me-preparer-a-lentretien-dembauch
 END:VEVENT
 BEGIN:VEVENT
 UID:160ddf10fb24@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Et soudain\, le spectacle (de Titiou Lecoq)
@@ -149,7 +87,7 @@ URL:https://chiche.makesense.org/events/e/et-soudain-le-spectacle-de-titiou
 END:VEVENT
 BEGIN:VEVENT
 UID:8909967e0ce2@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261027T180000
 DTEND;TZID=Europe/Paris:20261027T200000
 SUMMARY:Et soudain\, la conférence de Titiou Lecoq
@@ -163,7 +101,7 @@ URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:5ea514217010@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Startup For Girls : devenez facilitateur.rice bénévole
@@ -179,7 +117,7 @@ URL:https://chiche.makesense.org/events/e/startup-for-girls-devenez-facilit
 END:VEVENT
 BEGIN:VEVENT
 UID:04bed74c8491@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:STARTUP for Girls - Édition spéciale IA : filles de la 4ème à l
@@ -195,7 +133,7 @@ URL:https://chiche.makesense.org/events/e/startup-for-girls-edition-special
 END:VEVENT
 BEGIN:VEVENT
 UID:b9968bd884fd@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
@@ -211,7 +149,7 @@ URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
 END:VEVENT
 BEGIN:VEVENT
 UID:3f3a141157c4@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261029T095000
 DTEND;TZID=Europe/Paris:20261029T115000
 SUMMARY:Atelier - Quel statut pour entreprendre ?
@@ -226,7 +164,7 @@ URL:https://chiche.makesense.org/events/e/atelier-quel-statut-pour-entrepre
 END:VEVENT
 BEGIN:VEVENT
 UID:2e1d5e6f752b@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261029T190000
 DTEND;TZID=Europe/Paris:20261029T210000
 SUMMARY:Ne vous inquiétez pas
@@ -242,7 +180,7 @@ URL:https://chiche.makesense.org/events/e/ne-vous-inquietez-pas-6aad574819f
 END:VEVENT
 BEGIN:VEVENT
 UID:7957934e1b11@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261029T193000
 DTEND;TZID=Europe/Paris:20261029T210000
 SUMMARY:Greenwashing Comedy Club
@@ -257,8 +195,24 @@ URL:https://chiche.makesense.org/events/e/greenwashing-comedy-club-6aad384d
  ca918800076a5d71
 END:VEVENT
 BEGIN:VEVENT
+UID:2a78d0e45027@paris-academique
+DTSTAMP:20261025T090403Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:Projection-débat : "Outre-mer\, terres de solutions"
+DESCRIPTION:Organisé par Envie Le Labo — Découvrez le documentaire "Out
+ re-mer\, terres de solutions" qui explore les défis de la souveraineté a
+ limentaire dans les territoires ultramarins. La projection sera suivie d'u
+ n échange avec des intervenant·es autour des solutions locales\, des cir
+ c\nhttps://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
+ -de-solutions-6a992f0b1c5b4f0008b99420
+LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
+URL:https://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
+ -de-solutions-6a992f0b1c5b4f0008b99420
+END:VEVENT
+BEGIN:VEVENT
 UID:3a472c3119d4@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261031T130000
 DTEND;TZID=Europe/Paris:20261031T160000
 SUMMARY:Cercle de parole : santé mentale et identité rascisée
@@ -271,5 +225,34 @@ DESCRIPTION:Organisé par Maison de la Conversation — Un cercle de parole
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et
  -identite-rascisee-6ac7b19906b4310007d40e9a
+END:VEVENT
+BEGIN:VEVENT
+UID:9f9c520cdee7@paris-academique
+DTSTAMP:20261025T090403Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
+DESCRIPTION:Organisé par Les Canaux — La Formation Premiers Pas\, c'est 
+ une journée de formation et collective pour découvrir l'entrepreneuriat 
+ social et poser les premières bases de son projet à impact.\nhttps://chi
+ che.makesense.org/events/e/formation-premiers-pas-a-lentrepreneuriat-a-imp
+ act-6aabf273ca91880007621179
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
+ eneuriat-a-impact-6aabf273ca91880007621179
+END:VEVENT
+BEGIN:VEVENT
+UID:91f6247d1c80@paris-academique
+DTSTAMP:20261025T090403Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Pro\, c'est l’
+ atelier pour réfléchir ensemble au métier qui te correspond !2h45 d’a
+ telier collectif pour : &\nhttps://chiche.makesense.org/events/e/reflechir
+ -au-metier-qui-me-correspond-paris-13e-6aaaa79819fd1c000884a93c
+LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
+URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
+ pond-paris-13e-6aaaa79819fd1c000884a93c
 END:VEVENT
 END:VCALENDAR

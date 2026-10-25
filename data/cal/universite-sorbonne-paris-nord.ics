@@ -23,37 +23,4 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-UID:ef9dd516ccb0@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:Une collecte solidaire pour les étudiants en précarité
-DESCRIPTION:Du 28 septembre au 23 octobre 2026\, une collecte de produits a
- limentaires et d’hygiène est organisée sur le campus de Villetaneuse p
- our soutenir les étudiants en situation de précarité. Les dons seront r
- emis lors d’une distribution solidaire le jeudi 5 novembre\, à partir d
- e 17 h 30. Ils permettront aussi d’alimenter le service d’aide sociale
-  de la Vie étudiante\, qui pourra constituer des kits…\nhttps://www.uni
- v-spn.fr/events/une-collecte-solidaire-pour-les-etudiants-en-precarite/
-LOCATION:DAPS – Campus de Villetaneuse
-URL:https://www.univ-spn.fr/events/une-collecte-solidaire-pour-les-etudiant
- s-en-precarite/
-END:VEVENT
-BEGIN:VEVENT
-UID:bf009bdcb936@paris-academique
-DTSTAMP:20261024T084942Z
-DTSTART;TZID=Europe/Paris:20261024T140000
-DTEND;TZID=Europe/Paris:20261024T180000
-SUMMARY:En direct de la bibliothèque
-DESCRIPTION:Vous vous intéressez aux métiers du livre et de l’édition\
- , à la manière dont se construisent les projets éditoriaux ou souhaitez
-  simplement découvrir les coulisses de ce secteur ? L'université Sorbonn
- e Paris Nord vous invite à venir rencontrer des professionnels de l’éd
- ition lors d’un rendez-vous organisé à la BU Edgar Morin du campus de 
- Villetaneuse. Le samedi 24 octobre\, la BU Edgar Morin…\nhttps://www.uni
- v-spn.fr/events/en-direct-de-la-bibliotheque/
-LOCATION:B.U Edgar Morin Espace Le Kiosque Campus Villetaneuse
-URL:https://www.univ-spn.fr/events/en-direct-de-la-bibliotheque/
-END:VEVENT
 END:VCALENDAR

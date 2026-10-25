@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:909d7972c69f@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261030T180000
 DTEND;TZID=Europe/Paris:20261030T230000
 SUMMARY:Soirée Halloween à la Barge vendredi 30 octobre
@@ -44,7 +44,7 @@ URL:https://www.crous-paris.fr/evenement/soiree-halloween-a-la-barge-vendre
 END:VEVENT
 BEGIN:VEVENT
 UID:435325817acf@paris-academique
-DTSTAMP:20261024T084942Z
+DTSTAMP:20261025T090403Z
 DTSTART;TZID=Europe/Paris:20261120T190000
 DTEND;TZID=Europe/Paris:20261120T230000
 SUMMARY:Soirée karaoké à la Barge vendredi 20 novembre
