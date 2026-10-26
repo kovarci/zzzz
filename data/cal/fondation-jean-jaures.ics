@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:c400e221696e@paris-academique
-DTSTAMP:20261025T090403Z
+DTSTAMP:20261026T090701Z
 DTSTART;TZID=Europe/Paris:20261028T183000
 DTEND;TZID=Europe/Paris:20261028T203000
 SUMMARY:Des valeurs au réel : l’avenir du progressisme passe-t-il par le
@@ -38,7 +38,7 @@ URL:https://www.jean-jaures.org/agenda/des-valeurs-au-reel-lavenir-du-progr
 END:VEVENT
 BEGIN:VEVENT
 UID:454afcda7cea@paris-academique
-DTSTAMP:20261025T090403Z
+DTSTAMP:20261026T090701Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T203000
 SUMMARY:Sommes-nous condamnés à la société de marché ?
@@ -49,8 +49,21 @@ URL:https://www.jean-jaures.org/agenda/sommes-nous-condamnes-a-la-societe-d
  e-marche/
 END:VEVENT
 BEGIN:VEVENT
+UID:eabbbc41a0be@paris-academique
+DTSTAMP:20261026T090701Z
+DTSTART;TZID=Europe/Paris:20261112T183000
+DTEND;TZID=Europe/Paris:20261112T203000
+SUMMARY:Liberté d’expression\, liberté de la presse\, disparition du jo
+ urnalisme : où en est on ?
+DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/liberte-dexpres
+ sion-liberte-de-la-presse-disparition-du-journalisme-ou-en-est-on/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/liberte-dexpression-liberte-de-la-pr
+ esse-disparition-du-journalisme-ou-en-est-on/
+END:VEVENT
+BEGIN:VEVENT
 UID:d20a3757e6f9@paris-academique
-DTSTAMP:20261025T090403Z
+DTSTAMP:20261026T090701Z
 DTSTART;TZID=Europe/Paris:20261119T100000
 DTEND;TZID=Europe/Paris:20261119T120000
 SUMMARY:Le Blue Labour et l’avenir des gauches européennes
