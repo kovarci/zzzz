@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:d54aadf38a95@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20261102T110000
 DTEND;TZID=Europe/Paris:20261102T120000
 SUMMARY:Conférences scientifiques : Ana FRANCHESCHI (en anglais)
@@ -37,7 +37,7 @@ URL:https://institutducerveau.org/agenda/conferences-scientifiques-ana-fran
 END:VEVENT
 BEGIN:VEVENT
 UID:c35502b90dbc@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20261109T110000
 DTEND;TZID=Europe/Paris:20261109T120000
 SUMMARY:Conférences scientifiques : Pierre-Yves OUDEYER (en anglais)
@@ -49,7 +49,7 @@ URL:https://institutducerveau.org/agenda/conferences-scientifiques-pierre-y
 END:VEVENT
 BEGIN:VEVENT
 UID:411f5e475205@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:CLARA Symposium 2026 on AI for Brain Health
@@ -61,7 +61,7 @@ URL:https://institutducerveau.org/agenda/clara-symposium-2026-ai-brain-heal
 END:VEVENT
 BEGIN:VEVENT
 UID:d161f9d456ec@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20261116T110000
 DTEND;TZID=Europe/Paris:20261116T120000
 SUMMARY:Conférences scientifiques : Julie DUQUE (en anglais)
@@ -73,7 +73,7 @@ URL:https://institutducerveau.org/agenda/conferences-scientifiques-julie-du
 END:VEVENT
 BEGIN:VEVENT
 UID:0e75850019e5@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T190000
 SUMMARY:L'épilepsie
@@ -84,7 +84,7 @@ URL:https://institutducerveau.org/agenda/lepilepsie
 END:VEVENT
 BEGIN:VEVENT
 UID:6b000474995e@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20261123T110000
 DTEND;TZID=Europe/Paris:20261123T120000
 SUMMARY:Conférences scientifiques : Raul RABADAN (en anglais)
@@ -96,7 +96,7 @@ URL:https://institutducerveau.org/agenda/conferences-scientifiques-raul-rab
 END:VEVENT
 BEGIN:VEVENT
 UID:8c78163e8d9b@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20261124T094500
 DTEND;TZID=Europe/Paris:20261124T120000
 SUMMARY:Conférence Les matinales de l'Institut du Cerveau : Recherche sur 
@@ -110,7 +110,7 @@ URL:https://institutducerveau.org/agenda/conference-matinales-linstitut-cer
 END:VEVENT
 BEGIN:VEVENT
 UID:6bc76157b6f2@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20261130T110000
 DTEND;TZID=Europe/Paris:20261130T120000
 SUMMARY:Conférences scientifiques : Ewelina KNAPSKA (en anglais)
@@ -122,7 +122,7 @@ URL:https://institutducerveau.org/agenda/conferences-scientifiques-ewelina-
 END:VEVENT
 BEGIN:VEVENT
 UID:f94fba5e144d@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:The Body in Dialogue: How the Brain Communicates with Organs
@@ -134,7 +134,7 @@ URL:https://institutducerveau.org/agenda/body-dialogue-how-brain-communicat
 END:VEVENT
 BEGIN:VEVENT
 UID:2ce3899783b6@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Paris Ultrasound Workshop: De la théorie au montage expérimental 
@@ -148,7 +148,7 @@ URL:https://institutducerveau.org/agenda/paris-ultrasound-workshop-theorie-
 END:VEVENT
 BEGIN:VEVENT
 UID:bf480719d384@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20270121T180000
 DTEND;TZID=Europe/Paris:20270121T190000
 SUMMARY:L'Illusion
@@ -159,7 +159,7 @@ URL:https://institutducerveau.org/agenda/lillusion
 END:VEVENT
 BEGIN:VEVENT
 UID:809d766e84d6@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20270318T180000
 DTEND;TZID=Europe/Paris:20270318T190000
 SUMMARY:La dépression
@@ -170,7 +170,7 @@ URL:https://institutducerveau.org/agenda/depression
 END:VEVENT
 BEGIN:VEVENT
 UID:f63e4a8ea877@paris-academique
-DTSTAMP:20261026T090701Z
+DTSTAMP:20261026T094558Z
 DTSTART;TZID=Europe/Paris:20270520T180000
 DTEND;TZID=Europe/Paris:20270520T190000
 SUMMARY:La mémoire dans tous ses états
