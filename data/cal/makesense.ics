@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:6b3daa7d4e3f@paris-academique
-DTSTAMP:20261026T094558Z
-DTSTART;TZID=Europe/Paris:20261026T193000
-DTEND;TZID=Europe/Paris:20261026T213000
-SUMMARY:Workshop Capoeira Angola
-DESCRIPTION:Organisé par Maison de la Conversation — Venez découvrir la
-  capoeira Angola\, un art martial afro-brésilien qui allie résistance\, 
- gestuelle et culture.Retrouvez-nous pour une pratique ancestrale qui se jo
- ue près du sol. À travers des mouvements lents\, fluides et stratégique
- s\, accom\nhttps://chiche.makesense.org/events/e/workshop-capoeira-angola-
- 6aac0a4819fd1c00088dac8c
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/workshop-capoeira-angola-6aac0a48
- 19fd1c00088dac8c
-END:VEVENT
-BEGIN:VEVENT
 UID:c0162d670b3a@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Me préparer à l'entretien d'embauche📍Paris 13
@@ -56,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/me-preparer-a-lentretien-dembauch
 END:VEVENT
 BEGIN:VEVENT
 UID:160ddf10fb24@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Et soudain\, le spectacle (de Titiou Lecoq)
@@ -72,7 +56,7 @@ URL:https://chiche.makesense.org/events/e/et-soudain-le-spectacle-de-titiou
 END:VEVENT
 BEGIN:VEVENT
 UID:8909967e0ce2@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261027T180000
 DTEND;TZID=Europe/Paris:20261027T200000
 SUMMARY:Et soudain\, la conférence de Titiou Lecoq
@@ -85,24 +69,8 @@ LOCATION:3bis Rue Papin\, 75003 Paris\, France
 URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
-UID:5ea514217010@paris-academique
-DTSTAMP:20261026T094558Z
-DTSTART;VALUE=DATE:20261029
-DTEND;VALUE=DATE:20261030
-SUMMARY:Startup For Girls : devenez facilitateur.rice bénévole
-DESCRIPTION:Organisé par Nathalie PERIN — Startup For Girls - Édition s
- péciale IABeReal\, Instagram\, YouTube\, Netflix\, Ornikar… Ces platefo
- rmes font partie du quotidien des adolescentes. Pourtant\, combien d'entre
-  elles s'imaginent travailler dans la tech ou crée\nhttps://chiche.makese
- nse.org/events/e/startup-for-girls-devenez-facilitateurrice-benevole-6ac64
- c95bd306e00074e179c
-LOCATION:8 Bd Victor Hugo\, 93400 Saint-Ouen-sur-Seine\, France
-URL:https://chiche.makesense.org/events/e/startup-for-girls-devenez-facilit
- ateurrice-benevole-6ac64c95bd306e00074e179c
-END:VEVENT
-BEGIN:VEVENT
 UID:04bed74c8491@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:STARTUP for Girls - Édition spéciale IA : filles de la 4ème à l
@@ -118,7 +86,7 @@ URL:https://chiche.makesense.org/events/e/startup-for-girls-edition-special
 END:VEVENT
 BEGIN:VEVENT
 UID:b9968bd884fd@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
@@ -133,8 +101,24 @@ URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
  regenerative-6ab1581332f93b0008d0d0fd
 END:VEVENT
 BEGIN:VEVENT
+UID:5ea514217010@paris-academique
+DTSTAMP:20261027T094310Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Startup For Girls : devenez facilitateur.rice bénévole
+DESCRIPTION:Organisé par Nathalie PERIN — Startup For Girls - Édition s
+ péciale IABeReal\, Instagram\, YouTube\, Netflix\, Ornikar… Ces platefo
+ rmes font partie du quotidien des adolescentes. Pourtant\, combien d'entre
+  elles s'imaginent travailler dans la tech ou crée\nhttps://chiche.makese
+ nse.org/events/e/startup-for-girls-devenez-facilitateurrice-benevole-6ac64
+ c95bd306e00074e179c
+LOCATION:8 Bd Victor Hugo\, 93400 Saint-Ouen-sur-Seine\, France
+URL:https://chiche.makesense.org/events/e/startup-for-girls-devenez-facilit
+ ateurrice-benevole-6ac64c95bd306e00074e179c
+END:VEVENT
+BEGIN:VEVENT
 UID:3f3a141157c4@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261029T095000
 DTEND;TZID=Europe/Paris:20261029T115000
 SUMMARY:Atelier - Quel statut pour entreprendre ?
@@ -149,7 +133,7 @@ URL:https://chiche.makesense.org/events/e/atelier-quel-statut-pour-entrepre
 END:VEVENT
 BEGIN:VEVENT
 UID:2e1d5e6f752b@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261029T190000
 DTEND;TZID=Europe/Paris:20261029T210000
 SUMMARY:Ne vous inquiétez pas
@@ -165,7 +149,7 @@ URL:https://chiche.makesense.org/events/e/ne-vous-inquietez-pas-6aad574819f
 END:VEVENT
 BEGIN:VEVENT
 UID:7957934e1b11@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261029T193000
 DTEND;TZID=Europe/Paris:20261029T210000
 SUMMARY:Greenwashing Comedy Club
@@ -181,7 +165,7 @@ URL:https://chiche.makesense.org/events/e/greenwashing-comedy-club-6aad384d
 END:VEVENT
 BEGIN:VEVENT
 UID:2a78d0e45027@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Projection-débat : "Outre-mer\, terres de solutions"
@@ -197,7 +181,7 @@ URL:https://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
 END:VEVENT
 BEGIN:VEVENT
 UID:3a472c3119d4@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261031T130000
 DTEND;TZID=Europe/Paris:20261031T160000
 SUMMARY:Cercle de parole : santé mentale et identité rascisée
@@ -213,7 +197,7 @@ URL:https://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et
 END:VEVENT
 BEGIN:VEVENT
 UID:9f9c520cdee7@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
@@ -228,7 +212,7 @@ URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
 END:VEVENT
 BEGIN:VEVENT
 UID:91f6247d1c80@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -239,5 +223,22 @@ DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Pro\, c'est l’
 LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
 URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
  pond-paris-13e-6aaaa79819fd1c000884a93c
+END:VEVENT
+BEGIN:VEVENT
+UID:f20c89e4b965@paris-academique
+DTSTAMP:20261027T094310Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Sortir l'écologie de ses murs\, rencontre-discussion avec Kevin Bh
+ ema Vacher et ses invité·es
+DESCRIPTION:Organisé par Hélène Binet — Table-ronde et prélancement d
+ e La Colère d'une ville : après l'effondrement\, le pouvoir habitant" (W
+ ild Project\, 2026)Le 5 novembre\nhttps://chiche.makesense.org/events/e/so
+ rtir-lecologie-de-ses-murs-rencontre-discussion-avec-kevin-bhema-vacher-et
+ -ses-invitees-6acd42df1e36ae000818125b
+LOCATION:3bis Rue Papin\, 75003 Paris\, France
+URL:https://chiche.makesense.org/events/e/sortir-lecologie-de-ses-murs-renc
+ ontre-discussion-avec-kevin-bhema-vacher-et-ses-invitees-6acd42df1e36ae000
+ 818125b
 END:VEVENT
 END:VCALENDAR

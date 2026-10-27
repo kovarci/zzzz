@@ -23,4 +23,43 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:737de93dfb22@paris-academique
+DTSTAMP:20261027T094310Z
+DTSTART;TZID=Europe/Paris:20261110T190000
+DTEND;TZID=Europe/Paris:20261110T203000
+SUMMARY:Penser le Présent avec Laure Murat
+DESCRIPTION:Dialogue\nhttps://beauxartsparis.fr/fr/evenement/penser-le-pres
+ ent-avec-laure-murat
+LOCATION:Amphithéâtre des loges — Beaux-Arts de Paris\, 14 rue Bonapart
+ e\, Paris 6e
+URL:https://beauxartsparis.fr/fr/evenement/penser-le-present-avec-laure-mur
+ at
+END:VEVENT
+BEGIN:VEVENT
+UID:964fa5480991@paris-academique
+DTSTAMP:20261027T094310Z
+DTSTART;TZID=Europe/Paris:20261112T190000
+DTEND;TZID=Europe/Paris:20261112T203000
+SUMMARY:Penser le Présent avec Boaz Levin
+DESCRIPTION:Conférence\nhttps://beauxartsparis.fr/fr/evenement/penser-le-p
+ resent-avec-boaz-levin
+LOCATION:Amphithéâtre des loges — Beaux-Arts de Paris\, 14 rue Bonapart
+ e\, Paris 6e
+URL:https://beauxartsparis.fr/fr/evenement/penser-le-present-avec-boaz-levi
+ n
+END:VEVENT
+BEGIN:VEVENT
+UID:60bed2fb01d9@paris-academique
+DTSTAMP:20261027T094310Z
+DTSTART;TZID=Europe/Paris:20261117T190000
+DTEND;TZID=Europe/Paris:20261117T203000
+SUMMARY:Penser le Présent avec Krystian Lupa
+DESCRIPTION:Dialogue\nhttps://beauxartsparis.fr/fr/evenement/penser-le-pres
+ ent-avec-krystian-lupa
+LOCATION:Amphithéâtre des loges — Beaux-Arts de Paris\, 14 rue Bonapart
+ e\, Paris 6e
+URL:https://beauxartsparis.fr/fr/evenement/penser-le-present-avec-krystian-
+ lupa
+END:VEVENT
 END:VCALENDAR

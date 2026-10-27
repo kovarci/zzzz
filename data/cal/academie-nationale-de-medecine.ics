@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:78354a19d4eb@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261103T140000
 DTEND;TZID=Europe/Paris:20261103T170000
 SUMMARY:Séance de l'Académie nationale de médecine
@@ -41,7 +41,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-a-14h-4/
 END:VEVENT
 BEGIN:VEVENT
 UID:a9957aef1a16@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261110T140000
 DTEND;TZID=Europe/Paris:20261110T170000
 SUMMARY:Séance de l'Académie nationale de médecine
@@ -57,7 +57,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-a-14h-5/
 END:VEVENT
 BEGIN:VEVENT
 UID:1c7c90c1c4b0@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261117T140000
 DTEND;TZID=Europe/Paris:20261117T170000
 SUMMARY:Séance dédiée : « Erreur humaine et erreur artificielle en méd
@@ -76,7 +76,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-erreur-humaine-et
 END:VEVENT
 BEGIN:VEVENT
 UID:6fb50a9aadbf@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261118T140000
 DTEND;TZID=Europe/Paris:20261118T170000
 SUMMARY:Séance bi-académique de l'Académie nationale de Pharmacie et de 
@@ -91,7 +91,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-bi-academique-de-lacadem
 END:VEVENT
 BEGIN:VEVENT
 UID:700829bb3eb1@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261201T140000
 DTEND;TZID=Europe/Paris:20261201T170000
 SUMMARY:Séance dédiée : « La médecine génomique : apports\, écueils 
@@ -110,7 +110,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-la-medecine-genom
 END:VEVENT
 BEGIN:VEVENT
 UID:5d95fc2952f7@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Séance commune de l'Académie nationale de médecine et de la Haut
@@ -124,7 +124,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-commune-de-lacademie-nat
 END:VEVENT
 BEGIN:VEVENT
 UID:8a68eac97e2b@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20261215T140000
 DTEND;TZID=Europe/Paris:20261215T170000
 SUMMARY:Sur invitation : Matin (remise des prix)\, Après-midi (séance sol
@@ -138,7 +138,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-solennelle-sur-invitatio
 END:VEVENT
 BEGIN:VEVENT
 UID:ab6902dbedc4@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20270105T140000
 DTEND;TZID=Europe/Paris:20270105T170000
 SUMMARY:Séance inaugurale
@@ -149,7 +149,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-inaugurale/
 END:VEVENT
 BEGIN:VEVENT
 UID:c99ae45c1a40@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20270112T140000
 DTEND;TZID=Europe/Paris:20270112T170000
 SUMMARY:Séance dédiée : « Les lésions intracrâniennes de découverte 
@@ -168,7 +168,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-les-lesions-intra
 END:VEVENT
 BEGIN:VEVENT
 UID:e0c16173a3fe@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20270119T140000
 DTEND;TZID=Europe/Paris:20270119T170000
 SUMMARY:Séance de l'Académie nationale de médecine
@@ -184,7 +184,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-a-14h-6/
 END:VEVENT
 BEGIN:VEVENT
 UID:cc8f1cacc1ca@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20270126T140000
 DTEND;TZID=Europe/Paris:20270126T170000
 SUMMARY:Séance dédiée : « Les maladies psychiatriques émergentes »
@@ -202,7 +202,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-les-maladies-psyc
 END:VEVENT
 BEGIN:VEVENT
 UID:17d6eef258e9@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20270202T140000
 DTEND;TZID=Europe/Paris:20270202T170000
 SUMMARY:Séance dédiée : Registres
@@ -214,7 +214,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-registres-a-14h/
 END:VEVENT
 BEGIN:VEVENT
 UID:14975cb5f75e@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20270209T140000
 DTEND;TZID=Europe/Paris:20270209T170000
 SUMMARY:Séance dédiée : « La mort subite cardiaque de l’adulte »
@@ -232,7 +232,7 @@ URL:https://www.academie-medecine.fr/agenda/seance-dediee-la-mort-subite-ca
 END:VEVENT
 BEGIN:VEVENT
 UID:c5e5a5d1a64e@paris-academique
-DTSTAMP:20261026T094558Z
+DTSTAMP:20261027T094310Z
 DTSTART;TZID=Europe/Paris:20270223T140000
 DTEND;TZID=Europe/Paris:20270223T170000
 SUMMARY:Séance dédiée : « Détresse psychologique des professionnels de
