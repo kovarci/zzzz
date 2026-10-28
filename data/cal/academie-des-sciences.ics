@@ -25,20 +25,20 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:1e8f3fed15fe@paris-academique
-DTSTAMP:20261027T094310Z
+DTSTAMP:20261028T091710Z
 DTSTART;TZID=Europe/Paris:20261103T140000
 DTEND;TZID=Europe/Paris:20261103T160000
 SUMMARY:Remise de la Grande Médaille de l'Académie des sciences
-DESCRIPTION:Séance publique\nhttps://www.academie-sciences.fr/index%2ephp/
- remise-de-la-grande-medaille-de-lacademie-des-sciences
+DESCRIPTION:Séance publique\nhttps://www.academie-sciences.fr/remise-de-la
+ -grande-medaille-de-lacademie-des-sciences
 LOCATION:Grande Salle des séances — Académie des sciences\, 23 quai de 
  Conti\, Paris 6e
-URL:https://www.academie-sciences.fr/index%2ephp/remise-de-la-grande-medail
- le-de-lacademie-des-sciences
+URL:https://www.academie-sciences.fr/remise-de-la-grande-medaille-de-lacade
+ mie-des-sciences
 END:VEVENT
 BEGIN:VEVENT
 UID:7b0137eae8bb@paris-academique
-DTSTAMP:20261027T094310Z
+DTSTAMP:20261028T091710Z
 DTSTART;TZID=Europe/Paris:20261117T143000
 DTEND;TZID=Europe/Paris:20261117T163000
 SUMMARY:Viruses as Agents of Eukaryotic Genome Evolution
@@ -50,20 +50,20 @@ URL:https://www.academie-sciences.fr/index%2ephp/viruses-agents-eukaryotic-
 END:VEVENT
 BEGIN:VEVENT
 UID:be8a32d15110@paris-academique
-DTSTAMP:20261027T094310Z
+DTSTAMP:20261028T091710Z
 DTSTART;TZID=Europe/Paris:20261120T090000
 DTEND;TZID=Europe/Paris:20261120T110000
 SUMMARY:Séquençage du génome humain : 25 ans après
-DESCRIPTION:Colloques\nhttps://www.academie-sciences.fr/index%2ephp/sequenc
- age-du-genome-humain-25-ans-apres
+DESCRIPTION:Colloques\nhttps://www.academie-sciences.fr/sequencage-du-genom
+ e-humain-25-ans-apres
 LOCATION:Auditorium André et Liliane Bettencourt - 3 rue Mazarine - Instit
  ut de France
-URL:https://www.academie-sciences.fr/index%2ephp/sequencage-du-genome-humai
- n-25-ans-apres
+URL:https://www.academie-sciences.fr/sequencage-du-genome-humain-25-ans-apr
+ es
 END:VEVENT
 BEGIN:VEVENT
 UID:db81a53d5c2e@paris-academique
-DTSTAMP:20261027T094310Z
+DTSTAMP:20261028T091710Z
 DTSTART;TZID=Europe/Paris:20261201T140000
 DTEND;TZID=Europe/Paris:20261201T160000
 SUMMARY:Prédictabilité\, que peut-on prévoir ?
@@ -74,7 +74,7 @@ URL:https://www.academie-sciences.fr/predictabilite-que-peut-prevoir
 END:VEVENT
 BEGIN:VEVENT
 UID:b9ab83a8d296@paris-academique
-DTSTAMP:20261027T094310Z
+DTSTAMP:20261028T091710Z
 DTSTART;TZID=Europe/Paris:20261208T180000
 DTEND;TZID=Europe/Paris:20261208T200000
 SUMMARY:Rencontre avec Mickael Tanter

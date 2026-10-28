@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:8686a7a38183@paris-academique
-DTSTAMP:20261027T094310Z
+DTSTAMP:20261028T091710Z
 DTSTART;TZID=Europe/Paris:20261114T133000
 DTEND;TZID=Europe/Paris:20261114T190000
 SUMMARY:Colloque : Repenser l’offre sécuritaire française en Afrique
@@ -34,5 +34,40 @@ DESCRIPTION:Colloque\nhttps://www.jeunes-ihedn.org/events/colloque-repenser
 LOCATION:Paris
 URL:https://www.jeunes-ihedn.org/events/colloque-repenser-loffre-securitair
  e-francaise-en-afrique/
+END:VEVENT
+BEGIN:VEVENT
+UID:ea4b2b96a6ba@paris-academique
+DTSTAMP:20261028T091710Z
+DTSTART;TZID=Europe/Paris:20261118T193000
+DTEND;TZID=Europe/Paris:20261118T213000
+SUMMARY:Popote générale x Comité Sécurité Intérieure
+DESCRIPTION:Afterwork\nhttps://www.jeunes-ihedn.org/events/popote-generale-
+ x-comite-securite-interieure/
+LOCATION:Paris
+URL:https://www.jeunes-ihedn.org/events/popote-generale-x-comite-securite-i
+ nterieure/
+END:VEVENT
+BEGIN:VEVENT
+UID:01157b6267ae@paris-academique
+DTSTAMP:20261028T091710Z
+DTSTART;TZID=Europe/Paris:20261124T140000
+DTEND;TZID=Europe/Paris:20261124T170000
+SUMMARY:Visite de la Direction des Applications Militaires (DAM) du CEA
+DESCRIPTION:Visite\nhttps://www.jeunes-ihedn.org/events/visite-de-la-direct
+ ion-des-applications-militaires-dam-du-cea/
+LOCATION:Paris
+URL:https://www.jeunes-ihedn.org/events/visite-de-la-direction-des-applicat
+ ions-militaires-dam-du-cea/
+END:VEVENT
+BEGIN:VEVENT
+UID:c8ba821ffdb4@paris-academique
+DTSTAMP:20261028T091710Z
+DTSTART;TZID=Europe/Paris:20261209T193000
+DTEND;TZID=Europe/Paris:20261209T213000
+SUMMARY:Popote Générale
+DESCRIPTION:Afterwork\nhttps://www.jeunes-ihedn.org/events/popote-generale-
+ 5/
+LOCATION:Paris
+URL:https://www.jeunes-ihedn.org/events/popote-generale-5/
 END:VEVENT
 END:VCALENDAR
