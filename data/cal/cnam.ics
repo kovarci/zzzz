@@ -23,4 +23,16 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:82c23cbffba2@paris-academique
+DTSTAMP:20261028T103621Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:2è Séminaire SPID
+DESCRIPTION:https://www.cnam.fr/recherche-innovation/laboratoires/lirsa/2e-
+ seminaire-spid
+LOCATION:Cnam\, 292 rue Saint-Martin\, Paris 3e
+URL:https://www.cnam.fr/recherche-innovation/laboratoires/lirsa/2e-seminair
+ e-spid
+END:VEVENT
 END:VCALENDAR

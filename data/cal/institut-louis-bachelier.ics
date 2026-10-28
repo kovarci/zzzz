@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:0e5705ac1cc0@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261103T090000
 DTEND;TZID=Europe/Paris:20261103T110000
 SUMMARY:AM TECH DAY de l'AGEFI
@@ -38,7 +38,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/am-tech-
 END:VEVENT
 BEGIN:VEVENT
 UID:6f91b803b6bd@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T160000
 SUMMARY:Accélérer et financer l'adaptation au changement climatique
@@ -51,7 +51,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/accelere
 END:VEVENT
 BEGIN:VEVENT
 UID:b710e94e1c4a@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261112T170000
 DTEND;TZID=Europe/Paris:20261112T190000
 SUMMARY:Les Invitations DIALog avec Adrien Bilal
@@ -64,7 +64,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/les-invi
 END:VEVENT
 BEGIN:VEVENT
 UID:893588459232@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261124T100000
 DTEND;TZID=Europe/Paris:20261124T120000
 SUMMARY:Paris Energy Week 2026 - the Challenges of Electrification
@@ -77,7 +77,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/paris-en
 END:VEVENT
 BEGIN:VEVENT
 UID:7ef07d9b75d5@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261208T090000
 DTEND;TZID=Europe/Paris:20261208T110000
 SUMMARY:Green Finance Research Advances 2026
@@ -90,7 +90,7 @@ URL:https://www.institutlouisbachelier.org/au-programme/evenements/green-fi
 END:VEVENT
 BEGIN:VEVENT
 UID:2964c301909c@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261211T180000
 DTEND;TZID=Europe/Paris:20261211T200000
 SUMMARY:Hommage à André Lévy-Lang
@@ -100,5 +100,21 @@ LOCATION:Palais Brongniart — Institut Louis Bachelier\, 28 place de la Bo
  urse\, Paris 2e
 URL:https://www.institutlouisbachelier.org/au-programme/evenements/hommage-
  a-andre-levy-lang
+END:VEVENT
+BEGIN:VEVENT
+UID:a1aed5a067c5@paris-academique
+DTSTAMP:20261028T103621Z
+DTSTART;TZID=Europe/Paris:20261214T180000
+DTEND;TZID=Europe/Paris:20261214T200000
+SUMMARY:Prévision et gestion des risques financiers par l'IA : modèles de
+  fondation\, mémoire des marchés et signatures de chemins
+DESCRIPTION:Webinaires\nhttps://www.institutlouisbachelier.org/au-programme
+ /evenements/prevision-et-gestion-des-risques-financiers-par-lia-modeles-de
+ -fondation-memoire-des-marches-et-signatures-de-chemins
+LOCATION:En ligne\, Microsoft Teams — Institut Louis Bachelier\, 28 place
+  de la Bourse\, Paris 2e
+URL:https://www.institutlouisbachelier.org/au-programme/evenements/previsio
+ n-et-gestion-des-risques-financiers-par-lia-modeles-de-fondation-memoire-d
+ es-marches-et-signatures-de-chemins
 END:VEVENT
 END:VCALENDAR

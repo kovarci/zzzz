@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4bc45877ab90@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261029T103000
 DTEND;TZID=Europe/Paris:20261029T120000
 SUMMARY:Art d'éco
@@ -35,7 +35,7 @@ URL:https://www.citeco.fr/agenda/art-deco
 END:VEVENT
 BEGIN:VEVENT
 UID:aacc72fb364e@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261029T143000
 DTEND;TZID=Europe/Paris:20261029T153000
 SUMMARY:Écogame – Le loup de la finance
@@ -45,12 +45,24 @@ URL:https://www.citeco.fr/agenda/le-loup-de-la-finance
 END:VEVENT
 BEGIN:VEVENT
 UID:5783bfb02f1c@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261031T100000
 DTEND;TZID=Europe/Paris:20261031T190000
 SUMMARY:Halloween 2026
 DESCRIPTION:https://www.citeco.fr/agenda/halloween-2026
 LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
 URL:https://www.citeco.fr/agenda/halloween-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:2f9750dd171f@paris-academique
+DTSTAMP:20261028T103621Z
+DTSTART;TZID=Europe/Paris:20261031T163000
+DTEND;TZID=Europe/Paris:20261031T173000
+SUMMARY:Frissons économiques : les crises qui ont secoué le monde
+DESCRIPTION:https://www.citeco.fr/agenda/frissons-economiques-les-crises-qu
+ i-ont-secoue-le-monde
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/frissons-economiques-les-crises-qui-ont-se
+ coue-le-monde
 END:VEVENT
 END:VCALENDAR

@@ -24,53 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c0162d670b3a@paris-academique
-DTSTAMP:20261028T091710Z
-DTSTART;VALUE=DATE:20261027
-DTEND;VALUE=DATE:20261028
-SUMMARY:Me préparer à l'entretien d'embauche📍Paris 13
-DESCRIPTION:Organisé par Raphaëlle Afota — Notre devise : ensemble\, tr
- ansformons le chômage en une expérience constructive !Au travers des ate
- liers gratuits et collaboratifs Activ’Action\, la période de transition
-  professionnelle se transforme en une\nhttps://chiche.makesense.org/events
- /e/me-preparer-a-lentretien-dembaucheparis-13-6aaaa759ca9188000759b80e
-LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
-URL:https://chiche.makesense.org/events/e/me-preparer-a-lentretien-dembauch
- eparis-13-6aaaa759ca9188000759b80e
-END:VEVENT
-BEGIN:VEVENT
-UID:160ddf10fb24@paris-academique
-DTSTAMP:20261028T091710Z
-DTSTART;VALUE=DATE:20261027
-DTEND;VALUE=DATE:20261028
-SUMMARY:Et soudain\, le spectacle (de Titiou Lecoq)
-DESCRIPTION:Organisé par Hélène Binet — Alors que l’atmosphère gén
- érale se tend\, que les échéances électorales de 2027 angoissent de pl
- us en plus de gens\, Titiou Lecoq monte sur scène pour faire une réponse
-  féministe aux idées d’extrême-droite. Il ne s’agit pas de caric\nh
- ttps://chiche.makesense.org/events/e/et-soudain-le-spectacle-de-titiou-lec
- oq-6ac7b49c06b4310007d42642
-LOCATION:3bis Rue Papin\, 75003 Paris\, France
-URL:https://chiche.makesense.org/events/e/et-soudain-le-spectacle-de-titiou
- -lecoq-6ac7b49c06b4310007d42642
-END:VEVENT
-BEGIN:VEVENT
-UID:8909967e0ce2@paris-academique
-DTSTAMP:20261028T091710Z
-DTSTART;TZID=Europe/Paris:20261027T180000
-DTEND;TZID=Europe/Paris:20261027T200000
-SUMMARY:Et soudain\, la conférence de Titiou Lecoq
-DESCRIPTION:Organisé par Hélène Binet — Alors que l’atmosphère gén
- érale se tend\, que les échéances électorales de 2027 angoissent de pl
- us en plus de gens\, Titiou Lecoq monte sur scène pour faire une réponse
-  féministe aux idées d’extrême-droite. Il ne s’agit pas de caric\nh
- ttps://chiche.makesense.org/events
-LOCATION:3bis Rue Papin\, 75003 Paris\, France
-URL:https://chiche.makesense.org/events
-END:VEVENT
-BEGIN:VEVENT
 UID:04bed74c8491@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:STARTUP for Girls - Édition spéciale IA : filles de la 4ème à l
@@ -86,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/startup-for-girls-edition-special
 END:VEVENT
 BEGIN:VEVENT
 UID:b9968bd884fd@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
@@ -102,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
 END:VEVENT
 BEGIN:VEVENT
 UID:5ea514217010@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Startup For Girls : devenez facilitateur.rice bénévole
@@ -118,7 +73,7 @@ URL:https://chiche.makesense.org/events/e/startup-for-girls-devenez-facilit
 END:VEVENT
 BEGIN:VEVENT
 UID:3f3a141157c4@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261029T095000
 DTEND;TZID=Europe/Paris:20261029T115000
 SUMMARY:Atelier - Quel statut pour entreprendre ?
@@ -133,7 +88,7 @@ URL:https://chiche.makesense.org/events/e/atelier-quel-statut-pour-entrepre
 END:VEVENT
 BEGIN:VEVENT
 UID:2e1d5e6f752b@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261029T190000
 DTEND;TZID=Europe/Paris:20261029T210000
 SUMMARY:Ne vous inquiétez pas
@@ -149,7 +104,7 @@ URL:https://chiche.makesense.org/events/e/ne-vous-inquietez-pas-6aad574819f
 END:VEVENT
 BEGIN:VEVENT
 UID:7957934e1b11@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261029T193000
 DTEND;TZID=Europe/Paris:20261029T210000
 SUMMARY:Greenwashing Comedy Club
@@ -165,7 +120,7 @@ URL:https://chiche.makesense.org/events/e/greenwashing-comedy-club-6aad384d
 END:VEVENT
 BEGIN:VEVENT
 UID:2a78d0e45027@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Projection-débat : "Outre-mer\, terres de solutions"
@@ -181,7 +136,7 @@ URL:https://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
 END:VEVENT
 BEGIN:VEVENT
 UID:3a472c3119d4@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;TZID=Europe/Paris:20261031T130000
 DTEND;TZID=Europe/Paris:20261031T160000
 SUMMARY:Cercle de parole : santé mentale et identité rascisée
@@ -197,7 +152,7 @@ URL:https://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et
 END:VEVENT
 BEGIN:VEVENT
 UID:9f9c520cdee7@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
@@ -212,7 +167,7 @@ URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
 END:VEVENT
 BEGIN:VEVENT
 UID:91f6247d1c80@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -226,7 +181,7 @@ URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
 END:VEVENT
 BEGIN:VEVENT
 UID:f20c89e4b965@paris-academique
-DTSTAMP:20261028T091710Z
+DTSTAMP:20261028T103621Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Sortir l'écologie de ses murs\, rencontre-discussion avec Kevin Bh
@@ -240,5 +195,38 @@ LOCATION:3bis Rue Papin\, 75003 Paris\, France
 URL:https://chiche.makesense.org/events/e/sortir-lecologie-de-ses-murs-renc
  ontre-discussion-avec-kevin-bhema-vacher-et-ses-invitees-6acd42df1e36ae000
  818125b
+END:VEVENT
+BEGIN:VEVENT
+UID:704567818f9a@paris-academique
+DTSTAMP:20261028T103621Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Formaliser et prendre confiance en son projet entrepreneurial 📍P
+ aris 12
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Déclic\, c’es
+ t l’atelier du parcours Activ’Entrepreneurs pour clarifier et formalis
+ er son projet entrepreneurial !3h15\nhttps://chiche.makesense.org/events/e
+ /formaliser-et-prendre-confiance-en-son-projet-entrepreneurial-paris-12-6a
+ aaa7f3ca9188000759bcd7
+LOCATION:40 Av. des Terroirs de France\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/formaliser-et-prendre-confiance-e
+ n-son-projet-entrepreneurial-paris-12-6aaaa7f3ca9188000759bcd7
+END:VEVENT
+BEGIN:VEVENT
+UID:334ffe8eadf0@paris-academique
+DTSTAMP:20261028T103621Z
+DTSTART;TZID=Europe/Paris:20261104T141500
+DTEND;TZID=Europe/Paris:20261104T161500
+SUMMARY:Atelier - Comprends vraiment tes clients avec l’entretien de déc
+ ouverte
+DESCRIPTION:Organisé par Les Canaux — Mener des entretiens de découvert
+ e efficaces pour obtenir des retours non influencés sur son concept et le
+ s besoins clients.Un atelier animé par Dominique Lequepeys :Dominique Leq
+ uepeys est coach d'entrepreneurs depu\nhttps://chiche.makesense.org/events
+ /e/atelier-comprends-vraiment-tes-clients-avec-lentretien-de-decouverte-6a
+ be5bfc825ba200072c2134
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/atelier-comprends-vraiment-tes-cl
+ ients-avec-lentretien-de-decouverte-6abe5bfc825ba200072c2134
 END:VEVENT
 END:VCALENDAR
