@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c400e221696e@paris-academique
-DTSTAMP:20261028T103621Z
-DTSTART;TZID=Europe/Paris:20261028T183000
-DTEND;TZID=Europe/Paris:20261028T203000
-SUMMARY:Des valeurs au réel : l’avenir du progressisme passe-t-il par le
-  matérialisme ?
-DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/des-valeurs-au-
- reel-lavenir-du-progressisme-passe-t-il-par-le-materialisme/
-LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
-URL:https://www.jean-jaures.org/agenda/des-valeurs-au-reel-lavenir-du-progr
- essisme-passe-t-il-par-le-materialisme/
-END:VEVENT
-BEGIN:VEVENT
 UID:454afcda7cea@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T203000
 SUMMARY:Sommes-nous condamnés à la société de marché ?
@@ -49,12 +36,12 @@ URL:https://www.jean-jaures.org/agenda/sommes-nous-condamnes-a-la-societe-d
  e-marche/
 END:VEVENT
 BEGIN:VEVENT
-UID:eabbbc41a0be@paris-academique
-DTSTAMP:20261028T103621Z
+UID:9d5fadd59f98@paris-academique
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261112T183000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:Liberté d’expression\, liberté de la presse\, disparition du jo
- urnalisme : où en est on ?
+ urnalisme : où en est-on ?
 DESCRIPTION:Démocratie\nhttps://www.jean-jaures.org/agenda/liberte-dexpres
  sion-liberte-de-la-presse-disparition-du-journalisme-ou-en-est-on/
 LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
@@ -63,7 +50,7 @@ URL:https://www.jean-jaures.org/agenda/liberte-dexpression-liberte-de-la-pr
 END:VEVENT
 BEGIN:VEVENT
 UID:d20a3757e6f9@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261119T100000
 DTEND;TZID=Europe/Paris:20261119T120000
 SUMMARY:Le Blue Labour et l’avenir des gauches européennes
@@ -72,5 +59,18 @@ DESCRIPTION:Europe\nhttps://www.jean-jaures.org/agenda/le-blue-labour-et-la
 LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
 URL:https://www.jean-jaures.org/agenda/le-blue-labour-et-lavenir-des-gauche
  s-europeennes/
+END:VEVENT
+BEGIN:VEVENT
+UID:c406e042b807@paris-academique
+DTSTAMP:20261029T104931Z
+DTSTART;TZID=Europe/Paris:20261210T183000
+DTEND;TZID=Europe/Paris:20261210T203000
+SUMMARY:Élargir l’Europe ? Quelle Union européenne voulons-nous bâtir 
+ ?
+DESCRIPTION:Europe\nhttps://www.jean-jaures.org/agenda/elargir-leurope-quel
+ le-union-europeenne-voulons-nous-batir/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/elargir-leurope-quelle-union-europee
+ nne-voulons-nous-batir/
 END:VEVENT
 END:VCALENDAR

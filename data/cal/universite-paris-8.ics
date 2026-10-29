@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:36541a4bbfc7@paris-academique
-DTSTAMP:20261028T103621Z
-DTSTART;VALUE=DATE:20261029
-DTEND;VALUE=DATE:20261030
-SUMMARY:Rendez-vous de la Nouvelle table étudiante
-DESCRIPTION:https://www.univ-paris8.fr/Rendez-vous-de-la-Nouvelle-table-etu
- diante-10809
-LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Rendez-vous-de-la-Nouvelle-table-etudiante-1
- 0809
-END:VEVENT
-BEGIN:VEVENT
 UID:60be0c02b1d9@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261030
 DTEND;VALUE=DATE:20261031
 SUMMARY:Comment décrire une société en période de globalisation ?
@@ -49,7 +37,7 @@ URL:https://www.univ-paris8.fr/Comment-decrire-une-societe-en-periode-de-gl
 END:VEVENT
 BEGIN:VEVENT
 UID:af88bd21dcfa@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Atelier d’expression - Trouver sa voix
@@ -59,7 +47,7 @@ URL:https://www.univ-paris8.fr/Atelier-d-expression-Trouver-sa-voix
 END:VEVENT
 BEGIN:VEVENT
 UID:9fb66d1fdfa1@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Manifestation scientifique et artistique – Moment Palestine. « S
@@ -72,7 +60,7 @@ URL:https://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Mom
 END:VEVENT
 BEGIN:VEVENT
 UID:49c4b4b5a710@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Manifestation scientifique et artistique – Moment Palestine. « S
@@ -84,8 +72,22 @@ URL:https://www.univ-paris8.fr/Manifestation-scientifique-et-artistique-Mom
  ent-Palestine-Sur-cette-terre-il-y-10810
 END:VEVENT
 BEGIN:VEVENT
+UID:48816906c617@paris-academique
+DTSTAMP:20261029T104931Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:Cheminements des étudiants en exil\, de leur arrivée en France à
+  l’université : regards croisés étudiants\, associations\, universit
+ é
+DESCRIPTION:https://www.univ-paris8.fr/Cheminements-des-etudiants-en-exil-d
+ e-leur-arrivee-en-France-a-l-universite
+LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
+URL:https://www.univ-paris8.fr/Cheminements-des-etudiants-en-exil-de-leur-a
+ rrivee-en-France-a-l-universite
+END:VEVENT
+BEGIN:VEVENT
 UID:6090567bf822@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Journée - Les coopératives par étudiants et les coopératives po
@@ -97,12 +99,24 @@ URL:https://www.univ-paris8.fr/Journee-Les-cooperatives-par-etudiants-et-le
  s-cooperatives-pour-les-etudiants
 END:VEVENT
 BEGIN:VEVENT
-UID:640274ff82de@paris-academique
-DTSTAMP:20261028T103621Z
+UID:6ff1a7145e57@paris-academique
+DTSTAMP:20261029T104931Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Rencontres professionnelles - Conversation avec Eugenio Barba & Jul
+ ia Varley
+DESCRIPTION:https://www.univ-paris8.fr/Rencontres-professionnelles-Conversa
+ tion-avec-Eugenio-Barba-Julia-Varley
+LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
+URL:https://www.univ-paris8.fr/Rencontres-professionnelles-Conversation-ave
+ c-Eugenio-Barba-Julia-Varley
+END:VEVENT
+BEGIN:VEVENT
+UID:35f4e8db30c1@paris-academique
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
-SUMMARY:Séminaire en ligne “Escrituras y Formas del Descentramiento de l
- a Hispanofonía Global”
+SUMMARY:Escrituras y Formas del Descentramiento de la Hispanofonía Global
 DESCRIPTION:https://www.univ-paris8.fr/Seminaire-en-ligne-Escrituras-y-Form
  as-del-Descentramiento-de-la-Hispanofonia-10940
 LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
@@ -111,7 +125,7 @@ URL:https://www.univ-paris8.fr/Seminaire-en-ligne-Escrituras-y-Formas-del-D
 END:VEVENT
 BEGIN:VEVENT
 UID:530e52767198@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Conférence - Coproduire des villes démocratiques à l’ère des 
@@ -124,20 +138,32 @@ URL:https://www.univ-paris8.fr/Conference-Coproduire-des-villes-democratiqu
 END:VEVENT
 BEGIN:VEVENT
 UID:7fe7d7a08f4c@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Colloque - Les Migrations portugaises dans l’entre-deux-guerres :
   nouveaux regards et enjeux
-DESCRIPTION:https://www.univ-paris8.fr/Colloque-Les-Migrations-portugaises-
- dans-l-entre-deux-guerres-nouveaux-regards
+DESCRIPTION:https://www.univ-paris8.fr/Manifestation-scientifique-Les-Migra
+ tions-portugaises-dans-l-entre-deux-guerres
 LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
-URL:https://www.univ-paris8.fr/Colloque-Les-Migrations-portugaises-dans-l-e
- ntre-deux-guerres-nouveaux-regards
+URL:https://www.univ-paris8.fr/Manifestation-scientifique-Les-Migrations-po
+ rtugaises-dans-l-entre-deux-guerres
+END:VEVENT
+BEGIN:VEVENT
+UID:1eaa5574f5fc@paris-academique
+DTSTAMP:20261029T104931Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Rendez-vous de la Nouvelle table étudiante
+DESCRIPTION:https://www.univ-paris8.fr/Rendez-vous-de-la-Nouvelle-table-etu
+ diante-10809
+LOCATION:Université Paris 8\, 2 rue de la Liberté\, Saint-Denis
+URL:https://www.univ-paris8.fr/Rendez-vous-de-la-Nouvelle-table-etudiante-1
+ 0809
 END:VEVENT
 BEGIN:VEVENT
 UID:4ebeed7be5da@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Manifestation scientifique et artistique - Le Navire de Thésée ve

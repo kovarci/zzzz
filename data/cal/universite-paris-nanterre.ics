@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:a99b05cb08e1@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261123T174500
 DTEND;TZID=Europe/Paris:20261123T194500
 SUMMARY:17e édition du Festival Nanterre sur Scène
@@ -36,7 +36,7 @@ URL:https://www.parisnanterre.fr/agenda/festival-nss
 END:VEVENT
 BEGIN:VEVENT
 UID:3286b7dcb352@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261130T131500
 DTEND;TZID=Europe/Paris:20261130T151500
 SUMMARY:Siestes littéraires (décembre)
@@ -47,7 +47,7 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
 END:VEVENT
 BEGIN:VEVENT
 UID:260a87edc829@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20270206T100000
 DTEND;TZID=Europe/Paris:20270206T120000
 SUMMARY:Journée Portes Ouvertes (JPO) - STAPS - Campus de Nanterre - Samed

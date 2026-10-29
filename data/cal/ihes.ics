@@ -24,41 +24,40 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3daf96ad79a1@paris-academique
-DTSTAMP:20261028T103621Z
-DTSTART;TZID=Europe/Paris:20261028T140000
-DTEND;TZID=Europe/Paris:20261028T150000
-SUMMARY:Scattering and Smoothing for the Two-Dimensional Cubic Nonlinear Sc
- hrödinger Equation
-DESCRIPTION:Séminaire d'Analyse Scattering theory describes the large-time
-  behavior of nonlinear evolution equations through comparison with a linea
- r flow. This raises a further question: can the nonlinear correction to th
- e asymptotic state be smoother than the initial data? I will begin with an
-  introduction to scattering for nonlinear Schrödinger equations\, highlig
- hting several developments that motivate…\nhttps://indico.math.cnrs.fr/e
- vent/17603/
+UID:d0408f4b1b56@paris-academique
+DTSTAMP:20261029T104931Z
+DTSTART;TZID=Europe/Paris:20261104T103000
+DTEND;TZID=Europe/Paris:20261104T113000
+SUMMARY:Large Langage Models and Physics
+DESCRIPTION:Seed Seminar of Mathematics and Physics AI and the Future of Ma
+ thematics and Physics We will start with a brief technical overview of Lar
+ ge Language Models and then discuss their impact on the theoretical scienc
+ es. We will summarize the results of a recent study “TheoPhysEval” htt
+ ps://arxiv.org/abs/2610.16733 where we evaluated AI agents on unsolved phy
+ sics problems. The talk is aimed at…\nhttps://indico.math.cnrs.fr/event/
+ 17627/
 LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17603/
+URL:https://indico.math.cnrs.fr/event/17627/
 END:VEVENT
 BEGIN:VEVENT
-UID:b393ad05b173@paris-academique
-DTSTAMP:20261028T103621Z
-DTSTART;TZID=Europe/Paris:20261028T143000
-DTEND;TZID=Europe/Paris:20261028T160000
-SUMMARY:Fuzzy Sphere Meets CFT: 3D Ising\, Fermions and Gauge Theories
-DESCRIPTION:In this series of lectures\, I will introduce the "fuzzy (non-c
- ommutative) sphere regularization\," a recently proposed non-perturbative 
- approach to 3D CFTs. I will first elucidate its fundamental concepts and t
- hen dive into illustrative examples\, including the 3D Ising transition\, 
- fermionic CFTs\, and Chern-Simons matter theories. I will comment on the p
- otential theoretical direction in…\nhttps://indico.math.cnrs.fr/event/17
- 108/
+UID:ec4ea0bf2700@paris-academique
+DTSTAMP:20261029T104931Z
+DTSTART;TZID=Europe/Paris:20261104T114500
+DTEND;TZID=Europe/Paris:20261104T124500
+SUMMARY:A Counterexample to the Jacobian Conjecture in Dimension Three
+DESCRIPTION:Seed Seminar of Mathematics and Physics AI and the Future of Ma
+ thematics and Physics The Jacobian conjecture states that for any polynomi
+ al map from to itself\, if it is everywhere a local diffeomorphism\, then 
+ it admits a polynomial global inverse. In this talk\, I will present the t
+ hree-dimensional counterexample to this conjecture posted by L. Alpöge on
+  and credited to Claude. After stating the…\nhttps://indico.math.cnrs.fr
+ /event/17628/
 LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17108/
+URL:https://indico.math.cnrs.fr/event/17628/
 END:VEVENT
 BEGIN:VEVENT
 UID:e3ed9ac30ec4@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T151500
 SUMMARY:Representations and Harmonic Maps into Spheres
@@ -73,7 +72,7 @@ URL:https://indico.math.cnrs.fr/event/17586/
 END:VEVENT
 BEGIN:VEVENT
 UID:1366ba57232b@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261109T160000
 DTEND;TZID=Europe/Paris:20261109T171500
 SUMMARY:Combinations of Non-Archimedean Discrete Groups
@@ -89,7 +88,7 @@ URL:https://indico.math.cnrs.fr/event/17587/
 END:VEVENT
 BEGIN:VEVENT
 UID:878dbfa010be@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T110000
 SUMMARY:Combinatorics and Arithmetic for Physics
@@ -105,7 +104,7 @@ URL:https://indico.math.cnrs.fr/event/17588/
 END:VEVENT
 BEGIN:VEVENT
 UID:d5c2c9991d22@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261126T110000
 DTEND;TZID=Europe/Paris:20261126T123000
 SUMMARY:The Stratified Shape
@@ -121,7 +120,7 @@ URL:https://indico.math.cnrs.fr/event/17578/
 END:VEVENT
 BEGIN:VEVENT
 UID:687f749ff7e4@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261201T093000
 DTEND;TZID=Europe/Paris:20261201T160000
 SUMMARY:14e séminaire ITZYKSON - Dualité markovienne : méthodes algébri
@@ -138,7 +137,7 @@ URL:https://indico.math.cnrs.fr/event/17599/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -154,7 +153,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd1701d69489@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20261217T110000
 DTEND;TZID=Europe/Paris:20261217T123000
 SUMMARY:Algebraic Theory of Indefinite Theta Functions
@@ -170,7 +169,7 @@ URL:https://indico.math.cnrs.fr/event/17585/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261028T103621Z
+DTSTAMP:20261029T104931Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes
