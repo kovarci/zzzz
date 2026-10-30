@@ -1324,7 +1324,9 @@ CDF_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,"
               "image/avif,image/webp,*/*;q=0.8",
     "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-    "Accept-Encoding": "gzip, deflate, br",
+    # Pas de « br » : requests ne décode pas le brotli sans le paquet brotli,
+    # et le site répondait alors du binaire illisible (0 carte lue)
+    "Accept-Encoding": "gzip, deflate",
     "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
     "Sec-Ch-Ua-Mobile": "?0",
     "Sec-Ch-Ua-Platform": '"Windows"',
