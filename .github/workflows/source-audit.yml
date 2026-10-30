@@ -7,6 +7,7 @@ on:
     branches: ["claude/**"]
     paths:
       - "scraper/audit_sources.py"
+      - "scraper/_probe.py"
       - ".github/workflows/source-audit.yml"
   workflow_dispatch:
 
@@ -28,6 +29,6 @@ jobs:
       - name: Tests
         run: python -m pytest scraper/tests -q
       - name: Audit des sources
-        run: python scraper/audit_sources.py
+        run: python scraper/_probe.py
         env:
           PYTHONUNBUFFERED: "1"
