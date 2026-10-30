@@ -24,103 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:04bed74c8491@paris-academique
-DTSTAMP:20261029T104931Z
-DTSTART;VALUE=DATE:20261029
-DTEND;VALUE=DATE:20261030
-SUMMARY:STARTUP for Girls - Édition spéciale IA : filles de la 4ème à l
- a 2nd
-DESCRIPTION:Organisé par Nathalie PERIN — Startup For Girls - Édition s
- péciale IA : Startupper\, c'est pas sorcier !↳ Pour les filles de 4ème
- \, 3ème et 2nde d'Île-de-France ➤ 2 jours de chall\nhttps://chiche.mak
- esense.org/events/e/startup-for-girls-edition-speciale-ia-filles-de-la-4em
- e-a-la-2nd-6a9008d91c585d0008c80707
-LOCATION:8 Bd Victor Hugo\, 93400 Saint-Ouen-sur-Seine\, France
-URL:https://chiche.makesense.org/events/e/startup-for-girls-edition-special
- e-ia-filles-de-la-4eme-a-la-2nd-6a9008d91c585d0008c80707
-END:VEVENT
-BEGIN:VEVENT
-UID:b9968bd884fd@paris-academique
-DTSTAMP:20261029T104931Z
-DTSTART;VALUE=DATE:20261029
-DTEND;VALUE=DATE:20261030
-SUMMARY:LE BUSINESS MODEL DE L'ENTREPRISE RÉGÉNÉRATIVE
-DESCRIPTION:Organisé par Jeremy Dumont — Le business model canvas de l
- ’entreprise régénérativeNotre Business Model Canvas de l’entreprise
-  Régénérative – le REGEN BMC – permet d’identifier les zones de d
- égénération d’une activité économique et d’identi\nhttps://chiche
- .makesense.org/events/e/le-business-model-de-lentreprise-regenerative-6ab1
- 581332f93b0008d0d0fd
-LOCATION:Paris\, France
-URL:https://chiche.makesense.org/events/e/le-business-model-de-lentreprise-
- regenerative-6ab1581332f93b0008d0d0fd
-END:VEVENT
-BEGIN:VEVENT
-UID:5ea514217010@paris-academique
-DTSTAMP:20261029T104931Z
-DTSTART;VALUE=DATE:20261029
-DTEND;VALUE=DATE:20261030
-SUMMARY:Startup For Girls : devenez facilitateur.rice bénévole
-DESCRIPTION:Organisé par Nathalie PERIN — Startup For Girls - Édition s
- péciale IABeReal\, Instagram\, YouTube\, Netflix\, Ornikar… Ces platefo
- rmes font partie du quotidien des adolescentes. Pourtant\, combien d'entre
-  elles s'imaginent travailler dans la tech ou crée\nhttps://chiche.makese
- nse.org/events/e/startup-for-girls-devenez-facilitateurrice-benevole-6ac64
- c95bd306e00074e179c
-LOCATION:8 Bd Victor Hugo\, 93400 Saint-Ouen-sur-Seine\, France
-URL:https://chiche.makesense.org/events/e/startup-for-girls-devenez-facilit
- ateurrice-benevole-6ac64c95bd306e00074e179c
-END:VEVENT
-BEGIN:VEVENT
-UID:3f3a141157c4@paris-academique
-DTSTAMP:20261029T104931Z
-DTSTART;TZID=Europe/Paris:20261029T095000
-DTEND;TZID=Europe/Paris:20261029T115000
-SUMMARY:Atelier - Quel statut pour entreprendre ?
-DESCRIPTION:Organisé par Les Canaux — Découvrir les différentes formes
-  et statuts pour entreprendre et en particulier l'entrepreneuriat salarié
-  en coopérative chez OmnicitéUn atelier animé par Manon Couzy d'Omnicit
- é\nhttps://chiche.makesense.org/events/e/atelier-quel-statut-pour-entrepr
- endre-6a9969a31c5b4f0008bb0c0e
-LOCATION:6 Quai de la Seine\, 75019 Paris\, France
-URL:https://chiche.makesense.org/events/e/atelier-quel-statut-pour-entrepre
- ndre-6a9969a31c5b4f0008bb0c0e
-END:VEVENT
-BEGIN:VEVENT
-UID:2e1d5e6f752b@paris-academique
-DTSTAMP:20261029T104931Z
-DTSTART;TZID=Europe/Paris:20261029T190000
-DTEND;TZID=Europe/Paris:20261029T210000
-SUMMARY:Ne vous inquiétez pas
-DESCRIPTION:Organisé par Maison de la Conversation — "Ne vous inquiétez
-  pas" est un spectacle-débat en 2 temps. D'abord l'adaptation théâtrale
-  du témoignage de Nina et Thierry Delcroix « Papa\, viens me chercher ! 
- » qui retrace la descente aux enfers d’une jeune adolescente dans la\nh
- ttps://chiche.makesense.org/events/e/ne-vous-inquietez-pas-6aad574819fd1c0
- 008964bd8
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/ne-vous-inquietez-pas-6aad574819f
- d1c0008964bd8
-END:VEVENT
-BEGIN:VEVENT
-UID:7957934e1b11@paris-academique
-DTSTAMP:20261029T104931Z
-DTSTART;TZID=Europe/Paris:20261029T193000
-DTEND;TZID=Europe/Paris:20261029T210000
-SUMMARY:Greenwashing Comedy Club
-DESCRIPTION:Organisé par Maison de la Conversation — Contre le réchauff
- ement climatique\, on n’a pas de solution. Mais on a des blagues !Venez 
- découvrir l’univers d'une sélection d'humoristes préparées aux petit
- s oignons\, qui rigolent de leur éco anxiété\, leurs contradictions et 
- de la pas si g\nhttps://chiche.makesense.org/events/e/greenwashing-comedy-
- club-6aad384dca918800076a5d71
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/greenwashing-comedy-club-6aad384d
- ca918800076a5d71
-END:VEVENT
-BEGIN:VEVENT
 UID:2a78d0e45027@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Projection-débat : "Outre-mer\, terres de solutions"
@@ -136,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
 END:VEVENT
 BEGIN:VEVENT
 UID:3a472c3119d4@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261031T130000
 DTEND;TZID=Europe/Paris:20261031T160000
 SUMMARY:Cercle de parole : santé mentale et identité rascisée
@@ -152,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et
 END:VEVENT
 BEGIN:VEVENT
 UID:9f9c520cdee7@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
@@ -167,7 +72,7 @@ URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
 END:VEVENT
 BEGIN:VEVENT
 UID:91f6247d1c80@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -181,7 +86,7 @@ URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
 END:VEVENT
 BEGIN:VEVENT
 UID:f20c89e4b965@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Sortir l'écologie de ses murs\, rencontre-discussion avec Kevin Bh
@@ -198,7 +103,7 @@ URL:https://chiche.makesense.org/events/e/sortir-lecologie-de-ses-murs-renc
 END:VEVENT
 BEGIN:VEVENT
 UID:704567818f9a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Formaliser et prendre confiance en son projet entrepreneurial 📍P
@@ -214,7 +119,7 @@ URL:https://chiche.makesense.org/events/e/formaliser-et-prendre-confiance-e
 END:VEVENT
 BEGIN:VEVENT
 UID:334ffe8eadf0@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261104T141500
 DTEND;TZID=Europe/Paris:20261104T161500
 SUMMARY:Atelier - Comprends vraiment tes clients avec l’entretien de déc
@@ -228,5 +133,21 @@ DESCRIPTION:Organisé par Les Canaux — Mener des entretiens de découvert
 LOCATION:6 Quai de la Seine\, 75019 Paris\, France
 URL:https://chiche.makesense.org/events/e/atelier-comprends-vraiment-tes-cl
  ients-avec-lentretien-de-decouverte-6abe5bfc825ba200072c2134
+END:VEVENT
+BEGIN:VEVENT
+UID:6b76b17d318d@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Où dort ton argent ?...et comment l'orienter vers la transition ?
+DESCRIPTION:Organisé par Sylvie GRANDE — Et si votre argent pouvait lui 
+ aussi devenir un moyen d’agir pour la transition écologique et sociale 
+ ?On pense souvent à changer notre alimentation\, nos déplacements ou not
+ re façon de consommer pour agir en faveur d’un monde plus durable.\nhtt
+ ps://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lorienter
+ -vers-la-transition-6ad0abfa1e36ae00082ec669
+LOCATION:39 Rue de Montreuil\, 94300 Vincennes\, France
+URL:https://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lor
+ ienter-vers-la-transition-6ad0abfa1e36ae00082ec669
 END:VEVENT
 END:VCALENDAR

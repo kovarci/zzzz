@@ -24,11 +24,11 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:909d7972c69f@paris-academique
-DTSTAMP:20261029T104931Z
+UID:c2f111a074c6@paris-academique
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261030T180000
 DTEND;TZID=Europe/Paris:20261030T230000
-SUMMARY:Soirée Halloween à la Barge vendredi 30 octobre
+SUMMARY:COMPLET ! Soirée Halloween à la Barge vendredi 30 octobre
 DESCRIPTION:🎃 Halloween à La Barge : une soirée explosive ! La program
  mation à La Barge s’annonce explosive💥 Le vendredi 30 octobre\, sort
  ez vos plus beaux déguisements et préparez-vous à frissonner\, danser e
@@ -43,8 +43,25 @@ URL:https://www.crous-paris.fr/evenement/soiree-halloween-a-la-barge-vendre
  di-30-octobre/
 END:VEVENT
 BEGIN:VEVENT
+UID:26a498ba4185@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261103T190000
+DTEND;TZID=Europe/Paris:20261103T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-11-03/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-11-03/
+END:VEVENT
+BEGIN:VEVENT
 UID:2c5ac1d13fc1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261104T183000
 DTEND;TZID=Europe/Paris:20261104T210000
 SUMMARY:Atelier de cuisine durable à la résidence Saint-Jacques
@@ -61,8 +78,25 @@ URL:https://www.crous-paris.fr/evenement/atelier-de-cuisine-durable-a-la-re
  sidence-saint-jacques/
 END:VEVENT
 BEGIN:VEVENT
+UID:87299d2d65db@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261105T180000
+DTEND;TZID=Europe/Paris:20261105T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-05/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-05/
+END:VEVENT
+BEGIN:VEVENT
 UID:883683644e03@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:Atelier de cuisine durable à la résidence Poissonniers
@@ -79,8 +113,76 @@ URL:https://www.crous-paris.fr/evenement/atelier-de-cuisine-durable-a-la-re
  sidence-poissonniers/
 END:VEVENT
 BEGIN:VEVENT
+UID:706591ab38f7@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261110T190000
+DTEND;TZID=Europe/Paris:20261110T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-11-10/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-11-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:4574759cc794@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261112T180000
+DTEND;TZID=Europe/Paris:20261112T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-12/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-12/
+END:VEVENT
+BEGIN:VEVENT
+UID:61dcefcbc29b@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261117T190000
+DTEND;TZID=Europe/Paris:20261117T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-11-17/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-11-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:1b6b2b1ce101@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261119T180000
+DTEND;TZID=Europe/Paris:20261119T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-19/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-19/
+END:VEVENT
+BEGIN:VEVENT
 UID:435325817acf@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261120T190000
 DTEND;TZID=Europe/Paris:20261120T230000
 SUMMARY:Soirée karaoké à la Barge vendredi 20 novembre
@@ -96,5 +198,1671 @@ LOCATION:à la Barge du Crous de Paris\, Quai François Mauriac\, Port de l
  a Gare\, 75013 Paris
 URL:https://www.crous-paris.fr/evenement/soiree-karaoke-a-la-barge-vendredi
  -20-novembre/
+END:VEVENT
+BEGIN:VEVENT
+UID:68353ae3c728@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261124T190000
+DTEND;TZID=Europe/Paris:20261124T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-11-24/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-11-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:d02fb88eaf66@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261126T180000
+DTEND;TZID=Europe/Paris:20261126T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-26/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-11-26/
+END:VEVENT
+BEGIN:VEVENT
+UID:c99a55333b3e@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261201T190000
+DTEND;TZID=Europe/Paris:20261201T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-12-01/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-12-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:7af6c93b3ac7@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261203T180000
+DTEND;TZID=Europe/Paris:20261203T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-03/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:c691d340d5ab@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261208T190000
+DTEND;TZID=Europe/Paris:20261208T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-12-08/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-12-08/
+END:VEVENT
+BEGIN:VEVENT
+UID:a702cec13557@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261210T180000
+DTEND;TZID=Europe/Paris:20261210T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-10/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:bc94cc776244@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261215T190000
+DTEND;TZID=Europe/Paris:20261215T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-12-15/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-12-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:213898364053@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261217T180000
+DTEND;TZID=Europe/Paris:20261217T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-17/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:5381a91ef086@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261222T190000
+DTEND;TZID=Europe/Paris:20261222T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-12-22/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-12-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:f9d64f415a07@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261224T180000
+DTEND;TZID=Europe/Paris:20261224T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-24/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:67600518d6fd@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261229T190000
+DTEND;TZID=Europe/Paris:20261229T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2026-12-29/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2026-12-29/
+END:VEVENT
+BEGIN:VEVENT
+UID:f305391490e3@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261231T180000
+DTEND;TZID=Europe/Paris:20261231T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-31/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2026-12-31/
+END:VEVENT
+BEGIN:VEVENT
+UID:8abf75605861@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270105T190000
+DTEND;TZID=Europe/Paris:20270105T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-01-05/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-01-05/
+END:VEVENT
+BEGIN:VEVENT
+UID:c236bac53a9d@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270107T180000
+DTEND;TZID=Europe/Paris:20270107T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-07/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-07/
+END:VEVENT
+BEGIN:VEVENT
+UID:b269d1bd4e69@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270112T190000
+DTEND;TZID=Europe/Paris:20270112T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-01-12/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-01-12/
+END:VEVENT
+BEGIN:VEVENT
+UID:340a071e3fb7@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270114T180000
+DTEND;TZID=Europe/Paris:20270114T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-14/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-14/
+END:VEVENT
+BEGIN:VEVENT
+UID:5b62f466198c@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270119T190000
+DTEND;TZID=Europe/Paris:20270119T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-01-19/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-01-19/
+END:VEVENT
+BEGIN:VEVENT
+UID:be6162330913@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270121T180000
+DTEND;TZID=Europe/Paris:20270121T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-21/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:1a8763f48084@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270126T190000
+DTEND;TZID=Europe/Paris:20270126T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-01-26/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-01-26/
+END:VEVENT
+BEGIN:VEVENT
+UID:a4f872d7fca3@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270128T180000
+DTEND;TZID=Europe/Paris:20270128T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-28/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-01-28/
+END:VEVENT
+BEGIN:VEVENT
+UID:db57ef2317f0@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270202T190000
+DTEND;TZID=Europe/Paris:20270202T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-02-02/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-02-02/
+END:VEVENT
+BEGIN:VEVENT
+UID:ad3f7f685443@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270204T180000
+DTEND;TZID=Europe/Paris:20270204T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-04/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-04/
+END:VEVENT
+BEGIN:VEVENT
+UID:62bc5ec4ed89@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270209T190000
+DTEND;TZID=Europe/Paris:20270209T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-02-09/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-02-09/
+END:VEVENT
+BEGIN:VEVENT
+UID:dcfbe1f20de8@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270211T180000
+DTEND;TZID=Europe/Paris:20270211T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-11/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-11/
+END:VEVENT
+BEGIN:VEVENT
+UID:7fc596c7e023@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270216T190000
+DTEND;TZID=Europe/Paris:20270216T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-02-16/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-02-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:222088af5300@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270218T180000
+DTEND;TZID=Europe/Paris:20270218T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-18/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:0f0a420be1cc@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270223T190000
+DTEND;TZID=Europe/Paris:20270223T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-02-23/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-02-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:dd5f47983a46@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270225T180000
+DTEND;TZID=Europe/Paris:20270225T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-25/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-02-25/
+END:VEVENT
+BEGIN:VEVENT
+UID:d36b70394fd9@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270302T190000
+DTEND;TZID=Europe/Paris:20270302T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-03-02/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-03-02/
+END:VEVENT
+BEGIN:VEVENT
+UID:d9f28504ab3a@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270304T180000
+DTEND;TZID=Europe/Paris:20270304T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-04/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-04/
+END:VEVENT
+BEGIN:VEVENT
+UID:691653a6c116@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270309T190000
+DTEND;TZID=Europe/Paris:20270309T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-03-09/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-03-09/
+END:VEVENT
+BEGIN:VEVENT
+UID:1aed8ee318a1@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270311T180000
+DTEND;TZID=Europe/Paris:20270311T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-11/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-11/
+END:VEVENT
+BEGIN:VEVENT
+UID:a73412dff44a@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270316T190000
+DTEND;TZID=Europe/Paris:20270316T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-03-16/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-03-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:98ac268a4b46@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270318T180000
+DTEND;TZID=Europe/Paris:20270318T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-18/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:d3bf51e584d6@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270323T190000
+DTEND;TZID=Europe/Paris:20270323T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-03-23/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-03-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:5835de74bd41@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270325T180000
+DTEND;TZID=Europe/Paris:20270325T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-25/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-03-25/
+END:VEVENT
+BEGIN:VEVENT
+UID:0cfcdcff93c7@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270330T190000
+DTEND;TZID=Europe/Paris:20270330T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-03-30/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-03-30/
+END:VEVENT
+BEGIN:VEVENT
+UID:a8d7ddd1e615@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270401T180000
+DTEND;TZID=Europe/Paris:20270401T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-01/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:d01234635419@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270406T190000
+DTEND;TZID=Europe/Paris:20270406T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-04-06/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-04-06/
+END:VEVENT
+BEGIN:VEVENT
+UID:3a676d941e1b@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270408T180000
+DTEND;TZID=Europe/Paris:20270408T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-08/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-08/
+END:VEVENT
+BEGIN:VEVENT
+UID:57574207f224@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270413T190000
+DTEND;TZID=Europe/Paris:20270413T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-04-13/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-04-13/
+END:VEVENT
+BEGIN:VEVENT
+UID:e59ae0e1b122@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270415T180000
+DTEND;TZID=Europe/Paris:20270415T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-15/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:6a21cad9561d@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270420T190000
+DTEND;TZID=Europe/Paris:20270420T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-04-20/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-04-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:1af999770f9d@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270422T180000
+DTEND;TZID=Europe/Paris:20270422T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-22/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:da1361bf90b6@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270427T190000
+DTEND;TZID=Europe/Paris:20270427T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-04-27/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-04-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:38c086427b80@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270429T180000
+DTEND;TZID=Europe/Paris:20270429T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-29/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-04-29/
+END:VEVENT
+BEGIN:VEVENT
+UID:7413ae8fd566@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270504T190000
+DTEND;TZID=Europe/Paris:20270504T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-05-04/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-05-04/
+END:VEVENT
+BEGIN:VEVENT
+UID:0a3e924fad60@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270506T180000
+DTEND;TZID=Europe/Paris:20270506T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-06/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-06/
+END:VEVENT
+BEGIN:VEVENT
+UID:99c082a22749@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270511T190000
+DTEND;TZID=Europe/Paris:20270511T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-05-11/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-05-11/
+END:VEVENT
+BEGIN:VEVENT
+UID:63a57441d4b0@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270513T180000
+DTEND;TZID=Europe/Paris:20270513T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-13/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-13/
+END:VEVENT
+BEGIN:VEVENT
+UID:76c9b9e3f78f@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270518T190000
+DTEND;TZID=Europe/Paris:20270518T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-05-18/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-05-18/
+END:VEVENT
+BEGIN:VEVENT
+UID:0f827d2e0708@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270520T180000
+DTEND;TZID=Europe/Paris:20270520T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-20/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:037dc32bd9cb@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270525T190000
+DTEND;TZID=Europe/Paris:20270525T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-05-25/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-05-25/
+END:VEVENT
+BEGIN:VEVENT
+UID:b3541a8f030e@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270527T180000
+DTEND;TZID=Europe/Paris:20270527T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-27/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-05-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:b801c2a2f8f6@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270601T190000
+DTEND;TZID=Europe/Paris:20270601T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-06-01/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-06-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:71e6ae24763d@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270603T180000
+DTEND;TZID=Europe/Paris:20270603T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-03/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:5a34d0df0678@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270608T190000
+DTEND;TZID=Europe/Paris:20270608T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-06-08/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-06-08/
+END:VEVENT
+BEGIN:VEVENT
+UID:ab89a26a170e@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270610T180000
+DTEND;TZID=Europe/Paris:20270610T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-10/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:d549bc726178@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270615T190000
+DTEND;TZID=Europe/Paris:20270615T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-06-15/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-06-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:476016cfe715@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270617T180000
+DTEND;TZID=Europe/Paris:20270617T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-17/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:7240ffd6e0fe@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270622T190000
+DTEND;TZID=Europe/Paris:20270622T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-06-22/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-06-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:cdde752db53e@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270624T180000
+DTEND;TZID=Europe/Paris:20270624T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-24/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-06-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:f8e99ba7d7de@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270629T190000
+DTEND;TZID=Europe/Paris:20270629T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-06-29/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-06-29/
+END:VEVENT
+BEGIN:VEVENT
+UID:5c2ef0a330f6@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270701T180000
+DTEND;TZID=Europe/Paris:20270701T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-01/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-01/
+END:VEVENT
+BEGIN:VEVENT
+UID:8df139499e7f@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270706T190000
+DTEND;TZID=Europe/Paris:20270706T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-07-06/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-07-06/
+END:VEVENT
+BEGIN:VEVENT
+UID:fa6d26568a79@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270708T180000
+DTEND;TZID=Europe/Paris:20270708T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-08/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-08/
+END:VEVENT
+BEGIN:VEVENT
+UID:1cf38aea1234@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270713T190000
+DTEND;TZID=Europe/Paris:20270713T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-07-13/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-07-13/
+END:VEVENT
+BEGIN:VEVENT
+UID:6e70af06ea9e@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270715T180000
+DTEND;TZID=Europe/Paris:20270715T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-15/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-15/
+END:VEVENT
+BEGIN:VEVENT
+UID:a4739ce47087@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270720T190000
+DTEND;TZID=Europe/Paris:20270720T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-07-20/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-07-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:4e4e7089c11f@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270722T180000
+DTEND;TZID=Europe/Paris:20270722T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-22/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-22/
+END:VEVENT
+BEGIN:VEVENT
+UID:394b52788a28@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270727T190000
+DTEND;TZID=Europe/Paris:20270727T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-07-27/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-07-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:636d90f71c2a@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270729T180000
+DTEND;TZID=Europe/Paris:20270729T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-29/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-07-29/
+END:VEVENT
+BEGIN:VEVENT
+UID:ffb115548724@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270803T190000
+DTEND;TZID=Europe/Paris:20270803T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-08-03/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-08-03/
+END:VEVENT
+BEGIN:VEVENT
+UID:078efdeec3d2@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270805T180000
+DTEND;TZID=Europe/Paris:20270805T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-05/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-05/
+END:VEVENT
+BEGIN:VEVENT
+UID:cf6ff7499986@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270810T190000
+DTEND;TZID=Europe/Paris:20270810T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-08-10/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-08-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:8dc4a586b769@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270812T180000
+DTEND;TZID=Europe/Paris:20270812T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-12/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-12/
+END:VEVENT
+BEGIN:VEVENT
+UID:9ec9cd11d92d@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270817T190000
+DTEND;TZID=Europe/Paris:20270817T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-08-17/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-08-17/
+END:VEVENT
+BEGIN:VEVENT
+UID:08af22efe56d@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270819T180000
+DTEND;TZID=Europe/Paris:20270819T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-19/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-19/
+END:VEVENT
+BEGIN:VEVENT
+UID:30b335820323@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270824T190000
+DTEND;TZID=Europe/Paris:20270824T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-08-24/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-08-24/
+END:VEVENT
+BEGIN:VEVENT
+UID:1d1a75ffea0a@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270826T180000
+DTEND;TZID=Europe/Paris:20270826T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-26/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-08-26/
+END:VEVENT
+BEGIN:VEVENT
+UID:97195e797250@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270831T190000
+DTEND;TZID=Europe/Paris:20270831T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-08-31/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-08-31/
+END:VEVENT
+BEGIN:VEVENT
+UID:d8a81f503846@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270902T180000
+DTEND;TZID=Europe/Paris:20270902T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-02/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-02/
+END:VEVENT
+BEGIN:VEVENT
+UID:b6170dad2eb6@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270907T190000
+DTEND;TZID=Europe/Paris:20270907T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-09-07/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-09-07/
+END:VEVENT
+BEGIN:VEVENT
+UID:358660b027b5@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270909T180000
+DTEND;TZID=Europe/Paris:20270909T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-09/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-09/
+END:VEVENT
+BEGIN:VEVENT
+UID:5ac6cf2a2cda@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270914T190000
+DTEND;TZID=Europe/Paris:20270914T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-09-14/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-09-14/
+END:VEVENT
+BEGIN:VEVENT
+UID:3ce472b15c69@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270916T180000
+DTEND;TZID=Europe/Paris:20270916T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-16/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-16/
+END:VEVENT
+BEGIN:VEVENT
+UID:8aead715eafe@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270921T190000
+DTEND;TZID=Europe/Paris:20270921T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-09-21/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-09-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:2a48f0b6e7ad@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270923T180000
+DTEND;TZID=Europe/Paris:20270923T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-23/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:9c4944554791@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270928T190000
+DTEND;TZID=Europe/Paris:20270928T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-09-28/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-09-28/
+END:VEVENT
+BEGIN:VEVENT
+UID:55475a45da6e@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20270930T180000
+DTEND;TZID=Europe/Paris:20270930T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-30/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-09-30/
+END:VEVENT
+BEGIN:VEVENT
+UID:6b41f0ca0dbd@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271005T190000
+DTEND;TZID=Europe/Paris:20271005T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-10-05/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-10-05/
+END:VEVENT
+BEGIN:VEVENT
+UID:3dafd2c4b90f@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271007T180000
+DTEND;TZID=Europe/Paris:20271007T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-07/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-07/
+END:VEVENT
+BEGIN:VEVENT
+UID:f18b3d4ef662@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271012T190000
+DTEND;TZID=Europe/Paris:20271012T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-10-12/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-10-12/
+END:VEVENT
+BEGIN:VEVENT
+UID:7c496641c425@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271014T180000
+DTEND;TZID=Europe/Paris:20271014T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-14/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-14/
+END:VEVENT
+BEGIN:VEVENT
+UID:23e97eb392ef@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271019T190000
+DTEND;TZID=Europe/Paris:20271019T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-10-19/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-10-19/
+END:VEVENT
+BEGIN:VEVENT
+UID:3b24365ea7e4@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271021T180000
+DTEND;TZID=Europe/Paris:20271021T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-21/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:14da3796c121@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271026T190000
+DTEND;TZID=Europe/Paris:20271026T210000
+SUMMARY:Running Club
+DESCRIPTION:🏃‍♀️ Envie de courir ? Rejoignez le Running club du Cr
+ ous de Paris ! Débutant ou déjà adepte de la course à pied\, venez cou
+ rir\, vous dépenser et progresser lors des séances de Running club propo
+ sées par le Crous de Paris et le Paris Université Club (PUC) ! Flavie\, 
+ coach d’athlétisme\, vous accompagne à chaque entraînement dans une a
+ mbiance motivante et conviviale. 📅 Tous les mardis\, de 19h à…\nhttp
+ s://www.crous-paris.fr/evenement/running-club/2027-10-26/
+LOCATION:Stade Charlety – Entrée principale 17\, avenue Pierre de Couber
+ tin\, 75013 Paris
+URL:https://www.crous-paris.fr/evenement/running-club/2027-10-26/
+END:VEVENT
+BEGIN:VEVENT
+UID:2d886113b4c8@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20271028T180000
+DTEND;TZID=Europe/Paris:20271028T184500
+SUMMARY:Toutes en forme
+DESCRIPTION:💥 Du sport\, de l’énergie et zéro pression ! Envie de vo
+ us dépenser et de vous sentir plus forte ? Le Crous de Paris et le PUC vo
+ us proposent un cycle de 6 séances de cardio training et de renforcement 
+ musculaire réservées aux étudiantes\, dans un cadre bienveillant et inc
+ lusif. 📅 Tous les jeudis\, du 5 novembre au 17 décembre ⏱️ 2 crén
+ eaux de 45 min : 18h–18h45 ou 18h45–19h30 📍 Centre Sportif…\nhttp
+ s://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-28/
+LOCATION:Centre Sportif Universitaire Jean Sarrailh\, 39 av Bernanos 75005 
+ Paris
+URL:https://www.crous-paris.fr/evenement/toutes-en-forme/2027-10-28/
 END:VEVENT
 END:VCALENDAR

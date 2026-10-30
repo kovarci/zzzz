@@ -24,10 +24,10 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:b1ac641390c0@paris-academique
-DTSTAMP:20261029T104931Z
-DTSTART;TZID=Europe/Paris:20261028T090000
-DTEND;TZID=Europe/Paris:20261028T180000
+UID:f37d4c467a4c@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;TZID=Europe/Paris:20261029T090000
+DTEND;TZID=Europe/Paris:20261029T180000
 SUMMARY:Foucault\, une aventure intellectuelle au Collège de France
 DESCRIPTION:Du 30 septembre 2026 au 15 janvier 2026\, l’exposition « Fou
  cault\, une aventure intellectuelle au Collège de France » explore le pa
@@ -43,7 +43,7 @@ URL:https://www.paris.fr/evenements/foucault-une-aventure-intellectuelle-au
 END:VEVENT
 BEGIN:VEVENT
 UID:cd93a844cb4c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T093000
 DTEND;TZID=Europe/Paris:20261103T104500
 SUMMARY:Le temps et les mots pour le dire (ou pas) (3/3)
@@ -56,7 +56,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:2c6a8bfa2ef1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T111500
 DTEND;TZID=Europe/Paris:20261103T123000
 SUMMARY:Le corps dans tous ses états (2/5)
@@ -72,7 +72,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:4def13372129@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T140000
 DTEND;TZID=Europe/Paris:20261103T151500
 SUMMARY:Foucault aujourd’hui (3/6)
@@ -88,7 +88,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:92bf04361d49@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T153000
 DTEND;TZID=Europe/Paris:20261103T164500
 SUMMARY:Penser d’ailleurs (3/6)
@@ -104,7 +104,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:6223359a760b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T180000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Histoire et Philosophie de la Psychiatrie II
@@ -117,7 +117,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/histoire-et-philosop
 END:VEVENT
 BEGIN:VEVENT
 UID:47fd9168656f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T190000
 DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:Séminaire dialogues philosophiques — Dialogues entre l’Amériq
@@ -131,7 +131,7 @@ URL:https://www.mal217.org/fr/agenda/seminaire-dialogues-philosophiques-8c5
 END:VEVENT
 BEGIN:VEVENT
 UID:4e8d56302d4f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T193000
 DTEND;TZID=Europe/Paris:20261103T210000
 SUMMARY:Moïse : pourquoi est-il si important ?
@@ -143,7 +143,7 @@ URL:https://www.collegedesbernardins.fr/agenda/moise-pourquoi-est-il-si-imp
 END:VEVENT
 BEGIN:VEVENT
 UID:e78fa428b7da@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261103T193000
 DTEND;TZID=Europe/Paris:20261103T203000
 SUMMARY:Soirées Impro-Philo avec Laurence Devillairs
@@ -155,7 +155,7 @@ URL:https://www.paris.fr/evenements/soirees-impro-philo-avec-laurence-devil
 END:VEVENT
 BEGIN:VEVENT
 UID:e27ed13d314f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261104T110000
 DTEND;TZID=Europe/Paris:20261104T130000
 SUMMARY:The Noetic Theory\, Part I: Intelligible Beauty and Seeking to Unde
@@ -170,7 +170,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/aestheti
 END:VEVENT
 BEGIN:VEVENT
 UID:3102bc04adae@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261104T193000
 DTEND;TZID=Europe/Paris:20261104T233000
 SUMMARY:Soirée de générosité de la Fondation des Bernardins
@@ -182,7 +182,7 @@ URL:https://www.collegedesbernardins.fr/agenda/soiree-de-generosite-de-la-f
 END:VEVENT
 BEGIN:VEVENT
 UID:afa85aed023a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T090000
 DTEND;TZID=Europe/Paris:20261105T110000
 SUMMARY:Acteurs & réseaux transnationaux du nationalisme religieux(aire eu
@@ -198,7 +198,7 @@ URL:https://www.sciencespo.fr/fr/evenements/acteurs-and-reseaux-transnation
 END:VEVENT
 BEGIN:VEVENT
 UID:c3a8a77d6970@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T100000
 DTEND;TZID=Europe/Paris:20261105T120000
 SUMMARY:Atelier de lecture des "Recherches philosophiques" de Wittgenstein
@@ -211,7 +211,7 @@ URL:https://ihpst.pantheonsorbonne.fr/evenements/atelier-de-lecture-recherc
 END:VEVENT
 BEGIN:VEVENT
 UID:18fadc593cfe@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T141500
 DTEND;TZID=Europe/Paris:20261105T161500
 SUMMARY:‘Normes\, Sociétés\, Philosophies’ 2026-2027
@@ -224,7 +224,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/normes-societes-phil
 END:VEVENT
 BEGIN:VEVENT
 UID:33a61c6bc132@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T160000
 DTEND;TZID=Europe/Paris:20261105T180000
 SUMMARY:Séminaire de traduction des Topiques d’Aristote II
@@ -237,7 +237,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/seminaire-de-traduct
 END:VEVENT
 BEGIN:VEVENT
 UID:31b1adf3de4e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Chaillot Rencontre Hommage à André Malraux
@@ -253,7 +253,7 @@ URL:https://www.paris.fr/evenements/chaillot-rencontre-hommage-a-andre-malr
 END:VEVENT
 BEGIN:VEVENT
 UID:8b48ded1f84d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T190000
 DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:Malraux\, philosophe ?
@@ -266,7 +266,7 @@ URL:https://www.paris.fr/evenements/avec-une-legere-intimite-madeleine-malr
 END:VEVENT
 BEGIN:VEVENT
 UID:6efd2c278d58@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261105T190000
 DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:Beauvoir made in América
@@ -281,7 +281,7 @@ URL:https://www.paris.fr/evenements/beauvoir-made-in-america-118408
 END:VEVENT
 BEGIN:VEVENT
 UID:0625258dc448@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261106T090000
 DTEND;TZID=Europe/Paris:20261106T110000
 SUMMARY:La mondialisation comme problème philosophique
@@ -294,7 +294,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/la-mondialisation-co
 END:VEVENT
 BEGIN:VEVENT
 UID:a5ebb9c0f96d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261106T110000
 DTEND;TZID=Europe/Paris:20261106T130000
 SUMMARY:The Noetic Theory\, Part II: Aesthetic Discovery\, Exploration and 
@@ -309,7 +309,7 @@ URL:https://www.college-de-france.fr/fr/agenda/conferencier-invite/aestheti
 END:VEVENT
 BEGIN:VEVENT
 UID:674f26216c04@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261107T090000
 DTEND;TZID=Europe/Paris:20261107T110000
 SUMMARY:AI\, Television\, Creation and Ethics. France-Australia FASIC Works
@@ -323,7 +323,7 @@ URL:https://isjps.pantheonsorbonne.fr/evenements/ai-television-creation-and
 END:VEVENT
 BEGIN:VEVENT
 UID:91e0fd24d199@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261107T163000
 DTEND;TZID=Europe/Paris:20261107T173000
 SUMMARY:Les Petits philosophes : Moi et les autres
@@ -335,7 +335,7 @@ URL:https://www.collegedesbernardins.fr/agenda/petits-philosophes-moi-et-le
 END:VEVENT
 BEGIN:VEVENT
 UID:f24af4edf23b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261107T163000
 DTEND;TZID=Europe/Paris:20261107T180000
 SUMMARY:Banquet philo : Baume ou poignard : que provoque vraiment notre par
@@ -348,7 +348,7 @@ URL:https://www.collegedesbernardins.fr/agenda/banquet-philo-baume-ou-poign
 END:VEVENT
 BEGIN:VEVENT
 UID:04dcc95edbe7@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:La Foi bahá'íe : hérésie chiite ou religion universelle
@@ -361,7 +361,7 @@ URL:https://www.ephe.psl.eu/la-foi-bahaie-heresie-chiite-ou-religion-univer
 END:VEVENT
 BEGIN:VEVENT
 UID:8ea247107eb3@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Deuxième Congrès de la Société francophone de philosophie fémi
@@ -378,7 +378,7 @@ URL:https://congressfpf.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:748017d54ee5@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261109T103000
 DTEND;TZID=Europe/Paris:20261109T123000
 SUMMARY:Qu'est-ce qu'un mode de présentation ?
@@ -391,7 +391,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/concepts-et-modes-de-p
 END:VEVENT
 BEGIN:VEVENT
 UID:cef0cd851c8f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261109T200000
 DTEND;TZID=Europe/Paris:20261109T213000
 SUMMARY:De JD Vance à Léon XIV : le catholicisme américain est-il en cri
@@ -404,7 +404,7 @@ URL:https://www.collegedesbernardins.fr/agenda/de-jd-vance-a-leon-xiv-le-ca
 END:VEVENT
 BEGIN:VEVENT
 UID:04fe559a843e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261110T090000
 DTEND;TZID=Europe/Paris:20261110T190000
 SUMMARY:Résistances et utopies. Passées\, présentes et à venir. Deuxiè
@@ -419,7 +419,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/resistances-et-utopies-passee
 END:VEVENT
 BEGIN:VEVENT
 UID:ce89a62db08c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261110T093000
 DTEND;TZID=Europe/Paris:20261110T104500
 SUMMARY:Retrouver la morale (4/6)
@@ -433,7 +433,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:369bbbf077d9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261110T111500
 DTEND;TZID=Europe/Paris:20261110T123000
 SUMMARY:Arts et représentation (1/3)
@@ -449,7 +449,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:08c665bd2028@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261110T140000
 DTEND;TZID=Europe/Paris:20261110T151500
 SUMMARY:Qu’est-ce qu’un patrimoine ? (1/2)
@@ -463,7 +463,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:bc496befe6a6@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261110T153000
 DTEND;TZID=Europe/Paris:20261110T164500
 SUMMARY:Qui est l’ennemi ? (1/3)
@@ -479,7 +479,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:d31e1bf051d2@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261110T183000
 DTEND;TZID=Europe/Paris:20261110T203000
 SUMMARY:Philosophies allemandes 2026-2027
@@ -492,7 +492,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/philosophies-alleman
 END:VEVENT
 BEGIN:VEVENT
 UID:f3510bebd820@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261110T193000
 DTEND;TZID=Europe/Paris:20261110T210000
 SUMMARY:La doctrine sociale de l'Église appliquée à l’IA
@@ -504,7 +504,7 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-la-doctr
 END:VEVENT
 BEGIN:VEVENT
 UID:ce011dbccf2b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261112T160000
 DTEND;TZID=Europe/Paris:20261112T180000
 SUMMARY:Souveraineté : Entre métaphysiques\, théologies et politiques
@@ -516,7 +516,7 @@ URL:https://www.ens.psl.eu/agenda/souverainete-entre-metaphysiques-theologi
 END:VEVENT
 BEGIN:VEVENT
 UID:642f10d96cac@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261112T180000
 DTEND;TZID=Europe/Paris:20261112T200000
 SUMMARY:Populisme\, religion et formation des régimes théoséculiers
@@ -528,7 +528,7 @@ URL:https://www.fmsh.fr/agenda/populisme-religion-et-formation-des-regimes-
 END:VEVENT
 BEGIN:VEVENT
 UID:883edf887a5c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261113T103000
 DTEND;TZID=Europe/Paris:20261113T120000
 SUMMARY:Conférence contes – "Cent Nouvelles nouvelles : Le plaisir de la
@@ -546,7 +546,7 @@ URL:https://www.paris.fr/evenements/conference-contes-cent-nouvelles-nouvel
 END:VEVENT
 BEGIN:VEVENT
 UID:e5a72742169a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261114T100000
 DTEND;TZID=Europe/Paris:20261114T120000
 SUMMARY:Foucault en mots 2026-2027
@@ -559,7 +559,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/foucault-en-mots-202
 END:VEVENT
 BEGIN:VEVENT
 UID:13960092f2c9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261114T100000
 DTEND;TZID=Europe/Paris:20261114T120000
 SUMMARY:Hegel et l'idéalisme allemand 2026-2027
@@ -572,7 +572,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/hegel-et-lidealisme-
 END:VEVENT
 BEGIN:VEVENT
 UID:1490c44a2345@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Rethinking the Foundations of Logic: From Physics to Computation
@@ -587,7 +587,7 @@ URL:https://foundlogic.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:259505bc3eb4@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261116T090000
 DTEND;TZID=Europe/Paris:20261116T173000
 SUMMARY:PMA à la veille de la nouvelle révision de la loi de bioéthique
@@ -600,7 +600,7 @@ URL:https://www.ined.fr/fr/agenda/pma-veille-nouvelle-revision-loi-bioethiq
 END:VEVENT
 BEGIN:VEVENT
 UID:e536b27ec621@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261116T093000
 DTEND;TZID=Europe/Paris:20261116T180000
 SUMMARY:Formation - Être administrateur d'associations et fondations
@@ -612,7 +612,7 @@ URL:https://www.collegedesbernardins.fr/agenda/journees-formation-administr
 END:VEVENT
 BEGIN:VEVENT
 UID:7b589c804253@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261116T103000
 DTEND;TZID=Europe/Paris:20261116T123000
 SUMMARY:Le critère de Frege
@@ -625,7 +625,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/concepts-et-modes-de-p
 END:VEVENT
 BEGIN:VEVENT
 UID:5920f3cca008@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261116T140000
 DTEND;TZID=Europe/Paris:20261116T160000
 SUMMARY:Flavien Callet "Étude expérimentale des désintégrations hadroni
@@ -643,7 +643,7 @@ URL:https://indico.ijclab.in2p3.fr/event/14967/
 END:VEVENT
 BEGIN:VEVENT
 UID:f22da0e4cd7f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261116T180000
 DTEND;TZID=Europe/Paris:20261116T193000
 SUMMARY:Archive ou archives ? Les effets d’un néologisme philosophique
@@ -655,7 +655,7 @@ URL:https://www.chartes.psl.eu/gazette-chartiste/agenda/archive-ou-archives
 END:VEVENT
 BEGIN:VEVENT
 UID:e648ed3db19c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T093000
 DTEND;TZID=Europe/Paris:20261117T104500
 SUMMARY:L’historien face à l’animal : l’exemple du Moyen Âge (1/3)
@@ -671,7 +671,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:3e0826a36973@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T111500
 DTEND;TZID=Europe/Paris:20261117T123000
 SUMMARY:Le corps dans tous ses états (3/5)
@@ -687,7 +687,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:2f83c4689554@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T140000
 DTEND;TZID=Europe/Paris:20261117T151500
 SUMMARY:Foucault aujourd’hui (4/6)
@@ -703,7 +703,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:49e372f092f0@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T153000
 DTEND;TZID=Europe/Paris:20261117T164500
 SUMMARY:Penser d’ailleurs (4/6)
@@ -719,7 +719,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:8902b0a16985@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T183000
 DTEND;TZID=Europe/Paris:20261117T203000
 SUMMARY:L'incomplétude en mouvement : perspectives africaines et pensée d
@@ -732,7 +732,7 @@ URL:https://www.ehess.fr/jcms/284673_JEvent/fr/l-incompletude-en-mouvement-
 END:VEVENT
 BEGIN:VEVENT
 UID:ae2c04dc924e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T190000
 DTEND;TZID=Europe/Paris:20261117T200000
 SUMMARY:Visite dialoguée - Les Eaux des Écritures
@@ -743,7 +743,7 @@ URL:https://www.collegedesbernardins.fr/agenda/les-eaux-des-ecritures
 END:VEVENT
 BEGIN:VEVENT
 UID:57d4d7dc6b61@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T193000
 DTEND;TZID=Europe/Paris:20261117T210000
 SUMMARY:Dieu nous impose-t-il des règles ?
@@ -755,7 +755,7 @@ URL:https://www.collegedesbernardins.fr/agenda/dieu-nous-impose-t-il-des-re
 END:VEVENT
 BEGIN:VEVENT
 UID:e8d99737bc25@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T193000
 DTEND;TZID=Europe/Paris:20261117T210000
 SUMMARY:La logique de l'IA est-elle la fin du travail ?
@@ -767,7 +767,7 @@ URL:https://www.collegedesbernardins.fr/agenda/la-logique-de-l-ia-est-elle-
 END:VEVENT
 BEGIN:VEVENT
 UID:77ad740495e1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261117T203000
 DTEND;TZID=Europe/Paris:20261117T223000
 SUMMARY:Séminaire « Comprendre et agir dans la complexité » — Collect
@@ -781,11 +781,22 @@ URL:https://www.paris.fr/evenements/seminaire-comprendre-et-agir-dans-la-co
  mplexite-collectif-malgre-tout-125818
 END:VEVENT
 BEGIN:VEVENT
-UID:5fe86cf1ebfb@paris-academique
-DTSTAMP:20261029T104931Z
+UID:908826fc6a16@paris-academique
+DTSTAMP:20261030T105111Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Rencontres Internationales des Nouvelles Pratiques Philosophiques
+DESCRIPTION:Colloque sur les pratiques philosophiques. Thème : l'altérit
+ é\nhttps://rinpp2026.sciencesconf.org
+LOCATION:Maison de l'Unesco - PARIS (France)
+URL:https://rinpp2026.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:6eea62df4e3a@paris-academique
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261118T193000
 DTEND;TZID=Europe/Paris:20261118T213000
-SUMMARY:Léon décrypté : un pèlerin venu en France
+SUMMARY:Léon décrypté : quels messages d'espérance pour la France ?
 DESCRIPTION:conférence\nhttps://www.collegedesbernardins.fr/agenda/leon-de
  crypte-un-pelerin-venu-en-france
 LOCATION:Collège des Bernardins\, 20 rue de Poissy\, Paris 5e
@@ -794,7 +805,7 @@ URL:https://www.collegedesbernardins.fr/agenda/leon-decrypte-un-pelerin-ven
 END:VEVENT
 BEGIN:VEVENT
 UID:324faf6ab697@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261119T200000
 DTEND;TZID=Europe/Paris:20261119T220000
 SUMMARY:Chrétiens dans l'IA
@@ -805,7 +816,7 @@ URL:https://www.collegedesbernardins.fr/agenda/chretiens-dans-l-ia
 END:VEVENT
 BEGIN:VEVENT
 UID:efaf56edb536@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Par la seule Écriture. Protestantisme et Islam
@@ -816,7 +827,7 @@ URL:https://www.ephe.psl.eu/par-la-seule-ecriture-protestantisme-et-islam
 END:VEVENT
 BEGIN:VEVENT
 UID:5f90c6393307@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261121T093000
 DTEND;TZID=Europe/Paris:20261121T123000
 SUMMARY:Burn-out\, dépression\, désolation spirituelle : distinguer pour 
@@ -829,7 +840,7 @@ URL:https://www.collegedesbernardins.fr/agenda/burn-out-depression-desolati
 END:VEVENT
 BEGIN:VEVENT
 UID:d2643349a4bb@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261121T100000
 DTEND;TZID=Europe/Paris:20261121T120000
 SUMMARY:Hegel Lacan L’éthique
@@ -841,7 +852,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/hegel-lacan-lethique
 END:VEVENT
 BEGIN:VEVENT
 UID:50fbf3d72ec9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261121T103000
 DTEND;TZID=Europe/Paris:20261121T123000
 SUMMARY:Foucault et l'Italie
@@ -853,7 +864,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/foucault-et-litalie
 END:VEVENT
 BEGIN:VEVENT
 UID:e14f6690fbaf@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261121T103000
 DTEND;TZID=Europe/Paris:20261121T123000
 SUMMARY:Séminaire de phénoménologie 2026-2027
@@ -866,7 +877,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/seminaire-de-phenome
 END:VEVENT
 BEGIN:VEVENT
 UID:669f0c36e4e9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261122T200000
 DTEND;TZID=Europe/Paris:20261122T213000
 SUMMARY:Pèlerinages infinis\, une traversée religieuse à travers le sous
@@ -881,7 +892,7 @@ URL:https://www.paris.fr/evenements/conference-convergences-la-statuaire-fu
 END:VEVENT
 BEGIN:VEVENT
 UID:fd79b0c52c8f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261123T103000
 DTEND;TZID=Europe/Paris:20261123T123000
 SUMMARY:Mise à jour (update) et modes de présentation dynamiques
@@ -894,7 +905,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/concepts-et-modes-de-p
 END:VEVENT
 BEGIN:VEVENT
 UID:8d5a0dc40ca3@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261123T124500
 DTEND;TZID=Europe/Paris:20261123T134500
 SUMMARY:Une heure\, un livre - Les Pensées de Blaise Pascal
@@ -906,7 +917,7 @@ URL:https://www.collegedesbernardins.fr/agenda/une-heure-un-livre---les-pen
 END:VEVENT
 BEGIN:VEVENT
 UID:1037e310438c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261123T193000
 DTEND;TZID=Europe/Paris:20261123T210000
 SUMMARY:Comment voulons-nous habiter le monde de demain ?
@@ -918,7 +929,7 @@ URL:https://www.collegedesbernardins.fr/agenda/comment-voulons-nous-habiter
 END:VEVENT
 BEGIN:VEVENT
 UID:6f381dc5d5c9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261123T200000
 DTEND;TZID=Europe/Paris:20261123T224500
 SUMMARY:Dîner du Silence "Eaux vives"
@@ -929,7 +940,7 @@ URL:https://www.collegedesbernardins.fr/agenda/diner-du-silence-eaux-vives
 END:VEVENT
 BEGIN:VEVENT
 UID:f666938630fb@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T104500
 SUMMARY:Retrouver la morale (5/6)
@@ -943,7 +954,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:c91d47090921@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261124T111500
 DTEND;TZID=Europe/Paris:20261124T123000
 SUMMARY:Arts et représentation (2/3)
@@ -959,7 +970,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:8d6b94406808@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261124T140000
 DTEND;TZID=Europe/Paris:20261124T151500
 SUMMARY:Sait-on encore parler ? Pour une philosophie de la parole (3/3)
@@ -972,7 +983,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:729312e178af@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261124T153000
 DTEND;TZID=Europe/Paris:20261124T164500
 SUMMARY:Qui est l’ennemi ? (2/3)
@@ -988,7 +999,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:cb720597dab4@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261124T190000
 DTEND;TZID=Europe/Paris:20261124T203000
 SUMMARY:MISUNDERSTANDINGS ou comment parler alien
@@ -1000,7 +1011,7 @@ URL:https://www.collegedesbernardins.fr/agenda/misunderstandings-ou-comment
 END:VEVENT
 BEGIN:VEVENT
 UID:7c62a50a244d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261125T180000
 DTEND;TZID=Europe/Paris:20261125T200000
 SUMMARY:Séance de recherche ouverte "Pratiques de décentrement" : un atel
@@ -1013,7 +1024,7 @@ URL:https://www.collegedesbernardins.fr/agenda/seance-de-recherche-ouverte-
 END:VEVENT
 BEGIN:VEVENT
 UID:ebac0b4c84e9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T180000
 SUMMARY:Anthousa
@@ -1026,7 +1037,7 @@ URL:https://www.louvre.fr/expositions-et-evenements/evenements-activites/an
 END:VEVENT
 BEGIN:VEVENT
 UID:cc4aca527b5b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261127T090000
 DTEND;TZID=Europe/Paris:20261127T170000
 SUMMARY:Colloque International "Blanche de Castille. Exercer le pouvoir au 
@@ -1040,7 +1051,7 @@ URL:https://www.collegedesbernardins.fr/agenda/colloque-international-blanc
 END:VEVENT
 BEGIN:VEVENT
 UID:24fad0b0c94f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261127T090000
 DTEND;TZID=Europe/Paris:20261127T110000
 SUMMARY:La littérature\, matière philosophique ?
@@ -1053,7 +1064,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/la-litterature-matie
 END:VEVENT
 BEGIN:VEVENT
 UID:cf95790f2876@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261127T140000
 DTEND;TZID=Europe/Paris:20261127T160000
 SUMMARY:Philosophies hispanophones : perspectives pour l’agrégation
@@ -1066,7 +1077,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/philosophies-hispano
 END:VEVENT
 BEGIN:VEVENT
 UID:9fcb3cf71389@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261128T140000
 DTEND;TZID=Europe/Paris:20261128T183000
 SUMMARY:Averroès\, 900 ans de pensée vivante et universelle
@@ -1079,7 +1090,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/averroes-900-ans
 END:VEVENT
 BEGIN:VEVENT
 UID:e8f1053fd791@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261128T140000
 DTEND;TZID=Europe/Paris:20261128T160000
 SUMMARY:900 ans d'Averroès\, une histoire du philosophe
@@ -1092,7 +1103,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/900-ans-averroes
 END:VEVENT
 BEGIN:VEVENT
 UID:23d6105c806b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261128T153000
 DTEND;TZID=Europe/Paris:20261128T173000
 SUMMARY:900 ans d'Averroès\, l'héritage du philosophe
@@ -1105,7 +1116,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/900-ans-averroes
 END:VEVENT
 BEGIN:VEVENT
 UID:2b84334242e1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261128T163000
 DTEND;TZID=Europe/Paris:20261128T183000
 SUMMARY:900 ans d'Averroès\, le philosophe et les arts
@@ -1118,7 +1129,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/900-ans-averroes
 END:VEVENT
 BEGIN:VEVENT
 UID:e4681a604170@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261129T161500
 DTEND;TZID=Europe/Paris:20261129T181500
 SUMMARY:Vérité et responsabilité face au nazisme
@@ -1131,7 +1142,7 @@ URL:https://www.paris.fr/evenements/verite-et-responsabilite-face-au-nazism
 END:VEVENT
 BEGIN:VEVENT
 UID:f271c4e722ca@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261130T103000
 DTEND;TZID=Europe/Paris:20261130T123000
 SUMMARY:Concept\, conception\, mode de présentation
@@ -1144,7 +1155,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/concepts-et-modes-de-p
 END:VEVENT
 BEGIN:VEVENT
 UID:c41f05b5012a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T093000
 DTEND;TZID=Europe/Paris:20261201T104500
 SUMMARY:L’historien face à l’animal : l’exemple du Moyen Âge (2/3)
@@ -1160,7 +1171,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:0dbc27461e2c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T111500
 DTEND;TZID=Europe/Paris:20261201T123000
 SUMMARY:Le corps dans tous ses états (4/5)
@@ -1176,7 +1187,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:c47b3e740204@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T140000
 DTEND;TZID=Europe/Paris:20261201T151500
 SUMMARY:Foucault aujourd’hui (5/6)
@@ -1192,7 +1203,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:e47529e01fae@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T150000
 DTEND;TZID=Europe/Paris:20261201T170000
 SUMMARY:Vieillissement\, longévité et socialisme : la gérontologie en Ch
@@ -1205,7 +1216,7 @@ URL:https://www.inalco.fr/evenements/vieillissement-longevite-et-socialisme
 END:VEVENT
 BEGIN:VEVENT
 UID:a4ef1c912f3a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T153000
 DTEND;TZID=Europe/Paris:20261201T164500
 SUMMARY:Penser d’ailleurs (5/6)
@@ -1221,7 +1232,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:b14bd2866bc1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T170000
 DTEND;TZID=Europe/Paris:20261201T181500
 SUMMARY:La métamorphose du bouddhisme dans la « nouvelle ère » chinoise
@@ -1233,7 +1244,7 @@ URL:https://www.inalco.fr/evenements/la-metamorphose-du-bouddhisme-dans-la-
 END:VEVENT
 BEGIN:VEVENT
 UID:7db98e73321a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T180000
 DTEND;TZID=Europe/Paris:20261201T200000
 SUMMARY:Histoire et Philosophie de la Psychiatrie II
@@ -1246,7 +1257,7 @@ URL:https://philosophie.pantheonsorbonne.fr/evenements/histoire-et-philosop
 END:VEVENT
 BEGIN:VEVENT
 UID:822bb7c344e0@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261201T193000
 DTEND;TZID=Europe/Paris:20261201T210000
 SUMMARY:Quand l’humain rencontre l’IA
@@ -1258,7 +1269,7 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-quand-l-
 END:VEVENT
 BEGIN:VEVENT
 UID:a0ebb5d2065c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261203T103000
 DTEND;TZID=Europe/Paris:20261203T123000
 SUMMARY:Évaluer les valeurs : méthodes de la sociologie axiologique et de
@@ -1271,7 +1282,7 @@ URL:https://www.universite-paris-saclay.fr/evenements/evaluer-les-valeurs-m
 END:VEVENT
 BEGIN:VEVENT
 UID:f0f66528e83a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261205T153000
 DTEND;TZID=Europe/Paris:20261205T170000
 SUMMARY:Penser la philosophie : pourquoi pardonner ?
@@ -1286,7 +1297,7 @@ URL:https://www.paris.fr/evenements/penser-la-philosophie-pourquoi-pardonne
 END:VEVENT
 BEGIN:VEVENT
 UID:b211730f5eae@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261207T103000
 DTEND;TZID=Europe/Paris:20261207T123000
 SUMMARY:Polysémie mentale
@@ -1299,7 +1310,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/concepts-et-modes-de-p
 END:VEVENT
 BEGIN:VEVENT
 UID:170fc7af6bab@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261207T124500
 DTEND;TZID=Europe/Paris:20261207T134500
 SUMMARY:L’Annonciation du Prado\, un trésor de Fra Angelico
@@ -1311,7 +1322,7 @@ URL:https://www.collegedesbernardins.fr/agenda/l-annonciation-du-prado-un-t
 END:VEVENT
 BEGIN:VEVENT
 UID:e5c36acca5bd@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261208T093000
 DTEND;TZID=Europe/Paris:20261208T104500
 SUMMARY:Retrouver la morale (6/6)
@@ -1325,7 +1336,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:704f8d746a87@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261208T111500
 DTEND;TZID=Europe/Paris:20261208T123000
 SUMMARY:Arts et représentation (3/3)
@@ -1341,7 +1352,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:af2a24c94af5@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261208T140000
 DTEND;TZID=Europe/Paris:20261208T151500
 SUMMARY:Qu’est-ce qu’un patrimoine ? (2/2)
@@ -1355,7 +1366,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:151652e91b82@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261208T140000
 DTEND;TZID=Europe/Paris:20261208T160000
 SUMMARY:Débat public de Perspective\, no 2027-1 : Histoire de l’art et a
@@ -1369,7 +1380,7 @@ URL:https://www.inha.fr/agenda/presentation-de-louvrage-c-a-s-a-casablanca-
 END:VEVENT
 BEGIN:VEVENT
 UID:fc5db90be828@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261208T153000
 DTEND;TZID=Europe/Paris:20261208T164500
 SUMMARY:Qui est l’ennemi ? (3/3)
@@ -1385,7 +1396,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:c53e24a9e0ae@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261208T193000
 DTEND;TZID=Europe/Paris:20261208T210000
 SUMMARY:Élie : pourquoi a-t-il tout quitté pour Dieu ?
@@ -1397,7 +1408,7 @@ URL:https://www.collegedesbernardins.fr/agenda/elie-pourquoi-a-t-il-tout-qu
 END:VEVENT
 BEGIN:VEVENT
 UID:dfc24d76da5e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261208T193000
 DTEND;TZID=Europe/Paris:20261208T210000
 SUMMARY:Le renseignement est-il une arme de paix ?
@@ -1409,7 +1420,7 @@ URL:https://www.collegedesbernardins.fr/agenda/le-renseignement-est-il-une-
 END:VEVENT
 BEGIN:VEVENT
 UID:5e381b4728df@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261209T170000
 DTEND;TZID=Europe/Paris:20261209T183000
 SUMMARY:Un chef d'œuvre de l'art du livre constantinopolitain : le tétra
@@ -1423,7 +1434,7 @@ URL:https://www.bnf.fr/fr/agenda/un-chef-doeuvre-de-lart-du-livre-constanti
 END:VEVENT
 BEGIN:VEVENT
 UID:61e6f875a7ae@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261209T180000
 DTEND;TZID=Europe/Paris:20261209T200000
 SUMMARY:Séance de recherche ouverte "Pratiques de décentrement" : "Voir /
@@ -1436,7 +1447,7 @@ URL:https://www.collegedesbernardins.fr/agenda/seance-de-recherche-ouverte-
 END:VEVENT
 BEGIN:VEVENT
 UID:b04e5b39e360@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261210T080000
 DTEND;TZID=Europe/Paris:20261210T180000
 SUMMARY:Colloque inter-institutionnel "L'humanité en milieu numérique"
@@ -1448,7 +1459,7 @@ URL:https://www.collegedesbernardins.fr/agenda/colloque-inter-institutionne
 END:VEVENT
 BEGIN:VEVENT
 UID:f3485610ae48@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261214T103000
 DTEND;TZID=Europe/Paris:20261214T123000
 SUMMARY:Le déploiement des concepts
@@ -1461,7 +1472,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/concepts-et-modes-de-p
 END:VEVENT
 BEGIN:VEVENT
 UID:bdc422c8e10d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T093000
 DTEND;TZID=Europe/Paris:20261215T104500
 SUMMARY:L’historien face à l’animal : l’exemple du Moyen Âge (3/3)
@@ -1477,7 +1488,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:bb6caa14d7ff@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T111500
 DTEND;TZID=Europe/Paris:20261215T123000
 SUMMARY:Le corps dans tous ses états (5/5)
@@ -1493,7 +1504,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:0b008615e009@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T140000
 DTEND;TZID=Europe/Paris:20261215T151500
 SUMMARY:Foucault aujourd’hui (6/6)
@@ -1509,7 +1520,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:2786302472ef@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T153000
 DTEND;TZID=Europe/Paris:20261215T164500
 SUMMARY:Penser d’ailleurs (6/6)
@@ -1525,7 +1536,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:e440124a2e82@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T181500
 DTEND;TZID=Europe/Paris:20261215T213000
 SUMMARY:Soirée interreligieuse pour la paix — Contempler et dialoguer en
@@ -1538,7 +1549,7 @@ URL:https://www.collegedesbernardins.fr/agenda/soiree-interreligieuse-pour-
 END:VEVENT
 BEGIN:VEVENT
 UID:76135cfa9805@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T183000
 DTEND;TZID=Europe/Paris:20261215T200000
 SUMMARY:De la philosophie aux mathématiques : de l'intelligence pas si art
@@ -1552,7 +1563,7 @@ URL:https://www.bnf.fr/fr/agenda/de-la-philosophie-aux-mathematiques-de-lin
 END:VEVENT
 BEGIN:VEVENT
 UID:56bb6cfd2ddd@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T183000
 DTEND;TZID=Europe/Paris:20261215T203000
 SUMMARY:Plastiques\, des révélateurs de la crise éthique de notre relati
@@ -1565,7 +1576,7 @@ URL:https://www.fmsh.fr/agenda/plastiques-des-revelateurs-de-la-crise-ethiq
 END:VEVENT
 BEGIN:VEVENT
 UID:17ee9da12edc@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20261215T193000
 DTEND;TZID=Europe/Paris:20261215T210000
 SUMMARY:Dieu veut-il que nous lui offrions des sacrifices ?
@@ -1577,7 +1588,7 @@ URL:https://www.collegedesbernardins.fr/agenda/dieu-veut-il-que-nous-lui-of
 END:VEVENT
 BEGIN:VEVENT
 UID:87c1ce8822c3@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270104T124500
 DTEND;TZID=Europe/Paris:20270104T134500
 SUMMARY:Séquences frissons avec Les têtes coupées de Caravage
@@ -1589,7 +1600,7 @@ URL:https://www.collegedesbernardins.fr/agenda/sequences-frissons-avec-les-
 END:VEVENT
 BEGIN:VEVENT
 UID:f2c6e1f97f3f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270105T093000
 DTEND;TZID=Europe/Paris:20270105T104500
 SUMMARY:Du génie à l’algorithme : les métamorphoses de l’artiste (1/
@@ -1604,7 +1615,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:0546c6978b4f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270105T111500
 DTEND;TZID=Europe/Paris:20270105T123000
 SUMMARY:À quoi bon la littérature ? (1/6)
@@ -1620,7 +1631,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:c3e60d70adf4@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270105T140000
 DTEND;TZID=Europe/Paris:20270105T151500
 SUMMARY:Platon (1/6)
@@ -1636,7 +1647,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:bc396f763d08@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270105T153000
 DTEND;TZID=Europe/Paris:20270105T164500
 SUMMARY:Philosopher avec Cyrano (1/6)
@@ -1652,7 +1663,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:25b3f5a28a55@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270105T190000
 DTEND;TZID=Europe/Paris:20270105T210000
 SUMMARY:Dialectique et théologie du kalām chez Avicenne : une mise au poi
@@ -1666,7 +1677,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/dialectique-et-t
 END:VEVENT
 BEGIN:VEVENT
 UID:6c5352d8dcc8@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270105T193000
 DTEND;TZID=Europe/Paris:20270105T210000
 SUMMARY:Qui est Jésus ?
@@ -1677,7 +1688,7 @@ URL:https://www.collegedesbernardins.fr/agenda/qui-est-jesus
 END:VEVENT
 BEGIN:VEVENT
 UID:be052e2a7ef8@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270112T093000
 DTEND;TZID=Europe/Paris:20270112T104500
 SUMMARY:Philosophie de la monnaie : l’origine des espèces ! (1/6)
@@ -1693,7 +1704,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:b4cbee2d74fa@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270112T111500
 DTEND;TZID=Europe/Paris:20270112T123000
 SUMMARY:L’humanisme hypermoderne (1/6)
@@ -1709,7 +1720,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:181a54d4e4dc@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270112T140000
 DTEND;TZID=Europe/Paris:20270112T151500
 SUMMARY:Penser la condition historique (1/6)
@@ -1725,7 +1736,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:e846d8df01fc@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270112T153000
 DTEND;TZID=Europe/Paris:20270112T164500
 SUMMARY:La rhétorique : savoir convaincre et décrypter les discours (1/3)
@@ -1741,7 +1752,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:6fb46e56c92c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270112T193000
 DTEND;TZID=Europe/Paris:20270112T210000
 SUMMARY:Si Dieu a créé le monde\, est-il notre Père ?
@@ -1753,7 +1764,7 @@ URL:https://www.collegedesbernardins.fr/agenda/si-dieu-a-cree-le-monde-est-
 END:VEVENT
 BEGIN:VEVENT
 UID:a01fd4b02675@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270114T180000
 DTEND;TZID=Europe/Paris:20270114T200000
 SUMMARY:« La chancelante équivocité du monde ». Philosophie et politiqu
@@ -1769,7 +1780,7 @@ URL:https://www.college-de-france.fr/fr/agenda/lecon-inaugurale/la-chancela
 END:VEVENT
 BEGIN:VEVENT
 UID:bb98d75453c7@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270115T140000
 DTEND;TZID=Europe/Paris:20270115T170000
 SUMMARY:Handicap : Force ou faiblesse ?
@@ -1780,7 +1791,7 @@ URL:https://www.collegedesbernardins.fr/agenda/handicap-force-ou-faiblesse
 END:VEVENT
 BEGIN:VEVENT
 UID:973b6acc28ed@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270118T173000
 DTEND;TZID=Europe/Paris:20270118T193000
 SUMMARY:Exposer la traduction
@@ -1792,7 +1803,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/ex
 END:VEVENT
 BEGIN:VEVENT
 UID:1eca63a4ff3f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270119T093000
 DTEND;TZID=Europe/Paris:20270119T104500
 SUMMARY:Du génie à l’algorithme : les métamorphoses de l’artiste (2/
@@ -1807,7 +1818,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:cc1f0d31fae0@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270119T111500
 DTEND;TZID=Europe/Paris:20270119T123000
 SUMMARY:À quoi bon la littérature ? (2/6)
@@ -1823,7 +1834,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:037d9bdac76d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270119T140000
 DTEND;TZID=Europe/Paris:20270119T151500
 SUMMARY:Platon (2/6)
@@ -1839,7 +1850,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:447cddb78de9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270119T153000
 DTEND;TZID=Europe/Paris:20270119T164500
 SUMMARY:Philosopher avec Cyrano (2/6)
@@ -1855,7 +1866,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:f80ee1535f39@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270119T190000
 DTEND;TZID=Europe/Paris:20270119T210000
 SUMMARY:Dîner-conférence - Concilier IA et éthique : mode d'emploi
@@ -1866,7 +1877,7 @@ URL:https://lu.ma/evenem-ucje
 END:VEVENT
 BEGIN:VEVENT
 UID:22966fb9b1f4@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270119T193000
 DTEND;TZID=Europe/Paris:20270119T210000
 SUMMARY:Culture du pouvoir et civilisation de l’amour
@@ -1878,7 +1889,7 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-culture-
 END:VEVENT
 BEGIN:VEVENT
 UID:7efb7a53ba02@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270125T173000
 DTEND;TZID=Europe/Paris:20270125T193000
 SUMMARY:« Plus d’une langue ». Le premier Dictionnaire des intraduisibl
@@ -1892,7 +1903,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/pl
 END:VEVENT
 BEGIN:VEVENT
 UID:1afd12a28317@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270126T093000
 DTEND;TZID=Europe/Paris:20270126T104500
 SUMMARY:Philosophie de la monnaie : l’origine des espèces ! (2/6)
@@ -1908,7 +1919,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:e03078d7f8cc@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270126T111500
 DTEND;TZID=Europe/Paris:20270126T123000
 SUMMARY:L’humanisme hypermoderne (2/6)
@@ -1924,7 +1935,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:3c4a0d933d66@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270126T140000
 DTEND;TZID=Europe/Paris:20270126T151500
 SUMMARY:Penser la condition historique (2/6)
@@ -1940,7 +1951,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:a174a07f08e0@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270126T153000
 DTEND;TZID=Europe/Paris:20270126T164500
 SUMMARY:La rhétorique : savoir convaincre et décrypter les discours (2/3)
@@ -1956,7 +1967,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:555b5ed7be5d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270126T193000
 DTEND;TZID=Europe/Paris:20270126T210000
 SUMMARY:Comment Jésus fait-il pour obéir au point d’offrir sa vie ?
@@ -1968,7 +1979,7 @@ URL:https://www.collegedesbernardins.fr/agenda/comment-jesus-fait-il-pour-o
 END:VEVENT
 BEGIN:VEVENT
 UID:999266bf789d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270129T160000
 DTEND;TZID=Europe/Paris:20270129T180000
 SUMMARY:« Possible\, puissance\, pouvoir : de l’ontologie au politique 
@@ -1981,7 +1992,7 @@ URL:https://www.ens.psl.eu/agenda/possible-puissance-pouvoir-de-l-ontologie
 END:VEVENT
 BEGIN:VEVENT
 UID:b8b3e8c84f18@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270130T090000
 DTEND;TZID=Europe/Paris:20270130T160000
 SUMMARY:Santé\, Éthique et Foi : Le conflit dans le soin
@@ -1993,7 +2004,7 @@ URL:https://www.collegedesbernardins.fr/agenda/sante-ethique-et-foi-le-conf
 END:VEVENT
 BEGIN:VEVENT
 UID:2b87a7b7c1e2@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270201T124500
 DTEND;TZID=Europe/Paris:20270201T134500
 SUMMARY:La Chapelle Sixtine ou le chef d’œuvre d’un génie solitaire
@@ -2005,7 +2016,7 @@ URL:https://www.collegedesbernardins.fr/agenda/la-chapelle-sixtine-ou-le-ch
 END:VEVENT
 BEGIN:VEVENT
 UID:e70c31f4b679@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270201T173000
 DTEND;TZID=Europe/Paris:20270201T193000
 SUMMARY:Aristote et Jacques le sophiste
@@ -2017,7 +2028,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/ar
 END:VEVENT
 BEGIN:VEVENT
 UID:5379dba8e741@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270202T093000
 DTEND;TZID=Europe/Paris:20270202T104500
 SUMMARY:Du génie à l’algorithme : les métamorphoses de l’artiste (3/
@@ -2032,7 +2043,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:5e695d109d0e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270202T111500
 DTEND;TZID=Europe/Paris:20270202T123000
 SUMMARY:À quoi bon la littérature ? (3/6)
@@ -2048,7 +2059,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:b87c71e22fc6@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270202T140000
 DTEND;TZID=Europe/Paris:20270202T151500
 SUMMARY:Platon (3/6)
@@ -2064,7 +2075,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:7e51eac1e624@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270202T153000
 DTEND;TZID=Europe/Paris:20270202T164500
 SUMMARY:Philosopher avec Cyrano (3/6)
@@ -2080,7 +2091,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:77ae843dd1ee@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270202T181500
 DTEND;TZID=Europe/Paris:20270202T193000
 SUMMARY:Les « Épîtres » de saint Cyprien : un manifeste de l’humanism
@@ -2093,7 +2104,7 @@ URL:https://www.bnf.fr/fr/agenda/les-epitres-de-saint-cyprien-un-manifeste-
 END:VEVENT
 BEGIN:VEVENT
 UID:5557018c8ca2@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270202T193000
 DTEND;TZID=Europe/Paris:20270202T210000
 SUMMARY:Pourquoi fallait-il que Jésus meure ?
@@ -2105,7 +2116,7 @@ URL:https://www.collegedesbernardins.fr/agenda/pourquoi-fallait-il-que-jesu
 END:VEVENT
 BEGIN:VEVENT
 UID:c0a29ae2ce26@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270222T173000
 DTEND;TZID=Europe/Paris:20270222T193000
 SUMMARY:Les traductions-réinventions du Dictionnaire des intraduisibles
@@ -2118,7 +2129,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/le
 END:VEVENT
 BEGIN:VEVENT
 UID:5d3f8d68de92@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270223T093000
 DTEND;TZID=Europe/Paris:20270223T104500
 SUMMARY:Philosophie de la monnaie : l’origine des espèces ! (3/6)
@@ -2134,7 +2145,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:cd158c00d1e9@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270223T111500
 DTEND;TZID=Europe/Paris:20270223T123000
 SUMMARY:L’humanisme hypermoderne (3/6)
@@ -2150,7 +2161,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:49fe0a6b4322@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270223T140000
 DTEND;TZID=Europe/Paris:20270223T151500
 SUMMARY:Penser la condition historique (3/6)
@@ -2166,7 +2177,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:649afede38cd@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270223T153000
 DTEND;TZID=Europe/Paris:20270223T164500
 SUMMARY:La rhétorique : savoir convaincre et décrypter les discours (3/3)
@@ -2182,7 +2193,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:28ff9e284c3a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270223T193000
 DTEND;TZID=Europe/Paris:20270223T210000
 SUMMARY:De la Tour de Babel à la Pentecôte
@@ -2194,7 +2205,7 @@ URL:https://www.collegedesbernardins.fr/agenda/de-la-tour-de-babel-a-la-pen
 END:VEVENT
 BEGIN:VEVENT
 UID:530f68e229fb@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270224T193000
 DTEND;TZID=Europe/Paris:20270224T210000
 SUMMARY:Quand l’artificiel réveille le spirituel : enjeux contemporains 
@@ -2207,7 +2218,7 @@ URL:https://www.collegedesbernardins.fr/agenda/magnifique-humanite-quand-l-
 END:VEVENT
 BEGIN:VEVENT
 UID:7ed736fea5a3@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270301T124500
 DTEND;TZID=Europe/Paris:20270301T134500
 SUMMARY:La crucifixion blanche\, ou pourquoi Chagall peint-il des Christ en
@@ -2220,7 +2231,7 @@ URL:https://www.collegedesbernardins.fr/agenda/la-crucifixion-blanche-ou-po
 END:VEVENT
 BEGIN:VEVENT
 UID:9af10bc8c6e7@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270301T173000
 DTEND;TZID=Europe/Paris:20270301T193000
 SUMMARY:Les intraduisibles comme méthode
@@ -2232,7 +2243,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/le
 END:VEVENT
 BEGIN:VEVENT
 UID:9c039beee0ea@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270302T093000
 DTEND;TZID=Europe/Paris:20270302T104500
 SUMMARY:Du génie à l’algorithme : les métamorphoses de l’artiste (4/
@@ -2247,7 +2258,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:0341d362d367@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270302T111500
 DTEND;TZID=Europe/Paris:20270302T123000
 SUMMARY:À quoi bon la littérature ? (4/6)
@@ -2263,7 +2274,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:3dfc86a70048@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270302T140000
 DTEND;TZID=Europe/Paris:20270302T151500
 SUMMARY:Platon (4/6)
@@ -2279,7 +2290,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:f23f229698b6@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270302T153000
 DTEND;TZID=Europe/Paris:20270302T164500
 SUMMARY:Philosopher avec Cyrano (4/6)
@@ -2295,7 +2306,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:f90ae3a91b2c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270302T190000
 DTEND;TZID=Europe/Paris:20270302T210000
 SUMMARY:L’instinct historique du philosophe : Avicenne sur l’épicurism
@@ -2309,7 +2320,7 @@ URL:https://www.imarabe.org/fr/agenda/rencontres-et-debats/instinct-histori
 END:VEVENT
 BEGIN:VEVENT
 UID:427edb5484fa@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270302T193000
 DTEND;TZID=Europe/Paris:20270302T210000
 SUMMARY:L'Esprit Saint\, c'est qui vraiment ?
@@ -2321,7 +2332,7 @@ URL:https://www.collegedesbernardins.fr/agenda/l-esprit-saint-c-est-qui-vra
 END:VEVENT
 BEGIN:VEVENT
 UID:ff3f1cc478f2@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270308T173000
 DTEND;TZID=Europe/Paris:20270308T193000
 SUMMARY:« Nature »\, « culture »\, « musée » : les intraduisibles du
@@ -2335,7 +2346,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/na
 END:VEVENT
 BEGIN:VEVENT
 UID:397c508287b3@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270309T093000
 DTEND;TZID=Europe/Paris:20270309T104500
 SUMMARY:Philosophie de la monnaie : l’origine des espèces ! (4/6)
@@ -2351,7 +2362,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:56871255f2a5@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270309T111500
 DTEND;TZID=Europe/Paris:20270309T123000
 SUMMARY:L’humanisme hypermoderne (4/6)
@@ -2367,7 +2378,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:5683da3390f1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270309T140000
 DTEND;TZID=Europe/Paris:20270309T151500
 SUMMARY:Penser la condition historique (4/6)
@@ -2383,7 +2394,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:444b932bf1ad@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270309T193000
 DTEND;TZID=Europe/Paris:20270309T210000
 SUMMARY:Découvrir Marie dans les évangiles : du Fiat au Magnificat
@@ -2395,7 +2406,7 @@ URL:https://www.collegedesbernardins.fr/agenda/decouvrir-marie-dans-les-eva
 END:VEVENT
 BEGIN:VEVENT
 UID:8f511442023e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270312T160000
 DTEND;TZID=Europe/Paris:20270312T180000
 SUMMARY:« Y a-t-il une politique néoplatonicienne ? »
@@ -2407,7 +2418,7 @@ URL:https://www.ens.psl.eu/agenda/y-t-il-une-politique-neoplatonicienne/202
 END:VEVENT
 BEGIN:VEVENT
 UID:4e36d12a0176@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270315T173000
 DTEND;TZID=Europe/Paris:20270315T193000
 SUMMARY:Les intraduisibles des trois monothéismes
@@ -2420,7 +2431,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/le
 END:VEVENT
 BEGIN:VEVENT
 UID:2b202cc3193e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270316T093000
 DTEND;TZID=Europe/Paris:20270316T104500
 SUMMARY:Du génie à l’algorithme : les métamorphoses de l’artiste (5/
@@ -2435,7 +2446,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:e5782d4edecb@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270316T111500
 DTEND;TZID=Europe/Paris:20270316T123000
 SUMMARY:À quoi bon la littérature ? (5/6)
@@ -2451,7 +2462,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:d1bef9c85d4b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270316T140000
 DTEND;TZID=Europe/Paris:20270316T151500
 SUMMARY:Platon (5/6)
@@ -2467,7 +2478,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:383c6dd92a00@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270316T153000
 DTEND;TZID=Europe/Paris:20270316T164500
 SUMMARY:Philosopher avec Cyrano (5/6)
@@ -2483,7 +2494,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:0f0823c4b1bd@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270316T193000
 DTEND;TZID=Europe/Paris:20270316T210000
 SUMMARY:Ce que l’Église croit au sujet de Marie
@@ -2495,7 +2506,7 @@ URL:https://www.collegedesbernardins.fr/agenda/ce-que-l-eglise-croit-au-suj
 END:VEVENT
 BEGIN:VEVENT
 UID:972a15eefd36@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270322T173000
 DTEND;TZID=Europe/Paris:20270322T193000
 SUMMARY:Les intraduisibles et l’IA
@@ -2507,7 +2518,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/la-langue-de-europe/le
 END:VEVENT
 BEGIN:VEVENT
 UID:ecda3681149a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270323T093000
 DTEND;TZID=Europe/Paris:20270323T104500
 SUMMARY:Philosophie de la monnaie : l’origine des espèces ! (5/6)
@@ -2523,7 +2534,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:03de3563604a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270323T111500
 DTEND;TZID=Europe/Paris:20270323T123000
 SUMMARY:L’humanisme hypermoderne (5/6)
@@ -2539,7 +2550,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:ab4f64fa0167@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270323T140000
 DTEND;TZID=Europe/Paris:20270323T151500
 SUMMARY:Penser la condition historique (5/6)
@@ -2555,7 +2566,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:6b24d48fbdb7@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270323T193000
 DTEND;TZID=Europe/Paris:20270323T210000
 SUMMARY:Notre corps\, prison ou promesse divine ? Le corps comme langage de
@@ -2568,7 +2579,7 @@ URL:https://www.collegedesbernardins.fr/agenda/notre-corps-prison-ou-promes
 END:VEVENT
 BEGIN:VEVENT
 UID:07ad0b22f92e@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270330T093000
 DTEND;TZID=Europe/Paris:20270330T104500
 SUMMARY:Du génie à l’algorithme : les métamorphoses de l’artiste (6/
@@ -2583,7 +2594,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:e02ed4ce0f63@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270330T111500
 DTEND;TZID=Europe/Paris:20270330T123000
 SUMMARY:À quoi bon la littérature ? (6/6)
@@ -2599,7 +2610,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:27d079a01f0d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270330T140000
 DTEND;TZID=Europe/Paris:20270330T151500
 SUMMARY:Platon (6/6)
@@ -2615,7 +2626,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:c1be01d1da3c@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270330T153000
 DTEND;TZID=Europe/Paris:20270330T164500
 SUMMARY:Philosopher avec Cyrano (6/6)
@@ -2631,7 +2642,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:2f2aefc4aac6@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270330T193000
 DTEND;TZID=Europe/Paris:20270330T210000
 SUMMARY:Le corps a-t-il encore un sens ? Convergence ou concurrence des sex
@@ -2644,7 +2655,7 @@ URL:https://www.collegedesbernardins.fr/agenda/le-corps-a-t-il-encore-un-se
 END:VEVENT
 BEGIN:VEVENT
 UID:52793b1ba3c4@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270420T093000
 DTEND;TZID=Europe/Paris:20270420T104500
 SUMMARY:Philosophie de la monnaie : l’origine des espèces ! (6/6)
@@ -2660,7 +2671,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:86796d92bd50@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270420T111500
 DTEND;TZID=Europe/Paris:20270420T123000
 SUMMARY:L’humanisme hypermoderne (6/6)
@@ -2676,7 +2687,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:e147c355d697@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270420T140000
 DTEND;TZID=Europe/Paris:20270420T151500
 SUMMARY:Penser la condition historique (6/6)
@@ -2692,7 +2703,7 @@ URL:https://www.lesmardisdelaphilo.com/programme-philosophie
 END:VEVENT
 BEGIN:VEVENT
 UID:6fc20d252d57@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270420T193000
 DTEND;TZID=Europe/Paris:20270420T210000
 SUMMARY:Adam et Eve\, une histoire dépassée ? Ce que la Bible dit de l’
@@ -2705,7 +2716,7 @@ URL:https://www.collegedesbernardins.fr/agenda/adam-et-eve-une-histoire-dep
 END:VEVENT
 BEGIN:VEVENT
 UID:71e68c9e8f4d@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270421T160000
 DTEND;TZID=Europe/Paris:20270421T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2722,7 +2733,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:06c11028b308@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270422T110000
 DTEND;TZID=Europe/Paris:20270422T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (1)
@@ -2735,7 +2746,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:5387caf7e8ba@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270427T193000
 DTEND;TZID=Europe/Paris:20270427T210000
 SUMMARY:Mon corps\, un temple ? Le corps à la lumière du symbolisme bibli
@@ -2748,7 +2759,7 @@ URL:https://www.collegedesbernardins.fr/agenda/mon-corps-un-temple-le-corps
 END:VEVENT
 BEGIN:VEVENT
 UID:e213b3be8018@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270428T160000
 DTEND;TZID=Europe/Paris:20270428T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2765,7 +2776,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:1ec48702017a@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270429T110000
 DTEND;TZID=Europe/Paris:20270429T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (2)
@@ -2778,7 +2789,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:469a54be83b6@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270505T160000
 DTEND;TZID=Europe/Paris:20270505T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2795,7 +2806,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:e8709c4f9cb7@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270511T193000
 DTEND;TZID=Europe/Paris:20270511T210000
 SUMMARY:Pourquoi la Bible parle-t-elle de noces ? Jésus\, l’Époux\, et 
@@ -2808,7 +2819,7 @@ URL:https://www.collegedesbernardins.fr/agenda/pourquoi-la-bible-parle-t-el
 END:VEVENT
 BEGIN:VEVENT
 UID:629681c1c249@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270512T160000
 DTEND;TZID=Europe/Paris:20270512T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2825,7 +2836,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:cf3586341854@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270513T110000
 DTEND;TZID=Europe/Paris:20270513T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (3)
@@ -2838,7 +2849,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:be04df94b9e1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;VALUE=DATE:20270518
 DTEND;VALUE=DATE:20270519
 SUMMARY:SPSG 2027 : PHILOSOPHIE(S) DU MANAGEMENT
@@ -2848,7 +2859,7 @@ URL:https://spsg2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:d9a1bcec92ac@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270519T160000
 DTEND;TZID=Europe/Paris:20270519T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2865,7 +2876,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:092df03e72eb@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270520T110000
 DTEND;TZID=Europe/Paris:20270520T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (4)
@@ -2878,7 +2889,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:1ed546632ff1@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270527T110000
 DTEND;TZID=Europe/Paris:20270527T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (5)
@@ -2891,7 +2902,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:78986092d87b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270601T173000
 DTEND;TZID=Europe/Paris:20270601T193000
 SUMMARY:Halesi. Un dieu-lieu & Sansari. La déesse et le corona en Himalaya
@@ -2903,7 +2914,7 @@ URL:https://www.campus-condorcet.fr/fr/agenda/halesi-un-dieu-lieu-sansari-l
 END:VEVENT
 BEGIN:VEVENT
 UID:18748b2d1b0b@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270602T160000
 DTEND;TZID=Europe/Paris:20270602T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2920,7 +2931,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:46dd311e1c59@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270603T110000
 DTEND;TZID=Europe/Paris:20270603T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (6)
@@ -2933,7 +2944,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:4d8d11154921@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270607T124500
 DTEND;TZID=Europe/Paris:20270607T134500
 SUMMARY:Le repas rouge ou la figure d’Abraham dans l’oeuvre de Chagall
@@ -2945,7 +2956,7 @@ URL:https://www.collegedesbernardins.fr/agenda/le-repas-rouge-ou-la-figure-
 END:VEVENT
 BEGIN:VEVENT
 UID:d1012839f093@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270609T160000
 DTEND;TZID=Europe/Paris:20270609T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2962,7 +2973,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:1626f0383db6@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270610T110000
 DTEND;TZID=Europe/Paris:20270610T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (7)
@@ -2975,7 +2986,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:14bc6f24adfd@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270616T160000
 DTEND;TZID=Europe/Paris:20270616T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -2992,7 +3003,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:1770731a97de@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270617T110000
 DTEND;TZID=Europe/Paris:20270617T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (8)
@@ -3005,7 +3016,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:4ad8d4a63e46@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270623T160000
 DTEND;TZID=Europe/Paris:20270623T180000
 SUMMARY:Les linéaments du monde. Écriture et peinture selon les philosoph
@@ -3022,7 +3033,7 @@ URL:https://www.college-de-france.fr/fr/agenda/cours/les-lineaments-du-mond
 END:VEVENT
 BEGIN:VEVENT
 UID:bfc4a261c66f@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20270624T110000
 DTEND;TZID=Europe/Paris:20270624T130000
 SUMMARY:Arts\, savoirs\, échanges dans l’Inde prémoderne (9)
@@ -3035,7 +3046,7 @@ URL:https://www.college-de-france.fr/fr/agenda/seminaire/arts-savoirs-echan
 END:VEVENT
 BEGIN:VEVENT
 UID:7d34948bfb30@paris-academique
-DTSTAMP:20261029T104931Z
+DTSTAMP:20261030T105111Z
 DTSTART;TZID=Europe/Paris:20271008T193000
 DTEND;TZID=Europe/Paris:20271008T210000
 SUMMARY:« Yeshiva » – Juifs et chrétiens en dialogue
