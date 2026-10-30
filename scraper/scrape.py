@@ -4473,11 +4473,18 @@ def scrape_sciences_cultures(past_days: int = 0) -> list[dict]:
     H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                        "AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
          "Accept-Language": "fr-FR,fr;q=0.9", "Accept": "text/html,*/*"}
-    try:
-        r = requests.get(SCIENCES_CULTURES_LINKTREE, headers=H, timeout=30)
-    except Exception as e:
-        print(f"   [WARN] {type(e).__name__}: {e}")
-        return []
+    # Linktree refuse parfois un passage (406/429/5xx) : une 2e tentative
+    # évite de perdre la source pour la journée
+    for attempt in (1, 2):
+        try:
+            r = requests.get(SCIENCES_CULTURES_LINKTREE, headers=H, timeout=30)
+        except Exception as e:
+            print(f"   [WARN] {type(e).__name__}: {e}")
+            return []
+        if r.status_code == 200 or attempt == 2 or r.status_code not in (406, 429, 500, 502, 503, 504):
+            break
+        print(f"   HTTP {r.status_code}, nouvel essai")
+        time.sleep(5)
     if r.status_code != 200:
         print(f"   HTTP {r.status_code}")
         return []
