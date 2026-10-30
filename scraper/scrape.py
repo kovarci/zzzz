@@ -1990,43 +1990,19 @@ def _scrape_cards(name, url, card, *, title, base, location, date=None,
     return events
 
 
-def _paris_cite_soup(url):
-    """Agenda All-in-One Event Calendar. Depuis oct. 2026 la carte ne porte
-    plus sa date (« Oct 14 @ 12 h 00 min », mois anglais, sans année) : elle
-    est dans l'en-tête du jour (lien …exact_date~14-10-2026) qui regroupe les
-    cartes. On la recopie en <time datetime> dans chaque carte, on sort le
-    lieu du titre (il y était imbriqué) et on retire le ?instance_id du lien."""
-    soup = _soup(url)
-    for day in soup.select(".ai1ec-date"):
-        a = day.select_one("a.ai1ec-date-title[href]")
-        m = re.search(r"exact_date~(\d{2})-(\d{2})-(\d{4})", a["href"]) if a else None
-        if not m:
-            continue
-        iso = f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
-        for card in day.select(".ai1ec-event"):
-            tm = _times((card.select_one(".ai1ec-event-time") or card).get_text(" ")
-                        .replace(" h ", "h").replace(" min", ""))[0]
-            stamp = soup.new_tag("time", datetime=f"{iso}T{tm}" if tm else iso)
-            card.append(stamp)
-            title, loc = card.select_one(".ai1ec-event-title"), card.select_one(".ai1ec-event-location")
-            if loc:
-                loc.string = re.sub(r"^@\s*", "", loc.get_text())
-            if title and loc:
-                title.insert_after(loc.extract())
-            for link in card.select("a.ai1ec-load-event[href]"):
-                link["href"] = link["href"].split("?")[0]
-    return soup
-
-
 def scrape_paris_cite():
-    # All-in-One Event Calendar : ~12 événements par vue, pages via ?ai1ec=…
-    return _scrape_cards(
-        "Université Paris Cité", "https://u-paris.fr/agenda/", ".ai1ec-event",
-        title=".ai1ec-event-title", time=".ai1ec-event-time", place=".ai1ec-event-location",
-        link="a.ai1ec-load-event", fetch=_paris_cite_soup,
-        base="https://u-paris.fr",
-        location="Université Paris Cité, 85 boulevard Saint-Germain, Paris 6e",
-        page_url="https://u-paris.fr/agenda/?ai1ec=action~agenda|page_offset~{n}", max_pages=6)
+    # L'agenda All-in-One Event Calendar a disparu (la page /agenda/ affiche
+    # le shortcode « [ai1ec] » tel quel) : les événements passent désormais
+    # par le plugin Event Organiser, qui publie un flux iCal.
+    name = "Université Paris Cité"
+    print(f"→ {name} (iCal)...")
+    r = requests.get("https://u-paris.fr/?feed=eo-events", headers=CDF_HEADERS, timeout=35)
+    r.raise_for_status()
+    events = _ical_events(name, r.content,
+                          address="Université Paris Cité, 85 boulevard Saint-Germain, Paris 6e",
+                          default_url="https://u-paris.fr/agenda/")
+    print(f"   ✓ Total {name}: {len(events)} events")
+    return events
 
 
 def scrape_cnam():
@@ -2177,18 +2153,11 @@ def scrape_paris8():
         one_per_title=True)
 
 
-def scrape_nanterre():
-    # Export iCal natif de l'agenda (Kosmos) sur un an glissant.
-    name = "Université Paris Nanterre"
-    print(f"→ {name} (iCal)...")
-    fmt = lambda d: d.strftime("%d%%2F%m%%2F%Y")
-    u = ("https://www.parisnanterre.fr/servlet/com.kosmos.agenda.export.ExportAgendaServlet"
-         f"?DTSTART={fmt(TODAY)}&DTEND={fmt(HORIZON)}&THEMATIQUE=&CATEGORIE=&LIEU="
-         "&CODE_RUBRIQUE=1713186750251&CODE_RATTACHEMENT=&EXT=agenda")
-    r = requests.get(u, headers=CDF_HEADERS, timeout=35)
-    r.raise_for_status()
+def _ical_events(name, content, *, address, default_url):
+    """VEVENT d'un flux iCal → événements de la fenêtre. `address` complète le
+    lieu (« Amphi A — <address> ») ; `default_url` sert si la fiche n'a pas d'URL."""
     events = []
-    for v in icalendar.Calendar.from_ical(r.content).walk("VEVENT"):
+    for v in icalendar.Calendar.from_ical(content).walk("VEVENT"):
         t = clean_text(v.get("SUMMARY"))
         start = v.decoded("DTSTART", None)
         if start is None:
@@ -2200,10 +2169,24 @@ def scrape_nanterre():
         loc = clean_text(v.get("LOCATION"))
         events.append(new_event(
             name, t, dt.date(), time_str=dt.strftime("%H:%M") if (dt.hour or dt.minute) else "",
-            location=f"{loc} — Université Paris Nanterre, 200 avenue de la République, Nanterre"
-            if loc else "Université Paris Nanterre, 200 avenue de la République, Nanterre",
-            url=str(v.get("URL") or "https://www.parisnanterre.fr/agenda"),
+            location=f"{loc} — {address}" if loc else address,
+            url=str(v.get("URL") or default_url),
             desc=clean_text(v.get("DESCRIPTION"))[:400]))
+    return events
+
+
+def scrape_nanterre():
+    # Export iCal natif de l'agenda (Kosmos) sur un an glissant.
+    name = "Université Paris Nanterre"
+    print(f"→ {name} (iCal)...")
+    fmt = lambda d: d.strftime("%d%%2F%m%%2F%Y")
+    u = ("https://www.parisnanterre.fr/servlet/com.kosmos.agenda.export.ExportAgendaServlet"
+         f"?DTSTART={fmt(TODAY)}&DTEND={fmt(HORIZON)}&THEMATIQUE=&CATEGORIE=&LIEU="
+         "&CODE_RUBRIQUE=1713186750251&CODE_RATTACHEMENT=&EXT=agenda")
+    r = requests.get(u, headers=CDF_HEADERS, timeout=35)
+    r.raise_for_status()
+    events = _ical_events(name, r.content, address="Université Paris Nanterre, 200 avenue de la République, Nanterre",
+                          default_url="https://www.parisnanterre.fr/agenda")
     print(f"   ✓ Total {name}: {len(events)} events")
     return events
 
