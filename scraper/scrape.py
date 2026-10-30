@@ -3733,7 +3733,7 @@ def scrape_iris():
     # contenait que les événements PASSÉS (0 conférence depuis des semaines).
     return _scrape_cards(
         "IRIS", "https://www.iris-france.org/evenements/",
-        "article.event-featured, article.card:has(> .card-content > p.card-date)",
+        "article.event-featured, article.card:has(p.card-date)",
         title="h2.event-title, h3.card-title", date="p.card-date", time="p.card-subheading",
         link='a[href*="/event/"]', drop=re.compile(r"\breplay\b|webinaire", re.I),
         members=re.compile(r"sur invitation|réservé", re.I),
