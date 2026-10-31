@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:904768f55fac@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261103T123000
 DTEND;TZID=Europe/Paris:20261103T140000
 SUMMARY:États-Unis : les midterms ou le spectre d’une crise de régime
@@ -37,7 +37,7 @@ URL:https://www.iris-france.org/event/etats-unis-les-midterms-ou-le-spectre
 END:VEVENT
 BEGIN:VEVENT
 UID:a2d349dad93d@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Epidémie et conflit : quelle riposte contre Ebola en République D
@@ -50,7 +50,7 @@ URL:https://www.iris-france.org/event/epidemie-et-conflit-quelle-riposte-co
 END:VEVENT
 BEGIN:VEVENT
 UID:0ca17927b810@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261109T183000
 DTEND;TZID=Europe/Paris:20261109T200000
 SUMMARY:La résilience des Outre-mer : des territoires laboratoires de solu
@@ -62,8 +62,21 @@ URL:https://www.iris-france.org/event/la-resilience-des-outre-mer-des-terri
  toires-laboratoires-de-solutions-pour-penser-le-monde-de-demain/
 END:VEVENT
 BEGIN:VEVENT
+UID:8e30fde030b7@paris-academique
+DTSTAMP:20261031T090641Z
+DTSTART;TZID=Europe/Paris:20261112T183000
+DTEND;TZID=Europe/Paris:20261112T200000
+SUMMARY:(Ré)Inventer la coopération internationale dans un monde fractur
+ é
+DESCRIPTION:https://www.iris-france.org/event/reinventer-la-cooperation-int
+ ernationale-dans-un-monde-fracture/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/reinventer-la-cooperation-internation
+ ale-dans-un-monde-fracture/
+END:VEVENT
+BEGIN:VEVENT
 UID:bce4008998f0@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261120T140000
 DTEND;TZID=Europe/Paris:20261120T160000
 SUMMARY:Les Géopolitiques de Grenoble – 2e édition

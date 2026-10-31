@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:8686a7a38183@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261114T133000
 DTEND;TZID=Europe/Paris:20261114T190000
 SUMMARY:Colloque : Repenser l’offre sécuritaire française en Afrique
@@ -36,8 +36,20 @@ URL:https://www.jeunes-ihedn.org/events/colloque-repenser-loffre-securitair
  e-francaise-en-afrique/
 END:VEVENT
 BEGIN:VEVENT
+UID:31ea8cbeb1c3@paris-academique
+DTSTAMP:20261031T090641Z
+DTSTART;TZID=Europe/Paris:20261114T140000
+DTEND;TZID=Europe/Paris:20261114T160000
+SUMMARY:Conférence du comité aéronautique et espace x Cap sur l’avenir
+DESCRIPTION:Conférence\nhttps://www.jeunes-ihedn.org/events/conference-du-
+ comite-aeronautique-et-espace-x-cap-sur-lavenir/
+LOCATION:Paris
+URL:https://www.jeunes-ihedn.org/events/conference-du-comite-aeronautique-e
+ t-espace-x-cap-sur-lavenir/
+END:VEVENT
+BEGIN:VEVENT
 UID:ea4b2b96a6ba@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261118T193000
 DTEND;TZID=Europe/Paris:20261118T213000
 SUMMARY:Popote générale x Comité Sécurité Intérieure
@@ -49,7 +61,7 @@ URL:https://www.jeunes-ihedn.org/events/popote-generale-x-comite-securite-i
 END:VEVENT
 BEGIN:VEVENT
 UID:01157b6267ae@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261124T140000
 DTEND;TZID=Europe/Paris:20261124T170000
 SUMMARY:Visite de la Direction des Applications Militaires (DAM) du CEA
@@ -61,7 +73,7 @@ URL:https://www.jeunes-ihedn.org/events/visite-de-la-direction-des-applicat
 END:VEVENT
 BEGIN:VEVENT
 UID:c8ba821ffdb4@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261209T193000
 DTEND;TZID=Europe/Paris:20261209T213000
 SUMMARY:Popote Générale

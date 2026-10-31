@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:454afcda7cea@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T203000
 SUMMARY:Sommes-nous condamnés à la société de marché ?
@@ -37,7 +37,7 @@ URL:https://www.jean-jaures.org/agenda/sommes-nous-condamnes-a-la-societe-d
 END:VEVENT
 BEGIN:VEVENT
 UID:9d5fadd59f98@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261112T183000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:Liberté d’expression\, liberté de la presse\, disparition du jo
@@ -49,8 +49,21 @@ URL:https://www.jean-jaures.org/agenda/liberte-dexpression-liberte-de-la-pr
  esse-disparition-du-journalisme-ou-en-est-on/
 END:VEVENT
 BEGIN:VEVENT
+UID:23b613c5924c@paris-academique
+DTSTAMP:20261031T090641Z
+DTSTART;TZID=Europe/Paris:20261116T183000
+DTEND;TZID=Europe/Paris:20261116T203000
+SUMMARY:Que sommes-nous devenus ? Rencontre avec Jérôme Fourquet et Ruben
+  Rabinovitch
+DESCRIPTION:Société\nhttps://www.jean-jaures.org/agenda/que-sommes-nous-d
+ evenus-rencontre-avec-jerome-fourquet-et-ruben-rabinovitch/
+LOCATION:Fondation Jean-Jaurès\, Cité Malesherbes\, Paris\, France
+URL:https://www.jean-jaures.org/agenda/que-sommes-nous-devenus-rencontre-av
+ ec-jerome-fourquet-et-ruben-rabinovitch/
+END:VEVENT
+BEGIN:VEVENT
 UID:d20a3757e6f9@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261119T100000
 DTEND;TZID=Europe/Paris:20261119T120000
 SUMMARY:Le Blue Labour et l’avenir des gauches européennes
@@ -62,7 +75,7 @@ URL:https://www.jean-jaures.org/agenda/le-blue-labour-et-lavenir-des-gauche
 END:VEVENT
 BEGIN:VEVENT
 UID:c406e042b807@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261210T183000
 DTEND;TZID=Europe/Paris:20261210T203000
 SUMMARY:Élargir l’Europe ? Quelle Union européenne voulons-nous bâtir 

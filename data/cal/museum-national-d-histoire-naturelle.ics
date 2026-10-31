@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:43bc19179dfe@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261105T190000
 DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:La fabrique du vivant : l'art de la taxidermie - Cycle « Un état 
@@ -39,7 +39,7 @@ URL:https://www.mnhn.fr/fr/conference/la-fabrique-du-vivant-l-art-de-la-tax
 END:VEVENT
 BEGIN:VEVENT
 UID:4710c1b81537@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261109T190000
 DTEND;TZID=Europe/Paris:20261109T210000
 SUMMARY:La photographie\, miroir de l’évolution de nos sociétés
@@ -52,7 +52,7 @@ URL:https://www.mnhn.fr/fr/rencontre/la-photographie-miroir-de-l-evolution-
 END:VEVENT
 BEGIN:VEVENT
 UID:71ce4a45fae6@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261119T180000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:La fabrique des galeries : architectes et décorateurs du Muséum
@@ -65,7 +65,7 @@ URL:https://www.mnhn.fr/fr/rencontre/la-fabrique-des-galeries-architectes-e
 END:VEVENT
 BEGIN:VEVENT
 UID:462eac18f12f@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20261129T140000
 DTEND;TZID=Europe/Paris:20261129T160000
 SUMMARY:Effervescience : retour de mission
@@ -76,7 +76,7 @@ URL:https://www.mnhn.fr/fr/rencontre/retour-de-mission
 END:VEVENT
 BEGIN:VEVENT
 UID:f9494b18536e@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;TZID=Europe/Paris:20270111T190000
 DTEND;TZID=Europe/Paris:20270111T200000
 SUMMARY:Poétisation du vivant
@@ -88,7 +88,7 @@ URL:https://www.mnhn.fr/fr/rencontre/poetisation-du-vivant
 END:VEVENT
 BEGIN:VEVENT
 UID:bb194f0fca5b@paris-academique
-DTSTAMP:20261030T105111Z
+DTSTAMP:20261031T090641Z
 DTSTART;VALUE=DATE:20270312
 DTEND;VALUE=DATE:20270313
 SUMMARY:Sciences et Recherches Participatives : les Journées nationales 20
