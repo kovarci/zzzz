@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2a78d0e45027@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Projection-débat : "Outre-mer\, terres de solutions"
@@ -41,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
 END:VEVENT
 BEGIN:VEVENT
 UID:3a472c3119d4@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261031T130000
 DTEND;TZID=Europe/Paris:20261031T160000
 SUMMARY:Cercle de parole : santé mentale et identité rascisée
@@ -57,7 +57,7 @@ URL:https://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et
 END:VEVENT
 BEGIN:VEVENT
 UID:9f9c520cdee7@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
@@ -72,7 +72,7 @@ URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
 END:VEVENT
 BEGIN:VEVENT
 UID:91f6247d1c80@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -86,7 +86,7 @@ URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
 END:VEVENT
 BEGIN:VEVENT
 UID:f20c89e4b965@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Sortir l'écologie de ses murs\, rencontre-discussion avec Kevin Bh
@@ -103,7 +103,7 @@ URL:https://chiche.makesense.org/events/e/sortir-lecologie-de-ses-murs-renc
 END:VEVENT
 BEGIN:VEVENT
 UID:704567818f9a@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Formaliser et prendre confiance en son projet entrepreneurial 📍P
@@ -119,7 +119,7 @@ URL:https://chiche.makesense.org/events/e/formaliser-et-prendre-confiance-e
 END:VEVENT
 BEGIN:VEVENT
 UID:334ffe8eadf0@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261104T141500
 DTEND;TZID=Europe/Paris:20261104T161500
 SUMMARY:Atelier - Comprends vraiment tes clients avec l’entretien de déc
@@ -136,7 +136,7 @@ URL:https://chiche.makesense.org/events/e/atelier-comprends-vraiment-tes-cl
 END:VEVENT
 BEGIN:VEVENT
 UID:6b76b17d318d@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Où dort ton argent ?...et comment l'orienter vers la transition ?
@@ -149,5 +149,23 @@ DESCRIPTION:Organisé par Sylvie GRANDE — Et si votre argent pouvait lui
 LOCATION:39 Rue de Montreuil\, 94300 Vincennes\, France
 URL:https://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lor
  ienter-vers-la-transition-6ad0abfa1e36ae00082ec669
+END:VEVENT
+BEGIN:VEVENT
+UID:2eb18b4eea1c@paris-academique
+DTSTAMP:20261031T101752Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Arpentage du livre « Être écoféministe – Théories et pratiqu
+ es » de Jeanne Burgart Goutal
+DESCRIPTION:Organisé par Adele DORLIPO — Le principeL’arpentage est un
+  outil d’éducation populaire libre de droit : il s’agit d’une appro
+ priation collective de savoirs contenus dans un ouvrage par des groupes de
+  personnes qui s’en répartissent et partagent la lecture.\nhttps://chic
+ he.makesense.org/events/e/arpentage-du-livre-etre-ecofeministe-theories-et
+ -pratiques-de-jeanne-burgart-goutal-6ad20000ce193b0007ac8bda
+LOCATION:1 Pass. Jaqueline Giraud\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/arpentage-du-livre-etre-ecofemini
+ ste-theories-et-pratiques-de-jeanne-burgart-goutal-6ad20000ce193b0007ac8bd
+ a
 END:VEVENT
 END:VCALENDAR

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:5140d412c9d4@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261103T083000
 DTEND;TZID=Europe/Paris:20261103T100000
 SUMMARY:Café-Débat CGE x MdEP | Élargissement : l’Europe craint-elle d
@@ -38,7 +38,7 @@ URL:https://institutdelors.eu/evenements/cafe-debat-cge-x-mdep-elargissemen
 END:VEVENT
 BEGIN:VEVENT
 UID:e61061a5b914@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261113T090000
 DTEND;TZID=Europe/Paris:20261113T170000
 SUMMARY:Académie Notre Europe #2 – L’Europe dans le Monde
@@ -49,8 +49,23 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-2-leurope-da
  ns-le-monde/
 END:VEVENT
 BEGIN:VEVENT
+UID:fc8bea4b343e@paris-academique
+DTSTAMP:20261031T101752Z
+DTSTART;TZID=Europe/Paris:20261116T150000
+DTEND;TZID=Europe/Paris:20261116T163000
+SUMMARY:Conférence ECFR x CGE x DG ENEST : Élargir l’espace de sécurit
+ é : L’impact de l’adhésion à l’UE sur la sécurité de l’Europe
+DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/conference
+ -ecfr-x-cge-x-dg-enest-elargir-lespace-de-securite-limpact-de-ladhesion-a-
+ lue-sur-la-securite-de-leurope/
+LOCATION:Paris — lieu précisé sur la page de l'événement
+URL:https://institutdelors.eu/evenements/conference-ecfr-x-cge-x-dg-enest-e
+ largir-lespace-de-securite-limpact-de-ladhesion-a-lue-sur-la-securite-de-l
+ europe/
+END:VEVENT
+BEGIN:VEVENT
 UID:58fc5f7c15fc@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261117T123000
 DTEND;TZID=Europe/Paris:20261117T133000
 SUMMARY:Midis d’Europa Experience #7 – Crise du logement : l’Europe l
@@ -64,7 +79,7 @@ URL:https://institutdelors.eu/evenements/midis-deuropa-experience-7-crise-d
 END:VEVENT
 BEGIN:VEVENT
 UID:9bded1386cf6@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T183000
 SUMMARY:Paris Energy Week 2026 | Les défis de l’électrification
@@ -76,7 +91,7 @@ URL:https://institutdelors.eu/evenements/paris-energy-week-2026-the-challen
 END:VEVENT
 BEGIN:VEVENT
 UID:39da0bbbb3e2@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261207T140000
 DTEND;TZID=Europe/Paris:20261207T183000
 SUMMARY:30 ans de l’Institut Jacques Delors : Conférence annuelle 2026 |

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:7b5df0e2bfe6@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261102T180000
 DTEND;TZID=Europe/Paris:20261102T190000
 SUMMARY:Webinaire : CV et candidature
@@ -38,7 +38,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pCmB
 END:VEVENT
 BEGIN:VEVENT
 UID:4b97bafe5020@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261103T183000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:WEBINAIRE : METIERS DU NUMERIQUE
@@ -51,21 +51,22 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001nLcw
  w&id=a1NIV00000BcT4H&base=base5&form=jeune
 END:VEVENT
 BEGIN:VEVENT
-UID:bb8fb7303455@paris-academique
-DTSTAMP:20261031T090641Z
-DTSTART;TZID=Europe/Paris:20261104T183000
-DTEND;TZID=Europe/Paris:20261104T210000
-SUMMARY:Visite du Musée du Louvre - en Nocturne
-DESCRIPTION:Viens visiter le Louvre avec nous\, avec une médiation par les
-  supers bénévoles d'Art explora\nhttps://article1.my.salesforce-sites.co
- m/AG_VFP_Quiz?cid=701IV00001tRYwh&id=a1NIV00000CGFfJ&base=base5&form=jeune
+UID:65a3fedf29c2@paris-academique
+DTSTAMP:20261031T101752Z
+DTSTART;TZID=Europe/Paris:20261104T144500
+DTEND;TZID=Europe/Paris:20261104T160000
+SUMMARY:Ballet Preljocaj - Cours des danseurs Théâtre de la Ville
+DESCRIPTION:Viens assister au cours pour les danseurs et danseuses professi
+ onnelles du Ballet Prélocaj\, au Théâtre de la Ville.\nhttps://article1
+ .my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001u5rZB&id=a1NIV0000098qC
+ L&base=base5&form=jeune
 LOCATION:Paris
-URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001tRYw
- h&id=a1NIV00000CGFfJ&base=base5&form=jeune
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001u5rZ
+ B&id=a1NIV0000098qCL&base=base5&form=jeune
 END:VEVENT
 BEGIN:VEVENT
 UID:18d8adef42d5@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261109T180000
 DTEND;TZID=Europe/Paris:20261109T190000
 SUMMARY:Webinaire Méthodologie
@@ -78,7 +79,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pD9u
 END:VEVENT
 BEGIN:VEVENT
 UID:f26cc0827418@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261116T180000
 DTEND;TZID=Europe/Paris:20261116T190000
 SUMMARY:Webinaire : Canaux de recrutement
@@ -91,7 +92,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pCXF
 END:VEVENT
 BEGIN:VEVENT
 UID:7814340f5e21@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261118T183000
 DTEND;TZID=Europe/Paris:20261118T213000
 SUMMARY:Soirée des métiers de la transition écologique
@@ -106,7 +107,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001rkrK
 END:VEVENT
 BEGIN:VEVENT
 UID:d1991c90c100@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T123000
 SUMMARY:Intelligence Artificielle avec Salesforce
@@ -120,7 +121,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001taLl
 END:VEVENT
 BEGIN:VEVENT
 UID:187b77e1b139@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261123T180000
 DTEND;TZID=Europe/Paris:20261123T190000
 SUMMARY:Webinaire Gestion de Stress
@@ -133,7 +134,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pDQJ
 END:VEVENT
 BEGIN:VEVENT
 UID:a31efd6a9b5d@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261124T183000
 DTEND;TZID=Europe/Paris:20261124T200000
 SUMMARY:WEBINAIRE : METIERS VERTS
@@ -146,7 +147,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
 END:VEVENT
 BEGIN:VEVENT
 UID:cf8f5e734dba@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261126T180000
 DTEND;TZID=Europe/Paris:20261126T190000
 SUMMARY:National - Webinaire Agir pour le climat
@@ -162,7 +163,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vX
 END:VEVENT
 BEGIN:VEVENT
 UID:50b2a4b2635f@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261202T180000
 DTEND;TZID=Europe/Paris:20261202T190000
 SUMMARY:Ready set go
@@ -176,7 +177,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r1UL
 END:VEVENT
 BEGIN:VEVENT
 UID:f5e606b1c9e0@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261203T180000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:Webinaire Admissions HEC
@@ -192,7 +193,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001owt3
 END:VEVENT
 BEGIN:VEVENT
 UID:9928b4b7d96e@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261209T180000
 DTEND;TZID=Europe/Paris:20261209T190000
 SUMMARY:National - Webinaire Agir pour le climat
@@ -207,8 +208,22 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1vX
  N&id=a1NIV00000ByDvJ&base=base5&form=jeune
 END:VEVENT
 BEGIN:VEVENT
+UID:cf36e851eb13@paris-academique
+DTSTAMP:20261031T101752Z
+DTSTART;TZID=Europe/Paris:20261209T183000
+DTEND;TZID=Europe/Paris:20261209T210000
+SUMMARY:Visite du Musée du Louvre - en Nocturne
+DESCRIPTION:"Ces femmes qui nous regardent" : Viens visiter le Louvre avec 
+ une médiation proposée par les supers bénévoles d'Art explora\nhttps:/
+ /article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001tRYwh&id=a1NIV
+ 00000CGFfJ&base=base5&form=jeune
+LOCATION:Paris
+URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001tRYw
+ h&id=a1NIV00000CGFfJ&base=base5&form=jeune
+END:VEVENT
+BEGIN:VEVENT
 UID:bb14f846e15d@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
 SUMMARY:Paris - Stage IPESUP Noel 26
@@ -224,7 +239,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001timn
 END:VEVENT
 BEGIN:VEVENT
 UID:f5a3e257200c@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20270104T180000
 DTEND;TZID=Europe/Paris:20270104T193000
 SUMMARY:BOOST MON CV
@@ -239,7 +254,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
 END:VEVENT
 BEGIN:VEVENT
 UID:be179ab07ef3@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20270113T180000
 DTEND;TZID=Europe/Paris:20270113T193000
 SUMMARY:BOOST MY RESUME
@@ -252,7 +267,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001pAsP
 END:VEVENT
 BEGIN:VEVENT
 UID:112704b18e40@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20270114T183000
 DTEND;TZID=Europe/Paris:20270114T193000
 SUMMARY:Webinaire Gestion de Stress Session 1
@@ -265,7 +280,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n0wy
 END:VEVENT
 BEGIN:VEVENT
 UID:cb33c13ece47@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20270121T183000
 DTEND;TZID=Europe/Paris:20270121T193000
 SUMMARY:Webinaire Gestion de stress Session 2
@@ -278,7 +293,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001n1kH
 END:VEVENT
 BEGIN:VEVENT
 UID:4c89c5d7d96a@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20270203T180000
 DTEND;TZID=Europe/Paris:20270203T190000
 SUMMARY:Ready set go
@@ -292,7 +307,7 @@ URL:https://article1.my.salesforce-sites.com/AG_VFP_Quiz?cid=701IV00001r25Z
 END:VEVENT
 BEGIN:VEVENT
 UID:39b2174729ab@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20270331T180000
 DTEND;TZID=Europe/Paris:20270331T190000
 SUMMARY:Ready set go

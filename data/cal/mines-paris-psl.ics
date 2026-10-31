@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:382d9854e696@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261112T183000
 DTEND;TZID=Europe/Paris:20261112T203000
 SUMMARY:Remise du prix Entrepreneuriat 2026
@@ -39,7 +39,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/remise-de-prix-entreprene
 END:VEVENT
 BEGIN:VEVENT
 UID:ab2084fccb88@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:[Workshop] Electrification des usages
@@ -53,7 +53,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/workshop-electrification-
 END:VEVENT
 BEGIN:VEVENT
 UID:2d993f29fc7e@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:[SÉMINAIRE] Où sont les femmes dans les sciences à l’Universit
@@ -68,7 +68,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/seminaire-ou-sont-les-fem
 END:VEVENT
 BEGIN:VEVENT
 UID:22fb8e9d0bda@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Tuyau percé\, plancher collant\, effet Matilda… et maintenant qu
@@ -85,7 +85,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/tuyau-perce-plancher-coll
 END:VEVENT
 BEGIN:VEVENT
 UID:b28193492cb1@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261209T090000
 DTEND;TZID=Europe/Paris:20261209T123000
 SUMMARY:[Conférence] Bâtiments\, infrastructures : comment la recherche s
@@ -101,7 +101,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/conference-batiments-infr
 END:VEVENT
 BEGIN:VEVENT
 UID:324b203b7f58@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;TZID=Europe/Paris:20261215T180000
 DTEND;TZID=Europe/Paris:20261215T193000
 SUMMARY:[Conférence] L’histoire de la bibliothèque de l’École des mi
@@ -117,7 +117,7 @@ URL:https://www.minesparis.psl.eu/blog/evenements/conference-lhistoire-de-l
 END:VEVENT
 BEGIN:VEVENT
 UID:c4012016e898@paris-academique
-DTSTAMP:20261031T090641Z
+DTSTAMP:20261031T101752Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:[SECRE 2027] Colloque Situations Extrêmes\, Crise et Résilience
