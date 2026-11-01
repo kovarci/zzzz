@@ -9,9 +9,11 @@
     "watch": "concurrently \"esbuild src/main.jsx --bundle --jsx=automatic --define:process.env.NODE_ENV=\\\"development\\\" --outfile=../app.js --watch\" \"tailwindcss -i src/app.css -o ../app.css --watch\""
   },
   "dependencies": {
+    "date-fns": "^4.4.0",
     "framer-motion": "^11.11.17",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",
+    "react-day-picker": "^9.14.0",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {

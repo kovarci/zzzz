@@ -55,44 +55,22 @@ export function useFocusTrap(active) {
 
 /* ═══════════════════ Magic UI ═══════════════════ */
 // magicui.design/docs/components/number-ticker
-export function NumberTicker({ value, className, delay = 0, locale = "fr-FR" }) {
-  const ref = useRef(null);
-  const mv = useMotionValue(0);
-  const spring = useSpring(mv, { damping: 60, stiffness: 100 });
-  const inView = useInView(ref, { once: true, margin: "0px" });
-  useEffect(() => { if (inView) { const t = setTimeout(() => mv.set(value), delay * 1000); return () => clearTimeout(t); } }, [inView, value]);
-  useEffect(() => spring.on("change", v => { if (ref.current) ref.current.textContent = Intl.NumberFormat(locale).format(Math.round(v)); }), [spring, locale]);
-  return <span ref={ref} className={cn("inline-block tabular-nums tracking-tight", className)}>0</span>;
+// Chiffre affiché tel quel : le compteur qui monte depuis 0 était un effet de démonstration
+export function NumberTicker({ value, className, locale = "fr-FR" }) {
+  return <span className={cn("inline-block tabular-nums tracking-tight", className)}>{Intl.NumberFormat(locale).format(value)}</span>;
 }
-// magicui.design/docs/components/animated-shiny-text
-export function AnimatedShinyText({ children, className, shimmerWidth = 100 }) {
-  return <span style={{ "--shiny-width": `${shimmerWidth}px` }} className={cn("mx-auto max-w-md text-neutral-600/85 dark:text-neutral-300/75 animate-shimmer bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shiny-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80", className)}>{children}</span>;
+// Texte simple (l'ancien effet « brillance » et le défilement continu des
+// institutions, le fondu flouté à l'arrivée, le faisceau lumineux sur les
+// bordures : retirés, c'est ce qui donnait l'air « template »)
+export function AnimatedShinyText({ children, className }) {
+  return <span className={cn("text-muted-foreground", className)}>{children}</span>;
 }
-// magicui.design/docs/components/marquee
-export function Marquee({ children, className, pauseOnHover = true, repeat = 3 }) {
-  return <div className={cn("group flex overflow-hidden p-2 [--duration:60s] [--gap:1rem] [gap:var(--gap)]", className)}>
-    {Array.from({ length: repeat }).map((_, i) => <div key={i} className={cn("flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row", pauseOnHover && "group-hover:[animation-play-state:paused]")}>{children}</div>)}
-  </div>;
+// Rangée d'institutions : défilement manuel, rien ne bouge seul
+export function Marquee({ children, className }) {
+  return <div className={cn("flex gap-2 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden", className)}>{children}</div>;
 }
-// magicui.design/docs/components/blur-fade
-export function BlurFade({ children, className, delay = 0, inView = true, yOffset = 6 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-40px" });
-  return <motion.div ref={ref} initial="hidden" animate={(inView ? isInView : true) ? "visible" : "hidden"}
-    variants={{ hidden: { y: yOffset, opacity: 0, filter: "blur(6px)" }, visible: { y: 0, opacity: 1, filter: "blur(0px)" } }}
-    transition={{ delay: 0.04 + delay, duration: 0.4, ease: "easeOut" }} className={className}>{children}</motion.div>;
-}
-// magicui.design/docs/components/border-beam
-export function BorderBeam({ size = 200, duration = 15, colorFrom = "#ffaa40", colorTo = "#9c40ff", delay = 0 }) {
-  // Même comète que Magic UI, mais un dégradé conique qui tourne sous un
-  // masque « anneau » : l'animation offset-path d'origine se recalculait dans
-  // le fil principal à chaque image et forçait le navigateur à redécouper
-  // toute la page en calques (~200 ms par seconde, au repos).
-  const arc = Math.max(12, Math.min(60, size / 3));
-  return <div aria-hidden="true" className="beam pointer-events-none absolute inset-0 rounded-[inherit]"
-    style={{ "--beam-from": colorFrom, "--beam-to": colorTo, "--beam-dur": `${duration}s`, "--beam-delay": `-${delay}s`, "--beam-arc": `${arc}deg` }}>
-    <span className="beam-rot" /></div>;
-}
+export function BlurFade({ children, className }) { return <div className={className}>{children}</div>; }
+export function BorderBeam() { return null; }
 // magicui.design/docs/components/dot-pattern
 export function DotPattern({ width = 16, height = 16, cr = 1, className }) {
   const id = useMemo(() => "dp" + Math.random().toString(36).slice(2), []);
@@ -105,7 +83,7 @@ export function BentoGrid({ children, className }) { return <div className={cn("
 export function BentoCard({ name, className, background, description, cta = "Ouvrir", onClick, meta }) {
   return <div role="button" tabIndex={0} aria-label={name} onClick={onClick} onKeyDown={e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick?.(); } }} className={cn("group relative col-span-1 flex flex-col justify-end overflow-hidden rounded-xl cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-ring",
     "bg-card [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
-    "dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]", className)}>
+    "border", className)}>
     <div className="absolute inset-0">{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-5 transition-all duration-300 group-hover:-translate-y-8">
       {meta && <div className="text-xs font-medium text-white/85 drop-shadow">{meta}</div>}
@@ -118,21 +96,13 @@ export function BentoCard({ name, className, background, description, cta = "Ouv
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.04] dark:group-hover:bg-white/[.04]" />
   </div>;
 }
-// magicui.design/docs/components/dock — magnification par motion values
+// Barre d'icônes flottante, sans l'effet de loupe du Dock macOS
 export function Dock({ children, className }) {
-  const mouseX = useMotionValue(Infinity);
-  return <motion.div onMouseMove={e => mouseX.set(e.pageX)} onMouseLeave={() => mouseX.set(Infinity)}
-    className={cn("mx-auto flex h-[58px] w-max items-end gap-1 sm:gap-2 rounded-2xl border bg-background/70 backdrop-blur-md p-2 shadow-lg supports-[backdrop-filter]:bg-background/60", className)}>
-    {React.Children.map(children, c => React.isValidElement(c) && c.type === DockIcon ? React.cloneElement(c, { mouseX }) : c)}
-  </motion.div>;
+  return <div className={cn("mx-auto flex h-[52px] w-max items-center gap-1 rounded-xl border bg-background/90 p-1.5 shadow-md", className)}>{children}</div>;
 }
-export function DockIcon({ mouseX, children, title, onClick, active, size = 40, magnification = 60, distance = 140 }) {
-  const ref = useRef(null);
-  const dist = useTransform(mouseX, val => { const b = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 }; return val - b.x - b.width / 2; });
-  const w = useTransform(dist, [-distance, 0, distance], [size, magnification, size]);
-  const width = useSpring(w, { mass: 0.1, stiffness: 150, damping: 12 });
-  return <motion.button ref={ref} style={{ width, height: width }} onClick={onClick} title={title} aria-label={title} aria-pressed={active}
-    className={cn("relative flex aspect-square items-center justify-center rounded-full hover:bg-accent", active ? "text-amber-500" : "text-foreground/80")}>{children}</motion.button>;
+export function DockIcon({ children, title, onClick, active, size = 40 }) {
+  return <button onClick={onClick} title={title} aria-label={title} aria-pressed={active} style={{ width: size, height: size }}
+    className={cn("relative flex items-center justify-center rounded-lg hover:bg-accent", active ? "text-amber-500" : "text-foreground/80")}>{children}</button>;
 }
 export const DockSep = () => <span className="w-px h-6 bg-border mx-0.5 self-center" />;
 
@@ -145,25 +115,7 @@ export const DockSep = () => <span className="w-px h-6 bg-border mx-0.5 self-cen
 // par transform (compositeur, sans relayout) ; la position de la souris est
 // lue au plus une fois par image. Rien en mode clair, ni avec « réduire les
 // animations » ; sur écran tactile, pas de suivi.
-export function Ambient() {
-  const ref = useRef(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || !matchMedia("(hover: hover) and (pointer: fine)").matches
-        || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let x = innerWidth / 2, y = innerHeight / 3, raf = 0;
-    const apply = () => { raf = 0; el.style.setProperty("--mx", x + "px"); el.style.setProperty("--my", y + "px");
-      el.style.setProperty("--px", ((x / innerWidth) - .5).toFixed(3)); el.style.setProperty("--py", ((y / innerHeight) - .5).toFixed(3)); };
-    const move = e => { x = e.clientX; y = e.clientY; if (!raf) raf = requestAnimationFrame(apply); };
-    addEventListener("pointermove", move, { passive: true });
-    apply();
-    return () => { removeEventListener("pointermove", move); cancelAnimationFrame(raf); };
-  }, []);
-  return <div ref={ref} aria-hidden="true" className="ambient pointer-events-none fixed inset-0 -z-10 overflow-hidden hidden dark:block">
-    <div className="ambient-par"><span className="blob b1" /><span className="blob b2" /><span className="blob b3" /><span className="blob b4" /></div>
-    <span className="ambient-spot" />
-  </div>;
-}
+export function Ambient() { return null; }
 
 export function HoverEffect({ items, render, className }) {
   return <div className={cn("grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4", className)}>
@@ -173,23 +125,11 @@ export function HoverEffect({ items, render, className }) {
     </div>)}
   </div>;
 }
-// ui.aceternity.com/components/moving-border — la lumière qui fait le tour du
-// bouton est un dégradé conique en rotation (compositeur) : l'original
-// appelait getTotalLength / getPointAtLength à chaque image (~200 ms/s).
-export function MovingBorderButton({ children, onClick, href, duration = 3000, className }) {
+export function MovingBorderButton({ children, onClick, href, className }) {
   const Tag = href ? "a" : "button";
-  return <Tag href={href} onClick={onClick} className={cn("relative h-11 w-auto overflow-hidden bg-transparent p-[1px] text-sm rounded-[1.75rem] inline-flex", className)}>
-    <div aria-hidden="true" className="beam-fill absolute inset-0 rounded-[1.75rem] overflow-hidden" style={{ "--beam-dur": `${duration / 1000}s`, "--beam-from": "#3B82F6", "--beam-to": "#8B5CF6", "--beam-arc": "50deg" }}><span className="beam-rot" /></div>
-    <div className="relative flex h-full w-full items-center justify-center border border-border bg-background px-6 font-medium rounded-[1.75rem] antialiased">{children}</div>
-  </Tag>;
+  return <Tag href={href} onClick={onClick} className={cn("inline-flex h-9 items-center justify-center rounded-md border bg-background px-4 text-sm font-medium shadow-sm hover:bg-accent", className)}>{children}</Tag>;
 }
-// ui.aceternity.com/components/spotlight (fond sombre uniquement, cf. app.css .spot)
-export function Spotlight({ className, fill = "white" }) {
-  return <svg className={cn("spot animate-spotlight pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] opacity-0", className)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none">
-    <g filter="url(#spot)"><ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501" transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)" fill={fill} fillOpacity="0.21" /></g>
-    <defs><filter id="spot" x="0.86" y="0.84" width="3785.16" height="2840.26" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" /><feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur" /></filter></defs>
-  </svg>;
-}
+export function Spotlight() { return null; }
 
 /* ═══════════════════ shadcn-style ═══════════════════ */
 export const Button = ({ variant = "default", size = "md", className, ...p }) => <button className={cn("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none",

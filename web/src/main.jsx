@@ -6,6 +6,7 @@ import L from "leaflet";
 import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, placeKey, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
 import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
+import { CommandDialog } from "./palette.jsx";
 
 const PAGE = 48;
 // Couleur CSS résolue d'une discipline (var(--c-xxx) → couleur réelle), pour Leaflet qui ne lit pas les custom properties.
@@ -191,61 +192,6 @@ function SpeakerRow({ text, followSet, onFollow }) {
   if (names.length <= 1) return <span className="inline-flex items-center gap-1.5">{text}{names[0] && bell(names[0])}</span>;
   return <span className="flex flex-col gap-1"><span>{text}</span>
     <span className="flex flex-wrap gap-1.5">{names.map(n => <span key={n} className={cn("inline-flex items-center gap-1 rounded-md border pl-2 pr-0.5 py-0.5 text-xs", followSet.has(n) && "border-amber-500/40")}>{n}{bell(n)}</span>)}</span></span>;
-}
-
-/* ═════════════════════ Palette ⌘K ═════════════════════ */
-// Le mot w commence-t-il un mot de h (début, ou précédé d'un caractère non alphanumérique) ?
-const wordStart = (h, w) => { for (let i = h.indexOf(w); i >= 0; i = h.indexOf(w, i + 1)) if (i === 0 || !/[a-z0-9]/.test(h[i - 1])) return true; return false; };
-function CommandDialog({ open, onClose, onPick, pool }) {
-  const { t, fmtShort, discName } = useI18n();
-  const [q, setQ] = useState(""); const [sel, setSel] = useState(0); const inputRef = useRef(null);
-  const trap = useFocusTrap(open);
-  // Textes normalisés une fois par ouverture : titre, qui (intervenant,
-  // organisateurs), reste (lieu, discipline)
-  const idx = useMemo(() => open ? pool.map(e => [e, norm(e.title), norm([e.speaker, e.institution, ...(e.also || [])].join(" ")), norm([e.location, e.discipline, discName(e.discipline)].join(" "))]) : [], [open, pool, discName]);
-  const res = useMemo(() => {
-    const words = norm(q.trim()).split(/\s+/).filter(Boolean);
-    if (!words.length) return pool.filter(e => e.date === TODAY || e.date === TOMORROW).slice(0, 30);
-    // Chaque mot doit apparaître ; ceux d'une ou deux lettres en début de mot
-    // seulement (« IA », le « po » de Sciences Po trouvaient « pour », « Gaïas »).
-    // Classement : titre, puis intervenant / organisateur, puis le reste ; à
-    // égalité, l'ordre chronologique. Avant, « sciences po » donnait d'abord
-    // « Approches omiques… » (« po » dans « pour »).
-    const out = [];
-    for (const [e, ...fields] of idx) {
-      let score = 0;
-      for (const w of words) {
-        let best = 0;
-        fields.forEach((h, k) => { const at = wordStart(h, w); if (at || (w.length > 2 && h.includes(w))) best = Math.max(best, [6, 3, 1][k] * (at ? 1.5 : 1)); });
-        if (!best) { score = 0; break; }
-        score += best;
-      }
-      // Expression entière dans le titre ou chez l'organisateur (« sciences
-      // po », « college de france ») : devant les mots trouvés un à un
-      if (score && words.length > 1) { const ph = words.join(" "); fields.forEach((h, k) => { if (wordStart(h, ph)) score += [30, 30, 5][k]; }); }
-      if (score) out.push([score, e]);
-    }
-    return out.sort((a, b) => b[0] - a[0]).slice(0, 30).map(x => x[1]);
-  }, [q, idx, pool]);
-  useEffect(() => { if (open) { setQ(""); setSel(0); setTimeout(() => inputRef.current?.focus(), 30); } }, [open]);
-  useEffect(() => setSel(0), [q]);
-  // Ouverte par-dessus une fiche (« / » ou ⌘K) : Échap ne ferme que la palette
-  useEffect(() => {
-    if (!open) return;
-    const k = ev => { if (ev.key === "Escape") { ev.preventDefault(); onClose(); } };
-    document.addEventListener("keydown", k, true); return () => document.removeEventListener("keydown", k, true);
-  }, [open]);
-  const onKey = ev => { if (ev.key === "ArrowDown") { ev.preventDefault(); setSel(s => (s + 1) % Math.max(1, res.length)); } else if (ev.key === "ArrowUp") { ev.preventDefault(); setSel(s => (s - 1 + res.length) % Math.max(1, res.length)); } else if (ev.key === "Enter" && res[sel]) onPick(res[sel]); };
-  return <AnimatePresence>{open && <motion.div key="cmd" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
-    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} ref={trap} className="absolute left-1/2 top-[12vh] w-[min(640px,calc(100%-2rem))] rounded-xl border bg-popover shadow-2xl overflow-hidden" role="dialog" aria-modal="true">
-      <div className="flex items-center gap-2 border-b px-3"><Icon d={ICONS.search} size={16} className="text-muted-foreground" />
-        <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKey} className="h-12 flex-1 bg-transparent text-sm outline-none focus-visible:shadow-none placeholder:text-muted-foreground" placeholder={t("cmd_ph")} /><Kbd>ESC</Kbd></div>
-      <div className="max-h-[50vh] overflow-auto p-1">{res.length ? res.map((e, i) => <button key={e.id} onMouseEnter={() => setSel(i)} onClick={() => onPick(e)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", i === sel && "bg-accent")}>
-        <span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="flex-1 min-w-0"><span className="block truncate">{titleOf(e)}</span><span className="block text-xs text-muted-foreground truncate">{e.institution}{e.speaker ? " · " + e.speaker : ""}</span></span><span className="text-xs text-muted-foreground tabular-nums whitespace-nowrap">{fmtShort(e.date)}{e.time ? " " + e.time : ""}</span></button>)
-        : <p className="p-6 text-center text-sm text-muted-foreground">{t("cmd_none")}</p>}</div>
-      <div className="flex items-center gap-3 border-t px-3 py-2 text-[11px] text-muted-foreground"><span><kbd className="font-mono">↑↓</kbd> {t("cmd_nav")}</span><span><kbd className="font-mono">↵</kbd> {t("cmd_open")}</span><span className="ml-auto">{q ? t("cmd_n_results", { n: res.length }) : t("cmd_today_tomorrow")}</span></div>
-    </motion.div></motion.div>}</AnimatePresence>;
 }
 
 /* ═════════════════════ Vue semaine ═════════════════════ */
@@ -717,16 +663,16 @@ function App() {
         <BlurFade inView={false} delay={.2}><p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto [text-wrap:balance]">{archive ? t("history_lede", { n: archive.length }) : t("history_loading")}</p></BlurFade>
       </section> : <>
       {/* overflow-x-clip : le halo (thème sombre) dépassait à droite sur téléphone → défilement latéral */}
-      <section className="relative pt-14 pb-8 text-center overflow-x-clip">
+      <section className="relative pt-10 pb-6 text-center overflow-x-clip">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
-        <BlurFade inView={false}><div className="inline-flex max-w-full items-center rounded-full border bg-background/60 px-3 sm:px-4 py-1 text-xs sm:text-sm shadow-sm"><AnimatedShinyText>✦ {meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UP.length }) : ""}</AnimatedShinyText></div></BlurFade>
-        <BlurFade inView={false} delay={.1}><h1 className="mt-6 text-4xl sm:text-6xl font-bold tracking-tight [text-wrap:balance] max-w-4xl mx-auto leading-[1.05]">{t("hero_title_1")} <span className="bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">{t("hero_title_2")}</span></h1></BlurFade>
+        <BlurFade inView={false}><div className="inline-flex max-w-full items-center rounded-full border bg-background/60 px-3 sm:px-4 py-1 text-xs sm:text-sm shadow-sm"><AnimatedShinyText>{meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UP.length }) : ""}</AnimatedShinyText></div></BlurFade>
+        <BlurFade inView={false} delay={.1}><h1 className="mt-5 text-3xl sm:text-5xl font-semibold tracking-tight [text-wrap:balance] max-w-3xl mx-auto leading-[1.1]">{t("hero_title_1")} <span className="text-muted-foreground">{t("hero_title_2")}</span></h1></BlurFade>
         <BlurFade inView={false} delay={.2}><p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto [text-wrap:balance]">{/* Même phrase pendant le chargement (« … » à la place des nombres) : « chargement… »
             tenait sur une ligne, la phrase sur quatre (téléphone) — toute la page sautait de 84 px
             à l'arrivée des données (CLS 0,43, « mauvais » pour Google) */}
           {t("hero_lede", events ? { n: Object.keys(instAll).length, f: UP.filter(isFree).length } : { n: "…", f: "…" })}</p></BlurFade>
         <BlurFade inView={false} delay={.3}><div className="mt-8 flex flex-wrap justify-center gap-3"><Button onClick={() => { setHistory(false); setF({ when: "today" }); goAgenda(); }} className="h-11 px-6">{t("btn_today")}</Button><Button variant="outline" onClick={() => { setHistory(false); setF({ when: "week" }); goAgenda(); }} className="h-11 px-6">{t("btn_week")}</Button></div></BlurFade>
-        <BlurFade inView={false} delay={.4}><div className="relative mt-12 grid grid-cols-3 max-w-xl mx-auto divide-x rounded-xl border bg-card shadow-sm">
+        <BlurFade inView={false} delay={.4}><div className="relative mt-8 grid grid-cols-3 max-w-xl mx-auto divide-x rounded-xl border bg-card">
           {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w], i) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="flex flex-col items-center py-4 hover:bg-accent first:rounded-l-xl last:rounded-r-xl"><span className="text-3xl font-bold"><NumberTicker value={n} delay={.2 + i * .1} locale={lang === "en" ? "en-US" : "fr-FR"} /></span><span className="text-xs text-muted-foreground mt-1">{l}</span></button>)}
           <BorderBeam size={70} duration={9} colorFrom="#3B82F6" colorTo="#EC4899" /></div></BlurFade>
       </section>
