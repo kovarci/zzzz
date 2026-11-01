@@ -39,11 +39,14 @@ WATCH = ["EHESS", "ENS Paris", "Sciences Po", "Sorbonne Université",
 # Lues par maj.bat (scraper/refresh_local.py, LOCAL_INSTITUTIONS) : le robot
 # GitHub est bloqué chez elles, leur 0 ici est normal.
 LOCAL_ONLY = {"Collège de France", "Muséum national d'Histoire naturelle", "Académie des sciences",
-              "Jeunes IHEDN", "Ifri", "IRIS", "Fondation Jean-Jaurès", "Académie nationale de médecine",
-              "Maison de l'Amérique latine", "Maison de la culture du Japon", "L'Étudiant",
+              "Ifri", "Maison de l'Amérique latine", "Maison de la culture du Japon",
               "Musée du Louvre",
               # délai dépassé pour le robot depuis le 02/10/2026, lues par maj.bat
               "Université Paris 8", "IPGP"}
+# IRIS, Jean-Jaurès, Jeunes IHEDN, Académie nationale de médecine, L'Étudiant : plus
+# dans cette liste. Le robot les croyait bloquées alors qu'il recevait du
+# brotli illisible (corrigé le 30/10/2026) : il les lit maintenant, et leur 0
+# doit se voir. (maj.bat continue de les lire aussi, sans conflit.)
 
 
 def main():

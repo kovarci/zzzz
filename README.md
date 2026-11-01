@@ -33,7 +33,7 @@ pour un dépôt public. Le domaine `lotent.fr` est branché via le fichier `CNAM
 | Sciences Po                         | scraping HTML paginé                 | Institution    |
 | ENS Paris                           | scraping HTML paginé                 | Institution    |
 | Sorbonne Université                 | parseur dédié                        | Institution    |
-| Université Paris Cité               | cartes HTML (All-in-One Calendar)    | Institution    |
+| Université Paris Cité               | flux iCal (Event Organiser)          | Institution    |
 | Paris 1 Panthéon-Sorbonne (agenda + recherche), Paris-Panthéon-Assas, Paris-Saclay | cartes HTML | Institution |
 | Campus Condorcet, IEA de Paris, FMSH | cartes HTML                         | Recherche      |
 | Musée du quai Branly (colloques + salon de lecture) | cartes HTML          | Musée          |
@@ -200,6 +200,14 @@ automatiquement.
 Pour ajouter une source, écrire une fonction dans `scraper/scrape.py` et l'ajouter à
 la liste dans `main()`. Le filet de sécurité couvre automatiquement les sources `KNOWN_SOURCES`,
 `source_type == "luma"` et `source_type == "association"`.
+
+### Tests et audit des sources
+
+`python -m pytest scraper/tests` (workflow « Scraper tests », à chaque modification de `scraper/`) :
+sélecteurs compatibles avec la version épinglée de soupsieve, en-têtes HTTP décodables, flux iCal,
+nouvelle tentative de Linktree. `python scraper/audit_sources.py [fragment-de-nom …]` exécute chaque
+source en lecture seule (aucune donnée écrite) et, pour celles à 0, affiche statut HTTP, titre de
+page et structure HTML répétée : à lancer depuis une connexion qui joint les sites des sources.
 
 ## Structure
 
