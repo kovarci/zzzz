@@ -98,13 +98,13 @@ export function BentoCard({ name, className, background, description, cta = "Ouv
 }
 // Barre d'icônes flottante, sans l'effet de loupe du Dock macOS
 export function Dock({ children, className }) {
-  return <div className={cn("mx-auto flex h-[52px] w-max items-center gap-1 rounded-xl border bg-background/90 p-1.5 shadow-md", className)}>{children}</div>;
+  return <div className={cn("mx-auto flex h-[52px] [@media(pointer:coarse)]:h-14 w-max items-center gap-1 rounded-xl border bg-background/90 p-1.5 shadow-md", className)}>{children}</div>;
 }
-export function DockIcon({ children, title, onClick, active, size = 40 }) {
-  return <button onClick={onClick} title={title} aria-label={title} aria-pressed={active} style={{ width: size, height: size }}
-    className={cn("relative flex items-center justify-center rounded-lg hover:bg-accent", active ? "text-amber-500" : "text-foreground/80")}>{children}</button>;
+export function DockIcon({ children, title, onClick, active, className }) {
+  return <button onClick={onClick} title={title} aria-label={title} aria-pressed={active}
+    className={cn("relative flex h-10 w-10 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 items-center justify-center rounded-lg hover:bg-accent", active ? "text-amber-500" : "text-foreground/80", className)}>{children}</button>;
 }
-export const DockSep = () => <span className="w-px h-6 bg-border mx-0.5 self-center" />;
+export const DockSep = ({ className }) => <span className={cn("w-px h-6 bg-border mx-0.5 self-center", className)} />;
 
 /* ═══════════════════ Aceternity ═══════════════════ */
 // ui.aceternity.com/components/card-hover-effect
@@ -133,16 +133,24 @@ export function Spotlight() { return null; }
 
 /* ═══════════════════ shadcn-style ═══════════════════ */
 export const Button = ({ variant = "default", size = "md", className, ...p }) => <button className={cn("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none",
-  size === "sm" ? "h-8 px-3" : size === "icon" ? "h-9 w-9" : "h-10 px-4",
+  // Écran tactile : 44 px de haut (cible minimale du pouce), quel que soit `size`
+  size === "sm" ? "h-8 px-3" : size === "icon" ? "h-9 w-9 [@media(pointer:coarse)]:w-11" : "h-10 px-4", "[@media(pointer:coarse)]:h-11",
   variant === "default" ? "bg-primary text-primary-foreground shadow hover:bg-primary/90" : variant === "outline" ? "border bg-background shadow-sm hover:bg-accent" : variant === "ghost" ? "hover:bg-accent" : "", className)} {...p} />;
-export const LinkButton = ({ variant = "default", className, ...p }) => <a className={cn("inline-flex h-10 items-center justify-center gap-2 rounded-md px-4 text-sm font-medium transition-colors",
+export const LinkButton = ({ variant = "default", className, ...p }) => <a className={cn("inline-flex h-10 [@media(pointer:coarse)]:h-11 items-center justify-center gap-2 rounded-md px-4 text-sm font-medium transition-colors",
   variant === "default" ? "bg-primary text-primary-foreground shadow hover:bg-primary/90" : "border bg-background shadow-sm hover:bg-accent", className)} {...p} />;
-export const Badge = ({ variant = "outline", className, style, children, title }) => <span title={title} style={style} className={cn("inline-flex items-center rounded-md px-2 py-0.5 text-[11px] font-semibold", variant === "outline" ? "border" : "bg-primary text-primary-foreground", className)}>{children}</span>;
-export const Kbd = ({ children, className }) => <kbd className={cn("inline-flex h-5 items-center rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground", className)}>{children}</kbd>;
+export const Badge = ({ variant = "outline", className, style, children, title }) => <span title={title} style={style} className={cn("inline-flex items-center rounded-md px-2 py-0.5 text-xs font-semibold", variant === "outline" ? "border" : "bg-primary text-primary-foreground", className)}>{children}</span>;
+export const Kbd = ({ children, className }) => <kbd className={cn("inline-flex h-5 items-center rounded border bg-muted px-1.5 font-mono text-xs font-medium text-muted-foreground", className)}>{children}</kbd>;
 
+// Flèche en début ou fin de libellé (← → ↗) : décorative, lue à voix haute par
+// les lecteurs d'écran (« flèche vers la droite ») si elle n'est pas masquée.
+export function Arr({ text }) {
+  const m = /^(←\s)?(.*?)(\s[→↗])?$/s.exec(text || "");
+  return <>{m[1] && <span aria-hidden="true">{m[1]}</span>}{m[2]}{m[3] && <span aria-hidden="true">{m[3]}</span>}</>;
+}
+// items : [valeur, contenu, nom accessible (boutons-icônes), infobulle (texte visible)]
 export function Tabs({ value, onChange, items, layoutId = "tab-pill" }) {
-  return <div className="inline-flex h-9 items-center rounded-lg bg-muted p-1 text-muted-foreground relative">
-    {items.map(([v, l, label]) => <button key={v} onClick={() => onChange(v)} aria-label={label} title={label} aria-pressed={value === v} className={cn("relative z-10 inline-flex h-7 items-center rounded-md px-3 text-sm font-medium transition-colors whitespace-nowrap", value === v && "text-foreground")}>
+  return <div className="inline-flex h-9 [@media(pointer:coarse)]:h-11 items-center rounded-lg bg-muted p-1 text-muted-foreground relative">
+    {items.map(([v, l, label, hint]) => <button key={v} onClick={() => onChange(v)} aria-label={label} title={label || hint} aria-pressed={value === v} className={cn("relative z-10 inline-flex h-7 [@media(pointer:coarse)]:h-9 items-center rounded-md px-3 text-sm font-medium transition-colors whitespace-nowrap", value === v && "text-foreground")}>
       {value === v && <motion.span layoutId={layoutId} className="absolute inset-0 rounded-md bg-background shadow-sm" transition={{ type: "spring", stiffness: 500, damping: 40 }} />}
       <span className="relative">{l}</span></button>)}
   </div>;
@@ -202,7 +210,7 @@ export function Popover({ label, count, children, align = "left", minW = "min-w-
     : <AnimatePresence>{open && <motion.div ref={popRef} style={{ ...(align === "right" ? { marginRight: -dx } : { marginLeft: dx }), ...(maxH ? { maxHeight: `min(60vh, ${maxH}px)` } : null) }} initial={{ opacity: 0, y: -4, scale: .98, x: align === "center" ? "-50%" : 0 }} animate={{ opacity: 1, y: 0, scale: 1, x: align === "center" ? "-50%" : 0 }} exit={{ opacity: 0, y: -4, scale: .98 }} transition={{ duration: .12 }}
         className={cn("absolute top-[calc(100%+6px)] z-40 max-h-[60vh] overflow-auto rounded-lg border bg-popover p-1 shadow-lg", minW, align === "right" ? "right-0" : align === "center" ? "left-1/2" : "left-0")}>{children(close)}</motion.div>}</AnimatePresence>;
   return <div ref={ref} className={cn("relative shrink-0", block && "w-full")}>
-    <Button variant="outline" size={block ? "md" : "sm"} className={cn(block ? "w-full px-2" : "h-9", open && "bg-accent")} onClick={() => { setSheet(narrow()); setOpen(o => !o); }} aria-expanded={open}>{label}{count > 0 && <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[11px] text-primary-foreground">{count}</span>}
+    <Button variant="outline" size={block ? "md" : "sm"} className={cn(block ? "w-full px-2" : "h-9", open && "bg-accent")} onClick={() => { setSheet(narrow()); setOpen(o => !o); }} aria-expanded={open}>{label}{count > 0 && <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-xs text-primary-foreground">{count}</span>}
       <svg className="opacity-50" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6" /></svg></Button>
     {panel}
   </div>;

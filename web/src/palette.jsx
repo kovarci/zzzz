@@ -178,7 +178,13 @@ export function CommandDialog({ open, onClose, onPick, pool }) {
       </div>
       : <>
         <div ref={listRef} className="min-h-0 flex-1 overflow-auto p-1">{items.length ? rows
-          : <p className="p-6 text-center text-sm text-muted-foreground">{range && !words.length ? t("cmd_empty_range") : t("cmd_none")}</p>}</div>
-        <div className="flex shrink-0 items-center gap-3 border-t px-3 py-2 text-[11px] text-muted-foreground"><span><kbd className="font-mono">↑↓</kbd> {t("cmd_nav")}</span><span><kbd className="font-mono">↵</kbd> {t("cmd_open")}</span><span className="ml-auto">{dq || range ? t("cmd_n_results", { n: !words.length && range ? nIn : res.length }) : t("cmd_today_tomorrow")}</span></div></>}
+          : words.length ? <div className="p-6 text-center">
+              <p className="text-sm font-medium">{t("cmd_none_q", { q: dq.trim() })}</p>
+              <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground [text-wrap:balance]">{t("cmd_none_hint")}</p>
+              <div className="mt-4 flex flex-wrap justify-center gap-2">
+                {[presets[2], presets[3]].map(([l, r]) => <button key={l} onClick={() => apply(r)} className="inline-flex h-10 items-center rounded-md border px-3 text-sm font-medium hover:bg-accent">{l}</button>)}
+                <button onClick={() => { setQ(""); inputRef.current?.focus(); }} className="inline-flex h-10 items-center rounded-md px-3 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">{t("cmd_clear_q")}</button></div></div>
+          : <p className="p-6 text-center text-sm text-muted-foreground">{range ? t("cmd_empty_range") : t("cmd_none")}</p>}</div>
+        <div className="flex shrink-0 items-center gap-3 border-t px-3 py-2 text-xs text-muted-foreground"><span><kbd className="font-mono">↑↓</kbd> {t("cmd_nav")}</span><span><kbd className="font-mono">↵</kbd> {t("cmd_open")}</span><span className="ml-auto">{dq || range ? t("cmd_n_results", { n: !words.length && range ? nIn : res.length }) : t("cmd_today_tomorrow")}</span></div></>}
     </motion.div></motion.div>}</AnimatePresence>;
 }

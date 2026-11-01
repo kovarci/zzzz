@@ -3,10 +3,11 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
-import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, placeKey, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
-import { Marquee, BlurFade, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
+import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, placeKey, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store, SHORTCUT } from "./lib.js";
+import { Marquee, BlurFade, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap, Arr } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 import { CommandDialog } from "./palette.jsx";
+import { Logo } from "./logo.jsx";
 
 const PAGE = 48;
 // Couleur CSS résolue d'une discipline (var(--c-xxx) → couleur réelle), pour Leaflet qui ne lit pas les custom properties.
@@ -16,7 +17,7 @@ const discColor = disc => getComputedStyle(document.documentElement).getProperty
 // Premier morceau du lieu qui ne répète pas l'organisateur
 // (« Université Paris 8, 2 rue de la Liberté » → « 2 rue de la Liberté »)
 const placeOf = e => { const i = norm(e.institution); return (e.location || "").split(",").map(x => x.trim()).find(x => x && !i.includes(norm(x)) && !norm(x).includes(i)) || ""; };
-function Cover({ e, className = "", eager, label = true }) {
+function Cover({ e, className = "", eager, label = true, labelTop = false }) {
   const [broken, setBroken] = useState(false);
   // Vignette d'abord ; si le service de redimensionnement échoue, l'original
   const [orig, setOrig] = useState(false);
@@ -28,7 +29,8 @@ function Cover({ e, className = "", eager, label = true }) {
     {isMembers(e) && <Badge className="bg-background/95 text-foreground border-0 shadow-sm" title={t("access_members_hint")}>🔒 {t("badge_members")}</Badge>}</div>;
   if (e.image && !broken) return <div className={cn(pos, "overflow-hidden bg-muted", className)}>
     <img src={orig ? e.image : small} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => (!orig && small !== e.image ? setOrig(true) : setBroken(true))} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
-  return <div className={cn(pos, "overflow-hidden flex items-end p-4", className)} style={{ background: `color-mix(in srgb, ${dc(e)} 16%, hsl(var(--muted)))` }}>{badge}
+  // labelTop : cartes « À la une », où le titre occupe déjà le bas — l'organisateur passe en haut
+  return <div className={cn(pos, "overflow-hidden flex", labelTop ? "items-start p-5 pt-12" : "items-end p-4", className)} style={{ background: `color-mix(in srgb, ${dc(e)} 16%, hsl(var(--muted)))` }}>{badge}
     {label && <div className="relative font-serif text-xl font-medium leading-tight [text-wrap:balance] line-clamp-3" style={{ color: `color-mix(in srgb, ${dc(e)} 55%, hsl(var(--foreground)))` }}>{e.institution}</div>}</div>;
 }
 // Titre = vrai lien vers la fiche e/<id>.html : Google suit ces liens depuis
@@ -48,7 +50,7 @@ const EventCard = React.memo(function EventCard({ e, fav, onFav, onOpen, distanc
   // « bouton » carte, que les lecteurs d'écran annonçaient mal.
   return <div onClick={act} className={cn("group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring", past && "opacity-80")}>
     {/* L'étoile n'apparaît qu'au survol… sauf sur écran tactile (pas de survol) et au clavier */}
-    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow-sm transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
+    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 items-center justify-center rounded-md bg-background/90 shadow-sm transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
     <Cover e={e} className="aspect-[16/10]" />
     <div className="p-4 flex flex-col gap-1.5 flex-1">
       <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {discName(e.discipline)}</span>
@@ -104,7 +106,7 @@ function RelatedList({ title, items, onOpen, max = 5 }) {
 
 /* ═════════════════════ Fiche (sheet) ═════════════════════ */
 function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollow, pool = [], onOpen }) {
-  const { t, fmtDay, discName, kindName } = useI18n();
+  const { t, lang, fmtDay, discName, kindName } = useI18n();
   const rel = useMemo(() => e ? relatedOf(e, pool) : null, [e, pool]);
   const trap = useFocusTrap(!!e);
   // Échap déjà pris par un menu ou la palette ouverts par-dessus : la fiche reste
@@ -123,17 +125,17 @@ function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollo
           <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), "--dcol": dc(e) }} className="[color:color-mix(in_srgb,var(--dcol)_62%,#000)] dark:[color:var(--dcol)]">{discName(e.discipline)}</Badge><Badge>{kindName(kindOf(e))}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}{isEnglish(e) && <Badge title={t("filter_en_hint")}>{t("filter_en")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
           <h2 className="font-serif text-3xl font-medium leading-tight [text-wrap:balance]">{e.title}</h2>
           <div className="flex items-center gap-3 rounded-lg border bg-card p-3">
-            <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
-            <div className="text-sm"><div className="font-medium first-letter:uppercase">{fmtDay(e.date)} {d.getFullYear()}</div><div className="text-muted-foreground">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""} · ` : ""}{days < 0 ? t("sheet_terminated") : days === 0 ? t("sheet_today") : days === 1 ? t("sheet_tomorrow") : t("sheet_in_days", { n: days })}</div></div>
+            <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span><span className="mt-0.5 text-xs leading-none text-muted-foreground">{d.toLocaleDateString(lang === "en" ? "en-GB" : "fr-FR", { month: "short" })}</span></div>
+            <div className="text-sm"><div className="font-medium first-letter:uppercase">{fmtDay(e.date)} {d.getFullYear()}</div><div className="text-muted-foreground">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")} · {days < 0 ? t("sheet_terminated") : days === 0 ? t("sheet_today") : days === 1 ? t("sheet_tomorrow") : t("sheet_in_days", { n: days })}</div></div>
           </div>
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">{[[t("sheet_organizer"), e.institution, null], [t("sheet_also"), (e.also || []).join(", "), null], [t("sheet_with"), e.speaker, "speaker"], [t("sheet_place"), e.location, null], [t("sheet_price"), e.price ? (isFree(e) ? t("sheet_free") : e.price) : null, null]].filter(r => r[1]).map(([k, v, kind]) => <React.Fragment key={k}><dt className="text-muted-foreground">{k}</dt><dd className="break-words">{kind === "speaker" ? <SpeakerRow text={v} followSet={followSet} onFollow={onFollow} /> : v}</dd></React.Fragment>)}</dl>
           {e.description && e.description.length > 60 && <p className="text-sm leading-relaxed text-muted-foreground whitespace-pre-line">{e.description}</p>}
           <div className="grid gap-2 pt-2">
-            {safeUrl(e.url) && <LinkButton href={safeUrl(e.url)} target="_blank" rel="noopener">{t("sheet_official")}</LinkButton>}
-            <div className="grid grid-cols-3 gap-2">
-              <Button variant="outline" onClick={() => onFav(e.id)} className="px-2">{fav ? t("sheet_fav_on") : t("sheet_fav_off")}</Button>
+            {safeUrl(e.url) && <LinkButton href={safeUrl(e.url)} target="_blank" rel="noopener"><Arr text={t("sheet_official")} /></LinkButton>}
+            <Button variant="outline" onClick={() => onFav(e.id)} aria-pressed={fav} className="px-2">{fav ? t("sheet_fav_on") : t("sheet_fav_off")}</Button>
+            <div className="grid grid-cols-2 gap-2">
               <Popover closeLabel={t("fermer")} label={t("sheet_agenda")} align="center" minW="min-w-[220px]" block>{close => <div className="p-1">
-                <a className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-accent" href={googleCalUrl(e)} target="_blank" rel="noopener" onClick={close}>{t("sheet_google_cal")}</a>
+                <a className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-accent" href={googleCalUrl(e)} target="_blank" rel="noopener" onClick={close}><Arr text={t("sheet_google_cal")} /></a>
                 <button className="w-full text-left flex items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-accent" onClick={() => { download(`${e.id}.ics`, buildIcs([e])); close(); }}>{t("sheet_ics_file")}</button></div>}</Popover>
               <Button variant="outline" onClick={share} className="px-2"><Icon d={ICONS.share} size={14} />{t("sheet_share")}</Button>
             </div>
@@ -215,9 +217,9 @@ function WeekView({ events, onOpen, favs }) {
     {/* Téléphone : le titre au-dessus des deux boutons (coincé entre eux, il
         tenait sur quatre lignes) */}
     <div className="flex flex-wrap items-center justify-between gap-y-3 mb-4">
-      <Button variant="outline" size="sm" onClick={() => setOffset(o => o - 1)}>{t("week_prev")}</Button>
+      <Button variant="outline" size="sm" onClick={() => setOffset(o => o - 1)}><Arr text={t("week_prev")} /></Button>
       <div className="order-first w-full text-center sm:order-none sm:w-auto"><div className="font-semibold">{dayNum(days[0])} {MO[days[0].getMonth()]} → {dayNum(days[6])} {MO[days[6].getMonth()]} {days[6].getFullYear()}</div><div className="text-xs text-muted-foreground">{inWeek.length} {t("noun_event", { n: inWeek.length })}{offset !== 0 && <button className="ml-2 underline" onClick={() => setOffset(0)}>{t("week_this")}</button>}</div></div>
-      <Button variant="outline" size="sm" onClick={() => setOffset(o => o + 1)}>{t("week_next")}</Button>
+      <Button variant="outline" size="sm" onClick={() => setOffset(o => o + 1)}><Arr text={t("week_next")} /></Button>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-7 gap-2 overflow-x-auto">
       {/* Sur téléphone (une colonne), les jours déjà passés de la semaine sont
@@ -278,7 +280,7 @@ function FilterBanner({ name, count, color, links, onClear, clearLabel }) {
     <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg font-semibold text-white" style={{ background: color }}>{name[0]}</span>
     <div className="flex-1 min-w-0"><div className="font-semibold text-sm truncate">{name}</div><div className="text-xs text-muted-foreground">{t("inst_events_count", { n: count })}</div></div>
     <div className="flex w-full flex-wrap items-center gap-x-4 gap-y-2 sm:ml-auto sm:w-auto">
-      {links.map(([href, label]) => <a key={href} href={href} onClick={href.endsWith(".ics") ? ev => { ev.preventDefault(); openSubscribe(href, name); } : undefined} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline">{label}</a>)}
+      {links.map(([href, label]) => <a key={href} href={href} onClick={href.endsWith(".ics") ? ev => { ev.preventDefault(); openSubscribe(href, name); } : undefined} className="text-xs font-medium text-muted-foreground hover:text-foreground hover:underline"><Arr text={label} /></a>)}
       <Button variant="outline" size="sm" className="ml-auto sm:ml-0" onClick={onClear}>{clearLabel}</Button>
     </div>
   </div>;
@@ -339,7 +341,7 @@ function GithubCard() {
     <a href={`${REPO}/issues`} target="_blank" rel="noopener" className="group flex items-center gap-3 rounded-xl border bg-card p-3 shadow-sm hover:border-foreground/25 hover:bg-accent transition">
       <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-foreground text-background"><Icon d={ICONS.github} size={18} /></span>
       <span className="flex-1 min-w-0"><span className="block font-semibold text-sm">kovarci/zzzz</span><span className="block text-xs text-muted-foreground truncate">{t("footer_repo_desc")}</span></span>
-      <span className="text-xs font-medium text-muted-foreground shrink-0 group-hover:text-foreground">{t("footer_open_issue")} ↗</span>
+      <span className="text-xs font-medium text-muted-foreground shrink-0 group-hover:text-foreground"><Arr text={t("footer_open_issue")} /></span>
     </a>
     <p className="text-xs text-muted-foreground"><a className="hover:text-foreground underline underline-offset-2" href={REPO} target="_blank" rel="noopener">{t("footer_source")}</a></p>
   </div>;
@@ -373,7 +375,7 @@ function useSpeakers() {
   return { speakers, toggle, seen, markSeen };
 }
 function App() {
-  const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO, dayNum, discName } = useI18n();
+  const { t, lang, toggleLang, fmtDay, fmtShort, relDay, relTime, MO, dayNum, discName, fmtNum } = useI18n();
   const init = useMemo(filtersFromURL, []);
   const [events, setEvents] = useState(null); const [loadErr, setLoadErr] = useState(null); const [complete, setComplete] = useState(false);
   const [archive, setArchive] = useState(null); const [meta, setMeta] = useState({}); const [digest, setDigest] = useState(null);
@@ -382,6 +384,18 @@ function App() {
   const [favs, toggleFav] = useFavs(events); const [open, setOpen] = useState(null); const [cmd, setCmd] = useState(false); const [shown, setShown] = useState(PAGE); const [toast, setToast] = useState(null);
   const { speakers, toggle: toggleSpeaker, seen: seenSpeakerEvents, markSeen } = useSpeakers();
   const [speakersOpen, setSpeakersOpen] = useState(false);
+  // Dock : caché en descendant (au-delà du haut de page), de retour dès qu'on remonte
+  const [dockHidden, setDockHidden] = useState(false);
+  useEffect(() => {
+    let last = window.scrollY;
+    const h = () => {
+      const y = window.scrollY, d = y - last;
+      if (Math.abs(d) < 8) return;
+      last = y; setDockHidden(d > 0 && y > 240);
+    };
+    window.addEventListener("scroll", h, { passive: true });
+    return () => window.removeEventListener("scroll", h);
+  }, []);
   const [notifyPerm, setNotifyPerm] = useState(() => (typeof Notification === "undefined" ? "unsupported" : Notification.permission));
   const [near, setNear] = useState(false); const [userPos, setUserPos] = useState(null); const [locating, setLocating] = useState(false);
   const agendaRef = useRef(null), moreRef = useRef(null), pendingEvent = useRef(init.event);
@@ -598,22 +612,24 @@ function App() {
   const toggleTheme = () => { const r = document.documentElement, dark = r.dataset.theme === "dark" || (!r.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches); r.dataset.theme = dark ? "light" : "dark"; store.set("paf_theme", dark ? "light" : "dark"); };
   const pickRandom = () => { const p = filtered.length ? filtered : pool; if (p.length) setOpen(p[Math.floor(Math.random() * p.length)]); };
 
-  if (loadErr) return <div className="mx-auto max-w-lg p-10 text-center"><p className="font-semibold">{t("empty_generic_title")}</p><p className="text-sm text-muted-foreground mt-1">{loadErr}</p></div>;
+  // Panne de chargement (réseau, fichier absent) : pas « rien ne correspond », une vraie explication et une sortie
+  if (loadErr) return <div role="alert" className="mx-auto max-w-lg p-10 text-center"><p className="font-serif text-2xl font-medium">{t("err_title")}</p><p className="mt-2 text-muted-foreground">{t("err_body")}</p><Button className="mt-5" onClick={() => location.reload()}>{t("err_reload")}</Button><p className="mt-4 text-xs text-muted-foreground">{loadErr}</p></div>;
 
   return <>
     <Ambient />
+    <a href="#contenu" onClick={ev => { ev.preventDefault(); const m = document.getElementById("contenu"); m?.focus({ preventScroll: true }); m?.scrollIntoView(); }} className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[80] focus:rounded-md focus:border focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:font-medium">{t("skip_link")}</a>
     <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-4">
-        <a href="/" className="flex shrink-0 items-center gap-2"><span className="font-serif text-2xl font-medium">Lotent</span></a>
+        <a href="/" className="flex shrink-0 items-center gap-2"><Logo /></a>
         <nav className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground ml-2 whitespace-nowrap"><button onClick={backToAgenda} className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_agenda")}</button><button onClick={toggleHistory} className={cn("px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent", history && "text-foreground bg-accent")}>{t("nav_history")}</button><a href="apropos.html" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_about")}</a><a href={PROPOSE_URL} target="_blank" rel="noopener" className="hidden xl:inline px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_propose")}</a></nav>
         <div className="ml-auto flex shrink-0 items-center gap-2">
-          <button onClick={() => setCmd(true)} className="inline-flex items-center gap-2 h-9 rounded-md border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent hover:text-foreground w-10 sm:w-52 xl:w-64 justify-center sm:justify-between" aria-label={t("search_ph")}><Icon d={ICONS.search} size={15} className="sm:hidden" /><span className="hidden sm:inline">{t("search_ph")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
+          <button onClick={() => setCmd(true)} className="inline-flex items-center gap-2 h-9 rounded-md border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent hover:text-foreground w-10 sm:w-52 xl:w-64 justify-center sm:justify-between" aria-label={t("search_ph")}><Icon d={ICONS.search} size={15} className="sm:hidden" /><span className="hidden sm:inline">{t("search_ph")}</span><Kbd className="hidden sm:inline-flex">{SHORTCUT}</Kbd></button>
           <Button variant="outline" size="icon" onClick={toggleLang} aria-label={t("lang_aria")} className="font-semibold text-xs">{lang === "en" ? "FR" : "EN"}</Button>
           <Button variant="outline" size="icon" onClick={toggleTheme} aria-label={t("theme_aria")}><Icon d={ICONS.moon} size={16} className="dark:hidden" /><Icon d={ICONS.sun} size={16} className="hidden dark:block" /></Button>
           <MovingBorderButton href="data/calendar.ics" onClick={ev => { ev.preventDefault(); openSubscribe("data/calendar.ics"); }} className="hidden sm:inline-flex h-9">{t("subscribe")}</MovingBorderButton>
         </div></div></header>
 
-    <main className="mx-auto max-w-7xl px-4 sm:px-6">
+    <main id="contenu" tabIndex={-1} className="mx-auto max-w-7xl px-4 outline-none sm:px-6">
       {history ? <section className="relative pt-16 pb-10 text-center overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(60%_55%_at_50%_-10%,rgba(180,83,9,.22),transparent_70%)]" />
         <BlurFade inView={false}><div className="inline-flex items-center gap-1.5 rounded-full border bg-background/60 px-4 py-1 text-sm shadow-sm"><Icon d={ICONS.history} size={13} />{t("history_kicker")}</div></BlurFade>
@@ -622,16 +638,16 @@ function App() {
       </section> : <>
       {/* overflow-x-clip : le halo (thème sombre) dépassait à droite sur téléphone → défilement latéral */}
       <section className="pt-12 pb-8 sm:pt-16">
-        <p className="text-sm text-muted-foreground">{meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UP.length }) : ""}</p>
+        <p className="text-sm text-muted-foreground">{meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UPc.length }) : ""}</p>
         <h1 className="mt-3 max-w-3xl font-serif text-4xl font-medium leading-[1.05] tracking-tight [text-wrap:balance] sm:text-6xl">{t("hero_title_1")} {t("hero_title_2")}</h1>
         <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{/* Même phrase pendant le chargement (« … » à la place des nombres) : « chargement… »
             tenait sur une ligne, la phrase sur quatre (téléphone) — toute la page sautait de 84 px
             à l'arrivée des données (CLS 0,43, « mauvais » pour Google) */}
-          {t("hero_lede", events ? { n: Object.keys(instAll).length, f: UP.filter(isFree).length } : { n: "…", f: "…" })}</p>
+          {t("hero_lede", events ? { n: Object.keys(instAll).length, f: UPc.filter(isFree).length } : { n: "…", f: "…" })}</p>
         <button onClick={() => setCmd(true)} className="mt-8 flex h-12 w-full max-w-xl items-center gap-3 rounded-lg border bg-card px-4 text-left text-muted-foreground hover:border-foreground/40" aria-label={t("search_ph")}>
-          <Icon d={ICONS.search} size={17} /><span className="flex-1 truncate">{t("hero_search")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
-        <nav className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-          {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w]) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="underline decoration-border underline-offset-4 first-letter:uppercase hover:decoration-foreground">{l} <span className="tabular-nums text-muted-foreground">{Intl.NumberFormat(lang === "en" ? "en-US" : "fr-FR").format(n)}</span></button>)}
+          <Icon d={ICONS.search} size={17} /><span className="flex-1 truncate">{t("hero_search")}</span><Kbd className="hidden sm:inline-flex">{SHORTCUT}</Kbd></button>
+        <nav className="mt-4 flex flex-wrap gap-2 text-sm">
+          {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w]) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="inline-flex h-11 items-center gap-1.5 rounded-lg border px-3.5 hover:bg-accent sm:h-9"><span className="first-letter:uppercase">{l}</span> <span className="tabular-nums text-muted-foreground">{Intl.NumberFormat(lang === "en" ? "en-US" : "fr-FR").format(n)}</span></button>)}
         </nav>
       </section>
 
@@ -642,22 +658,23 @@ function App() {
       {!events && <div aria-hidden="true"><div className="h-[74px]" /><section className="py-10"><div className="mb-5 h-[56px]" />
         <BentoGrid>{["lg:col-span-2 lg:row-span-2", "", "", "lg:col-span-2", "lg:col-span-2", "lg:col-span-2"].map((c, i) => <div key={i} className={cn("rounded-xl border bg-card/60 animate-pulse", c)} />)}</BentoGrid></section></div>}
       {topInst.length > 0 && <section className="py-2 relative [mask-image:linear-gradient(to_right,transparent,#000_10%,#000_90%,transparent)]">
-        <Marquee pauseOnHover>{topInst.map(([i, n]) => <button key={i} onClick={() => { setHistory(false); setF({ inst: new Set([i]) }); goAgenda(); }} className="inline-flex items-center gap-2 rounded-lg border bg-card px-3 py-2 text-sm shadow-sm hover:bg-accent whitespace-nowrap"><span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-muted text-xs font-semibold">{i[0]}</span>{i}<span className="text-xs text-muted-foreground tabular-nums">{n}</span></button>)}</Marquee>
+        <Marquee pauseOnHover>{topInst.map(([i, n]) => <button key={i} onClick={() => { setHistory(false); setF({ inst: new Set([i]) }); goAgenda(); }} className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-3 py-2 text-sm shadow-sm hover:bg-accent whitespace-nowrap"><span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-muted text-xs font-semibold">{i[0]}</span>{i}<span className="text-xs text-muted-foreground tabular-nums">{n}</span></button>)}</Marquee>
       </section>}
 
       {events && <section className="py-10">
         <BlurFade><div className="mb-5 flex items-end justify-between gap-4"><div><h2 className="font-serif text-3xl font-medium">{t("featured_title")}</h2><p className="text-sm text-muted-foreground mt-1">{digest && featured.length >= 3 ? t("featured_sub_digest", { period: digestPeriod() }) : t("featured_sub_auto")}</p></div></div></BlurFade>
         <BentoGrid>
-          {featured[0] && <BentoCard className="lg:col-span-2 lg:row-span-2" name={featured[0].title} meta={`${relDay(featured[0].date, TODAY, TOMORROW) || fmtShort(featured[0].date)}${featured[0].time ? " · " + featured[0].time : ""} · ${featured[0].institution}`} description={featured[0].speaker} onClick={() => setOpen(featured[0])}
-            background={<div className="group h-full"><Cover e={featured[0]} className="absolute inset-0" eager label={false} /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" /></div>} />}
+          {featured[0] && <BentoCard className="lg:col-span-2 lg:row-span-2" name={featured[0].title} meta={`${relDay(featured[0].date, TODAY, TOMORROW) || fmtShort(featured[0].date)}${featured[0].time ? " · " + featured[0].time : ""}${featured[0].image ? " · " + featured[0].institution : ""}`} description={featured[0].speaker} onClick={() => setOpen(featured[0])}
+            background={<div className="group h-full"><Cover e={featured[0]} className="absolute inset-0" eager labelTop /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" /></div>} />}
           {featured.slice(1, 3).map(e => <BentoCard key={e.id} className="lg:col-span-2" name={e.title} meta={`${relDay(e.date, TODAY, TOMORROW) || fmtShort(e.date)}${e.time ? " · " + e.time : ""}`} onClick={() => setOpen(e)}
-            background={<div className="group h-full"><Cover e={e} className="absolute inset-0" eager label={false} /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" /></div>} />)}
+            background={<div className="group h-full"><Cover e={e} className="absolute inset-0" eager labelTop /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" /></div>} />)}
         </BentoGrid>
       </section>}
       </>}
 
       <div ref={agendaRef} className="scroll-mt-14" />
       <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 bg-background/80 backdrop-blur border-b">
+        {/* Téléphone : un fondu sur le bord droit des deux rangées signale qu'elles défilent */}
         {/* Fond prolongé jusqu'aux bords de l'écran. Sur un calque à part : posé
             sur la barre, le clip-path qui borne l'ombre en hauteur coupait aussi
             les menus Discipline / Institution / Source / Accès (cases
@@ -665,11 +682,11 @@ function App() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 [box-shadow:0_0_0_100vmax_hsl(var(--background)/.8)] [clip-path:inset(0_-100vmax)]" />
         <div className="flex items-center gap-2">
           {history
-            ? <div className="flex min-w-0 flex-wrap items-center gap-2"><Badge variant="solid" className="h-9 px-3 text-sm">{t("history_badge")}</Badge><select value={histMonth} onChange={e => setHistMonth(e.target.value)} className="h-9 rounded-md border bg-background px-2 text-sm"><option value="all">{t("history_all_period")}</option>{histMonths.map(m => <option key={m} value={m}>{MO[+m.slice(5, 7) - 1]} {m.slice(0, 4)}</option>)}</select><Button variant="outline" size="sm" className="h-9" onClick={toggleHistory}>{t("history_back")}</Button></div>
-            : <div className="min-w-0 flex-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"><Tabs value={filters.when} onChange={w => setF({ when: w })} items={[["all", t("tab_all")], ["today", t("tab_today")], ["tonight", t("tab_tonight")], ["week", t("tab_week")], ["weekend", t("tab_weekend")], ...(nNew ? [["new", `${t("tab_new")} · ${nNew}`]] : [])]} /></div>}
-          <span className="ml-auto shrink-0 pl-1 text-sm text-muted-foreground tabular-nums whitespace-nowrap"><b className="text-foreground font-medium">{filtered.length}</b> {t("noun_event", { n: filtered.length })}</span>
+            ? <div className="flex min-w-0 flex-wrap items-center gap-2"><Badge variant="solid" className="h-9 px-3 text-sm">{t("history_badge")}</Badge><select value={histMonth} onChange={e => setHistMonth(e.target.value)} className="h-9 rounded-md border bg-background px-2 text-sm"><option value="all">{t("history_all_period")}</option>{histMonths.map(m => <option key={m} value={m}>{MO[+m.slice(5, 7) - 1]} {m.slice(0, 4)}</option>)}</select><Button variant="outline" size="sm" className="h-9" onClick={toggleHistory}><Arr text={t("history_back")} /></Button></div>
+            : <div className="min-w-0 flex-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [mask-image:linear-gradient(to_right,#000_calc(100%_-_20px),transparent)] sm:[mask-image:none]"><Tabs value={filters.when} onChange={w => setF({ when: w })} items={[["all", t("tab_all")], ["today", t("tab_today")], ["tonight", t("tab_tonight")], ["week", t("tab_week")], ["weekend", t("tab_weekend")], ...(nNew ? [["new", `${t("tab_new")} · ${fmtNum(nNew)}`, undefined, t("tab_new_hint")]] : [])]} /></div>}
+          <span className="ml-auto shrink-0 pl-1 text-sm text-muted-foreground tabular-nums whitespace-nowrap"><b className="text-foreground font-medium">{fmtNum(filtered.length)}</b> {t("noun_event", { n: filtered.length })}</span>
         </div>
-        <div className="mt-2 -mx-4 flex items-center gap-2 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+        <div className="mt-2 -mx-4 flex items-center gap-2 overflow-x-auto px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [mask-image:linear-gradient(to_right,#000_calc(100%_-_20px),transparent)] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:[mask-image:none]">
           <Popover closeLabel={t("fermer")} label={t("pop_discipline")} count={filters.disc.size}>{() => <CheckList values={Object.keys(DISC).filter(d => counts.disc[d] || filters.disc.has(d)).map(d => [d, counts.disc[d] || 0])} set={filters.disc} onToggle={toggleIn("disc")} labelFn={discName} swatch colorOf={v => `var(${DISC[v] || "--c-aut"})`} onClear={() => setF({ disc: new Set() })} clearLabel={t("clear_all")} />}</Popover>
           <Popover closeLabel={t("fermer")} label={t("pop_institution")} count={filters.inst.size}>{() => <CheckList values={[...MAIN_INST.filter(i => counts.inst[i] || filters.inst.has(i)).map((i, k) => [i, counts.inst[i] || 0, k === 0 ? t("group_establishments") : null]), ...instOthers.map(([i, n], k) => [i, n, k === 0 ? t("group_others") : null])]} set={filters.inst} onToggle={toggleIn("inst")} onClear={() => setF({ inst: new Set() })} clearLabel={t("clear_all")} />}</Popover>
           <Popover closeLabel={t("fermer")} label={t("pop_source")} count={filters.src.size + filters.cat.size + filters.theme.size}>{() => <>
@@ -688,10 +705,10 @@ function App() {
               labelFn={v => v.startsWith("flag:") ? FLAGS[v.slice(5)][2] : (v === "membres" ? "🔒 " : "") + t(v === "membres" ? "access_members" : "access_public")}
               titleFn={v => v === "flag:en" ? t("filter_en_hint") : undefined}
               onClear={() => setF({ access: new Set(), online: false, free: false, en: false })} clearLabel={t("clear_all")} />; }}</Popover>
-          <Button variant={filters.fav ? "default" : "outline"} size="sm" className="h-9 shrink-0" onClick={() => setF({ fav: !filters.fav })} aria-pressed={filters.fav}>★<span className="hidden sm:inline"> {t("btn_fav")}</span>{favs.size > 0 && <span className={cn("inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[11px]", filters.fav ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground")}>{favs.size}</span>}</Button>
+          <Button variant={filters.fav ? "default" : "outline"} size="sm" className="h-9 shrink-0" onClick={() => setF({ fav: !filters.fav })} aria-pressed={filters.fav} aria-label={t("btn_fav")}>★<span className="hidden sm:inline"> {t("btn_fav")}</span>{favs.size > 0 && <span className={cn("inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-xs", filters.fav ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground")}>{favs.size}</span>}</Button>
           <div className="ml-auto flex shrink-0 items-center gap-2">
             {!history && <Tabs value={view} onChange={setView} layoutId="view-pill" items={[["list", <Icon d={ICONS.list} size={15} />, t("view_list")], ["week", <Icon d={ICONS.week} size={15} />, t("view_week")], ["map", <Icon d={ICONS.map} size={15} />, t("view_map")]]} />}
-            {!history && <Button variant={near ? "default" : "outline"} size="sm" className="h-9" onClick={toggleNear} aria-pressed={near} disabled={locating}><Icon d={ICONS.pin} size={14} /><span className="hidden lg:inline">{locating ? t("near_locate") : near ? t("near_sorted") : t("near_label")}</span></Button>}
+            {!history && <Button variant={near ? "default" : "outline"} size="sm" className="h-9" onClick={toggleNear} aria-pressed={near} disabled={locating} aria-label={locating ? t("near_locate") : near ? t("near_sorted") : t("near_label")}><Icon d={ICONS.pin} size={14} /><span className="hidden lg:inline">{locating ? t("near_locate") : near ? t("near_sorted") : t("near_label")}</span></Button>}
           </div>
         </div>
         {(activeTags.length > 0 || rawQ) && <div className="flex flex-wrap gap-1.5 mt-2">{rawQ && <span className="inline-flex items-center gap-1 rounded-md border bg-background pl-2 pr-1 py-0.5 text-xs font-medium">« {rawQ} »<button onClick={() => { setRawQ(""); setF({ q: "" }); }} className="inline-flex h-4 w-4 items-center justify-center rounded-sm text-muted-foreground hover:bg-accent hover:text-foreground">×</button></span>}{activeTags.map(([l, rm]) => <span key={l} className="inline-flex items-center gap-1 rounded-md border bg-background pl-2 pr-1 py-0.5 text-xs font-medium">{l}<button onClick={rm} className="inline-flex h-4 w-4 items-center justify-center rounded-sm text-muted-foreground hover:bg-accent hover:text-foreground">×</button></span>)}</div>}
@@ -703,7 +720,8 @@ function App() {
       <section className="py-4 pb-36">
         {!events && <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pt-6">{[...Array(8)].map((_, i) => <div key={i} className="rounded-xl border bg-card overflow-hidden animate-pulse"><div className="aspect-[16/10] bg-muted" /><div className="p-4 space-y-2"><div className="h-3 w-1/3 bg-muted rounded" /><div className="h-4 w-4/5 bg-muted rounded" /><div className="h-3 w-1/2 bg-muted rounded" /></div></div>)}</div>}
         {events && history && !archive && <p className="pt-6 text-sm text-muted-foreground">{t("history_loading")}</p>}
-        {events && !filtered.length && (!history || archive) && <div className="mt-6 rounded-xl border border-dashed p-12 text-center"><p className="font-medium">{filters.fav && !favs.size ? t("empty_fav_title") : t("empty_generic_title")}</p><p className="text-sm text-muted-foreground mt-1">{filters.fav && !favs.size ? t("empty_fav_sub") : t("empty_generic_sub")}</p></div>}
+        {events && !filtered.length && (!history || archive) && <div className="mt-6 rounded-xl border border-dashed p-12 text-center"><p className="font-medium">{filters.fav && !favs.size ? t("empty_fav_title") : t("empty_generic_title")}</p><p className="text-sm text-muted-foreground mt-1">{filters.fav && !favs.size ? t("empty_fav_sub") : t("empty_generic_sub")}</p>
+          {!(filters.fav && !favs.size) && <Button variant="outline" className="mt-5" onClick={() => { setFilters(EMPTY_FILTERS); setRawQ(""); setNear(false); }}>{t("clear_filters")}</Button>}</div>}
         {events && view === "week" && !history && <WeekView events={filtered} onOpen={setOpen} favs={favs} />}
         {events && view === "map" && !history && <MapView events={filtered} onOpen={setOpen} onPlace={showPlace} userPos={userPos} />}
         {events && (view === "list" || history) && (near && userPos
@@ -735,16 +753,17 @@ function App() {
     </footer>
 
 
-    <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40">
+    {/* Téléphone : le dock se retire quand on descend dans la liste et revient quand on remonte (il masquait les cartes) */}
+    <div className={cn("fixed bottom-5 left-1/2 z-40 -translate-x-1/2 transition-transform duration-200", dockHidden && "translate-y-28 sm:translate-y-0")}>
       <Dock>
         <DockIcon title={t("dock_top")} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Icon d={ICONS.up} /></DockIcon>
         <DockIcon title={t("dock_today")} active={!history && filters.when === "today"} onClick={() => { setF({ when: "today" }); backToAgenda(); }}><Icon d={ICONS.cal} /></DockIcon>
         <DockIcon title={t("dock_history")} active={history} onClick={toggleHistory}><Icon d={ICONS.history} /></DockIcon>
         <DockIcon title={t("dock_random")} onClick={pickRandom}><Icon d={ICONS.random} /></DockIcon>
-        <DockIcon title={t("dock_fav")} active={filters.fav} onClick={() => { setF({ fav: !filters.fav }); goAgenda(); }}><Icon d={ICONS.star} />{favs.size > 0 && <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 rounded-full bg-primary text-primary-foreground text-[10px] font-bold px-1 leading-4">{favs.size}</span>}</DockIcon>
-        {speakers.size > 0 && <DockIcon title={t("my_speakers")} active={speakersOpen} onClick={openSpeakers}><Icon d={ICONS.bell} />{followedNew.length > 0 && <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 rounded-full bg-primary text-primary-foreground text-[10px] font-bold px-1 leading-4">{followedNew.length}</span>}</DockIcon>}
-        <DockSep />
-        <DockIcon title={t("dock_search")} onClick={() => setCmd(true)}><Icon d={ICONS.search} /></DockIcon>
+        <DockIcon title={t("dock_fav")} active={filters.fav} onClick={() => { setF({ fav: !filters.fav }); goAgenda(); }}><Icon d={ICONS.star} />{favs.size > 0 && <span className="absolute -top-1 -right-1 h-5 min-w-5 rounded-full bg-primary text-primary-foreground text-xs font-bold px-1 leading-5">{favs.size}</span>}</DockIcon>
+        {speakers.size > 0 && <DockIcon title={t("my_speakers")} active={speakersOpen} onClick={openSpeakers}><Icon d={ICONS.bell} />{followedNew.length > 0 && <span className="absolute -top-1 -right-1 h-5 min-w-5 rounded-full bg-primary text-primary-foreground text-xs font-bold px-1 leading-5">{followedNew.length}</span>}</DockIcon>}
+        <DockSep className="hidden sm:block" />
+        <DockIcon className="hidden sm:flex" title={`${t("dock_search")} (${SHORTCUT})`} onClick={() => setCmd(true)}><Icon d={ICONS.search} /></DockIcon>
       </Dock>
     </div>
 

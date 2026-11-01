@@ -15,7 +15,7 @@
        et même document. Ce canonical fixe dit à Google de tout consolider sur « / ». -->
   <link rel="canonical" href="https://lotent.fr/" />
 
-  <link rel="icon" href="icon.svg?v=2" type="image/svg+xml" />
+  <link rel="icon" href="icon.svg?v=3" type="image/svg+xml" />
   <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192" />
   <link rel="manifest" href="manifest.json" />
   <!-- iOS n'accepte pas d'icône SVG pour l'écran d'accueil -->
@@ -46,10 +46,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=62" />
+  <link rel="stylesheet" href="app.css?v=63" />
   <!-- En tête (defer) plutôt qu'en fin de page : le téléchargement démarre
        avant la lecture du contenu pré-rendu de l'accueil -->
-  <script src="app.js?v=62" defer></script>
+  <script src="app.js?v=63" defer></script>
   <script>
     // Agenda découpé par mois (data/m/) : on lance l'index et les mois des
     // 7 prochains jours tout de suite, en parallèle du téléchargement d'app.js,
@@ -115,7 +115,7 @@
 <body>
   <div id="splash" aria-hidden="true">
     <div class="sp-in">
-      <img src="icon.svg?v=2" alt="" width="56" height="56" />
+      <img src="icon.svg?v=3" alt="" width="56" height="56" />
       <div class="sp-name">Lotent</div>
       <div class="sp-bar"><span></span></div>
     </div>
@@ -125,8 +125,8 @@
        vers les hubs par institution. -->
   <div id="root">
     <main style="max-width:48rem;margin:0 auto;padding:4rem 1.5rem;font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.5">
-      <h1 style="font-size:2rem;font-weight:700;letter-spacing:-.02em">Toutes les conférences de Paris, en un seul agenda.</h1>
-      <p style="color:#666">Cours du Collège de France, séminaires de l'IHP et de PSE, rencontres Luma : réunis chaque matin. Chargement de l'agenda…</p>
+      <h1 style="font-size:2rem;font-weight:700;letter-spacing:-.02em">Les conférences ouvertes au public à Paris, en un seul agenda.</h1>
+      <p style="color:#666">Cours du Collège de France, séminaires de l'Institut Henri Poincaré et de PSE, rencontres Luma : réunis chaque matin. Chargement de l'agenda…</p>
       <!-- Écrit chaque jour par le robot (write_home_prerender) : ne pas modifier à la main -->
       <!-- lotent:prerender -->
       <h2 style="font-size:1.2rem;margin-top:2rem">Prochaines conférences à Paris</h2>

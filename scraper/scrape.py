@@ -6173,6 +6173,9 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
 
 
 OG_FILE = OUTPUT_FILE.parent.parent / "og.png"
+# Marque (escargot de Paris) pour les images de partage — géométrie : web/src/logo-geometry.mjs
+LOGO_MARK = ('<svg width="__S__" height="__S__" viewBox="0 0 64 64" fill="none"><path d="M32 29.5C32.11 29.42 32.43 29.12 32.69 29C32.95 28.88 33.25 28.8 33.56 28.78C33.87 28.75 34.21 28.77 34.54 28.84C34.88 28.91 35.23 29.03 35.55 29.2C35.87 29.37 36.2 29.6 36.49 29.88C36.78 30.15 37.06 30.48 37.28 30.84C37.51 31.2 37.71 31.62 37.84 32.06C37.98 32.49 38.07 32.98 38.1 33.46C38.12 33.95 38.09 34.47 37.99 34.98C37.89 35.49 37.73 36.01 37.5 36.51C37.26 37.01 36.96 37.5 36.6 37.95C36.24 38.4 35.8 38.83 35.32 39.2C34.84 39.57 34.29 39.9 33.71 40.16C33.12 40.42 32.48 40.62 31.83 40.74C31.17 40.85 30.47 40.91 29.78 40.86C29.09 40.82 28.36 40.7 27.67 40.5C26.98 40.29 26.28 39.99 25.63 39.61C24.98 39.24 24.34 38.77 23.77 38.23C23.2 37.69 22.67 37.07 22.23 36.39C21.79 35.71 21.4 34.95 21.11 34.17C20.83 33.38 20.62 32.52 20.52 31.66C20.42 30.8 20.41 29.89 20.51 29C20.62 28.11 20.82 27.2 21.14 26.33C21.45 25.46 21.87 24.59 22.39 23.79C22.91 23 23.54 22.22 24.25 21.55C24.95 20.87 25.77 20.24 26.63 19.73C27.5 19.22 28.46 18.78 29.45 18.47C30.43 18.16 31.5 17.95 32.56 17.87C33.61 17.79 34.73 17.82 35.8 17.99C36.88 18.16 37.98 18.45 39.02 18.87C40.06 19.29 41.09 19.84 42.02 20.49C42.96 21.15 43.86 21.94 44.64 22.81C45.43 23.69 46.14 24.68 46.72 25.73C47.3 26.78 47.78 27.94 48.11 29.12C48.44 30.3 48.65 31.57 48.71 32.82C48.77 34.07 48.69 35.38 48.46 36.64C48.22 37.9 47.84 39.18 47.32 40.38C46.8 41.58 46.12 42.77 45.32 43.84C44.53 44.91 43.58 45.94 42.55 46.82C41.51 47.7 40.33 48.5 39.1 49.14C37.86 49.78 36.51 50.3 35.14 50.65C33.77 51 32.31 51.2 30.87 51.24C29.42 51.27 27.93 51.14 26.49 50.84C25.05 50.54 23.59 50.07 22.23 49.44C20.88 48.81 19.54 48.01 18.34 47.07C17.13 46.14 16 45.04 15.02 43.84C14.04 42.64 13.16 41.28 12.47 39.87C11.77 38.45 11.22 36.91 10.85 35.35C10.49 33.79 10.29 32.13 10.29 30.51C10.28 28.88 10.46 27.19 10.83 25.58C11.2 23.97 11.77 22.34 12.5 20.83C13.24 19.32 14.17 17.84 15.24 16.51C16.31 15.18 17.57 13.93 18.94 12.86C20.3 11.79 21.83 10.84 23.43 10.09C25.02 9.35 26.75 8.76 28.5 8.38C30.24 8.01 32.09 7.82 33.9 7.85C35.71 7.88 37.58 8.11 39.36 8.55C41.15 9 42.94 9.66 44.6 10.5C46.26 11.34 47.89 12.4 49.33 13.61C50.78 14.82 52.14 16.24 53.3 17.77C54.46 19.29 55.48 21 56.27 22.77C57.06 24.55 57.68 26.47 58.06 28.4C58.44 30.32 58.62 32.36 58.55 34.35C58.49 36.34 57.82 39.34 57.68 40.34" stroke="#f4f4f5" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>'
+             '<circle cx="57.68" cy="40.34" r="4.8" fill="#8CA7FF"/></svg>')
 OG_INST_DIR = OUTPUT_FILE.parent / "og"
 INST_PAGES_DIR = OUTPUT_FILE.parent.parent / "i"
 
@@ -6830,46 +6833,28 @@ def write_institution_share_pages(events):
             n = len(evts)
             initial = inst[0].upper()
             html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,500&display=swap');
 * {{ margin:0; padding:0; box-sizing:border-box; }}
-body {{ width:1200px; height:630px; background:#07070d; overflow:hidden; position:relative;
-       font-family:'Space Grotesk',sans-serif; color:#ececf2; }}
-.blob {{ position:absolute; border-radius:50%; filter:blur(120px); opacity:.55; }}
-.b1 {{ width:560px; height:560px; background:#6d28d9; top:-180px; left:-120px; }}
-.b2 {{ width:480px; height:480px; background:#1d4ed8; top:120px; right:-140px; }}
-.b3 {{ width:430px; height:430px; background:#be185d; bottom:-200px; left:330px; }}
-.grain {{ position:absolute; inset:0;
-         background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);
-         background-size:4px 4px; }}
+body {{ width:1200px; height:630px; background:#111113; overflow:hidden; position:relative;
+       font-family:'Instrument Sans',sans-serif; color:#f4f4f5; }}
 .wrap {{ position:absolute; inset:0; display:flex; flex-direction:column;
         justify-content:center; padding:0 90px; }}
-.brand {{ font-size:24px; font-weight:500; color:#8888a0; margin-bottom:22px;
-         letter-spacing:.04em; }}
+.brand {{ font-size:26px; color:#a1a1aa; margin-bottom:22px; }}
 .row {{ display:flex; align-items:center; gap:32px; margin-bottom:34px; }}
-.avatar {{ width:130px; height:130px; border-radius:36px; flex:0 0 130px;
+.avatar {{ width:130px; height:130px; border-radius:20px; flex:0 0 130px;
           display:flex; align-items:center; justify-content:center;
-          font-size:74px; font-weight:700; color:#fff;
-          background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6);
-          box-shadow:0 18px 60px -10px rgba(120,100,255,.6); }}
-h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
-     background:linear-gradient(100deg,#ececf2 30%,#a78bfa 80%);
-     -webkit-background-clip:text; -webkit-text-fill-color:transparent; }}
-.count {{ font-size:42px; font-weight:600; color:#c2c2d0;
-         font-family:Inter,sans-serif; }}
-.count b {{ background:linear-gradient(100deg,#a78bfa,#60a5fa);
-            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-            font-weight:700; }}
+          font-family:Newsreader,serif; font-size:76px; font-weight:500; color:#f4f4f5;
+          background:#1c1c20; border:1px solid #2f2f35; }}
+h1 {{ font-family:Newsreader,serif; font-size:60px; font-weight:500; line-height:1.05; color:#f4f4f5; }}
+.count {{ font-size:38px; color:#a1a1aa; }}
+.count b {{ color:#f4f4f5; font-family:Newsreader,serif; font-weight:500; }}
 .foot {{ position:absolute; bottom:48px; left:90px; right:90px;
         display:flex; justify-content:space-between; align-items:center;
-        font-family:Inter,sans-serif; font-size:19px; color:#8888a0; }}
-.orb {{ width:18px; height:18px; border-radius:50%; display:inline-block;
-       background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6);
-       vertical-align:-3px; margin-right:9px; }}
+        font-size:20px; color:#a1a1aa; }}
+.mk {{ vertical-align:-5px; margin-right:9px; }}
 </style></head><body>
-<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-<div class="grain"></div>
 <div class="wrap">
-  <div class="brand">CONFÉRENCES À PARIS</div>
+  <div class="brand">Conférences à Paris</div>
   <div class="row">
     <div class="avatar">{initial}</div>
     <div>
@@ -6879,7 +6864,7 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
   <div class="count"><b>Agenda</b>&nbsp;des conférences à venir</div>
 </div>
 <div class="foot">
-  <span><span class="orb"></span>lotent.fr</span>
+  <span><span class="mk">{LOGO_MARK.replace('__S__', '24')}</span>lotent.fr</span>
   <span>mis à jour chaque jour</span>
 </div>
 </body></html>"""
@@ -6944,7 +6929,7 @@ h1 {{ font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-.5px;
 # l'historique git, et des envois de 18 Mo que la connexion de maj.bat
 # n'arrivait pas toujours à pousser.
 OG_LABELS = OG_INST_DIR / "labels.json"
-OG_INST_VERSION = "nom-seul"    # à changer pour refaire toutes les images d'institution
+OG_INST_VERSION = "escargot-1"    # à changer pour refaire toutes les images d'institution
 
 
 def _og_labels():
@@ -6979,50 +6964,25 @@ def write_og_image(events):
         print(f"og.png inchangé ({label} événements à venir)")
         return
     html = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,500&display=swap');
 * { margin:0; padding:0; box-sizing:border-box; }
-body { width:1200px; height:630px; background:#07070d; overflow:hidden;
-       position:relative; font-family:'Space Grotesk',sans-serif; color:#ececf2; }
-.blob { position:absolute; border-radius:50%; filter:blur(120px); opacity:.55; }
-.b1 { width:560px; height:560px; background:#6d28d9; top:-180px; left:-120px; }
-.b2 { width:480px; height:480px; background:#1d4ed8; top:120px; right:-140px; }
-.b3 { width:430px; height:430px; background:#be185d; bottom:-200px; left:330px; }
-.grain { position:absolute; inset:0;
-         background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);
-         background-size:4px 4px; }
-.wrap { position:absolute; inset:0; display:flex; flex-direction:column;
-        justify-content:center; padding:0 90px; }
-.orb { width:34px; height:34px; border-radius:50%;
-       background:linear-gradient(135deg,#a78bfa,#60a5fa,#f472b6);
-       display:inline-block; vertical-align:middle; margin-right:16px; }
-.brand { font-size:30px; font-weight:600; color:#c2c2d0;
-         display:flex; align-items:center; margin-bottom:34px; }
-h1 { font-size:74px; font-weight:700; line-height:1.12; letter-spacing:-1px;
-     background:linear-gradient(100deg,#ececf2 20%,#a78bfa 55%,#60a5fa 80%);
-     -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-     margin-bottom:34px; }
-.sub { font-family:Inter,sans-serif; font-size:27px; color:#9a9ab2;
-       line-height:1.5; max-width:900px; }
-.badges { position:absolute; bottom:54px; left:90px; display:flex; gap:14px;
-          font-family:Inter,sans-serif; }
-.badge { font-size:20px; padding:10px 22px; border-radius:999px;
-         border:1px solid rgba(255,255,255,.16);
-         background:rgba(255,255,255,.05); color:#c2c2d0; }
-.badge b { color:#fff; }
+body { width:1200px; height:630px; background:#111113; overflow:hidden; position:relative;
+       font-family:'Instrument Sans',sans-serif; color:#f4f4f5; }
+.wrap { position:absolute; inset:0; padding:80px 90px; }
+.brand { display:flex; align-items:center; gap:18px; font-family:Newsreader,serif; font-size:52px; font-weight:500; }
+h1 { font-family:Newsreader,serif; font-size:86px; font-weight:500; line-height:1.1; margin-top:96px; }
+.sub { font-size:27px; color:#a1a1aa; margin-top:30px; }
+.foot { position:absolute; left:90px; right:90px; bottom:46px; border-top:1.5px solid #2a2a2e;
+        padding-top:30px; font-size:26px; }
+.foot span { color:#a1a1aa; }
 </style></head><body>
-<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-<div class="grain"></div>
 <div class="wrap">
-  <div class="brand"><span class="orb"></span>lotent.fr</div>
+  <div class="brand">__MARK__Lotent</div>
   <h1>Toutes les conférences<br>académiques de Paris.</h1>
-  <div class="sub">Collège de France · ENS · EHESS · Sorbonne · Sciences Po · IHP · PSE · PSL — mis à jour chaque jour.</div>
+  <div class="sub">Collège de France · ENS · EHESS · Sorbonne · Sciences Po · IHP · PSE · PSL</div>
 </div>
-<div class="badges">
-  <span class="badge"><b>__N__</b>&nbsp;événements à venir</span>
-  <span class="badge">Gratuit, sans compte</span>
-  <span class="badge">Carte · Agenda · iCal</span>
-</div>
-</body></html>""".replace("__N__", label)
+<div class="foot">__N__ événements à venir <span>· gratuit, sans compte · mis à jour chaque jour</span></div>
+</body></html>""".replace("__N__", label).replace("__MARK__", LOGO_MARK.replace("__S__", "62"))
     tmp = OG_FILE.parent / "_og_template.html"
     tmp.write_text(html, encoding="utf-8")
     try:

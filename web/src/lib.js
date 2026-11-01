@@ -87,6 +87,8 @@ export const escHtml = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&a
 // Liens venus des sources : http(s) seulement (pas de javascript:\u2026)
 export const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "";
 export const cn = (...a) => a.filter(Boolean).join(" ");
+// Raccourci de la recherche : ⌘K sur Mac et iOS, Ctrl K ailleurs (le symbole ⌘ n'existe pas sur un clavier Windows)
+export const SHORTCUT = typeof navigator !== "undefined" && /Mac|iPhone|iPad/i.test(navigator.platform || navigator.userAgent || "") ? "⌘K" : "Ctrl K";
 export const dc = e => `var(${DISC[e.discipline] || "--c-aut"})`;
 // Catégories à part : masquées du fil principal, un bouton chacune les affiche.
 // param = clé d'URL (?soutenances=1), label/hint = clés i18n.
