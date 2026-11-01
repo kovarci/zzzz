@@ -75,6 +75,7 @@ const TR = {
   cmd_ph: ["Un titre, un intervenant, un sujet…", "A title, a speaker, a topic…"], cmd_nav: ["naviguer", "navigate"],
   cmd_open: ["ouvrir", "open"], cmd_none: ["Aucun résultat.", "No results."], cmd_today_tomorrow: ["Aujourd'hui et demain", "Today and tomorrow"],
   cmd_n_results: ["{n} résultat{s}", "{n} result{s}"],
+  hero_search: ["Un titre, un intervenant, une date…", "A title, a speaker, a date…"],
   cmd_date: ["Date", "Date"], cmd_pick: ["Choisir une date", "Pick a date"], cmd_done: ["Voir les résultats", "Show results"], cmd_clear_date: ["Retirer la date", "Remove date"],
   cmd_hint: ["Un jour : un clic. Une période : un second clic.", "One day: one click. A range: a second click."],
   cmd_p_today: ["Aujourd'hui", "Today"], cmd_p_tomorrow: ["Demain", "Tomorrow"], cmd_p_week: ["Cette semaine", "This week"], cmd_p_weekend: ["Ce week-end", "This weekend"],

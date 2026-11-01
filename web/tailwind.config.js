@@ -11,7 +11,9 @@ module.exports = {
   ]],
   theme: {
     extend: {
-      fontFamily: { sans: ["Geist", "ui-sans-serif", "system-ui", "sans-serif"], mono: ["Geist Mono", "ui-monospace", "monospace"] },
+      fontFamily: { sans: ["Instrument Sans", "ui-sans-serif", "system-ui", "sans-serif"], serif: ["Newsreader", "Georgia", "serif"], mono: ["ui-monospace", "monospace"] },
+      // Pas d'ombres portées : la structure passe par les filets, pas par le relief
+      boxShadow: { DEFAULT: "none", sm: "none" },
       colors: {
         border: "hsl(var(--border))", input: "hsl(var(--input))", ring: "hsl(var(--ring))",
         background: "hsl(var(--background))", foreground: "hsl(var(--foreground))",
@@ -21,7 +23,7 @@ module.exports = {
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
       },
-      borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 2px)", sm: "calc(var(--radius) - 4px)" },
+      borderRadius: { xl: "0.5rem", lg: "var(--radius)", md: "calc(var(--radius) - 1px)", sm: "calc(var(--radius) - 2px)" },
       keyframes: {
         marquee: { from: { transform: "translateX(0)" }, to: { transform: "translateX(calc(-100% - var(--gap)))" } },
         shimmer: { "0%,90%,100%": { backgroundPosition: "calc(-100% - var(--shiny-width)) 0" }, "30%,60%": { backgroundPosition: "calc(100% + var(--shiny-width)) 0" } },

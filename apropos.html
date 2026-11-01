@@ -28,8 +28,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=61" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css?v=62" />
   <script>
     // Même thème que l'app principale, appliqué avant le premier rendu (pas de flash)
     try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
@@ -43,7 +43,7 @@
     .prose strong { color: hsl(var(--foreground)); font-weight: 600; }
     .prose ul { margin: 0 0 14px; padding-left: 20px; list-style: disc; color: hsl(var(--muted-foreground)); line-height: 1.7; }
     .prose li { margin-bottom: 6px; }
-    .prose code { background: hsl(var(--muted)); border-radius: 6px; padding: 2px 7px; font-family: "Geist Mono", ui-monospace, monospace; font-size: 13px; color: hsl(var(--foreground)); }
+    .prose code { background: hsl(var(--muted)); border-radius: 6px; padding: 2px 7px; font-family: ui-monospace, monospace; font-size: 13px; color: hsl(var(--foreground)); }
     .prose table { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 14px; }
     .prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); }
     .prose th { color: hsl(var(--foreground)); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }

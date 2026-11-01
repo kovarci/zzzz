@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import { motion, AnimatePresence } from "framer-motion";
 import L from "leaflet";
 import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, placeKey, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store } from "./lib.js";
-import { NumberTicker, AnimatedShinyText, Marquee, BlurFade, BorderBeam, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Spotlight, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
+import { Marquee, BlurFade, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap } from "./ui.jsx";
 import { LangProvider, useI18n } from "./i18n.jsx";
 import { CommandDialog } from "./palette.jsx";
 
@@ -28,9 +28,8 @@ function Cover({ e, className = "", eager, label = true }) {
     {isMembers(e) && <Badge className="bg-background/95 text-foreground border-0 shadow-sm" title={t("access_members_hint")}>🔒 {t("badge_members")}</Badge>}</div>;
   if (e.image && !broken) return <div className={cn(pos, "overflow-hidden bg-muted", className)}>
     <img src={orig ? e.image : small} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => (!orig && small !== e.image ? setOrig(true) : setBroken(true))} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
-  return <div className={cn(pos, "overflow-hidden flex items-end p-4 text-white", className)} style={{ background: `linear-gradient(135deg, ${dc(e)}, color-mix(in srgb, ${dc(e)} 55%, #000))` }}>
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 [background-image:radial-gradient(rgba(255,255,255,.3)_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_at_top_right,#000,transparent_70%)]" />{badge}
-    {label && <div className="relative font-semibold text-lg leading-tight tracking-tight [text-wrap:balance] [text-shadow:0_1px_6px_rgba(0,0,0,.35)] line-clamp-3">{e.institution}</div>}</div>;
+  return <div className={cn(pos, "overflow-hidden flex items-end p-4", className)} style={{ background: `color-mix(in srgb, ${dc(e)} 16%, hsl(var(--muted)))` }}>{badge}
+    {label && <div className="relative font-serif text-xl font-medium leading-tight [text-wrap:balance] line-clamp-3" style={{ color: `color-mix(in srgb, ${dc(e)} 55%, hsl(var(--foreground)))` }}>{e.institution}</div>}</div>;
 }
 // Titre = vrai lien vers la fiche e/<id>.html : Google suit ces liens depuis
 // l'accueil (il n'en trouvait aucun), et Ctrl/⌘-clic ou clic molette ouvre la
@@ -47,14 +46,14 @@ const EventCard = React.memo(function EventCard({ e, fav, onFav, onOpen, distanc
   // Le titre est le bouton de la carte (Tab puis Entrée) et sa zone cliquable
   // (::after) couvre toute la carte : pas de bouton étoile imbriqué dans un
   // « bouton » carte, que les lecteurs d'écran annonçaient mal.
-  return <div onClick={act} className={cn("group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card shadow-sm cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring", past && "opacity-80")}>
+  return <div onClick={act} className={cn("group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring", past && "opacity-80")}>
     {/* L'étoile n'apparaît qu'au survol… sauf sur écran tactile (pas de survol) et au clavier */}
     <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow-sm transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
     <Cover e={e} className="aspect-[16/10]" />
     <div className="p-4 flex flex-col gap-1.5 flex-1">
       <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {discName(e.discipline)}</span>
         {distance !== undefined ? <Badge className="ml-auto shrink-0 tabular-nums">{fmtDist(distance)}</Badge> : isNew(e) && !past ? <Badge className="ml-auto shrink-0 border-sky-500/30 text-sky-700 dark:text-sky-400">{t("badge_new")}</Badge> : isFree(e) ? <Badge className="ml-auto shrink-0 border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("badge_free")}</Badge> : null}</div>
-      <h3 className="font-semibold leading-snug tracking-tight line-clamp-3"><a href={evHref(e)} onClick={openIn(e, onOpen)} className="outline-none after:absolute after:inset-0 after:content-['']">{e.title}</a></h3>
+      <h3 className="font-serif text-[1.15rem] font-medium leading-snug line-clamp-3"><a href={evHref(e)} onClick={openIn(e, onOpen)} className="outline-none after:absolute after:inset-0 after:content-['']">{e.title}</a></h3>
       {/* Pas si le titre le donne déjà (« Séminaire de recherche HEC : Paul Fonantier (LBS) ») */}
       {e.speaker && !norm(e.title).includes(norm(e.speaker)) && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
       <p className="mt-auto pt-2 text-xs text-muted-foreground truncate">{isOnline(e) && (t("online_prefix") || "")}{e.institution}{placeOf(e) ? " · " + placeOf(e) : ""}</p>
@@ -122,7 +121,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollo
         <div className="relative aspect-[16/10] shrink-0 group"><Cover e={e} className="absolute inset-0" eager /><button onClick={onClose} className="absolute top-3 right-3 z-[2] inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow hover:bg-background" aria-label={t("fermer")}><Icon d={ICONS.x} size={16} /></button></div>
         <div className="p-6 flex flex-col gap-4">
           <div className="flex flex-wrap gap-2"><Badge style={{ borderColor: dc(e), "--dcol": dc(e) }} className="[color:color-mix(in_srgb,var(--dcol)_62%,#000)] dark:[color:var(--dcol)]">{discName(e.discipline)}</Badge><Badge>{kindName(kindOf(e))}</Badge>{isMembers(e) && <Badge title={t("access_members_hint")}>🔒 {t("access_members")}</Badge>}{isFree(e) && <Badge className="border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("sheet_free")}</Badge>}{isOnline(e) && <Badge>{t("sheet_online")}</Badge>}{isEnglish(e) && <Badge title={t("filter_en_hint")}>{t("filter_en")}</Badge>}<Badge>{t("src_" + e.source_type) || t("org_default")}</Badge></div>
-          <h2 className="text-2xl font-semibold tracking-tight leading-tight [text-wrap:balance]">{e.title}</h2>
+          <h2 className="font-serif text-3xl font-medium leading-tight [text-wrap:balance]">{e.title}</h2>
           <div className="flex items-center gap-3 rounded-lg border bg-card p-3">
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span></div>
             <div className="text-sm"><div className="font-medium first-letter:uppercase">{fmtDay(e.date)} {d.getFullYear()}</div><div className="text-muted-foreground">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""} · ` : ""}{days < 0 ? t("sheet_terminated") : days === 0 ? t("sheet_today") : days === 1 ? t("sheet_tomorrow") : t("sheet_in_days", { n: days })}</div></div>
@@ -268,43 +267,6 @@ function MapView({ events, onOpen, onPlace, userPos }) {
     if (userPos) L.marker([userPos.lat, userPos.lng], { icon: L.divIcon({ className: "", html: '<div class="pin-me"></div>', iconSize: [14, 14], iconAnchor: [7, 7] }) }).bindPopup(t("you_are_here")).addTo(layer);
   }, [events, userPos]);
   return <div className="pt-6"><div ref={ref} className="relative isolate h-[70vh] rounded-xl border overflow-hidden z-0" /><p className="text-xs text-muted-foreground mt-2">{t("map_note", { n: events.filter(e => typeof e.lat === "number").length })}</p></div>;
-}
-
-/* ═════════════════════ Mini-carte (bento, aperçu) ═════════════════════ */
-function MiniMap({ events, onGoMap }) {
-  const { t } = useI18n();
-  const ref = useRef(null), mapRef = useRef(null), layerRef = useRef(null);
-  // Carte créée à l'approche seulement : sur téléphone elle est loin sous le
-  // premier écran, et ses tuiles (~170 Ko, 4 à 6 requêtes vers OSM)
-  // ralentissaient l'arrivée de l'agenda pour une carte jamais vue
-  const [seen, setSeen] = useState(false);
-  useEffect(() => {
-    const el = ref.current; if (!el || typeof IntersectionObserver === "undefined") { setSeen(true); return; }
-    const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { setSeen(true); io.disconnect(); } }, { rootMargin: "400px" });
-    io.observe(el); return () => io.disconnect();
-  }, []);
-  useEffect(() => {
-    if (!seen) return;
-    const map = L.map(ref.current, { zoomControl: false, attributionControl: false, dragging: false, scrollWheelZoom: false, doubleClickZoom: false, touchZoom: false, boxZoom: false, keyboard: false, tap: false }).setView([48.8566, 2.349], 11.6);
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19 }).addTo(map);
-    layerRef.current = L.layerGroup().addTo(map); mapRef.current = map;
-    const t0 = setTimeout(() => map.invalidateSize(), 60);
-    return () => { clearTimeout(t0); map.remove(); layerRef.current = null; };
-  }, [seen]);
-  const geo = useMemo(() => events.filter(e => typeof e.lat === "number"), [events]);
-  useEffect(() => {
-    const layer = layerRef.current; if (!layer) return; layer.clearLayers();
-    geo.slice(0, 200).forEach(e => { L.circleMarker([e.lat, e.lng], { radius: 4, weight: 0, fillOpacity: .85, fillColor: discColor(e.discipline) }).addTo(layer); });
-  }, [geo, seen]);
-  // isolate : les calques Leaflet (z-index 400+) passaient au-dessus de l'en-tête collant
-  return <button onClick={onGoMap} className="group relative isolate col-span-1 lg:col-span-2 rounded-xl border bg-card shadow-sm overflow-hidden text-left">
-    <div ref={ref} className="absolute inset-0 pointer-events-none [&_.leaflet-control-attribution]:hidden" />
-    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent transition-opacity group-hover:opacity-90" />
-    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
-      <div><h3 className="text-sm font-semibold">{t("map_title")}</h3><p className="text-xs text-muted-foreground">{t("n_events", { n: geo.length })}</p></div>
-      <span className="text-sm font-medium shrink-0 group-hover:underline">{t("map_cta")}</span>
-    </div>
-  </button>;
 }
 
 /* ═════════════════════ Bandeaux institution / discipline (filtre unique) ═════════════════════ */
@@ -610,9 +572,6 @@ function App() {
     return lang === "en" ? `${MO[a.getMonth()]} ${a.getDate()}${y[0]} – ${MO[b.getMonth()]} ${b.getDate()}${y[1]}`
       : `du ${dayNum(a)} ${MO[a.getMonth()]}${y[0]} au ${dayNum(b)} ${MO[b.getMonth()]}${y[1]}`;
   });
-  const tonight = UPc.filter(e => e.date === TODAY && (e.time || "") >= "17:30");
-  const days7 = useMemo(() => [...Array(7)].map((_, i) => { const d = addDays(today, i), k = iso(d); return { k, d, n: UPc.filter(e => e.date === k).length }; }), [UPc]);
-  const max7 = Math.max(1, ...days7.map(x => x.n));
   const perDay = useMemo(() => { const c = {}; filtered.forEach(e => { c[e.date] = (c[e.date] || 0) + 1; }); return c; }, [filtered]);
   const groups = useMemo(() => { const g = []; filtered.slice(0, shown).forEach(e => { if (!g.length || g[g.length - 1].date !== e.date) g.push({ date: e.date, items: [] }); g[g.length - 1].items.push(e); }); return g; }, [filtered, shown]);
   const histMonths = useMemo(() => [...new Set((archive || []).map(e => e.date.slice(0, 7)))].sort().reverse(), [archive]);
@@ -638,7 +597,6 @@ function App() {
   const backToAgenda = () => { if (history) { pendingScroll.current = "agenda"; setHistory(false); } else goAgenda(); };
   const toggleTheme = () => { const r = document.documentElement, dark = r.dataset.theme === "dark" || (!r.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches); r.dataset.theme = dark ? "light" : "dark"; store.set("paf_theme", dark ? "light" : "dark"); };
   const pickRandom = () => { const p = filtered.length ? filtered : pool; if (p.length) setOpen(p[Math.floor(Math.random() * p.length)]); };
-  const goMap = () => { setHistory(false); setNear(false); setView("map"); goAgenda(); };
 
   if (loadErr) return <div className="mx-auto max-w-lg p-10 text-center"><p className="font-semibold">{t("empty_generic_title")}</p><p className="text-sm text-muted-foreground mt-1">{loadErr}</p></div>;
 
@@ -646,7 +604,7 @@ function App() {
     <Ambient />
     <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 h-14 flex items-center gap-4">
-        <a href="/" className="flex shrink-0 items-center gap-2 font-semibold tracking-tight"><img src="icon.svg" alt="" width="28" height="28" className="h-7 w-7 rounded-md" /><span>Lotent</span></a>
+        <a href="/" className="flex shrink-0 items-center gap-2"><span className="font-serif text-2xl font-medium">Lotent</span></a>
         <nav className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground ml-2 whitespace-nowrap"><button onClick={backToAgenda} className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_agenda")}</button><button onClick={toggleHistory} className={cn("px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent", history && "text-foreground bg-accent")}>{t("nav_history")}</button><a href="apropos.html" className="px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_about")}</a><a href={PROPOSE_URL} target="_blank" rel="noopener" className="hidden xl:inline px-3 py-1.5 rounded-md hover:text-foreground hover:bg-accent">{t("nav_propose")}</a></nav>
         <div className="ml-auto flex shrink-0 items-center gap-2">
           <button onClick={() => setCmd(true)} className="inline-flex items-center gap-2 h-9 rounded-md border bg-background px-3 text-sm text-muted-foreground shadow-sm hover:bg-accent hover:text-foreground w-10 sm:w-52 xl:w-64 justify-center sm:justify-between" aria-label={t("search_ph")}><Icon d={ICONS.search} size={15} className="sm:hidden" /><span className="hidden sm:inline">{t("search_ph")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
@@ -663,18 +621,18 @@ function App() {
         <BlurFade inView={false} delay={.2}><p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto [text-wrap:balance]">{archive ? t("history_lede", { n: archive.length }) : t("history_loading")}</p></BlurFade>
       </section> : <>
       {/* overflow-x-clip : le halo (thème sombre) dépassait à droite sur téléphone → défilement latéral */}
-      <section className="relative pt-10 pb-6 text-center overflow-x-clip">
-        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" />
-        <BlurFade inView={false}><div className="inline-flex max-w-full items-center rounded-full border bg-background/60 px-3 sm:px-4 py-1 text-xs sm:text-sm shadow-sm"><AnimatedShinyText>{meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UP.length }) : ""}</AnimatedShinyText></div></BlurFade>
-        <BlurFade inView={false} delay={.1}><h1 className="mt-5 text-3xl sm:text-5xl font-semibold tracking-tight [text-wrap:balance] max-w-3xl mx-auto leading-[1.1]">{t("hero_title_1")} <span className="text-muted-foreground">{t("hero_title_2")}</span></h1></BlurFade>
-        <BlurFade inView={false} delay={.2}><p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto [text-wrap:balance]">{/* Même phrase pendant le chargement (« … » à la place des nombres) : « chargement… »
+      <section className="pt-12 pb-8 sm:pt-16">
+        <p className="text-sm text-muted-foreground">{meta.last_workflow_run ? t("live_updated", { rel: relTime(meta.last_workflow_run) }) : t("live_fallback")}{events && complete ? t("live_events_suffix", { n: UP.length }) : ""}</p>
+        <h1 className="mt-3 max-w-3xl font-serif text-4xl font-medium leading-[1.05] tracking-tight [text-wrap:balance] sm:text-6xl">{t("hero_title_1")} {t("hero_title_2")}</h1>
+        <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{/* Même phrase pendant le chargement (« … » à la place des nombres) : « chargement… »
             tenait sur une ligne, la phrase sur quatre (téléphone) — toute la page sautait de 84 px
             à l'arrivée des données (CLS 0,43, « mauvais » pour Google) */}
-          {t("hero_lede", events ? { n: Object.keys(instAll).length, f: UP.filter(isFree).length } : { n: "…", f: "…" })}</p></BlurFade>
-        <BlurFade inView={false} delay={.3}><div className="mt-8 flex flex-wrap justify-center gap-3"><Button onClick={() => { setHistory(false); setF({ when: "today" }); goAgenda(); }} className="h-11 px-6">{t("btn_today")}</Button><Button variant="outline" onClick={() => { setHistory(false); setF({ when: "week" }); goAgenda(); }} className="h-11 px-6">{t("btn_week")}</Button></div></BlurFade>
-        <BlurFade inView={false} delay={.4}><div className="relative mt-8 grid grid-cols-3 max-w-xl mx-auto divide-x rounded-xl border bg-card">
-          {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w], i) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="flex flex-col items-center py-4 hover:bg-accent first:rounded-l-xl last:rounded-r-xl"><span className="text-3xl font-bold"><NumberTicker value={n} delay={.2 + i * .1} locale={lang === "en" ? "en-US" : "fr-FR"} /></span><span className="text-xs text-muted-foreground mt-1">{l}</span></button>)}
-          <BorderBeam size={70} duration={9} colorFrom="#3B82F6" colorTo="#EC4899" /></div></BlurFade>
+          {t("hero_lede", events ? { n: Object.keys(instAll).length, f: UP.filter(isFree).length } : { n: "…", f: "…" })}</p>
+        <button onClick={() => setCmd(true)} className="mt-8 flex h-12 w-full max-w-xl items-center gap-3 rounded-lg border bg-card px-4 text-left text-muted-foreground hover:border-foreground/40" aria-label={t("search_ph")}>
+          <Icon d={ICONS.search} size={17} /><span className="flex-1 truncate">{t("hero_search")}</span><Kbd className="hidden sm:inline-flex">⌘K</Kbd></button>
+        <nav className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          {[[nToday, t("stat_today"), "today"], [nWeek, t("stat_week"), "week"], [nWe, t("stat_weekend"), "weekend"]].map(([n, l, w]) => <button key={w} onClick={() => { setHistory(false); setF({ when: w }); goAgenda(); }} className="underline decoration-border underline-offset-4 first-letter:uppercase hover:decoration-foreground">{l} <span className="tabular-nums text-muted-foreground">{Intl.NumberFormat(lang === "en" ? "en-US" : "fr-FR").format(n)}</span></button>)}
+        </nav>
       </section>
 
       {/* Avant les données : place du carrousel (74 px) et du bloc « À la une »
@@ -688,17 +646,12 @@ function App() {
       </section>}
 
       {events && <section className="py-10">
-        <BlurFade><div className="mb-5 flex items-end justify-between gap-4"><div><h2 className="text-2xl font-semibold tracking-tight">{t("featured_title")}</h2><p className="text-sm text-muted-foreground mt-1">{digest && featured.length >= 3 ? t("featured_sub_digest", { period: digestPeriod() }) : t("featured_sub_auto")}</p></div></div></BlurFade>
+        <BlurFade><div className="mb-5 flex items-end justify-between gap-4"><div><h2 className="font-serif text-3xl font-medium">{t("featured_title")}</h2><p className="text-sm text-muted-foreground mt-1">{digest && featured.length >= 3 ? t("featured_sub_digest", { period: digestPeriod() }) : t("featured_sub_auto")}</p></div></div></BlurFade>
         <BentoGrid>
           {featured[0] && <BentoCard className="lg:col-span-2 lg:row-span-2" name={featured[0].title} meta={`${relDay(featured[0].date, TODAY, TOMORROW) || fmtShort(featured[0].date)}${featured[0].time ? " · " + featured[0].time : ""} · ${featured[0].institution}`} description={featured[0].speaker} onClick={() => setOpen(featured[0])}
             background={<div className="group h-full"><Cover e={featured[0]} className="absolute inset-0" eager label={false} /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" /></div>} />}
-          {featured.slice(1, 3).map(e => <BentoCard key={e.id} className={featured.length === 2 ? "lg:col-span-2" : ""} name={e.title} meta={`${relDay(e.date, TODAY, TOMORROW) || fmtShort(e.date)}${e.time ? " · " + e.time : ""}`} onClick={() => setOpen(e)}
+          {featured.slice(1, 3).map(e => <BentoCard key={e.id} className="lg:col-span-2" name={e.title} meta={`${relDay(e.date, TODAY, TOMORROW) || fmtShort(e.date)}${e.time ? " · " + e.time : ""}`} onClick={() => setOpen(e)}
             background={<div className="group h-full"><Cover e={e} className="absolute inset-0" eager label={false} /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" /></div>} />)}
-          <div className={cn("col-span-1 flex flex-col gap-2 rounded-xl border bg-card p-4 shadow-sm overflow-hidden", featured.length !== 2 && "lg:col-span-2")}><div className="flex items-center justify-between"><h3 className="text-sm font-semibold">{t("tonight_title")}</h3><Badge>{tonight.length}</Badge></div>
-            {tonight.length ? <ul className="flex flex-col divide-y text-sm overflow-hidden">{tonight.slice(0, 4).map(e => <li key={e.id}><button onClick={() => setOpen(e)} className="w-full text-left py-1.5 flex gap-2 text-muted-foreground hover:text-foreground"><span className="font-mono text-xs pt-0.5 tabular-nums text-foreground">{e.time}</span><span className="truncate">{e.title}</span></button></li>)}</ul> : <p className="text-sm text-muted-foreground">{t("tonight_empty")}</p>}</div>
-          <div className="col-span-1 lg:col-span-2 flex flex-col gap-3 rounded-xl border bg-card p-4 shadow-sm"><div className="flex items-center justify-between"><h3 className="text-sm font-semibold">{t("days7_title")}</h3><span className="text-xs text-muted-foreground">{t("n_events", { n: days7.reduce((s, x) => s + x.n, 0) })}</span></div>
-            <div className="flex items-end gap-2 flex-1 min-h-[80px]">{days7.map(x => <button key={x.k} onClick={() => { jumpTo.current = x.k; setHistory(false); setNear(false); setF({ when: "all", cat: new Set() }); setView("list"); }} className="flex-1 flex flex-col items-center gap-1 group/bar"><span className="text-[11px] tabular-nums text-muted-foreground">{x.n}</span><motion.span initial={{ height: 6 }} whileInView={{ height: Math.max(6, x.n / max7 * 64) }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 120, damping: 18 }} className="w-full rounded-md bg-primary/80 group-hover/bar:bg-primary" /><span className={cn("text-[11px]", x.k === TODAY ? "font-semibold" : "text-muted-foreground")}>{x.d.getDate()}</span></button>)}</div></div>
-          <MiniMap events={UPc} onGoMap={goMap} />
         </BentoGrid>
       </section>}
       </>}

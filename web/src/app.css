@@ -14,7 +14,7 @@
   --muted: 240 4.8% 95.9%; --muted-foreground: 240 3.8% 40%;   /* 46,1 % : contraste 4,4:1 < 4,5 */
   --accent: 240 4.8% 95.9%; --accent-foreground: 240 5.9% 10%;
   --border: 240 5.9% 90%; --input: 240 5.9% 90%; --ring: 240 5.9% 10%;
-  --radius: .75rem;
+  --radius: .375rem;
   /* Couleurs de discipline — mêmes clés que DISC dans lib.js */
   --c-math: #3B82F6; --c-sci: #10B981; --c-eco: #F59E0B; --c-his: #A16207; --c-phi: #8B5CF6;
   --c-lit: #EC4899; --c-soc: #EAB308; --c-dro: #0EA5E9; --c-art: #F43F5E; --c-aut: #71717A;

@@ -82,12 +82,12 @@ export function DotPattern({ width = 16, height = 16, cr = 1, className }) {
 export function BentoGrid({ children, className }) { return <div className={cn("grid w-full auto-rows-[190px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4", className)}>{children}</div>; }
 export function BentoCard({ name, className, background, description, cta = "Ouvrir", onClick, meta }) {
   return <div role="button" tabIndex={0} aria-label={name} onClick={onClick} onKeyDown={e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick?.(); } }} className={cn("group relative col-span-1 flex flex-col justify-end overflow-hidden rounded-xl cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-ring",
-    "bg-card [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+    "bg-card",
     "border", className)}>
     <div className="absolute inset-0">{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-5 transition-all duration-300 group-hover:-translate-y-8">
       {meta && <div className="text-xs font-medium text-white/85 drop-shadow">{meta}</div>}
-      <h3 className="text-lg font-semibold leading-snug text-white drop-shadow line-clamp-2 [text-wrap:balance]">{name}</h3>
+      <h3 className="font-serif text-xl font-medium leading-snug text-white drop-shadow line-clamp-2 [text-wrap:balance]">{name}</h3>
       {description && <p className="max-w-lg text-sm text-white/80 line-clamp-1 drop-shadow">{description}</p>}
     </div>
     <div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">

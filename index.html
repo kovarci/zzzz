@@ -45,11 +45,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=61" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css?v=62" />
   <!-- En tête (defer) plutôt qu'en fin de page : le téléchargement démarre
        avant la lecture du contenu pré-rendu de l'accueil -->
-  <script src="app.js?v=61" defer></script>
+  <script src="app.js?v=62" defer></script>
   <script>
     // Agenda découpé par mois (data/m/) : on lance l'index et les mois des
     // 7 prochains jours tout de suite, en parallèle du téléchargement d'app.js,
@@ -96,7 +96,7 @@
       animation: sp-rise .5s .12s ease-out both; transition: transform .5s ease; }
     .sp-in img { width: 56px; height: 56px; border-radius: 14px;
       animation: sp-breathe 1.8s ease-in-out infinite; }
-    .sp-name { font: 600 22px/1 Geist, system-ui, sans-serif; letter-spacing: -.02em; }
+    .sp-name { font: 500 22px/1 Newsreader, Georgia, serif; letter-spacing: -.02em; }
     .sp-bar { position: relative; width: 120px; height: 2px; border-radius: 2px; overflow: hidden;
       background: hsl(var(--muted)); }
     .sp-bar span { position: absolute; inset: 0 auto 0 0; width: 40%; border-radius: 2px;
@@ -124,7 +124,7 @@
        il donne aux robots sans JavaScript la structure du site et les liens
        vers les hubs par institution. -->
   <div id="root">
-    <main style="max-width:48rem;margin:0 auto;padding:4rem 1.5rem;font-family:Geist,system-ui,sans-serif;line-height:1.5">
+    <main style="max-width:48rem;margin:0 auto;padding:4rem 1.5rem;font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.5">
       <h1 style="font-size:2rem;font-weight:700;letter-spacing:-.02em">Toutes les conférences de Paris, en un seul agenda.</h1>
       <p style="color:#666">Cours du Collège de France, séminaires de l'IHP et de PSE, rencontres Luma : réunis chaque matin. Chargement de l'agenda…</p>
       <!-- Écrit chaque jour par le robot (write_home_prerender) : ne pas modifier à la main -->
