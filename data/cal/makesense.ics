@@ -24,40 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:2a78d0e45027@paris-academique
-DTSTAMP:20261031T101752Z
-DTSTART;VALUE=DATE:20261031
-DTEND;VALUE=DATE:20261101
-SUMMARY:Projection-débat : "Outre-mer\, terres de solutions"
-DESCRIPTION:Organisé par Envie Le Labo — Découvrez le documentaire "Out
- re-mer\, terres de solutions" qui explore les défis de la souveraineté a
- limentaire dans les territoires ultramarins. La projection sera suivie d'u
- n échange avec des intervenant·es autour des solutions locales\, des cir
- c\nhttps://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
- -de-solutions-6a992f0b1c5b4f0008b99420
-LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
-URL:https://chiche.makesense.org/events/e/projection-debat-outre-mer-terres
- -de-solutions-6a992f0b1c5b4f0008b99420
-END:VEVENT
-BEGIN:VEVENT
-UID:3a472c3119d4@paris-academique
-DTSTAMP:20261031T101752Z
-DTSTART;TZID=Europe/Paris:20261031T130000
-DTEND;TZID=Europe/Paris:20261031T160000
-SUMMARY:Cercle de parole : santé mentale et identité rascisée
-DESCRIPTION:Organisé par Maison de la Conversation — Un cercle de parole
-  en mixité choisie pour les jeunes issu·es des diasporas\, autour de la 
- santé mentale.Ce cercle de parole est un espace de confiance. On y racont
- e son expérience\, on écoute celle des autres\, et l'on réalise q\nhttp
- s://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et-identi
- te-rascisee-6ac7b19906b4310007d40e9a
-LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
-URL:https://chiche.makesense.org/events/e/cercle-de-parole-sante-mentale-et
- -identite-rascisee-6ac7b19906b4310007d40e9a
-END:VEVENT
-BEGIN:VEVENT
 UID:9f9c520cdee7@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
@@ -72,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
 END:VEVENT
 BEGIN:VEVENT
 UID:91f6247d1c80@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -86,7 +54,7 @@ URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
 END:VEVENT
 BEGIN:VEVENT
 UID:f20c89e4b965@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Sortir l'écologie de ses murs\, rencontre-discussion avec Kevin Bh
@@ -103,7 +71,7 @@ URL:https://chiche.makesense.org/events/e/sortir-lecologie-de-ses-murs-renc
 END:VEVENT
 BEGIN:VEVENT
 UID:704567818f9a@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Formaliser et prendre confiance en son projet entrepreneurial 📍P
@@ -119,7 +87,7 @@ URL:https://chiche.makesense.org/events/e/formaliser-et-prendre-confiance-e
 END:VEVENT
 BEGIN:VEVENT
 UID:334ffe8eadf0@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;TZID=Europe/Paris:20261104T141500
 DTEND;TZID=Europe/Paris:20261104T161500
 SUMMARY:Atelier - Comprends vraiment tes clients avec l’entretien de déc
@@ -136,7 +104,7 @@ URL:https://chiche.makesense.org/events/e/atelier-comprends-vraiment-tes-cl
 END:VEVENT
 BEGIN:VEVENT
 UID:6b76b17d318d@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Où dort ton argent ?...et comment l'orienter vers la transition ?
@@ -152,7 +120,7 @@ URL:https://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lor
 END:VEVENT
 BEGIN:VEVENT
 UID:2eb18b4eea1c@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Arpentage du livre « Être écoféministe – Théories et pratiqu
@@ -167,5 +135,35 @@ LOCATION:1 Pass. Jaqueline Giraud\, 75012 Paris\, France
 URL:https://chiche.makesense.org/events/e/arpentage-du-livre-etre-ecofemini
  ste-theories-et-pratiques-de-jeanne-burgart-goutal-6ad20000ce193b0007ac8bd
  a
+END:VEVENT
+BEGIN:VEVENT
+UID:996d0db733c4@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Devenir bénévole à la Maison du Zéro Déchet
+DESCRIPTION:Organisé par Jeanne Chaplain — Une centaine de bénévoles p
+ articipent à l’animation de la Maison du Zéro D\nhttps://chiche.makese
+ nse.org/events/e/devenir-benevole-a-la-maison-du-zero-dechet-6aca33929fdbd
+ 6000864e099
+LOCATION:1 Pass. Jaqueline Giraud\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/devenir-benevole-a-la-maison-du-z
+ ero-dechet-6aca33929fdbd6000864e099
+END:VEVENT
+BEGIN:VEVENT
+UID:ae99c9767684@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261107T140000
+DTEND;TZID=Europe/Paris:20261107T170000
+SUMMARY:Danse thérapeutique : sensibilisation à la capoeira angola
+DESCRIPTION:Organisé par Maison de la Conversation — Explorer ses émoti
+ ons par le mouvement : une séance de capoeira Angola pensée comme un esp
+ ace de soin\, ouverte à tous les niveaux.La capoeira Angola offre un espa
+ ce pour se reconnaître\, exprimer qui l'on est\, trouver sa place\nhttps:
+ //chiche.makesense.org/events/e/danse-therapeutique-sensibilisation-a-la-c
+ apoeira-angola-6ac7b417bd306e000758a1d3
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/danse-therapeutique-sensibilisati
+ on-a-la-capoeira-angola-6ac7b417bd306e000758a1d3
 END:VEVENT
 END:VCALENDAR

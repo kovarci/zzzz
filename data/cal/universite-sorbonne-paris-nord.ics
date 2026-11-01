@@ -23,4 +23,241 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:3585d063d9a0@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Hackathon – Green Island
+DESCRIPTION:Vous êtes étudiant à Sorbonne Paris Nord ou dans l’une des
+  universités partenaires d’UNINOVIS ? Vous êtes intéressé par l’en
+ vironnement\, la biodiversité\, l’aménagement\, la santé\, l’innova
+ tion ou le développement durable ? Il est encore temps de rejoindre l’I
+ nnovation Challenge Camp « Green Island » Imaginez la future Green Islan
+ d Pendant cinq jours des équipes internationales et…\nhttps://www.univ-
+ spn.fr/events/hackathon-green-island/
+LOCATION:MSH Paris Nord
+URL:https://www.univ-spn.fr/events/hackathon-green-island/
+END:VEVENT
+BEGIN:VEVENT
+UID:0e456f4a801c@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261104T193000
+DTEND;TZID=Europe/Paris:20261104T203000
+SUMMARY:[Cabaret] Kabarè Z
+DESCRIPTION:https://www.univ-spn.fr/events/cabaret-kabare-z/
+LOCATION:Le Carreau du Temple\, Université Sorbonne Paris Nord\, 99 avenue
+  Jean-Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/cabaret-kabare-z/
+END:VEVENT
+BEGIN:VEVENT
+UID:0bf99d79efc5@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261106T110000
+DTEND;TZID=Europe/Paris:20261106T123000
+SUMMARY:[Danse – Théâtre] Qui est le malade ?
+DESCRIPTION:Auteure\, chorégraphe\, metteuse en scène : Jasmine Remadna\,
+  Cie Sentabou Une psychiatre reçoit sa patiente\, l’une s’assoit et s
+ e confie\, l’autre écoute et réagit\, très vite nous ne savons plus l
+ aquelle des deux est la plus névrosée. D’autres patientes intègrent c
+ ette thérapie révolutionnaire\, celle qui soigne par le corps\, par les 
+ mots\, aussi. Une chose les lie toutes : le mouvement\, celui qui ne…\nh
+ ttps://www.univ-spn.fr/events/quiestlemalade-ciesentabou/
+LOCATION:Salle polyvalente – campus de Bobigny
+URL:https://www.univ-spn.fr/events/quiestlemalade-ciesentabou/
+END:VEVENT
+BEGIN:VEVENT
+UID:12e83d8e681d@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261106T180000
+DTEND;TZID=Europe/Paris:20261106T200000
+SUMMARY:Topographies écosophiques : une exposition entre art et écologie
+DESCRIPTION:Le vendredi 6 novembre 2026\, la Maison des Sciences de l’Hom
+ me Paris Nord (MSH Paris Nord) vous invite au vernissage de l’exposition
+  Topographies écosophiques\, de l’artiste Karine Bonneval. À la crois
+ ée de l’art\, de la recherche et de l’écologie politique\, cette exp
+ osition propose une réflexion sur les relations entre les individus\, la 
+ société et leur environnement. Un rendez-vous ouvert au…\nhttps://www.
+ univ-spn.fr/events/topographies-ecosophiques-une-exposition-entre-art-et-e
+ cologie/
+LOCATION:MSH Paris Nord
+URL:https://www.univ-spn.fr/events/topographies-ecosophiques-une-exposition
+ -entre-art-et-ecologie/
+END:VEVENT
+BEGIN:VEVENT
+UID:df4f128d5140@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261109T113000
+DTEND;TZID=Europe/Paris:20261109T140000
+SUMMARY:[Performance] Consultations poétiques\, musicales et dansées
+DESCRIPTION:Troupe de l'Imaginaire Lundi 9 novembre de 11h30 à 14h\, lieux
+  communiqués ultérieurement. Des artistes de la Troupe de l'Imaginaire s
+ ont présents à différents endroits du campus pour recevoir les étudian
+ t·es en " consultation poétique ". Une fois la question "comment allez-v
+ ous ?" posée\, s'ensuit un échange libre et confidentiel. L'artiste pres
+ crit et interprète alors un poème ou un morceau de…\nhttps://www.univ-
+ spn.fr/events/performance-consultations-poetiques-musicales-et-dansees-vil
+ letaneuse-2026/
+LOCATION:Université Sorbonne Paris Nord\, 99 avenue Jean-Baptiste Clément
+ \, Villetaneuse
+URL:https://www.univ-spn.fr/events/performance-consultations-poetiques-musi
+ cales-et-dansees-villetaneuse-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:434d39efda8a@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261110T120000
+DTEND;TZID=Europe/Paris:20261110T143000
+SUMMARY:[Performance – bien-être ] Consultations poétiques
+DESCRIPTION:Avec la Troupe de l'Imaginaire du Théâtre de la Ville Des art
+ istes de la Troupe de l'Imaginaire sont présents à différents endroits 
+ du campus pour recevoir les étudiant·es en " consultation poétique ". U
+ ne fois posée la question "comment allez-vous ?"\, s'ensuit un échange l
+ ibre et confidentiel. L'artiste prescrit et interprète alors un poème ou
+  un morceau de musique\, spécialement choisi pour vous.\nhttps://www.univ
+ -spn.fr/events/consultationspoetiques101126/
+LOCATION:Couloir de l'Illustration - Campus de Bobigny
+URL:https://www.univ-spn.fr/events/consultationspoetiques101126/
+END:VEVENT
+BEGIN:VEVENT
+UID:6a0d6cf30497@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261112T120000
+DTEND;TZID=Europe/Paris:20261112T133000
+SUMMARY:Comment changer de filière après un 1er semestre ?
+DESCRIPTION:Vous êtes étudiant en 1ère année à l’Université Sorbonn
+ e Paris Nord et vous souhaitez vous réorienter ? Pour en savoir plus sur 
+ les différentes possibilités de réorientation\, participez à la réuni
+ on d’information organisée par le service VOIE. Seront présentés : un
+  rappel des principales filières de l’enseignement supérieur\, les dif
+ férentes procédures de réorientation (au 2nd semestre ou après…\nhtt
+ ps://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre-187-5
+ 42-762/
+LOCATION:Campus de Bobigny
+URL:https://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre
+ -187-542-762/
+END:VEVENT
+BEGIN:VEVENT
+UID:3164796e41da@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261118T200000
+DTEND;TZID=Europe/Paris:20261118T220000
+SUMMARY:[Danse] Step 1
+DESCRIPTION:https://www.univ-spn.fr/events/danse-step-1/
+LOCATION:Grande Halle de la Villette\, Paris 19
+URL:https://www.univ-spn.fr/events/danse-step-1/
+END:VEVENT
+BEGIN:VEVENT
+UID:ea83a858d23b@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261120T203000
+DTEND;TZID=Europe/Paris:20261120T223000
+SUMMARY:[Danse] Come Out
+DESCRIPTION:Chorégraphie : Olivier Dubois Olivier Dubois nous propose un s
+ pectacle hypnotique sur la musique Come Out de Steve Reich\, faisant réf
+ érence aux émeutes de 1966 à Harlem\, où six jeunes Afro-Américains f
+ urent battus\, inculpés et condamnés à tort. Véritable réflexion sur 
+ la résilience et la mémoire\, cette performance interprétée par quinze
+  danseurs illustre toute la puissance du corps collectif.…\nhttps://www.
+ univ-spn.fr/events/https-www-enghienlesbains-fr-fr-agenda-come-out-olivier
+ -dubois/
+LOCATION:Centre des arts d'Enghien-les-bains\, Université Sorbonne Paris N
+ ord\, 99 avenue Jean-Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/https-www-enghienlesbains-fr-fr-agenda-c
+ ome-out-olivier-dubois/
+END:VEVENT
+BEGIN:VEVENT
+UID:774257c17ec0@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261123T120000
+DTEND;TZID=Europe/Paris:20261123T130000
+SUMMARY:[Rencontre littéraire Texto] Diaty Diallo
+DESCRIPTION:Diaty Diallo est une autrice et artiste dont le travail se situ
+ e à la croisée de la littérature et de la performance. Elle donne vie 
+ à ses textes en les lisant\, les interprétant et les chantant sur scène
+ . Son premier roman\, Deux secondes d’air qui brûle (Seuil\, 2022)\, a 
+ rencontré un large succès et a marqué son entrée remarquée dans le pa
+ ysage littéraire contemporain. En 2026\, elle est…\nhttps://www.univ-sp
+ n.fr/events/rencontre-litteraire-texto-diaty-diallo/
+LOCATION:Université Sorbonne Paris Nord\, 99 avenue Jean-Baptiste Clément
+ \, Villetaneuse
+URL:https://www.univ-spn.fr/events/rencontre-litteraire-texto-diaty-diallo/
+END:VEVENT
+BEGIN:VEVENT
+UID:52210bea63e4@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Innov’SPN Days : trois minutes pour convaincre
+DESCRIPTION:Une idée naissante\, un projet en développement ou une innova
+ tion déjà accompagnée ? Le 26 novembre 2026 à LaMSN\, présentez votre
+  projet scientifique lors du Trophée des Innov’SPN Days. Vous aurez tro
+ is minutes pour convaincre le public\, quel que soit votre domaine. Pour c
+ ette deuxième édition\, trois catégories sont ouvertes : J’ai une id
+ ée : pour présenter un concept au début de sa réflexion. Je…\nhttps:
+ //www.univ-spn.fr/events/innovspn-days-trois-minutes-pour-convaincre/
+LOCATION:La Maison des Sciences Numériques (LaMSN)\, Université Sorbonne 
+ Paris Nord\, 99 avenue Jean-Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/innovspn-days-trois-minutes-pour-convain
+ cre/
+END:VEVENT
+BEGIN:VEVENT
+UID:f2dd232e5698@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261127T190000
+DTEND;TZID=Europe/Paris:20261127T201500
+SUMMARY:[Musique] 11 000 Cordes
+DESCRIPTION:https://www.univ-spn.fr/events/https-www-lavillette-com-manifes
+ tations-georg-friedrich-haas-klangforum-wien-26-27/
+LOCATION:Grande Halle de la Villette\, Paris 19
+URL:https://www.univ-spn.fr/events/https-www-lavillette-com-manifestations-
+ georg-friedrich-haas-klangforum-wien-26-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:980a13ab2bbf@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261201T120000
+DTEND;TZID=Europe/Paris:20261201T140000
+SUMMARY:[Rencontre littéraire Texto] Rencontre un.e auteur.ice de littéra
+ ture jeunesse
+DESCRIPTION:Cette rencontre consacrée\, comme chaque année\, à la litté
+ rature jeunesse\, s'intéressera aux imaginaires de la nature dans les alb
+ ums contemporains destinés aux enfants.Rencontre animée par Yamini Yogan
+ anthan\, doctorante à l'équipe de recherche Pléiade Les rencontres litt
+ éraires Texto Ce cycle de rencontres organisé sur les campus de Villetan
+ euse et de Bobigny\, invite des auteur·ices connu·es ou…\nhttps://www.
+ univ-spn.fr/events/rencontre-litteraire-litterature-jeunesse-2026/
+LOCATION:BU Edgar Morin\, Université Sorbonne Paris Nord\, 99 avenue Jean-
+ Baptiste Clément\, Villetaneuse
+URL:https://www.univ-spn.fr/events/rencontre-litteraire-litterature-jeuness
+ e-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:6f351c0307f4@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261203T101500
+DTEND;TZID=Europe/Paris:20261203T121500
+SUMMARY:[Spectacle] Ces filles qu’on attend
+DESCRIPTION:Texte : Claudine Galea Mise en scène : Elsa Granat Quelles son
+ t les marques laissées par l’enfance ? Ces filles qu’on attend est le
+  récit de jeunes filles tout juste sorties de l’enfance.Elles n’ont p
+ as l’habitude de parler d’elles\, encore moins qu’on parle d’elles
+ . Et pourtant\, si l’on prête attention à ce qui est dit\, on entend l
+ eur histoire : celle qui les a conduites à la déscolarisation\, à…\nh
+ ttps://www.univ-spn.fr/events/144655/
+LOCATION:B.U Edgar Morin Espace Le Kiosque Campus Villetaneuse
+URL:https://www.univ-spn.fr/events/144655/
+END:VEVENT
+BEGIN:VEVENT
+UID:3bd7641a4495@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261204T190000
+DTEND;TZID=Europe/Paris:20261204T201500
+SUMMARY:[Cirque] Ten Thousand Hours
+DESCRIPTION:https://www.univ-spn.fr/events/https-www-lavillette-com-manifes
+ tations-gravity-other-myths-26-27/
+LOCATION:Grande Halle de la Villette\, Paris 19
+URL:https://www.univ-spn.fr/events/https-www-lavillette-com-manifestations-
+ gravity-other-myths-26-27/
+END:VEVENT
 END:VCALENDAR

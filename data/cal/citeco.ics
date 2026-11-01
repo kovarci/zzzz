@@ -24,18 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5783bfb02f1c@paris-academique
-DTSTAMP:20261031T101752Z
-DTSTART;TZID=Europe/Paris:20261031T100000
-DTEND;TZID=Europe/Paris:20261031T190000
-SUMMARY:Halloween 2026
-DESCRIPTION:https://www.citeco.fr/agenda/halloween-2026
-LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
-URL:https://www.citeco.fr/agenda/halloween-2026
-END:VEVENT
-BEGIN:VEVENT
 UID:2f9750dd171f@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;TZID=Europe/Paris:20261031T163000
 DTEND;TZID=Europe/Paris:20261031T173000
 SUMMARY:Frissons économiques : les crises qui ont secoué le monde
@@ -47,12 +37,37 @@ URL:https://www.citeco.fr/agenda/frissons-economiques-les-crises-qui-ont-se
 END:VEVENT
 BEGIN:VEVENT
 UID:2eab0a9608bc@paris-academique
-DTSTAMP:20261031T101752Z
+DTSTAMP:20261101T111342Z
 DTSTART;TZID=Europe/Paris:20261031T170000
 DTEND;TZID=Europe/Paris:20261031T180000
 SUMMARY:Frayeurs symphoniques
 DESCRIPTION:https://www.citeco.fr/agenda/frayeurs-symphoniques
 LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
 URL:https://www.citeco.fr/agenda/frayeurs-symphoniques
+END:VEVENT
+BEGIN:VEVENT
+UID:77f2234a6f9b@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261105T190000
+DTEND;TZID=Europe/Paris:20261105T203000
+SUMMARY:L’innovation sociale : une innovation dont nous avons besoin !
+DESCRIPTION:https://www.citeco.fr/agenda/linnovation-sociale-une-innovation
+ -dont-nous-avons-besoin
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/linnovation-sociale-une-innovation-dont-no
+ us-avons-besoin
+END:VEVENT
+BEGIN:VEVENT
+UID:4bcf12621755@paris-academique
+DTSTAMP:20261101T111342Z
+DTSTART;TZID=Europe/Paris:20261105T190000
+DTEND;TZID=Europe/Paris:20261105T220000
+SUMMARY:Chapitres de la chute\, Saga des Lehman Brothers — VOLET 1 (1844-
+ 1890)
+DESCRIPTION:https://www.citeco.fr/agenda/chapitres-de-la-chute-saga-des-leh
+ man-brothers-volet-1-1844-1890
+LOCATION:Citéco\, 1 place du Général Catroux\, Paris 17e
+URL:https://www.citeco.fr/agenda/chapitres-de-la-chute-saga-des-lehman-brot
+ hers-volet-1-1844-1890
 END:VEVENT
 END:VCALENDAR
