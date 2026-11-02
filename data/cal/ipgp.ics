@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:ffc1f2771037@paris-academique
-DTSTAMP:20261102T120459Z
+DTSTAMP:20261102T191047Z
 DTSTART;TZID=Europe/Paris:20261103T150000
 DTEND;TZID=Europe/Paris:20261103T170000
 SUMMARY:Towards a Systematic Detection of Mantle-sensitive P-wave Interfere
@@ -40,7 +40,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/towards-a-systema
 END:VEVENT
 BEGIN:VEVENT
 UID:7bea922af3c0@paris-academique
-DTSTAMP:20261102T120459Z
+DTSTAMP:20261102T191047Z
 DTSTART;TZID=Europe/Paris:20261105T140000
 DTEND;TZID=Europe/Paris:20261105T160000
 SUMMARY:--- SEMINAIRE GENERAL --- Cross-scale modelling of tectonics and ea
@@ -54,7 +54,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/grand-seminaire-d
 END:VEVENT
 BEGIN:VEVENT
 UID:504c6e884945@paris-academique
-DTSTAMP:20261102T120459Z
+DTSTAMP:20261102T191047Z
 DTSTART;TZID=Europe/Paris:20261112T110000
 DTEND;TZID=Europe/Paris:20261112T130000
 SUMMARY:Earthquake cycle simulations for PSHA
@@ -66,7 +66,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/earthquake-cycle-
 END:VEVENT
 BEGIN:VEVENT
 UID:b1eea711ad78@paris-academique
-DTSTAMP:20261102T120459Z
+DTSTAMP:20261102T191047Z
 DTSTART;TZID=Europe/Paris:20261118T110000
 DTEND;TZID=Europe/Paris:20261118T130000
 SUMMARY:Echoes from the seabed: the continuing evolution of industrial mult
