@@ -1,0 +1,56 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lotent//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Longdom · Lotent
+X-WR-TIMEZONE:Europe/Paris
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+X-LIC-LOCATION:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:30b9b8a75a92@paris-academique
+DTSTAMP:20261102T120459Z
+DTSTART;TZID=Europe/Paris:20270315T093000
+DTEND;TZID=Europe/Paris:20270315T113000
+SUMMARY:4th International Summit on Hematology and Blood Disorders
+DESCRIPTION:Colloque — ⚠️ Événement non vérifié par Lotent : orga
+ nisateur commercial (Longdom)\, inscription payante. Sommet international 
+ (15-16 mars 2027) réunissant chercheurs\, médecins et professionnels de 
+ santé autour des dernières avancées en hématologie et dans les maladie
+ s du sang.\nhttps://www.longdom.com/hematology
+LOCATION:Millennium Hotel Paris Charles de Gaulle\, Zone Hôtelière\, 2 al
+ lée du Verger\, 95700 Roissy-en-France
+URL:https://www.longdom.com/hematology
+END:VEVENT
+BEGIN:VEVENT
+UID:eb5676809ac7@paris-academique
+DTSTAMP:20261102T120459Z
+DTSTART;VALUE=DATE:20270617
+DTEND;VALUE=DATE:20270618
+SUMMARY:5th International Conference on Pediatrics and Pediatrics Healthcar
+ e
+DESCRIPTION:Conférence — ⚠️ Événement non vérifié par Lotent : o
+ rganisateur commercial (Longdom)\, inscription payante. Conférence intern
+ ationale (17-18 juin 2027) sur la pédiatrie clinique\, la recherche pédi
+ atrique\, le développement de l'enfant et l'innovation en santé de l'enf
+ ant.\nhttps://www.longdom.com/pediatrics/about
+LOCATION:Londres\, Royaume-Uni
+URL:https://www.longdom.com/pediatrics/about
+END:VEVENT
+END:VCALENDAR
