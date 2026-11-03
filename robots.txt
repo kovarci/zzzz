@@ -2,6 +2,7 @@ User-agent: *
 # Code source et ancienne version du site : servis par GitHub Pages, rien à indexer
 Disallow: /web/
 Disallow: /scraper/
+Disallow: /logo-ideas/
 Disallow: /maj.bat
 # Variantes de l'accueil (?event=… depuis chaque fiche, ?institution=… depuis
 # les hubs) : même page que « / » avec une fiche ou un filtre ouvert. Google
