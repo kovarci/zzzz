@@ -51,5 +51,21 @@ Un seul mot par notion :
 - Flèches ← → ↗ dans un libellé : passer par `<Arr text={…} />`, elles sont décoratives.
 - Un bouton dont le mot disparaît sur téléphone garde un `aria-label`.
 
-## Pas encore fait
-- Les pages de partage `e/<id>.html` et `s/*.html` (générées par `scraper/scrape.py`) utilisent encore Geist.
+## Pages statiques (e/, i/, d/, s/, p/, 404)
+Générées chaque jour par `scraper/scrape.py` (`_hub_page`, `write_event_pages`), sans JavaScript sauf le filtre par
+discipline et la recherche de l'annuaire. Même charte que l'application, dans **`pages.css`** (un seul fichier, versionné
+par un hachage dans l'URL) : mêmes jetons zinc clair / sombre, thème mémorisé (`paf_theme`), Newsreader + Instrument Sans.
+- **Un programme, pas des cartes** : les événements sont groupés par jour (titre en serif), une ligne par événement
+  (heure, titre, organisateur · lieu, discipline), vignette à droite si elle existe. Pas d'aplat vide quand il n'y a pas d'image.
+- **À la une** (3 événements avec image, organisateurs différents) et **barre des jours** (liens d'ancre, sans JavaScript)
+  au-dessus des listes de 12 événements ou plus ; puces de discipline pour filtrer (JavaScript).
+- **Par organisateur** sur les sélections et les disciplines : maillage vers les pages `i/`.
+- La page `s/gratuites.html` est la plus visitée : ne pas la surcharger, la garder rapide (≈ 190 Ko pour 400 événements).
+- Cibles de 44 px au tactile, bordure de contrôle à 3:1 (`--control`), lien « Aller au contenu », un seul `<h1>`.
+- Le lien officiel d'une page événement porte la classe `ext` : `write_event_pages` s'en sert pour rediriger un événement renommé.
+- **Jamais de 404 pour un ancien événement** : une fiche de plus d'un an (ou retirée par sa source) devient une page
+  « Événement passé » (`_past_stub`, `noindex`, sans redirection automatique, avec « Voir l'agenda » et une recherche
+  préremplie) au lieu d'être supprimée. `404.html` dit la même chose pour les liens `/e/…` restants.
+- **`apropos.html`** (+ `apropos.css`, `apropos.js`) est la démonstration technique du site : pipeline en cinq étapes,
+  carte des lieux, répartitions, générateur d'abonnement `.ics`, poids du premier affichage, pile. Aucun chiffre n'y est
+  écrit à la main : tout vient de `data/meta.json` et `data/site.json` (`write_site_stats`, à chaque passage du scraper).

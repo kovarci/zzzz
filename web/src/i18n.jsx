@@ -105,7 +105,7 @@ const TR = {
   toast_locate_denied: ["Position refusée : autorise la localisation pour ce site dans les réglages du navigateur.", "Location blocked: allow location for this site in your browser settings."],
   toast_locate_timeout: ["Position introuvable à temps, réessaie dans un instant.", "Couldn't get your location in time, please try again."],
   toast_locate_unavailable: ["Position indisponible sur cet appareil.", "Location unavailable on this device."],
-  toast_not_found: ["Événement introuvable — il est peut-être terminé.", "Event not found — it may be over."],
+  toast_not_found: ["Cet événement est passé ou n’est plus au programme.", "This event is over or no longer listed."],
 
 
   dock_top: ["Haut de page", "Back to top"], dock_today: ["Aujourd'hui", "Today"], dock_history: ["Historique", "History"],

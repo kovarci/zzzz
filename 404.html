@@ -9,22 +9,13 @@
 <!-- GitHub Pages sert ce fichier pour toute adresse absente (e/<id>.html d'un
      événement renommé ou passé depuis plus d'un an, lien mal copié…) : chemins
      absolus obligatoires, la page peut s'afficher sous /e/, /i/ ou /d/. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("paf_theme");try{t=JSON.parse(t)}catch(e){}if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="/pages.css">
 <style>
-:root{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted-fg:#5f5f68;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}
-@media (prefers-color-scheme:dark){:root{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}
-*{box-sizing:border-box}
-body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;line-height:1.5;-webkit-font-smoothing:antialiased}
-.card{width:100%;max-width:480px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 24px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -16px rgba(0,0,0,.25)}
-.logo{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:inherit;text-decoration:none;margin-bottom:20px}
-.logo img{width:22px;height:22px}
-.code{font-size:13px;font-weight:600;color:var(--muted-fg);letter-spacing:.04em}
-h1{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:6px 0 10px;text-wrap:balance}
-p{color:var(--muted-fg);margin:0 0 20px;font-size:15px}
-form{display:flex;gap:8px;margin-bottom:14px}
-input{flex:1;min-width:0;height:40px;border:1px solid var(--border);border-radius:8px;background:transparent;color:inherit;padding:0 12px;font:inherit;font-size:14px}
-button,.btn{height:40px;border-radius:8px;border:0;background:var(--primary);color:var(--primary-fg);font:inherit;font-size:14px;font-weight:600;padding:0 16px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
-.btn.ghost{background:transparent;color:inherit;border:1px solid var(--border)}
-.row{display:flex;flex-wrap:wrap;gap:8px}
+.search{display:flex;gap:.5rem;margin:1.5rem 0 0;max-width:30rem}
+.search .finder{flex:1;min-width:0}
 [data-en]{display:none}
 html[lang=en] [data-fr]{display:none}html[lang=en] [data-en]{display:revert}
 </style>
@@ -36,26 +27,28 @@ html[lang=en] [data-fr]{display:none}html[lang=en] [data-en]{display:revert}
 <script data-goatcounter="https://lotent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-<main class="card">
-  <a class="logo" href="/"><img src="/icon.svg" alt="">Lotent</a>
-  <div class="code">404</div>
-  <h1 id="t"><span data-fr>Cette page n'existe pas (ou plus)</span><span data-en>This page doesn't exist (anymore)</span></h1>
-  <p id="m"><span data-fr>Le lien est peut-être incomplet, ou la page a été déplacée.</span><span data-en>The link may be incomplete, or the page has moved.</span></p>
-  <form action="/" method="get" role="search">
-    <input name="q" type="search" placeholder="Rechercher une conférence…" aria-label="Rechercher une conférence" id="q">
-    <button type="submit"><span data-fr>Chercher</span><span data-en>Search</span></button>
-  </form>
-  <div class="row">
-    <a class="btn ghost" href="/"><span data-fr>← Tout l'agenda</span><span data-en>← Full agenda</span></a>
-    <a class="btn ghost" href="/apropos.html"><span data-fr>À propos</span><span data-en>About</span></a>
-  </div>
+<header class="top"><div class="bar"><a class="brand" href="/" aria-label="Lotent"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 64 64" fill="none"><path d="M32 29.5C32.11 29.42 32.43 29.12 32.69 29C32.95 28.88 33.25 28.8 33.56 28.78C33.87 28.75 34.21 28.77 34.54 28.84C34.88 28.91 35.23 29.03 35.55 29.2C35.87 29.37 36.2 29.6 36.49 29.88C36.78 30.15 37.06 30.48 37.28 30.84C37.51 31.2 37.71 31.62 37.84 32.06C37.98 32.49 38.07 32.98 38.1 33.46C38.12 33.95 38.09 34.47 37.99 34.98C37.89 35.49 37.73 36.01 37.5 36.51C37.26 37.01 36.96 37.5 36.6 37.95C36.24 38.4 35.8 38.83 35.32 39.2C34.84 39.57 34.29 39.9 33.71 40.16C33.12 40.42 32.48 40.62 31.83 40.74C31.17 40.85 30.47 40.91 29.78 40.86C29.09 40.82 28.36 40.7 27.67 40.5C26.98 40.29 26.28 39.99 25.63 39.61C24.98 39.24 24.34 38.77 23.77 38.23C23.2 37.69 22.67 37.07 22.23 36.39C21.79 35.71 21.4 34.95 21.11 34.17C20.83 33.38 20.62 32.52 20.52 31.66C20.42 30.8 20.41 29.89 20.51 29C20.62 28.11 20.82 27.2 21.14 26.33C21.45 25.46 21.87 24.59 22.39 23.79C22.91 23 23.54 22.22 24.25 21.55C24.95 20.87 25.77 20.24 26.63 19.73C27.5 19.22 28.46 18.78 29.45 18.47C30.43 18.16 31.5 17.95 32.56 17.87C33.61 17.79 34.73 17.82 35.8 17.99C36.88 18.16 37.98 18.45 39.02 18.87C40.06 19.29 41.09 19.84 42.02 20.49C42.96 21.15 43.86 21.94 44.64 22.81C45.43 23.69 46.14 24.68 46.72 25.73C47.3 26.78 47.78 27.94 48.11 29.12C48.44 30.3 48.65 31.57 48.71 32.82C48.77 34.07 48.69 35.38 48.46 36.64C48.22 37.9 47.84 39.18 47.32 40.38C46.8 41.58 46.12 42.77 45.32 43.84C44.53 44.91 43.58 45.94 42.55 46.82C41.51 47.7 40.33 48.5 39.1 49.14C37.86 49.78 36.51 50.3 35.14 50.65C33.77 51 32.31 51.2 30.87 51.24C29.42 51.27 27.93 51.14 26.49 50.84C25.05 50.54 23.59 50.07 22.23 49.44C20.88 48.81 19.54 48.01 18.34 47.07C17.13 46.14 16 45.04 15.02 43.84C14.04 42.64 13.16 41.28 12.47 39.87C11.77 38.45 11.22 36.91 10.85 35.35C10.49 33.79 10.29 32.13 10.29 30.51C10.28 28.88 10.46 27.19 10.83 25.58C11.2 23.97 11.77 22.34 12.5 20.83C13.24 19.32 14.17 17.84 15.24 16.51C16.31 15.18 17.57 13.93 18.94 12.86C20.3 11.79 21.83 10.84 23.43 10.09C25.02 9.35 26.75 8.76 28.5 8.38C30.24 8.01 32.09 7.82 33.9 7.85C35.71 7.88 37.58 8.11 39.36 8.55C41.15 9 42.94 9.66 44.6 10.5C46.26 11.34 47.89 12.4 49.33 13.61C50.78 14.82 52.14 16.24 53.3 17.77C54.46 19.29 55.48 21 56.27 22.77C57.06 24.55 57.68 26.47 58.06 28.4C58.44 30.32 58.62 32.36 58.55 34.35C58.49 36.34 57.82 39.34 57.68 40.34" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="57.68" cy="40.34" r="4.8" class="brand-dot"/></svg><span>Lotent</span></a></div></header>
+<main class="wrap narrow">
+  <section class="hero">
+    <p class="kind">404</p>
+    <h1 class="display" id="t"><span data-fr>Cette page n'existe pas (ou plus)</span><span data-en>This page doesn't exist (anymore)</span></h1>
+    <p class="lede" id="m"><span data-fr>Le lien est peut-être incomplet, ou la page a été déplacée.</span><span data-en>The link may be incomplete, or the page has moved.</span></p>
+    <form class="search" action="/" method="get" role="search">
+      <input class="finder" name="q" type="search" placeholder="Rechercher une conférence…" aria-label="Rechercher une conférence" id="q">
+      <button class="btn btn-primary" type="submit"><span data-fr>Chercher</span><span data-en>Search</span></button>
+    </form>
+    <div class="actions">
+      <a class="btn" href="/"><span data-fr>Tout l'agenda</span><span data-en>Full agenda</span></a>
+      <a class="btn" href="/apropos.html"><span data-fr>À propos</span><span data-en>About</span></a>
+    </div>
+  </section>
 </main>
 <script>
   // Fiche d'événement disparue : l'organisateur l'a renommée (nouvelle fiche),
   // annulée, ou elle a plus d'un an. Le dire plutôt qu'un « lien cassé » muet.
   if (/^\/e\/[0-9a-f]{12}\.html$/.test(location.pathname)) {
-    document.getElementById("t").innerHTML = '<span data-fr>Cet événement n\'est plus en ligne</span><span data-en>This event is no longer listed</span>';
-    document.getElementById("m").innerHTML = '<span data-fr>Il a pu être renommé ou annulé par son organisateur, ou date de plus d\'un an. Cherchez-le par son titre ou son intervenant :</span><span data-en>It may have been renamed or cancelled by its organiser, or be more than a year old. Search for it by title or speaker:</span>';
+    document.getElementById("t").innerHTML = '<span data-fr>Cet événement est passé ou n’est plus au programme</span><span data-en>This event is over or no longer listed</span>';
+    document.getElementById("m").innerHTML = '<span data-fr>Les événements restent un an dans l’historique ; au-delà, ou s’ils sont annulés ou renommés par leur organisateur, leur page disparaît. Cherche-le par son titre ou son intervenant :</span><span data-en>Events stay in the history for a year; after that, or if the organiser cancels or renames them, their page goes away. Search for it by title or speaker:</span>';
   }
   if (document.documentElement.lang === "en") {
     var q = document.getElementById("q"); q.placeholder = "Search for a talk…"; q.setAttribute("aria-label", "Search for a talk");

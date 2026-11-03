@@ -1,325 +1,420 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À propos de Lotent — l'agenda des conférences de Paris</title>
-  <meta name="description" content="Comment fonctionne Lotent, l'agenda gratuit des conférences, cours et séminaires de Paris : les dizaines d'établissements suivis, la mise à jour quotidienne, l'abonnement au calendrier." />
-  <link rel="canonical" href="https://lotent.fr/apropos.html" />
-  <link rel="icon" href="icon.svg?v=3" type="image/svg+xml" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Aperçu de lien (WhatsApp, Discord, LinkedIn…) : sans ces balises, le
-       partage de la page affichait un lien nu -->
-  <meta property="og:title" content="À propos de Lotent — l'agenda des conférences de Paris" />
-  <meta property="og:description" content="L'agenda gratuit des conférences, cours et séminaires de Paris : établissements suivis, mise à jour quotidienne, abonnement au calendrier." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Lotent" />
-  <meta property="og:url" content="https://lotent.fr/apropos.html" />
-  <meta property="og:image" content="https://lotent.fr/og.png" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://lotent.fr/og.png" />
-  <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "AboutPage", "name": "À propos de Lotent", "url": "https://lotent.fr/apropos.html", "inLanguage": "fr", "isPartOf": {"@id": "https://lotent.fr/#website"}, "about": {"@id": "https://lotent.fr/#organization"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lotent.fr/"}, {"@type": "ListItem", "position": 2, "name": "À propos", "item": "https://lotent.fr/apropos.html"}]}}
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=63" />
-  <script>
-    // Même thème que l'app principale, appliqué avant le premier rendu (pas de flash)
-    try { var t = localStorage.getItem("paf_theme"); if (t) { t = t.replace(/"/g, ""); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } } catch (e) {}
-  </script>
-  <style>
-    /* Prose : réglé au niveau des éléments pour ne pas semer des classes dans
-       chaque cellule de tableau ; mêmes tokens que le reste du site. */
-    .prose p { color: hsl(var(--muted-foreground)); line-height: 1.7; margin: 0 0 14px; }
-    .prose a { color: hsl(var(--foreground)); text-decoration: underline; text-underline-offset: 3px; }
-    .prose a:hover { opacity: .75; }
-    .prose strong { color: hsl(var(--foreground)); font-weight: 600; }
-    .prose ul { margin: 0 0 14px; padding-left: 20px; list-style: disc; color: hsl(var(--muted-foreground)); line-height: 1.7; }
-    .prose li { margin-bottom: 6px; }
-    .prose code { background: hsl(var(--muted)); border-radius: 6px; padding: 2px 7px; font-family: ui-monospace, monospace; font-size: 13px; color: hsl(var(--foreground)); }
-    .prose table { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 14px; }
-    .prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); }
-    .prose th { color: hsl(var(--foreground)); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
-    .prose td:first-child { color: hsl(var(--foreground)); }
-    /* Bascule FR/EN : même mécanisme qu'avant, piloté par html[lang] */
-    [data-en] { display: none; }
-    html[lang="en"] [data-fr] { display: none; }
-    html[lang="en"] [data-en] { display: initial; }
-    html[lang="en"] [data-en="block"] { display: block; }
-  </style>
-  <!-- Mesure d'audience GoatCounter : sans cookie ni donnée personnelle -->
-  <script data-goatcounter="https://lotent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos de Lotent — l'agenda des conférences de Paris</title>
+<meta name="description" content="Comment fonctionne Lotent, l'agenda gratuit des conférences, cours et séminaires de Paris : le pipeline de collecte, la carte des lieux, les chiffres du jour, les calendriers à s'abonner et la pile technique.">
+<link rel="canonical" href="https://lotent.fr/apropos.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icon.svg?v=3" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="À propos de Lotent — l'agenda des conférences de Paris">
+<meta property="og:description" content="Comment un agenda de Paris se construit chaque matin : collecte, normalisation, 6 500 pages générées, calendriers à s'abonner. Avec les vrais chiffres du jour.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lotent">
+<meta property="og:url" content="https://lotent.fr/apropos.html">
+<meta property="og:image" content="https://lotent.fr/og.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lotent.fr/og.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "AboutPage", "name": "À propos de Lotent", "url": "https://lotent.fr/apropos.html", "inLanguage": "fr", "isPartOf": {"@id": "https://lotent.fr/#website"}, "about": {"@id": "https://lotent.fr/#organization"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lotent.fr/"}, {"@type": "ListItem", "position": 2, "name": "À propos", "item": "https://lotent.fr/apropos.html"}]}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("paf_theme");try{t=JSON.parse(t)}catch(e){}if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="apropos.css">
+<!-- Mesure d'audience GoatCounter : sans cookie ni donnée personnelle -->
+<script data-goatcounter="https://lotent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
+<a class="skip" href="#main"><span data-fr>Aller au contenu</span><span data-en>Skip to content</span></a>
+<header class="top"><div class="bar">
+  <a class="brand" href="index.html" aria-label="Lotent"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 64 64" fill="none"><path d="M32 29.5C32.11 29.42 32.43 29.12 32.69 29C32.95 28.88 33.25 28.8 33.56 28.78C33.87 28.75 34.21 28.77 34.54 28.84C34.88 28.91 35.23 29.03 35.55 29.2C35.87 29.37 36.2 29.6 36.49 29.88C36.78 30.15 37.06 30.48 37.28 30.84C37.51 31.2 37.71 31.62 37.84 32.06C37.98 32.49 38.07 32.98 38.1 33.46C38.12 33.95 38.09 34.47 37.99 34.98C37.89 35.49 37.73 36.01 37.5 36.51C37.26 37.01 36.96 37.5 36.6 37.95C36.24 38.4 35.8 38.83 35.32 39.2C34.84 39.57 34.29 39.9 33.71 40.16C33.12 40.42 32.48 40.62 31.83 40.74C31.17 40.85 30.47 40.91 29.78 40.86C29.09 40.82 28.36 40.7 27.67 40.5C26.98 40.29 26.28 39.99 25.63 39.61C24.98 39.24 24.34 38.77 23.77 38.23C23.2 37.69 22.67 37.07 22.23 36.39C21.79 35.71 21.4 34.95 21.11 34.17C20.83 33.38 20.62 32.52 20.52 31.66C20.42 30.8 20.41 29.89 20.51 29C20.62 28.11 20.82 27.2 21.14 26.33C21.45 25.46 21.87 24.59 22.39 23.79C22.91 23 23.54 22.22 24.25 21.55C24.95 20.87 25.77 20.24 26.63 19.73C27.5 19.22 28.46 18.78 29.45 18.47C30.43 18.16 31.5 17.95 32.56 17.87C33.61 17.79 34.73 17.82 35.8 17.99C36.88 18.16 37.98 18.45 39.02 18.87C40.06 19.29 41.09 19.84 42.02 20.49C42.96 21.15 43.86 21.94 44.64 22.81C45.43 23.69 46.14 24.68 46.72 25.73C47.3 26.78 47.78 27.94 48.11 29.12C48.44 30.3 48.65 31.57 48.71 32.82C48.77 34.07 48.69 35.38 48.46 36.64C48.22 37.9 47.84 39.18 47.32 40.38C46.8 41.58 46.12 42.77 45.32 43.84C44.53 44.91 43.58 45.94 42.55 46.82C41.51 47.7 40.33 48.5 39.1 49.14C37.86 49.78 36.51 50.3 35.14 50.65C33.77 51 32.31 51.2 30.87 51.24C29.42 51.27 27.93 51.14 26.49 50.84C25.05 50.54 23.59 50.07 22.23 49.44C20.88 48.81 19.54 48.01 18.34 47.07C17.13 46.14 16 45.04 15.02 43.84C14.04 42.64 13.16 41.28 12.47 39.87C11.77 38.45 11.22 36.91 10.85 35.35C10.49 33.79 10.29 32.13 10.29 30.51C10.28 28.88 10.46 27.19 10.83 25.58C11.2 23.97 11.77 22.34 12.5 20.83C13.24 19.32 14.17 17.84 15.24 16.51C16.31 15.18 17.57 13.93 18.94 12.86C20.3 11.79 21.83 10.84 23.43 10.09C25.02 9.35 26.75 8.76 28.5 8.38C30.24 8.01 32.09 7.82 33.9 7.85C35.71 7.88 37.58 8.11 39.36 8.55C41.15 9 42.94 9.66 44.6 10.5C46.26 11.34 47.89 12.4 49.33 13.61C50.78 14.82 52.14 16.24 53.3 17.77C54.46 19.29 55.48 21 56.27 22.77C57.06 24.55 57.68 26.47 58.06 28.4C58.44 30.32 58.62 32.36 58.55 34.35C58.49 36.34 57.82 39.34 57.68 40.34" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="57.68" cy="40.34" r="4.8" class="brand-dot"/></svg><span>Lotent</span></a>
+  <nav aria-label="Navigation">
+    <a href="index.html">Agenda</a>
+    <a href="s/cette-semaine.html"><span data-fr>Cette semaine</span><span data-en>This week</span></a>
+    <a href="s/gratuites.html"><span data-fr>Gratuites</span><span data-en>Free</span></a>
+    <a href="p/"><span data-fr>Intervenants</span><span data-en>Speakers</span></a>
+  </nav>
+  <button id="lang-btn" class="btn btn-sm" type="button" style="margin-left:auto" aria-label="Switch to English">EN</button>
+  <button id="theme-btn" class="btn btn-sm" type="button" aria-label="Changer de thème / Toggle theme"><svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"></svg></button>
+  <a class="btn btn-sm" href="index.html"><span data-fr>Ouvrir l'agenda</span><span data-en>Open the agenda</span></a>
+</div></header>
 
-<header class="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6 h-14 flex items-center gap-4">
-    <a href="index.html" class="inline-flex items-center gap-2.5">
-      <svg width="28" height="28" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 29.5C32.11 29.42 32.43 29.12 32.69 29C32.95 28.88 33.25 28.8 33.56 28.78C33.87 28.75 34.21 28.77 34.54 28.84C34.88 28.91 35.23 29.03 35.55 29.2C35.87 29.37 36.2 29.6 36.49 29.88C36.78 30.15 37.06 30.48 37.28 30.84C37.51 31.2 37.71 31.62 37.84 32.06C37.98 32.49 38.07 32.98 38.1 33.46C38.12 33.95 38.09 34.47 37.99 34.98C37.89 35.49 37.73 36.01 37.5 36.51C37.26 37.01 36.96 37.5 36.6 37.95C36.24 38.4 35.8 38.83 35.32 39.2C34.84 39.57 34.29 39.9 33.71 40.16C33.12 40.42 32.48 40.62 31.83 40.74C31.17 40.85 30.47 40.91 29.78 40.86C29.09 40.82 28.36 40.7 27.67 40.5C26.98 40.29 26.28 39.99 25.63 39.61C24.98 39.24 24.34 38.77 23.77 38.23C23.2 37.69 22.67 37.07 22.23 36.39C21.79 35.71 21.4 34.95 21.11 34.17C20.83 33.38 20.62 32.52 20.52 31.66C20.42 30.8 20.41 29.89 20.51 29C20.62 28.11 20.82 27.2 21.14 26.33C21.45 25.46 21.87 24.59 22.39 23.79C22.91 23 23.54 22.22 24.25 21.55C24.95 20.87 25.77 20.24 26.63 19.73C27.5 19.22 28.46 18.78 29.45 18.47C30.43 18.16 31.5 17.95 32.56 17.87C33.61 17.79 34.73 17.82 35.8 17.99C36.88 18.16 37.98 18.45 39.02 18.87C40.06 19.29 41.09 19.84 42.02 20.49C42.96 21.15 43.86 21.94 44.64 22.81C45.43 23.69 46.14 24.68 46.72 25.73C47.3 26.78 47.78 27.94 48.11 29.12C48.44 30.3 48.65 31.57 48.71 32.82C48.77 34.07 48.69 35.38 48.46 36.64C48.22 37.9 47.84 39.18 47.32 40.38C46.8 41.58 46.12 42.77 45.32 43.84C44.53 44.91 43.58 45.94 42.55 46.82C41.51 47.7 40.33 48.5 39.1 49.14C37.86 49.78 36.51 50.3 35.14 50.65C33.77 51 32.31 51.2 30.87 51.24C29.42 51.27 27.93 51.14 26.49 50.84C25.05 50.54 23.59 50.07 22.23 49.44C20.88 48.81 19.54 48.01 18.34 47.07C17.13 46.14 16 45.04 15.02 43.84C14.04 42.64 13.16 41.28 12.47 39.87C11.77 38.45 11.22 36.91 10.85 35.35C10.49 33.79 10.29 32.13 10.29 30.51C10.28 28.88 10.46 27.19 10.83 25.58C11.2 23.97 11.77 22.34 12.5 20.83C13.24 19.32 14.17 17.84 15.24 16.51C16.31 15.18 17.57 13.93 18.94 12.86C20.3 11.79 21.83 10.84 23.43 10.09C25.02 9.35 26.75 8.76 28.5 8.38C30.24 8.01 32.09 7.82 33.9 7.85C35.71 7.88 37.58 8.11 39.36 8.55C41.15 9 42.94 9.66 44.6 10.5C46.26 11.34 47.89 12.4 49.33 13.61C50.78 14.82 52.14 16.24 53.3 17.77C54.46 19.29 55.48 21 56.27 22.77C57.06 24.55 57.68 26.47 58.06 28.4C58.44 30.32 58.62 32.36 58.55 34.35C58.49 36.34 57.82 39.34 57.68 40.34" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="57.68" cy="40.34" r="4.6" class="fill-brand"/></svg><span class="font-serif text-2xl font-medium leading-none">Lotent</span>
-    </a>
-    <div class="ml-auto flex items-center gap-2">
-      <button id="lang-btn" title="Switch language" class="inline-flex h-9 w-9 items-center justify-center rounded-md border bg-background text-xs font-semibold shadow-sm hover:bg-accent">EN</button>
-      <button id="theme-btn" aria-label="Changer de thème" class="inline-flex h-9 w-9 items-center justify-center rounded-md border bg-background shadow-sm hover:bg-accent">
-        <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
-      </button>
-      <!-- Libellé court sur téléphone : « Retour au calendrier » passait sur deux lignes -->
-      <a href="index.html" class="inline-flex h-9 items-center whitespace-nowrap rounded-md border bg-background px-3 text-sm shadow-sm hover:bg-accent">
-        <span data-fr>← <span class="sm:hidden">Agenda</span><span class="hidden sm:inline">Retour au calendrier</span></span><span data-en>← <span class="sm:hidden">Agenda</span><span class="hidden sm:inline">Back to the calendar</span></span>
-      </a>
+<main id="main" class="wrap">
+<nav class="crumb" aria-label="Fil d'Ariane"><a href="index.html"><span data-fr>Accueil</span><span data-en>Home</span></a> › <span data-fr>À propos</span><span data-en>About</span></nav>
+
+<section class="hero ap-hero">
+  <p class="kind"><span class="dot" style="--dc:hsl(var(--brand))"></span><span data-fr>À propos</span><span data-en>About</span></p>
+  <h1 class="display long"><span data-fr>Un seul endroit pour savoir ce qui se passe dans les amphis parisiens.</span><span data-en>One place to know what’s happening in Paris’s lecture halls.</span></h1>
+  <p class="lede" data-fr>Lotent rassemble chaque matin les conférences, cours et séminaires ouverts au public à Paris. Cette page montre comment, avec les chiffres du jour : tout ce qui s’affiche ici est mesuré à chaque mise à jour, rien n’est écrit à la main.</p>
+  <p class="lede" data-en>Every morning Lotent gathers the talks, lectures and seminars open to the public in Paris. This page shows how, with today’s numbers: everything displayed here is measured at each update, nothing is typed by hand.</p>
+  <dl class="figures">
+    <div><dt><span data-fr>événements indexés</span><span data-en>indexed events</span></dt><dd id="f-total">—</dd></div>
+    <div><dt><span data-fr>à venir</span><span data-en>upcoming</span></dt><dd id="f-upcoming">—</dd></div>
+    <div><dt><span data-fr>organisateurs indexés</span><span data-en>indexed organisers</span></dt><dd id="f-orgs">—</dd></div>
+    <div><dt><span data-fr>indexé depuis</span><span data-en>indexed since</span></dt><dd id="f-since">—</dd></div>
+  </dl>
+  <p class="fresh" id="fresh"></p>
+</section>
+
+<div class="bar2"><div class="scroller" role="navigation" aria-label="Sections">
+  <a class="chip" href="#pipeline"><span data-fr>Le pipeline</span><span data-en>The pipeline</span></a>
+  <a class="chip" href="#live"><span data-fr>En direct</span><span data-en>Live</span></a>
+  <a class="chip" href="#try"><span data-fr>À essayer</span><span data-en>Try it</span></a>
+  <a class="chip" href="#stack"><span data-fr>Sous le capot</span><span data-en>Under the hood</span></a>
+  <a class="chip" href="#sources"><span data-fr>Les sources</span><span data-en>The sources</span></a>
+  <a class="chip" href="#propose"><span data-fr>Proposer</span><span data-en>Submit</span></a>
+</div></div>
+
+<!-- ═════════ PIPELINE ═════════ -->
+<section class="ap" id="pipeline">
+  <h2><span data-fr>Du site d’un amphi à votre téléphone</span><span data-en>From a lecture hall’s website to your phone</span></h2>
+  <p class="intro" data-fr>Cinq étapes, chaque jour, sans serveur ni base de données : des fichiers écrits à l’avance et publiés tels quels. Choisissez une étape.</p>
+  <p class="intro" data-en>Five steps, every day, with no server and no database: files written ahead of time and published as they are. Pick a step.</p>
+
+  <div class="steps" role="tablist" aria-label="Pipeline">
+    <button class="step" role="tab" id="t1" aria-controls="p1" aria-selected="true"><span class="no">1</span><span data-fr>Sources</span><span data-en>Sources</span><small data-fr>des sites très différents</small><small data-en>very different websites</small></button>
+    <button class="step" role="tab" id="t2" aria-controls="p2" aria-selected="false"><span class="no">2</span><span data-fr>Collecte</span><span data-en>Collection</span><small data-fr>un robot chaque matin</small><small data-en>a robot every morning</small></button>
+    <button class="step" role="tab" id="t3" aria-controls="p3" aria-selected="false"><span class="no">3</span><span data-fr>Normalisation</span><span data-en>Normalisation</span><small data-fr>tout au même format</small><small data-en>everything in one format</small></button>
+    <button class="step" role="tab" id="t4" aria-controls="p4" aria-selected="false"><span class="no">4</span><span data-fr>Génération</span><span data-en>Generation</span><small data-fr>tout écrit à l’avance</small><small data-en>all written ahead</small></button>
+    <button class="step" role="tab" id="t5" aria-controls="p5" aria-selected="false"><span class="no">5</span><span data-fr>Publication</span><span data-en>Publishing</span><small data-fr>un commit, un site</small><small data-en>one commit, one site</small></button>
+  </div>
+
+  <div class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
+    <div>
+      <h3><span data-fr>Chacun publie à sa façon</span><span data-en>Everyone publishes their own way</span></h3>
+      <p data-fr><b data-fill="organisers">…</b> organisateurs ont des événements à venir : universités, grandes écoles, musées, think tanks, associations, la Ville de Paris, des plateformes comme Luma ou Sciencesconf. Aucun ne publie le même format.</p>
+      <p data-en><b data-fill="organisers">…</b> organisers have upcoming events: universities, schools, museums, think tanks, associations, the City of Paris, platforms such as Luma or Sciencesconf. No two publish the same format.</p>
+      <ul data-fr><li>pages HTML paginées, ou construites en JavaScript</li><li>API <b>Indico</b> (laboratoires de maths et de physique)</li><li>flux <b>iCal</b> (Paris Cité, Nanterre)</li><li>données <b>Next.js</b> embarquées dans la page (Louvre)</li><li>pages <b>Luma</b>, une par thème</li></ul>
+      <ul data-en><li>paginated HTML pages, or pages built in JavaScript</li><li><b>Indico</b> API (maths and physics labs)</li><li><b>iCal</b> feeds (Paris Cité, Nanterre)</li><li><b>Next.js</b> data embedded in the page (Louvre)</li><li><b>Luma</b> pages, one per theme</li></ul>
+    </div>
+    <div>
+      <p data-fr>Un piège réel : le Collège de France répondait du binaire illisible, parce que le robot annonçait savoir lire le brotli. Une ligne retirée a ramené cinq sources à la vie.</p>
+      <p data-en>A real trap: the Collège de France answered with unreadable binary because the robot claimed it could read brotli. One line removed brought five sources back to life.</p>
+      <pre class="code"><code>CDF_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; …) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+    # Pas de « br » : requests ne décode pas le brotli sans le paquet brotli,
+    # et le site répondait alors du binaire illisible (0 carte lue)
+    "Accept-Encoding": "gzip, deflate",
+}</code></pre>
+      <span class="src">scraper/scrape.py (<span data-fr>abrégé</span><span data-en>shortened</span>)</span>
     </div>
   </div>
-</header>
 
-<main class="mx-auto max-w-3xl px-4 sm:px-6 py-14 prose">
-  <h1 class="text-4xl font-bold tracking-tight">
-    <span data-fr>À propos</span><span data-en>About</span>
-  </h1>
-  <p class="mt-3 text-lg">
-    <span data-fr>Un seul endroit pour savoir ce qui se passe dans les amphis parisiens.</span>
-    <span data-en>One place to know what's happening in Paris's lecture halls.</span>
-  </p>
-
-  <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
-    <div class="rounded-xl border bg-card p-4 shadow-sm">
-      <div class="text-2xl font-bold tabular-nums text-foreground" id="stat-total">—</div>
-      <div class="text-xs text-muted-foreground mt-1"><span data-fr>événements indexés</span><span data-en>indexed events</span></div>
+  <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+    <div>
+      <h3><span data-fr>Un robot, chaque matin</span><span data-en>One robot, every morning</span></h3>
+      <p data-fr><b>GitHub Actions</b> lance le scraper Python chaque jour à 4 h UTC. <code>requests</code> et BeautifulSoup lisent les pages ; <b>Playwright</b> pilote un vrai Chromium pour celles qui se construisent en JavaScript.</p>
+      <p data-en><b>GitHub Actions</b> runs the Python scraper every day at 4 am UTC. <code>requests</code> and BeautifulSoup read the pages; <b>Playwright</b> drives a real Chromium for the ones built in JavaScript.</p>
+      <p data-fr>Les sources qui bloquent les robots des data-centers (Collège de France, Louvre, Muséum, Ifri, IRIS…) sont rafraîchies à la main, trois fois par semaine, depuis une connexion française.</p>
+      <p data-en>Sources that block data-center robots (Collège de France, Louvre, Muséum, Ifri, IRIS…) are refreshed by hand, three times a week, from a French connection.</p>
+      <p data-fr>Un contrôle de santé (<code>check_health.py</code>) alerte quand une source critique tombe à zéro événement.</p>
+      <p data-en>A health check (<code>check_health.py</code>) raises an alert when a critical source drops to zero events.</p>
     </div>
-    <div class="rounded-xl border bg-card p-4 shadow-sm">
-      <div class="text-2xl font-bold tabular-nums text-foreground" id="stat-upcoming">—</div>
-      <div class="text-xs text-muted-foreground mt-1"><span data-fr>à venir</span><span data-en>upcoming</span></div>
-    </div>
-    <div class="rounded-xl border bg-card p-4 shadow-sm">
-      <div class="text-2xl font-bold tabular-nums text-foreground" id="stat-sources">—</div>
-      <div class="text-xs text-muted-foreground mt-1"><span data-fr>organisateurs</span><span data-en>organisers</span></div>
-    </div>
-    <div class="rounded-xl border bg-card p-4 shadow-sm">
-      <div class="text-2xl font-bold tabular-nums text-foreground" id="stat-since">—</div>
-      <div class="text-xs text-muted-foreground mt-1"><span data-fr>indexé depuis</span><span data-en>indexed since</span></div>
+    <div>
+      <pre class="code"><code>on:
+  schedule:
+    - cron: "0 4 * * *"  # 06:00 Paris (summer) / 05:00 (winter)</code></pre>
+      <span class="src">.github/workflows/daily-scrape.yml</span>
+      <dl class="kv">
+        <dt data-fr>Workflows</dt><dt data-en>Workflows</dt><dd><b data-fill="workflows">…</b></dd>
+        <dt data-fr>Tests</dt><dt data-en>Tests</dt><dd><b data-fill="tests">…</b> <span data-fr>fonctions de test</span><span data-en>test functions</span></dd>
+      </dl>
     </div>
   </div>
 
-  <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>Le projet</span><span data-en>The project</span></h2>
-  <p data-fr>Les conférences, séminaires et colloques parisiens sont éparpillés sur des dizaines
-  de sites institutionnels, chacun avec son propre agenda, sa propre pagination, son
-  propre format. Beaucoup sont ouverts à tous — mais encore faut-il savoir qu'ils existent.</p>
-  <p data-en="block">Conferences, seminars and symposiums in Paris are scattered across dozens of
-  institutional websites, each with its own agenda, its own pagination, its own
-  format. Many are open to everyone — but you still need to know they exist.</p>
-  <p data-fr>Ce site les rassemble en un calendrier unique, filtrable par discipline,
-  institution, date et format, avec une carte, un historique et un flux iCal
-  pour s'abonner depuis son agenda.</p>
-  <p data-en="block">This site brings them together into a single calendar, filterable by discipline,
-  institution, date and format, with a map, an archive and an iCal feed to
-  subscribe from your own calendar app.</p>
+  <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+    <div>
+      <h3><span data-fr>Mettre tout le monde au même format</span><span data-en>Putting everyone in the same format</span></h3>
+      <ul data-fr>
+        <li><b>Dates et heures</b> lues dans tous les formats français, ramenées à l’heure de Paris.</li>
+        <li><b>Lieux géocodés</b> : <b data-fill="geocoded">…</b> adresses gardées en cache, pour la carte et « Près de moi ».</li>
+        <li><b>Discipline</b> devinée par mots-clés (elle peut se tromper).</li>
+        <li><b>Gratuit, en ligne, en anglais</b> repérés par des règles ; aujourd’hui <b data-fill="free">…</b> événements gratuits, <b data-fill="english">…</b> en anglais.</li>
+        <li><b>Doublons fusionnés</b> : la même conférence publiée par deux sources n’apparaît qu’une fois.</li>
+        <li><b>Catégories à part</b> : soutenances, carrières, salons étudiants.</li>
+      </ul>
+      <ul data-en>
+        <li><b>Dates and times</b> parsed from every French format, converted to Paris time.</li>
+        <li><b>Geocoded places</b>: <b data-fill="geocoded">…</b> addresses kept in a cache, for the map and “Near me”.</li>
+        <li><b>Discipline</b> guessed from keywords (it can be wrong).</li>
+        <li><b>Free, online, in English</b> spotted by rules; today <b data-fill="free">…</b> free events, <b data-fill="english">…</b> in English.</li>
+        <li><b>Duplicates merged</b>: the same talk published by two sources appears once.</li>
+        <li><b>Separate categories</b>: PhD defences, careers, student fairs.</li>
+      </ul>
+    </div>
+    <div>
+      <p data-fr>Une règle parmi d’autres, telle qu’elle est écrite :</p>
+      <p data-en>One rule among many, exactly as written:</p>
+      <pre class="code"><code>def _is_free(ev):
+    p = str(ev.get("price", "") or "")
+    return p == "0" or bool(re.search(r"gratuit|free", p, re.I))</code></pre>
+      <span class="src">scraper/scrape.py</span>
+    </div>
+  </div>
 
-  <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>Les sources</span><span data-en>The sources</span></h2>
-  <table>
-    <tr><th><span data-fr>Source</span><span data-en>Source</span></th>
-        <th><span data-fr>Type</span><span data-en>Type</span></th></tr>
-    <tr><td>Collège de France</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>École normale supérieure (ENS)</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>EHESS</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Institut Henri Poincaré</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Paris School of Economics</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Sciences Po</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Sorbonne Université</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université PSL</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université Paris Dauphine</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université Paris 1 Panthéon-Sorbonne</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université Paris-Panthéon-Assas</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université Paris-Saclay</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Campus Condorcet</td><td><span data-fr>Campus de recherche</span><span data-en>Research campus</span></td></tr>
-    <tr><td>Institut d'études avancées de Paris</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
-    <tr><td>Fondation Maison des Sciences de l'Homme</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
-    <tr><td>Musée du quai Branly</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
-    <tr><td>Musée du Louvre (conférences et colloques)</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
-    <tr><td>Centre Pompidou (rencontres hors les murs)</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
-    <tr><td>ENS : département de mathématiques, ITEM, CIENS, CERES</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>HEC Paris</td><td><span data-fr>École</span><span data-en>School</span></td></tr>
-    <tr><td>Hi! PARIS, PR[AI]RIE</td><td><span data-fr>Centres de recherche en IA</span><span data-en>AI research centres</span></td></tr>
-    <tr><td>Université Ouverte (Université Paris Cité)</td><td><span data-fr>Conférences gratuites</span><span data-en>Free lectures</span></td></tr>
-    <tr><td>Les Mardis de la Philo (gratuit pour les moins de 26 ans)</td><td><span data-fr>Conférences</span><span data-en>Lectures</span></td></tr>
-    <tr><td>INHA, Institut du monde arabe, Beaux-Arts de Paris</td><td><span data-fr>Art et culture</span><span data-en>Art and culture</span></td></tr>
-    <tr><td>École nationale des chartes, ENS Paris-Saclay, Université Sorbonne Paris Nord</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Ifri, IRIS, Institut Jacques Delors, Fondation Jean-Jaurès</td><td><span data-fr>Think tanks</span><span data-en>Think tanks</span></td></tr>
-    <tr><td>Institut Louis Bachelier, Citéco, ESCP</td><td><span data-fr>Économie et finance</span><span data-en>Economics and finance</span></td></tr>
-    <tr><td>Institut des actuaires</td><td><span data-fr>Actuariat</span><span data-en>Actuarial science</span></td></tr>
-    <tr><td>LAMSADE (Dauphine), CMAP (École polytechnique)</td><td><span data-fr>Laboratoires de recherche</span><span data-en>Research labs</span></td></tr>
-    <tr><td>IHES, IPGP, labos de maths d'Île-de-France (Indico)</td><td><span data-fr>Recherche</span><span data-en>Research</span></td></tr>
-    <tr><td>Maison de l'Amérique latine, Institut culturel italien, Maison de la culture du Japon</td><td><span data-fr>Instituts culturels</span><span data-en>Cultural institutes</span></td></tr>
-    <tr><td>Académie nationale de médecine, Académie des inscriptions et belles-lettres</td><td><span data-fr>Académies (séances publiques)</span><span data-en>Academies (public sessions)</span></td></tr>
-    <tr><td>Mines Paris - PSL</td><td><span data-fr>École</span><span data-en>School</span></td></tr>
-    <tr><td>Musée de l'Homme</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
-    <tr><td>Ined (démographie)</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
-    <tr><td>Université Paris Cité</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université Sorbonne Nouvelle</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université Paris 8</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Université Paris Nanterre</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>EPHE</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Inalco</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Cnam</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Académie des sciences</td><td><span data-fr>Institution</span><span data-en>Institution</span></td></tr>
-    <tr><td>Institut Pasteur</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
-    <tr><td>Institut Curie</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
-    <tr><td>Institut du Cerveau</td><td><span data-fr>Institut de recherche</span><span data-en>Research institute</span></td></tr>
-    <tr><td>Muséum national d'Histoire naturelle</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
-    <tr><td>Bibliothèque nationale de France (BnF)</td><td><span data-fr>Bibliothèque</span><span data-en>Library</span></td></tr>
-    <tr><td>Cité des sciences et de l'industrie</td><td><span data-fr>Musée</span><span data-en>Museum</span></td></tr>
-    <tr><td>IJCLab, IN2P3 (LPNHE, APC…), Observatoire de Paris</td><td><span data-fr>Laboratoires (Indico)</span><span data-en>Labs (Indico)</span></td></tr>
-    <tr><td><span data-fr>Sciencesconf.org (colloques en Île-de-France)</span><span data-en>Sciencesconf.org (conferences in Île-de-France)</span></td><td><span data-fr>Plateforme de colloques</span><span data-en>Conference platform</span></td></tr>
-    <tr><td><span data-fr>Soutenances de thèse et d'HDR (repérées dans toutes les sources)</span><span data-en>PhD and habilitation defences (spotted across all sources)</span></td><td><span data-fr>Catégorie à part</span><span data-en>Separate category</span></td></tr>
-    <tr><td><span data-fr>Carrières : événements de recrutement (BCG, Kering… et salons de l'emploi)</span><span data-en>Careers: recruiting events (BCG, Kering… and job fairs)</span></td><td><span data-fr>Entreprises</span><span data-en>Companies</span></td></tr>
-    <tr><td>Collège des Bernardins</td><td><span data-fr>Lieu de débat</span><span data-en>Forum</span></td></tr>
-    <tr><td><span data-fr>Luma (événements parisiens : tech, IA, arts…)</span><span data-en>Luma (events in Paris: tech, AI, arts…)</span></td><td><span data-fr>Plateforme</span><span data-en>Platform</span></td></tr>
-    <tr><td>Sciences et Cultures / Citoy.ENS</td><td><span data-fr>Association étudiante</span><span data-en>Student association</span></td></tr>
-    <tr><td>Article 1</td><td><span data-fr>Association</span><span data-en>Association</span></td></tr>
-    <tr><td><span data-fr>Crous de Paris, Créteil et Versailles (vie étudiante)</span><span data-en>Crous of Paris, Créteil and Versailles (student life)</span></td><td><span data-fr>Vie étudiante</span><span data-en>Student life</span></td></tr>
-    <tr><td><span data-fr>Salons étudiants : L'Étudiant (grandes écoles, masters, alternance…), Jeunes d'Avenirs</span><span data-en>Student fairs: L'Étudiant (grandes écoles, masters, apprenticeships…), Jeunes d'Avenirs</span></td><td><span data-fr>Catégorie à part</span><span data-en>Separate category</span></td></tr>
-    <tr><td>Jeunes IHEDN, Institut Open Diplomacy, Taureaux du Panthéon, HEC IA…</td><td><span data-fr>Associations étudiantes</span><span data-en>Student associations</span></td></tr>
-    <tr><td><span data-fr>Que faire à Paris (agenda officiel de la Ville de Paris : bibliothèques, musées, mairies…)</span><span data-en>Que faire à Paris (City of Paris official agenda: libraries, museums, town halls…)</span></td><td><span data-fr>Open data</span><span data-en>Open data</span></td></tr>
-  </table>
-  <p class="mt-4 rounded-lg border-l-2 border-primary/50 bg-muted/50 py-3 pl-4 pr-3 text-sm" data-fr>Le classement par discipline est automatique (mots-clés) : il peut se
-  tromper. L'événement fait toujours foi sur le site de l'institution — cliquez sur une
-  carte pour y accéder.</p>
-  <p class="mt-4 rounded-lg border-l-2 border-primary/50 bg-muted/50 py-3 pl-4 pr-3 text-sm" data-en="block">Discipline classification is automatic (keywords): it can be wrong.
-  The event's official page is always the source of truth — click any card to reach it.</p>
+  <div class="panel" id="p4" role="tabpanel" aria-labelledby="t4" hidden>
+    <div>
+      <h3><span data-fr>Tout est écrit à l’avance</span><span data-en>Everything is written ahead of time</span></h3>
+      <p data-fr>Le site n’interroge rien en direct : à chaque passage, le scraper écrit les pages, les calendriers et les fichiers de données. Une page événement, une page par organisateur, par discipline, par intervenant, des sélections (« ce soir », « gratuites »…).</p>
+      <p data-en>The site queries nothing live: on each run the scraper writes the pages, the calendars and the data files. An event page, one page per organiser, discipline and speaker, and selections (“tonight”, “free”…).</p>
+      <p data-fr>L’agenda est découpé par mois en JSON : le premier affichage ne télécharge que le mois en cours.</p>
+      <p data-en>The agenda is split by month into JSON: the first load only downloads the current month.</p>
+    </div>
+    <div>
+      <pre class="code" id="tree" aria-label="Fichiers générés">…</pre>
+      <span class="src"><span data-fr>mesuré au dernier passage du scraper (data/site.json)</span><span data-en>measured at the scraper’s last run (data/site.json)</span></span>
+    </div>
+  </div>
 
-  <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>La mise à jour</span><span data-en>Updates</span></h2>
-  <ul data-fr>
-    <li><strong>Chaque matin</strong> : récupération automatique de toutes les sources.</li>
-    <li><strong>Trois fois par semaine</strong> : passage complémentaire pour les sources qui
-    bloquent les robots des data-centers (Collège de France, Musée du Louvre, Muséum, Académie des sciences, Ifri, IRIS, salons de L'Étudiant, pages thématiques Luma…).</li>
-    <li>Les événements passés sont conservés dans l'onglet <em>Historique</em> pendant un an.</li>
+  <div class="panel" id="p5" role="tabpanel" aria-labelledby="t5" hidden>
+    <div>
+      <h3><span data-fr>Un commit, un site</span><span data-en>One commit, one site</span></h3>
+      <p data-fr>Le robot enregistre les fichiers dans Git ; <b>GitHub Pages</b> les publie. L’application est en <b>React 18</b>, compilée par esbuild : <b data-fill="js-kb">…</b> Ko (<b data-fill="js-gz">…</b> Ko compressés). Un <b>service worker</b> garde le nécessaire pour l’ouvrir hors ligne.</p>
+      <p data-en>The robot saves the files in Git; <b>GitHub Pages</b> publishes them. The app is <b>React 18</b> built with esbuild: <b data-fill="js-kb">…</b> KB (<b data-fill="js-gz">…</b> KB compressed). A <b>service worker</b> keeps what’s needed to open it offline.</p>
+      <p data-fr>Pas de compte, pas de cookie, pas de serveur à maintenir : si GitHub tombe, le dernier site publié reste lisible depuis le cache.</p>
+      <p data-en>No account, no cookie, no server to maintain: if GitHub goes down, the last published site stays readable from the cache.</p>
+    </div>
+    <div>
+      <pre class="code"><code>/* Service worker — installable PWA + offline mode.
+   Strategy: network-first (fresh online), cache fallback when offline.
+   Bumped CACHE version forces clients to refresh their precache. */</code></pre>
+      <span class="src">sw.js</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ EN DIRECT ═════════ -->
+<section class="ap" id="live">
+  <h2><span data-fr>En direct</span><span data-en>Live</span></h2>
+  <p class="intro" data-fr>Lu dans <code>data/site.json</code> au moment où vous ouvrez la page. Survolez la carte : chaque point est un lieu.</p>
+  <p class="intro" data-en>Read from <code>data/site.json</code> as you open the page. Hover the map: each dot is a place.</p>
+
+  <div class="maprow">
+    <div class="mapwrap">
+      <canvas id="map" role="img" aria-label="Carte des lieux d’événements à venir à Paris"></canvas>
+      <div id="tip" hidden></div>
+    </div>
+    <div class="legend" id="legend" role="group" aria-label="Disciplines"></div>
+    <p class="ap-note"><span data-fr><b data-fill="located">…</b> événements à venir géolocalisés. Un point par lieu, sa taille suit le nombre d’événements, sa couleur la discipline dominante. Cliquez une discipline pour la masquer.</span><span data-en><b data-fill="located">…</b> upcoming events geolocated. One dot per place, its size follows the number of events, its colour the dominant discipline. Click a discipline to hide it.</span> <span id="map-note"></span></p>
+  </div>
+
+  <div class="live">
+    <div>
+      <h3><span data-fr>Par discipline</span><span data-en>By discipline</span></h3>
+      <ul class="bars" id="bars-disc"></ul>
+      <p class="ap-note" data-fr>Le classement est automatique : un événement peut tomber dans la mauvaise case. Il fait toujours foi sur le site de l’organisateur.</p>
+      <p class="ap-note" data-en>The classification is automatic: an event can land in the wrong bucket. The organiser’s own page is always the source of truth.</p>
+    </div>
+    <div>
+      <h3><span data-fr>Premiers organisateurs</span><span data-en>Top organisers</span></h3>
+      <ul class="bars" id="bars-org"></ul>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem">
+    <h3><span data-fr>Événements par mois</span><span data-en>Events per month</span></h3>
+    <svg class="months" id="months" role="img" aria-label="Événements par mois"></svg>
+    <p class="keyline"><span><i style="background:hsl(var(--control))"></i><span data-fr>historique conservé</span><span data-en>kept history</span></span><span><i style="background:hsl(var(--foreground))"></i><span data-fr>agenda à venir</span><span data-en>upcoming agenda</span></span></p>
+  </div>
+</section>
+
+<!-- ═════════ À ESSAYER ═════════ -->
+<section class="ap" id="try">
+  <h2><span data-fr>À essayer</span><span data-en>Try it</span></h2>
+  <p class="intro" data-fr>Chaque organisateur et chaque discipline a son calendrier <code>.ics</code>, mis à jour tout seul. Choisissez-en un : l’adresse ci-dessous est la vraie.</p>
+  <p class="intro" data-en>Every organiser and every discipline has its own <code>.ics</code> calendar, updated by itself. Pick one: the address below is the real one.</p>
+  <div class="try">
+    <div class="card">
+      <label class="field"><span data-fr>Quoi ?</span><span data-en>What?</span>
+        <select class="sel" id="gen-kind">
+          <option value="all">Tout l’agenda</option>
+          <option value="inst">Un organisateur</option>
+          <option value="disc">Une discipline</option>
+        </select></label>
+      <label class="field"><span data-fr>Lequel ?</span><span data-en>Which one?</span><select class="sel" id="gen-item" disabled></select></label>
+      <p class="out" id="gen-out">—</p>
+      <p class="ap-note" id="gen-n"></p>
+      <div class="actions">
+        <a class="btn btn-primary" id="gen-apple" href="#"><span data-fr>S’abonner (Apple, Outlook)</span><span data-en>Subscribe (Apple, Outlook)</span></a>
+        <a class="btn" id="gen-google" href="#" rel="noopener"><span data-fr>Google Agenda</span><span data-en>Google Calendar</span></a>
+        <button class="btn" id="gen-copy" type="button"><span data-fr>Copier le lien</span><span data-en>Copy link</span></button>
+        <a class="btn" id="gen-file" href="#"><span data-fr>Télécharger le .ics</span><span data-en>Download the .ics</span></a>
+      </div>
+      <p class="toast" id="gen-toast" role="status"></p>
+    </div>
+    <div>
+      <h3><span data-fr>La recherche comprend les dates</span><span data-en>Search understands dates</span></h3>
+      <p class="ap-note" style="margin:0 0 .75rem" data-fr>Dans l’agenda, ouvrez la recherche et tapez :</p>
+      <p class="ap-note" style="margin:0 0 .75rem" data-en>In the agenda, open the search and type:</p>
+      <ul class="tips">
+        <li><span><kbd>/</kbd> <span data-fr>ou</span><span data-en>or</span> <kbd>Ctrl K</kbd></span><span data-fr>ouvre la recherche</span><span data-en>opens the search</span></li>
+        <li><code>demain</code><span data-fr>tous les événements de demain</span><span data-en>everything tomorrow</span></li>
+        <li><code>12 novembre</code><span data-fr>un jour précis</span><span data-en>a specific day</span></li>
+        <li><code>semaine du 9 nov</code><span data-fr>du lundi au dimanche</span><span data-en>Monday to Sunday</span></li>
+        <li><code>ce week-end</code><span data-fr>samedi et dimanche</span><span data-en>Saturday and Sunday</span></li>
+      </ul>
+      <div class="actions"><a class="btn" href="index.html"><span data-fr>Essayer dans l’agenda</span><span data-en>Try it in the agenda</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ SOUS LE CAPOT ═════════ -->
+<section class="ap" id="stack">
+  <h2><span data-fr>Sous le capot</span><span data-en>Under the hood</span></h2>
+  <div class="cols">
+    <div>
+      <h3><span data-fr>Ce que pèse un premier affichage</span><span data-en>What a first load weighs</span></h3>
+      <div class="wbar" id="wbar" role="img" aria-label="Répartition du poids"></div>
+      <table class="wtable"><thead><tr><th><span data-fr>Fichier</span><span data-en>File</span></th><th>brut</th><th>gzip</th></tr></thead><tbody id="wbody"></tbody><tfoot id="wfoot"></tfoot></table>
+      <p class="ap-note" data-fr>Hors polices et images, chargées à la demande (les images ne sont jamais recopiées : elles viennent de l’organisateur, réduites à la volée).</p>
+      <p class="ap-note" data-en>Fonts and images excluded, loaded on demand (images are never copied: they come from the organiser, resized on the fly).</p>
+    </div>
+    <div>
+      <h3><span data-fr>La pile</span><span data-en>The stack</span></h3>
+      <p class="ap-note" style="margin:0" data-fr>Collecte (Python)</p><p class="ap-note" style="margin:0" data-en>Collection (Python)</p>
+      <ul class="chipsline" id="stack-py"></ul>
+      <p class="ap-note" style="margin-top:1rem" data-fr>Application et outils (JavaScript)</p><p class="ap-note" style="margin-top:1rem" data-en>App and tooling (JavaScript)</p>
+      <ul class="chipsline" id="stack-js"></ul>
+      <p class="ap-note" data-fr>Versions lues dans <code>requirements.txt</code> et <code>package.json</code>.</p>
+      <p class="ap-note" data-en>Versions read from <code>requirements.txt</code> and <code>package.json</code>.</p>
+    </div>
+  </div>
+  <div class="cols">
+    <div>
+      <h3><span data-fr>Fiabilité</span><span data-en>Reliability</span></h3>
+      <ul class="list" id="ci-list"></ul>
+      <p class="ap-note" data-fr>Trois workflows GitHub Actions : la collecte quotidienne, les tests du scraper (à chaque modification) et la vérification de la compilation de l’application.</p>
+      <p class="ap-note" data-en>Three GitHub Actions workflows: the daily collection, the scraper tests (on every change) and the app build check.</p>
+    </div>
+    <div>
+      <h3><span data-fr>Vie privée</span><span data-en>Privacy</span></h3>
+      <p class="ap-note" style="margin:0;font-size:.9375rem;line-height:1.65" data-fr>Pas de compte, pas de cookie. Une mesure d’audience anonyme (<a href="https://www.goatcounter.com" target="_blank" rel="noopener noreferrer">GoatCounter</a> : pages vues, aucune donnée personnelle, aucun pistage d’un site à l’autre). Les polices sont servies par Google Fonts. Vos favoris, votre langue et votre thème restent dans votre navigateur.</p>
+      <p class="ap-note" style="margin:0;font-size:.9375rem;line-height:1.65" data-en>No account, no cookie. An anonymous visit counter (<a href="https://www.goatcounter.com" target="_blank" rel="noopener noreferrer">GoatCounter</a>: page views, no personal data, no cross-site tracking). Fonts are served by Google Fonts. Your favourites, language and theme stay in your browser.</p>
+    </div>
+  </div>
+  <div style="margin-top:2.5rem">
+    <h3><span data-fr>Des formats ouverts</span><span data-en>Open formats</span></h3>
+    <ul class="list">
+      <li><span data-fr>Calendrier global</span><span data-en>Global calendar</span> : <a href="data/calendar.ics"><code>data/calendar.ics</code></a></li>
+      <li><span data-fr>Un calendrier par organisateur et par discipline</span><span data-en>One calendar per organiser and discipline</span> : <code>data/cal/&lt;slug&gt;.ics</code></li>
+      <li><span data-fr>Flux RSS des immanquables</span><span data-en>Highlights RSS feed</span> : <a href="data/digest.xml"><code>data/digest.xml</code></a></li>
+      <li><span data-fr>Données brutes</span><span data-en>Raw data</span> : <a href="data/events.json"><code>data/events.json</code></a>, <code>data/m/AAAA-MM.json</code></li>
+      <li><span data-fr>Code source</span><span data-en>Source code</span> : <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">github.com/kovarci/zzzz</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════════ SOURCES ═════════ -->
+<section class="ap" id="sources">
+  <h2><span data-fr>Les sources</span><span data-en>The sources</span></h2>
+  <p class="intro" data-fr>Les organisateurs suivis, avec le type de source. Beaucoup d’autres s’y ajoutent par Luma, Sciencesconf, la Ville de Paris et les propositions des visiteurs.</p>
+  <p class="intro" data-en>The organisers we follow, with their source type. Many more come through Luma, Sciencesconf, the City of Paris and visitors’ submissions.</p>
+  <label class="field" style="margin-top:1.25rem;max-width:24rem"><span class="sr"><span data-fr>Filtrer les sources</span><span data-en>Filter the sources</span></span>
+    <input class="sel" id="src-filter" type="search" placeholder="Filtrer : Collège de France, musée, think tank…" aria-label="Filtrer les sources"></label>
+  <p class="count-line" id="src-count" aria-live="polite"></p>
+  <ul class="srcs">
+      <li><span>Collège de France</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>École normale supérieure (ENS)</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>EHESS</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Institut Henri Poincaré</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Paris School of Economics</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Sciences Po</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Sorbonne Université</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université PSL</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université Paris Dauphine</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université Paris 1 Panthéon-Sorbonne</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université Paris-Panthéon-Assas</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université Paris-Saclay</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Campus Condorcet</span><em><span data-fr>Campus de recherche</span><span data-en>Research campus</span></em></li>
+      <li><span>Institut d'études avancées de Paris</span><em><span data-fr>Institut de recherche</span><span data-en>Research institute</span></em></li>
+      <li><span>Fondation Maison des Sciences de l'Homme</span><em><span data-fr>Institut de recherche</span><span data-en>Research institute</span></em></li>
+      <li><span>Musée du quai Branly</span><em><span data-fr>Musée</span><span data-en>Museum</span></em></li>
+      <li><span>Musée du Louvre (conférences et colloques)</span><em><span data-fr>Musée</span><span data-en>Museum</span></em></li>
+      <li><span>Centre Pompidou (rencontres hors les murs)</span><em><span data-fr>Musée</span><span data-en>Museum</span></em></li>
+      <li><span>ENS : département de mathématiques, ITEM, CIENS, CERES</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>HEC Paris</span><em><span data-fr>École</span><span data-en>School</span></em></li>
+      <li><span>Hi! PARIS, PR[AI]RIE</span><em><span data-fr>Centres de recherche en IA</span><span data-en>AI research centres</span></em></li>
+      <li><span>Université Ouverte (Université Paris Cité)</span><em><span data-fr>Conférences gratuites</span><span data-en>Free lectures</span></em></li>
+      <li><span>Les Mardis de la Philo (gratuit pour les moins de 26 ans)</span><em><span data-fr>Conférences</span><span data-en>Lectures</span></em></li>
+      <li><span>INHA, Institut du monde arabe, Beaux-Arts de Paris</span><em><span data-fr>Art et culture</span><span data-en>Art and culture</span></em></li>
+      <li><span>École nationale des chartes, ENS Paris-Saclay, Université Sorbonne Paris Nord</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Ifri, IRIS, Institut Jacques Delors, Fondation Jean-Jaurès</span><em><span data-fr>Think tanks</span><span data-en>Think tanks</span></em></li>
+      <li><span>Institut Louis Bachelier, Citéco, ESCP</span><em><span data-fr>Économie et finance</span><span data-en>Economics and finance</span></em></li>
+      <li><span>Institut des actuaires</span><em><span data-fr>Actuariat</span><span data-en>Actuarial science</span></em></li>
+      <li><span>LAMSADE (Dauphine), CMAP (École polytechnique)</span><em><span data-fr>Laboratoires de recherche</span><span data-en>Research labs</span></em></li>
+      <li><span>IHES, IPGP, labos de maths d'Île-de-France (Indico)</span><em><span data-fr>Recherche</span><span data-en>Research</span></em></li>
+      <li><span>Maison de l'Amérique latine, Institut culturel italien, Maison de la culture du Japon</span><em><span data-fr>Instituts culturels</span><span data-en>Cultural institutes</span></em></li>
+      <li><span>Académie nationale de médecine, Académie des inscriptions et belles-lettres</span><em><span data-fr>Académies (séances publiques)</span><span data-en>Academies (public sessions)</span></em></li>
+      <li><span>Mines Paris - PSL</span><em><span data-fr>École</span><span data-en>School</span></em></li>
+      <li><span>Musée de l'Homme</span><em><span data-fr>Musée</span><span data-en>Museum</span></em></li>
+      <li><span>Ined (démographie)</span><em><span data-fr>Institut de recherche</span><span data-en>Research institute</span></em></li>
+      <li><span>Université Paris Cité</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université Sorbonne Nouvelle</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université Paris 8</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Université Paris Nanterre</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>EPHE</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Inalco</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Cnam</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Académie des sciences</span><em><span data-fr>Institution</span><span data-en>Institution</span></em></li>
+      <li><span>Institut Pasteur</span><em><span data-fr>Institut de recherche</span><span data-en>Research institute</span></em></li>
+      <li><span>Institut Curie</span><em><span data-fr>Institut de recherche</span><span data-en>Research institute</span></em></li>
+      <li><span>Institut du Cerveau</span><em><span data-fr>Institut de recherche</span><span data-en>Research institute</span></em></li>
+      <li><span>Muséum national d'Histoire naturelle</span><em><span data-fr>Musée</span><span data-en>Museum</span></em></li>
+      <li><span>Bibliothèque nationale de France (BnF)</span><em><span data-fr>Bibliothèque</span><span data-en>Library</span></em></li>
+      <li><span>Cité des sciences et de l'industrie</span><em><span data-fr>Musée</span><span data-en>Museum</span></em></li>
+      <li><span>IJCLab, IN2P3 (LPNHE, APC…), Observatoire de Paris</span><em><span data-fr>Laboratoires (Indico)</span><span data-en>Labs (Indico)</span></em></li>
+      <li><span><span data-fr>Sciencesconf.org (colloques en Île-de-France)</span><span data-en>Sciencesconf.org (conferences in Île-de-France)</span></span><em><span data-fr>Plateforme de colloques</span><span data-en>Conference platform</span></em></li>
+      <li><span><span data-fr>Soutenances de thèse et d'HDR (repérées dans toutes les sources)</span><span data-en>PhD and habilitation defences (spotted across all sources)</span></span><em><span data-fr>Catégorie à part</span><span data-en>Separate category</span></em></li>
+      <li><span><span data-fr>Carrières : événements de recrutement (BCG, Kering… et salons de l'emploi)</span><span data-en>Careers: recruiting events (BCG, Kering… and job fairs)</span></span><em><span data-fr>Entreprises</span><span data-en>Companies</span></em></li>
+      <li><span>Collège des Bernardins</span><em><span data-fr>Lieu de débat</span><span data-en>Forum</span></em></li>
+      <li><span><span data-fr>Luma (événements parisiens : tech, IA, arts…)</span><span data-en>Luma (events in Paris: tech, AI, arts…)</span></span><em><span data-fr>Plateforme</span><span data-en>Platform</span></em></li>
+      <li><span>Sciences et Cultures / Citoy.ENS</span><em><span data-fr>Association étudiante</span><span data-en>Student association</span></em></li>
+      <li><span>Article 1</span><em><span data-fr>Association</span><span data-en>Association</span></em></li>
+      <li><span><span data-fr>Crous de Paris, Créteil et Versailles (vie étudiante)</span><span data-en>Crous of Paris, Créteil and Versailles (student life)</span></span><em><span data-fr>Vie étudiante</span><span data-en>Student life</span></em></li>
+      <li><span><span data-fr>Salons étudiants : L'Étudiant (grandes écoles, masters, alternance…), Jeunes d'Avenirs</span><span data-en>Student fairs: L'Étudiant (grandes écoles, masters, apprenticeships…), Jeunes d'Avenirs</span></span><em><span data-fr>Catégorie à part</span><span data-en>Separate category</span></em></li>
+      <li><span>Jeunes IHEDN, Institut Open Diplomacy, Taureaux du Panthéon, HEC IA…</span><em><span data-fr>Associations étudiantes</span><span data-en>Student associations</span></em></li>
+      <li><span><span data-fr>Que faire à Paris (agenda officiel de la Ville de Paris : bibliothèques, musées, mairies…)</span><span data-en>Que faire à Paris (City of Paris official agenda: libraries, museums, town halls…)</span></span><em><span data-fr>Open data</span><span data-en>Open data</span></em></li>
   </ul>
-  <ul data-en="block">
-    <li><strong>Every morning</strong>: automatic refresh of every source.</li>
-    <li><strong>Three times a week</strong>: a complementary pass for sources that block
-    data-center bots (Collège de France, Musée du Louvre, Muséum, Académie des sciences, Ifri, IRIS, L'Étudiant fairs, Luma theme pages…).</li>
-    <li>Past events are kept in the <em>Past events</em> tab for one year.</li>
-  </ul>
+  <p class="ap-note" data-fr>Le classement par discipline est automatique (mots-clés) : il peut se tromper. L’événement fait toujours foi sur le site de l’organisateur — cliquez sur une carte pour y accéder.</p>
+  <p class="ap-note" data-en>Discipline classification is automatic (keywords): it can be wrong. The event’s official page is always the source of truth — click any card to reach it.</p>
+  <p class="ap-note" data-fr>Les événements passés restent un an dans l’historique.</p>
+  <p class="ap-note" data-en>Past events are kept in the history for one year.</p>
+</section>
 
-  <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>La technique</span><span data-en>The tech</span></h2>
-  <p data-fr>Site statique, sans compte ni cookie. Seule une mesure d'audience anonyme
-  (<a href="https://www.goatcounter.com" target="_blank" rel="noopener noreferrer">GoatCounter</a> :
-  pages vues, sans donnée personnelle ni pistage d'un site à l'autre) indique ce qui est consulté. Les données sont
-  collectées par un scraper Python (exécuté par GitHub Actions), publiées en JSON et
-  affichées par une application React. Le tout est open source :
-  <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">github.com/kovarci/zzzz</a>.</p>
-  <p data-en="block">Static site, no account, no cookie. Only an anonymous visit counter
-  (<a href="https://www.goatcounter.com" target="_blank" rel="noopener noreferrer">GoatCounter</a>:
-  page views, no personal data, no cross-site tracking) shows what gets read. Data is collected
-  by a Python scraper (run by GitHub Actions), published as JSON and rendered by
-  a React app. Everything is open source:
-  <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">github.com/kovarci/zzzz</a>.</p>
-  <ul>
-    <li><span data-fr>Flux iCal global</span><span data-en>Global iCal feed</span> : <code>data/calendar.ics</code></li>
-    <li><span data-fr>Flux iCal par institution</span><span data-en>Per-institution iCal feeds</span> : <code>data/cal/&lt;slug&gt;.ics</code></li>
-    <li><span data-fr>Flux RSS des immanquables</span><span data-en>Highlights RSS feed</span> : <code>data/digest.xml</code></li>
-    <li><span data-fr>Données brutes</span><span data-en>Raw data</span> : <code>data/events.json</code></li>
-  </ul>
-
-  <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>Proposer un événement</span><span data-en>Submit an event</span></h2>
-  <p data-fr>Vous organisez une conférence, un colloque, une rencontre d'association ou un événement carrière à Paris ?
-  Remplissez le <a href="https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml" target="_blank" rel="noopener noreferrer">formulaire de proposition</a> :
-  chaque proposition est relue puis ajoutée à l'agenda (en général sous une semaine). Les événements réservés aux membres
-  sont acceptés et signalés par un 🔒.</p>
-  <p data-en="block">Organising a talk, a conference, a student association meetup or a career event in Paris?
-  Fill in the <a href="https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml" target="_blank" rel="noopener noreferrer">submission form</a>: every submission
-  is reviewed and added to the calendar (usually within a week). Members-only events are welcome and marked with 🔒.</p>
-
-  <h2 class="text-xl font-semibold tracking-tight mt-12 mb-3 text-foreground"><span data-fr>Contact</span><span data-en>Contact</span></h2>
-  <p data-fr>Une source à suggérer, un bug à signaler ? Ouvrez une
-  <a href="https://github.com/kovarci/zzzz/issues" target="_blank" rel="noopener noreferrer">issue GitHub</a>.
-  Projet maintenu par <a href="https://github.com/kovarci" target="_blank" rel="noopener noreferrer">kovarci</a>.</p>
-  <p data-en="block">Got a source to suggest, a bug to report? Open a
-  <a href="https://github.com/kovarci/zzzz/issues" target="_blank" rel="noopener noreferrer">GitHub issue</a>.
-  Maintained by <a href="https://github.com/kovarci" target="_blank" rel="noopener noreferrer">kovarci</a>.</p>
+<!-- ═════════ PROPOSER ═════════ -->
+<section class="ap" id="propose">
+  <h2><span data-fr>Proposer un événement</span><span data-en>Submit an event</span></h2>
+  <p class="intro" data-fr>Vous organisez une conférence, un colloque, une rencontre d’association ou un événement carrière à Paris ? Remplissez le formulaire : chaque proposition est relue puis ajoutée à l’agenda, en général sous une semaine. Les événements réservés aux membres sont acceptés et signalés par un 🔒.</p>
+  <p class="intro" data-en>Organising a talk, a conference, a student association meetup or a career event in Paris? Fill in the form: every submission is reviewed and added to the agenda, usually within a week. Members-only events are welcome and marked with 🔒.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml" target="_blank" rel="noopener noreferrer"><span data-fr>Proposer un événement ↗</span><span data-en>Submit an event ↗</span></a>
+    <a class="btn" href="https://github.com/kovarci/zzzz/issues" target="_blank" rel="noopener noreferrer"><span data-fr>Signaler un bug ou une source ↗</span><span data-en>Report a bug or a source ↗</span></a>
+  </div>
+  <p class="ap-note" data-fr>Le formulaire est hébergé sur GitHub : un compte GitHub est nécessaire. Projet maintenu par <a href="https://github.com/kovarci" target="_blank" rel="noopener noreferrer">kovarci</a>.</p>
+  <p class="ap-note" data-en>The form is hosted on GitHub: a GitHub account is required. Maintained by <a href="https://github.com/kovarci" target="_blank" rel="noopener noreferrer">kovarci</a>.</p>
+</section>
 </main>
 
-<footer class="border-t">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6 py-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-    <span class="font-semibold text-foreground">Lotent</span>
-    <a class="hover:text-foreground" href="index.html"><span data-fr>Agenda</span><span data-en>Agenda</span></a>
-    <a class="hover:text-foreground" href="webcal://lotent.fr/data/calendar.ics" title="Abonnement (Apple, Outlook) — lien direct : https://lotent.fr/data/calendar.ics">S'abonner (iCal)</a>
-    <a class="hover:text-foreground" href="data/digest.xml">RSS</a>
-    <a class="hover:text-foreground" href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </div>
-</footer>
-
-<script>
-// Bascule EN/FR (partagée avec l'app principale via localStorage)
-function applyLang() {
-  let lang = "fr";
-  // Le nouveau site (React) enregistre "paf_lang" en JSON (donc entre guillemets,
-  // ex. '"en"') ; cette page l'écrit en brut. On tolère les deux formats, sinon
-  // un visiteur passé par le nouveau site en anglais retombe ici en français.
-  try {
-    const raw = localStorage.getItem("paf_lang");
-    lang = raw ? JSON.parse(raw) : "fr";
-  } catch (e) { try { lang = localStorage.getItem("paf_lang") || "fr"; } catch (e2) {} }
-  document.documentElement.lang = lang;
-  document.getElementById("lang-btn").textContent = lang === "en" ? "FR" : "EN";
-  document.title = lang === "en" ? "About — Lotent" : "À propos — Lotent";
-}
-document.getElementById("lang-btn").addEventListener("click", () => {
-  const cur = document.documentElement.lang;
-  try { localStorage.setItem("paf_lang", cur === "en" ? "fr" : "en"); } catch (e) {}
-  applyLang();
-});
-applyLang();
-
-// Thème clair/sombre, même clé (paf_theme) que l'app principale
-const MOON = "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z";
-const SUN = "M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z";
-function isDark() {
-  const t = document.documentElement.dataset.theme;
-  return t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches);
-}
-function paintThemeIcon() {
-  document.getElementById("theme-icon").innerHTML = '<path d="' + (isDark() ? SUN : MOON) + '"/>';
-}
-document.getElementById("theme-btn").addEventListener("click", () => {
-  const next = isDark() ? "light" : "dark";
-  document.documentElement.dataset.theme = next;
-  try { localStorage.setItem("paf_theme", JSON.stringify(next)); } catch (e) {}
-  paintThemeIcon();
-});
-paintThemeIcon();
-
-// Stats publiques, calculées par le scraper (data/meta.json → stats) :
-// 9 Ko au lieu des 3,5 Mo d'events.json + archive.
-function fmtNumber(n) {
-  return new Intl.NumberFormat(document.documentElement.lang === "en" ? "en-US" : "fr-FR").format(n);
-}
-// Réaffichées au changement de langue (« 2 491 » / « 2,491 », « sept. 2025 » / « Sep 2025 »)
-let stats = null;
-function paintStats() {
-  const s = stats; if (!s) return;
-  document.getElementById("stat-total").textContent = fmtNumber(s.total);
-  document.getElementById("stat-upcoming").textContent = fmtNumber(s.upcoming);
-  document.getElementById("stat-sources").textContent = fmtNumber(s.institutions);
-  if (s.since) {
-    const d = new Date(s.since + "T12:00:00");
-    const lang = document.documentElement.lang === "en" ? "en-GB" : "fr-FR";
-    document.getElementById("stat-since").textContent =
-      d.toLocaleDateString(lang, { month: "short", year: "numeric" });
-  }
-}
-document.getElementById("lang-btn").addEventListener("click", paintStats);
-(async () => {
-  try {
-    const meta = await (await fetch("data/meta.json?" + Date.now())).json();
-    stats = meta.stats || null;
-    paintStats();
-  } catch (e) {}
-})();
-</script>
+<footer class="site"><div class="wrap">
+  <div><b>Lotent</b><p class="about"><span data-fr>Les conférences, cours et séminaires ouverts au public à Paris, réunis chaque matin en un seul agenda.</span><span data-en>Conferences, lectures and seminars open to the public in Paris, gathered every morning into a single agenda.</span></p></div>
+  <nav aria-label="Lotent"><h2>Lotent</h2><ul>
+    <li><a href="index.html">Agenda</a></li>
+    <li><a href="s/cette-semaine.html"><span data-fr>Cette semaine</span><span data-en>This week</span></a></li>
+    <li><a href="s/gratuites.html"><span data-fr>Conférences gratuites</span><span data-en>Free talks</span></a></li>
+    <li><a href="p/"><span data-fr>Intervenants</span><span data-en>Speakers</span></a></li></ul></nav>
+  <nav aria-label="Abonnement"><h2><span data-fr>S’abonner</span><span data-en>Subscribe</span></h2><ul>
+    <li><a href="webcal://lotent.fr/data/calendar.ics"><span data-fr>Tous les événements (.ics)</span><span data-en>All events (.ics)</span></a></li>
+    <li><a href="data/digest.xml"><span data-fr>Flux RSS de la semaine</span><span data-en>This week’s RSS feed</span></a></li></ul></nav>
+  <div><h2>GitHub</h2><ul><li><a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer"><span data-fr>Code source</span><span data-en>Source code</span></a></li></ul></div>
+</div></footer>
+<script src="apropos.js" defer></script>
 </body>
 </html>

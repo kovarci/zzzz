@@ -5798,6 +5798,56 @@ def _speaker_links(speaker_html, slugs):
 _GC_TAG = '<script data-goatcounter="https://lotent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>'
 
 
+def _past_stub(eid, title_html, iso, inst_html, inst_slug):
+    """Fiche trop ancienne pour l'historique (365 jours) ou retirée par sa source :
+    au lieu d'une 404, une page courte qui dit ce qu'il en est et mène à
+    l'agenda. Hors Google (noindex), sans redirection automatique : le visiteur
+    garde le bouton retour et comprend pourquoi il atterrit ici."""
+    from urllib.parse import quote
+    past = iso < TODAY.isoformat()
+    when = _date_fr(iso) if iso else ""
+    if past:
+        lede = f"Cet événement a eu lieu le {when}. Cette page n'est plus mise à jour."
+        kind = "Événement passé"
+    else:
+        lede = (f"Cet événement n'est plus au programme : son organisateur l'a peut-être annulé ou déplacé. "
+                f"Il était prévu le {when}.")
+        kind = "Événement retiré"
+    title_plain = html_unescape(re.sub(r"<[^>]+>", "", title_html))
+    hub = bool(inst_slug) and (INST_PAGES_DIR / f"{inst_slug}.html").exists()
+    acts = [f'<a class="btn btn-primary" href="/">Voir l’agenda</a>',
+            f'<a class="btn" href="/?q={quote(title_plain)}" rel="nofollow">Rechercher cet événement</a>']
+    if hub:
+        acts.append(f'<a class="btn" href="/i/{inst_slug}.html">Prochains événements · {inst_html}</a>')
+    return f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{kind} · Lotent</title>
+<meta name="robots" content="noindex, follow">
+<meta name="lotent-past" content="{eid}">
+<meta name="lotent-date" content="{_esc_attr(iso)}">
+<meta name="lotent-inst" content="{inst_html}">
+{_head_common()}
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+{_site_header()}
+<main id="main" class="wrap narrow">
+<section class="hero">
+<p class="kind">{kind}</p>
+<h1 class="display">{title_html}</h1>
+<p class="lede">{lede}</p>
+<div class="actions">{"".join(acts)}</div>
+</section>
+</main>
+{_site_footer()}
+</body>
+</html>
+"""
+
+
 def write_event_pages(events):
     """One small static page per event (e/<id>.html): Open Graph tags for a
     proper link preview on WhatsApp/Discord/Twitter, plus REAL visible content
@@ -5826,8 +5876,9 @@ def write_event_pages(events):
 
     def _links(evts, cls):
         items = "".join(
-            f'<li><a href="{e["id"]}.html"><span>{_esc_attr(e.get("title", ""))}</span>'
-            f'<span class="d">{_esc_attr(_date_fr(e.get("date", "")))}</span></a></li>'
+            f'<li class="ev"><a href="{e["id"]}.html"><span class="tm">{_esc_attr(_date_fr(e.get("date", "")))}'
+            f'{(" · " + _esc_attr(e["time"])) if e.get("time") else ""}</span>'
+            f'<span><span class="tt">{_esc_attr(e.get("title", ""))}</span></span></a></li>'
             for e in evts)
         return f'<ul class="{cls}">{items}</ul>' if items else ""
 
@@ -5952,13 +6003,12 @@ def write_event_pages(events):
         inst_html = (f'<a href="{hub_url}">{inst}</a>' if hub_url else inst)
         # Badge discipline → page discipline (maillage vers d/)
         disc = ev.get("discipline", "")
-        disc_html = (f'<a class="badge dbadge" href="{SITE_URL}/d/{_disc_slug(disc)}.html">{_esc_attr(disc)}</a>'
-                     if disc in _DISC_OF else f'<span class="badge dbadge">{_esc_attr(disc)}</span>')
+        disc_html = (f'<a href="{SITE_URL}/d/{_disc_slug(disc)}.html">{_esc_attr(disc)}</a>'
+                     if disc in _DISC_OF else f'<span>{_esc_attr(disc)}</span>')
         about = _esc_attr(_about_text(ev))
         is_past = ev.get("date", "") < today_iso
-        past_html = (f'<p class="past">Cet événement a eu lieu le {_esc_attr(_date_fr(ev.get("date", "")))}.'
-                     + (f' <a href="{hub_url}">Voir les prochaines conférences de {inst}</a>.' if hub_url else '')
-                     + '</p>') if is_past else ""
+        past_html = (f'<p class="notice"><b>Événement passé.</b> Il a eu lieu le {_esc_attr(_date_fr(ev.get("date", "")))} ; '
+                     f'cette page est gardée dans l’historique.</p>') if is_past else ""
         gcal = ""
         if not is_past:
             from urllib.parse import urlencode
@@ -5978,8 +6028,41 @@ def write_event_pages(events):
                     "action": "TEMPLATE", "text": ev.get("title", "")[:200], "dates": dates,
                     "ctz": "Europe/Paris", "location": (ev.get("location") or "")[:200],
                     "details": f"{SITE_URL}/e/{eid}.html"}))
-        gcal_html = (f'<p class="note"><a href="{_esc_attr(gcal)}" rel="nofollow noopener">+ Ajouter à Google Agenda</a></p>'
+        gcal_html = (f'<p class="fine"><a href="{_esc_attr(gcal)}" rel="nofollow noopener">Ajouter à Google Agenda</a></p>'
                      if gcal else "")
+        # Page événement : même charte que le site (pages.css), sans JavaScript.
+        # La classe « ext » du lien officiel sert aussi à retrouver l'événement
+        # d'une ancienne page (redirections plus bas) : ne pas la retirer.
+        try:
+            _wd = _WEEKDAYS_FR[date.fromisoformat(ev.get("date", "")).weekday()].capitalize()
+        except Exception:
+            _wd = ""
+        when_d = f"{_wd} {_date_fr(ev.get('date', ''))}".strip()
+        if ev.get("time"):
+            when_t = ev["time"] + (f" – {ev['end_time']}" if ev.get("end_time") and ev["end_time"] > ev["time"] else "")
+        else:
+            when_t = "Horaire à confirmer"
+        when_line = _esc_attr(when_t + (f" · {ev['location']}" if ev.get("location") else " · Paris"))
+        price_txt = ("Gratuit" if _is_free(ev) else
+                     (_esc_attr(str(ev["price"])[:60]) if ev.get("price") and str(ev["price"]) != "0" else ""))
+        facts = [("Organisé par", inst_html), ("Avec", _speaker_links(speaker, speaker_slugs) if speaker else ""),
+                 ("Tarif", price_txt)]
+        facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts if v)
+        free_tag = '<span>·</span><span>Gratuit</span>' if _is_free(ev) else ""
+        cover = (f'<figure class="cover" style="margin-inline:0"><img src="{_esc_attr(_img_thumb(real_img, 1000))}" alt="" '
+                 f'loading="eager" onerror="this.onerror=null;this.src=\'{_esc_attr(real_img)}\'"></figure>' if real_img else "")
+        desc_html = (f'<p class="prose main">{body_desc}</p>' if body_desc and len(body_desc) > 40 and body_desc != speaker else "")
+        series_html = f'<p class="prose">{series_note}</p>' if series_note else ""
+        past_block = past_html
+        # Événement passé : le premier geste utile est de voir ce qui vient, pas de rouvrir la fiche
+        actions_html = (
+            (f'<a class="btn btn-primary" href="{hub_url or SITE_URL + "/"}">'
+             f'{"Voir les prochains événements" if hub_url else "Voir l’agenda"}</a>'
+             f'<a class="btn" href="{target}" rel="nofollow">Voir dans l’historique</a>') if is_past else
+            f'<a class="btn btn-primary" href="{target}" rel="nofollow">Ouvrir dans l’agenda</a>')
+        rel_series = (f'<h2 class="sec">Autres séances du cycle</h2>{_links(series, "prog plain")}' if series else "")
+        rel_inst = (f'<h2 class="sec">Prochains événements · {inst}</h2>{_links(others, "prog plain")}' if others else "")
+        more_html = (f'<p class="more"><a class="btn" href="{hub_url}">Tous les événements de {inst}</a></p>' if hub_url else "")
         page = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5989,6 +6072,8 @@ def write_event_pages(events):
 <link rel="canonical" href="{SITE_URL}/e/{eid}.html">
 <meta name="robots" content="max-image-preview:large, max-snippet:-1">
 <meta name="description" content="{meta_desc}">
+<meta name="lotent-date" content="{_esc_attr(ev.get('date', ''))}">
+<meta name="lotent-inst" content="{inst}">
 <meta name="keywords" content="conférence Paris, {_esc_attr(ev.get('institution',''))}, {_esc_attr((ev.get('speaker','') or ev.get('discipline','')))}, séminaire académique">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{meta_desc}">
@@ -6002,85 +6087,32 @@ def write_event_pages(events):
 <meta name="twitter:image" content="{img}">
 {f'<script type="application/ld+json">{jsonld}</script>' if jsonld else ''}
 <script type="application/ld+json">{crumb_ld}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#5f5f68;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}}
-@media (prefers-color-scheme:dark){{:root{{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted:#27272a;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}}}
-*{{box-sizing:border-box}}
-body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px 16px 40px;line-height:1.5;-webkit-font-smoothing:antialiased}}
-.wrap{{max-width:560px;margin:0 auto}}
-.crumb{{font-size:12px;color:var(--muted-fg);margin:0 0 14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-.crumb a{{color:inherit;text-decoration:none}}.crumb a:hover{{color:var(--fg)}}
-.card{{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -16px rgba(0,0,0,.25)}}
-.cover{{position:relative;aspect-ratio:16/9;background:var(--muted);overflow:hidden}}
-.cover img{{width:100%;height:100%;object-fit:cover;display:block}}
-.cover.typo{{display:flex;align-items:flex-end;padding:18px;color:#fff;background:linear-gradient(135deg,var(--dc),color-mix(in srgb,var(--dc) 55%,#000))}}
-.cover.typo::before{{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:16px 16px;-webkit-mask-image:radial-gradient(ellipse at top right,#000,transparent 70%);mask-image:radial-gradient(ellipse at top right,#000,transparent 70%)}}
-.cover.typo b{{position:relative;font-size:22px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance;text-shadow:0 1px 8px rgba(0,0,0,.35)}}
-.kind{{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);color:#18181b;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px}}
-.body{{padding:20px 22px 22px}}
-.badges{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}}
-.badge{{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:600}}
-.dbadge{{border-color:var(--dc);color:color-mix(in srgb,var(--dc) 62%,#000)}}
-@media (prefers-color-scheme:dark){{.dbadge{{color:color-mix(in srgb,var(--dc) 60%,#fff)}}}}
-h1{{font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}}
-.date{{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:14px}}
-.date .d{{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--muted);border-radius:8px;min-width:56px;padding:6px 10px}}
-.date .d small{{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted-fg)}}
-.date .d b{{font-size:22px;line-height:1;font-variant-numeric:tabular-nums}}
-.date .t{{font-size:14px}}.date .t span{{display:block;color:var(--muted-fg)}}
-dl{{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;margin:0 0 14px}}
-dt{{color:var(--muted-fg)}}dd{{margin:0;overflow-wrap:anywhere}}dd a{{color:inherit;text-decoration:underline;text-underline-offset:2px}}
-.desc{{font-size:14px;line-height:1.6;color:var(--muted-fg);margin:0 0 16px}}
-.cta{{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}}
-.cta a{{display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 12px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;line-height:1.2}}
-.cta .site{{background:var(--primary);color:var(--primary-fg)}}
-.cta .ext{{background:color-mix(in srgb,var(--dc) 62%,#000);color:#fff}}
-.cta a:hover{{filter:brightness(1.08)}}
-@media (max-width:420px){{.cta{{grid-template-columns:1fr}}}}
-.note{{font-size:12px;color:var(--muted-fg);text-align:center;margin:10px 0 0}}
-.note a{{color:inherit;font-weight:600}}
-a.badge{{text-decoration:none}}a.badge:hover{{background:var(--muted)}}
-.past{{font-size:13px;background:var(--muted);border-radius:8px;padding:8px 12px;margin:0 0 12px}}.past a{{color:inherit}}
-h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-transform:uppercase;letter-spacing:.06em}}
-.rel{{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden}}
-.rel li{{font-size:14px;line-height:1.4}}
-.rel li+li{{border-top:1px solid var(--border)}}
-.rel a{{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}}
-.rel a:hover{{background:var(--muted)}}
-.rel .d{{color:var(--muted-fg);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}}
-.more{{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:inherit;text-decoration:none}}
-.foot{{text-align:center;margin-top:24px;font-size:12px;color:var(--muted-fg)}}
-.foot a{{color:inherit}}
-</style>
-{_GC_TAG}
+{_head_common()}
 </head>
 <body>
-<div class="wrap">
+<a class="skip" href="#main">Aller au contenu</a>
+{_site_header()}
+<main id="main" class="wrap narrow" style="--dc:{dcolor}">
 <nav class="crumb" aria-label="Fil d'Ariane">{crumb_html}</nav>
-<main class="card" style="--dc:{dcolor}">
-{cover_html}
-<div class="body">
-{past_html}
-<div class="badges">{disc_html}<span class="badge">{kind}</span>{'<span class="badge">Entrée libre</span>' if _is_free(ev) else ''}</div>
-<h1>{title}</h1>
-<div class="date"><div class="d"><small>{_wds(ev.get('date',''))}</small><b>{_dnum(ev.get('date',''))}</b><small>{_mos(ev.get('date',''))}</small></div><div class="t">{_esc_attr(date_label)}<span>{loc or 'Paris'}</span></div></div>
-<dl><dt>Organisé par</dt><dd>{inst_html}</dd>{f'<dt>Avec</dt><dd>{_speaker_links(speaker, speaker_slugs)}</dd>' if speaker else ''}</dl>
-{f'<p class="desc">{body_desc}</p>' if body_desc and len(body_desc) > 40 and body_desc != speaker else ''}
-{f'<p class="desc">{series_note}</p>' if series_note else ''}
-<p class="desc about">{about}</p>
-<div class="cta"><a class="site" href="{target}" rel="nofollow">Voir sur Lotent →</a>{f'<a class="ext" href="{ext}" rel="noopener">Page officielle · inscription ↗</a>' if ext else ''}</div>
+<article class="hero">
+{past_block}
+<p class="kind"><span class="dot"></span>{disc_html}<span>·</span><span>{kind}</span>{free_tag}</p>
+<h1 class="display">{title}</h1>
+{cover}
+<div class="when"><p class="d">{_esc_attr(when_d)}</p><p>{when_line}</p></div>
+<dl class="facts">{facts_html}</dl>
+{desc_html}
+{series_html}
+<p class="prose">{about}</p>
+<div class="actions">{actions_html}{f'<a class="btn ext" href="{ext}" rel="noopener">Voir la page officielle ↗</a>' if ext else ''}</div>
 {gcal_html}
-<p class="note">Vérifie les horaires sur la page officielle avant de te déplacer.</p>
-</div>
+<p class="fine">Vérifie les horaires sur la page officielle avant de te déplacer.</p>
+</article>
+{rel_series}
+{rel_inst}
+{more_html}
 </main>
-{f'<h2>Autres séances du cycle</h2>{_links(series, "rel")}' if series else ''}
-{f'<h2>Prochaines conférences · {inst}</h2>{_links(others, "rel")}' if others else ''}
-{f'<a class="more" href="{hub_url}">Toutes les conférences de {inst} →</a>' if hub_url else ''}
-<nav class="foot" aria-label="Sélections">{" · ".join(f'<a href="{SITE_URL}/{sp}">{sl}</a>' for sp, sl in SELECTIONS)}</nav>
-<div class="foot"><a href="{SITE_URL}/">Lotent — toutes les conférences de Paris</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">Questions &amp; recommandations</a></div>
-</div>
+{_site_footer()}
 </body>
 </html>
 """
@@ -6106,13 +6138,15 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
     # sources) : sa page renvoie vers la fiche gardée, archivée comprise.
     alias_of = {a: e["id"] for e in events if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")
                 for a in (e.get("aliases") or [])}
-    removed = redirected = 0
+    removed = redirected = stubbed = 0
     for f in EVENT_PAGES_DIR.glob("*.html"):
         if f.name in keep:
             continue
         try:
             old = f.read_text(encoding="utf-8", errors="replace")
-            m = (re.search(r'<a class="ext" href="([^"]+)"', old)
+            if 'name="lotent-past"' in old:       # déjà une page « événement passé » : on la garde
+                continue
+            m = (re.search(r'<a class="(?:btn )?ext" href="([^"]+)"', old)
                  or re.search(r'<meta name="lotent-src" content="([^"]+)"', old))
             ids = (by_url.get(html_unescape(m.group(1))) or past_url.get(html_unescape(m.group(1)), [])) if m else []
             if f.stem in alias_of:
@@ -6134,6 +6168,14 @@ h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:22px 0 8px;text-
                     f'<body><p>Cet événement a été mis à jour par son organisateur : '
                     f'<a href="{new}.html">voir la fiche</a>.</p></body></html>', encoding="utf-8")
                 redirected += 1
+                continue
+            t_ = re.search(r'<h1 class="display">(.*?)</h1>', old, re.S)
+            d_ = re.search(r'<meta name="lotent-date" content="([^"]*)"', old)
+            i_ = re.search(r'<meta name="lotent-inst" content="([^"]*)"', old)
+            if t_ and d_:
+                f.write_text(_past_stub(f.stem, t_.group(1), d_.group(1), i_.group(1) if i_ else "",
+                                        slugify(html_unescape(i_.group(1))) if i_ else ""), encoding="utf-8")
+                stubbed += 1
                 continue
             f.unlink()
             removed += 1
@@ -6185,121 +6227,359 @@ _HUB_MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août",
 
 
 _HUB_TXT = {
-    "fr": dict(count="<b>{n}</b> conférence{s} à venir dans l'agenda Lotent.", short="{n} conférence{s} à venir à Paris.",
-               upcoming="Prochaines conférences", cta="Voir dans l'agenda →", cta_all="Voir tout l'agenda →", home="Accueil",
-               foot="Lotent — toutes les conférences de Paris", questions="Questions &amp; recommandations",
-               crumb="Fil d'Ariane", more="Voir toutes les conférences dans l'agenda →",
-               empty="Aucune conférence annoncée pour le moment. En vous abonnant à l'agenda, "
-                     "les prochaines s'y ajouteront d'elles-mêmes.",
-               updated="Calendrier mis à jour chaque jour sur lotent.fr."),
-    "en": dict(count="<b>{n}</b> upcoming talk{s} in the Lotent calendar.", short="{n} upcoming talk{s} in Paris.",
-               upcoming="Upcoming talks", cta="Open in the calendar →", cta_all="See the whole calendar →", home="Home",
-               foot="Lotent — every talk in Paris", questions="Questions &amp; suggestions",
-               crumb="Breadcrumb", more="See every talk in the calendar →",
-               empty="No talk announced yet.", updated="Updated every day on lotent.fr."),
+    "fr": dict(count="<b>{n}</b> événement{s} à venir dans l'agenda Lotent.", short="{n} conférence{s} à venir à Paris.",
+               upcoming="Prochains événements", cta="Voir dans l'agenda", cta_all="Ouvrir l'agenda", home="Accueil",
+               questions="Signaler une erreur", crumb="Fil d'Ariane",
+               more="Les {limit} premiers événements sont listés ici. Voir les {n} dans l'agenda",
+               empty="Aucun événement annoncé pour le moment. En vous abonnant à l'agenda, "
+                     "les prochains s'y ajouteront d'eux-mêmes.",
+               updated="Agenda mis à jour chaque jour sur lotent.fr.",
+               featured="À la une", by_org="Par organisateur", see_also="Voir aussi", all="Toutes",
+               one="événement affiché", many="événements affichés", none="Aucun événement dans cette discipline.",
+               today="Aujourd'hui", tomorrow="Demain", tbd="Horaire à confirmer", free="Gratuit", online="En ligne",
+               members="Membres", english="En anglais", daynav="Aller à un jour", filter="Filtrer par discipline",
+               subscribe="S'abonner", apple="Apple Calendrier, Outlook", google="Google Agenda",
+               paste="Lien à coller dans une autre application", autoupd="Il se met à jour tout seul chaque jour.",
+               past="Événements passés", skip="Aller au contenu", open="Ouvrir l'agenda"),
+    "en": dict(count="<b>{n}</b> upcoming event{s} in the Lotent agenda.", short="{n} upcoming talk{s} in Paris.",
+               upcoming="Upcoming events", cta="Open in the agenda", cta_all="Open the agenda", home="Home",
+               questions="Report a mistake", crumb="Breadcrumb",
+               more="The first {limit} events are listed here. See all {n} in the agenda",
+               empty="No event announced yet.", updated="Updated every day on lotent.fr.",
+               featured="Highlights", by_org="By organiser", see_also="See also", all="All",
+               one="event shown", many="events shown", none="No event in this discipline.",
+               today="Today", tomorrow="Tomorrow", tbd="Time to be confirmed", free="Free", online="Online",
+               members="Members", english="In English", daynav="Jump to a day", filter="Filter by discipline",
+               subscribe="Subscribe", apple="Apple Calendar, Outlook", google="Google Calendar",
+               paste="Link to paste into another app", autoupd="It updates itself every day.",
+               past="Past events", skip="Skip to content", open="Open the agenda"),
 }
 _HUB_MONTHS_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+_MONTHS_EN_FULL = ["January", "February", "March", "April", "May", "June", "July", "August",
+                   "September", "October", "November", "December"]
+_WD_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+_WDS_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+_DISC_EN = {"Mathématiques": "Mathematics", "Économie": "Economics", "Histoire": "History", "Philosophie": "Philosophy",
+            "Littérature": "Literature", "Sociologie & Anthropologie": "Sociology & Anthropology",
+            "Droit & Sciences politiques": "Law & Political science", "Arts & Culture": "Arts & Culture", "Autre": "Other"}
 # Pages « sélection » (s/…) : liées depuis toutes les pages hub et l'accueil
 SELECTIONS = [("s/cette-semaine.html", "Cette semaine"), ("s/ce-week-end.html", "Ce week-end"),
               ("s/ce-soir.html", "Ce soir"), ("s/gratuites.html", "Conférences gratuites"),
-              ("s/talks-in-english.html", "Talks in English"),
+              ("s/talks-in-english.html", "Conférences en anglais"),
               ("s/soutenances-de-these.html", "Soutenances de thèse"),
               ("s/carrieres.html", "Événements carrières"),
               ("s/salons-etudiants.html", "Salons étudiants"), ("p/", "Intervenants")]
+PAGES_CSS = OUTPUT_FILE.parent.parent / "pages.css"
+_LOGO_SVG = (LOGO_MARK.replace("__S__", "28").replace('stroke="#f4f4f5"', 'stroke="currentColor"')
+             .replace('fill="#8CA7FF"', 'class="brand-dot"'))
+_THEME_JS = ('<script>try{var t=localStorage.getItem("paf_theme");try{t=JSON.parse(t)}catch(e){}'
+             'if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>')
+_FILTER_JS = """<script>
+(function(){var bar=document.querySelector('[data-disc]');if(!bar)return;bar.hidden=false;
+var evs=[].slice.call(document.querySelectorAll('.ev')),days=[].slice.call(document.querySelectorAll('.day')),
+st=document.getElementById('st'),em=document.getElementById('none'),chips=[].slice.call(bar.querySelectorAll('.chip')),
+one=st.getAttribute('data-one'),many=st.getAttribute('data-many'),
+nf=new Intl.NumberFormat(document.documentElement.lang==='en'?'en-GB':'fr-FR');
+bar.addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;
+var v=c.getAttribute('data-v')||'',n=0;
+chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+evs.forEach(function(el){var ok=!v||el.getAttribute('data-d')===v;el.hidden=!ok;if(ok)n++});
+days.forEach(function(d){d.hidden=!d.querySelector('.ev:not([hidden])')});
+st.textContent=nf.format(n)+' '+(n===1?one:many);em.hidden=n>0});})();
+</script>"""
+_FINDER_JS = """<script>
+(function(){var f=document.getElementById('finder');if(!f)return;f.hidden=false;
+var rows=[].slice.call(document.querySelectorAll('.az .ev')),secs=[].slice.call(document.querySelectorAll('.az section'));
+function norm(s){return s.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase()}
+f.addEventListener('input',function(){var q=norm(f.value.trim());
+rows.forEach(function(r){r.hidden=q&&norm(r.getAttribute('data-n')).indexOf(q)<0});
+secs.forEach(function(s){s.hidden=!s.querySelector('.ev:not([hidden])')})});})();
+</script>"""
+
+
+def _pages_css_url():
+    import hashlib
+    try:
+        h = hashlib.md5(PAGES_CSS.read_bytes()).hexdigest()[:8]
+    except Exception:
+        h = "0"
+    return f"/pages.css?v={h}"
+
+
+def _fmt_n(n):
+    """2480 → « 2 480 » (espace fine insécable)."""
+    return f"{int(n):,}".replace(",", " ")
+
+
+def _head_common():
+    """Polices, thème mémorisé, feuille de style commune : tout ce que les
+    pages statiques partagent avec le site."""
+    return (
+        '<link rel="icon" href="/icon.svg" type="image/svg+xml">\n'
+        '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
+        '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+        '<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">\n'
+        f'{_THEME_JS}\n<link rel="stylesheet" href="{_pages_css_url()}">\n{_GC_TAG}')
+
+
+def _site_header(path="", lang="fr"):
+    nav = ([("/", "Agenda"), ("/s/cette-semaine.html", "Cette semaine"), ("/s/ce-week-end.html", "Ce week-end"),
+            ("/s/gratuites.html", "Gratuites"), ("/p/", "Intervenants")] if lang == "fr" else
+           [("/", "Agenda"), ("/s/cette-semaine.html", "This week"), ("/s/ce-week-end.html", "This weekend"),
+            ("/s/talks-in-english.html", "Talks in English"), ("/p/", "Speakers")])
+    cur = ' aria-current="page"'
+    links = "".join(f'<a href="{h}"{cur if path and h.lstrip("/") == path else ""}>{l}</a>' for h, l in nav)
+    T = _HUB_TXT[lang]
+    return (f'<header class="top"><div class="bar"><a class="brand" href="/" aria-label="Lotent">{_LOGO_SVG}<span>Lotent</span></a>'
+            f'<nav aria-label="Navigation">{links}</nav><a class="btn btn-sm" href="/">{T["open"]}</a></div></header>')
+
+
+def _site_footer(lang="fr"):
+    T = _HUB_TXT[lang]
+    fr = lang == "fr"
+    sel = "".join(f'<li><a href="/{p}">{_esc_attr(l)}</a></li>' for p, l in SELECTIONS)
+    disc = "".join(f'<li><a href="/d/{_disc_slug(d)}.html">{_esc_attr(d if fr else _DISC_EN.get(d, d))}</a></li>'
+                   for d in DISC_COLORS if d != "Autre")
+    about = ("Les conférences, cours et séminaires ouverts au public à Paris, réunis chaque matin en un seul agenda."
+             if fr else "Conferences, lectures and seminars open to the public in Paris, gathered every morning into a single agenda.")
+    t_sel = "Sélections" if fr else "Selections"
+    t_sub = "S'abonner" if fr else "Subscribe"
+    t_all = "Tous les événements (.ics)" if fr else "All events (.ics)"
+    t_rss = "Flux RSS de la semaine" if fr else "This week's RSS feed"
+    t_about = "À propos" if fr else "About"
+    return (f'<footer class="site"><div class="wrap"><div><b>Lotent</b><p class="about">{about}</p></div>'
+            f'<nav aria-label="{t_sel}"><h2>{t_sel}</h2><ul>{sel}</ul></nav>'
+            f'<nav aria-label="Disciplines"><h2>Disciplines</h2><ul>{disc}</ul></nav>'
+            f'<div><h2>{t_sub}</h2><ul>'
+            f'<li><a href="webcal://lotent.fr/data/calendar.ics">{t_all}</a></li>'
+            f'<li><a href="/data/digest.xml">{t_rss}</a></li>'
+            f'<li><a href="/apropos.html">{t_about}</a></li>'
+            f'<li><a href="https://github.com/kovarci/zzzz/issues" rel="noopener">{T["questions"]}</a></li></ul></div></div></footer>')
+
+
+def _short_place(ev):
+    """Premier morceau du lieu qui ne répète pas l'organisateur."""
+    inst_s = slugify(ev.get("institution", ""))
+    bits = [x.strip() for x in re.split(r",| — ", re.sub(r"\([^)]*\)", "", ev.get("location") or "")) if x.strip()]
+    bits = [x for x in bits if len(slugify(x)) > 2 and not (inst_s and (slugify(x) in inst_s or inst_s in slugify(x)))]
+    if not bits:
+        return ""
+    b = bits[0]
+    return b if len(b) <= 60 else b[:59].rsplit(" ", 1)[0].rstrip(" -–,;:") + "…"
+
+
+def _day_heading(d, lang):
+    year = f" {d.year}" if d.year != TODAY.year else ""
+    if lang == "en":
+        return f"{_WD_EN[d.weekday()]} {_MONTHS_EN_FULL[d.month - 1]} {d.day}{year}"
+    return f"{_WEEKDAYS_FR[d.weekday()].capitalize()} {_jour_fr(d.day)} {_MONTHS_FR[d.month - 1]}{year}"
+
+
+def _ev_row(ev, lang, *, show_inst=True, hide_free=False, thumb=True, when=None):
+    """Une ligne du programme : heure, titre, organisateur · lieu, discipline,
+    étiquettes. Toute la ligne est le lien vers la fiche e/<id>.html."""
+    T = _HUB_TXT[lang]
+    eid = ev["id"]
+    disc = ev.get("discipline") or ""
+    color = DISC_COLORS.get(disc, DISC_COLORS["Autre"])
+    # Hors liste datée (séances liées, passées, annuaire) : colonne de gauche = la date.
+    # Sinon l'heure ouvre la ligne de détail, pour que les titres s'alignent même sans horaire.
+    tm = f'<span class="tm">{_esc_attr(when)}</span>' if when is not None else ""
+    lead = f'<b>{_esc_attr(ev["time"])}</b>' if (when is None and ev.get("time")) else ""
+    sub = " · ".join(x for x in (lead, _esc_attr(ev.get("institution") if show_inst else ""),
+                                 _esc_attr(_short_place(ev))) if x)
+    tags = []
+    if disc and disc != "Autre":
+        tags.append(f'<span><span class="dot"></span> {_esc_attr(_DISC_EN.get(disc, disc) if lang == "en" else disc)}</span>')
+    if _is_free(ev) and not hide_free:
+        tags.append(f'<span class="tag">{T["free"]}</span>')
+    if _attendance(ev.get("location") or "") == "online":
+        tags.append(f'<span class="tag">{T["online"]}</span>')
+    if ev.get("members"):
+        tags.append(f'<span class="tag">{T["members"]}</span>')
+    img = ""
+    if thumb and ev.get("image"):
+        img = (f'<img src="{_esc_attr(_img_thumb(ev["image"], 160))}" alt="" width="72" height="72" '
+               f'loading="lazy" decoding="async" onerror="this.remove()">')
+    return (f'<li class="ev" data-d="{_esc_attr(disc)}" style="--dc:{color}"><a href="/e/{eid}.html">{tm}'
+            f'<span><span class="tt">{_esc_attr((ev.get("title") or "")[:140])}</span>'
+            f'{f"<span class=su>{sub}</span>" if sub else ""}'
+            f'{f"<span class=tags>{chr(32).join(tags)}</span>" if tags else ""}</span>{img}</a></li>')
+
+
+def _pick_featured(evts, k=3):
+    """Jusqu'à 3 événements avec image, d'organisateurs différents, parmi les
+    prochains : même idée que « À la une » de l'accueil."""
+    scored = []
+    for e in evts[:90]:
+        if not e.get("image"):
+            continue
+        s = (2 + (1.5 if e.get("institution") in SHARE_INSTITUTIONS else 0) + (.5 if e.get("speaker") else 0)
+             + (.5 if len(e.get("description") or "") > 80 else 0))
+        scored.append((-s, e.get("date", ""), e.get("time", ""), e))
+    scored.sort(key=lambda x: x[:3])
+    out, seen = [], set()
+    for *_, e in scored:
+        if e.get("institution") in seen:
+            continue
+        seen.add(e.get("institution"))
+        out.append(e)
+        if len(out) == k:
+            break
+    return sorted(out, key=lambda e: (e.get("date", ""), e.get("time", ""))) if len(out) >= 2 else []
 
 
 def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=None,
               intro="", chips_title="", chips=(), lang="fr", title=None, desc=None,
-              limit=800, show_inst=None, past=(), index=None, extra_ld=None, past_title="Conférences passées", count_html=None):
-    """Page « hub » (i/<slug>.html par institution, d/<slug>.html par
-    discipline) : même charte que les pages événement e/*.html — Geist, clair
-    / sombre, carte — avec la liste des prochaines conférences (liens vers
-    e/*.html : c'est par ces hubs que Google découvre les pages événement),
-    l'agenda .ics à s'abonner et des liens vers les hubs voisins."""
+              limit=400, show_inst=None, past=(), index=None, extra_ld=None, past_title=None,
+              count_html=None, body_html=None, show_orgs=None, hide_free=False, finder=False):
+    """Page « hub » (i/ institution, d/ discipline, s/ sélection, p/ intervenant
+    et annuaire) : même charte que le site — Newsreader + Instrument Sans,
+    filets, pas d'ombres — avec le programme des prochains événements groupé
+    par jour (liens vers e/*.html : c'est par ces hubs que Google découvre les
+    pages événement), la liste des organisateurs et, selon la page, l'agenda
+    .ics à s'abonner. Le JavaScript ne fait que filtrer par discipline."""
     url = f"{SITE_URL}/{path}"
     T = _HUB_TXT[lang]
-    # « 0 conférence », comme « 1 conférence » — mais « 0 talks » en anglais
     plural = "s" if (n != 1 if lang == "en" else n > 1) else ""
-    short = T["short"].format(n=n, s=plural)
+    short = T["short"].format(n=_fmt_n(n), s=plural)
     if show_inst is None:
         show_inst = kicker != "Institution"
-    # Toutes les conférences à venir (pas seulement les 60 prochaines) : le
-    # Collège de France en a ~550, et 987 fiches e/ n'étaient liées depuis
-    # aucun hub — Google ne les trouvait que par le sitemap. Intertitre par
-    # mois dès que la liste est longue.
-    items, month = [], None
-    by_month = len(evts) > 40
-    for ev in evts[:limit]:
-        eid = ev.get("id") or ""
-        if not re.fullmatch(r"[0-9a-f]{12}", eid):
-            continue
+    if show_orgs is None:
+        show_orgs = kicker in ("Sélection", "Selection", "Discipline")
+    valid = [e for e in evts if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or "")]
+    shown = valid[:limit]
+
+    # ── Programme, groupé par jour ───────────────────────────────────────
+    days, order = {}, []
+    for ev in shown:
+        if ev.get("date") not in days:
+            days[ev.get("date")] = []
+            order.append(ev.get("date"))
+        days[ev.get("date")].append(ev)
+    today_iso, tomorrow_iso = TODAY.isoformat(), (TODAY + timedelta(days=1)).isoformat()
+    sections = []
+    for ds in order:
         try:
-            d = date.fromisoformat(ev.get("date", ""))
-            when = (f"{_HUB_MONTHS_EN[d.month - 1]} {d.day}" if lang == "en"
-                    else f"{_jour_fr(d.day)} {_HUB_MOIS[d.month - 1]}")
-            if by_month and (d.year, d.month) != month:
-                month = (d.year, d.month)
-                label = (d.strftime("%B %Y") if lang == "en" else f"{_MONTHS_FR[d.month - 1]} {d.year}")
-                items.append(f'<li class="m">{label[0].upper() + label[1:]}</li>')
+            d = date.fromisoformat(ds)
+            head = _day_heading(d, lang)
         except Exception:
-            when = ""
-        sub = ev.get("institution", "") if show_inst else ""
-        items.append(f'<li><a href="{SITE_URL}/e/{eid}.html"><span class="t">{_esc_attr((ev.get("title") or "")[:110])}'
-                     f'{f"<small>{_esc_attr(sub)}</small>" if sub else ""}</span>'
-                     f'<span class="d">{_esc_attr(when)}{(" · " + _esc_attr(ev["time"])) if ev.get("time") else ""}</span></a></li>')
-    more = (f'<p class="more"><a href="{target}" rel="nofollow">{T["more"]}</a></p>'
-            if len(evts) > limit else "")
-    events_html = (f'<h2>{T["upcoming"]}</h2><ul class="rel">{"".join(items)}</ul>{more}' if items else
-                   f'<p class="empty">{T["empty"]}</p>' if not past else "")
-    # Conférences passées (pages intervenant) : date avec l'année
+            head = ds
+        rel = (f'<span class="rel">{T["today"]}</span>' if ds == today_iso
+               else f'<span class="rel">{T["tomorrow"]}</span>' if ds == tomorrow_iso else "")
+        rows = "".join(_ev_row(e, lang, show_inst=show_inst, hide_free=hide_free) for e in days[ds])
+        sections.append(f'<section class="day" id="j-{ds}"><h2>{head}{rel}<span class="n">{_fmt_n(len(days[ds]))}</span></h2>'
+                        f'<ul class="prog">{rows}</ul></section>')
+    more = (f'<p class="more">{T["more"].format(limit=_fmt_n(limit), n=_fmt_n(n))} '
+            f'<a class="btn" href="{target}" rel="nofollow">{T["cta_all"]}</a></p>' if len(valid) > limit else "")
+    # Conférences passées (pages intervenant) : date avec l'année, sans vignette
+    past_html = ""
     if past:
-        rows = []
-        for ev in past[:60]:
-            eid = ev.get("id") or ""
-            if not re.fullmatch(r"[0-9a-f]{12}", eid):
-                continue
-            sub = ev.get("institution", "") if show_inst else ""
-            rows.append(f'<li><a href="{SITE_URL}/e/{eid}.html"><span class="t">{_esc_attr((ev.get("title") or "")[:110])}'
-                        f'{f"<small>{_esc_attr(sub)}</small>" if sub else ""}</span>'
-                        f'<span class="d">{_esc_attr(_date_fr(ev.get("date", "")))}</span></a></li>')
+        rows = "".join(_ev_row(e, lang, show_inst=show_inst, thumb=False, when=_date_fr(e.get("date", "")))
+                       for e in past[:60] if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or ""))
         if rows:
-            events_html += f'<h2>{_esc_attr(past_title)}</h2><ul class="rel">{"".join(rows)}</ul>'
-    # Hub vide : hors index Google (page mince) et hors sitemap (write_sitemap)
-    robots = '<meta name="robots" content="noindex, follow">\n' if not (n if index is None else index) else ""
+            past_html = f'<h2 class="sec">{_esc_attr(past_title or T["past"])}</h2><ul class="prog plain">{rows}</ul>'
+
+    # ── À la une, jours, filtre par discipline ───────────────────────────
+    featured = _pick_featured(valid) if (body_html is None and len(valid) >= 6) else []
+    feat_html = ""
+    if featured:
+        cards = []
+        for e in featured:
+            try:
+                d = date.fromisoformat(e["date"])
+                when = f"{_WDS_EN[d.weekday()] if lang == 'en' else _WDS[d.weekday()].capitalize()} {d.day}" + (f" · {e['time']}" if e.get("time") else "")
+            except Exception:
+                when = ""
+            disc = e.get("discipline") or ""
+            cards.append(
+                f'<li class="fcard" style="--dc:{DISC_COLORS.get(disc, DISC_COLORS["Autre"])}"><a href="/e/{e["id"]}.html">'
+                f'<span class="im"><img src="{_esc_attr(_img_thumb(e["image"], 640))}" alt="" width="640" height="400" '
+                f'loading="lazy" decoding="async" onerror="this.closest(\'li\').remove()"></span>'
+                f'<span class="m"><span class="dot"></span>{_esc_attr(when)}</span>'
+                f'<span class="t">{_esc_attr((e.get("title") or "")[:110])}</span>'
+                f'<span class="o">{_esc_attr(e.get("institution", ""))}</span></a></li>')
+        feat_html = f'<h2 class="sec">{T["featured"]}</h2><ul class="featured">{"".join(cards)}</ul>'
+    nav_html = ""
+    if len(order) >= 2 and len(shown) >= 12 and body_html is None:
+        pills = []
+        for ds in order[:21]:
+            try:
+                d = date.fromisoformat(ds)
+                pills.append(f'<a href="#j-{ds}"><span>{_WDS_EN[d.weekday()] if lang == "en" else _WDS[d.weekday()]}</span>'
+                             f'<b>{d.day}</b></a>')
+            except Exception:
+                pass
+        nav_html = f'<div class="scroller daynav" role="navigation" aria-label="{T["daynav"]}">{"".join(pills)}</div>'
+    dcount = {}
+    for e in shown:
+        dn = e.get("discipline") or "Autre"
+        dcount[dn] = dcount.get(dn, 0) + 1
+    chips_f = ""
+    if len(dcount) >= 2 and len(shown) >= 8 and body_html is None:
+        items = [f'<button type="button" class="chip" data-v="" aria-pressed="true">{T["all"]}</button>']
+        for dn, c in sorted(dcount.items(), key=lambda x: -x[1]):
+            items.append(f'<button type="button" class="chip" data-v="{_esc_attr(dn)}" aria-pressed="false" '
+                         f'style="--dc:{DISC_COLORS.get(dn, DISC_COLORS["Autre"])}"><i></i>'
+                         f'{_esc_attr(_DISC_EN.get(dn, dn) if lang == "en" else dn)} <span class="n">{c}</span></button>')
+        chips_f = (f'<div class="scroller" data-disc hidden role="group" aria-label="{T["filter"]}">{"".join(items)}</div>')
+    bar = ""
+    if nav_html or chips_f:
+        nshown = len(shown)
+        bar = (f'<div class="bar2">{nav_html}{chips_f}'
+               f'<p class="status" id="st" aria-live="polite" data-one="{T["one"]}" data-many="{T["many"]}">'
+               f'{_fmt_n(nshown)} {T["many"] if nshown != 1 else T["one"]}</p></div>')
+    empty_msg = (f'<p class="empty" id="none" hidden>{T["none"]}</p>' if chips_f else "")
+    programme = (f'{bar}{empty_msg}{"".join(sections)}{more}' if sections else
+                 (f'<p class="empty">{T["empty"]}</p>' if not past and body_html is None else ""))
+
+    # ── Organisateurs, liens voisins ─────────────────────────────────────
+    orgs_html = ""
+    if show_orgs and valid:
+        c = {}
+        for e in valid:
+            c[e.get("institution", "")] = c.get(e.get("institution", ""), 0) + 1
+        rows = []
+        for inst, cnt in sorted(c.items(), key=lambda x: -x[1])[:8]:
+            if not inst:
+                continue
+            hub = (INST_PAGES_DIR / f"{slugify(inst)}.html").exists()
+            inner = f'<span>{_esc_attr(inst)}</span><span class="c">{_fmt_n(cnt)}</span>'
+            rows.append(f'<li><a href="/i/{slugify(inst)}.html">{inner}</a></li>' if hub else f'<li><span class="i">{inner}</span></li>')
+        if rows:
+            orgs_html = f'<h2 class="sec">{T["by_org"]}</h2><ul class="orgs">{"".join(rows)}</ul>'
     chips_html = ""
     if chips:
-        chips_html = (f'<h2>{_esc_attr(chips_title)}</h2><div class="chips">'
-                      + "".join(f'<a href="{u}">{_esc_attr(label)}</a>' for label, u in chips) + "</div>")
+        chips_html = (f'<h2 class="sec">{_esc_attr(chips_title or T["see_also"])}</h2><div class="links">'
+                      + "".join(f'<a class="chip" href="{u}">{_esc_attr(label)}</a>' for label, u in chips) + "</div>")
+
+    # ── Données structurées, métadonnées ─────────────────────────────────
+    robots = '<meta name="robots" content="noindex, follow">\n' if not (n if index is None else index) else ""
     crumb_ld = json.dumps({
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [{"@type": "ListItem", "position": 1, "name": T["home"], "item": f"{SITE_URL}/"},
                             {"@type": "ListItem", "position": 2, "name": name, "item": url}]},
         ensure_ascii=False).replace("</", "<\\/")
-    # CollectionPage + ItemList des fiches listées : dit à Google que la page
-    # est une liste d'événements (et lui donne leurs URL dans l'ordre)
     list_ld = json.dumps({
         "@context": "https://schema.org", "@type": "CollectionPage", "name": name, "url": url,
         "inLanguage": lang, "isPartOf": {"@id": f"{SITE_URL}/#website"},
         "mainEntity": {"@type": "ItemList", "numberOfItems": n, "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": f"{SITE_URL}/e/{e['id']}.html"}
-            for i, e in enumerate(e for e in evts[:min(limit, 100)] if re.fullmatch(r"[0-9a-f]{12}", e.get("id") or ""))]}},
+            for i, e in enumerate(valid[:min(limit, 100)])]}},
         ensure_ascii=False).replace("</", "<\\/")
     img = og_image or f"{SITE_URL}/og.png"
-    ics_btn, ics_more = "", ""
+    actions = [f'<a class="btn btn-primary" href="{target if n else SITE_URL + "/"}" rel="nofollow">{T["cta"] if n else T["cta_all"]}</a>']
+    ics_more = ""
     if ics:
         from urllib.parse import quote
         webcal = re.sub(r"^https?:", "webcal:", ics)
-        ics_btn = f'<a class="ext" href="{webcal}">S\'abonner à l\'agenda</a>'
-        ics_more = (f'<p class="subs">Abonnement : <a href="{webcal}">Apple, Outlook</a> · '
-                    f'<a href="https://calendar.google.com/calendar/render?cid={quote(webcal, safe="")}" rel="noopener">Google Agenda</a> · '
-                    f'lien à coller dans une autre application : <a href="{ics}">{_esc_attr(ics)}</a>. '
-                    f'Il se met à jour tout seul chaque jour.</p>')
-    # Titre calé sur les recherches (« Collège de France : agenda des
-    # conférences à Paris », « Conférences de philosophie à Paris »)
+        actions.append(f'<a class="btn" href="{webcal}">{T["subscribe"]} · {T["apple"]}</a>')
+        actions.append(f'<a class="btn" href="https://calendar.google.com/calendar/render?cid={quote(webcal, safe="")}" rel="noopener">{T["google"]}</a>')
+        ics_more = (f'<p class="subs">{T["paste"]} : <a href="{ics}">{_esc_attr(ics)}</a>. {T["autoupd"]}</p>')
     page_title = title or f"{name} : agenda des conférences à Paris · Lotent"
     meta_desc = desc or f"{short} {intro} {T['updated']}".replace("  ", " ")
-    sel_links = " · ".join(f'<a href="{SITE_URL}/{p}">{_esc_attr(l)}</a>' for p, l in SELECTIONS
-                           if p != path)
+    count_line = count_html or T["count"].format(n=_fmt_n(n), s=plural)
+    scripts = (_FILTER_JS if chips_f else "") + (_FINDER_JS if finder else "")
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -6318,73 +6598,32 @@ def _hub_page(*, kicker, name, path, n, color, evts, target, ics=None, og_image=
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{_esc_attr(page_title.replace(' · Lotent', ''))}">
 <meta name="twitter:image" content="{img}">
-<link rel="icon" href="{SITE_URL}/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="{SITE_URL}/apple-touch-icon.png">
 {f'<link rel="alternate" type="text/calendar" title="{_esc_attr(name)} (.ics)" href="{ics}">' + chr(10) if ics else ''}<script type="application/ld+json">{crumb_ld}</script>
 <script type="application/ld+json">{list_ld}</script>{chr(10) + '<script type="application/ld+json">' + extra_ld + '</script>' if extra_ld else ''}
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{{--bg:#fff;--fg:#0a0a0b;--card:#fff;--muted:#f4f4f5;--muted-fg:#5f5f68;--border:#e4e4e7;--primary:#18181b;--primary-fg:#fafafa}}
-@media (prefers-color-scheme:dark){{:root{{--bg:#0a0a0b;--fg:#fafafa;--card:#0e0e10;--muted:#27272a;--muted-fg:#a1a1aa;--border:#27272a;--primary:#fafafa;--primary-fg:#18181b}}}}
-*{{box-sizing:border-box}}
-body{{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:24px 16px 40px;line-height:1.5;-webkit-font-smoothing:antialiased}}
-.wrap{{max-width:620px;margin:0 auto}}
-.crumb{{font-size:12px;color:var(--muted-fg);margin:0 0 14px}}
-.crumb a{{color:inherit;text-decoration:none}}.crumb a:hover{{color:var(--fg)}}
-.card{{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -16px rgba(0,0,0,.25)}}
-.head{{position:relative;display:flex;align-items:flex-end;min-height:150px;padding:20px 22px;color:#fff;background:linear-gradient(135deg,color-mix(in srgb,var(--dc) 78%,#000),color-mix(in srgb,var(--dc) 50%,#000))}}
-.head::before{{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:16px 16px;-webkit-mask-image:radial-gradient(ellipse at top right,#000,transparent 70%);mask-image:radial-gradient(ellipse at top right,#000,transparent 70%)}}
-.head .k{{position:absolute;top:14px;left:16px;background:rgba(255,255,255,.92);color:#18181b;font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px}}
-.head h1{{position:relative;margin:0;font-size:28px;line-height:1.15;letter-spacing:-.02em;text-wrap:balance;text-shadow:0 1px 8px rgba(0,0,0,.3)}}
-.body{{padding:20px 22px 22px}}
-.count{{font-size:15px;margin:0 0 6px}}.count b{{font-variant-numeric:tabular-nums}}
-.intro{{font-size:14px;color:var(--muted-fg);margin:0 0 16px}}
-.cta{{display:grid;grid-template-columns:1fr 1fr;gap:8px}}
-.cta a{{display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 12px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;line-height:1.2}}
-.cta .site{{background:var(--primary);color:var(--primary-fg)}}
-.cta .ext{{border:1px solid var(--border);color:inherit}}
-.cta a:hover{{filter:brightness(1.08)}}
-.cta a:only-child{{grid-column:1/-1}}
-.subs{{font-size:12px;color:var(--muted-fg);margin:10px 0 0;overflow-wrap:anywhere}}.subs a{{color:inherit}}
-@media (max-width:420px){{.cta{{grid-template-columns:1fr}}}}
-h2{{font-size:13px;color:var(--muted-fg);font-weight:600;margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em}}
-.rel{{list-style:none;padding:0;margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}}
-.empty{{color:var(--muted-fg);border:1px dashed var(--border);border-radius:10px;padding:14px 16px;margin:18px 0 0;font-size:14px}}
-.rel li{{font-size:14px;line-height:1.4}}
-.rel li+li{{border-top:1px solid var(--border)}}
-.rel a{{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;color:inherit;text-decoration:none}}
-.rel a:hover{{background:var(--muted)}}
-.rel .t small{{display:block;color:var(--muted-fg);font-size:12px;margin-top:2px}}
-.rel li.m{{font-size:12px;font-weight:600;color:var(--muted-fg);background:var(--muted);padding:7px 12px}}
-.rel .d{{color:var(--muted-fg);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}}
-.chips{{display:flex;flex-wrap:wrap;gap:6px}}
-.chips a{{border:1px solid var(--border);border-radius:999px;padding:5px 11px;font-size:13px;color:inherit;text-decoration:none;background:var(--card)}}
-.chips a:hover{{background:var(--muted)}}
-.foot{{text-align:center;margin-top:24px;font-size:12px;color:var(--muted-fg)}}
-.foot a{{color:inherit}}
-.more{{font-size:13px;margin:10px 0 0}}.more a{{color:inherit}}
-.sel{{text-align:center;margin-top:18px;font-size:12px;color:var(--muted-fg)}}.sel a{{color:inherit}}
-</style>
-{_GC_TAG}
+{_head_common()}
 </head>
 <body>
-<div class="wrap">
-<nav class="crumb" aria-label="{T['crumb']}"><a href="{SITE_URL}/">{T['home']}</a> › {_esc_attr(name)}</nav>
-<main class="card" style="--dc:{color}">
-<div class="head"><span class="k">{_esc_attr(kicker)}</span><h1>{_esc_attr(name)}</h1></div>
-<div class="body">
-<p class="count">{count_html or T['count'].format(n=n, s=plural)}</p>
-{f'<p class="intro">{_esc_attr(intro)}</p>' if intro else ''}
-<div class="cta"><a class="site" href="{target if n else SITE_URL + '/'}" rel="nofollow">{T['cta'] if n else T['cta_all']}</a>{ics_btn}</div>
+<a class="skip" href="#main">{T["skip"]}</a>
+{_site_header(path, lang)}
+<main id="main" class="wrap" style="--dc:{color}">
+<nav class="crumb" aria-label="{T['crumb']}"><a href="/">{T['home']}</a> › {_esc_attr(name)}</nav>
+<section class="hero">
+<p class="kind"><span class="dot"></span>{_esc_attr(kicker)}</p>
+<h1 class="display">{_esc_attr(name)}</h1>
+{f'<p class="lede">{_esc_attr(intro)}</p>' if intro else ''}
+<p class="count">{count_line}</p>
+<div class="actions">{"".join(actions)}</div>
 {ics_more}
-</div>
-</main>
-{events_html}
+</section>
+{feat_html}
+{body_html or ""}
+{programme}
+{past_html}
+{orgs_html}
 {chips_html}
-<nav class="sel" aria-label="Sélections">{sel_links}</nav>
-<div class="foot"><a href="{SITE_URL}/">{T['foot']}</a> · <a href="https://github.com/kovarci/zzzz/issues" rel="noopener">{T['questions']}</a></div>
-</div>
+</main>
+{_site_footer(lang)}
+{scripts}
 </body>
 </html>
 """
@@ -6589,25 +6828,32 @@ def write_speaker_pages(events):
                          count_html=(None if up else f"<b>{len(past)}</b> conférence{'s' if len(past) > 1 else ''} passée{'s' if len(past) > 1 else ''} dans l'agenda Lotent."))
         (SPEAKER_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
         written.add(f"{slug}.html")
-    # Annuaire A–Z
+    # Annuaire A–Z : lettres, recherche (JavaScript facultatif), une ligne par intervenant
     rows = sorted(groups.items(), key=lambda kv: slugify(kv[1]["name"].split()[-1]) + slugify(kv[1]["name"]))
     letters = {}
     for slug, g in rows:
         letters.setdefault(slugify(g["name"].split()[-1])[:1].upper() or "#", []).append((slug, g))
-    body = "".join(
-        f'<h2 id="l-{L}">{L}</h2><ul class="rel">' + "".join(
-            f'<li><a href="{SITE_URL}/p/{slug}.html"><span class="t">{_esc_attr(g["name"])}'
-            f'<small>{_esc_attr(", ".join(sorted({e.get("institution", "") for e in g["up"] + g["past"]})[:2]))}</small></span>'
-            f'<span class="d">{_up_past(g)}</span></a></li>' for slug, g in lst) + "</ul>"
-        for L, lst in sorted(letters.items()))
+    letter_nav = "".join(f'<a class="chip" href="#l-{L}">{L}</a>' for L in sorted(letters))
+    sections = ""
+    for L, lst in sorted(letters.items()):
+        items = ""
+        for slug, g in lst:
+            insts_ = ", ".join(sorted({e.get("institution", "") for e in g["up"] + g["past"]} - {""})[:2])
+            items += (f'<li class="ev" data-n="{_esc_attr(g["name"] + " " + insts_)}"><a href="/p/{slug}.html">'
+                      f'<span class="tm">{_up_past(g)}</span><span><span class="tt">{_esc_attr(g["name"])}</span>'
+                      f'{f"<span class=su>{_esc_attr(insts_)}</span>" if insts_ else ""}</span></a></li>')
+        sections += f'<section><h2 id="l-{L}">{L}</h2><ul class="prog plain">{items}</ul></section>'
+    body = ('<div class="az"><input id="finder" class="finder" type="search" hidden '
+            'placeholder="Rechercher un intervenant" aria-label="Rechercher un intervenant">'
+            f'<div class="bar2"><div class="scroller letters" role="navigation" aria-label="Lettres">{letter_nav}</div></div>'
+            f'{sections}</div>')
     idx = _hub_page(kicker="Annuaire", name="Intervenants", path="p/", n=len(groups),
                     color="#6366F1", evts=[], target="/", title="Intervenants des conférences à Paris : l'annuaire · Lotent",
                     desc=f"{len(groups)} chercheurs, professeurs et invités qui donnent des conférences à Paris "
                          f"(Collège de France, PSE, EHESS…) : leurs prochaines dates et conférences passées.",
                     intro="Chaque page réunit les conférences à venir et passées d'un intervenant.",
-                    index=True, count_html=f"<b>{len(groups)}</b> intervenants, dont {sum(1 for g in groups.values() if g['up'])} avec une conférence à venir.")
-    idx = idx.replace('<p class="empty">', '<p class="empty" hidden>', 1).replace(
-        "</main>", "</main>" + body, 1)
+                    index=True, body_html=body, finder=True, show_orgs=False,
+                    count_html=f"<b>{len(groups)}</b> intervenants, dont {sum(1 for g in groups.values() if g['up'])} avec un événement à venir.")
     (SPEAKER_PAGES_DIR / "index.html").write_text(idx, encoding="utf-8")
     for f in SPEAKER_PAGES_DIR.glob("*.html"):
         if f.name not in written:
@@ -6734,7 +6980,8 @@ def write_selection_pages(events):
         page = _hub_page(kicker="Sélection" if lang == "fr" else "Selection", name=name, path=path,
                          n=len(evts), color="#6366F1", evts=evts, target=target, intro=intro,
                          chips_title="Voir aussi" if lang == "fr" else "See also", chips=chips,
-                         lang=lang, title=title, desc=desc, limit=400, show_inst=True)
+                         lang=lang, title=title, desc=desc, limit=400, show_inst=True,
+                         hide_free=(slug == "gratuites"))
         (SEL_PAGES_DIR / f"{slug}.html").write_text(page, encoding="utf-8")
         written.add(f"{slug}.html")
     for f in SEL_PAGES_DIR.glob("*.html"):
@@ -6788,6 +7035,24 @@ def write_home_prerender(events):
     print(f"Accueil pré-rendu : {len(shown)} conférences")
 
 
+class _LazyBrowser:
+    """Chromium n'est lancé qu'à la première image à refaire : les pages
+    HTML d'institution s'écrivent sans navigateur (et sans Playwright)."""
+    def __init__(self, pw):
+        self.pw, self.b = pw, None
+
+    def new_page(self, **kw):
+        if self.b is None:
+            if self.pw is None:
+                raise RuntimeError("Playwright absent")
+            self.b = self.pw.chromium.launch(headless=True)
+        return self.b.new_page(**kw)
+
+    def close(self):
+        if self.b is not None:
+            self.b.close()
+
+
 def write_institution_share_pages(events):
     """Pour chaque grande institution : 1 PNG (data/og/<slug>.png) + 1 page
     HTML (i/<slug>.html) avec balises OG dédiées et redirection vers
@@ -6796,8 +7061,8 @@ def write_institution_share_pages(events):
     try:
         from playwright.sync_api import sync_playwright
     except Exception as e:
-        print(f"[WARN] institution OG skipped (no Playwright): {e}")
-        return
+        print(f"[WARN] images d'institution non refaites (pas de Playwright) : {e}")
+        sync_playwright = None
 
     OG_INST_DIR.mkdir(exist_ok=True)
     INST_PAGES_DIR.mkdir(exist_ok=True)
@@ -6815,8 +7080,9 @@ def write_institution_share_pages(events):
 
     written_pngs, written_pages = set(), set()
     og_labels = _og_labels()
-    with sync_playwright() as p:
-        b = p.chromium.launch(headless=True)
+    from contextlib import nullcontext
+    with (sync_playwright() if sync_playwright else nullcontext()) as p:
+        b = _LazyBrowser(p)
         for inst in SHARE_INSTITUTIONS:
             slug = slugify(inst)
             if not slug:
@@ -7510,6 +7776,131 @@ def write_month_files(events):
     print(f"Fichiers mensuels : {len(index)} mois dans data/m/")
 
 
+def write_site_stats(events):
+    """data/site.json : ce que la page À propos montre « en direct » et que
+    meta.json ne contient pas — pages et calendriers générés, poids des fichiers,
+    répartition des événements, points de la carte, versions de la pile. Tout est
+    mesuré ici, à chaque passage : la page n'affiche aucun chiffre écrit à la main."""
+    import gzip
+    from collections import Counter
+    root = OUTPUT_FILE.parent.parent
+    try:
+        arch = json.loads(ARCHIVE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        arch = []
+    today = TODAY.isoformat()
+    up = [e for e in events if e.get("date", "") >= today and not e.get("kind")]
+
+    ev_pages = redirects = 0
+    for f in EVENT_PAGES_DIR.glob("*.html"):
+        try:
+            if f.stat().st_size < 1200 and 'http-equiv="refresh"' in f.read_text(encoding="utf-8", errors="replace"):
+                redirects += 1
+            else:
+                ev_pages += 1
+        except Exception:
+            pass
+    count = lambda d, skip=(): sum(1 for f in d.glob("*.html") if f.name not in skip)
+
+    def weight(path):
+        try:
+            b = path.read_bytes()
+            return {"kb": round(len(b) / 1024), "gz": round(len(gzip.compress(b, 6)) / 1024)}
+        except Exception:
+            return None
+    try:
+        first_month = json.loads((OUTPUT_FILE.parent / "m" / "index.json").read_text(encoding="utf-8"))["months"][0]["m"]
+    except Exception:
+        first_month = ""
+    weights = {"app.js": weight(root / "app.js"), "app.css": weight(root / "app.css"),
+               "pages.css": weight(root / "pages.css"), "index.html": weight(root / "index.html"),
+               "month": weight(OUTPUT_FILE.parent / "m" / f"{first_month}.json"), "month_name": first_month}
+
+    # Calendriers .ics : un par organisateur et par discipline, plus le calendrier complet
+    by_inst, discs = Counter(e.get("institution", "") for e in up), list(DISC_COLORS)
+    inst_of = {slugify(i): i for i in {e.get("institution", "") for e in events} if i}
+    cal = []
+    for f in sorted((OUTPUT_FILE.parent / "cal").glob("*.ics")):
+        stem = f.stem
+        if stem.startswith("d-"):
+            name = next((d for d in discs if _disc_slug(d) == stem[2:]), None)
+            if name:
+                cal.append({"kind": "disc", "name": name, "slug": stem,
+                            "n": sum(1 for e in up if e.get("discipline") == name)})
+        elif stem in inst_of:
+            cal.append({"kind": "inst", "name": inst_of[stem], "slug": stem, "n": by_inst.get(inst_of[stem], 0)})
+
+    # Carte : un point par lieu (coordonnées arrondies à ~10 m), couleur = discipline dominante
+    spots = {}
+    for e in up:
+        # Île-de-France seulement : un géocodage raté (0°, 0°) ou hors région ne doit pas étirer la carte
+        if (isinstance(e.get("lat"), (int, float)) and isinstance(e.get("lng"), (int, float))
+                and 48.1 <= e["lat"] <= 49.3 and 1.4 <= e["lng"] <= 3.6):
+            k = (round(e["lat"], 4), round(e["lng"], 4))
+            sp = spots.setdefault(k, {"d": Counter(), "p": Counter()})
+            sp["d"][e.get("discipline") if e.get("discipline") in DISC_COLORS else "Autre"] += 1
+            first = (e.get("location") or "").split(",")[0].strip()
+            sp["p"][(e.get("institution") if (not first or first[0].isdigit()) else first)[:48]] += 1
+    points = [[k[0], k[1], discs.index(sp["d"].most_common(1)[0][0]), sum(sp["d"].values()),
+               (sp["p"].most_common(1)[0][0] if sp["p"] else "")] for k, sp in sorted(spots.items())]
+
+    months = Counter((e.get("date") or "")[:7] for e in {x.get("id"): x for x in events + arch}.values()
+                     if e.get("date") and not e.get("kind"))
+    top = []
+    for inst, n in by_inst.most_common(12):
+        if inst:
+            top.append({"name": inst, "n": n,
+                        "slug": slugify(inst) if (INST_PAGES_DIR / f"{slugify(inst)}.html").exists() else ""})
+
+    def deps(txt):
+        out = []
+        for line in txt.splitlines():
+            m = re.match(r"\s*([A-Za-z0-9_.\-]+)\s*==\s*([0-9][\w.\-]*)", line)
+            if m:
+                out.append([m.group(1), m.group(2)])
+        return out
+    stack = {"python": [], "js": []}
+    try:
+        stack["python"] = deps((root / "scraper" / "requirements.txt").read_text(encoding="utf-8"))
+        pk = json.loads((root / "web" / "package.json").read_text(encoding="utf-8"))
+        stack["js"] = [[n, re.sub(r"^[^0-9]*", "", v)]
+                       for n, v in {**pk.get("dependencies", {}), **pk.get("devDependencies", {})}.items()]
+    except Exception:
+        pass
+    tests = {"files": 0, "cases": 0}
+    for f in (root / "scraper" / "tests").glob("test_*.py"):
+        tests["files"] += 1
+        tests["cases"] += len(re.findall(r"^def test_", f.read_text(encoding="utf-8"), re.M))
+    workflows = []
+    for f in sorted((root / ".github" / "workflows").glob("*.yml")):
+        m = re.search(r"^name:\s*(.+)$", f.read_text(encoding="utf-8"), re.M)
+        workflows.append(m.group(1).strip() if m else f.stem)
+    try:
+        geocache = len(json.loads((OUTPUT_FILE.parent / "geocache.json").read_text(encoding="utf-8")))
+    except Exception:
+        geocache = 0
+
+    site = {
+        "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "pages": {"events": ev_pages, "redirects": redirects, "organisers": count(INST_PAGES_DIR),
+                  "disciplines": count(DISC_PAGES_DIR), "selections": count(SEL_PAGES_DIR),
+                  "speakers": count(SPEAKER_PAGES_DIR, ("index.html",))},
+        "calendars": cal, "weights": weights,
+        "events": {"upcoming": len(up), "archive": len(arch), "organisers": len({e.get("institution") for e in up}),
+                   "located": sum(q[3] for q in points), "with_image": sum(1 for e in up if e.get("image")),
+                   "free": sum(1 for e in up if _is_free(e)),
+                   "online": sum(1 for e in up if _attendance(e.get("location") or "") == "online"),
+                   "english": sum(1 for e in up if _is_english(e)), "geocoded_places": geocache},
+        "disciplines": [{"name": d, "color": DISC_COLORS[d], "slug": _disc_slug(d) if d != "Autre" else "",
+                         "n": sum(1 for e in up if (e.get("discipline") if e.get("discipline") in DISC_COLORS else "Autre") == d)}
+                        for d in discs],
+        "months": sorted([m, n] for m, n in months.items() if m), "organisers": top,
+        "points": points, "stack": stack, "tests": tests, "workflows": workflows,
+    }
+    (OUTPUT_FILE.parent / "site.json").write_text(json.dumps(site, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"site.json : {len(points)} lieux, {len(cal)} calendriers, {ev_pages} pages événement")
+
+
 def write_stats(events):
     """Chiffres de la page À propos, calculés ici : elle téléchargeait
     events.json + l'archive (3,5 Mo) pour afficher quatre nombres."""
@@ -7781,6 +8172,12 @@ def main():
         except Exception as e:
             print(f"[ERROR] {fn.__name__}: {e}")
             traceback.print_exc()
+
+    try:
+        write_site_stats(all_events)
+    except Exception as e:
+        print(f"[ERROR] site stats: {e}")
+        traceback.print_exc()
 
     try:
         write_sitemap(all_events + arch)

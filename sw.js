@@ -2,13 +2,13 @@
    Strategy: network-first (fresh online), cache fallback when offline.
    Bumped CACHE version forces clients to refresh their precache. */
 
-const CACHE = "lotent-v64";
+const CACHE = "lotent-v65";
 
 // Precached on install : the shell that lets the app boot fully offline,
 // even on first visit-when-offline. Per-event pages (e/<id>.html) are
 // cached opportunistically as the user navigates to them.
 const SHELL = [
-  "./", "./index.html", "./app.js", "./app.css", "./apropos.html",
+  "./", "./index.html", "./app.js", "./app.css", "./apropos.html", "./apropos.css", "./apropos.js", "./pages.css",
   "./manifest.json", "./icon.svg", "./og.png",
   "./data/m/index.json", "./data/digest.json", "./data/meta.json",
 ];
