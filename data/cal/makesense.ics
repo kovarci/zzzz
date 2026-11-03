@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9f9c520cdee7@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
@@ -40,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
 END:VEVENT
 BEGIN:VEVENT
 UID:91f6247d1c80@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
@@ -54,7 +54,7 @@ URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
 END:VEVENT
 BEGIN:VEVENT
 UID:f20c89e4b965@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Sortir l'écologie de ses murs\, rencontre-discussion avec Kevin Bh
@@ -71,7 +71,7 @@ URL:https://chiche.makesense.org/events/e/sortir-lecologie-de-ses-murs-renc
 END:VEVENT
 BEGIN:VEVENT
 UID:704567818f9a@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Formaliser et prendre confiance en son projet entrepreneurial 📍P
@@ -87,7 +87,7 @@ URL:https://chiche.makesense.org/events/e/formaliser-et-prendre-confiance-e
 END:VEVENT
 BEGIN:VEVENT
 UID:334ffe8eadf0@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;TZID=Europe/Paris:20261104T141500
 DTEND;TZID=Europe/Paris:20261104T161500
 SUMMARY:Atelier - Comprends vraiment tes clients avec l’entretien de déc
@@ -104,7 +104,7 @@ URL:https://chiche.makesense.org/events/e/atelier-comprends-vraiment-tes-cl
 END:VEVENT
 BEGIN:VEVENT
 UID:6b76b17d318d@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Où dort ton argent ?...et comment l'orienter vers la transition ?
@@ -119,8 +119,23 @@ URL:https://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lor
  ienter-vers-la-transition-6ad0abfa1e36ae00082ec669
 END:VEVENT
 BEGIN:VEVENT
+UID:1ea15aa01dbf@paris-academique
+DTSTAMP:20261103T114229Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:J’améliore le confort thermique de mon logement
+DESCRIPTION:Organisé par Envie Le Labo — Et si vous appreniez à rendre 
+ votre logement plus confortable ? Découvrez des astuces simples à mettre
+  en place pour améliorer le confort thermique de votre logement.Envie Le 
+ Labo et l’Agence Par\nhttps://chiche.makesense.org/events/e/jameliore-le
+ -confort-thermique-de-mon-logement-6ae9ac9b20d095000803e05e
+LOCATION:10 Rue Julien Lacroix\, 75020 Paris\, France
+URL:https://chiche.makesense.org/events/e/jameliore-le-confort-thermique-de
+ -mon-logement-6ae9ac9b20d095000803e05e
+END:VEVENT
+BEGIN:VEVENT
 UID:2eb18b4eea1c@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Arpentage du livre « Être écoféministe – Théories et pratiqu
@@ -138,7 +153,7 @@ URL:https://chiche.makesense.org/events/e/arpentage-du-livre-etre-ecofemini
 END:VEVENT
 BEGIN:VEVENT
 UID:996d0db733c4@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Devenir bénévole à la Maison du Zéro Déchet
@@ -152,7 +167,7 @@ URL:https://chiche.makesense.org/events/e/devenir-benevole-a-la-maison-du-z
 END:VEVENT
 BEGIN:VEVENT
 UID:ae99c9767684@paris-academique
-DTSTAMP:20261103T090822Z
+DTSTAMP:20261103T114229Z
 DTSTART;TZID=Europe/Paris:20261107T140000
 DTEND;TZID=Europe/Paris:20261107T170000
 SUMMARY:Danse thérapeutique : sensibilisation à la capoeira angola
