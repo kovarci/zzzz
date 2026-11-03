@@ -43,7 +43,7 @@ const openIn = (e, onOpen) => ev => {
   ev.preventDefault(); onOpen(e);
 };
 const EventCard = React.memo(function EventCard({ e, fav, onFav, onOpen, distance, past }) {
-  const { t, discName } = useI18n();
+  const { t, discName, locName } = useI18n();
   const act = () => onOpen(e);
   // Le titre est le bouton de la carte (Tab puis Entrée) et sa zone cliquable
   // (::after) couvre toute la carte : pas de bouton étoile imbriqué dans un
@@ -58,7 +58,7 @@ const EventCard = React.memo(function EventCard({ e, fav, onFav, onOpen, distanc
       <h3 className="font-serif text-[1.15rem] font-medium leading-snug line-clamp-3"><a href={evHref(e)} onClick={openIn(e, onOpen)} className="outline-none after:absolute after:inset-0 after:content-['']">{e.title}</a></h3>
       {/* Pas si le titre le donne déjà (« Séminaire de recherche HEC : Paul Fonantier (LBS) ») */}
       {e.speaker && !norm(e.title).includes(norm(e.speaker)) && <p className="text-sm text-muted-foreground line-clamp-1">{e.speaker}</p>}
-      <p className="mt-auto pt-2 text-xs text-muted-foreground truncate">{isOnline(e) && (t("online_prefix") || "")}{e.institution}{placeOf(e) ? " · " + placeOf(e) : ""}</p>
+      <p className="mt-auto pt-2 text-xs text-muted-foreground truncate">{isOnline(e) && (t("online_prefix") || "")}{e.institution}{placeOf(e) ? " · " + locName(placeOf(e)) : ""}</p>
     </div></div>;
 });
 
@@ -106,7 +106,7 @@ function RelatedList({ title, items, onOpen, max = 5 }) {
 
 /* ═════════════════════ Fiche (sheet) ═════════════════════ */
 function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollow, pool = [], onOpen }) {
-  const { t, lang, fmtDay, discName, kindName } = useI18n();
+  const { t, lang, fmtDay, discName, kindName, locName } = useI18n();
   const rel = useMemo(() => e ? relatedOf(e, pool) : null, [e, pool]);
   const trap = useFocusTrap(!!e);
   // Échap déjà pris par un menu ou la palette ouverts par-dessus : la fiche reste
@@ -128,7 +128,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollo
             <div className="flex flex-col items-center justify-center rounded-md bg-muted px-3 py-1.5 min-w-14"><span className="text-xl font-bold leading-none tabular-nums">{d.getDate()}</span><span className="mt-0.5 text-xs leading-none text-muted-foreground">{d.toLocaleDateString(lang === "en" ? "en-GB" : "fr-FR", { month: "short" })}</span></div>
             <div className="text-sm"><div className="font-medium first-letter:uppercase">{fmtDay(e.date)} {d.getFullYear()}</div><div className="text-muted-foreground">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")} · {days < 0 ? t("sheet_terminated") : days === 0 ? t("sheet_today") : days === 1 ? t("sheet_tomorrow") : t("sheet_in_days", { n: days })}</div></div>
           </div>
-          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">{[[t("sheet_organizer"), e.institution, null], [t("sheet_also"), (e.also || []).join(", "), null], [t("sheet_with"), e.speaker, "speaker"], [t("sheet_place"), e.location, null], [t("sheet_price"), e.price ? (isFree(e) ? t("sheet_free") : e.price) : null, null]].filter(r => r[1]).map(([k, v, kind]) => <React.Fragment key={k}><dt className="text-muted-foreground">{k}</dt><dd className="break-words">{kind === "speaker" ? <SpeakerRow text={v} followSet={followSet} onFollow={onFollow} /> : v}</dd></React.Fragment>)}</dl>
+          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">{[[t("sheet_organizer"), e.institution, null], [t("sheet_also"), (e.also || []).join(", "), null], [t("sheet_with"), e.speaker, "speaker"], [t("sheet_place"), locName(e.location), null], [t("sheet_price"), e.price ? (isFree(e) ? t("sheet_free") : e.price) : null, null]].filter(r => r[1]).map(([k, v, kind]) => <React.Fragment key={k}><dt className="text-muted-foreground">{k}</dt><dd className="break-words">{kind === "speaker" ? <SpeakerRow text={v} followSet={followSet} onFollow={onFollow} /> : v}</dd></React.Fragment>)}</dl>
           {e.description && e.description.length > 60 && <p className="text-sm leading-relaxed text-muted-foreground whitespace-pre-line">{e.description}</p>}
           <div className="grid gap-2 pt-2">
             {safeUrl(e.url) && <LinkButton href={safeUrl(e.url)} target="_blank" rel="noopener"><Arr text={t("sheet_official")} /></LinkButton>}

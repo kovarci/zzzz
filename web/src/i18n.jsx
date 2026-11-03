@@ -170,6 +170,7 @@ const LangContext = createContext(null);
 
 function parseISO(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
 
+const FR_TITLE = document.title;
 export function LangProvider({ children }) {
   const [lang, setLangState] = useState(() => (store.get("paf_lang", "fr") === "en" ? "en" : "fr"));
   const setLang = useCallback(l => { setLangState(l); store.set("paf_lang", l); }, []);
@@ -177,6 +178,8 @@ export function LangProvider({ children }) {
   // <html lang> reste sinon figé sur "fr" (valeur statique d'index.html) après
   // un passage en anglais — mauvais pour l'accessibilité et les lecteurs d'écran.
   useEffect(() => { document.documentElement.lang = lang; }, [lang]);
+  // Le titre de l'onglet suit la langue (celui d'index.html est en français)
+  useEffect(() => { if (location.pathname.replace(/index\.html$/, "") === "/") document.title = lang === "en" ? "Open-access talks and seminars in Paris — one agenda · Lotent" : FR_TITLE; }, [lang]);
 
   // Séparateur de milliers : « 2 480 » en français, « 2,480 » en anglais
   const nf = useMemo(() => new Intl.NumberFormat(lang === "en" ? "en-US" : "fr-FR"), [lang]);
@@ -206,6 +209,8 @@ export function LangProvider({ children }) {
       lang, setLang, toggleLang, t, WD, WDS, MO, dayNum, fmtNum: n => nf.format(n),
       discName: d => (lang === "en" && DISC_EN[d]) || d,
       kindName: k => (lang === "en" && KIND_EN[k]) || k,
+      // Le texte de repli du scraper (« lieu précisé sur la page… ») est en français
+      locName: l => lang === "en" ? (l || "").replace("lieu précisé sur la page de l'événement", "exact venue on the event page") : l,
       fmtDay: s => { const d = parseISO(s); return `${WD[d.getDay()]} ${dayNum(d)} ${MO[d.getMonth()]}`; },
       fmtShort: s => { const d = parseISO(s); return `${WDS[d.getDay()]} ${dayNum(d)} ${MO[d.getMonth()].slice(0, lang === "en" ? 3 : 4)}`; },
       relDay: (s, TODAY, TOMORROW) => s === TODAY ? t("rel_today") : s === TOMORROW ? t("rel_tomorrow") : "",
