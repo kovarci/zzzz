@@ -6098,13 +6098,13 @@ def write_event_pages(events):
 {past_block}
 <p class="kind"><span class="dot"></span>{disc_html}<span>·</span><span>{kind}</span>{free_tag}</p>
 <h1 class="display">{title}</h1>
-{cover}
 <div class="when"><p class="d">{_esc_attr(when_d)}</p><p>{when_line}</p></div>
+<div class="cta-slot"><div class="actions cta">{actions_html}{f'<a class="btn ext" href="{ext}" rel="noopener">Voir la page officielle ↗</a>' if ext else ''}</div></div>
+{cover}
 <dl class="facts">{facts_html}</dl>
 {desc_html}
 {series_html}
 <p class="prose">{about}</p>
-<div class="actions">{actions_html}{f'<a class="btn ext" href="{ext}" rel="noopener">Voir la page officielle ↗</a>' if ext else ''}</div>
 {gcal_html}
 <p class="fine">Vérifie les horaires sur la page officielle avant de te déplacer.</p>
 </article>
@@ -6113,6 +6113,7 @@ def write_event_pages(events):
 {more_html}
 </main>
 {_site_footer()}
+{_CTA_JS}
 </body>
 </html>
 """
@@ -6286,6 +6287,16 @@ chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
 evs.forEach(function(el){var ok=!v||el.getAttribute('data-d')===v;el.hidden=!ok;if(ok)n++});
 days.forEach(function(d){d.hidden=!d.querySelector('.ev:not([hidden])')});
 st.textContent=nf.format(n)+' '+(n===1?one:many);em.hidden=n>0});})();
+</script>"""
+# Téléphone : une fois l'emplacement des boutons dépassé, ils se fixent au bas de l'écran
+# (jusqu'à la fin de la fiche). Sans JavaScript, ils restent simplement sous la date.
+_CTA_JS = """<script>
+(function(){var s=document.querySelector('.cta-slot'),c=s&&s.firstElementChild,a=document.querySelector('article.hero');
+if(!c||!a||!matchMedia('(max-width:720px)').matches)return;
+function f(){var r=s.getBoundingClientRect(),ar=a.getBoundingClientRect(),on=r.bottom<0&&ar.bottom>innerHeight*0.25;
+if(on&&!c.classList.contains('stuck'))s.style.minHeight=c.offsetHeight+'px';
+c.classList.toggle('stuck',on);if(!on)s.style.minHeight=''}
+addEventListener('scroll',f,{passive:true});f()})();
 </script>"""
 _FINDER_JS = """<script>
 (function(){var f=document.getElementById('finder');if(!f)return;f.hidden=false;
