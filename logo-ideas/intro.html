@@ -26,11 +26,10 @@ body{margin:0;padding:2rem;background:#0a0a0b;color:#f4f4f5;font:16px/1.5 system
 .s-e .page{z-index:3;clip-path:circle(0% at 50% 50%)}
 @keyframes e-iris{to{clip-path:circle(85% at 50% 50%)}}@keyframes e-pulse{0%{transform:scale(.8);opacity:0}30%{transform:scale(1);opacity:1}60%{transform:scale(1.06)}100%{transform:scale(1)}}
 .s-e.go .page{animation:e-iris 1s 1.2s cubic-bezier(.6,0,.2,1) forwards}.s-e.go .inner{animation:e-pulse 1.4s ease both}
-@media (prefers-reduced-motion:reduce){body:not(.force) .stage *{animation-duration:.01s!important}}
 .rm{display:none;margin:0 0 1.25rem;padding:.6rem .9rem;border:1px solid #52525b;border-radius:8px;color:#d4d4d8;font-size:.9rem}.rm.on{display:block}
 </style></head><body><h1>Animations de lancement</h1>
-<p class="lead">Ce qu'on verrait à l'ouverture du site, pendant que l'agenda se charge. Chaque maquette se rejoue. Durées réelles : entre 1,4 et 2,8 secondes ; l'animation ne retarderait jamais l'agenda, elle prendrait le temps du chargement et finirait ensuite.</p>
-<p class="rm" id="rm">Votre système demande de réduire les animations : le site les respecterait (le logo apparaîtrait simplement). Les maquettes sont donc figées. <button type="button" id="force">Les jouer quand même</button></p>
+<p class="lead">Ce qu'on verrait à l'ouverture du site, pendant que l'agenda se charge. Chaque maquette se rejoue. Une animation à la fois : cliquez « Rejouer » sous chaque carte. Durées réelles : entre 1,4 et 2,8 secondes ; l'animation ne retarderait jamais l'agenda, elle prendrait le temps du chargement et finirait ensuite.</p>
+<p class="rm" id="rm">Votre système demande de réduire les animations : le vrai site les respecterait (le logo apparaîtrait simplement). Cette page joue quand même les maquettes, pour que vous puissiez les juger.</p>
 <p class="all"><button type="button" id="all">Tout rejouer</button></p>
 <div class="grid">
 <article><h2>A. Sobre : apparition puis fondu</h2><p>Le logo et le mot arrivent doucement, puis l'écran se dissout. Presque rien à voir : c'est ce que fait déjà le site, en plus propre.</p>
@@ -51,7 +50,7 @@ body{margin:0;padding:2rem;background:#0a0a0b;color:#f4f4f5;font:16px/1.5 system
 </div>
 <script>
 function play(s){s.classList.remove('go');void s.offsetWidth;s.classList.add('go')}
-document.querySelectorAll('.stage').forEach(function(s){var b=s.parentElement.querySelector('.replay');b.addEventListener('click',function(){play(s)});setTimeout(function(){play(s)},150)});
-if(matchMedia('(prefers-reduced-motion:reduce)').matches)document.getElementById('rm').classList.add('on');document.getElementById('force').addEventListener('click',function(){document.body.classList.add('force');document.querySelectorAll('.stage').forEach(play)});
-document.getElementById('all').addEventListener('click',function(){document.querySelectorAll('.stage').forEach(play)});
+document.querySelectorAll('.stage').forEach(function(s){var b=s.parentElement.querySelector('.replay');b.addEventListener('click',function(){play(s)});});
+setTimeout(function(){play(document.querySelector('.stage'))},400);
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)document.getElementById('rm').classList.add('on');document.getElementById('all').addEventListener('click',function(){document.querySelectorAll('.stage').forEach(play)});
 </script></body></html>

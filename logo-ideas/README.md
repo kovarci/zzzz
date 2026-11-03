@@ -19,7 +19,7 @@ logos, un par thème. Le logo d'origine exact (tracé Bézier) est dans `origina
 ## Changer de logo
 
 ```bash
-node logo-ideas/apply.mjs escargot     # écrit web/src/logo.json (le logo actif)
+node logo-ideas/apply.mjs escargot     # écrit web/src/logo.json (le logo actif) et le logo de l'écran de chargement d'index.html
 cd web && npm run brand                # icône, icônes mobiles, image de partage (og.png)
 npm run build                          # en-tête de l'application (app.js)
 ```
@@ -36,3 +36,7 @@ tremblement (`wr`, `wa`), graine (`seed`). `node logo-ideas/make.mjs` réécrit 
 
 Le logo d'avant les pistes (spirale régulière) est aussi dans l'historique Git :
 `git show 376ed0b11:web/src/logo-geometry.mjs`.
+
+## Animations de lancement
+
+`node logo-ideas/make-intro.mjs` écrit `intro.html` : cinq maquettes (sobre, tourne, plongée dans la spirale, tracé à la plume, iris). C'est le **tracé à la plume** qui est en place sur le site ; seule une variante avec une ligne médiane (`spine`, aujourd'hui « pinceau ») peut se dessiner, les autres apparaissent d'un bloc.

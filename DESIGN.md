@@ -28,6 +28,10 @@ Le mot « Lotent » en Newsreader à côté. La spirale suit la couleur du texte
 - Le dessin actif est dans **`web/src/logo.json`** (contours remplis), lu par `web/src/logo.jsx`, `web/scripts/brand.mjs` et `scraper/scrape.py`.
 - **`logo-ideas/`** garde les six pistes et le logo d'origine (« l'escargot de Paris ») : `node logo-ideas/apply.mjs <id>` change de logo
   (voir `logo-ideas/README.md`).
+- **Écran de chargement** (`index.html`, bloc `<!--logo:start-->`, réécrit par `apply.mjs`) : la spirale se dessine d'un trait, le point bleu tombe au bout,
+  puis le mot « Lotent » (≈ 1,7 s). Une seule fois par session (`sessionStorage`), jamais si le visiteur demande moins d'animations
+  (`prefers-reduced-motion`), et jamais plus longtemps que le chargement : l'agenda n'est retardé que de ce qui reste de `INTRO_MS`.
+  Les maquettes des autres animations (sobre, tourne, plongée, iris) : `logo-ideas/intro.html`.
 - `cd web && npm run brand` régénère `icon.svg` (favicon clair/sombre), `apple-touch-icon.png`, `icon-192/512.png`, `icon-maskable-512.png` et `og.png`.
 - Les images de partage générées chaque jour (`scraper/scrape.py`, accueil et organisateurs) utilisent le même dessin ; changer `OG_INST_VERSION` les refait toutes.
 
