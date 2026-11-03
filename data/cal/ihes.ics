@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:7e104cd8f3f1@paris-academique
-DTSTAMP:20261102T191047Z
-DTSTART;TZID=Europe/Paris:20261102T140000
-DTEND;TZID=Europe/Paris:20261102T150000
-SUMMARY:Exact-Solvability of Superintegrable Systems
-DESCRIPTION:All\, so far known explicitly two-dimensional quantum superinte
- grable systems in flat space are exactly solvable with spectra linear in q
- uantum numbers (in agreement with the Montreal Conjecture by Tempesta-Turb
- iner-Winternirz (2001)). Their eigenfunctions are bivariate orthogonal pol
- ynomials in invariants of the (discrete) symmetry group. It includes the S
- morodinsky-Winternitz potentials I-IV…\nhttps://indico.math.cnrs.fr/even
- t/17644/
-LOCATION:IHES
-URL:https://indico.math.cnrs.fr/event/17644/
-END:VEVENT
-BEGIN:VEVENT
 UID:d0408f4b1b56@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261104T103000
 DTEND;TZID=Europe/Paris:20261104T113000
 SUMMARY:Large Langage Models and Physics
@@ -57,7 +41,7 @@ URL:https://indico.math.cnrs.fr/event/17627/
 END:VEVENT
 BEGIN:VEVENT
 UID:ec4ea0bf2700@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261104T114500
 DTEND;TZID=Europe/Paris:20261104T124500
 SUMMARY:A Counterexample to the Jacobian Conjecture in Dimension Three
@@ -73,7 +57,7 @@ URL:https://indico.math.cnrs.fr/event/17628/
 END:VEVENT
 BEGIN:VEVENT
 UID:606584b0a86b@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261104T140000
 DTEND;TZID=Europe/Paris:20261104T150000
 SUMMARY:Boltzmann Equation and Hard Sphere Gas with Singular Initial Data: 
@@ -90,7 +74,7 @@ URL:https://indico.math.cnrs.fr/event/17657/
 END:VEVENT
 BEGIN:VEVENT
 UID:e3ed9ac30ec4@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T151500
 SUMMARY:Representations and Harmonic Maps into Spheres
@@ -105,7 +89,7 @@ URL:https://indico.math.cnrs.fr/event/17586/
 END:VEVENT
 BEGIN:VEVENT
 UID:1366ba57232b@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261109T160000
 DTEND;TZID=Europe/Paris:20261109T171500
 SUMMARY:Combinations of Non-Archimedean Discrete Groups
@@ -121,7 +105,7 @@ URL:https://indico.math.cnrs.fr/event/17587/
 END:VEVENT
 BEGIN:VEVENT
 UID:878dbfa010be@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T110000
 SUMMARY:Combinatorics and Arithmetic for Physics
@@ -137,7 +121,7 @@ URL:https://indico.math.cnrs.fr/event/17588/
 END:VEVENT
 BEGIN:VEVENT
 UID:d5c2c9991d22@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261126T110000
 DTEND;TZID=Europe/Paris:20261126T123000
 SUMMARY:The Stratified Shape
@@ -153,7 +137,7 @@ URL:https://indico.math.cnrs.fr/event/17578/
 END:VEVENT
 BEGIN:VEVENT
 UID:687f749ff7e4@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261201T093000
 DTEND;TZID=Europe/Paris:20261201T160000
 SUMMARY:14e séminaire ITZYKSON - Dualité markovienne : méthodes algébri
@@ -170,7 +154,7 @@ URL:https://indico.math.cnrs.fr/event/17599/
 END:VEVENT
 BEGIN:VEVENT
 UID:d6cc6b6478a2@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261202T140000
 DTEND;TZID=Europe/Paris:20261202T160000
 SUMMARY:Two Applications of the Arithmetic Margulis Lemma
@@ -186,7 +170,7 @@ URL:https://indico.math.cnrs.fr/event/17631/
 END:VEVENT
 BEGIN:VEVENT
 UID:e1e5d72b58e2@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261204T140000
 DTEND;TZID=Europe/Paris:20261204T160000
 SUMMARY:Two Applications of the Arithmetic Margulis Lemma
@@ -202,7 +186,7 @@ URL:https://indico.math.cnrs.fr/event/17632/
 END:VEVENT
 BEGIN:VEVENT
 UID:5355402a7318@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261207T090000
 DTEND;TZID=Europe/Paris:20261207T190000
 SUMMARY:XMath Physics Day
@@ -218,7 +202,7 @@ URL:https://indico.math.cnrs.fr/event/17422/
 END:VEVENT
 BEGIN:VEVENT
 UID:970335f46717@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261208T140000
 DTEND;TZID=Europe/Paris:20261208T160000
 SUMMARY:Two Applications of the Arithmetic Margulis Lemma
@@ -234,7 +218,7 @@ URL:https://indico.math.cnrs.fr/event/17633/
 END:VEVENT
 BEGIN:VEVENT
 UID:81d34b604e72@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261210T140000
 DTEND;TZID=Europe/Paris:20261210T160000
 SUMMARY:Two Applications of the Arithmetic Margulis Lemma
@@ -250,7 +234,7 @@ URL:https://indico.math.cnrs.fr/event/17634/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd1701d69489@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20261217T110000
 DTEND;TZID=Europe/Paris:20261217T123000
 SUMMARY:Algebraic Theory of Indefinite Theta Functions
@@ -266,7 +250,7 @@ URL:https://indico.math.cnrs.fr/event/17585/
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd8d0b9edde@paris-academique
-DTSTAMP:20261102T191047Z
+DTSTAMP:20261103T085215Z
 DTSTART;TZID=Europe/Paris:20270531T093000
 DTEND;TZID=Europe/Paris:20270531T113000
 SUMMARY:French-Japanese Conference on Arithmetic Geometry in Honor of Takes
