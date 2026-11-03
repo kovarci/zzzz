@@ -6208,9 +6208,18 @@ def write_event_pages(events):
 
 
 OG_FILE = OUTPUT_FILE.parent.parent / "og.png"
-# Marque (escargot de Paris) pour les images de partage — géométrie : web/src/logo-geometry.mjs
-LOGO_MARK = ('<svg width="__S__" height="__S__" viewBox="0 0 64 64" fill="none"><path d="M32 29.5C32.11 29.42 32.43 29.12 32.69 29C32.95 28.88 33.25 28.8 33.56 28.78C33.87 28.75 34.21 28.77 34.54 28.84C34.88 28.91 35.23 29.03 35.55 29.2C35.87 29.37 36.2 29.6 36.49 29.88C36.78 30.15 37.06 30.48 37.28 30.84C37.51 31.2 37.71 31.62 37.84 32.06C37.98 32.49 38.07 32.98 38.1 33.46C38.12 33.95 38.09 34.47 37.99 34.98C37.89 35.49 37.73 36.01 37.5 36.51C37.26 37.01 36.96 37.5 36.6 37.95C36.24 38.4 35.8 38.83 35.32 39.2C34.84 39.57 34.29 39.9 33.71 40.16C33.12 40.42 32.48 40.62 31.83 40.74C31.17 40.85 30.47 40.91 29.78 40.86C29.09 40.82 28.36 40.7 27.67 40.5C26.98 40.29 26.28 39.99 25.63 39.61C24.98 39.24 24.34 38.77 23.77 38.23C23.2 37.69 22.67 37.07 22.23 36.39C21.79 35.71 21.4 34.95 21.11 34.17C20.83 33.38 20.62 32.52 20.52 31.66C20.42 30.8 20.41 29.89 20.51 29C20.62 28.11 20.82 27.2 21.14 26.33C21.45 25.46 21.87 24.59 22.39 23.79C22.91 23 23.54 22.22 24.25 21.55C24.95 20.87 25.77 20.24 26.63 19.73C27.5 19.22 28.46 18.78 29.45 18.47C30.43 18.16 31.5 17.95 32.56 17.87C33.61 17.79 34.73 17.82 35.8 17.99C36.88 18.16 37.98 18.45 39.02 18.87C40.06 19.29 41.09 19.84 42.02 20.49C42.96 21.15 43.86 21.94 44.64 22.81C45.43 23.69 46.14 24.68 46.72 25.73C47.3 26.78 47.78 27.94 48.11 29.12C48.44 30.3 48.65 31.57 48.71 32.82C48.77 34.07 48.69 35.38 48.46 36.64C48.22 37.9 47.84 39.18 47.32 40.38C46.8 41.58 46.12 42.77 45.32 43.84C44.53 44.91 43.58 45.94 42.55 46.82C41.51 47.7 40.33 48.5 39.1 49.14C37.86 49.78 36.51 50.3 35.14 50.65C33.77 51 32.31 51.2 30.87 51.24C29.42 51.27 27.93 51.14 26.49 50.84C25.05 50.54 23.59 50.07 22.23 49.44C20.88 48.81 19.54 48.01 18.34 47.07C17.13 46.14 16 45.04 15.02 43.84C14.04 42.64 13.16 41.28 12.47 39.87C11.77 38.45 11.22 36.91 10.85 35.35C10.49 33.79 10.29 32.13 10.29 30.51C10.28 28.88 10.46 27.19 10.83 25.58C11.2 23.97 11.77 22.34 12.5 20.83C13.24 19.32 14.17 17.84 15.24 16.51C16.31 15.18 17.57 13.93 18.94 12.86C20.3 11.79 21.83 10.84 23.43 10.09C25.02 9.35 26.75 8.76 28.5 8.38C30.24 8.01 32.09 7.82 33.9 7.85C35.71 7.88 37.58 8.11 39.36 8.55C41.15 9 42.94 9.66 44.6 10.5C46.26 11.34 47.89 12.4 49.33 13.61C50.78 14.82 52.14 16.24 53.3 17.77C54.46 19.29 55.48 21 56.27 22.77C57.06 24.55 57.68 26.47 58.06 28.4C58.44 30.32 58.62 32.36 58.55 34.35C58.49 36.34 57.82 39.34 57.68 40.34" stroke="#f4f4f5" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>'
-             '<circle cx="57.68" cy="40.34" r="4.8" fill="#8CA7FF"/></svg>')
+# Marque pour les images de partage et les en-têtes de pages — dessin : web/src/logo.json (logo-ideas/README.md)
+def _load_logo():
+    """Le logo actif (web/src/logo.json, posé par logo-ideas/apply.mjs) en SVG remplis, 64 × 64."""
+    d = json.loads((OUTPUT_FILE.parent.parent / "web" / "src" / "logo.json").read_text(encoding="utf-8"))
+    x, y, size = d["view"]
+    ink = "".join(f'<path d="{q}"/>' for q in d["ink"])
+    dot = "".join(f'<path d="{q}"/>' for q in d["dot"])
+    return (f'<svg width="__S__" height="__S__" viewBox="{x} {y} {size} {size}">'
+            f'<g fill="#f4f4f5">{ink}</g><g fill="#8CA7FF">{dot}</g></svg>')
+
+
+LOGO_MARK = _load_logo()
 OG_INST_DIR = OUTPUT_FILE.parent / "og"
 INST_PAGES_DIR = OUTPUT_FILE.parent.parent / "i"
 
@@ -6271,7 +6280,7 @@ SELECTIONS = [("s/cette-semaine.html", "Cette semaine"), ("s/ce-week-end.html", 
               ("s/carrieres.html", "Événements carrières"),
               ("s/salons-etudiants.html", "Salons étudiants"), ("p/", "Intervenants")]
 PAGES_CSS = OUTPUT_FILE.parent.parent / "pages.css"
-_LOGO_SVG = (LOGO_MARK.replace("__S__", "28").replace('stroke="#f4f4f5"', 'stroke="currentColor"')
+_LOGO_SVG = (LOGO_MARK.replace("__S__", "28").replace('fill="#f4f4f5"', 'fill="currentColor"')
              .replace('fill="#8CA7FF"', 'class="brand-dot"'))
 _THEME_JS = ('<script>try{var t=localStorage.getItem("paf_theme");try{t=JSON.parse(t)}catch(e){}'
              'if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>')
@@ -7180,8 +7189,11 @@ h1 {{ font-family:Newsreader,serif; font-size:60px; font-weight:500; line-height
 
     # Nettoyage : si une institution est retirée de SHARE_INSTITUTIONS,
     # supprimer ses anciens fichiers.
+    # Une image qu'on n'a pas pu refaire (pas de navigateur, erreur réseau) reste en place :
+    # seules celles d'une institution retirée de SHARE_INSTITUTIONS disparaissent.
+    wanted_pngs = {f"{slugify(i)}.png" for i in SHARE_INSTITUTIONS}
     for f in OG_INST_DIR.glob("*.png"):
-        if f.name not in written_pngs:
+        if f.name not in wanted_pngs:
             try: f.unlink()
             except Exception: pass
     for f in INST_PAGES_DIR.glob("*.html"):
@@ -7198,7 +7210,7 @@ h1 {{ font-family:Newsreader,serif; font-size:60px; font-weight:500; line-height
 # l'historique git, et des envois de 18 Mo que la connexion de maj.bat
 # n'arrivait pas toujours à pousser.
 OG_LABELS = OG_INST_DIR / "labels.json"
-OG_INST_VERSION = "escargot-1"    # à changer pour refaire toutes les images d'institution
+OG_INST_VERSION = "pinceau-1"    # à changer pour refaire toutes les images d'institution
 
 
 def _og_labels():

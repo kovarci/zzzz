@@ -21,12 +21,15 @@ clair et sombre. La couleur ne sert qu'à **coder la discipline** (`--c-*`) : po
 Un seul accent de marque, `--brand` (bleu, `224 64% 42%` en clair, `224 100% 78%` en sombre) : réservé au **point du logo**.
 Ne pas l'étendre aux boutons ou aux liens sans décision explicite.
 
-## Logo : l'escargot de Paris
-Une spirale (la disposition des arrondissements de Paris) qui s'enroule vers un point : le temps, et l'événement au bout.
+## Logo : la spirale « coup de pinceau »
+Une spirale qui s'enroule vers un point bleu : le temps, et l'événement au bout. Tracée comme au pinceau (fine au centre,
+grasse à l'extérieur), pas au compas : le site est un agenda, pas un document officiel.
 Le mot « Lotent » en Newsreader à côté. La spirale suit la couleur du texte ; le point est `--brand`.
-- Géométrie unique : `web/src/logo-geometry.mjs` (utilisée par `web/src/logo.jsx` et par le script de marque).
+- Le dessin actif est dans **`web/src/logo.json`** (contours remplis), lu par `web/src/logo.jsx`, `web/scripts/brand.mjs` et `scraper/scrape.py`.
+- **`logo-ideas/`** garde les six pistes et le logo d'origine (« l'escargot de Paris ») : `node logo-ideas/apply.mjs <id>` change de logo
+  (voir `logo-ideas/README.md`).
 - `cd web && npm run brand` régénère `icon.svg` (favicon clair/sombre), `apple-touch-icon.png`, `icon-192/512.png`, `icon-maskable-512.png` et `og.png`.
-- Les images de partage générées chaque jour (`scraper/scrape.py`, accueil et institutions) utilisent le même dessin ; changer `OG_INST_VERSION` les refait toutes.
+- Les images de partage générées chaque jour (`scraper/scrape.py`, accueil et organisateurs) utilisent le même dessin ; changer `OG_INST_VERSION` les refait toutes.
 
 ## Formes
 - Rayon : 8 px sur les conteneurs, 6 px sur les contrôles.
