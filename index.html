@@ -46,10 +46,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=66" />
+  <link rel="stylesheet" href="app.css?v=67" />
   <!-- En tête (defer) plutôt qu'en fin de page : le téléchargement démarre
        avant la lecture du contenu pré-rendu de l'accueil -->
-  <script src="app.js?v=66" defer></script>
+  <script src="app.js?v=67" defer></script>
   <script>
     // Agenda découpé par mois (data/m/) : on lance l'index et les mois des
     // 7 prochains jours tout de suite, en parallèle du téléchargement d'app.js,
@@ -80,7 +80,10 @@
     window.__lotentT0 = Date.now();
     window.__lotentPlay = false;
     try {
-      window.__lotentPlay = !sessionStorage.getItem("lotent_intro") && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+      // /?intro=1 : la rejoue à la demande (session déjà vue, ou animations réduites dans le système)
+      var force = /[?&]intro=1(&|$)/.test(location.search);
+      if (force) document.documentElement.classList.add("intro-force");
+      window.__lotentPlay = force || (!sessionStorage.getItem("lotent_intro") && !matchMedia("(prefers-reduced-motion: reduce)").matches);
       sessionStorage.setItem("lotent_intro", "1");
     } catch (e) {}
     window.__lotentReady = function () {

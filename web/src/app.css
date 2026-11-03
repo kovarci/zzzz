@@ -74,7 +74,8 @@
 .pin-me { width: 14px; height: 14px; border-radius: 50%; background: #3B82F6; border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(59,130,246,.3); }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
+  /* html.intro-force : /?intro=1 rejoue l'animation de lancement même ici (pour la montrer) */
+  html:not(.intro-force) *, html:not(.intro-force) *::before, html:not(.intro-force) *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
 }
 
 /* ── Calendrier de la recherche (react-day-picker) aux couleurs du site ── */
