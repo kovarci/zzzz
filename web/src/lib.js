@@ -1,9 +1,9 @@
 /* Données, dates, filtres — pas de React ici. */
 
 export const SITE = "https://lotent.fr";
-export const REPO = "https://github.com/kovarci/zzzz";
+export const REPO = "https://github.com/kovarci/lotent";
 // Formulaire « Proposer un événement » (.github/ISSUE_TEMPLATE/proposer-evenement.yml)
-export const PROPOSE_URL = "https://github.com/kovarci/zzzz/issues/new?template=proposer-evenement.yml";
+export const PROPOSE_URL = "https://github.com/kovarci/lotent/issues/new?template=proposer-evenement.yml";
 
 export const DISC = {
   "Mathématiques": "--c-math", "Sciences": "--c-sci", "Économie": "--c-eco", "Histoire": "--c-his",

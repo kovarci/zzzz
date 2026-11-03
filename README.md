@@ -4,7 +4,7 @@ Un site qui rassemble toutes les conférences et séminaires académiques de Par
 dans un seul calendrier filtrable, mis à jour chaque jour.
 
 - Site : <https://lotent.fr>
-- Dépôt : <https://github.com/kovarci/zzzz>
+- Dépôt : <https://github.com/kovarci/lotent>
 
 ## Fonctionnement
 

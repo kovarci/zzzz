@@ -5130,7 +5130,7 @@ def geocode_all(events):
         cache.setdefault(k, v)
 
     sess = requests.Session()
-    sess.headers.update({"User-Agent": "ParisAcademique/1.0 (github.com/kovarci/zzzz)"})
+    sess.headers.update({"User-Agent": "ParisAcademique/1.0 (github.com/kovarci/lotent)"})
     new = 0
     down = False                             # Nominatim ne répond plus : on arrête pour ce passage
     for ev in events:
@@ -6383,7 +6383,7 @@ def _site_footer(lang="fr"):
             f'<li><a href="webcal://lotent.fr/data/calendar.ics">{t_all}</a></li>'
             f'<li><a href="/data/digest.xml">{t_rss}</a></li>'
             f'<li><a href="/apropos.html">{t_about}</a></li>'
-            f'<li><a href="https://github.com/kovarci/zzzz/issues" rel="noopener">{T["questions"]}</a></li></ul></div></div></footer>')
+            f'<li><a href="https://github.com/kovarci/lotent/issues" rel="noopener">{T["questions"]}</a></li></ul></div></div></footer>')
 
 
 def _short_place(ev):

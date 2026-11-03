@@ -395,7 +395,7 @@
       <button class="about-link" id="theme-btn" title="Mode clair / sombre" style="border:1px solid var(--border);background:none;cursor:pointer;font-family:inherit">🌙</button>
       <button class="about-link" id="lang-btn" title="Switch language" style="border:1px solid var(--border);background:none;cursor:pointer;font-family:inherit">EN</button>
       <a class="about-link suggest-link" id="suggest-link" target="_blank" rel="noopener noreferrer"
-         href="https://github.com/kovarci/zzzz/issues/new?title=Source%20manquante&body=Hello%20kovarci%20%2F%20j%27aimerais%20que%20le%20site%20suive%20la%20source%20suivante%20%3A%0A%0A-%20Nom%20%3A%20%0A-%20URL%20%3A%20%0A-%20Pourquoi%20%3A%20"
+         href="https://github.com/kovarci/lotent/issues/new?title=Source%20manquante&body=Hello%20kovarci%20%2F%20j%27aimerais%20que%20le%20site%20suive%20la%20source%20suivante%20%3A%0A%0A-%20Nom%20%3A%20%0A-%20URL%20%3A%20%0A-%20Pourquoi%20%3A%20"
          title="Suggérer une source à ajouter au site">+ Source</a>
       <a class="about-link" id="about-link" href="apropos.html">À propos</a>
       <div class="meta-pill" id="meta-auto" title="—">
@@ -598,7 +598,7 @@
     Un seul abonnement — tous les événements se synchronisent dans ton agenda, chaque jour.<br>
     Pour Google Agenda : « Autres agendas → À partir de l'URL » avec
     <code>https://lotent.fr/data/calendar.ics</code><br>
-    <a href="apropos.html">À propos</a> · <a href="data/digest.xml">RSS des immanquables</a> · <a href="https://github.com/kovarci/zzzz/issues/new?title=Source%20manquante&amp;body=Hello%20kovarci%20%2F%20j%27aimerais%20que%20le%20site%20suive%20la%20source%20suivante%20%3A%0A%0A-%20Nom%20%3A%20%0A-%20URL%20%3A%20%0A-%20Pourquoi%20%3A%20" target="_blank" rel="noopener noreferrer">📩 Suggérer une source</a> · <a href="https://github.com/kovarci/zzzz" target="_blank" rel="noopener noreferrer">Code source</a>
+    <a href="apropos.html">À propos</a> · <a href="data/digest.xml">RSS des immanquables</a> · <a href="https://github.com/kovarci/lotent/issues/new?title=Source%20manquante&amp;body=Hello%20kovarci%20%2F%20j%27aimerais%20que%20le%20site%20suive%20la%20source%20suivante%20%3A%0A%0A-%20Nom%20%3A%20%0A-%20URL%20%3A%20%0A-%20Pourquoi%20%3A%20" target="_blank" rel="noopener noreferrer">📩 Suggérer une source</a> · <a href="https://github.com/kovarci/lotent" target="_blank" rel="noopener noreferrer">Code source</a>
   </div>
 </footer>
 
@@ -770,7 +770,7 @@ function applyLang() {
   document.getElementById("footer-note").innerHTML =
     'One subscription — every event syncs into your calendar, daily.<br>' +
     'For Google Calendar: “Other calendars → From URL” with <code>https://lotent.fr/data/calendar.ics</code><br>' +
-    '<a href="apropos.html">About</a> · <a href="data/digest.xml">Highlights RSS</a> · <a href="https://github.com/kovarci/zzzz" target="_blank">Source code</a>';
+    '<a href="apropos.html">About</a> · <a href="data/digest.xml">Highlights RSS</a> · <a href="https://github.com/kovarci/lotent" target="_blank">Source code</a>';
 }
 document.getElementById("lang-btn").addEventListener("click", () => {
   try { localStorage.setItem("paf_lang", LANG === "en" ? "fr" : "en"); } catch (e) {}

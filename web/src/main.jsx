@@ -340,7 +340,7 @@ function GithubCard() {
     <div><div className="font-semibold">{t("footer_contact_title")}</div><p className="text-muted-foreground mt-2">{t("footer_contact_body")}</p></div>
     <a href={`${REPO}/issues`} target="_blank" rel="noopener" className="group flex items-center gap-3 rounded-xl border bg-card p-3 shadow-sm hover:border-foreground/25 hover:bg-accent transition">
       <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-foreground text-background"><Icon d={ICONS.github} size={18} /></span>
-      <span className="flex-1 min-w-0"><span className="block font-semibold text-sm">kovarci/zzzz</span><span className="block text-xs text-muted-foreground truncate">{t("footer_repo_desc")}</span></span>
+      <span className="flex-1 min-w-0"><span className="block font-semibold text-sm">kovarci/lotent</span><span className="block text-xs text-muted-foreground truncate">{t("footer_repo_desc")}</span></span>
       <span className="text-xs font-medium text-muted-foreground shrink-0 group-hover:text-foreground"><Arr text={t("footer_open_issue")} /></span>
     </a>
     <p className="text-xs text-muted-foreground"><a className="hover:text-foreground underline underline-offset-2" href={REPO} target="_blank" rel="noopener">{t("footer_source")}</a></p>
