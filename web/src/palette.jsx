@@ -144,19 +144,19 @@ export function CommandDialog({ open, onClose, onPick, pool }) {
     if (grouped && it.e.date !== lastDay) { lastDay = it.e.date; rows.push(<div key={"d" + lastDay} className="px-2 pb-1 pt-3 text-xs font-medium text-muted-foreground first:pt-1.5">{fmtDay(lastDay)}<span className="font-normal tabular-nums"> · {res.filter(x => x.date === lastDay).length}</span></div>); }
     const on = i === sel;
     rows.push(it.date
-      ? <button key="hint" data-sel={on} onMouseMove={() => !on && setSel(i)} onClick={() => go(it)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", on && "bg-accent")}>
+      ? <button key="hint" id="cmd-o-hint" role="option" aria-selected={on} data-sel={on} onMouseMove={() => !on && setSel(i)} onClick={() => go(it)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", on && "bg-accent")}>
           <Icon d={ICONS.cal} size={14} className="shrink-0 text-muted-foreground" /><span className="flex-1 first-letter:uppercase">{t("cmd_see", { d: long(it.date).toLowerCase() })}</span><Kbd>↵</Kbd></button>
-      : <button key={it.e.id} data-sel={on} onMouseMove={() => !on && setSel(i)} onClick={() => go(it)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", on && "bg-accent")}>
+      : <button key={it.e.id} id={"cmd-o-" + i} role="option" aria-selected={on} data-sel={on} onMouseMove={() => !on && setSel(i)} onClick={() => go(it)} className={cn("w-full flex items-center gap-3 rounded-md px-2 py-2 text-left text-sm", on && "bg-accent")}>
           <span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(it.e) }} /><span className="flex-1 min-w-0"><span className="block truncate">{titleOf(it.e)}</span><span className="block text-xs text-muted-foreground truncate">{it.e.institution}{it.e.speaker ? " · " + it.e.speaker : ""}</span></span>
           <span className="text-xs text-muted-foreground tabular-nums whitespace-nowrap">{grouped ? (it.e.time || "") : fmtShort(it.e.date)}</span></button>);
   });
 
   return <AnimatePresence>{open && <motion.div key="cmd" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .18, ease: "easeOut" }}>
     <div className="absolute inset-0 bg-black/60" onClick={onClose} />
-    <motion.div initial={{ x: "-50%", y: -6 }} animate={{ x: "-50%", y: 0 }} exit={{ x: "-50%", y: -6 }} transition={{ duration: .18, ease: "easeOut" }} ref={trap} className="absolute left-1/2 top-[10vh] w-[min(640px,calc(100%-2rem))] max-h-[82vh] flex flex-col rounded-xl border bg-popover shadow-2xl overflow-hidden" role="dialog" aria-modal="true">
+    <motion.div initial={{ x: "-50%", y: -6 }} animate={{ x: "-50%", y: 0 }} exit={{ x: "-50%", y: -6 }} transition={{ duration: .18, ease: "easeOut" }} ref={trap} className="absolute left-1/2 top-[10vh] w-[min(640px,calc(100%-2rem))] max-h-[82vh] flex flex-col rounded-xl border bg-popover shadow-2xl overflow-hidden" role="dialog" aria-modal="true" aria-label={t("dock_search")}>
       <div className="flex shrink-0 items-center gap-2 border-b px-3">
         <Icon d={ICONS.search} size={16} className="shrink-0 text-muted-foreground" />
-        <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKey} className="h-12 min-w-0 flex-1 bg-transparent text-sm outline-none focus-visible:shadow-none placeholder:text-muted-foreground" placeholder={t("cmd_ph")} />
+        <input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} onKeyDown={onKey} role="combobox" aria-expanded={!cal && items.length > 0} aria-controls="cmd-list" aria-autocomplete="list" aria-label={t("dock_search")} aria-activedescendant={!cal && items[sel] ? (items[sel].date ? "cmd-o-hint" : "cmd-o-" + sel) : undefined} className="h-12 min-w-0 flex-1 bg-transparent text-sm outline-none focus-visible:shadow-none placeholder:text-muted-foreground" placeholder={t("cmd_ph")} />
         <span className={cn("inline-flex h-8 shrink-0 items-center rounded-md border text-xs", range ? "bg-accent" : "")}>
           <button onClick={() => setCal(c => !c)} aria-expanded={cal} aria-label={t("cmd_pick")} className="inline-flex h-full items-center gap-1.5 rounded-md px-2 hover:bg-accent"><Icon d={ICONS.cal} size={14} /><span className={cn(!range && "hidden sm:inline")}>{range ? label(range) : t("cmd_date")}</span></button>
           {range && <button onClick={clearRange} aria-label={t("cmd_clear_date")} title={t("cmd_clear_date")} className="inline-flex h-full w-7 items-center justify-center rounded-r-md text-muted-foreground hover:bg-accent hover:text-foreground"><Icon d={ICONS.x} size={13} /></button>}
@@ -177,7 +177,7 @@ export function CommandDialog({ open, onClose, onPick, pool }) {
           <Button size="sm" onClick={() => { setCal(false); setPicking(false); inputRef.current?.focus(); }}>{t("cmd_done")}</Button></div>
       </div>
       : <>
-        <div ref={listRef} className="min-h-0 flex-1 overflow-auto p-1">{items.length ? rows
+        <div ref={listRef} id="cmd-list" role="listbox" aria-label={t("dock_search")} className="min-h-0 flex-1 overflow-auto p-1">{items.length ? rows
           : words.length ? <div className="p-6 text-center">
               <p className="text-sm font-medium">{t("cmd_none_q", { q: dq.trim() })}</p>
               <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground [text-wrap:balance]">{t("cmd_none_hint")}</p>
@@ -185,6 +185,6 @@ export function CommandDialog({ open, onClose, onPick, pool }) {
                 {[presets[2], presets[3]].map(([l, r]) => <button key={l} onClick={() => apply(r)} className="inline-flex h-10 items-center rounded-md border px-3 text-sm font-medium hover:bg-accent">{l}</button>)}
                 <button onClick={() => { setQ(""); inputRef.current?.focus(); }} className="inline-flex h-10 items-center rounded-md px-3 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">{t("cmd_clear_q")}</button></div></div>
           : <p className="p-6 text-center text-sm text-muted-foreground">{range ? t("cmd_empty_range") : t("cmd_none")}</p>}</div>
-        <div className="flex shrink-0 items-center gap-3 border-t px-3 py-2 text-xs text-muted-foreground"><span><kbd className="font-mono">↑↓</kbd> {t("cmd_nav")}</span><span><kbd className="font-mono">↵</kbd> {t("cmd_open")}</span><span className="ml-auto">{dq || range ? t("cmd_n_results", { n: !words.length && range ? nIn : res.length }) : t("cmd_today_tomorrow")}</span></div></>}
+        <div className="flex shrink-0 items-center gap-3 border-t px-3 py-2 text-xs text-muted-foreground"><span><kbd className="font-mono">↑↓</kbd> {t("cmd_nav")}</span><span><kbd className="font-mono">↵</kbd> {t("cmd_open")}</span><span className="ml-auto" role="status" aria-live="polite">{dq || range ? t("cmd_n_results", { n: !words.length && range ? nIn : res.length }) : t("cmd_today_tomorrow")}</span></div></>}
     </motion.div></motion.div>}</AnimatePresence>;
 }

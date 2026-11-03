@@ -2335,6 +2335,18 @@ def _range_start(text):
 SCIENCESCONF_CACHE = OUTPUT_FILE.parent / "sciencesconf-sites.json"
 
 
+def _tidy_city(loc):
+    """« Exploradôme, à Vitry-sur-Seine - Vitry-sur-Seine (France) » → « Exploradôme, à Vitry-sur-Seine (France) » :
+    Sciencesconf répète la ville après le lieu, et glisse parfois des coordonnées GPS en texte."""
+    loc = re.sub(r"\s*\(GPS[^)]*\)", "", loc or "").strip()
+    m = re.match(r"^(.*?)\s+-\s+(.+?)(\s*\(France\))?$", loc)
+    if m and m.group(2).strip().lower() in m.group(1).lower():
+        loc = m.group(1) + (m.group(3) or "")
+    elif m and m.group(1).strip().lower() == m.group(2).strip().lower():
+        loc = m.group(1) + (m.group(3) or "")
+    return loc.strip()
+
+
 def _sc_key(url):
     return re.sub(r"^https?://", "", url or "").rstrip("/").lower()
 
@@ -2449,7 +2461,7 @@ def scrape_sciencesconf():
         loc, url, desc, lat, lon = ps[0], fiche, "", None, None
         try:
             f = _soup(fiche)
-            loc = clean_text(f.select_one(".conference .city").get_text(" ")) or loc
+            loc = _tidy_city(clean_text(f.select_one(".conference .city").get_text(" "))) or loc
             site = f.select_one(".conference h3 a[href]")
             url = site["href"] if site else fiche
             desc = clean_text(f.select_one(".conference .description").get_text(" "))[:400] \
@@ -2462,7 +2474,7 @@ def scrape_sciencesconf():
             print(f"   [warn] fiche {fiche}: {e}")
         ev = new_event(name, title, d, location=loc, desc=desc, url=url)
         ev["description"] = desc or "Colloque"
-        if lat and lon:
+        if lat and lon and not _paris_placeholder(lat, lon):
             ev["lat"], ev["lng"], ev["geo_exact"] = lat, lon, True
         events.append(ev)
     known = {_sc_key(e["url"]) for e in events}
@@ -5077,6 +5089,8 @@ def _paris_placeholder(lat, lng):
     n'est pas géolocalisé : pas une position. Théâtre Comédie Bastille (11e),
     Alliance française (bd Raspail, 6e), BPI… s'empilaient devant l'Hôtel de Ville."""
     try:
+        if not (41.0 < float(lat) < 51.5 and -5.5 < float(lng) < 10.0):
+            return True                      # hors de France (ex. ~(0, 0) renvoyé par Sciencesconf) : pas une position
         return abs(float(lat) - 48.8566) < 0.0006 and abs(float(lng) - 2.3518) < 0.0006
     except (TypeError, ValueError):
         return False

@@ -85,3 +85,17 @@ def test_past_event_page_offers_upcoming_events(tmp_path, monkeypatch):
     scrape.write_event_pages([ev(id="dddddddddddd", date="2020-01-02")])
     page = (tmp_path / "dddddddddddd.html").read_text(encoding="utf-8")
     assert "Événement passé" in page and "Voir dans l’historique" in page
+
+
+def test_coordonnees_hors_france_rejetees():
+    """Sciencesconf a renvoyé ~(0, 0) pour un colloque à Nanterre : ce n'est pas une position."""
+    assert scrape._paris_placeholder(0.00013, -0.0014)
+    assert scrape._paris_placeholder(48.8566, 2.3518)
+    assert not scrape._paris_placeholder(48.8925, 2.2150)
+
+
+def test_ville_repetee_sciencesconf():
+    assert scrape._tidy_city("Exploradôme, à Vitry-sur-Seine - Vitry-sur-Seine (France)") == "Exploradôme, à Vitry-sur-Seine (France)"
+    assert scrape._tidy_city("Paris - Paris (France)") == "Paris (France)"
+    assert scrape._tidy_city("Institut X, Orsay (GPS coordinates: 48°42 N) - Paris (France)") == "Institut X, Orsay - Paris (France)"
+    assert scrape._tidy_city("Collège de France - Paris (France)") == "Collège de France - Paris (France)"

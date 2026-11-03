@@ -102,7 +102,7 @@ export function Dock({ children, className }) {
 }
 export function DockIcon({ children, title, onClick, active, className }) {
   return <button onClick={onClick} title={title} aria-label={title} aria-pressed={active}
-    className={cn("relative flex h-10 w-10 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 items-center justify-center rounded-lg hover:bg-accent", active ? "text-amber-500" : "text-foreground/80", className)}>{children}</button>;
+    className={cn("relative flex h-10 w-10 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 items-center justify-center rounded-lg hover:bg-accent", active ? "text-amber-600 dark:text-amber-400" : "text-foreground/80", className)}>{children}</button>;
 }
 export const DockSep = ({ className }) => <span className={cn("w-px h-6 bg-border mx-0.5 self-center", className)} />;
 

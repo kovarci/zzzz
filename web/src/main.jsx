@@ -1,7 +1,7 @@
 /* Lotent — front. `npm run build` dans web/ produit ../app.js + ../app.css. */
 import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { createRoot } from "react-dom/client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import L from "leaflet";
 import { SITE, REPO, PROPOSE_URL, DISC, MAIN_INST, TODAY, TOMORROW, WEEK_END, WE, today, parisISO, iso, parse, addDays, norm, splitSpeakers, speaksAt, cn, dc, kindOf, SIDE_KINDS, isSide, isMembers, accessOf, titleOf, isFree, isOnline, isEnglish, isNew, when, thumb, haversine, fmtDist, slugify, escHtml, safeUrl, EMPTY_FILTERS, inSource, matches, placeKey, filtersFromURL, urlFromState, buildIcs, download, googleCalUrl, store, SHORTCUT } from "./lib.js";
 import { Marquee, BlurFade, DotPattern, BentoGrid, BentoCard, Dock, DockIcon, DockSep, HoverEffect, MovingBorderButton, Ambient, Button, LinkButton, Badge, Kbd, Tabs, Popover, CheckList, Icon, ICONS, useFocusTrap, Arr } from "./ui.jsx";
@@ -17,7 +17,7 @@ const discColor = disc => getComputedStyle(document.documentElement).getProperty
 // Premier morceau du lieu qui ne répète pas l'organisateur
 // (« Université Paris 8, 2 rue de la Liberté » → « 2 rue de la Liberté »)
 const placeOf = e => { const i = norm(e.institution); return (e.location || "").split(",").map(x => x.trim()).find(x => x && !i.includes(norm(x)) && !norm(x).includes(i)) || ""; };
-function Cover({ e, className = "", eager, label = true, labelTop = false }) {
+function Cover({ e, className = "", eager, label = true, labelTop = false, compact = false }) {
   const [broken, setBroken] = useState(false);
   // Vignette d'abord ; si le service de redimensionnement échoue, l'original
   const [orig, setOrig] = useState(false);
@@ -30,8 +30,8 @@ function Cover({ e, className = "", eager, label = true, labelTop = false }) {
   if (e.image && !broken) return <div className={cn(pos, "overflow-hidden bg-muted", className)}>
     <img src={orig ? e.image : small} alt="" loading={eager ? "eager" : "lazy"} decoding="async" onError={() => (!orig && small !== e.image ? setOrig(true) : setBroken(true))} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" />{badge}</div>;
   // labelTop : cartes « À la une », où le titre occupe déjà le bas — l'organisateur passe en haut
-  return <div className={cn(pos, "overflow-hidden flex", labelTop ? "items-start p-5 pt-12" : "items-end p-4", className)} style={{ background: `color-mix(in srgb, ${dc(e)} 16%, hsl(var(--muted)))` }}>{badge}
-    {label && <div className="relative font-serif text-xl font-medium leading-tight [text-wrap:balance] line-clamp-3" style={{ color: `color-mix(in srgb, ${dc(e)} 55%, hsl(var(--foreground)))` }}>{e.institution}</div>}</div>;
+  return <div className={cn(pos, "overflow-hidden flex", labelTop ? "items-start p-5 pt-12" : "items-end", compact ? "px-4 pb-3 pt-10" : "p-4", className)} style={{ background: `color-mix(in srgb, ${dc(e)} 16%, hsl(var(--muted)))` }}>{badge}
+    {label && <div className={cn("relative font-serif font-medium leading-tight [text-wrap:balance]", compact ? "text-lg line-clamp-2" : "text-xl line-clamp-3")} style={{ color: `color-mix(in srgb, ${dc(e)} 55%, hsl(var(--foreground)))` }}>{e.institution}</div>}</div>;
 }
 // Titre = vrai lien vers la fiche e/<id>.html : Google suit ces liens depuis
 // l'accueil (il n'en trouvait aucun), et Ctrl/⌘-clic ou clic molette ouvre la
@@ -50,8 +50,8 @@ const EventCard = React.memo(function EventCard({ e, fav, onFav, onOpen, distanc
   // « bouton » carte, que les lecteurs d'écran annonçaient mal.
   return <div onClick={act} className={cn("group relative flex h-full flex-col overflow-hidden rounded-xl border bg-card cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring", past && "opacity-80")}>
     {/* L'étoile n'apparaît qu'au survol… sauf sur écran tactile (pas de survol) et au clavier */}
-    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 items-center justify-center rounded-md bg-background/90 shadow-sm transition", fav ? "text-amber-500" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
-    <Cover e={e} className="aspect-[16/10]" />
+    <button onClick={ev => { ev.stopPropagation(); onFav(e.id); }} aria-label={t("favori")} aria-pressed={fav} className={cn("absolute top-2.5 right-2.5 z-10 inline-flex h-8 w-8 [@media(pointer:coarse)]:h-11 [@media(pointer:coarse)]:w-11 items-center justify-center rounded-md bg-background/90 shadow-sm transition", fav ? "text-amber-600 dark:text-amber-400" : "text-muted-foreground opacity-0 group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 focus-visible:opacity-100 [@media(hover:none)]:opacity-100 hover:text-foreground")}>{fav ? "★" : "☆"}</button>
+    <Cover e={e} compact={!e.image} className={e.image ? "aspect-[16/10]" : "min-h-[6.5rem]"} />
     <div className="p-4 flex flex-col gap-1.5 flex-1">
       <div className="flex items-center gap-2 text-xs text-muted-foreground"><span className="h-2 w-2 rounded-full shrink-0" style={{ background: dc(e) }} /><span className="tabular-nums font-medium text-foreground whitespace-nowrap">{e.time ? `${e.time}${e.end_time ? " – " + e.end_time : ""}` : t("time_tbd")}</span><span className="truncate min-w-0">· {discName(e.discipline)}</span>
         {distance !== undefined ? <Badge className="ml-auto shrink-0 tabular-nums">{fmtDist(distance)}</Badge> : isNew(e) && !past ? <Badge className="ml-auto shrink-0 border-sky-500/30 text-sky-700 dark:text-sky-400">{t("badge_new")}</Badge> : isFree(e) ? <Badge className="ml-auto shrink-0 border-emerald-500/30 text-emerald-700 dark:text-emerald-400">{t("badge_free")}</Badge> : null}</div>
@@ -118,7 +118,7 @@ function Sheet({ e, onClose, fav, onFav, onToast, followSet = new Set(), onFollo
   };
   return <AnimatePresence>{e && <React.Fragment key={e.id}>
     <motion.div className="fixed inset-0 z-50 bg-black/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
-    <motion.aside ref={trap} className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-lg bg-background border-l shadow-2xl flex flex-col overflow-auto" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "spring", stiffness: 380, damping: 40 }} aria-modal="true" role="dialog">
+    <motion.aside ref={trap} className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-lg bg-background border-l shadow-2xl flex flex-col overflow-auto" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "spring", stiffness: 380, damping: 40 }} aria-modal="true" role="dialog" aria-label={e.title}>
       {(() => { const d = parse(e.date), days = Math.round((d - today) / 864e5); return <>
         <div className="relative aspect-[16/10] shrink-0 group"><Cover e={e} className="absolute inset-0" eager /><button onClick={onClose} className="absolute top-3 right-3 z-[2] inline-flex h-8 w-8 items-center justify-center rounded-md bg-background/90 shadow hover:bg-background" aria-label={t("fermer")}><Icon d={ICONS.x} size={16} /></button></div>
         <div className="p-6 flex flex-col gap-4">
@@ -264,9 +264,9 @@ function MapView({ events, onOpen, onPlace, userPos }) {
         // « + 494 » restait du texte : au Collège de France, 98 % des événements du
         // lieu étaient introuvables depuis la carte. Lien vers la liste du lieu.
         (evs.length > 6 ? `<div style="margin-top:6px"><a href="#" data-place="${k}" onclick="return false">${escHtml(t("map_more", { n: evs.length - 6 }))}</a></div>` : "") + "</div>";
-      L.marker([lat, lng], { icon }).bindPopup(html).addTo(layer);
+      L.marker([lat, lng], { icon, title: label, alt: label }).bindPopup(html).addTo(layer);
     });
-    if (userPos) L.marker([userPos.lat, userPos.lng], { icon: L.divIcon({ className: "", html: '<div class="pin-me"></div>', iconSize: [14, 14], iconAnchor: [7, 7] }) }).bindPopup(t("you_are_here")).addTo(layer);
+    if (userPos) L.marker([userPos.lat, userPos.lng], { title: t("you_are_here"), alt: t("you_are_here"), icon: L.divIcon({ className: "", html: '<div class="pin-me"></div>', iconSize: [14, 14], iconAnchor: [7, 7] }) }).bindPopup(t("you_are_here")).addTo(layer);
   }, [events, userPos]);
   return <div className="pt-6"><div ref={ref} className="relative isolate h-[70vh] rounded-xl border overflow-hidden z-0" /><p className="text-xs text-muted-foreground mt-2">{t("map_note", { n: events.filter(e => typeof e.lat === "number").length })}</p></div>;
 }
@@ -313,7 +313,7 @@ function SpeakersPanel({ open, onClose, speakers, onUnfollow, pool, onOpenEvent,
   }, [open]);
   return <AnimatePresence>{open && <motion.div key="speakers" className="fixed inset-0 z-[60]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .12 }}>
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} ref={trap} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true">
+    <motion.div initial={{ x: "-50%", scale: .97, y: -8 }} animate={{ x: "-50%", scale: 1, y: 0 }} exit={{ x: "-50%", scale: .97, y: -8 }} ref={trap} className="absolute left-1/2 top-[10vh] w-[min(480px,calc(100%-2rem))] max-h-[78vh] rounded-xl border bg-popover shadow-2xl overflow-hidden flex flex-col" role="dialog" aria-modal="true" aria-label={t("my_speakers")}>
       <div className="flex items-center justify-between border-b px-4 py-3"><h2 className="font-semibold text-sm">{t("my_speakers")}</h2><button onClick={onClose} className="inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-accent" aria-label={t("fermer")}><Icon d={ICONS.x} size={15} /></button></div>
       {notifyPerm !== "unsupported" && <div className="px-4 py-2 border-b bg-muted/40 text-xs">
         {notifyPerm === "granted" ? <span className="text-emerald-700 dark:text-emerald-400 font-medium">{t("notify_enabled")}</span>
@@ -754,7 +754,7 @@ function App() {
 
 
     {/* Téléphone : le dock se retire quand on descend dans la liste et revient quand on remonte (il masquait les cartes) */}
-    <div className={cn("fixed bottom-5 left-1/2 z-40 -translate-x-1/2 transition-transform duration-200", dockHidden && "translate-y-28 sm:translate-y-0")}>
+    <div className={cn("fixed bottom-5 left-1/2 z-40 -translate-x-1/2 transition-[transform,visibility] duration-200", dockHidden && "translate-y-28 sm:translate-y-0 [@media(max-width:639px)]:invisible")}>
       <Dock>
         <DockIcon title={t("dock_top")} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}><Icon d={ICONS.up} /></DockIcon>
         <DockIcon title={t("dock_today")} active={!history && filters.when === "today"} onClick={() => { setF({ when: "today" }); backToAgenda(); }}><Icon d={ICONS.cal} /></DockIcon>
@@ -771,11 +771,12 @@ function App() {
     <CommandDialog open={cmd} onClose={() => setCmd(false)} onPick={e => { setCmd(false); setOpen(e); }} pool={pool} />
     <SubscribeDialog onToast={notify} />
     <SpeakersPanel open={speakersOpen} onClose={() => setSpeakersOpen(false)} speakers={speakers} onUnfollow={toggleSpeaker} pool={UP} onOpenEvent={e => { setSpeakersOpen(false); setOpen(e); }} notifyPerm={notifyPerm} onEnableNotify={enableNotify} />
-    <AnimatePresence>{toast && <motion.div initial={{ x: "-50%", opacity: 0, y: 8 }} animate={{ x: "-50%", opacity: 1, y: 0 }} exit={{ x: "-50%", opacity: 0 }} className="fixed bottom-24 left-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg">{toast}</motion.div>}</AnimatePresence>
+    <AnimatePresence>{toast && <motion.div initial={{ x: "-50%", opacity: 0, y: 8 }} animate={{ x: "-50%", opacity: 1, y: 0 }} exit={{ x: "-50%", opacity: 0 }} className="fixed bottom-24 left-1/2 z-50 rounded-md border bg-popover px-3 py-2 text-sm shadow-lg" aria-hidden="true">{toast}</motion.div>}</AnimatePresence>
+    <div className="sr-only" role="status" aria-live="polite">{toast}</div>
   </>;
 }
 
 // Thème mémorisé par l'ancien site (paf_theme) : appliqué avant le premier rendu
 const savedTheme = store.get("paf_theme", null);
 if (savedTheme === "dark" || savedTheme === "light") document.documentElement.dataset.theme = savedTheme;
-createRoot(document.getElementById("root")).render(<LangProvider><App /></LangProvider>);
+createRoot(document.getElementById("root")).render(<MotionConfig reducedMotion="user"><LangProvider><App /></LangProvider></MotionConfig>);
