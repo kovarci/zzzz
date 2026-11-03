@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:fca9166c778a@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261103T180000
 DTEND;TZID=Europe/Paris:20261103T200000
 SUMMARY:Hi! PARIS Career Fair
@@ -41,7 +41,7 @@ URL:https://hi-paris.fr/event/hi-paris-career-fair/
 END:VEVENT
 BEGIN:VEVENT
 UID:f422396e312a@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261104T110000
 DTEND;TZID=Europe/Paris:20261104T120000
 SUMMARY:AI Seminar Cycle: Jes Frellsen (DTU)
@@ -56,7 +56,7 @@ URL:https://hi-paris.fr/event/ai-seminar-cycle-jes-frellsen-dtu/
 END:VEVENT
 BEGIN:VEVENT
 UID:0b52277e64d3@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Hi!ckathon 2026 | The Hi! PARIS AI & Data Science Challenge
@@ -74,7 +74,7 @@ URL:https://hi-paris.fr/event/hickathon-2026-the-hi-paris-ai-data-science-c
 END:VEVENT
 BEGIN:VEVENT
 UID:0651395df470@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261130T110000
 DTEND;TZID=Europe/Paris:20261130T120000
 SUMMARY:AI Seminar Cycle: When Generators Condition on Themselves – Expos
@@ -93,7 +93,7 @@ URL:https://hi-paris.fr/event/ai-seminar-cycle-when-generators-condition-on
 END:VEVENT
 BEGIN:VEVENT
 UID:bad0a6e26f5a@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:CTRL+SOUND: AI for Sound and Creative Technologies Workshop
@@ -110,7 +110,7 @@ URL:https://hi-paris.fr/event/ctrlsound-ai-for-sound-and-creative-technolog
 END:VEVENT
 BEGIN:VEVENT
 UID:82cd8cc7c08e@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Séminaire : ELLIS UnConference 2026
@@ -127,7 +127,7 @@ URL:https://hi-paris.fr/event/ellis-unconference-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:b32301b0b466@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20270414T110000
 DTEND;TZID=Europe/Paris:20270414T120000
 SUMMARY:AI Seminar Cycle: Nuria Oliver (ELLIS Alicante)

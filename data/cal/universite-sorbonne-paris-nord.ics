@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:3585d063d9a0@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Hackathon – Green Island
@@ -41,7 +41,7 @@ URL:https://www.univ-spn.fr/events/hackathon-green-island/
 END:VEVENT
 BEGIN:VEVENT
 UID:0e456f4a801c@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261104T193000
 DTEND;TZID=Europe/Paris:20261104T203000
 SUMMARY:[Cabaret] Kabarè Z
@@ -52,7 +52,7 @@ URL:https://www.univ-spn.fr/events/cabaret-kabare-z/
 END:VEVENT
 BEGIN:VEVENT
 UID:0bf99d79efc5@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261106T110000
 DTEND;TZID=Europe/Paris:20261106T123000
 SUMMARY:[Danse – Théâtre] Qui est le malade ?
@@ -68,7 +68,7 @@ URL:https://www.univ-spn.fr/events/quiestlemalade-ciesentabou/
 END:VEVENT
 BEGIN:VEVENT
 UID:12e83d8e681d@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261106T180000
 DTEND;TZID=Europe/Paris:20261106T200000
 SUMMARY:Topographies écosophiques : une exposition entre art et écologie
@@ -86,7 +86,7 @@ URL:https://www.univ-spn.fr/events/topographies-ecosophiques-une-exposition
 END:VEVENT
 BEGIN:VEVENT
 UID:df4f128d5140@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261109T113000
 DTEND;TZID=Europe/Paris:20261109T140000
 SUMMARY:[Performance] Consultations poétiques\, musicales et dansées
@@ -105,7 +105,7 @@ URL:https://www.univ-spn.fr/events/performance-consultations-poetiques-musi
 END:VEVENT
 BEGIN:VEVENT
 UID:434d39efda8a@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261110T120000
 DTEND;TZID=Europe/Paris:20261110T143000
 SUMMARY:[Performance – bien-être ] Consultations poétiques
@@ -121,7 +121,7 @@ URL:https://www.univ-spn.fr/events/consultationspoetiques101126/
 END:VEVENT
 BEGIN:VEVENT
 UID:6a0d6cf30497@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261112T120000
 DTEND;TZID=Europe/Paris:20261112T133000
 SUMMARY:Comment changer de filière après un 1er semestre ?
@@ -139,7 +139,7 @@ URL:https://www.univ-spn.fr/events/changer-de-filiere-apres-un-1er-semestre
 END:VEVENT
 BEGIN:VEVENT
 UID:3164796e41da@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261118T200000
 DTEND;TZID=Europe/Paris:20261118T220000
 SUMMARY:[Danse] Step 1
@@ -149,7 +149,7 @@ URL:https://www.univ-spn.fr/events/danse-step-1/
 END:VEVENT
 BEGIN:VEVENT
 UID:ea83a858d23b@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261120T203000
 DTEND;TZID=Europe/Paris:20261120T223000
 SUMMARY:[Danse] Come Out
@@ -168,7 +168,7 @@ URL:https://www.univ-spn.fr/events/https-www-enghienlesbains-fr-fr-agenda-c
 END:VEVENT
 BEGIN:VEVENT
 UID:774257c17ec0@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261123T120000
 DTEND;TZID=Europe/Paris:20261123T130000
 SUMMARY:[Rencontre littéraire Texto] Diaty Diallo
@@ -185,7 +185,7 @@ URL:https://www.univ-spn.fr/events/rencontre-litteraire-texto-diaty-diallo/
 END:VEVENT
 BEGIN:VEVENT
 UID:52210bea63e4@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:Innov’SPN Days : trois minutes pour convaincre
@@ -203,7 +203,7 @@ URL:https://www.univ-spn.fr/events/innovspn-days-trois-minutes-pour-convain
 END:VEVENT
 BEGIN:VEVENT
 UID:f2dd232e5698@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261127T190000
 DTEND;TZID=Europe/Paris:20261127T201500
 SUMMARY:[Musique] 11 000 Cordes
@@ -215,7 +215,7 @@ URL:https://www.univ-spn.fr/events/https-www-lavillette-com-manifestations-
 END:VEVENT
 BEGIN:VEVENT
 UID:980a13ab2bbf@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261201T120000
 DTEND;TZID=Europe/Paris:20261201T140000
 SUMMARY:[Rencontre littéraire Texto] Rencontre un.e auteur.ice de littéra
@@ -234,7 +234,7 @@ URL:https://www.univ-spn.fr/events/rencontre-litteraire-litterature-jeuness
 END:VEVENT
 BEGIN:VEVENT
 UID:6f351c0307f4@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261203T101500
 DTEND;TZID=Europe/Paris:20261203T121500
 SUMMARY:[Spectacle] Ces filles qu’on attend
@@ -250,7 +250,7 @@ URL:https://www.univ-spn.fr/events/144655/
 END:VEVENT
 BEGIN:VEVENT
 UID:3bd7641a4495@paris-academique
-DTSTAMP:20261103T085215Z
+DTSTAMP:20261103T090822Z
 DTSTART;TZID=Europe/Paris:20261204T190000
 DTEND;TZID=Europe/Paris:20261204T201500
 SUMMARY:[Cirque] Ten Thousand Hours
