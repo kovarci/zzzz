@@ -45,6 +45,14 @@ function blob(cx, cy, r, seed, amp = 0.14, k = 9) {
   return smooth(poly);
 }
 const last = (a) => a[a.length - 1];
+export function openPath(pts) {
+  let d = "M" + f(pts[0]);
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)];
+    d += "C" + f([p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6]) + " " + f([p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6]) + " " + f(p2);
+  }
+  return d;
+}
 
 export const variants = [
   { id: "original", num: 0, name: "Spirale actuelle (l’escargot de Paris)", note: "Le logo d’origine : trait régulier de 3,6, point rond. Reconstruit à l’identique en contour.",
@@ -60,7 +68,7 @@ export const variants = [
       return { ink: [smooth(outline(p, (t) => Math.max(1.8, 3.1 + w(t * 6))))], dot: [blob(e[0] + 1, e[1] + 0.5, 4.8, 41, 0.18, 8), blob(e[0] - 0.8, e[1] + 1.4, 3.8, 43, 0.2, 7)] }; } },
   { id: "pinceau", name: "Coup de pinceau", note: "Fin au centre, gras à l’extérieur : un seul geste d’encre.",
     build() { const p = spine({ turns: 2.3, r0: 1.5, r1: 23, cx: 31, cy: 31, wr: 0.7, wa: 0.05, seed: 22, end: 0.4, pow: 0.9 }), w = wob(24, 0.5, 8), e = last(p);
-      return { ink: [smooth(outline(p, (t) => 1.1 + 5.6 * Math.pow(t, 0.9) + w(t * 6)))], dot: [blob(e[0] + 1, e[1] + 1, 6, 52, 0.1)] }; } },
+      return { ink: [smooth(outline(p, (t) => 1.1 + 5.6 * Math.pow(t, 0.9) + w(t * 6)))], dot: [blob(e[0] + 1, e[1] + 1, 6, 52, 0.1)], spine: openPath(p), end: e, center: [31, 31] }; } },
   { id: "pate", name: "Pâte à modeler", note: "Ramassé et épais, presque un escargot en pâte.",
     build() { const p = spine({ turns: 1.35, r0: 7, r1: 23, cx: 31, cy: 31, wr: 0.8, wa: 0.05, sq: 0.92, seed: 31, end: 0.35 }), w = wob(33, 1.0, 7), e = last(p);
       return { ink: [smooth(outline(p, (t) => 8.2 + w(t * 5)))], dot: [blob(e[0] + 1, e[1] + 1, 7.4, 61, 0.09)] }; } },

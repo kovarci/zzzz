@@ -184,6 +184,7 @@ def main():
     print(f"  {n_new} nouveaux ids estampillés added_at={today_iso}")
 
     scrape.geocode_all(merged)
+    scrape.enrich_event_images(merged)
     scrape.write_ics(merged)
     out.write_text(json.dumps(merged, ensure_ascii=False, separators=(",", ":")),
                    encoding="utf-8")

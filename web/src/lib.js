@@ -135,7 +135,8 @@ export const thumb = (url, w = 600) => {
   // pour la couverture du « Paris Framer Meetup #04 ».
   if (url.indexOf("images.lumacdn.com/") >= 0 && url.indexOf("/cdn-cgi/") < 0)
     return url.replace("images.lumacdn.com/", `images.lumacdn.com/cdn-cgi/image/width=${w},quality=72,format=auto${/\.gif$/i.test(url) ? ",anim=false" : ""}/`);
-  if (/^https:\/\/cdn\.paris\.fr\//.test(url))
+  // Les originaux des organisateurs pèsent souvent plusieurs Mo : réduits à la taille d'affichage
+  if (/^https:\/\//.test(url) && url.indexOf("wsrv.nl/") < 0)
     return `https://wsrv.nl/?url=${encodeURIComponent(url.slice(8))}&w=${w}&q=72&output=webp`;
   return url;
 };

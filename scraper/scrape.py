@@ -5111,6 +5111,14 @@ def _street_query(loc, arr):
     return f"{m.group(1)} {street}, {mc.group(1)} {mc.group(2)}" if mc else None
 
 
+def enrich_event_images(events, budget=None):
+    """Voir og_images.py. OG_BUDGET (pages lues par passage) vaut 150 par défaut, 0 = cache seul."""
+    from og_images import enrich_images
+    if budget is None:
+        budget = int(os.environ.get("OG_BUDGET", "150"))
+    return enrich_images(events, OUTPUT_FILE.parent / "og-cache.json", TODAY.isoformat(), budget=budget)
+
+
 def geocode_all(events):
     """Add lat/lng to events. Real addresses are geocoded (Nominatim, cached);
     vague locations fall back to the event's institution coordinates."""
@@ -5523,7 +5531,8 @@ def _img_thumb(url, w=800, seo=False):
         # GIF animé : sans anim=false, Luma refuse de réduire les gros (403)
         anim = ",anim=false" if url.lower().endswith(".gif") else ""
         return url.replace("images.lumacdn.com/", f"images.lumacdn.com/cdn-cgi/image/width={w},quality=75,format=auto{anim}/")
-    if url.startswith("https://cdn.paris.fr/") and not seo:
+    if url.startswith("https://") and not seo and "wsrv.nl/" not in url:
+        # Les originaux des organisateurs pèsent souvent plusieurs Mo : réduits à la taille d'affichage
         from urllib.parse import quote
         return f"https://wsrv.nl/?url={quote(url[8:], safe='')}&w={w}&q=75&output=jpg"
     return url
@@ -8135,6 +8144,13 @@ def main():
         geocode_all(all_events)
     except Exception as e:
         print(f"[ERROR] geocoding: {e}")
+        traceback.print_exc()
+
+    # Images des événements dont l'agenda n'en donne pas : lues sur leur page (og:image), par petits lots
+    try:
+        enrich_event_images(all_events)
+    except Exception as e:
+        print(f"[ERROR] images og:image : {e}")
         traceback.print_exc()
 
     try:
