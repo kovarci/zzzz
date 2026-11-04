@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:7b0574ba2bd5@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Le pari de l'œuvre de Michèle Audin
@@ -36,7 +36,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/VkVzlE5
 END:VEVENT
 BEGIN:VEVENT
 UID:595420e1818a@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261217T190000
 DTEND;TZID=Europe/Paris:20261217T210000
 SUMMARY:Le pari de l’œuvre de Mouna Ouafik et la plateforme Shaeirat
@@ -46,19 +46,30 @@ LOCATION:Ircam\, Paris
 URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/MieQELT
 END:VEVENT
 BEGIN:VEVENT
-UID:538f39a9095e@paris-academique
-DTSTAMP:20261103T114229Z
+UID:79da64812f30@paris-academique
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20270130T110000
-DTEND;TZID=Europe/Paris:20270130T190000
-SUMMARY:Le Centre Pompidou : 50 ans d’histoires
-DESCRIPTION:Conférence\nhttps://www.centrepompidou.fr/fr/programme/agenda/
- evenement/Bkau90m
+DTEND;TZID=Europe/Paris:20270130T120000
+SUMMARY:L’histoire sonore du Centre Pompidou
+DESCRIPTION:Conférence · Le Centre Pompidou : 50 ans d’histo…\nhttps:
+ //www.centrepompidou.fr/fr/programme/agenda/evenement/Bkau90m
 LOCATION:Cité de la musique – Philharmonie de Paris\, Paris
 URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/Bkau90m
 END:VEVENT
 BEGIN:VEVENT
+UID:4d6d78673f43@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20270130T143000
+DTEND;TZID=Europe/Paris:20270130T153000
+SUMMARY:L’ouverture du Centre Pompidou comme si on y était...
+DESCRIPTION:Conférence · Le Centre Pompidou : 50 ans d’histo…\nhttps:
+ //www.centrepompidou.fr/fr/programme/agenda/evenement/CLzjf7u
+LOCATION:Cité de la musique – Philharmonie de Paris\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/CLzjf7u
+END:VEVENT
+BEGIN:VEVENT
 UID:6ed024dfb259@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20270130T150000
 DTEND;TZID=Europe/Paris:20270130T170000
 SUMMARY:Poésie sonore\, et alors ?
@@ -66,5 +77,16 @@ DESCRIPTION:Conférence\nhttps://www.centrepompidou.fr/fr/programme/agenda/
  evenement/JxMmaZp
 LOCATION:Cité de la musique – Philharmonie de Paris\, Paris
 URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/JxMmaZp
+END:VEVENT
+BEGIN:VEVENT
+UID:d7b2f99368b1@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20270130T180000
+DTEND;TZID=Europe/Paris:20270130T190000
+SUMMARY:Masterclasse
+DESCRIPTION:Rencontres · Le Centre Pompidou : 50 ans d’histo…\nhttps:/
+ /www.centrepompidou.fr/fr/programme/agenda/evenement/5IiHBzL
+LOCATION:Cité de la musique – Philharmonie de Paris\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/5IiHBzL
 END:VEVENT
 END:VCALENDAR

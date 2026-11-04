@@ -24,25 +24,12 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5140d412c9d4@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261103T083000
-DTEND;TZID=Europe/Paris:20261103T100000
-SUMMARY:Café-Débat CGE x MdEP | Élargissement : l’Europe craint-elle d
- e grandir ?
-DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/cafe-debat
- -cge-x-mdep-elargissement-leurope-craint-elle-de-grandir/
-LOCATION:Paris — lieu précisé sur la page de l'événement
-URL:https://institutdelors.eu/evenements/cafe-debat-cge-x-mdep-elargissemen
- t-leurope-craint-elle-de-grandir/
-END:VEVENT
-BEGIN:VEVENT
-UID:681d639cdc17@paris-academique
-DTSTAMP:20261103T114229Z
+UID:db1a1998003a@paris-academique
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261106T174500
 DTEND;TZID=Europe/Paris:20261106T194500
-SUMMARY:DG ENEST x IJD | Elargissement de l’UE : l’Europe a-t-elle peur
-  de grandir ?
+SUMMARY:DG ENEST x CGE x ECFR | Élargissement de l’UE : l’Europe a-t-e
+ lle peur de grandir ?
 DESCRIPTION:En présentiel\nhttps://institutdelors.eu/evenements/elargissem
  ent-de-lue-leurope-a-t-elle-peur-de-grandir/
 LOCATION:Paris — lieu précisé sur la page de l'événement
@@ -51,7 +38,7 @@ URL:https://institutdelors.eu/evenements/elargissement-de-lue-leurope-a-t-e
 END:VEVENT
 BEGIN:VEVENT
 UID:e61061a5b914@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261113T090000
 DTEND;TZID=Europe/Paris:20261113T170000
 SUMMARY:Académie Notre Europe #2 – L’Europe dans le Monde
@@ -63,7 +50,7 @@ URL:https://institutdelors.eu/evenements/academie-notre-europe-2-leurope-da
 END:VEVENT
 BEGIN:VEVENT
 UID:fc8bea4b343e@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261116T150000
 DTEND;TZID=Europe/Paris:20261116T163000
 SUMMARY:Conférence ECFR x CGE x DG ENEST : Élargir l’espace de sécurit
@@ -78,7 +65,7 @@ URL:https://institutdelors.eu/evenements/conference-ecfr-x-cge-x-dg-enest-e
 END:VEVENT
 BEGIN:VEVENT
 UID:58fc5f7c15fc@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261117T123000
 DTEND;TZID=Europe/Paris:20261117T133000
 SUMMARY:Midis d’Europa Experience #7 – Crise du logement : l’Europe l
@@ -92,7 +79,7 @@ URL:https://institutdelors.eu/evenements/midis-deuropa-experience-7-crise-d
 END:VEVENT
 BEGIN:VEVENT
 UID:9bded1386cf6@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T183000
 SUMMARY:Paris Energy Week 2026 | Les défis de l’électrification
@@ -104,7 +91,7 @@ URL:https://institutdelors.eu/evenements/paris-energy-week-2026-the-challen
 END:VEVENT
 BEGIN:VEVENT
 UID:39da0bbbb3e2@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261207T140000
 DTEND;TZID=Europe/Paris:20261207T183000
 SUMMARY:30 ans de l’Institut Jacques Delors : Conférence annuelle 2026 |

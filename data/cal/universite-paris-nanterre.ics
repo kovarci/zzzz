@@ -24,19 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a99b05cb08e1@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261123T174500
-DTEND;TZID=Europe/Paris:20261123T194500
-SUMMARY:17e édition du Festival Nanterre sur Scène
-DESCRIPTION:https://www.parisnanterre.fr/agenda/festival-nss
-LOCATION:Bâtiment Paul Ricoeur (L) — Université Paris Nanterre\, 200 av
- enue de la République\, Nanterre
-URL:https://www.parisnanterre.fr/agenda/festival-nss
-END:VEVENT
-BEGIN:VEVENT
 UID:3286b7dcb352@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261130T131500
 DTEND;TZID=Europe/Paris:20261130T151500
 SUMMARY:Siestes littéraires (décembre)
@@ -47,7 +36,7 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
 END:VEVENT
 BEGIN:VEVENT
 UID:08d562b61e5e@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Le village d'hiver - édition 2026
@@ -59,7 +48,7 @@ URL:https://www.parisnanterre.fr/agenda/le-village-dhiver-edition-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:260a87edc829@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20270206T100000
 DTEND;TZID=Europe/Paris:20270206T120000
 SUMMARY:Journée Portes Ouvertes (JPO) - STAPS - Campus de Nanterre - Samed

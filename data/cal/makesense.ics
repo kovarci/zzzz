@@ -24,54 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:9f9c520cdee7@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:Formation Premiers Pas à l'entrepreneuriat à impact
-DESCRIPTION:Organisé par Les Canaux — La Formation Premiers Pas\, c'est 
- une journée de formation et collective pour découvrir l'entrepreneuriat 
- social et poser les premières bases de son projet à impact.\nhttps://chi
- che.makesense.org/events/e/formation-premiers-pas-a-lentrepreneuriat-a-imp
- act-6aabf273ca91880007621179
-LOCATION:6 Quai de la Seine\, 75019 Paris\, France
-URL:https://chiche.makesense.org/events/e/formation-premiers-pas-a-lentrepr
- eneuriat-a-impact-6aabf273ca91880007621179
-END:VEVENT
-BEGIN:VEVENT
-UID:91f6247d1c80@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:Réfléchir au métier qui me correspond 📍Paris 13e
-DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Pro\, c'est l’
- atelier pour réfléchir ensemble au métier qui te correspond !2h45 d’a
- telier collectif pour : &\nhttps://chiche.makesense.org/events/e/reflechir
- -au-metier-qui-me-correspond-paris-13e-6aaaa79819fd1c000884a93c
-LOCATION:13 Rue Annie Girardot\, 75013 Paris\, France
-URL:https://chiche.makesense.org/events/e/reflechir-au-metier-qui-me-corres
- pond-paris-13e-6aaaa79819fd1c000884a93c
-END:VEVENT
-BEGIN:VEVENT
-UID:f20c89e4b965@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:Sortir l'écologie de ses murs\, rencontre-discussion avec Kevin Bh
- ema Vacher et ses invité·es
-DESCRIPTION:Organisé par Hélène Binet — Table-ronde et prélancement d
- e La Colère d'une ville : après l'effondrement\, le pouvoir habitant" (W
- ild Project\, 2026)Le 5 novembre\nhttps://chiche.makesense.org/events/e/so
- rtir-lecologie-de-ses-murs-rencontre-discussion-avec-kevin-bhema-vacher-et
- -ses-invitees-6acd42df1e36ae000818125b
-LOCATION:3bis Rue Papin\, 75003 Paris\, France
-URL:https://chiche.makesense.org/events/e/sortir-lecologie-de-ses-murs-renc
- ontre-discussion-avec-kevin-bhema-vacher-et-ses-invitees-6acd42df1e36ae000
- 818125b
-END:VEVENT
-BEGIN:VEVENT
 UID:704567818f9a@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Formaliser et prendre confiance en son projet entrepreneurial 📍P
@@ -87,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/formaliser-et-prendre-confiance-e
 END:VEVENT
 BEGIN:VEVENT
 UID:334ffe8eadf0@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261104T141500
 DTEND;TZID=Europe/Paris:20261104T161500
 SUMMARY:Atelier - Comprends vraiment tes clients avec l’entretien de déc
@@ -104,7 +58,7 @@ URL:https://chiche.makesense.org/events/e/atelier-comprends-vraiment-tes-cl
 END:VEVENT
 BEGIN:VEVENT
 UID:6b76b17d318d@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Où dort ton argent ?...et comment l'orienter vers la transition ?
@@ -120,7 +74,7 @@ URL:https://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lor
 END:VEVENT
 BEGIN:VEVENT
 UID:1ea15aa01dbf@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:J’améliore le confort thermique de mon logement
@@ -135,7 +89,7 @@ URL:https://chiche.makesense.org/events/e/jameliore-le-confort-thermique-de
 END:VEVENT
 BEGIN:VEVENT
 UID:2eb18b4eea1c@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Arpentage du livre « Être écoféministe – Théories et pratiqu
@@ -153,7 +107,7 @@ URL:https://chiche.makesense.org/events/e/arpentage-du-livre-etre-ecofemini
 END:VEVENT
 BEGIN:VEVENT
 UID:996d0db733c4@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Devenir bénévole à la Maison du Zéro Déchet
@@ -167,7 +121,7 @@ URL:https://chiche.makesense.org/events/e/devenir-benevole-a-la-maison-du-z
 END:VEVENT
 BEGIN:VEVENT
 UID:ae99c9767684@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261107T140000
 DTEND;TZID=Europe/Paris:20261107T170000
 SUMMARY:Danse thérapeutique : sensibilisation à la capoeira angola
@@ -180,5 +134,19 @@ DESCRIPTION:Organisé par Maison de la Conversation — Explorer ses émoti
 LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
 URL:https://chiche.makesense.org/events/e/danse-therapeutique-sensibilisati
  on-a-la-capoeira-angola-6ac7b417bd306e000758a1d3
+END:VEVENT
+BEGIN:VEVENT
+UID:7a49b3a99bd9@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:Projection-débat : film « Tout va bien » & accueil en famille
+DESCRIPTION:Organisé par Pauline Farnabe — Projection du documentaire «
+  Tout va bien » (parcours de 5 jeunes exilés à Marseille) suivie d'un t
+ emps d'échange sur l'accueil temporaire en famille avec JRS France. Rése
+ rvation : toutvabiensmb@gmail.com (Tarif : 10€).\nhttps://chiche.makesen
+ se.org/events
+LOCATION:101 Rue Saint-Lazare\, 75009 Paris\, France
+URL:https://chiche.makesense.org/events
 END:VEVENT
 END:VCALENDAR

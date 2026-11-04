@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3c93499275b6@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261102T091500
-DTEND;TZID=Europe/Paris:20261102T111500
-SUMMARY:Cherenkov Astronomy Data School 2026
-DESCRIPTION:One-week school on gamma-ray astronomy organized at the Observa
- toire de Paris\, designed for PhD students/postdocs/researchers eager to l
- earn about gamma-ray astronomy data and the specific challenges of ground-
- based Cherenkov observations and of high-energy data analysis. The science
-  analysis tool Gammapy\, chosen by/for the international Cherenkov Telesco
- pe Array Observatory CTAO\, will be…\nhttps://indico.obspm.fr/event/2993
- /
-LOCATION:Observatoire de Paris
-URL:https://indico.obspm.fr/event/2993/
-END:VEVENT
-BEGIN:VEVENT
 UID:1e14d5dd62b5@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261112T143000
 DTEND;TZID=Europe/Paris:20261112T153000
 SUMMARY:A narrowly missed four-body resonant chain among the Galilean moons
@@ -57,7 +41,7 @@ URL:https://indico.obspm.fr/event/3428/
 END:VEVENT
 BEGIN:VEVENT
 UID:7b3aa4a6c7a7@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261126T103000
 DTEND;TZID=Europe/Paris:20261126T123000
 SUMMARY:Galaxy Cluster France Workshop
@@ -73,7 +57,7 @@ URL:https://indico.obspm.fr/event/3124/
 END:VEVENT
 BEGIN:VEVENT
 UID:a2e83f70d48c@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261201T110000
 DTEND;TZID=Europe/Paris:20261201T130000
 SUMMARY:Débrancher le cloud - IA locale pour la recherche
@@ -86,5 +70,21 @@ DESCRIPTION:Ce séminaire donné par Carlo Maria Zwölf sera une présentat
  .fr/event/3387/
 LOCATION:MEUDON
 URL:https://indico.obspm.fr/event/3387/
+END:VEVENT
+BEGIN:VEVENT
+UID:90c6943adde5@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20270614T093000
+DTEND;TZID=Europe/Paris:20270614T113000
+SUMMARY:Stage lycée (2nde) LUX-UNIDIA à Meudon du 14 au 25 juin 2027
+DESCRIPTION:Ce stage de découverte des métiers de l’astronomie se déro
+ ulera sur le campus de Meudon de l’Observatoire de Paris ( 5 place Jules
+  Janssen\, 92190 Meudon ) et est organisé par le Laboratoire d'étude de 
+ l'Univers et des phénomènes eXtrêmes (LUX) .\, et l' UNité d’Ingéni
+ erie et de Développements Instrumentaux pour l’Astrophysique (UNIDIA) .
+  Cette session pourra accueillir au maximum 12 élèves\, en…\nhttps://i
+ ndico.obspm.fr/event/3430/
+LOCATION:Observatoire de Paris\, Site de Meudon
+URL:https://indico.obspm.fr/event/3430/
 END:VEVENT
 END:VCALENDAR

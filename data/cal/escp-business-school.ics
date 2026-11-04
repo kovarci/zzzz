@@ -24,21 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c9f56bc16a15@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261103T170000
-DTEND;TZID=Europe/Paris:20261103T190000
-SUMMARY:From AI to Impact: Il ruolo della leadership nel trasformare l’AI
-  in performance
-DESCRIPTION:Impact Talks Series\nhttps://escp.eu/fr/events/ai-impact-il-ruo
- lo-della-leadership-nel-trasformare-lai-performance
-LOCATION:ESCP Business School\, 79 avenue de la République\, Paris 11e
-URL:https://escp.eu/fr/events/ai-impact-il-ruolo-della-leadership-nel-trasf
- ormare-lai-performance
-END:VEVENT
-BEGIN:VEVENT
 UID:16c0217a6988@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261106T153000
 DTEND;TZID=Europe/Paris:20261106T180000
 SUMMARY:Luxury Consumers\, Status and Digital Experiences: Quiet Signals on
@@ -46,5 +33,17 @@ SUMMARY:Luxury Consumers\, Status and Digital Experiences: Quiet Signals on
 DESCRIPTION:Masterclass\nhttps://escp.eu/fr/events/masterclass-ESCPTurin
 LOCATION:ESCP Business School\, 79 avenue de la République\, Paris 11e
 URL:https://escp.eu/fr/events/masterclass-ESCPTurin
+END:VEVENT
+BEGIN:VEVENT
+UID:8b6d5ed5e8a8@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20261110T183000
+DTEND;TZID=Europe/Paris:20261110T203000
+SUMMARY:Minister Aurore Bergé at ESCP
+DESCRIPTION:Women in Finance Chair\nhttps://escp.eu/fr/events/minister-auro
+ re-berge-escp
+LOCATION:Amphitheater Etienne Marcel à ESCP Business School - 8 Avenue de 
+ la Porte de Champerret 75017 Paris\, France
+URL:https://escp.eu/fr/events/minister-aurore-berge-escp
 END:VEVENT
 END:VCALENDAR

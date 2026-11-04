@@ -24,55 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:d4dafe80e286@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261103T123000
-DTEND;TZID=Europe/Paris:20261103T133000
-SUMMARY:De l’enquête à l’image\, de l’image au livre : photographie
-  et sciences sociales
-DESCRIPTION:Une exploration du dialogue entre photographie\, enquête de te
- rrain et écriture des sciences sociales\, à travers la genèse de l'ouvr
- age de Laurent Gayer et Waseem Yaqoob\, Quand la ville brûle\, sur les tr
- aces d’une émeute\, Karachi 2007-2023 publié chez Anamosa.\nhttps://ww
- w.sciencespo.fr/fr/evenements/de-l-enquete-a-l-image-de-l-image-au-livre-p
- hotographie-et-sciences-sociales/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/de-l-enquete-a-l-image-de-l-ima
- ge-au-livre-photographie-et-sciences-sociales/
-END:VEVENT
-BEGIN:VEVENT
-UID:a06f90c0cd26@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261103T170000
-DTEND;TZID=Europe/Paris:20261103T190000
-SUMMARY:Shared Sacred Sites in South Asia: Negotiating Coexistence and Belo
- nging
-DESCRIPTION:Book discussion with Laurent Gayer\, Christophe Jaffrelot\, Ami
- nah Mohammad-Arif and Grégoire Schlemmer.\nhttps://www.sciencespo.fr/fr/e
- venements/shared-sacred-sites-in-south-asia/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/shared-sacred-sites-in-south-as
- ia/
-END:VEVENT
-BEGIN:VEVENT
-UID:29827bcd1d4a@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261103T191500
-DTEND;TZID=Europe/Paris:20261103T211500
-SUMMARY:La manufacture de Sèvres : une référence de l'art de vivre à la
-  française
-DESCRIPTION:Cette rencontre sera l'occasion de considérer ce qui fait de S
- èvres une marque unique\, et d'imaginer l'offre qui permettrait d'en fair
- e à nouveau une marque internationale emblématique de l'art de vivre fra
- nçais.\nhttps://www.sciencespo.fr/fr/evenements/la-manufacture-de-sevres-
- une-reference-de-l-art-de-vivre-a-la-francaise/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/la-manufacture-de-sevres-une-re
- ference-de-l-art-de-vivre-a-la-francaise/
-END:VEVENT
-BEGIN:VEVENT
 UID:534610543f02@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261104T093000
 DTEND;TZID=Europe/Paris:20261104T183000
 SUMMARY:Protéger les sources : un statut pour la recherche
@@ -84,7 +37,7 @@ URL:https://www.sciencespo.fr/fr/evenements/proteger-les-sources-un-statut-
 END:VEVENT
 BEGIN:VEVENT
 UID:68307eadabb3@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261104T170000
 DTEND;TZID=Europe/Paris:20261104T183000
 SUMMARY:Le cimetière\, lieu de vi(ll)e
@@ -97,7 +50,7 @@ URL:https://www.paris.fr/evenements/le-cimetiere-lieu-de-vi-ll-e-126285
 END:VEVENT
 BEGIN:VEVENT
 UID:477f579b605c@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261104T170000
 DTEND;TZID=Europe/Paris:20261104T190000
 SUMMARY:Récits de filiation en partage
@@ -111,7 +64,7 @@ URL:https://www.sciencespo.fr/fr/evenements/recits-de-filiation-en-partage/
 END:VEVENT
 BEGIN:VEVENT
 UID:02becd8074ed@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261104T170000
 DTEND;TZID=Europe/Paris:20261104T190000
 SUMMARY:De Mayotte à Créteil: l'éducation au coeur des inégalités terr
@@ -124,7 +77,7 @@ URL:https://www.sciencespo.fr/fr/evenements/de-mayotte-a-creteil-l-educatio
 END:VEVENT
 BEGIN:VEVENT
 UID:f8f29408a56e@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261104T190000
 DTEND;TZID=Europe/Paris:20261104T203000
 SUMMARY:Le trumpisme à l'épreuve du pouvoir : décryptage des midterms
@@ -140,7 +93,7 @@ URL:https://www.sciencespo.fr/fr/evenements/le-trumpisme-a-l-epreuve-du-pou
 END:VEVENT
 BEGIN:VEVENT
 UID:afa85aed023a@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261105T090000
 DTEND;TZID=Europe/Paris:20261105T110000
 SUMMARY:Acteurs & réseaux transnationaux du nationalisme religieux(aire eu
@@ -155,24 +108,8 @@ URL:https://www.sciencespo.fr/fr/evenements/acteurs-and-reseaux-transnation
  aux-du-nationalisme-religieux-aire-euro-atlantique/
 END:VEVENT
 BEGIN:VEVENT
-UID:f83c6e3e8ada@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;TZID=Europe/Paris:20261105T180000
-DTEND;TZID=Europe/Paris:20261105T200000
-SUMMARY:L'IA peut-elle être créative ? Écrire à l’heure de l’intell
- igence artificielle
-DESCRIPTION:Bertrand De Longueville\, docteur en sciences des données\, ex
- pert en intelligence artificielle et romancier-essayiste\, nous invite à 
- explorer les enjeux culturels et sociétaux de l’IA générative\nhttps:
- //www.sciencespo.fr/fr/evenements/l-ia-peut-elle-etre-creative-ecrire-a-l-
- heure-de-l-intelligence-artificielle/
-LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
-URL:https://www.sciencespo.fr/fr/evenements/l-ia-peut-elle-etre-creative-ec
- rire-a-l-heure-de-l-intelligence-artificielle/
-END:VEVENT
-BEGIN:VEVENT
 UID:d79093024f46@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261106T170000
 DTEND;TZID=Europe/Paris:20261106T190000
 SUMMARY:The 2026 Midterm Elections in the United States
@@ -185,7 +122,7 @@ URL:https://www.sciencespo.fr/fr/evenements/the-2026-midterm-elections-in-t
 END:VEVENT
 BEGIN:VEVENT
 UID:3279381dd614@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261109T173000
 DTEND;TZID=Europe/Paris:20261109T183000
 SUMMARY:60 Minutes with Albin Kurti\, Prime Minister of Kosovo
@@ -196,8 +133,36 @@ URL:https://www.sciencespo.fr/fr/evenements/60-minutes-with-albin-kurti-pri
  me-minister-of-kosovo/
 END:VEVENT
 BEGIN:VEVENT
+UID:ce19bac3412d@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20261110T090000
+DTEND;TZID=Europe/Paris:20261110T100000
+SUMMARY:60 Minutes with Mirjana Spoljaric Egger
+DESCRIPTION:Join us for an event with the President of the International Co
+ mmittee of the Red Cross\nhttps://www.sciencespo.fr/fr/evenements/60-minut
+ es-with-mirjana-spoljaric-egger/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/60-minutes-with-mirjana-spoljar
+ ic-egger/
+END:VEVENT
+BEGIN:VEVENT
+UID:952186808bf1@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20261110T180000
+DTEND;TZID=Europe/Paris:20261110T200000
+SUMMARY:Power\, Purpose and Partnership: who will (should) decide the Futur
+ e of Development Cooperation?
+DESCRIPTION:This event is co-organised with the Future of Development Coope
+ ration Coalition\nhttps://www.sciencespo.fr/fr/evenements/power-purpose-an
+ d-partnership-who-will-should-decide-the-future-of-development-cooperation
+ /
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/power-purpose-and-partnership-w
+ ho-will-should-decide-the-future-of-development-cooperation/
+END:VEVENT
+BEGIN:VEVENT
 UID:db91a650618f@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261112T170000
 DTEND;TZID=Europe/Paris:20261112T190000
 SUMMARY:L'Histoire en livres | Une histoire de migrations et de persécutio
@@ -216,7 +181,7 @@ URL:https://www.sciencespo.fr/fr/evenements/l-histoire-en-livres-une-histoi
 END:VEVENT
 BEGIN:VEVENT
 UID:8d254804a3a7@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261112T180000
 DTEND;TZID=Europe/Paris:20261112T200000
 SUMMARY:Canada-Europe : un rapprochement\, au-delà des années Trump ?
@@ -230,7 +195,7 @@ URL:https://www.sciencespo.fr/fr/evenements/canada-europe-un-rapprochement-
 END:VEVENT
 BEGIN:VEVENT
 UID:ec3ff5390868@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261113T170000
 DTEND;TZID=Europe/Paris:20261113T183000
 SUMMARY:Table ronde « Cultiver les possibles : éducation\, culture et ég
@@ -245,7 +210,7 @@ URL:https://www.sciencespo.fr/fr/evenements/table-ronde-cultiver-les-possib
 END:VEVENT
 BEGIN:VEVENT
 UID:663affb49073@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261117T090000
 DTEND;TZID=Europe/Paris:20261117T110000
 SUMMARY:Journées d’études « Comment enquêter en sciences sociales : t
@@ -260,8 +225,22 @@ URL:https://www.sciencespo.fr/fr/evenements/journees-etudes-comment-enquete
  r-en-sciences-sociales-terrains-methodes-donnees/
 END:VEVENT
 BEGIN:VEVENT
+UID:9376e7b598f8@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20261117T183000
+DTEND;TZID=Europe/Paris:20261117T200000
+SUMMARY:[Table ronde] Union européenne et États membres : quelles politiq
+ ues pour la jeunesse ?
+DESCRIPTION:organisée en partenariat avec la Maison de l'Europe de Paris\n
+ https://www.sciencespo.fr/fr/evenements/table-ronde-union-europeenne-et-et
+ ats-membres-quelles-politiques-pour-la-jeunesse/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/table-ronde-union-europeenne-et
+ -etats-membres-quelles-politiques-pour-la-jeunesse/
+END:VEVENT
+BEGIN:VEVENT
 UID:fb0197da03a1@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261117T191500
 DTEND;TZID=Europe/Paris:20261117T210000
 SUMMARY:Soirée-débat : Sport-santé : de l’activité physique à l’ac
@@ -278,7 +257,7 @@ URL:https://www.sciencespo.fr/fr/evenements/soirée-débat-sport-santé-de-
 END:VEVENT
 BEGIN:VEVENT
 UID:6249a439fe40@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261118T083000
 DTEND;TZID=Europe/Paris:20261118T103000
 SUMMARY:Avec l'IA\, qui dirige ?
@@ -292,7 +271,7 @@ URL:https://www.sciencespo.fr/fr/evenements/avec-l-ia-qui-dirige/
 END:VEVENT
 BEGIN:VEVENT
 UID:94e54fd5c558@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261118T180000
 DTEND;TZID=Europe/Paris:20261118T213000
 SUMMARY:#NPDJ Les nouvelles pratiques du journalisme 2026
@@ -306,7 +285,7 @@ URL:https://www.sciencespo.fr/fr/evenements/npdj-les-nouvelles-pratiques-du
 END:VEVENT
 BEGIN:VEVENT
 UID:dca04573db13@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261118T180000
 DTEND;TZID=Europe/Paris:20261118T193000
 SUMMARY:Les États-Unis peuvent-ils reprendre contrôle de l’Amérique la
@@ -322,7 +301,7 @@ URL:https://www.sciencespo.fr/fr/evenements/les-etats-unis-peuvent-ils-repr
 END:VEVENT
 BEGIN:VEVENT
 UID:220eed23a5c7@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261119T140000
 DTEND;TZID=Europe/Paris:20261119T170000
 SUMMARY:PhD Mobility Day 2026 : Journée de la mobilité internationale des
@@ -337,7 +316,7 @@ URL:https://www.sciencespo.fr/fr/evenements/mobility-ph-d-day-2026-journee-
 END:VEVENT
 BEGIN:VEVENT
 UID:0d678a3942d4@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261119T170000
 DTEND;TZID=Europe/Paris:20261119T190000
 SUMMARY:"Comment apprécier un disque ?" avec Laurent de Wilde
@@ -351,7 +330,7 @@ URL:https://www.sciencespo.fr/fr/evenements/comment-apprecier-un-disque-ave
 END:VEVENT
 BEGIN:VEVENT
 UID:b8c4ec27bdc7@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261119T170000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:Soirée portes ouvertes Masters / Graduate In-Person Open House
@@ -365,9 +344,9 @@ URL:https://www.sciencespo.fr/fr/evenements/soiree-portes-ouvertes-masters-
 END:VEVENT
 BEGIN:VEVENT
 UID:0190b8132e8c@paris-academique
-DTSTAMP:20261103T114229Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261121
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20261120T153000
+DTEND;TZID=Europe/Paris:20261120T170000
 SUMMARY:Enregistrement en public d’un nouvel épisode du podcast Le Nouve
  l Esprit public
 DESCRIPTION:Sciences Po a le plaisir d’accueillir en novembre l’enregis
@@ -383,7 +362,7 @@ URL:https://www.sciencespo.fr/fr/evenements/enregistrement-en-public-d-un-n
 END:VEVENT
 BEGIN:VEVENT
 UID:7d7e134fa2a5@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261120T170000
 DTEND;TZID=Europe/Paris:20261120T190000
 SUMMARY:The Sciences Po AI Hackathon\, Second edition
@@ -394,8 +373,21 @@ URL:https://www.sciencespo.fr/fr/evenements/the-new-sciences-po-ai-hackatho
  n-edition/
 END:VEVENT
 BEGIN:VEVENT
+UID:023b353a0dfb@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20261123T123000
+DTEND;TZID=Europe/Paris:20261123T140000
+SUMMARY:Conversatorio con Lorenzo Silva
+DESCRIPTION:Con motivo de la publicación de su libro "Erguido hacia las es
+ trellas. Una vida de Francisco de Vitoria".\nhttps://www.sciencespo.fr/fr/
+ evenements/conversatorio-con-lorenzo-silva/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/conversatorio-con-lorenzo-silva
+ /
+END:VEVENT
+BEGIN:VEVENT
 UID:9244f835da59@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261125T093000
 DTEND;TZID=Europe/Paris:20261125T143000
 SUMMARY:Dialogues franco-italiens pour l’Europe
@@ -408,7 +400,7 @@ URL:https://www.sciencespo.fr/fr/evenements/dialogues-franco-italiens-pour-
 END:VEVENT
 BEGIN:VEVENT
 UID:c6bc03675a3f@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261125T101500
 DTEND;TZID=Europe/Paris:20261125T121500
 SUMMARY:Musiciens voyageurs : diplomates ou disrupteurs ?
@@ -422,7 +414,7 @@ URL:https://www.sciencespo.fr/fr/evenements/musiciens-voyageurs-diplomates-
 END:VEVENT
 BEGIN:VEVENT
 UID:3c3488fe9b3c@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261125T191500
 DTEND;TZID=Europe/Paris:20261125T211500
 SUMMARY:Prix Penser le travail 2026
@@ -436,8 +428,19 @@ LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
 URL:https://www.sciencespo.fr/fr/evenements/prix-penser-le-travail-2026/
 END:VEVENT
 BEGIN:VEVENT
+UID:b3ca87719bac@paris-academique
+DTSTAMP:20261104T120014Z
+DTSTART;TZID=Europe/Paris:20261126T090000
+DTEND;TZID=Europe/Paris:20261126T120000
+SUMMARY:Matinée jeunes chercheurs et chercheuses (4ème édition)
+DESCRIPTION:Mode d’emploi de la publication en sciences sociales\nhttps:/
+ /www.sciencespo.fr/fr/evenements/matinee-jeunes-chercheurs/
+LOCATION:Sciences Po\, 27 rue Saint-Guillaume\, Paris 7e
+URL:https://www.sciencespo.fr/fr/evenements/matinee-jeunes-chercheurs/
+END:VEVENT
+BEGIN:VEVENT
 UID:250c83b1637b@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261126T150000
 DTEND;TZID=Europe/Paris:20261126T160000
 SUMMARY:La petite bibliothèque de Tanguy Viel
@@ -451,7 +454,7 @@ URL:https://www.sciencespo.fr/fr/evenements/la-petite-bibliotheque-de-tangu
 END:VEVENT
 BEGIN:VEVENT
 UID:a46a020066aa@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261130T191500
 DTEND;TZID=Europe/Paris:20261130T211500
 SUMMARY:Favoriser la transition environnementale des plus aisés pour contr
@@ -465,7 +468,7 @@ URL:https://www.sciencespo.fr/fr/evenements/favoriser-la-transition-environ
 END:VEVENT
 BEGIN:VEVENT
 UID:a66708d1690b@paris-academique
-DTSTAMP:20261103T114229Z
+DTSTAMP:20261104T120014Z
 DTSTART;TZID=Europe/Paris:20261202T170000
 DTEND;TZID=Europe/Paris:20261202T190000
 SUMMARY:Intelligence artificielle générative & pratiques professionnelles
