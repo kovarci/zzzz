@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:a2d349dad93d@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261105T183000
 DTEND;TZID=Europe/Paris:20261105T200000
 SUMMARY:Epidémie et conflit : quelle riposte contre Ebola en République D
@@ -38,7 +38,7 @@ URL:https://www.iris-france.org/event/epidemie-et-conflit-quelle-riposte-co
 END:VEVENT
 BEGIN:VEVENT
 UID:0ca17927b810@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261109T183000
 DTEND;TZID=Europe/Paris:20261109T200000
 SUMMARY:La résilience des Outre-mer : des territoires laboratoires de solu
@@ -51,7 +51,7 @@ URL:https://www.iris-france.org/event/la-resilience-des-outre-mer-des-terri
 END:VEVENT
 BEGIN:VEVENT
 UID:8e30fde030b7@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261112T183000
 DTEND;TZID=Europe/Paris:20261112T200000
 SUMMARY:(Ré)Inventer la coopération internationale dans un monde fractur
@@ -63,8 +63,23 @@ URL:https://www.iris-france.org/event/reinventer-la-cooperation-internation
  ale-dans-un-monde-fracture/
 END:VEVENT
 BEGIN:VEVENT
+UID:09f905888943@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261118T140000
+DTEND;TZID=Europe/Paris:20261118T153000
+SUMMARY:Minerais critiques en Afrique : États producteurs\, stratégies de
+ s puissances étrangères et risques d’approvisionnement
+DESCRIPTION:https://www.iris-france.org/event/minerais-critiques-en-afrique
+ -etats-producteurs-strategies-des-puissances-etrangeres-et-risques-dapprov
+ isionnement/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/minerais-critiques-en-afrique-etats-p
+ roducteurs-strategies-des-puissances-etrangeres-et-risques-dapprovisionnem
+ ent/
+END:VEVENT
+BEGIN:VEVENT
 UID:bce4008998f0@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261120T140000
 DTEND;TZID=Europe/Paris:20261120T160000
 SUMMARY:Les Géopolitiques de Grenoble – 2e édition
@@ -73,5 +88,18 @@ DESCRIPTION:https://www.iris-france.org/event/les-geopolitiques-de-grenoble
 LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
 URL:https://www.iris-france.org/event/les-geopolitiques-de-grenoble-2e-edit
  ion/
+END:VEVENT
+BEGIN:VEVENT
+UID:c8d7173fe19b@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261125T140000
+DTEND;TZID=Europe/Paris:20261125T153000
+SUMMARY:The EU as a Global Security Actor: Military Assistance to Partner S
+ tates
+DESCRIPTION:https://www.iris-france.org/event/the-eu-as-a-global-security-a
+ ctor-military-assistance-to-partner-states/
+LOCATION:IRIS\, 2 bis rue Mercœur\, Paris 11e
+URL:https://www.iris-france.org/event/the-eu-as-a-global-security-actor-mil
+ itary-assistance-to-partner-states/
 END:VEVENT
 END:VCALENDAR

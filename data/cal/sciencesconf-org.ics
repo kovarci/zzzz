@@ -24,84 +24,51 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:6ea94645e668@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:JTMS 2026 : Journées "Théorie\, Modélisation et Simulation"
-DESCRIPTION:Colloque\nhttps://jtms2026.sciencesconf.org/
-LOCATION:Paris (France)
-URL:https://jtms2026.sciencesconf.org/
+UID:cd67d5be7c79@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:20 ans du GDRS EcoInfo
+DESCRIPTION:Conférence pour fêter les 20 ans du groupement de recherche e
+ t de service du CNRS EcoInfo\nhttps://20ecoinfo.sciencesconf.org
+LOCATION:98 bis boulevard Arago 75014 - Paris (France)
+URL:https://20ecoinfo.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:5ec5a94e9477@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:Les femmes de la Tour Eiffel. Pourquoi et comment les célébrer ? 
- Les apports de l'histoire des sciences et des techniques
-DESCRIPTION:Colloque\nhttps://72femmes-eiffel.sciencesconf.org/
-LOCATION:Paris (France)
-URL:https://72femmes-eiffel.sciencesconf.org/
+UID:ad2a7ecc83d1@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Journées Thématiques Machine Learning pour l'optique ultrarapide
+DESCRIPTION:Le développement rapide de l'intelligence artificielle\, du ma
+ chine learning et des réseaux de neurones bouleverse aujourd'hui l'ensemb
+ le des domaines scientifiques\, et l'optique ultrarapide ne fait pas excep
+ tion. L'architecture complexe des systèmes femtosecondes modernes\, la ri
+ chesse des interactions lumière–matière et le volume croissant de donn
+ ées acquises imposent de nouvelles approches…\nhttps://jt-ml4ufo.scienc
+ esconf.org
+LOCATION:Ecole Polytechnique\, Route de Saclay\, 91128 Palaiseau (France)
+URL:https://jt-ml4ufo.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:f5842dc7d8d1@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:Congrès international conclusif du Consortium Huma-Num ARIANE
-DESCRIPTION:Stabiliser l'instable : modèles\, outils et pratiques de l'éd
- ition numérique\nhttps://csthn-ariane.sciencesconf.org
-LOCATION:Paris (France)
-URL:https://csthn-ariane.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:33018a207cf6@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:55ème Colloque de la Société Française pour l'Etude du Comporte
- ment Animal (SFECA)
-DESCRIPTION:https://sfeca2026.sciencesconf.org
-LOCATION:Campus Condorcet\, centre des colloques - Place du front populaire
-  - Aubervilliers 93300 (France)
-URL:https://sfeca2026.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:1a50694d40b7@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:Pérennité des données de recherche
-DESCRIPTION:Comment garantir que vos données de recherche resteront access
- ibles\, lisibles et réutilisables dans 10\, 20 ou 30 ans ? Dans un contex
- te de science ouverte\, la pérennisation des données constitue un enjeu 
- majeur pour assurer la reproductibilité des résultats\, leur valorisatio
- n et leur conformité réglementaire. Cette formation propose d'aborder la
-  notion d'archivage sous l'angle de la préservation…\nhttps://perdata20
- 26.sciencesconf.org
-LOCATION:Délégation CNRS Villejuif (France)
-URL:https://perdata2026.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:dd37324a7238@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:4th colloquium of the GdR TeQ "Quantum Technologies"
-DESCRIPTION:The annual colloquium of the CNRS Research Network "Quantum Tec
- hnologies" (GdR TeQ) aims to bring together the French scientific communit
- y around advances in quantum information and technologies. It supports six
-  main areas of research: communications\, quantum computation and algorith
- ms\, simulation\, metrology and sensors\, fundamental aspects of quantum p
- hysics\, and cross-disciplinary approaches.…\nhttps://gdrteq2026.science
- sconf.org
-LOCATION:ENS Paris-Saclay - Gif-sur-Yvette (France)
-URL:https://gdrteq2026.sciencesconf.org
+UID:33868a0d3ca2@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Journées annuelles CONCORD 2026
+DESCRIPTION:Le GDR 2081 COnCOrD « Couplage méCanique Oxydation Diffusion 
+ » a pour objectif d'établir un dialogue entre des équipes françaises a
+ bordant l'oxydation haute température (HT) sous différents aspects\, chi
+ mique et mécanique\, approche expérimentale et modélisation\, afin de m
+ otiver une approche pluridisciplinaire\, en se focalisant plus spécifique
+ ment sur le couplage oxydation/mécanique.\nhttps://jaconcord26.sciencesco
+ nf.org
+LOCATION:Ecole des Mines de Paris (France)
+URL:https://jaconcord26.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:aba59dddbbe4@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:13e Journée annuelle du Comité d'éthique de l'Inserm
@@ -116,7 +83,7 @@ URL:https://journee-cei2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:a0d915156fdc@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Penser les inégalités sociales à l'ère de l'intersectionnalité
@@ -133,7 +100,7 @@ URL:https://intersect.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:017de6b39ebb@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Journée d'étude sur les estampages
@@ -150,7 +117,7 @@ URL:https://estampages.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:9a5bc71a96ac@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Journées de Biostatistique 2026
@@ -166,51 +133,8 @@ LOCATION:Conservatoire national des arts et métiers 292 Rue Saint-Martin\,
 URL:https://jbiostat2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:ad2a7ecc83d1@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Journées Thématiques Machine Learning pour l'optique ultrarapide
-DESCRIPTION:Le développement rapide de l'intelligence artificielle\, du ma
- chine learning et des réseaux de neurones bouleverse aujourd'hui l'ensemb
- le des domaines scientifiques\, et l'optique ultrarapide ne fait pas excep
- tion. L'architecture complexe des systèmes femtosecondes modernes\, la ri
- chesse des interactions lumière–matière et le volume croissant de donn
- ées acquises imposent de nouvelles approches…\nhttps://jt-ml4ufo.scienc
- esconf.org
-LOCATION:Ecole Polytechnique\, Route de Saclay\, 91128 Palaiseau (France)
-URL:https://jt-ml4ufo.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:cd67d5be7c79@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:20 ans du GDRS EcoInfo
-DESCRIPTION:Conférence pour fêter les 20 ans du groupement de recherche e
- t de service du CNRS EcoInfo\nhttps://20ecoinfo.sciencesconf.org
-LOCATION:98 bis boulevard Arago 75014 - Paris (France)
-URL:https://20ecoinfo.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:33868a0d3ca2@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Journées annuelles CONCORD 2026
-DESCRIPTION:Le GDR 2081 COnCOrD « Couplage méCanique Oxydation Diffusion 
- » a pour objectif d'établir un dialogue entre des équipes françaises a
- bordant l'oxydation haute température (HT) sous différents aspects\, chi
- mique et mécanique\, approche expérimentale et modélisation\, afin de m
- otiver une approche pluridisciplinaire\, en se focalisant plus spécifique
- ment sur le couplage oxydation/mécanique.\nhttps://jaconcord26.sciencesco
- nf.org
-LOCATION:Ecole des Mines de Paris (France)
-URL:https://jaconcord26.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
 UID:3ccb61fec286@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Journées annuelles du réseau thématique Concord Couplage mécani
@@ -221,7 +145,7 @@ URL:https://jaconcord26.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:dd9c800f9580@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Paris Ile-de-France Neuroscience\, Theory\, and Systems
@@ -231,7 +155,7 @@ URL:https://pints2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:8ea247107eb3@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Deuxième Congrès de la Société francophone de philosophie fémi
@@ -248,7 +172,7 @@ URL:https://congressfpf.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:fcb9149472f4@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:ColDoc 2026
@@ -264,7 +188,7 @@ URL:https://coldoc2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:fb785db6b595@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Le temps des épreuves. 50 ans de préservation des photographies
@@ -279,8 +203,20 @@ LOCATION:Paris (France)
 URL:https://tempsepreuves.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:cef72a733db7@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:Recherche en conservation-restauration - Perspectives historiques
+DESCRIPTION:Le GT Recherche et restauration du DIM PAMIR organise à 'INHA 
+ le 10 novembre 2026 une journée portant sur l'histoire de la restauration
+ .\nhttps://dim-rech-rest4.sciencesconf.org
+LOCATION:INHA - Paris (France)
+URL:https://dim-rech-rest4.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
 UID:c554e533ed5d@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:La biomasse dans la transition écologique : science\, données et 
@@ -297,7 +233,7 @@ URL:https://gisbiomasse2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:bb33a7c11373@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Journée du numérique de l'OSUPS 2026
@@ -308,37 +244,8 @@ LOCATION:Auditorium Irène Joliot-Curie\, IJCLab (bât 100) - Orsay (France
 URL:https://jnum-osups.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:cef72a733db7@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
-SUMMARY:Recherche en conservation-restauration - Perspectives historiques
-DESCRIPTION:Le GT Recherche et restauration du DIM PAMIR organise à 'INHA 
- le 10 novembre 2026 une journée portant sur l'histoire de la restauration
- .\nhttps://dim-rech-rest4.sciencesconf.org
-LOCATION:INHA - Paris (France)
-URL:https://dim-rech-rest4.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:9a18030ea20a@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261112
-DTEND;VALUE=DATE:20261113
-SUMMARY:L’enseignement de la prononciation dans les cours de langues étr
- angères et de spécialité : avancées et perspectives
-DESCRIPTION:Ce colloque se propose comme un espace d'échange scientifique 
- et pédagogique sur les moyens d'intégrer la prononciation dans l'enseign
- ement des langues étrangères et de spécialité\, en particulier dans l'
- enseignement de l'espagnol sur objectifs spécifiques. Face à la faible p
- roduction scientifique sur cette question dans le domaine français de l'e
- nseignement de l'espagnol\, le colloque est une…\nhttps://prononciation.
- sciencesconf.org
-LOCATION:Université Paris Nanterre (France)
-URL:https://prononciation.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
 UID:2876dd66a87c@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Couplages\, relaxation\, décohérence dans les systèmes molécula
@@ -355,7 +262,7 @@ URL:https://crdmol.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:36cf66ca6f79@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Journées des doctorants de l'IRD autour de l'IA
@@ -368,7 +275,7 @@ URL:https://doctorialesird.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:49c75bab4467@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Journée RMNGBP hiver 2026
@@ -378,8 +285,25 @@ LOCATION:- Paris (France)
 URL:https://rmngbp-nov2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:9a18030ea20a@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:L’enseignement de la prononciation dans les cours de langues étr
+ angères et de spécialité : avancées et perspectives
+DESCRIPTION:Ce colloque se propose comme un espace d'échange scientifique 
+ et pédagogique sur les moyens d'intégrer la prononciation dans l'enseign
+ ement des langues étrangères et de spécialité\, en particulier dans l'
+ enseignement de l'espagnol sur objectifs spécifiques. Face à la faible p
+ roduction scientifique sur cette question dans le domaine français de l'e
+ nseignement de l'espagnol\, le colloque est une…\nhttps://prononciation.
+ sciencesconf.org
+LOCATION:Université Paris Nanterre (France)
+URL:https://prononciation.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
 UID:5c7969679bd9@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Pegasus 2026
@@ -389,7 +313,7 @@ URL:https://pegasus2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:1a241e6cea60@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:The BBC under Fire: Debates on Impartiality and the Crisis of Legit
@@ -406,21 +330,8 @@ LOCATION:Maison de la Recherche\, Université Sorbonne Nouvelle - Paris (Fr
 URL:https://bbc-under-fire.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:4a1984f6223d@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261117
-SUMMARY:PhysChemCell 2026
-DESCRIPTION:La conférence PhyChemCell2026 rassemble la large communauté q
- ui développe et utilise des méthodes d'analyse et d'imagerie en milieu b
- iologique complexe.\nhttps://physchemcell26.sciencesconf.org
-LOCATION:Amphi BLANDIN du LPS de la Faculté des Sciences d’Orsay (France
- )
-URL:https://physchemcell26.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
 UID:c0fb489ebde9@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Colloque G2\, Géodésie & Géophysique\, Paris 2026
@@ -436,7 +347,7 @@ URL:https://g2paris2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:d01ba9ddd4d0@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:8th Symposium on the Acoustics of Poro-Elastic Materials
@@ -452,39 +363,32 @@ LOCATION:Université Gustave Eiffel\, Marne-la-Vallée (greater Paris)\, Fr
 URL:https://sapem2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:c3b149538d11@paris-academique
-DTSTAMP:20261104T120014Z
+UID:fccbdea34f9d@paris-academique
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-SUMMARY:Ctrl+Epi+Edit: Engineering the Epigenome
-DESCRIPTION:Epigenome editing is a rapidly emerging field that has the pote
- ntial to revolutionise genomic medicine by offering new ways to precisely 
- program gene expression and treat a range of diseases. Precision control o
- f the epigenome and gene activity is further unlocking key mechanistic ins
- ights into a wide variety of molecular and cellular processes. The potenti
- al of epigenome editing technologies…\nhttps://ctrlepiedit.sciencesconf.
- org
-LOCATION:Amphithéâtre Buffon - Université Paris Cité\, 15 rue Hélène 
- Brion - Paris (France)
-URL:https://ctrlepiedit.sciencesconf.org
+SUMMARY:Open Science Week 2026
+DESCRIPTION:Open Science Week 2026\, Libérez la science !\nhttps://osw2026
+ .sciencesconf.org
+LOCATION:En ligne - Orsay Ville (France)
+URL:https://osw2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:e3cc4ddb64f2@paris-academique
-DTSTAMP:20261104T120014Z
+UID:96740cd20ae3@paris-academique
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-SUMMARY:Données et documents administratifs : quels usages et implications
-  pour la recherche en sciences sociales ?
-DESCRIPTION:Journée d'études organisée par le RT20 "Méthodes" de l'Asso
- ciation Française de Sociologie (AFS)\nhttps://donnees-admin.sciencesconf
- .org
-LOCATION:Auditorium 150 Centre des colloques Campus Condorcet Place du Fron
- t populaire - Aubervilliers (France)
-URL:https://donnees-admin.sciencesconf.org
+SUMMARY:IA frugale pour les sciences de l’ingénieur
+DESCRIPTION:Le thème central de cette édition sera l’IA frugale\, avec 
+ des contributions autour de la frugalité en données\, en calcul\, en acq
+ uisition\, en instrumentation\, en modélisation physique et en ingénieri
+ e durable.\nhttps://gdr-i-gaia-2026.sciencesconf.org
+LOCATION:ENS Paris-Saclay (France)
+URL:https://gdr-i-gaia-2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:196a82593505@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Conférence annuelle des réseaux PhyloMAP et PHYLODYN
@@ -495,7 +399,7 @@ URL:https://phylo2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba4a95e3724@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Pérenniser les codes scientifiques communautaires : Pratiques\, d
@@ -513,7 +417,7 @@ URL:https://j-sun-cnrs-2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:1490c44a2345@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Rethinking the Foundations of Logic: From Physics to Computation
@@ -527,32 +431,52 @@ LOCATION:IHPST - 13 rue du Four\, 75006 Paris - Paris (France)
 URL:https://foundlogic.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:fccbdea34f9d@paris-academique
-DTSTAMP:20261104T120014Z
+UID:c3b149538d11@paris-academique
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-SUMMARY:Open Science Week 2026
-DESCRIPTION:Open Science Week 2026\, Libérez la science !\nhttps://osw2026
- .sciencesconf.org
-LOCATION:En ligne - Orsay Ville (France)
-URL:https://osw2026.sciencesconf.org
+SUMMARY:Ctrl+Epi+Edit: Engineering the Epigenome
+DESCRIPTION:Epigenome editing is a rapidly emerging field that has the pote
+ ntial to revolutionise genomic medicine by offering new ways to precisely 
+ program gene expression and treat a range of diseases. Precision control o
+ f the epigenome and gene activity is further unlocking key mechanistic ins
+ ights into a wide variety of molecular and cellular processes. The potenti
+ al of epigenome editing technologies…\nhttps://ctrlepiedit.sciencesconf.
+ org
+LOCATION:Amphithéâtre Buffon - Université Paris Cité\, 15 rue Hélène 
+ Brion - Paris (France)
+URL:https://ctrlepiedit.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:96740cd20ae3@paris-academique
-DTSTAMP:20261104T120014Z
+UID:e3cc4ddb64f2@paris-academique
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-SUMMARY:IA frugale pour les sciences de l’ingénieur
-DESCRIPTION:Le thème central de cette édition sera l’IA frugale\, avec 
- des contributions autour de la frugalité en données\, en calcul\, en acq
- uisition\, en instrumentation\, en modélisation physique et en ingénieri
- e durable.\nhttps://gdr-i-gaia-2026.sciencesconf.org
-LOCATION:ENS Paris-Saclay (France)
-URL:https://gdr-i-gaia-2026.sciencesconf.org
+SUMMARY:Données et documents administratifs : quels usages et implications
+  pour la recherche en sciences sociales ?
+DESCRIPTION:Journée d'études organisée par le RT20 "Méthodes" de l'Asso
+ ciation Française de Sociologie (AFS)\nhttps://donnees-admin.sciencesconf
+ .org
+LOCATION:Auditorium 150 Centre des colloques Campus Condorcet Place du Fron
+ t populaire - Aubervilliers (France)
+URL:https://donnees-admin.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:4a1984f6223d@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:PhysChemCell 2026
+DESCRIPTION:La conférence PhyChemCell2026 rassemble la large communauté q
+ ui développe et utilise des méthodes d'analyse et d'imagerie en milieu b
+ iologique complexe.\nhttps://physchemcell26.sciencesconf.org
+LOCATION:Amphi BLANDIN du LPS de la Faculté des Sciences d’Orsay (France
+ )
+URL:https://physchemcell26.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:12b432a24364@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:GDR I GAIA 2026 : IA frugale pour les sciences de l'ingénieur
@@ -561,22 +485,8 @@ LOCATION:Paris (France)
 URL:https://gdr-i-gaia-2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
-UID:b6e55d421641@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261118
-SUMMARY:Comment enquêter en sciences sociales : terrains\, méthodes\, don
- nées
-DESCRIPTION:Le médialab et le Centre de données socio-politiques (CDSP) d
- e Sciences Po organisent des journées d'études dédiées aux méthodes d
- 'enquêtes\, les 17 et 18 novembre 2026\, dans le cadre du réseau d'ingé
- nieur·es dans la recherche (RésIn).\nhttps://je-112026.sciencesconf.org
-LOCATION:Sciences Po\, 1 place Saint Thomas\, 75007 Paris (France)
-URL:https://je-112026.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
 UID:ba8a8079b866@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Troisième séminaire scientifique du consortium SMaCS
@@ -591,7 +501,7 @@ URL:https://smacs.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:fa16185c5084@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:Journées Nationales Méthane 2026
@@ -606,84 +516,22 @@ LOCATION:- Paris (France)
 URL:https://jnm-2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:2022697c106b@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:13e Colloque international en linguistique arménienne\, Dédié au
-  150ème anniversaire de la naissance de Hratchia Adjarian
-DESCRIPTION:Ce rendez-vous périodique est destiné à permettre aux spéci
- alistes du domaine d’échanger leurs travaux inédits\, récents ou en c
- ours\, et susciter d’éventuelles collaborations. Les soumissions sont a
- cceptées dans tous les sous-domaines de la linguistique arménienne (list
- e non exhaustive) phonétique\, morphologie\, syntaxe\, pragmatique et dis
- cours\, lexicologie\, dialectologie\, sociolinguistique…\nhttps://ical13
- .sciencesconf.org
-LOCATION:Inalco - Paris (France)
-URL:https://ical13.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:5dbeb69aa704@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:The Use of R in Official Statistics - 2026
-DESCRIPTION:The annual event “use of R in Official Statistics” started 
- as a local conference at the Statistical Office of Romania in 2013\, with 
- the first international edition being held at that same office in 2014. Si
- nce then the conference evolved to a well-known international event.\nhttp
- s://uros2026.sciencesconf.org
-LOCATION:Paris (France)
-URL:https://uros2026.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:a3b34d8a3c9c@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:Symposium ICSN 2026 Pierre Potier
-DESCRIPTION:Le Symposium ICSN 2026 - Pierre Potier est organisé en hommage
-  à Pierre Potier et célèbre des approches scientifiques inspirées par 
- la chimie des substances naturelles et la chimie médicinale. Ses travaux 
- ont montré comment des molécules complexes d'origine naturelle peuvent 
- être transformées\, grâce à des stratégies synthétiques et semi-synt
- hétiques\, en agents thérapeutiques efficaces. En…\nhttps://icsn2026-p
- otier.sciencesconf.org
-LOCATION:IMAGIF - Bâtiment 21\, 1 Avenue de la Terrasse - 91190 Gif-sur-Yv
- ette (France)
-URL:https://icsn2026-potier.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:4d9aec3e15f1@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:Héritages tissés : histoires\, circulations et réappropriations 
- du patrimoine textile en Afrique
-DESCRIPTION:Ce colloque est organisé dans le cadre du projet international
-  de recherches collaboratives "RESOTISSUS". Il se présente comme une éta
- pe essentielle de ce projet et rassemblera chercheurs\, professionnels de 
- musées\, détenteurs de savoirs communautaires\, décideurs politiques\, 
- artisans\, designers\, afin de mettre en perspective les résultats du pro
- jet RésoTissus et de questionner le rôle du textile…\nhttps://heritiss
- es.sciencesconf.org
-LOCATION:CY Cergy Paris Université (France)
-URL:https://heritisses.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
-UID:908826fc6a16@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261119
-SUMMARY:Rencontres Internationales des Nouvelles Pratiques Philosophiques
-DESCRIPTION:Colloque sur les pratiques philosophiques. Thème : l'altérit
- é\nhttps://rinpp2026.sciencesconf.org
-LOCATION:Maison de l'Unesco - PARIS (France)
-URL:https://rinpp2026.sciencesconf.org
+UID:b6e55d421641@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Comment enquêter en sciences sociales : terrains\, méthodes\, don
+ nées
+DESCRIPTION:Le médialab et le Centre de données socio-politiques (CDSP) d
+ e Sciences Po organisent des journées d'études dédiées aux méthodes d
+ 'enquêtes\, les 17 et 18 novembre 2026\, dans le cadre du réseau d'ingé
+ nieur·es dans la recherche (RésIn).\nhttps://je-112026.sciencesconf.org
+LOCATION:Sciences Po\, 1 place Saint Thomas\, 75007 Paris (France)
+URL:https://je-112026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:0a5181b09a4f@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:15èmes journées scientifiques du GDR Sciences du bois (15th Wood 
@@ -702,7 +550,7 @@ URL:https://gdrbois-2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:6be4ad1981ba@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:GDR-GDM : Réunion thématique du GDR-GDM à Jussieu
@@ -713,42 +561,84 @@ LOCATION:Université de Jussieu - Paris (France)
 URL:https://gdr-gdm-jussieu.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:3633c711eac4@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
-SUMMARY:Journée d'étude NORMEASP - Norme et variabilité dans la producti
- on orale en anglais de spécialité
-DESCRIPTION:Cette journée d'étude vise à interroger la possibilité de d
- éfinir une « norme d'acceptabilité » en anglais académique et profess
- ionnel en production orale\, en s'éloignant du modèle du locuteur natif 
- comme norme implicite et en reconnaissant l'existence de phénomènes de v
- ariation et « de normes de comportements langagiers socialement variables
-  » (Weber\, 2008 : 186). Il s'agira ainsi moins de…\nhttps://normeasp.s
- ciencesconf.org
-LOCATION:ENS Paris-Saclay\, 4 Avenue des Sciences\, 91190 Gif-sur-Yvette (F
- rance)
-URL:https://normeasp.sciencesconf.org
+UID:2022697c106b@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:13e Colloque international en linguistique arménienne\, Dédié au
+  150ème anniversaire de la naissance de Hratchia Adjarian
+DESCRIPTION:Ce rendez-vous périodique est destiné à permettre aux spéci
+ alistes du domaine d’échanger leurs travaux inédits\, récents ou en c
+ ours\, et susciter d’éventuelles collaborations. Les soumissions sont a
+ cceptées dans tous les sous-domaines de la linguistique arménienne (list
+ e non exhaustive) phonétique\, morphologie\, syntaxe\, pragmatique et dis
+ cours\, lexicologie\, dialectologie\, sociolinguistique…\nhttps://ical13
+ .sciencesconf.org
+LOCATION:Inalco - Paris (France)
+URL:https://ical13.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:0fd2a247b4a8@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
-SUMMARY:LBT days 2026
-DESCRIPTION:The Laboratory of Theoretical Biochemistry (LBT) is a historica
- l actor in biomolecular modeling\, well established in the French research
-  landscape. This meeting is the second installment of a biennial rendez-vo
- us connecting the local research experience with the international context
- . The essential motivation stems from the clear (r)evolution that the fiel
- d is undergoing vis-à-vis technological…\nhttps://lbtdays2026.sciencesc
- onf.org
-LOCATION:IBPC - Paris (France)
-URL:https://lbtdays2026.sciencesconf.org
+UID:5dbeb69aa704@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:The Use of R in Official Statistics - 2026
+DESCRIPTION:The annual event “use of R in Official Statistics” started 
+ as a local conference at the Statistical Office of Romania in 2013\, with 
+ the first international edition being held at that same office in 2014. Si
+ nce then the conference evolved to a well-known international event.\nhttp
+ s://uros2026.sciencesconf.org
+LOCATION:Paris (France)
+URL:https://uros2026.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:a3b34d8a3c9c@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Symposium ICSN 2026 Pierre Potier
+DESCRIPTION:Le Symposium ICSN 2026 - Pierre Potier est organisé en hommage
+  à Pierre Potier et célèbre des approches scientifiques inspirées par 
+ la chimie des substances naturelles et la chimie médicinale. Ses travaux 
+ ont montré comment des molécules complexes d'origine naturelle peuvent 
+ être transformées\, grâce à des stratégies synthétiques et semi-synt
+ hétiques\, en agents thérapeutiques efficaces. En…\nhttps://icsn2026-p
+ otier.sciencesconf.org
+LOCATION:IMAGIF - Bâtiment 21\, 1 Avenue de la Terrasse - 91190 Gif-sur-Yv
+ ette (France)
+URL:https://icsn2026-potier.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:4d9aec3e15f1@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Héritages tissés : histoires\, circulations et réappropriations 
+ du patrimoine textile en Afrique
+DESCRIPTION:Ce colloque est organisé dans le cadre du projet international
+  de recherches collaboratives "RESOTISSUS". Il se présente comme une éta
+ pe essentielle de ce projet et rassemblera chercheurs\, professionnels de 
+ musées\, détenteurs de savoirs communautaires\, décideurs politiques\, 
+ artisans\, designers\, afin de mettre en perspective les résultats du pro
+ jet RésoTissus et de questionner le rôle du textile…\nhttps://heritiss
+ es.sciencesconf.org
+LOCATION:CY Cergy Paris Université (France)
+URL:https://heritisses.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:908826fc6a16@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Rencontres Internationales des Nouvelles Pratiques Philosophiques
+DESCRIPTION:Colloque sur les pratiques philosophiques. Thème : l'altérit
+ é\nhttps://rinpp2026.sciencesconf.org
+LOCATION:Maison de l'Unesco - PARIS (France)
+URL:https://rinpp2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:986c43f65adb@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Journée professionnelle NumaHop 2026
@@ -765,24 +655,26 @@ LOCATION:Campus Condorcet Centre des Colloques Place du Front populaire 933
 URL:https://numahop2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:47f91c4270a1@paris-academique
-DTSTAMP:20261104T120014Z
+UID:3633c711eac4@paris-academique
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
-SUMMARY:L'héritage majuscule de Dominique Pasquier
-DESCRIPTION:Les RT11 (sociologie de la consommation et du numérique)\, RT1
- 4 (sociologie de la culture) et RT37 (sociologie des médias) de l'AFS s'a
- ssocient afin d'organiser un colloque en hommage à Dominique Pasquier\, d
- irectrice de recherche CNRS décédée en avril 2025. Son oeuvre croise de
-  façon centrale ces objets d'étude - culture\, médias\, numérique - à
-  travers ses ouvrages consacrés aux scénaristes de la…\nhttps://hommag
- epasquier.sciencesconf.org
-LOCATION:- Paris (France)
-URL:https://hommagepasquier.sciencesconf.org
+SUMMARY:Journée d'étude NORMEASP - Norme et variabilité dans la producti
+ on orale en anglais de spécialité
+DESCRIPTION:Cette journée d'étude vise à interroger la possibilité de d
+ éfinir une « norme d'acceptabilité » en anglais académique et profess
+ ionnel en production orale\, en s'éloignant du modèle du locuteur natif 
+ comme norme implicite et en reconnaissant l'existence de phénomènes de v
+ ariation et « de normes de comportements langagiers socialement variables
+  » (Weber\, 2008 : 186). Il s'agira ainsi moins de…\nhttps://normeasp.s
+ ciencesconf.org
+LOCATION:ENS Paris-Saclay\, 4 Avenue des Sciences\, 91190 Gif-sur-Yvette (F
+ rance)
+URL:https://normeasp.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:3147cac0d187@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Atelier Cesam2k20 IV : Modélisation des composants d’un système
@@ -799,7 +691,7 @@ URL:https://cesamworkshop4.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:22520086639c@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Workshop sur les “Affects\, Compagnons Artificiels et Interaction
@@ -815,8 +707,24 @@ LOCATION:INRIA Paris - rue Barrault - Paris (France)
 URL:https://wacai2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:0fd2a247b4a8@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:LBT days 2026
+DESCRIPTION:The Laboratory of Theoretical Biochemistry (LBT) is a historica
+ l actor in biomolecular modeling\, well established in the French research
+  landscape. This meeting is the second installment of a biennial rendez-vo
+ us connecting the local research experience with the international context
+ . The essential motivation stems from the clear (r)evolution that the fiel
+ d is undergoing vis-à-vis technological…\nhttps://lbtdays2026.sciencesc
+ onf.org
+LOCATION:IBPC - Paris (France)
+URL:https://lbtdays2026.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
 UID:c0b202809e39@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Ultrafest XII: Conference on Ultrasound Imaging for Speech and Lang
@@ -827,8 +735,24 @@ LOCATION:Université Paris Cité (France)
 URL:https://ultrasound12.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:47f91c4270a1@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:L'héritage majuscule de Dominique Pasquier
+DESCRIPTION:Les RT11 (sociologie de la consommation et du numérique)\, RT1
+ 4 (sociologie de la culture) et RT37 (sociologie des médias) de l'AFS s'a
+ ssocient afin d'organiser un colloque en hommage à Dominique Pasquier\, d
+ irectrice de recherche CNRS décédée en avril 2025. Son oeuvre croise de
+  façon centrale ces objets d'étude - culture\, médias\, numérique - à
+  travers ses ouvrages consacrés aux scénaristes de la…\nhttps://hommag
+ epasquier.sciencesconf.org
+LOCATION:- Paris (France)
+URL:https://hommagepasquier.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
 UID:f00a2fe59280@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Psychothérapies à l’épreuve du XXIe siècle : recompositions\,
@@ -845,8 +769,20 @@ LOCATION:École de Psychologues Praticiens 23 rue du Montparnasse - Paris 7
 URL:https://epp-congres2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
+UID:af3dc59a31de@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Les données dans le sport de haut niveau
+DESCRIPTION:Séminaire des groupes de travail Quanticharge et Datasport du 
+ GDR Sports et activités physiques\nhttps://datacharge.sciencesconf.org
+LOCATION:Maison du Handball \; 1 Rue Daniel Costantini\, 94000 Créteil (Fr
+ ance)
+URL:https://datacharge.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
 UID:d6548c5d64cc@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Dépollution par les plantes et les algues: mythes et réalités
@@ -862,20 +798,8 @@ LOCATION:ENCPB - Lycée Pierre-Gilles de Gennes 11 Rue Pirandello\, 75013 P
 URL:https://colloque-sbf26.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:af3dc59a31de@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261120
-DTEND;VALUE=DATE:20261121
-SUMMARY:Les données dans le sport de haut niveau
-DESCRIPTION:Séminaire des groupes de travail Quanticharge et Datasport du 
- GDR Sports et activités physiques\nhttps://datacharge.sciencesconf.org
-LOCATION:Maison du Handball \; 1 Rue Daniel Costantini\, 94000 Créteil (Fr
- ance)
-URL:https://datacharge.sciencesconf.org
-END:VEVENT
-BEGIN:VEVENT
 UID:4782c750538d@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:XIème Animation Wetlab et Bioinfo
@@ -886,29 +810,83 @@ URL:https://ateliers-10.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:70c831ed4cdc@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:Ecouter\, composer\, fabriquer en son lieu : vers un ralentissement
   des pratiques du numérique ?
-DESCRIPTION:Colloque\nhttps://econum2026.sciencesconf.org/
-LOCATION:Paris (France)
-URL:https://econum2026.sciencesconf.org/
+DESCRIPTION:Suite aux deux journées d'études « Pratiques artistiques num
+ ériques et enjeux environnementaux : Penser (par) le milieu » (volet 1 e
+ t volet 2)\, le colloque « Écouter\, composer\, fabriquer en son lieu : 
+ vers un ralentissement des pratiques du numérique ? » entend s'intéress
+ er aux démarches et pratiques artistiques qui envisagent le numérique co
+ mme un ensemble de relations matérielles\, sociales et…\nhttps://econum
+ 2026.sciencesconf.org
+LOCATION:Académie du Climat - Paris (France)
+URL:https://econum2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
-UID:aa7d607d4b4e@paris-academique
-DTSTAMP:20261104T120014Z
+UID:c6f15419c44c@paris-academique
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
-SUMMARY:Les 10 ans de la plateforme EMAN\, et après ? Histoire et position
- nement(s) d'une plateforme d'édition numérique
-DESCRIPTION:Colloque\nhttps://eman10ans.sciencesconf.org/
-LOCATION:Humathèque\, Campus Condorcet\, Aubervilliers (France)
-URL:https://eman10ans.sciencesconf.org/
+SUMMARY:Paris Cytoskeleton Day 2026
+DESCRIPTION:The Paris Cytoskeleton Day is a scientific one-day symposium op
+ en to all types of cytoskeletal components and all types of approaches.\nh
+ ttps://pcd2026.sciencesconf.org
+LOCATION:It will take place in Auditorium Buffon (Institut Jacques Monod). 
+ - Paris (France)
+URL:https://pcd2026.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:b2c5fb8b2eb5@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Climat et Impacts 2026
+DESCRIPTION:Les journées "Climat et Impacts" ont pour objectif de croiser 
+ les expertises scientifiques concernant les variabilités du climat actuel
+ les et passées\, leurs causes\, leurs impacts sur les écosystèmes et le
+ urs répercussions sur les sociétés humaines d'hier et d'aujourd'hui.\nh
+ ttps://climat-impact26.sciencesconf.org
+LOCATION:ENS Paris-Saclay - Gif-sur-Yvette (France)
+URL:https://climat-impact26.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:256755fddf65@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Les 10 ans de la plateforme EMAN
+DESCRIPTION:Histoire et positionnement(s) d'une plateforme d'édition numé
+ rique EMAN (édition de manuscrits et d'archives numériques) fête ses 10
+  ans les 24 et 25 novembre 2026 à l'Humathèque du Campus Condorcet. EMAN
+  est une plateforme collaborative de projets numériques d'édition et d'e
+ xploration de corpus de tous types\, qui favorise la biblio-diversité et 
+ l'édition de nombreux documents numériques. Lancée…\nhttps://eman10an
+ s.sciencesconf.org
+LOCATION:Auditorium et Open Space\, Humathèque\, Campus Condorcet - Humath
+ èque\, Campus Condorcet\, Aubervilliers (France)
+URL:https://eman10ans.sciencesconf.org
+END:VEVENT
+BEGIN:VEVENT
+UID:80c8ce669729@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:ESPI International Real Estate Conference 2026
+DESCRIPTION:The ESPI International Real Estate Conference (ESPI-IREC) is a 
+ bi-annual event hosted and run by ESPI2R. It has grown into a premier plat
+ form for real estate researchers and experts from various disciplines such
+  as - law\, economics\, management\, finance\, urban planning\, architectu
+ re\, and sociology - to engage in dialogue and to intertwine insights.\nht
+ tps://espi-irec-2026.sciencesconf.org
+LOCATION:199bis Rue Saint-Martin\, 75003 Paris (France)
+URL:https://espi-irec-2026.sciencesconf.org
 END:VEVENT
 BEGIN:VEVENT
 UID:cef0a7cf9230@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Biodiversité urbaine - enjeux et modélisation
@@ -918,7 +896,7 @@ URL:https://urbanbiodiv.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e00045c91020@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Premier workshop du GDR PIX
@@ -929,7 +907,7 @@ URL:https://gdrpix2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:204620d1e0a6@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Rupture de stock : comprendre le défi énergétique.
@@ -939,7 +917,7 @@ URL:https://rupturedestock.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:73a515bcd4db@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Journée d'études TARTOAS et rencontres de l'ED 661 pour les langu
@@ -950,7 +928,7 @@ URL:https://tartoas-red661.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:0070a5644e2b@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:EduBIM2026 : Modéliser l'invisible : numérique et espaces souterr
@@ -961,7 +939,7 @@ URL:https://edubim2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:8dc544797020@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Sites souterrains à forte valeur patrimoniale - Quelles méthodes 
@@ -972,7 +950,7 @@ URL:https://mskcairn2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:36d447539e7b@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:PYXIS Workshop: Hybrid Modeling\, Mechanistic AI and Data-Driven Me
@@ -983,7 +961,7 @@ URL:https://pyxis2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f856431c9d3@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Formation sur les outils de modélisation aquatique : le modèle py
@@ -994,7 +972,7 @@ URL:https://pynuts-2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:6cd3dc6d0800@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Penser et mettre en œuvre la transition foncière : vers un urbani
@@ -1005,7 +983,7 @@ URL:https://landtransition.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b45f91a46d08@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Action de Convergence CNRS en Glycochimie
@@ -1015,7 +993,7 @@ URL:https://capglyco2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:7e19c0591998@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Les acteurs et actrices de la téléréalité : de la fabrique aux 
@@ -1026,7 +1004,7 @@ URL:https://telerealite.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ab5e52e812f0@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:NATURE 2026 : Plénière du GDR NATURE et atelier ACV
@@ -1036,7 +1014,7 @@ URL:https://nature.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b9caef9b7c19@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:6ème Journée Automnale du Management International
@@ -1046,7 +1024,7 @@ URL:https://jami2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:47e4ce36a1a7@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:ChooseFIRST - Choose France International Research & Science Talent
@@ -1056,7 +1034,7 @@ URL:https://choose1rst.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:8adeb5ec2ab1@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:Complexity Days 2026
@@ -1066,7 +1044,7 @@ URL:https://complexitydays.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:eca3fb48199e@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:REFRAIN13 : 13e journée du réseau
@@ -1076,7 +1054,7 @@ URL:https://refrain13.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:397db50cb4ea@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:3rd Workshop on Artificial Intelligence with and for Learning Scien
@@ -1087,7 +1065,7 @@ URL:https://wails2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:af32f4a499c9@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Exclamation: Form(s) and Function(s)
@@ -1097,7 +1075,7 @@ URL:https://exclamatives.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:266be4f0275d@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Construire les mobilités actives de demain : recherche\, société
@@ -1108,7 +1086,7 @@ URL:https://mobactives.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:0dc929563ac6@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:16th Annual Conference on Immigration in OECD Countries
@@ -1118,7 +1096,7 @@ URL:https://immigoecd16.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e72ce9ece83b@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:International Workshop on Engineering of Quantum Emitter Properties
@@ -1129,7 +1107,7 @@ URL:https://eqep2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:7f51c7a3a5d8@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:2026 - Maths-physics meeting on solitons in condensates and polarit
@@ -1140,7 +1118,7 @@ URL:https://soliton2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ef41e670b2ea@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:A Decade of Urban Proximity
@@ -1150,7 +1128,7 @@ URL:https://10years15mc.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:733b8d78a48b@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:7th Financial Economic Meeting FEM-2026
@@ -1160,7 +1138,7 @@ URL:https://fem2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ba6ee2e826db@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Words in Space: HTR\, Computer Vision\, and the Spatial Dimensions 
@@ -1171,7 +1149,7 @@ URL:https://mermaid2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ac983897359a@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:Workshop on stochastic analysis
@@ -1181,7 +1159,7 @@ URL:https://astral.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:20cbb1e42514@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:La linguistique fonctionnelle : bilan et perspectives
@@ -1191,7 +1169,7 @@ URL:https://silf2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:fe7479e103ca@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:« Anthropocène ». Deuxièmes rencontres du Comité National Fran
@@ -1202,7 +1180,7 @@ URL:https://geoanthropocene.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:695d044d6dcf@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:GT LEGO Machine Learning for genomics - 2026 Meeting
@@ -1212,7 +1190,7 @@ URL:https://lego-fall-2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:630349aec2db@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Symposium du GDR SuNSeT 2026
@@ -1222,7 +1200,7 @@ URL:https://sunset-2026.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:f0b29e050537@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:La Sécurité sociale\, 80 ans après : dimensions et horizons de l
@@ -1233,7 +1211,7 @@ URL:https://secu80universel.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:a3dfc764d85b@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
 SUMMARY:International Meeting on Curation of Samples returned by Space Miss
@@ -1244,7 +1222,7 @@ URL:https://cres2027mnhn.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:df25a05877ea@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
 SUMMARY:IEMI27 : Journée thématique sur les Interférences Électromagné
@@ -1255,7 +1233,7 @@ URL:https://iemi27.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:37537c34ae4f@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270225
 DTEND;VALUE=DATE:20270226
 SUMMARY:Dev2A 2027: Life in a changing environment
@@ -1265,7 +1243,7 @@ URL:https://dev2a2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:a0a20966a801@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270317
 DTEND;VALUE=DATE:20270318
 SUMMARY:PhD GERAS 2027 : Rencontres Doctorales Monique Mémet 2027
@@ -1275,7 +1253,7 @@ URL:https://phd-geras-2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:f1027519fd4c@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:1ʳᵉ édition des Rencontres de la Résilience Nationale
@@ -1285,7 +1263,7 @@ URL:https://resilnat.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:eee2b3573c47@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270322
 DTEND;VALUE=DATE:20270323
 SUMMARY:BSAM Workshop on Nonlocal Problems: PDEs\, Analysis and Application
@@ -1296,7 +1274,7 @@ URL:https://bsamworkshop.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f59f74a7425@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270323
 DTEND;VALUE=DATE:20270324
 SUMMARY:30ème Rencontre du Non-Linéaire
@@ -1306,7 +1284,7 @@ URL:https://rnl2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:46762ada64be@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270330
 DTEND;VALUE=DATE:20270331
 SUMMARY:PéDiPol\, Pédagogie\, Didactique et Politique / Inter-AREF 2027
@@ -1316,7 +1294,7 @@ URL:https://inter-aref2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:02ff6c451d7a@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:3ème Journée de Recherche en sciences de gestion sur les Changeme
@@ -1327,7 +1305,7 @@ URL:https://jrcc3.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:be04df94b9e1@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270518
 DTEND;VALUE=DATE:20270519
 SUMMARY:SPSG 2027 : PHILOSOPHIE(S) DU MANAGEMENT
@@ -1337,7 +1315,7 @@ URL:https://spsg2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:33e8bb7f80e3@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270526
 DTEND;VALUE=DATE:20270527
 SUMMARY:CISELA 2027
@@ -1347,7 +1325,7 @@ URL:https://afla2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ba614a757960@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270614
 DTEND;VALUE=DATE:20270615
 SUMMARY:Rencontres Jeunes Chercheurs de l'ED661 2027
@@ -1357,7 +1335,7 @@ URL:https://rjc2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:64967b13ec49@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270616
 DTEND;VALUE=DATE:20270617
 SUMMARY:JORRESCAM 2027
@@ -1367,7 +1345,7 @@ URL:https://jorrescam2027.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:c28a2b5edd4e@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:Sixth European Convention on Turkic\, Ottoman and Turkish Studies (
@@ -1378,7 +1356,7 @@ URL:https://turkologentag27.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:3729c214a48b@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20271014
 DTEND;VALUE=DATE:20271015
 SUMMARY:#MeToo 10 ans après\, que célèbre-t-on ?
@@ -1388,7 +1366,7 @@ URL:https://metoo10ansapres.sciencesconf.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e10a91db01c9@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20271026
 DTEND;VALUE=DATE:20271027
 SUMMARY:12ème Conférence Plénière du GDR Ondes

@@ -24,32 +24,24 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:97d8612796fa@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;TZID=Europe/Paris:20261104T170000
-DTEND;TZID=Europe/Paris:20261104T183000
-SUMMARY:Le racisme scientifique et médical : du 19e siècle à nos jours
-DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr
-LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
- 7e
-URL:https://www.quaibranly.fr
-END:VEVENT
-BEGIN:VEVENT
 UID:05140ab13bd7@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261106T170000
 DTEND;TZID=Europe/Paris:20261106T184500
 SUMMARY:Célébrer la vie\, honorer les morts
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr
+ branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
+ re-jacques-kerchache/details-de-levenement/e/celebrer-la-vie-honorer-les-m
+ orts
 LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
  7e
-URL:https://www.quaibranly.fr
+URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
+ s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/celebrer-l
+ a-vie-honorer-les-morts
 END:VEVENT
 BEGIN:VEVENT
 UID:f687e1999431@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261110T091500
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Le temps des épreuves
@@ -64,19 +56,23 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:503dfe4788ff@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261110T170000
 DTEND;TZID=Europe/Paris:20261110T183000
 SUMMARY:Genèses de Léopold Sédar Senghor : actualité éditoriale
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr
+ branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
+ re-jacques-kerchache/details-de-levenement/e/geneses-de-leopold-sedar-seng
+ hor-actualite-editoriale-41150
 LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
  7e
-URL:https://www.quaibranly.fr
+URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
+ s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/geneses-de
+ -leopold-sedar-senghor-actualite-editoriale-41150
 END:VEVENT
 BEGIN:VEVENT
 UID:426f20d0be52@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261118T093000
 DTEND;TZID=Europe/Paris:20261118T173000
 SUMMARY:Objets de mémoires
@@ -92,19 +88,23 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:5dd66cc4b19c@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261119T183000
 DTEND;TZID=Europe/Paris:20261119T200000
 SUMMARY:"Haïti\, seul peuple de peintres"
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr
+ branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
+ re-jacques-kerchache/details-de-levenement/e/haiti-seul-peuple-de-peintres
+ -41151
 LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
  7e
-URL:https://www.quaibranly.fr
+URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
+ s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/haiti-seul
+ -peuple-de-peintres-41151
 END:VEVENT
 BEGIN:VEVENT
 UID:a20f9f5625f3@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T183000
 SUMMARY:L'archéologie et l'anthropologie face au pillage
@@ -120,31 +120,38 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:3a86f96752dc@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261124T170000
 DTEND;TZID=Europe/Paris:20261124T184500
 SUMMARY:Rencontre avec George Nuku
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr
+ branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
+ re-jacques-kerchache/details-de-levenement/e/rencontre-avec-george-nuku
 LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
  7e
-URL:https://www.quaibranly.fr
+URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
+ s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/rencontre-
+ avec-george-nuku
 END:VEVENT
 BEGIN:VEVENT
 UID:8c4a1242ff87@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261126T173000
 DTEND;TZID=Europe/Paris:20261126T184500
 SUMMARY:Le survivant : trois ans parmi les Nootka de l'île de Vancouver
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr
+ branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
+ re-jacques-kerchache/details-de-levenement/e/le-survivant-trois-ans-parmi-
+ les-nootka-de-lile-de-vancouver-41152
 LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
  7e
-URL:https://www.quaibranly.fr
+URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
+ s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/le-surviva
+ nt-trois-ans-parmi-les-nootka-de-lile-de-vancouver-41152
 END:VEVENT
 BEGIN:VEVENT
 UID:895838b36c59@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261127T110000
 DTEND;TZID=Europe/Paris:20261127T180000
 SUMMARY:Pourquoi faire l’histoire orale des musées ?
@@ -159,7 +166,7 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:cb4886d830fd@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261203T170000
 DTEND;TZID=Europe/Paris:20261203T190000
 SUMMARY:« Comment créer un environnement propice à la création artistiq
@@ -177,14 +184,18 @@ URL:https://www.quaibranly.fr/fr/recherche-scientifique/activites/colloques
 END:VEVENT
 BEGIN:VEVENT
 UID:a7129bd2cf8d@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261208T170000
 DTEND;TZID=Europe/Paris:20261208T184500
 SUMMARY:Au cœur du dialogue des cultures
 DESCRIPTION:Les RDV du salon de lecture Jacques Kerchache\nhttps://www.quai
- branly.fr
+ branly.fr/fr/expositions-evenements/au-musee/rendez-vous-du-salon-de-lectu
+ re-jacques-kerchache/details-de-levenement/e/au-coeur-du-dialogue-des-cult
+ ures-41079
 LOCATION:Musée du quai Branly – Jacques Chirac\, 37 quai Branly\, Paris 
  7e
-URL:https://www.quaibranly.fr
+URL:https://www.quaibranly.fr/fr/expositions-evenements/au-musee/rendez-vou
+ s-du-salon-de-lecture-jacques-kerchache/details-de-levenement/e/au-coeur-d
+ u-dialogue-des-cultures-41079
 END:VEVENT
 END:VCALENDAR

@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:7b0574ba2bd5@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Le pari de l'œuvre de Michèle Audin
@@ -35,8 +35,30 @@ LOCATION:Ircam\, Paris
 URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/VkVzlE5
 END:VEVENT
 BEGIN:VEVENT
+UID:478c0c680820@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261119T190000
+DTEND;TZID=Europe/Paris:20261119T210000
+SUMMARY:Mourir écolo
+DESCRIPTION:Rencontre\nhttps://www.centrepompidou.fr/fr/programme/agenda/ev
+ enement/FfvRoN8
+LOCATION:Bpi\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/FfvRoN8
+END:VEVENT
+BEGIN:VEVENT
+UID:1e25519f0911@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261123T190000
+DTEND;TZID=Europe/Paris:20261123T210000
+SUMMARY:Les minéraux et l’humanité
+DESCRIPTION:Rencontre · Une interaction continue\nhttps://www.centrepompid
+ ou.fr/fr/programme/agenda/evenement/JhjWRBq
+LOCATION:Bpi\, Paris
+URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/JhjWRBq
+END:VEVENT
+BEGIN:VEVENT
 UID:595420e1818a@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261217T190000
 DTEND;TZID=Europe/Paris:20261217T210000
 SUMMARY:Le pari de l’œuvre de Mouna Ouafik et la plateforme Shaeirat
@@ -47,7 +69,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/MieQELT
 END:VEVENT
 BEGIN:VEVENT
 UID:79da64812f30@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20270130T110000
 DTEND;TZID=Europe/Paris:20270130T120000
 SUMMARY:L’histoire sonore du Centre Pompidou
@@ -58,7 +80,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/Bkau90m
 END:VEVENT
 BEGIN:VEVENT
 UID:4d6d78673f43@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20270130T143000
 DTEND;TZID=Europe/Paris:20270130T153000
 SUMMARY:L’ouverture du Centre Pompidou comme si on y était...
@@ -69,7 +91,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/CLzjf7u
 END:VEVENT
 BEGIN:VEVENT
 UID:6ed024dfb259@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20270130T150000
 DTEND;TZID=Europe/Paris:20270130T170000
 SUMMARY:Poésie sonore\, et alors ?
@@ -80,7 +102,7 @@ URL:https://www.centrepompidou.fr/fr/programme/agenda/evenement/JxMmaZp
 END:VEVENT
 BEGIN:VEVENT
 UID:d7b2f99368b1@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20270130T180000
 DTEND;TZID=Europe/Paris:20270130T190000
 SUMMARY:Masterclasse

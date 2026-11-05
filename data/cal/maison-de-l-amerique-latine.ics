@@ -24,32 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:5c1da11fc39c@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;TZID=Europe/Paris:20261104T190000
-DTEND;TZID=Europe/Paris:20261104T210000
-SUMMARY:Danser le tango\, penser le tango
-DESCRIPTION:Actualité\nhttps://www.mal217.org/fr/agenda/danser-le-tango-pe
- nser-le-tango
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/danser-le-tango-penser-le-tango
-END:VEVENT
-BEGIN:VEVENT
-UID:b8df7bb54526@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;TZID=Europe/Paris:20261104T210000
-DTEND;TZID=Europe/Paris:20261104T230000
-SUMMARY:Seminario latino de París — L’inconscient c’est la politique
-DESCRIPTION:Conférence\nhttps://www.mal217.org/fr/agenda/seminario-latino-
- de-paris-ee957e84
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/seminario-latino-de-paris-ee957e84
-END:VEVENT
-BEGIN:VEVENT
 UID:e36109ea7f86@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261105T190000
 DTEND;TZID=Europe/Paris:20261105T210000
 SUMMARY:Tribune de l'économie
@@ -61,7 +37,7 @@ URL:https://www.mal217.org/fr/agenda/tribune-de-l-economie-812009fa
 END:VEVENT
 BEGIN:VEVENT
 UID:c90a13c9ac5e@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261106T090000
 DTEND;TZID=Europe/Paris:20261106T110000
 SUMMARY:Nicaragua — Regards sur une révolution
@@ -73,7 +49,7 @@ URL:https://www.mal217.org/fr/agenda/nicaragua-811cf27d
 END:VEVENT
 BEGIN:VEVENT
 UID:28180f284d43@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261109T190000
 DTEND;TZID=Europe/Paris:20261109T210000
 SUMMARY:Penser avec les études décoloniales — & Europe latina
@@ -85,7 +61,7 @@ URL:https://www.mal217.org/fr/agenda/penser-avec-les-etudes-decoloniales
 END:VEVENT
 BEGIN:VEVENT
 UID:a07e4ca20cbc@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261110T190000
 DTEND;TZID=Europe/Paris:20261110T210000
 SUMMARY:Festival Cinélatino — 39e édition des rencontres de Toulouse
@@ -93,5 +69,31 @@ DESCRIPTION:Festival\nhttps://www.mal217.org/fr/agenda/festival-cinelatino
 LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
   7e
 URL:https://www.mal217.org/fr/agenda/festival-cinelatino
+END:VEVENT
+BEGIN:VEVENT
+UID:f8d1ec04f5c8@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261112T210000
+DTEND;TZID=Europe/Paris:20261112T230000
+SUMMARY:Où en est la paix en Colombie ? — De la paix totale à la guerre
+  totale
+DESCRIPTION:Rencontre/Débat\nhttps://www.mal217.org/fr/agenda/ou-en-est-la
+ -paix-en-colombie
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
+URL:https://www.mal217.org/fr/agenda/ou-en-est-la-paix-en-colombie
+END:VEVENT
+BEGIN:VEVENT
+UID:7219c4e59a6a@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261113T190000
+DTEND;TZID=Europe/Paris:20261113T210000
+SUMMARY:Escritoras bolivianas en Europa — La literatura como herramienta 
+ de resistencia
+DESCRIPTION:Conférence\nhttps://www.mal217.org/fr/agenda/escritoras-bolivi
+ anas-en-europa
+LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
+  7e
+URL:https://www.mal217.org/fr/agenda/escritoras-bolivianas-en-europa
 END:VEVENT
 END:VCALENDAR

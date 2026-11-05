@@ -24,41 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:704567818f9a@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261105
-SUMMARY:Formaliser et prendre confiance en son projet entrepreneurial 📍P
- aris 12
-DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Déclic\, c’es
- t l’atelier du parcours Activ’Entrepreneurs pour clarifier et formalis
- er son projet entrepreneurial !3h15\nhttps://chiche.makesense.org/events/e
- /formaliser-et-prendre-confiance-en-son-projet-entrepreneurial-paris-12-6a
- aaa7f3ca9188000759bcd7
-LOCATION:40 Av. des Terroirs de France\, 75012 Paris\, France
-URL:https://chiche.makesense.org/events/e/formaliser-et-prendre-confiance-e
- n-son-projet-entrepreneurial-paris-12-6aaaa7f3ca9188000759bcd7
-END:VEVENT
-BEGIN:VEVENT
-UID:334ffe8eadf0@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;TZID=Europe/Paris:20261104T141500
-DTEND;TZID=Europe/Paris:20261104T161500
-SUMMARY:Atelier - Comprends vraiment tes clients avec l’entretien de déc
- ouverte
-DESCRIPTION:Organisé par Les Canaux — Mener des entretiens de découvert
- e efficaces pour obtenir des retours non influencés sur son concept et le
- s besoins clients.Un atelier animé par Dominique Lequepeys :Dominique Leq
- uepeys est coach d'entrepreneurs depu\nhttps://chiche.makesense.org/events
- /e/atelier-comprends-vraiment-tes-clients-avec-lentretien-de-decouverte-6a
- be5bfc825ba200072c2134
-LOCATION:6 Quai de la Seine\, 75019 Paris\, France
-URL:https://chiche.makesense.org/events/e/atelier-comprends-vraiment-tes-cl
- ients-avec-lentretien-de-decouverte-6abe5bfc825ba200072c2134
-END:VEVENT
-BEGIN:VEVENT
 UID:6b76b17d318d@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Où dort ton argent ?...et comment l'orienter vers la transition ?
@@ -74,7 +41,7 @@ URL:https://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lor
 END:VEVENT
 BEGIN:VEVENT
 UID:1ea15aa01dbf@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:J’améliore le confort thermique de mon logement
@@ -89,7 +56,7 @@ URL:https://chiche.makesense.org/events/e/jameliore-le-confort-thermique-de
 END:VEVENT
 BEGIN:VEVENT
 UID:2eb18b4eea1c@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Arpentage du livre « Être écoféministe – Théories et pratiqu
@@ -107,7 +74,7 @@ URL:https://chiche.makesense.org/events/e/arpentage-du-livre-etre-ecofemini
 END:VEVENT
 BEGIN:VEVENT
 UID:996d0db733c4@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Devenir bénévole à la Maison du Zéro Déchet
@@ -121,7 +88,7 @@ URL:https://chiche.makesense.org/events/e/devenir-benevole-a-la-maison-du-z
 END:VEVENT
 BEGIN:VEVENT
 UID:ae99c9767684@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261107T140000
 DTEND;TZID=Europe/Paris:20261107T170000
 SUMMARY:Danse thérapeutique : sensibilisation à la capoeira angola
@@ -137,7 +104,7 @@ URL:https://chiche.makesense.org/events/e/danse-therapeutique-sensibilisati
 END:VEVENT
 BEGIN:VEVENT
 UID:7a49b3a99bd9@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Projection-débat : film « Tout va bien » & accueil en famille
@@ -148,5 +115,54 @@ DESCRIPTION:Organisé par Pauline Farnabe — Projection du documentaire «
  se.org/events
 LOCATION:101 Rue Saint-Lazare\, 75009 Paris\, France
 URL:https://chiche.makesense.org/events
+END:VEVENT
+BEGIN:VEVENT
+UID:35ae8399599f@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:Activ'Go - Réfléchir à la mise en œuvre de son projet entrepren
+ eurial 📍 Paris 19
+DESCRIPTION:Organisé par Raphaëlle Afota — L’Activ’Go\, c’est l
+ ’atelier du parcours Activ’Entrepreneurs pour définir les besoins de 
+ son projet et trouver des opportunités pour passer de l’idée à l’ac
+ tion\nhttps://chiche.makesense.org/events
+LOCATION:Cité des Sciences et de l'Industrie\, 30 Av. Corentin Cariou\, 75
+ 019 Paris\, France
+URL:https://chiche.makesense.org/events
+END:VEVENT
+BEGIN:VEVENT
+UID:bc40e7f01e7b@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261110T142000
+DTEND;TZID=Europe/Paris:20261110T162000
+SUMMARY:Atelier - Comment arrêter de tout porter quand on est une femme en
+ trepreneure ?
+DESCRIPTION:Organisé par Les Canaux — Aider les femmes entrepreneures à
+  comprendre ce qui alimente leur surcharge mentale et rendre visible ce qu
+ ’elles portent au quotidien.Un atelier animé par Ingrid Ngatchani de Su
+ bliMama :Ingrid Ngatchani\, fo\nhttps://chiche.makesense.org/events/e/atel
+ ier-comment-arreter-de-tout-porter-quand-on-est-une-femme-entrepreneure-6a
+ be5cfb334fdc00086aa89f
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/atelier-comment-arreter-de-tout-p
+ orter-quand-on-est-une-femme-entrepreneure-6abe5cfb334fdc00086aa89f
+END:VEVENT
+BEGIN:VEVENT
+UID:9c2d6a50c9d2@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Atelier - Réussir son premier recrutement (salariat\, alternance\,
+  stage ou freelance)
+DESCRIPTION:Organisé par Les Canaux — Repartir avec une vision claire de
+ s options possibles pour un premier recrutement (salarié\, alternant\, st
+ agiaire\, freelance)\, de leurs coûtsUn atelier animé par Laura Pivette 
+ de Terra Legal :Après 8 ans en g\nhttps://chiche.makesense.org/events/e/a
+ telier-reussir-son-premier-recrutement-salariat-alternance-stage-ou-freela
+ nce-6ac504aacc49190007ccc69b
+LOCATION:6 Quai de la Seine\, 75019 Paris\, France
+URL:https://chiche.makesense.org/events/e/atelier-reussir-son-premier-recru
+ tement-salariat-alternance-stage-ou-freelance-6ac504aacc49190007ccc69b
 END:VEVENT
 END:VCALENDAR

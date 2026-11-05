@@ -24,35 +24,41 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:4d88af97b284@paris-academique
-DTSTAMP:20261104T120014Z
-DTSTART;TZID=Europe/Paris:20261104T150000
-DTEND;TZID=Europe/Paris:20261104T160000
-SUMMARY:Edge artificial intelligence for scientific instrumentation
-DESCRIPTION:Radiation and particle detectors let us observe the universe be
- yond what our senses can achieve. Scientists come up with new ways to coll
- ect information about our universe using detectors to transform particles 
- into electrical signals and digital bits. These novel detectors are more p
- recise\, larger and offer much more range than their predecessors\, result
- ing in large amounts of channels (millions)\nhttps://indico.in2p3.fr/event
- /40921/
-LOCATION:IJCLAB
-URL:https://indico.in2p3.fr/event/40921/
-END:VEVENT
-BEGIN:VEVENT
-UID:bb42bb86d0a3@paris-academique
-DTSTAMP:20261104T120014Z
+UID:02d962d6290f@paris-academique
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261109T110000
 DTEND;TZID=Europe/Paris:20261109T123000
-SUMMARY:Séminaires du DPhP: Metrology - Atomic clock
-DESCRIPTION:TBD zoom connection : https://cern.zoom.us/j/67425097284\nhttps
- ://indico.in2p3.fr/event/40825/
+SUMMARY:Séminaires du DPhP: Construction of an 171Yb Optical Lattice Clock
+  for Geodetic Exporation
+DESCRIPTION:Optical lattice clocks have progressed swiftly over the past de
+ cade\, now outperforming state-of-the-art microwave clocks by more than tw
+ o orders of magnitude in both stability and accuracy\, reaching a level of
+  control of the frequency of 18 digits or better. This opens up new applic
+ ations in fundamental physics\, astronomy and Earth science. In this conte
+ xt\, LTE initiated the development of a…\nhttps://indico.in2p3.fr/event/
+ 40825/
 LOCATION:CEA Paris-Saclay
 URL:https://indico.in2p3.fr/event/40825/
 END:VEVENT
 BEGIN:VEVENT
+UID:7e2ec9eabbc3@paris-academique
+DTSTAMP:20261105T120431Z
+DTSTART;TZID=Europe/Paris:20261118T093000
+DTEND;TZID=Europe/Paris:20261118T165000
+SUMMARY:DuoDay 2026
+DESCRIPTION:Bienvenue ! Pendant cette journée\, vous découvrirez le trava
+ il de la cheffe de projet de LaRadioactivite.com\, un site Internet qui ex
+ plique la radioactivité et ses applications avec des mots accessibles à 
+ tous. Mon rôle consiste à organiser le travail autour de ce site : chois
+ ir les sujets à développer\, échanger avec les scientifiques\, prépare
+ r et améliorer les articles et veiller à ce que les…\nhttps://indico.i
+ n2p3.fr/event/41357/
+LOCATION:CCIN2P3
+URL:https://indico.in2p3.fr/event/41357/
+END:VEVENT
+BEGIN:VEVENT
 UID:bf1cdcc3940c@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261118T140000
 DTEND;TZID=Europe/Paris:20261118T160000
 SUMMARY:Journées de l'AT-PEM 2026 - Défis numériques en astrophysique de
@@ -69,7 +75,7 @@ URL:https://indico.in2p3.fr/event/39545/
 END:VEVENT
 BEGIN:VEVENT
 UID:f567110d751a@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261123T090000
 DTEND;TZID=Europe/Paris:20261123T110000
 SUMMARY:Atelier API "Ondes gravitationnelles et objets compacts"
@@ -85,7 +91,7 @@ URL:https://indico.in2p3.fr/event/40352/
 END:VEVENT
 BEGIN:VEVENT
 UID:063b2ebd8a29@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261123T110000
 DTEND;TZID=Europe/Paris:20261123T123000
 SUMMARY:Séminaires du DPhP: Metrology - Atomic interferometer
@@ -96,7 +102,7 @@ URL:https://indico.in2p3.fr/event/40904/
 END:VEVENT
 BEGIN:VEVENT
 UID:b4d0f5338e7d@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261124T140000
 DTEND;TZID=Europe/Paris:20261124T160000
 SUMMARY:Colloque national CMB-France #8
@@ -111,7 +117,7 @@ URL:https://indico.in2p3.fr/event/40591/
 END:VEVENT
 BEGIN:VEVENT
 UID:86cab15231ad@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261125T120000
 DTEND;TZID=Europe/Paris:20261125T140000
 SUMMARY:Rubin LSST-France\, IJClab Orsay\, 25-27/11/2026
@@ -126,7 +132,7 @@ URL:https://indico.in2p3.fr/event/40822/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f14fa0aece8@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261126T090000
 DTEND;TZID=Europe/Paris:20261126T110000
 SUMMARY:Journées Scientifiques de l'Action Thématique GRAM
@@ -142,7 +148,7 @@ URL:https://indico.in2p3.fr/event/40247/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ca2b00e5994@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261130T120000
 DTEND;TZID=Europe/Paris:20261130T140000
 SUMMARY:3ème colloque EIC-France
@@ -158,7 +164,7 @@ URL:https://indico.in2p3.fr/event/40260/
 END:VEVENT
 BEGIN:VEVENT
 UID:dfee1c1325a8@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261202T100000
 DTEND;TZID=Europe/Paris:20261202T120000
 SUMMARY:Spectral lags as a new window on GeV–TeV emission and particle ac
@@ -175,7 +181,7 @@ URL:https://indico.in2p3.fr/event/40366/
 END:VEVENT
 BEGIN:VEVENT
 UID:04ff595c785a@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261207T110000
 DTEND;TZID=Europe/Paris:20261207T123000
 SUMMARY:Séminaires du DPhP: Latest results of the JUNO experiment
@@ -191,7 +197,7 @@ URL:https://indico.in2p3.fr/event/40824/
 END:VEVENT
 BEGIN:VEVENT
 UID:4b7a17deaa10@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20261214T080000
 DTEND;TZID=Europe/Paris:20261214T100000
 SUMMARY:Cosmic Rays in the Multi-Messenger Era
@@ -207,7 +213,7 @@ URL:https://indico.in2p3.fr/event/39812/
 END:VEVENT
 BEGIN:VEVENT
 UID:2623f35a8019@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20270121T093000
 DTEND;TZID=Europe/Paris:20270121T113000
 SUMMARY:Euclid-DESI data synergies
@@ -223,7 +229,7 @@ URL:https://indico.in2p3.fr/event/40887/
 END:VEVENT
 BEGIN:VEVENT
 UID:e1af81b886ef@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20270316T083000
 DTEND;TZID=Europe/Paris:20270316T180500
 SUMMARY:Journée SFP 2027 : Le futur de la physique des particules
@@ -237,7 +243,7 @@ URL:https://indico.in2p3.fr/event/41140/
 END:VEVENT
 BEGIN:VEVENT
 UID:0d05527703bb@paris-academique
-DTSTAMP:20261104T120014Z
+DTSTAMP:20261105T120431Z
 DTSTART;TZID=Europe/Paris:20271018T110000
 DTEND;TZID=Europe/Paris:20271018T130000
 SUMMARY:Imaging Sensors for Precision Astronomy 2027
