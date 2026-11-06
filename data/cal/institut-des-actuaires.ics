@@ -24,8 +24,22 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:704d3120081b@paris-academique
+DTSTAMP:20261106T120701Z
+DTSTART;TZID=Europe/Paris:20261106T123000
+DTEND;TZID=Europe/Paris:20261106T143000
+SUMMARY:GT ISR - ALM - Intégration des enjeux ESG dans l'allocation strat
+ égique
+DESCRIPTION:Réunion réservée aux membres du groupe\nhttps://www.institut
+ desactuaires.com/agenda/gt-isr-alm-integration-des-enjeux-esg-dans-l-alloc
+ ation-strategique-8111
+LOCATION:Paris — lieu précisé sur la page de l'événement
+URL:https://www.institutdesactuaires.com/agenda/gt-isr-alm-integration-des-
+ enjeux-esg-dans-l-allocation-strategique-8111
+END:VEVENT
+BEGIN:VEVENT
 UID:bad9a05a645a@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261126T083000
 DTEND;TZID=Europe/Paris:20261126T103000
 SUMMARY:Journée 100% Actuaires - Data Science - Durabilité
@@ -37,7 +51,7 @@ URL:https://www.institutdesactuaires.com/agenda/journee-100-actuaires-data-
 END:VEVENT
 BEGIN:VEVENT
 UID:8cb31892ea2c@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261126T174500
 DTEND;TZID=Europe/Paris:20261126T194500
 SUMMARY:Cérémonie d'accueil des nouveaux associés 2026
@@ -49,7 +63,7 @@ URL:https://www.institutdesactuaires.com/agenda/ceremonie-des-nouveaux-asso
 END:VEVENT
 BEGIN:VEVENT
 UID:1cc1e06d5944@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261209T090000
 DTEND;TZID=Europe/Paris:20261209T110000
 SUMMARY:Colloque Actuariat 2026 et remise du Prix SCOR de l’actuariat

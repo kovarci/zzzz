@@ -24,20 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:e36109ea7f86@paris-academique
-DTSTAMP:20261105T120431Z
-DTSTART;TZID=Europe/Paris:20261105T190000
-DTEND;TZID=Europe/Paris:20261105T210000
-SUMMARY:Tribune de l'économie
-DESCRIPTION:Économie\nhttps://www.mal217.org/fr/agenda/tribune-de-l-econom
- ie-812009fa
-LOCATION:Maison de l'Amérique latine\, 217 boulevard Saint-Germain\, Paris
-  7e
-URL:https://www.mal217.org/fr/agenda/tribune-de-l-economie-812009fa
-END:VEVENT
-BEGIN:VEVENT
 UID:c90a13c9ac5e@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261106T090000
 DTEND;TZID=Europe/Paris:20261106T110000
 SUMMARY:Nicaragua — Regards sur une révolution
@@ -49,7 +37,7 @@ URL:https://www.mal217.org/fr/agenda/nicaragua-811cf27d
 END:VEVENT
 BEGIN:VEVENT
 UID:28180f284d43@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261109T190000
 DTEND;TZID=Europe/Paris:20261109T210000
 SUMMARY:Penser avec les études décoloniales — & Europe latina
@@ -61,7 +49,7 @@ URL:https://www.mal217.org/fr/agenda/penser-avec-les-etudes-decoloniales
 END:VEVENT
 BEGIN:VEVENT
 UID:a07e4ca20cbc@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261110T190000
 DTEND;TZID=Europe/Paris:20261110T210000
 SUMMARY:Festival Cinélatino — 39e édition des rencontres de Toulouse
@@ -72,7 +60,7 @@ URL:https://www.mal217.org/fr/agenda/festival-cinelatino
 END:VEVENT
 BEGIN:VEVENT
 UID:f8d1ec04f5c8@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261112T210000
 DTEND;TZID=Europe/Paris:20261112T230000
 SUMMARY:Où en est la paix en Colombie ? — De la paix totale à la guerre
@@ -85,7 +73,7 @@ URL:https://www.mal217.org/fr/agenda/ou-en-est-la-paix-en-colombie
 END:VEVENT
 BEGIN:VEVENT
 UID:7219c4e59a6a@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261113T190000
 DTEND;TZID=Europe/Paris:20261113T210000
 SUMMARY:Escritoras bolivianas en Europa — La literatura como herramienta 

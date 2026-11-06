@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:7bea922af3c0@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261105T140000
 DTEND;TZID=Europe/Paris:20261105T160000
 SUMMARY:--- SEMINAIRE GENERAL --- Cross-scale modelling of tectonics and ea
@@ -39,7 +39,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/grand-seminaire-d
 END:VEVENT
 BEGIN:VEVENT
 UID:504c6e884945@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261112T110000
 DTEND;TZID=Europe/Paris:20261112T130000
 SUMMARY:Earthquake cycle simulations for PSHA
@@ -51,7 +51,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/earthquake-cycle-
 END:VEVENT
 BEGIN:VEVENT
 UID:b1eea711ad78@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261118T110000
 DTEND;TZID=Europe/Paris:20261118T130000
 SUMMARY:Echoes from the seabed: the continuing evolution of industrial mult
@@ -60,5 +60,18 @@ DESCRIPTION:Séminaires Géosciences Marines\nhttps://www.ipgp.fr/actus-et-
  agenda/agenda/seminaires/tba-7/
 LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
 URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/tba-7/
+END:VEVENT
+BEGIN:VEVENT
+UID:90ac8fcd48bf@paris-academique
+DTSTAMP:20261106T120701Z
+DTSTART;TZID=Europe/Paris:20261123T110000
+DTEND;TZID=Europe/Paris:20261123T130000
+SUMMARY:Exploring Tidal Modulation of Seismicity in Southern California
+DESCRIPTION:Séminaires communs Tectonique-Sismologie\nhttps://www.ipgp.fr/
+ actus-et-agenda/agenda/seminaires/exploring-tidal-modulation-of-seismicity
+ -in-southern-california/
+LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
+URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/exploring-tidal-m
+ odulation-of-seismicity-in-southern-california/
 END:VEVENT
 END:VCALENDAR

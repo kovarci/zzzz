@@ -24,24 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:6b76b17d318d@paris-academique
-DTSTAMP:20261105T120431Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Où dort ton argent ?...et comment l'orienter vers la transition ?
-DESCRIPTION:Organisé par Sylvie GRANDE — Et si votre argent pouvait lui 
- aussi devenir un moyen d’agir pour la transition écologique et sociale 
- ?On pense souvent à changer notre alimentation\, nos déplacements ou not
- re façon de consommer pour agir en faveur d’un monde plus durable.\nhtt
- ps://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lorienter
- -vers-la-transition-6ad0abfa1e36ae00082ec669
-LOCATION:39 Rue de Montreuil\, 94300 Vincennes\, France
-URL:https://chiche.makesense.org/events/e/ou-dort-ton-argent-et-comment-lor
- ienter-vers-la-transition-6ad0abfa1e36ae00082ec669
-END:VEVENT
-BEGIN:VEVENT
 UID:1ea15aa01dbf@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:J’améliore le confort thermique de mon logement
@@ -56,7 +40,7 @@ URL:https://chiche.makesense.org/events/e/jameliore-le-confort-thermique-de
 END:VEVENT
 BEGIN:VEVENT
 UID:2eb18b4eea1c@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Arpentage du livre « Être écoféministe – Théories et pratiqu
@@ -74,7 +58,7 @@ URL:https://chiche.makesense.org/events/e/arpentage-du-livre-etre-ecofemini
 END:VEVENT
 BEGIN:VEVENT
 UID:996d0db733c4@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Devenir bénévole à la Maison du Zéro Déchet
@@ -88,7 +72,7 @@ URL:https://chiche.makesense.org/events/e/devenir-benevole-a-la-maison-du-z
 END:VEVENT
 BEGIN:VEVENT
 UID:ae99c9767684@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261107T140000
 DTEND;TZID=Europe/Paris:20261107T170000
 SUMMARY:Danse thérapeutique : sensibilisation à la capoeira angola
@@ -104,7 +88,7 @@ URL:https://chiche.makesense.org/events/e/danse-therapeutique-sensibilisati
 END:VEVENT
 BEGIN:VEVENT
 UID:7a49b3a99bd9@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
 SUMMARY:Projection-débat : film « Tout va bien » & accueil en famille
@@ -118,7 +102,7 @@ URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:35ae8399599f@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Activ'Go - Réfléchir à la mise en œuvre de son projet entrepren
@@ -133,7 +117,7 @@ URL:https://chiche.makesense.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:bc40e7f01e7b@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261110T142000
 DTEND;TZID=Europe/Paris:20261110T162000
 SUMMARY:Atelier - Comment arrêter de tout porter quand on est une femme en
@@ -150,7 +134,7 @@ URL:https://chiche.makesense.org/events/e/atelier-comment-arreter-de-tout-p
 END:VEVENT
 BEGIN:VEVENT
 UID:9c2d6a50c9d2@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Atelier - Réussir son premier recrutement (salariat\, alternance\,
@@ -164,5 +148,67 @@ DESCRIPTION:Organisé par Les Canaux — Repartir avec une vision claire de
 LOCATION:6 Quai de la Seine\, 75019 Paris\, France
 URL:https://chiche.makesense.org/events/e/atelier-reussir-son-premier-recru
  tement-salariat-alternance-stage-ou-freelance-6ac504aacc49190007ccc69b
+END:VEVENT
+BEGIN:VEVENT
+UID:2179b4fb7692@paris-academique
+DTSTAMP:20261106T120701Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Ciné-débat : « Femmes des terres » avec l’association Terre d
+ e Liens
+DESCRIPTION:Organisé par Adele DORLIPO — Découvrez le documentaire « F
+ emmes des Terres »\, lors d’un ciné-débat organisé avec l’associat
+ ion Terre de Liens. Le film met en récit l’expérience croisée de pays
+ annes de Bolivie\, France et Togo.Nous vous invi\nhttps://chiche.makesense
+ .org/events/e/cine-debat-femmes-des-terres-avec-lassociation-terre-de-lien
+ s-6aeb0bcc6ae81e0008885d0d
+LOCATION:1 Pass. Jaqueline Giraud\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events/e/cine-debat-femmes-des-terres-avec
+ -lassociation-terre-de-liens-6aeb0bcc6ae81e0008885d0d
+END:VEVENT
+BEGIN:VEVENT
+UID:8ff448b581f7@paris-academique
+DTSTAMP:20261106T120701Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:Girls Comedy Club & Friends
+DESCRIPTION:Organisé par Valentina Stan — Et si on faisait bouger les li
+ gnes… en riant ?Le Girls Comedy Club & Friends\, c’est un plateau de s
+ tand-up qui donne la parole à celles et ceux qu’on entend encore trop p
+ eu sur scène : les femmes et les personnes non bi\nhttps://chiche.makesen
+ se.org/events
+LOCATION:24 Av. Daumesnil\, 75012 Paris\, France
+URL:https://chiche.makesense.org/events
+END:VEVENT
+BEGIN:VEVENT
+UID:caf1dc06c110@paris-academique
+DTSTAMP:20261106T120701Z
+DTSTART;TZID=Europe/Paris:20261114T130000
+DTEND;TZID=Europe/Paris:20261114T160000
+SUMMARY:Atelier d'écriture autobiographique
+DESCRIPTION:Organisé par Maison de la Conversation — Un atelier d'écrit
+ ure pour se raconter\, et repartir avec son propre recueil de poésie.Iden
+ tité\, mémoire\, émotions : cet atelier invite à se raconter par l'éc
+ riture et à valoriser son expérience\, dans un cadre intime et bienveill
+ ant.\nhttps://chiche.makesense.org/events/e/atelier-decriture-autobiograph
+ ique-6ac7b64abd306e000758b312
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/atelier-decriture-autobiographiqu
+ e-6ac7b64abd306e000758b312
+END:VEVENT
+BEGIN:VEVENT
+UID:a62623173efa@paris-academique
+DTSTAMP:20261106T120701Z
+DTSTART;TZID=Europe/Paris:20261114T143000
+DTEND;TZID=Europe/Paris:20261114T163000
+SUMMARY:Lettres en Soi – atelier d’écriture créative
+DESCRIPTION:Organisé par Maison de la Conversation — Atelier d'écriture
+  créative pour explorer votre imagination et exprimer vos émotions. En p
+ etit groupe bienveillant\, autour de thématiques.Et si la conversation se
+  faisait aussi par l'écrit ?Lettr\nhttps://chiche.makesense.org/events/e/
+ lettres-en-soi-atelier-decriture-creative-6aeb14d56ae81e0008889c2a
+LOCATION:12 Rue Maurice Grimaud\, 75018 Paris\, France
+URL:https://chiche.makesense.org/events/e/lettres-en-soi-atelier-decriture-
+ creative-6aeb14d56ae81e0008889c2a
 END:VEVENT
 END:VCALENDAR

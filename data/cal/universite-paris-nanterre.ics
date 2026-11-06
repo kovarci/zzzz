@@ -24,8 +24,19 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:3ae620540310@paris-academique
+DTSTAMP:20261106T120701Z
+DTSTART;TZID=Europe/Paris:20261130T121500
+DTEND;TZID=Europe/Paris:20261130T130000
+SUMMARY:Siestes littéraires 2026
+DESCRIPTION:https://www.parisnanterre.fr/agenda/siestes-litteraires-2
+LOCATION:Bâtiment Maison de l'étudiant·e (MDE) — Université Paris Nan
+ terre\, 200 avenue de la République\, Nanterre
+URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-2
+END:VEVENT
+BEGIN:VEVENT
 UID:3286b7dcb352@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20261130T131500
 DTEND;TZID=Europe/Paris:20261130T151500
 SUMMARY:Siestes littéraires (décembre)
@@ -36,7 +47,7 @@ URL:https://www.parisnanterre.fr/agenda/siestes-litteraires-1
 END:VEVENT
 BEGIN:VEVENT
 UID:08d562b61e5e@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Le village d'hiver - édition 2026
@@ -48,7 +59,7 @@ URL:https://www.parisnanterre.fr/agenda/le-village-dhiver-edition-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:260a87edc829@paris-academique
-DTSTAMP:20261105T120431Z
+DTSTAMP:20261106T120701Z
 DTSTART;TZID=Europe/Paris:20270206T100000
 DTEND;TZID=Europe/Paris:20270206T120000
 SUMMARY:Journée Portes Ouvertes (JPO) - STAPS - Campus de Nanterre - Samed
