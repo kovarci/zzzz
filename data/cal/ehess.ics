@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:4b30ef1b52ce@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261107T090000
 DTEND;TZID=Europe/Paris:20261107T110000
 SUMMARY:Journée des sciences humaines et sociales #1 : Où penser libremen
@@ -38,7 +38,7 @@ URL:https://www.ehess.fr/jcms/298487_JEvent/fr/journee-des-sciences-humaine
 END:VEVENT
 BEGIN:VEVENT
 UID:d15b53794d2b@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261109T140000
 DTEND;TZID=Europe/Paris:20261109T160000
 SUMMARY:Réunions d'information "Reprise d'études"
@@ -50,7 +50,7 @@ URL:https://www.ehess.fr/jcms/37175_JEvent/fr/reunions-d-information-repris
 END:VEVENT
 BEGIN:VEVENT
 UID:a360a684fb13@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261112T100000
 DTEND;TZID=Europe/Paris:20261112T120000
 SUMMARY:Prix de thèse Systèmes Complexes
@@ -62,7 +62,7 @@ URL:https://www.ehess.fr/jcms/303600_JEvent/fr/prix-de-these-systemes-compl
 END:VEVENT
 BEGIN:VEVENT
 UID:5d49993288de@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261112T190000
 DTEND;TZID=Europe/Paris:20261112T210000
 SUMMARY:Langue des Signes Japonaise et Langue des Signes Française : regar
@@ -75,7 +75,7 @@ URL:https://www.ehess.fr/jcms/302138_JEvent/fr/langue-des-signes-japonaise-
 END:VEVENT
 BEGIN:VEVENT
 UID:90c88da3518b@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261114T140000
 DTEND;TZID=Europe/Paris:20261114T160000
 SUMMARY:Genèses d'une révolution culturelle : acteurs\, pratiques et imag
@@ -89,7 +89,7 @@ URL:https://www.ehess.fr/jcms/307322_JEvent/fr/geneses-d-une-revolution-cul
 END:VEVENT
 BEGIN:VEVENT
 UID:431194571b51@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261117T183000
 DTEND;TZID=Europe/Paris:20261117T203000
 SUMMARY:L'incomplétude en mouvement
@@ -100,7 +100,7 @@ URL:https://www.ehess.fr/jcms/284673_JEvent/fr/l-incompletude-en-mouvement
 END:VEVENT
 BEGIN:VEVENT
 UID:e67f8476334d@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261119T090000
 DTEND;TZID=Europe/Paris:20261119T110000
 SUMMARY:La psychologisation des violences faites aux femmes
@@ -112,7 +112,7 @@ URL:https://www.ehess.fr/jcms/258092_JEvent/fr/la-psychologisation-des-viol
 END:VEVENT
 BEGIN:VEVENT
 UID:25f806336c48@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261124T093000
 DTEND;TZID=Europe/Paris:20261124T113000
 SUMMARY:Semaine de l'Afrique
@@ -123,7 +123,7 @@ URL:https://www.ehess.fr/jcms/293183_JEvent/fr/semaine-de-l-afrique
 END:VEVENT
 BEGIN:VEVENT
 UID:aea07c6b66b2@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261126T100000
 DTEND;TZID=Europe/Paris:20261126T120000
 SUMMARY:L’ « histoire des religions »
@@ -134,7 +134,7 @@ URL:https://www.ehess.fr/jcms/305341_JEvent/fr/l-histoire-des-religions
 END:VEVENT
 BEGIN:VEVENT
 UID:126f55eb6343@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261127T100000
 DTEND;TZID=Europe/Paris:20261127T120000
 SUMMARY:Voix aux Chapitres #22 autour de l'ouvrage "Chroniques de l’intra
@@ -149,8 +149,20 @@ URL:https://www.ehess.fr/jcms/296672_JEvent/fr/voix-aux-chapitres-22-autour
  ion-en-situation-postcoloniale
 END:VEVENT
 BEGIN:VEVENT
+UID:6efb7f8ce4f2@paris-academique
+DTSTAMP:20261107T105812Z
+DTSTART;TZID=Europe/Paris:20261128T142000
+DTEND;TZID=Europe/Paris:20261128T162000
+SUMMARY:L’EHESS au festival Vrai de vrai organisé par la Scam
+DESCRIPTION:Projection-débat\nhttps://www.ehess.fr/jcms/312529_JEvent/fr/l
+ -ehess-au-festival-vrai-de-vrai-organise-par-la-scam
+LOCATION:EHESS\, 54 boulevard Raspail\, Paris 6e
+URL:https://www.ehess.fr/jcms/312529_JEvent/fr/l-ehess-au-festival-vrai-de-
+ vrai-organise-par-la-scam
+END:VEVENT
+BEGIN:VEVENT
 UID:a497b7772165@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261201T173000
 DTEND;TZID=Europe/Paris:20261201T193000
 SUMMARY:Voix aux Chapitres #23 autour de l'ouvrage "Une histoire économiqu
@@ -165,7 +177,7 @@ URL:https://www.ehess.fr/jcms/296719_JEvent/fr/voix-aux-chapitres-23-autour
 END:VEVENT
 BEGIN:VEVENT
 UID:8a1bb38da24d@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261209T120000
 DTEND;TZID=Europe/Paris:20261209T140000
 SUMMARY:Atelier-rencontre de l'IISMM "Changer d’alphabet. Turquie 1850-19
@@ -178,7 +190,7 @@ URL:https://www.ehess.fr/jcms/302060_JEvent/fr/atelier-rencontre-de-l-iismm
 END:VEVENT
 BEGIN:VEVENT
 UID:e931f209406d@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261209T173000
 DTEND;TZID=Europe/Paris:20261209T193000
 SUMMARY:Voix aux Chapitres #24 autour de l'ouvrage "Coluche"

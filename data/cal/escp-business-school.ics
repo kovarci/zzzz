@@ -24,19 +24,20 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:16c0217a6988@paris-academique
-DTSTAMP:20261107T090803Z
-DTSTART;TZID=Europe/Paris:20261106T153000
-DTEND;TZID=Europe/Paris:20261106T180000
-SUMMARY:Luxury Consumers\, Status and Digital Experiences: Quiet Signals on
-  Loud Platforms
-DESCRIPTION:Masterclass\nhttps://escp.eu/fr/events/masterclass-ESCPTurin
-LOCATION:ESCP Business School\, 79 avenue de la République\, Paris 11e
-URL:https://escp.eu/fr/events/masterclass-ESCPTurin
+UID:467ae97a7aef@paris-academique
+DTSTAMP:20261107T105812Z
+DTSTART;TZID=Europe/Paris:20261110T183000
+DTEND;TZID=Europe/Paris:20261110T210000
+SUMMARY:IA Générative : guide de survie - Conférence Débat
+DESCRIPTION:Event\nhttps://escp.eu/fr/events/ia-generative-guide-de-survie-
+ conference-debat
+LOCATION:Campus Montparnasse – 3\, rue Armand Moisant\, Paris\, France
+URL:https://escp.eu/fr/events/ia-generative-guide-de-survie-conference-deba
+ t
 END:VEVENT
 BEGIN:VEVENT
 UID:8b6d5ed5e8a8@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261110T183000
 DTEND;TZID=Europe/Paris:20261110T203000
 SUMMARY:Minister Aurore Bergé at ESCP

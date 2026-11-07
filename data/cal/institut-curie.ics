@@ -25,7 +25,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:a610ecc26d5e@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261106T100000
 DTEND;TZID=Europe/Paris:20261106T120000
 SUMMARY:Uncovering the role of cell size asymmetry in Drosophila neuroblast
@@ -37,8 +37,22 @@ URL:https://curie.fr/evenements-scientifiques/uncovering-role-cell-size-asy
  mmetry-drosophila-neuroblasts-06-11-2026
 END:VEVENT
 BEGIN:VEVENT
+UID:1d634e11a861@paris-academique
+DTSTAMP:20261107T105812Z
+DTSTART;TZID=Europe/Paris:20261112T100000
+DTEND;TZID=Europe/Paris:20261112T120000
+SUMMARY:Molecular mechanisms controlling intergenerational epigenetic inher
+ itance in mammals
+DESCRIPTION:Séminaire Keynote BDD\nhttps://curie.fr/evenements-scientifiqu
+ es/molecular-mechanisms-controlling-intergenerational-epigenetic-inheritan
+ ce-mammals-12-11-2026
+LOCATION:Institut Curie\, 26 rue d'Ulm\, Paris 5e
+URL:https://curie.fr/evenements-scientifiques/molecular-mechanisms-controll
+ ing-intergenerational-epigenetic-inheritance-mammals-12-11-2026
+END:VEVENT
+BEGIN:VEVENT
 UID:e61c62a98026@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:8ème édition - Biologie Cellulaire et Cancer
@@ -50,7 +64,7 @@ URL:https://curie.fr/evenements-scientifiques/8eme-edition-biologie-cellula
 END:VEVENT
 BEGIN:VEVENT
 UID:cb7f51ed4410@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261118T113000
 DTEND;TZID=Europe/Paris:20261118T133000
 SUMMARY:Defining structural principles of cell function by cryo-electron to
@@ -64,7 +78,7 @@ URL:https://curie.fr/evenements-scientifiques/defining-structural-principle
 END:VEVENT
 BEGIN:VEVENT
 UID:8ab4e00a3ec0@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261119T100000
 DTEND;TZID=Europe/Paris:20261119T120000
 SUMMARY:Temporal adaptations of neural stem cells during metabolic stress
@@ -77,7 +91,7 @@ URL:https://curie.fr/evenements-scientifiques/temporal-adaptations-neural-s
 END:VEVENT
 BEGIN:VEVENT
 UID:568622133a67@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261125T113000
 DTEND;TZID=Europe/Paris:20261125T133000
 SUMMARY:Recombination\, fork regression\, or translation synthesis: Pathway
@@ -91,7 +105,7 @@ URL:https://curie.fr/evenements-scientifiques/recombination-fork-regression
 END:VEVENT
 BEGIN:VEVENT
 UID:a26a87885375@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261202T110000
 DTEND;TZID=Europe/Paris:20261202T130000
 SUMMARY:Mechanism of homologous recombination: Analysis of pathway intermed
@@ -106,7 +120,7 @@ URL:https://curie.fr/evenements-scientifiques/mechanism-homologous-recombin
 END:VEVENT
 BEGIN:VEVENT
 UID:0b5b57403c38@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261207T100000
 DTEND;TZID=Europe/Paris:20261207T120000
 SUMMARY:Elemental Legacies\, Ferroptosis and Ferrology
@@ -118,7 +132,7 @@ URL:https://curie.fr/evenements-scientifiques/elemental-legacies-ferroptosi
 END:VEVENT
 BEGIN:VEVENT
 UID:8dd47560c354@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261207T140000
 DTEND;TZID=Europe/Paris:20261207T160000
 SUMMARY:Building Life: Growth\, Morphogenesis and Physiology
@@ -130,7 +144,7 @@ URL:https://curie.fr/evenements-scientifiques/building-life-growth-morphoge
 END:VEVENT
 BEGIN:VEVENT
 UID:c3c51df6279f@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261214T110000
 DTEND;TZID=Europe/Paris:20261214T130000
 SUMMARY:Neutrophil migration dynamics in inflammation and trained immunity
@@ -142,7 +156,7 @@ URL:https://curie.fr/evenements-scientifiques/neutrophil-migration-dynamics
 END:VEVENT
 BEGIN:VEVENT
 UID:55d70d8256c3@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261218T100000
 DTEND;TZID=Europe/Paris:20261218T120000
 SUMMARY:New insights into regenerative programs driving cancer plasticity

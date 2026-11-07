@@ -24,32 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:bb110b4ce1fd@paris-academique
-DTSTAMP:20261107T090803Z
-DTSTART;TZID=Europe/Paris:20261106T093000
-DTEND;TZID=Europe/Paris:20261106T180000
-SUMMARY:Colloque inter-ENS reporté
-DESCRIPTION:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-repor
- te
-LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
-URL:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-reporte
-END:VEVENT
-BEGIN:VEVENT
-UID:7a6329099f63@paris-academique
-DTSTAMP:20261107T090803Z
-DTSTART;TZID=Europe/Paris:20261106T093000
-DTEND;TZID=Europe/Paris:20261106T180000
-SUMMARY:Colloque inter-ENS « Accéder à l’enseignement supérieur : une
-  question de territoire ? »
-DESCRIPTION:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acced
- er-lenseignement-superieur-une-question-de-territoire
-LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
-URL:https://www.ens-paris-saclay.fr/agenda/colloque-inter-ens-acceder-lense
- ignement-superieur-une-question-de-territoire
-END:VEVENT
-BEGIN:VEVENT
 UID:72e19a27838b@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261110T190000
 DTEND;TZID=Europe/Paris:20261110T203000
 SUMMARY:Arts & Sciences : Péritopie 1
@@ -60,7 +36,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/arts-sciences-peritopie-1
 END:VEVENT
 BEGIN:VEVENT
 UID:e1fac47f83af@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261113T093000
 DTEND;TZID=Europe/Paris:20261113T120000
 SUMMARY:Soutenance HDR de Pierre Penet
@@ -70,8 +46,21 @@ LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
 URL:https://www.ens-paris-saclay.fr/agenda/soutenance-hdr-de-pierre-penet
 END:VEVENT
 BEGIN:VEVENT
+UID:0c51fda7cfd3@paris-academique
+DTSTAMP:20261107T105812Z
+DTSTART;TZID=Europe/Paris:20261117T183000
+DTEND;TZID=Europe/Paris:20261117T200000
+SUMMARY:Conférence du diplôme : Analyser le capitalisme par son métaboli
+ sme
+DESCRIPTION:Conférence du diplôme\nhttps://www.ens-paris-saclay.fr/agenda
+ /conference-du-diplome-analyser-le-capitalisme-par-son-metabolisme
+LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
+URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-analyser-l
+ e-capitalisme-par-son-metabolisme
+END:VEVENT
+BEGIN:VEVENT
 UID:3dc7e87b91f6@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261117T183000
 DTEND;TZID=Europe/Paris:20261117T200000
 SUMMARY:Conférence du diplôme sur l'histoire environnementale des infrast
@@ -83,8 +72,20 @@ URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-sur-lhisto
  ire-environnementale-des-infrastructures
 END:VEVENT
 BEGIN:VEVENT
+UID:8f1393c07e2a@paris-academique
+DTSTAMP:20261107T105812Z
+DTSTART;TZID=Europe/Paris:20261119T090000
+DTEND;TZID=Europe/Paris:20261119T170000
+SUMMARY:Journée d’étude du projet CASPORAL 2026
+DESCRIPTION:Formations\nhttps://www.ens-paris-saclay.fr/agenda/journee-detu
+ de-du-projet-casporal-2026
+LOCATION:ENS Paris-Saclay\, 4 avenue des Sciences\, Gif-sur-Yvette
+URL:https://www.ens-paris-saclay.fr/agenda/journee-detude-du-projet-caspora
+ l-2026
+END:VEVENT
+BEGIN:VEVENT
 UID:639624e75bb5@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261124T190000
 DTEND;TZID=Europe/Paris:20261124T203000
 SUMMARY:La vie de recherche : Jean Jouzel
@@ -95,7 +96,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/la-vie-de-recherche-jean-jouzel
 END:VEVENT
 BEGIN:VEVENT
 UID:062edd4cdfbf@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261126T183000
 DTEND;TZID=Europe/Paris:20261126T200000
 SUMMARY:Conférence du diplôme avec Didier Fassin
@@ -107,7 +108,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/conference-du-diplome-avec-didie
 END:VEVENT
 BEGIN:VEVENT
 UID:f2e6bd93540a@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261128T090000
 DTEND;TZID=Europe/Paris:20261128T170000
 SUMMARY:Rencontres des jeunes mathématiciennes et informaticiennes (RJMI) 
@@ -120,7 +121,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/rencontres-des-jeunes-mathematic
 END:VEVENT
 BEGIN:VEVENT
 UID:767f4385dd82@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261130T183000
 DTEND;TZID=Europe/Paris:20261130T203000
 SUMMARY:Semaine des carrières normaliennes 2026
@@ -132,7 +133,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/semaine-des-carrieres-normalienn
 END:VEVENT
 BEGIN:VEVENT
 UID:67a32f5728f3@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20261205T140000
 DTEND;TZID=Europe/Paris:20261205T144000
 SUMMARY:Spectacle : Trait(s)
@@ -142,7 +143,7 @@ URL:https://www.ens-paris-saclay.fr/agenda/spectacle-traits
 END:VEVENT
 BEGIN:VEVENT
 UID:7c452be96618@paris-academique
-DTSTAMP:20261107T090803Z
+DTSTAMP:20261107T105812Z
 DTSTART;TZID=Europe/Paris:20270112T190000
 DTEND;TZID=Europe/Paris:20270112T203000
 SUMMARY:Arts & Sciences : Péritopie 2
