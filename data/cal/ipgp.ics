@@ -24,22 +24,8 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:7bea922af3c0@paris-academique
-DTSTAMP:20261106T120701Z
-DTSTART;TZID=Europe/Paris:20261105T140000
-DTEND;TZID=Europe/Paris:20261105T160000
-SUMMARY:--- SEMINAIRE GENERAL --- Cross-scale modelling of tectonics and ea
- rthquakes
-DESCRIPTION:Séminaires généraux de l’IPGP\nhttps://www.ipgp.fr/actus-e
- t-agenda/agenda/seminaires/grand-seminaire-de-theme-cross-scale-modelling-
- of-tectonics-and-earthquakes/
-LOCATION:IPGP\, 1 rue Jussieu\, Paris 5e
-URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/grand-seminaire-d
- e-theme-cross-scale-modelling-of-tectonics-and-earthquakes/
-END:VEVENT
-BEGIN:VEVENT
 UID:504c6e884945@paris-academique
-DTSTAMP:20261106T120701Z
+DTSTAMP:20261107T090803Z
 DTSTART;TZID=Europe/Paris:20261112T110000
 DTEND;TZID=Europe/Paris:20261112T130000
 SUMMARY:Earthquake cycle simulations for PSHA
@@ -51,7 +37,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/earthquake-cycle-
 END:VEVENT
 BEGIN:VEVENT
 UID:b1eea711ad78@paris-academique
-DTSTAMP:20261106T120701Z
+DTSTAMP:20261107T090803Z
 DTSTART;TZID=Europe/Paris:20261118T110000
 DTEND;TZID=Europe/Paris:20261118T130000
 SUMMARY:Echoes from the seabed: the continuing evolution of industrial mult
@@ -63,7 +49,7 @@ URL:https://www.ipgp.fr/actus-et-agenda/agenda/seminaires/tba-7/
 END:VEVENT
 BEGIN:VEVENT
 UID:90ac8fcd48bf@paris-academique
-DTSTAMP:20261106T120701Z
+DTSTAMP:20261107T090803Z
 DTSTART;TZID=Europe/Paris:20261123T110000
 DTEND;TZID=Europe/Paris:20261123T130000
 SUMMARY:Exploring Tidal Modulation of Seismicity in Southern California
